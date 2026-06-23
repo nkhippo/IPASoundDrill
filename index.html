@@ -388,7 +388,12 @@ function filteredPool(){
   else{p=PRESET.filter(w=>(w.cefr==="A1"||w.cefr==="A2")&&(S.lvl==="A1A2"||w.cefr===S.lvl));}
   return p;
 }
-function updatePool(){const n=filteredPool().length;$("poolNote").textContent="Pool: "+n+" words · Quiz: "+Math.min(QUESTION_COUNT,n)+" words";}
+function updatePool(){
+  const n=filteredPool().length;
+  const text="Pool: "+n+" words";
+  $("lvlPoolNote").textContent=text;
+  $("grpPoolNote").textContent=text;
+}
 updatePool();
 
 
