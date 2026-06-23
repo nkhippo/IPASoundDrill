@@ -111,19 +111,13 @@
   .word{font-size:38px;font-weight:700;letter-spacing:-.01em;margin:2px 0 4px}
   .yourtry{font-size:12px;color:var(--muted);margin-bottom:14px}
   .yourtry s{color:var(--bad)} .yourtry .uipa{font-family:var(--ipa)}
-  .play{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--signal);color:var(--signal);background:#fff;border-radius:999px;padding:9px 18px;cursor:pointer;font-weight:600;font-size:13px;margin-bottom:16px}
-  .play svg{width:15px;height:15px}
   .note{text-align:left;border-top:1px solid var(--hair);padding-top:14px;margin-top:4px}
   .note .nh{font-family:var(--mono);font-size:10px;color:var(--faint);text-transform:uppercase;letter-spacing:.14em;margin-bottom:6px}
   .note p{font-size:13px;color:var(--ink);margin:0 0 10px}
   .trapchips{display:flex;gap:6px;flex-wrap:wrap}
   .trapchip{font-family:var(--ipa);font-size:15px;color:var(--signal);background:var(--signal-soft);border-radius:8px;padding:3px 10px;cursor:pointer}
-  .assess{margin-top:16px;background:#fbfbf9;border:1px solid var(--hair);border-radius:12px;padding:15px;text-align:center}
-  .assess .q{font-size:13.5px;font-weight:600;margin-bottom:3px}
-  .assess .sub{font-size:11.5px;color:var(--muted);margin-bottom:11px}
-  .assess .row{display:flex;gap:8px}
-  .assess .row button{flex:1;border:1px solid var(--hair);background:#fff;border-radius:9px;padding:11px;cursor:pointer;font-size:13px;font-weight:600;color:var(--ink)}
-  .assess .row .said:hover{border-color:var(--ok);color:var(--ok)} .assess .row .iffy:hover{border-color:var(--stress);color:var(--stress)}
+  .reveal-next{margin-top:16px;width:100%;border:none;border-radius:11px;cursor:pointer;background:var(--ink);color:#fff;font-family:var(--ui);font-weight:700;font-size:15px;padding:14px;letter-spacing:.03em}
+  .reveal-next:active{transform:translateY(1px)}
 
   .sumhead{text-align:center;margin-bottom:6px}
   .bigstat{font-size:54px;font-weight:800;letter-spacing:-.02em;line-height:1}
@@ -256,7 +250,6 @@
       <div class="verdict" id="verdict"></div>
       <div class="word" id="rWord"></div>
       <div class="yourtry" id="rTry"></div>
-      <button class="play" id="rPlay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>もう一度聞く</button>
       <div class="readout" style="padding-top:0"><div class="ipa" id="rIpa"></div></div>
       <div class="info" id="rInfo"></div>
       <div class="note">
@@ -264,11 +257,7 @@
         <p id="rNote"></p>
         <div class="trapchips" id="rTraps"></div>
       </div>
-      <div class="assess">
-        <div class="q">IPAを見て、声に出して言えた？</div>
-        <div class="sub">自己評価が苦手音リストに反映されます</div>
-        <div class="row"><button class="said" id="saidYes">言えた</button><button class="iffy" id="saidNo">あやしい</button></div>
-      </div>
+      <button class="reveal-next" id="nextBtn">次へ</button>
     </div>
   </section>
 
@@ -661,14 +650,12 @@ function reveal(res,ctx){
   $("rTraps").querySelectorAll(".trapchip").forEach(ch=>ch.addEventListener("click",()=>renderInfo("rInfo",ch.dataset.sym)));
   setTimeout(()=>speak(c.w),200);
 }
-$("rPlay").addEventListener("click",()=>speak(S.cur.w));
-function nextCard(uncertain){
-  const c=S.cur;const missed=S.missed.includes(c.w);
-  if(missed||uncertain){phonemesOf(c.ipa).forEach(s=>{if(PH[s].t===1)S.weak[s]=(S.weak[s]||0)+1;});if(uncertain&&!S.missed.includes(c.w))S.missed.push(c.w);}
+function nextCard(){
+  const c=S.cur;
+  if(S.missed.includes(c.w))phonemesOf(c.ipa).forEach(s=>{if(PH[s].t===1)S.weak[s]=(S.weak[s]||0)+1;});
   S.idx++;renderCard();
 }
-$("saidYes").addEventListener("click",()=>nextCard(false));
-$("saidNo").addEventListener("click",()=>nextCard(true));
+$("nextBtn").addEventListener("click",nextCard);
 
 /* ---------- summary ---------- */
 function renderSummary(){
@@ -681,7 +668,7 @@ function renderSummary(){
   if(ent.length){
     $("weakList").innerHTML=ent.map(([s,n])=>{const p=PH[s];return '<div class="wk"><div class="wsym">'+s+'</div><div style="flex:1"><div class="wlab">'+p.lab+'</div><div class="wtip">'+p.mouth+'</div></div><div class="wcount">×'+n+'</div></div>';}).join("");
   }else{
-    $("weakList").innerHTML='<div class="wk"><div style="flex:1"><div class="wlab">苦手音は検出されませんでした</div><div class="wtip">「言えた」が揃っています。出題数やレベルを上げてもOK。</div></div></div>';
+    $("weakList").innerHTML='<div class="wk"><div style="flex:1"><div class="wlab">苦手音は検出されませんでした</div><div class="wtip">ミスした音はありません。出題数やレベルを上げてもOK。</div></div></div>';
   }
   $("reviewList").innerHTML=S.missed.length?'復習リスト: '+S.missed.map(w=>{const o=PRESET.find(x=>x.w===w);return '<b>'+o.ipa+'</b> '+w;}).join(" · "):"";
   $("weakBtn").disabled=S.missed.length===0;
