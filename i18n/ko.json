@@ -1,0 +1,29 @@
+{
+  "brand": { "name": "IPA 받아쓰기 · Decoder / Encoder", "sub": "CEFR A1–A2 · 미국 영어" },
+  "lead_html": "이미 아는 단어의 <b>발음만</b> 다시 훈련합니다. &ldquo;낼 수 없는 소리는 들리지 않는다&rdquo;는 간극을 메웁니다. <b>일상 어휘</b>와 <b>철자&ndash;소리 규칙</b>(예: ai &rarr; /eɪ/)으로 IPA 읽기를 연습하세요.",
+  "dir": { "label": "방향", "decode_t": "읽기 · IPA &rarr; 단어", "decode_d": "IPA를 읽고 철자를 맞추기", "encode_t": "쓰기 · 단어 &rarr; IPA", "encode_d": "IPA 키보드로 발음 조립하기" },
+  "set": { "label": "문제 세트", "daily_t": "일상 어휘 · CEFR A1–A2", "daily_d": "자주 쓰는 단어(불규칙 철자 포함)", "phonics_t": "규칙 패턴 · 철자 &harr; 소리", "phonics_d": "철자와 소리가 규칙적으로 대응하는 단어" },
+  "lvl": { "label": "레벨", "all": "A1+A2", "a1": "A1만", "a2": "A2만", "pool": "대상 {n}개 단어" },
+  "grp": { "label": "철자 규칙 그룹", "all": "전체", "short": "단모음", "long": "장모음·묵음 e", "team": "모음 팀", "r": "r색 모음" },
+  "start": "시작", "loading": "불러오는 중…", "load_fail": "불러오기 실패", "wordlist_fail": "단어 목록을 불러오지 못했습니다",
+  "back_top": "처음", "settings_btn": "설정", "settings_lang": "언어", "settings_close": "닫기",
+  "lang_opts": { "en": "English", "ja": "日本語", "zh": "中文", "ko": "한국어" },
+  "listen": "듣기", "meter_done": "완료",
+  "hint": { "syl": "음절 수", "first": "첫 글자", "pos": "품사" },
+  "input_ph": "단어 입력", "check": "채점", "clear": "지우기", "next": "다음",
+  "build_ph": "아래 IPA 키를 눌러 발음을 만드세요",
+  "tips_head": "발음 포인트",
+  "note": { "pattern": "철자 규칙: {p}", "stress": "제{n}음절 강세 ({sy}음절)", "schwa": "약화 모음(ə/ɚ): 철자에 끌리지 말고 약하고 모호하게", "tricky": "주의할 소리: {s}" },
+  "patterns": { "magic_e": "묵음 e" },
+  "you": "당신: {a}", "see_answer": "정답 확인",
+  "syl": "{n}음절", "syl_pl": "{n}음절",
+  "summary": { "line": "{c} / {t} 정답 · 복습 {m}개", "weak_head": "다음에 연습할 소리", "weak_none_t": "약한 소리가 감지되지 않았습니다", "weak_none_d": "틀린 소리가 없습니다. 레벨을 올려 보세요.", "review": "복습 목록: {list}", "again": "다시 하기", "weak_btn": "틀린 것만 복습" },
+  "info": { "mouth": "입 모양", "watch": "주의" },
+  "kbd": { "stress": "강세", "vowels": "모음", "r_vowels": "r색 모음", "diphthongs": "이중 모음", "consonants": "자음" },
+  "pos": {
+    "限定詞": "한정사", "名詞": "명사", "動詞": "동사", "形容詞": "형용사", "副詞": "부사",
+    "前置詞": "전치사", "接続詞": "접속사", "代名詞": "대명사", "間投詞": "감탄사",
+    "副詞 / 前置詞": "부사 / 전치사", "形容詞 / 副詞": "형용사 / 부사",
+    "be動詞": "be동사", "助動詞": "조동사"
+  }
+}

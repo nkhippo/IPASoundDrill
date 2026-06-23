@@ -1,0 +1,29 @@
+{
+  "brand": { "name": "IPA Dictation · Decoder / Encoder", "sub": "CEFR A1–A2 · General American" },
+  "lead_html": "Retrain <b>pronunciation only</b> for words you already know. Bridge the gap: <b>if you can&rsquo;t say a sound, you can&rsquo;t hear it</b>. Practice with <b>everyday words</b> plus <b>regular spelling&ndash;sound patterns</b> (e.g. ai &rarr; /eɪ/) to build IPA reading skills.",
+  "dir": { "label": "Direction", "decode_t": "Decode · IPA &rarr; word", "decode_d": "Read the IPA and spell the word", "encode_t": "Encode · word &rarr; IPA", "encode_d": "Build the pronunciation with the IPA keyboard" },
+  "set": { "label": "Question set", "daily_t": "Daily words · CEFR A1–A2", "daily_d": "Common words (including irregular spellings)", "phonics_t": "Phonics patterns · spelling &harr; sound", "phonics_d": "Words with regular spelling&ndash;sound correspondences" },
+  "lvl": { "label": "Level", "all": "A1+A2", "a1": "A1 only", "a2": "A2 only", "pool": "Pool: {n} words" },
+  "grp": { "label": "Spelling pattern group", "all": "All", "short": "Short vowels", "long": "Long vowels · silent e", "team": "Vowel teams", "r": "R-colored vowels" },
+  "start": "Start", "loading": "Loading…", "load_fail": "Load failed", "wordlist_fail": "Failed to load word list",
+  "back_top": "Menu", "settings_btn": "Settings", "settings_lang": "Language", "settings_close": "Close",
+  "lang_opts": { "en": "English", "ja": "日本語", "zh": "中文", "ko": "한국어" },
+  "listen": "Listen", "meter_done": "done",
+  "hint": { "syl": "Syllables", "first": "First letter", "pos": "Part of speech" },
+  "input_ph": "Type the word", "check": "Check", "clear": "Clear", "next": "Next",
+  "build_ph": "Tap the IPA keys below to build the pronunciation",
+  "tips_head": "Pronunciation tips",
+  "note": { "pattern": "Spelling pattern: {p}", "stress": "Stress syllable {n} ({sy} syllables)", "schwa": "Schwa (ə/ɚ): stay weak and vague, not led by spelling", "tricky": "Tricky sounds: {s}" },
+  "patterns": { "magic_e": "silent e" },
+  "you": "You: {a}", "see_answer": "See the answer",
+  "syl": "{n} syllable", "syl_pl": "{n} syllables",
+  "summary": { "line": "{c} / {t} correct · {m} to review", "weak_head": "Sounds to practice next", "weak_none_t": "No weak sounds detected", "weak_none_d": "No missed sounds. Try a higher level.", "review": "Review list: {list}", "again": "Play again", "weak_btn": "Review misses only" },
+  "info": { "mouth": "Mouth", "watch": "Watch out" },
+  "kbd": { "stress": "Stress", "vowels": "Vowels", "r_vowels": "R-colored", "diphthongs": "Diphthongs", "consonants": "Consonants" },
+  "pos": {
+    "限定詞": "determiner", "名詞": "noun", "動詞": "verb", "形容詞": "adjective", "副詞": "adverb",
+    "前置詞": "preposition", "接続詞": "conjunction", "代名詞": "pronoun", "間投詞": "interjection",
+    "副詞 / 前置詞": "adverb / preposition", "形容詞 / 副詞": "adjective / adverb",
+    "be動詞": "be verb", "助動詞": "modal verb"
+  }
+}

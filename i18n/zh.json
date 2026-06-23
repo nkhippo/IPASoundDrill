@@ -1,0 +1,29 @@
+{
+  "brand": { "name": "IPA听写 · Decoder / Encoder", "sub": "CEFR A1–A2 · 美式英语" },
+  "lead_html": "专为<b>已学单词</b>重练<b>发音</b>。弥合&ldquo;不会发的音就听不出来&rdquo;的缺口。通过<b>日常词汇</b>和<b>拼写&ndash;读音规则</b>（如 ai &rarr; /eɪ/）训练IPA阅读能力。",
+  "dir": { "label": "方向", "decode_t": "解码 · IPA &rarr; 单词", "decode_d": "读IPA并拼写单词", "encode_t": "编码 · 单词 &rarr; IPA", "encode_d": "用IPA键盘拼出发音" },
+  "set": { "label": "题库", "daily_t": "日常词 · CEFR A1–A2", "daily_d": "常用词（含不规则拼写）", "phonics_t": "拼读规则 · 拼写 &harr; 音", "phonics_d": "拼写与读音规则对应的词" },
+  "lvl": { "label": "级别", "all": "A1+A2", "a1": "仅A1", "a2": "仅A2", "pool": "词库 {n} 词" },
+  "grp": { "label": "拼写规则组", "all": "全部", "short": "短元音", "long": "长元音·不发音e", "team": "元音组合", "r": "r化元音" },
+  "start": "开始", "loading": "加载中…", "load_fail": "加载失败", "wordlist_fail": "词表加载失败",
+  "back_top": "首页", "settings_btn": "设置", "settings_lang": "语言", "settings_close": "关闭",
+  "lang_opts": { "en": "English", "ja": "日本語", "zh": "中文", "ko": "한국어" },
+  "listen": "播放发音", "meter_done": "完成",
+  "hint": { "syl": "音节数", "first": "首字母", "pos": "词性" },
+  "input_ph": "输入单词", "check": "核对", "clear": "清除", "next": "下一题",
+  "build_ph": "点击下方IPA键拼出发音",
+  "tips_head": "发音要点",
+  "note": { "pattern": "拼写规则: {p}", "stress": "重读第{n}音节（共{sy}音节）", "schwa": "弱读元音(ə/ɚ): 勿被拼写牵引，要含糊轻读", "tricky": "需注意音: {s}" },
+  "patterns": { "magic_e": "不发音e" },
+  "you": "你的答案: {a}", "see_answer": "查看答案",
+  "syl": "{n}个音节", "syl_pl": "{n}个音节",
+  "summary": { "line": "{c} / {t} 正确 · 复习 {m} 词", "weak_head": "建议练习的音", "weak_none_t": "未检测到薄弱音", "weak_none_d": "没有错过的音。可尝试更高难度。", "review": "复习列表: {list}", "again": "再来一轮", "weak_btn": "只复习错题" },
+  "info": { "mouth": "口型", "watch": "注意" },
+  "kbd": { "stress": "重音", "vowels": "元音", "r_vowels": "r化元音", "diphthongs": "双元音", "consonants": "辅音" },
+  "pos": {
+    "限定詞": "限定词", "名詞": "名词", "動詞": "动词", "形容詞": "形容词", "副詞": "副词",
+    "前置詞": "介词", "接続詞": "连词", "代名詞": "代词", "間投詞": "感叹词",
+    "副詞 / 前置詞": "副词 / 介词", "形容詞 / 副詞": "形容词 / 副词",
+    "be動詞": "be动词", "助動詞": "情态动词"
+  }
+}

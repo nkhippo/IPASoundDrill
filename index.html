@@ -30,6 +30,9 @@
   .langpick{display:flex;gap:4px}
   .langpick button{border:1px solid var(--hair);background:#fff;border-radius:6px;padding:3px 8px;font-family:var(--mono);font-size:9px;font-weight:700;cursor:pointer;color:var(--muted)}
   .langpick button[aria-pressed="true"]{border-color:var(--signal);color:var(--signal);background:var(--signal-soft)}
+  .topbtn{border:1px solid var(--hair);background:#fff;border-radius:999px;width:34px;height:34px;padding:0;cursor:pointer;color:var(--muted);display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+  .topbtn svg{width:16px;height:16px}
+  .topbtn:hover{border-color:var(--signal);color:var(--signal)}
   .backtop{border:1px solid var(--hair);background:#fff;border-radius:999px;padding:5px 10px;cursor:pointer;font-family:var(--mono);font-size:10px;font-weight:600;color:var(--muted);letter-spacing:.04em;text-transform:uppercase;white-space:nowrap}
   .backtop:hover{border-color:var(--signal);color:var(--signal)}
   .panel{background:var(--panel);border:1px solid var(--hair);border-radius:14px;padding:24px 20px}
@@ -148,6 +151,15 @@
   .sumbtns .again{border:none;background:var(--ink);color:#fff} .sumbtns .weak{border:1px solid var(--signal);background:#fff;color:var(--signal)}
   .sumbtns button:disabled{opacity:.4;cursor:default}
   .hidden{display:none}
+  .modal{position:fixed;inset:0;z-index:100;padding:18px}
+  .modal:not(.hidden){display:flex;align-items:center;justify-content:center}
+  .modal-scrim{position:absolute;inset:0;border:none;background:rgba(25,28,32,.35);cursor:pointer}
+  .modal-card{position:relative;width:min(100%,320px);padding:18px 16px}
+  .modal-head{margin-bottom:12px}
+  .modal-title{margin:0;font-size:14px;font-weight:700;letter-spacing:.02em}
+  .langopts{display:flex;flex-direction:column;gap:8px}
+  .langopt{border:1px solid var(--hair);background:#fff;border-radius:10px;padding:12px 14px;cursor:pointer;font-family:var(--ui);font-size:14px;font-weight:600;color:var(--ink);text-align:left}
+  .langopt[aria-pressed="true"]{border-color:var(--signal);background:var(--signal-soft);color:var(--signal)}
   body.in-play .wrap{padding:12px 14px 20px}
   body.in-play .topbar{margin-bottom:8px}
   body.in-play .panel{padding:14px 16px}
@@ -173,12 +185,7 @@
       <div><div class="name" id="brandName">IPA Dictation</div><div class="sub" id="brandSub">A1–A2 · GA</div></div>
     </div>
     <div class="topbar-actions">
-      <div class="langpick" id="langPick">
-        <button type="button" data-lang="en" aria-pressed="true">EN</button>
-        <button type="button" data-lang="ja" aria-pressed="false">JA</button>
-        <button type="button" data-lang="zh" aria-pressed="false">ZH</button>
-        <button type="button" data-lang="ko" aria-pressed="false">KO</button>
-      </div>
+      <button class="topbtn settings" id="settingsBtn" type="button" aria-label="Settings"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></button>
       <button class="backtop hidden" id="backTopBtn" type="button">Menu</button>
       <div class="meter" id="meter"></div>
     </div>
@@ -284,8 +291,22 @@
   </section>
 </div>
 
-<script>
+<div class="modal hidden" id="settingsModal" role="dialog" aria-modal="true" aria-labelledby="settingsTitle">
+  <button class="modal-scrim" id="settingsScrim" type="button" aria-label="Close"></button>
+  <div class="modal-card panel">
+    <div class="modal-head"><h2 class="modal-title" id="settingsTitle">Language</h2></div>
+    <div class="langopts" id="langOpts">
+      <button class="langopt" type="button" data-lang="en" aria-pressed="true">English</button>
+      <button class="langopt" type="button" data-lang="ja" aria-pressed="false">日本語</button>
+      <button class="langopt" type="button" data-lang="zh" aria-pressed="false">中文</button>
+      <button class="langopt" type="button" data-lang="ko" aria-pressed="false">한국어</button>
+    </div>
+  </div>
+</div>
 
+<script>
+const $=id=>document.getElementById(id);
+const show=(id,on)=>$(id).classList.toggle("hidden",!on);
 /* ---------- wordlist (table) ---------- */
 let PRESET = [];
 let wordlistReady = false;
@@ -378,7 +399,14 @@ function applyI18n() {
   $("againBtn").textContent = t("summary.again");
   $("weakBtn").textContent = t("summary.weak_btn");
   ["dPlay", "ePlay", "rPlay"].forEach(id => { const b = $(id); if (b) b.setAttribute("aria-label", t("listen")); });
-  $("langPick").querySelectorAll("button").forEach(b => b.setAttribute("aria-pressed", b.dataset.lang === LANG ? "true" : "false"));
+  $("settingsBtn").setAttribute("aria-label", t("settings_btn"));
+  $("settingsScrim").setAttribute("aria-label", t("settings_close"));
+  $("settingsTitle").textContent = t("settings_lang");
+  $("backTopBtn").textContent = t("back_top");
+  $("langOpts").querySelectorAll(".langopt").forEach(b => {
+    b.textContent = t("lang_opts." + b.dataset.lang);
+    b.setAttribute("aria-pressed", b.dataset.lang === LANG ? "true" : "false");
+  });
   updatePool();
   if (!S.built.length && $("eBuild")) renderBuild();
 }
@@ -398,7 +426,8 @@ async function setLang(lang) {
   if (!$("summary").classList.contains("hidden")) renderSummary();
 }
 
-$("langPick").querySelectorAll("button").forEach(b => b.addEventListener("click", () => setLang(b.dataset.lang)));
+function openSettings(){show("settingsModal",true);}
+function closeSettings(){show("settingsModal",false);}
 
 async function initApp() {
   await loadLocale(LANG);
@@ -411,7 +440,7 @@ async function initApp() {
     console.error(err);
   });
 }
-initApp();
+
 const MULTI=["tʃ","dʒ","eɪ","aɪ","ɔɪ","oʊ","aʊ"];
 const VOWELS=new Set(["i","ɪ","ɛ","æ","ə","ʌ","ɑ","ɔ","ʊ","u","ɝ","ɚ","eɪ","aɪ","ɔɪ","oʊ","aʊ"]);
 
@@ -430,8 +459,6 @@ const TRAPSET=new Set(["θ","ð","æ","ʒ","ɝ"]);
 const QUESTION_COUNT = 10;
 function sylLabel(n){return n===1?t("syl",{n}):t("syl_pl",{n});}
 let S={dir:"decode",set:"daily",lvl:"A1A2",grp:"all",queue:[],idx:0,correct:0,weak:{},missed:[],cur:null,revealed:false,built:[]};
-const $=id=>document.getElementById(id);
-const show=(id,on)=>$(id).classList.toggle("hidden",!on);
 
 function setSetupVisible(on){
   show("setup",on);
@@ -440,7 +467,7 @@ function setSetupVisible(on){
   show("reveal",false);
   show("summary",false);
   $("backTopBtn").classList.toggle("hidden",on);
-  $("langPick").classList.toggle("hidden",!on);
+  $("settingsBtn").classList.toggle("hidden",!on);
   document.body.classList.toggle("in-play",!on);
   if(on){
     if(currentAudio){currentAudio.pause();currentAudio=null;}
@@ -780,6 +807,11 @@ function renderSummary(){
   $("reviewList").innerHTML=list?t("summary.review",{list}):"";
   $("weakBtn").disabled=S.missed.length===0;
 }
+
+$("settingsBtn").addEventListener("click",openSettings);
+$("settingsScrim").addEventListener("click",closeSettings);
+$("langOpts").querySelectorAll(".langopt").forEach(b=>b.addEventListener("click",()=>{setLang(b.dataset.lang);closeSettings();}));
+initApp();
 </script>
 </body>
 </html>

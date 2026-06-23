@@ -1,0 +1,29 @@
+{
+  "brand": { "name": "IPA音写 · Decoder / Encoder", "sub": "CEFR A1–A2 · General American" },
+  "lead_html": "既知の単語の<b>発音だけ</b>を鍛え直すツール。&ldquo;発音できない音は聞き取れない&rdquo; のギャップを埋めます。<b>日常語</b>と<b>綴りと音の規則パターン</b>（例: ai &rarr; /eɪ/）でIPAの読み方を鍛えます。",
+  "dir": { "label": "方向", "decode_t": "読む · IPA &rarr; 単語", "decode_d": "発音記号を読んで綴りを当てる", "encode_t": "書く · 単語 &rarr; IPA", "encode_d": "IPAキーボードで発音を組み立てる" },
+  "set": { "label": "出題セット", "daily_t": "日常語 · CEFR A1–A2", "daily_d": "よく使う語（不規則綴りを含む）", "phonics_t": "規則パターン · 綴り &harr; 音", "phonics_d": "綴りと発音が規則的に対応する語" },
+  "lvl": { "label": "レベル", "all": "A1+A2", "a1": "A1のみ", "a2": "A2のみ", "pool": "対象 {n} 語" },
+  "grp": { "label": "綴り規則グループ", "all": "すべて", "short": "短母音", "long": "長母音・マジックe", "team": "母音チーム", "r": "r音色" },
+  "start": "はじめる", "loading": "読み込み中…", "load_fail": "読み込み失敗", "wordlist_fail": "単語リストの読み込みに失敗しました",
+  "back_top": "TOPへ", "settings_btn": "設定", "settings_lang": "言語", "settings_close": "閉じる",
+  "lang_opts": { "en": "English", "ja": "日本語", "zh": "中文", "ko": "한국어" },
+  "listen": "音を聞く", "meter_done": "完了",
+  "hint": { "syl": "音節数", "first": "最初の文字", "pos": "品詞" },
+  "input_ph": "単語を入力", "check": "答え合わせ", "clear": "クリア", "next": "次へ",
+  "build_ph": "下のIPAキーをタップして発音を組み立てる",
+  "tips_head": "発音ポイント",
+  "note": { "pattern": "綴り規則: {p}", "stress": "第{n}音節を強く（{sy}音節）", "schwa": "弱化母音(ə/ɚ): 綴りに引っ張られず曖昧に", "tricky": "要注意音: {s}" },
+  "patterns": { "magic_e": "マジックe" },
+  "you": "あなた: {a}", "see_answer": "答えを確認",
+  "syl": "{n}音節", "syl_pl": "{n}音節",
+  "summary": { "line": "{c} / {t} 正解 · 復習 {m} 語", "weak_head": "次に練習すべき音", "weak_none_t": "苦手音は検出されませんでした", "weak_none_d": "ミスした音はありません。レベルを上げてもOK。", "review": "復習リスト: {list}", "again": "もう一周", "weak_btn": "苦手だけ復習" },
+  "info": { "mouth": "口の形", "watch": "注意" },
+  "kbd": { "stress": "強勢", "vowels": "母音", "r_vowels": "r母音", "diphthongs": "二重母音", "consonants": "子音" },
+  "pos": {
+    "限定詞": "限定詞", "名詞": "名詞", "動詞": "動詞", "形容詞": "形容詞", "副詞": "副詞",
+    "前置詞": "前置詞", "接続詞": "接続詞", "代名詞": "代名詞", "間投詞": "間投詞",
+    "副詞 / 前置詞": "副詞 / 前置詞", "形容詞 / 副詞": "形容詞 / 副詞",
+    "be動詞": "be動詞", "助動詞": "助動詞"
+  }
+}
