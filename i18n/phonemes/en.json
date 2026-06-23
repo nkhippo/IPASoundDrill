@@ -1,0 +1,303 @@
+{
+  "ˈ": {
+    "lab": "Primary stress",
+    "ex": "stress the next syllable",
+    "mouth": "Higher, longer, and louder together",
+    "trap": "Pitch alone is not enough — use length and volume too",
+    "t": 1
+  },
+  "ˌ": {
+    "lab": "Secondary stress",
+    "ex": "lighter stress",
+    "mouth": "Stronger than unstressed, weaker than primary",
+    "trap": "Do not reduce it completely",
+    "t": 1
+  },
+  "i": {
+    "lab": "long ee (see)",
+    "ex": "see /si/",
+    "mouth": "Tense lips spread wide for a long \"ee\"",
+    "trap": "Contrasts with ɪ — do not relax it",
+    "t": 1
+  },
+  "ɪ": {
+    "lab": "short i (sit)",
+    "ex": "sit /sɪt/",
+    "mouth": "Relaxed, short, slightly lax \"ih\" toward \"eh\"",
+    "trap": "Do not tense it like i",
+    "t": 1
+  },
+  "ɛ": {
+    "lab": "eh (bed)",
+    "ex": "bed /bɛd/",
+    "mouth": "Open mid front vowel like \"eh\"",
+    "trap": "Keep it distinct from æ",
+    "t": 0
+  },
+  "æ": {
+    "lab": "a~eh (cat)",
+    "ex": "cat /kæt/",
+    "mouth": "Mouth wide; between \"ah\" and \"eh\"",
+    "trap": "Not a plain \"ah\" — spread and front it",
+    "t": 1
+  },
+  "ə": {
+    "lab": "schwa",
+    "ex": "about /əˈbaʊt/",
+    "mouth": "Central, weak, relaxed vowel",
+    "trap": "Ignore spelling — keep it vague and unstressed",
+    "t": 1
+  },
+  "ʌ": {
+    "lab": "uh (cup)",
+    "ex": "cup /kʌp/",
+    "mouth": "Short, open central \"uh\"",
+    "trap": "Clearer and stronger than schwa",
+    "t": 1
+  },
+  "ɑ": {
+    "lab": "ah (hot/father)",
+    "ex": "hot /hɑt/",
+    "mouth": "Low back open \"ah\"",
+    "trap": "Deep in the mouth, not a bright front \"ah\"",
+    "t": 1
+  },
+  "ɔ": {
+    "lab": "aw (dog/thought)",
+    "ex": "dog /dɔɡ/",
+    "mouth": "Rounded \"aw\"",
+    "trap": "In GA it may merge with ɑ — still round the lips",
+    "t": 1
+  },
+  "ʊ": {
+    "lab": "short u (book)",
+    "ex": "book /bʊk/",
+    "mouth": "Relaxed short \"u\"; lips lightly rounded",
+    "trap": "Distinct from u — do not protrude too much",
+    "t": 1
+  },
+  "u": {
+    "lab": "long oo (food)",
+    "ex": "food /fud/",
+    "mouth": "Rounded protruded \"oo\"",
+    "trap": "Round the lips more than many learners expect",
+    "t": 1
+  },
+  "ɝ": {
+    "lab": "stressed er (bird)",
+    "ex": "bird /bɝd/",
+    "mouth": "Tongue bunched back with strong r-color",
+    "trap": "No exact L1 equivalent — er/ir/ur often map here",
+    "t": 1
+  },
+  "ɚ": {
+    "lab": "unstressed er (water)",
+    "ex": "water /ˈwɔtɚ/",
+    "mouth": "Weaker r-colored schwa",
+    "trap": "Word-final -er/-or is usually this",
+    "t": 1
+  },
+  "eɪ": {
+    "lab": "ay (day)",
+    "ex": "day /deɪ/",
+    "mouth": "Glide from \"eh\" to \"ee\"",
+    "trap": "Do not hold a flat \"ay\"",
+    "t": 0
+  },
+  "aɪ": {
+    "lab": "eye (my)",
+    "ex": "my /maɪ/",
+    "mouth": "Glide from \"ah\" to \"ee\"",
+    "trap": "Keep it one diphthong",
+    "t": 0
+  },
+  "ɔɪ": {
+    "lab": "oy (boy)",
+    "ex": "boy /bɔɪ/",
+    "mouth": "Glide from \"aw\" to \"ee\"",
+    "trap": "—",
+    "t": 0
+  },
+  "oʊ": {
+    "lab": "oh (go)",
+    "ex": "go /ɡoʊ/",
+    "mouth": "Glide from \"oh\" to \"oo\"; round at the end",
+    "trap": "Not a flat long \"oh\" — keep the glide",
+    "t": 1
+  },
+  "aʊ": {
+    "lab": "ow (now)",
+    "ex": "now /naʊ/",
+    "mouth": "Glide from \"ah\" to \"oo\"",
+    "trap": "Round the second part",
+    "t": 0
+  },
+  "θ": {
+    "lab": "voiceless th (think)",
+    "ex": "think /θɪŋk/",
+    "mouth": "Tongue tip lightly between teeth; air only",
+    "trap": "Not \"s\" — show the tongue",
+    "t": 1
+  },
+  "ð": {
+    "lab": "voiced th (this)",
+    "ex": "this /ðɪs/",
+    "mouth": "Same as θ with voice",
+    "trap": "Not \"z\" or \"d\"",
+    "t": 1
+  },
+  "ʃ": {
+    "lab": "sh (she)",
+    "ex": "she /ʃi/",
+    "mouth": "Lips rounded; tongue pulled back",
+    "trap": "Farther back than many \"sh\" habits",
+    "t": 0
+  },
+  "ʒ": {
+    "lab": "zh (measure)",
+    "ex": "measure /ˈmɛʒɚ/",
+    "mouth": "Voiced version of sh",
+    "trap": "Rare in many L1s; common medially/finally",
+    "t": 1
+  },
+  "tʃ": {
+    "lab": "ch (church)",
+    "ex": "church /tʃɝtʃ/",
+    "mouth": "t + sh as one affricate",
+    "trap": "—",
+    "t": 0
+  },
+  "dʒ": {
+    "lab": "j (judge)",
+    "ex": "judge /dʒʌdʒ/",
+    "mouth": "d + zh as one affricate",
+    "trap": "—",
+    "t": 0
+  },
+  "ŋ": {
+    "lab": "ng (sing)",
+    "ex": "sing /sɪŋ/",
+    "mouth": "Back of tongue up; air through nose; no final g",
+    "trap": "Do not add a hard \"g\"",
+    "t": 1
+  },
+  "r": {
+    "lab": "r (right)",
+    "ex": "right /raɪt/",
+    "mouth": "Tongue bunched/curled back without touching",
+    "trap": "Not l — no contact anywhere",
+    "t": 1
+  },
+  "l": {
+    "lab": "l (light)",
+    "ex": "light /laɪt/",
+    "mouth": "Tongue tip firmly on the alveolar ridge",
+    "trap": "Not r — must make contact",
+    "t": 1
+  },
+  "v": {
+    "lab": "v (van)",
+    "ex": "van /væn/",
+    "mouth": "Top teeth on lower lip with voice",
+    "trap": "Not \"b\" — use teeth on lip",
+    "t": 1
+  },
+  "f": {
+    "lab": "f (fan)",
+    "ex": "fan /fæn/",
+    "mouth": "Top teeth on lower lip with air",
+    "trap": "Not both lips together",
+    "t": 1
+  },
+  "w": {
+    "lab": "w (we)",
+    "ex": "we /wi/",
+    "mouth": "Rounded lips; semivowel onset",
+    "trap": "—",
+    "t": 0
+  },
+  "j": {
+    "lab": "y (yes)",
+    "ex": "yes /jɛs/",
+    "mouth": "Palatal semivowel like \"y\"",
+    "trap": "ju is not plain \"oo\"",
+    "t": 0
+  },
+  "h": {
+    "lab": "h (hat)",
+    "ex": "hat /hæt/",
+    "mouth": "Light breath from the throat",
+    "trap": "—",
+    "t": 0
+  },
+  "b": {
+    "lab": "b",
+    "ex": "bat",
+    "mouth": "Bilabial stop, voiced",
+    "trap": "—",
+    "t": 0
+  },
+  "d": {
+    "lab": "d",
+    "ex": "dog",
+    "mouth": "Alveolar stop, voiced",
+    "trap": "—",
+    "t": 0
+  },
+  "ɡ": {
+    "lab": "g",
+    "ex": "go",
+    "mouth": "Velar stop, voiced",
+    "trap": "—",
+    "t": 0
+  },
+  "k": {
+    "lab": "k",
+    "ex": "cat",
+    "mouth": "Velar stop, voiceless",
+    "trap": "—",
+    "t": 0
+  },
+  "p": {
+    "lab": "p",
+    "ex": "pen",
+    "mouth": "Bilabial stop, voiceless",
+    "trap": "—",
+    "t": 0
+  },
+  "t": {
+    "lab": "t",
+    "ex": "top",
+    "mouth": "Alveolar stop, voiceless",
+    "trap": "—",
+    "t": 0
+  },
+  "m": {
+    "lab": "m",
+    "ex": "man",
+    "mouth": "Bilabial nasal",
+    "trap": "—",
+    "t": 0
+  },
+  "n": {
+    "lab": "n",
+    "ex": "no",
+    "mouth": "Alveolar nasal",
+    "trap": "—",
+    "t": 0
+  },
+  "s": {
+    "lab": "s",
+    "ex": "see",
+    "mouth": "Tongue near teeth; air stream",
+    "trap": "Do not confuse with θ",
+    "t": 1
+  },
+  "z": {
+    "lab": "z",
+    "ex": "zoo",
+    "mouth": "Voiced s",
+    "trap": "—",
+    "t": 0
+  }
+}
