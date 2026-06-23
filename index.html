@@ -219,7 +219,7 @@
       <button class="hint" data-h="pos">Part of speech<span class="hv" id="hPos">?</span></button>
     </div>
     <div class="answer">
-      <input id="dInput" type="text" inputmode="latin" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" placeholder="Type the word">
+      <input id="dInput" type="text" lang="en" inputmode="latin" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" pattern="[A-Za-z]*" placeholder="Type the word">
       <button class="go" id="dCheck">Check</button>
     </div>
   </section>
@@ -565,6 +565,14 @@ function decodeCheck(){
   reveal(res,{type:"decode",tryRaw:t});
 }
 $("dCheck").addEventListener("click",decodeCheck);
+$("dInput").addEventListener("beforeinput",e=>{
+  if(e.inputType.startsWith("delete"))return;
+  if(e.data&&!/^[A-Za-z]*$/.test(e.data))e.preventDefault();
+});
+$("dInput").addEventListener("input",e=>{
+  const el=e.target,cleaned=el.value.replace(/[^A-Za-z]/g,"");
+  if(cleaned!==el.value){const pos=el.selectionStart;el.value=cleaned;el.setSelectionRange(Math.min(pos,cleaned.length),Math.min(pos,cleaned.length));}
+});
 $("dInput").addEventListener("keydown",e=>{if(e.key==="Enter")decodeCheck();});
 $("dPlay").addEventListener("click",()=>{if(S.cur)speak(S.cur.w);});
 
