@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>IPA Dictation · Decoder / Encoder</title>
+<title>IPA Dictation</title>
 <style>
   :root{
     --paper:#F4F3EE; --panel:#FFFFFF; --ink:#191C20; --muted:#6C717A; --faint:#9AA0A8;
@@ -17,16 +17,20 @@
   *{box-sizing:border-box}
   html,body{margin:0;padding:0}
   body{background:var(--paper);color:var(--ink);font-family:var(--ui);-webkit-font-smoothing:antialiased;line-height:1.5;min-height:100vh}
+  body.scroll-locked{position:fixed;left:0;right:0;width:100%;overflow:hidden}
   .wrap{max-width:600px;margin:0 auto;padding:20px 18px 72px}
-  .topbar{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:20px}
-  .brand{display:flex;align-items:baseline;gap:10px}
-  .brand .mark{font-family:var(--ipa);font-size:24px;color:var(--signal);letter-spacing:.5px}
-  .brand .name{font-weight:700;font-size:15px;letter-spacing:.04em}
-  .brand .sub{font-family:var(--mono);font-size:10px;color:var(--faint);text-transform:uppercase;letter-spacing:.14em}
-  .meter{font-family:var(--mono);font-size:11px;color:var(--muted);text-align:right;letter-spacing:.04em}
+  .topbar{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:20px}
+  .brand{display:flex;align-items:center;gap:8px;min-width:0;flex:1}
+  .brand .mark{font-family:var(--ipa);font-size:24px;color:var(--signal);letter-spacing:.5px;flex-shrink:0}
+  .brand .name{font-weight:700;font-size:15px;letter-spacing:.04em;white-space:nowrap}
+  .brand .sub{font-family:var(--mono);font-size:10px;color:var(--faint);text-transform:uppercase;letter-spacing:.14em;white-space:nowrap}
+  .meter{font-family:var(--mono);font-size:11px;color:var(--muted);text-align:right;letter-spacing:.04em;white-space:nowrap}
   .meter b{color:var(--ink);font-weight:700}
-  .topbar-actions{display:flex;flex-direction:column;align-items:flex-end;gap:6px}
-  .backtop{border:1px solid var(--hair);background:#fff;border-radius:999px;padding:5px 12px;cursor:pointer;font-family:var(--mono);font-size:10px;font-weight:600;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+  .topbar-actions{display:flex;flex-direction:column;align-items:flex-end;gap:6px;flex-shrink:0}
+  .langpick{display:flex;gap:4px}
+  .langpick button{border:1px solid var(--hair);background:#fff;border-radius:6px;padding:3px 8px;font-family:var(--mono);font-size:9px;font-weight:700;cursor:pointer;color:var(--muted)}
+  .langpick button[aria-pressed="true"]{border-color:var(--signal);color:var(--signal);background:var(--signal-soft)}
+  .backtop{border:1px solid var(--hair);background:#fff;border-radius:999px;padding:5px 10px;cursor:pointer;font-family:var(--mono);font-size:10px;font-weight:600;color:var(--muted);letter-spacing:.04em;text-transform:uppercase;white-space:nowrap}
   .backtop:hover{border-color:var(--signal);color:var(--signal)}
   .panel{background:var(--panel);border:1px solid var(--hair);border-radius:14px;padding:24px 20px}
   .panel + .panel{margin-top:14px}
@@ -72,13 +76,9 @@
   .info .irow{font-size:12.5px;color:var(--ink);margin-top:4px}
   .info .irow span{color:var(--muted);font-weight:600;margin-right:6px}
 
-  .hints{display:flex;gap:8px;margin:16px 0 14px;flex-wrap:wrap}
-  .hint{flex:1 1 auto;border:1px solid var(--hair);background:#fff;border-radius:9px;padding:9px;cursor:pointer;font-family:var(--ui);font-size:12px;color:var(--muted);transition:border-color .15s,color .15s}
-  .hint:hover{border-color:var(--signal);color:var(--signal)}
-  .hint:disabled{opacity:.5;cursor:default}
-  .hint .hv{display:block;color:var(--ink);font-weight:700;font-size:13px;margin-top:3px}
+  .hints{display:none}
 
-  .answer{display:flex;gap:8px;margin-top:6px}
+  .answer{display:flex;gap:8px;margin-top:10px}
   .answer input{flex:1;border:1.5px solid var(--hair);border-radius:10px;padding:13px 14px;font-size:17px;font-family:var(--ui);color:var(--ink);background:#fff}
   .answer input:focus{outline:none;border-color:var(--signal)}
   .answer .go{border:none;background:var(--signal);color:#fff;border-radius:10px;padding:0 18px;font-weight:700;cursor:pointer;font-size:14px}
@@ -111,6 +111,8 @@
   #reveal.res-near{border-color:var(--stress);background:linear-gradient(180deg,var(--stress-soft) 0%,var(--panel) 28%)}
   #reveal.res-bad{border-color:var(--bad);background:linear-gradient(180deg,var(--bad-soft) 0%,var(--panel) 28%)}
   .word{font-size:38px;font-weight:700;letter-spacing:-.01em;margin:2px 0 4px}
+  .word-gloss{font-size:15px;color:var(--muted);margin:0 0 10px;font-weight:500}
+  .word-gloss.hidden{display:none}
   #reveal.res-ok .word{color:var(--ok)}
   #reveal.res-near .word{color:var(--stress)}
   #reveal.res-bad .word{color:var(--bad)}
@@ -146,6 +148,21 @@
   .sumbtns .again{border:none;background:var(--ink);color:#fff} .sumbtns .weak{border:1px solid var(--signal);background:#fff;color:var(--signal)}
   .sumbtns button:disabled{opacity:.4;cursor:default}
   .hidden{display:none}
+  body.in-play .wrap{padding:12px 14px 20px}
+  body.in-play .topbar{margin-bottom:8px}
+  body.in-play .panel{padding:14px 16px}
+  body.in-play .card-top{margin-bottom:6px}
+  body.in-play .readout{padding:2px 4px 0}
+  body.in-play .readout .ipa{font-size:clamp(28px,7.5vw,44px)}
+  body.in-play .playicon{width:38px;height:38px;margin-top:6px}
+  @media (max-width:520px){
+    .brand .mark{font-size:17px}
+    .brand .name{font-size:12px;letter-spacing:.02em}
+    .brand .sub{font-size:8.5px;letter-spacing:.1em}
+    body.in-play .topbar-actions{flex-direction:row;align-items:center;gap:6px}
+    .backtop{padding:4px 8px;font-size:9px}
+    .meter{font-size:10px}
+  }
   @media (prefers-reduced-motion:no-preference){.panel{animation:rise .26s ease}@keyframes rise{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}}
 </style>
 </head>
@@ -153,52 +170,58 @@
 <div class="wrap">
   <div class="topbar">
     <div class="brand"><span class="mark">/iː/</span>
-      <div><div class="name">IPA Dictation · Decoder / Encoder</div><div class="sub">CEFR A1–A2 · General American</div></div>
+      <div><div class="name" id="brandName">IPA Dictation</div><div class="sub" id="brandSub">A1–A2 · GA</div></div>
     </div>
     <div class="topbar-actions">
-      <button class="backtop hidden" id="backTopBtn" type="button">Back to TOP</button>
+      <div class="langpick" id="langPick">
+        <button type="button" data-lang="en" aria-pressed="true">EN</button>
+        <button type="button" data-lang="ja" aria-pressed="false">JA</button>
+        <button type="button" data-lang="zh" aria-pressed="false">ZH</button>
+        <button type="button" data-lang="ko" aria-pressed="false">KO</button>
+      </div>
+      <button class="backtop hidden" id="backTopBtn" type="button">Menu</button>
       <div class="meter" id="meter"></div>
     </div>
   </div>
 
   <!-- SETUP -->
   <section id="setup" class="panel">
-    <p class="lead">Retrain <b>pronunciation only</b> for words you already know. Bridge the gap: <b>if you can&rsquo;t say a sound, you can&rsquo;t hear it</b>. Practice with <b>everyday words</b> plus <b>regular spelling&ndash;sound patterns</b> (e.g. ai &rarr; /eɪ/) to build IPA reading skills.</p>
+    <p class="lead" id="lead">Retrain <b>pronunciation only</b> for words you already know. Bridge the gap: <b>if you can&rsquo;t say a sound, you can&rsquo;t hear it</b>. Practice with <b>everyday words</b> plus <b>regular spelling&ndash;sound patterns</b> (e.g. ai &rarr; /eɪ/) to build IPA reading skills.</p>
 
     <div class="field">
-      <div class="flabel">Direction</div>
+      <div class="flabel" id="flabelDir">Direction</div>
       <div class="opts" id="dirOpts">
-        <button class="opt" data-dir="decode" aria-pressed="true"><span class="ot">Decode · IPA &rarr; word</span><span class="od">Read the IPA and spell the word</span></button>
-        <button class="opt" data-dir="encode" aria-pressed="false"><span class="ot">Encode · word &rarr; IPA</span><span class="od">Build the pronunciation with the IPA keyboard</span></button>
+        <button class="opt" data-dir="decode" aria-pressed="true"><span class="ot" id="dirDecodeT">Decode · IPA &rarr; word</span><span class="od" id="dirDecodeD">Read the IPA and spell the word</span></button>
+        <button class="opt" data-dir="encode" aria-pressed="false"><span class="ot" id="dirEncodeT">Encode · word &rarr; IPA</span><span class="od" id="dirEncodeD">Build the pronunciation with the IPA keyboard</span></button>
       </div>
     </div>
 
     <div class="field">
-      <div class="flabel">Question set</div>
+      <div class="flabel" id="flabelSet">Question set</div>
       <div class="opts" id="setOpts">
-        <button class="opt" data-set="daily" aria-pressed="true"><span class="ot">Daily words · CEFR A1–A2</span><span class="od">Common words (including irregular spellings)</span></button>
-        <button class="opt" data-set="phonics" aria-pressed="false"><span class="ot">Phonics patterns · spelling &harr; sound</span><span class="od">Words with regular spelling&ndash;sound correspondences</span></button>
+        <button class="opt" data-set="daily" aria-pressed="true"><span class="ot" id="setDailyT">Daily words · CEFR A1–A2</span><span class="od" id="setDailyD">Common words (including irregular spellings)</span></button>
+        <button class="opt" data-set="phonics" aria-pressed="false"><span class="ot" id="setPhonicsT">Phonics patterns · spelling &harr; sound</span><span class="od" id="setPhonicsD">Words with regular spelling&ndash;sound correspondences</span></button>
       </div>
     </div>
 
     <div class="field" id="lvlField">
-      <div class="flabel">Level</div>
+      <div class="flabel" id="flabelLvl">Level</div>
       <div class="pills" id="lvlPills">
-        <button class="pill" data-lvl="A1A2" aria-pressed="true">A1+A2</button>
-        <button class="pill" data-lvl="A1" aria-pressed="false">A1 only</button>
-        <button class="pill" data-lvl="A2" aria-pressed="false">A2 only</button>
+        <button class="pill" data-lvl="A1A2" aria-pressed="true" id="lvlAll">A1+A2</button>
+        <button class="pill" data-lvl="A1" aria-pressed="false" id="lvlA1">A1 only</button>
+        <button class="pill" data-lvl="A2" aria-pressed="false" id="lvlA2">A2 only</button>
       </div>
       <div class="countnote" id="lvlPoolNote"></div>
     </div>
 
     <div class="field hidden" id="grpField">
-      <div class="flabel">Spelling pattern group</div>
+      <div class="flabel" id="flabelGrp">Spelling pattern group</div>
       <div class="pills" id="grpPills">
-        <button class="pill" data-grp="all" aria-pressed="true">All</button>
-        <button class="pill" data-grp="short" aria-pressed="false">Short vowels</button>
-        <button class="pill" data-grp="long" aria-pressed="false">Long vowels · silent e</button>
-        <button class="pill" data-grp="team" aria-pressed="false">Vowel teams</button>
-        <button class="pill" data-grp="r" aria-pressed="false">R-colored vowels</button>
+        <button class="pill" data-grp="all" aria-pressed="true" id="grpAll">All</button>
+        <button class="pill" data-grp="short" aria-pressed="false" id="grpShort">Short vowels</button>
+        <button class="pill" data-grp="long" aria-pressed="false" id="grpLong">Long vowels · silent e</button>
+        <button class="pill" data-grp="team" aria-pressed="false" id="grpTeam">Vowel teams</button>
+        <button class="pill" data-grp="r" aria-pressed="false" id="grpR">R-colored vowels</button>
       </div>
       <div class="countnote" id="grpPoolNote"></div>
     </div>
@@ -213,11 +236,6 @@
       <button class="playicon" id="dPlay" type="button" aria-label="Listen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button>
     </div>
     <div class="info" id="dInfo"></div>
-    <div class="hints" id="dHints">
-      <button class="hint" data-h="syl">Syllables<span class="hv" id="hSyl">?</span></button>
-      <button class="hint" data-h="first">First letter<span class="hv" id="hFirst">?</span></button>
-      <button class="hint" data-h="pos">Part of speech<span class="hv" id="hPos">?</span></button>
-    </div>
     <div class="answer">
       <input id="dInput" type="text" lang="en" inputmode="latin" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" pattern="[A-Za-z]*" placeholder="Type the word">
       <button class="go" id="dCheck">Check</button>
@@ -242,13 +260,14 @@
   <section id="reveal" class="panel hidden">
     <div class="reveal">
       <div class="word" id="rWord"></div>
+      <div class="word-gloss hidden" id="rGloss"></div>
       <div class="yourtry" id="rTry"></div>
       <div class="readout" style="padding-top:0"><div class="ipa" id="rIpa"></div>
         <button class="playicon" id="rPlay" type="button" aria-label="Listen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button>
       </div>
       <div class="info" id="rInfo"></div>
       <div class="note">
-        <div class="nh">Pronunciation tips</div>
+        <div class="nh" id="tipsHead">Pronunciation tips</div>
         <p id="rNote"></p>
         <div class="trapchips" id="rTraps"></div>
       </div>
@@ -259,7 +278,7 @@
   <!-- SUMMARY -->
   <section id="summary" class="panel hidden">
     <div class="sumhead"><div class="bigstat"><span id="sumPct">0</span><small>%</small></div><div class="substat" id="sumLine"></div></div>
-    <div id="weakWrap"><div class="weakhead">Sounds to practice next</div><div id="weakList"></div></div>
+    <div id="weakWrap"><div class="weakhead" id="weakHead">Sounds to practice next</div><div id="weakList"></div></div>
     <div class="reviewlist" id="reviewList"></div>
     <div class="sumbtns"><button class="again" id="againBtn">Play again</button><button class="weak" id="weakBtn">Review misses only</button></div>
   </section>
@@ -275,6 +294,7 @@ function normalizeWord(row) {
   const w = { w: row.w, ipa: row.ipa, cefr: row.cefr, pos: row.pos };
   if (row.pattern) w.pat = row.pattern;
   if (row.group) w.grp = row.group;
+  if (row.gloss) w.gloss = row.gloss;
   return w;
 }
 
@@ -285,64 +305,113 @@ async function loadWordlist() {
   PRESET = rows.map(normalizeWord);
   wordlistReady = true;
   $("startBtn").disabled = false;
-  $("startBtn").textContent = "Start";
+  $("startBtn").textContent = t("start");
   updatePool();
 }
 
-loadWordlist().catch(err => {
-  $("lvlPoolNote").textContent = "Failed to load word list";
-  $("grpPoolNote").textContent = "Failed to load word list";
-  $("startBtn").textContent = "Load failed";
-  console.error(err);
-});
+/* ---------- i18n ---------- */
+let LANG = localStorage.getItem("app_lang") || "en";
+let UI = {};
+let PH = {};
 
+function t(path, vars) {
+  let v = path.split(".").reduce((o, k) => (o && o[k] != null ? o[k] : null), UI);
+  if (v == null) return path;
+  if (vars) Object.entries(vars).forEach(([k, val]) => { v = String(v).replace(new RegExp("\\{" + k + "\\}", "g"), val); });
+  return v;
+}
 
-/* ---------- GA phoneme reference ---------- */
-const PH = {
-  "ˈ":{lab:"Primary stress",ex:"stress the next syllable",mouth:"Higher, longer, and louder together",trap:"Pitch alone is not enough — use length and volume too",t:1},
-  "ˌ":{lab:"Secondary stress",ex:"lighter stress",mouth:"Stronger than unstressed, weaker than primary",trap:"Do not reduce it completely",t:1},
-  "i":{lab:"long ee (see)",ex:"see /si/",mouth:"Tense lips spread wide for a long \"ee\"",trap:"Contrasts with ɪ — do not relax it",t:1},
-  "ɪ":{lab:"short i (sit)",ex:"sit /sɪt/",mouth:"Relaxed, short, slightly lax \"ih\" toward \"eh\"",trap:"Do not tense it like i",t:1},
-  "ɛ":{lab:"eh (bed)",ex:"bed /bɛd/",mouth:"Open mid front vowel like \"eh\"",trap:"Keep it distinct from æ",t:0},
-  "æ":{lab:"a~eh (cat)",ex:"cat /kæt/",mouth:"Mouth wide; between \"ah\" and \"eh\"",trap:"Not a plain \"ah\" — spread and front it",t:1},
-  "ə":{lab:"schwa",ex:"about /əˈbaʊt/",mouth:"Central, weak, relaxed vowel",trap:"Ignore spelling — keep it vague and unstressed",t:1},
-  "ʌ":{lab:"uh (cup)",ex:"cup /kʌp/",mouth:"Short, open central \"uh\"",trap:"Clearer and stronger than schwa",t:1},
-  "ɑ":{lab:"ah (hot/father)",ex:"hot /hɑt/",mouth:"Low back open \"ah\"",trap:"Deep in the mouth, not a bright front \"ah\"",t:1},
-  "ɔ":{lab:"aw (dog/thought)",ex:"dog /dɔɡ/",mouth:"Rounded \"aw\"",trap:"In GA it may merge with ɑ — still round the lips",t:1},
-  "ʊ":{lab:"short u (book)",ex:"book /bʊk/",mouth:"Relaxed short \"u\"; lips lightly rounded",trap:"Distinct from u — do not protrude too much",t:1},
-  "u":{lab:"long oo (food)",ex:"food /fud/",mouth:"Rounded protruded \"oo\"",trap:"Round the lips more than many learners expect",t:1},
-  "ɝ":{lab:"stressed er (bird)",ex:"bird /bɝd/",mouth:"Tongue bunched back with strong r-color",trap:"No exact L1 equivalent — er/ir/ur often map here",t:1},
-  "ɚ":{lab:"unstressed er (water)",ex:"water /ˈwɔtɚ/",mouth:"Weaker r-colored schwa",trap:"Word-final -er/-or is usually this",t:1},
-  "eɪ":{lab:"ay (day)",ex:"day /deɪ/",mouth:"Glide from \"eh\" to \"ee\"",trap:"Do not hold a flat \"ay\"",t:0},
-  "aɪ":{lab:"eye (my)",ex:"my /maɪ/",mouth:"Glide from \"ah\" to \"ee\"",trap:"Keep it one diphthong",t:0},
-  "ɔɪ":{lab:"oy (boy)",ex:"boy /bɔɪ/",mouth:"Glide from \"aw\" to \"ee\"",trap:"—",t:0},
-  "oʊ":{lab:"oh (go)",ex:"go /ɡoʊ/",mouth:"Glide from \"oh\" to \"oo\"; round at the end",trap:"Not a flat long \"oh\" — keep the glide",t:1},
-  "aʊ":{lab:"ow (now)",ex:"now /naʊ/",mouth:"Glide from \"ah\" to \"oo\"",trap:"Round the second part",t:0},
-  "θ":{lab:"voiceless th (think)",ex:"think /θɪŋk/",mouth:"Tongue tip lightly between teeth; air only",trap:"Not \"s\" — show the tongue",t:1},
-  "ð":{lab:"voiced th (this)",ex:"this /ðɪs/",mouth:"Same as θ with voice",trap:"Not \"z\" or \"d\"",t:1},
-  "ʃ":{lab:"sh (she)",ex:"she /ʃi/",mouth:"Lips rounded; tongue pulled back",trap:"Farther back than many \"sh\" habits",t:0},
-  "ʒ":{lab:"zh (measure)",ex:"measure /ˈmɛʒɚ/",mouth:"Voiced version of sh",trap:"Rare in many L1s; common medially/finally",t:1},
-  "tʃ":{lab:"ch (church)",ex:"church /tʃɝtʃ/",mouth:"t + sh as one affricate",trap:"—",t:0},
-  "dʒ":{lab:"j (judge)",ex:"judge /dʒʌdʒ/",mouth:"d + zh as one affricate",trap:"—",t:0},
-  "ŋ":{lab:"ng (sing)",ex:"sing /sɪŋ/",mouth:"Back of tongue up; air through nose; no final g",trap:"Do not add a hard \"g\"",t:1},
-  "r":{lab:"r (right)",ex:"right /raɪt/",mouth:"Tongue bunched/curled back without touching",trap:"Not l — no contact anywhere",t:1},
-  "l":{lab:"l (light)",ex:"light /laɪt/",mouth:"Tongue tip firmly on the alveolar ridge",trap:"Not r — must make contact",t:1},
-  "v":{lab:"v (van)",ex:"van /væn/",mouth:"Top teeth on lower lip with voice",trap:"Not \"b\" — use teeth on lip",t:1},
-  "f":{lab:"f (fan)",ex:"fan /fæn/",mouth:"Top teeth on lower lip with air",trap:"Not both lips together",t:1},
-  "w":{lab:"w (we)",ex:"we /wi/",mouth:"Rounded lips; semivowel onset",trap:"—",t:0},
-  "j":{lab:"y (yes)",ex:"yes /jɛs/",mouth:"Palatal semivowel like \"y\"",trap:"ju is not plain \"oo\"",t:0},
-  "h":{lab:"h (hat)",ex:"hat /hæt/",mouth:"Light breath from the throat",trap:"—",t:0},
-  "b":{lab:"b",ex:"bat",mouth:"Bilabial stop, voiced",trap:"—",t:0},
-  "d":{lab:"d",ex:"dog",mouth:"Alveolar stop, voiced",trap:"—",t:0},
-  "ɡ":{lab:"g",ex:"go",mouth:"Velar stop, voiced",trap:"—",t:0},
-  "k":{lab:"k",ex:"cat",mouth:"Velar stop, voiceless",trap:"—",t:0},
-  "p":{lab:"p",ex:"pen",mouth:"Bilabial stop, voiceless",trap:"—",t:0},
-  "t":{lab:"t",ex:"top",mouth:"Alveolar stop, voiceless",trap:"—",t:0},
-  "m":{lab:"m",ex:"man",mouth:"Bilabial nasal",trap:"—",t:0},
-  "n":{lab:"n",ex:"no",mouth:"Alveolar nasal",trap:"—",t:0},
-  "s":{lab:"s",ex:"see",mouth:"Tongue near teeth; air stream",trap:"Do not confuse with θ",t:1},
-  "z":{lab:"z",ex:"zoo",mouth:"Voiced s",trap:"—",t:0}
-};
+async function loadLocale(lang) {
+  const uiRes = await fetch("i18n/" + lang + ".json");
+  if (!uiRes.ok) throw new Error("locale load failed: " + lang);
+  UI = await uiRes.json();
+  const phRes = await fetch("i18n/phonemes/" + lang + ".json");
+  if (phRes.ok) PH = await phRes.json();
+  else PH = await (await fetch("i18n/phonemes/en.json")).json();
+  document.documentElement.lang = lang === "zh" ? "zh-Hans" : lang;
+}
+
+function localizePattern(pat) {
+  if (!pat) return "";
+  const magic = "(" + t("patterns.magic_e") + ")";
+  return pat.replace(/\(マジックe\)/g, magic).replace(/\(silent e\)/gi, magic).replace(/\(magic e\)/gi, magic);
+}
+
+function wordGloss(c) {
+  if (!c || !c.gloss || LANG === "en") return "";
+  return c.gloss[LANG] || "";
+}
+
+function posLabel(pos) { return (UI.pos && UI.pos[pos]) || pos || "—"; }
+
+function applyI18n() {
+  $("lead").innerHTML = t("lead_html");
+  $("flabelDir").textContent = t("dir.label");
+  $("dirDecodeT").innerHTML = t("dir.decode_t");
+  $("dirDecodeD").textContent = t("dir.decode_d");
+  $("dirEncodeT").innerHTML = t("dir.encode_t");
+  $("dirEncodeD").textContent = t("dir.encode_d");
+  $("flabelSet").textContent = t("set.label");
+  $("setDailyT").textContent = t("set.daily_t");
+  $("setDailyD").textContent = t("set.daily_d");
+  $("setPhonicsT").innerHTML = t("set.phonics_t");
+  $("setPhonicsD").textContent = t("set.phonics_d");
+  $("flabelLvl").textContent = t("lvl.label");
+  $("lvlAll").textContent = t("lvl.all");
+  $("lvlA1").textContent = t("lvl.a1");
+  $("lvlA2").textContent = t("lvl.a2");
+  $("flabelGrp").textContent = t("grp.label");
+  $("grpAll").textContent = t("grp.all");
+  $("grpShort").textContent = t("grp.short");
+  $("grpLong").textContent = t("grp.long");
+  $("grpTeam").textContent = t("grp.team");
+  $("grpR").textContent = t("grp.r");
+  if (wordlistReady) $("startBtn").textContent = t("start");
+  else $("startBtn").textContent = t("loading");
+  $("dInput").placeholder = t("input_ph");
+  $("dCheck").textContent = t("check");
+  $("eClear").textContent = t("clear");
+  $("eCheck").textContent = t("check");
+  $("nextBtn").textContent = t("next");
+  $("tipsHead").textContent = t("tips_head");
+  $("weakHead").textContent = t("summary.weak_head");
+  $("againBtn").textContent = t("summary.again");
+  $("weakBtn").textContent = t("summary.weak_btn");
+  ["dPlay", "ePlay", "rPlay"].forEach(id => { const b = $(id); if (b) b.setAttribute("aria-label", t("listen")); });
+  $("langPick").querySelectorAll("button").forEach(b => b.setAttribute("aria-pressed", b.dataset.lang === LANG ? "true" : "false"));
+  updatePool();
+  if (!S.built.length && $("eBuild")) renderBuild();
+}
+
+async function setLang(lang) {
+  LANG = lang;
+  localStorage.setItem("app_lang", lang);
+  await loadLocale(lang);
+  applyI18n();
+  buildKeyboard();
+  if (S.cur && !$("reveal").classList.contains("hidden")) {
+    const g = wordGloss(S.cur);
+    $("rGloss").textContent = g;
+    $("rGloss").classList.toggle("hidden", !g);
+    $("rNote").textContent = autoNote(S.cur);
+  }
+  if (!$("summary").classList.contains("hidden")) renderSummary();
+}
+
+$("langPick").querySelectorAll("button").forEach(b => b.addEventListener("click", () => setLang(b.dataset.lang)));
+
+async function initApp() {
+  await loadLocale(LANG);
+  applyI18n();
+  buildKeyboard();
+  loadWordlist().catch(err => {
+    $("lvlPoolNote").textContent = t("wordlist_fail");
+    $("grpPoolNote").textContent = t("wordlist_fail");
+    $("startBtn").textContent = t("load_fail");
+    console.error(err);
+  });
+}
+initApp();
 const MULTI=["tʃ","dʒ","eɪ","aɪ","ɔɪ","oʊ","aʊ"];
 const VOWELS=new Set(["i","ɪ","ɛ","æ","ə","ʌ","ɑ","ɔ","ʊ","u","ɝ","ɚ","eɪ","aɪ","ɔɪ","oʊ","aʊ"]);
 
@@ -359,12 +428,7 @@ function stressSyllable(ipa){const tk=tokenize(ipa);let n=0;for(let k=0;k<tk.len
 /* ---------- state ---------- */
 const TRAPSET=new Set(["θ","ð","æ","ʒ","ɝ"]);
 const QUESTION_COUNT = 10;
-const POS_EN={
-  "限定詞":"determiner","名詞":"noun","動詞":"verb","形容詞":"adjective","副詞":"adverb",
-  "前置詞":"preposition","接続詞":"conjunction","代名詞":"pronoun","間投詞":"interjection",
-  "副詞 / 前置詞":"adverb / preposition","形容詞 / 副詞":"adjective / adverb"
-};
-function posEn(pos){if(!pos)return "—";return POS_EN[pos]||pos.replace(/名詞/g,"noun").replace(/動詞/g,"verb").replace(/形容詞/g,"adjective").replace(/副詞/g,"adverb").replace(/前置詞/g,"preposition").replace(/限定詞/g,"determiner");}
+function sylLabel(n){return n===1?t("syl",{n}):t("syl_pl",{n});}
 let S={dir:"decode",set:"daily",lvl:"A1A2",grp:"all",queue:[],idx:0,correct:0,weak:{},missed:[],cur:null,revealed:false,built:[]};
 const $=id=>document.getElementById(id);
 const show=(id,on)=>$(id).classList.toggle("hidden",!on);
@@ -376,9 +440,12 @@ function setSetupVisible(on){
   show("reveal",false);
   show("summary",false);
   $("backTopBtn").classList.toggle("hidden",on);
+  $("langPick").classList.toggle("hidden",!on);
+  document.body.classList.toggle("in-play",!on);
   if(on){
     if(currentAudio){currentAudio.pause();currentAudio=null;}
     $("meter").textContent="";
+    unlockInputScroll();
   }
 }
 function goToTop(){setSetupVisible(true);}
@@ -407,11 +474,10 @@ function filteredPool(){
 }
 function updatePool(){
   const n=filteredPool().length;
-  const text="Pool: "+n+" words";
+  const text=t("lvl.pool",{n});
   $("lvlPoolNote").textContent=text;
   $("grpPoolNote").textContent=text;
 }
-updatePool();
 
 
 /* ---------- speech (GAS → Drive → localStorage) ---------- */
@@ -508,7 +574,7 @@ function startSession(weakOnly){
   shuffle(pool);
   pool=pool.slice(0,QUESTION_COUNT);
   S.queue=pool;S.idx=0;S.correct=0;S.weak={};S.missed=[];
-  show("setup",false);show("summary",false);$("backTopBtn").classList.remove("hidden");renderCard();
+  setSetupVisible(false);renderCard();
 }
 $("startBtn").addEventListener("click",()=>startSession(false));
 $("againBtn").addEventListener("click",()=>startSession(false));
@@ -517,7 +583,7 @@ $("weakBtn").addEventListener("click",()=>startSession(true));
 /* ---------- info rendering ---------- */
 function renderInfo(boxId,sym){const p=PH[sym];const box=$(boxId);if(!p){box.classList.remove("on");return;}
   box.innerHTML='<div class="ih"><span class="isym">'+sym+'</span><span class="ilab">'+p.lab+'</span><span class="iex">'+p.ex+'</span></div>'+
-    '<div class="irow"><span>Mouth</span>'+p.mouth+'</div>'+(p.trap&&p.trap!=="—"?'<div class="irow"><span>Watch out</span>'+p.trap+'</div>':'');
+    '<div class="irow"><span>'+t("info.mouth")+'</span>'+p.mouth+'</div>'+(p.trap&&p.trap!=="—"?'<div class="irow"><span>'+t("info.watch")+'</span>'+p.trap+'</div>':'');
   box.classList.add("on");
 }
 function renderIpaInto(container,ipa,infoBoxId,markTokens){
@@ -543,20 +609,26 @@ function renderCard(){
   if(S.dir==="decode")renderDecode(c);else renderEncode(c);
 }
 /* DECODE */
-let usedHints=0;
+const COARSE=matchMedia("(pointer:coarse)").matches;
+let inputScrollY=0;
+function lockInputScroll(){
+  inputScrollY=window.scrollY;
+  document.body.classList.add("scroll-locked");
+  document.body.style.top=`-${inputScrollY}px`;
+}
+function unlockInputScroll(){
+  if(!document.body.classList.contains("scroll-locked"))return;
+  document.body.classList.remove("scroll-locked");
+  document.body.style.top="";
+  window.scrollTo(0,inputScrollY);
+}
 function renderDecode(c){
   show("cardEncode",false);show("cardDecode",true);
   $("dNo").textContent="#"+String(S.idx+1).padStart(2,"0");
   renderIpaInto($("dIpa"),c.ipa,"dInfo",null);$("dInfo").classList.remove("on");
-  $("hSyl").textContent="?";$("hFirst").textContent="?";$("hPos").textContent="?";
-  $("dHints").querySelectorAll(".hint").forEach(h=>h.disabled=false);
-  const inp=$("dInput");inp.value="";inp.focus();
+  const inp=$("dInput");inp.value="";
+  if(!COARSE)inp.focus({preventScroll:true});
 }
-$("dHints").querySelectorAll(".hint").forEach(h=>h.addEventListener("click",()=>{
-  const c=S.cur;if(h.dataset.h==="syl")$("hSyl").textContent=syllableCount(c.ipa)+" syllable"+(syllableCount(c.ipa)>1?"s":"");
-  if(h.dataset.h==="first")$("hFirst").textContent=c.w[0].toUpperCase()+"…";
-  if(h.dataset.h==="pos")$("hPos").textContent=posEn(c.pos);h.disabled=true;
-}));
 function norm(s){return s.toLowerCase().replace(/[^a-z]/g,"");}
 function lev(a,b){const m=a.length,n=b.length,d=Array.from({length:m+1},(_,i)=>[i,...Array(n).fill(0)]);for(let j=0;j<=n;j++)d[0][j]=j;for(let i=1;i<=m;i++)for(let j=1;j<=n;j++)d[i][j]=Math.min(d[i-1][j]+1,d[i][j-1]+1,d[i-1][j-1]+(a[i-1]===b[j-1]?0:1));return d[m][n];}
 function decodeCheck(){
@@ -565,6 +637,11 @@ function decodeCheck(){
   reveal(res,{type:"decode",tryRaw:t});
 }
 $("dCheck").addEventListener("click",decodeCheck);
+$("dInput").addEventListener("focus",()=>{
+  lockInputScroll();
+  requestAnimationFrame(()=>window.scrollTo(0,inputScrollY));
+});
+$("dInput").addEventListener("blur",unlockInputScroll);
 $("dInput").addEventListener("beforeinput",e=>{
   if(e.inputType.startsWith("delete"))return;
   if(e.data&&!/^[A-Za-z]*$/.test(e.data))e.preventDefault();
@@ -577,16 +654,18 @@ $("dInput").addEventListener("keydown",e=>{if(e.key==="Enter")decodeCheck();});
 $("dPlay").addEventListener("click",()=>{if(S.cur)speak(S.cur.w);});
 
 /* ENCODE + IPA keyboard */
-const KEYGROUPS=[
-  {label:"Stress",keys:["ˈ","ˌ"],cls:"stress"},
-  {label:"Vowels",keys:["i","ɪ","ɛ","æ","ə","ʌ","ɑ","ɔ","ʊ","u"]},
-  {label:"R-colored",keys:["ɝ","ɚ"]},
-  {label:"Diphthongs",keys:["eɪ","aɪ","ɔɪ","oʊ","aʊ"]},
-  {label:"Consonants",keys:["p","b","t","d","k","ɡ","f","v","θ","ð","s","z","ʃ","ʒ","tʃ","dʒ","m","n","ŋ","l","r","w","j","h"]}
-];
+function keyGroups(){
+  return [
+    {label:t("kbd.stress"),keys:["ˈ","ˌ"],cls:"stress"},
+    {label:t("kbd.vowels"),keys:["i","ɪ","ɛ","æ","ə","ʌ","ɑ","ɔ","ʊ","u"]},
+    {label:t("kbd.r_vowels"),keys:["ɝ","ɚ"]},
+    {label:t("kbd.diphthongs"),keys:["eɪ","aɪ","ɔɪ","oʊ","aʊ"]},
+    {label:t("kbd.consonants"),keys:["p","b","t","d","k","ɡ","f","v","θ","ð","s","z","ʃ","ʒ","tʃ","dʒ","m","n","ŋ","l","r","w","j","h"]}
+  ];
+}
 function buildKeyboard(){
   let html="";
-  KEYGROUPS.forEach(g=>{
+  keyGroups().forEach(g=>{
     html+='<div class="krow"><div class="kglabel">'+g.label+'</div><div class="keys">';
     g.keys.forEach(k=>{html+='<button class="key'+(g.cls?" "+g.cls:"")+'" data-k="'+k+'">'+k+'</button>';});
     html+='<button class="key fn" data-k="__bs">⌫</button></div></div>';
@@ -596,10 +675,9 @@ function buildKeyboard(){
     const k=b.dataset.k;if(k==="__bs")S.built.pop();else S.built.push(k);renderBuild();
   }));
 }
-buildKeyboard();
 function renderBuild(){
   const el=$("eBuild");
-  if(!S.built.length){el.innerHTML='<span class="ph">Tap the IPA keys below to build the pronunciation</span>';return;}
+  if(!S.built.length){el.innerHTML='<span class="ph">'+t("build_ph")+'</span>';return;}
   el.innerHTML='<span class="ipa"><span class="slash">/</span>'+S.built.map(t=>t==="ˈ"||t==="ˌ"?'<span class="mark" style="color:var(--faint);font-size:.62em;vertical-align:.35em">'+t+'</span>':t).join("")+'<span class="slash">/</span></span>';
 }
 function renderEncode(c){
@@ -632,15 +710,16 @@ $("eCheck").addEventListener("click",encodeCheck);
 /* ---------- reveal ---------- */
 function autoNote(c){
   const parts=[];
-  if(c.pat)parts.push("Spelling pattern: "+c.pat);
+  if(c.pat)parts.push(t("note.pattern",{p:localizePattern(c.pat)}));
   const sy=syllableCount(c.ipa);
-  if(sy>1)parts.push("Stress syllable "+stressSyllable(c.ipa)+" ("+sy+" syllables)");
+  if(sy>1)parts.push(t("note.stress",{n:stressSyllable(c.ipa),sy}));
   const tk=tokenize(c.ipa);
-  if(tk.includes("ə")||tk.includes("ɚ"))parts.push("Schwa (ə/ɚ): stay weak and vague, not led by spelling");
-  const traps=[...new Set(tokenize(c.ipa))].filter(t=>PH[t]&&PH[t].t===1&&t!=="ˈ"&&t!=="ˌ");
-  if(traps.length)parts.push("Tricky sounds: "+traps.join(" "));
+  if(tk.includes("ə")||tk.includes("ɚ"))parts.push(t("note.schwa"));
+  const traps=[...new Set(tokenize(c.ipa))].filter(tk=>PH[tk]&&PH[tk].t===1&&tk!=="ˈ"&&tk!=="ˌ");
+  if(traps.length)parts.push(t("note.tricky",{s:traps.join(" ")}));
   return parts.join(" · ");
 }
+function tryLine(html){return t("you",{a:html});}
 function reveal(res,ctx){
   const c=S.cur;S.revealed=true;
   if(res==="ok")S.correct++;
@@ -650,14 +729,16 @@ function reveal(res,ctx){
   panel.classList.remove("res-ok","res-near","res-bad");
   panel.classList.add("res-"+res);
   $("rWord").textContent=c.w;
-  // your attempt
+  const g=wordGloss(c);
+  $("rGloss").textContent=g;
+  $("rGloss").classList.toggle("hidden",!g);
   if(ctx.type==="decode"){
-    $("rTry").innerHTML=ctx.tryRaw&&norm(ctx.tryRaw)!==norm(c.w)?'You: <span class="try">'+ctx.tryRaw.replace(/[<>]/g,"")+'</span>':(ctx.tryRaw?'You: <span class="try">'+ctx.tryRaw.replace(/[<>]/g,"")+'</span>':'See the answer');
+    const raw=ctx.tryRaw?ctx.tryRaw.replace(/[<>]/g,""):"";
+    $("rTry").innerHTML=raw?tryLine('<span class="try">'+raw+'</span>'):t("see_answer");
   }else{
     const u=ctx.usr||[];
-    $("rTry").innerHTML=u.length?'You: <span class="uipa">/'+u.join("")+'/</span>':'See the answer';
+    $("rTry").innerHTML=u.length?tryLine('<span class="uipa">/'+u.join("")+'/</span>'):t("see_answer");
   }
-  // reveal IPA with per-token correctness for encode
   let marker=null;
   if(ctx.type==="encode"){
     const tgt=tokenize(c.ipa),tgtSeg=stripStress(tgt),usrSeg=stripStress(ctx.usr||[]);
@@ -687,15 +768,16 @@ function renderSummary(){
   show("cardDecode",false);show("cardEncode",false);show("reveal",false);show("summary",true);
   const total=S.queue.length,pct=total?Math.round(S.correct/total*100):0;
   $("sumPct").textContent=pct;
-  $("sumLine").textContent=S.correct+" / "+total+" correct · "+S.missed.length+" to review";
-  $("meter").innerHTML='<b>done</b>';
+  $("sumLine").textContent=t("summary.line",{c:S.correct,t:total,m:S.missed.length});
+  $("meter").innerHTML='<b>'+t("meter_done")+'</b>';
   const ent=Object.entries(S.weak).sort((a,b)=>b[1]-a[1]).slice(0,5);
   if(ent.length){
     $("weakList").innerHTML=ent.map(([s,n])=>{const p=PH[s];return '<div class="wk"><div class="wsym">'+s+'</div><div style="flex:1"><div class="wlab">'+p.lab+'</div><div class="wtip">'+p.mouth+'</div></div><div class="wcount">×'+n+'</div></div>';}).join("");
   }else{
-    $("weakList").innerHTML='<div class="wk"><div style="flex:1"><div class="wlab">No weak sounds detected</div><div class="wtip">No missed sounds. Try a higher level.</div></div></div>';
+    $("weakList").innerHTML='<div class="wk"><div style="flex:1"><div class="wlab">'+t("summary.weak_none_t")+'</div><div class="wtip">'+t("summary.weak_none_d")+'</div></div></div>';
   }
-  $("reviewList").innerHTML=S.missed.length?'Review list: '+S.missed.map(w=>{const o=PRESET.find(x=>x.w===w);return '<b>'+o.ipa+'</b> '+w;}).join(" · "):"";
+  const list=S.missed.length?S.missed.map(w=>{const o=PRESET.find(x=>x.w===w);return '<b>'+o.ipa+'</b> '+w;}).join(" · "):"";
+  $("reviewList").innerHTML=list?t("summary.review",{list}):"";
   $("weakBtn").disabled=S.missed.length===0;
 }
 </script>
