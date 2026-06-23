@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>音写 · IPA Decoder / Encoder</title>
+<style>
+  :root{
+    --paper:#F4F3EE; --panel:#FFFFFF; --ink:#191C20; --muted:#6C717A; --faint:#9AA0A8;
+    --hair:#E2E0D8; --signal:#0C7C7E; --signal-soft:#E2F0EF;
+    --stress:#D9911B; --stress-soft:#F8ECD3; --ok:#2E7D54; --ok-soft:#E4F0E8;
+    --bad:#BC4F3A; --bad-soft:#F6E6E1;
+    --ipa:"Doulos SIL","Charis SIL","Gentium Plus",Cambria,Georgia,"Times New Roman",serif;
+    --ui:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    --mono:"SF Mono","Roboto Mono",ui-monospace,Menlo,Consolas,monospace;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{background:var(--paper);color:var(--ink);font-family:var(--ui);-webkit-font-smoothing:antialiased;line-height:1.5;min-height:100vh}
+  .wrap{max-width:600px;margin:0 auto;padding:20px 18px 72px}
+  .topbar{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:20px}
+  .brand{display:flex;align-items:baseline;gap:10px}
+  .brand .mark{font-family:var(--ipa);font-size:24px;color:var(--signal);letter-spacing:.5px}
+  .brand .name{font-weight:700;font-size:15px;letter-spacing:.04em}
+  .brand .sub{font-family:var(--mono);font-size:10px;color:var(--faint);text-transform:uppercase;letter-spacing:.14em}
+  .meter{font-family:var(--mono);font-size:11px;color:var(--muted);text-align:right;letter-spacing:.04em}
+  .meter b{color:var(--ink);font-weight:700}
+  .panel{background:var(--panel);border:1px solid var(--hair);border-radius:14px;padding:24px 20px}
+  .panel + .panel{margin-top:14px}
+
+  .lead{font-size:13.5px;color:var(--muted);margin:0 0 20px}
+  .lead b{color:var(--ink);font-weight:600}
+  .field{margin-bottom:18px}
+  .flabel{font-family:var(--mono);font-size:10.5px;color:var(--faint);text-transform:uppercase;letter-spacing:.14em;margin-bottom:9px}
+  .opts{display:flex;flex-wrap:wrap;gap:8px}
+  .opt{flex:1 1 auto;border:1px solid var(--hair);background:var(--panel);border-radius:10px;padding:11px 13px;cursor:pointer;text-align:left;font-family:var(--ui);font-size:13px;color:var(--ink);transition:border-color .15s,background .15s}
+  .opt .ot{font-weight:600;display:block}
+  .opt .od{font-size:11.5px;color:var(--muted);margin-top:2px}
+  .opt[aria-pressed="true"]{border-color:var(--signal);background:var(--signal-soft)}
+  .opt:focus-visible{outline:2px solid var(--signal);outline-offset:2px}
+  .pills{display:flex;gap:8px;flex-wrap:wrap}
+  .pill{border:1px solid var(--hair);background:#fff;border-radius:999px;padding:8px 15px;cursor:pointer;font-size:13px;font-weight:600;color:var(--ink)}
+  .pill[aria-pressed="true"]{border-color:var(--signal);background:var(--signal-soft);color:var(--signal)}
+  .start{width:100%;margin-top:6px;border:none;border-radius:11px;cursor:pointer;background:var(--ink);color:#fff;font-family:var(--ui);font-weight:700;font-size:15px;padding:15px;letter-spacing:.03em;transition:transform .08s}
+  .start:active{transform:translateY(1px)}
+  .countnote{text-align:center;font-size:11px;color:var(--faint);margin-top:10px;font-family:var(--mono)}
+
+  .card-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
+  .tagrow{display:flex;gap:6px;flex-wrap:wrap}
+  .tag{font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);border:1px solid var(--hair);border-radius:999px;padding:3px 9px}
+  .qno{font-family:var(--mono);font-size:11px;color:var(--faint)}
+
+  .readout{text-align:center;padding:10px 4px 4px}
+  .readout .ipa{font-family:var(--ipa);font-size:clamp(32px,8.5vw,50px);line-height:1.15;letter-spacing:.5px}
+  .readout .wordbig{font-size:clamp(30px,8vw,46px);font-weight:700;letter-spacing:-.01em}
+  .slash{color:var(--signal);font-weight:400}
+  .seg{cursor:pointer;border-radius:4px;padding:0 1px;transition:background .12s,color .12s}
+  .seg:hover{background:var(--signal-soft)}
+  .seg.sel{background:var(--signal-soft);color:var(--signal)}
+  .seg.mark{color:var(--faint);font-size:.62em;vertical-align:.35em}
+  .seg.nucleus{background:linear-gradient(transparent 60%, var(--stress-soft) 60%);box-shadow:inset 0 -3px 0 var(--stress)}
+  .seg.tok-ok{color:var(--ok)} .seg.tok-bad{color:var(--bad);background:var(--bad-soft)}
+  .readout .sub{margin-top:8px;font-family:var(--mono);font-size:11px;color:var(--faint);letter-spacing:.1em}
+
+  .info{margin-top:6px;border:1px dashed var(--hair);border-radius:11px;padding:13px 15px;background:#fbfbf9;display:none}
+  .info.on{display:block}
+  .info .ih{display:flex;align-items:baseline;gap:10px;margin-bottom:6px}
+  .info .isym{font-family:var(--ipa);font-size:26px;color:var(--signal)}
+  .info .ilab{font-weight:700;font-size:13px}
+  .info .iex{font-family:var(--mono);font-size:11px;color:var(--muted)}
+  .info .irow{font-size:12.5px;color:var(--ink);margin-top:4px}
+  .info .irow span{color:var(--muted);font-weight:600;margin-right:6px}
+  .info-hint{font-size:11px;color:var(--faint);margin-top:9px;text-align:center}
+
+  .hints{display:flex;gap:8px;margin:16px 0 14px;flex-wrap:wrap}
+  .hint{flex:1 1 auto;border:1px solid var(--hair);background:#fff;border-radius:9px;padding:9px;cursor:pointer;font-family:var(--ui);font-size:12px;color:var(--muted);transition:border-color .15s,color .15s}
+  .hint:hover{border-color:var(--signal);color:var(--signal)}
+  .hint:disabled{opacity:.5;cursor:default}
+  .hint .hv{display:block;color:var(--ink);font-weight:700;font-size:13px;margin-top:3px}
+
+  .answer{display:flex;gap:8px;margin-top:6px}
+  .answer input{flex:1;border:1.5px solid var(--hair);border-radius:10px;padding:13px 14px;font-size:17px;font-family:var(--ui);color:var(--ink);background:#fff}
+  .answer input:focus{outline:none;border-color:var(--signal)}
+  .answer .go{border:none;background:var(--signal);color:#fff;border-radius:10px;padding:0 18px;font-weight:700;cursor:pointer;font-size:14px}
+  .skip{margin-top:12px;text-align:center}
+  .skip button{background:none;border:none;color:var(--faint);font-size:12px;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+  .playmini{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--signal);color:var(--signal);background:#fff;border-radius:999px;padding:8px 16px;cursor:pointer;font-weight:600;font-size:12.5px;margin-top:14px}
+  .playmini svg{width:14px;height:14px}
+
+  /* IPA keyboard (encode mode) */
+  .build{border:1.5px solid var(--hair);border-radius:11px;background:#fff;min-height:58px;display:flex;align-items:center;justify-content:center;padding:10px 14px;margin:4px 0 12px}
+  .build .ipa{font-family:var(--ipa);font-size:30px;letter-spacing:1px;min-height:36px}
+  .build .ph{color:var(--faint);font-size:14px;font-family:var(--ui)}
+  .kbd{display:flex;flex-direction:column;gap:10px}
+  .krow{}
+  .kglabel{font-family:var(--mono);font-size:9.5px;color:var(--faint);text-transform:uppercase;letter-spacing:.12em;margin-bottom:5px}
+  .keys{display:flex;flex-wrap:wrap;gap:6px}
+  .key{font-family:var(--ipa);font-size:19px;border:1px solid var(--hair);background:#fff;border-radius:8px;min-width:38px;height:42px;padding:0 6px;cursor:pointer;color:var(--ink);display:flex;align-items:center;justify-content:center;transition:background .1s,border-color .1s}
+  .key:hover{border-color:var(--signal);background:var(--signal-soft)}
+  .key:active{transform:translateY(1px)}
+  .key.fn{font-family:var(--ui);font-size:12px;font-weight:600;color:var(--muted);min-width:54px}
+  .key.stress{font-family:var(--ipa);color:var(--stress);font-weight:700}
+  .kbtns{display:flex;gap:8px;margin-top:6px}
+  .kbtns button{flex:1;border-radius:10px;padding:13px;font-weight:700;font-size:14px;cursor:pointer;font-family:var(--ui)}
+  .kbtns .check{border:none;background:var(--signal);color:#fff}
+  .kbtns .clear{border:1px solid var(--hair);background:#fff;color:var(--muted)}
+
+  .reveal{text-align:center}
+  .verdict{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;padding:5px 12px;border-radius:999px;display:inline-block;margin-bottom:14px}
+  .verdict.ok{background:var(--ok-soft);color:var(--ok)} .verdict.bad{background:var(--bad-soft);color:var(--bad)} .verdict.near{background:var(--stress-soft);color:var(--stress)}
+  .word{font-size:38px;font-weight:700;letter-spacing:-.01em;margin:2px 0 4px}
+  .yourtry{font-size:12px;color:var(--muted);margin-bottom:14px}
+  .yourtry s{color:var(--bad)} .yourtry .uipa{font-family:var(--ipa)}
+  .play{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--signal);color:var(--signal);background:#fff;border-radius:999px;padding:9px 18px;cursor:pointer;font-weight:600;font-size:13px;margin-bottom:16px}
+  .play svg{width:15px;height:15px}
+  .note{text-align:left;border-top:1px solid var(--hair);padding-top:14px;margin-top:4px}
+  .note .nh{font-family:var(--mono);font-size:10px;color:var(--faint);text-transform:uppercase;letter-spacing:.14em;margin-bottom:6px}
+  .note p{font-size:13px;color:var(--ink);margin:0 0 10px}
+  .trapchips{display:flex;gap:6px;flex-wrap:wrap}
+  .trapchip{font-family:var(--ipa);font-size:15px;color:var(--signal);background:var(--signal-soft);border-radius:8px;padding:3px 10px;cursor:pointer}
+  .assess{margin-top:16px;background:#fbfbf9;border:1px solid var(--hair);border-radius:12px;padding:15px;text-align:center}
+  .assess .q{font-size:13.5px;font-weight:600;margin-bottom:3px}
+  .assess .sub{font-size:11.5px;color:var(--muted);margin-bottom:11px}
+  .assess .row{display:flex;gap:8px}
+  .assess .row button{flex:1;border:1px solid var(--hair);background:#fff;border-radius:9px;padding:11px;cursor:pointer;font-size:13px;font-weight:600;color:var(--ink)}
+  .assess .row .said:hover{border-color:var(--ok);color:var(--ok)} .assess .row .iffy:hover{border-color:var(--stress);color:var(--stress)}
+
+  .sumhead{text-align:center;margin-bottom:6px}
+  .bigstat{font-size:54px;font-weight:800;letter-spacing:-.02em;line-height:1}
+  .bigstat small{font-size:22px;color:var(--faint);font-weight:600}
+  .substat{font-family:var(--mono);font-size:12px;color:var(--muted);margin-top:6px}
+  .weakhead{font-family:var(--mono);font-size:10.5px;color:var(--faint);text-transform:uppercase;letter-spacing:.14em;margin:22px 0 10px}
+  .wk{display:flex;align-items:center;gap:12px;border:1px solid var(--hair);border-radius:11px;padding:12px 14px;margin-bottom:8px}
+  .wk .wsym{font-family:var(--ipa);font-size:26px;color:var(--signal);min-width:34px;text-align:center}
+  .wk .wlab{font-size:13px;font-weight:600} .wk .wtip{font-size:11.5px;color:var(--muted);margin-top:2px}
+  .wk .wcount{font-family:var(--mono);font-size:11px;color:var(--bad);font-weight:700}
+  .reviewlist{font-size:12px;color:var(--muted);margin-top:14px;line-height:1.9}
+  .reviewlist b{color:var(--ink);font-family:var(--ipa);font-weight:400}
+  .sumbtns{display:flex;gap:8px;margin-top:22px}
+  .sumbtns button{flex:1;border-radius:11px;padding:14px;font-weight:700;font-size:14px;cursor:pointer;font-family:var(--ui)}
+  .sumbtns .again{border:none;background:var(--ink);color:#fff} .sumbtns .weak{border:1px solid var(--signal);background:#fff;color:var(--signal)}
+  .sumbtns button:disabled{opacity:.4;cursor:default}
+  .hidden{display:none}
+  .foot{margin-top:24px;text-align:center;font-size:11px;color:var(--faint);line-height:1.7}
+  @media (prefers-reduced-motion:no-preference){.panel{animation:rise .26s ease}@keyframes rise{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="topbar">
+    <div class="brand"><span class="mark">/iː/</span>
+      <div><div class="name">音写 IPA Decoder / Encoder</div><div class="sub">CEFR A1–A2 · General American</div></div>
+    </div>
+    <div class="meter" id="meter"></div>
+  </div>
+
+  <!-- SETUP -->
+  <section id="setup" class="panel">
+    <p class="lead">既知の単語の<b>発音だけ</b>を鍛え直すツール。&ldquo;発音できない音は聞き取れない&rdquo; を埋めます。<b>日常語</b>に加え、<b>綴りと発音が規則的に対応する語</b>(ai→/eɪ/ など)でIPAの読み方そのものを鍛えられます。</p>
+
+    <div class="field">
+      <div class="flabel">方向</div>
+      <div class="opts" id="dirOpts">
+        <button class="opt" data-dir="decode" aria-pressed="true"><span class="ot">読む · IPA → 単語</span><span class="od">発音記号を読んで綴りを当てる</span></button>
+        <button class="opt" data-dir="encode" aria-pressed="false"><span class="ot">書く · 単語 → IPA</span><span class="od">IPAキーボードで発音を組み立てる</span></button>
+      </div>
+    </div>
+
+    <div class="field">
+      <div class="flabel">出題セット</div>
+      <div class="opts" id="setOpts">
+        <button class="opt" data-set="daily" aria-pressed="true"><span class="ot">日常語 · CEFR A1–A2</span><span class="od">よく使う語(不規則語も含む)</span></button>
+        <button class="opt" data-set="phonics" aria-pressed="false"><span class="ot">規則パターン · 綴り↔音</span><span class="od">綴りと発音が規則的に対応する語</span></button>
+      </div>
+    </div>
+
+    <div class="field" id="lvlField">
+      <div class="flabel">レベル</div>
+      <div class="pills" id="lvlPills">
+        <button class="pill" data-lvl="A1A2" aria-pressed="true">A1+A2</button>
+        <button class="pill" data-lvl="A1" aria-pressed="false">A1のみ</button>
+        <button class="pill" data-lvl="A2" aria-pressed="false">A2のみ</button>
+      </div>
+    </div>
+
+    <div class="field hidden" id="grpField">
+      <div class="flabel">綴り規則グループ</div>
+      <div class="pills" id="grpPills">
+        <button class="pill" data-grp="all" aria-pressed="true">すべて</button>
+        <button class="pill" data-grp="short" aria-pressed="false">短母音</button>
+        <button class="pill" data-grp="long" aria-pressed="false">長母音・マジックe</button>
+        <button class="pill" data-grp="team" aria-pressed="false">母音チーム</button>
+        <button class="pill" data-grp="r" aria-pressed="false">r音色</button>
+      </div>
+    </div>
+
+    <div class="field">
+      <div class="flabel">出題数</div>
+      <div class="pills" id="cntPills">
+        <button class="pill" data-cnt="10" aria-pressed="true">10</button>
+        <button class="pill" data-cnt="20" aria-pressed="false">20</button>
+        <button class="pill" data-cnt="40" aria-pressed="false">40</button>
+        <button class="pill" data-cnt="0" aria-pressed="false">すべて</button>
+      </div>
+    </div>
+
+    <div class="field" id="apiField">
+      <div class="flabel">OpenAI API キー <span style="font-weight:400;text-transform:none;letter-spacing:0">(音声合成 · ブラウザに保存)</span></div>
+      <div class="answer" style="margin-top:0">
+        <input id="apiKey" type="password" autocomplete="off" placeholder="sk-..." spellcheck="false">
+        <button class="go" id="apiSave" type="button">保存</button>
+      </div>
+      <div class="countnote" id="apiNote" style="margin-top:8px;text-align:left"></div>
+    </div>
+
+    <button class="start" id="startBtn" disabled>読み込み中…</button>
+    <div class="countnote" id="poolNote"></div>
+  </section>
+
+  <!-- DECODE CARD -->
+  <section id="cardDecode" class="panel hidden">
+    <div class="card-top"><div class="tagrow" id="dTags"></div><div class="qno" id="dNo"></div></div>
+    <div class="readout"><div class="ipa" id="dIpa"></div></div>
+    <div class="info" id="dInfo"></div>
+    <div class="info-hint">記号をタップ → 口の形・コツ</div>
+    <div class="hints" id="dHints">
+      <button class="hint" data-h="syl">音節数<span class="hv" id="hSyl">？</span></button>
+      <button class="hint" data-h="first">最初の文字<span class="hv" id="hFirst">？</span></button>
+      <button class="hint" data-h="pos">品詞<span class="hv" id="hPos">？</span></button>
+    </div>
+    <div class="answer">
+      <input id="dInput" type="text" inputmode="latin" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" placeholder="単語を入力">
+      <button class="go" id="dCheck">答え合わせ</button>
+    </div>
+    <div class="skip"><button id="dDunno">わからない → 答えを見る</button></div>
+  </section>
+
+  <!-- ENCODE CARD -->
+  <section id="cardEncode" class="panel hidden">
+    <div class="card-top"><div class="tagrow" id="eTags"></div><div class="qno" id="eNo"></div></div>
+    <div class="readout"><div class="wordbig" id="eWord"></div>
+      <div><button class="playmini" id="ePlay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>音を聞く(任意)</button></div>
+    </div>
+    <div class="build" id="eBuild"><span class="ph">下のIPAキーをタップして発音を組み立てる</span></div>
+    <div class="kbd" id="eKbd"></div>
+    <div class="kbtns">
+      <button class="clear" id="eClear">クリア</button>
+      <button class="check" id="eCheck">答え合わせ</button>
+    </div>
+    <div class="skip"><button id="eDunno">わからない → 答えを見る</button></div>
+  </section>
+
+  <!-- REVEAL -->
+  <section id="reveal" class="panel hidden">
+    <div class="reveal">
+      <div class="verdict" id="verdict"></div>
+      <div class="word" id="rWord"></div>
+      <div class="yourtry" id="rTry"></div>
+      <button class="play" id="rPlay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>もう一度聞く</button>
+      <div class="readout" style="padding-top:0"><div class="ipa" id="rIpa"></div></div>
+      <div class="info" id="rInfo"></div>
+      <div class="note">
+        <div class="nh">この単語の発音ポイント</div>
+        <p id="rNote"></p>
+        <div class="trapchips" id="rTraps"></div>
+      </div>
+      <div class="assess">
+        <div class="q">IPAを見て、声に出して言えた？</div>
+        <div class="sub">自己評価が苦手音リストに反映されます</div>
+        <div class="row"><button class="said" id="saidYes">言えた</button><button class="iffy" id="saidNo">あやしい</button></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUMMARY -->
+  <section id="summary" class="panel hidden">
+    <div class="sumhead"><div class="bigstat"><span id="sumPct">0</span><small>%</small></div><div class="substat" id="sumLine"></div></div>
+    <div id="weakWrap"><div class="weakhead">次に練習すべき音</div><div id="weakList"></div></div>
+    <div class="reviewlist" id="reviewList"></div>
+    <div class="sumbtns"><button class="again" id="againBtn">もう一周</button><button class="weak" id="weakBtn">苦手だけ復習</button></div>
+  </section>
+
+  <div class="foot">CEFR-J Wordlist × CMU Pronouncing Dictionary 由来 · 約2,840語<br>日常語(A1/A2) + 綴り↔音が規則的な語(1,490語/パターン付き) · General American<br>音声は OpenAI gpt-4o-mini-tts · 出題は wordlist テーブルから</div>
+</div>
+
+<script>
+
+/* ---------- wordlist (table) ---------- */
+let PRESET = [];
+let wordlistReady = false;
+
+function normalizeWord(row) {
+  const w = { w: row.w, ipa: row.ipa, cefr: row.cefr, pos: row.pos };
+  if (row.pattern) w.pat = row.pattern;
+  if (row.group) w.grp = row.group;
+  return w;
+}
+
+async function loadWordlist() {
+  const res = await fetch("wordlist_GA_a1a2_plus_phonics.json");
+  if (!res.ok) throw new Error("wordlist load failed: " + res.status);
+  const rows = await res.json();
+  PRESET = rows.map(normalizeWord);
+  wordlistReady = true;
+  $("startBtn").disabled = false;
+  $("startBtn").textContent = "はじめる";
+  updatePool();
+}
+
+loadWordlist().catch(err => {
+  $("poolNote").textContent = "単語リストの読み込みに失敗しました";
+  $("startBtn").textContent = "読み込み失敗";
+  console.error(err);
+});
+
+
+/* ---------- GA phoneme reference ---------- */
+const PH = {
+  "ˈ":{lab:"第一強勢",ex:"直後の音節を強く",mouth:"高く・長く・大きく の三位一体で",trap:"日本語は高低だけ。長さと強さも使う",t:1},
+  "ˌ":{lab:"第二強勢",ex:"弱めの強勢",mouth:"第一強勢より軽く強める",trap:"完全には潰さない",t:1},
+  "i":{lab:"長いイー (see)",ex:"see /si/",mouth:"唇を横に張り緊張した「イー」",trap:"ɪ と対立。緩めない",t:1},
+  "ɪ":{lab:"短いイ (sit)",ex:"sit /sɪt/",mouth:"力を抜いた短く緩い「イ」。やや「エ」寄り",trap:"i と混同しない。緊張させない",t:1},
+  "ɛ":{lab:"エ (bed)",ex:"bed /bɛd/",mouth:"日本語の「エ」に近い",trap:"æ と混ざらないよう注意",t:0},
+  "æ":{lab:"ア〜エ (cat)",ex:"cat /kæt/",mouth:"口を横に大きく開き「ア」と「エ」の中間",trap:"日本語のアでは通じない。「エ」寄りに広げる",t:1},
+  "ə":{lab:"シュワ (曖昧母音)",ex:"about /əˈbaʊt/",mouth:"口も舌も脱力した中央の弱い「ア」",trap:"綴りの母音字に引っ張られず最弱・曖昧に",t:1},
+  "ʌ":{lab:"ア (cup)",ex:"cup /kʌp/",mouth:"口をやや開け短く鋭い「ア」",trap:"ə より明確で力がある",t:1},
+  "ɑ":{lab:"アー (hot/father)",ex:"hot /hɑt/",mouth:"口を大きく開けた奥の「アー」",trap:"明るい「ア」でなく奥で深く",t:1},
+  "ɔ":{lab:"オー (dog/thought)",ex:"dog /dɔɡ/",mouth:"唇を丸めた「オ」",trap:"米では ɑ と合流することも。丸めを意識",t:1},
+  "ʊ":{lab:"短いウ (book)",ex:"book /bʊk/",mouth:"力を抜いた短い「ウ」。唇は軽く丸める",trap:"u と区別。突き出しすぎない",t:1},
+  "u":{lab:"長いウー (food)",ex:"food /fud/",mouth:"唇をしっかり丸め突き出す「ウー」",trap:"日本語のウは丸めが弱い。突き出す",t:1},
+  "ɝ":{lab:"アー r音色 (bird)",ex:"bird /bɝd/",mouth:"舌を奥で丸めながら「アー」。強いr音色",trap:"日本語にない。er/ir/ur が全部これ",t:1},
+  "ɚ":{lab:"弱いアー r音色 (water語尾)",ex:"water /ˈwɔtɚ/",mouth:"ɝ の無強勢・弱い版",trap:"語尾 -er/-or はほぼこれ",t:1},
+  "eɪ":{lab:"エイ (day)",ex:"day /deɪ/",mouth:"「エ」から「イ」へ滑らせる",trap:"「エー」と伸ばさない",t:0},
+  "aɪ":{lab:"アイ (my)",ex:"my /maɪ/",mouth:"「ア」から「イ」へ",trap:"1音にしない",t:0},
+  "ɔɪ":{lab:"オイ (boy)",ex:"boy /bɔɪ/",mouth:"「オ」から「イ」へ",trap:"—",t:0},
+  "oʊ":{lab:"オウ (go)",ex:"go /ɡoʊ/",mouth:"「オ」から「ウ」へ。後半で唇を丸める",trap:"「オー」と平板にしない。二重母音",t:1},
+  "aʊ":{lab:"アウ (now)",ex:"now /naʊ/",mouth:"「ア」から「ウ」へ",trap:"後半の丸めを忘れない",t:0},
+  "θ":{lab:"無声 th (think)",ex:"think /θɪŋk/",mouth:"舌先を上下の歯で軽く挟み息だけ",trap:"s で代用しない。舌を見せる",t:1},
+  "ð":{lab:"有声 th (this)",ex:"this /ðɪs/",mouth:"θ の口で声を加える",trap:"z や d で代用しない",t:1},
+  "ʃ":{lab:"シュ (she)",ex:"she /ʃi/",mouth:"唇を丸め舌を後ろへ",trap:"日本語のシより奥で",t:0},
+  "ʒ":{lab:"ジュ (measure)",ex:"measure /ˈmɛʒɚ/",mouth:"ʃ の有声版。唇丸め「ジュ」",trap:"日本語にない。語中・語末に多い",t:1},
+  "tʃ":{lab:"チ (church)",ex:"church /tʃɝtʃ/",mouth:"t+ʃ を一気に。破擦音",trap:"—",t:0},
+  "dʒ":{lab:"ヂ (judge)",ex:"judge /dʒʌdʒ/",mouth:"d+ʒ を一気に",trap:"—",t:0},
+  "ŋ":{lab:"ング (sing)",ex:"sing /sɪŋ/",mouth:"舌の奥を上げ鼻に抜く。g は出さない",trap:"「ング」と g を足さない",t:1},
+  "r":{lab:"r (right)",ex:"right /raɪt/",mouth:"舌をどこにも触れさせず奥へ丸める",trap:"l と区別。どこにも付けない",t:1},
+  "l":{lab:"l (light)",ex:"light /laɪt/",mouth:"舌先を上の歯茎にしっかり付ける",trap:"r と混同しない。付ける",t:1},
+  "v":{lab:"v (van)",ex:"van /væn/",mouth:"上の歯を下唇に当て声を加える",trap:"「ブ」と両唇でやらない。歯を使う",t:1},
+  "f":{lab:"f (fan)",ex:"fan /fæn/",mouth:"上の歯を下唇に当て息",trap:"「フ」と両唇でやらない",t:1},
+  "w":{lab:"ワ行 (we)",ex:"we /wi/",mouth:"唇を丸めすぼめる半母音",trap:"—",t:0},
+  "j":{lab:"ヤ行 (yes)",ex:"yes /jɛs/",mouth:"半母音。「ヤ・ユ・ヨ」の出だし",trap:"ju=「ユー」",t:0},
+  "h":{lab:"h (hat)",ex:"hat /hæt/",mouth:"喉から軽く息",trap:"—",t:0},
+  "b":{lab:"b",ex:"bat",mouth:"両唇を閉じ破裂・有声",trap:"—",t:0},
+  "d":{lab:"d",ex:"dog",mouth:"舌先を歯茎につけ破裂・有声",trap:"—",t:0},
+  "ɡ":{lab:"g",ex:"go",mouth:"舌の奥で破裂・有声",trap:"—",t:0},
+  "k":{lab:"k",ex:"cat",mouth:"舌の奥で破裂・無声",trap:"—",t:0},
+  "p":{lab:"p",ex:"pen",mouth:"両唇破裂・無声",trap:"—",t:0},
+  "t":{lab:"t",ex:"top",mouth:"舌先を歯茎につけ破裂・無声",trap:"—",t:0},
+  "m":{lab:"m",ex:"man",mouth:"両唇を閉じ鼻に抜く",trap:"—",t:0},
+  "n":{lab:"n",ex:"no",mouth:"舌先を歯茎につけ鼻に抜く",trap:"—",t:0},
+  "s":{lab:"s",ex:"see",mouth:"舌先を歯茎に近づけ息",trap:"θ と混同しない",t:1},
+  "z":{lab:"z",ex:"zoo",mouth:"s の有声版",trap:"—",t:0}
+};
+const MULTI=["tʃ","dʒ","eɪ","aɪ","ɔɪ","oʊ","aʊ"];
+const VOWELS=new Set(["i","ɪ","ɛ","æ","ə","ʌ","ɑ","ɔ","ʊ","u","ɝ","ɚ","eɪ","aɪ","ɔɪ","oʊ","aʊ"]);
+
+function tokenize(raw){
+  const s=raw.replace(/\//g,"");const out=[];let i=0;
+  while(i<s.length){let m=null;for(const x of MULTI){if(s.startsWith(x,i)){m=x;break;}}if(m){out.push(m);i+=m.length;}else{out.push(s[i]);i++;}}
+  return out;
+}
+function nucleusIndex(tk){const si=tk.indexOf("ˈ");const from=si>=0?si+1:0;for(let k=from;k<tk.length;k++)if(VOWELS.has(tk[k]))return k;for(let k=0;k<tk.length;k++)if(VOWELS.has(tk[k]))return k;return -1;}
+function phonemesOf(ipa){return tokenize(ipa).filter(t=>PH[t]&&t!=="ˈ"&&t!=="ˌ");}
+function syllableCount(ipa){return tokenize(ipa).filter(t=>VOWELS.has(t)).length||1;}
+function stressSyllable(ipa){const tk=tokenize(ipa);let n=0;for(let k=0;k<tk.length;k++){if(tk[k]==="ˈ"){let c=0;for(let j=0;j<k;j++)if(VOWELS.has(tk[j]))c++;return c+1;}}return 1;}
+
+/* ---------- state ---------- */
+const TRAPSET=new Set(["θ","ð","æ","ʒ","ɝ"]);
+const GRP_LABEL={short:"短母音",long:"長母音・マジックe",team:"母音チーム",r:"r音色"};
+let S={dir:"decode",set:"daily",lvl:"A1A2",grp:"all",cnt:10,queue:[],idx:0,correct:0,weak:{},missed:[],cur:null,revealed:false,built:[]};
+const $=id=>document.getElementById(id);
+const show=(id,on)=>$(id).classList.toggle("hidden",!on);
+
+/* ---------- setup ---------- */
+function bindPills(group,key,parse){
+  $(group).querySelectorAll(".pill,.opt").forEach(b=>b.addEventListener("click",()=>{
+    $(group).querySelectorAll(".pill,.opt").forEach(x=>x.setAttribute("aria-pressed","false"));
+    b.setAttribute("aria-pressed","true");S[key]=parse(b);updatePool();
+  }));
+}
+bindPills("dirOpts","dir",b=>b.dataset.dir);
+bindPills("lvlPills","lvl",b=>b.dataset.lvl);
+bindPills("grpPills","grp",b=>b.dataset.grp);
+bindPills("cntPills","cnt",b=>parseInt(b.dataset.cnt));
+$("setOpts").querySelectorAll(".opt").forEach(b=>b.addEventListener("click",()=>{
+  $("setOpts").querySelectorAll(".opt").forEach(x=>x.setAttribute("aria-pressed","false"));
+  b.setAttribute("aria-pressed","true");S.set=b.dataset.set;
+  show("lvlField",S.set==="daily");show("grpField",S.set==="phonics");updatePool();
+}));
+function filteredPool(){
+  let p;
+  if(S.set==="phonics"){p=PRESET.filter(w=>w.grp&&(S.grp==="all"||w.grp===S.grp));}
+  else{p=PRESET.filter(w=>(w.cefr==="A1"||w.cefr==="A2")&&(S.lvl==="A1A2"||w.cefr===S.lvl));}
+  return p;
+}
+function updatePool(){const n=filteredPool().length;$("poolNote").textContent="対象 "+n+" 語"+(S.cnt?(" / 出題 "+Math.min(S.cnt,n)+" 語"):" / 全題");}
+updatePool();
+
+
+/* ---------- speech (OpenAI TTS) ---------- */
+const TTS_MODEL = "gpt-4o-mini-tts";
+const TTS_VOICE = "alloy";
+const audioCache = new Map();
+let currentAudio = null;
+
+function getApiKey() {
+  return localStorage.getItem("openai_api_key") || "";
+}
+
+function setApiNote(msg, ok) {
+  const el = $("apiNote");
+  el.textContent = msg;
+  el.style.color = ok ? "var(--ok)" : "var(--muted)";
+}
+
+function initApiKeyField() {
+  const saved = getApiKey();
+  if (saved) {
+    $("apiKey").value = saved;
+    setApiNote("APIキー保存済み · 音声再生に使用します", true);
+  } else {
+    setApiNote("音声を聞くには OpenAI API キーが必要です", false);
+  }
+  $("apiSave").addEventListener("click", () => {
+    const key = $("apiKey").value.trim();
+    if (!key) {
+      localStorage.removeItem("openai_api_key");
+      setApiNote("APIキーを削除しました", false);
+      return;
+    }
+    localStorage.setItem("openai_api_key", key);
+    setApiNote("APIキーを保存しました", true);
+  });
+}
+initApiKeyField();
+
+async function speak(w) {
+  const key = getApiKey();
+  if (!key) {
+    setApiNote("先に OpenAI API キーを保存してください", false);
+    $("apiField").scrollIntoView({ behavior: "smooth", block: "center" });
+    return;
+  }
+  if (currentAudio) {
+    currentAudio.pause();
+    currentAudio = null;
+  }
+  try {
+    let url = audioCache.get(w);
+    if (!url) {
+      const res = await fetch("https://api.openai.com/v1/audio/speech", {
+        method: "POST",
+        headers: {
+          Authorization: "Bearer " + key,
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ model: TTS_MODEL, input: w, voice: TTS_VOICE })
+      });
+      if (!res.ok) {
+        const detail = await res.text();
+        throw new Error(res.status + " " + detail.slice(0, 120));
+      }
+      const blob = await res.blob();
+      url = URL.createObjectURL(blob);
+      audioCache.set(w, url);
+    }
+    const audio = new Audio(url);
+    currentAudio = audio;
+    audio.addEventListener("ended", () => { if (currentAudio === audio) currentAudio = null; });
+    await audio.play();
+  } catch (err) {
+    console.error(err);
+    setApiNote("音声の取得に失敗しました: " + err.message, false);
+  }
+}
+
+
+/* ---------- start ---------- */
+function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+function startSession(weakOnly){
+  let pool=filteredPool().slice();
+  if(weakOnly&&S.missed.length)pool=PRESET.filter(w=>S.missed.includes(w.w));
+  shuffle(pool);
+  if(S.cnt>0)pool=pool.slice(0,S.cnt);
+  S.queue=pool;S.idx=0;S.correct=0;S.weak={};S.missed=[];
+  show("setup",false);show("summary",false);renderCard();
+}
+$("startBtn").addEventListener("click",()=>startSession(false));
+$("againBtn").addEventListener("click",()=>startSession(false));
+$("weakBtn").addEventListener("click",()=>startSession(true));
+
+/* ---------- info rendering ---------- */
+function renderInfo(boxId,sym){const p=PH[sym];const box=$(boxId);if(!p){box.classList.remove("on");return;}
+  box.innerHTML='<div class="ih"><span class="isym">'+sym+'</span><span class="ilab">'+p.lab+'</span><span class="iex">'+p.ex+'</span></div>'+
+    '<div class="irow"><span>口の形</span>'+p.mouth+'</div>'+(p.trap&&p.trap!=="—"?'<div class="irow"><span>注意</span>'+p.trap+'</div>':'');
+  box.classList.add("on");
+}
+function renderIpaInto(container,ipa,infoBoxId,markTokens){
+  const tk=tokenize(ipa);const nuc=nucleusIndex(tk);let html='<span class="slash">/</span>';
+  tk.forEach((t,k)=>{
+    if(t==="ˈ"||t==="ˌ"){html+='<span class="seg mark" data-sym="'+t+'">'+t+'</span>';return;}
+    let cls="seg"+(k===nuc?" nucleus":"");
+    if(markTokens){const st=markTokens(k,t);if(st)cls+=" "+st;}
+    html+='<span class="'+cls+'" data-sym="'+t+'">'+t+'</span>';
+  });
+  html+='<span class="slash">/</span>';container.innerHTML=html;
+  container.querySelectorAll(".seg").forEach(seg=>seg.addEventListener("click",()=>{
+    container.querySelectorAll(".seg").forEach(s=>s.classList.remove("sel"));seg.classList.add("sel");renderInfo(infoBoxId,seg.dataset.sym);
+  }));
+}
+
+/* ---------- render card (dispatch) ---------- */
+function renderCard(){
+  if(S.idx>=S.queue.length)return renderSummary();
+  const c=S.queue[S.idx];S.cur=c;S.revealed=false;S.built=[];
+  show("reveal",false);
+  $("meter").innerHTML='<b>'+(S.idx+1)+'</b> / '+S.queue.length;
+  if(S.dir==="decode")renderDecode(c);else renderEncode(c);
+}
+function tagsHtml(c,dirLabel){
+  let h="";
+  if(c.cefr)h+='<span class="tag">'+c.cefr+'</span>';
+  if(c.grp)h+='<span class="tag">'+(GRP_LABEL[c.grp]||c.grp)+'</span>';
+  h+='<span class="tag">'+dirLabel+'</span>';
+  return h;
+}
+/* DECODE */
+let usedHints=0;
+function renderDecode(c){
+  show("cardEncode",false);show("cardDecode",true);
+  $("dNo").textContent="#"+String(S.idx+1).padStart(2,"0");
+  $("dTags").innerHTML=tagsHtml(c,"読む");
+  renderIpaInto($("dIpa"),c.ipa,"dInfo",null);$("dInfo").classList.remove("on");
+  $("hSyl").textContent="？";$("hFirst").textContent="？";$("hPos").textContent="？";
+  $("dHints").querySelectorAll(".hint").forEach(h=>h.disabled=false);
+  const inp=$("dInput");inp.value="";inp.focus();
+}
+$("dHints").querySelectorAll(".hint").forEach(h=>h.addEventListener("click",()=>{
+  const c=S.cur;if(h.dataset.h==="syl")$("hSyl").textContent=syllableCount(c.ipa)+"音節";
+  if(h.dataset.h==="first")$("hFirst").textContent=c.w[0].toUpperCase()+"…";
+  if(h.dataset.h==="pos")$("hPos").textContent=c.pos||"—";h.disabled=true;
+}));
+function norm(s){return s.toLowerCase().replace(/[^a-z]/g,"");}
+function lev(a,b){const m=a.length,n=b.length,d=Array.from({length:m+1},(_,i)=>[i,...Array(n).fill(0)]);for(let j=0;j<=n;j++)d[0][j]=j;for(let i=1;i<=m;i++)for(let j=1;j<=n;j++)d[i][j]=Math.min(d[i-1][j]+1,d[i][j-1]+1,d[i-1][j-1]+(a[i-1]===b[j-1]?0:1));return d[m][n];}
+function decodeCheck(){
+  if(S.revealed)return;const c=S.cur;const t=$("dInput").value.trim();const a=norm(t),g=norm(c.w);
+  let res=a===g?"ok":(a.length>2&&lev(a,g)<=1?"near":"bad");
+  reveal(res,{type:"decode",tryRaw:t});
+}
+$("dCheck").addEventListener("click",decodeCheck);
+$("dInput").addEventListener("keydown",e=>{if(e.key==="Enter")decodeCheck();});
+$("dDunno").addEventListener("click",()=>{if(!S.revealed)reveal("bad",{type:"decode",tryRaw:""});});
+
+/* ENCODE + IPA keyboard */
+const KEYGROUPS=[
+  {label:"強勢",keys:["ˈ","ˌ"],cls:"stress"},
+  {label:"母音",keys:["i","ɪ","ɛ","æ","ə","ʌ","ɑ","ɔ","ʊ","u"]},
+  {label:"r母音",keys:["ɝ","ɚ"]},
+  {label:"二重母音",keys:["eɪ","aɪ","ɔɪ","oʊ","aʊ"]},
+  {label:"子音",keys:["p","b","t","d","k","ɡ","f","v","θ","ð","s","z","ʃ","ʒ","tʃ","dʒ","m","n","ŋ","l","r","w","j","h"]}
+];
+function buildKeyboard(){
+  let html="";
+  KEYGROUPS.forEach(g=>{
+    html+='<div class="krow"><div class="kglabel">'+g.label+'</div><div class="keys">';
+    g.keys.forEach(k=>{html+='<button class="key'+(g.cls?" "+g.cls:"")+'" data-k="'+k+'">'+k+'</button>';});
+    html+='<button class="key fn" data-k="__bs">⌫</button></div></div>';
+  });
+  $("eKbd").innerHTML=html;
+  $("eKbd").querySelectorAll(".key").forEach(b=>b.addEventListener("click",()=>{
+    const k=b.dataset.k;if(k==="__bs")S.built.pop();else S.built.push(k);renderBuild();
+  }));
+}
+buildKeyboard();
+function renderBuild(){
+  const el=$("eBuild");
+  if(!S.built.length){el.innerHTML='<span class="ph">下のIPAキーをタップして発音を組み立てる</span>';return;}
+  el.innerHTML='<span class="ipa"><span class="slash">/</span>'+S.built.map(t=>t==="ˈ"||t==="ˌ"?'<span class="mark" style="color:var(--faint);font-size:.62em;vertical-align:.35em">'+t+'</span>':t).join("")+'<span class="slash">/</span></span>';
+}
+function renderEncode(c){
+  show("cardDecode",false);show("cardEncode",true);
+  $("eNo").textContent="#"+String(S.idx+1).padStart(2,"0");
+  $("eTags").innerHTML=tagsHtml(c,"書く");
+  $("eWord").textContent=c.w;S.built=[];renderBuild();
+}
+$("ePlay").addEventListener("click",()=>speak(S.cur.w));
+$("eClear").addEventListener("click",()=>{S.built=[];renderBuild();});
+function stripStress(tk){return tk.filter(t=>t!=="ˈ"&&t!=="ˌ");}
+function lcsMark(target,user){ // returns Set of target indices matched (segments only, ignoring stress)
+  const T=target,U=user,m=T.length,n=U.length;
+  const dp=Array.from({length:m+1},()=>Array(n+1).fill(0));
+  for(let i=1;i<=m;i++)for(let j=1;j<=n;j++)dp[i][j]=T[i-1]===U[j-1]?dp[i-1][j-1]+1:Math.max(dp[i-1][j],dp[i][j-1]);
+  const matched=new Set();let i=m,j=n;
+  while(i>0&&j>0){if(T[i-1]===U[j-1]){matched.add(i-1);i--;j--;}else if(dp[i-1][j]>=dp[i][j-1])i--;else j--;}
+  return matched;
+}
+function encodeCheck(){
+  if(S.revealed)return;const c=S.cur;
+  const tgt=tokenize(c.ipa),usr=S.built.slice();
+  const tgtSeg=stripStress(tgt),usrSeg=stripStress(usr);
+  const segEqual=tgtSeg.join("")===usrSeg.join("");
+  const stressEqual=tgt.join("")===usr.join("");
+  let res;if(stressEqual)res="ok";else if(segEqual)res="near";else res="bad";
+  reveal(res,{type:"encode",usr:usr});
+}
+$("eCheck").addEventListener("click",encodeCheck);
+$("eDunno").addEventListener("click",()=>{if(!S.revealed)reveal("bad",{type:"encode",usr:S.built.slice()});});
+
+/* ---------- reveal ---------- */
+function autoNote(c){
+  const parts=[];
+  if(c.pat)parts.push("綴り規則 "+c.pat);
+  const sy=syllableCount(c.ipa);
+  if(sy>1)parts.push("第"+stressSyllable(c.ipa)+"音節を強く("+sy+"音節)");
+  const tk=tokenize(c.ipa);
+  if(tk.includes("ə")||tk.includes("ɚ"))parts.push("弱化母音(ə/ɚ)あり：綴りに引っ張られず曖昧に");
+  const traps=[...new Set(tokenize(c.ipa))].filter(t=>PH[t]&&PH[t].t===1&&t!=="ˈ"&&t!=="ˌ");
+  if(traps.length)parts.push("要注意音: "+traps.join(" "));
+  return parts.join(" ／ ");
+}
+function reveal(res,ctx){
+  const c=S.cur;S.revealed=true;
+  if(res==="ok")S.correct++;
+  if(res==="bad"&&!S.missed.includes(c.w))S.missed.push(c.w);
+  show("cardDecode",false);show("cardEncode",false);show("reveal",true);
+  const v=$("verdict");
+  if(res==="ok"){v.className="verdict ok";v.textContent="正解";}
+  else if(res==="near"){v.className="verdict near";v.textContent=ctx.type==="encode"?"音は正解 · 強勢を確認":"ほぼ正解 · 綴り注意";}
+  else{v.className="verdict bad";v.textContent="復習";}
+  $("rWord").textContent=c.w;
+  // your attempt
+  if(ctx.type==="decode"){
+    $("rTry").innerHTML=ctx.tryRaw&&norm(ctx.tryRaw)!==norm(c.w)?'あなた: <s>'+ctx.tryRaw.replace(/[<>]/g,"")+'</s>':(ctx.tryRaw?"":'答えを確認');
+  }else{
+    const u=ctx.usr||[];
+    $("rTry").innerHTML=u.length?'あなた: <span class="uipa">/'+u.join("")+'/</span>':'答えを確認';
+  }
+  // reveal IPA with per-token correctness for encode
+  let marker=null;
+  if(ctx.type==="encode"){
+    const tgt=tokenize(c.ipa),tgtSeg=stripStress(tgt),usrSeg=stripStress(ctx.usr||[]);
+    const matched=lcsMark(tgtSeg,usrSeg);
+    // map seg index -> token index
+    const segIdxOf=[];tgt.forEach((t,k)=>{if(t!=="ˈ"&&t!=="ˌ")segIdxOf.push(k);});
+    const okTokens=new Set();matched.forEach(si=>okTokens.add(segIdxOf[si]));
+    marker=(k,t)=>{if(t==="ˈ"||t==="ˌ")return null;return okTokens.has(k)?"tok-ok":"tok-bad";};
+  }
+  renderIpaInto($("rIpa"),c.ipa,"rInfo",marker);$("rInfo").classList.remove("on");
+  $("rNote").textContent=autoNote(c);
+  const traps=[...new Set(phonemesOf(c.ipa))].filter(s=>PH[s].t===1);
+  $("rTraps").innerHTML=traps.map(s=>'<span class="trapchip" data-sym="'+s+'">'+s+'</span>').join("");
+  $("rTraps").querySelectorAll(".trapchip").forEach(ch=>ch.addEventListener("click",()=>renderInfo("rInfo",ch.dataset.sym)));
+  setTimeout(()=>speak(c.w),200);
+}
+$("rPlay").addEventListener("click",()=>speak(S.cur.w));
+function nextCard(uncertain){
+  const c=S.cur;const missed=S.missed.includes(c.w);
+  if(missed||uncertain){phonemesOf(c.ipa).forEach(s=>{if(PH[s].t===1)S.weak[s]=(S.weak[s]||0)+1;});if(uncertain&&!S.missed.includes(c.w))S.missed.push(c.w);}
+  S.idx++;renderCard();
+}
+$("saidYes").addEventListener("click",()=>nextCard(false));
+$("saidNo").addEventListener("click",()=>nextCard(true));
+
+/* ---------- summary ---------- */
+function renderSummary(){
+  show("cardDecode",false);show("cardEncode",false);show("reveal",false);show("summary",true);
+  const total=S.queue.length,pct=total?Math.round(S.correct/total*100):0;
+  $("sumPct").textContent=pct;
+  $("sumLine").textContent=S.correct+" / "+total+" 正解 · 復習 "+S.missed.length+" 語";
+  $("meter").innerHTML='<b>done</b>';
+  const ent=Object.entries(S.weak).sort((a,b)=>b[1]-a[1]).slice(0,5);
+  if(ent.length){
+    $("weakList").innerHTML=ent.map(([s,n])=>{const p=PH[s];return '<div class="wk"><div class="wsym">'+s+'</div><div style="flex:1"><div class="wlab">'+p.lab+'</div><div class="wtip">'+p.mouth+'</div></div><div class="wcount">×'+n+'</div></div>';}).join("");
+  }else{
+    $("weakList").innerHTML='<div class="wk"><div style="flex:1"><div class="wlab">苦手音は検出されませんでした</div><div class="wtip">「言えた」が揃っています。出題数やレベルを上げてもOK。</div></div></div>';
+  }
+  $("reviewList").innerHTML=S.missed.length?'復習リスト: '+S.missed.map(w=>{const o=PRESET.find(x=>x.w===w);return '<b>'+o.ipa+'</b> '+w;}).join(" · "):"";
+  $("weakBtn").disabled=S.missed.length===0;
+}
+</script>
+</body>
+</html>
