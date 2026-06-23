@@ -189,25 +189,6 @@
       </div>
     </div>
 
-    <div class="field">
-      <div class="flabel">出題数</div>
-      <div class="pills" id="cntPills">
-        <button class="pill" data-cnt="10" aria-pressed="true">10</button>
-        <button class="pill" data-cnt="20" aria-pressed="false">20</button>
-        <button class="pill" data-cnt="40" aria-pressed="false">40</button>
-        <button class="pill" data-cnt="0" aria-pressed="false">すべて</button>
-      </div>
-    </div>
-
-    <div class="field" id="gasField">
-      <div class="flabel">GAS Web App URL <span style="font-weight:400;text-transform:none;letter-spacing:0">(音声合成プロキシ · ブラウザに保存)</span></div>
-      <div class="answer" style="margin-top:0">
-        <input id="gasUrl" type="url" autocomplete="off" placeholder="https://script.google.com/macros/s/AKfycbz.../exec" spellcheck="false">
-        <button class="go" id="gasSave" type="button">保存</button>
-      </div>
-      <div class="countnote" id="gasNote" style="margin-top:8px;text-align:left"></div>
-    </div>
-
     <button class="start" id="startBtn" disabled>読み込み中…</button>
     <div class="countnote" id="poolNote"></div>
   </section>
@@ -369,7 +350,8 @@ function stressSyllable(ipa){const tk=tokenize(ipa);let n=0;for(let k=0;k<tk.len
 /* ---------- state ---------- */
 const TRAPSET=new Set(["θ","ð","æ","ʒ","ɝ"]);
 const GRP_LABEL={short:"短母音",long:"長母音・マジックe",team:"母音チーム",r:"r音色"};
-let S={dir:"decode",set:"daily",lvl:"A1A2",grp:"all",cnt:10,queue:[],idx:0,correct:0,weak:{},missed:[],cur:null,revealed:false,built:[]};
+const QUESTION_COUNT = 10;
+let S={dir:"decode",set:"daily",lvl:"A1A2",grp:"all",queue:[],idx:0,correct:0,weak:{},missed:[],cur:null,revealed:false,built:[]};
 const $=id=>document.getElementById(id);
 const show=(id,on)=>$(id).classList.toggle("hidden",!on);
 
@@ -383,7 +365,6 @@ function bindPills(group,key,parse){
 bindPills("dirOpts","dir",b=>b.dataset.dir);
 bindPills("lvlPills","lvl",b=>b.dataset.lvl);
 bindPills("grpPills","grp",b=>b.dataset.grp);
-bindPills("cntPills","cnt",b=>parseInt(b.dataset.cnt));
 $("setOpts").querySelectorAll(".opt").forEach(b=>b.addEventListener("click",()=>{
   $("setOpts").querySelectorAll(".opt").forEach(x=>x.setAttribute("aria-pressed","false"));
   b.setAttribute("aria-pressed","true");S.set=b.dataset.set;
@@ -395,52 +376,16 @@ function filteredPool(){
   else{p=PRESET.filter(w=>(w.cefr==="A1"||w.cefr==="A2")&&(S.lvl==="A1A2"||w.cefr===S.lvl));}
   return p;
 }
-function updatePool(){const n=filteredPool().length;$("poolNote").textContent="対象 "+n+" 語"+(S.cnt?(" / 出題 "+Math.min(S.cnt,n)+" 語"):" / 全題");}
+function updatePool(){const n=filteredPool().length;$("poolNote").textContent="対象 "+n+" 語 / 出題 "+Math.min(QUESTION_COUNT,n)+" 語";}
 updatePool();
 
 
 /* ---------- speech (GAS → Drive → localStorage) ---------- */
-const DEFAULT_GAS_TTS_URL = "https://script.google.com/macros/s/AKfycbzUN8XntWeS68Gf3OqC5UP5J3jqAkEf254sp5JP8ik-PTmI20x_yx5nYi8NkH7UaiuQ/exec";
+const GAS_TTS_URL = "https://script.google.com/macros/s/AKfycbzUN8XntWeS68Gf3OqC5UP5J3jqAkEf254sp5JP8ik-PTmI20x_yx5nYi8NkH7UaiuQ/exec";
 const LS_TTS_PREFIX = "ipa_tts_v1:";
 const memAudioCache = new Map();
 let currentAudio = null;
 let speakBusy = false;
-
-function getGasUrl() {
-  return (localStorage.getItem("gas_tts_url") || DEFAULT_GAS_TTS_URL).replace(/\/$/, "");
-}
-
-function setGasNote(msg, ok) {
-  const el = $("gasNote");
-  el.textContent = msg;
-  el.style.color = ok ? "var(--ok)" : "var(--muted)";
-}
-
-function initGasUrlField() {
-  const saved = localStorage.getItem("gas_tts_url");
-  $("gasUrl").value = saved || DEFAULT_GAS_TTS_URL;
-  if (saved) {
-    setGasNote("GAS URL 保存済み · 音声は Drive / localStorage から再生します", true);
-  } else {
-    setGasNote("デフォルト GAS URL を使用中 · 変更する場合は保存してください", true);
-  }
-  $("gasSave").addEventListener("click", () => {
-    const url = $("gasUrl").value.trim().replace(/\/$/, "");
-    if (!url) {
-      localStorage.removeItem("gas_tts_url");
-      $("gasUrl").value = DEFAULT_GAS_TTS_URL;
-      setGasNote("カスタム URL を削除 · デフォルト GAS URL を使用中", true);
-      return;
-    }
-    if (!/^https:\/\/script\.google\.com\/macros\/s\/.+\/exec$/.test(url)) {
-      setGasNote("URL は https://script.google.com/macros/s/.../exec 形式で入力してください", false);
-      return;
-    }
-    localStorage.setItem("gas_tts_url", url);
-    setGasNote("GAS URL を保存しました", true);
-  });
-}
-initGasUrlField();
 
 function lsKey(w) { return LS_TTS_PREFIX + w.toLowerCase(); }
 
@@ -474,9 +419,7 @@ function saveAudioToLS(w, mime, b64) {
 }
 
 async function fetchAudioFromGas(w) {
-  const gasUrl = getGasUrl();
-  if (!gasUrl) throw new Error("GAS Web App URL が未設定です");
-  const res = await fetch(gasUrl + "?word=" + encodeURIComponent(w));
+  const res = await fetch(GAS_TTS_URL + "?word=" + encodeURIComponent(w));
   if (!res.ok) throw new Error("GAS HTTP " + res.status);
   const data = await res.json();
   if (!data.ok) throw new Error(data.error || "GAS error");
@@ -505,12 +448,6 @@ async function speak(w) {
       if (url) memAudioCache.set(w, url);
     }
     if (!url) {
-      const gasUrl = getGasUrl();
-      if (!gasUrl) {
-        setGasNote("先に GAS Web App URL を保存してください", false);
-        $("gasField").scrollIntoView({ behavior: "smooth", block: "center" });
-        return;
-      }
       const data = await fetchAudioFromGas(w);
       saveAudioToLS(w, data.mimeType, data.audio);
       const blob = new Blob([bytesFromB64(data.audio)], { type: data.mimeType || "audio/mpeg" });
@@ -522,8 +459,7 @@ async function speak(w) {
     audio.addEventListener("ended", () => { if (currentAudio === audio) currentAudio = null; });
     await audio.play();
   } catch (err) {
-    console.error(err);
-    setGasNote("音声の取得に失敗しました: " + err.message, false);
+    console.error("音声の取得に失敗しました:", err);
   } finally {
     setSpeakerBusy(false);
   }
@@ -536,7 +472,7 @@ function startSession(weakOnly){
   let pool=filteredPool().slice();
   if(weakOnly&&S.missed.length)pool=PRESET.filter(w=>S.missed.includes(w.w));
   shuffle(pool);
-  if(S.cnt>0)pool=pool.slice(0,S.cnt);
+  pool=pool.slice(0,QUESTION_COUNT);
   S.queue=pool;S.idx=0;S.correct=0;S.weak={};S.missed=[];
   show("setup",false);show("summary",false);renderCard();
 }
@@ -727,7 +663,7 @@ function renderSummary(){
   if(ent.length){
     $("weakList").innerHTML=ent.map(([s,n])=>{const p=PH[s];return '<div class="wk"><div class="wsym">'+s+'</div><div style="flex:1"><div class="wlab">'+p.lab+'</div><div class="wtip">'+p.mouth+'</div></div><div class="wcount">×'+n+'</div></div>';}).join("");
   }else{
-    $("weakList").innerHTML='<div class="wk"><div style="flex:1"><div class="wlab">苦手音は検出されませんでした</div><div class="wtip">ミスした音はありません。出題数やレベルを上げてもOK。</div></div></div>';
+    $("weakList").innerHTML='<div class="wk"><div style="flex:1"><div class="wlab">苦手音は検出されませんでした</div><div class="wtip">ミスした音はありません。レベルを上げてもOK。</div></div></div>';
   }
   $("reviewList").innerHTML=S.missed.length?'復習リスト: '+S.missed.map(w=>{const o=PRESET.find(x=>x.w===w);return '<b>'+o.ipa+'</b> '+w;}).join(" · "):"";
   $("weakBtn").disabled=S.missed.length===0;

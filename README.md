@@ -9,15 +9,13 @@ GitHub Pages: https://nkhippo.github.io/English-Pronunciation-Trainer/
 ## 機能
 
 - **読む (IPA → 単語)** / **書く (単語 → IPA)** の2モード
-- 出題は `wordlist_GA_a1a2_plus_phonics.json` のテーブルデータから選択（API不要）
+- 出題は `wordlist_GA_a1a2_plus_phonics.json` のテーブルデータからランダム選択（1セッション **10問** 固定）
 - 音声は GAS プロキシ経由で OpenAI `gpt-4o-mini-tts` を呼び出し（APIキーは GAS 側に保存）
 - 生成音声は Google Drive にキャッシュ、ブラウザでは localStorage にも保存して連続再生時は API を呼ばない
 
 ## 使い方
 
-1. `gas/README.md` に従い GAS をデプロイし、OpenAI API キーを Script Properties に設定（済みの場合は不要）
-2. セットアップ画面で GAS Web App URL を確認（デフォルト URL が設定済み。変更時のみ「保存」）
-3. 方向・出題セット・レベル・出題数を選び「はじめる」
+1. 方向・出題セット・レベルを選び「はじめる」
 
 ## ファイル
 
