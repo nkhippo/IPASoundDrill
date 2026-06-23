@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>音写 · IPA Decoder / Encoder</title>
+<title>IPA Dictation · Decoder / Encoder</title>
 <style>
   :root{
     --paper:#F4F3EE; --panel:#FFFFFF; --ink:#191C20; --muted:#6C717A; --faint:#9AA0A8;
@@ -152,52 +152,52 @@
 <div class="wrap">
   <div class="topbar">
     <div class="brand"><span class="mark">/iː/</span>
-      <div><div class="name">音写 IPA Decoder / Encoder</div><div class="sub">CEFR A1–A2 · General American</div></div>
+      <div><div class="name">IPA Dictation · Decoder / Encoder</div><div class="sub">CEFR A1–A2 · General American</div></div>
     </div>
     <div class="meter" id="meter"></div>
   </div>
 
   <!-- SETUP -->
   <section id="setup" class="panel">
-    <p class="lead">既知の単語の<b>発音だけ</b>を鍛え直すツール。&ldquo;発音できない音は聞き取れない&rdquo; を埋めます。<b>日常語</b>に加え、<b>綴りと発音が規則的に対応する語</b>(ai→/eɪ/ など)でIPAの読み方そのものを鍛えられます。</p>
+    <p class="lead">Retrain <b>pronunciation only</b> for words you already know. Bridge the gap: <b>if you can&rsquo;t say a sound, you can&rsquo;t hear it</b>. Practice with <b>everyday words</b> plus <b>regular spelling&ndash;sound patterns</b> (e.g. ai &rarr; /eɪ/) to build IPA reading skills.</p>
 
     <div class="field">
-      <div class="flabel">方向</div>
+      <div class="flabel">Direction</div>
       <div class="opts" id="dirOpts">
-        <button class="opt" data-dir="decode" aria-pressed="true"><span class="ot">読む · IPA → 単語</span><span class="od">発音記号を読んで綴りを当てる</span></button>
-        <button class="opt" data-dir="encode" aria-pressed="false"><span class="ot">書く · 単語 → IPA</span><span class="od">IPAキーボードで発音を組み立てる</span></button>
+        <button class="opt" data-dir="decode" aria-pressed="true"><span class="ot">Decode · IPA &rarr; word</span><span class="od">Read the IPA and spell the word</span></button>
+        <button class="opt" data-dir="encode" aria-pressed="false"><span class="ot">Encode · word &rarr; IPA</span><span class="od">Build the pronunciation with the IPA keyboard</span></button>
       </div>
     </div>
 
     <div class="field">
-      <div class="flabel">出題セット</div>
+      <div class="flabel">Question set</div>
       <div class="opts" id="setOpts">
-        <button class="opt" data-set="daily" aria-pressed="true"><span class="ot">日常語 · CEFR A1–A2</span><span class="od">よく使う語(不規則語も含む)</span></button>
-        <button class="opt" data-set="phonics" aria-pressed="false"><span class="ot">規則パターン · 綴り↔音</span><span class="od">綴りと発音が規則的に対応する語</span></button>
+        <button class="opt" data-set="daily" aria-pressed="true"><span class="ot">Daily words · CEFR A1–A2</span><span class="od">Common words (including irregular spellings)</span></button>
+        <button class="opt" data-set="phonics" aria-pressed="false"><span class="ot">Phonics patterns · spelling &harr; sound</span><span class="od">Words with regular spelling&ndash;sound correspondences</span></button>
       </div>
     </div>
 
     <div class="field" id="lvlField">
-      <div class="flabel">レベル</div>
+      <div class="flabel">Level</div>
       <div class="pills" id="lvlPills">
         <button class="pill" data-lvl="A1A2" aria-pressed="true">A1+A2</button>
-        <button class="pill" data-lvl="A1" aria-pressed="false">A1のみ</button>
-        <button class="pill" data-lvl="A2" aria-pressed="false">A2のみ</button>
+        <button class="pill" data-lvl="A1" aria-pressed="false">A1 only</button>
+        <button class="pill" data-lvl="A2" aria-pressed="false">A2 only</button>
       </div>
     </div>
 
     <div class="field hidden" id="grpField">
-      <div class="flabel">綴り規則グループ</div>
+      <div class="flabel">Spelling pattern group</div>
       <div class="pills" id="grpPills">
-        <button class="pill" data-grp="all" aria-pressed="true">すべて</button>
-        <button class="pill" data-grp="short" aria-pressed="false">短母音</button>
-        <button class="pill" data-grp="long" aria-pressed="false">長母音・マジックe</button>
-        <button class="pill" data-grp="team" aria-pressed="false">母音チーム</button>
-        <button class="pill" data-grp="r" aria-pressed="false">r音色</button>
+        <button class="pill" data-grp="all" aria-pressed="true">All</button>
+        <button class="pill" data-grp="short" aria-pressed="false">Short vowels</button>
+        <button class="pill" data-grp="long" aria-pressed="false">Long vowels · silent e</button>
+        <button class="pill" data-grp="team" aria-pressed="false">Vowel teams</button>
+        <button class="pill" data-grp="r" aria-pressed="false">R-colored vowels</button>
       </div>
     </div>
 
-    <button class="start" id="startBtn" disabled>読み込み中…</button>
+    <button class="start" id="startBtn" disabled>Loading…</button>
     <div class="countnote" id="poolNote"></div>
   </section>
 
@@ -205,34 +205,34 @@
   <section id="cardDecode" class="panel hidden">
     <div class="card-top"><div class="qno" id="dNo"></div></div>
     <div class="readout"><div class="ipa" id="dIpa"></div>
-      <button class="playicon" id="dPlay" type="button" aria-label="音を聞く"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button>
+      <button class="playicon" id="dPlay" type="button" aria-label="Listen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button>
     </div>
     <div class="info" id="dInfo"></div>
     <div class="hints" id="dHints">
-      <button class="hint" data-h="syl">音節数<span class="hv" id="hSyl">？</span></button>
-      <button class="hint" data-h="first">最初の文字<span class="hv" id="hFirst">？</span></button>
-      <button class="hint" data-h="pos">品詞<span class="hv" id="hPos">？</span></button>
+      <button class="hint" data-h="syl">Syllables<span class="hv" id="hSyl">?</span></button>
+      <button class="hint" data-h="first">First letter<span class="hv" id="hFirst">?</span></button>
+      <button class="hint" data-h="pos">Part of speech<span class="hv" id="hPos">?</span></button>
     </div>
     <div class="answer">
-      <input id="dInput" type="text" inputmode="latin" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" placeholder="単語を入力">
-      <button class="go" id="dCheck">答え合わせ</button>
+      <input id="dInput" type="text" inputmode="latin" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" placeholder="Type the word">
+      <button class="go" id="dCheck">Check</button>
     </div>
-    <div class="skip"><button id="dDunno">わからない → 答えを見る</button></div>
+    <div class="skip"><button id="dDunno">Don&rsquo;t know &rarr; show answer</button></div>
   </section>
 
   <!-- ENCODE CARD -->
   <section id="cardEncode" class="panel hidden">
     <div class="card-top"><div class="qno" id="eNo"></div></div>
     <div class="readout"><div class="wordbig" id="eWord"></div>
-      <button class="playicon" id="ePlay" type="button" aria-label="音を聞く"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button>
+      <button class="playicon" id="ePlay" type="button" aria-label="Listen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button>
     </div>
-    <div class="build" id="eBuild"><span class="ph">下のIPAキーをタップして発音を組み立てる</span></div>
+    <div class="build" id="eBuild"><span class="ph">Tap the IPA keys below to build the pronunciation</span></div>
     <div class="kbd" id="eKbd"></div>
     <div class="kbtns">
-      <button class="clear" id="eClear">クリア</button>
-      <button class="check" id="eCheck">答え合わせ</button>
+      <button class="clear" id="eClear">Clear</button>
+      <button class="check" id="eCheck">Check</button>
     </div>
-    <div class="skip"><button id="eDunno">わからない → 答えを見る</button></div>
+    <div class="skip"><button id="eDunno">Don&rsquo;t know &rarr; show answer</button></div>
   </section>
 
   <!-- REVEAL -->
@@ -241,24 +241,24 @@
       <div class="word" id="rWord"></div>
       <div class="yourtry" id="rTry"></div>
       <div class="readout" style="padding-top:0"><div class="ipa" id="rIpa"></div>
-        <button class="playicon" id="rPlay" type="button" aria-label="音を聞く"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button>
+        <button class="playicon" id="rPlay" type="button" aria-label="Listen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button>
       </div>
       <div class="info" id="rInfo"></div>
       <div class="note">
-        <div class="nh">この単語の発音ポイント</div>
+        <div class="nh">Pronunciation tips</div>
         <p id="rNote"></p>
         <div class="trapchips" id="rTraps"></div>
       </div>
-      <button class="reveal-next" id="nextBtn">次へ</button>
+      <button class="reveal-next" id="nextBtn">Next</button>
     </div>
   </section>
 
   <!-- SUMMARY -->
   <section id="summary" class="panel hidden">
     <div class="sumhead"><div class="bigstat"><span id="sumPct">0</span><small>%</small></div><div class="substat" id="sumLine"></div></div>
-    <div id="weakWrap"><div class="weakhead">次に練習すべき音</div><div id="weakList"></div></div>
+    <div id="weakWrap"><div class="weakhead">Sounds to practice next</div><div id="weakList"></div></div>
     <div class="reviewlist" id="reviewList"></div>
-    <div class="sumbtns"><button class="again" id="againBtn">もう一周</button><button class="weak" id="weakBtn">苦手だけ復習</button></div>
+    <div class="sumbtns"><button class="again" id="againBtn">Play again</button><button class="weak" id="weakBtn">Review misses only</button></div>
   </section>
 </div>
 
@@ -282,62 +282,62 @@ async function loadWordlist() {
   PRESET = rows.map(normalizeWord);
   wordlistReady = true;
   $("startBtn").disabled = false;
-  $("startBtn").textContent = "はじめる";
+  $("startBtn").textContent = "Start";
   updatePool();
 }
 
 loadWordlist().catch(err => {
-  $("poolNote").textContent = "単語リストの読み込みに失敗しました";
-  $("startBtn").textContent = "読み込み失敗";
+  $("poolNote").textContent = "Failed to load word list";
+  $("startBtn").textContent = "Load failed";
   console.error(err);
 });
 
 
 /* ---------- GA phoneme reference ---------- */
 const PH = {
-  "ˈ":{lab:"第一強勢",ex:"直後の音節を強く",mouth:"高く・長く・大きく の三位一体で",trap:"日本語は高低だけ。長さと強さも使う",t:1},
-  "ˌ":{lab:"第二強勢",ex:"弱めの強勢",mouth:"第一強勢より軽く強める",trap:"完全には潰さない",t:1},
-  "i":{lab:"長いイー (see)",ex:"see /si/",mouth:"唇を横に張り緊張した「イー」",trap:"ɪ と対立。緩めない",t:1},
-  "ɪ":{lab:"短いイ (sit)",ex:"sit /sɪt/",mouth:"力を抜いた短く緩い「イ」。やや「エ」寄り",trap:"i と混同しない。緊張させない",t:1},
-  "ɛ":{lab:"エ (bed)",ex:"bed /bɛd/",mouth:"日本語の「エ」に近い",trap:"æ と混ざらないよう注意",t:0},
-  "æ":{lab:"ア〜エ (cat)",ex:"cat /kæt/",mouth:"口を横に大きく開き「ア」と「エ」の中間",trap:"日本語のアでは通じない。「エ」寄りに広げる",t:1},
-  "ə":{lab:"シュワ (曖昧母音)",ex:"about /əˈbaʊt/",mouth:"口も舌も脱力した中央の弱い「ア」",trap:"綴りの母音字に引っ張られず最弱・曖昧に",t:1},
-  "ʌ":{lab:"ア (cup)",ex:"cup /kʌp/",mouth:"口をやや開け短く鋭い「ア」",trap:"ə より明確で力がある",t:1},
-  "ɑ":{lab:"アー (hot/father)",ex:"hot /hɑt/",mouth:"口を大きく開けた奥の「アー」",trap:"明るい「ア」でなく奥で深く",t:1},
-  "ɔ":{lab:"オー (dog/thought)",ex:"dog /dɔɡ/",mouth:"唇を丸めた「オ」",trap:"米では ɑ と合流することも。丸めを意識",t:1},
-  "ʊ":{lab:"短いウ (book)",ex:"book /bʊk/",mouth:"力を抜いた短い「ウ」。唇は軽く丸める",trap:"u と区別。突き出しすぎない",t:1},
-  "u":{lab:"長いウー (food)",ex:"food /fud/",mouth:"唇をしっかり丸め突き出す「ウー」",trap:"日本語のウは丸めが弱い。突き出す",t:1},
-  "ɝ":{lab:"アー r音色 (bird)",ex:"bird /bɝd/",mouth:"舌を奥で丸めながら「アー」。強いr音色",trap:"日本語にない。er/ir/ur が全部これ",t:1},
-  "ɚ":{lab:"弱いアー r音色 (water語尾)",ex:"water /ˈwɔtɚ/",mouth:"ɝ の無強勢・弱い版",trap:"語尾 -er/-or はほぼこれ",t:1},
-  "eɪ":{lab:"エイ (day)",ex:"day /deɪ/",mouth:"「エ」から「イ」へ滑らせる",trap:"「エー」と伸ばさない",t:0},
-  "aɪ":{lab:"アイ (my)",ex:"my /maɪ/",mouth:"「ア」から「イ」へ",trap:"1音にしない",t:0},
-  "ɔɪ":{lab:"オイ (boy)",ex:"boy /bɔɪ/",mouth:"「オ」から「イ」へ",trap:"—",t:0},
-  "oʊ":{lab:"オウ (go)",ex:"go /ɡoʊ/",mouth:"「オ」から「ウ」へ。後半で唇を丸める",trap:"「オー」と平板にしない。二重母音",t:1},
-  "aʊ":{lab:"アウ (now)",ex:"now /naʊ/",mouth:"「ア」から「ウ」へ",trap:"後半の丸めを忘れない",t:0},
-  "θ":{lab:"無声 th (think)",ex:"think /θɪŋk/",mouth:"舌先を上下の歯で軽く挟み息だけ",trap:"s で代用しない。舌を見せる",t:1},
-  "ð":{lab:"有声 th (this)",ex:"this /ðɪs/",mouth:"θ の口で声を加える",trap:"z や d で代用しない",t:1},
-  "ʃ":{lab:"シュ (she)",ex:"she /ʃi/",mouth:"唇を丸め舌を後ろへ",trap:"日本語のシより奥で",t:0},
-  "ʒ":{lab:"ジュ (measure)",ex:"measure /ˈmɛʒɚ/",mouth:"ʃ の有声版。唇丸め「ジュ」",trap:"日本語にない。語中・語末に多い",t:1},
-  "tʃ":{lab:"チ (church)",ex:"church /tʃɝtʃ/",mouth:"t+ʃ を一気に。破擦音",trap:"—",t:0},
-  "dʒ":{lab:"ヂ (judge)",ex:"judge /dʒʌdʒ/",mouth:"d+ʒ を一気に",trap:"—",t:0},
-  "ŋ":{lab:"ング (sing)",ex:"sing /sɪŋ/",mouth:"舌の奥を上げ鼻に抜く。g は出さない",trap:"「ング」と g を足さない",t:1},
-  "r":{lab:"r (right)",ex:"right /raɪt/",mouth:"舌をどこにも触れさせず奥へ丸める",trap:"l と区別。どこにも付けない",t:1},
-  "l":{lab:"l (light)",ex:"light /laɪt/",mouth:"舌先を上の歯茎にしっかり付ける",trap:"r と混同しない。付ける",t:1},
-  "v":{lab:"v (van)",ex:"van /væn/",mouth:"上の歯を下唇に当て声を加える",trap:"「ブ」と両唇でやらない。歯を使う",t:1},
-  "f":{lab:"f (fan)",ex:"fan /fæn/",mouth:"上の歯を下唇に当て息",trap:"「フ」と両唇でやらない",t:1},
-  "w":{lab:"ワ行 (we)",ex:"we /wi/",mouth:"唇を丸めすぼめる半母音",trap:"—",t:0},
-  "j":{lab:"ヤ行 (yes)",ex:"yes /jɛs/",mouth:"半母音。「ヤ・ユ・ヨ」の出だし",trap:"ju=「ユー」",t:0},
-  "h":{lab:"h (hat)",ex:"hat /hæt/",mouth:"喉から軽く息",trap:"—",t:0},
-  "b":{lab:"b",ex:"bat",mouth:"両唇を閉じ破裂・有声",trap:"—",t:0},
-  "d":{lab:"d",ex:"dog",mouth:"舌先を歯茎につけ破裂・有声",trap:"—",t:0},
-  "ɡ":{lab:"g",ex:"go",mouth:"舌の奥で破裂・有声",trap:"—",t:0},
-  "k":{lab:"k",ex:"cat",mouth:"舌の奥で破裂・無声",trap:"—",t:0},
-  "p":{lab:"p",ex:"pen",mouth:"両唇破裂・無声",trap:"—",t:0},
-  "t":{lab:"t",ex:"top",mouth:"舌先を歯茎につけ破裂・無声",trap:"—",t:0},
-  "m":{lab:"m",ex:"man",mouth:"両唇を閉じ鼻に抜く",trap:"—",t:0},
-  "n":{lab:"n",ex:"no",mouth:"舌先を歯茎につけ鼻に抜く",trap:"—",t:0},
-  "s":{lab:"s",ex:"see",mouth:"舌先を歯茎に近づけ息",trap:"θ と混同しない",t:1},
-  "z":{lab:"z",ex:"zoo",mouth:"s の有声版",trap:"—",t:0}
+  "ˈ":{lab:"Primary stress",ex:"stress the next syllable",mouth:"Higher, longer, and louder together",trap:"Pitch alone is not enough — use length and volume too",t:1},
+  "ˌ":{lab:"Secondary stress",ex:"lighter stress",mouth:"Stronger than unstressed, weaker than primary",trap:"Do not reduce it completely",t:1},
+  "i":{lab:"long ee (see)",ex:"see /si/",mouth:"Tense lips spread wide for a long \"ee\"",trap:"Contrasts with ɪ — do not relax it",t:1},
+  "ɪ":{lab:"short i (sit)",ex:"sit /sɪt/",mouth:"Relaxed, short, slightly lax \"ih\" toward \"eh\"",trap:"Do not tense it like i",t:1},
+  "ɛ":{lab:"eh (bed)",ex:"bed /bɛd/",mouth:"Open mid front vowel like \"eh\"",trap:"Keep it distinct from æ",t:0},
+  "æ":{lab:"a~eh (cat)",ex:"cat /kæt/",mouth:"Mouth wide; between \"ah\" and \"eh\"",trap:"Not a plain \"ah\" — spread and front it",t:1},
+  "ə":{lab:"schwa",ex:"about /əˈbaʊt/",mouth:"Central, weak, relaxed vowel",trap:"Ignore spelling — keep it vague and unstressed",t:1},
+  "ʌ":{lab:"uh (cup)",ex:"cup /kʌp/",mouth:"Short, open central \"uh\"",trap:"Clearer and stronger than schwa",t:1},
+  "ɑ":{lab:"ah (hot/father)",ex:"hot /hɑt/",mouth:"Low back open \"ah\"",trap:"Deep in the mouth, not a bright front \"ah\"",t:1},
+  "ɔ":{lab:"aw (dog/thought)",ex:"dog /dɔɡ/",mouth:"Rounded \"aw\"",trap:"In GA it may merge with ɑ — still round the lips",t:1},
+  "ʊ":{lab:"short u (book)",ex:"book /bʊk/",mouth:"Relaxed short \"u\"; lips lightly rounded",trap:"Distinct from u — do not protrude too much",t:1},
+  "u":{lab:"long oo (food)",ex:"food /fud/",mouth:"Rounded protruded \"oo\"",trap:"Round the lips more than many learners expect",t:1},
+  "ɝ":{lab:"stressed er (bird)",ex:"bird /bɝd/",mouth:"Tongue bunched back with strong r-color",trap:"No exact L1 equivalent — er/ir/ur often map here",t:1},
+  "ɚ":{lab:"unstressed er (water)",ex:"water /ˈwɔtɚ/",mouth:"Weaker r-colored schwa",trap:"Word-final -er/-or is usually this",t:1},
+  "eɪ":{lab:"ay (day)",ex:"day /deɪ/",mouth:"Glide from \"eh\" to \"ee\"",trap:"Do not hold a flat \"ay\"",t:0},
+  "aɪ":{lab:"eye (my)",ex:"my /maɪ/",mouth:"Glide from \"ah\" to \"ee\"",trap:"Keep it one diphthong",t:0},
+  "ɔɪ":{lab:"oy (boy)",ex:"boy /bɔɪ/",mouth:"Glide from \"aw\" to \"ee\"",trap:"—",t:0},
+  "oʊ":{lab:"oh (go)",ex:"go /ɡoʊ/",mouth:"Glide from \"oh\" to \"oo\"; round at the end",trap:"Not a flat long \"oh\" — keep the glide",t:1},
+  "aʊ":{lab:"ow (now)",ex:"now /naʊ/",mouth:"Glide from \"ah\" to \"oo\"",trap:"Round the second part",t:0},
+  "θ":{lab:"voiceless th (think)",ex:"think /θɪŋk/",mouth:"Tongue tip lightly between teeth; air only",trap:"Not \"s\" — show the tongue",t:1},
+  "ð":{lab:"voiced th (this)",ex:"this /ðɪs/",mouth:"Same as θ with voice",trap:"Not \"z\" or \"d\"",t:1},
+  "ʃ":{lab:"sh (she)",ex:"she /ʃi/",mouth:"Lips rounded; tongue pulled back",trap:"Farther back than many \"sh\" habits",t:0},
+  "ʒ":{lab:"zh (measure)",ex:"measure /ˈmɛʒɚ/",mouth:"Voiced version of sh",trap:"Rare in many L1s; common medially/finally",t:1},
+  "tʃ":{lab:"ch (church)",ex:"church /tʃɝtʃ/",mouth:"t + sh as one affricate",trap:"—",t:0},
+  "dʒ":{lab:"j (judge)",ex:"judge /dʒʌdʒ/",mouth:"d + zh as one affricate",trap:"—",t:0},
+  "ŋ":{lab:"ng (sing)",ex:"sing /sɪŋ/",mouth:"Back of tongue up; air through nose; no final g",trap:"Do not add a hard \"g\"",t:1},
+  "r":{lab:"r (right)",ex:"right /raɪt/",mouth:"Tongue bunched/curled back without touching",trap:"Not l — no contact anywhere",t:1},
+  "l":{lab:"l (light)",ex:"light /laɪt/",mouth:"Tongue tip firmly on the alveolar ridge",trap:"Not r — must make contact",t:1},
+  "v":{lab:"v (van)",ex:"van /væn/",mouth:"Top teeth on lower lip with voice",trap:"Not \"b\" — use teeth on lip",t:1},
+  "f":{lab:"f (fan)",ex:"fan /fæn/",mouth:"Top teeth on lower lip with air",trap:"Not both lips together",t:1},
+  "w":{lab:"w (we)",ex:"we /wi/",mouth:"Rounded lips; semivowel onset",trap:"—",t:0},
+  "j":{lab:"y (yes)",ex:"yes /jɛs/",mouth:"Palatal semivowel like \"y\"",trap:"ju is not plain \"oo\"",t:0},
+  "h":{lab:"h (hat)",ex:"hat /hæt/",mouth:"Light breath from the throat",trap:"—",t:0},
+  "b":{lab:"b",ex:"bat",mouth:"Bilabial stop, voiced",trap:"—",t:0},
+  "d":{lab:"d",ex:"dog",mouth:"Alveolar stop, voiced",trap:"—",t:0},
+  "ɡ":{lab:"g",ex:"go",mouth:"Velar stop, voiced",trap:"—",t:0},
+  "k":{lab:"k",ex:"cat",mouth:"Velar stop, voiceless",trap:"—",t:0},
+  "p":{lab:"p",ex:"pen",mouth:"Bilabial stop, voiceless",trap:"—",t:0},
+  "t":{lab:"t",ex:"top",mouth:"Alveolar stop, voiceless",trap:"—",t:0},
+  "m":{lab:"m",ex:"man",mouth:"Bilabial nasal",trap:"—",t:0},
+  "n":{lab:"n",ex:"no",mouth:"Alveolar nasal",trap:"—",t:0},
+  "s":{lab:"s",ex:"see",mouth:"Tongue near teeth; air stream",trap:"Do not confuse with θ",t:1},
+  "z":{lab:"z",ex:"zoo",mouth:"Voiced s",trap:"—",t:0}
 };
 const MULTI=["tʃ","dʒ","eɪ","aɪ","ɔɪ","oʊ","aʊ"];
 const VOWELS=new Set(["i","ɪ","ɛ","æ","ə","ʌ","ɑ","ɔ","ʊ","u","ɝ","ɚ","eɪ","aɪ","ɔɪ","oʊ","aʊ"]);
@@ -355,6 +355,12 @@ function stressSyllable(ipa){const tk=tokenize(ipa);let n=0;for(let k=0;k<tk.len
 /* ---------- state ---------- */
 const TRAPSET=new Set(["θ","ð","æ","ʒ","ɝ"]);
 const QUESTION_COUNT = 10;
+const POS_EN={
+  "限定詞":"determiner","名詞":"noun","動詞":"verb","形容詞":"adjective","副詞":"adverb",
+  "前置詞":"preposition","接続詞":"conjunction","代名詞":"pronoun","間投詞":"interjection",
+  "副詞 / 前置詞":"adverb / preposition","形容詞 / 副詞":"adjective / adverb"
+};
+function posEn(pos){if(!pos)return "—";return POS_EN[pos]||pos.replace(/名詞/g,"noun").replace(/動詞/g,"verb").replace(/形容詞/g,"adjective").replace(/副詞/g,"adverb").replace(/前置詞/g,"preposition").replace(/限定詞/g,"determiner");}
 let S={dir:"decode",set:"daily",lvl:"A1A2",grp:"all",queue:[],idx:0,correct:0,weak:{},missed:[],cur:null,revealed:false,built:[]};
 const $=id=>document.getElementById(id);
 const show=(id,on)=>$(id).classList.toggle("hidden",!on);
@@ -380,7 +386,7 @@ function filteredPool(){
   else{p=PRESET.filter(w=>(w.cefr==="A1"||w.cefr==="A2")&&(S.lvl==="A1A2"||w.cefr===S.lvl));}
   return p;
 }
-function updatePool(){const n=filteredPool().length;$("poolNote").textContent="対象 "+n+" 語 / 出題 "+Math.min(QUESTION_COUNT,n)+" 語";}
+function updatePool(){const n=filteredPool().length;$("poolNote").textContent="Pool: "+n+" words · Quiz: "+Math.min(QUESTION_COUNT,n)+" words";}
 updatePool();
 
 
@@ -463,7 +469,7 @@ async function speak(w) {
     audio.addEventListener("ended", () => { if (currentAudio === audio) currentAudio = null; });
     await audio.play();
   } catch (err) {
-    console.error("音声の取得に失敗しました:", err);
+    console.error("Failed to fetch audio:", err);
   } finally {
     setSpeakerBusy(false);
   }
@@ -487,7 +493,7 @@ $("weakBtn").addEventListener("click",()=>startSession(true));
 /* ---------- info rendering ---------- */
 function renderInfo(boxId,sym){const p=PH[sym];const box=$(boxId);if(!p){box.classList.remove("on");return;}
   box.innerHTML='<div class="ih"><span class="isym">'+sym+'</span><span class="ilab">'+p.lab+'</span><span class="iex">'+p.ex+'</span></div>'+
-    '<div class="irow"><span>口の形</span>'+p.mouth+'</div>'+(p.trap&&p.trap!=="—"?'<div class="irow"><span>注意</span>'+p.trap+'</div>':'');
+    '<div class="irow"><span>Mouth</span>'+p.mouth+'</div>'+(p.trap&&p.trap!=="—"?'<div class="irow"><span>Watch out</span>'+p.trap+'</div>':'');
   box.classList.add("on");
 }
 function renderIpaInto(container,ipa,infoBoxId,markTokens){
@@ -518,14 +524,14 @@ function renderDecode(c){
   show("cardEncode",false);show("cardDecode",true);
   $("dNo").textContent="#"+String(S.idx+1).padStart(2,"0");
   renderIpaInto($("dIpa"),c.ipa,"dInfo",null);$("dInfo").classList.remove("on");
-  $("hSyl").textContent="？";$("hFirst").textContent="？";$("hPos").textContent="？";
+  $("hSyl").textContent="?";$("hFirst").textContent="?";$("hPos").textContent="?";
   $("dHints").querySelectorAll(".hint").forEach(h=>h.disabled=false);
   const inp=$("dInput");inp.value="";inp.focus();
 }
 $("dHints").querySelectorAll(".hint").forEach(h=>h.addEventListener("click",()=>{
-  const c=S.cur;if(h.dataset.h==="syl")$("hSyl").textContent=syllableCount(c.ipa)+"音節";
+  const c=S.cur;if(h.dataset.h==="syl")$("hSyl").textContent=syllableCount(c.ipa)+" syllable"+(syllableCount(c.ipa)>1?"s":"");
   if(h.dataset.h==="first")$("hFirst").textContent=c.w[0].toUpperCase()+"…";
-  if(h.dataset.h==="pos")$("hPos").textContent=c.pos||"—";h.disabled=true;
+  if(h.dataset.h==="pos")$("hPos").textContent=posEn(c.pos);h.disabled=true;
 }));
 function norm(s){return s.toLowerCase().replace(/[^a-z]/g,"");}
 function lev(a,b){const m=a.length,n=b.length,d=Array.from({length:m+1},(_,i)=>[i,...Array(n).fill(0)]);for(let j=0;j<=n;j++)d[0][j]=j;for(let i=1;i<=m;i++)for(let j=1;j<=n;j++)d[i][j]=Math.min(d[i-1][j]+1,d[i][j-1]+1,d[i-1][j-1]+(a[i-1]===b[j-1]?0:1));return d[m][n];}
@@ -541,11 +547,11 @@ $("dPlay").addEventListener("click",()=>{if(S.cur)speak(S.cur.w);});
 
 /* ENCODE + IPA keyboard */
 const KEYGROUPS=[
-  {label:"強勢",keys:["ˈ","ˌ"],cls:"stress"},
-  {label:"母音",keys:["i","ɪ","ɛ","æ","ə","ʌ","ɑ","ɔ","ʊ","u"]},
-  {label:"r母音",keys:["ɝ","ɚ"]},
-  {label:"二重母音",keys:["eɪ","aɪ","ɔɪ","oʊ","aʊ"]},
-  {label:"子音",keys:["p","b","t","d","k","ɡ","f","v","θ","ð","s","z","ʃ","ʒ","tʃ","dʒ","m","n","ŋ","l","r","w","j","h"]}
+  {label:"Stress",keys:["ˈ","ˌ"],cls:"stress"},
+  {label:"Vowels",keys:["i","ɪ","ɛ","æ","ə","ʌ","ɑ","ɔ","ʊ","u"]},
+  {label:"R-colored",keys:["ɝ","ɚ"]},
+  {label:"Diphthongs",keys:["eɪ","aɪ","ɔɪ","oʊ","aʊ"]},
+  {label:"Consonants",keys:["p","b","t","d","k","ɡ","f","v","θ","ð","s","z","ʃ","ʒ","tʃ","dʒ","m","n","ŋ","l","r","w","j","h"]}
 ];
 function buildKeyboard(){
   let html="";
@@ -562,7 +568,7 @@ function buildKeyboard(){
 buildKeyboard();
 function renderBuild(){
   const el=$("eBuild");
-  if(!S.built.length){el.innerHTML='<span class="ph">下のIPAキーをタップして発音を組み立てる</span>';return;}
+  if(!S.built.length){el.innerHTML='<span class="ph">Tap the IPA keys below to build the pronunciation</span>';return;}
   el.innerHTML='<span class="ipa"><span class="slash">/</span>'+S.built.map(t=>t==="ˈ"||t==="ˌ"?'<span class="mark" style="color:var(--faint);font-size:.62em;vertical-align:.35em">'+t+'</span>':t).join("")+'<span class="slash">/</span></span>';
 }
 function renderEncode(c){
@@ -596,14 +602,14 @@ $("eDunno").addEventListener("click",()=>{if(!S.revealed)reveal("bad",{type:"enc
 /* ---------- reveal ---------- */
 function autoNote(c){
   const parts=[];
-  if(c.pat)parts.push("綴り規則 "+c.pat);
+  if(c.pat)parts.push("Spelling pattern: "+c.pat);
   const sy=syllableCount(c.ipa);
-  if(sy>1)parts.push("第"+stressSyllable(c.ipa)+"音節を強く("+sy+"音節)");
+  if(sy>1)parts.push("Stress syllable "+stressSyllable(c.ipa)+" ("+sy+" syllables)");
   const tk=tokenize(c.ipa);
-  if(tk.includes("ə")||tk.includes("ɚ"))parts.push("弱化母音(ə/ɚ)あり：綴りに引っ張られず曖昧に");
+  if(tk.includes("ə")||tk.includes("ɚ"))parts.push("Schwa (ə/ɚ): stay weak and vague, not led by spelling");
   const traps=[...new Set(tokenize(c.ipa))].filter(t=>PH[t]&&PH[t].t===1&&t!=="ˈ"&&t!=="ˌ");
-  if(traps.length)parts.push("要注意音: "+traps.join(" "));
-  return parts.join(" ／ ");
+  if(traps.length)parts.push("Tricky sounds: "+traps.join(" "));
+  return parts.join(" · ");
 }
 function reveal(res,ctx){
   const c=S.cur;S.revealed=true;
@@ -616,10 +622,10 @@ function reveal(res,ctx){
   $("rWord").textContent=c.w;
   // your attempt
   if(ctx.type==="decode"){
-    $("rTry").innerHTML=ctx.tryRaw&&norm(ctx.tryRaw)!==norm(c.w)?'あなた: <span class="try">'+ctx.tryRaw.replace(/[<>]/g,"")+'</span>':(ctx.tryRaw?'あなた: <span class="try">'+ctx.tryRaw.replace(/[<>]/g,"")+'</span>':'答えを確認');
+    $("rTry").innerHTML=ctx.tryRaw&&norm(ctx.tryRaw)!==norm(c.w)?'You: <span class="try">'+ctx.tryRaw.replace(/[<>]/g,"")+'</span>':(ctx.tryRaw?'You: <span class="try">'+ctx.tryRaw.replace(/[<>]/g,"")+'</span>':'See the answer');
   }else{
     const u=ctx.usr||[];
-    $("rTry").innerHTML=u.length?'あなた: <span class="uipa">/'+u.join("")+'/</span>':'答えを確認';
+    $("rTry").innerHTML=u.length?'You: <span class="uipa">/'+u.join("")+'/</span>':'See the answer';
   }
   // reveal IPA with per-token correctness for encode
   let marker=null;
@@ -651,15 +657,15 @@ function renderSummary(){
   show("cardDecode",false);show("cardEncode",false);show("reveal",false);show("summary",true);
   const total=S.queue.length,pct=total?Math.round(S.correct/total*100):0;
   $("sumPct").textContent=pct;
-  $("sumLine").textContent=S.correct+" / "+total+" 正解 · 復習 "+S.missed.length+" 語";
+  $("sumLine").textContent=S.correct+" / "+total+" correct · "+S.missed.length+" to review";
   $("meter").innerHTML='<b>done</b>';
   const ent=Object.entries(S.weak).sort((a,b)=>b[1]-a[1]).slice(0,5);
   if(ent.length){
     $("weakList").innerHTML=ent.map(([s,n])=>{const p=PH[s];return '<div class="wk"><div class="wsym">'+s+'</div><div style="flex:1"><div class="wlab">'+p.lab+'</div><div class="wtip">'+p.mouth+'</div></div><div class="wcount">×'+n+'</div></div>';}).join("");
   }else{
-    $("weakList").innerHTML='<div class="wk"><div style="flex:1"><div class="wlab">苦手音は検出されませんでした</div><div class="wtip">ミスした音はありません。レベルを上げてもOK。</div></div></div>';
+    $("weakList").innerHTML='<div class="wk"><div style="flex:1"><div class="wlab">No weak sounds detected</div><div class="wtip">No missed sounds. Try a higher level.</div></div></div>';
   }
-  $("reviewList").innerHTML=S.missed.length?'復習リスト: '+S.missed.map(w=>{const o=PRESET.find(x=>x.w===w);return '<b>'+o.ipa+'</b> '+w;}).join(" · "):"";
+  $("reviewList").innerHTML=S.missed.length?'Review list: '+S.missed.map(w=>{const o=PRESET.find(x=>x.w===w);return '<b>'+o.ipa+'</b> '+w;}).join(" · "):"";
   $("weakBtn").disabled=S.missed.length===0;
 }
 </script>
