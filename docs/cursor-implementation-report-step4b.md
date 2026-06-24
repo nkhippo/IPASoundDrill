@@ -1,7 +1,7 @@
 # Cursor 実装レポート — STEP4-b: 音素近傍（neighbors）
 
 > 作成日: 2026-06-23  
-> 対象ブランチ: `main`（マージ後コミットを記載）  
+> 対象ブランチ: `main`（`854dcc2`）  
 > 指示書: `cursor-step4b-neighbors.md`  
 > 前提正本: `docs/PURPOSE.md` v2 / `docs/DESIGN.md` §2.2
 
@@ -143,7 +143,7 @@ python3 scripts/merge_neighbors.py   # slim 源を更新した場合は slim も
 
 | コミット | 内容 |
 |----------|------|
-| （マージ後に記載） | STEP4-b: neighbors マージ、再生成ツール、実装レポート |
+| `854dcc2` | STEP4-b: neighbors マージ、再生成ツール、実装レポート |
 
 ブランチ: `step4b-neighbors` → `main` へマージ・`origin/main` へプッシュ済み。
 
