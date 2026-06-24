@@ -1,7 +1,7 @@
 # Cursor 実装レポート — STEP4-a: 基礎語（アルファベット・短縮形）
 
 > 作成日: 2026-06-23  
-> 対象ブランチ: `main`（マージ後コミットを記載）  
+> 対象ブランチ: `main`（`b8f6ba5`）  
 > 指示書: `cursor-step4a-basic-words.md`  
 > 前提正本: `docs/PURPOSE.md` v2 / `docs/DESIGN.md` §4
 
@@ -130,7 +130,7 @@ python3 tools/validate_i18n.py
 
 | コミット | 内容 |
 |----------|------|
-| （マージ後に記載） | STEP4-a: 基礎語74語マージ、フォーカスUI、i18n |
+| `b8f6ba5` | STEP4-a: 基礎語74語マージ、フォーカスUI、i18n、実装レポート |
 
 ブランチ: `step4a-basic-words` → `main` へマージ・`origin/main` へプッシュ済み。
 
