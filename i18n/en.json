@@ -10,7 +10,9 @@
     "traps": "Trap sounds",
     "traps_d": "θ ð æ ʒ ɝ",
     "weak": "Weak spots",
-    "weak_d": "From practice history"
+    "weak_d": "From practice history",
+    "letters": "Alphabet",
+    "contractions": "Contractions"
   },
   "reg": {
     "label": "Spelling type",
@@ -127,6 +129,8 @@
     "副詞 / 前置詞": "adverb / preposition",
     "形容詞 / 副詞": "adjective / adverb",
     "be動詞": "be verb",
-    "助動詞": "modal verb"
+    "助動詞": "modal verb",
+    "文字": "letter name",
+    "短縮形": "contraction"
   }
 }

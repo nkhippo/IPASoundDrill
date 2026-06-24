@@ -1,5 +1,20 @@
 [
  {
+  "w": "A",
+  "ipa": "/eɪ/",
+  "cefr": "A1",
+  "pos": "文字",
+  "src": "letter",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "letter A",
+   "ja": "文字 A",
+   "zh": "字母 A",
+   "ko": "문자 A"
+  }
+ },
+ {
   "w": "a",
   "ipa": "/ə/",
   "cefr": "A1",
@@ -585,6 +600,21 @@
   }
  },
  {
+  "w": "aren't",
+  "ipa": "/ˈɑrənt/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "are not",
+   "ja": "are notの短縮形",
+   "zh": "are not的缩写",
+   "ko": "are not의 축약형"
+  }
+ },
+ {
   "w": "arm",
   "ipa": "/ɑrm/",
   "cefr": "A1",
@@ -777,6 +807,21 @@
    "ja": "離れて",
    "zh": "离开",
    "ko": "떨어져 있는"
+  }
+ },
+ {
+  "w": "B",
+  "ipa": "/bi/",
+  "cefr": "A1",
+  "pos": "文字",
+  "src": "letter",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "letter B",
+   "ja": "文字 B",
+   "zh": "字母 B",
+   "ko": "문자 B"
   }
  },
  {
@@ -2100,6 +2145,21 @@
   }
  },
  {
+  "w": "C",
+  "ipa": "/si/",
+  "cefr": "A1",
+  "pos": "文字",
+  "src": "letter",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "letter C",
+   "ja": "文字 C",
+   "zh": "字母 C",
+   "ko": "문자 C"
+  }
+ },
+ {
   "w": "cake",
   "ipa": "/keɪk/",
   "cefr": "A1",
@@ -2172,6 +2232,21 @@
    "ja": "できる",
    "zh": "能",
    "ko": "~할 수 있다"
+  }
+ },
+ {
+  "w": "can't",
+  "ipa": "/kænt/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "cannot",
+   "ja": "cannotの短縮形",
+   "zh": "cannot的缩写",
+   "ko": "cannot의 축약형"
   }
  },
  {
@@ -3165,6 +3240,36 @@
   }
  },
  {
+  "w": "could've",
+  "ipa": "/ˈkʊdəv/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "could have",
+   "ja": "could haveの短縮形",
+   "zh": "could have的缩写",
+   "ko": "could have의 축약형"
+  }
+ },
+ {
+  "w": "couldn't",
+  "ipa": "/ˈkʊdənt/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "could not",
+   "ja": "could notの短縮形",
+   "zh": "could not的缩写",
+   "ko": "could not의 축약형"
+  }
+ },
+ {
   "w": "course",
   "ipa": "/kɔrs/",
   "cefr": "A1",
@@ -3312,6 +3417,21 @@
    "ja": "かわいい",
    "zh": "可爱的",
    "ko": "귀여운"
+  }
+ },
+ {
+  "w": "D",
+  "ipa": "/di/",
+  "cefr": "A1",
+  "pos": "文字",
+  "src": "letter",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "letter D",
+   "ja": "文字 D",
+   "zh": "字母 D",
+   "ko": "문자 D"
   }
  },
  {
@@ -3555,6 +3675,21 @@
   }
  },
  {
+  "w": "didn't",
+  "ipa": "/ˈdɪdənt/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "did not",
+   "ja": "did notの短縮形",
+   "zh": "did not的缩写",
+   "ko": "did not의 축약형"
+  }
+ },
+ {
   "w": "difference",
   "ipa": "/ˈdɪfɚəns/",
   "cefr": "A1",
@@ -3705,6 +3840,21 @@
   }
  },
  {
+  "w": "doesn't",
+  "ipa": "/ˈdʌzənt/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "does not",
+   "ja": "does notの短縮形",
+   "zh": "does not的缩写",
+   "ko": "does not의 축약형"
+  }
+ },
+ {
   "w": "dog",
   "ipa": "/dɔɡ/",
   "cefr": "A1",
@@ -3762,6 +3912,21 @@
    "ja": "ドル",
    "zh": "美元",
    "ko": "달러"
+  }
+ },
+ {
+  "w": "don't",
+  "ipa": "/doʊnt/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "do not",
+   "ja": "do notの短縮形",
+   "zh": "do not的缩写",
+   "ko": "do not의 축약형"
   }
  },
  {
@@ -3972,6 +4137,21 @@
    "ja": "DVD（映像ディスク）",
    "zh": "光碟",
    "ko": "디브이디"
+  }
+ },
+ {
+  "w": "E",
+  "ipa": "/i/",
+  "cefr": "A1",
+  "pos": "文字",
+  "src": "letter",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "letter E",
+   "ja": "文字 E",
+   "zh": "字母 E",
+   "ko": "문자 E"
   }
  },
  {
@@ -4452,6 +4632,21 @@
    "ja": "目",
    "zh": "眼睛",
    "ko": "눈"
+  }
+ },
+ {
+  "w": "F",
+  "ipa": "/ɛf/",
+  "cefr": "A1",
+  "pos": "文字",
+  "src": "letter",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "letter F",
+   "ja": "文字 F",
+   "zh": "字母 F",
+   "ko": "문자 F"
   }
  },
  {
@@ -5385,6 +5580,21 @@
   }
  },
  {
+  "w": "G",
+  "ipa": "/dʒi/",
+  "cefr": "A1",
+  "pos": "文字",
+  "src": "letter",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "letter G",
+   "ja": "文字 G",
+   "zh": "字母 G",
+   "ko": "문자 G"
+  }
+ },
+ {
   "w": "game",
   "ipa": "/ɡeɪm/",
   "cefr": "A1",
@@ -5910,6 +6120,21 @@
   }
  },
  {
+  "w": "H",
+  "ipa": "/eɪtʃ/",
+  "cefr": "A1",
+  "pos": "文字",
+  "src": "letter",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "letter H",
+   "ja": "文字 H",
+   "zh": "字母 H",
+   "ko": "문자 H"
+  }
+ },
+ {
   "w": "habit",
   "ipa": "/ˈhæbət/",
   "cefr": "A1",
@@ -5937,6 +6162,21 @@
    "ja": "持っていた",
    "zh": "有",
    "ko": "가졌다"
+  }
+ },
+ {
+  "w": "hadn't",
+  "ipa": "/ˈhædənt/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "had not",
+   "ja": "had notの短縮形",
+   "zh": "had not的缩写",
+   "ko": "had not의 축약형"
   }
  },
  {
@@ -6105,6 +6345,21 @@
   }
  },
  {
+  "w": "hasn't",
+  "ipa": "/ˈhæzənt/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "has not",
+   "ja": "has notの短縮形",
+   "zh": "has not的缩写",
+   "ko": "has not의 축약형"
+  }
+ },
+ {
   "w": "hat",
   "ipa": "/hæt/",
   "cefr": "A1",
@@ -6135,6 +6390,21 @@
   }
  },
  {
+  "w": "haven't",
+  "ipa": "/ˈhævənt/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "have not",
+   "ja": "have notの短縮形",
+   "zh": "have not的缩写",
+   "ko": "have not의 축약형"
+  }
+ },
+ {
   "w": "he",
   "ipa": "/hi/",
   "cefr": "A1",
@@ -6147,6 +6417,51 @@
    "ja": "彼",
    "zh": "他",
    "ko": "그"
+  }
+ },
+ {
+  "w": "he'd",
+  "ipa": "/hid/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "he would / he had",
+   "ja": "he would / he hadの短縮形",
+   "zh": "he would / he had的缩写",
+   "ko": "he would / he had의 축약형"
+  }
+ },
+ {
+  "w": "he'll",
+  "ipa": "/hil/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "he will",
+   "ja": "he willの短縮形",
+   "zh": "he will的缩写",
+   "ko": "he will의 축약형"
+  }
+ },
+ {
+  "w": "he's",
+  "ipa": "/hiz/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "he is",
+   "ja": "he isの短縮形",
+   "zh": "he is的缩写",
+   "ko": "he is의 축약형"
   }
  },
  {
@@ -6312,6 +6627,21 @@
    "ja": "ここ",
    "zh": "这里",
    "ko": "여기"
+  }
+ },
+ {
+  "w": "here's",
+  "ipa": "/hɪrz/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "here is",
+   "ja": "here isの短縮形",
+   "zh": "here is的缩写",
+   "ko": "here is의 축약형"
   }
  },
  {
@@ -6720,6 +7050,21 @@
   }
  },
  {
+  "w": "I",
+  "ipa": "/aɪ/",
+  "cefr": "A1",
+  "pos": "文字",
+  "src": "letter",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "letter I",
+   "ja": "文字 I",
+   "zh": "字母 I",
+   "ko": "문자 I"
+  }
+ },
+ {
   "w": "i",
   "ipa": "/aɪ/",
   "cefr": "A1",
@@ -6732,6 +7077,66 @@
    "ja": "私",
    "zh": "我",
    "ko": "나"
+  }
+ },
+ {
+  "w": "i'd",
+  "ipa": "/aɪd/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "I would / I had",
+   "ja": "I would / I hadの短縮形",
+   "zh": "I would / I had的缩写",
+   "ko": "I would / I had의 축약형"
+  }
+ },
+ {
+  "w": "i'll",
+  "ipa": "/aɪl/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "I will",
+   "ja": "I willの短縮形",
+   "zh": "I will的缩写",
+   "ko": "I will의 축약형"
+  }
+ },
+ {
+  "w": "i'm",
+  "ipa": "/aɪm/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "I am",
+   "ja": "I amの短縮形",
+   "zh": "I am的缩写",
+   "ko": "I am의 축약형"
+  }
+ },
+ {
+  "w": "i've",
+  "ipa": "/aɪv/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "I have",
+   "ja": "I haveの短縮形",
+   "zh": "I have的缩写",
+   "ko": "I have의 축약형"
   }
  },
  {
@@ -6990,6 +7395,21 @@
   }
  },
  {
+  "w": "isn't",
+  "ipa": "/ˈɪzənt/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "is not",
+   "ja": "is notの短縮形",
+   "zh": "is not的缩写",
+   "ko": "is not의 축약형"
+  }
+ },
+ {
   "w": "it",
   "ipa": "/ɪt/",
   "cefr": "A1",
@@ -7002,6 +7422,21 @@
    "ja": "それ",
    "zh": "它",
    "ko": "그것"
+  }
+ },
+ {
+  "w": "it's",
+  "ipa": "/ɪts/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "it is",
+   "ja": "it isの短縮形",
+   "zh": "it is的缩写",
+   "ko": "it is의 축약형"
   }
  },
  {
@@ -7032,6 +7467,21 @@
    "ja": "その",
    "zh": "它是",
    "ko": "그것은"
+  }
+ },
+ {
+  "w": "J",
+  "ipa": "/dʒeɪ/",
+  "cefr": "A1",
+  "pos": "文字",
+  "src": "letter",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "letter J",
+   "ja": "文字 J",
+   "zh": "字母 J",
+   "ko": "문자 J"
   }
  },
  {
@@ -7212,6 +7662,21 @@
    "ja": "ただ",
    "zh": "只是",
    "ko": "단지"
+  }
+ },
+ {
+  "w": "K",
+  "ipa": "/keɪ/",
+  "cefr": "A1",
+  "pos": "文字",
+  "src": "letter",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "letter K",
+   "ja": "文字 K",
+   "zh": "字母 K",
+   "ko": "문자 K"
   }
  },
  {
@@ -7407,6 +7872,21 @@
    "ja": "知る",
    "zh": "知道",
    "ko": "알다"
+  }
+ },
+ {
+  "w": "L",
+  "ipa": "/ɛl/",
+  "cefr": "A1",
+  "pos": "文字",
+  "src": "letter",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "letter L",
+   "ja": "文字 L",
+   "zh": "字母 L",
+   "ko": "문자 L"
   }
  },
  {
@@ -7632,6 +8112,21 @@
    "ja": "させて",
    "zh": "让",
    "ko": "허락하다"
+  }
+ },
+ {
+  "w": "let's",
+  "ipa": "/lɛts/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "let us",
+   "ja": "let usの短縮形",
+   "zh": "let us的缩写",
+   "ko": "let us의 축약형"
   }
  },
  {
@@ -7962,6 +8457,21 @@
    "ja": "ランチ",
    "zh": "午餐",
    "ko": "점심"
+  }
+ },
+ {
+  "w": "M",
+  "ipa": "/ɛm/",
+  "cefr": "A1",
+  "pos": "文字",
+  "src": "letter",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "letter M",
+   "ja": "文字 M",
+   "zh": "字母 M",
+   "ko": "문자 M"
   }
  },
  {
@@ -8715,6 +9225,21 @@
   }
  },
  {
+  "w": "mustn't",
+  "ipa": "/ˈmʌsənt/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "must not",
+   "ja": "must notの短縮形",
+   "zh": "must not的缩写",
+   "ko": "must not의 축약형"
+  }
+ },
+ {
   "w": "my",
   "ipa": "/maɪ/",
   "cefr": "A1",
@@ -8727,6 +9252,21 @@
    "ja": "私の",
    "zh": "我的",
    "ko": "나의"
+  }
+ },
+ {
+  "w": "N",
+  "ipa": "/ɛn/",
+  "cefr": "A1",
+  "pos": "文字",
+  "src": "letter",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "letter N",
+   "ja": "文字 N",
+   "zh": "字母 N",
+   "ko": "문자 N"
   }
  },
  {
@@ -9105,6 +9645,21 @@
   }
  },
  {
+  "w": "O",
+  "ipa": "/oʊ/",
+  "cefr": "A1",
+  "pos": "文字",
+  "src": "letter",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "letter O",
+   "ja": "文字 O",
+   "zh": "字母 O",
+   "ko": "문자 O"
+  }
+ },
+ {
   "w": "october",
   "ipa": "/ɑkˈtoʊbɚ/",
   "cefr": "A1",
@@ -9477,6 +10032,21 @@
    "ja": "所有者",
    "zh": "所有者",
    "ko": "소유자"
+  }
+ },
+ {
+  "w": "P",
+  "ipa": "/pi/",
+  "cefr": "A1",
+  "pos": "文字",
+  "src": "letter",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "letter P",
+   "ja": "文字 P",
+   "zh": "字母 P",
+   "ko": "문자 P"
   }
  },
  {
@@ -10395,6 +10965,21 @@
   }
  },
  {
+  "w": "Q",
+  "ipa": "/kju/",
+  "cefr": "A1",
+  "pos": "文字",
+  "src": "letter",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "letter Q",
+   "ja": "文字 Q",
+   "zh": "字母 Q",
+   "ko": "문자 Q"
+  }
+ },
+ {
   "w": "quarter",
   "ipa": "/ˈkwɔrtɚ/",
   "cefr": "A1",
@@ -10452,6 +11037,21 @@
    "ja": "静かな",
    "zh": "安静的",
    "ko": "조용한"
+  }
+ },
+ {
+  "w": "R",
+  "ipa": "/ɑr/",
+  "cefr": "A1",
+  "pos": "文字",
+  "src": "letter",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "letter R",
+   "ja": "文字 R",
+   "zh": "字母 R",
+   "ko": "문자 R"
   }
  },
  {
@@ -10965,6 +11565,21 @@
   }
  },
  {
+  "w": "S",
+  "ipa": "/ɛs/",
+  "cefr": "A1",
+  "pos": "文字",
+  "src": "letter",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "letter S",
+   "ja": "文字 S",
+   "zh": "字母 S",
+   "ko": "문자 S"
+  }
+ },
+ {
   "w": "sad",
   "ipa": "/sæd/",
   "cefr": "A1",
@@ -11400,6 +12015,51 @@
   }
  },
  {
+  "w": "she'd",
+  "ipa": "/ʃid/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "she would / she had",
+   "ja": "she would / she hadの短縮形",
+   "zh": "she would / she had的缩写",
+   "ko": "she would / she had의 축약형"
+  }
+ },
+ {
+  "w": "she'll",
+  "ipa": "/ʃil/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "she will",
+   "ja": "she willの短縮形",
+   "zh": "she will的缩写",
+   "ko": "she will의 축약형"
+  }
+ },
+ {
+  "w": "she's",
+  "ipa": "/ʃiz/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "she is",
+   "ja": "she isの短縮形",
+   "zh": "she is的缩写",
+   "ko": "she is의 축약형"
+  }
+ },
+ {
   "w": "sheep",
   "ipa": "/ʃip/",
   "cefr": "A1",
@@ -11535,6 +12195,21 @@
   }
  },
  {
+  "w": "should've",
+  "ipa": "/ˈʃʊdəv/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "should have",
+   "ja": "should haveの短縮形",
+   "zh": "should have的缩写",
+   "ko": "should have의 축약형"
+  }
+ },
+ {
   "w": "shoulder",
   "ipa": "/ˈʃoʊldɚ/",
   "cefr": "A1",
@@ -11547,6 +12222,21 @@
    "ja": "ショルダー",
    "zh": "肩膀",
    "ko": "어깨"
+  }
+ },
+ {
+  "w": "shouldn't",
+  "ipa": "/ˈʃʊdənt/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "should not",
+   "ja": "should notの短縮形",
+   "zh": "should not的缩写",
+   "ko": "should not의 축약형"
   }
  },
  {
@@ -12945,6 +13635,21 @@
   }
  },
  {
+  "w": "T",
+  "ipa": "/ti/",
+  "cefr": "A1",
+  "pos": "文字",
+  "src": "letter",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "letter T",
+   "ja": "文字 T",
+   "zh": "字母 T",
+   "ko": "문자 T"
+  }
+ },
+ {
   "w": "table",
   "ipa": "/ˈteɪbəl/",
   "cefr": "A1",
@@ -13275,6 +13980,21 @@
   }
  },
  {
+  "w": "that's",
+  "ipa": "/ðæts/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "that is",
+   "ja": "that isの短縮形",
+   "zh": "that is的缩写",
+   "ko": "that is의 축약형"
+  }
+ },
+ {
   "w": "the",
   "ipa": "/ðə/",
   "cefr": "A1",
@@ -13350,6 +14070,21 @@
   }
  },
  {
+  "w": "there's",
+  "ipa": "/ðɛrz/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "there is",
+   "ja": "there isの短縮形",
+   "zh": "there is的缩写",
+   "ko": "there is의 축약형"
+  }
+ },
+ {
   "w": "these",
   "ipa": "/ðiz/",
   "cefr": "A1",
@@ -13377,6 +14112,66 @@
    "ja": "彼らは",
    "zh": "他们",
    "ko": "그들"
+  }
+ },
+ {
+  "w": "they'd",
+  "ipa": "/ðeɪd/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "they would / they had",
+   "ja": "they would / they hadの短縮形",
+   "zh": "they would / they had的缩写",
+   "ko": "they would / they had의 축약형"
+  }
+ },
+ {
+  "w": "they'll",
+  "ipa": "/ðeɪl/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "they will",
+   "ja": "they willの短縮形",
+   "zh": "they will的缩写",
+   "ko": "they will의 축약형"
+  }
+ },
+ {
+  "w": "they're",
+  "ipa": "/ðɛr/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "they are",
+   "ja": "they areの短縮形",
+   "zh": "they are的缩写",
+   "ko": "they are의 축약형"
+  }
+ },
+ {
+  "w": "they've",
+  "ipa": "/ðeɪv/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "they have",
+   "ja": "they haveの短縮形",
+   "zh": "they have的缩写",
+   "ko": "they have의 축약형"
   }
  },
  {
@@ -14145,6 +14940,21 @@
   }
  },
  {
+  "w": "U",
+  "ipa": "/ju/",
+  "cefr": "A1",
+  "pos": "文字",
+  "src": "letter",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "letter U",
+   "ja": "文字 U",
+   "zh": "字母 U",
+   "ko": "문자 U"
+  }
+ },
+ {
   "w": "ugly",
   "ipa": "/ˈʌɡli/",
   "cefr": "A1",
@@ -14295,6 +15105,21 @@
   }
  },
  {
+  "w": "V",
+  "ipa": "/vi/",
+  "cefr": "A1",
+  "pos": "文字",
+  "src": "letter",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "letter V",
+   "ja": "文字 V",
+   "zh": "字母 V",
+   "ko": "문자 V"
+  }
+ },
+ {
   "w": "vacation",
   "ipa": "/veɪˈkeɪʃən/",
   "cefr": "A1",
@@ -14412,6 +15237,21 @@
    "ja": "投票する",
    "zh": "投票",
    "ko": "투표"
+  }
+ },
+ {
+  "w": "W",
+  "ipa": "/ˈdʌbəlju/",
+  "cefr": "A1",
+  "pos": "文字",
+  "src": "letter",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "letter W",
+   "ja": "文字 W",
+   "zh": "字母 W",
+   "ko": "문자 W"
   }
  },
  {
@@ -14580,6 +15420,21 @@
   }
  },
  {
+  "w": "wasn't",
+  "ipa": "/ˈwɑzənt/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "was not",
+   "ja": "was notの短縮形",
+   "zh": "was not的缩写",
+   "ko": "was not의 축약형"
+  }
+ },
+ {
   "w": "watch",
   "ipa": "/wɑtʃ/",
   "cefr": "A1",
@@ -14637,6 +15492,66 @@
    "ja": "私たちは",
    "zh": "我们",
    "ko": "우리"
+  }
+ },
+ {
+  "w": "we'd",
+  "ipa": "/wid/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "we would / we had",
+   "ja": "we would / we hadの短縮形",
+   "zh": "we would / we had的缩写",
+   "ko": "we would / we had의 축약형"
+  }
+ },
+ {
+  "w": "we'll",
+  "ipa": "/wil/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "we will",
+   "ja": "we willの短縮形",
+   "zh": "we will的缩写",
+   "ko": "we will의 축약형"
+  }
+ },
+ {
+  "w": "we're",
+  "ipa": "/wir/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "we are",
+   "ja": "we areの短縮形",
+   "zh": "we are的缩写",
+   "ko": "we are의 축약형"
+  }
+ },
+ {
+  "w": "we've",
+  "ipa": "/wiv/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "we have",
+   "ja": "we haveの短縮形",
+   "zh": "we have的缩写",
+   "ko": "we have의 축약형"
   }
  },
  {
@@ -14760,6 +15675,21 @@
   }
  },
  {
+  "w": "weren't",
+  "ipa": "/ˈwɝənt/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "were not",
+   "ja": "were notの短縮形",
+   "zh": "were not的缩写",
+   "ko": "were not의 축약형"
+  }
+ },
+ {
   "w": "what",
   "ipa": "/wʌt/",
   "cefr": "A1",
@@ -14772,6 +15702,21 @@
    "ja": "何",
    "zh": "什么",
    "ko": "무엇"
+  }
+ },
+ {
+  "w": "what's",
+  "ipa": "/wʌts/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "what is",
+   "ja": "what isの短縮形",
+   "zh": "what is的缩写",
+   "ko": "what is의 축약형"
   }
  },
  {
@@ -14862,6 +15807,21 @@
    "ja": "誰が",
    "zh": "谁",
    "ko": "누구"
+  }
+ },
+ {
+  "w": "who's",
+  "ipa": "/huz/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "who is",
+   "ja": "who isの短縮形",
+   "zh": "who is的缩写",
+   "ko": "who is의 축약형"
   }
  },
  {
@@ -15030,6 +15990,21 @@
   }
  },
  {
+  "w": "won't",
+  "ipa": "/woʊnt/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "will not",
+   "ja": "will notの短縮形",
+   "zh": "will not的缩写",
+   "ko": "will not의 축약형"
+  }
+ },
+ {
   "w": "wonderful",
   "ipa": "/ˈwʌndɚfəl/",
   "cefr": "A1",
@@ -15135,6 +16110,36 @@
   }
  },
  {
+  "w": "would've",
+  "ipa": "/ˈwʊdəv/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "would have",
+   "ja": "would haveの短縮形",
+   "zh": "would have的缩写",
+   "ko": "would have의 축약형"
+  }
+ },
+ {
+  "w": "wouldn't",
+  "ipa": "/ˈwʊdənt/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "would not",
+   "ja": "would notの短縮形",
+   "zh": "would not的缩写",
+   "ko": "would not의 축약형"
+  }
+ },
+ {
   "w": "write",
   "ipa": "/raɪt/",
   "cefr": "A1",
@@ -15177,6 +16182,36 @@
    "ja": "間違った、誤って",
    "zh": "错误的、不对",
    "ko": "잘못된, 틀리게"
+  }
+ },
+ {
+  "w": "X",
+  "ipa": "/ɛks/",
+  "cefr": "A1",
+  "pos": "文字",
+  "src": "letter",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "letter X",
+   "ja": "文字 X",
+   "zh": "字母 X",
+   "ko": "문자 X"
+  }
+ },
+ {
+  "w": "Y",
+  "ipa": "/waɪ/",
+  "cefr": "A1",
+  "pos": "文字",
+  "src": "letter",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "letter Y",
+   "ja": "文字 Y",
+   "zh": "字母 Y",
+   "ko": "문자 Y"
   }
  },
  {
@@ -15285,6 +16320,66 @@
   }
  },
  {
+  "w": "you'd",
+  "ipa": "/jud/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "you would / you had",
+   "ja": "you would / you hadの短縮形",
+   "zh": "you would / you had的缩写",
+   "ko": "you would / you had의 축약형"
+  }
+ },
+ {
+  "w": "you'll",
+  "ipa": "/jul/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "you will",
+   "ja": "you willの短縮形",
+   "zh": "you will的缩写",
+   "ko": "you will의 축약형"
+  }
+ },
+ {
+  "w": "you're",
+  "ipa": "/jʊr/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "you are",
+   "ja": "you areの短縮形",
+   "zh": "you are的缩写",
+   "ko": "you are의 축약형"
+  }
+ },
+ {
+  "w": "you've",
+  "ipa": "/juv/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "you have",
+   "ja": "you haveの短縮形",
+   "zh": "you have的缩写",
+   "ko": "you have의 축약형"
+  }
+ },
+ {
   "w": "young",
   "ipa": "/jʌŋ/",
   "cefr": "A1",
@@ -15342,6 +16437,21 @@
    "ja": "あなた自身",
    "zh": "你自己",
    "ko": "당신 자신"
+  }
+ },
+ {
+  "w": "Z",
+  "ipa": "/zi/",
+  "cefr": "A1",
+  "pos": "文字",
+  "src": "letter",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "letter Z",
+   "ja": "文字 Z",
+   "zh": "字母 Z",
+   "ko": "문자 Z"
   }
  },
  {

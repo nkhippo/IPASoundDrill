@@ -1,0 +1,1112 @@
+[
+ {
+  "w": "A",
+  "ipa": "/eɪ/",
+  "cefr": "A1",
+  "pos": "文字",
+  "src": "letter",
+  "grp": null,
+  "pat": null,
+  "gloss": {
+   "en": "letter A",
+   "ja": "文字 A",
+   "zh": "字母 A",
+   "ko": "문자 A"
+  }
+ },
+ {
+  "w": "B",
+  "ipa": "/bi/",
+  "cefr": "A1",
+  "pos": "文字",
+  "src": "letter",
+  "grp": null,
+  "pat": null,
+  "gloss": {
+   "en": "letter B",
+   "ja": "文字 B",
+   "zh": "字母 B",
+   "ko": "문자 B"
+  }
+ },
+ {
+  "w": "C",
+  "ipa": "/si/",
+  "cefr": "A1",
+  "pos": "文字",
+  "src": "letter",
+  "grp": null,
+  "pat": null,
+  "gloss": {
+   "en": "letter C",
+   "ja": "文字 C",
+   "zh": "字母 C",
+   "ko": "문자 C"
+  }
+ },
+ {
+  "w": "D",
+  "ipa": "/di/",
+  "cefr": "A1",
+  "pos": "文字",
+  "src": "letter",
+  "grp": null,
+  "pat": null,
+  "gloss": {
+   "en": "letter D",
+   "ja": "文字 D",
+   "zh": "字母 D",
+   "ko": "문자 D"
+  }
+ },
+ {
+  "w": "E",
+  "ipa": "/i/",
+  "cefr": "A1",
+  "pos": "文字",
+  "src": "letter",
+  "grp": null,
+  "pat": null,
+  "gloss": {
+   "en": "letter E",
+   "ja": "文字 E",
+   "zh": "字母 E",
+   "ko": "문자 E"
+  }
+ },
+ {
+  "w": "F",
+  "ipa": "/ɛf/",
+  "cefr": "A1",
+  "pos": "文字",
+  "src": "letter",
+  "grp": null,
+  "pat": null,
+  "gloss": {
+   "en": "letter F",
+   "ja": "文字 F",
+   "zh": "字母 F",
+   "ko": "문자 F"
+  }
+ },
+ {
+  "w": "G",
+  "ipa": "/dʒi/",
+  "cefr": "A1",
+  "pos": "文字",
+  "src": "letter",
+  "grp": null,
+  "pat": null,
+  "gloss": {
+   "en": "letter G",
+   "ja": "文字 G",
+   "zh": "字母 G",
+   "ko": "문자 G"
+  }
+ },
+ {
+  "w": "H",
+  "ipa": "/eɪtʃ/",
+  "cefr": "A1",
+  "pos": "文字",
+  "src": "letter",
+  "grp": null,
+  "pat": null,
+  "gloss": {
+   "en": "letter H",
+   "ja": "文字 H",
+   "zh": "字母 H",
+   "ko": "문자 H"
+  }
+ },
+ {
+  "w": "I",
+  "ipa": "/aɪ/",
+  "cefr": "A1",
+  "pos": "文字",
+  "src": "letter",
+  "grp": null,
+  "pat": null,
+  "gloss": {
+   "en": "letter I",
+   "ja": "文字 I",
+   "zh": "字母 I",
+   "ko": "문자 I"
+  }
+ },
+ {
+  "w": "J",
+  "ipa": "/dʒeɪ/",
+  "cefr": "A1",
+  "pos": "文字",
+  "src": "letter",
+  "grp": null,
+  "pat": null,
+  "gloss": {
+   "en": "letter J",
+   "ja": "文字 J",
+   "zh": "字母 J",
+   "ko": "문자 J"
+  }
+ },
+ {
+  "w": "K",
+  "ipa": "/keɪ/",
+  "cefr": "A1",
+  "pos": "文字",
+  "src": "letter",
+  "grp": null,
+  "pat": null,
+  "gloss": {
+   "en": "letter K",
+   "ja": "文字 K",
+   "zh": "字母 K",
+   "ko": "문자 K"
+  }
+ },
+ {
+  "w": "L",
+  "ipa": "/ɛl/",
+  "cefr": "A1",
+  "pos": "文字",
+  "src": "letter",
+  "grp": null,
+  "pat": null,
+  "gloss": {
+   "en": "letter L",
+   "ja": "文字 L",
+   "zh": "字母 L",
+   "ko": "문자 L"
+  }
+ },
+ {
+  "w": "M",
+  "ipa": "/ɛm/",
+  "cefr": "A1",
+  "pos": "文字",
+  "src": "letter",
+  "grp": null,
+  "pat": null,
+  "gloss": {
+   "en": "letter M",
+   "ja": "文字 M",
+   "zh": "字母 M",
+   "ko": "문자 M"
+  }
+ },
+ {
+  "w": "N",
+  "ipa": "/ɛn/",
+  "cefr": "A1",
+  "pos": "文字",
+  "src": "letter",
+  "grp": null,
+  "pat": null,
+  "gloss": {
+   "en": "letter N",
+   "ja": "文字 N",
+   "zh": "字母 N",
+   "ko": "문자 N"
+  }
+ },
+ {
+  "w": "O",
+  "ipa": "/oʊ/",
+  "cefr": "A1",
+  "pos": "文字",
+  "src": "letter",
+  "grp": null,
+  "pat": null,
+  "gloss": {
+   "en": "letter O",
+   "ja": "文字 O",
+   "zh": "字母 O",
+   "ko": "문자 O"
+  }
+ },
+ {
+  "w": "P",
+  "ipa": "/pi/",
+  "cefr": "A1",
+  "pos": "文字",
+  "src": "letter",
+  "grp": null,
+  "pat": null,
+  "gloss": {
+   "en": "letter P",
+   "ja": "文字 P",
+   "zh": "字母 P",
+   "ko": "문자 P"
+  }
+ },
+ {
+  "w": "Q",
+  "ipa": "/kju/",
+  "cefr": "A1",
+  "pos": "文字",
+  "src": "letter",
+  "grp": null,
+  "pat": null,
+  "gloss": {
+   "en": "letter Q",
+   "ja": "文字 Q",
+   "zh": "字母 Q",
+   "ko": "문자 Q"
+  }
+ },
+ {
+  "w": "R",
+  "ipa": "/ɑr/",
+  "cefr": "A1",
+  "pos": "文字",
+  "src": "letter",
+  "grp": null,
+  "pat": null,
+  "gloss": {
+   "en": "letter R",
+   "ja": "文字 R",
+   "zh": "字母 R",
+   "ko": "문자 R"
+  }
+ },
+ {
+  "w": "S",
+  "ipa": "/ɛs/",
+  "cefr": "A1",
+  "pos": "文字",
+  "src": "letter",
+  "grp": null,
+  "pat": null,
+  "gloss": {
+   "en": "letter S",
+   "ja": "文字 S",
+   "zh": "字母 S",
+   "ko": "문자 S"
+  }
+ },
+ {
+  "w": "T",
+  "ipa": "/ti/",
+  "cefr": "A1",
+  "pos": "文字",
+  "src": "letter",
+  "grp": null,
+  "pat": null,
+  "gloss": {
+   "en": "letter T",
+   "ja": "文字 T",
+   "zh": "字母 T",
+   "ko": "문자 T"
+  }
+ },
+ {
+  "w": "U",
+  "ipa": "/ju/",
+  "cefr": "A1",
+  "pos": "文字",
+  "src": "letter",
+  "grp": null,
+  "pat": null,
+  "gloss": {
+   "en": "letter U",
+   "ja": "文字 U",
+   "zh": "字母 U",
+   "ko": "문자 U"
+  }
+ },
+ {
+  "w": "V",
+  "ipa": "/vi/",
+  "cefr": "A1",
+  "pos": "文字",
+  "src": "letter",
+  "grp": null,
+  "pat": null,
+  "gloss": {
+   "en": "letter V",
+   "ja": "文字 V",
+   "zh": "字母 V",
+   "ko": "문자 V"
+  }
+ },
+ {
+  "w": "W",
+  "ipa": "/ˈdʌbəlju/",
+  "cefr": "A1",
+  "pos": "文字",
+  "src": "letter",
+  "grp": null,
+  "pat": null,
+  "gloss": {
+   "en": "letter W",
+   "ja": "文字 W",
+   "zh": "字母 W",
+   "ko": "문자 W"
+  }
+ },
+ {
+  "w": "X",
+  "ipa": "/ɛks/",
+  "cefr": "A1",
+  "pos": "文字",
+  "src": "letter",
+  "grp": null,
+  "pat": null,
+  "gloss": {
+   "en": "letter X",
+   "ja": "文字 X",
+   "zh": "字母 X",
+   "ko": "문자 X"
+  }
+ },
+ {
+  "w": "Y",
+  "ipa": "/waɪ/",
+  "cefr": "A1",
+  "pos": "文字",
+  "src": "letter",
+  "grp": null,
+  "pat": null,
+  "gloss": {
+   "en": "letter Y",
+   "ja": "文字 Y",
+   "zh": "字母 Y",
+   "ko": "문자 Y"
+  }
+ },
+ {
+  "w": "Z",
+  "ipa": "/zi/",
+  "cefr": "A1",
+  "pos": "文字",
+  "src": "letter",
+  "grp": null,
+  "pat": null,
+  "gloss": {
+   "en": "letter Z",
+   "ja": "文字 Z",
+   "zh": "字母 Z",
+   "ko": "문자 Z"
+  }
+ },
+ {
+  "w": "i'm",
+  "ipa": "/aɪm/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "grp": null,
+  "pat": null,
+  "gloss": {
+   "en": "I am",
+   "ja": "I amの短縮形",
+   "zh": "I am的缩写",
+   "ko": "I am의 축약형"
+  }
+ },
+ {
+  "w": "you're",
+  "ipa": "/jʊr/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "grp": null,
+  "pat": null,
+  "gloss": {
+   "en": "you are",
+   "ja": "you areの短縮形",
+   "zh": "you are的缩写",
+   "ko": "you are의 축약형"
+  }
+ },
+ {
+  "w": "he's",
+  "ipa": "/hiz/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "grp": null,
+  "pat": null,
+  "gloss": {
+   "en": "he is",
+   "ja": "he isの短縮形",
+   "zh": "he is的缩写",
+   "ko": "he is의 축약형"
+  }
+ },
+ {
+  "w": "she's",
+  "ipa": "/ʃiz/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "grp": null,
+  "pat": null,
+  "gloss": {
+   "en": "she is",
+   "ja": "she isの短縮形",
+   "zh": "she is的缩写",
+   "ko": "she is의 축약형"
+  }
+ },
+ {
+  "w": "it's",
+  "ipa": "/ɪts/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "grp": null,
+  "pat": null,
+  "gloss": {
+   "en": "it is",
+   "ja": "it isの短縮形",
+   "zh": "it is的缩写",
+   "ko": "it is의 축약형"
+  }
+ },
+ {
+  "w": "we're",
+  "ipa": "/wir/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "grp": null,
+  "pat": null,
+  "gloss": {
+   "en": "we are",
+   "ja": "we areの短縮形",
+   "zh": "we are的缩写",
+   "ko": "we are의 축약형"
+  }
+ },
+ {
+  "w": "they're",
+  "ipa": "/ðɛr/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "grp": null,
+  "pat": null,
+  "gloss": {
+   "en": "they are",
+   "ja": "they areの短縮形",
+   "zh": "they are的缩写",
+   "ko": "they are의 축약형"
+  }
+ },
+ {
+  "w": "that's",
+  "ipa": "/ðæts/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "grp": null,
+  "pat": null,
+  "gloss": {
+   "en": "that is",
+   "ja": "that isの短縮形",
+   "zh": "that is的缩写",
+   "ko": "that is의 축약형"
+  }
+ },
+ {
+  "w": "there's",
+  "ipa": "/ðɛrz/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "grp": null,
+  "pat": null,
+  "gloss": {
+   "en": "there is",
+   "ja": "there isの短縮形",
+   "zh": "there is的缩写",
+   "ko": "there is의 축약형"
+  }
+ },
+ {
+  "w": "here's",
+  "ipa": "/hɪrz/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "grp": null,
+  "pat": null,
+  "gloss": {
+   "en": "here is",
+   "ja": "here isの短縮形",
+   "zh": "here is的缩写",
+   "ko": "here is의 축약형"
+  }
+ },
+ {
+  "w": "what's",
+  "ipa": "/wʌts/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "grp": null,
+  "pat": null,
+  "gloss": {
+   "en": "what is",
+   "ja": "what isの短縮形",
+   "zh": "what is的缩写",
+   "ko": "what is의 축약형"
+  }
+ },
+ {
+  "w": "who's",
+  "ipa": "/huz/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "grp": null,
+  "pat": null,
+  "gloss": {
+   "en": "who is",
+   "ja": "who isの短縮形",
+   "zh": "who is的缩写",
+   "ko": "who is의 축약형"
+  }
+ },
+ {
+  "w": "let's",
+  "ipa": "/lɛts/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "grp": null,
+  "pat": null,
+  "gloss": {
+   "en": "let us",
+   "ja": "let usの短縮形",
+   "zh": "let us的缩写",
+   "ko": "let us의 축약형"
+  }
+ },
+ {
+  "w": "i'll",
+  "ipa": "/aɪl/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "grp": null,
+  "pat": null,
+  "gloss": {
+   "en": "I will",
+   "ja": "I willの短縮形",
+   "zh": "I will的缩写",
+   "ko": "I will의 축약형"
+  }
+ },
+ {
+  "w": "you'll",
+  "ipa": "/jul/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "grp": null,
+  "pat": null,
+  "gloss": {
+   "en": "you will",
+   "ja": "you willの短縮形",
+   "zh": "you will的缩写",
+   "ko": "you will의 축약형"
+  }
+ },
+ {
+  "w": "he'll",
+  "ipa": "/hil/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "grp": null,
+  "pat": null,
+  "gloss": {
+   "en": "he will",
+   "ja": "he willの短縮形",
+   "zh": "he will的缩写",
+   "ko": "he will의 축약형"
+  }
+ },
+ {
+  "w": "she'll",
+  "ipa": "/ʃil/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "grp": null,
+  "pat": null,
+  "gloss": {
+   "en": "she will",
+   "ja": "she willの短縮形",
+   "zh": "she will的缩写",
+   "ko": "she will의 축약형"
+  }
+ },
+ {
+  "w": "we'll",
+  "ipa": "/wil/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "grp": null,
+  "pat": null,
+  "gloss": {
+   "en": "we will",
+   "ja": "we willの短縮形",
+   "zh": "we will的缩写",
+   "ko": "we will의 축약형"
+  }
+ },
+ {
+  "w": "they'll",
+  "ipa": "/ðeɪl/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "grp": null,
+  "pat": null,
+  "gloss": {
+   "en": "they will",
+   "ja": "they willの短縮形",
+   "zh": "they will的缩写",
+   "ko": "they will의 축약형"
+  }
+ },
+ {
+  "w": "i'd",
+  "ipa": "/aɪd/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "grp": null,
+  "pat": null,
+  "gloss": {
+   "en": "I would / I had",
+   "ja": "I would / I hadの短縮形",
+   "zh": "I would / I had的缩写",
+   "ko": "I would / I had의 축약형"
+  }
+ },
+ {
+  "w": "you'd",
+  "ipa": "/jud/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "grp": null,
+  "pat": null,
+  "gloss": {
+   "en": "you would / you had",
+   "ja": "you would / you hadの短縮形",
+   "zh": "you would / you had的缩写",
+   "ko": "you would / you had의 축약형"
+  }
+ },
+ {
+  "w": "he'd",
+  "ipa": "/hid/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "grp": null,
+  "pat": null,
+  "gloss": {
+   "en": "he would / he had",
+   "ja": "he would / he hadの短縮形",
+   "zh": "he would / he had的缩写",
+   "ko": "he would / he had의 축약형"
+  }
+ },
+ {
+  "w": "she'd",
+  "ipa": "/ʃid/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "grp": null,
+  "pat": null,
+  "gloss": {
+   "en": "she would / she had",
+   "ja": "she would / she hadの短縮形",
+   "zh": "she would / she had的缩写",
+   "ko": "she would / she had의 축약형"
+  }
+ },
+ {
+  "w": "we'd",
+  "ipa": "/wid/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "grp": null,
+  "pat": null,
+  "gloss": {
+   "en": "we would / we had",
+   "ja": "we would / we hadの短縮形",
+   "zh": "we would / we had的缩写",
+   "ko": "we would / we had의 축약형"
+  }
+ },
+ {
+  "w": "they'd",
+  "ipa": "/ðeɪd/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "grp": null,
+  "pat": null,
+  "gloss": {
+   "en": "they would / they had",
+   "ja": "they would / they hadの短縮形",
+   "zh": "they would / they had的缩写",
+   "ko": "they would / they had의 축약형"
+  }
+ },
+ {
+  "w": "i've",
+  "ipa": "/aɪv/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "grp": null,
+  "pat": null,
+  "gloss": {
+   "en": "I have",
+   "ja": "I haveの短縮形",
+   "zh": "I have的缩写",
+   "ko": "I have의 축약형"
+  }
+ },
+ {
+  "w": "you've",
+  "ipa": "/juv/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "grp": null,
+  "pat": null,
+  "gloss": {
+   "en": "you have",
+   "ja": "you haveの短縮形",
+   "zh": "you have的缩写",
+   "ko": "you have의 축약형"
+  }
+ },
+ {
+  "w": "we've",
+  "ipa": "/wiv/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "grp": null,
+  "pat": null,
+  "gloss": {
+   "en": "we have",
+   "ja": "we haveの短縮形",
+   "zh": "we have的缩写",
+   "ko": "we have의 축약형"
+  }
+ },
+ {
+  "w": "they've",
+  "ipa": "/ðeɪv/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "grp": null,
+  "pat": null,
+  "gloss": {
+   "en": "they have",
+   "ja": "they haveの短縮形",
+   "zh": "they have的缩写",
+   "ko": "they have의 축약형"
+  }
+ },
+ {
+  "w": "should've",
+  "ipa": "/ˈʃʊdəv/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "grp": null,
+  "pat": null,
+  "gloss": {
+   "en": "should have",
+   "ja": "should haveの短縮形",
+   "zh": "should have的缩写",
+   "ko": "should have의 축약형"
+  }
+ },
+ {
+  "w": "could've",
+  "ipa": "/ˈkʊdəv/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "grp": null,
+  "pat": null,
+  "gloss": {
+   "en": "could have",
+   "ja": "could haveの短縮形",
+   "zh": "could have的缩写",
+   "ko": "could have의 축약형"
+  }
+ },
+ {
+  "w": "would've",
+  "ipa": "/ˈwʊdəv/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "grp": null,
+  "pat": null,
+  "gloss": {
+   "en": "would have",
+   "ja": "would haveの短縮形",
+   "zh": "would have的缩写",
+   "ko": "would have의 축약형"
+  }
+ },
+ {
+  "w": "don't",
+  "ipa": "/doʊnt/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "grp": null,
+  "pat": null,
+  "gloss": {
+   "en": "do not",
+   "ja": "do notの短縮形",
+   "zh": "do not的缩写",
+   "ko": "do not의 축약형"
+  }
+ },
+ {
+  "w": "doesn't",
+  "ipa": "/ˈdʌzənt/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "grp": null,
+  "pat": null,
+  "gloss": {
+   "en": "does not",
+   "ja": "does notの短縮形",
+   "zh": "does not的缩写",
+   "ko": "does not의 축약형"
+  }
+ },
+ {
+  "w": "didn't",
+  "ipa": "/ˈdɪdənt/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "grp": null,
+  "pat": null,
+  "gloss": {
+   "en": "did not",
+   "ja": "did notの短縮形",
+   "zh": "did not的缩写",
+   "ko": "did not의 축약형"
+  }
+ },
+ {
+  "w": "isn't",
+  "ipa": "/ˈɪzənt/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "grp": null,
+  "pat": null,
+  "gloss": {
+   "en": "is not",
+   "ja": "is notの短縮形",
+   "zh": "is not的缩写",
+   "ko": "is not의 축약형"
+  }
+ },
+ {
+  "w": "aren't",
+  "ipa": "/ˈɑrənt/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "grp": null,
+  "pat": null,
+  "gloss": {
+   "en": "are not",
+   "ja": "are notの短縮形",
+   "zh": "are not的缩写",
+   "ko": "are not의 축약형"
+  }
+ },
+ {
+  "w": "wasn't",
+  "ipa": "/ˈwɑzənt/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "grp": null,
+  "pat": null,
+  "gloss": {
+   "en": "was not",
+   "ja": "was notの短縮形",
+   "zh": "was not的缩写",
+   "ko": "was not의 축약형"
+  }
+ },
+ {
+  "w": "weren't",
+  "ipa": "/ˈwɝənt/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "grp": null,
+  "pat": null,
+  "gloss": {
+   "en": "were not",
+   "ja": "were notの短縮形",
+   "zh": "were not的缩写",
+   "ko": "were not의 축약형"
+  }
+ },
+ {
+  "w": "can't",
+  "ipa": "/kænt/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "grp": null,
+  "pat": null,
+  "gloss": {
+   "en": "cannot",
+   "ja": "cannotの短縮形",
+   "zh": "cannot的缩写",
+   "ko": "cannot의 축약형"
+  }
+ },
+ {
+  "w": "couldn't",
+  "ipa": "/ˈkʊdənt/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "grp": null,
+  "pat": null,
+  "gloss": {
+   "en": "could not",
+   "ja": "could notの短縮形",
+   "zh": "could not的缩写",
+   "ko": "could not의 축약형"
+  }
+ },
+ {
+  "w": "won't",
+  "ipa": "/woʊnt/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "grp": null,
+  "pat": null,
+  "gloss": {
+   "en": "will not",
+   "ja": "will notの短縮形",
+   "zh": "will not的缩写",
+   "ko": "will not의 축약형"
+  }
+ },
+ {
+  "w": "wouldn't",
+  "ipa": "/ˈwʊdənt/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "grp": null,
+  "pat": null,
+  "gloss": {
+   "en": "would not",
+   "ja": "would notの短縮形",
+   "zh": "would not的缩写",
+   "ko": "would not의 축약형"
+  }
+ },
+ {
+  "w": "shouldn't",
+  "ipa": "/ˈʃʊdənt/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "grp": null,
+  "pat": null,
+  "gloss": {
+   "en": "should not",
+   "ja": "should notの短縮形",
+   "zh": "should not的缩写",
+   "ko": "should not의 축약형"
+  }
+ },
+ {
+  "w": "haven't",
+  "ipa": "/ˈhævənt/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "grp": null,
+  "pat": null,
+  "gloss": {
+   "en": "have not",
+   "ja": "have notの短縮形",
+   "zh": "have not的缩写",
+   "ko": "have not의 축약형"
+  }
+ },
+ {
+  "w": "hasn't",
+  "ipa": "/ˈhæzənt/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "grp": null,
+  "pat": null,
+  "gloss": {
+   "en": "has not",
+   "ja": "has notの短縮形",
+   "zh": "has not的缩写",
+   "ko": "has not의 축약형"
+  }
+ },
+ {
+  "w": "hadn't",
+  "ipa": "/ˈhædənt/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "grp": null,
+  "pat": null,
+  "gloss": {
+   "en": "had not",
+   "ja": "had notの短縮形",
+   "zh": "had not的缩写",
+   "ko": "had not의 축약형"
+  }
+ },
+ {
+  "w": "mustn't",
+  "ipa": "/ˈmʌsənt/",
+  "cefr": "A1",
+  "pos": "短縮形",
+  "src": "contraction",
+  "grp": null,
+  "pat": null,
+  "gloss": {
+   "en": "must not",
+   "ja": "must notの短縮形",
+   "zh": "must not的缩写",
+   "ko": "must not의 축약형"
+  }
+ }
+]
