@@ -10,6 +10,28 @@
     "words": "Words",
     "connected": "Connected Speech"
   },
+  "mode": {
+    "label": "Learning mode",
+    "a": "Pronunciation"
+  },
+  "modeb": {
+    "title": "Sound → Vocabulary",
+    "lead_html": "Learn <b>new words from sound</b>&mdash;hear the word, then match meaning and spelling. CEFR band progression with spaced review.",
+    "study": {
+      "got_it": "Got it → Next"
+    },
+    "quiz": {
+      "choose_meaning": "Choose the meaning",
+      "type_word": "Type the word"
+    },
+    "band": {
+      "label": "Band",
+      "note": "{band}: {n} words · {pct}% mastered ({m} at box 4+)"
+    },
+    "pool": "Band {band}: {n} words · {pct}% mastered",
+    "correct": "Correct",
+    "incorrect": "Try again"
+  },
   "cs": {
     "label": "Type",
     "all": "All",

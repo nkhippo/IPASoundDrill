@@ -10,6 +10,28 @@
     "words": "单词",
     "connected": "连读·脱落·同化"
   },
+  "mode": {
+    "label": "学习模式",
+    "a": "发音再学习"
+  },
+  "modeb": {
+    "title": "从声音到词汇",
+    "lead_html": "从<b>声音学习新词</b>——先听发音，再匹配意思和拼写。按 CEFR 级别递进，并自动安排复习。",
+    "study": {
+      "got_it": "记住了→下一个"
+    },
+    "quiz": {
+      "choose_meaning": "选择意思",
+      "type_word": "输入单词"
+    },
+    "band": {
+      "label": "词汇级别",
+      "note": "{band}：{n}词 · 掌握率{pct}%（box4+ {m}词）"
+    },
+    "pool": "级别 {band}：{n}词 · 掌握率{pct}%",
+    "correct": "正确",
+    "incorrect": "错误"
+  },
   "cs": {
     "label": "类型",
     "all": "全部",

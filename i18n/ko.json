@@ -10,6 +10,28 @@
     "words": "단어",
     "connected": "연음·탈락·동화"
   },
+  "mode": {
+    "label": "학습 모드",
+    "a": "발음 재학습"
+  },
+  "modeb": {
+    "title": "소리에서 어휘로",
+    "lead_html": "<b>소리로 새 단어</b>를 익힙니다. 발음을 듣고 의미와 철자를 확인합니다. CEFR 밴드로 단계적으로 학습하고 복습 간격도 자동 조정됩니다.",
+    "study": {
+      "got_it": "외웠어요→다음"
+    },
+    "quiz": {
+      "choose_meaning": "의미를 선택",
+      "type_word": "단어를 입력"
+    },
+    "band": {
+      "label": "레벨",
+      "note": "{band}: {n}개 단어 · 습득률 {pct}% (box4+ {m}개)"
+    },
+    "pool": "밴드 {band}: {n}개 단어 · 습득률 {pct}%",
+    "correct": "정답",
+    "incorrect": "오답"
+  },
   "cs": {
     "label": "유형",
     "all": "전체",

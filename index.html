@@ -174,6 +174,14 @@
   .modal-sub{font-family:var(--mono);font-size:10px;color:var(--faint);text-transform:uppercase;letter-spacing:.14em;margin:0 0 8px}
   .langopt{border:1px solid var(--hair);background:#fff;border-radius:10px;padding:12px 14px;cursor:pointer;font-family:var(--ui);font-size:14px;font-weight:600;color:var(--ink);text-align:left}
   .langopt[aria-pressed="true"]{border-color:var(--signal);background:var(--signal-soft);color:var(--signal)}
+  .mcqopts{display:flex;flex-direction:column;gap:8px;margin-top:14px}
+  .mcqopt{border:1px solid var(--hair);background:#fff;border-radius:10px;padding:13px 14px;cursor:pointer;font-size:15px;font-weight:600;text-align:left;color:var(--ink);transition:border-color .12s,background .12s}
+  .mcqopt:hover:not(:disabled){border-color:var(--signal);background:var(--signal-soft)}
+  .mcqopt:disabled{cursor:default;opacity:.92}
+  .mcqopt.mcq-ok{border-color:var(--ok);background:var(--ok-soft);color:var(--ok)}
+  .mcqopt.mcq-bad{border-color:var(--bad);background:var(--bad-soft);color:var(--bad)}
+  .mcqfb{font-size:13px;font-weight:600;text-align:center;margin-top:10px}
+  .mcqfb.ok{color:var(--ok)} .mcqfb.bad{color:var(--bad)}
   body.in-play .wrap{padding:12px 14px 20px}
   body.in-play .topbar{margin-bottom:8px}
   body.in-play .panel{padding:14px 16px}
@@ -207,6 +215,13 @@
 
   <!-- SETUP -->
   <section id="setup" class="panel">
+    <div class="field field-tabs" id="modeField">
+      <div class="flabel" id="flabelMode">Learning mode</div>
+      <div class="tabbar" id="modeOpts" role="tablist">
+        <button class="opt" role="tab" data-mode="a" aria-pressed="true" id="modeA"><span class="ot" id="modeAT">Pronunciation</span></button>
+        <button class="opt" role="tab" data-mode="b" aria-pressed="false" id="modeB"><span class="ot" id="modeBT">Sound → Vocabulary</span></button>
+      </div>
+    </div>
     <div class="field field-tabs" id="tabField">
       <div class="flabel" id="flabelTab">Practice mode</div>
       <div class="tabbar" id="tabOpts" role="tablist">
@@ -217,6 +232,15 @@
 
     <p class="lead" id="lead">Drill <b>IPA reading and writing</b> for words you already know&mdash;sound by sound. Target <b>trap phonemes</b> (θ, ð, æ, ʒ, ɝ) or your <b>weak spots</b> from practice history. Objective scoring only; build symbol coverage, not vocabulary lists.</p>
     <p class="lead hidden" id="leadConnected">Hear <b>connected speech</b> in GA&mdash;linking, assimilation, and elision. Read the connected IPA and recover the original phrase.</p>
+
+    <p class="lead hidden" id="leadModeB">Learn <b>new words from sound</b>&mdash;hear the word, then match meaning and spelling. CEFR band progression with spaced review.</p>
+
+    <div id="modebSetup" class="hidden">
+      <div class="field">
+        <div class="flabel" id="flabelModeBBand">Band</div>
+        <div class="countnote" id="modebBandNote"></div>
+      </div>
+    </div>
 
     <div id="wordsSetup">
     <div class="field" id="dirField">
@@ -286,6 +310,36 @@
     <div class="countnote" id="poolNote"></div>
 
     <button class="start" id="startBtn" disabled>Loading…</button>
+  </section>
+
+  <!-- MODE B STUDY -->
+  <section id="cardModeBStudy" class="panel hidden">
+    <div class="card-top"><div class="qno" id="mbSNo"></div></div>
+    <div class="readout"><button class="playicon" id="mbSPlay" type="button" aria-label="Listen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div>
+    <div class="readout"><div class="ipa" id="mbSIpa"></div></div>
+    <div class="readout"><div class="wordbig" id="mbSWord"></div></div>
+    <div class="word-gloss" id="mbSGloss" style="text-align:center;margin-bottom:12px"></div>
+    <button class="reveal-next" id="mbSGotIt" type="button">Got it → Next</button>
+  </section>
+
+  <!-- MODE B QUIZ MCQ -->
+  <section id="cardModeBMcq" class="panel hidden">
+    <div class="card-top"><div class="qno" id="mbMNo"></div></div>
+    <div class="flabel" style="text-align:center;margin-bottom:4px" id="mbMHead">Choose the meaning</div>
+    <div class="readout"><button class="playicon" id="mbMPlay" type="button" aria-label="Listen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div>
+    <div class="mcqopts" id="mbMOpts"></div>
+    <div class="mcqfb hidden" id="mbMFb"></div>
+  </section>
+
+  <!-- MODE B QUIZ DICTATION -->
+  <section id="cardModeBDict" class="panel hidden">
+    <div class="card-top"><div class="qno" id="mbDNo"></div></div>
+    <div class="flabel" style="text-align:center;margin-bottom:4px" id="mbDHead">Type the word</div>
+    <div class="readout"><button class="playicon" id="mbDPlay" type="button" aria-label="Listen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div>
+    <div class="answer">
+      <input id="mbDInput" type="text" lang="en" inputmode="latin" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" placeholder="Type the word">
+      <button class="go" id="mbDCheck">Check</button>
+    </div>
   </section>
 
   <!-- DECODE CARD -->
@@ -373,6 +427,7 @@ const $=id=>document.getElementById(id);
 const show=(id,on)=>$(id).classList.toggle("hidden",!on);
 /* ---------- wordlist (table) ---------- */
 let PRESET = [];
+let WORD_BY_W = {};
 let wordlistReady = false;
 let CONNECTED = [];
 let connectedReady = false;
@@ -393,6 +448,8 @@ async function loadWordlist() {
   if (!res.ok) throw new Error("wordlist load failed: " + res.status);
   const rows = await res.json();
   PRESET = rows.map(normalizeWord);
+  WORD_BY_W = {};
+  PRESET.forEach(w => { WORD_BY_W[w.w] = w; });
   wordlistReady = true;
   updatePool();
 }
@@ -489,6 +546,16 @@ function applyI18n() {
   $("lead").innerHTML = t("lead_html");
   $("leadConnected").innerHTML = t("lead_connected_html");
   $("flabelTab").textContent = t("tab.label");
+  $("flabelMode").textContent = t("mode.label");
+  $("modeAT").textContent = t("mode.a");
+  $("modeBT").textContent = t("modeb.title");
+  $("leadModeB").innerHTML = t("modeb.lead_html");
+  $("flabelModeBBand").textContent = t("modeb.band.label");
+  $("mbSGotIt").textContent = t("modeb.study.got_it");
+  $("mbMHead").textContent = t("modeb.quiz.choose_meaning");
+  $("mbDHead").textContent = t("modeb.quiz.type_word");
+  $("mbDInput").placeholder = t("input_ph");
+  $("mbDCheck").textContent = t("check");
   $("tabWordsT").textContent = t("tab.words");
   $("tabConnectedT").textContent = t("tab.connected");
   $("flabelCs").textContent = t("cs.label");
@@ -553,6 +620,9 @@ function applyI18n() {
   $("accentOpts").querySelectorAll(".langopt").forEach(b => {
     b.textContent = t("accent." + b.dataset.accent);
     b.setAttribute("aria-pressed", b.dataset.accent === ACCENT ? "true" : "false");
+  });
+  $("modeOpts").querySelectorAll(".opt").forEach(b => {
+    b.setAttribute("aria-pressed", b.dataset.mode === S.appMode ? "true" : "false");
   });
   updateSetupFields();
   updatePool();
@@ -632,8 +702,15 @@ const TRAPSET=new Set(["θ","ð","æ","ʒ","ɝ"]);
 const QUESTION_COUNT = 10;
 const LS_HIST_KEY = "ept_hist_v1";
 const LS_SYM_KEY = "ept_sym_v1";
+const LS_VOCAB_KEY = "ept_vocab_v1";
+const LS_VOCAB_BAND_KEY = "ept_vocab_band";
+const MODEB_BANDS = ["A1", "A2", "B1", "B2"];
+const MODEB_EXCLUDED_SRC = new Set(["letter", "contraction"]);
+const MODEB_DISTRACTOR = { fromNeighbors: 2, fromBand: 1 };
+const MODEB_SESSION = { newCount: 5, reviewCount: 5 };
+const MODEB_BAND_UNLOCK_RATIO = 0.6;
 const BOX_INTERVAL_MS = [0, 3600000, 86400000, 259200000, 604800000, 2592000000];
-let S={tab:"words",csFilter:"all",csLevel:"all",dir:"decode",focus:"all",reg:"all",grp:"all",queue:[],idx:0,correct:0,weak:{},missed:[],cur:null,revealed:false,built:[]};
+let S={appMode:localStorage.getItem("app_mode")||"a",tab:"words",csFilter:"all",csLevel:"all",dir:"decode",focus:"all",reg:"all",grp:"all",queue:[],idx:0,correct:0,weak:{},missed:[],cur:null,revealed:false,built:[],mbPhase:"mcq",mbQuiz:null};
 
 const PH_EXAMPLES={
   "p":[["pay","/peɪ/"],["up","/ʌp/"],["pea","/pi/"]],
@@ -683,6 +760,9 @@ function setSetupVisible(on){
   show("setup",on);
   show("cardDecode",false);
   show("cardEncode",false);
+  show("cardModeBStudy",false);
+  show("cardModeBMcq",false);
+  show("cardModeBDict",false);
   show("reveal",false);
   show("summary",false);
   $("backTopBtn").classList.toggle("hidden",on);
@@ -711,17 +791,23 @@ bindPills("focusPills","focus",b=>b.dataset.focus);
 bindPills("grpPills","grp",b=>b.dataset.grp);
 bindPills("regOpts","reg",b=>b.dataset.reg);
 bindPills("tabOpts","tab",b=>b.dataset.tab);
+bindPills("modeOpts","appMode",b=>{localStorage.setItem("app_mode",b.dataset.mode);return b.dataset.mode;});
 bindPills("csPills","csFilter",b=>b.dataset.cs);
 bindPills("csLevelPills","csLevel",b=>b.dataset.csLevel);
 function updateSetupFields(){
-  const words=S.tab==="words";
+  const modeB=S.appMode==="b";
+  const words=S.tab==="words"&&!modeB;
+  show("tabField",!modeB);
+  show("modebSetup",modeB);
   show("wordsSetup",words);
-  show("connectedSetup",!words);
+  show("connectedSetup",S.tab==="connected"&&!modeB);
   show("lead",words);
-  show("leadConnected",!words);
+  show("leadModeB",modeB);
+  show("leadConnected",S.tab==="connected"&&!modeB);
   show("grpField",words&&S.reg==="regular");
   $("focusTrapNote").textContent=words&&(S.focus==="traps"?t("focus.traps_d"):S.focus==="weak"?t("focus.weak_d"):"");
   $("dInput").placeholder=S.tab==="connected"?t("input_phrase"):t("input_ph");
+  if(modeB)updateModeBBandNote();
 }
 function hasTrapPhoneme(w){
   return phonemesOf(w.ipa).some(s=>TRAPSET.has(s));
@@ -766,6 +852,16 @@ function filteredConnectedPool(){
   return p;
 }
 function updatePool(){
+  if(S.appMode==="b"){
+    refreshVocabBandUnlock();
+    const band=getVocabBand();
+    const pool=modeBBandPool(band);
+    const prog=bandProgress(band);
+    $("poolNote").textContent=t("modeb.pool",{band,n:pool.length,pct:Math.round(prog.ratio*100)});
+    if(dataReady())$("startBtn").disabled=pool.length===0;
+    updateModeBBandNote();
+    return;
+  }
   if(S.tab==="connected"){
     const n=filteredConnectedPool().length;
     $("poolNote").textContent=t("pool.count_phrases",{n});
@@ -796,6 +892,141 @@ function recordSymEncode(c,usr){
     if(!matched.has(i))sym[tok].err++;
   });
   saveSym(sym);
+}
+
+/* ---------- Mode B (sound → vocabulary) ---------- */
+function loadVocab(){try{return JSON.parse(localStorage.getItem(LS_VOCAB_KEY)||"{}")||{};}catch(e){return {};}}
+function saveVocab(v){try{localStorage.setItem(LS_VOCAB_KEY,JSON.stringify(v));}catch(e){}}
+function getVocabBand(){return localStorage.getItem(LS_VOCAB_BAND_KEY)||"A1";}
+function setVocabBand(b){try{localStorage.setItem(LS_VOCAB_BAND_KEY,b);}catch(e){}}
+function vocabEntry(w){return loadVocab()[w]||null;}
+function modeBEligible(w){return!!(w&&w.gloss&&w.cefr&&MODEB_BANDS.includes(w.cefr)&&!MODEB_EXCLUDED_SRC.has(w.src));}
+function modeBBandPool(band){return PRESET.filter(w=>modeBEligible(w)&&w.cefr===band);}
+function bandProgress(band){
+  const pool=modeBBandPool(band),vocab=loadVocab();
+  let mastered=0;
+  pool.forEach(w=>{const e=vocab[w.w];if(e&&e.box>=4)mastered++;});
+  return {total:pool.length,mastered,ratio:pool.length?mastered/pool.length:0};
+}
+function refreshVocabBandUnlock(){
+  let idx=MODEB_BANDS.indexOf(getVocabBand());if(idx<0)idx=0;
+  while(idx<MODEB_BANDS.length-1){
+    if(bandProgress(MODEB_BANDS[idx]).ratio>=MODEB_BAND_UNLOCK_RATIO){idx++;setVocabBand(MODEB_BANDS[idx]);}
+    else break;
+  }
+}
+function updateModeBBandNote(){
+  const band=getVocabBand(),prog=bandProgress(band);
+  $("modebBandNote").textContent=t("modeb.band.note",{band,n:prog.total,pct:Math.round(prog.ratio*100),m:prog.mastered});
+}
+function modeBGloss(w){return wordGloss(w);}
+function isValidDistractor(cand,correct,used){
+  if(!cand||cand.w===correct.w)return false;
+  const g=modeBGloss(cand);if(!g)return false;
+  if(g===modeBGloss(correct))return false;
+  if(used.has(g))return false;
+  return true;
+}
+function buildMcqChoices(correct){
+  const used=new Set([modeBGloss(correct)]),picks=[];
+  const neighbors=(correct.neighbors||[]).map(w=>WORD_BY_W[w]).filter(Boolean);
+  shuffle(neighbors.slice()).forEach(n=>{
+    if(picks.length>=MODEB_DISTRACTOR.fromNeighbors)return;
+    if(isValidDistractor(n,correct,used)){picks.push(n);used.add(modeBGloss(n));}
+  });
+  shuffle(modeBBandPool(correct.cefr).filter(w=>w.w!==correct.w)).forEach(w=>{
+    if(picks.length>=MODEB_DISTRACTOR.fromNeighbors+MODEB_DISTRACTOR.fromBand)return;
+    if(isValidDistractor(w,correct,used)){picks.push(w);used.add(modeBGloss(w));}
+  });
+  if(picks.length<3){
+    shuffle(PRESET.filter(w=>modeBEligible(w)&&w.w!==correct.w)).forEach(w=>{
+      if(picks.length>=3)return;
+      if(isValidDistractor(w,correct,used)){picks.push(w);used.add(modeBGloss(w));}
+    });
+  }
+  return shuffle([correct,...picks].slice(0,4));
+}
+function buildModeBQueue(){
+  refreshVocabBandUnlock();
+  const band=getVocabBand(),pool=modeBBandPool(band),vocab=loadVocab();
+  const study=shuffle(pool.filter(w=>{const e=vocab[w.w];return!e||!e.seen;}));
+  const quiz=shuffle(pool.filter(w=>{const e=vocab[w.w];return e&&e.seen&&isDue(e);}));
+  const used=new Set(),out=[];
+  study.slice(0,MODEB_SESSION.newCount).forEach(w=>{out.push({...w,mbKind:"study"});used.add(w.w);});
+  quiz.slice(0,MODEB_SESSION.reviewCount).forEach(w=>{if(!used.has(w.w)){out.push({...w,mbKind:"quiz"});used.add(w.w);}});
+  const total=MODEB_SESSION.newCount+MODEB_SESSION.reviewCount;
+  if(out.length<total){
+    shuffle(pool.filter(w=>!used.has(w.w))).forEach(w=>{
+      if(out.length>=total)return;
+      const e=vocab[w.w];
+      out.push({...w,mbKind:(!e||!e.seen)?"study":"quiz"});
+      used.add(w.w);
+    });
+  }
+  return shuffle(out).slice(0,total);
+}
+function recordModeBStudy(c){
+  const v=loadVocab(),e=v[c.w]||{box:1,seen:0,okMean:0,ngMean:0,okSpell:0,ngSpell:0,ts:0};
+  e.seen=1;e.box=1;e.ts=Date.now();v[c.w]=e;saveVocab(v);
+}
+function recordModeBQuiz(c,mcqRes,spellRes){
+  const v=loadVocab(),e=v[c.w]||{box:1,seen:1,okMean:0,ngMean:0,okSpell:0,ngSpell:0,ts:0};
+  e.seen=1;e.ts=Date.now();
+  if(mcqRes==="ok")e.okMean++;else e.ngMean++;
+  if(spellRes==="ok"||spellRes==="near")e.okSpell++;else e.ngSpell++;
+  const passed=mcqRes==="ok"&&(spellRes==="ok"||spellRes==="near");
+  e.box=passed?Math.min(e.box+1,5):1;
+  v[c.w]=e;saveVocab(v);
+  return passed?"ok":(spellRes==="near"?"near":"bad");
+}
+function hideModeBCards(){show("cardModeBStudy",false);show("cardModeBMcq",false);show("cardModeBDict",false);}
+function renderModeBStudy(c){
+  hideModeBCards();show("cardModeBStudy",true);
+  $("mbSNo").textContent="#"+String(S.idx+1).padStart(2,"0");
+  renderIpaInto($("mbSIpa"),activeIpa(c),"dInfo",null);
+  $("mbSWord").textContent=c.w;
+  $("mbSGloss").textContent=wordGloss(c);
+  setTimeout(()=>speak(c.w),250);
+}
+function renderModeBMcq(c){
+  hideModeBCards();show("cardModeBMcq",true);S.mbPhase="mcq";S.mbQuiz={mcq:null,spell:null};
+  $("mbMNo").textContent="#"+String(S.idx+1).padStart(2,"0");
+  $("mbMFb").classList.add("hidden");
+  const choices=buildMcqChoices(c);
+  $("mbMOpts").innerHTML=choices.map((w,i)=>'<button type="button" class="mcqopt" data-i="'+i+'" data-w="'+w.w.replace(/"/g,"")+'">'+modeBGloss(w).replace(/[<>]/g,"")+'</button>').join("");
+  $("mbMOpts").querySelectorAll(".mcqopt").forEach(btn=>{
+    btn.addEventListener("click",()=>modeBMcqPick(c,btn,choices));
+  });
+  setTimeout(()=>speak(c.w),250);
+}
+function modeBMcqPick(c,btn,choices){
+  if(S.mbQuiz&&S.mbQuiz.mcq)return;
+  const mcqRes=btn.dataset.w===c.w?"ok":"bad";
+  S.mbQuiz={mcq:mcqRes,spell:null};
+  $("mbMOpts").querySelectorAll(".mcqopt").forEach(b=>{
+    b.disabled=true;
+    if(b.dataset.w===c.w)b.classList.add("mcq-ok");
+    else if(b===btn&&mcqRes==="bad")b.classList.add("mcq-bad");
+  });
+  const fb=$("mbMFb");
+  fb.textContent=mcqRes==="ok"?t("modeb.correct"):t("modeb.incorrect");
+  fb.className="mcqfb "+(mcqRes==="ok"?"ok":"bad");
+  fb.classList.remove("hidden");
+  setTimeout(()=>renderModeBDict(c),700);
+}
+function renderModeBDict(c){
+  hideModeBCards();show("cardModeBDict",true);S.mbPhase="dict";
+  $("mbDNo").textContent="#"+String(S.idx+1).padStart(2,"0");
+  const inp=$("mbDInput");inp.value="";if(!COARSE)inp.focus({preventScroll:true});
+  setTimeout(()=>speak(c.w),200);
+}
+function modeBDictCheck(){
+  if(S.revealed||S.mbPhase!=="dict")return;
+  const c=S.cur,t=$("mbDInput").value.trim();
+  const spellRes=spellCheck(t,c.w);
+  S.mbQuiz.spell=spellRes;
+  const res=recordModeBQuiz(c,S.mbQuiz.mcq||"bad",spellRes);
+  reveal(res,{type:"modeb-quiz",tryRaw:t,mcq:S.mbQuiz.mcq});
 }
 
 
@@ -919,6 +1150,11 @@ function buildSessionQueue(pool,count){
   return shuffle(out).slice(0,count);
 }
 function startSession(weakOnly){
+  if(S.appMode==="b"){
+    S.queue=buildModeBQueue();S.idx=0;S.correct=0;S.weak={};S.missed=[];S.mbPhase="mcq";S.mbQuiz=null;
+    setSetupVisible(false);renderCard();
+    return;
+  }
   let pool;
   if(S.tab==="connected"){
     pool=shuffle(filteredConnectedPool().slice());
@@ -970,9 +1206,14 @@ function renderIpaInto(container,ipa,infoBoxId,markTokens){
 /* ---------- render card (dispatch) ---------- */
 function renderCard(){
   if(S.idx>=S.queue.length)return renderSummary();
-  const c=S.queue[S.idx];S.cur=c;S.revealed=false;S.built=[];
-  show("reveal",false);
+  const c=S.queue[S.idx];S.cur=c;S.revealed=false;S.built=[];S.mbQuiz=null;
+  show("reveal",false);hideModeBCards();
   $("meter").innerHTML='<b>'+(S.idx+1)+'</b> / '+S.queue.length;
+  if(S.appMode==="b"){
+    if(c.mbKind==="study")renderModeBStudy(c);
+    else renderModeBMcq(c);
+    return;
+  }
   if(S.tab==="connected"||S.dir==="decode")renderDecode(c);else renderEncode(c);
 }
 /* DECODE */
@@ -998,11 +1239,13 @@ function renderDecode(c){
 }
 function norm(s){return s.toLowerCase().replace(/[^a-z]/g,"");}
 function lev(a,b){const m=a.length,n=b.length,d=Array.from({length:m+1},(_,i)=>[i,...Array(n).fill(0)]);for(let j=0;j<=n;j++)d[0][j]=j;for(let i=1;i<=m;i++)for(let j=1;j<=n;j++)d[i][j]=Math.min(d[i-1][j]+1,d[i][j-1]+1,d[i-1][j-1]+(a[i-1]===b[j-1]?0:1));return d[m][n];}
+function spellCheck(text,word){
+  const a=norm(text),g=norm(word);
+  return a===g?"ok":(a.length>2&&lev(a,g)<=1?"near":"bad");
+}
 function decodeCheck(){
   if(S.revealed)return;const c=S.cur;const t=$("dInput").value.trim();
-  const a=norm(t),g=norm(c.w);
-  let res=a===g?"ok":(a.length>2&&lev(a,g)<=1?"near":"bad");
-  reveal(res,{type:"decode",tryRaw:t});
+  reveal(spellCheck(t,c.w),{type:"decode",tryRaw:t});
 }
 $("dCheck").addEventListener("click",decodeCheck);
 $("dInput").addEventListener("focus",()=>{
@@ -1122,11 +1365,11 @@ function refreshRevealIpa(marker){
 }
 function reveal(res,ctx){
   const c=S.cur;S.revealed=true;
-  recordHist(c.w,res);
+  if(S.appMode!=="b")recordHist(c.w,res);
   if(ctx.type==="encode")recordSymEncode(c,ctx.usr||[]);
   if(res==="ok")S.correct++;
   if(res==="bad"&&!S.missed.includes(c.w))S.missed.push(c.w);
-  show("cardDecode",false);show("cardEncode",false);show("reveal",true);
+  show("cardDecode",false);show("cardEncode",false);hideModeBCards();show("reveal",true);
   const panel=$("reveal");
   panel.classList.remove("res-ok","res-near","res-bad");
   panel.classList.add("res-"+res);
@@ -1141,7 +1384,7 @@ function reveal(res,ctx){
     $("rCsMeta").classList.add("hidden");
     $("tipsHead").textContent=t("tips_head");
   }
-  if(ctx.type==="decode"){
+  if(ctx.type==="decode"||ctx.type==="modeb-quiz"){
     const raw=ctx.tryRaw?ctx.tryRaw.replace(/[<>]/g,""):"";
     $("rTry").innerHTML=raw?tryLine('<span class="try">'+raw+'</span>'):t("see_answer");
   }else{
@@ -1168,10 +1411,27 @@ function reveal(res,ctx){
 }
 function nextCard(){
   const c=S.cur;
+  if(S.appMode==="b"&&c.mbKind==="study"&&!S.revealed){recordModeBStudy(c);S.idx++;renderCard();return;}
   if(S.missed.includes(c.w))phonemesOf(activeIpa(c)).forEach(s=>{if(PH[s].t===1)S.weak[s]=(S.weak[s]||0)+1;});
   S.idx++;renderCard();
 }
 $("nextBtn").addEventListener("click",nextCard);
+$("mbSGotIt").addEventListener("click",nextCard);
+$("mbSPlay").addEventListener("click",()=>{if(S.cur)speak(S.cur.w);});
+$("mbMPlay").addEventListener("click",()=>{if(S.cur)speak(S.cur.w);});
+$("mbDPlay").addEventListener("click",()=>{if(S.cur)speak(S.cur.w);});
+$("mbDCheck").addEventListener("click",modeBDictCheck);
+$("mbDInput").addEventListener("keydown",e=>{if(e.key==="Enter")modeBDictCheck();});
+$("mbDInput").addEventListener("focus",lockInputScroll);
+$("mbDInput").addEventListener("blur",unlockInputScroll);
+$("mbDInput").addEventListener("beforeinput",e=>{
+  if(e.inputType.startsWith("delete"))return;
+  if(e.data&&!/^[A-Za-z]*$/.test(e.data||""))e.preventDefault();
+});
+$("mbDInput").addEventListener("input",e=>{
+  const el=e.target,cleaned=el.value.replace(/[^A-Za-z]/g,"");
+  if(cleaned!==el.value){const pos=el.selectionStart;el.value=cleaned;el.setSelectionRange(Math.min(pos,cleaned.length),Math.min(pos,cleaned.length));}
+});
 $("rPlay").addEventListener("click",()=>{if(S.cur)speak(S.cur.w,{connected:isConnectedItem(S.cur)});});
 
 /* ---------- summary ---------- */
