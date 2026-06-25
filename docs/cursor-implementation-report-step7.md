@@ -1,7 +1,7 @@
 # Cursor 実装レポート — STEP7: Mode B（音から語彙）
 
 > 作成日: 2026-06-26  
-> 対象ブランチ: `main`（コミット後に追記）  
+> 対象ブランチ: `main`（`d061b8e`）  
 > 指示書: `cursor-step7-mode-b.md`  
 > 前提正本: `docs/PURPOSE.md` §3 / `docs/DESIGN.md` §2
 
@@ -100,7 +100,7 @@ Mode B は Mode A の SRS データを**一切更新しない**。
 
 | 項目 | 値 |
 |------|-----|
-| ブランチ | `main` |
+| ブランチ | `main`（`d061b8e`） |
 
 ---
 
