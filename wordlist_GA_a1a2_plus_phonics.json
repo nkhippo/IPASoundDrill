@@ -1197,12 +1197,12 @@
   "neighbors": [
    "item",
    "atom",
+   "oughta",
    "bottom",
    "eaten",
    "often",
    "poem",
-   "team",
-   "time"
+   "team"
   ]
  },
  {
@@ -2648,9 +2648,9 @@
    "gotten",
    "little",
    "awful",
-   "metal",
-   "model",
-   "novel"
+   "gotta",
+   "lotta",
+   "metal"
   ]
  },
  {
@@ -2674,7 +2674,8 @@
    "gotten",
    "item",
    "atom",
-   "column"
+   "column",
+   "gotta"
   ]
  },
  {
@@ -5513,7 +5514,7 @@
    "keep",
    "cope",
    "cuff",
-   "up"
+   "cuz"
   ]
  },
  {
@@ -6186,13 +6187,13 @@
   },
   "neighbors": [
    "buzz",
+   "cuz",
    "daze",
    "done",
    "doze",
    "duck",
    "dull",
-   "dumb",
-   "D"
+   "dumb"
   ]
  },
  {
@@ -9731,14 +9732,14 @@
    "ko": "얻다 (get의 과거분사)"
   },
   "neighbors": [
+   "gotta",
    "bottle",
    "bottom",
    "button",
    "eaten",
    "fallen",
    "garden",
-   "written",
-   "certain"
+   "written"
   ]
  },
  {
@@ -12353,7 +12354,7 @@
    "poem",
    "team",
    "time",
-   "steam"
+   "oughta"
   ]
  },
  {
@@ -12891,10 +12892,10 @@
    "mind",
    "wind",
    "bind",
+   "kinda",
    "and",
    "around",
-   "band",
-   "can"
+   "band"
   ]
  },
  {
@@ -13851,7 +13852,7 @@
    "detail",
    "level",
    "local",
-   "loyal"
+   "lotta"
   ]
  },
  {
@@ -14695,6 +14696,7 @@
    "every",
    "many",
    "merry",
+   "lemme",
    "marry",
    "measure",
    "member",
@@ -25713,12 +25715,12 @@
   "neighbors": [
    "went",
    "won't",
+   "wanna",
    "art",
    "aunt",
    "bought",
    "can't",
-   "caught",
-   "don't"
+   "caught"
   ]
  },
  {
@@ -28711,11 +28713,11 @@
    "and",
    "allow",
    "avoid",
+   "dunno",
    "earn",
    "inch",
    "inner",
-   "joy",
-   "N"
+   "joy"
   ]
  },
  {
@@ -29228,12 +29230,12 @@
   "neighbors": [
    "autumn",
    "item",
+   "oughta",
+   "outta",
    "album",
    "apple",
    "bottom",
-   "eaten",
-   "poem",
-   "steam"
+   "eaten"
   ]
  },
  {
@@ -29392,7 +29394,7 @@
    "horror",
    "inner",
    "lawyer",
-   "power"
+   "oughta"
   ]
  },
  {
@@ -31242,14 +31244,14 @@
    "ko": "원인"
   },
   "neighbors": [
+   "cuz",
    "car",
    "caught",
    "cod",
    "cop",
    "was",
    "boss",
-   "cab",
-   "cash"
+   "cab"
   ]
  },
  {
@@ -33403,11 +33405,11 @@
    "carry",
    "bury",
    "court",
+   "cuz",
    "honey",
    "marry",
    "agree",
-   "car",
-   "card"
+   "car"
   ]
  },
  {
@@ -33495,6 +33497,31 @@
   },
   "neighbors": [
    "custom"
+  ]
+ },
+ {
+  "w": "cuz",
+  "ipa": "/kʌz/",
+  "cefr": "A2",
+  "pos": "口語表現",
+  "src": "casual",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "because",
+   "ja": "〜だから（becauseの口語形）",
+   "zh": "因为（because的口语形式）",
+   "ko": "왜냐하면 (because의 구어체)"
+  },
+  "neighbors": [
+   "cause",
+   "buzz",
+   "come",
+   "cuff",
+   "cup",
+   "cut",
+   "does",
+   "bug"
   ]
  },
  {
@@ -34487,8 +34514,8 @@
    "delay",
    "dessert",
    "diary",
-   "noisy",
-   "pity"
+   "gimme",
+   "noisy"
   ]
  },
  {
@@ -34776,6 +34803,31 @@
    "dull",
    "dumb",
    "luck"
+  ]
+ },
+ {
+  "w": "dunno",
+  "ipa": "/dəˈnoʊ/",
+  "cefr": "A2",
+  "pos": "口語表現",
+  "src": "casual",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "don't know",
+   "ja": "知らない、わからない（don't knowの口語形）",
+   "zh": "不知道（don't know的口语形式）",
+   "ko": "몰라 (don't know의 구어체)"
+  },
+  "neighbors": [
+   "annoy",
+   "done",
+   "ago",
+   "and",
+   "dance",
+   "dawn",
+   "dense",
+   "dinner"
   ]
  },
  {
@@ -37527,6 +37579,31 @@
   ]
  },
  {
+  "w": "gimme",
+  "ipa": "/ˈɡɪmi/",
+  "cefr": "A2",
+  "pos": "口語表現",
+  "src": "casual",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "give me",
+   "ja": "ちょうだい、くれ（give meの口語形）",
+   "zh": "给我（give me的口语形式）",
+   "ko": "나에게 줘 (give me의 구어체)"
+  },
+  "neighbors": [
+   "dizzy",
+   "lemme",
+   "pity",
+   "silly",
+   "busy",
+   "city",
+   "dim",
+   "game"
+  ]
+ },
+ {
   "w": "given",
   "ipa": "/ˈɡɪvən/",
   "cefr": "A2",
@@ -37635,13 +37712,38 @@
   },
   "neighbors": [
    "follow",
+   "gonna",
+   "gotcha",
+   "gotta",
    "guard",
    "doll",
    "dollar",
-   "gall",
-   "girl",
-   "glee",
-   "glow"
+   "gall"
+  ]
+ },
+ {
+  "w": "gonna",
+  "ipa": "/ˈɡɑnə/",
+  "cefr": "A2",
+  "pos": "口語表現",
+  "src": "casual",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "going to",
+   "ja": "〜するつもり（going toの口語形）",
+   "zh": "将要（going to的口语形式）",
+   "ko": "~할 것이다 (going to의 구어체)"
+  },
+  "neighbors": [
+   "gotcha",
+   "gotta",
+   "wanna",
+   "golf",
+   "guard",
+   "gun",
+   "lotta",
+   "bond"
   ]
  },
  {
@@ -37667,6 +37769,56 @@
    "use",
    "base",
    "boss"
+  ]
+ },
+ {
+  "w": "gotcha",
+  "ipa": "/ˈɡɑtʃə/",
+  "cefr": "A2",
+  "pos": "口語表現",
+  "src": "casual",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "got you / I understand",
+   "ja": "わかった、捕まえた（got youの口語形）",
+   "zh": "懂了、抓到你了（got you的口语形式）",
+   "ko": "알았어, 잡았다 (got you의 구어체)"
+  },
+  "neighbors": [
+   "gonna",
+   "gotta",
+   "golf",
+   "guard",
+   "lotta",
+   "wanna",
+   "god",
+   "got"
+  ]
+ },
+ {
+  "w": "gotta",
+  "ipa": "/ˈɡɑtə/",
+  "cefr": "A2",
+  "pos": "口語表現",
+  "src": "casual",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "got to / have got to",
+   "ja": "〜しなければ（got toの口語形）",
+   "zh": "必须（got to的口语形式）",
+   "ko": "~해야 한다 (got to의 구어체)"
+  },
+  "neighbors": [
+   "gonna",
+   "gotcha",
+   "lotta",
+   "got",
+   "gotten",
+   "gate",
+   "golf",
+   "guard"
   ]
  },
  {
@@ -37980,6 +38132,25 @@
    "gown",
    "gum",
    "one"
+  ]
+ },
+ {
+  "w": "hafta",
+  "ipa": "/ˈhæftə/",
+  "cefr": "A2",
+  "pos": "口語表現",
+  "src": "casual",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "have to",
+   "ja": "〜しなければならない（have toの口語形）",
+   "zh": "必须（have to的口语形式）",
+   "ko": "~해야 한다 (have to의 구어체)"
+  },
+  "neighbors": [
+   "after",
+   "daft"
   ]
  },
  {
@@ -39625,6 +39796,30 @@
   ]
  },
  {
+  "w": "kinda",
+  "ipa": "/ˈkaɪndə/",
+  "cefr": "A2",
+  "pos": "口語表現",
+  "src": "casual",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "kind of",
+   "ja": "なんとなく、ちょっと（kind ofの口語形）",
+   "zh": "有点（kind of的口语形式）",
+   "ko": "약간, 어느 정도 (kind of의 구어체)"
+  },
+  "neighbors": [
+   "kind",
+   "kindly",
+   "bind",
+   "candy",
+   "find",
+   "mind",
+   "wind"
+  ]
+ },
+ {
   "w": "kindly",
   "ipa": "/ˈkaɪndli/",
   "cefr": "A2",
@@ -39640,6 +39835,7 @@
   },
   "neighbors": [
    "finally",
+   "kinda",
    "widely",
    "candy"
   ]
@@ -40133,6 +40329,31 @@
   ]
  },
  {
+  "w": "lemme",
+  "ipa": "/ˈlɛmi/",
+  "cefr": "A2",
+  "pos": "口語表現",
+  "src": "casual",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "let me",
+   "ja": "〜させて（let meの口語形）",
+   "zh": "让我（let me的口语形式）",
+   "ko": "내가 ~하게 해줘 (let me의 구어체)"
+  },
+  "neighbors": [
+   "belly",
+   "bury",
+   "gimme",
+   "jelly",
+   "lamp",
+   "lead",
+   "leather",
+   "leisure"
+  ]
+ },
+ {
   "w": "lemon",
   "ipa": "/ˈlɛmən/",
   "cefr": "A2",
@@ -40150,11 +40371,11 @@
    "lesson",
    "chairman",
    "common",
+   "lemme",
    "level",
    "melon",
    "eleven",
-   "lion",
-   "listen"
+   "lion"
   ]
  },
  {
@@ -40542,6 +40763,31 @@
    "chest",
    "coast",
    "cost"
+  ]
+ },
+ {
+  "w": "lotta",
+  "ipa": "/ˈlɑtə/",
+  "cefr": "A2",
+  "pos": "口語表現",
+  "src": "casual",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "lot of / lots of",
+   "ja": "たくさんの（lot ofの口語形）",
+   "zh": "很多（lot of的口语形式）",
+   "ko": "많은 (lot of의 구어체)"
+  },
+  "neighbors": [
+   "gotta",
+   "lot",
+   "gonna",
+   "gotcha",
+   "latter",
+   "lock",
+   "oughta",
+   "outta"
   ]
  },
  {
@@ -42515,6 +42761,31 @@
   ]
  },
  {
+  "w": "oughta",
+  "ipa": "/ˈɔtə/",
+  "cefr": "A2",
+  "pos": "口語表現",
+  "src": "casual",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "ought to",
+   "ja": "〜すべき（ought toの口語形）",
+   "zh": "应该（ought to的口语形式）",
+   "ko": "~해야 한다 (ought to의 구어체)"
+  },
+  "neighbors": [
+   "outta",
+   "autumn",
+   "atom",
+   "author",
+   "gotta",
+   "lotta",
+   "offer",
+   "thought"
+  ]
+ },
+ {
   "w": "ourselves",
   "ipa": "/aʊɚˈsɛlvz/",
   "cefr": "A2",
@@ -42529,6 +42800,31 @@
    "ko": "우리 스스로"
   },
   "neighbors": []
+ },
+ {
+  "w": "outta",
+  "ipa": "/ˈaʊtə/",
+  "cefr": "A2",
+  "pos": "口語表現",
+  "src": "casual",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "out of",
+   "ja": "〜から外へ（out ofの口語形）",
+   "zh": "从…出来（out of的口语形式）",
+   "ko": "~밖으로 (out of의 구어체)"
+  },
+  "neighbors": [
+   "oughta",
+   "out",
+   "atom",
+   "doubt",
+   "gotta",
+   "lotta",
+   "shout",
+   "tie"
+  ]
  },
  {
   "w": "oven",
@@ -42852,6 +43148,8 @@
   },
   "neighbors": [
    "cost",
+   "gotta",
+   "lotta",
    "part",
    "party",
    "past",
@@ -43404,8 +43702,8 @@
    "bit",
    "dizzy",
    "fit",
-   "hit",
-   "kit"
+   "gimme",
+   "hit"
   ]
  },
  {
@@ -44757,7 +45055,7 @@
    "clear",
    "click",
    "cruise",
-   "kit"
+   "cuz"
   ]
  },
  {
@@ -48229,6 +48527,31 @@
   ]
  },
  {
+  "w": "sorta",
+  "ipa": "/ˈsɔrtə/",
+  "cefr": "A2",
+  "pos": "口語表現",
+  "src": "casual",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "sort of",
+   "ja": "いくぶん、まあまあ（sort ofの口語形）",
+   "zh": "有点、稍微（sort of的口语形式）",
+   "ko": "다소, 어느 정도 (sort of의 구어체)"
+  },
+  "neighbors": [
+   "sort",
+   "court",
+   "salt",
+   "source",
+   "forty",
+   "port",
+   "short",
+   "sport"
+  ]
+ },
+ {
   "w": "sound",
   "ipa": "/saʊnd/",
   "cefr": "A2",
@@ -50764,6 +51087,26 @@
   ]
  },
  {
+  "w": "tryna",
+  "ipa": "/ˈtraɪnə/",
+  "cefr": "A2",
+  "pos": "口語表現",
+  "src": "casual",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "trying to",
+   "ja": "〜しようとして（trying toの口語形）",
+   "zh": "试图、正想（trying to的口语形式）",
+   "ko": "~하려고 하는 (trying to의 구어체)"
+  },
+  "neighbors": [
+   "train",
+   "trend",
+   "tribe"
+  ]
+ },
+ {
   "w": "tune",
   "ipa": "/tun/",
   "cefr": "A2",
@@ -51546,12 +51889,37 @@
   "neighbors": [
    "wonder",
    "gender",
+   "wanna",
    "windy",
    "winner",
    "bond",
    "fond",
-   "pond",
-   "under"
+   "pond"
+  ]
+ },
+ {
+  "w": "wanna",
+  "ipa": "/ˈwɑnə/",
+  "cefr": "A2",
+  "pos": "口語表現",
+  "src": "casual",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "want to",
+   "ja": "〜したい（want toの口語形）",
+   "zh": "想要（want to的口语形式）",
+   "ko": "~하고 싶다 (want to의 구어체)"
+  },
+  "neighbors": [
+   "gonna",
+   "want",
+   "gotcha",
+   "gotta",
+   "lotta",
+   "wander",
+   "wine",
+   "winner"
   ]
  },
  {
@@ -59143,7 +59511,7 @@
    "source",
    "sore",
    "soar",
-   "sport"
+   "sorta"
   ]
  },
  {
@@ -61658,8 +62026,8 @@
    "bug",
    "bus",
    "but",
-   "does",
-   "badge"
+   "cuz",
+   "does"
   ]
  },
  {
@@ -62256,10 +62624,10 @@
    "come",
    "cup",
    "cut",
+   "cuz",
    "rough",
    "bud",
-   "bum",
-   "bun"
+   "bum"
   ]
  },
  {

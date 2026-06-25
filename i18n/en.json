@@ -4,6 +4,20 @@
     "sub": "CEFR A1–A2 · General American"
   },
   "lead_html": "Drill <b>IPA reading and writing</b> for words you already know&mdash;sound by sound. Target <b>trap phonemes</b> (θ, ð, æ, ʒ, ɝ) or your <b>weak spots</b> from practice history. Objective scoring only; build symbol coverage, not vocabulary lists.",
+  "lead_connected_html": "Hear <b>connected speech</b> in GA&mdash;linking, assimilation, and elision. Read the connected IPA and recover the original phrase.",
+  "tab": {
+    "label": "Practice mode",
+    "words": "Words",
+    "connected": "Connected Speech"
+  },
+  "cs": {
+    "label": "Type",
+    "all": "All",
+    "linking": "Linking",
+    "assimilation": "Assimilation",
+    "elision": "Elision",
+    "ruleLabel": "Rule"
+  },
   "focus": {
     "label": "Phoneme focus",
     "all": "All sounds",
@@ -13,7 +27,8 @@
     "weak_d": "From practice history",
     "letters": "Alphabet",
     "contractions": "Contractions",
-    "irregular": "Irregular forms"
+    "irregular": "Irregular forms",
+    "casual": "Casual speech"
   },
   "reg": {
     "label": "Spelling type",
@@ -24,7 +39,8 @@
     "irregular_d": "Common words, irregular spelling"
   },
   "pool": {
-    "count": "Pool: {n} words"
+    "count": "Pool: {n} words",
+    "count_phrases": "Pool: {n} phrases"
   },
   "dir": {
     "label": "Direction",
@@ -78,6 +94,7 @@
     "pos": "Part of speech"
   },
   "input_ph": "Type the word",
+  "input_phrase": "Type the phrase",
   "check": "Check",
   "clear": "Clear",
   "next": "Next",
@@ -134,6 +151,7 @@
     "文字": "letter name",
     "短縮形": "contraction",
     "動詞（不規則変化）": "irregular verb form",
-    "名詞（不規則複数）": "irregular plural"
+    "名詞（不規則複数）": "irregular plural",
+    "口語表現": "casual expression"
   }
 }

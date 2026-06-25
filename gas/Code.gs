@@ -10,6 +10,7 @@ const TTS_CACHE_VER = 'v2';
 const TTS_MODEL = 'gpt-4o-mini-tts';
 const TTS_VOICE = 'alloy';
 const TTS_INSTRUCTIONS = 'Pronounce the single English word in a clear General American accent. Use the citation (dictionary) form: full, unreduced vowels and the correct lexical stress — do not use the weak or reduced connected-speech form, even for function words. Say the word once, at a calm pace slightly slower than conversational, with neutral falling intonation. Articulate consonants precisely and keep contrasts distinct — especially /θ/–/f/, /ð/–/d/, /l/–/r/, /s/–/ʃ/, /b/–/v/, and word-final consonants — but stay natural and never exaggerate them into distortion. Do not spell the word, do not add any other words, do not pause, and do not use emotional or expressive delivery. Keep the delivery identical and consistent across all words.';
+const TTS_CONNECTED_INSTRUCTIONS = 'Pronounce the English phrase in a clear General American accent with natural connected speech: link words smoothly, apply assimilation and elision where native speakers would, and use weak forms where appropriate. Say the phrase once at a calm conversational pace with neutral intonation. Do not spell letters, do not add extra words, and do not pause between words unnaturally.';
 // Normal single-word MP3s are ~12 KB+; near-silent glitches (e.g. flight at 5.7 KB) stay below this.
 const TTS_MIN_BYTES = 9000;
 
@@ -20,7 +21,7 @@ function getFolder_() {
 }
 
 function fileNameForWord_(word) {
-  return String(word).toLowerCase().replace(/[^a-z0-9]/g, '_') + '_' + TTS_CACHE_VER + '.mp3';
+  return String(word).toLowerCase().replace(/[^a-z0-9]+/g, '_') + '_' + TTS_CACHE_VER + '.mp3';
 }
 
 function getAudioFromDrive_(word) {
@@ -42,7 +43,7 @@ function trashAudioOnDrive_(word) {
   while (files.hasNext()) files.next().setTrashed(true);
 }
 
-function fetchFromOpenAI_(word) {
+function fetchFromOpenAI_(text, instructions) {
   const key = PropertiesService.getScriptProperties().getProperty('OPENAI_API_KEY');
   if (!key) throw new Error('OPENAI_API_KEY is not set in Script Properties');
 
@@ -54,9 +55,9 @@ function fetchFromOpenAI_(word) {
     },
     payload: JSON.stringify({
       model: TTS_MODEL,
-      input: word,
+      input: text,
       voice: TTS_VOICE,
-      instructions: TTS_INSTRUCTIONS,
+      instructions: instructions || TTS_INSTRUCTIONS,
     }),
     muteHttpExceptions: true,
   });
@@ -67,10 +68,10 @@ function fetchFromOpenAI_(word) {
   return res.getBlob();
 }
 
-function fetchFromOpenAIWithRetry_(word) {
-  const blob = fetchFromOpenAI_(word);
+function fetchFromOpenAIWithRetry_(text, instructions) {
+  const blob = fetchFromOpenAI_(text, instructions);
   if (!isAudioBlobTooShort_(blob)) return blob;
-  return fetchFromOpenAI_(word);
+  return fetchFromOpenAI_(text, instructions);
 }
 
 function saveToDrive_(word, blob) {
@@ -88,26 +89,41 @@ function jsonResponse_(obj) {
 
 function doGet(e) {
   try {
+    const phrase = String((e && e.parameter && e.parameter.phrase) || '').trim();
     const word = String((e && e.parameter && e.parameter.word) || '').trim();
-    if (!word || !/^[a-zA-Z][a-zA-Z'-]*$/.test(word)) {
+    let input = '';
+    let instructions = TTS_INSTRUCTIONS;
+
+    if (phrase) {
+      if (!/^[\w\s'-]+$/.test(phrase)) {
+        return jsonResponse_({ ok: false, error: 'Invalid phrase parameter' });
+      }
+      input = phrase;
+      instructions = TTS_CONNECTED_INSTRUCTIONS;
+    } else if (word) {
+      if (!/^[a-zA-Z][a-zA-Z'-]*$/.test(word)) {
+        return jsonResponse_({ ok: false, error: 'Invalid or missing word parameter' });
+      }
+      input = word;
+    } else {
       return jsonResponse_({ ok: false, error: 'Invalid or missing word parameter' });
     }
 
-    let blob = getAudioFromDrive_(word);
+    let blob = getAudioFromDrive_(input);
     let source = 'drive';
     if (blob && isAudioBlobTooShort_(blob)) {
-      trashAudioOnDrive_(word);
+      trashAudioOnDrive_(input);
       blob = null;
     }
     if (!blob) {
-      blob = fetchFromOpenAIWithRetry_(word);
+      blob = fetchFromOpenAIWithRetry_(input, instructions);
       source = 'openai';
-      if (!isAudioBlobTooShort_(blob)) saveToDrive_(word, blob);
+      if (!isAudioBlobTooShort_(blob)) saveToDrive_(input, blob);
     }
 
     return jsonResponse_({
       ok: true,
-      word: word,
+      word: input,
       source: source,
       mimeType: blob.getContentType() || 'audio/mpeg',
       audio: Utilities.base64Encode(blob.getBytes()),

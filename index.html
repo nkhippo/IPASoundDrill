@@ -197,9 +197,19 @@
 
   <!-- SETUP -->
   <section id="setup" class="panel">
-    <p class="lead" id="lead">Drill <b>IPA reading and writing</b> for words you already know&mdash;sound by sound. Target <b>trap phonemes</b> (θ, ð, æ, ʒ, ɝ) or your <b>weak spots</b> from practice history. Objective scoring only; build symbol coverage, not vocabulary lists.</p>
+    <div class="field" id="tabField">
+      <div class="flabel" id="flabelTab">Practice mode</div>
+      <div class="opts" id="tabOpts">
+        <button class="opt" data-tab="words" aria-pressed="true" id="tabWords"><span class="ot" id="tabWordsT">Words</span></button>
+        <button class="opt" data-tab="connected" aria-pressed="false" id="tabConnected"><span class="ot" id="tabConnectedT">Connected Speech</span></button>
+      </div>
+    </div>
 
-    <div class="field">
+    <p class="lead" id="lead">Drill <b>IPA reading and writing</b> for words you already know&mdash;sound by sound. Target <b>trap phonemes</b> (θ, ð, æ, ʒ, ɝ) or your <b>weak spots</b> from practice history. Objective scoring only; build symbol coverage, not vocabulary lists.</p>
+    <p class="lead hidden" id="leadConnected">Hear <b>connected speech</b> in GA&mdash;linking, assimilation, and elision. Read the connected IPA and recover the original phrase.</p>
+
+    <div id="wordsSetup">
+    <div class="field" id="dirField">
       <div class="flabel" id="flabelDir">Direction</div>
       <div class="opts" id="dirOpts">
         <button class="opt" data-dir="decode" aria-pressed="true"><span class="ot" id="dirDecodeT">Decode · IPA &rarr; word</span><span class="od" id="dirDecodeD">Read the IPA and spell the word</span></button>
@@ -207,7 +217,7 @@
       </div>
     </div>
 
-    <div class="field">
+    <div class="field" id="focusField">
       <div class="flabel" id="flabelFocus">Phoneme focus</div>
       <div class="pills" id="focusPills">
         <button class="pill" data-focus="all" aria-pressed="true" id="focusAll">All sounds</button>
@@ -216,11 +226,12 @@
         <button class="pill" data-focus="letters" aria-pressed="false" id="focusLetters">Alphabet</button>
         <button class="pill" data-focus="contractions" aria-pressed="false" id="focusContractions">Contractions</button>
         <button class="pill" data-focus="irregular" aria-pressed="false" id="focusIrregular">Irregular forms</button>
+        <button class="pill" data-focus="casual" aria-pressed="false" id="focusCasual">Casual speech</button>
       </div>
       <div class="countnote" id="focusTrapNote"></div>
     </div>
 
-    <div class="field">
+    <div class="field" id="regField">
       <div class="flabel" id="flabelReg">Spelling type</div>
       <div class="opts" id="regOpts">
         <button class="opt" data-reg="all" aria-pressed="true"><span class="ot" id="regAllT">All</span><span class="od" id="regAllD"></span></button>
@@ -237,6 +248,19 @@
         <button class="pill" data-grp="long" aria-pressed="false" id="grpLong">Long vowels · silent e</button>
         <button class="pill" data-grp="team" aria-pressed="false" id="grpTeam">Vowel teams</button>
         <button class="pill" data-grp="r" aria-pressed="false" id="grpR">R-colored vowels</button>
+      </div>
+    </div>
+    </div>
+
+    <div id="connectedSetup" class="hidden">
+      <div class="field">
+        <div class="flabel" id="flabelCs">Type</div>
+        <div class="pills" id="csPills">
+          <button class="pill" data-cs="all" aria-pressed="true" id="csAll">All</button>
+          <button class="pill" data-cs="linking" aria-pressed="false" id="csLinking">Linking</button>
+          <button class="pill" data-cs="assimilation" aria-pressed="false" id="csAssim">Assimilation</button>
+          <button class="pill" data-cs="elision" aria-pressed="false" id="csElision">Elision</button>
+        </div>
       </div>
     </div>
 
@@ -277,6 +301,7 @@
     <div class="reveal">
       <div class="word" id="rWord"></div>
       <div class="word-gloss" id="rGloss"></div>
+      <div class="word-gloss hidden" id="rCsMeta"></div>
       <div class="yourtry" id="rTry"></div>
       <div class="readout" style="padding-top:0"><div class="ipa" id="rIpa"></div>
         <button class="playicon" id="rPlay" type="button" aria-label="Listen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button>
@@ -319,6 +344,8 @@ const show=(id,on)=>$(id).classList.toggle("hidden",!on);
 /* ---------- wordlist (table) ---------- */
 let PRESET = [];
 let wordlistReady = false;
+let CONNECTED = [];
+let connectedReady = false;
 
 function normalizeWord(row) {
   const w = { w: row.w, ipa: row.ipa, cefr: row.cefr, pos: row.pos };
@@ -336,9 +363,30 @@ async function loadWordlist() {
   const rows = await res.json();
   PRESET = rows.map(normalizeWord);
   wordlistReady = true;
-  $("startBtn").disabled = false;
-  $("startBtn").textContent = t("start");
   updatePool();
+}
+
+function normalizeConnected(row) {
+  return {
+    w: row.w,
+    ipa: row.ipa,
+    cs_type: row.cs_type,
+    cs_rule: row.cs_rule,
+    gloss: row.gloss,
+    src: row.src || "connected_speech"
+  };
+}
+
+async function loadConnected() {
+  const res = await fetch("data/connected_speech.json");
+  if (!res.ok) throw new Error("connected speech load failed: " + res.status);
+  CONNECTED = (await res.json()).map(normalizeConnected);
+  connectedReady = true;
+  updatePool();
+}
+
+function dataReady() {
+  return wordlistReady && connectedReady;
 }
 
 /* ---------- i18n ---------- */
@@ -376,11 +424,33 @@ function wordGloss(c) {
 
 function posLabel(pos) { return (UI.pos && UI.pos[pos]) || pos || "—"; }
 
+function isConnectedItem(c) { return !!(c && c.cs_type); }
+
+function csTypeLabel(type) {
+  if (!type || type === "all") return "";
+  const key = "cs." + type;
+  return t(key) || type;
+}
+
+function csRuleText(c) {
+  if (!c || !c.cs_rule) return "";
+  return c.cs_rule[LANG] || c.cs_rule.en || "";
+}
+
 function applyI18n() {
   document.title = t("brand.name");
   $("brandName").textContent = t("brand.name");
   $("brandSub").textContent = t("brand.sub");
   $("lead").innerHTML = t("lead_html");
+  $("leadConnected").innerHTML = t("lead_connected_html");
+  $("flabelTab").textContent = t("tab.label");
+  $("tabWordsT").textContent = t("tab.words");
+  $("tabConnectedT").textContent = t("tab.connected");
+  $("flabelCs").textContent = t("cs.label");
+  $("csAll").textContent = t("cs.all");
+  $("csLinking").textContent = t("cs.linking");
+  $("csAssim").textContent = t("cs.assimilation");
+  $("csElision").textContent = t("cs.elision");
   $("flabelDir").textContent = t("dir.label");
   $("dirDecodeT").innerHTML = t("dir.decode_t");
   $("dirDecodeD").textContent = t("dir.decode_d");
@@ -393,6 +463,7 @@ function applyI18n() {
   $("focusLetters").textContent = t("focus.letters");
   $("focusContractions").textContent = t("focus.contractions");
   $("focusIrregular").textContent = t("focus.irregular");
+  $("focusCasual").textContent = t("focus.casual");
   $("focusTrapNote").textContent = t("focus.traps_d");
   $("flabelReg").textContent = t("reg.label");
   $("regAllT").textContent = t("reg.all");
@@ -407,9 +478,9 @@ function applyI18n() {
   $("grpLong").textContent = t("grp.long");
   $("grpTeam").textContent = t("grp.team");
   $("grpR").textContent = t("grp.r");
-  if (wordlistReady) $("startBtn").textContent = t("start");
+  if (dataReady()) $("startBtn").textContent = t("start");
   else $("startBtn").textContent = t("loading");
-  $("dInput").placeholder = t("input_ph");
+  $("dInput").placeholder = S.tab === "connected" ? t("input_phrase") : t("input_ph");
   $("dCheck").textContent = t("check");
   $("eClear").textContent = t("clear");
   $("eCheck").textContent = t("check");
@@ -440,6 +511,12 @@ async function setLang(lang) {
   buildKeyboard();
   if (S.cur && !$("reveal").classList.contains("hidden")) {
     $("rGloss").textContent = wordGloss(S.cur);
+    if (isConnectedItem(S.cur)) {
+      $("rCsMeta").textContent = csTypeLabel(S.cur.cs_type) + " · " + t("cs.ruleLabel") + ": " + csRuleText(S.cur);
+      $("rCsMeta").classList.remove("hidden");
+    } else {
+      $("rCsMeta").classList.add("hidden");
+    }
     $("rNote").textContent = autoNote(S.cur);
   }
   if (!$("summary").classList.contains("hidden")) renderSummary();
@@ -452,10 +529,15 @@ async function initApp() {
   await loadLocale(LANG);
   applyI18n();
   buildKeyboard();
-  loadWordlist().catch(err => {
-    $("poolNote").textContent = t("wordlist_fail");
-    $("startBtn").textContent = t("load_fail");
-    console.error(err);
+  Promise.all([
+    loadWordlist().catch(err => { console.error(err); $("poolNote").textContent = t("wordlist_fail"); }),
+    loadConnected().catch(err => { console.error(err); if (S.tab === "connected") $("poolNote").textContent = t("load_fail"); })
+  ]).then(() => {
+    if (dataReady()) {
+      $("startBtn").disabled = false;
+      $("startBtn").textContent = t("start");
+      updatePool();
+    }
   });
 }
 
@@ -478,7 +560,7 @@ const QUESTION_COUNT = 10;
 const LS_HIST_KEY = "ept_hist_v1";
 const LS_SYM_KEY = "ept_sym_v1";
 const BOX_INTERVAL_MS = [0, 3600000, 86400000, 259200000, 604800000, 2592000000];
-let S={dir:"decode",focus:"all",reg:"all",grp:"all",queue:[],idx:0,correct:0,weak:{},missed:[],cur:null,revealed:false,built:[]};
+let S={tab:"words",csFilter:"all",dir:"decode",focus:"all",reg:"all",grp:"all",queue:[],idx:0,correct:0,weak:{},missed:[],cur:null,revealed:false,built:[]};
 
 const PH_EXAMPLES={
   "p":[["pay","/peɪ/"],["up","/ʌp/"],["pea","/pi/"]],
@@ -555,9 +637,17 @@ bindPills("dirOpts","dir",b=>b.dataset.dir);
 bindPills("focusPills","focus",b=>b.dataset.focus);
 bindPills("grpPills","grp",b=>b.dataset.grp);
 bindPills("regOpts","reg",b=>b.dataset.reg);
+bindPills("tabOpts","tab",b=>b.dataset.tab);
+bindPills("csPills","csFilter",b=>b.dataset.cs);
 function updateSetupFields(){
-  show("grpField",S.reg==="regular");
-  $("focusTrapNote").textContent=S.focus==="traps"?t("focus.traps_d"):S.focus==="weak"?t("focus.weak_d"):"";
+  const words=S.tab==="words";
+  show("wordsSetup",words);
+  show("connectedSetup",!words);
+  show("lead",words);
+  show("leadConnected",!words);
+  show("grpField",words&&S.reg==="regular");
+  $("focusTrapNote").textContent=words&&(S.focus==="traps"?t("focus.traps_d"):S.focus==="weak"?t("focus.weak_d"):"");
+  $("dInput").placeholder=S.tab==="connected"?t("input_phrase"):t("input_ph");
 }
 function hasTrapPhoneme(w){
   return phonemesOf(w.ipa).some(s=>TRAPSET.has(s));
@@ -592,12 +682,24 @@ function filteredPool(){
   else if(S.focus==="letters")p=p.filter(w=>w.src==="letter");
   else if(S.focus==="contractions")p=p.filter(w=>w.src==="contraction");
   else if(S.focus==="irregular")p=p.filter(w=>w.src==="irregular_verb"||w.src==="irregular_plural");
+  else if(S.focus==="casual")p=p.filter(w=>w.src==="casual");
+  return p;
+}
+function filteredConnectedPool(){
+  let p=CONNECTED.slice();
+  if(S.csFilter!=="all")p=p.filter(x=>x.cs_type===S.csFilter);
   return p;
 }
 function updatePool(){
+  if(S.tab==="connected"){
+    const n=filteredConnectedPool().length;
+    $("poolNote").textContent=t("pool.count_phrases",{n});
+    if(dataReady())$("startBtn").disabled=n===0;
+    return;
+  }
   const n=filteredPool().length;
   $("poolNote").textContent=t("pool.count",{n});
-  if(wordlistReady)$("startBtn").disabled=n===0;
+  if(dataReady())$("startBtn").disabled=n===0;
 }
 function recordHist(word,res){
   const h=loadHist();
@@ -629,7 +731,7 @@ const memAudioCache = new Map();
 let currentAudio = null;
 let speakBusy = false;
 
-function lsKey(w) { return LS_TTS_PREFIX + w.toLowerCase(); }
+function lsKey(w) { return LS_TTS_PREFIX + w.toLowerCase().replace(/[^a-z0-9]+/g, "_"); }
 
 function bytesFromB64(b64) {
   const bin = atob(b64);
@@ -660,8 +762,11 @@ function saveAudioToLS(w, mime, b64) {
   }
 }
 
-async function fetchAudioFromGas(w) {
-  const res = await fetch(GAS_TTS_URL + "?word=" + encodeURIComponent(w));
+async function fetchAudioFromGas(text, connected) {
+  const q = connected
+    ? "phrase=" + encodeURIComponent(text)
+    : "word=" + encodeURIComponent(text);
+  const res = await fetch(GAS_TTS_URL + "?" + q);
   if (!res.ok) throw new Error("GAS HTTP " + res.status);
   const data = await res.json();
   if (!data.ok) throw new Error(data.error || "GAS error");
@@ -676,25 +781,27 @@ function setSpeakerBusy(busy) {
   });
 }
 
-async function speak(w) {
-  if (!w || speakBusy) return;
+async function speak(text, opts) {
+  const connected = opts && opts.connected;
+  if (!text || speakBusy) return;
   if (currentAudio) {
     currentAudio.pause();
     currentAudio = null;
   }
   setSpeakerBusy(true);
+  const cacheKey = connected ? "p:" + text.toLowerCase() : text;
   try {
-    let url = memAudioCache.get(w);
+    let url = memAudioCache.get(cacheKey);
     if (!url) {
-      url = loadAudioFromLS(w);
-      if (url) memAudioCache.set(w, url);
+      url = loadAudioFromLS(cacheKey);
+      if (url) memAudioCache.set(cacheKey, url);
     }
     if (!url) {
-      const data = await fetchAudioFromGas(w);
-      saveAudioToLS(w, data.mimeType, data.audio);
+      const data = await fetchAudioFromGas(text, connected);
+      saveAudioToLS(cacheKey, data.mimeType, data.audio);
       const blob = new Blob([bytesFromB64(data.audio)], { type: data.mimeType || "audio/mpeg" });
       url = URL.createObjectURL(blob);
-      memAudioCache.set(w, url);
+      memAudioCache.set(cacheKey, url);
     }
     const audio = new Audio(url);
     currentAudio = audio;
@@ -737,11 +844,18 @@ function buildSessionQueue(pool,count){
   return shuffle(out).slice(0,count);
 }
 function startSession(weakOnly){
-  let pool=filteredPool().slice();
-  if(weakOnly&&S.missed.length){
-    pool=shuffle(PRESET.filter(w=>S.missed.includes(w.w))).slice(0,QUESTION_COUNT);
+  let pool;
+  if(S.tab==="connected"){
+    pool=shuffle(filteredConnectedPool().slice());
+    if(pool.length>QUESTION_COUNT)pool=pool.slice(0,QUESTION_COUNT);
+  }else if(weakOnly&&S.missed.length){
+    if(S.tab==="connected"){
+      pool=shuffle(CONNECTED.filter(w=>S.missed.includes(w.w))).slice(0,QUESTION_COUNT);
+    }else{
+      pool=shuffle(PRESET.filter(w=>S.missed.includes(w.w))).slice(0,QUESTION_COUNT);
+    }
   }else{
-    pool=buildSessionQueue(pool,QUESTION_COUNT);
+    pool=buildSessionQueue(filteredPool().slice(),QUESTION_COUNT);
   }
   S.queue=pool;S.idx=0;S.correct=0;S.weak={};S.missed=[];
   setSetupVisible(false);renderCard();
@@ -784,7 +898,7 @@ function renderCard(){
   const c=S.queue[S.idx];S.cur=c;S.revealed=false;S.built=[];
   show("reveal",false);
   $("meter").innerHTML='<b>'+(S.idx+1)+'</b> / '+S.queue.length;
-  if(S.dir==="decode")renderDecode(c);else renderEncode(c);
+  if(S.tab==="connected"||S.dir==="decode")renderDecode(c);else renderEncode(c);
 }
 /* DECODE */
 const COARSE=matchMedia("(pointer:coarse)").matches;
@@ -810,7 +924,8 @@ function renderDecode(c){
 function norm(s){return s.toLowerCase().replace(/[^a-z]/g,"");}
 function lev(a,b){const m=a.length,n=b.length,d=Array.from({length:m+1},(_,i)=>[i,...Array(n).fill(0)]);for(let j=0;j<=n;j++)d[0][j]=j;for(let i=1;i<=m;i++)for(let j=1;j<=n;j++)d[i][j]=Math.min(d[i-1][j]+1,d[i][j-1]+1,d[i-1][j-1]+(a[i-1]===b[j-1]?0:1));return d[m][n];}
 function decodeCheck(){
-  if(S.revealed)return;const c=S.cur;const t=$("dInput").value.trim();const a=norm(t),g=norm(c.w);
+  if(S.revealed)return;const c=S.cur;const t=$("dInput").value.trim();
+  const a=norm(t),g=norm(c.w);
   let res=a===g?"ok":(a.length>2&&lev(a,g)<=1?"near":"bad");
   reveal(res,{type:"decode",tryRaw:t});
 }
@@ -822,14 +937,18 @@ $("dInput").addEventListener("focus",()=>{
 $("dInput").addEventListener("blur",unlockInputScroll);
 $("dInput").addEventListener("beforeinput",e=>{
   if(e.inputType.startsWith("delete"))return;
-  if(e.data&&!/^[A-Za-z]*$/.test(e.data))e.preventDefault();
+  const phrase=isConnectedItem(S.cur)||S.tab==="connected";
+  const ok=phrase?/^[A-Za-z ]*$/.test(e.data||""):/^[A-Za-z]*$/.test(e.data||"");
+  if(e.data&&!ok)e.preventDefault();
 });
 $("dInput").addEventListener("input",e=>{
-  const el=e.target,cleaned=el.value.replace(/[^A-Za-z]/g,"");
+  const el=e.target;
+  const phrase=isConnectedItem(S.cur)||S.tab==="connected";
+  const cleaned=phrase?el.value.replace(/[^A-Za-z ]/g,"").replace(/\s+/g," "):el.value.replace(/[^A-Za-z]/g,"");
   if(cleaned!==el.value){const pos=el.selectionStart;el.value=cleaned;el.setSelectionRange(Math.min(pos,cleaned.length),Math.min(pos,cleaned.length));}
 });
 $("dInput").addEventListener("keydown",e=>{if(e.key==="Enter")decodeCheck();});
-$("dPlay").addEventListener("click",()=>{if(S.cur)speak(S.cur.w);});
+$("dPlay").addEventListener("click",()=>{if(S.cur)speak(S.cur.w,{connected:isConnectedItem(S.cur)});});
 
 /* ENCODE + IPA keyboard */
 function keyGroups(){
@@ -887,6 +1006,13 @@ $("eCheck").addEventListener("click",encodeCheck);
 
 /* ---------- reveal ---------- */
 function autoNote(c){
+  if(isConnectedItem(c)){
+    const parts=[];
+    if(c.cs_type)parts.push(csTypeLabel(c.cs_type));
+    const rule=csRuleText(c);
+    if(rule)parts.push(t("cs.ruleLabel")+": "+rule);
+    return parts.join(" · ");
+  }
   const parts=[];
   if(c.pat)parts.push(t("note.pattern",{p:localizePattern(c.pat)}));
   const sy=syllableCount(c.ipa);
@@ -910,6 +1036,15 @@ function reveal(res,ctx){
   panel.classList.add("res-"+res);
   $("rWord").textContent=c.w;
   $("rGloss").textContent=wordGloss(c);
+  if(isConnectedItem(c)){
+    $("rCsMeta").textContent=csTypeLabel(c.cs_type)+" · "+t("cs.ruleLabel")+": "+csRuleText(c);
+    $("rCsMeta").classList.remove("hidden");
+    $("rTraps").innerHTML="";
+    $("tipsHead").textContent=t("cs.ruleLabel");
+  }else{
+    $("rCsMeta").classList.add("hidden");
+    $("tipsHead").textContent=t("tips_head");
+  }
   if(ctx.type==="decode"){
     const raw=ctx.tryRaw?ctx.tryRaw.replace(/[<>]/g,""):"";
     $("rTry").innerHTML=raw?tryLine('<span class="try">'+raw+'</span>'):t("see_answer");
@@ -928,10 +1063,12 @@ function reveal(res,ctx){
   }
   renderIpaInto($("rIpa"),c.ipa,"rInfo",marker);$("rInfo").classList.remove("on");
   $("rNote").textContent=autoNote(c);
-  const traps=[...new Set(phonemesOf(c.ipa))].filter(s=>PH[s].t===1);
-  $("rTraps").innerHTML=traps.map(s=>'<span class="trapchip" data-sym="'+s+'">'+s+'</span>').join("");
-  $("rTraps").querySelectorAll(".trapchip").forEach(ch=>ch.addEventListener("click",()=>renderInfo("rInfo",ch.dataset.sym)));
-  setTimeout(()=>speak(c.w),200);
+  if(!isConnectedItem(c)){
+    const traps=[...new Set(phonemesOf(c.ipa))].filter(s=>PH[s].t===1);
+    $("rTraps").innerHTML=traps.map(s=>'<span class="trapchip" data-sym="'+s+'">'+s+'</span>').join("");
+    $("rTraps").querySelectorAll(".trapchip").forEach(ch=>ch.addEventListener("click",()=>renderInfo("rInfo",ch.dataset.sym)));
+  }
+  setTimeout(()=>speak(c.w,{connected:isConnectedItem(c)}),200);
 }
 function nextCard(){
   const c=S.cur;
@@ -939,7 +1076,7 @@ function nextCard(){
   S.idx++;renderCard();
 }
 $("nextBtn").addEventListener("click",nextCard);
-$("rPlay").addEventListener("click",()=>{if(S.cur)speak(S.cur.w);});
+$("rPlay").addEventListener("click",()=>{if(S.cur)speak(S.cur.w,{connected:isConnectedItem(S.cur)});});
 
 /* ---------- summary ---------- */
 function renderSummary(){
@@ -954,7 +1091,10 @@ function renderSummary(){
   }else{
     $("weakList").innerHTML='<div class="wk"><div style="flex:1"><div class="wlab">'+t("summary.weak_none_t")+'</div><div class="wtip">'+t("summary.weak_none_d")+'</div></div></div>';
   }
-  const list=S.missed.length?S.missed.map(w=>{const o=PRESET.find(x=>x.w===w);return '<b>'+o.ipa+'</b> '+w;}).join(" · "):"";
+  const list=S.missed.length?S.missed.map(w=>{
+    const o=PRESET.find(x=>x.w===w)||CONNECTED.find(x=>x.w===w);
+    return o?'<b>'+o.ipa+'</b> '+w:"";
+  }).filter(Boolean).join(" · "):"";
   $("reviewList").innerHTML=list?t("summary.review",{list}):"";
   $("weakBtn").disabled=S.missed.length===0;
 }
