@@ -1,7 +1,7 @@
 # Cursor 実装レポート — STEP4-d: 薄い音素の補強
 
 > 作成日: 2026-06-23  
-> 対象ブランチ: `main`（マージ後コミットを記載）  
+> 対象ブランチ: `main`（`96684ee`）  
 > 指示書: `cursor-step4d-thin-phonemes.md`  
 > 前提正本: `docs/PURPOSE.md` v2 / `docs/DESIGN.md` §4
 
@@ -145,7 +145,7 @@ python3 -m http.server 8080
 
 | コミット | 内容 |
 |----------|------|
-| （マージ後に記載） | STEP4-d: 薄い音素40語、neighbors 再生成 |
+| `96684ee` | STEP4-d: 薄い音素40語、neighbors 再生成 |
 
 ブランチ: `step4d-thin-phonemes` → `main` へマージ・`origin/main` へプッシュ済み。
 
