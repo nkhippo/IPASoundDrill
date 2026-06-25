@@ -24,6 +24,7 @@ K = 8                    # 近傍トップK
 MAX_DIST = 2             # これより遠い語は近傍にしない
 INPUT = ROOT / "wordlist_GA_a1a2_plus_phonics.json"
 OUTPUT = ROOT / "data" / "wordlist_with_neighbors.json"
+SLIM_OUTPUT = ROOT / "data" / "wordlist_with_neighbors_slim.json"
 REPORT = ROOT / "docs" / "neighbors_report.md"
 
 MULTI = ['tʃ','dʒ','eɪ','aɪ','ɔɪ','oʊ','aʊ']
@@ -109,6 +110,12 @@ def main():
     for i,e in enumerate(data):
         e['neighbors'] = neighbors_all[i]
     json.dump(data, open(OUTPUT,'w',encoding='utf-8'), ensure_ascii=False)
+    slim = []
+    for e in data:
+        row = dict(e)
+        row['neighbors'] = [nb['w'] for nb in e['neighbors']]
+        slim.append(row)
+    json.dump(slim, open(SLIM_OUTPUT,'w',encoding='utf-8'), ensure_ascii=False)
 
     # ── レポート ──
     cnt = [len(x) for x in neighbors_all]
@@ -145,6 +152,7 @@ def main():
     open(REPORT,'w',encoding='utf-8').write('\n'.join(lines))
 
     print(f"完了: {n}語に neighbors 付与 → {OUTPUT}")
+    print(f"slim版: {SLIM_OUTPUT}")
     print(f"近傍0語: {zero} / ミニマルペア保有: {has_sub} ({has_sub*100//n}%)")
     print(f"レポート: {REPORT}")
 

@@ -67,11 +67,11 @@
    "above",
    "bat",
    "boat",
+   "bought",
    "but",
    "account",
    "allow",
-   "beat",
-   "bet"
+   "beat"
   ]
  },
  {
@@ -294,10 +294,10 @@
    "agree",
    "alone",
    "get",
+   "gone",
    "guess",
-   "pen",
-   "ten",
-   "then"
+   "men",
+   "pen"
   ]
  },
  {
@@ -316,13 +316,13 @@
   },
   "neighbors": [
    "H",
+   "ate",
    "eight",
    "ache",
    "aid",
    "aim",
    "ape",
-   "edge",
-   "urge"
+   "edge"
   ]
  },
  {
@@ -469,14 +469,14 @@
    "ko": "홀로, 혼자"
   },
   "neighbors": [
+   "flown",
    "clone",
    "loan",
    "again",
    "ago",
    "along",
    "blow",
-   "bone",
-   "clean"
+   "bone"
   ]
  },
  {
@@ -1101,10 +1101,35 @@
    "am",
    "an",
    "as",
+   "ate",
    "eat",
    "eight",
+   "it"
+  ]
+ },
+ {
+  "w": "ate",
+  "ipa": "/eɪt/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense of eat",
+   "ja": "食べる（eatの過去形）",
+   "zh": "吃（eat的过去式）",
+   "ko": "먹다 (eat의 과거형)"
+  },
+  "neighbors": [
+   "H",
+   "age",
+   "at",
+   "eat",
    "it",
-   "out"
+   "out",
+   "ache",
+   "aid"
   ]
  },
  {
@@ -1170,11 +1195,11 @@
    "item",
    "atom",
    "bottom",
+   "eaten",
    "often",
    "poem",
    "team",
-   "time",
-   "steam"
+   "time"
   ]
  },
  {
@@ -1459,13 +1484,13 @@
   },
   "neighbors": [
    "bear",
+   "bought",
    "car",
    "bare",
    "beer",
    "bomb",
    "bore",
-   "boss",
-   "far"
+   "boss"
   ]
  },
  {
@@ -1520,9 +1545,9 @@
    "bag",
    "bath",
    "boat",
+   "bought",
    "but",
-   "cat",
-   "fat"
+   "cat"
   ]
  },
  {
@@ -1637,10 +1662,10 @@
    "beef",
    "bone",
    "mean",
+   "seen",
    "ban",
    "beak",
-   "beam",
-   "beat"
+   "beam"
   ]
  },
  {
@@ -1685,6 +1710,26 @@
   "neighbors": []
  },
  {
+  "w": "became",
+  "ipa": "/bɪˈkeɪm/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense of become",
+   "ja": "なる（becomeの過去形）",
+   "zh": "变得（become的过去式）",
+   "ko": "~이 되다 (become의 과거형)"
+  },
+  "neighbors": [
+   "become",
+   "because",
+   "blame"
+  ]
+ },
+ {
   "w": "because",
   "ipa": "/bɪˈkɔz/",
   "cefr": "A1",
@@ -1699,6 +1744,7 @@
    "ko": "왜냐하면"
   },
   "neighbors": [
+   "became",
    "become",
    "before",
    "belong"
@@ -1719,7 +1765,9 @@
    "ko": "~이 되다"
   },
   "neighbors": [
-   "because"
+   "became",
+   "because",
+   "begun"
   ]
  },
  {
@@ -1744,7 +1792,7 @@
    "head",
    "read",
    "red",
-   "bare"
+   "said"
   ]
  },
  {
@@ -1835,6 +1883,26 @@
   ]
  },
  {
+  "w": "began",
+  "ipa": "/bɪˈɡæn/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense of begin",
+   "ja": "始める（beginの過去形）",
+   "zh": "开始（begin的过去式）",
+   "ko": "시작하다 (begin의 과거형)"
+  },
+  "neighbors": [
+   "begin",
+   "begun",
+   "beginner"
+  ]
+ },
+ {
   "w": "begin",
   "ipa": "/bɪˈɡɪn/",
   "cefr": "A1",
@@ -1849,8 +1917,31 @@
    "ko": "시작하다"
   },
   "neighbors": [
+   "began",
+   "begun",
    "beginner",
    "within"
+  ]
+ },
+ {
+  "w": "begun",
+  "ipa": "/bɪˈɡʌn/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past participle of begin",
+   "ja": "始める（beginの過去分詞）",
+   "zh": "开始（begin的过去分词）",
+   "ko": "시작하다 (begin의 과거분사)"
+  },
+  "neighbors": [
+   "began",
+   "begin",
+   "become",
+   "beginner"
   ]
  },
  {
@@ -1890,12 +1981,12 @@
   "neighbors": [
    "below",
    "build",
+   "built",
    "busy",
    "lily",
    "really",
    "belly",
-   "belong",
-   "bleed"
+   "belong"
   ]
  },
  {
@@ -1917,10 +2008,10 @@
    "bear",
    "bed",
    "bowl",
+   "fell",
    "sell",
    "tell",
-   "well",
-   "bare"
+   "well"
   ]
  },
  {
@@ -1939,13 +2030,13 @@
   },
   "neighbors": [
    "build",
+   "built",
    "kilo",
    "blow",
    "bill",
    "ball",
    "believe",
-   "bell",
-   "big"
+   "bell"
   ]
  },
  {
@@ -2123,11 +2214,11 @@
    "bad",
    "bed",
    "birth",
+   "heard",
    "word",
    "bid",
    "bud",
-   "burn",
-   "herd"
+   "burn"
   ]
  },
  {
@@ -2236,6 +2327,7 @@
    "bank",
    "black",
    "block",
+   "drank",
    "thank",
    "blast",
    "frank",
@@ -2308,13 +2400,13 @@
   },
   "neighbors": [
    "blow",
+   "flew",
    "blur",
    "clue",
    "flu",
    "bloom",
    "B",
-   "L",
-   "Q"
+   "L"
   ]
  },
  {
@@ -2360,11 +2452,11 @@
    "bat",
    "bone",
    "both",
+   "bought",
    "bowl",
    "but",
    "coat",
-   "note",
-   "vote"
+   "note"
   ]
  },
  {
@@ -2388,8 +2480,8 @@
    "bed",
    "bird",
    "borrow",
-   "box",
-   "busy"
+   "bought",
+   "box"
   ]
  },
  {
@@ -2412,9 +2504,9 @@
    "both",
    "bowl",
    "phone",
+   "shown",
    "ban",
-   "been",
-   "bin"
+   "been"
   ]
  },
  {
@@ -2436,10 +2528,10 @@
    "bike",
    "cook",
    "look",
+   "took",
    "bake",
    "beak",
-   "bull",
-   "bush"
+   "bull"
   ]
  },
  {
@@ -2550,12 +2642,12 @@
   "neighbors": [
    "bottom",
    "button",
+   "gotten",
    "little",
    "awful",
    "metal",
    "model",
-   "novel",
-   "title"
+   "novel"
   ]
  },
  {
@@ -2576,9 +2668,35 @@
    "bottle",
    "autumn",
    "button",
+   "gotten",
    "item",
    "atom",
    "column"
+  ]
+ },
+ {
+  "w": "bought",
+  "ipa": "/bɑt/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense / past participle of buy",
+   "ja": "買う（buyの過去形・過去分詞）",
+   "zh": "买（buy的过去式/过去分词）",
+   "ko": "구입하다 (buy의 과거형·과거분사)"
+  },
+  "neighbors": [
+   "bar",
+   "bat",
+   "boat",
+   "but",
+   "caught",
+   "got",
+   "hot",
+   "lot"
   ]
  },
  {
@@ -2738,13 +2856,13 @@
   },
   "neighbors": [
    "brain",
+   "broke",
    "brave",
    "brick",
    "bake",
    "awake",
    "back",
-   "bank",
-   "bike"
+   "bank"
   ]
  },
  {
@@ -2828,14 +2946,14 @@
    "ko": "밝은"
   },
   "neighbors": [
+   "brought",
    "bride",
    "fright",
    "right",
    "write",
    "bite",
    "rite",
-   "art",
-   "bat"
+   "art"
   ]
  },
  {
@@ -2864,6 +2982,31 @@
   ]
  },
  {
+  "w": "broke",
+  "ipa": "/broʊk/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense of break",
+   "ja": "壊す、休憩、折れる（breakの過去形）",
+   "zh": "打破、休息、断裂（break的过去式）",
+   "ko": "부수다, 휴식, 꺾이다 (break의 과거형)"
+  },
+  "neighbors": [
+   "break",
+   "brake",
+   "brick",
+   "back",
+   "bank",
+   "bike",
+   "black",
+   "block"
+  ]
+ },
+ {
   "w": "broken",
   "ipa": "/ˈbroʊkən/",
   "cefr": "A1",
@@ -2877,7 +3020,10 @@
    "zh": "破碎的",
    "ko": "고장난"
   },
-  "neighbors": []
+  "neighbors": [
+   "spoken",
+   "woken"
+  ]
  },
  {
   "w": "brother",
@@ -2902,6 +3048,31 @@
    "bother",
    "rather",
    "runner"
+  ]
+ },
+ {
+  "w": "brought",
+  "ipa": "/brɔt/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense / past participle of bring",
+   "ja": "持ってくる（bringの過去形・過去分詞）",
+   "zh": "带来（bring的过去式/过去分词）",
+   "ko": "가져오다 (bring의 과거형·과거분사)"
+  },
+  "neighbors": [
+   "bright",
+   "art",
+   "ball",
+   "bat",
+   "best",
+   "boat",
+   "bought",
+   "brain"
   ]
  },
  {
@@ -2995,13 +3166,13 @@
   },
   "neighbors": [
    "below",
+   "built",
    "bald",
    "beard",
    "boiled",
    "bold",
    "bid",
-   "bill",
-   "bad"
+   "bill"
   ]
  },
  {
@@ -3020,6 +3191,31 @@
   },
   "neighbors": [
    "belong"
+  ]
+ },
+ {
+  "w": "built",
+  "ipa": "/bɪlt/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense / past participle of build",
+   "ja": "建てる（buildの過去形・過去分詞）",
+   "zh": "建造（build的过去式/过去分词）",
+   "ko": "짓다 (build의 과거형·과거분사)"
+  },
+  "neighbors": [
+   "below",
+   "build",
+   "belt",
+   "bolt",
+   "guilt",
+   "bill",
+   "bit",
+   "ball"
   ]
  },
  {
@@ -3112,7 +3308,7 @@
    "big",
    "body",
    "build",
-   "city"
+   "built"
   ]
  },
  {
@@ -3132,12 +3328,12 @@
   "neighbors": [
    "bat",
    "boat",
+   "bought",
    "bus",
    "cut",
    "what",
    "beat",
-   "bet",
-   "bit"
+   "bet"
   ]
  },
  {
@@ -3161,8 +3357,8 @@
    "after",
    "bat",
    "boat",
-   "brother",
-   "burger"
+   "bought",
+   "brother"
   ]
  },
  {
@@ -3201,9 +3397,9 @@
    "bucket",
    "butter",
    "cousin",
-   "certain",
-   "oven",
-   "sudden"
+   "eaten",
+   "gotten",
+   "written"
   ]
  },
  {
@@ -3321,14 +3517,14 @@
    "ko": "케이크"
   },
   "neighbors": [
+   "came",
    "case",
    "coke",
    "cook",
    "kick",
    "make",
    "shake",
-   "take",
-   "wake"
+   "take"
   ]
  },
  {
@@ -3354,6 +3550,31 @@
    "wall",
    "coal",
    "core"
+  ]
+ },
+ {
+  "w": "came",
+  "ipa": "/keɪm/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense of come",
+   "ja": "来る（comeの過去形）",
+   "zh": "来（come的过去式）",
+   "ko": "오다 (come의 과거형)"
+  },
+  "neighbors": [
+   "cake",
+   "case",
+   "come",
+   "game",
+   "name",
+   "same",
+   "cage",
+   "cane"
   ]
  },
  {
@@ -3394,10 +3615,10 @@
    "lamp",
    "ramp",
    "cap",
+   "came",
    "camera",
    "can",
-   "can't",
-   "carry"
+   "can't"
   ]
  },
  {
@@ -3420,9 +3641,9 @@
    "catch",
    "fan",
    "man",
+   "ran",
    "than",
-   "ban",
-   "cab"
+   "ban"
   ]
  },
  {
@@ -3517,12 +3738,12 @@
   "neighbors": [
    "bar",
    "care",
+   "caught",
    "cop",
    "cause",
    "cod",
    "core",
-   "far",
-   "jar"
+   "far"
   ]
  },
  {
@@ -3668,13 +3889,13 @@
   },
   "neighbors": [
    "cake",
+   "came",
    "face",
    "kiss",
    "vase",
    "base",
    "cage",
-   "cane",
-   "cave"
+   "cane"
   ]
  },
  {
@@ -3696,10 +3917,10 @@
    "can",
    "cap",
    "catch",
+   "caught",
    "coat",
    "cut",
-   "fat",
-   "hat"
+   "fat"
   ]
  },
  {
@@ -3725,6 +3946,31 @@
    "match",
    "batch",
    "cab"
+  ]
+ },
+ {
+  "w": "caught",
+  "ipa": "/kɑt/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense / past participle of catch",
+   "ja": "捕まえる、キャッチ、乗る（catchの過去形・過去分詞）",
+   "zh": "抓住、接球、赶上（catch的过去式/过去分词）",
+   "ko": "잡다, 캐치, 타다 (catch의 과거형·과거분사)"
+  },
+  "neighbors": [
+   "bought",
+   "car",
+   "cat",
+   "coat",
+   "cop",
+   "cut",
+   "got",
+   "hot"
   ]
  },
  {
@@ -3891,13 +4137,13 @@
   },
   "neighbors": [
    "choose",
+   "chose",
    "he's",
    "she's",
    "these",
    "cheap",
    "cheat",
-   "cheek",
-   "chief"
+   "cheek"
   ]
  },
  {
@@ -3915,12 +4161,14 @@
    "ko": "닭"
   },
   "neighbors": [
+   "chosen",
    "kitchen",
    "listen",
    "ribbon",
+   "ridden",
+   "taken",
    "ticket",
-   "fiction",
-   "given"
+   "woken"
   ]
  },
  {
@@ -3947,6 +4195,22 @@
    "find",
    "gold"
   ]
+ },
+ {
+  "w": "children",
+  "ipa": "/ˈtʃɪldrən/",
+  "cefr": "A1",
+  "pos": "名詞（不規則複数）",
+  "src": "irregular_plural",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "plural of child",
+   "ja": "子供（childの複数形）",
+   "zh": "孩子（child的复数）",
+   "ko": "어린이 (child의 복수형)"
+  },
+  "neighbors": []
  },
  {
   "w": "chocolate",
@@ -3982,13 +4246,60 @@
   },
   "neighbors": [
    "cheese",
+   "chose",
    "news",
    "who's",
    "whose",
    "lose",
    "chew",
-   "U",
-   "as"
+   "U"
+  ]
+ },
+ {
+  "w": "chose",
+  "ipa": "/tʃoʊz/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense of choose",
+   "ja": "選ぶ（chooseの過去形）",
+   "zh": "选择（choose的过去式）",
+   "ko": "선택하다 (choose의 과거형)"
+  },
+  "neighbors": [
+   "cheese",
+   "choose",
+   "nose",
+   "rose",
+   "those",
+   "choke",
+   "doze",
+   "pose"
+  ]
+ },
+ {
+  "w": "chosen",
+  "ipa": "/ˈtʃoʊzən/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past participle of choose",
+   "ja": "選ぶ（chooseの過去分詞）",
+   "zh": "选择（choose的过去分词）",
+   "ko": "선택하다 (choose의 과거분사)"
+  },
+  "neighbors": [
+   "chicken",
+   "cousin",
+   "open",
+   "reason",
+   "woken"
   ]
  },
  {
@@ -4207,11 +4518,11 @@
    "claim",
    "clam",
    "crime",
+   "came",
    "class",
    "clean",
    "clock",
-   "close",
-   "cloth"
+   "close"
   ]
  },
  {
@@ -4449,12 +4760,12 @@
   "neighbors": [
    "boat",
    "cat",
+   "caught",
    "coach",
    "code",
    "coke",
    "cut",
-   "kite",
-   "note"
+   "kite"
   ]
  },
  {
@@ -4477,9 +4788,9 @@
    "coke",
    "could",
    "kid",
-   "coal",
-   "cod",
-   "comb"
+   "rode",
+   "showed",
+   "coal"
   ]
  },
  {
@@ -4502,9 +4813,9 @@
    "car",
    "card",
    "carry",
+   "caught",
    "cookie",
-   "cop",
-   "foggy"
+   "cop"
   ]
  },
  {
@@ -4528,8 +4839,8 @@
    "code",
    "cook",
    "kick",
-   "choke",
-   "coal"
+   "woke",
+   "choke"
   ]
  },
  {
@@ -4549,12 +4860,12 @@
   "neighbors": [
    "gold",
    "hold",
+   "sold",
+   "told",
    "bold",
    "cola",
    "fold",
-   "code",
-   "old",
-   "coal"
+   "code"
   ]
  },
  {
@@ -4631,14 +4942,14 @@
    "ko": "오다"
   },
   "neighbors": [
+   "came",
    "cup",
    "cut",
    "mum",
    "some",
    "sum",
    "bum",
-   "comb",
-   "cuff"
+   "comb"
   ]
  },
  {
@@ -4730,8 +5041,8 @@
    "could",
    "kick",
    "look",
-   "gook",
-   "hook"
+   "took",
+   "gook"
   ]
  },
  {
@@ -4801,12 +5112,12 @@
   "neighbors": [
    "cap",
    "car",
+   "caught",
    "cup",
    "keep",
    "pop",
    "shop",
-   "top",
-   "cause"
+   "top"
   ]
  },
  {
@@ -4831,7 +5142,7 @@
    "car",
    "card",
    "carry",
-   "cookie"
+   "caught"
   ]
  },
  {
@@ -4901,6 +5212,7 @@
   "neighbors": [
    "direct",
    "collect",
+   "kept",
    "director",
    "effect",
    "perfect"
@@ -5041,13 +5353,13 @@
   },
   "neighbors": [
    "button",
+   "chosen",
    "doesn't",
    "kitchen",
    "reason",
    "common",
    "couple",
-   "oven",
-   "sudden"
+   "oven"
   ]
  },
  {
@@ -5122,7 +5434,7 @@
    "scream",
    "arm",
    "breathe",
-   "carry"
+   "came"
   ]
  },
  {
@@ -5213,12 +5525,12 @@
   "neighbors": [
    "but",
    "cat",
+   "caught",
    "coat",
    "come",
    "cup",
    "kite",
-   "what",
-   "cuff"
+   "what"
   ]
  },
  {
@@ -5240,10 +5552,10 @@
    "Q",
    "can't",
    "cat",
+   "caught",
    "coat",
    "cool",
-   "cut",
-   "fruit"
+   "cut"
   ]
  },
  {
@@ -5646,6 +5958,7 @@
    "doesn't",
    "hadn't",
    "isn't",
+   "ridden",
    "shouldn't",
    "wouldn't"
   ]
@@ -5842,11 +6155,11 @@
    "D",
    "U",
    "day",
+   "knew",
    "new",
    "shoe",
    "to",
-   "too",
-   "two"
+   "too"
   ]
  },
  {
@@ -6043,8 +6356,8 @@
    "four",
    "more",
    "war",
-   "your",
-   "bore"
+   "wore",
+   "your"
   ]
  },
  {
@@ -6095,6 +6408,31 @@
   ]
  },
  {
+  "w": "drank",
+  "ipa": "/dræŋk/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense of drink",
+   "ja": "飲み物、飲む（drinkの過去形）",
+   "zh": "饮料、喝（drink的过去式）",
+   "ko": "음료, 마시다 (drink의 과거형)"
+  },
+  "neighbors": [
+   "drink",
+   "drunk",
+   "frank",
+   "bank",
+   "blank",
+   "thank",
+   "crack",
+   "drag"
+  ]
+ },
+ {
   "w": "draw",
   "ipa": "/drɔ/",
   "cefr": "A1",
@@ -6109,14 +6447,39 @@
    "ko": "그리다, 끌다, 무승부"
   },
   "neighbors": [
+   "drew",
    "dry",
+   "drawn",
    "drawer",
    "D",
    "R",
    "are",
-   "arm",
-   "art",
-   "cry"
+   "arm"
+  ]
+ },
+ {
+  "w": "drawn",
+  "ipa": "/drɔn/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past participle of draw",
+   "ja": "描く、引く、引き分け（drawの過去分詞）",
+   "zh": "画、拉、平局（draw的过去分词）",
+   "ko": "그리다, 끌다, 무승부 (draw의 과거분사)"
+  },
+  "neighbors": [
+   "drain",
+   "drawer",
+   "drown",
+   "prawn",
+   "draw",
+   "dawn",
+   "brain",
+   "brought"
   ]
  },
  {
@@ -6141,7 +6504,7 @@
    "breathe",
    "drama",
    "draw",
-   "dress"
+   "drawn"
   ]
  },
  {
@@ -6170,6 +6533,31 @@
   ]
  },
  {
+  "w": "drew",
+  "ipa": "/dru/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense of draw",
+   "ja": "描く、引く、引き分け（drawの過去形）",
+   "zh": "画、拉、平局（draw的过去式）",
+   "ko": "그리다, 끌다, 무승부 (draw의 과거형)"
+  },
+  "neighbors": [
+   "draw",
+   "dry",
+   "grew",
+   "threw",
+   "through",
+   "true",
+   "crew",
+   "do"
+  ]
+ },
+ {
   "w": "drink",
   "ipa": "/drɪŋk/",
   "cefr": "A1",
@@ -6184,14 +6572,14 @@
    "ko": "음료, 마시다"
   },
   "neighbors": [
+   "drank",
+   "drunk",
    "bring",
    "doing",
    "pink",
    "think",
    "brick",
-   "drawing",
-   "drill",
-   "during"
+   "drawing"
   ]
  },
  {
@@ -6209,14 +6597,35 @@
    "ko": "운전, 운전하다"
   },
   "neighbors": [
+   "drove",
    "driver",
    "dry",
    "dive",
    "arrive",
    "bright",
    "cry",
-   "draw",
-   "dream"
+   "draw"
+  ]
+ },
+ {
+  "w": "driven",
+  "ipa": "/ˈdrɪvən/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past participle of drive",
+   "ja": "運転、運転する（driveの過去分詞）",
+   "zh": "驾驶、驱车（drive的过去分词）",
+   "ko": "운전, 운전하다 (drive의 과거분사)"
+  },
+  "neighbors": [
+   "ribbon",
+   "ridden",
+   "written",
+   "given"
   ]
  },
  {
@@ -6235,6 +6644,7 @@
   },
   "neighbors": [
    "drive",
+   "drove",
    "river",
    "writer"
   ]
@@ -6260,8 +6670,33 @@
    "doll",
    "drama",
    "draw",
+   "drawn",
+   "dream"
+  ]
+ },
+ {
+  "w": "drove",
+  "ipa": "/droʊv/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense of drive",
+   "ja": "運転、運転する（driveの過去形）",
+   "zh": "驾驶、驱车（drive的过去式）",
+   "ko": "운전, 운전하다 (drive의 과거형)"
+  },
+  "neighbors": [
+   "drive",
+   "broke",
+   "draw",
+   "drawn",
    "dream",
-   "dress"
+   "dress",
+   "drew",
+   "driver"
   ]
  },
  {
@@ -6290,6 +6725,31 @@
   ]
  },
  {
+  "w": "drunk",
+  "ipa": "/drʌŋk/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past participle of drink",
+   "ja": "飲み物、飲む（drinkの過去分詞）",
+   "zh": "饮料、喝（drink的过去分词）",
+   "ko": "음료, 마시다 (drink의 과거분사)"
+  },
+  "neighbors": [
+   "drank",
+   "drink",
+   "drum",
+   "truck",
+   "drawing",
+   "drug",
+   "frank",
+   "junk"
+  ]
+ },
+ {
   "w": "dry",
   "ipa": "/draɪ/",
   "cefr": "A1",
@@ -6306,12 +6766,12 @@
   "neighbors": [
    "cry",
    "draw",
+   "drew",
    "try",
    "fry",
    "drive",
    "die",
-   "dye",
-   "D"
+   "dye"
   ]
  },
  {
@@ -6332,11 +6792,11 @@
    "D",
    "U",
    "day",
+   "knew",
    "new",
    "shoe",
    "to",
-   "too",
-   "two"
+   "too"
   ]
  },
  {
@@ -6496,13 +6956,38 @@
   },
   "neighbors": [
    "at",
+   "ate",
    "each",
    "ear",
    "eight",
    "it",
    "out",
-   "ease",
-   "E"
+   "ease"
+  ]
+ },
+ {
+  "w": "eaten",
+  "ipa": "/ˈitən/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past participle of eat",
+   "ja": "食べる（eatの過去分詞）",
+   "zh": "吃（eat的过去分词）",
+   "ko": "먹다 (eat의 과거분사)"
+  },
+  "neighbors": [
+   "autumn",
+   "button",
+   "eighteen",
+   "gotten",
+   "item",
+   "lion",
+   "often",
+   "open"
   ]
  },
  {
@@ -6574,10 +7059,10 @@
    "teen",
    "bean",
    "clean",
+   "eaten",
    "green",
    "mean",
-   "stone",
-   "teach"
+   "seen"
   ]
  },
  {
@@ -6596,13 +7081,13 @@
   },
   "neighbors": [
    "T",
+   "ate",
    "eight",
    "eighteen",
    "tea",
    "B",
    "C",
-   "D",
-   "G"
+   "D"
   ]
  },
  {
@@ -6793,11 +7278,12 @@
   "neighbors": [
    "invent",
    "isn't",
-   "bent",
-   "cent",
-   "effect",
-   "rent",
-   "tent"
+   "lent",
+   "meant",
+   "sent",
+   "spent",
+   "went",
+   "bent"
   ]
  },
  {
@@ -7142,11 +7628,11 @@
    "bear",
    "care",
    "chair",
+   "fell",
    "for",
    "four",
    "hair",
-   "pair",
-   "share"
+   "pair"
   ]
  },
  {
@@ -7172,6 +7658,31 @@
    "free",
    "fairly",
    "fare"
+  ]
+ },
+ {
+  "w": "fallen",
+  "ipa": "/ˈfɑlən/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past participle of fall",
+   "ja": "落ちる、秋、倒れる（fallの過去分詞）",
+   "zh": "落下、秋天、跌倒（fall的过去分词）",
+   "ko": "떨어지다, 가을, 넘어지다 (fall의 과거분사)"
+  },
+  "neighbors": [
+   "flown",
+   "foreign",
+   "gotten",
+   "column",
+   "common",
+   "fashion",
+   "follow",
+   "knowledge"
   ]
  },
  {
@@ -7257,8 +7768,8 @@
    "fun",
    "man",
    "phone",
-   "than",
-   "ban"
+   "ran",
+   "than"
   ]
  },
  {
@@ -7353,11 +7864,11 @@
    "bat",
    "cat",
    "fan",
+   "feet",
    "fight",
    "hat",
    "rat",
-   "that",
-   "chat"
+   "sat"
   ]
  },
  {
@@ -7417,13 +7928,13 @@
   },
   "neighbors": [
    "feel",
+   "feet",
    "food",
    "he'd",
    "need",
    "she'd",
    "we'd",
-   "deed",
-   "fade"
+   "deed"
   ]
  },
  {
@@ -7442,13 +7953,13 @@
   },
   "neighbors": [
    "feed",
+   "feet",
+   "fell",
    "file",
    "fill",
    "full",
    "he'll",
-   "meal",
-   "real",
-   "she'll"
+   "meal"
   ]
  },
  {
@@ -7474,6 +7985,81 @@
    "being",
    "flip",
    "heating"
+  ]
+ },
+ {
+  "w": "feet",
+  "ipa": "/fit/",
+  "cefr": "A1",
+  "pos": "名詞（不規則複数）",
+  "src": "irregular_plural",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "plural of foot",
+   "ja": "足（footの複数形）",
+   "zh": "脚（foot的复数）",
+   "ko": "발 (foot의 복수형)"
+  },
+  "neighbors": [
+   "fat",
+   "feed",
+   "feel",
+   "fight",
+   "meat",
+   "meet",
+   "seat",
+   "beat"
+  ]
+ },
+ {
+  "w": "fell",
+  "ipa": "/fɛl/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense of fall",
+   "ja": "落ちる、秋、倒れる（fallの過去形）",
+   "zh": "落下、秋天、跌倒（fall的过去式）",
+   "ko": "떨어지다, 가을, 넘어지다 (fall의 과거형)"
+  },
+  "neighbors": [
+   "bell",
+   "fair",
+   "feel",
+   "file",
+   "fill",
+   "full",
+   "sell",
+   "tell"
+  ]
+ },
+ {
+  "w": "felt",
+  "ipa": "/fɛlt/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense / past participle of feel",
+   "ja": "感じる、気持ち、触る（feelの過去形・過去分詞）",
+   "zh": "感觉、心情、触摸（feel的过去式/过去分词）",
+   "ko": "느끼다, 기분, 만지다 (feel의 과거형·과거분사)"
+  },
+  "neighbors": [
+   "belt",
+   "fault",
+   "melt",
+   "fell",
+   "bell",
+   "best",
+   "built",
+   "else"
   ]
  },
  {
@@ -7513,8 +8099,8 @@
    "father",
    "feed",
    "feel",
-   "field",
-   "fire"
+   "feet",
+   "field"
   ]
  },
  {
@@ -7602,13 +8188,13 @@
   },
   "neighbors": [
    "fat",
+   "feet",
    "file",
    "fine",
    "fire",
    "five",
    "kite",
-   "light",
-   "night"
+   "light"
   ]
  },
  {
@@ -7627,13 +8213,13 @@
   },
   "neighbors": [
    "feel",
+   "fell",
    "fight",
    "fill",
    "fine",
    "fire",
    "five",
-   "full",
-   "fail"
+   "full"
   ]
  },
  {
@@ -7652,13 +8238,13 @@
   },
   "neighbors": [
    "feel",
+   "fell",
    "file",
    "fish",
    "full",
    "hill",
    "kill",
-   "will",
-   "bill"
+   "will"
   ]
  },
  {
@@ -7903,6 +8489,31 @@
   ]
  },
  {
+  "w": "flew",
+  "ipa": "/flu/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense of fly",
+   "ja": "飛ぶ、ハエ、操縦する（flyの過去形）",
+   "zh": "飞、苍蝇、驾驶（fly的过去式）",
+   "ko": "날다, 파리, 조종하다 (fly의 과거형)"
+  },
+  "neighbors": [
+   "blue",
+   "fly",
+   "clue",
+   "few",
+   "flaw",
+   "flea",
+   "flee",
+   "flow"
+  ]
+ },
+ {
   "w": "floor",
   "ipa": "/flɔr/",
   "cefr": "A1",
@@ -7948,8 +8559,33 @@
    "fire",
    "flag",
    "flat",
-   "floor",
-   "fly"
+   "flew",
+   "floor"
+  ]
+ },
+ {
+  "w": "flown",
+  "ipa": "/floʊn/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past participle of fly",
+   "ja": "飛ぶ、ハエ、操縦する（flyの過去分詞）",
+   "zh": "飞、苍蝇、驾驶（fly的过去分词）",
+   "ko": "날다, 파리, 조종하다 (fly의 과거분사)"
+  },
+  "neighbors": [
+   "alone",
+   "clone",
+   "float",
+   "phone",
+   "flow",
+   "loan",
+   "blow",
+   "bone"
   ]
  },
  {
@@ -7967,14 +8603,14 @@
    "ko": "날다, 파리, 조종하다"
   },
   "neighbors": [
+   "flew",
    "flaw",
    "flea",
    "flee",
    "flow",
    "flu",
    "fry",
-   "flight",
-   "lie"
+   "flight"
   ]
  },
  {
@@ -7993,6 +8629,7 @@
   },
   "neighbors": [
    "famous",
+   "woken",
    "bonus",
    "fax",
    "fix",
@@ -8104,10 +8741,10 @@
    "fair",
    "more",
    "war",
+   "wore",
    "your",
    "bore",
-   "core",
-   "fall"
+   "core"
   ]
  },
  {
@@ -8129,10 +8766,10 @@
    "fortune",
    "apron",
    "corn",
+   "fallen",
    "form",
    "forty",
-   "fourteen",
-   "often"
+   "fourteen"
   ]
  },
  {
@@ -8170,6 +8807,42 @@
    "ja": "忘れる",
    "zh": "忘记",
    "ko": "잊다"
+  },
+  "neighbors": [
+   "forgot"
+  ]
+ },
+ {
+  "w": "forgot",
+  "ipa": "/fɚˈɡɑt/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense of forget",
+   "ja": "忘れる（forgetの過去形）",
+   "zh": "忘记（forget的过去式）",
+   "ko": "잊다 (forget의 과거형)"
+  },
+  "neighbors": [
+   "forget"
+  ]
+ },
+ {
+  "w": "forgotten",
+  "ipa": "/fɚˈɡɑtən/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past participle of forget",
+   "ja": "忘れる（forgetの過去分詞）",
+   "zh": "忘记（forget的过去分词）",
+   "ko": "잊다 (forget의 과거분사)"
   },
   "neighbors": []
  },
@@ -8242,10 +8915,10 @@
    "fair",
    "more",
    "war",
+   "wore",
    "your",
    "bore",
-   "core",
-   "fall"
+   "core"
   ]
  },
  {
@@ -8440,8 +9113,8 @@
    "route",
    "art",
    "bright",
-   "cute",
-   "fast"
+   "brought",
+   "cute"
   ]
  },
  {
@@ -8460,13 +9133,13 @@
   },
   "neighbors": [
    "feel",
+   "fell",
    "file",
    "fill",
    "bull",
    "fail",
    "fall",
-   "fool",
-   "foot"
+   "fool"
   ]
  },
  {
@@ -8491,7 +9164,7 @@
    "run",
    "son",
    "sun",
-   "bun"
+   "won"
   ]
  },
  {
@@ -8578,14 +9251,14 @@
    "ko": "게임"
   },
   "neighbors": [
+   "came",
+   "gave",
    "name",
    "same",
    "fame",
    "gain",
    "gate",
-   "gaze",
-   "gum",
-   "lame"
+   "gaze"
   ]
  },
  {
@@ -8622,8 +9295,59 @@
   },
   "neighbors": [
    "pardon",
+   "gotten",
    "bargain",
    "golden"
+  ]
+ },
+ {
+  "w": "gave",
+  "ipa": "/ɡeɪv/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense of give",
+   "ja": "与える（giveの過去形）",
+   "zh": "给（give的过去式）",
+   "ko": "주다 (give의 과거형)"
+  },
+  "neighbors": [
+   "game",
+   "give",
+   "save",
+   "they've",
+   "cave",
+   "gain",
+   "gate",
+   "gaze"
+  ]
+ },
+ {
+  "w": "geese",
+  "ipa": "/ɡis/",
+  "cefr": "A1",
+  "pos": "名詞（不規則複数）",
+  "src": "irregular_plural",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "plural of goose",
+   "ja": "ガチョウ（gooseの複数形）",
+   "zh": "鹅（goose的复数）",
+   "ko": "거위 (goose의 복수형)"
+  },
+  "neighbors": [
+   "guess",
+   "peace",
+   "piece",
+   "cease",
+   "gas",
+   "goose",
+   "lease",
+   "niece"
   ]
  },
  {
@@ -8641,14 +9365,14 @@
    "ko": "얻다"
   },
   "neighbors": [
+   "got",
    "guess",
    "jet",
    "let",
+   "met",
    "pet",
    "set",
-   "yet",
-   "bet",
-   "gate"
+   "yet"
   ]
  },
  {
@@ -8694,11 +9418,11 @@
    "guilt",
    "lift",
    "shift",
+   "built",
    "fifty",
    "get",
    "ghost",
-   "give",
-   "great"
+   "give"
   ]
  },
  {
@@ -8757,14 +9481,14 @@
    "ko": "주다"
   },
   "neighbors": [
+   "gave",
    "gear",
    "arrive",
    "big",
    "dear",
    "did",
    "dig",
-   "dish",
-   "fill"
+   "dish"
   ]
  },
  {
@@ -8900,12 +9624,37 @@
   "neighbors": [
    "cold",
    "hold",
+   "sold",
+   "told",
    "bold",
    "fold",
    "goal",
-   "old",
-   "bowl",
-   "build"
+   "old"
+  ]
+ },
+ {
+  "w": "gone",
+  "ipa": "/ɡɔn/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past participle of go",
+   "ja": "行く（goの過去分詞）",
+   "zh": "去（go的过去分词）",
+   "ko": "가다 (go의 과거분사)"
+  },
+  "neighbors": [
+   "dawn",
+   "gain",
+   "gall",
+   "gown",
+   "gun",
+   "lawn",
+   "yawn",
+   "N"
   ]
  },
  {
@@ -8931,6 +9680,56 @@
    "hood",
    "wood",
    "add"
+  ]
+ },
+ {
+  "w": "got",
+  "ipa": "/ɡɑt/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense of get",
+   "ja": "得る（getの過去形）",
+   "zh": "得到（get的过去式）",
+   "ko": "얻다 (get의 과거형)"
+  },
+  "neighbors": [
+   "bought",
+   "caught",
+   "get",
+   "hot",
+   "lot",
+   "not",
+   "dot",
+   "gate"
+  ]
+ },
+ {
+  "w": "gotten",
+  "ipa": "/ˈɡɑtən/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past participle of get",
+   "ja": "得る（getの過去分詞）",
+   "zh": "得到（get的过去分词）",
+   "ko": "얻다 (get의 과거분사)"
+  },
+  "neighbors": [
+   "bottle",
+   "bottom",
+   "button",
+   "eaten",
+   "fallen",
+   "garden",
+   "written",
+   "certain"
   ]
  },
  {
@@ -9164,13 +9963,13 @@
   },
   "neighbors": [
    "greet",
+   "grown",
    "grain",
    "grief",
    "grieve",
    "grin",
    "agree",
-   "bean",
-   "brain"
+   "bean"
   ]
  },
  {
@@ -9199,6 +9998,31 @@
   ]
  },
  {
+  "w": "grew",
+  "ipa": "/ɡru/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense of grow",
+   "ja": "育つ（growの過去形）",
+   "zh": "生长（grow的过去式）",
+   "ko": "자라다 (grow의 과거형)"
+  },
+  "neighbors": [
+   "drew",
+   "grow",
+   "threw",
+   "through",
+   "true",
+   "crew",
+   "group",
+   "groom"
+  ]
+ },
+ {
   "w": "ground",
   "ipa": "/ɡraʊnd/",
   "cefr": "A1",
@@ -9220,7 +10044,7 @@
    "friend",
    "grade",
    "green",
-   "bound"
+   "grown"
   ]
  },
  {
@@ -9243,9 +10067,9 @@
    "grip",
    "groom",
    "troop",
-   "drop",
-   "fruit",
-   "grade"
+   "grew",
+   "drew",
+   "drop"
   ]
  },
  {
@@ -9263,14 +10087,39 @@
    "ko": "자라다"
   },
   "neighbors": [
+   "grew",
    "throw",
    "crow",
    "glow",
    "pro",
    "go",
-   "row",
+   "grown",
+   "row"
+  ]
+ },
+ {
+  "w": "grown",
+  "ipa": "/ɡroʊn/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past participle of grow",
+   "ja": "育つ（growの過去分詞）",
+   "zh": "生长（grow的过去分词）",
+   "ko": "자라다 (grow의 과거분사)"
+  },
+  "neighbors": [
+   "green",
+   "thrown",
+   "grain",
+   "grin",
    "gross",
-   "growth"
+   "growth",
+   "grow",
+   "alone"
   ]
  },
  {
@@ -9288,14 +10137,14 @@
    "ko": "추측하다"
   },
   "neighbors": [
+   "geese",
    "get",
    "yes",
    "chess",
    "gas",
+   "goose",
    "less",
-   "mess",
-   "ness",
-   "S"
+   "mess"
   ]
  },
  {
@@ -9383,13 +10232,13 @@
   },
   "neighbors": [
    "age",
+   "ate",
    "each",
    "eight",
    "ache",
    "aid",
    "aim",
-   "ape",
-   "itch"
+   "ape"
   ]
  },
  {
@@ -9558,6 +10407,31 @@
   ]
  },
  {
+  "w": "halves",
+  "ipa": "/hævz/",
+  "cefr": "A1",
+  "pos": "名詞（不規則複数）",
+  "src": "irregular_plural",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "plural of half",
+   "ja": "半分（halfの複数形）",
+   "zh": "一半（half的复数）",
+   "ko": "반 (half의 복수형)"
+  },
+  "neighbors": [
+   "has",
+   "have",
+   "had",
+   "half",
+   "hand",
+   "happy",
+   "hat",
+   "he's"
+  ]
+ },
+ {
   "w": "hamburger",
   "ipa": "/ˈhæmbɚɡɚ/",
   "cefr": "A1",
@@ -9662,8 +10536,8 @@
    "daddy",
    "had",
    "half",
-   "hand",
-   "happen"
+   "halves",
+   "hand"
   ]
  },
  {
@@ -9788,7 +10662,7 @@
    "ham",
    "hang",
    "hatch",
-   "add"
+   "halves"
   ]
  },
  {
@@ -9859,8 +10733,8 @@
    "he's",
    "head",
    "hear",
-   "here",
-   "hide"
+   "heard",
+   "here"
   ]
  },
  {
@@ -9932,10 +10806,10 @@
    "had",
    "hair",
    "he'd",
+   "heard",
    "hide",
    "read",
-   "red",
-   "dead"
+   "red"
   ]
  },
  {
@@ -9969,14 +10843,14 @@
    "ko": "건강"
   },
   "neighbors": [
+   "held",
    "help",
    "wealth",
    "healthy",
    "hell",
    "bell",
    "else",
-   "hair",
-   "hall"
+   "fell"
   ]
  },
  {
@@ -9996,6 +10870,7 @@
   "neighbors": [
    "health",
    "heavy",
+   "held",
    "help",
    "belly",
    "jelly",
@@ -10025,6 +10900,31 @@
    "heal",
    "heap",
    "heat"
+  ]
+ },
+ {
+  "w": "heard",
+  "ipa": "/hɝd/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense / past participle of hear",
+   "ja": "聞く（hearの過去形・過去分詞）",
+   "zh": "听到（hear的过去式/过去分词）",
+   "ko": "듣다 (hear의 과거형·과거분사)"
+  },
+  "neighbors": [
+   "bird",
+   "had",
+   "he'd",
+   "head",
+   "hide",
+   "hurry",
+   "hurt",
+   "word"
   ]
  },
  {
@@ -10071,10 +10971,35 @@
    "every",
    "fairy",
    "hair",
+   "halves",
    "happy",
    "have",
+   "head"
+  ]
+ },
+ {
+  "w": "held",
+  "ipa": "/hɛld/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense / past participle of hold",
+   "ja": "持つ、開催する、保持（holdの過去形・過去分詞）",
+   "zh": "握住、举办、保持（hold的过去式/过去分词）",
+   "ko": "잡다, 개최하다, 유지하다 (hold의 과거형·과거분사)"
+  },
+  "neighbors": [
+   "health",
+   "help",
+   "hold",
    "head",
-   "health"
+   "hell",
+   "bed",
+   "bell",
+   "build"
   ]
  },
  {
@@ -10099,7 +11024,7 @@
    "hall",
    "he'll",
    "health",
-   "help"
+   "held"
   ]
  },
  {
@@ -10118,13 +11043,13 @@
   },
   "neighbors": [
    "health",
+   "held",
    "hemp",
    "hell",
    "bell",
    "else",
-   "hair",
-   "hall",
-   "he'll"
+   "fell",
+   "felt"
   ]
  },
  {
@@ -10196,10 +11121,10 @@
    "his",
    "dear",
    "hair",
+   "halves",
    "hard",
    "has",
-   "he's",
-   "hear"
+   "he's"
   ]
  },
  {
@@ -10270,11 +11195,11 @@
    "had",
    "he'd",
    "head",
+   "heard",
    "ride",
    "side",
    "height",
-   "herd",
-   "hike"
+   "herd"
   ]
  },
  {
@@ -10438,12 +11363,12 @@
   "neighbors": [
    "cold",
    "gold",
+   "held",
+   "sold",
+   "told",
    "bold",
    "fold",
-   "hole",
-   "old",
-   "whole",
-   "bowl"
+   "hole"
   ]
  },
  {
@@ -10625,14 +11550,14 @@
    "ko": "더운"
   },
   "neighbors": [
+   "bought",
+   "caught",
+   "got",
    "hat",
    "hurt",
    "lot",
    "not",
-   "dot",
-   "hate",
-   "heat",
-   "height"
+   "dot"
   ]
  },
  {
@@ -10759,14 +11684,14 @@
    "ko": "서두름, 서두르다"
   },
   "neighbors": [
+   "heard",
    "hurt",
    "worry",
    "herd",
    "he",
    "her",
    "B",
-   "C",
-   "D"
+   "C"
   ]
  },
  {
@@ -10785,13 +11710,13 @@
   },
   "neighbors": [
    "hat",
+   "heard",
    "hot",
    "hurry",
    "shirt",
    "dirt",
    "hate",
-   "heat",
-   "height"
+   "heat"
   ]
  },
  {
@@ -11363,13 +12288,13 @@
   },
   "neighbors": [
    "at",
+   "ate",
    "eat",
    "eight",
    "if",
    "in",
    "is",
-   "out",
-   "id"
+   "out"
   ]
  },
  {
@@ -11392,9 +12317,9 @@
    "T",
    "X",
    "at",
+   "ate",
    "bus",
-   "case",
-   "city"
+   "case"
   ]
  },
  {
@@ -11415,11 +12340,11 @@
    "autumn",
    "atom",
    "bottom",
+   "eaten",
    "poem",
    "team",
    "time",
-   "steam",
-   "stem"
+   "steam"
   ]
  },
  {
@@ -11442,9 +12367,9 @@
    "T",
    "X",
    "at",
+   "ate",
    "bus",
-   "case",
-   "city"
+   "case"
   ]
  },
  {
@@ -11534,8 +12459,8 @@
    "he's",
    "join",
    "june",
-   "mean",
-   "she's"
+   "leaves",
+   "mean"
   ]
  },
  {
@@ -11555,12 +12480,12 @@
   "neighbors": [
    "get",
    "let",
+   "met",
    "pet",
    "set",
    "yet",
    "bet",
-   "net",
-   "vet"
+   "net"
   ]
  },
  {
@@ -11655,12 +12580,12 @@
   "neighbors": [
    "june",
    "use",
+   "goose",
    "loose",
    "G",
    "J",
    "S",
-   "U",
-   "X"
+   "U"
   ]
  },
  {
@@ -11811,6 +12736,31 @@
    "cope",
    "deep",
    "heap"
+  ]
+ },
+ {
+  "w": "kept",
+  "ipa": "/kɛpt/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense / past participle of keep",
+   "ja": "保つ（keepの過去形・過去分詞）",
+   "zh": "保持（keep的过去式/过去分词）",
+   "ko": "유지하다 (keep의 과거형·과거분사)"
+  },
+  "neighbors": [
+   "best",
+   "can't",
+   "cap",
+   "care",
+   "cat",
+   "caught",
+   "coat",
+   "cop"
   ]
  },
  {
@@ -12007,8 +12957,10 @@
    "cousin",
    "listen",
    "ribbon",
-   "common",
-   "given"
+   "ridden",
+   "women",
+   "written",
+   "common"
   ]
  },
  {
@@ -12027,13 +12979,13 @@
   },
   "neighbors": [
    "cat",
+   "caught",
    "coat",
    "cut",
    "fight",
    "light",
    "night",
-   "right",
-   "sight"
+   "right"
   ]
  },
  {
@@ -12062,6 +13014,31 @@
   ]
  },
  {
+  "w": "knew",
+  "ipa": "/nu/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense of know",
+   "ja": "知る（knowの過去形）",
+   "zh": "知道（know的过去式）",
+   "ko": "알다 (know의 과거형)"
+  },
+  "neighbors": [
+   "U",
+   "do",
+   "due",
+   "knee",
+   "know",
+   "no",
+   "now",
+   "shoe"
+  ]
+ },
+ {
   "w": "knife",
   "ipa": "/naɪf/",
   "cefr": "A1",
@@ -12087,6 +13064,31 @@
   ]
  },
  {
+  "w": "knives",
+  "ipa": "/naɪvz/",
+  "cefr": "A1",
+  "pos": "名詞（不規則複数）",
+  "src": "irregular_plural",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "plural of knife",
+   "ja": "ナイフ（knifeの複数形）",
+   "zh": "刀（knife的复数）",
+   "ko": "칼 (knife의 복수형)"
+  },
+  "neighbors": [
+   "wives",
+   "arrive",
+   "five",
+   "halves",
+   "knife",
+   "leaves",
+   "live",
+   "lives"
+  ]
+ },
+ {
   "w": "know",
   "ipa": "/noʊ/",
   "cefr": "A1",
@@ -12103,12 +13105,12 @@
   "neighbors": [
    "go",
    "knee",
+   "knew",
    "new",
    "now",
    "row",
    "show",
-   "so",
-   "low"
+   "so"
   ]
  },
  {
@@ -12403,6 +13405,31 @@
   ]
  },
  {
+  "w": "leaves",
+  "ipa": "/livz/",
+  "cefr": "A1",
+  "pos": "名詞（不規則複数）",
+  "src": "irregular_plural",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "plural of leaf",
+   "ja": "葉（leafの複数形）",
+   "zh": "叶子（leaf的复数）",
+   "ko": "잎 (leaf의 복수형)"
+  },
+  "neighbors": [
+   "lives",
+   "leave",
+   "cheese",
+   "fever",
+   "halves",
+   "he's",
+   "jeans",
+   "knives"
+  ]
+ },
+ {
   "w": "left",
   "ipa": "/lɛft/",
   "cefr": "A1",
@@ -12417,14 +13444,14 @@
    "ko": "왼쪽, 남은"
   },
   "neighbors": [
+   "lent",
    "lest",
    "lift",
    "theft",
    "let",
    "best",
-   "get",
-   "gift",
-   "guest"
+   "felt",
+   "get"
   ]
  },
  {
@@ -12450,6 +13477,31 @@
    "peg",
    "egg",
    "F"
+  ]
+ },
+ {
+  "w": "lent",
+  "ipa": "/lɛnt/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense / past participle of lend",
+   "ja": "貸す（lendの過去形・過去分詞）",
+   "zh": "借（lend的过去式/过去分词）",
+   "ko": "빌려주다 (lend의 과거형·과거분사)"
+  },
+  "neighbors": [
+   "left",
+   "meant",
+   "sent",
+   "went",
+   "bent",
+   "cent",
+   "lend",
+   "lest"
   ]
  },
  {
@@ -12498,8 +13550,8 @@
    "leg",
    "light",
    "lot",
-   "pet",
-   "set"
+   "met",
+   "pet"
   ]
  },
  {
@@ -12663,9 +13715,9 @@
    "believe",
    "below",
    "build",
+   "built",
    "busy",
-   "city",
-   "early"
+   "city"
   ]
  },
  {
@@ -12709,13 +13761,13 @@
   },
   "neighbors": [
    "line",
+   "eaten",
    "fine",
    "learn",
    "lesson",
    "life",
    "light",
-   "like",
-   "listen"
+   "like"
   ]
  },
  {
@@ -12786,11 +13838,11 @@
    "bottle",
    "listen",
    "middle",
+   "written",
    "detail",
    "level",
    "local",
-   "metal",
-   "title"
+   "metal"
   ]
  },
  {
@@ -12819,6 +13871,31 @@
   ]
  },
  {
+  "w": "lives",
+  "ipa": "/lɪvz/",
+  "cefr": "A1",
+  "pos": "名詞（不規則複数）",
+  "src": "irregular_plural",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "plural of life",
+   "ja": "人生（lifeの複数形）",
+   "zh": "生活（life的复数）",
+   "ko": "삶 (life의 복수형)"
+  },
+  "neighbors": [
+   "leaves",
+   "give",
+   "halves",
+   "here's",
+   "his",
+   "knives",
+   "leave",
+   "lily"
+  ]
+ },
+ {
   "w": "living",
   "ipa": "/ˈlɪvɪŋ/",
   "cefr": "A1",
@@ -12834,6 +13911,7 @@
   },
   "neighbors": [
    "fishing",
+   "lives",
    "earring",
    "lyric",
    "missing",
@@ -12909,10 +13987,10 @@
    "cook",
    "like",
    "luck",
+   "took",
    "gook",
    "hook",
-   "lack",
-   "lake"
+   "lack"
   ]
  },
  {
@@ -12930,14 +14008,14 @@
    "ko": "많음, 부지"
   },
   "neighbors": [
+   "bought",
+   "caught",
+   "got",
    "hot",
    "late",
    "let",
    "light",
-   "not",
-   "dot",
-   "knot",
-   "lock"
+   "not"
   ]
  },
  {
@@ -13061,8 +14139,8 @@
    "fun",
    "funny",
    "learn",
-   "line",
-   "love"
+   "lent",
+   "line"
   ]
  },
  {
@@ -13107,6 +14185,31 @@
   "neighbors": []
  },
  {
+  "w": "made",
+  "ipa": "/meɪd/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense / past participle of make",
+   "ja": "作る（makeの過去形・過去分詞）",
+   "zh": "制作（make的过去式/过去分词）",
+   "ko": "만들다 (make의 과거형·과거분사)"
+  },
+  "neighbors": [
+   "mail",
+   "make",
+   "they'd",
+   "fade",
+   "jade",
+   "mad",
+   "main",
+   "male"
+  ]
+ },
+ {
   "w": "magazine",
   "ipa": "/ˈmæɡəˌzin/",
   "cefr": "A1",
@@ -13137,14 +14240,14 @@
    "ko": "우편"
   },
   "neighbors": [
+   "made",
    "make",
    "meal",
    "sale",
    "they'll",
    "fail",
    "hail",
-   "main",
-   "mall"
+   "main"
   ]
  },
  {
@@ -13163,13 +14266,13 @@
   },
   "neighbors": [
    "cake",
+   "made",
    "mail",
    "shake",
    "take",
    "wake",
    "bake",
-   "fake",
-   "lake"
+   "fake"
   ]
  },
  {
@@ -13192,9 +14295,9 @@
    "map",
    "match",
    "mean",
+   "men",
    "mine",
-   "moon",
-   "than"
+   "moon"
   ]
  },
  {
@@ -13212,14 +14315,14 @@
    "ko": "많은"
   },
   "neighbors": [
+   "meant",
    "merry",
    "money",
    "marry",
    "mend",
    "any",
-   "end",
-   "fairy",
-   "funny"
+   "men",
+   "end"
   ]
  },
  {
@@ -13367,9 +14470,9 @@
    "hobby",
    "lady",
    "lazy",
+   "made",
    "mail",
-   "make",
-   "many"
+   "make"
   ]
  },
  {
@@ -13442,9 +14545,34 @@
    "meal",
    "meat",
    "meet",
+   "men",
    "mine",
-   "moon",
-   "gene"
+   "moon"
+  ]
+ },
+ {
+  "w": "meant",
+  "ipa": "/mɛnt/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense / past participle of mean",
+   "ja": "意味する、意地悪、平均（meanの過去形・過去分詞）",
+   "zh": "意味着、刻薄、平均（mean的过去式/过去分词）",
+   "ko": "의미하다, 못되다, 평균 (mean의 과거형·과거분사)"
+  },
+  "neighbors": [
+   "lent",
+   "many",
+   "sent",
+   "went",
+   "bent",
+   "cent",
+   "melt",
+   "mend"
   ]
  },
  {
@@ -13462,14 +14590,14 @@
    "ko": "고기"
   },
   "neighbors": [
+   "feet",
    "meal",
    "mean",
+   "met",
    "seat",
    "beat",
    "cheat",
-   "feat",
-   "heat",
-   "mate"
+   "feat"
   ]
  },
  {
@@ -13505,14 +14633,14 @@
    "ko": "만나다"
   },
   "neighbors": [
+   "feet",
    "meal",
    "mean",
+   "met",
    "seat",
    "beat",
    "cheat",
-   "feat",
-   "heat",
-   "mate"
+   "feat"
   ]
  },
  {
@@ -13561,6 +14689,31 @@
    "marry",
    "member",
    "summary"
+  ]
+ },
+ {
+  "w": "men",
+  "ipa": "/mɛn/",
+  "cefr": "A1",
+  "pos": "名詞（不規則複数）",
+  "src": "irregular_plural",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "plural of man",
+   "ja": "男（manの複数形）",
+   "zh": "男人（man的复数）",
+   "ko": "남성 (man의 복수형)"
+  },
+  "neighbors": [
+   "man",
+   "mean",
+   "met",
+   "mine",
+   "moon",
+   "pen",
+   "ten",
+   "then"
   ]
  },
  {
@@ -13614,6 +14767,56 @@
   ]
  },
  {
+  "w": "met",
+  "ipa": "/mɛt/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense / past participle of meet",
+   "ja": "会う（meetの過去形・過去分詞）",
+   "zh": "见面（meet的过去式/过去分词）",
+   "ko": "만나다 (meet의 과거형·과거분사)"
+  },
+  "neighbors": [
+   "get",
+   "jet",
+   "let",
+   "meat",
+   "meet",
+   "men",
+   "pet",
+   "set"
+  ]
+ },
+ {
+  "w": "mice",
+  "ipa": "/maɪs/",
+  "cefr": "A1",
+  "pos": "名詞（不規則複数）",
+  "src": "irregular_plural",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "plural of mouse",
+   "ja": "ねずみ（mouseの複数形）",
+   "zh": "老鼠（mouse的复数）",
+   "ko": "생쥐 (mouse의 복수형)"
+  },
+  "neighbors": [
+   "mine",
+   "miss",
+   "mouse",
+   "nice",
+   "rice",
+   "mass",
+   "mess",
+   "might"
+  ]
+ },
+ {
   "w": "middle",
   "ipa": "/ˈmɪdəl/",
   "cefr": "A1",
@@ -13633,9 +14836,9 @@
    "little",
    "minute",
    "mobile",
+   "ridden",
    "metal",
-   "midday",
-   "midst"
+   "midday"
   ]
  },
  {
@@ -13657,10 +14860,10 @@
    "mill",
    "below",
    "build",
+   "built",
    "fill",
    "hill",
-   "kick",
-   "kill"
+   "kick"
   ]
  },
  {
@@ -13707,10 +14910,10 @@
    "line",
    "man",
    "mean",
+   "men",
+   "mice",
    "moon",
-   "nine",
-   "sign",
-   "main"
+   "nine"
   ]
  },
  {
@@ -13729,13 +14932,13 @@
   },
   "neighbors": [
    "mint",
+   "meant",
    "middle",
    "ticket",
    "hint",
    "manage",
    "midnight",
-   "midst",
-   "mist"
+   "midst"
   ]
  },
  {
@@ -13754,13 +14957,13 @@
   },
   "neighbors": [
    "kiss",
+   "mice",
    "mouse",
    "this",
    "mass",
    "mere",
    "mess",
-   "mill",
-   "moss"
+   "mill"
   ]
  },
  {
@@ -13924,7 +15127,7 @@
    "man",
    "many",
    "mean",
-   "mind"
+   "meant"
   ]
  },
  {
@@ -13945,11 +15148,11 @@
    "june",
    "man",
    "mean",
+   "men",
    "mine",
    "move",
    "soon",
-   "main",
-   "mood"
+   "main"
   ]
  },
  {
@@ -13971,10 +15174,10 @@
    "for",
    "four",
    "war",
+   "wore",
    "your",
    "bore",
-   "core",
-   "mall"
+   "core"
   ]
  },
  {
@@ -14081,13 +15284,13 @@
   },
   "neighbors": [
    "house",
+   "mice",
    "miss",
    "mouth",
    "mass",
    "mess",
    "moss",
-   "S",
-   "X"
+   "S"
   ]
  },
  {
@@ -14359,14 +15562,14 @@
    "ko": "이름, 이름짓다, 명성"
   },
   "neighbors": [
+   "came",
    "game",
    "same",
    "fame",
    "lame",
    "nail",
    "shame",
-   "tame",
-   "aim"
+   "tame"
   ]
  },
  {
@@ -14482,7 +15685,7 @@
    "every",
    "fever",
    "heavy",
-   "letter"
+   "knives"
   ]
  },
  {
@@ -14532,7 +15735,7 @@
    "whose",
    "lose",
    "noon",
-   "new"
+   "knew"
   ]
  },
  {
@@ -14567,13 +15770,13 @@
   },
   "neighbors": [
    "knife",
+   "mice",
    "night",
    "nine",
    "nurse",
    "rice",
    "ness",
-   "niece",
-   "vice"
+   "niece"
   ]
  },
  {
@@ -14680,12 +15883,12 @@
   "neighbors": [
    "go",
    "knee",
+   "knew",
    "new",
    "now",
    "row",
    "show",
-   "so",
-   "low"
+   "so"
   ]
  },
  {
@@ -14710,7 +15913,7 @@
    "boy",
    "cheese",
    "choose",
-   "does"
+   "chose"
   ]
  },
  {
@@ -14728,14 +15931,14 @@
    "ko": "코"
   },
   "neighbors": [
+   "chose",
    "news",
    "noise",
    "note",
    "rose",
    "those",
    "doze",
-   "known",
-   "pose"
+   "known"
   ]
  },
  {
@@ -14753,14 +15956,14 @@
    "ko": "~ 아니다"
   },
   "neighbors": [
+   "bought",
+   "caught",
+   "got",
    "hot",
    "lot",
    "night",
    "note",
-   "dot",
-   "knit",
-   "knock",
-   "neat"
+   "dot"
   ]
  },
  {
@@ -14784,8 +15987,8 @@
    "nose",
    "not",
    "vote",
-   "goat",
-   "knit"
+   "wrote",
+   "goat"
   ]
  },
  {
@@ -14858,11 +16061,11 @@
    "cow",
    "how",
    "knee",
+   "knew",
    "know",
    "new",
    "no",
-   "bow",
-   "vow"
+   "bow"
   ]
  },
  {
@@ -15061,12 +16264,12 @@
   "neighbors": [
    "orphan",
    "autumn",
+   "eaten",
    "fan",
    "fine",
    "foreign",
    "fun",
-   "lion",
-   "office"
+   "lion"
   ]
  },
  {
@@ -15087,11 +16290,11 @@
    "cold",
    "gold",
    "hold",
+   "sold",
+   "told",
    "bold",
    "fold",
-   "L",
-   "add",
-   "all"
+   "L"
   ]
  },
  {
@@ -15154,12 +16357,12 @@
   "neighbors": [
    "what's",
    "one",
+   "won",
    "bus",
    "dance",
    "fun",
    "funny",
-   "lunch",
-   "money"
+   "lunch"
   ]
  },
  {
@@ -15229,12 +16432,12 @@
   "neighbors": [
    "apple",
    "apron",
+   "chosen",
+   "eaten",
    "happen",
    "lion",
    "often",
-   "pen",
-   "oven",
-   "pain"
+   "pen"
   ]
  },
  {
@@ -15406,8 +16609,8 @@
    "as",
    "cheese",
    "choose",
-   "does",
-   "has"
+   "chose",
+   "does"
   ]
  },
  {
@@ -15426,13 +16629,13 @@
   },
   "neighbors": [
    "at",
+   "ate",
    "eat",
    "eight",
    "hour",
    "it",
    "our",
-   "owl",
-   "doubt"
+   "owl"
   ]
  },
  {
@@ -15917,14 +17120,14 @@
    "ko": "평화"
   },
   "neighbors": [
+   "geese",
    "cease",
    "lease",
    "niece",
    "pace",
    "pass",
    "peach",
-   "peak",
-   "peel"
+   "peak"
   ]
  },
  {
@@ -15942,14 +17145,14 @@
    "ko": "펜"
   },
   "neighbors": [
+   "men",
    "pair",
    "pet",
    "ten",
    "then",
    "when",
    "pain",
-   "pan",
-   "pear"
+   "pan"
   ]
  },
  {
@@ -16067,11 +17270,11 @@
    "get",
    "jet",
    "let",
+   "met",
    "pair",
    "pen",
    "put",
-   "set",
-   "yet"
+   "set"
   ]
  },
  {
@@ -16093,10 +17296,10 @@
    "fan",
    "fine",
    "fun",
+   "shown",
    "cone",
    "hone",
-   "known",
-   "loan"
+   "known"
   ]
  },
  {
@@ -16117,11 +17320,11 @@
    "boat",
    "coat",
    "fat",
+   "feet",
    "fight",
    "note",
    "phone",
-   "vote",
-   "fate"
+   "vote"
   ]
  },
  {
@@ -16218,14 +17421,14 @@
    "ko": "조각"
   },
   "neighbors": [
+   "geese",
    "cease",
    "lease",
    "niece",
    "pace",
    "pass",
    "peach",
-   "peak",
-   "peel"
+   "peak"
   ]
  },
  {
@@ -16541,7 +17744,7 @@
    "can't",
    "don't",
    "join",
-   "pants"
+   "lent"
   ]
  },
  {
@@ -17133,14 +18336,14 @@
    "ko": "비, 내리다, 강우"
   },
   "neighbors": [
+   "ran",
    "run",
    "cane",
    "chain",
    "gain",
    "lane",
    "main",
-   "pain",
-   "race"
+   "pain"
   ]
  },
  {
@@ -17169,6 +18372,56 @@
   ]
  },
  {
+  "w": "ran",
+  "ipa": "/ræn/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense of run",
+   "ja": "走る、経営する、作動（runの過去形）",
+   "zh": "跑、经营、运行（run的过去式）",
+   "ko": "달리다, 운영하다, 작동 (run의 과거형)"
+  },
+  "neighbors": [
+   "can",
+   "fan",
+   "man",
+   "rain",
+   "rang",
+   "rat",
+   "run",
+   "than"
+  ]
+ },
+ {
+  "w": "rang",
+  "ipa": "/ræŋ/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense of ring",
+   "ja": "指輪、鳴る、輪（ringの過去形）",
+   "zh": "戒指、响、环（ring的过去式）",
+   "ko": "반지, 울리다, 고리 (ring의 과거형)"
+  },
+  "neighbors": [
+   "ran",
+   "rat",
+   "ring",
+   "rung",
+   "sang",
+   "wrong",
+   "bang",
+   "gang"
+  ]
+ },
+ {
   "w": "rat",
   "ipa": "/ræt/",
   "cefr": "A1",
@@ -17187,10 +18440,10 @@
    "cat",
    "fat",
    "hat",
+   "ran",
+   "rang",
    "right",
-   "that",
-   "write",
-   "chat"
+   "sat"
   ]
  },
  {
@@ -17211,11 +18464,11 @@
    "bed",
    "head",
    "ride",
+   "rode",
    "rude",
+   "said",
    "dead",
-   "lead",
-   "rare",
-   "reed"
+   "lead"
   ]
  },
  {
@@ -17338,9 +18591,9 @@
    "believe",
    "below",
    "build",
+   "built",
    "busy",
-   "city",
-   "early"
+   "city"
   ]
  },
  {
@@ -17358,11 +18611,14 @@
    "ko": "이유"
   },
   "neighbors": [
+   "chosen",
    "cousin",
+   "eaten",
    "ribbon",
+   "ridden",
+   "written",
    "recent",
-   "robin",
-   "ruin"
+   "robin"
   ]
  },
  {
@@ -17383,11 +18639,11 @@
    "bed",
    "head",
    "ride",
+   "rode",
    "rude",
+   "said",
    "dead",
-   "lead",
-   "rare",
-   "reed"
+   "lead"
   ]
  },
  {
@@ -17513,14 +18769,14 @@
    "ko": "리본"
   },
   "neighbors": [
+   "ridden",
+   "written",
    "robin",
    "chicken",
+   "driven",
    "kitchen",
    "listen",
-   "rabbit",
-   "reason",
-   "given",
-   "remain"
+   "rabbit"
   ]
  },
  {
@@ -17538,14 +18794,14 @@
    "ko": "쌀"
   },
   "neighbors": [
+   "mice",
    "nice",
    "ride",
    "right",
    "write",
    "race",
    "ripe",
-   "rise",
-   "rite"
+   "rise"
   ]
  },
  {
@@ -17574,6 +18830,31 @@
   ]
  },
  {
+  "w": "ridden",
+  "ipa": "/ˈrɪdən/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past participle of ride",
+   "ja": "乗車、乗る（rideの過去分詞）",
+   "zh": "乘坐、骑车（ride的过去分词）",
+   "ko": "탑승, 타다 (ride의 과거분사)"
+  },
+  "neighbors": [
+   "ribbon",
+   "written",
+   "chicken",
+   "didn't",
+   "driven",
+   "kitchen",
+   "listen",
+   "middle"
+  ]
+ },
+ {
   "w": "ride",
   "ipa": "/raɪd/",
   "cefr": "A1",
@@ -17593,9 +18874,9 @@
    "red",
    "rice",
    "right",
+   "rode",
    "rude",
-   "side",
-   "write"
+   "side"
   ]
  },
  {
@@ -17639,13 +18920,13 @@
   },
   "neighbors": [
    "king",
+   "rang",
    "rich",
+   "rung",
    "sing",
    "thing",
    "wrong",
-   "ling",
-   "rear",
-   "rib"
+   "ling"
   ]
  },
  {
@@ -17668,9 +18949,34 @@
    "driver",
    "fever",
    "give",
+   "lives",
    "never",
-   "over",
-   "reader"
+   "over"
+  ]
+ },
+ {
+  "w": "rode",
+  "ipa": "/roʊd/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense of ride",
+   "ja": "乗車、乗る（rideの過去形）",
+   "zh": "乘坐、骑车（ride的过去式）",
+   "ko": "탑승, 타다 (ride의 과거형)"
+  },
+  "neighbors": [
+   "code",
+   "read",
+   "red",
+   "ride",
+   "role",
+   "rose",
+   "rude",
+   "showed"
   ]
  },
  {
@@ -17692,10 +18998,10 @@
    "goal",
    "hole",
    "real",
+   "rode",
    "rose",
    "rule",
-   "coal",
-   "pole"
+   "wrote"
   ]
  },
  {
@@ -17738,14 +19044,14 @@
    "ko": "장미"
   },
   "neighbors": [
+   "chose",
    "nose",
+   "rode",
    "role",
    "those",
+   "wrote",
    "doze",
-   "pose",
-   "raise",
-   "rise",
-   "road"
+   "pose"
   ]
  },
  {
@@ -17792,10 +19098,10 @@
    "read",
    "red",
    "ride",
+   "rode",
    "room",
    "rule",
-   "you'd",
-   "dude"
+   "you'd"
   ]
  },
  {
@@ -17866,11 +19172,36 @@
    "fun",
    "one",
    "rain",
+   "ran",
+   "rung",
    "son",
    "sun",
-   "bun",
-   "done",
-   "gun"
+   "won"
+  ]
+ },
+ {
+  "w": "rung",
+  "ipa": "/rʌŋ/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past participle of ring",
+   "ja": "指輪、鳴る、輪（ringの過去分詞）",
+   "zh": "戒指、响、环（ring的过去分词）",
+   "ko": "반지, 울리다, 고리 (ring의 과거분사)"
+  },
+  "neighbors": [
+   "rang",
+   "ring",
+   "run",
+   "sung",
+   "wrong",
+   "young",
+   "lung",
+   "rough"
   ]
  },
  {
@@ -17916,11 +19247,36 @@
    "bad",
    "dad",
    "had",
+   "said",
+   "sang",
+   "sat",
    "side",
-   "mad",
-   "pad",
-   "sack",
-   "sag"
+   "mad"
+  ]
+ },
+ {
+  "w": "said",
+  "ipa": "/sɛd/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense / past participle of say",
+   "ja": "言う（sayの過去形・過去分詞）",
+   "zh": "说（say的过去式/过去分词）",
+   "ko": "말하다 (say의 과거형·과거분사)"
+  },
+  "neighbors": [
+   "bed",
+   "head",
+   "read",
+   "red",
+   "sad",
+   "sell",
+   "set",
+   "side"
   ]
  },
  {
@@ -17964,6 +19320,7 @@
   },
   "neighbors": [
    "palace",
+   "sold",
    "sand",
    "slide"
   ]
@@ -18008,14 +19365,14 @@
    "ko": "같은, 똑같이"
   },
   "neighbors": [
+   "came",
    "game",
    "name",
    "sale",
    "save",
    "some",
    "sum",
-   "fame",
-   "lame"
+   "fame"
   ]
  },
  {
@@ -18033,6 +19390,56 @@
    "ko": "샌드위치"
   },
   "neighbors": []
+ },
+ {
+  "w": "sang",
+  "ipa": "/sæŋ/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense of sing",
+   "ja": "歌う、歌唱、鳴く（singの過去形）",
+   "zh": "唱、歌唱、鸣叫（sing的过去式）",
+   "ko": "노래하다, 가창, 울다 (sing의 과거형)"
+  },
+  "neighbors": [
+   "rang",
+   "sad",
+   "sat",
+   "sing",
+   "song",
+   "sung",
+   "bang",
+   "gang"
+  ]
+ },
+ {
+  "w": "sat",
+  "ipa": "/sæt/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense / past participle of sit",
+   "ja": "座る、開催される、座らせる（sitの過去形・過去分詞）",
+   "zh": "坐、举行、使就座（sit的过去式/过去分词）",
+   "ko": "앉다, 열리다, 앉히다 (sit의 과거형·과거분사)"
+  },
+  "neighbors": [
+   "bat",
+   "cat",
+   "fat",
+   "hat",
+   "rat",
+   "sad",
+   "sang",
+   "seat"
+  ]
  },
  {
   "w": "saturday",
@@ -18069,14 +19476,14 @@
    "ko": "구하다, 저장하다, 절약"
   },
   "neighbors": [
+   "gave",
    "sale",
    "same",
    "they've",
    "cave",
    "pave",
    "safe",
-   "sage",
-   "sail"
+   "sage"
   ]
  },
  {
@@ -18231,14 +19638,14 @@
    "ko": "좌석, 앉히다, 앉다"
   },
   "neighbors": [
+   "feet",
    "meat",
    "meet",
+   "sat",
+   "seen",
    "set",
    "sight",
-   "sit",
-   "site",
-   "beat",
-   "cease"
+   "sit"
   ]
  },
  {
@@ -18310,6 +19717,31 @@
   ]
  },
  {
+  "w": "seen",
+  "ipa": "/sin/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past participle of see",
+   "ja": "見る（seeの過去分詞）",
+   "zh": "看（see的过去分词）",
+   "ko": "보다 (see의 과거분사)"
+  },
+  "neighbors": [
+   "bean",
+   "mean",
+   "seat",
+   "sign",
+   "son",
+   "soon",
+   "sun",
+   "cease"
+  ]
+ },
+ {
   "w": "self",
   "ipa": "/sɛlf/",
   "cefr": "A1",
@@ -18329,9 +19761,9 @@
    "cell",
    "bell",
    "else",
-   "health",
-   "help",
-   "sailor"
+   "fell",
+   "felt",
+   "health"
   ]
  },
  {
@@ -18350,13 +19782,38 @@
   },
   "neighbors": [
    "bell",
+   "fell",
+   "said",
    "sale",
    "set",
    "tell",
    "well",
-   "hell",
-   "sail",
-   "seal"
+   "hell"
+  ]
+ },
+ {
+  "w": "sent",
+  "ipa": "/sɛnt/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense / past participle of send",
+   "ja": "送信（sendの過去形・過去分詞）",
+   "zh": "发送（send的过去式/过去分词）",
+   "ko": "보내다 (send의 과거형·과거분사)"
+  },
+  "neighbors": [
+   "lent",
+   "meant",
+   "went",
+   "bent",
+   "rent",
+   "send",
+   "sense",
+   "tent"
   ]
  },
  {
@@ -18411,11 +19868,11 @@
    "get",
    "jet",
    "let",
+   "met",
    "pet",
-   "seat",
-   "sell",
-   "sight",
-   "sit"
+   "said",
+   "sat",
+   "seat"
   ]
  },
  {
@@ -18576,7 +20033,7 @@
    "she's",
    "sheep",
    "should",
-   "we'd"
+   "showed"
   ]
  },
  {
@@ -18674,9 +20131,28 @@
    "shell",
    "bell",
    "else",
-   "health",
-   "help",
-   "sell"
+   "fell",
+   "felt",
+   "health"
+  ]
+ },
+ {
+  "w": "shelves",
+  "ipa": "/ʃɛlvz/",
+  "cefr": "A1",
+  "pos": "名詞（不規則複数）",
+  "src": "irregular_plural",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "plural of shelf",
+   "ja": "棚（shelfの複数形）",
+   "zh": "架子（shelf的复数）",
+   "ko": "선반 (shelf의 복수형)"
+  },
+  "neighbors": [
+   "shelf",
+   "wolves"
   ]
  },
  {
@@ -18747,11 +20223,11 @@
    "U",
    "do",
    "due",
+   "knew",
    "new",
    "she",
    "show",
-   "shy",
-   "to"
+   "shy"
   ]
  },
  {
@@ -18840,11 +20316,11 @@
    "could",
    "good",
    "she'd",
+   "showed",
    "sure",
    "would",
    "hood",
-   "shade",
-   "wood"
+   "shade"
   ]
  },
  {
@@ -18887,10 +20363,10 @@
    "cold",
    "gold",
    "hold",
+   "sold",
+   "told",
    "bold",
-   "fold",
-   "shield",
-   "soldier"
+   "fold"
   ]
  },
  {
@@ -18942,6 +20418,31 @@
   ]
  },
  {
+  "w": "showed",
+  "ipa": "/ʃoʊd/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense of show",
+   "ja": "見せる、ショー、示す（showの過去形）",
+   "zh": "展示、演出、显示（show的过去式）",
+   "ko": "보여주다, 쇼, 나타내다 (show의 과거형)"
+  },
+  "neighbors": [
+   "code",
+   "rode",
+   "she'd",
+   "should",
+   "shown",
+   "load",
+   "road",
+   "shade"
+  ]
+ },
+ {
   "w": "shower",
   "ipa": "/ˈʃaʊɚ/",
   "cefr": "A1",
@@ -18964,6 +20465,31 @@
    "couch",
    "cow",
    "down"
+  ]
+ },
+ {
+  "w": "shown",
+  "ipa": "/ʃoʊn/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past participle of show",
+   "ja": "見せる、ショー、示す（showの過去分詞）",
+   "zh": "展示、演出、显示（show的过去分词）",
+   "ko": "보여주다, 쇼, 나타내다 (show의 과거분사)"
+  },
+  "neighbors": [
+   "bone",
+   "phone",
+   "showed",
+   "cone",
+   "hone",
+   "known",
+   "loan",
+   "shine"
   ]
  },
  {
@@ -19034,11 +20560,11 @@
    "hide",
    "ride",
    "sad",
+   "said",
    "sight",
    "sign",
    "site",
-   "size",
-   "seed"
+   "size"
   ]
  },
  {
@@ -19061,9 +20587,9 @@
    "light",
    "night",
    "right",
+   "sat",
    "seat",
-   "set",
-   "side"
+   "set"
   ]
  },
  {
@@ -19085,10 +20611,10 @@
    "line",
    "mine",
    "nine",
+   "seen",
    "side",
    "sight",
-   "site",
-   "size"
+   "site"
   ]
  },
  {
@@ -19108,12 +20634,12 @@
   "neighbors": [
    "king",
    "ring",
+   "sang",
    "sick",
    "sit",
    "song",
-   "thing",
-   "ling",
-   "wing"
+   "sung",
+   "thing"
   ]
  },
  {
@@ -19206,14 +20732,14 @@
    "ko": "앉다, 열리다, 앉히다"
   },
   "neighbors": [
+   "sat",
    "seat",
    "set",
    "sick",
    "sight",
    "sing",
    "site",
-   "bit",
-   "fit"
+   "bit"
   ]
  },
  {
@@ -19236,9 +20762,9 @@
    "light",
    "night",
    "right",
+   "sat",
    "seat",
-   "set",
-   "side"
+   "set"
   ]
  },
  {
@@ -19370,12 +20896,12 @@
   "neighbors": [
    "skate",
    "cat",
+   "caught",
    "coat",
    "cut",
    "hurt",
    "kite",
-   "school",
-   "seat"
+   "sat"
   ]
  },
  {
@@ -19426,6 +20952,31 @@
    "sweep",
    "asleep",
    "leap"
+  ]
+ },
+ {
+  "w": "slept",
+  "ipa": "/slɛpt/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense / past participle of sleep",
+   "ja": "眠る、睡眠、寝る（sleepの過去形・過去分詞）",
+   "zh": "睡觉、睡眠、入睡（sleep的过去式/过去分词）",
+   "ko": "자다, 수면, 잠자다 (sleep의 과거형·과거분사)"
+  },
+  "neighbors": [
+   "kept",
+   "left",
+   "lent",
+   "sent",
+   "sleep",
+   "spent",
+   "step",
+   "cent"
   ]
  },
  {
@@ -19525,7 +21076,7 @@
    "sell",
    "cell",
    "bell",
-   "mail"
+   "fell"
   ]
  },
  {
@@ -19550,7 +21101,7 @@
    "file",
    "mail",
    "meal",
-   "mine"
+   "mice"
   ]
  },
  {
@@ -19593,14 +21144,14 @@
    "ko": "연기, 피우다"
   },
   "neighbors": [
+   "spoke",
    "soak",
+   "broke",
    "coke",
    "make",
    "sick",
    "slow",
-   "small",
-   "smell",
-   "smile"
+   "small"
   ]
  },
  {
@@ -19784,12 +21335,37 @@
   "neighbors": [
    "soda",
    "social",
+   "sold",
    "surf",
    "cola",
    "loaf",
    "safe",
-   "soak",
-   "soap"
+   "soak"
+  ]
+ },
+ {
+  "w": "sold",
+  "ipa": "/soʊld/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense / past participle of sell",
+   "ja": "売る（sellの過去形・過去分詞）",
+   "zh": "卖（sell的过去式/过去分词）",
+   "ko": "팔다 (sell의 과거형·과거분사)"
+  },
+  "neighbors": [
+   "cold",
+   "gold",
+   "hold",
+   "told",
+   "bold",
+   "fold",
+   "old",
+   "scold"
   ]
  },
  {
@@ -19837,9 +21413,9 @@
    "same",
    "son",
    "sun",
+   "sung",
    "bum",
-   "dumb",
-   "gum"
+   "dumb"
   ]
  },
  {
@@ -19896,11 +21472,11 @@
    "fun",
    "one",
    "run",
+   "seen",
    "sign",
    "some",
    "soon",
-   "sum",
-   "bun"
+   "sum"
   ]
  },
  {
@@ -19919,13 +21495,13 @@
   },
   "neighbors": [
    "long",
+   "sang",
    "sing",
+   "sung",
    "wrong",
    "sauce",
    "soar",
-   "sore",
-   "saw",
-   "C"
+   "sore"
   ]
  },
  {
@@ -19945,12 +21521,12 @@
   "neighbors": [
    "june",
    "moon",
+   "seen",
    "sign",
    "son",
    "soup",
    "sun",
-   "noon",
-   "scene"
+   "noon"
   ]
  },
  {
@@ -20019,13 +21595,13 @@
   },
   "neighbors": [
    "speech",
+   "spoke",
    "sneak",
    "speed",
    "peak",
    "seek",
    "speaker",
-   "peace",
-   "pick"
+   "peace"
   ]
  },
  {
@@ -20068,7 +21644,7 @@
    "peace",
    "piece",
    "seat",
-   "sleep"
+   "seen"
   ]
  },
  {
@@ -20111,14 +21687,83 @@
    "ko": "경비"
   },
   "neighbors": [
+   "spent",
    "send",
    "friend",
+   "sent",
    "spell",
    "stand",
    "bend",
-   "blend",
+   "blend"
+  ]
+ },
+ {
+  "w": "spent",
+  "ipa": "/spɛnt/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense / past participle of spend",
+   "ja": "過ごす（spendの過去形・過去分詞）",
+   "zh": "花费（spend的过去式/过去分词）",
+   "ko": "경비 (spend의 과거형·과거분사)"
+  },
+  "neighbors": [
+   "spend",
+   "sent",
    "cent",
-   "depend"
+   "event",
+   "lent",
+   "meant",
+   "paint",
+   "point"
+  ]
+ },
+ {
+  "w": "spoke",
+  "ipa": "/spoʊk/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense of speak",
+   "ja": "話す（speakの過去形）",
+   "zh": "说话（speak的过去式）",
+   "ko": "말하다 (speak의 과거형)"
+  },
+  "neighbors": [
+   "smoke",
+   "speak",
+   "soak",
+   "broke",
+   "coke",
+   "pick",
+   "sick",
+   "slow"
+  ]
+ },
+ {
+  "w": "spoken",
+  "ipa": "/ˈspoʊkən/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past participle of speak",
+   "ja": "話す（speakの過去分詞）",
+   "zh": "说话（speak的过去分词）",
+   "ko": "말하다 (speak의 과거분사)"
+  },
+  "neighbors": [
+   "broken",
+   "woken"
   ]
  },
  {
@@ -20142,8 +21787,8 @@
    "airport",
    "short",
    "smart",
-   "spot",
-   "start"
+   "spent",
+   "spot"
   ]
  },
  {
@@ -20165,10 +21810,10 @@
    "spite",
    "pot",
    "spa",
-   "hot",
-   "lot",
-   "not",
-   "pet"
+   "bought",
+   "caught",
+   "got",
+   "hot"
   ]
  },
  {
@@ -20267,8 +21912,8 @@
    "hand",
    "spend",
    "stone",
-   "brand",
-   "grand"
+   "stood",
+   "brand"
   ]
  },
  {
@@ -20337,6 +21982,7 @@
   },
   "neighbors": [
    "section",
+   "taken",
    "nation"
   ]
  },
@@ -20385,9 +22031,9 @@
    "stare",
    "steep",
    "stem",
+   "said",
    "sell",
-   "set",
-   "sleep"
+   "set"
   ]
  },
  {
@@ -20437,7 +22083,32 @@
    "tone",
    "alone",
    "bone",
-   "eighteen"
+   "eaten"
+  ]
+ },
+ {
+  "w": "stood",
+  "ipa": "/stʊd/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense / past participle of stand",
+   "ja": "立つ、スタンド、耐える（standの過去形・過去分詞）",
+   "zh": "站立、摊位、忍受（stand的过去式/过去分词）",
+   "ko": "서다, 가판대, 견디다 (stand의 과거형·과거분사)"
+  },
+  "neighbors": [
+   "could",
+   "good",
+   "sad",
+   "said",
+   "should",
+   "side",
+   "sold",
+   "stage"
   ]
  },
  {
@@ -20670,12 +22341,12 @@
   "neighbors": [
    "cd",
    "saturday",
+   "stood",
    "story",
    "sunny",
    "sandy",
    "stuck",
-   "stuff",
-   "stun"
+   "stuff"
   ]
  },
  {
@@ -20792,9 +22463,9 @@
    "same",
    "son",
    "sun",
+   "sung",
    "bum",
-   "dumb",
-   "gum"
+   "dumb"
   ]
  },
  {
@@ -20840,11 +22511,11 @@
    "fun",
    "one",
    "run",
+   "seen",
    "sign",
    "some",
    "soon",
-   "sum",
-   "bun"
+   "sum"
   ]
  },
  {
@@ -20870,6 +22541,31 @@
    "fund",
    "sand",
    "sandy"
+  ]
+ },
+ {
+  "w": "sung",
+  "ipa": "/sʌŋ/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past participle of sing",
+   "ja": "歌う、歌唱、鳴く（singの過去分詞）",
+   "zh": "唱、歌唱、鸣叫（sing的过去分词）",
+   "ko": "노래하다, 가창, 울다 (sing의 과거분사)"
+  },
+  "neighbors": [
+   "rung",
+   "sang",
+   "sing",
+   "some",
+   "son",
+   "song",
+   "sum",
+   "sun"
   ]
  },
  {
@@ -21047,6 +22743,31 @@
   ]
  },
  {
+  "w": "swam",
+  "ipa": "/swæm/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense of swim",
+   "ja": "泳ぐ、水泳、浮かぶ（swimの過去形）",
+   "zh": "游泳、游泳、漂浮（swim的过去式）",
+   "ko": "수영하다, 수영, 뜨다 (swim의 과거형)"
+  },
+  "neighbors": [
+   "swim",
+   "swum",
+   "slam",
+   "sad",
+   "same",
+   "sang",
+   "sat",
+   "some"
+  ]
+ },
+ {
   "w": "sweet",
   "ipa": "/swit/",
   "cefr": "A1",
@@ -21065,10 +22786,10 @@
    "sweep",
    "seat",
    "wheat",
+   "feet",
    "greet",
    "meat",
-   "meet",
-   "set"
+   "meet"
   ]
  },
  {
@@ -21086,14 +22807,14 @@
    "ko": "수영하다, 수영, 뜨다"
   },
   "neighbors": [
+   "swam",
+   "swum",
    "skim",
    "slim",
    "swing",
    "switch",
    "him",
-   "same",
-   "sick",
-   "sing"
+   "same"
   ]
  },
  {
@@ -21112,6 +22833,31 @@
   },
   "neighbors": [
    "singing"
+  ]
+ },
+ {
+  "w": "swum",
+  "ipa": "/swʌm/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past participle of swim",
+   "ja": "泳ぐ、水泳、浮かぶ（swimの過去分詞）",
+   "zh": "游泳、游泳、漂浮（swim的过去分词）",
+   "ko": "수영하다, 수영, 뜨다 (swim의 과거분사)"
+  },
+  "neighbors": [
+   "swam",
+   "swim",
+   "some",
+   "sum",
+   "come",
+   "drum",
+   "from",
+   "mum"
   ]
  },
  {
@@ -21155,6 +22901,7 @@
   },
   "neighbors": [
    "mobile",
+   "taken",
    "towel",
    "double",
    "title",
@@ -21180,10 +22927,33 @@
    "make",
    "shake",
    "talk",
+   "took",
    "wake",
    "bake",
-   "fake",
-   "lake"
+   "fake"
+  ]
+ },
+ {
+  "w": "taken",
+  "ipa": "/ˈteɪkən/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past participle of take",
+   "ja": "取る（takeの過去分詞）",
+   "zh": "拿（take的过去分词）",
+   "ko": "가져가다 (take의 과거분사)"
+  },
+  "neighbors": [
+   "chicken",
+   "station",
+   "table",
+   "ticket",
+   "woken",
+   "nation"
   ]
  },
  {
@@ -21203,12 +22973,12 @@
   "neighbors": [
    "take",
    "tall",
+   "taught",
+   "took",
    "walk",
    "tack",
    "tick",
-   "toss",
-   "T",
-   "all"
+   "toss"
   ]
  },
  {
@@ -21230,10 +23000,35 @@
    "call",
    "hall",
    "talk",
+   "taught",
    "tell",
    "tool",
-   "wall",
-   "fall"
+   "wall"
+  ]
+ },
+ {
+  "w": "taught",
+  "ipa": "/tɔt/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense / past participle of teach",
+   "ja": "教える、教訓、伝える（teachの過去形・過去分詞）",
+   "zh": "教、教训、传授（teach的过去式/过去分词）",
+   "ko": "가르치다, 교훈, 전하다 (teach의 과거형·과거분사)"
+  },
+  "neighbors": [
+   "talk",
+   "tall",
+   "tight",
+   "thought",
+   "toss",
+   "taunt",
+   "T",
+   "all"
   ]
  },
  {
@@ -21303,12 +23098,12 @@
   "neighbors": [
    "beach",
    "team",
+   "teeth",
    "touch",
    "peach",
    "reach",
    "tease",
-   "teen",
-   "T"
+   "teen"
   ]
  },
  {
@@ -21352,13 +23147,13 @@
   },
   "neighbors": [
    "teach",
+   "teeth",
    "time",
    "beam",
    "deem",
    "seem",
    "tame",
-   "tease",
-   "teen"
+   "tease"
   ]
  },
  {
@@ -21376,6 +23171,31 @@
    "ko": "기술"
   },
   "neighbors": []
+ },
+ {
+  "w": "teeth",
+  "ipa": "/tiθ/",
+  "cefr": "A1",
+  "pos": "名詞（不規則複数）",
+  "src": "irregular_plural",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "plural of tooth",
+   "ja": "歯（toothの複数形）",
+   "zh": "齿（tooth的复数）",
+   "ko": "이빨 (tooth의 복수형)"
+  },
+  "neighbors": [
+   "teach",
+   "team",
+   "tooth",
+   "tease",
+   "teen",
+   "T",
+   "tea",
+   "B"
+  ]
  },
  {
   "w": "telephone",
@@ -21425,13 +23245,13 @@
   },
   "neighbors": [
    "bell",
+   "fell",
    "sell",
    "tall",
    "ten",
    "tool",
    "well",
-   "cell",
-   "hell"
+   "cell"
   ]
  },
  {
@@ -21469,14 +23289,14 @@
    "ko": "열"
   },
   "neighbors": [
+   "men",
    "pen",
    "tell",
    "then",
    "town",
    "turn",
    "when",
-   "tan",
-   "tear"
+   "tan"
   ]
  },
  {
@@ -21565,11 +23385,11 @@
    "can",
    "fan",
    "man",
+   "ran",
    "that",
    "then",
    "ban",
-   "pan",
-   "tan"
+   "pan"
   ]
  },
  {
@@ -21593,8 +23413,8 @@
    "ask",
    "back",
    "blank",
-   "pink",
-   "thick"
+   "drank",
+   "pink"
   ]
  },
  {
@@ -21641,9 +23461,9 @@
    "fat",
    "hat",
    "rat",
+   "sat",
    "than",
-   "chat",
-   "at"
+   "chat"
   ]
  },
  {
@@ -21761,14 +23581,14 @@
    "ko": "그 다음에"
   },
   "neighbors": [
+   "men",
    "pen",
    "ten",
    "than",
    "their",
    "them",
    "there",
-   "they're",
-   "when"
+   "they're"
   ]
  },
  {
@@ -21886,14 +23706,14 @@
    "ko": "they would / they had의 축약형"
   },
   "neighbors": [
+   "made",
    "they'll",
    "they've",
    "fade",
    "jade",
    "paid",
    "shade",
-   "they",
-   "aid"
+   "they"
   ]
  },
  {
@@ -21961,14 +23781,14 @@
    "ko": "they have의 축약형"
   },
   "neighbors": [
+   "gave",
    "save",
    "they'd",
    "they'll",
    "cave",
    "pave",
    "shave",
-   "wave",
-   "they"
+   "wave"
   ]
  },
  {
@@ -22115,7 +23935,7 @@
    "daddy",
    "dirty",
    "early",
-   "hurry"
+   "heard"
   ]
  },
  {
@@ -22158,14 +23978,14 @@
    "ko": "저것들"
   },
   "neighbors": [
+   "chose",
    "nose",
    "rose",
    "these",
    "doze",
    "pose",
    "though",
-   "as",
-   "boat"
+   "as"
   ]
  },
  {
@@ -22184,13 +24004,38 @@
   },
   "neighbors": [
    "free",
+   "threw",
    "through",
    "throw",
    "tree",
    "B",
    "C",
-   "D",
-   "G"
+   "D"
+  ]
+ },
+ {
+  "w": "threw",
+  "ipa": "/θru/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense of throw",
+   "ja": "投球、投げる（throwの過去形）",
+   "zh": "投掷、扔（throw的过去式）",
+   "ko": "투구, 던지다 (throw의 과거형)"
+  },
+  "neighbors": [
+   "drew",
+   "grew",
+   "three",
+   "throw",
+   "true",
+   "crew",
+   "Q",
+   "R"
   ]
  },
  {
@@ -22208,14 +24053,14 @@
    "ko": "~을 통해"
   },
   "neighbors": [
+   "drew",
+   "grew",
    "three",
    "throw",
    "true",
    "crew",
    "Q",
-   "R",
-   "U",
-   "are"
+   "R"
   ]
  },
  {
@@ -22235,12 +24080,37 @@
   "neighbors": [
    "grow",
    "three",
+   "threw",
    "through",
    "crow",
    "pro",
    "row",
+   "thrown"
+  ]
+ },
+ {
+  "w": "thrown",
+  "ipa": "/θroʊn/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past participle of throw",
+   "ja": "投球、投げる（throwの過去分詞）",
+   "zh": "投掷、扔（throw的过去分词）",
+   "ko": "투구, 던지다 (throw의 과거분사)"
+  },
+  "neighbors": [
+   "grown",
    "throat",
-   "R"
+   "throw",
+   "alone",
+   "bone",
+   "brain",
+   "broke",
+   "brown"
   ]
  },
  {
@@ -22283,8 +24153,8 @@
    "jacket",
    "minute",
    "pocket",
-   "toilet",
-   "cricket"
+   "taken",
+   "toilet"
   ]
  },
  {
@@ -22334,7 +24204,7 @@
    "right",
    "sight",
    "site",
-   "time"
+   "taught"
   ]
  },
  {
@@ -22406,10 +24276,10 @@
    "U",
    "do",
    "due",
+   "knew",
    "new",
    "shoe",
-   "tea",
-   "toy"
+   "tea"
   ]
  },
  {
@@ -22468,6 +24338,31 @@
    "pilot",
    "talent",
    "wallet"
+  ]
+ },
+ {
+  "w": "told",
+  "ipa": "/toʊld/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense / past participle of tell",
+   "ja": "言う、伝える、見分ける（tellの過去形・過去分詞）",
+   "zh": "告诉、讲述、分辨（tell的过去式/过去分词）",
+   "ko": "말하다, 전하다, 구별하다 (tell의 과거형·과거분사)"
+  },
+  "neighbors": [
+   "cold",
+   "gold",
+   "hold",
+   "sold",
+   "bold",
+   "fold",
+   "old",
+   "toll"
   ]
  },
  {
@@ -22546,10 +24441,35 @@
    "U",
    "do",
    "due",
+   "knew",
    "new",
    "shoe",
-   "tea",
-   "toy"
+   "tea"
+  ]
+ },
+ {
+  "w": "took",
+  "ipa": "/tʊk/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense of take",
+   "ja": "取る（takeの過去形）",
+   "zh": "拿（take的过去式）",
+   "ko": "가져가다 (take의 과거형)"
+  },
+  "neighbors": [
+   "book",
+   "cook",
+   "look",
+   "take",
+   "talk",
+   "gook",
+   "hook",
+   "tack"
   ]
  },
  {
@@ -22592,14 +24512,14 @@
    "ko": "이빨"
   },
   "neighbors": [
+   "teeth",
    "tool",
    "tube",
    "booth",
    "tomb",
    "tune",
    "youth",
-   "to",
-   "too"
+   "to"
   ]
  },
  {
@@ -22900,10 +24820,10 @@
    "trek",
    "trick",
    "break",
+   "broke",
    "brush",
    "drum",
-   "from",
-   "luck"
+   "drunk"
   ]
  },
  {
@@ -22921,14 +24841,14 @@
    "ko": "진실"
   },
   "neighbors": [
+   "drew",
+   "grew",
+   "threw",
    "through",
    "tree",
    "try",
    "crew",
-   "tray",
-   "to",
-   "too",
-   "two"
+   "tray"
   ]
  },
  {
@@ -23070,9 +24990,9 @@
    "fever",
    "heavy",
    "leave",
+   "leaves",
    "movie",
-   "teach",
-   "teacher"
+   "teach"
   ]
  },
  {
@@ -23131,10 +25051,10 @@
    "U",
    "do",
    "due",
+   "knew",
    "new",
    "shoe",
-   "tea",
-   "toy"
+   "tea"
   ]
  },
  {
@@ -23179,12 +25099,12 @@
   "neighbors": [
    "do",
    "due",
+   "knew",
    "new",
    "shoe",
    "to",
    "too",
-   "two",
-   "who"
+   "two"
   ]
  },
  {
@@ -23290,6 +25210,24 @@
   "neighbors": []
  },
  {
+  "w": "understood",
+  "ipa": "/ˌʌndɚˈstʊd/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense / past participle of understand",
+   "ja": "理解する（understandの過去形・過去分詞）",
+   "zh": "理解（understand的过去式/过去分词）",
+   "ko": "이해하다 (understand의 과거형·과거분사)"
+  },
+  "neighbors": [
+   "understand"
+  ]
+ },
+ {
   "w": "until",
   "ipa": "/ənˈtɪl/",
   "cefr": "A1",
@@ -23378,9 +25316,9 @@
    "you'd",
    "you'll",
    "you've",
+   "goose",
    "loose",
-   "youth",
-   "U"
+   "youth"
   ]
  },
  {
@@ -23580,11 +25518,11 @@
    "boat",
    "coat",
    "note",
+   "wrote",
    "goat",
    "vet",
    "V",
-   "art",
-   "at"
+   "art"
   ]
  },
  {
@@ -23691,7 +25629,7 @@
    "wait",
    "walk",
    "week",
-   "work"
+   "woke"
   ]
  },
  {
@@ -23714,9 +25652,9 @@
    "wall",
    "war",
    "week",
-   "work",
-   "weak",
-   "Y"
+   "woke",
+   "wore",
+   "work"
   ]
  },
  {
@@ -23759,14 +25697,14 @@
    "ko": "원하다"
   },
   "neighbors": [
+   "went",
    "won't",
    "art",
    "aunt",
+   "bought",
    "can't",
-   "don't",
-   "heart",
-   "hot",
-   "lot"
+   "caught",
+   "don't"
   ]
  },
  {
@@ -23815,8 +25753,8 @@
    "warn",
    "worn",
    "war",
-   "swarm",
-   "warmth"
+   "wore",
+   "swarm"
   ]
  },
  {
@@ -24182,7 +26120,7 @@
    "we're",
    "we've",
    "wheel",
-   "work"
+   "woke"
   ]
  },
  {
@@ -24233,13 +26171,38 @@
   },
   "neighbors": [
    "bell",
+   "fell",
    "sell",
    "tell",
    "wall",
    "we'll",
    "wear",
-   "wheel",
-   "when"
+   "wheel"
+  ]
+ },
+ {
+  "w": "went",
+  "ipa": "/wɛnt/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense of go",
+   "ja": "行く（goの過去形）",
+   "zh": "去（go的过去式）",
+   "ko": "가다 (go의 과거형)"
+  },
+  "neighbors": [
+   "lent",
+   "meant",
+   "sent",
+   "want",
+   "won't",
+   "bent",
+   "cent",
+   "rent"
   ]
  },
  {
@@ -24286,10 +26249,10 @@
    "isn't",
    "want",
    "wasn't",
+   "went",
    "won't",
    "wouldn't",
-   "agent",
-   "worst"
+   "agent"
   ]
  },
  {
@@ -24312,9 +26275,9 @@
    "one",
    "wait",
    "white",
+   "won",
    "hut",
-   "nut",
-   "shut"
+   "nut"
   ]
  },
  {
@@ -24382,14 +26345,14 @@
    "ko": "언제"
   },
   "neighbors": [
+   "men",
    "one",
    "pen",
    "ten",
    "then",
    "wear",
    "well",
-   "where",
-   "win"
+   "where"
   ]
  },
  {
@@ -24639,7 +26602,7 @@
    "will",
    "wish",
    "with",
-   "been"
+   "won"
   ]
  },
  {
@@ -24714,7 +26677,7 @@
    "waiter",
    "want",
    "water",
-   "window"
+   "went"
   ]
  },
  {
@@ -24768,6 +26731,101 @@
   ]
  },
  {
+  "w": "wives",
+  "ipa": "/waɪvz/",
+  "cefr": "A1",
+  "pos": "名詞（不規則複数）",
+  "src": "irregular_plural",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "plural of wife",
+   "ja": "妻（wifeの複数形）",
+   "zh": "妻子（wife的复数）",
+   "ko": "부인 (wife의 복수형)"
+  },
+  "neighbors": [
+   "knives",
+   "wise",
+   "arrive",
+   "five",
+   "halves",
+   "leaves",
+   "live",
+   "lives"
+  ]
+ },
+ {
+  "w": "woke",
+  "ipa": "/woʊk/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense of wake",
+   "ja": "目を覚ます（wakeの過去形）",
+   "zh": "唤醒（wake的过去式）",
+   "ko": "깨어 있다 (wake의 과거형)"
+  },
+  "neighbors": [
+   "coke",
+   "wake",
+   "walk",
+   "week",
+   "work",
+   "choke",
+   "joke",
+   "soak"
+  ]
+ },
+ {
+  "w": "woken",
+  "ipa": "/ˈwoʊkən/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past participle of wake",
+   "ja": "目を覚ます（wakeの過去分詞）",
+   "zh": "唤醒（wake的过去分词）",
+   "ko": "깨어 있다 (wake의 과거분사)"
+  },
+  "neighbors": [
+   "broken",
+   "chicken",
+   "chosen",
+   "focus",
+   "open",
+   "spoken",
+   "taken",
+   "woman"
+  ]
+ },
+ {
+  "w": "wolves",
+  "ipa": "/wʊlvz/",
+  "cefr": "A1",
+  "pos": "名詞（不規則複数）",
+  "src": "irregular_plural",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "plural of wolf",
+   "ja": "狼（wolfの複数形）",
+   "zh": "狼（wolf的复数）",
+   "ko": "늑대 (wolf의 복수형)"
+  },
+  "neighbors": [
+   "shelves",
+   "wives",
+   "wolf"
+  ]
+ },
+ {
   "w": "woman",
   "ipa": "/ˈwʊmən/",
   "cefr": "A1",
@@ -24782,11 +26840,63 @@
    "ko": "여성"
   },
   "neighbors": [
+   "women",
    "wooden",
+   "woken",
    "would've",
    "wouldn't",
    "common",
    "lemon"
+  ]
+ },
+ {
+  "w": "women",
+  "ipa": "/ˈwɪmən/",
+  "cefr": "A1",
+  "pos": "名詞（不規則複数）",
+  "src": "irregular_plural",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "plural of woman",
+   "ja": "女性（womanの複数形）",
+   "zh": "女士（woman的复数）",
+   "ko": "여성 (woman의 복수형)"
+  },
+  "neighbors": [
+   "woman",
+   "chicken",
+   "kitchen",
+   "listen",
+   "ribbon",
+   "ridden",
+   "woken",
+   "written"
+  ]
+ },
+ {
+  "w": "won",
+  "ipa": "/wʌn/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense / past participle of win",
+   "ja": "勝つ、獲得、勝利（winの過去形・過去分詞）",
+   "zh": "赢、获得、胜利（win的过去式/过去分词）",
+   "ko": "이기다, 얻다, 승리 (win의 과거형·과거분사)"
+  },
+  "neighbors": [
+   "fun",
+   "run",
+   "son",
+   "sun",
+   "what",
+   "when",
+   "win",
+   "bun"
   ]
  },
  {
@@ -24806,12 +26916,12 @@
   "neighbors": [
    "don't",
    "want",
+   "went",
    "aunt",
    "boat",
    "bone",
    "can't",
-   "coat",
-   "ghost"
+   "coat"
   ]
  },
  {
@@ -24846,13 +26956,38 @@
   },
   "neighbors": [
    "bird",
+   "heard",
    "we'd",
    "work",
    "worry",
    "would",
    "herd",
-   "third",
-   "wed"
+   "third"
+  ]
+ },
+ {
+  "w": "wore",
+  "ipa": "/wɔr/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense of wear",
+   "ja": "着る、身につける、摩耗（wearの過去形）",
+   "zh": "穿、佩戴、磨损（wear的过去式）",
+   "ko": "입다, 착용하다, 마모 (wear의 과거형)"
+  },
+  "neighbors": [
+   "door",
+   "for",
+   "four",
+   "more",
+   "walk",
+   "wall",
+   "we're",
+   "wear"
   ]
  },
  {
@@ -24873,11 +27008,11 @@
    "wake",
    "walk",
    "week",
+   "woke",
    "word",
    "worry",
    "weak",
-   "worm",
-   "worse"
+   "worm"
   ]
  },
  {
@@ -25078,6 +27213,31 @@
   ]
  },
  {
+  "w": "written",
+  "ipa": "/ˈrɪtən/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past participle of write",
+   "ja": "書く（writeの過去分詞）",
+   "zh": "写（write的过去分词）",
+   "ko": "쓰다 (write의 과거분사)"
+  },
+  "neighbors": [
+   "ribbon",
+   "ridden",
+   "return",
+   "button",
+   "chicken",
+   "driven",
+   "eaten",
+   "gotten"
+  ]
+ },
+ {
   "w": "wrong",
   "ipa": "/rɔŋ/",
   "cefr": "A1",
@@ -25093,13 +27253,38 @@
   },
   "neighbors": [
    "long",
+   "rang",
    "ring",
+   "rung",
    "song",
    "roar",
    "all",
-   "along",
-   "ball",
-   "bring"
+   "along"
+  ]
+ },
+ {
+  "w": "wrote",
+  "ipa": "/roʊt/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense of write",
+   "ja": "書く（writeの過去形）",
+   "zh": "写（write的过去式）",
+   "ko": "쓰다 (write의 과거형)"
+  },
+  "neighbors": [
+   "boat",
+   "coat",
+   "note",
+   "rat",
+   "right",
+   "rode",
+   "role",
+   "rose"
   ]
  },
  {
@@ -25222,9 +27407,9 @@
    "below",
    "blow",
    "else",
-   "health",
-   "hello",
-   "help"
+   "fell",
+   "felt",
+   "health"
   ]
  },
  {
@@ -25286,11 +27471,11 @@
    "get",
    "jet",
    "let",
+   "met",
    "pet",
    "set",
    "yes",
-   "bet",
-   "net"
+   "bet"
   ]
  },
  {
@@ -25310,12 +27495,12 @@
   "neighbors": [
    "do",
    "due",
+   "knew",
    "new",
    "shoe",
    "to",
    "too",
-   "two",
-   "who"
+   "two"
   ]
  },
  {
@@ -25433,14 +27618,14 @@
    "ko": "어린"
   },
   "neighbors": [
+   "rung",
+   "sung",
    "lung",
    "U",
    "bus",
    "but",
    "come",
-   "cup",
-   "cut",
-   "does"
+   "cup"
   ]
  },
  {
@@ -25463,9 +27648,9 @@
    "four",
    "more",
    "war",
+   "wore",
    "year",
-   "you're",
-   "bore"
+   "you're"
   ]
  },
  {
@@ -25557,10 +27742,10 @@
    "Z",
    "do",
    "due",
+   "knew",
    "new",
    "shoe",
-   "to",
-   "too"
+   "to"
   ]
  },
  {
@@ -25599,6 +27784,7 @@
    "afraid",
    "bread",
    "breed",
+   "brought",
    "fraud"
   ]
  },
@@ -26350,7 +28536,7 @@
    "much",
    "mud",
    "mum",
-   "young"
+   "rung"
   ]
  },
  {
@@ -27029,9 +29215,9 @@
    "album",
    "apple",
    "bottom",
+   "eaten",
    "poem",
-   "steam",
-   "stem"
+   "steam"
   ]
  },
  {
@@ -27768,7 +29954,9 @@
   },
   "neighbors": [
    "begin",
-   "beginning"
+   "beginning",
+   "began",
+   "begun"
   ]
  },
  {
@@ -27883,10 +30071,10 @@
    "bent",
    "best",
    "bolt",
+   "built",
+   "felt",
    "melt",
-   "bell",
-   "bet",
-   "beg"
+   "bell"
   ]
  },
  {
@@ -28355,11 +30543,11 @@
    "base",
    "bar",
    "bomb",
+   "bought",
    "bus",
    "box",
    "bake",
-   "batch",
-   "bay"
+   "batch"
   ]
  },
  {
@@ -28446,11 +30634,11 @@
    "brave",
    "brain",
    "brick",
+   "broke",
    "bake",
    "base",
    "blame",
-   "bra",
-   "breeze"
+   "bra"
   ]
  },
  {
@@ -29012,13 +31200,13 @@
   },
   "neighbors": [
    "car",
+   "caught",
    "cod",
    "cop",
    "was",
    "boss",
    "cab",
-   "cash",
-   "clue"
+   "cash"
   ]
  },
  {
@@ -29040,10 +31228,10 @@
    "send",
    "sense",
    "bent",
+   "lent",
+   "meant",
    "tent",
-   "set",
-   "belt",
-   "bench"
+   "went"
   ]
  },
  {
@@ -29103,11 +31291,11 @@
    "sudden",
    "button",
    "circle",
+   "eaten",
+   "gotten",
    "person",
    "seven",
-   "stain",
-   "stern",
-   "stone"
+   "stain"
   ]
  },
  {
@@ -29313,8 +31501,8 @@
    "fat",
    "hat",
    "rat",
-   "that",
-   "at"
+   "sat",
+   "that"
   ]
  },
  {
@@ -29668,10 +31856,10 @@
    "clam",
    "climb",
    "flame",
+   "came",
    "lame",
    "bloom",
-   "clear",
-   "clerk"
+   "clear"
   ]
  },
  {
@@ -29846,10 +32034,10 @@
    "alone",
    "clean",
    "close",
+   "flown",
    "cone",
    "loan",
-   "claim",
-   "cleaner"
+   "claim"
   ]
  },
  {
@@ -29895,11 +32083,11 @@
    "Q",
    "blue",
    "crew",
+   "flew",
    "flu",
    "aisle",
    "allow",
-   "bloom",
-   "cab"
+   "bloom"
   ]
  },
  {
@@ -30017,14 +32205,14 @@
    "ko": "빗"
   },
   "neighbors": [
+   "came",
    "coach",
    "coal",
    "coat",
    "code",
    "coke",
    "come",
-   "cone",
-   "cope"
+   "cone"
   ]
  },
  {
@@ -30117,8 +32305,9 @@
    "lemon",
    "robin",
    "cousin",
-   "kitchen",
-   "woman"
+   "fallen",
+   "gotten",
+   "kitchen"
   ]
  },
  {
@@ -30711,12 +32900,12 @@
   "neighbors": [
    "coast",
    "cast",
+   "caught",
    "boss",
    "cassette",
    "cause",
    "chart",
-   "chest",
-   "count"
+   "chest"
   ]
  },
  {
@@ -32351,14 +34540,14 @@
    "ko": "서랍"
   },
   "neighbors": [
+   "drawn",
    "door",
    "draw",
    "roar",
    "cross",
    "drawing",
    "drill",
-   "drug",
-   "pour"
+   "drug"
   ]
  },
  {
@@ -32755,7 +34944,8 @@
    "insect",
    "perfect",
    "correct",
-   "event"
+   "event",
+   "felt"
   ]
  },
  {
@@ -32887,7 +35077,7 @@
    "mall",
    "scale",
    "hail",
-   "main"
+   "made"
   ]
  },
  {
@@ -33331,10 +35521,10 @@
    "chin",
    "oven",
    "bin",
+   "eaten",
    "evening",
    "grin",
-   "pin",
-   "skin"
+   "pin"
   ]
  },
  {
@@ -33719,7 +35909,7 @@
    "jelly",
    "marry",
    "nearly",
-   "forty"
+   "felt"
   ]
  },
  {
@@ -33743,8 +35933,8 @@
    "ball",
    "call",
    "feel",
-   "file",
-   "fill"
+   "fell",
+   "file"
   ]
  },
  {
@@ -33888,6 +36078,7 @@
    "fiction",
    "nation",
    "action",
+   "fallen",
    "foreign",
    "happen"
   ]
@@ -33909,12 +36100,12 @@
   "neighbors": [
    "salt",
    "false",
+   "felt",
    "fall",
    "belt",
    "court",
    "fact",
-   "fail",
-   "film"
+   "fail"
   ]
  },
  {
@@ -34077,12 +36268,12 @@
   "neighbors": [
    "view",
    "Q",
+   "flew",
    "flu",
    "U",
    "fume",
    "you",
-   "clue",
-   "fail"
+   "clue"
   ]
  },
  {
@@ -34251,7 +36442,7 @@
    "fat",
    "fate",
    "feat",
-   "fight"
+   "feet"
   ]
  },
  {
@@ -34296,12 +36487,12 @@
   "neighbors": [
    "early",
    "flaw",
+   "flew",
    "flow",
    "flu",
    "fly",
    "free",
-   "glee",
-   "fee"
+   "glee"
   ]
  },
  {
@@ -34347,11 +36538,11 @@
    "flight",
    "flat",
    "fleet",
+   "flown",
    "flute",
    "flow",
    "clone",
-   "fact",
-   "fault"
+   "fact"
   ]
  },
  {
@@ -34498,10 +36689,10 @@
    "fall",
    "cool",
    "feel",
+   "fell",
    "file",
    "fill",
-   "food",
-   "foul"
+   "food"
   ]
  },
  {
@@ -34706,13 +36897,14 @@
    "ko": "솔직한"
   },
   "neighbors": [
+   "drank",
    "track",
    "bank",
    "blank",
    "crack",
    "drink",
-   "freak",
-   "thank"
+   "drunk",
+   "freak"
   ]
  },
  {
@@ -34862,7 +37054,8 @@
    "ko": "놀라다"
   },
   "neighbors": [
-   "frightened"
+   "frightened",
+   "written"
   ]
  },
  {
@@ -35046,7 +37239,8 @@
    "ko": "차고"
   },
   "neighbors": [
-   "god"
+   "god",
+   "got"
   ]
  },
  {
@@ -35082,14 +37276,14 @@
    "ko": "가스"
   },
   "neighbors": [
+   "goose",
    "pass",
    "gang",
    "gap",
+   "geese",
    "guess",
    "mass",
-   "gasp",
-   "glass",
-   "grass"
+   "gasp"
   ]
  },
  {
@@ -35114,7 +37308,7 @@
    "fate",
    "gain",
    "game",
-   "gaze"
+   "gave"
   ]
  },
  {
@@ -35219,10 +37413,12 @@
   "neighbors": [
    "oven",
    "chicken",
+   "driven",
+   "gotten",
    "kitchen",
    "listen",
    "ribbon",
-   "seven"
+   "ridden"
   ]
  },
  {
@@ -35316,6 +37512,31 @@
    "girl",
    "glee",
    "glow"
+  ]
+ },
+ {
+  "w": "goose",
+  "ipa": "/ɡus/",
+  "cefr": "A2",
+  "pos": "名詞",
+  "src": "cefr",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "goose",
+   "ja": "ガチョウ",
+   "zh": "鹅",
+   "ko": "거위"
+  },
+  "neighbors": [
+   "gas",
+   "loose",
+   "geese",
+   "guess",
+   "juice",
+   "use",
+   "base",
+   "boss"
   ]
  },
  {
@@ -35625,10 +37846,10 @@
    "bun",
    "fun",
    "gain",
+   "gone",
    "gown",
    "gum",
-   "one",
-   "run"
+   "one"
   ]
  },
  {
@@ -35894,9 +38115,9 @@
    "beat",
    "cheat",
    "feat",
+   "feet",
    "hat",
-   "he'd",
-   "he'll"
+   "he'd"
   ]
  },
  {
@@ -36426,7 +38647,8 @@
   },
   "neighbors": [
    "village",
-   "merge"
+   "merge",
+   "women"
   ]
  },
  {
@@ -37120,11 +39342,11 @@
    "choke",
    "coke",
    "soak",
+   "woke",
    "oak",
    "bake",
    "cheek",
-   "cheque",
-   "comb"
+   "cheque"
   ]
  },
  {
@@ -37215,10 +39437,10 @@
    "joke",
    "sink",
    "bank",
+   "drunk",
    "judge",
    "jug",
-   "jump",
-   "just"
+   "jump"
   ]
  },
  {
@@ -37328,10 +39550,10 @@
    "fit",
    "hit",
    "cat",
+   "caught",
    "coat",
    "cut",
-   "kick",
-   "kid"
+   "kick"
   ]
  },
  {
@@ -37377,7 +39599,8 @@
    "column",
    "novel",
    "village",
-   "college"
+   "college",
+   "fallen"
   ]
  },
  {
@@ -37837,11 +40060,11 @@
    "bend",
    "land",
    "send",
+   "lent",
    "mend",
    "tend",
    "lead",
-   "blend",
-   "end"
+   "blend"
   ]
  },
  {
@@ -38046,7 +40269,7 @@
    "loaf",
    "loan",
    "loud",
-   "low"
+   "rode"
   ]
  },
  {
@@ -38130,14 +40353,14 @@
    "ko": "헐렁한"
   },
   "neighbors": [
+   "goose",
    "less",
    "lose",
    "juice",
    "lease",
    "loss",
    "use",
-   "base",
-   "bloom"
+   "base"
   ]
  },
  {
@@ -38343,10 +40566,10 @@
    "bad",
    "dad",
    "had",
+   "made",
    "man",
    "map",
-   "mash",
-   "mass"
+   "mash"
   ]
  },
  {
@@ -38461,11 +40684,11 @@
    "fail",
    "mall",
    "hail",
+   "made",
    "main",
    "make",
    "mate",
-   "meal",
-   "mile"
+   "meal"
   ]
  },
  {
@@ -38783,8 +41006,8 @@
    "metal",
    "method",
    "million",
-   "lesson",
-   "melt"
+   "fallen",
+   "lesson"
   ]
  },
  {
@@ -38843,6 +41066,7 @@
   },
   "neighbors": [
    "many",
+   "meant",
    "mend"
   ]
  },
@@ -39145,11 +41369,11 @@
    "mad",
    "dude",
    "food",
+   "made",
    "moon",
    "move",
    "mud",
-   "rude",
-   "you'd"
+   "rude"
   ]
  },
  {
@@ -39386,7 +41610,8 @@
    "fashion",
    "patient",
    "action",
-   "station"
+   "station",
+   "taken"
   ]
  },
  {
@@ -39560,7 +41785,7 @@
    "knit",
    "knot",
    "let",
-   "neat"
+   "met"
   ]
  },
  {
@@ -40016,8 +42241,8 @@
    "upon",
    "ago",
    "alone",
-   "doze",
-   "nose"
+   "chose",
+   "doze"
   ]
  },
  {
@@ -40112,7 +42337,7 @@
    "sudden",
    "button",
    "cousin",
-   "lion"
+   "eaten"
   ]
  },
  {
@@ -42841,7 +45066,10 @@
   "neighbors": [
    "remote",
    "return",
-   "ribbon"
+   "ribbon",
+   "ridden",
+   "women",
+   "written"
   ]
  },
  {
@@ -42898,12 +45126,12 @@
   "neighbors": [
    "cent",
    "bent",
+   "lent",
+   "meant",
    "rest",
+   "sent",
    "tent",
-   "belt",
-   "bench",
-   "bend",
-   "chest"
+   "went"
   ]
  },
  {
@@ -43070,7 +45298,8 @@
    "retired",
    "repair",
    "return",
-   "guitar"
+   "guitar",
+   "written"
   ]
  },
  {
@@ -43106,9 +45335,11 @@
    "ko": "귀환, 돌아가다"
   },
   "neighbors": [
+   "written",
    "remain",
    "retire",
    "ribbon",
+   "ridden",
    "stern"
   ]
  },
@@ -43164,7 +45395,9 @@
    "ko": "율"
   },
   "neighbors": [
-   "ribbon"
+   "ribbon",
+   "ridden",
+   "written"
   ]
  },
  {
@@ -43280,6 +45513,8 @@
    "common",
    "robbery",
    "ruin",
+   "fallen",
+   "gotten",
    "rabbit",
    "reason"
   ]
@@ -43644,7 +45879,7 @@
    "rub",
    "rug",
    "run",
-   "brush"
+   "rung"
   ]
  },
  {
@@ -44368,7 +46603,7 @@
    "sound",
    "mend",
    "sand",
-   "tend"
+   "sent"
   ]
  },
  {
@@ -44411,8 +46646,8 @@
    "send",
    "since",
    "dense",
-   "sex",
-   "tense"
+   "sent",
+   "sex"
   ]
  },
  {
@@ -44536,11 +46771,11 @@
    "shape",
    "fade",
    "jade",
+   "made",
    "paid",
    "shake",
    "shame",
-   "shave",
-   "she'd"
+   "shave"
   ]
  },
  {
@@ -44659,10 +46894,10 @@
    "shall",
    "bell",
    "cell",
+   "fell",
    "hell",
    "sell",
-   "share",
-   "she'll"
+   "share"
   ]
  },
  {
@@ -44686,8 +46921,8 @@
    "mine",
    "nine",
    "pine",
-   "sign",
-   "shy"
+   "shown",
+   "sign"
   ]
  },
  {
@@ -44784,10 +47019,10 @@
    "shoot",
    "shout",
    "shut",
+   "bought",
+   "caught",
    "dot",
-   "hot",
-   "knot",
-   "lot"
+   "got"
   ]
  },
  {
@@ -45320,8 +47555,8 @@
    "cd",
    "slap",
    "sleeve",
-   "slip",
-   "slope"
+   "slept",
+   "slip"
   ]
  },
  {
@@ -45656,7 +47891,8 @@
    "folder",
    "silver",
    "sailor",
-   "shoulder"
+   "shoulder",
+   "sold"
   ]
  },
  {
@@ -45884,7 +48120,8 @@
    "speed",
    "sneak",
    "soccer",
-   "speech"
+   "speech",
+   "spoke"
   ]
  },
  {
@@ -46609,7 +48846,7 @@
    "suck",
    "sum",
    "sun",
-   "touch"
+   "sung"
   ]
  },
  {
@@ -46633,6 +48870,7 @@
    "wooden",
    "button",
    "cousin",
+   "ridden",
    "seven"
   ]
  },
@@ -46675,10 +48913,10 @@
    "shoot",
    "boot",
    "route",
+   "sat",
    "seat",
    "set",
-   "sight",
-   "sit"
+   "sight"
   ]
  },
  {
@@ -47502,13 +49740,13 @@
   },
   "neighbors": [
    "bird",
+   "heard",
    "herd",
    "word",
    "thirty",
    "aged",
    "burn",
-   "chirp",
-   "curse"
+   "chirp"
   ]
  },
  {
@@ -47575,14 +49813,14 @@
    "ko": "생각"
   },
   "neighbors": [
+   "taught",
    "act",
    "bit",
    "bite",
    "chat",
    "court",
    "doubt",
-   "east",
-   "fall"
+   "east"
   ]
  },
  {
@@ -47891,12 +50129,12 @@
   "neighbors": [
    "tear",
    "sure",
+   "took",
    "you're",
    "air",
    "beer",
    "bush",
-   "cheer",
-   "far"
+   "cheer"
   ]
  },
  {
@@ -48322,7 +50560,9 @@
    "zh": "理解",
    "ko": "이해하다"
   },
-  "neighbors": []
+  "neighbors": [
+   "understood"
+  ]
  },
  {
   "w": "underwater",
@@ -49006,12 +51246,12 @@
   "neighbors": [
    "weight",
    "cave",
+   "gave",
    "pave",
    "save",
    "shave",
    "they've",
-   "wage",
-   "wait"
+   "wage"
   ]
  },
  {
@@ -49287,7 +51527,7 @@
    "get",
    "jet",
    "let",
-   "pet"
+   "met"
   ]
  },
  {
@@ -49605,7 +51845,8 @@
    "ko": "이내에"
   },
   "neighbors": [
-   "begin"
+   "begin",
+   "women"
   ]
  },
  {
@@ -49695,8 +51936,8 @@
    "sudden",
    "could've",
    "couldn't",
-   "should've",
-   "shouldn't"
+   "ridden",
+   "should've"
   ]
  },
  {
@@ -49911,7 +52152,7 @@
    "known",
    "loan",
    "phone",
-   "own"
+   "shown"
   ]
  },
  {
@@ -49934,9 +52175,9 @@
    "ape",
    "H",
    "age",
+   "ate",
    "eight",
-   "oak",
-   "fake"
+   "oak"
   ]
  },
  {
@@ -49986,7 +52227,7 @@
    "H",
    "add",
    "age",
-   "eight"
+   "ate"
   ]
  },
  {
@@ -50011,7 +52252,7 @@
    "M",
    "age",
    "am",
-   "eight"
+   "ate"
   ]
  },
  {
@@ -50059,9 +52300,9 @@
    "aim",
    "H",
    "age",
+   "ate",
    "eight",
-   "up",
-   "A"
+   "up"
   ]
  },
  {
@@ -50285,8 +52526,8 @@
    "bend",
    "best",
    "cent",
-   "rent",
-   "bet"
+   "lent",
+   "meant"
   ]
  },
  {
@@ -50558,10 +52799,10 @@
    "bar",
    "beam",
    "boss",
+   "bought",
    "bum",
    "mom",
-   "aim",
-   "bang"
+   "aim"
   ]
  },
  {
@@ -50858,10 +53099,10 @@
    "break",
    "bridge",
    "bring",
+   "broke",
    "prick",
    "trick",
-   "bark",
-   "bin"
+   "bark"
   ]
  },
  {
@@ -51032,11 +53273,11 @@
    "cave",
    "rage",
    "cake",
+   "came",
    "cane",
    "case",
    "page",
-   "sage",
-   "wage"
+   "sage"
   ]
  },
  {
@@ -51058,10 +53299,10 @@
    "curve",
    "shave",
    "cake",
+   "came",
    "cane",
    "case",
-   "pave",
-   "save"
+   "gave"
   ]
  },
  {
@@ -51083,10 +53324,10 @@
    "soul",
    "yell",
    "bell",
+   "fell",
    "hell",
-   "sail",
-   "sale",
-   "seal"
+   "said",
+   "sail"
   ]
  },
  {
@@ -51207,11 +53448,11 @@
    "check",
    "cheek",
    "cheque",
+   "chose",
    "coke",
    "joke",
    "soak",
-   "oak",
-   "ache"
+   "woke"
   ]
  },
  {
@@ -51306,12 +53547,12 @@
   "neighbors": [
    "nod",
    "car",
+   "caught",
    "cause",
    "code",
    "cop",
    "could",
-   "god",
-   "kid"
+   "god"
   ]
  },
  {
@@ -51732,11 +53973,11 @@
    "dirt",
    "doc",
    "pot",
+   "bought",
+   "caught",
    "date",
    "dock",
-   "doll",
-   "doubt",
-   "hot"
+   "doll"
   ]
  },
  {
@@ -51755,13 +53996,13 @@
   },
   "neighbors": [
    "daze",
+   "chose",
    "does",
    "dose",
    "nose",
    "pose",
    "rose",
-   "those",
-   "choke"
+   "those"
   ]
  },
  {
@@ -51807,11 +54048,11 @@
    "brown",
    "crown",
    "drain",
+   "drawn",
    "drought",
    "down",
    "drag",
-   "gown",
-   "proud"
+   "gown"
   ]
  },
  {
@@ -52035,8 +54276,8 @@
    "least",
    "east",
    "feat",
-   "beat",
-   "boast"
+   "feet",
+   "beat"
   ]
  },
  {
@@ -52056,12 +54297,12 @@
   "neighbors": [
    "fair",
    "fare",
+   "fell",
    "bare",
    "bet",
    "cell",
    "dare",
-   "deaf",
-   "edge"
+   "deaf"
   ]
  },
  {
@@ -52184,9 +54425,9 @@
    "flaw",
    "flea",
    "flee",
+   "flew",
    "fly",
-   "glow",
-   "slow"
+   "glow"
   ]
  },
  {
@@ -52235,8 +54476,8 @@
    "float",
    "fruit",
    "flu",
-   "boot",
-   "faint"
+   "flew",
+   "boot"
   ]
  },
  {
@@ -52259,9 +54500,9 @@
    "field",
    "gold",
    "hold",
-   "folder",
-   "old",
-   "bald"
+   "sold",
+   "told",
+   "folder"
   ]
  },
  {
@@ -52307,11 +54548,11 @@
    "fat",
    "fate",
    "feat",
+   "feet",
    "fight",
    "fit",
    "full",
-   "put",
-   "ant"
+   "put"
   ]
  },
  {
@@ -52385,8 +54626,8 @@
    "priest",
    "rest",
    "wrist",
-   "cross",
-   "dressed"
+   "brought",
+   "cross"
   ]
  },
  {
@@ -52509,9 +54750,9 @@
    "fall",
    "girl",
    "goal",
+   "gone",
    "hall",
-   "mall",
-   "tall"
+   "mall"
   ]
  },
  {
@@ -52702,7 +54943,7 @@
    "gift",
    "grin",
    "hint",
-   "list"
+   "lent"
   ]
  },
  {
@@ -52722,12 +54963,12 @@
   "neighbors": [
    "gain",
    "down",
+   "gone",
    "gun",
    "noun",
    "town",
    "bin",
-   "bounce",
-   "bound"
+   "bounce"
   ]
  },
  {
@@ -52827,7 +55068,7 @@
    "grape",
    "great",
    "grieve",
-   "cave"
+   "gave"
   ]
  },
  {
@@ -52872,12 +55113,12 @@
   "neighbors": [
    "grim",
    "group",
+   "grew",
    "room",
    "boom",
    "grab",
    "graph",
-   "grave",
-   "grill"
+   "grave"
   ]
  },
  {
@@ -52896,13 +55137,13 @@
   },
   "neighbors": [
    "gross",
+   "grown",
    "grow",
    "breath",
    "crow",
    "grab",
    "graph",
-   "grave",
-   "grill"
+   "grave"
   ]
  },
  {
@@ -52920,14 +55161,14 @@
    "ko": "죄"
   },
   "neighbors": [
+   "built",
    "gift",
    "gall",
    "glint",
    "grill",
    "knit",
    "lift",
-   "melt",
-   "pit"
+   "melt"
   ]
  },
  {
@@ -53297,12 +55538,12 @@
   "neighbors": [
    "fade",
    "paid",
+   "made",
    "shade",
    "they'd",
    "aid",
    "J",
-   "ache",
-   "ad"
+   "ache"
   ]
  },
  {
@@ -53800,9 +56041,9 @@
    "love",
    "luck",
    "lush",
-   "young",
-   "bang",
-   "blush"
+   "rung",
+   "sung",
+   "young"
   ]
  },
  {
@@ -53826,8 +56067,8 @@
    "cane",
    "chain",
    "lane",
-   "mail",
-   "make"
+   "made",
+   "mail"
   ]
  },
  {
@@ -53896,13 +56137,13 @@
   },
   "neighbors": [
    "belt",
+   "felt",
+   "meant",
+   "met",
    "bent",
    "bet",
    "cell",
-   "guilt",
-   "mend",
-   "mess",
-   "mild"
+   "guilt"
   ]
  },
  {
@@ -53924,10 +56165,10 @@
    "bend",
    "lend",
    "many",
+   "meant",
    "mind",
    "send",
-   "end",
-   "bent"
+   "end"
   ]
  },
  {
@@ -53976,8 +56217,8 @@
    "chess",
    "guess",
    "less",
-   "miss",
-   "mouse"
+   "men",
+   "met"
   ]
  },
  {
@@ -54026,8 +56267,8 @@
    "male",
    "mall",
    "meal",
-   "might",
-   "mill"
+   "mice",
+   "might"
   ]
  },
  {
@@ -54050,9 +56291,9 @@
    "mess",
    "toss",
    "mall",
+   "mice",
    "miss",
-   "more",
-   "mouse"
+   "more"
   ]
  },
  {
@@ -54071,13 +56312,13 @@
   },
   "neighbors": [
    "count",
+   "meant",
    "mint",
    "ant",
    "bent",
    "bounce",
    "bound",
-   "faint",
-   "gown"
+   "faint"
   ]
  },
  {
@@ -54122,12 +56363,12 @@
   "neighbors": [
    "bud",
    "mad",
+   "made",
    "mood",
    "much",
    "mug",
    "mum",
-   "ad",
-   "aid"
+   "ad"
   ]
  },
  {
@@ -54272,12 +56513,12 @@
   "neighbors": [
    "ness",
    "cease",
+   "geese",
    "kneel",
    "lease",
    "neat",
    "need",
-   "nice",
-   "nurse"
+   "nice"
   ]
  },
  {
@@ -54400,9 +56641,9 @@
    "pace",
    "pain",
    "pale",
+   "made",
    "pad",
-   "page",
-   "pave"
+   "page"
   ]
  },
  {
@@ -54797,12 +57038,12 @@
   "neighbors": [
    "dot",
    "pit",
+   "bought",
+   "caught",
+   "got",
    "hot",
    "knot",
-   "lot",
-   "not",
-   "pet",
-   "pop"
+   "lot"
   ]
  },
  {
@@ -55401,8 +57642,8 @@
    "rub",
    "rug",
    "run",
-   "rush",
-   "tough"
+   "rung",
+   "rush"
   ]
  },
  {
@@ -55496,13 +57737,13 @@
   },
   "neighbors": [
    "cold",
+   "sold",
    "bold",
    "fold",
    "scope",
    "cola",
    "gold",
-   "hold",
-   "scale"
+   "hold"
   ]
  },
  {
@@ -55621,13 +57862,13 @@
   },
   "neighbors": [
    "shave",
+   "came",
    "fame",
    "game",
    "lame",
    "name",
    "same",
-   "shade",
-   "shake"
+   "shade"
   ]
  },
  {
@@ -55672,12 +57913,12 @@
   "neighbors": [
    "cave",
    "shame",
+   "gave",
    "pave",
    "save",
    "shade",
    "shake",
-   "shape",
-   "they've"
+   "shape"
   ]
  },
  {
@@ -55723,11 +57964,11 @@
    "beat",
    "cheat",
    "feat",
+   "feet",
    "heat",
    "meat",
    "meet",
-   "neat",
-   "seat"
+   "neat"
   ]
  },
  {
@@ -56826,8 +59067,8 @@
    "she's",
    "teach",
    "team",
-   "these",
-   "T"
+   "teeth",
+   "these"
   ]
  },
  {
@@ -56874,6 +59115,7 @@
    "tent",
    "empty",
    "hemp",
+   "kept",
    "temple",
    "test",
    "text"
@@ -56948,10 +59190,10 @@
    "tend",
    "tense",
    "cent",
+   "lent",
+   "meant",
    "rent",
-   "taunt",
-   "test",
-   "ten"
+   "sent"
   ]
  },
  {
@@ -57249,9 +59491,9 @@
    "sauce",
    "talk",
    "tall",
+   "taught",
    "bore",
-   "chase",
-   "fuss"
+   "chase"
   ]
  },
  {
@@ -57525,8 +59767,8 @@
    "fan",
    "man",
    "pan",
-   "tan",
-   "than"
+   "ran",
+   "tan"
   ]
  },
  {
@@ -57573,10 +59815,10 @@
    "get",
    "jet",
    "let",
+   "met",
    "net",
    "pet",
-   "set",
-   "vote"
+   "set"
   ]
  },
  {
@@ -57594,14 +59836,14 @@
    "ko": "바이스"
   },
   "neighbors": [
+   "mice",
    "nice",
    "rice",
    "vase",
    "verse",
    "voice",
    "ice",
-   "chase",
-   "dive"
+   "chase"
   ]
  },
  {
@@ -57675,8 +59917,8 @@
    "corn",
    "warm",
    "war",
-   "bore",
-   "forth"
+   "wore",
+   "bore"
   ]
  },
  {
@@ -57825,8 +60067,8 @@
    "corn",
    "warm",
    "war",
-   "bore",
-   "forth"
+   "wore",
+   "bore"
   ]
  },
  {
@@ -57946,12 +60188,12 @@
   "neighbors": [
    "cell",
    "bell",
+   "fell",
    "hell",
    "sell",
    "shell",
    "tell",
-   "well",
-   "yes"
+   "well"
   ]
  },
  {
@@ -58322,11 +60564,11 @@
    "belt",
    "boast",
    "bold",
+   "built",
    "boat",
    "bowl",
    "blur",
-   "blurt",
-   "boost"
+   "blurt"
   ]
  },
  {
@@ -58573,10 +60815,10 @@
    "keen",
    "cage",
    "cake",
+   "came",
    "can",
    "case",
-   "cave",
-   "chain"
+   "cave"
   ]
  },
  {
@@ -58646,12 +60888,12 @@
   "neighbors": [
    "lease",
    "seal",
+   "geese",
    "niece",
    "peace",
    "piece",
    "sauce",
-   "scene",
-   "seat"
+   "scene"
   ]
  },
  {
@@ -58698,10 +60940,10 @@
    "U",
    "do",
    "due",
+   "knew",
    "new",
    "shoe",
-   "to",
-   "too"
+   "to"
   ]
  },
  {
@@ -59098,10 +61340,10 @@
    "clue",
    "crow",
    "cry",
-   "through",
-   "true",
-   "cruise",
-   "screw"
+   "drew",
+   "grew",
+   "threw",
+   "through"
   ]
  },
  {
@@ -59250,8 +61492,8 @@
    "done",
    "door",
    "down",
-   "ban",
-   "bun"
+   "gone",
+   "drawn"
   ]
  },
  {
@@ -59546,12 +61788,12 @@
   "neighbors": [
    "grain",
    "brain",
+   "drawn",
    "drown",
    "train",
    "rain",
    "cane",
-   "dawn",
-   "dread"
+   "dawn"
   ]
  },
  {
@@ -59597,11 +61839,11 @@
    "troop",
    "drop",
    "group",
+   "drew",
    "bruise",
    "crew",
    "dip",
-   "doom",
-   "drain"
+   "doom"
   ]
  },
  {
@@ -59774,9 +62016,9 @@
    "lame",
    "phase",
    "tame",
+   "came",
    "face",
-   "fade",
-   "fail"
+   "fade"
   ]
  },
  {
@@ -59921,12 +62163,12 @@
   "neighbors": [
    "flee",
    "flea",
+   "flew",
    "flow",
    "flu",
    "fly",
    "floor",
-   "law",
-   "blur"
+   "law"
   ]
  },
  {
@@ -59972,11 +62214,11 @@
    "flaw",
    "glee",
    "early",
+   "flew",
    "flow",
    "flu",
    "fly",
-   "free",
-   "fleet"
+   "free"
   ]
  },
  {
@@ -60000,8 +62242,8 @@
    "flute",
    "feat",
    "flee",
-   "flea",
-   "blurt"
+   "feet",
+   "flea"
   ]
  },
  {
@@ -60072,11 +62314,11 @@
    "fail",
    "fall",
    "feel",
+   "fell",
    "file",
    "fill",
    "fool",
-   "full",
-   "owl"
+   "full"
   ]
  },
  {
@@ -60223,10 +62465,10 @@
    "gap",
    "gas",
    "hang",
+   "rang",
+   "sang",
    "ash",
-   "badge",
-   "ban",
-   "dash"
+   "badge"
   ]
  },
  {
@@ -60274,9 +62516,9 @@
    "gain",
    "game",
    "gate",
+   "gave",
    "raise",
-   "gay",
-   "blaze"
+   "gay"
   ]
  },
  {
@@ -60449,9 +62691,9 @@
    "gate",
    "get",
    "goal",
+   "got",
    "note",
-   "vote",
-   "ghost"
+   "vote"
   ]
  },
  {
@@ -60471,12 +62713,12 @@
   "neighbors": [
    "cod",
    "good",
+   "got",
    "nod",
    "odd",
    "guard",
    "bid",
-   "bud",
-   "chop"
+   "bud"
   ]
  },
  {
@@ -60499,9 +62741,9 @@
    "cook",
    "good",
    "look",
+   "took",
    "beak",
-   "deck",
-   "dock"
+   "deck"
   ]
  },
  {
@@ -60699,9 +62941,9 @@
    "grip",
    "green",
    "grill",
+   "grown",
    "drain",
-   "gear",
-   "grand"
+   "gear"
   ]
  },
  {
@@ -60746,12 +62988,12 @@
   "neighbors": [
    "grace",
    "grass",
+   "grown",
    "growth",
    "grow",
    "crease",
    "dose",
-   "glow",
-   "goat"
+   "glow"
   ]
  },
  {
@@ -60948,10 +63190,10 @@
    "hedge",
    "bell",
    "cell",
+   "fell",
    "hair",
    "hall",
-   "he'll",
-   "head"
+   "he'll"
   ]
  },
  {
@@ -61050,8 +63292,8 @@
    "had",
    "he'd",
    "head",
-   "herd",
-   "hide"
+   "heard",
+   "herd"
   ]
  },
  {
@@ -61075,8 +63317,8 @@
    "cook",
    "hike",
    "look",
-   "beak",
-   "deck"
+   "took",
+   "beak"
   ]
  },
  {
@@ -61221,12 +63463,12 @@
   "neighbors": [
    "neat",
    "nut",
+   "bought",
+   "caught",
    "dot",
+   "got",
    "hot",
-   "knit",
-   "knock",
-   "lot",
-   "net"
+   "knit"
   ]
  },
  {
@@ -61272,11 +63514,11 @@
    "fame",
    "limb",
    "tame",
+   "came",
    "game",
    "lake",
    "lamb",
-   "lane",
-   "late"
+   "lane"
   ]
  },
  {
@@ -61372,11 +63614,11 @@
    "dawn",
    "loan",
    "yawn",
+   "gone",
    "lane",
    "lean",
    "learn",
-   "line",
-   "log"
+   "line"
   ]
  },
  {
@@ -61423,10 +63665,10 @@
    "leak",
    "leash",
    "leek",
+   "geese",
    "leaf",
    "lean",
-   "leap",
-   "leave"
+   "leap"
   ]
  },
  {
@@ -61500,8 +63742,8 @@
    "last",
    "least",
    "left",
-   "list",
-   "lost"
+   "lent",
+   "list"
   ]
  },
  {
@@ -61699,9 +63941,9 @@
    "gate",
    "hate",
    "late",
+   "made",
    "mail",
-   "main",
-   "make"
+   "main"
   ]
  },
  {
@@ -61796,12 +64038,12 @@
   "neighbors": [
    "hint",
    "mist",
+   "meant",
    "mount",
    "minute",
    "mate",
    "midst",
-   "mill",
-   "pint"
+   "mill"
   ]
  },
  {
@@ -61901,7 +64143,7 @@
    "nut",
    "wheat",
    "beat",
-   "heat"
+   "feet"
   ]
  },
  {
@@ -62195,13 +64437,13 @@
   },
   "neighbors": [
    "cave",
+   "gave",
    "pace",
    "page",
    "paid",
    "pain",
    "pale",
-   "save",
-   "shave"
+   "save"
   ]
  },
  {
@@ -62694,14 +64936,14 @@
    "ko": "포즈"
   },
   "neighbors": [
+   "chose",
    "doze",
    "nose",
    "pause",
    "pole",
    "rose",
    "those",
-   "prose",
-   "oppose"
+   "prose"
   ]
  },
  {
@@ -62769,14 +65011,14 @@
    "ko": "왕새우"
   },
   "neighbors": [
+   "drawn",
    "crawl",
    "dawn",
    "drain",
    "fraud",
    "grain",
    "grin",
-   "lawn",
-   "pine"
+   "lawn"
   ]
  },
  {
@@ -63070,7 +65312,7 @@
    "sag",
    "tag",
    "bag",
-   "rap"
+   "ran"
   ]
  },
  {
@@ -63169,8 +65411,8 @@
    "ram",
    "cash",
    "mash",
-   "rap",
-   "rat"
+   "ran",
+   "rang"
   ]
  },
  {
@@ -63368,9 +65610,9 @@
    "comb",
    "home",
    "road",
+   "rode",
    "role",
-   "roll",
-   "room"
+   "roll"
   ]
  },
  {
@@ -63445,7 +65687,7 @@
    "rob",
    "rough",
    "run",
-   "rush"
+   "rung"
   ]
  },
  {
@@ -63518,9 +65760,9 @@
    "tag",
    "bag",
    "sad",
-   "ash",
-   "badge",
-   "ban"
+   "sang",
+   "sat",
+   "ash"
   ]
  },
  {
@@ -63816,9 +66058,9 @@
    "slap",
    "slash",
    "slim",
+   "swam",
    "lamb",
-   "clap",
-   "flame"
+   "clap"
   ]
  },
  {
@@ -63839,11 +66081,11 @@
    "slam",
    "slap",
    "slash",
+   "sang",
    "clam",
    "clap",
    "flap",
-   "gang",
-   "lap"
+   "gang"
   ]
  },
  {
@@ -64315,6 +66557,7 @@
    "prince",
    "printer",
    "script",
+   "spent",
    "split",
    "spring",
    "strict"
@@ -64884,9 +67127,9 @@
    "U",
    "do",
    "due",
+   "knew",
    "new",
-   "saw",
-   "say"
+   "saw"
   ]
  },
  {
@@ -65108,10 +67351,10 @@
    "lame",
    "tail",
    "tomb",
+   "came",
    "game",
    "name",
-   "same",
-   "shame"
+   "same"
   ]
  },
  {
@@ -65156,12 +67399,12 @@
   "neighbors": [
    "haunt",
    "tent",
+   "taught",
    "dawn",
    "hint",
    "lawn",
    "mint",
-   "pint",
-   "tan"
+   "pint"
   ]
  },
  {
@@ -65280,13 +67523,13 @@
   },
   "neighbors": [
    "threat",
+   "thrown",
    "throw",
+   "wrote",
    "drought",
    "goat",
    "gross",
-   "probe",
-   "prose",
-   "quote"
+   "probe"
   ]
  },
  {
@@ -65836,7 +68079,7 @@
    "lead",
    "read",
    "red",
-   "we'd"
+   "said"
   ]
  },
  {
@@ -65886,7 +68129,7 @@
    "weed",
    "wit",
    "beat",
-   "heat"
+   "feet"
   ]
  },
  {
@@ -66082,11 +68325,11 @@
    "dawn",
    "lawn",
    "yearn",
+   "gone",
    "your",
    "ban",
    "bun",
-   "cane",
-   "cone"
+   "cane"
   ]
  },
  {

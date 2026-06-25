@@ -1,0 +1,1352 @@
+[
+ {
+  "w": "goose",
+  "ipa": "/ɡus/",
+  "cefr": "A2",
+  "pos": "名詞",
+  "src": "cefr",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "goose",
+   "ja": "ガチョウ",
+   "zh": "鹅",
+   "ko": "거위"
+  }
+ },
+ {
+  "w": "ate",
+  "ipa": "/eɪt/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense of eat",
+   "ja": "食べる（eatの過去形）",
+   "zh": "吃（eat的过去式）",
+   "ko": "먹다 (eat의 과거형)"
+  }
+ },
+ {
+  "w": "became",
+  "ipa": "/bɪˈkeɪm/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense of become",
+   "ja": "なる（becomeの過去形）",
+   "zh": "变得（become的过去式）",
+   "ko": "~이 되다 (become의 과거형)"
+  }
+ },
+ {
+  "w": "began",
+  "ipa": "/bɪˈɡæn/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense of begin",
+   "ja": "始める（beginの過去形）",
+   "zh": "开始（begin的过去式）",
+   "ko": "시작하다 (begin의 과거형)"
+  }
+ },
+ {
+  "w": "begun",
+  "ipa": "/bɪˈɡʌn/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past participle of begin",
+   "ja": "始める（beginの過去分詞）",
+   "zh": "开始（begin的过去分词）",
+   "ko": "시작하다 (begin의 과거분사)"
+  }
+ },
+ {
+  "w": "bought",
+  "ipa": "/bɑt/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense / past participle of buy",
+   "ja": "買う（buyの過去形・過去分詞）",
+   "zh": "买（buy的过去式/过去分词）",
+   "ko": "구입하다 (buy의 과거형·과거분사)"
+  }
+ },
+ {
+  "w": "broke",
+  "ipa": "/broʊk/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense of break",
+   "ja": "壊す、休憩、折れる（breakの過去形）",
+   "zh": "打破、休息、断裂（break的过去式）",
+   "ko": "부수다, 휴식, 꺾이다 (break의 과거형)"
+  }
+ },
+ {
+  "w": "brought",
+  "ipa": "/brɔt/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense / past participle of bring",
+   "ja": "持ってくる（bringの過去形・過去分詞）",
+   "zh": "带来（bring的过去式/过去分词）",
+   "ko": "가져오다 (bring의 과거형·과거분사)"
+  }
+ },
+ {
+  "w": "built",
+  "ipa": "/bɪlt/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense / past participle of build",
+   "ja": "建てる（buildの過去形・過去分詞）",
+   "zh": "建造（build的过去式/过去分词）",
+   "ko": "짓다 (build의 과거형·과거분사)"
+  }
+ },
+ {
+  "w": "came",
+  "ipa": "/keɪm/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense of come",
+   "ja": "来る（comeの過去形）",
+   "zh": "来（come的过去式）",
+   "ko": "오다 (come의 과거형)"
+  }
+ },
+ {
+  "w": "caught",
+  "ipa": "/kɑt/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense / past participle of catch",
+   "ja": "捕まえる、キャッチ、乗る（catchの過去形・過去分詞）",
+   "zh": "抓住、接球、赶上（catch的过去式/过去分词）",
+   "ko": "잡다, 캐치, 타다 (catch의 과거형·과거분사)"
+  }
+ },
+ {
+  "w": "chose",
+  "ipa": "/tʃoʊz/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense of choose",
+   "ja": "選ぶ（chooseの過去形）",
+   "zh": "选择（choose的过去式）",
+   "ko": "선택하다 (choose의 과거형)"
+  }
+ },
+ {
+  "w": "chosen",
+  "ipa": "/ˈtʃoʊzən/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past participle of choose",
+   "ja": "選ぶ（chooseの過去分詞）",
+   "zh": "选择（choose的过去分词）",
+   "ko": "선택하다 (choose의 과거분사)"
+  }
+ },
+ {
+  "w": "drank",
+  "ipa": "/dræŋk/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense of drink",
+   "ja": "飲み物、飲む（drinkの過去形）",
+   "zh": "饮料、喝（drink的过去式）",
+   "ko": "음료, 마시다 (drink의 과거형)"
+  }
+ },
+ {
+  "w": "drawn",
+  "ipa": "/drɔn/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past participle of draw",
+   "ja": "描く、引く、引き分け（drawの過去分詞）",
+   "zh": "画、拉、平局（draw的过去分词）",
+   "ko": "그리다, 끌다, 무승부 (draw의 과거분사)"
+  }
+ },
+ {
+  "w": "drew",
+  "ipa": "/dru/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense of draw",
+   "ja": "描く、引く、引き分け（drawの過去形）",
+   "zh": "画、拉、平局（draw的过去式）",
+   "ko": "그리다, 끌다, 무승부 (draw의 과거형)"
+  }
+ },
+ {
+  "w": "driven",
+  "ipa": "/ˈdrɪvən/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past participle of drive",
+   "ja": "運転、運転する（driveの過去分詞）",
+   "zh": "驾驶、驱车（drive的过去分词）",
+   "ko": "운전, 운전하다 (drive의 과거분사)"
+  }
+ },
+ {
+  "w": "drove",
+  "ipa": "/droʊv/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense of drive",
+   "ja": "運転、運転する（driveの過去形）",
+   "zh": "驾驶、驱车（drive的过去式）",
+   "ko": "운전, 운전하다 (drive의 과거형)"
+  }
+ },
+ {
+  "w": "drunk",
+  "ipa": "/drʌŋk/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past participle of drink",
+   "ja": "飲み物、飲む（drinkの過去分詞）",
+   "zh": "饮料、喝（drink的过去分词）",
+   "ko": "음료, 마시다 (drink의 과거분사)"
+  }
+ },
+ {
+  "w": "eaten",
+  "ipa": "/ˈitən/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past participle of eat",
+   "ja": "食べる（eatの過去分詞）",
+   "zh": "吃（eat的过去分词）",
+   "ko": "먹다 (eat의 과거분사)"
+  }
+ },
+ {
+  "w": "fallen",
+  "ipa": "/ˈfɑlən/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past participle of fall",
+   "ja": "落ちる、秋、倒れる（fallの過去分詞）",
+   "zh": "落下、秋天、跌倒（fall的过去分词）",
+   "ko": "떨어지다, 가을, 넘어지다 (fall의 과거분사)"
+  }
+ },
+ {
+  "w": "fell",
+  "ipa": "/fɛl/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense of fall",
+   "ja": "落ちる、秋、倒れる（fallの過去形）",
+   "zh": "落下、秋天、跌倒（fall的过去式）",
+   "ko": "떨어지다, 가을, 넘어지다 (fall의 과거형)"
+  }
+ },
+ {
+  "w": "felt",
+  "ipa": "/fɛlt/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense / past participle of feel",
+   "ja": "感じる、気持ち、触る（feelの過去形・過去分詞）",
+   "zh": "感觉、心情、触摸（feel的过去式/过去分词）",
+   "ko": "느끼다, 기분, 만지다 (feel의 과거형·과거분사)"
+  }
+ },
+ {
+  "w": "flew",
+  "ipa": "/flu/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense of fly",
+   "ja": "飛ぶ、ハエ、操縦する（flyの過去形）",
+   "zh": "飞、苍蝇、驾驶（fly的过去式）",
+   "ko": "날다, 파리, 조종하다 (fly의 과거형)"
+  }
+ },
+ {
+  "w": "flown",
+  "ipa": "/floʊn/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past participle of fly",
+   "ja": "飛ぶ、ハエ、操縦する（flyの過去分詞）",
+   "zh": "飞、苍蝇、驾驶（fly的过去分词）",
+   "ko": "날다, 파리, 조종하다 (fly의 과거분사)"
+  }
+ },
+ {
+  "w": "forgot",
+  "ipa": "/fɚˈɡɑt/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense of forget",
+   "ja": "忘れる（forgetの過去形）",
+   "zh": "忘记（forget的过去式）",
+   "ko": "잊다 (forget의 과거형)"
+  }
+ },
+ {
+  "w": "forgotten",
+  "ipa": "/fɚˈɡɑtən/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past participle of forget",
+   "ja": "忘れる（forgetの過去分詞）",
+   "zh": "忘记（forget的过去分词）",
+   "ko": "잊다 (forget의 과거분사)"
+  }
+ },
+ {
+  "w": "gave",
+  "ipa": "/ɡeɪv/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense of give",
+   "ja": "与える（giveの過去形）",
+   "zh": "给（give的过去式）",
+   "ko": "주다 (give의 과거형)"
+  }
+ },
+ {
+  "w": "gone",
+  "ipa": "/ɡɔn/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past participle of go",
+   "ja": "行く（goの過去分詞）",
+   "zh": "去（go的过去分词）",
+   "ko": "가다 (go의 과거분사)"
+  }
+ },
+ {
+  "w": "got",
+  "ipa": "/ɡɑt/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense of get",
+   "ja": "得る（getの過去形）",
+   "zh": "得到（get的过去式）",
+   "ko": "얻다 (get의 과거형)"
+  }
+ },
+ {
+  "w": "gotten",
+  "ipa": "/ˈɡɑtən/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past participle of get",
+   "ja": "得る（getの過去分詞）",
+   "zh": "得到（get的过去分词）",
+   "ko": "얻다 (get의 과거분사)"
+  }
+ },
+ {
+  "w": "grew",
+  "ipa": "/ɡru/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense of grow",
+   "ja": "育つ（growの過去形）",
+   "zh": "生长（grow的过去式）",
+   "ko": "자라다 (grow의 과거형)"
+  }
+ },
+ {
+  "w": "grown",
+  "ipa": "/ɡroʊn/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past participle of grow",
+   "ja": "育つ（growの過去分詞）",
+   "zh": "生长（grow的过去分词）",
+   "ko": "자라다 (grow의 과거분사)"
+  }
+ },
+ {
+  "w": "heard",
+  "ipa": "/hɝd/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense / past participle of hear",
+   "ja": "聞く（hearの過去形・過去分詞）",
+   "zh": "听到（hear的过去式/过去分词）",
+   "ko": "듣다 (hear의 과거형·과거분사)"
+  }
+ },
+ {
+  "w": "held",
+  "ipa": "/hɛld/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense / past participle of hold",
+   "ja": "持つ、開催する、保持（holdの過去形・過去分詞）",
+   "zh": "握住、举办、保持（hold的过去式/过去分词）",
+   "ko": "잡다, 개최하다, 유지하다 (hold의 과거형·과거분사)"
+  }
+ },
+ {
+  "w": "kept",
+  "ipa": "/kɛpt/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense / past participle of keep",
+   "ja": "保つ（keepの過去形・過去分詞）",
+   "zh": "保持（keep的过去式/过去分词）",
+   "ko": "유지하다 (keep의 과거형·과거분사)"
+  }
+ },
+ {
+  "w": "knew",
+  "ipa": "/nu/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense of know",
+   "ja": "知る（knowの過去形）",
+   "zh": "知道（know的过去式）",
+   "ko": "알다 (know의 과거형)"
+  }
+ },
+ {
+  "w": "lent",
+  "ipa": "/lɛnt/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense / past participle of lend",
+   "ja": "貸す（lendの過去形・過去分詞）",
+   "zh": "借（lend的过去式/过去分词）",
+   "ko": "빌려주다 (lend의 과거형·과거분사)"
+  }
+ },
+ {
+  "w": "made",
+  "ipa": "/meɪd/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense / past participle of make",
+   "ja": "作る（makeの過去形・過去分詞）",
+   "zh": "制作（make的过去式/过去分词）",
+   "ko": "만들다 (make의 과거형·과거분사)"
+  }
+ },
+ {
+  "w": "meant",
+  "ipa": "/mɛnt/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense / past participle of mean",
+   "ja": "意味する、意地悪、平均（meanの過去形・過去分詞）",
+   "zh": "意味着、刻薄、平均（mean的过去式/过去分词）",
+   "ko": "의미하다, 못되다, 평균 (mean의 과거형·과거분사)"
+  }
+ },
+ {
+  "w": "met",
+  "ipa": "/mɛt/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense / past participle of meet",
+   "ja": "会う（meetの過去形・過去分詞）",
+   "zh": "见面（meet的过去式/过去分词）",
+   "ko": "만나다 (meet의 과거형·과거분사)"
+  }
+ },
+ {
+  "w": "ran",
+  "ipa": "/ræn/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense of run",
+   "ja": "走る、経営する、作動（runの過去形）",
+   "zh": "跑、经营、运行（run的过去式）",
+   "ko": "달리다, 운영하다, 작동 (run의 과거형)"
+  }
+ },
+ {
+  "w": "rang",
+  "ipa": "/ræŋ/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense of ring",
+   "ja": "指輪、鳴る、輪（ringの過去形）",
+   "zh": "戒指、响、环（ring的过去式）",
+   "ko": "반지, 울리다, 고리 (ring의 과거형)"
+  }
+ },
+ {
+  "w": "ridden",
+  "ipa": "/ˈrɪdən/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past participle of ride",
+   "ja": "乗車、乗る（rideの過去分詞）",
+   "zh": "乘坐、骑车（ride的过去分词）",
+   "ko": "탑승, 타다 (ride의 과거분사)"
+  }
+ },
+ {
+  "w": "rode",
+  "ipa": "/roʊd/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense of ride",
+   "ja": "乗車、乗る（rideの過去形）",
+   "zh": "乘坐、骑车（ride的过去式）",
+   "ko": "탑승, 타다 (ride의 과거형)"
+  }
+ },
+ {
+  "w": "rung",
+  "ipa": "/rʌŋ/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past participle of ring",
+   "ja": "指輪、鳴る、輪（ringの過去分詞）",
+   "zh": "戒指、响、环（ring的过去分词）",
+   "ko": "반지, 울리다, 고리 (ring의 과거분사)"
+  }
+ },
+ {
+  "w": "said",
+  "ipa": "/sɛd/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense / past participle of say",
+   "ja": "言う（sayの過去形・過去分詞）",
+   "zh": "说（say的过去式/过去分词）",
+   "ko": "말하다 (say의 과거형·과거분사)"
+  }
+ },
+ {
+  "w": "sang",
+  "ipa": "/sæŋ/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense of sing",
+   "ja": "歌う、歌唱、鳴く（singの過去形）",
+   "zh": "唱、歌唱、鸣叫（sing的过去式）",
+   "ko": "노래하다, 가창, 울다 (sing의 과거형)"
+  }
+ },
+ {
+  "w": "sat",
+  "ipa": "/sæt/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense / past participle of sit",
+   "ja": "座る、開催される、座らせる（sitの過去形・過去分詞）",
+   "zh": "坐、举行、使就座（sit的过去式/过去分词）",
+   "ko": "앉다, 열리다, 앉히다 (sit의 과거형·과거분사)"
+  }
+ },
+ {
+  "w": "seen",
+  "ipa": "/sin/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past participle of see",
+   "ja": "見る（seeの過去分詞）",
+   "zh": "看（see的过去分词）",
+   "ko": "보다 (see의 과거분사)"
+  }
+ },
+ {
+  "w": "sent",
+  "ipa": "/sɛnt/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense / past participle of send",
+   "ja": "送信（sendの過去形・過去分詞）",
+   "zh": "发送（send的过去式/过去分词）",
+   "ko": "보내다 (send의 과거형·과거분사)"
+  }
+ },
+ {
+  "w": "showed",
+  "ipa": "/ʃoʊd/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense of show",
+   "ja": "見せる、ショー、示す（showの過去形）",
+   "zh": "展示、演出、显示（show的过去式）",
+   "ko": "보여주다, 쇼, 나타내다 (show의 과거형)"
+  }
+ },
+ {
+  "w": "shown",
+  "ipa": "/ʃoʊn/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past participle of show",
+   "ja": "見せる、ショー、示す（showの過去分詞）",
+   "zh": "展示、演出、显示（show的过去分词）",
+   "ko": "보여주다, 쇼, 나타내다 (show의 과거분사)"
+  }
+ },
+ {
+  "w": "slept",
+  "ipa": "/slɛpt/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense / past participle of sleep",
+   "ja": "眠る、睡眠、寝る（sleepの過去形・過去分詞）",
+   "zh": "睡觉、睡眠、入睡（sleep的过去式/过去分词）",
+   "ko": "자다, 수면, 잠자다 (sleep의 과거형·과거분사)"
+  }
+ },
+ {
+  "w": "sold",
+  "ipa": "/soʊld/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense / past participle of sell",
+   "ja": "売る（sellの過去形・過去分詞）",
+   "zh": "卖（sell的过去式/过去分词）",
+   "ko": "팔다 (sell의 과거형·과거분사)"
+  }
+ },
+ {
+  "w": "spent",
+  "ipa": "/spɛnt/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense / past participle of spend",
+   "ja": "過ごす（spendの過去形・過去分詞）",
+   "zh": "花费（spend的过去式/过去分词）",
+   "ko": "경비 (spend의 과거형·과거분사)"
+  }
+ },
+ {
+  "w": "spoke",
+  "ipa": "/spoʊk/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense of speak",
+   "ja": "話す（speakの過去形）",
+   "zh": "说话（speak的过去式）",
+   "ko": "말하다 (speak의 과거형)"
+  }
+ },
+ {
+  "w": "spoken",
+  "ipa": "/ˈspoʊkən/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past participle of speak",
+   "ja": "話す（speakの過去分詞）",
+   "zh": "说话（speak的过去分词）",
+   "ko": "말하다 (speak의 과거분사)"
+  }
+ },
+ {
+  "w": "stood",
+  "ipa": "/stʊd/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense / past participle of stand",
+   "ja": "立つ、スタンド、耐える（standの過去形・過去分詞）",
+   "zh": "站立、摊位、忍受（stand的过去式/过去分词）",
+   "ko": "서다, 가판대, 견디다 (stand의 과거형·과거분사)"
+  }
+ },
+ {
+  "w": "sung",
+  "ipa": "/sʌŋ/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past participle of sing",
+   "ja": "歌う、歌唱、鳴く（singの過去分詞）",
+   "zh": "唱、歌唱、鸣叫（sing的过去分词）",
+   "ko": "노래하다, 가창, 울다 (sing의 과거분사)"
+  }
+ },
+ {
+  "w": "swam",
+  "ipa": "/swæm/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense of swim",
+   "ja": "泳ぐ、水泳、浮かぶ（swimの過去形）",
+   "zh": "游泳、游泳、漂浮（swim的过去式）",
+   "ko": "수영하다, 수영, 뜨다 (swim의 과거형)"
+  }
+ },
+ {
+  "w": "swum",
+  "ipa": "/swʌm/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past participle of swim",
+   "ja": "泳ぐ、水泳、浮かぶ（swimの過去分詞）",
+   "zh": "游泳、游泳、漂浮（swim的过去分词）",
+   "ko": "수영하다, 수영, 뜨다 (swim의 과거분사)"
+  }
+ },
+ {
+  "w": "taken",
+  "ipa": "/ˈteɪkən/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past participle of take",
+   "ja": "取る（takeの過去分詞）",
+   "zh": "拿（take的过去分词）",
+   "ko": "가져가다 (take의 과거분사)"
+  }
+ },
+ {
+  "w": "taught",
+  "ipa": "/tɔt/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense / past participle of teach",
+   "ja": "教える、教訓、伝える（teachの過去形・過去分詞）",
+   "zh": "教、教训、传授（teach的过去式/过去分词）",
+   "ko": "가르치다, 교훈, 전하다 (teach의 과거형·과거분사)"
+  }
+ },
+ {
+  "w": "threw",
+  "ipa": "/θru/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense of throw",
+   "ja": "投球、投げる（throwの過去形）",
+   "zh": "投掷、扔（throw的过去式）",
+   "ko": "투구, 던지다 (throw의 과거형)"
+  }
+ },
+ {
+  "w": "thrown",
+  "ipa": "/θroʊn/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past participle of throw",
+   "ja": "投球、投げる（throwの過去分詞）",
+   "zh": "投掷、扔（throw的过去分词）",
+   "ko": "투구, 던지다 (throw의 과거분사)"
+  }
+ },
+ {
+  "w": "told",
+  "ipa": "/toʊld/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense / past participle of tell",
+   "ja": "言う、伝える、見分ける（tellの過去形・過去分詞）",
+   "zh": "告诉、讲述、分辨（tell的过去式/过去分词）",
+   "ko": "말하다, 전하다, 구별하다 (tell의 과거형·과거분사)"
+  }
+ },
+ {
+  "w": "took",
+  "ipa": "/tʊk/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense of take",
+   "ja": "取る（takeの過去形）",
+   "zh": "拿（take的过去式）",
+   "ko": "가져가다 (take의 과거형)"
+  }
+ },
+ {
+  "w": "understood",
+  "ipa": "/ˌʌndɚˈstʊd/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense / past participle of understand",
+   "ja": "理解する（understandの過去形・過去分詞）",
+   "zh": "理解（understand的过去式/过去分词）",
+   "ko": "이해하다 (understand의 과거형·과거분사)"
+  }
+ },
+ {
+  "w": "went",
+  "ipa": "/wɛnt/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense of go",
+   "ja": "行く（goの過去形）",
+   "zh": "去（go的过去式）",
+   "ko": "가다 (go의 과거형)"
+  }
+ },
+ {
+  "w": "woke",
+  "ipa": "/woʊk/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense of wake",
+   "ja": "目を覚ます（wakeの過去形）",
+   "zh": "唤醒（wake的过去式）",
+   "ko": "깨어 있다 (wake의 과거형)"
+  }
+ },
+ {
+  "w": "woken",
+  "ipa": "/ˈwoʊkən/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past participle of wake",
+   "ja": "目を覚ます（wakeの過去分詞）",
+   "zh": "唤醒（wake的过去分词）",
+   "ko": "깨어 있다 (wake의 과거분사)"
+  }
+ },
+ {
+  "w": "won",
+  "ipa": "/wʌn/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense / past participle of win",
+   "ja": "勝つ、獲得、勝利（winの過去形・過去分詞）",
+   "zh": "赢、获得、胜利（win的过去式/过去分词）",
+   "ko": "이기다, 얻다, 승리 (win의 과거형·과거분사)"
+  }
+ },
+ {
+  "w": "wore",
+  "ipa": "/wɔr/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense of wear",
+   "ja": "着る、身につける、摩耗（wearの過去形）",
+   "zh": "穿、佩戴、磨损（wear的过去式）",
+   "ko": "입다, 착용하다, 마모 (wear의 과거형)"
+  }
+ },
+ {
+  "w": "written",
+  "ipa": "/ˈrɪtən/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past participle of write",
+   "ja": "書く（writeの過去分詞）",
+   "zh": "写（write的过去分词）",
+   "ko": "쓰다 (write의 과거분사)"
+  }
+ },
+ {
+  "w": "wrote",
+  "ipa": "/roʊt/",
+  "cefr": "A1",
+  "pos": "動詞（不規則変化）",
+  "src": "irregular_verb",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "past tense of write",
+   "ja": "書く（writeの過去形）",
+   "zh": "写（write的过去式）",
+   "ko": "쓰다 (write의 과거형)"
+  }
+ },
+ {
+  "w": "children",
+  "ipa": "/ˈtʃɪldrən/",
+  "cefr": "A1",
+  "pos": "名詞（不規則複数）",
+  "src": "irregular_plural",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "plural of child",
+   "ja": "子供（childの複数形）",
+   "zh": "孩子（child的复数）",
+   "ko": "어린이 (child의 복수형)"
+  }
+ },
+ {
+  "w": "feet",
+  "ipa": "/fit/",
+  "cefr": "A1",
+  "pos": "名詞（不規則複数）",
+  "src": "irregular_plural",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "plural of foot",
+   "ja": "足（footの複数形）",
+   "zh": "脚（foot的复数）",
+   "ko": "발 (foot의 복수형)"
+  }
+ },
+ {
+  "w": "geese",
+  "ipa": "/ɡis/",
+  "cefr": "A1",
+  "pos": "名詞（不規則複数）",
+  "src": "irregular_plural",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "plural of goose",
+   "ja": "ガチョウ（gooseの複数形）",
+   "zh": "鹅（goose的复数）",
+   "ko": "거위 (goose의 복수형)"
+  }
+ },
+ {
+  "w": "halves",
+  "ipa": "/hævz/",
+  "cefr": "A1",
+  "pos": "名詞（不規則複数）",
+  "src": "irregular_plural",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "plural of half",
+   "ja": "半分（halfの複数形）",
+   "zh": "一半（half的复数）",
+   "ko": "반 (half의 복수형)"
+  }
+ },
+ {
+  "w": "knives",
+  "ipa": "/naɪvz/",
+  "cefr": "A1",
+  "pos": "名詞（不規則複数）",
+  "src": "irregular_plural",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "plural of knife",
+   "ja": "ナイフ（knifeの複数形）",
+   "zh": "刀（knife的复数）",
+   "ko": "칼 (knife의 복수형)"
+  }
+ },
+ {
+  "w": "leaves",
+  "ipa": "/livz/",
+  "cefr": "A1",
+  "pos": "名詞（不規則複数）",
+  "src": "irregular_plural",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "plural of leaf",
+   "ja": "葉（leafの複数形）",
+   "zh": "叶子（leaf的复数）",
+   "ko": "잎 (leaf의 복수형)"
+  }
+ },
+ {
+  "w": "lives",
+  "ipa": "/lɪvz/",
+  "cefr": "A1",
+  "pos": "名詞（不規則複数）",
+  "src": "irregular_plural",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "plural of life",
+   "ja": "人生（lifeの複数形）",
+   "zh": "生活（life的复数）",
+   "ko": "삶 (life의 복수형)"
+  }
+ },
+ {
+  "w": "men",
+  "ipa": "/mɛn/",
+  "cefr": "A1",
+  "pos": "名詞（不規則複数）",
+  "src": "irregular_plural",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "plural of man",
+   "ja": "男（manの複数形）",
+   "zh": "男人（man的复数）",
+   "ko": "남성 (man의 복수형)"
+  }
+ },
+ {
+  "w": "mice",
+  "ipa": "/maɪs/",
+  "cefr": "A1",
+  "pos": "名詞（不規則複数）",
+  "src": "irregular_plural",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "plural of mouse",
+   "ja": "ねずみ（mouseの複数形）",
+   "zh": "老鼠（mouse的复数）",
+   "ko": "생쥐 (mouse의 복수형)"
+  }
+ },
+ {
+  "w": "shelves",
+  "ipa": "/ʃɛlvz/",
+  "cefr": "A1",
+  "pos": "名詞（不規則複数）",
+  "src": "irregular_plural",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "plural of shelf",
+   "ja": "棚（shelfの複数形）",
+   "zh": "架子（shelf的复数）",
+   "ko": "선반 (shelf의 복수형)"
+  }
+ },
+ {
+  "w": "teeth",
+  "ipa": "/tiθ/",
+  "cefr": "A1",
+  "pos": "名詞（不規則複数）",
+  "src": "irregular_plural",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "plural of tooth",
+   "ja": "歯（toothの複数形）",
+   "zh": "齿（tooth的复数）",
+   "ko": "이빨 (tooth의 복수형)"
+  }
+ },
+ {
+  "w": "wives",
+  "ipa": "/waɪvz/",
+  "cefr": "A1",
+  "pos": "名詞（不規則複数）",
+  "src": "irregular_plural",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "plural of wife",
+   "ja": "妻（wifeの複数形）",
+   "zh": "妻子（wife的复数）",
+   "ko": "부인 (wife의 복수형)"
+  }
+ },
+ {
+  "w": "wolves",
+  "ipa": "/wʊlvz/",
+  "cefr": "A1",
+  "pos": "名詞（不規則複数）",
+  "src": "irregular_plural",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "plural of wolf",
+   "ja": "狼（wolfの複数形）",
+   "zh": "狼（wolf的复数）",
+   "ko": "늑대 (wolf의 복수형)"
+  }
+ },
+ {
+  "w": "women",
+  "ipa": "/ˈwɪmən/",
+  "cefr": "A1",
+  "pos": "名詞（不規則複数）",
+  "src": "irregular_plural",
+  "pattern": null,
+  "group": null,
+  "gloss": {
+   "en": "plural of woman",
+   "ja": "女性（womanの複数形）",
+   "zh": "女士（woman的复数）",
+   "ko": "여성 (woman의 복수형)"
+  }
+ }
+]

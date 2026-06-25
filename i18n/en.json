@@ -12,7 +12,8 @@
     "weak": "Weak spots",
     "weak_d": "From practice history",
     "letters": "Alphabet",
-    "contractions": "Contractions"
+    "contractions": "Contractions",
+    "irregular": "Irregular forms"
   },
   "reg": {
     "label": "Spelling type",
@@ -131,6 +132,8 @@
     "be動詞": "be verb",
     "助動詞": "modal verb",
     "文字": "letter name",
-    "短縮形": "contraction"
+    "短縮形": "contraction",
+    "動詞（不規則変化）": "irregular verb form",
+    "名詞（不規則複数）": "irregular plural"
   }
 }

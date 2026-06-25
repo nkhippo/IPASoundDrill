@@ -215,6 +215,7 @@
         <button class="pill" data-focus="weak" aria-pressed="false" id="focusWeak">Weak spots</button>
         <button class="pill" data-focus="letters" aria-pressed="false" id="focusLetters">Alphabet</button>
         <button class="pill" data-focus="contractions" aria-pressed="false" id="focusContractions">Contractions</button>
+        <button class="pill" data-focus="irregular" aria-pressed="false" id="focusIrregular">Irregular forms</button>
       </div>
       <div class="countnote" id="focusTrapNote"></div>
     </div>
@@ -391,6 +392,7 @@ function applyI18n() {
   $("focusWeak").textContent = t("focus.weak");
   $("focusLetters").textContent = t("focus.letters");
   $("focusContractions").textContent = t("focus.contractions");
+  $("focusIrregular").textContent = t("focus.irregular");
   $("focusTrapNote").textContent = t("focus.traps_d");
   $("flabelReg").textContent = t("reg.label");
   $("regAllT").textContent = t("reg.all");
@@ -589,6 +591,7 @@ function filteredPool(){
   else if(S.focus==="weak")p=p.filter(matchesWeakFocus);
   else if(S.focus==="letters")p=p.filter(w=>w.src==="letter");
   else if(S.focus==="contractions")p=p.filter(w=>w.src==="contraction");
+  else if(S.focus==="irregular")p=p.filter(w=>w.src==="irregular_verb"||w.src==="irregular_plural");
   return p;
 }
 function updatePool(){
