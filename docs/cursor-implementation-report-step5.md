@@ -1,7 +1,7 @@
 # Cursor 実装レポート — STEP5: GA/RP 対応
 
 > 作成日: 2026-06-23  
-> 対象ブランチ: `main`（STEP5 マージ後）  
+> 対象ブランチ: `main`（`73a310b`）  
 > 指示書: `cursor-step5-rp-support.md`  
 > 前提正本: `docs/PURPOSE.md` v2 / `docs/DESIGN.md` §10
 
@@ -130,7 +130,7 @@ Naoya 側で API 版を実行した場合は、`data/rp_complete.json` を差し
 | 項目 | 値 |
 |------|-----|
 | 作業ブランチ | `step5-rp-support` |
-| マージ先 | `main` |
+| マージ先 | `main`（`73a310b`） |
 
 ---
 
