@@ -21,20 +21,23 @@ STEP5 では以下を実装する。
 
 ---
 
-## 2. RP データ生成について（申し送り）
+## 2. RP データ生成について
 
-指示書のフェーズ (1) `gen_rp_ipa.py`（Anthropic API）による `rp_complete.json` 生成は、作業時点で **API キー未設定・`rp_complete.json` 未受領** のため未実施。
+### 初回（Cursor 実装時）
 
-**代替:** 指示書・`gen_rp_ipa.py` の SYSTEM_PROMPT に沿った **ルールベース変換**（`scripts/ga_to_rp.py`）で `data/rp_complete.json` を生成しマージした。
+API キー未設定のため、**ルールベース変換**（`scripts/ga_to_rp.py`）で `data/rp_complete.json` を生成しマージ。
+
+### 更新（2026-06-25 · Naoya ローカル API 実行後）
 
 | 項目 | 内容 |
 |------|------|
-| オフライン生成 | `scripts/gen_rp_ipa_offline.py` |
-| 変換ロジック | `scripts/ga_to_rp.py`（非 rhotic、TRAP-BATH、Z→/zɛd/、R→/ɑː/ 等） |
-| API 版スクリプト | `scripts/gen_rp_ipa.py`（Naoya ローカル実行用に配置済み） |
-| 品質レビュー | **Claude 手番 (2) は未実施** — API 版またはオフライン版の品質確認を推奨 |
+| 実行 | `python3 scripts/gen_rp_ipa.py`（39 バッチ） |
+| 結果 | **3,059 / 3,059 語成功**、失敗 0 |
+| マージ | `cp rp_complete.json data/rp_complete.json` → `python3 scripts/merge_rp_ipa.py` |
+| 手修正 | API 出力 `Z: /zed/` → DoD 準拠 **`/zɛd/`** に修正 |
+| 品質レビュー | **Claude 手番 (2) は未実施** — `data/rp_complete.json` のレビューを推奨 |
 
-Naoya 側で API 版を実行した場合は、`data/rp_complete.json` を差し替えて `scripts/merge_rp_ipa.py` を再実行すれば本番 wordlist を更新できる。
+オフライン版スクリプト（`scripts/gen_rp_ipa_offline.py` / `scripts/ga_to_rp.py`）はフォールバック用として残置。
 
 ---
 
