@@ -1,7 +1,7 @@
 # Cursor 実装レポート — STEP4-e: カジュアル表現 + 連結現象
 
 > 作成日: 2026-06-23  
-> 対象ブランチ: `main`（マージ後コミットを記載）  
+> 対象ブランチ: `main`（`fcdcc2f`）  
 > 指示書: `cursor-step4e-casual-connected.md`  
 > 前提正本: `docs/PURPOSE.md` v2 / `docs/DESIGN.md` §3.1 / §4
 
@@ -151,7 +151,7 @@ python3 -m http.server 8080
 
 | コミット | 内容 |
 |----------|------|
-| （マージ後に記載） | STEP4-e: casual/connected、UIタブ、GAS phrase TTS |
+| `fcdcc2f` | STEP4-e: casual/connected、UIタブ、GAS phrase TTS |
 
 ---
 
