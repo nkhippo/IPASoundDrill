@@ -1,7 +1,7 @@
 # Cursor 実装レポート — STEP6: 連結句拡張（15 → 201句・難易度3段階）
 
 > 作成日: 2026-06-26  
-> 対象ブランチ: `main`（コミット後に追記）  
+> 対象ブランチ: `main`（`116f6f8`）  
 > 指示書: `cursor-step6-connected-speech-expansion.md`  
 > 入力: `connected_speech_expanded.json`（Claude 生成・品質確認済み）  
 > 前提正本: `docs/PURPOSE.md` / `docs/DESIGN.md`
@@ -112,7 +112,7 @@ Claude 側への作業報告用サマリー。
 
 | 項目 | 値 |
 |------|-----|
-| ブランチ | `main` |
+| ブランチ | `main`（`116f6f8`） |
 | GitHub Pages | push 後 Actions 自動デプロイ |
 
 ---
