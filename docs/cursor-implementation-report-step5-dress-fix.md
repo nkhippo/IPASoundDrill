@@ -1,7 +1,7 @@
 # Cursor 実装レポート — STEP5 追補: DRESS 母音（ɛ→e）修正
 
 > 作成日: 2026-06-25  
-> 対象ブランチ: `main`（コミット後に追記）  
+> 対象ブランチ: `main`（`294f306`）  
 > 前提: STEP5 GA/RP 対応（`docs/cursor-implementation-report-step5.md`）  
 > 入力: Claude 品質レビュー後の修正ファイル
 
@@ -104,7 +104,7 @@ python3 scripts/merge_rp_ipa.py
 
 | 項目 | 値 |
 |------|-----|
-| ブランチ | `main`（直接コミット） |
+| ブランチ | `main`（`294f306`） |
 
 ---
 
