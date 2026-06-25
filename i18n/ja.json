@@ -16,7 +16,14 @@
     "linking": "連結",
     "assimilation": "同化",
     "elision": "脱落",
-    "ruleLabel": "規則"
+    "ruleLabel": "規則",
+    "level": {
+      "label": "難易度",
+      "all": "全て",
+      "l1": "初級",
+      "l2": "中級",
+      "l3": "上級"
+    }
   },
   "focus": {
     "label": "音素フォーカス",

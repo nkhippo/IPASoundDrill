@@ -264,6 +264,15 @@
 
     <div id="connectedSetup" class="hidden">
       <div class="field">
+        <div class="flabel" id="flabelCsLevel">Level</div>
+        <div class="pills" id="csLevelPills">
+          <button class="pill" data-cs-level="all" aria-pressed="true" id="csLevelAll">All</button>
+          <button class="pill" data-cs-level="1" aria-pressed="false" id="csLevelL1">Beginner</button>
+          <button class="pill" data-cs-level="2" aria-pressed="false" id="csLevelL2">Intermediate</button>
+          <button class="pill" data-cs-level="3" aria-pressed="false" id="csLevelL3">Advanced</button>
+        </div>
+      </div>
+      <div class="field">
         <div class="flabel" id="flabelCs">Type</div>
         <div class="pills" id="csPills">
           <button class="pill" data-cs="all" aria-pressed="true" id="csAll">All</button>
@@ -397,6 +406,8 @@ function normalizeConnected(row) {
     gloss: row.gloss,
     src: row.src || "connected_speech"
   };
+  if (row.id) c.id = row.id;
+  if (row.level != null) c.level = row.level;
   if (row.rp_ipa) c.rp_ipa = row.rp_ipa;
   return c;
 }
@@ -481,6 +492,11 @@ function applyI18n() {
   $("tabWordsT").textContent = t("tab.words");
   $("tabConnectedT").textContent = t("tab.connected");
   $("flabelCs").textContent = t("cs.label");
+  $("flabelCsLevel").textContent = t("cs.level.label");
+  $("csLevelAll").textContent = t("cs.level.all");
+  $("csLevelL1").textContent = t("cs.level.l1");
+  $("csLevelL2").textContent = t("cs.level.l2");
+  $("csLevelL3").textContent = t("cs.level.l3");
   $("csAll").textContent = t("cs.all");
   $("csLinking").textContent = t("cs.linking");
   $("csAssim").textContent = t("cs.assimilation");
@@ -617,7 +633,7 @@ const QUESTION_COUNT = 10;
 const LS_HIST_KEY = "ept_hist_v1";
 const LS_SYM_KEY = "ept_sym_v1";
 const BOX_INTERVAL_MS = [0, 3600000, 86400000, 259200000, 604800000, 2592000000];
-let S={tab:"words",csFilter:"all",dir:"decode",focus:"all",reg:"all",grp:"all",queue:[],idx:0,correct:0,weak:{},missed:[],cur:null,revealed:false,built:[]};
+let S={tab:"words",csFilter:"all",csLevel:"all",dir:"decode",focus:"all",reg:"all",grp:"all",queue:[],idx:0,correct:0,weak:{},missed:[],cur:null,revealed:false,built:[]};
 
 const PH_EXAMPLES={
   "p":[["pay","/peɪ/"],["up","/ʌp/"],["pea","/pi/"]],
@@ -696,6 +712,7 @@ bindPills("grpPills","grp",b=>b.dataset.grp);
 bindPills("regOpts","reg",b=>b.dataset.reg);
 bindPills("tabOpts","tab",b=>b.dataset.tab);
 bindPills("csPills","csFilter",b=>b.dataset.cs);
+bindPills("csLevelPills","csLevel",b=>b.dataset.csLevel);
 function updateSetupFields(){
   const words=S.tab==="words";
   show("wordsSetup",words);
@@ -744,6 +761,7 @@ function filteredPool(){
 }
 function filteredConnectedPool(){
   let p=CONNECTED.slice();
+  if(S.csLevel!=="all")p=p.filter(x=>String(x.level)===S.csLevel);
   if(S.csFilter!=="all")p=p.filter(x=>x.cs_type===S.csFilter);
   return p;
 }

@@ -1,0 +1,317 @@
+[
+ {
+  "w": "check it",
+  "ipa": "/ˈtʃɛkɪt/",
+  "cefr": null,
+  "pos": null,
+  "src": "connected_speech",
+  "pattern": null,
+  "group": null,
+  "cs_type": "linking",
+  "cs_rule": {
+   "en": "k + i link",
+   "ja": "語末 k と語頭 i が連結"
+  },
+  "gloss": {
+   "en": "check it",
+   "ja": "確認して",
+   "zh": "检查一下",
+   "ko": "확인해 봐"
+  },
+  "rp_ipa": "/ˈtʃekɪt/"
+ },
+ {
+  "w": "look at",
+  "ipa": "/ˈlʊkæt/",
+  "cefr": null,
+  "pos": null,
+  "src": "connected_speech",
+  "pattern": null,
+  "group": null,
+  "cs_type": "linking",
+  "cs_rule": {
+   "en": "k + æ link",
+   "ja": "語末 k と語頭 æ が連結"
+  },
+  "gloss": {
+   "en": "look at",
+   "ja": "〜を見て",
+   "zh": "看",
+   "ko": "~을 봐"
+  },
+  "rp_ipa": "/ˈlʊkæt/"
+ },
+ {
+  "w": "come on",
+  "ipa": "/ˈkʌmɑn/",
+  "cefr": null,
+  "pos": null,
+  "src": "connected_speech",
+  "pattern": null,
+  "group": null,
+  "cs_type": "linking",
+  "cs_rule": {
+   "en": "m + ɑ link",
+   "ja": "語末 m と語頭 ɑ が連結"
+  },
+  "gloss": {
+   "en": "come on",
+   "ja": "さあ、おいで",
+   "zh": "来吧、加油",
+   "ko": "어서, 자"
+  },
+  "rp_ipa": "/ˈkʌmɒn/"
+ },
+ {
+  "w": "turn it",
+  "ipa": "/ˈtɝnɪt/",
+  "cefr": null,
+  "pos": null,
+  "src": "connected_speech",
+  "pattern": null,
+  "group": null,
+  "cs_type": "linking",
+  "cs_rule": {
+   "en": "n + i link",
+   "ja": "語末 n と語頭 i が連結"
+  },
+  "gloss": {
+   "en": "turn it",
+   "ja": "それを回して",
+   "zh": "转动它",
+   "ko": "그것을 돌려"
+  },
+  "rp_ipa": "/ˈtɜːnɪt/"
+ },
+ {
+  "w": "pick up",
+  "ipa": "/ˈpɪkʌp/",
+  "cefr": null,
+  "pos": null,
+  "src": "connected_speech",
+  "pattern": null,
+  "group": null,
+  "cs_type": "linking",
+  "cs_rule": {
+   "en": "k + ʌ link",
+   "ja": "語末 k と語頭 ʌ が連結"
+  },
+  "gloss": {
+   "en": "pick up",
+   "ja": "拾う、迎えに行く",
+   "zh": "捡起、接",
+   "ko": "줍다, 데리러 가다"
+  },
+  "rp_ipa": "/ˈpɪkʌp/"
+ },
+ {
+  "w": "an apple",
+  "ipa": "/əˈnæpəl/",
+  "cefr": null,
+  "pos": null,
+  "src": "connected_speech",
+  "pattern": null,
+  "group": null,
+  "cs_type": "linking",
+  "cs_rule": {
+   "en": "n + æ link",
+   "ja": "語末 n と語頭 æ が連結"
+  },
+  "gloss": {
+   "en": "an apple",
+   "ja": "りんご一つ",
+   "zh": "一个苹果",
+   "ko": "사과 한 개"
+  },
+  "rp_ipa": "/əˈnæpəl/"
+ },
+ {
+  "w": "could you",
+  "ipa": "/ˈkʊdʒu/",
+  "cefr": null,
+  "pos": null,
+  "src": "connected_speech",
+  "pattern": null,
+  "group": null,
+  "cs_type": "assimilation",
+  "cs_rule": {
+   "en": "d + j → dʒ",
+   "ja": "d + j が dʒ に同化"
+  },
+  "gloss": {
+   "en": "could you",
+   "ja": "〜してくれますか",
+   "zh": "你能…吗",
+   "ko": "~해 주시겠어요"
+  },
+  "rp_ipa": "/ˈkʊdʒuː/"
+ },
+ {
+  "w": "would you",
+  "ipa": "/ˈwʊdʒu/",
+  "cefr": null,
+  "pos": null,
+  "src": "connected_speech",
+  "pattern": null,
+  "group": null,
+  "cs_type": "assimilation",
+  "cs_rule": {
+   "en": "d + j → dʒ",
+   "ja": "d + j が dʒ に同化"
+  },
+  "gloss": {
+   "en": "would you",
+   "ja": "〜してくれますか",
+   "zh": "你愿意…吗",
+   "ko": "~하시겠어요"
+  },
+  "rp_ipa": "/ˈwʊdʒuː/"
+ },
+ {
+  "w": "did you",
+  "ipa": "/ˈdɪdʒu/",
+  "cefr": null,
+  "pos": null,
+  "src": "connected_speech",
+  "pattern": null,
+  "group": null,
+  "cs_type": "assimilation",
+  "cs_rule": {
+   "en": "d + j → dʒ",
+   "ja": "d + j が dʒ に同化"
+  },
+  "gloss": {
+   "en": "did you",
+   "ja": "〜しましたか",
+   "zh": "你…了吗",
+   "ko": "~했나요"
+  },
+  "rp_ipa": "/ˈdɪdʒuː/"
+ },
+ {
+  "w": "meet you",
+  "ipa": "/ˈmitʃu/",
+  "cefr": null,
+  "pos": null,
+  "src": "connected_speech",
+  "pattern": null,
+  "group": null,
+  "cs_type": "assimilation",
+  "cs_rule": {
+   "en": "t + j → tʃ",
+   "ja": "t + j が tʃ に同化"
+  },
+  "gloss": {
+   "en": "meet you",
+   "ja": "あなたに会う",
+   "zh": "见到你",
+   "ko": "당신을 만나다"
+  },
+  "rp_ipa": "/ˈmiːtʃuː/"
+ },
+ {
+  "w": "miss you",
+  "ipa": "/ˈmɪʃu/",
+  "cefr": null,
+  "pos": null,
+  "src": "connected_speech",
+  "pattern": null,
+  "group": null,
+  "cs_type": "assimilation",
+  "cs_rule": {
+   "en": "s + j → ʃ",
+   "ja": "s + j が ʃ に同化"
+  },
+  "gloss": {
+   "en": "miss you",
+   "ja": "あなたが恋しい",
+   "zh": "想念你",
+   "ko": "당신이 그리워요"
+  },
+  "rp_ipa": "/ˈmɪʃuː/"
+ },
+ {
+  "w": "and you",
+  "ipa": "/ən ju/",
+  "cefr": null,
+  "pos": null,
+  "src": "connected_speech",
+  "pattern": null,
+  "group": null,
+  "cs_type": "elision",
+  "cs_rule": {
+   "en": "d dropped",
+   "ja": "語末 d が脱落"
+  },
+  "gloss": {
+   "en": "and you",
+   "ja": "そしてあなた",
+   "zh": "还有你",
+   "ko": "그리고 당신"
+  },
+  "rp_ipa": "/ən juː/"
+ },
+ {
+  "w": "next day",
+  "ipa": "/ˈnɛks deɪ/",
+  "cefr": null,
+  "pos": null,
+  "src": "connected_speech",
+  "pattern": null,
+  "group": null,
+  "cs_type": "elision",
+  "cs_rule": {
+   "en": "t dropped",
+   "ja": "語末 t が脱落"
+  },
+  "gloss": {
+   "en": "next day",
+   "ja": "翌日",
+   "zh": "第二天",
+   "ko": "다음 날"
+  },
+  "rp_ipa": "/ˈneks deɪ/"
+ },
+ {
+  "w": "must be",
+  "ipa": "/ˈmʌs bi/",
+  "cefr": null,
+  "pos": null,
+  "src": "connected_speech",
+  "pattern": null,
+  "group": null,
+  "cs_type": "elision",
+  "cs_rule": {
+   "en": "t dropped",
+   "ja": "語末 t が脱落"
+  },
+  "gloss": {
+   "en": "must be",
+   "ja": "〜に違いない",
+   "zh": "一定是",
+   "ko": "~임에 틀림없다"
+  },
+  "rp_ipa": "/ˈmʌs biː/"
+ },
+ {
+  "w": "old man",
+  "ipa": "/ˈoʊl mæn/",
+  "cefr": null,
+  "pos": null,
+  "src": "connected_speech",
+  "pattern": null,
+  "group": null,
+  "cs_type": "elision",
+  "cs_rule": {
+   "en": "d dropped",
+   "ja": "語末 d が脱落"
+  },
+  "gloss": {
+   "en": "old man",
+   "ja": "年配の男性",
+   "zh": "老人",
+   "ko": "노인"
+  },
+  "rp_ipa": "/ˈəʊl mæn/"
+ }
+]

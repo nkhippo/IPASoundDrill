@@ -16,7 +16,14 @@
     "linking": "连读",
     "assimilation": "同化",
     "elision": "脱落",
-    "ruleLabel": "规则"
+    "ruleLabel": "规则",
+    "level": {
+      "label": "难度",
+      "all": "全部",
+      "l1": "初级",
+      "l2": "中级",
+      "l3": "高级"
+    }
   },
   "focus": {
     "label": "音素聚焦",

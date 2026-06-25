@@ -16,7 +16,14 @@
     "linking": "Linking",
     "assimilation": "Assimilation",
     "elision": "Elision",
-    "ruleLabel": "Rule"
+    "ruleLabel": "Rule",
+    "level": {
+      "label": "Level",
+      "all": "All",
+      "l1": "Beginner",
+      "l2": "Intermediate",
+      "l3": "Advanced"
+    }
   },
   "focus": {
     "label": "Phoneme focus",

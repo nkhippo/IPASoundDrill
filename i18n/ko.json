@@ -16,7 +16,14 @@
     "linking": "연음",
     "assimilation": "동화",
     "elision": "탈락",
-    "ruleLabel": "규칙"
+    "ruleLabel": "규칙",
+    "level": {
+      "label": "난이도",
+      "all": "전체",
+      "l1": "초급",
+      "l2": "중급",
+      "l3": "고급"
+    }
   },
   "focus": {
     "label": "음소 포커스",
