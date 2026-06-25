@@ -1,7 +1,7 @@
 # Cursor 実装レポート — STEP4-c: 不規則変化形
 
 > 作成日: 2026-06-23  
-> 対象ブランチ: `main`（マージ後コミットを記載）  
+> 対象ブランチ: `main`（`6a57e15`）  
 > 指示書: `cursor-step4c-irregular-forms.md`  
 > 前提正本: `docs/PURPOSE.md` v2 / `docs/DESIGN.md` §4
 
@@ -138,7 +138,7 @@ python3 -m http.server 8080
 
 | コミット | 内容 |
 |----------|------|
-| （マージ後に記載） | STEP4-c: 不規則変化形90語、neighbors 再生成、フォーカスUI |
+| `6a57e15` | STEP4-c: 不規則変化形90語、neighbors 再生成、フォーカスUI |
 
 ブランチ: `step4c-irregular-forms` → `main` へマージ・`origin/main` へプッシュ済み。
 
