@@ -104,4 +104,5 @@ identical fil cells (Mode B distractor-collision candidates): 0
 
 ## 7. コミット
 
-（push 後に SHA を記載）
+- **SHA:** `1effae9`
+- **メッセージ:** Add gloss.fil Tier 2 batches 09–12 and refresh batches 02–05 (960/3059).
