@@ -6,6 +6,7 @@
  *
  * Query: GET ?word=luck[&accent=ga|rp]
  *        GET ?phrase=check%20it[&accent=ga]  (connected; GA only)
+ *        GET ?warm=1&words=luck,colour&accent=ga  (Drive warmup; no audio body)
  */
 
 const FOLDER_NAME = 'IPA-TTS-Audio';
@@ -17,6 +18,7 @@ const TTS_INSTRUCTIONS_RP = 'Pronounce the single English word in a clear modern
 const TTS_CONNECTED_INSTRUCTIONS = 'Pronounce the English phrase in a clear General American accent with natural connected speech: link words smoothly, apply assimilation and elision where native speakers would, and use weak forms where appropriate. Say the phrase once at a calm conversational pace with neutral intonation. Do not spell letters, do not add extra words, and do not pause between words unnaturally.';
 // Normal single-word MP3s are ~12 KB+; near-silent glitches (e.g. flight at 5.7 KB) stay below this.
 const TTS_MIN_BYTES = 9000;
+const WARM_MAX = 6;
 
 function getFolder_() {
   const folders = DriveApp.getFoldersByName(FOLDER_NAME);
@@ -115,8 +117,42 @@ function jsonResponse_(obj) {
     .setMimeType(ContentService.MimeType.JSON);
 }
 
+function warmOne_(word, accent) {
+  if (!/^[a-zA-Z][a-zA-Z'-]*$/.test(word)) {
+    return { word: word, status: 'failed', error: 'invalid' };
+  }
+  let blob = getAudioFromDrive_(word, accent);
+  if (blob && isAudioBlobTooShort_(blob)) {
+    trashAudioOnDrive_(word, accent);
+    blob = null;
+  }
+  if (blob) return { word: word, status: 'cached' };
+  try {
+    const instructions = instructionsFor_(accent, false);
+    const fresh = fetchFromOpenAIWithRetry_(word, instructions);
+    if (!isAudioBlobTooShort_(fresh)) {
+      saveToDrive_(word, accent, fresh);
+      return { word: word, status: 'generated' };
+    }
+    return { word: word, status: 'failed', error: 'too_short' };
+  } catch (err) {
+    return { word: word, status: 'failed', error: String(err.message || err).slice(0, 120) };
+  }
+}
+
+function handleWarm_(e) {
+  const accent = normalizeAccent_(e && e.parameter && e.parameter.accent);
+  const raw = String((e && e.parameter && e.parameter.words) || '').trim();
+  if (!raw) return jsonResponse_({ ok: false, error: 'no words' });
+  const words = raw.split(',').map(function(s) { return s.trim(); }).filter(Boolean).slice(0, WARM_MAX);
+  const results = words.map(function(w) { return warmOne_(w, accent); });
+  return jsonResponse_({ ok: true, accent: accent, results: results });
+}
+
 function doGet(e) {
   try {
+    if (e && e.parameter && e.parameter.warm) return handleWarm_(e);
+
     const phrase = String((e && e.parameter && e.parameter.phrase) || '').trim();
     const word = String((e && e.parameter && e.parameter.word) || '').trim();
     const accent = normalizeAccent_(e && e.parameter && e.parameter.accent);

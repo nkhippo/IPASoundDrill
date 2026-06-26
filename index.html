@@ -665,6 +665,7 @@ function setAccent(accent) {
   buildKeyboard();
   if (S.cur && S.revealed) refreshRevealIpa();
   else if (S.cur && !S.revealed) renderCard();
+  prefetchAccentBodies(accent);
 }
 
 function openSettings(){show("settingsModal",true);}
@@ -1040,7 +1041,10 @@ function modeBDictCheck(){
 /* ---------- speech (GAS → Drive → localStorage) ---------- */
 const GAS_TTS_URL = "https://script.google.com/macros/s/AKfycbxe6u7CiIbXzNmNRCHYjkJLnieAkVHuIOvbE_R3af4Y9plwEQ9cluWeX0FG9NmaAp0m/exec";
 const LS_TTS_PREFIX = "ipa_tts_v2:";
+const PREFETCH = { warmChunk: 6, warmParallel: 2, bodyParallel: 3 };
 const memAudioCache = new Map();
+const audioReady = new Map();
+let prefetchToken = 0;
 let currentAudio = null;
 let speakBusy = false;
 
@@ -1055,6 +1059,9 @@ function ttsCacheSlug(text, connected) {
 function lsKey(text, connected) {
   return LS_TTS_PREFIX + ttsAccent(connected) + ":" + ttsCacheSlug(text, connected);
 }
+function lsKeyAccent(word, accent) {
+  return LS_TTS_PREFIX + accent + ":" + ttsCacheSlug(word, false);
+}
 function legacyLsKey(text, connected) {
   const slug = connected
     ? ("p:" + text.toLowerCase()).replace(/[^a-z0-9]+/g, "_")
@@ -1064,6 +1071,15 @@ function legacyLsKey(text, connected) {
 function memCacheKey(text, connected) {
   return ttsAccent(connected) + ":" + (connected ? "p:" + text.toLowerCase() : text);
 }
+function memKeyAccent(word, accent) {
+  return accent + ":" + word;
+}
+function audioReadyKey(word, accent) {
+  return accent + ":" + String(word).toLowerCase();
+}
+function currentAccent() {
+  return ACCENT === "rp" ? "rp" : "ga";
+}
 
 function bytesFromB64(b64) {
   const bin = atob(b64);
@@ -1072,15 +1088,18 @@ function bytesFromB64(b64) {
   return bytes;
 }
 
-function loadAudioFromLS(text, connected) {
+function hasCachedAudioFor(word, accent) {
+  if (memAudioCache.has(memKeyAccent(word, accent))) return true;
+  try { return !!localStorage.getItem(lsKeyAccent(word, accent)); } catch (e) { return false; }
+}
+
+function loadAudioFromLSAccent(word, accent) {
   try {
-    const key = lsKey(text, connected);
+    const key = lsKeyAccent(word, accent);
     let raw = localStorage.getItem(key);
-    if (!raw && ttsAccent(connected) === "ga") {
-      raw = localStorage.getItem(legacyLsKey(text, connected));
-      if (raw) {
-        try { localStorage.setItem(key, raw); } catch (e) {}
-      }
+    if (!raw && accent === "ga") {
+      raw = localStorage.getItem(legacyLsKey(word, false));
+      if (raw) { try { localStorage.setItem(key, raw); } catch (e) {} }
     }
     if (!raw) return null;
     const data = JSON.parse(raw);
@@ -1093,12 +1112,28 @@ function loadAudioFromLS(text, connected) {
   }
 }
 
-function saveAudioToLS(text, connected, mime, b64) {
+function loadAudioFromLS(text, connected) {
+  return loadAudioFromLSAccent(text, ttsAccent(connected));
+}
+
+function saveAudioToLSAccent(word, accent, mime, b64) {
   try {
-    localStorage.setItem(lsKey(text, connected), JSON.stringify({ mime: mime || "audio/mpeg", b64 }));
+    localStorage.setItem(lsKeyAccent(word, accent), JSON.stringify({ mime: mime || "audio/mpeg", b64 }));
   } catch (err) {
     console.warn("localStorage audio save failed", err);
   }
+}
+
+function saveAudioToLS(text, connected, mime, b64) {
+  saveAudioToLSAccent(text, ttsAccent(connected), mime, b64);
+}
+
+async function fetchAudioFromGasAccent(word, accent) {
+  const res = await fetch(GAS_TTS_URL + "?word=" + encodeURIComponent(word) + "&accent=" + accent);
+  if (!res.ok) throw new Error("GAS HTTP " + res.status);
+  const data = await res.json();
+  if (!data.ok) throw new Error(data.error || "GAS error");
+  return data;
 }
 
 async function fetchAudioFromGas(text, connected) {
@@ -1113,12 +1148,145 @@ async function fetchAudioFromGas(text, connected) {
   return data;
 }
 
+function currentCardWord() {
+  return S.cur ? S.cur.w : null;
+}
+
+function speakerIdsForCurrentCard() {
+  if (S.appMode === "b") return ["mbSPlay", "mbMPlay", "mbDPlay"];
+  return ["dPlay", "ePlay", "rPlay"];
+}
+
+function refreshSpeakerFor(word, accent) {
+  const w = currentCardWord();
+  if (!w || w.toLowerCase() !== String(word).toLowerCase()) return;
+  if (accent !== currentAccent()) return;
+  const st = audioReady.get(audioReadyKey(word, accent));
+  const enabled = hasCachedAudioFor(word, accent) || st === "ready" || st === "failed";
+  speakerIdsForCurrentCard().forEach(id => {
+    const btn = $(id);
+    if (btn && !speakBusy) btn.disabled = !enabled;
+  });
+}
+
+function refreshAllSpeakers() {
+  if (speakBusy) return;
+  if (S.tab === "connected") {
+    speakerIdsForCurrentCard().forEach(id => { const b = $(id); if (b) b.disabled = false; });
+    return;
+  }
+  const w = currentCardWord();
+  if (w) refreshSpeakerFor(w, currentAccent());
+}
+
+async function gasWarm(words, accent, token) {
+  const chunks = [];
+  for (let i = 0; i < words.length; i += PREFETCH.warmChunk) {
+    chunks.push(words.slice(i, i + PREFETCH.warmChunk));
+  }
+  for (let i = 0; i < chunks.length; i += PREFETCH.warmParallel) {
+    if (token !== prefetchToken) return;
+    const batch = chunks.slice(i, i + PREFETCH.warmParallel);
+    await Promise.all(batch.map(async chunk => {
+      if (token !== prefetchToken) return;
+      try {
+        const q = "warm=1&accent=" + accent + "&words=" + encodeURIComponent(chunk.join(","));
+        await fetch(GAS_TTS_URL + "?" + q);
+      } catch (e) { /* warm failure; body fetch will retry */ }
+    }));
+  }
+}
+
+async function fetchBodyToCache(word, accent, token) {
+  if (token !== prefetchToken) return;
+  const key = audioReadyKey(word, accent);
+  if (hasCachedAudioFor(word, accent)) {
+    audioReady.set(key, "ready");
+    refreshSpeakerFor(word, accent);
+    return;
+  }
+  try {
+    const data = await fetchAudioFromGasAccent(word, accent);
+    if (token !== prefetchToken) return;
+    saveAudioToLSAccent(word, accent, data.mimeType, data.audio);
+    const blob = new Blob([bytesFromB64(data.audio)], { type: data.mimeType || "audio/mpeg" });
+    memAudioCache.set(memKeyAccent(word, accent), URL.createObjectURL(blob));
+    audioReady.set(key, "ready");
+    refreshSpeakerFor(word, accent);
+  } catch (e) {
+    audioReady.set(key, "failed");
+    refreshSpeakerFor(word, accent);
+  }
+}
+
+async function prefetchIdleBodies(words, accent, token) {
+  for (const w of words) {
+    if (token !== prefetchToken) return;
+    if (hasCachedAudioFor(w, accent)) continue;
+    await fetchBodyToCache(w, accent, token);
+  }
+}
+
+async function prefetchAccentBodies(accent) {
+  if (S.tab === "connected" || !S.queue.length) return;
+  const token = prefetchToken;
+  const words = [...new Set(S.queue.map(c => c.w).filter(Boolean))];
+  for (const w of words) {
+    if (!hasCachedAudioFor(w, accent)) audioReady.set(audioReadyKey(w, accent), "pending");
+  }
+  refreshAllSpeakers();
+  let i = 0;
+  async function worker() {
+    while (i < words.length) {
+      if (token !== prefetchToken) return;
+      const w = words[i++];
+      await fetchBodyToCache(w, accent, token);
+    }
+  }
+  await Promise.all(Array.from({ length: PREFETCH.bodyParallel }, worker));
+}
+
+function prefetchSessionAudio(queue) {
+  if (S.tab === "connected") return;
+  prefetchToken++;
+  const token = prefetchToken;
+  const words = [...new Set(queue.map(c => c.w).filter(Boolean))];
+  if (!words.length) return;
+  const cur = currentAccent();
+  const other = cur === "rp" ? "ga" : "rp";
+
+  for (const w of words) {
+    audioReady.set(audioReadyKey(w, cur), hasCachedAudioFor(w, cur) ? "ready" : "pending");
+    audioReady.set(audioReadyKey(w, other), hasCachedAudioFor(w, other) ? "ready" : "pending");
+  }
+  refreshAllSpeakers();
+
+  (async () => {
+    await Promise.all([gasWarm(words, cur, token), gasWarm(words, other, token)]);
+    if (token !== prefetchToken) return;
+    let i = 0;
+    async function bodyWorker() {
+      while (i < words.length) {
+        if (token !== prefetchToken) return;
+        const w = words[i++];
+        await fetchBodyToCache(w, cur, token);
+      }
+    }
+    await Promise.all(Array.from({ length: PREFETCH.bodyParallel }, bodyWorker));
+    if (token !== prefetchToken) return;
+    const idleFn = () => prefetchIdleBodies(words, other, token);
+    if (typeof requestIdleCallback === "function") requestIdleCallback(idleFn, { timeout: 30000 });
+    else setTimeout(idleFn, 2000);
+  })();
+}
+
 function setSpeakerBusy(busy) {
   speakBusy = busy;
-  ["dPlay", "ePlay", "rPlay", "mbSPlay", "mbMPlay", "mbDPlay"].forEach(id => {
-    const btn = $(id);
-    if (btn) btn.disabled = busy;
-  });
+  if (busy) {
+    speakerIdsForCurrentCard().forEach(id => { const btn = $(id); if (btn) btn.disabled = true; });
+  } else {
+    refreshAllSpeakers();
+  }
 }
 
 async function speak(text, opts) {
@@ -1142,6 +1310,10 @@ async function speak(text, opts) {
       const blob = new Blob([bytesFromB64(data.audio)], { type: data.mimeType || "audio/mpeg" });
       url = URL.createObjectURL(blob);
       memAudioCache.set(cacheKey, url);
+      if (!connected) {
+        const acc = currentAccent();
+        audioReady.set(audioReadyKey(text, acc), "ready");
+      }
     }
     const audio = new Audio(url);
     currentAudio = audio;
@@ -1186,7 +1358,9 @@ function buildSessionQueue(pool,count){
 function startSession(weakOnly){
   if(S.appMode==="b"){
     S.queue=buildModeBQueue();S.idx=0;S.correct=0;S.weak={};S.missed=[];S.mbPhase="mcq";S.mbQuiz=null;
-    setSetupVisible(false);renderCard();
+    setSetupVisible(false);
+    prefetchSessionAudio(S.queue);
+    renderCard();
     return;
   }
   let pool;
@@ -1203,7 +1377,9 @@ function startSession(weakOnly){
     pool=buildSessionQueue(filteredPool().slice(),QUESTION_COUNT);
   }
   S.queue=pool;S.idx=0;S.correct=0;S.weak={};S.missed=[];
-  setSetupVisible(false);renderCard();
+  setSetupVisible(false);
+  prefetchSessionAudio(S.queue);
+  renderCard();
 }
 $("startBtn").addEventListener("click",()=>startSession(false));
 $("againBtn").addEventListener("click",()=>startSession(false));
@@ -1246,9 +1422,11 @@ function renderCard(){
   if(S.appMode==="b"){
     if(c.mbKind==="study")renderModeBStudy(c);
     else renderModeBMcq(c);
+    refreshAllSpeakers();
     return;
   }
   if(S.tab==="connected"||S.dir==="decode")renderDecode(c);else renderEncode(c);
+  refreshAllSpeakers();
 }
 /* DECODE */
 const COARSE=matchMedia("(pointer:coarse)").matches;
@@ -1442,6 +1620,7 @@ function reveal(res,ctx){
     $("rTraps").querySelectorAll(".trapchip").forEach(ch=>ch.addEventListener("click",()=>renderInfo("rInfo",ch.dataset.sym)));
   }
   setTimeout(()=>speak(c.w,{connected:isConnectedItem(c)}),200);
+  refreshAllSpeakers();
 }
 function nextCard(){
   const c=S.cur;
