@@ -60,7 +60,7 @@ Start 後・再生ボタン押下の都度 `speak()` が GAS へ 1 件 fetch し
 **再デプロイ済み**（2026-06-26）。`index.html` の `GAS_TTS_URL` を warm 対応デプロイ URL に更新。
 
 ```
-https://script.google.com/macros/s/AKfycbyN0SMY3mjSe_3mw5zKtgP_gERBGcUP4t94q6GBVaLM6S4hclwUHamM8gR07qzbAXNz/exec
+https://script.google.com/macros/s/AKfycbwrv4Fxox4Qigo2jfpGoDgB45_r_l6okLhgIZlZn99XB7Y82UDsJQAXIo_TAmm_aDHD/exec
 ```
 
 セッション開始 → DevTools Network で `warm=1` リクエストを確認推奨。
