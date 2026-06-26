@@ -1,6 +1,7 @@
 # Cursor 実装レポート — TTS プリフェッチ（GAS warm + クライアント先読み）
 
 > 作成日: 2026-06-26  
+> 対象ブランチ: `main`（`cfa14da`）  
 > 指示書: `cursor-tts-prefetch-warmup.md`（Claude 設計）  
 > 前提: RP TTS 対応済み（`accent=ga|rp`）
 
@@ -96,7 +97,7 @@ Start 後・再生ボタン押下の都度 `speak()` が GAS へ 1 件 fetch し
 
 | 項目 | 値 |
 |------|-----|
-| ブランチ | `main` |
+| ブランチ | `main`（`cfa14da`） |
 | GitHub Pages | push 後即反映（クライアント） |
 | GAS | **再デプロイ要**（warm 有効化） |
 
