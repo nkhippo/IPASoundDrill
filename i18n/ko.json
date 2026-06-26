@@ -115,6 +115,11 @@
     "ga": "미국식",
     "rp": "영국식"
   },
+  "guide": {
+    "open": "가이드",
+    "title": "앱 사용 방법",
+    "close": "닫기"
+  },
   "reveal": {
     "rp_note": "RP（영）",
     "ga_note": "GA（미）"

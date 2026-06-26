@@ -235,7 +235,7 @@ Keep the delivery identical and consistent across all words.
 | GA/RP 切替（IPA・キーボード・RP TTS） | ✅ |
 | 連結句 201句 | ✅ |
 | Mode B（Study/Quiz・vocab SRS） | ✅ |
-| 多言語学習ガイド | ⬜ |
+| 多言語学習ガイド | ✅ フェーズ1 |
 | 連結句 RP TTS | ⬜ |
 
 **運用メモ:** Mode A/B の新規 UI 文字列は i18n キー経由。GAS は RP TTS 対応版を再デプロイ済み（`index.html` `GAS_TTS_URL` 参照）。

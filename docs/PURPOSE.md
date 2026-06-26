@@ -72,7 +72,7 @@
 | `neighbors_rp` | **保留**（GA neighbors 流用） |
 | 連結句 RP TTS | 未着手（別タスク） |
 | 本物の B/C 語彙拡張 | 部分（phonics 語は Mode B で利用可。上級日常語の追加は継続） |
-| 多言語学習ガイド | 未着手（独立タスク） |
+| 多言語学習ガイド | ✅ フェーズ1（en/ja/ko/zh-Hant/zh-Hans） |
 
 ---
 

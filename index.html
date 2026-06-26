@@ -174,6 +174,21 @@
   .modal-sub{font-family:var(--mono);font-size:10px;color:var(--faint);text-transform:uppercase;letter-spacing:.14em;margin:0 0 8px}
   .langopt{border:1px solid var(--hair);background:#fff;border-radius:10px;padding:12px 14px;cursor:pointer;font-family:var(--ui);font-size:14px;font-weight:600;color:var(--ink);text-align:left}
   .langopt[aria-pressed="true"]{border-color:var(--signal);background:var(--signal-soft);color:var(--signal)}
+  .guideopen{width:100%;margin-top:4px;border:1px solid var(--signal);background:var(--signal-soft);border-radius:10px;padding:12px 14px;cursor:pointer;font-family:var(--ui);font-size:14px;font-weight:600;color:var(--signal);text-align:left}
+  .guideopen:hover{background:#d4ebe9}
+  .modal-card.guide-card{width:min(100%,560px);max-height:min(88vh,720px);display:flex;flex-direction:column;padding:18px 16px 14px}
+  .guide-head{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:10px}
+  .guide-close{border:1px solid var(--hair);background:#fff;border-radius:999px;padding:6px 12px;cursor:pointer;font-family:var(--mono);font-size:10px;font-weight:600;color:var(--muted);letter-spacing:.04em;text-transform:uppercase;flex-shrink:0}
+  .guide-close:hover{border-color:var(--signal);color:var(--signal)}
+  .guide-lang{margin-bottom:12px}
+  .guide-lang .pills{gap:6px}
+  .guide-lang .pill{padding:6px 12px;font-size:12px}
+  .guide-body{overflow-y:auto;flex:1;min-height:0;font-size:13.5px;color:var(--muted);line-height:1.65;padding-right:4px}
+  .guide-body h3{font-size:14px;font-weight:700;color:var(--ink);margin:20px 0 8px;letter-spacing:.01em}
+  .guide-body h3:first-child{margin-top:0}
+  .guide-body p{margin:0 0 10px}
+  .guide-body strong{color:var(--ink);font-weight:600}
+  .guide-body em{font-style:italic}
   .mcqopts{display:flex;flex-direction:column;gap:8px;margin-top:14px}
   .mcqopt{border:1px solid var(--hair);background:#fff;border-radius:10px;padding:13px 14px;cursor:pointer;font-size:15px;font-weight:600;text-align:left;color:var(--ink);transition:border-color .12s,background .12s}
   .mcqopt:hover:not(:disabled){border-color:var(--signal);background:var(--signal-soft)}
@@ -419,6 +434,29 @@
         <button class="langopt" type="button" data-accent="rp" aria-pressed="false">British (RP)</button>
       </div>
     </div>
+    <div class="settings-section">
+      <button class="guideopen" id="guideOpenBtn" type="button">Guide</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal hidden" id="guideModal" role="dialog" aria-modal="true" aria-labelledby="guideTitle">
+  <button class="modal-scrim" id="guideScrim" type="button" aria-label="Close"></button>
+  <div class="modal-card panel guide-card">
+    <div class="guide-head">
+      <h2 class="modal-title" id="guideTitle">How to use this app</h2>
+      <button class="guide-close" id="guideCloseBtn" type="button">Close</button>
+    </div>
+    <div class="guide-lang">
+      <div class="pills" id="guideLangPills">
+        <button class="pill" type="button" data-guide-lang="en" aria-pressed="true">English</button>
+        <button class="pill" type="button" data-guide-lang="ja" aria-pressed="false">日本語</button>
+        <button class="pill" type="button" data-guide-lang="ko" aria-pressed="false">한국어</button>
+        <button class="pill" type="button" data-guide-lang="zh-Hant" aria-pressed="false">繁體</button>
+        <button class="pill" type="button" data-guide-lang="zh-Hans" aria-pressed="false">简体</button>
+      </div>
+    </div>
+    <div class="guide-body" id="guideBody"></div>
   </div>
 </div>
 
@@ -431,6 +469,10 @@ let WORD_BY_W = {};
 let wordlistReady = false;
 let CONNECTED = [];
 let connectedReady = false;
+let GUIDE = {};
+let guideReady = false;
+let guideLang = "en";
+const GUIDE_ORDER = ["welcome", "philosophy", "solves", "modes", "decode_encode", "connected", "accents", "how_to_use"];
 
 function normalizeWord(row) {
   const w = { w: row.w, ipa: row.ipa, cefr: row.cefr, pos: row.pos };
@@ -476,6 +518,58 @@ async function loadConnected() {
   CONNECTED = (await res.json()).map(normalizeConnected);
   connectedReady = true;
   updatePool();
+}
+
+async function loadGuide() {
+  const res = await fetch("data/guide.json");
+  if (!res.ok) throw new Error("guide load failed: " + res.status);
+  GUIDE = await res.json();
+  guideReady = true;
+}
+
+function mapAppLangToGuide(appLang) {
+  if (appLang === "zh") return "zh-Hans";
+  return appLang;
+}
+
+function escapeHtml(s) {
+  return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+}
+
+function escapeAndBold(s) {
+  return escapeHtml(s)
+    .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>")
+    .replace(/\*([^*]+)\*/g, "<em>$1</em>");
+}
+
+function renderGuide(lang) {
+  guideLang = lang;
+  const data = GUIDE[lang] || GUIDE.en;
+  if (!data) return;
+  const html = GUIDE_ORDER.map(key => {
+    const sec = data[key];
+    if (!sec) return "";
+    const paras = (sec.body || []).map(p => "<p>" + escapeAndBold(p) + "</p>").join("");
+    return "<h3>" + escapeHtml(sec.title) + "</h3>" + paras;
+  }).join("");
+  $("guideBody").innerHTML = html;
+  $("guideLangPills").querySelectorAll(".pill").forEach(b => {
+    b.setAttribute("aria-pressed", b.dataset.guideLang === lang ? "true" : "false");
+  });
+}
+
+async function openGuide() {
+  closeSettings();
+  if (!guideReady) {
+    try { await loadGuide(); } catch (e) { console.error(e); return; }
+  }
+  guideLang = mapAppLangToGuide(LANG);
+  renderGuide(guideLang);
+  show("guideModal", true);
+}
+
+function closeGuide() {
+  show("guideModal", false);
 }
 
 function dataReady() {
@@ -619,6 +713,10 @@ function applyI18n() {
   $("settingsTitle").textContent = t("settings_title");
   $("settingsLangLabel").textContent = t("settings_lang");
   $("settingsAccentLabel").textContent = t("accent.label");
+  $("guideOpenBtn").textContent = t("guide.open");
+  $("guideTitle").textContent = t("guide.title");
+  $("guideCloseBtn").textContent = t("guide.close");
+  $("guideScrim").setAttribute("aria-label", t("guide.close"));
   $("backTopBtn").textContent = t("back_top");
   $("langOpts").querySelectorAll(".langopt").forEach(b => {
     b.textContent = t("lang_opts." + b.dataset.lang);
@@ -654,6 +752,7 @@ async function setLang(lang) {
     refreshRevealIpa();
   }
   if (!$("summary").classList.contains("hidden")) renderSummary();
+  if (!$("guideModal").classList.contains("hidden")) renderGuide(mapAppLangToGuide(LANG));
 }
 
 function setAccent(accent) {
@@ -677,7 +776,8 @@ async function initApp() {
   buildKeyboard();
   Promise.all([
     loadWordlist().catch(err => { console.error(err); $("poolNote").textContent = t("wordlist_fail"); }),
-    loadConnected().catch(err => { console.error(err); if (S.tab === "connected") $("poolNote").textContent = t("load_fail"); })
+    loadConnected().catch(err => { console.error(err); if (S.tab === "connected") $("poolNote").textContent = t("load_fail"); }),
+    loadGuide().catch(err => console.error("guide load failed", err))
   ]).then(() => {
     if (dataReady()) {
       $("startBtn").disabled = false;
@@ -1670,6 +1770,10 @@ function renderSummary(){
 
 $("settingsBtn").addEventListener("click",openSettings);
 $("settingsScrim").addEventListener("click",closeSettings);
+$("guideOpenBtn").addEventListener("click",openGuide);
+$("guideScrim").addEventListener("click",closeGuide);
+$("guideCloseBtn").addEventListener("click",closeGuide);
+$("guideLangPills").querySelectorAll(".pill").forEach(b=>b.addEventListener("click",()=>renderGuide(b.dataset.guideLang)));
 $("langOpts").querySelectorAll(".langopt").forEach(b=>b.addEventListener("click",()=>{setLang(b.dataset.lang);closeSettings();}));
 $("accentOpts").querySelectorAll(".langopt").forEach(b=>b.addEventListener("click",()=>setAccent(b.dataset.accent)));
 initApp();

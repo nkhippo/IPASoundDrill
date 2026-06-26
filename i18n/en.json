@@ -115,6 +115,11 @@
     "ga": "American (GA)",
     "rp": "British (RP)"
   },
+  "guide": {
+    "open": "Guide",
+    "title": "How to use this app",
+    "close": "Close"
+  },
   "reveal": {
     "rp_note": "RP",
     "ga_note": "GA"

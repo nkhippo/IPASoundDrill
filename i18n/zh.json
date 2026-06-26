@@ -115,6 +115,11 @@
     "ga": "美式",
     "rp": "英式"
   },
+  "guide": {
+    "open": "指南",
+    "title": "如何使用本应用",
+    "close": "关闭"
+  },
   "reveal": {
     "rp_note": "RP（英）",
     "ga_note": "GA（美）"

@@ -1,0 +1,277 @@
+{
+  "en": {
+    "welcome": {
+      "title": "Welcome",
+      "body": [
+        "This app is a pronunciation trainer, not a vocabulary app. Its job is narrow and deliberate: to help you re-learn the *sound* of words you already know, and to make you fluent at reading and writing the IPA — the phonetic alphabet that finally makes English spelling predictable. You are not here to memorize new words. You are here to repair the gap between the words you recognize on a page and the sounds those words actually make."
+      ]
+    },
+    "philosophy": {
+      "title": "The idea behind it",
+      "body": [
+        "The whole app rests on one principle: **sounds you cannot produce correctly, you cannot hear correctly.** Perception and production are two sides of one skill. If your mouth has never learned the difference between the vowels in *ship* and *sheep*, or the consonants in *think* and *sink*, then your ears will keep blurring them too — no matter how many hours of listening you do. This is why a pronunciation tool can quietly improve your listening: by training the motor side of a sound, you sharpen the perception of it.",
+        "That is also why every reference voice here is a calm, citation-form pronunciation — the careful dictionary form, not fast conversational speech. You need a stable, clear target to internalize before you can recognize the messier real-world versions."
+      ]
+    },
+    "solves": {
+      "title": "What this app fixes",
+      "body": [
+        "Three gaps, specifically. First, the **vocabulary–pronunciation gap**: you know what a word means, but its sound is not yet settled in your body. Second, **IPA literacy**: English spelling lies constantly, so the only reliable map from letters to sound is the IPA — and most learners can read a little of it but cannot write it. Third, the **perception–production gap** described above, including the small contrasts (θ/f, ð/d, ʃ/tʃ, ɪ/iː) that decide whether you understand a sentence or guess at it.",
+        "It does **not** try to be a general speaking course or a fluency trainer. It works at the level of single words and short phrases, on purpose. Broad conversation practice belongs elsewhere; this is the precision tool."
+      ]
+    },
+    "modes": {
+      "title": "The two modes",
+      "body": [
+        "**Mode A — Pronunciation (the core).** Use this for words you already understand. You drill the link between sound and IPA symbol, scored objectively, with a light spaced-repetition system that brings back the words and the specific symbols you keep missing. This is the heart of the app and where most of your time should go. Pick a phoneme focus — all sounds, the notorious \"trap\" sounds, your own weak spots from history, the alphabet, contractions, irregular forms, casual speech — and the app feeds you matching words.",
+        "**Mode B — Sound → Vocabulary (the sub-theme).** Use this when you want to acquire genuinely new words, sound-first. You hear the word before you see its meaning, then confirm it two ways: choosing the meaning from four options, and typing the spelling from the sound. The wrong answers in the multiple choice are deliberately chosen to be *phonetic neighbors* — words that differ by a single sound — so you cannot pass by elimination. You have to actually hear the difference. In effect it turns every quiz into a minimal-pair listening test.",
+        "A simple rule of thumb: if you already know the word, that is Mode A. If you do not, that is Mode B."
+      ]
+    },
+    "decode_encode": {
+      "title": "Decode and Encode",
+      "body": [
+        "Mode A runs in two directions, and you should practice both. **Decode** shows you the IPA and asks you to write the ordinary spelling — this trains *reading* the phonetic alphabet. **Encode** shows you the word and asks you to build its pronunciation on the IPA keyboard, symbol by symbol — this trains *writing* it, which is far harder and far more revealing. Encode is where you discover that you never actually knew where the stress fell, or which vowel was really in there. Decode confirms you can read; Encode proves you understand."
+      ]
+    },
+    "connected": {
+      "title": "The Connected Speech tab",
+      "body": [
+        "Real speech does not pronounce words one clean piece at a time. It links them, blends them, and drops sounds: *what do you* becomes one smooth run, *next day* loses its middle *t*, *ten boys* turns its *n* toward an *m*. The Connected Speech tab collects these phrases and shows you the IPA of the *connected* result, asking you to recover the original words. The phrases are sorted into three phenomena — linking, assimilation, elision — and three difficulty levels. Start at Level 1 with two-word links, and climb to Level 3, where several effects stack inside one short sentence. This tab explains why fast English sounds nothing like the dictionary, and why that is normal."
+      ]
+    },
+    "accents": {
+      "title": "American (GA) and British (RP)",
+      "body": [
+        "You can set the whole app to General American or to Received Pronunciation, and the choice changes the IPA you see, the keyboard you type on, and the voice you hear. They differ in real ways: RP drops the *r* at the end of *car* and *letter*; the two accents split words like *bath* and *lot* into different vowels. Pick the accent you actually want to sound like, and stay with it long enough to internalize it. When you reveal an answer, the app also shows the other accent's IPA as a footnote, so you can see the contrast without losing your main target. There is no \"correct\" accent — only the one you are choosing to learn."
+      ]
+    },
+    "how_to_use": {
+      "title": "How to use it well",
+      "body": [
+        "Begin in Mode A, Decode, with \"all sounds,\" and let the app learn your weak spots from your mistakes. After a few sessions, switch the focus to \"weak spots\" and let it hunt the symbols you keep missing. Add Encode once Decode feels easy — it will humble you, and that is the point. Visit the Connected Speech tab a couple of times a week to keep your ear ready for real speech. Turn to Mode B when you want to grow your vocabulary through the ear rather than the eye.",
+        "Keep sessions short and frequent rather than long and rare; the spaced-repetition system is built for daily returns. Tap any IPA symbol to open its explanation and example words — use this every time a symbol surprises you. And replay the audio often: the goal is not to answer once, but to make the correct sound feel ordinary. When a contrast finally clicks in your mouth, you will notice you can suddenly hear it too. That moment is the whole point of the app."
+      ]
+    }
+  },
+  "ja": {
+    "welcome": {
+      "title": "はじめに",
+      "body": [
+        "このアプリは語彙を増やすためのものではなく、発音を鍛え直すためのトレーナーです。目的は意図的にひとつに絞られています。すでに意味を知っている単語の「音」だけを学び直し、英語の綴りをようやく予測可能にしてくれる発音記号（IPA）を、読めるだけでなく書けるようにすること。ここで新しい単語を覚える必要はありません。あなたが取り組むのは、紙の上で見覚えのある単語と、その単語が実際に出している音との間にあるズレを埋めることです。"
+      ]
+    },
+    "philosophy": {
+      "title": "このアプリの核心思想",
+      "body": [
+        "すべては一つの原則の上に成り立っています。**正しく発音できない音は、正しく聞き取れない。** 知覚（聞く）と産出（出す）は、一つの技能の表と裏です。もしあなたの口が ship と sheep の母音の違いや、think と sink の子音の違いを一度も学んでいなければ、何時間リスニングを重ねても、耳はその違いをぼかし続けます。だからこそ発音のトレーニングが、静かにリスニング力を押し上げます。ある音を「出す」運動を鍛えることで、その音を「聞き分ける」知覚が鋭くなるからです。",
+        "参照音声がすべて、落ち着いた citation（辞書）形である理由もここにあります。速い会話の音ではなく、丁寧な辞書発音です。現実の崩れた音を聞き分けられるようになる前に、安定した明瞭な手本を体に染み込ませる必要があるのです。"
+      ]
+    },
+    "solves": {
+      "title": "このアプリが解決すること",
+      "body": [
+        "具体的には三つのギャップです。第一に**語彙と発音のギャップ**。単語の意味は知っているのに、その音がまだ身体に定着していない状態です。第二に**IPAリテラシー**。英語の綴りは音を絶えず裏切るので、文字から音への唯一信頼できる地図はIPAだけです。けれど多くの学習者はIPAを少し読めても、書くことはできません。第三に前述の**知覚と産出のギャップ**。文の意味が分かるか当て推量になるかを左右する、θ/f、ð/d、ʃ/tʃ、ɪ/iː といった小さな対立を含みます。",
+        "このアプリは総合的なスピーキング講座でも、流暢さのトレーナーでもありません。あえて単語と短いフレーズの単位で機能します。幅広い会話練習は他に譲り、これは精度を磨くための道具です。"
+      ]
+    },
+    "modes": {
+      "title": "二つのモード",
+      "body": [
+        "**Mode A — 発音（本丸）。** すでに意味を理解している単語に使います。音とIPA記号の対応を、客観採点でドリルします。軽い間隔反復（SRS）が、あなたが繰り返し間違える単語と、特定の記号を呼び戻してくれます。ここがアプリの心臓部で、学習時間の大半を注ぐべき場所です。音素フォーカス（全部／悪名高いトラップ音／履歴から割り出したあなたの弱点／アルファベット／短縮形／不規則形／カジュアル表現）を選ぶと、それに合う単語が出題されます。",
+        "**Mode B — 音から語彙（サブテーマ）。** 本当に新しい単語を、音から覚えたいときに使います。意味を見る前に音を聞き、二通りで確認します。四択から意味を選ぶことと、音から綴りを入力すること。四択の誤答は意図的に**音素近傍**（たった一つの音だけが違う語）から選ばれているため、消去法では通れません。実際に音の違いを聞き取るしかないのです。これにより、すべてのクイズが事実上のミニマルペア聞き取りテストになります。",
+        "簡単な目安。すでに知っている単語ならMode A。知らない単語ならMode Bです。"
+      ]
+    },
+    "decode_encode": {
+      "title": "Decode と Encode",
+      "body": [
+        "Mode A は二方向で動き、両方を練習すべきです。**Decode** はIPAを見せて普通の綴りを書かせます。これは発音記号を「読む」訓練です。**Encode** は単語を見せて、IPAキーボードで発音を一記号ずつ組み立てさせます。これは「書く」訓練で、はるかに難しく、はるかに多くを暴きます。Encodeでこそ、自分が実は強勢の位置を分かっていなかった、どの母音が入っているか曖昧だった、と気づくのです。Decodeは読めることの確認、Encodeは理解していることの証明です。"
+      ]
+    },
+    "connected": {
+      "title": "連結句タブ",
+      "body": [
+        "実際の発話は、単語を一つずつきれいに区切って発音しません。つなげ、混ぜ、音を落とします。what do you は一続きの流れになり、next day は真ん中の t を失い、ten boys は n が m へ寄っていきます。連結句タブはこうしたフレーズを集め、**連結した結果**のIPAを見せて、元の単語を復元させます。フレーズは三つの現象（連結 linking／同化 assimilation／脱落 elision）と三つの難易度に分かれています。まずLevel 1の二語の連結から始め、複数の効果が一つの短い文の中で重なるLevel 3へと登っていきましょう。このタブは、なぜ速い英語が辞書とまるで違って聞こえるのか、そしてそれが当たり前なのだということを教えてくれます。"
+      ]
+    },
+    "accents": {
+      "title": "アメリカ式（GA）とイギリス式（RP）",
+      "body": [
+        "アプリ全体を General American か Received Pronunciation に設定でき、その選択によって、見えるIPA、入力するキーボード、聞こえる音声が変わります。両者は実際に異なります。RPは car や letter の語末の r を落とし、bath や lot のような単語の母音を二つのアクセントで別々に分けます。自分が実際にそう聞こえたいアクセントを選び、体に染み込むまで腰を据えて続けてください。答えを開いたとき、アプリはもう一方のアクセントのIPAも脚注として表示するので、主な手本を見失わずに対比を確認できます。「正しい」アクセントなどなく、あるのはあなたが学ぶと選んだものだけです。"
+      ]
+    },
+    "how_to_use": {
+      "title": "効果的な使い方",
+      "body": [
+        "まずMode AのDecodeで「全部の音」から始め、あなたの間違いからアプリに弱点を学習させましょう。数セッションの後、フォーカスを「弱点」に切り替え、繰り返し外す記号を狙い撃ちさせます。Decodeが楽に感じたらEncodeを加えてください。打ちのめされるはずですが、それこそが狙いです。連結句タブには週に二度ほど立ち寄り、現実の発話に対する耳を保ちましょう。目ではなく耳から語彙を増やしたくなったらMode Bへ向かいます。",
+        "セッションは長く稀にではなく、短く頻繁に。間隔反復は毎日戻ってくることを前提に設計されています。どのIPA記号もタップすれば解説と例語が開きます。記号に驚かされるたびに、これを使ってください。そして音声を何度も再生しましょう。目的は一度正解することではなく、正しい音を「当たり前」に感じられるようにすることです。ある対立がついに口で噛み合ったとき、それが急に聞き取れるようになっていることに気づくはずです。その瞬間こそ、このアプリのすべてです。"
+      ]
+    }
+  },
+  "ko": {
+    "welcome": {
+      "title": "시작하며",
+      "body": [
+        "이 앱은 어휘를 늘리기 위한 것이 아니라 발음을 다시 단련하기 위한 트레이너입니다. 목적은 의도적으로 하나로 좁혀져 있습니다. 이미 뜻을 아는 단어의 '소리'만을 다시 배우고, 영어 철자를 비로소 예측 가능하게 만들어 주는 발음 기호(IPA)를 읽을 수 있을 뿐 아니라 쓸 수 있게 하는 것. 여기서 새로운 단어를 외울 필요는 없습니다. 당신이 메우려는 것은, 종이 위에서 익숙한 단어와 그 단어가 실제로 내는 소리 사이의 틈입니다."
+      ]
+    },
+    "philosophy": {
+      "title": "앱의 핵심 사상",
+      "body": [
+        "모든 것은 하나의 원칙 위에 서 있습니다. **올바르게 발음할 수 없는 소리는, 올바르게 들을 수 없다.** 지각(듣기)과 산출(내기)은 하나의 기능의 양면입니다. 당신의 입이 ship과 sheep의 모음 차이, think와 sink의 자음 차이를 한 번도 배운 적이 없다면, 아무리 오래 듣기를 쌓아도 귀는 그 차이를 계속 뭉개 버립니다. 그래서 발음 훈련이 조용히 듣기 실력을 끌어올립니다. 어떤 소리를 '내는' 운동을 단련함으로써, 그 소리를 '가려내는' 지각이 날카로워지기 때문입니다.",
+        "참조 음성이 모두 차분한 citation(사전) 형태인 이유도 여기에 있습니다. 빠른 대화의 소리가 아니라 정성스러운 사전 발음입니다. 현실의 흐트러진 소리를 가려낼 수 있게 되기 전에, 안정되고 명료한 본보기를 몸에 새겨 넣어야 하기 때문입니다."
+      ]
+    },
+    "solves": {
+      "title": "이 앱이 해결하는 것",
+      "body": [
+        "구체적으로는 세 가지 틈입니다. 첫째, **어휘와 발음의 틈**. 단어의 뜻은 아는데 그 소리가 아직 몸에 정착되지 않은 상태입니다. 둘째, **IPA 문해력**. 영어 철자는 소리를 끊임없이 배신하므로, 문자에서 소리로 가는 유일하게 믿을 수 있는 지도는 IPA뿐입니다. 그러나 많은 학습자는 IPA를 조금 읽을 수는 있어도 쓰지는 못합니다. 셋째, 앞서 말한 **지각과 산출의 틈**. 문장의 뜻을 이해하느냐 어림짐작하느냐를 가르는 θ/f, ð/d, ʃ/tʃ, ɪ/iː 같은 작은 대립을 포함합니다.",
+        "이 앱은 종합적인 말하기 강좌도, 유창함의 트레이너도 아닙니다. 일부러 단어와 짧은 구절 단위로 작동합니다. 폭넓은 회화 연습은 다른 곳에 맡기고, 이것은 정밀도를 갈고닦는 도구입니다."
+      ]
+    },
+    "modes": {
+      "title": "두 가지 모드",
+      "body": [
+        "**Mode A — 발음 (핵심).** 이미 뜻을 이해하는 단어에 사용합니다. 소리와 IPA 기호의 대응을 객관 채점으로 훈련합니다. 가벼운 간격 반복(SRS)이 당신이 반복해서 틀리는 단어와 특정 기호를 다시 불러옵니다. 여기가 앱의 심장부이며, 학습 시간의 대부분을 쏟아야 할 곳입니다. 음소 포커스(전체／악명 높은 트랩 음／이력에서 찾아낸 당신의 약점／알파벳／축약형／불규칙형／구어 표현)를 고르면 거기에 맞는 단어가 출제됩니다.",
+        "**Mode B — 소리에서 어휘로 (보조 주제).** 정말로 새로운 단어를 소리부터 외우고 싶을 때 사용합니다. 뜻을 보기 전에 소리를 듣고, 두 가지로 확인합니다. 사지선다에서 뜻을 고르기, 그리고 소리에서 철자를 입력하기. 사지선다의 오답은 의도적으로 **음소 근방**(단 하나의 소리만 다른 단어)에서 골라지므로, 소거법으로는 통과할 수 없습니다. 실제로 소리의 차이를 들을 수밖에 없습니다. 이로써 모든 퀴즈가 사실상 미니멀 페어 듣기 시험이 됩니다.",
+        "간단한 기준. 이미 아는 단어라면 Mode A. 모르는 단어라면 Mode B입니다."
+      ]
+    },
+    "decode_encode": {
+      "title": "Decode와 Encode",
+      "body": [
+        "Mode A는 두 방향으로 작동하며, 둘 다 연습해야 합니다. **Decode**는 IPA를 보여 주고 보통의 철자를 쓰게 합니다. 이것은 발음 기호를 '읽는' 훈련입니다. **Encode**는 단어를 보여 주고 IPA 키보드로 발음을 한 기호씩 조립하게 합니다. 이것은 '쓰는' 훈련으로, 훨씬 어렵고 훨씬 많은 것을 드러냅니다. Encode에서야말로, 사실 강세의 위치를 몰랐다거나 어떤 모음이 들어 있는지 모호했다는 것을 깨닫게 됩니다. Decode는 읽을 수 있다는 확인이고, Encode는 이해하고 있다는 증명입니다."
+      ]
+    },
+    "connected": {
+      "title": "연결 발화(Connected Speech) 탭",
+      "body": [
+        "실제 발화는 단어를 하나씩 깔끔하게 끊어 발음하지 않습니다. 잇고, 섞고, 소리를 떨어뜨립니다. what do you는 한 줄기의 흐름이 되고, next day는 가운데 t를 잃으며, ten boys는 n이 m 쪽으로 옮겨 갑니다. 연결 발화 탭은 이런 구절을 모아 **연결된 결과**의 IPA를 보여 주고, 원래 단어를 복원하게 합니다. 구절은 세 가지 현상(연결 linking／동화 assimilation／탈락 elision)과 세 가지 난이도로 나뉘어 있습니다. 먼저 Level 1의 두 단어 연결부터 시작해, 여러 효과가 하나의 짧은 문장 안에서 겹치는 Level 3으로 올라가세요. 이 탭은 왜 빠른 영어가 사전과 전혀 다르게 들리는지, 그리고 그것이 당연하다는 것을 가르쳐 줍니다."
+      ]
+    },
+    "accents": {
+      "title": "미국식(GA)과 영국식(RP)",
+      "body": [
+        "앱 전체를 General American 또는 Received Pronunciation으로 설정할 수 있고, 그 선택에 따라 보이는 IPA, 입력하는 키보드, 들리는 음성이 바뀝니다. 둘은 실제로 다릅니다. RP는 car와 letter의 어말 r을 떨어뜨리고, bath나 lot 같은 단어의 모음을 두 악센트에서 각각 다르게 가릅니다. 자신이 실제로 그렇게 들리고 싶은 악센트를 고르고, 몸에 밸 때까지 진득하게 이어 가세요. 답을 펼쳤을 때 앱은 다른 악센트의 IPA도 각주로 표시하므로, 주된 본보기를 잃지 않고 대비를 확인할 수 있습니다. '올바른' 악센트 같은 것은 없으며, 있는 것은 당신이 배우기로 고른 것뿐입니다."
+      ]
+    },
+    "how_to_use": {
+      "title": "효과적인 사용법",
+      "body": [
+        "먼저 Mode A의 Decode에서 '모든 소리'로 시작해, 당신의 실수로부터 앱이 약점을 학습하게 하세요. 몇 세션 뒤, 포커스를 '약점'으로 바꿔 반복해서 놓치는 기호를 정조준하게 합니다. Decode가 수월하게 느껴지면 Encode를 더하세요. 호되게 당할 테지만, 바로 그것이 노림수입니다. 연결 발화 탭에는 일주일에 두어 번 들러 현실의 발화에 대한 귀를 유지하세요. 눈이 아니라 귀로 어휘를 늘리고 싶어지면 Mode B로 향합니다.",
+        "세션은 길고 드물게가 아니라 짧고 자주. 간격 반복은 매일 돌아오는 것을 전제로 설계되어 있습니다. 어떤 IPA 기호든 탭하면 해설과 예시 단어가 열립니다. 기호에 놀랄 때마다 이것을 사용하세요. 그리고 음성을 몇 번이고 재생하세요. 목적은 한 번 맞히는 것이 아니라, 올바른 소리를 '당연하게' 느낄 수 있게 하는 것입니다. 어떤 대립이 마침내 입에서 맞물렸을 때, 그것이 갑자기 들리게 되었음을 깨닫게 됩니다. 그 순간이야말로 이 앱의 전부입니다."
+      ]
+    }
+  },
+  "zh-Hant": {
+    "welcome": {
+      "title": "前言",
+      "body": [
+        "這個應用程式並非用來擴充詞彙，而是一套重新鍛鍊發音的訓練工具。它的目的刻意收得很窄：只重新學習你已經認識的單字的「聲音」，並讓你不僅能讀、更能寫出國際音標（IPA）——正是這套音標，終於讓英語的拼寫變得可以預測。你來這裡不是為了背新單字，而是為了填補一道縫隙：紙上眼熟的單字，和那個單字實際發出的聲音，兩者之間的落差。"
+      ]
+    },
+    "philosophy": {
+      "title": "這個應用背後的理念",
+      "body": [
+        "一切都建立在一條原則之上：**你無法正確發出的聲音，就無法正確聽辨。** 知覺（聽）與產出（發）是同一項能力的一體兩面。如果你的口腔從未學會 ship 與 sheep 的母音之別，或 think 與 sink 的子音之別，那麼無論累積多少小時的聽力，你的耳朵都會繼續把它們混為一談。這正是為什麼一套發音工具能悄悄提升你的聽力：透過鍛鍊一個聲音的「運動」面，你對它的「知覺」也隨之變得銳利。",
+        "這也是為什麼這裡所有的參考語音都是沉穩的 citation（字典）形——是字典裡那種仔細的發音，而非快速的口語。在你能聽辨現實中那些較凌亂的版本之前，必須先把一個穩定、清晰的標的內化進身體。"
+      ]
+    },
+    "solves": {
+      "title": "這個應用要解決什麼",
+      "body": [
+        "具體而言是三道縫隙。其一，**詞彙與發音的縫隙**：你知道單字的意思，但它的聲音尚未在身體裡安頓下來。其二，**音標素養**：英語拼寫不斷欺騙聲音，因此從字母通往聲音唯一可靠的地圖只有 IPA——而多數學習者能讀懂一點，卻寫不出來。其三，前述的**知覺與產出的縫隙**，包括那些決定你是聽懂一句話、還是用猜的小對立（θ/f、ð/d、ʃ/tʃ、ɪ/iː）。",
+        "它**並不**試圖成為一套通用的口說課程或流利度訓練。它刻意在單字與短語的層級上運作。廣泛的會話練習自有他處承擔；這是一把磨精度的工具。"
+      ]
+    },
+    "modes": {
+      "title": "兩種模式",
+      "body": [
+        "**Mode A — 發音（核心）。** 用於你已經理解的單字。你反覆操練聲音與 IPA 符號之間的連結，採客觀計分，並搭配一套輕量的間隔重複系統（SRS），把你一再答錯的單字與特定符號帶回來。這是應用的心臟，也是你應投入最多時間之處。挑一個音素焦點——全部的音、惡名昭彰的「陷阱」音、從歷史紀錄找出的你的弱點、字母、縮寫、不規則形、口語表達——應用便會餵給你相符的單字。",
+        "**Mode B — 從聲音到詞彙（次要主題）。** 當你想以「聲音優先」的方式真正習得新單字時使用。你先聽到單字、再看見意思，然後以兩種方式確認：從四個選項中選出意思，以及依聲音輸入拼寫。選擇題的錯誤選項刻意取自**音素近鄰**（只差一個音的字），因此你無法靠刪去法過關。你只能真正聽出聲音的差別。如此一來，每一道測驗實際上都成了一場最小對立組的聽辨測試。",
+        "一個簡單的判準：已經認得的單字，走 Mode A；不認得的，走 Mode B。"
+      ]
+    },
+    "decode_encode": {
+      "title": "Decode 與 Encode",
+      "body": [
+        "Mode A 以兩個方向運作，兩者都該練。**Decode** 給你看 IPA，要你寫出一般拼寫——這訓練的是「讀」音標。**Encode** 給你看單字，要你用 IPA 鍵盤一個符號一個符號地組出它的發音——這訓練的是「寫」，難得多，也揭露得多。正是在 Encode 裡，你會發現自己其實從不知道重音落在哪、裡頭究竟是哪個母音。Decode 確認你能讀，Encode 證明你真懂。"
+      ]
+    },
+    "connected": {
+      "title": "連音（Connected Speech）分頁",
+      "body": [
+        "真實的話語不會把單字一塊塊乾淨地分開來唸。它把字連起來、揉在一起、還會丟掉某些音：what do you 連成一道順暢的氣流，next day 失去中間的 t，ten boys 的 n 朝著 m 偏移。連音分頁蒐集這些短語，給你看**連起來之後**的 IPA，要你還原出原本的字。這些短語依三種現象（連音 linking／同化 assimilation／省略 elision）與三個難度分級。先從 Level 1 的兩字連音開始，再爬上 Level 3——在那裡，數種效果會疊在同一個短句之內。這個分頁會告訴你，為什麼快速的英語聽起來和字典毫不相像，而那是再正常不過的事。"
+      ]
+    },
+    "accents": {
+      "title": "美式（GA）與英式（RP）",
+      "body": [
+        "你可以把整個應用設為 General American 或 Received Pronunciation，這個選擇會改變你看到的 IPA、你輸入用的鍵盤，以及你聽到的語音。兩者確有實質差異：RP 會丟掉 car 與 letter 字尾的 r；兩種腔調也把 bath、lot 這類字分成不同的母音。挑你真正想聽起來像的那種腔調，並且穩穩地練到把它內化為止。當你揭曉答案時，應用也會把另一種腔調的 IPA 以註腳呈現，讓你在不失去主要標的的情況下對照差異。沒有所謂「正確」的腔調——只有你選擇去學的那一種。"
+      ]
+    },
+    "how_to_use": {
+      "title": "如何用得好",
+      "body": [
+        "先從 Mode A 的 Decode、選「全部的音」開始，讓應用從你的錯誤裡學出你的弱點。幾輪之後，把焦點切到「弱點」，讓它鎖定你一再漏掉的符號。等 Decode 變得輕鬆，再加上 Encode——它會挫挫你的銳氣，而這正是重點。每週上連音分頁兩次左右，讓你的耳朵對真實話語保持準備。當你想透過耳朵、而非眼睛來擴充詞彙時，就轉向 Mode B。",
+        "每次練習要短而頻繁，而非長而稀少；間隔重複系統正是為每天回訪而設計的。任何 IPA 符號都可以點開，看它的解說與例字——每當某個符號讓你意外，就用它。並且經常重播語音：目標不是答對一次，而是讓正確的聲音變得「理所當然」。當某組對立終於在你口中咬合，你會發現自己忽然也聽得見它了。那一刻，正是這個應用的全部意義。"
+      ]
+    }
+  },
+  "zh-Hans": {
+    "welcome": {
+      "title": "前言",
+      "body": [
+        "这个应用并非用来扩充词汇，而是一套重新锤炼发音的训练工具。它的目的刻意收得很窄：只重新学习你已经认识的单词的\"声音\"，并让你不仅能读、更能写出国际音标（IPA）——正是这套音标，终于让英语的拼写变得可以预测。你来这里不是为了背新单词，而是为了填补一道缝隙：纸上眼熟的单词，和那个单词实际发出的声音，两者之间的落差。"
+      ]
+    },
+    "philosophy": {
+      "title": "这个应用背后的理念",
+      "body": [
+        "一切都建立在一条原则之上：**你无法正确发出的声音，就无法正确听辨。** 知觉（听）与产出（发）是同一项能力的一体两面。如果你的口腔从未学会 ship 与 sheep 的元音之别，或 think 与 sink 的辅音之别，那么无论累积多少小时的听力，你的耳朵都会继续把它们混为一谈。这正是为什么一套发音工具能悄悄提升你的听力：通过锤炼一个声音的\"运动\"面，你对它的\"知觉\"也随之变得敏锐。",
+        "这也是为什么这里所有的参考语音都是沉稳的 citation（词典）形——是词典里那种仔细的发音，而非快速的口语。在你能听辨现实中那些较凌乱的版本之前，必须先把一个稳定、清晰的目标内化进身体。"
+      ]
+    },
+    "solves": {
+      "title": "这个应用要解决什么",
+      "body": [
+        "具体而言是三道缝隙。其一，**词汇与发音的缝隙**：你知道单词的意思，但它的声音尚未在身体里安顿下来。其二，**音标素养**：英语拼写不断欺骗声音，因此从字母通往声音唯一可靠的地图只有 IPA——而多数学习者能读懂一点，却写不出来。其三，前述的**知觉与产出的缝隙**，包括那些决定你是听懂一句话、还是靠猜的小对立（θ/f、ð/d、ʃ/tʃ、ɪ/iː）。",
+        "它**并不**试图成为一套通用的口语课程或流利度训练。它刻意在单词与短语的层级上运作。广泛的会话练习自有他处承担；这是一把磨精度的工具。"
+      ]
+    },
+    "modes": {
+      "title": "两种模式",
+      "body": [
+        "**Mode A — 发音（核心）。** 用于你已经理解的单词。你反复操练声音与 IPA 符号之间的连结，采客观计分，并搭配一套轻量的间隔重复系统（SRS），把你一再答错的单词与特定符号带回来。这是应用的心脏，也是你应投入最多时间之处。挑一个音素焦点——全部的音、臭名昭著的\"陷阱\"音、从历史记录找出的你的弱点、字母、缩写、不规则形、口语表达——应用便会喂给你相符的单词。",
+        "**Mode B — 从声音到词汇（次要主题）。** 当你想以\"声音优先\"的方式真正习得新单词时使用。你先听到单词、再看见意思，然后以两种方式确认：从四个选项中选出意思，以及依声音输入拼写。选择题的错误选项刻意取自**音素近邻**（只差一个音的词），因此你无法靠排除法过关。你只能真正听出声音的差别。如此一来，每一道测验实际上都成了一场最小对立组的听辨测试。",
+        "一个简单的判准：已经认得的单词，走 Mode A；不认得的，走 Mode B。"
+      ]
+    },
+    "decode_encode": {
+      "title": "Decode 与 Encode",
+      "body": [
+        "Mode A 以两个方向运作，两者都该练。**Decode** 给你看 IPA，要你写出一般拼写——这训练的是\"读\"音标。**Encode** 给你看单词，要你用 IPA 键盘一个符号一个符号地组出它的发音——这训练的是\"写\"，难得多，也揭露得多。正是在 Encode 里，你会发现自己其实从不知道重音落在哪、里头究竟是哪个元音。Decode 确认你能读，Encode 证明你真懂。"
+      ]
+    },
+    "connected": {
+      "title": "连读（Connected Speech）标签页",
+      "body": [
+        "真实的话语不会把单词一块块干净地分开来念。它把词连起来、揉在一起、还会丢掉某些音：what do you 连成一道顺畅的气流，next day 失去中间的 t，ten boys 的 n 朝着 m 偏移。连读标签页搜集这些短语，给你看**连起来之后**的 IPA，要你还原出原本的词。这些短语依三种现象（连读 linking／同化 assimilation／省略 elision）与三个难度分级。先从 Level 1 的两词连读开始，再爬上 Level 3——在那里，数种效果会叠在同一个短句之内。这个标签页会告诉你，为什么快速的英语听起来和词典毫不相像，而那是再正常不过的事。"
+      ]
+    },
+    "accents": {
+      "title": "美式（GA）与英式（RP）",
+      "body": [
+        "你可以把整个应用设为 General American 或 Received Pronunciation，这个选择会改变你看到的 IPA、你输入用的键盘，以及你听到的语音。两者确有实质差异：RP 会丢掉 car 与 letter 词尾的 r；两种口音也把 bath、lot 这类词分成不同的元音。挑你真正想听起来像的那种口音，并且稳稳地练到把它内化为止。当你揭晓答案时，应用也会把另一种口音的 IPA 以脚注呈现，让你在不失去主要目标的情况下对照差异。没有所谓\"正确\"的口音——只有你选择去学的那一种。"
+      ]
+    },
+    "how_to_use": {
+      "title": "如何用得好",
+      "body": [
+        "先从 Mode A 的 Decode、选\"全部的音\"开始，让应用从你的错误里学出你的弱点。几轮之后，把焦点切到\"弱点\"，让它锁定你一再漏掉的符号。等 Decode 变得轻松，再加上 Encode——它会挫挫你的锐气，而这正是重点。每周上连读标签页两次左右，让你的耳朵对真实话语保持准备。当你想通过耳朵、而非眼睛来扩充词汇时，就转向 Mode B。",
+        "每次练习要短而频繁，而非长而稀少；间隔重复系统正是为每天回访而设计的。任何 IPA 符号都可以点开，看它的解说与例词——每当某个符号让你意外，就用它。并且经常重播语音：目标不是答对一次，而是让正确的声音变得\"理所当然\"。当某组对立终于在你口中咬合，你会发现自己忽然也听得见它了。那一刻，正是这个应用的全部意义。"
+      ]
+    }
+  }
+}
