@@ -5,10 +5,12 @@
   },
   "lead_html": "Drill <b>IPA reading and writing</b> for words you already know&mdash;sound by sound. Target <b>trap phonemes</b> (θ, ð, æ, ʒ, ɝ) or your <b>weak spots</b> from practice history. Objective scoring only; build symbol coverage, not vocabulary lists.",
   "lead_connected_html": "Hear <b>connected speech</b> in GA&mdash;linking, assimilation, and elision. Read the connected IPA and recover the original phrase.",
+  "lead_weak_html": "Hear the <b>weak forms</b> of function words in connected speech. Read the IPA and recover the word.",
   "tab": {
     "label": "Practice mode",
     "words": "Words",
-    "connected": "Connected Speech"
+    "connected": "Connected Speech",
+    "weak": "Weak Forms"
   },
   "mode": {
     "label": "Learning mode",
@@ -47,6 +49,10 @@
       "l3": "Advanced"
     }
   },
+  "weak": {
+    "strong_label": "Strong",
+    "weak_label": "Weak"
+  },
   "focus": {
     "label": "Phoneme focus",
     "all": "All sounds",
@@ -69,7 +75,8 @@
   },
   "pool": {
     "count": "Pool: {n} words",
-    "count_phrases": "Pool: {n} phrases"
+    "count_phrases": "Pool: {n} phrases",
+    "count_weak": "Pool: {n} weak forms"
   },
   "dir": {
     "label": "Direction",

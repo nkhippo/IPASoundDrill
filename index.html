@@ -245,11 +245,13 @@
       <div class="tabbar" id="tabOpts" role="tablist">
         <button class="opt" role="tab" data-tab="words" aria-pressed="true" id="tabWords"><span class="ot" id="tabWordsT">Words</span></button>
         <button class="opt" role="tab" data-tab="connected" aria-pressed="false" id="tabConnected"><span class="ot" id="tabConnectedT">Connected Speech</span></button>
+        <button class="opt" role="tab" data-tab="weak" aria-pressed="false" id="tabWeak"><span class="ot" id="tabWeakT">Weak Forms</span></button>
       </div>
     </div>
 
     <p class="lead" id="lead">Drill <b>IPA reading and writing</b> for words you already know&mdash;sound by sound. Target <b>trap phonemes</b> (θ, ð, æ, ʒ, ɝ) or your <b>weak spots</b> from practice history. Objective scoring only; build symbol coverage, not vocabulary lists.</p>
     <p class="lead hidden" id="leadConnected">Hear <b>connected speech</b> in GA&mdash;linking, assimilation, and elision. Read the connected IPA and recover the original phrase.</p>
+    <p class="lead hidden" id="leadWeak">Hear <b>weak forms</b> of function words in connected speech. Read the IPA and recover the word.</p>
 
     <p class="lead hidden" id="leadModeB">Learn <b>new words from sound</b>&mdash;hear the word, then match meaning and spelling. CEFR band progression with spaced review.</p>
 
@@ -314,7 +316,7 @@
           <button class="pill" data-cs-level="3" aria-pressed="false" id="csLevelL3">Advanced</button>
         </div>
       </div>
-      <div class="field">
+      <div class="field hidden" id="csTypeField">
         <div class="flabel" id="flabelCs">Type</div>
         <div class="pills" id="csPills">
           <button class="pill" data-cs="all" aria-pressed="true" id="csAll">All</button>
@@ -472,6 +474,8 @@ let WORD_BY_W = {};
 let wordlistReady = false;
 let CONNECTED = [];
 let connectedReady = false;
+let WEAK = [];
+let weakReady = false;
 let GUIDE = {};
 let guideReady = false;
 let guideLang = "en";
@@ -522,6 +526,30 @@ async function loadConnected() {
   CONNECTED = (await res.json()).map(normalizeConnected);
   connectedReady = true;
   updatePool();
+}
+
+async function loadWeak() {
+  const res = await fetch("data/weak_forms.json");
+  if (!res.ok) throw new Error("weak forms load failed: " + res.status);
+  WEAK = (await res.json()).map(normalizeWeak);
+  weakReady = true;
+  updatePool();
+}
+
+function normalizeWeak(row) {
+  const c = {
+    w: row.w,
+    ipa: row.ipa,
+    ipa_strong: row.ipa_strong,
+    level: row.level,
+    src: "weak_form",
+    cs_rule: row.cs_rule,
+    carriers: row.carriers || null
+  };
+  if (row.id) c.id = row.id;
+  if (row.rp_ipa) c.rp_ipa = row.rp_ipa;
+  if (row.rp_ipa_strong) c.rp_ipa_strong = row.rp_ipa_strong;
+  return c;
 }
 
 async function loadGuide() {
@@ -577,7 +605,7 @@ function closeGuide() {
 }
 
 function dataReady() {
-  return wordlistReady && connectedReady;
+  return wordlistReady && connectedReady && weakReady;
 }
 
 /* ---------- i18n ---------- */
@@ -632,6 +660,11 @@ function wordGloss(c) {
 function posLabel(pos) { return (UI.pos && UI.pos[pos]) || pos || "—"; }
 
 function isConnectedItem(c) { return !!(c && c.cs_type); }
+function isWeakItem(c) { return !!(c && c.src === "weak_form"); }
+function activeStrongIpa(c) {
+  if (!c) return "";
+  return ACCENT === "rp" ? (c.rp_ipa_strong || c.ipa_strong || c.ipa) : (c.ipa_strong || c.ipa);
+}
 
 function csTypeLabel(type) {
   if (!type || type === "all") return "";
@@ -650,6 +683,7 @@ function applyI18n() {
   $("brandSub").textContent = t("brand.sub");
   $("lead").innerHTML = t("lead_html");
   $("leadConnected").innerHTML = t("lead_connected_html");
+  $("leadWeak").innerHTML = t("lead_weak_html");
   $("flabelTab").textContent = t("tab.label");
   $("flabelMode").textContent = t("mode.label");
   $("modeAT").textContent = t("mode.a");
@@ -663,6 +697,7 @@ function applyI18n() {
   $("mbDCheck").textContent = t("check");
   $("tabWordsT").textContent = t("tab.words");
   $("tabConnectedT").textContent = t("tab.connected");
+  $("tabWeakT").textContent = t("tab.weak");
   $("flabelCs").textContent = t("cs.label");
   $("flabelCsLevel").textContent = t("cs.level.label");
   $("csLevelAll").textContent = t("cs.level.all");
@@ -781,6 +816,7 @@ async function initApp() {
   Promise.all([
     loadWordlist().catch(err => { console.error(err); $("poolNote").textContent = t("wordlist_fail"); }),
     loadConnected().catch(err => { console.error(err); if (S.tab === "connected") $("poolNote").textContent = t("load_fail"); }),
+    loadWeak().catch(err => { console.error(err); if (S.tab === "weak") $("poolNote").textContent = t("load_fail"); }),
     loadGuide().catch(err => console.error("guide load failed", err))
   ]).then(() => {
     if (dataReady()) {
@@ -912,10 +948,12 @@ function updateSetupFields(){
   show("tabField",!modeB);
   show("modebSetup",modeB);
   show("wordsSetup",words);
-  show("connectedSetup",S.tab==="connected"&&!modeB);
+  show("connectedSetup",(S.tab==="connected"||S.tab==="weak")&&!modeB);
+  show("csTypeField",S.tab==="connected"&&!modeB);
   show("lead",words);
   show("leadModeB",modeB);
   show("leadConnected",S.tab==="connected"&&!modeB);
+  show("leadWeak",S.tab==="weak"&&!modeB);
   show("grpField",words&&S.reg==="regular");
   $("focusTrapNote").textContent=words&&(S.focus==="traps"?t("focus.traps_d"):S.focus==="weak"?t("focus.weak_d"):"");
   $("dInput").placeholder=S.tab==="connected"?t("input_phrase"):t("input_ph");
@@ -963,6 +1001,11 @@ function filteredConnectedPool(){
   if(S.csFilter!=="all")p=p.filter(x=>x.cs_type===S.csFilter);
   return p;
 }
+function filteredWeakPool(){
+  let p=WEAK.slice();
+  if(S.csLevel!=="all")p=p.filter(x=>String(x.level)===S.csLevel);
+  return p;
+}
 function updatePool(){
   if(S.appMode==="b"){
     refreshVocabBandUnlock();
@@ -977,6 +1020,12 @@ function updatePool(){
   if(S.tab==="connected"){
     const n=filteredConnectedPool().length;
     $("poolNote").textContent=t("pool.count_phrases",{n});
+    if(dataReady())$("startBtn").disabled=n===0;
+    return;
+  }
+  if(S.tab==="weak"){
+    const n=filteredWeakPool().length;
+    $("poolNote").textContent=t("pool.count_weak",{n});
     if(dataReady())$("startBtn").disabled=n===0;
     return;
   }
@@ -1152,16 +1201,24 @@ let prefetchToken = 0;
 let currentAudio = null;
 let speakBusy = false;
 
-function ttsAccent(connected) {
-  if (connected) return "ga";
+function parseSpeakOpts(opts) {
+  if (typeof opts === "boolean") return { connected: !!opts };
+  return opts || {};
+}
+function ttsAccent(opts) {
+  const o = parseSpeakOpts(opts);
+  if (o.connected) return "ga";
+  if (o.weak) return currentAccent();
   return ACCENT === "rp" ? "rp" : "ga";
 }
-function ttsCacheSlug(text, connected) {
+function ttsCacheSlug(text, opts) {
+  const o = parseSpeakOpts(opts);
+  if (o.weak) return "weak_" + String(o.ww || text).toLowerCase().replace(/[^a-z0-9]+/g, "_");
   const base = text.toLowerCase().replace(/[^a-z0-9]+/g, "_");
-  return connected ? "p_" + base : base;
+  return o.connected ? "p_" + base : base;
 }
-function lsKey(text, connected) {
-  return LS_TTS_PREFIX + ttsAccent(connected) + ":" + ttsCacheSlug(text, connected);
+function lsKey(text, opts) {
+  return LS_TTS_PREFIX + ttsAccent(opts) + ":" + ttsCacheSlug(text, opts);
 }
 function lsKeyAccent(word, accent) {
   return LS_TTS_PREFIX + accent + ":" + ttsCacheSlug(word, false);
@@ -1172,8 +1229,10 @@ function legacyLsKey(text, connected) {
     : text.toLowerCase().replace(/[^a-z0-9]+/g, "_");
   return LS_TTS_PREFIX + slug;
 }
-function memCacheKey(text, connected) {
-  return ttsAccent(connected) + ":" + (connected ? "p:" + text.toLowerCase() : text);
+function memCacheKey(text, opts) {
+  const o = parseSpeakOpts(opts);
+  if (o.weak) return currentAccent() + ":weak:" + o.ww;
+  return ttsAccent(o) + ":" + (o.connected ? "p:" + text.toLowerCase() : text);
 }
 function memKeyAccent(word, accent) {
   return accent + ":" + word;
@@ -1216,8 +1275,24 @@ function loadAudioFromLSAccent(word, accent) {
   }
 }
 
-function loadAudioFromLS(text, connected) {
-  return loadAudioFromLSAccent(text, ttsAccent(connected));
+function loadAudioFromLS(text, opts) {
+  const o = parseSpeakOpts(opts);
+  try {
+    const key = lsKey(text, o);
+    let raw = localStorage.getItem(key);
+    if (!raw && !o.weak && !o.connected && ttsAccent(o) === "ga") {
+      raw = localStorage.getItem(legacyLsKey(text, false));
+      if (raw) { try { localStorage.setItem(key, raw); } catch (e) {} }
+    }
+    if (!raw) return null;
+    const data = JSON.parse(raw);
+    if (!data || !data.b64) return null;
+    const blob = new Blob([bytesFromB64(data.b64)], { type: data.mime || "audio/mpeg" });
+    return URL.createObjectURL(blob);
+  } catch (err) {
+    console.warn("localStorage audio load failed", err);
+    return null;
+  }
 }
 
 function saveAudioToLSAccent(word, accent, mime, b64) {
@@ -1228,8 +1303,12 @@ function saveAudioToLSAccent(word, accent, mime, b64) {
   }
 }
 
-function saveAudioToLS(text, connected, mime, b64) {
-  saveAudioToLSAccent(text, ttsAccent(connected), mime, b64);
+function saveAudioToLS(text, opts, mime, b64) {
+  try {
+    localStorage.setItem(lsKey(text, opts), JSON.stringify({ mime: mime || "audio/mpeg", b64 }));
+  } catch (err) {
+    console.warn("localStorage audio save failed", err);
+  }
 }
 
 async function fetchAudioFromGasAccent(word, accent) {
@@ -1240,16 +1319,29 @@ async function fetchAudioFromGasAccent(word, accent) {
   return data;
 }
 
-async function fetchAudioFromGas(text, connected) {
-  const accent = ttsAccent(connected);
-  const q = connected
-    ? "phrase=" + encodeURIComponent(text) + "&accent=ga"
-    : "word=" + encodeURIComponent(text) + "&accent=" + accent;
+async function fetchAudioFromGas(text, opts) {
+  const o = parseSpeakOpts(opts);
+  let q;
+  if (o.weak) {
+    const accent = currentAccent();
+    q = "weak=" + encodeURIComponent(o.weak) + "&ww=" + encodeURIComponent(o.ww) + "&accent=" + accent;
+  } else if (o.connected) {
+    q = "phrase=" + encodeURIComponent(text) + "&accent=ga";
+  } else {
+    q = "word=" + encodeURIComponent(text) + "&accent=" + ttsAccent(o);
+  }
   const res = await fetch(GAS_TTS_URL + "?" + q);
   if (!res.ok) throw new Error("GAS HTTP " + res.status);
   const data = await res.json();
   if (!data.ok) throw new Error(data.error || "GAS error");
   return data;
+}
+
+function speakOptsForItem(c) {
+  if (!c) return {};
+  if (isWeakItem(c)) return { weak: activeIpa(c), ww: c.w };
+  if (isConnectedItem(c)) return { connected: true };
+  return {};
 }
 
 function currentCardWord() {
@@ -1275,7 +1367,7 @@ function refreshSpeakerFor(word, accent) {
 
 function refreshAllSpeakers() {
   if (speakBusy) return;
-  if (S.tab === "connected") {
+  if (S.tab === "connected" || S.tab === "weak" || isConnectedItem(S.cur) || isWeakItem(S.cur)) {
     speakerIdsForCurrentCard().forEach(id => { const b = $(id); if (b) b.disabled = false; });
     return;
   }
@@ -1332,7 +1424,7 @@ async function prefetchIdleBodies(words, accent, token) {
 }
 
 async function prefetchAccentBodies(accent) {
-  if (S.tab === "connected" || !S.queue.length) return;
+  if (S.tab === "connected" || S.tab === "weak" || !S.queue.length) return;
   const token = prefetchToken;
   const words = [...new Set(S.queue.map(c => c.w).filter(Boolean))];
   for (const w of words) {
@@ -1351,7 +1443,7 @@ async function prefetchAccentBodies(accent) {
 }
 
 function prefetchSessionAudio(queue) {
-  if (S.tab === "connected") return;
+  if (S.tab === "connected" || S.tab === "weak") return;
   prefetchToken++;
   const token = prefetchToken;
   const words = [...new Set(queue.map(c => c.w).filter(Boolean))];
@@ -1394,27 +1486,27 @@ function setSpeakerBusy(busy) {
 }
 
 async function speak(text, opts) {
-  const connected = opts && opts.connected;
+  const o = parseSpeakOpts(opts);
   if (!text || speakBusy) return;
   if (currentAudio) {
     currentAudio.pause();
     currentAudio = null;
   }
   setSpeakerBusy(true);
-  const cacheKey = memCacheKey(text, connected);
+  const cacheKey = memCacheKey(text, o);
   try {
     let url = memAudioCache.get(cacheKey);
     if (!url) {
-      url = loadAudioFromLS(text, connected);
+      url = loadAudioFromLS(text, o);
       if (url) memAudioCache.set(cacheKey, url);
     }
     if (!url) {
-      const data = await fetchAudioFromGas(text, connected);
-      saveAudioToLS(text, connected, data.mimeType, data.audio);
+      const data = await fetchAudioFromGas(text, o);
+      saveAudioToLS(text, o, data.mimeType, data.audio);
       const blob = new Blob([bytesFromB64(data.audio)], { type: data.mimeType || "audio/mpeg" });
       url = URL.createObjectURL(blob);
       memAudioCache.set(cacheKey, url);
-      if (!connected) {
+      if (!o.connected && !o.weak) {
         const acc = currentAccent();
         audioReady.set(audioReadyKey(text, acc), "ready");
       }
@@ -1470,6 +1562,11 @@ function startSession(weakOnly){
   let pool;
   if(S.tab==="connected"){
     pool=shuffle(filteredConnectedPool().slice());
+    if(pool.length>QUESTION_COUNT)pool=pool.slice(0,QUESTION_COUNT);
+  }else if(S.tab==="weak"){
+    pool=weakOnly
+      ?shuffle(WEAK.filter(w=>S.missed.includes(w.w))).slice(0,QUESTION_COUNT)
+      :shuffle(filteredWeakPool().slice());
     if(pool.length>QUESTION_COUNT)pool=pool.slice(0,QUESTION_COUNT);
   }else if(weakOnly&&S.missed.length){
     if(S.tab==="connected"){
@@ -1551,7 +1648,7 @@ function renderConnectedPrompt(c){
 function renderCard(){
   if(S.idx>=S.queue.length)return renderSummary();
   const c=S.queue[S.idx];S.cur=c;S.revealed=false;S.built=[];S.mbQuiz=null;
-  S.curCarrier=isConnectedItem(c)?pickCarrier(c):null;
+  S.curCarrier=(isConnectedItem(c)||isWeakItem(c))?pickCarrier(c):null;
   show("reveal",false);hideModeBCards();
   $("meter").innerHTML='<b>'+(S.idx+1)+'</b> / '+S.queue.length;
   if(S.appMode==="b"){
@@ -1560,7 +1657,7 @@ function renderCard(){
     refreshAllSpeakers();
     return;
   }
-  if(S.tab==="connected"||S.dir==="decode")renderDecode(c);else renderEncode(c);
+  if(S.tab==="connected"||S.tab==="weak"||S.dir==="decode")renderDecode(c);else renderEncode(c);
   refreshAllSpeakers();
 }
 /* DECODE */
@@ -1581,7 +1678,7 @@ function renderDecode(c){
   show("cardEncode",false);show("cardDecode",true);
   $("dNo").textContent="#"+String(S.idx+1).padStart(2,"0");
   $("dInfo").classList.remove("on");
-  if(isConnectedItem(c)&&S.curCarrier){
+  if((isConnectedItem(c)||isWeakItem(c))&&S.curCarrier){
     renderConnectedPrompt(c);
   }else{
     renderIpaInto($("dIpa"),activeIpa(c),"dInfo",null);
@@ -1618,7 +1715,7 @@ $("dInput").addEventListener("input",e=>{
   if(cleaned!==el.value){const pos=el.selectionStart;el.value=cleaned;el.setSelectionRange(Math.min(pos,cleaned.length),Math.min(pos,cleaned.length));}
 });
 $("dInput").addEventListener("keydown",e=>{if(e.key==="Enter")decodeCheck();});
-$("dPlay").addEventListener("click",()=>{if(S.cur)speak(S.cur.w,{connected:isConnectedItem(S.cur)});});
+$("dPlay").addEventListener("click",()=>{if(S.cur)speak(S.cur.w,speakOptsForItem(S.cur));});
 
 /* ENCODE + IPA keyboard */
 function keyGroups(){
@@ -1684,6 +1781,10 @@ $("eCheck").addEventListener("click",encodeCheck);
 
 /* ---------- reveal ---------- */
 function autoNote(c){
+  if(isWeakItem(c)){
+    const rule=csRuleText(c);
+    return rule?t("cs.ruleLabel")+": "+rule:"";
+  }
   if(isConnectedItem(c)){
     const parts=[];
     if(c.cs_type)parts.push(csTypeLabel(c.cs_type));
@@ -1727,7 +1828,13 @@ function reveal(res,ctx){
   panel.classList.add("res-"+res);
   $("rWord").textContent=c.w;
   $("rGloss").textContent=wordGloss(c);
-  if(isConnectedItem(c)){
+  if(isWeakItem(c)){
+    $("rCsMeta").textContent=t("weak.strong_label")+": "+activeStrongIpa(c)
+      +"  ↔  "+t("weak.weak_label")+": "+activeIpa(c);
+    $("rCsMeta").classList.remove("hidden");
+    $("rTraps").innerHTML="";
+    $("tipsHead").textContent=t("cs.ruleLabel");
+  }else if(isConnectedItem(c)){
     $("rCsMeta").textContent=csTypeLabel(c.cs_type)+" · "+t("cs.ruleLabel")+": "+csRuleText(c);
     $("rCsMeta").classList.remove("hidden");
     $("rTraps").innerHTML="";
@@ -1754,12 +1861,12 @@ function reveal(res,ctx){
   }
   refreshRevealIpa(marker);
   $("rNote").textContent=autoNote(c);
-  if(!isConnectedItem(c)){
+  if(!isConnectedItem(c)&&!isWeakItem(c)){
     const traps=[...new Set(phonemesOf(activeIpa(c)))].filter(s=>PH[s].t===1);
     $("rTraps").innerHTML=traps.map(s=>'<span class="trapchip" data-sym="'+s+'">'+s+'</span>').join("");
     $("rTraps").querySelectorAll(".trapchip").forEach(ch=>ch.addEventListener("click",()=>renderInfo("rInfo",ch.dataset.sym)));
   }
-  setTimeout(()=>speak(c.w,{connected:isConnectedItem(c)}),200);
+  setTimeout(()=>speak(c.w,speakOptsForItem(c)),200);
   refreshAllSpeakers();
 }
 function nextCard(){
@@ -1785,7 +1892,7 @@ $("mbDInput").addEventListener("input",e=>{
   const el=e.target,cleaned=el.value.replace(/[^A-Za-z]/g,"");
   if(cleaned!==el.value){const pos=el.selectionStart;el.value=cleaned;el.setSelectionRange(Math.min(pos,cleaned.length),Math.min(pos,cleaned.length));}
 });
-$("rPlay").addEventListener("click",()=>{if(S.cur)speak(S.cur.w,{connected:isConnectedItem(S.cur)});});
+$("rPlay").addEventListener("click",()=>{if(S.cur)speak(S.cur.w,speakOptsForItem(S.cur));});
 
 /* ---------- summary ---------- */
 function renderSummary(){
@@ -1801,7 +1908,7 @@ function renderSummary(){
     $("weakList").innerHTML='<div class="wk"><div style="flex:1"><div class="wlab">'+t("summary.weak_none_t")+'</div><div class="wtip">'+t("summary.weak_none_d")+'</div></div></div>';
   }
   const list=S.missed.length?S.missed.map(w=>{
-    const o=PRESET.find(x=>x.w===w)||CONNECTED.find(x=>x.w===w);
+    const o=PRESET.find(x=>x.w===w)||CONNECTED.find(x=>x.w===w)||WEAK.find(x=>x.w===w);
     return o?'<b>'+activeIpa(o)+'</b> '+w:"";
   }).filter(Boolean).join(" · "):"";
   $("reviewList").innerHTML=list?t("summary.review",{list}):"";

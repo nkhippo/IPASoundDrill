@@ -5,10 +5,12 @@
   },
   "lead_html": "针对<b>已知单词</b>逐音素训练<b>IPA读写</b>。专攻<b>陷阱音</b>（θ, ð, æ, ʒ, ɝ）或练习记录中的<b>薄弱音</b>。仅客观评分；提升音标覆盖，而非词汇量。",
   "lead_connected_html": "听辨 GA 的<b>连读现象</b>（连读、同化、脱落）。根据连读后的 IPA 还原原短语。",
+  "lead_weak_html": "听功能词的<b>弱读形式</b>，读出 IPA 还原单词。",
   "tab": {
     "label": "练习模式",
     "words": "单词",
-    "connected": "连读·脱落·同化"
+    "connected": "连读·脱落·同化",
+    "weak": "弱读形式"
   },
   "mode": {
     "label": "学习模式",
@@ -47,6 +49,10 @@
       "l3": "高级"
     }
   },
+  "weak": {
+    "strong_label": "强读",
+    "weak_label": "弱读"
+  },
   "focus": {
     "label": "音素聚焦",
     "all": "全部",
@@ -69,7 +75,8 @@
   },
   "pool": {
     "count": "词库 {n} 词",
-    "count_phrases": "词库 {n} 句"
+    "count_phrases": "词库 {n} 句",
+    "count_weak": "词库 {n} 弱读形式"
   },
   "dir": {
     "label": "方向",

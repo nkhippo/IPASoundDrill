@@ -5,10 +5,12 @@
   },
   "lead_html": "이미 아는 단어로 <b>IPA 읽기·쓰기</b>를 음소 단위로 훈련합니다. <b>함정 소리</b>(θ, ð, æ, ʒ, ɝ)나 연습 기록의 <b>약점 소리</b>를 집중 공략. 객관 채점만 사용하며, 어휘 목록이 아니라 기호 커버리지를 키웁니다.",
   "lead_connected_html": "GA <b>연음</b>(연음·동화·탈락)을 듣고, 연음된 IPA에서 원래 구를 맞춥니다.",
+  "lead_weak_html": "기능어의 <b>약형</b>을 듣고 IPA를 읽어 단어를 맞히세요.",
   "tab": {
     "label": "연습 모드",
     "words": "단어",
-    "connected": "연음·탈락·동화"
+    "connected": "연음·탈락·동화",
+    "weak": "약형"
   },
   "mode": {
     "label": "학습 모드",
@@ -47,6 +49,10 @@
       "l3": "고급"
     }
   },
+  "weak": {
+    "strong_label": "강형",
+    "weak_label": "약형"
+  },
   "focus": {
     "label": "음소 포커스",
     "all": "전체",
@@ -69,7 +75,8 @@
   },
   "pool": {
     "count": "대상 {n}개 단어",
-    "count_phrases": "대상 {n}개 구"
+    "count_phrases": "대상 {n}개 구",
+    "count_weak": "대상 {n}개 약형"
   },
   "dir": {
     "label": "방향",

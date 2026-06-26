@@ -5,10 +5,12 @@
   },
   "lead_html": "既知の単語で<b>IPAの読み書き</b>を音素単位で鍛えるツール。<b>トラップ音</b>（θ, ð, æ, ʒ, ɝ）や<b>練習履歴の苦手音</b>を狙って出題。客観採点のみで、語彙リストではなく記号カバーを伸ばします。",
   "lead_connected_html": "GAの<b>連結発音</b>（連結・同化・脱落）を聞き取り、連結後のIPAから元の句を当てます。",
+  "lead_weak_html": "機能語の<b>弱形</b>を聞き取る。IPAを読んで元の語を答える。",
   "tab": {
     "label": "練習モード",
     "words": "単語",
-    "connected": "連結・脱落・同化"
+    "connected": "連結・脱落・同化",
+    "weak": "弱形"
   },
   "mode": {
     "label": "学習モード",
@@ -47,6 +49,10 @@
       "l3": "上級"
     }
   },
+  "weak": {
+    "strong_label": "強形",
+    "weak_label": "弱形"
+  },
   "focus": {
     "label": "音素フォーカス",
     "all": "すべて",
@@ -69,7 +75,8 @@
   },
   "pool": {
     "count": "対象 {n} 語",
-    "count_phrases": "対象 {n} 句"
+    "count_phrases": "対象 {n} 句",
+    "count_weak": "対象 {n} 弱形"
   },
   "dir": {
     "label": "方向",

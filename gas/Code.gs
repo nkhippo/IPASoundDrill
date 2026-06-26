@@ -7,6 +7,7 @@
  * Query: GET ?word=luck[&accent=ga|rp]
  *        GET ?phrase=check%20it[&accent=ga]  (connected; GA only)
  *        GET ?warm=1&words=luck,colour&accent=ga  (Drive warmup; no audio body)
+ *        GET ?weak=/kən/&ww=can&accent=ga|rp  (weak form; IPA input)
  */
 
 const FOLDER_NAME = 'IPA-TTS-Audio';
@@ -16,6 +17,8 @@ const TTS_VOICE = 'alloy';
 const TTS_INSTRUCTIONS_GA = 'Pronounce the single English word in a clear General American accent. Use the citation (dictionary) form: full, unreduced vowels and the correct lexical stress — do not use the weak or reduced connected-speech form, even for function words. Say the word once, at a calm pace slightly slower than conversational, with neutral falling intonation. Articulate consonants precisely and keep contrasts distinct — especially /θ/–/f/, /ð/–/d/, /l/–/r/, /s/–/ʃ/, /b/–/v/, and word-final consonants — but stay natural and never exaggerate them into distortion. Do not spell the word, do not add any other words, do not pause, and do not use emotional or expressive delivery. Keep the delivery identical and consistent across all words.';
 const TTS_INSTRUCTIONS_RP = 'Pronounce the single English word in a clear modern Received Pronunciation (standard Southern British) accent. Use the citation (dictionary) form: full, unreduced vowels and the correct lexical stress — do not use the weak or reduced connected-speech form, even for function words. Say the word once, at a calm pace slightly slower than conversational, with neutral falling intonation. Articulate consonants precisely and keep contrasts distinct — especially /θ/–/f/, /ð/–/d/, /l/–/r/, /s/–/ʃ/, /b/–/v/, and word-final consonants — but stay natural and never exaggerate them into distortion. Do not spell the word, do not add any other words, do not pause, and do not use emotional or expressive delivery. Keep the delivery identical and consistent across all words.';
 const TTS_CONNECTED_INSTRUCTIONS = 'Pronounce the English phrase in a clear General American accent with natural connected speech: link words smoothly, apply assimilation and elision where native speakers would, and use weak forms where appropriate. Say the phrase once at a calm conversational pace with neutral intonation. Do not spell letters, do not add extra words, and do not pause between words unnaturally.';
+const TTS_WEAK_INSTRUCTIONS_GA = 'Pronounce this English function word using its WEAK (reduced) form exactly as the IPA indicates, as it sounds inside connected speech — typically with a schwa /ə/. Use a clear General American accent, calm and natural, said once. Do NOT use the strong citation form. Do not spell it, add words, or pause.';
+const TTS_WEAK_INSTRUCTIONS_RP = 'Pronounce this English function word using its WEAK (reduced) form exactly as the IPA indicates, as it sounds inside connected speech — typically with a schwa /ə/. Use a clear modern Received Pronunciation (standard Southern British) accent, calm and natural, said once. Do NOT use the strong citation form. Do not spell it, add words, or pause.';
 // Normal single-word MP3s are ~12 KB+; near-silent glitches (e.g. flight at 5.7 KB) stay below this.
 const TTS_MIN_BYTES = 9000;
 const WARM_MAX = 6;
@@ -39,8 +42,27 @@ function fileNameFor_(input, accent) {
   return slugForInput_(input) + '__' + acc + '_' + TTS_CACHE_VER + '.mp3';
 }
 
+function fileNameForWeak_(weakWord, accent) {
+  return slugForInput_(weakWord) + '__' + normalizeAccent_(accent) + '_weak_' + TTS_CACHE_VER + '.mp3';
+}
+
 function legacyFileNameFor_(input) {
   return slugForInput_(input) + '_' + TTS_CACHE_VER + '.mp3';
+}
+
+function getAudioFromDriveWeak_(weakWord, accent) {
+  const folder = getFolder_();
+  const name = fileNameForWeak_(weakWord, accent);
+  const files = folder.getFilesByName(name);
+  if (files.hasNext()) return files.next().getBlob();
+  return null;
+}
+
+function trashAudioOnDriveWeak_(weakWord, accent) {
+  const folder = getFolder_();
+  const name = fileNameForWeak_(weakWord, accent);
+  const files = folder.getFilesByName(name);
+  while (files.hasNext()) files.next().setTrashed(true);
 }
 
 function getAudioFromDrive_(input, accent) {
@@ -66,6 +88,10 @@ function trashAudioOnDrive_(input, accent) {
   const name = fileNameFor_(input, accent);
   const files = folder.getFilesByName(name);
   while (files.hasNext()) files.next().setTrashed(true);
+}
+
+function instructionsForWeak_(accent) {
+  return normalizeAccent_(accent) === 'rp' ? TTS_WEAK_INSTRUCTIONS_RP : TTS_WEAK_INSTRUCTIONS_GA;
 }
 
 function instructionsFor_(accent, connected) {
@@ -102,6 +128,14 @@ function fetchFromOpenAIWithRetry_(text, instructions) {
   const blob = fetchFromOpenAI_(text, instructions);
   if (!isAudioBlobTooShort_(blob)) return blob;
   return fetchFromOpenAI_(text, instructions);
+}
+
+function saveToDriveWeak_(weakWord, accent, blob) {
+  const folder = getFolder_();
+  const name = fileNameForWeak_(weakWord, accent);
+  const existing = folder.getFilesByName(name);
+  while (existing.hasNext()) existing.next().setTrashed(true);
+  folder.createFile(blob.setName(name));
 }
 
 function saveToDrive_(input, accent, blob) {
@@ -153,18 +187,34 @@ function doGet(e) {
   try {
     if (e && e.parameter && e.parameter.warm) return handleWarm_(e);
 
+    const weakIpa = String((e && e.parameter && e.parameter.weak) || '').trim();
+    const weakWord = String((e && e.parameter && e.parameter.ww) || '').trim();
     const phrase = String((e && e.parameter && e.parameter.phrase) || '').trim();
     const word = String((e && e.parameter && e.parameter.word) || '').trim();
     const accent = normalizeAccent_(e && e.parameter && e.parameter.accent);
     let input = '';
+    let cacheKey = '';
     let connected = false;
+    let weakMode = false;
     let cacheAccent = accent;
 
-    if (phrase) {
+    if (weakIpa && weakWord) {
+      if (!/^[a-zA-Z][a-zA-Z'-]*$/.test(weakWord)) {
+        return jsonResponse_({ ok: false, error: 'Invalid ww parameter' });
+      }
+      if (!/^\/[^/]+\/$/.test(weakIpa)) {
+        return jsonResponse_({ ok: false, error: 'Invalid weak parameter' });
+      }
+      input = weakIpa;
+      cacheKey = weakWord;
+      weakMode = true;
+      cacheAccent = accent;
+    } else if (phrase) {
       if (!/^[\w\s'-]+$/.test(phrase)) {
         return jsonResponse_({ ok: false, error: 'Invalid phrase parameter' });
       }
       input = phrase;
+      cacheKey = phrase;
       connected = true;
       cacheAccent = 'ga';
     } else if (word) {
@@ -172,27 +222,34 @@ function doGet(e) {
         return jsonResponse_({ ok: false, error: 'Invalid or missing word parameter' });
       }
       input = word;
+      cacheKey = word;
     } else {
       return jsonResponse_({ ok: false, error: 'Invalid or missing word parameter' });
     }
 
-    const instructions = instructionsFor_(accent, connected);
+    const instructions = weakMode ? instructionsForWeak_(accent) : instructionsFor_(accent, connected);
 
-    let blob = getAudioFromDrive_(input, cacheAccent);
+    let blob = weakMode
+      ? getAudioFromDriveWeak_(cacheKey, cacheAccent)
+      : getAudioFromDrive_(cacheKey, cacheAccent);
     let source = 'drive';
     if (blob && isAudioBlobTooShort_(blob)) {
-      trashAudioOnDrive_(input, cacheAccent);
+      if (weakMode) trashAudioOnDriveWeak_(cacheKey, cacheAccent);
+      else trashAudioOnDrive_(cacheKey, cacheAccent);
       blob = null;
     }
     if (!blob) {
       blob = fetchFromOpenAIWithRetry_(input, instructions);
       source = 'openai';
-      if (!isAudioBlobTooShort_(blob)) saveToDrive_(input, cacheAccent, blob);
+      if (!isAudioBlobTooShort_(blob)) {
+        if (weakMode) saveToDriveWeak_(cacheKey, cacheAccent, blob);
+        else saveToDrive_(cacheKey, cacheAccent, blob);
+      }
     }
 
     return jsonResponse_({
       ok: true,
-      word: input,
+      word: weakMode ? weakWord : input,
       accent: cacheAccent,
       source: source,
       mimeType: blob.getContentType() || 'audio/mpeg',

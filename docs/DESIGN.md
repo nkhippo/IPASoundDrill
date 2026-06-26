@@ -127,6 +127,14 @@ aʊ: how /haʊ/, cow /kaʊ/, hour /ˈaʊɚ/
 - **TTS:** GA 固定（自然連結 `TTS_CONNECTED_INSTRUCTIONS`）。RP 連結は範囲外。
 - **表示 IPA:** `activeIpa()` で GA/RP 切替可（`rp_ipa` 付き）。
 
+### 1.9 弱形タブ（実装済み）
+
+- **データ:** `data/weak_forms.json`（36 機能語）。`level`: 1–3。`carriers` 各4種。
+- **練習:** Decode のみ（弱形 IPA → 機能語 `w`）。出題は連結句と同じキャリア文＋IPA 埋め込み。
+- **フィルタ:** Level ピルのみ（Type なし）。
+- **reveal:** 強形 ↔ 弱形 IPA 対比 + `cs_rule`。
+- **TTS:** `?weak=` + 弱形 IPA（GA/RP 両対応）。GAS 再デプロイ必須。
+
 ---
 
 ## 2. Mode B：音から語彙（サブテーマ）
