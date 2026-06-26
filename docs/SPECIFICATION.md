@@ -2,10 +2,10 @@
 
 > 本ドキュメントは、アプリの目的・設計・データ管理の正本（source of truth）です。  
 > 機能追加や仕様相談の前提資料として利用してください。  
-> 目的の正本は docs/PURPOSE.md、実装仕様は docs/DESIGN.md（衝突時はそちらを優先）。
+> 目的の正本は `docs/PURPOSE.md`、実装設計は `docs/DESIGN.md`（衝突時は PURPOSE → DESIGN → 本書の順で参照）。
 
-**最終更新:** 2026-06-23  
-**対象コード:** `index.html`（アプリ本体）、`wordlist_GA_a1a2_plus_phonics.json`、`i18n/`、`gas/`
+**最終更新:** 2026-06-26  
+**対象コード:** `index.html`、`wordlist_GA_a1a2_plus_phonics.json`、`data/connected_speech.json`、`i18n/`、`gas/`
 
 ---
 
@@ -24,13 +24,14 @@
 
 ### 1.1 対象ユーザー
 
-- CEFR A1–A2 程度の英語学習者
+- CEFR A1–A2 程度の英語学習者（Mode B はバンド進行で上級語彙へ拡張可能）
 - 母語は日本語・中国語・韓国語を想定（UI 言語として対応）
-- 学習対象の発音体系は **General American (GA)**
+- 学習対象の発音体系は **General American (GA)** を基準。**Received Pronunciation (RP)** を設定で選択可能
 
 ### 1.2 アプリの位置づけ
 
-**語彙を増やすツールではなく、既知単語の発音だけを鍛え直す IPA 音写トレーナー**（Decoder / Encoder）。
+**語彙を増やすツールではなく、既知単語の発音（IPA）を鍛え直すトレーナー**が本丸（Mode A）。  
+**音から未知語を覚える** Mode B をサブテーマとして併設。姉妹アプリ English Listening Trainer と役割分担。
 
 ### 1.3 解決したい課題
 
@@ -39,46 +40,75 @@
 | 語彙と発音のギャップ | 単語の意味は知っているが、**発音（音）が身体に定着していない** |
 | 聞き取りとの連動 | 「**発音できない音は聞き取れない**」という知覚–運動のギャップ |
 | IPA リテラシー不足 | 綴りと音が一致しない英語で、**IPA を読んで書ける力**が弱い |
-| 規則パターンの体系学習 | 日常語（不規則綴り含む）と、**綴り↔音の規則パターン**を分けて練習したい |
+| 連結音の理解 | 辞書形 IPA と実際の連結発音のギャップ（Connected Speech タブ） |
+| 米英アクセント差 | GA 学習者が RP を、RP 学習者が GA を参照音声として聞く不整合 |
 
 ---
 
 ## 2. 課題への解決アプローチ
 
-### 2.1 学習モード（双方向）
+### 2.1 学習モード（2種）
 
-| モード | 方向 | 学習者の行動 |
-|--------|------|-------------|
-| **Decode（読む）** | IPA → 単語 | IPA を見て、英語の綴りを入力する |
-| **Encode（書く）** | 単語 → IPA | 英単語を見て、画面上の IPA キーボードで発音を組み立てる |
+| モード | 目的 | 主なループ |
+|--------|------|-----------|
+| **Mode A：Pronunciation** | 既知語の IPA 読み書き（本丸） | Decode / Encode |
+| **Mode B：Sound → Vocabulary** | 音から語彙獲得（サブ） | Study → Quiz（MCQ + ディクテーション） |
 
-### 2.2 出題設計
+### 2.2 Mode A — 練習タブ
 
-- **1 セッション 10 問固定**（フィルタ後のプールからランダム抽出）
-- **出題セット 2 種:**
-  - **Daily words:** CEFR レベル別の日常語（不規則綴りを含む）
-  - **Phonics patterns:** 綴りと音が規則的に対応する語
-- **Phonics のグループフィルタ:** 短母音 / 長母音・マジックe / 母音チーム / r 音色
+| タブ | 内容 |
+|------|------|
+| **Words** | 単語の Decode / Encode |
+| **Connected Speech** | 連結 IPA → 元フレーズ（Decode のみ）。linking / assimilation / elision、L1–L3 |
 
-### 2.3 採点ロジック
+### 2.3 Mode A — Words の出題設計
+
+- **1 セッション 10 問固定**（フィルタ後プールから適応抽出）
+- **音素フォーカス（主）:** All / Trap sounds / Weak spots / Alphabet / Contractions / Irregular forms / Casual speech
+- **綴りタイプ（従）:** All / Regular patterns / Irregular
+- **規則グループ（Regular 時）:** Short / Long·silent e / Vowel teams / R-colored vowels
+- **適応出題:** `ept_hist_v1`・`ept_sym_v1` に基づく Leitner + 弱点記号ターゲット（詳細は `DESIGN.md` §1.4）
+
+### 2.4 Mode A — 学習方向
+
+| 方向 | 学習者の行動 |
+|------|-------------|
+| **Decode** | IPA を見て英語の綴りを入力 |
+| **Encode** | 英単語を見て IPA キーボードで発音を組み立て（GA/RP でキー配列が切替） |
+
+### 2.5 Mode B — ループ
+
+| 段階 | 内容 |
+|------|------|
+| **Study** | TTS 自動再生 → IPA → 単語＋gloss 開示。採点なし |
+| **Quiz (a)** | 音 → 4択 MCQ（意味）。distractor: neighbors 2 + 同バンド random 1 |
+| **Quiz (b)** | 音 → 綴り入力（Decode 採点流用） |
+
+### 2.6 採点ロジック
 
 | モード | OK | near | bad |
 |--------|-----|------|-----|
-| Decode | 綴りが完全一致 | Levenshtein 距離 ≤ 1（入力 3 文字超） | それ以外 |
-| Encode | IPA（強勢記号含む）が完全一致 | 強勢を除いた音素列は一致 | 音素列が不一致 |
+| Decode | 綴り完全一致 | Levenshtein ≤ 1（入力 3 文字以上） | それ以外 |
+| Encode | IPA（強勢含む）完全一致 | 強勢を除く音素列一致 | 音素列不一致 |
 
-### 2.4 フィードバック設計
+### 2.7 フィードバック設計
 
-- **音声再生:** 各問・解答後に TTS で正解発音を聞ける
-- **音素タップ:** IPA の各記号をタップすると、口の形・注意点などの音素解説パネルが開く
-- **解答後（Reveal）:** 正解単語・IPA・自分の回答・発音ポイントを表示
-- **Encode 時:** 音素ごとに OK/NG を色分け（LCS ベースのマッチング）
-- **セッション終了後（Summary）:** 正答率、苦手音素ランキング（最大 5）、ミス単語リスト、苦手だけ復習
+- **TTS:** 各問・解答後に参照発音（単語は GA/RP、連結句は GA）
+- **音素タップ:** IPA 各記号の解説パネル（例語付き）
+- **Reveal:** 正解単語・IPA・gloss・自分の回答・発音ポイント。RP/GA 切替時は代替アクセント IPA を補足表示
+- **Encode:** 音素ごと OK/NG 色分け（LCS ベース）
+- **Summary:** 正答率、苦手音素、ミス単語、苦手だけ復習
 
-### 2.5 多言語 UI
+### 2.8 多言語 UI
 
-- UI 言語は **en / ja / zh / ko** を切り替え可能
-- 学習対象の英単語・IPA・TTS 音声は **言語共通**（常に英語）
+- UI 言語: **en / ja / zh / ko**（`localStorage.app_lang`）
+- 学習対象の英単語・IPA・TTS は言語共通（常に英語）
+
+### 2.9 アクセント設定
+
+- **GA / RP**（`localStorage.app_accent`、既定 `ga`）
+- `activeIpa()` — 表示・採点・キーボードが追従
+- TTS 単語は `accent=ga|rp`、連結句は `accent=ga` 固定
 
 ---
 
@@ -87,260 +117,168 @@
 ### 3.1 構成図
 
 ```
-┌─────────────────────────────────────────────────────────┐
-│  クライアント（ブラウザ）                                  │
-│  index.html（SPA・単一 HTML ファイル）                     │
-│  + wordlist_GA_a1a2_plus_phonics.json                   │
-│  + i18n/{en,ja,zh,ko}.json                              │
-│  + i18n/phonemes/{en,ja,zh,ko}.json                      │
-│  localStorage: 言語設定・TTS 音声キャッシュ                 │
-└──────────────┬──────────────────────────┬───────────────┘
-               │ fetch（静的）              │ GET ?word=...
+┌─────────────────────────────────────────────────────────────┐
+│  クライアント（ブラウザ）                                       │
+│  index.html（SPA）                                           │
+│  + wordlist_GA_a1a2_plus_phonics.json（3,059語）             │
+│  + data/connected_speech.json（201句）                        │
+│  + i18n/{en,ja,zh,ko}.json + i18n/phonemes/                  │
+│  localStorage: 言語・アクセント・SRS・TTSキャッシュ              │
+└──────────────┬──────────────────────────┬───────────────────┘
+               │ fetch（静的）              │ GET ?word=...&accent=...
                ▼                          ▼
-┌──────────────────────────┐   ┌──────────────────────────┐
-│  GitHub Pages             │   │  Google Apps Script       │
-│  GitHub Actions 自動デプロイ │   │  Web App（gas/Code.gs）   │
-│  main ブランチ push で公開   │   │  OPENAI_API_KEY は        │
-│                           │   │  Script Properties に保存  │
-└──────────────────────────┘   └──────────┬───────────────┘
+┌──────────────────────────┐   ┌──────────────────────────────┐
+│  GitHub Pages             │   │  Google Apps Script           │
+│  Actions 自動デプロイ       │   │  gas/Code.gs → OpenAI TTS     │
+│  main push で公開           │   │  OPENAI_API_KEY in Properties │
+└──────────────────────────┘   └──────────┬───────────────────┘
                                           │
                           ┌───────────────┼───────────────┐
                           ▼               ▼               ▼
-                   OpenAI API      Google Drive      ブラウザへ
-                   gpt-4o-mini-tts  IPA-TTS-Audio/    base64 MP3
-                   voice: alloy      {word}.mp3 キャッシュ
+                   OpenAI API      Google Drive      base64 MP3
+                   gpt-4o-mini-tts  IPA-TTS-Audio/    → ブラウザ
+                   voice: alloy       {slug}__{accent}_v2.mp3
 ```
 
 ### 3.2 コンポーネント一覧
 
 | レイヤ | 技術 | 役割 |
 |--------|------|------|
-| フロントエンド | 単一 `index.html`（Vanilla JS、ビルド不要） | UI・ゲームロジック・採点 |
-| ホスティング | GitHub Pages + `.github/workflows/static.yml` | 静的ファイル配信 |
-| 音声 API | GAS Web App → OpenAI TTS | API キーをクライアントに露出しない |
-| 音声キャッシュ（サーバー） | Google Drive フォルダ `IPA-TTS-Audio` | 単語ごとに MP3 を永続保存 |
-| 音声キャッシュ（クライアント） | `localStorage`（キー: `ipa_tts_v1:{word}`） | 2 回目以降は GAS を呼ばない |
-| 単語データ | `wordlist_GA_a1a2_plus_phonics.json` | 単語・IPA・メタデータ |
-| ビルドスクリプト（オフライン） | `scripts/enrich_wordlist_i18n.py` | gloss 翻訳のバッチ生成（実行時には不要） |
+| フロントエンド | 単一 `index.html`（Vanilla JS） | UI・ゲームロジック・採点・SRS |
+| ホスティング | GitHub Pages + `.github/workflows/static.yml` | 静的配信 |
+| 音声 API | GAS Web App → OpenAI `gpt-4o-mini-tts` | API キー非露出 |
+| サーバーキャッシュ | Google Drive `IPA-TTS-Audio/` | `{slug}__ga_v2.mp3` / `{slug}__rp_v2.mp3` |
+| クライアント TTS キャッシュ | `localStorage` `ipa_tts_v2:{accent}:{slug}` | 2 回目以降 GAS 不要 |
+| 単語データ | `wordlist_GA_a1a2_plus_phonics.json` | 語・IPA・rp_ipa・gloss・neighbors |
+| 連結句 | `data/connected_speech.json` | 201 句・cs_type・level・rp_ipa |
+| オフラインスクリプト | `scripts/*.py` | gloss・neighbors・RP IPA 生成（実行時不要） |
 
-### 3.3 デプロイ・ローカル確認
+### 3.3 デプロイ
 
 - **本番 URL:** https://nkhippo.github.io/English-Pronunciation-Trainer/
-- **ローカル確認:** `python3 -m http.server 8080` が必要（`file://` では JSON の fetch がブロックされる）
-- **GAS デプロイ手順:** `gas/README.md` を参照
+- **ローカル:** `python3 -m http.server 8080`（`file://` 不可）
+- **GAS:** `gas/README.md` 参照。`index.html` の `GAS_TTS_URL` に Web App URL を設定
 
 ---
 
 ## 4. 画面設計
 
-画面切替はルーターなし。`#setup` / `#cardDecode` / `#cardEncode` / `#reveal` / `#summary` の各 `<section>` を `hidden` クラスで表示・非表示する。
+画面切替はルーターなし。`<section>` の `hidden` で表示制御。
 
 ### 4.0 全画面共通 — トップバー
 
-| 要素 | 表示内容 | 言語依存 |
-|------|----------|----------|
-| ブランド | `/iː/` マーク + アプリ名 + サブタイトル（CEFR A1–A2 · GA） | あり（`i18n/*.json` の `brand.*`） |
-| 設定ボタン | 言語選択モーダルを開く | ラベルのみ |
-| Menu ボタン | プレイ中のみ表示。セットアップ画面へ戻る | あり |
-| メーター | 進行中: `3 / 10`、終了時: `done` | 終了文言のみ |
+| 要素 | 内容 |
+|------|------|
+| ブランド | `/iː/` + アプリ名 + サブタイトル |
+| 設定 | 言語・アクセントモーダル |
+| Menu | プレイ中のみ。セットアップへ戻る |
+| メーター | `3 / 10` または `done` |
 
-### 4.1 セットアップ画面（`#setup`）
+### 4.1 セットアップ（`#setup`）
 
-**目的:** セッション条件の選択
+| 要素 | Mode A | Mode B |
+|------|--------|--------|
+| Learning mode | Pronunciation / Sound → Vocabulary | 同左 |
+| Practice mode | Words / Connected Speech | （非表示） |
+| Direction | Decode / Encode | （非表示） |
+| Phoneme focus | 7 ピル | （非表示） |
+| Spelling type / pattern group | あり | （非表示） |
+| Connected filters | Level L1–L3、Type | （非表示） |
+| Band | — | 現在 CEFR バンド表示 |
+| プール件数 + 開始 | あり | あり |
 
-| 要素 | 表示内容 | 言語共通 / 依存 |
-|------|----------|----------------|
-| リード文 | アプリの目的説明 | UI 文言のみ依存 |
-| 方向 | Decode / Encode の 2 択（タイトル + 説明） | UI 文言のみ |
-| 出題セット | Daily words / Phonics patterns | UI 文言のみ |
-| レベル | A1+A2 / B1 / B2 / C1（Daily 選択時のみ表示） | UI 文言のみ |
-| 綴り規則グループ | All / Short / Long / Team / R（Phonics 選択時のみ表示） | UI 文言のみ |
-| プール件数 | `対象 N 語` | 数値は動的、文言は UI |
-| 開始ボタン | はじめる（単語リスト読込完了まで disabled） | UI 文言のみ |
+### 4.2 問題 — Decode（`#cardDecode`）
 
-### 4.2 問題画面 — Decode（`#cardDecode`）
+IPA（タップ可）・TTS・綴り入力・Check。連結句時は cs メタ表示。
 
-**目的:** IPA から英単語を当てる
+### 4.3 問題 — Encode（`#cardEncode`）
 
-| 要素 | 表示内容 | 言語共通 / 依存 |
-|------|----------|----------------|
-| 問題番号 | `#01` 形式 | **共通** |
-| IPA 表示 | クリック可能な音素セグメント（強勢核はハイライト） | **共通（英語 IPA）** |
-| 音素解説パネル | タップした音素のラベル・例語・口の形・注意点 | **設定言語の phonemes JSON** |
-| 再生ボタン | 正解単語の TTS | **単語ごと（英語音声）** |
-| 入力欄 | 英単語テキスト（A–Z のみ） | placeholder のみ言語依存 |
-| 採点ボタン | Check | UI 文言のみ |
+英単語・TTS・IPA ビルドエリア・キーボード（GA/RP で記号セット切替）・Clear / Check。
 
-### 4.3 問題画面 — Encode（`#cardEncode`）
+### 4.4 Mode B — Study（`#cardModeBStudy`）
 
-**目的:** 英単語から IPA を組み立てる
+TTS・IPA・単語＋gloss・「Got it → Next」。
 
-| 要素 | 表示内容 | 言語共通 / 依存 |
-|------|----------|----------------|
-| 問題番号 | `#01` 形式 | **共通** |
-| 英単語 | 大きく表示 | **共通（英語）** |
-| 再生ボタン | 正解単語の TTS | 単語ごと |
-| ビルドエリア | 組み立て中の IPA（`/…/`） | **共通** |
-| IPA キーボード | 強勢・母音・r 母音・二重母音・子音 + バックスペース | グループラベルのみ言語依存 |
-| Clear / Check | 操作ボタン | UI 文言のみ |
+### 4.5 Mode B — Quiz（`#cardModeBQuiz`）
 
-### 4.4 解答画面（`#reveal`）
+MCQ（4 択意味）またはディクテーション（綴り入力）。
 
-**目的:** 1 問の採点結果と学習フィードバック
+### 4.6 解答（`#reveal`）
 
-| 要素 | 表示内容 | 言語共通 / 依存 |
-|------|----------|----------------|
-| 背景色 | OK=緑 / near=黄 / bad=赤 | **共通** |
-| 正解単語 | 英単語 | **共通** |
-| グロス（訳） | 単語の意味訳 | **設定言語の gloss**（UI 言語が en のとき非表示） |
-| 自分の回答 | Decode: 入力した綴り / Encode: 組み立てた IPA | **共通** |
-| 正解 IPA | クリック可能セグメント（Encode 時は OK/NG 色分け） | **共通** |
-| 音素解説パネル | タップした音素の解説 | 設定言語 |
-| 発音ポイント | 綴り規則・強勢位置・schwa 注意・要注意音 | テンプレは UI、中身は単語データから生成 |
-| 要注意音チップ | `t:1` フラグ付き音素（θ, æ 等） | 記号は共通、解説は設定言語 |
-| 再生 + 次へ | TTS 自動再生（200ms 後）+ Next ボタン | UI 文言のみ |
+OK/near/bad 色分け・単語・gloss・自分の回答・正解 IPA（Encode 時色分け）・代替アクセント IPA 補足・発音ポイント・TTS 自動再生。
 
-### 4.5 サマリー画面（`#summary`）
+### 4.7 サマリー（`#summary`）
 
-**目的:** セッション結果の振り返り
+正答率・苦手音素・復習リスト・Play again / Review misses only。
 
-| 要素 | 表示内容 | 言語共通 / 依存 |
-|------|----------|----------------|
-| 正答率 | `N%` | **共通** |
-| サブ統計 | `8 / 10 正解 · 復習 2 語` 形式 | UI テンプレのみ |
-| 苦手音素リスト | 音素記号 + ラベル + 口の形 + ミス回数 | 記号は共通、説明は設定言語 |
-| 復習リスト | `IPA 単語 · IPA 単語 …` | **共通（英語 IPA + 英単語）** |
-| Play again | 同条件で再開 | UI 文言のみ |
-| Review misses only | ミスした単語だけで再開（0 件時 disabled） | UI 文言のみ |
+### 4.8 設定モーダル（`#settingsModal`）
 
-### 4.6 設定モーダル（`#settingsModal`）
-
-| 要素 | 表示内容 |
-|------|----------|
-| 言語選択 | English / 日本語 / 中文 / 한국어 |
-
-選択は `localStorage.app_lang` に保存。変更時に UI 全体・phoneme 解説・グロス・発音ポイントを再描画する。
-
-### 4.7 言語共通で表示される情報（まとめ）
-
-以下は UI 言語に関わらず常に同じ内容が表示される。
-
-- 学習対象の英単語（`w`）
-- 正解 IPA（`ipa`）
-- TTS 音声（英語）
-- 入力制約（A–Z のみ）
-- 採点結果の色（OK / near / bad）
-- セッション進行（問題番号、正答率の数値）
+| 項目 | 選択肢 | 保存キー |
+|------|--------|----------|
+| Language | en / ja / zh / ko | `app_lang` |
+| Accent | American (GA) / British (RP) | `app_accent` |
 
 ---
 
 ## 5. 動的情報の管理
 
-### 5.1 単語ごと
+### 5.1 単語データ — `wordlist_GA_a1a2_plus_phonics.json`
 
-#### データソース: `wordlist_GA_a1a2_plus_phonics.json`
-
-各レコードのスキーマ:
+約 **3,059 語**。主要フィールド:
 
 ```json
 {
-  "w": "about",
-  "ipa": "/əˈbaʊt/",
+  "w": "colour",
+  "ipa": "/ˈkʌlər/",
+  "rp_ipa": "/ˈkʌlə/",
   "cefr": "A1",
-  "pos": "副詞 / 前置詞",
+  "pos": "名詞",
   "src": "cefr",
   "pattern": null,
   "group": null,
-  "gloss": {
-    "en": "about",
-    "ja": "について",
-    "zh": "关于",
-    "ko": "~에 대한"
-  }
+  "gloss": { "en": "...", "ja": "...", "zh": "...", "ko": "..." },
+  "neighbors": ["caller", "collar", "..."]
 }
 ```
 
-| フィールド | 内容 | 使用箇所 |
-|-----------|------|----------|
-| `w` | 英単語（正解） | Encode 表示、Decode 採点、TTS リクエスト |
-| `ipa` | GA の IPA 表記 | Decode 表示、Encode 正解、Reveal、Summary |
-| `cefr` | A1 / A2 / B1 / B2 / C1 | Daily モードのレベルフィルタ |
-| `pos` | 品詞（日本語キーで格納） | 現状 UI では非表示（`posLabel()` は定義済みだが未使用） |
-| `pattern` | 綴り規則（例: `a_e → /eɪ/ (マジックe)`） | Phonics 語のみ。Reveal の発音ポイント |
-| `group` | `short` / `long` / `team` / `r` | Phonics モードのグループフィルタ |
-| `gloss` | 4 言語の意味訳 | Reveal 画面（UI 言語が en 以外のとき） |
-
-#### 単語ごとのランタイム生成データ
-
-| データ | 管理場所 | 備考 |
-|--------|----------|------|
-| TTS 音声（MP3） | GAS → Google Drive → `localStorage` | キー: `ipa_tts_v1:{word}`。メモリ内 `Map` も併用 |
-| セッション内の正誤・ミスリスト | ブラウザメモリ（`S` オブジェクト） | リロードで消える。永続化なし |
-
-#### gloss の生成
-
-`scripts/enrich_wordlist_i18n.py` が Google Translate で `ja` / `zh` / `ko` をバッチ翻訳し JSON に書き込む。アプリ実行時には不要なオフライン処理。
-
----
-
-### 5.2 設定言語ごと
-
-#### データソース
-
-| データ | ファイル | 内容 |
-|--------|----------|------|
-| UI 文言全体 | `i18n/{en,ja,zh,ko}.json` | ボタン、ラベル、説明文、サマリー文言、品詞ラベルマップ（`pos`）、綴りパターン用語（`patterns.magic_e`）など |
-| 音素解説 | `i18n/phonemes/{en,ja,zh,ko}.json` | 各 IPA 記号ごとに `lab`（名称）, `ex`（例）, `mouth`（口の形）, `trap`（注意）, `t`（要注意フラグ 0/1） |
-| 言語設定の永続化 | `localStorage.app_lang` | デフォルト `en` |
-
-#### phonemes JSON のフィールド
-
-| フィールド | 意味 |
+| フィールド | 用途 |
 |-----------|------|
-| `lab` | 音素の名称（例: "schwa"） |
-| `ex` | 例語（例: "about /əˈbaʊt/"） |
-| `mouth` | 口の形・発音方法の説明 |
-| `trap` | 注意点・よくある間違い |
-| `t` | 要注意フラグ（`1` = 苦手音素集計・チップ表示の対象） |
+| `w` | 正解綴り・TTS 入力 |
+| `ipa` | GA IPA（Decode/Encode/reveal） |
+| `rp_ipa` | RP IPA（accent=rp 時） |
+| `neighbors` | Mode B MCQ distractor（RP でも GA リスト流用） |
+| `neighbors_rp` | （将来用・未生成） |
+| `gloss` | reveal・Mode B |
+| `src` | letter / contraction / irregular_* / casual / cefr / phonics 等 |
+| `pattern` / `group` | 規則語フィルタ・発音ポイント |
 
-#### 設定言語によって変わる表示（単語データと組み合わせ）
+### 5.2 連結句 — `data/connected_speech.json`
 
-| 表示 | ソースの組み合わせ |
-|------|-------------------|
-| グロス（意味訳） | `word.gloss[LANG]` |
-| 品詞ラベル（将来用） | `UI.pos[word.pos]` |
-| 綴り規則テキスト | `word.pattern` + `localizePattern()`（マジックe 等を UI 言語に置換） |
-| 発音ポイント文 | `autoNote()` — `UI.note.*` テンプレ + 単語の `ipa` / `pattern` から動的生成 |
-| 音素チップ・苦手音リスト | `PH[sym].lab` / `.mouth` 等 |
-| IPA キーボードのグループ名 | `UI.kbd.*` |
+**201 句。** フィールド: `id`, `w`, `ipa`, `rp_ipa`, `cs_type`, `level` (1–3), `cs_rule` (多言語), `gloss`。
 
-#### UI JSON の主要キー（参照用）
+### 5.3 localStorage（永続）
 
-| キー | 用途 |
+| キー | 内容 |
 |------|------|
-| `brand` | アプリ名・サブタイトル |
-| `lead_html` | セットアップ画面のリード文 |
-| `dir` / `set` / `lvl` / `grp` | セットアップ画面のラベル・選択肢 |
-| `note` | 発音ポイントのテンプレート |
-| `summary` | サマリー画面の文言 |
-| `kbd` | IPA キーボードのグループ名 |
-| `pos` | 品詞ラベルの翻訳マップ |
+| `app_lang` | UI 言語 |
+| `app_accent` | `ga` / `rp` |
+| `app_mode` | `a` / `b` |
+| `ept_hist_v1` | Mode A 単語 SRS（Leitner） |
+| `ept_sym_v1` | Mode A 記号弱点（Encode のみ更新） |
+| `ept_vocab_v1` | Mode B 語彙 SRS |
+| `ept_vocab_band` | Mode B 現在バンド |
+| `ipa_tts_v2:{accent}:{slug}` | TTS MP3（旧キーは GA として移行） |
 
----
+### 5.4 セッション状態（メモリ `S`）
 
-### 5.3 セッション状態（ブラウザメモリのみ）
+`appMode`, `tab`, `dir`, `focus`, `reg`, `grp`, `csFilter`, `csLevel`, `queue`, `idx`, `correct`, `weak`, `missed`, `cur`, `mbPhase` 等。リロードで消える。
 
-```javascript
-S = {
-  dir, set, lvl, grp,     // セットアップ選択
-  queue, idx,             // 出題キュー（10 問）
-  correct, weak, missed,  // 採点・苦手音素集計
-  cur, revealed, built    // 現在の問題・解答状態
-}
-```
+### 5.5 i18n
 
-- 永続化されない
-- サマリー後の「苦手だけ復習」は同一セッション内の `missed` を参照
+| データ | パス |
+|--------|------|
+| UI 文言 | `i18n/{en,ja,zh,ko}.json` |
+| 音素解説 | `i18n/phonemes/{en,ja,zh,ko}.json` |
 
 ---
 
@@ -348,13 +286,13 @@ S = {
 
 | 項目 | 内容 |
 |------|------|
-| アーキテクチャ | 単一 HTML ファイル。フレームワーク・ルーターなし |
-| 認証・進捗 | ユーザー認証なし。学習履歴はセッション内のみ |
-| CEFR フィルタ | UI に B1/B2/C1 があるが、wordlist の主データは A1–A2 + phonics |
-| 要注意音素判定 | `phonemes/*.json` の `t: 1` フラグ + コード内 `TRAPSET`（θ, ð, æ, ʒ, ɝ） |
-| Encode 採点 | 強勢記号を除いた音素列の一致で near/ok を判定。ストレス記号の誤りは near |
-| Decode 採点 | 完全一致 or Levenshtein ≤ 1 で near（`a.length > 2` 条件付き） |
-| 関連ドキュメント | `README.md`（概要）、`gas/README.md`（GAS デプロイ） |
+| アーキテクチャ | 単一 HTML。フレームワーク・認証なし |
+| 進捗 | localStorage のみ（端末・ブラウザ単位） |
+| 連結句 TTS | GA 固定。RP 連結音声は未対応 |
+| Mode B 語彙 | 主データは A1–A2 + phonics。上級日常語拡張は継続 |
+| `neighbors_rp` | 保留（`docs/rp-neighbors-priority-decision.md`） |
+| 要注意音素 | `phonemes/*.json` の `t:1` + コード内 TRAPSET |
+| 関連ドキュメント | `PURPOSE.md`, `DESIGN.md`, `gas/README.md`, `docs/rp-tts-design-and-priority.md` |
 
 ---
 
@@ -362,4 +300,5 @@ S = {
 
 | 日付 | 内容 |
 |------|------|
-| 2026-06-23 | 初版作成 |
+| 2026-06-23 | 初版（Mode A のみ・GA 固定） |
+| 2026-06-26 | Mode B・連結句・GA/RP・SRS・TTS v2/accent キャッシュを反映 |
