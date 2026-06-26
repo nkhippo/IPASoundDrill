@@ -183,6 +183,13 @@ Keep the delivery identical and consistent across all words.
 
 - 同綴異音語（read, live, wind, lead 等）はTTSが意図と違う読みを返し得る。必要なら語に読み分けヒントを添える運用を将来検討（現データ規模では低優先）。
 
+### 3.4 RP TTS（2026-06-26 実装）
+
+- **単語:** `GET ?word=...&accent=ga|rp`（既定 `ga`）。`instructions` を GA/RP で分岐。voice は `alloy` 据え置き。
+- **キャッシュキー:** Drive `{slug}__{accent}_v2.mp3`、localStorage `ipa_tts_v2:{accent}:{slug}`。旧 `{slug}_v2.mp3` / 無 accent キーは GA として後方互換。
+- **連結句:** GA 固定（`?phrase=` + `accent=ga`）。RP 連結音声は別タスク。
+- 詳細: `docs/rp-tts-design-and-priority.md`
+
 ---
 
 ## 4. データ整備タスク（ステップ4へ申し送り）

@@ -1044,7 +1044,26 @@ const memAudioCache = new Map();
 let currentAudio = null;
 let speakBusy = false;
 
-function lsKey(w) { return LS_TTS_PREFIX + w.toLowerCase().replace(/[^a-z0-9]+/g, "_"); }
+function ttsAccent(connected) {
+  if (connected) return "ga";
+  return ACCENT === "rp" ? "rp" : "ga";
+}
+function ttsCacheSlug(text, connected) {
+  const base = text.toLowerCase().replace(/[^a-z0-9]+/g, "_");
+  return connected ? "p_" + base : base;
+}
+function lsKey(text, connected) {
+  return LS_TTS_PREFIX + ttsAccent(connected) + ":" + ttsCacheSlug(text, connected);
+}
+function legacyLsKey(text, connected) {
+  const slug = connected
+    ? ("p:" + text.toLowerCase()).replace(/[^a-z0-9]+/g, "_")
+    : text.toLowerCase().replace(/[^a-z0-9]+/g, "_");
+  return LS_TTS_PREFIX + slug;
+}
+function memCacheKey(text, connected) {
+  return ttsAccent(connected) + ":" + (connected ? "p:" + text.toLowerCase() : text);
+}
 
 function bytesFromB64(b64) {
   const bin = atob(b64);
@@ -1053,9 +1072,16 @@ function bytesFromB64(b64) {
   return bytes;
 }
 
-function loadAudioFromLS(w) {
+function loadAudioFromLS(text, connected) {
   try {
-    const raw = localStorage.getItem(lsKey(w));
+    const key = lsKey(text, connected);
+    let raw = localStorage.getItem(key);
+    if (!raw && ttsAccent(connected) === "ga") {
+      raw = localStorage.getItem(legacyLsKey(text, connected));
+      if (raw) {
+        try { localStorage.setItem(key, raw); } catch (e) {}
+      }
+    }
     if (!raw) return null;
     const data = JSON.parse(raw);
     if (!data || !data.b64) return null;
@@ -1067,18 +1093,19 @@ function loadAudioFromLS(w) {
   }
 }
 
-function saveAudioToLS(w, mime, b64) {
+function saveAudioToLS(text, connected, mime, b64) {
   try {
-    localStorage.setItem(lsKey(w), JSON.stringify({ mime: mime || "audio/mpeg", b64 }));
+    localStorage.setItem(lsKey(text, connected), JSON.stringify({ mime: mime || "audio/mpeg", b64 }));
   } catch (err) {
     console.warn("localStorage audio save failed", err);
   }
 }
 
 async function fetchAudioFromGas(text, connected) {
+  const accent = ttsAccent(connected);
   const q = connected
-    ? "phrase=" + encodeURIComponent(text)
-    : "word=" + encodeURIComponent(text);
+    ? "phrase=" + encodeURIComponent(text) + "&accent=ga"
+    : "word=" + encodeURIComponent(text) + "&accent=" + accent;
   const res = await fetch(GAS_TTS_URL + "?" + q);
   if (!res.ok) throw new Error("GAS HTTP " + res.status);
   const data = await res.json();
@@ -1088,7 +1115,7 @@ async function fetchAudioFromGas(text, connected) {
 
 function setSpeakerBusy(busy) {
   speakBusy = busy;
-  ["dPlay", "ePlay", "rPlay"].forEach(id => {
+  ["dPlay", "ePlay", "rPlay", "mbSPlay", "mbMPlay", "mbDPlay"].forEach(id => {
     const btn = $(id);
     if (btn) btn.disabled = busy;
   });
@@ -1102,16 +1129,16 @@ async function speak(text, opts) {
     currentAudio = null;
   }
   setSpeakerBusy(true);
-  const cacheKey = connected ? "p:" + text.toLowerCase() : text;
+  const cacheKey = memCacheKey(text, connected);
   try {
     let url = memAudioCache.get(cacheKey);
     if (!url) {
-      url = loadAudioFromLS(cacheKey);
+      url = loadAudioFromLS(text, connected);
       if (url) memAudioCache.set(cacheKey, url);
     }
     if (!url) {
       const data = await fetchAudioFromGas(text, connected);
-      saveAudioToLS(cacheKey, data.mimeType, data.audio);
+      saveAudioToLS(text, connected, data.mimeType, data.audio);
       const blob = new Blob([bytesFromB64(data.audio)], { type: data.mimeType || "audio/mpeg" });
       url = URL.createObjectURL(blob);
       memAudioCache.set(cacheKey, url);
