@@ -132,4 +132,5 @@ https://script.google.com/macros/s/AKfycbyQgqctjbVgZiXoPtUzqnoXNFDvCYKZsN0PLAwMi
 
 ## 8. コミット
 
-（push 後に SHA を記載）
+- **SHA:** `1d00c78`
+- **メッセージ:** Document TTS prefetch warmup spec and refresh implementation report.
