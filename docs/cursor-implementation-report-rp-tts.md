@@ -50,16 +50,15 @@ RP 選択時は IPA 表示・キーボードは STEP5 で対応済みだが、TT
 
 ---
 
-## 3. 運用上の注意 ★
+## 3. GAS 本番デプロイ
 
-**GAS 再デプロイが必要。** リポジトリの `Code.gs` 更新だけでは本番 GAS は旧版のまま。
+**再デプロイ済み**（2026-06-26）。`index.html` の `GAS_TTS_URL` を新デプロイ URL に更新。
 
-手順:
-1. Google Apps Script で `gas/Code.gs` を反映
-2. **デプロイ → 新バージョンでウェブアプリ再デプロイ**（URL は既存のまま）
-3. RP アクセントで単語再生 → GA とは別 MP3 が生成されることを確認
+```
+https://script.google.com/macros/s/AKfycbxe6u7CiIbXzNmNRCHYjkJLnieAkVHuIOvbE_R3af4Y9plwEQ9cluWeX0FG9NmaAp0m/exec
+```
 
-再デプロイ前: クライアントは `accent=rp` を送るが、旧 GAS は無視する可能性あり。
+RP アクセントで単語再生 → GA とは別 MP3 が生成されることを確認推奨。
 
 ---
 
@@ -102,14 +101,13 @@ RP 選択時は IPA 表示・キーボードは STEP5 で対応済みだが、TT
 
 | 項目 | 値 |
 |------|-----|
-| ブランチ | `main`（`99bfc6f`） |
-| GitHub Pages | クライアント側は push 後即反映 |
-| GAS | **Naoya 手動再デプロイ要** |
+| ブランチ | `main` |
+| GitHub Pages | push 後即反映 |
+| GAS | 再デプロイ済み（上記 URL） |
 
 ---
 
 ## 8. Claude への申し送り
 
-- RP TTS 実装完了（クライアント + GAS ソース）
-- **GAS 再デプロイ後**に RP 音声が本番で有効
+- RP TTS 実装完了（クライアント + GAS ソース + 本番デプロイ）
 - 残: 連結句 RP TTS、多言語学習ガイド
