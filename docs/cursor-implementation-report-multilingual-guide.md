@@ -1,8 +1,8 @@
 # Cursor 実装レポート — 多言語学習ガイド（フェーズ1）
 
 > 作成日: 2026-06-26  
-> 指示書: `docs/cursor-multilingual-guide.md`（Claude 設計）  
-> 入力データ: `data/guide.json`（5言語×8セクション）
+> 対象ブランチ: `main`（`3d2ba14`）  
+> 指示書: `docs/cursor-multilingual-guide.md`（Claude 設計）
 
 Claude 側への作業報告用サマリー。
 
@@ -87,7 +87,7 @@ Claude 側への作業報告用サマリー。
 
 | 項目 | 値 |
 |------|-----|
-| ブランチ | `main` |
+| ブランチ | `main`（`3d2ba14`） |
 | GitHub Pages | push 後即反映 |
 
 ---
