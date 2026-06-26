@@ -1,0 +1,209 @@
+{
+  "accent": {
+    "ga": "Amerikano (GA)",
+    "label": "Punto",
+    "rp": "Britaniko (RP)"
+  },
+  "back_top": "Menu",
+  "brand": {
+    "name": "IPA Diktasyon · Decoder / Encoder",
+    "sub": "CEFR A1–A2 · Amerikanong Ingles"
+  },
+  "build_ph": "I-tap ang mga IPA key sa ibaba para buuin ang pagbigkas",
+  "check": "Suriin",
+  "clear": "Burahin",
+  "cs": {
+    "all": "Lahat",
+    "assimilation": "Asimilasyon",
+    "elision": "Pagkakaltas",
+    "label": "Uri",
+    "level": {
+      "all": "Lahat",
+      "l1": "Nagsisimula",
+      "l2": "Katamtaman",
+      "l3": "Abanse",
+      "label": "Antas"
+    },
+    "linking": "Pagkakawing",
+    "ruleLabel": "Tuntunin"
+  },
+  "dir": {
+    "decode_d": "Basahin ang IPA at baybayin ang salita",
+    "decode_t": "Decode · IPA &rarr; salita",
+    "encode_d": "Buuin ang pagbigkas gamit ang IPA keyboard",
+    "encode_t": "Encode · salita &rarr; IPA",
+    "label": "Direksyon"
+  },
+  "focus": {
+    "all": "Lahat ng tunog",
+    "casual": "Pang-araw-araw na pananalita",
+    "contractions": "Mga pinaikli",
+    "irregular": "Mga di-regular na anyo",
+    "label": "Pokus na ponema",
+    "letters": "Alpabeto",
+    "traps": "Mga mahirap na tunog",
+    "traps_d": "θ ð æ ʒ ɝ",
+    "weak": "Mga kahinaan",
+    "weak_d": "Mula sa kasaysayan ng pagsasanay"
+  },
+  "grp": {
+    "all": "Lahat",
+    "label": "Grupo ng padron ng baybay",
+    "long": "Mahahabang patinig · tahimik na e",
+    "r": "Mga patinig na may kulay-r",
+    "short": "Maiikling patinig",
+    "team": "Mga pangkat ng patinig"
+  },
+  "guide": {
+    "close": "Isara",
+    "open": "Gabay",
+    "title": "Paano gamitin ang app na ito"
+  },
+  "hint": {
+    "first": "Unang titik",
+    "pos": "Bahagi ng pananalita",
+    "syl": "Mga pantig"
+  },
+  "info": {
+    "examples": "Mga halimbawa",
+    "mouth": "Bibig",
+    "watch": "Mag-ingat"
+  },
+  "input_ph": "I-type ang salita",
+  "input_phrase": "I-type ang parirala",
+  "kbd": {
+    "consonants": "Mga katinig",
+    "diphthongs": "Mga diptonggo",
+    "r_vowels": "May kulay-r",
+    "stress": "Diin",
+    "vowels": "Mga patinig"
+  },
+  "lang_opts": {
+    "en": "English",
+    "ja": "日本語",
+    "ko": "한국어",
+    "zh": "中文",
+    "fil": "Filipino"
+  },
+  "lead_connected_html": "Pakinggan ang <b>konektadong pananalita</b> sa GA—pagkakawing, asimilasyon, pagkakaltas. Mula sa konektadong IPA, hulaan ang orihinal na parirala.",
+  "lead_html": "Sanayin ang <b>pagbasa at pagsulat ng IPA</b> nang paisa-isang ponema gamit ang mga salitang alam mo na. Pokus sa <b>mga mahirap na tunog</b> (θ, ð, æ, ...).",
+  "lead_weak_html": "Pakinggan ang <b>mahihinang anyo</b> ng mga function word. Basahin ang IPA at sagutin ang orihinal na salita.",
+  "listen": "Makinig",
+  "load_fail": "Nabigo ang pag-load",
+  "loading": "Naglo-load…",
+  "lvl": {
+    "all": "A1+A2",
+    "b1": "B1",
+    "b2": "B2",
+    "c1": "C1",
+    "label": "Antas",
+    "pool": "Pool: {n} salita"
+  },
+  "meter_done": "tapos na",
+  "mode": {
+    "a": "Pagbigkas",
+    "label": "Mode ng pag-aaral"
+  },
+  "modeb": {
+    "band": {
+      "label": "Banda",
+      "note": "{band}: {n} salita · {pct}% na-master ({m} sa box 4+)"
+    },
+    "correct": "Tama",
+    "incorrect": "Subukang muli",
+    "lead_html": "Sa halip na alam nang salita, matuto ng <b>bagong bokabularyo mula sa tunog</b>. Pakinggan ang salita, tingnan ang kahulugan at baybay. Umuusad ayon sa CEFR band na may awtomatikong review.",
+    "pool": "Band {band}: {n} salita · {pct}% na-master",
+    "quiz": {
+      "choose_meaning": "Piliin ang kahulugan",
+      "type_word": "I-type ang salita"
+    },
+    "study": {
+      "got_it": "Naintindihan → Susunod"
+    },
+    "title": "Tunog → Bokabularyo"
+  },
+  "next": "Susunod",
+  "note": {
+    "pattern": "Padron ng baybay: {p}",
+    "schwa": "Schwa (ə/ɚ): manatiling mahina at malabo, huwag padala sa baybay",
+    "stress": "Diinan ang pantig {n} ({sy} pantig)",
+    "tricky": "Mga mahirap na tunog: {s}"
+  },
+  "patterns": {
+    "magic_e": "tahimik na e"
+  },
+  "pool": {
+    "count": "Pool: {n} salita",
+    "count_phrases": "Pool: {n} parirala",
+    "count_weak": "Pool: {n} mahinang anyo"
+  },
+  "pos": {
+    "be動詞": "pandiwang be",
+    "代名詞": "panghalip",
+    "前置詞": "pang-ukol",
+    "副詞": "pang-abay",
+    "副詞 / 前置詞": "pang-abay / pang-ukol",
+    "助動詞": "pandiwang pantulong",
+    "動詞": "pandiwa",
+    "動詞（不規則変化）": "di-regular na anyo ng pandiwa",
+    "口語表現": "pang-araw-araw na ekspresyon",
+    "名詞": "pangngalan",
+    "名詞（不規則複数）": "di-regular na maramihan",
+    "形容詞": "pang-uri",
+    "形容詞 / 副詞": "pang-uri / pang-abay",
+    "接続詞": "pangatnig",
+    "文字": "pangalan ng titik",
+    "短縮形": "pinaikli",
+    "間投詞": "pandamdam",
+    "限定詞": "pantukoy"
+  },
+  "reg": {
+    "all": "Lahat",
+    "irregular": "Di-regular",
+    "irregular_d": "Karaniwang salita, di-regular na baybay",
+    "label": "Uri ng baybay",
+    "regular": "Mga regular na padron",
+    "regular_d": "Phonics / mga tuntunin ng baybay&ndash;tunog"
+  },
+  "reveal": {
+    "ga_note": "GA (Amer.)",
+    "rp_note": "RP (Brit.)"
+  },
+  "see_answer": "Tingnan ang sagot",
+  "set": {
+    "daily_d": "Karaniwang salita (kasama ang di-regular na baybay)",
+    "daily_t": "Pang-araw-araw na salita · CEFR A1–A2",
+    "label": "Set ng tanong",
+    "phonics_d": "Mga salitang may regular na tugma ng baybay&ndash;tunog",
+    "phonics_t": "Mga padron ng phonics · baybay &harr; tunog"
+  },
+  "settings_btn": "Mga Setting",
+  "settings_close": "Isara",
+  "settings_lang": "Wika",
+  "settings_title": "Mga Setting",
+  "start": "Simulan",
+  "summary": {
+    "again": "Maglaro muli",
+    "line": "{c} / {t} tama · {m} babalikan",
+    "review": "Listahan ng babalikan: {list}",
+    "weak_btn": "Balikan ang mga mali lamang",
+    "weak_head": "Mga tunog na susunod na sanayin",
+    "weak_none_d": "Walang naling tunog. Subukan ang mas mataas na antas.",
+    "weak_none_t": "Walang natukoy na mahinang tunog"
+  },
+  "syl": "{n} pantig",
+  "syl_pl": "{n} pantig",
+  "tab": {
+    "connected": "Konektadong Pananalita",
+    "label": "Mode ng pagsasanay",
+    "weak": "Mahihinang Anyo",
+    "words": "Mga Salita"
+  },
+  "tips_head": "Mga tip sa pagbigkas",
+  "weak": {
+    "strong_label": "Malakas",
+    "weak_label": "Mahina"
+  },
+  "wordlist_fail": "Nabigong i-load ang listahan ng salita",
+  "you": "Ikaw: {a}"
+}

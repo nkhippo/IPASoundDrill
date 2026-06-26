@@ -1,0 +1,303 @@
+{
+  "ˈ": {
+    "lab": "Pangunahing diin",
+    "ex": "diinan ang susunod na pantig",
+    "mouth": "Mas mataas, mas mahaba, at mas malakas nang sabay",
+    "trap": "Hindi sapat ang tono lamang — gamitin din ang haba at lakas",
+    "t": 1
+  },
+  "ˌ": {
+    "lab": "Pangalawang diin",
+    "ex": "mas magaang diin",
+    "mouth": "Mas malakas kaysa walang-diin, mas mahina kaysa pangunahin",
+    "trap": "Huwag itong lubusang paluwagin",
+    "t": 1
+  },
+  "i": {
+    "lab": "mahabang ee (see)",
+    "ex": "see /si/",
+    "mouth": "Mahigpit na mga labing nakangiti pahaba para sa mahabang \"ee\"",
+    "trap": "Kaiba sa ɪ — huwag itong paluwagin",
+    "t": 1
+  },
+  "ɪ": {
+    "lab": "maikling i (sit)",
+    "ex": "sit /sɪt/",
+    "mouth": "Nakarelaks, maikli, bahagyang maluwag na \"ih\" papuntang \"eh\"",
+    "trap": "Huwag itong hihigpitan na parang i",
+    "t": 1
+  },
+  "ɛ": {
+    "lab": "eh (bed)",
+    "ex": "bed /bɛd/",
+    "mouth": "Bukas-gitnang patinig sa harapan na parang \"eh\"",
+    "trap": "Panatilihing kaiba sa æ",
+    "t": 0
+  },
+  "æ": {
+    "lab": "a~eh (cat)",
+    "ex": "cat /kæt/",
+    "mouth": "Nakabukang bibig; nasa pagitan ng \"ah\" at \"eh\"",
+    "trap": "Hindi payak na \"ah\" — ikalat at ilapit sa harapan",
+    "t": 1
+  },
+  "ə": {
+    "lab": "schwa",
+    "ex": "about /əˈbaʊt/",
+    "mouth": "Gitnang, mahina, at nakarelaks na patinig",
+    "trap": "Huwag pansinin ang baybay — panatilihing malabo at walang-diin",
+    "t": 1
+  },
+  "ʌ": {
+    "lab": "uh (cup)",
+    "ex": "cup /kʌp/",
+    "mouth": "Maikli, bukas, at gitnang \"uh\"",
+    "trap": "Mas malinaw at mas malakas kaysa schwa",
+    "t": 1
+  },
+  "ɑ": {
+    "lab": "ah (hot/father)",
+    "ex": "hot /hɑt/",
+    "mouth": "Mababa at likurang bukas na \"ah\"",
+    "trap": "Malalim sa loob ng bibig, hindi maliwanag na \"ah\" sa harapan",
+    "t": 1
+  },
+  "ɔ": {
+    "lab": "aw (dog/thought)",
+    "ex": "dog /dɔɡ/",
+    "mouth": "Nakabilog na \"aw\"",
+    "trap": "Sa GA maaaring magsanib ito sa ɑ — bilugan pa rin ang mga labi",
+    "t": 1
+  },
+  "ʊ": {
+    "lab": "maikling u (book)",
+    "ex": "book /bʊk/",
+    "mouth": "Nakarelaks na maikling \"u\"; bahagyang bilog ang mga labi",
+    "trap": "Kaiba sa u — huwag masyadong iusli ang labi",
+    "t": 1
+  },
+  "u": {
+    "lab": "mahabang oo (food)",
+    "ex": "food /fud/",
+    "mouth": "Nakabilog at nakausling \"oo\"",
+    "trap": "Bilugan ang labi nang higit sa inaasahan ng marami",
+    "t": 1
+  },
+  "ɝ": {
+    "lab": "may-diing er (bird)",
+    "ex": "bird /bɝd/",
+    "mouth": "Nakaipon palikod ang dila na may malakas na kulay-r",
+    "trap": "Walang eksaktong katumbas sa unang wika — er/ir/ur ang kadalasang nauuwi rito",
+    "t": 1
+  },
+  "ɚ": {
+    "lab": "walang-diing er (water)",
+    "ex": "water /ˈwɔtɚ/",
+    "mouth": "Mas mahinang schwa na may kulay-r",
+    "trap": "Ang -er/-or sa dulo ng salita ay kadalasang ito",
+    "t": 1
+  },
+  "eɪ": {
+    "lab": "ay (day)",
+    "ex": "day /deɪ/",
+    "mouth": "Dausdos mula \"eh\" papuntang \"ee\"",
+    "trap": "Huwag panatilihing patag na \"ay\"",
+    "t": 0
+  },
+  "aɪ": {
+    "lab": "eye (my)",
+    "ex": "my /maɪ/",
+    "mouth": "Dausdos mula \"ah\" papuntang \"ee\"",
+    "trap": "Panatilihin itong iisang diptonggo",
+    "t": 0
+  },
+  "ɔɪ": {
+    "lab": "oy (boy)",
+    "ex": "boy /bɔɪ/",
+    "mouth": "Dausdos mula \"aw\" papuntang \"ee\"",
+    "trap": "—",
+    "t": 0
+  },
+  "oʊ": {
+    "lab": "oh (go)",
+    "ex": "go /ɡoʊ/",
+    "mouth": "Dausdos mula \"oh\" papuntang \"oo\"; bilugan sa dulo",
+    "trap": "Hindi patag na mahabang \"oh\" — panatilihin ang dausdos",
+    "t": 1
+  },
+  "aʊ": {
+    "lab": "ow (now)",
+    "ex": "now /naʊ/",
+    "mouth": "Dausdos mula \"ah\" papuntang \"oo\"",
+    "trap": "Bilugan ang ikalawang bahagi",
+    "t": 0
+  },
+  "θ": {
+    "lab": "walang-tinig na th (think)",
+    "ex": "think /θɪŋk/",
+    "mouth": "Dulo ng dila nang bahagya sa pagitan ng ngipin; hangin lamang",
+    "trap": "Hindi \"s\" — ipakita ang dila",
+    "t": 1
+  },
+  "ð": {
+    "lab": "may-tinig na th (this)",
+    "ex": "this /ðɪs/",
+    "mouth": "Katulad ng θ ngunit may tinig",
+    "trap": "Hindi \"z\" o \"d\"",
+    "t": 1
+  },
+  "ʃ": {
+    "lab": "sh (she)",
+    "ex": "she /ʃi/",
+    "mouth": "Bilog ang labi; dila ay nakahila paatras",
+    "trap": "Mas paatras kaysa karaniwang gawi sa \"sh\"",
+    "t": 0
+  },
+  "ʒ": {
+    "lab": "zh (measure)",
+    "ex": "measure /ˈmɛʒɚ/",
+    "mouth": "May-tinig na bersyon ng sh",
+    "trap": "Bihira sa maraming unang wika; karaniwan sa gitna/dulo",
+    "t": 1
+  },
+  "tʃ": {
+    "lab": "ch (church)",
+    "ex": "church /tʃɝtʃ/",
+    "mouth": "t + sh bilang isang aprikada",
+    "trap": "—",
+    "t": 0
+  },
+  "dʒ": {
+    "lab": "j (judge)",
+    "ex": "judge /dʒʌdʒ/",
+    "mouth": "d + zh bilang isang aprikada",
+    "trap": "—",
+    "t": 0
+  },
+  "ŋ": {
+    "lab": "ng (sing)",
+    "ex": "sing /sɪŋ/",
+    "mouth": "Itaas ang likod ng dila; hangin sa ilong; walang \"g\" sa dulo",
+    "trap": "Huwag dagdagan ng matigas na \"g\"",
+    "t": 1
+  },
+  "r": {
+    "lab": "r (right)",
+    "ex": "right /raɪt/",
+    "mouth": "Nakaipon/nakakurba paatras ang dila nang hindi dumidikit",
+    "trap": "Hindi l — walang dikit kahit saan",
+    "t": 1
+  },
+  "l": {
+    "lab": "l (light)",
+    "ex": "light /laɪt/",
+    "mouth": "Dulo ng dila nang matatag sa gilagid (alveolar ridge)",
+    "trap": "Hindi r — kailangang may dikit",
+    "t": 1
+  },
+  "v": {
+    "lab": "v (van)",
+    "ex": "van /væn/",
+    "mouth": "Itaas na ngipin sa ibabang labi na may tinig",
+    "trap": "Hindi \"b\" — gamitin ang ngipin sa labi",
+    "t": 1
+  },
+  "f": {
+    "lab": "f (fan)",
+    "ex": "fan /fæn/",
+    "mouth": "Itaas na ngipin sa ibabang labi na may hangin",
+    "trap": "Hindi magkadikit ang dalawang labi",
+    "t": 1
+  },
+  "w": {
+    "lab": "w (we)",
+    "ex": "we /wi/",
+    "mouth": "Bilog na labi; nagsisimula bilang malapatinig",
+    "trap": "—",
+    "t": 0
+  },
+  "j": {
+    "lab": "y (yes)",
+    "ex": "yes /jɛs/",
+    "mouth": "Palatal na malapatinig na parang \"y\"",
+    "trap": "Ang ju ay hindi payak na \"oo\"",
+    "t": 0
+  },
+  "h": {
+    "lab": "h (hat)",
+    "ex": "hat /hæt/",
+    "mouth": "Magaang hininga mula sa lalamunan",
+    "trap": "—",
+    "t": 0
+  },
+  "b": {
+    "lab": "b",
+    "ex": "bat",
+    "mouth": "Magkadikit na labi, may tinig",
+    "trap": "—",
+    "t": 0
+  },
+  "d": {
+    "lab": "d",
+    "ex": "dog",
+    "mouth": "Dulo ng dila sa gilagid, may tinig",
+    "trap": "—",
+    "t": 0
+  },
+  "ɡ": {
+    "lab": "g",
+    "ex": "go",
+    "mouth": "Likod ng dila sa ngala-ngala, may tinig",
+    "trap": "—",
+    "t": 0
+  },
+  "k": {
+    "lab": "k",
+    "ex": "cat",
+    "mouth": "Likod ng dila sa ngala-ngala, walang tinig",
+    "trap": "—",
+    "t": 0
+  },
+  "p": {
+    "lab": "p",
+    "ex": "pen",
+    "mouth": "Magkadikit na labi, walang tinig",
+    "trap": "—",
+    "t": 0
+  },
+  "t": {
+    "lab": "t",
+    "ex": "top",
+    "mouth": "Dulo ng dila sa gilagid, walang tinig",
+    "trap": "—",
+    "t": 0
+  },
+  "m": {
+    "lab": "m",
+    "ex": "man",
+    "mouth": "Pang-ilong, magkadikit na labi",
+    "trap": "—",
+    "t": 0
+  },
+  "n": {
+    "lab": "n",
+    "ex": "no",
+    "mouth": "Pang-ilong, dulo ng dila sa gilagid",
+    "trap": "—",
+    "t": 0
+  },
+  "s": {
+    "lab": "s",
+    "ex": "see",
+    "mouth": "Dila malapit sa ngipin; daloy ng hangin",
+    "trap": "Huwag ipagkamali sa θ",
+    "t": 1
+  },
+  "z": {
+    "lab": "z",
+    "ex": "zoo",
+    "mouth": "May-tinig na s",
+    "trap": "—",
+    "t": 0
+  }
+}

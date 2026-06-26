@@ -273,5 +273,60 @@
         "每次练习要短而频繁，而非长而稀少；间隔重复系统正是为每天回访而设计的。任何 IPA 符号都可以点开，看它的解说与例词——每当某个符号让你意外，就用它。并且经常重播语音：目标不是答对一次，而是让正确的声音变得\"理所当然\"。当某组对立终于在你口中咬合，你会发现自己忽然也听得见它了。那一刻，正是这个应用的全部意义。"
       ]
     }
+  },
+  "fil": {
+    "welcome": {
+      "title": "Maligayang pagdating",
+      "body": [
+        "Ang app na ito ay isang pagsasanay sa pagbigkas, hindi isang app para sa bokabularyo. Tiyak at sinadya ang gawain nito: tulungan kang muling matutunan ang *tunog* ng mga salitang alam mo na, at gawin kang bihasa sa pagbasa at pagsulat ng IPA — ang ponetikong alpabeto na sa wakas ay nagpapahulaan sa baybay ng Ingles. Wala ka rito para magsaulo ng mga bagong salita. Nandito ka para ayusin ang puwang sa pagitan ng mga salitang nakikilala mo sa papel at ng mga tunog na talagang nililikha ng mga salitang iyon."
+      ]
+    },
+    "philosophy": {
+      "title": "Ang ideya sa likod nito",
+      "body": [
+        "Ang buong app ay nakasalalay sa isang prinsipyo: **ang mga tunog na hindi mo kayang bigkasin nang tama ay hindi mo rin maririnig nang tama.** Ang pakikinig at ang pagbigkas ay dalawang mukha ng iisang kasanayan. Kung hindi pa kailanman natutunan ng iyong bibig ang pagkakaiba ng patinig sa *ship* at *sheep*, o ng katinig sa *think* at *sink*, patuloy na lalabuin ng iyong tainga ang mga iyon — gaano man karaming oras ka makinig. Ito ang dahilan kung bakit tahimik na napapabuti ng isang kasangkapan sa pagbigkas ang iyong pakikinig: sa pamamagitan ng pagsasanay sa panig na pang-galaw ng isang tunog, hinahasa mo ang pang-unawa rito.",
+        "Ito rin ang dahilan kung bakit ang bawat sangguniang tinig dito ay isang mahinahon, anyong-diksyunaryo (citation form) na pagbigkas — ang maingat na anyo sa diksyunaryo, hindi ang mabilis na pang-usapang tinig. Kailangan mo ng matatag at malinaw na target na maisaloob bago mo makilala ang mas magulong bersyon sa totoong buhay."
+      ]
+    },
+    "solves": {
+      "title": "Ano ang inaayos ng app na ito",
+      "body": [
+        "Tatlong puwang, sa partikular. Una, ang **puwang sa bokabularyo at pagbigkas**: alam mo ang kahulugan ng salita, ngunit hindi pa nakaayos sa katawan mo ang tunog nito. Pangalawa, ang **kakayahan sa IPA**: palaging nagsisinungaling ang baybay ng Ingles, kaya ang tanging mapagkakatiwalaang mapa mula titik patungong tunog ay ang IPA — at karamihan ng mga nag-aaral ay nakababasa ng kaunti ngunit hindi nakasusulat nito. Pangatlo, ang **puwang sa pagitan ng pang-unawa at pagbigkas** na binanggit sa itaas, kabilang ang maliliit na kaibahan (θ/f, ð/d, ʃ/tʃ, ɪ/iː) na nagpapasiya kung mauunawaan mo ang pangungusap o hihinuhin mo lamang.",
+        "**Hindi** nito sinusubukang maging pangkalahatang kurso sa pagsasalita o pagsasanay sa katatasan. Sinadya itong gumana sa antas ng iisang salita at maikling parirala. Ang malawak na pagsasanay sa pakikipag-usap ay nasa ibang lugar; ito ang kasangkapan para sa katumpakan."
+      ]
+    },
+    "modes": {
+      "title": "Ang dalawang mode",
+      "body": [
+        "**Mode A — Pagbigkas (ang pangunahin).** Gamitin ito para sa mga salitang naiintindihan mo na. Sinasanay mo ang ugnayan ng tunog at simbolong IPA, sinusuri nang obhetibo, kalakip ang magaan na sistema ng paulit-ulit na pagbabalik (spaced repetition) na nagbabalik ng mga salita at partikular na simbolo na madalas mong mali. Ito ang puso ng app at kung saan dapat mapunta ang halos lahat ng iyong oras. Pumili ng pokus na ponema — lahat ng tunog, ang kilalang \"trap\" na tunog, ang sarili mong kahinaan mula sa kasaysayan, ang alpabeto, mga pinaikling anyo (contractions), mga di-regular na anyo, pang-usapang pananalita — at ibibigay sa iyo ng app ang mga tugmang salita.",
+        "**Mode B — Tunog → Bokabularyo (ang pangalawang tema).** Gamitin ito kapag nais mong matuto ng tunay na bagong salita, tunog-muna. Naririnig mo ang salita bago mo makita ang kahulugan, pagkatapos ay kinukumpirma mo ito sa dalawang paraan: pagpili ng kahulugan mula sa apat na pagpipilian, at pag-type ng baybay mula sa tunog. Ang maling mga sagot sa multiple choice ay sinadyang piliin bilang *ponetikong kalapit* — mga salitang nagkakaiba sa isang tunog lamang — kaya hindi ka makadaraan sa pamamagitan ng pag-aalis. Kailangan mong talagang marinig ang pagkakaiba. Sa katunayan, ginagawa nitong pagsusulit sa pagkilala ng minimal pair ang bawat pagsusuri.",
+        "Isang simpleng panuntunan: kung kilala mo na ang salita, iyon ay Mode A. Kung hindi, iyon ay Mode B."
+      ]
+    },
+    "decode_encode": {
+      "title": "Decode at Encode",
+      "body": [
+        "Tumatakbo ang Mode A sa dalawang direksyon, at dapat mong sanayin ang dalawa. Ipinapakita ng **Decode** ang IPA at hinihiling sa iyong isulat ang karaniwang baybay — sinasanay nito ang *pagbasa* ng ponetikong alpabeto. Ipinapakita ng **Encode** ang salita at hinihiling sa iyong buuin ang pagbigkas sa keyboard ng IPA, simbolo sa simbolo — sinasanay nito ang *pagsulat*, na mas mahirap at mas marami ang inilalantad. Sa Encode mo matutuklasan na hindi mo pala talaga alam kung saan nahuhulog ang diin, o kung aling patinig ang talagang naroon. Pinatutunayan ng Decode na nakababasa ka; pinatutunayan ng Encode na nauunawaan mo."
+      ]
+    },
+    "connected": {
+      "title": "Ang tab na Connected Speech",
+      "body": [
+        "Hindi binibigkas ng totoong pananalita ang mga salita nang isa-isa at malinis. Ikinakawing, pinaghahalo, at binabawasan ang mga tunog: ang *what do you* ay nagiging isang malinis na agos, ang *next day* ay nawawalan ng gitnang *t*, ang *ten boys* ay inililihis ang *n* nito patungong *m*. Tinitipon ng tab na Connected Speech ang mga pariralang ito at ipinapakita ang IPA ng *konektadong* resulta, hinihiling sa iyong bawiin ang orihinal na mga salita. Ang mga parirala ay nahahati sa tatlong kababalaghan — linking, assimilation, elision — at tatlong antas ng hirap. Magsimula sa Level 1 na may dalawang-salitang kawing, at umakyat sa Level 3, kung saan maraming epekto ang nagsasalansan sa loob ng isang maikling pangungusap. Ipinaliliwanag ng tab na ito kung bakit ang mabilis na Ingles ay walang kawangis ng diksyunaryo, at kung bakit normal iyon."
+      ]
+    },
+    "accents": {
+      "title": "Amerikano (GA) at Britaniko (RP)",
+      "body": [
+        "Maaari mong itakda ang buong app sa General American o sa Received Pronunciation, at binabago ng pagpiling iyon ang IPA na nakikita mo, ang keyboard na pinipindot mo, at ang tinig na naririnig mo. Tunay na nagkakaiba ang mga ito: ibinabagsak ng RP ang *r* sa dulo ng *car* at *letter*; hinahati ng dalawang punto ang mga salitang tulad ng *bath* at *lot* sa magkaibang patinig. Piliin ang punto na talagang nais mong tularan ang tunog, at manatili rito nang sapat na panahon upang maisaloob ito. Kapag inihayag mo ang sagot, ipinapakita rin ng app ang IPA ng kabilang punto bilang talababa, kaya makikita mo ang kaibahan nang hindi nawawala ang iyong pangunahing target. Walang \"tama\" na punto — mayroon lamang ang pinili mong pag-aralan."
+      ]
+    },
+    "how_to_use": {
+      "title": "Paano ito gamitin nang mahusay",
+      "body": [
+        "Magsimula sa Mode A, Decode, gamit ang \"lahat ng tunog,\" at hayaang matutunan ng app ang iyong mga kahinaan mula sa iyong pagkakamali. Pagkatapos ng ilang sesyon, ilipat ang pokus sa \"weak spots\" at hayaang hanapin nito ang mga simbolong madalas mong mali. Idagdag ang Encode kapag madali nang pakiramdam ang Decode — pagpapakumbaba iyon, at iyon ang layunin. Bisitahin ang tab na Connected Speech nang dalawang beses sa isang linggo upang manatiling handa ang iyong tainga sa tunay na pananalita. Lumipat sa Mode B kapag nais mong palawakin ang bokabularyo sa pamamagitan ng tainga sa halip na mata.",
+        "Panatilihing maikli at madalas ang mga sesyon sa halip na mahaba at bihira; ang sistema ng paulit-ulit na pagbabalik ay ginawa para sa pang-araw-araw na pagbabalik. Pindutin ang anumang simbolong IPA upang buksan ang paliwanag at mga halimbawang salita nito — gamitin ito sa tuwing may simbolong magugulat sa iyo. At ulit-ulitin ang pag-play ng tunog: ang layunin ay hindi ang sumagot nang minsan, kundi ang gawing karaniwan ang tamang tunog. Kapag sa wakas ay umangkop sa iyong bibig ang isang kaibahan, mapapansin mong bigla mo na itong naririnig. Iyon ang buong layunin ng app na ito."
+      ]
+    }
   }
 }

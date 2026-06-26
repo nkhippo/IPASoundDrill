@@ -34,7 +34,7 @@ BASE = "en"  # 正本言語
 ALLOW_EN_IDENTICAL = {
     "focus.traps_d",          # IPA 記号列
     "lvl.all", "lvl.b1", "lvl.b2", "lvl.c1",  # CEFR コード
-    "lang_opts.en", "lang_opts.ja", "lang_opts.zh", "lang_opts.ko",  # 言語名(自称)
+    "lang_opts.en", "lang_opts.ja", "lang_opts.zh", "lang_opts.ko", "lang_opts.fil",  # 言語名(自称)
 }
 
 def load(path):
