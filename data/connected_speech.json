@@ -16,7 +16,13 @@
       "ja": "リンゴ",
       "zh": "一个苹果",
       "ko": "사과 하나"
-    }
+    },
+    "carriers": [
+      "I ate {P} for breakfast.",
+      "She bought {P} at the store.",
+      "There's {P} on the table.",
+      "He gave me {P}."
+    ]
   },
   {
     "id": "cs002",
@@ -35,7 +41,13 @@
       "ja": "拾い上げる",
       "zh": "捡起来",
       "ko": "집어 올리다"
-    }
+    },
+    "carriers": [
+      "Could you {P} for me?",
+      "He bent down to {P}.",
+      "Please {P} before you go.",
+      "I'll {P} on my way out."
+    ]
   },
   {
     "id": "cs003",
@@ -54,7 +66,13 @@
       "ja": "さあ、おいで",
       "zh": "来吧",
       "ko": "어서"
-    }
+    },
+    "carriers": [
+      "{P}, we're going to be late!",
+      "Oh {P}, you can do it.",
+      "{P}, the bus is here.",
+      "Hey, {P} and join us."
+    ]
   },
   {
     "id": "cs004",
@@ -73,7 +91,13 @@
       "ja": "見る",
       "zh": "看",
       "ko": "보다"
-    }
+    },
+    "carriers": [
+      "{P} that beautiful sky.",
+      "Just {P} the time!",
+      "Let's {P} the map first.",
+      "{P} what you did."
+    ]
   },
   {
     "id": "cs005",
@@ -92,7 +116,13 @@
       "ja": "確認する",
       "zh": "检查它",
       "ko": "확인하다"
-    }
+    },
+    "carriers": [
+      "Let me {P} before we go.",
+      "Can you {P} for me?",
+      "I'll {P} one more time.",
+      "Please {P} carefully."
+    ]
   },
   {
     "id": "cs006",
@@ -111,7 +141,13 @@
       "ja": "消す",
       "zh": "关掉",
       "ko": "끄다"
-    }
+    },
+    "carriers": [
+      "Don't forget to {P} the lights.",
+      "Please {P} your phone.",
+      "Can you {P} the TV?",
+      "I'll {P} the heater now."
+    ]
   },
   {
     "id": "cs007",
@@ -130,7 +166,13 @@
       "ja": "1時間",
       "zh": "一小时",
       "ko": "한 시간"
-    }
+    },
+    "carriers": [
+      "We waited {P} for the train.",
+      "The meeting lasted {P}.",
+      "I'll be there in {P}.",
+      "It takes {P} to get there."
+    ]
   },
   {
     "id": "cs008",
@@ -149,7 +191,13 @@
       "ja": "遠く離れて",
       "zh": "遥远",
       "ko": "멀리"
-    }
+    },
+    "carriers": [
+      "They live {P} from here.",
+      "The beach is {P}.",
+      "He moved {P} last year.",
+      "It's not that {P}."
+    ]
   },
   {
     "id": "cs009",
@@ -168,7 +216,13 @@
       "ja": "私は～です",
       "zh": "我是",
       "ko": "나는 ~이다"
-    }
+    },
+    "carriers": [
+      "{P} so happy today.",
+      "I think {P} ready now.",
+      "Yes, {P} listening.",
+      "{P} sure it will work."
+    ]
   },
   {
     "id": "cs010",
@@ -187,7 +241,13 @@
       "ja": "立ち去る",
       "zh": "走开",
       "ko": "저리 가"
-    }
+    },
+    "carriers": [
+      "Please {P} and leave me alone.",
+      "The clouds will {P} soon.",
+      "Tell them to {P}.",
+      "I watched the train {P}."
+    ]
   },
   {
     "id": "cs011",
@@ -206,7 +266,13 @@
       "ja": "終わり",
       "zh": "结束",
       "ko": "끝"
-    }
+    },
+    "carriers": [
+      "We reached {P} at last.",
+      "This is {P} of the road.",
+      "Read it to {P}.",
+      "That was {P} of the movie."
+    ]
   },
   {
     "id": "cs012",
@@ -225,7 +291,13 @@
       "ja": "～しましたか",
       "zh": "你...了吗",
       "ko": "너 ~했니"
-    }
+    },
+    "carriers": [
+      "{P} finish the report?",
+      "{P} see that?",
+      "Where {P} put my keys?",
+      "{P} call her yesterday?"
+    ]
   },
   {
     "id": "cs013",
@@ -244,7 +316,13 @@
       "ja": "～してくれますか",
       "zh": "你愿意吗",
       "ko": "~해 주겠니"
-    }
+    },
+    "carriers": [
+      "{P} pass me the salt?",
+      "{P} like some tea?",
+      "{P} mind helping me?",
+      "{P} come with us?"
+    ]
   },
   {
     "id": "cs014",
@@ -263,7 +341,13 @@
       "ja": "～できますか",
       "zh": "你能吗",
       "ko": "~할 수 있니"
-    }
+    },
+    "carriers": [
+      "{P} help me move this?",
+      "{P} open the window?",
+      "{P} explain it again?",
+      "{P} wait a moment?"
+    ]
   },
   {
     "id": "cs015",
@@ -282,7 +366,13 @@
       "ja": "～しないの",
       "zh": "你不...吗",
       "ko": "너 ~안 하니"
-    }
+    },
+    "carriers": [
+      "{P} remember to lock up?",
+      "{P} want to come along?",
+      "{P} like this one better?",
+      "{P} agree with me?"
+    ]
   },
   {
     "id": "cs016",
@@ -301,7 +391,13 @@
       "ja": "～しませんか",
       "zh": "你不...吗",
       "ko": "~하지 않겠니"
-    }
+    },
+    "carriers": [
+      "{P} join us for dinner?",
+      "{P} stay a little longer?",
+      "{P} try the other door?",
+      "{P} call me later?"
+    ]
   },
   {
     "id": "cs017",
@@ -320,7 +416,13 @@
       "ja": "翌日",
       "zh": "第二天",
       "ko": "다음 날"
-    }
+    },
+    "carriers": [
+      "We'll continue the {P}.",
+      "Let's meet the {P}.",
+      "I'll start the {P}.",
+      "The {P} was sunny."
+    ]
   },
   {
     "id": "cs018",
@@ -339,7 +441,13 @@
       "ja": "～にちがいない",
       "zh": "一定是",
       "ko": "~임에 틀림없다"
-    }
+    },
+    "carriers": [
+      "It {P} a mistake.",
+      "He {P} home by now.",
+      "There {P} a reason.",
+      "That {P} the answer."
+    ]
   },
   {
     "id": "cs019",
@@ -358,7 +466,13 @@
       "ja": "老人",
       "zh": "老人",
       "ko": "노인"
-    }
+    },
+    "carriers": [
+      "The {P} sat by the window.",
+      "An {P} told the story.",
+      "That {P} is my neighbor.",
+      "A kind {P} helped us."
+    ]
   },
   {
     "id": "cs020",
@@ -377,7 +491,13 @@
       "ja": "昨夜",
       "zh": "昨晚",
       "ko": "어젯밤"
-    }
+    },
+    "carriers": [
+      "I slept badly {P}.",
+      "We met {P}.",
+      "It rained all {P}.",
+      "She called me {P}."
+    ]
   },
   {
     "id": "cs021",
@@ -396,7 +516,13 @@
       "ja": "親友",
       "zh": "好朋友",
       "ko": "절친한 친구"
-    }
+    },
+    "carriers": [
+      "She is my {P}.",
+      "He's my {P}.",
+      "My {P} lives nearby.",
+      "You're my {P}."
+    ]
   },
   {
     "id": "cs022",
@@ -415,7 +541,13 @@
       "ja": "たくさんの",
       "zh": "很多",
       "ko": "많은"
-    }
+    },
+    "carriers": [
+      "I have {P} work today.",
+      "There's {P} food left.",
+      "She knows {P} people.",
+      "We had {P} fun."
+    ]
   },
   {
     "id": "cs023",
@@ -434,7 +566,13 @@
       "ja": "その一部",
       "zh": "其中一部分",
       "ko": "그 일부"
-    }
+    },
+    "carriers": [
+      "That's {P}.",
+      "I missed {P}.",
+      "This is {P}.",
+      "He explained {P}."
+    ]
   },
   {
     "id": "cs024",
@@ -453,7 +591,13 @@
       "ja": "まず第一に",
       "zh": "首先",
       "ko": "우선"
-    }
+    },
+    "carriers": [
+      "{P}, let me say thanks.",
+      "{P}, we need a plan.",
+      "{P}, check the date.",
+      "{P}, sit down."
+    ]
   },
   {
     "id": "cs025",
@@ -472,7 +616,13 @@
       "ja": "ますます",
       "zh": "越来越多",
       "ko": "점점 더"
-    }
+    },
+    "carriers": [
+      "It's getting {P} difficult.",
+      "She likes him {P}.",
+      "Prices rise {P}.",
+      "We hear it {P}."
+    ]
   },
   {
     "id": "cs026",
@@ -491,7 +641,13 @@
       "ja": "～から出る",
       "zh": "离开",
       "ko": "~에서 나가다"
-    }
+    },
+    "carriers": [
+      "Let's {P} here.",
+      "I need to {P} the house.",
+      "Try to {P} trouble.",
+      "Help me {P} this."
+    ]
   },
   {
     "id": "cs027",
@@ -510,7 +666,13 @@
       "ja": "ちょっと待って",
       "zh": "等一下",
       "ko": "잠깐만"
-    }
+    },
+    "carriers": [
+      "{P}, I'm almost ready.",
+      "Please {P}.",
+      "{P}, let me check.",
+      "Just {P}."
+    ]
   },
   {
     "id": "cs028",
@@ -529,7 +691,13 @@
       "ja": "全然～ない",
       "zh": "一点也不",
       "ko": "전혀 아니다"
-    }
+    },
+    "carriers": [
+      "{P}, it was easy.",
+      "I'm {P} tired.",
+      "That's {P} true.",
+      "No trouble {P}."
+    ]
   },
   {
     "id": "cs029",
@@ -548,7 +716,13 @@
       "ja": "そのうちの一つ",
       "zh": "其中之一",
       "ko": "그중 하나"
-    }
+    },
+    "carriers": [
+      "She's {P}.",
+      "Take {P}.",
+      "He's {P}.",
+      "Pick {P}."
+    ]
   },
   {
     "id": "cs030",
@@ -567,7 +741,13 @@
       "ja": "わかった／捕まえた",
       "zh": "明白了／抓到你了",
       "ko": "알았어／잡았다"
-    }
+    },
+    "carriers": [
+      "{P}, don't worry.",
+      "Ah, {P}!",
+      "{P} on that one.",
+      "Okay, {P}."
+    ]
   },
   {
     "id": "cs031",
@@ -586,7 +766,13 @@
       "ja": "あなたが何を",
       "zh": "你...什么",
       "ko": "네가 무엇을"
-    }
+    },
+    "carriers": [
+      "I know {P} mean.",
+      "Is that {P} want?",
+      "Tell me {P} need.",
+      "That's {P} said."
+    ]
   },
   {
     "id": "cs032",
@@ -605,7 +791,13 @@
       "ja": "～していただけますか",
       "zh": "你介意吗",
       "ko": "~해 주시겠어요"
-    }
+    },
+    "carriers": [
+      "{P} closing the door?",
+      "{P} waiting a moment?",
+      "{P} helping me?",
+      "{P} repeating that?"
+    ]
   },
   {
     "id": "cs033",
@@ -624,7 +816,13 @@
       "ja": "～の場合に備えて",
       "zh": "以防",
       "ko": "~할 경우에 대비해"
-    }
+    },
+    "carriers": [
+      "Bring an umbrella {P} it rains.",
+      "Take a map {P} you get lost.",
+      "Save some {P} we need it.",
+      "Call me {P} of trouble."
+    ]
   },
   {
     "id": "cs034",
@@ -643,7 +841,13 @@
       "ja": "10人の少年",
       "zh": "十个男孩",
       "ko": "열 명의 소년"
-    }
+    },
+    "carriers": [
+      "There were {P}.",
+      "I saw {P}.",
+      "{P} were playing.",
+      "We counted {P}."
+    ]
   },
   {
     "id": "cs035",
@@ -662,7 +866,13 @@
       "ja": "いい子",
       "zh": "好孩子",
       "ko": "착한 아이"
-    }
+    },
+    "carriers": [
+      "He's a {P}.",
+      "What a {P}!",
+      "Such a {P}.",
+      "That's a {P}."
+    ]
   },
   {
     "id": "cs036",
@@ -681,7 +891,13 @@
       "ja": "あの件",
       "zh": "那个案子",
       "ko": "그 경우"
-    }
+    },
+    "carriers": [
+      "In {P}, call me.",
+      "{P} is closed.",
+      "Take {P} to court.",
+      "We dropped {P}."
+    ]
   },
   {
     "id": "cs037",
@@ -700,7 +916,13 @@
       "ja": "お大事に",
       "zh": "保佑你",
       "ko": "건강하세요"
-    }
+    },
+    "carriers": [
+      "{P}! Are you okay?",
+      "Oh, {P}.",
+      "{P}, take care.",
+      "{P}! That was a big sneeze."
+    ]
   },
   {
     "id": "cs038",
@@ -719,7 +941,13 @@
       "ja": "ちょっと、まあ",
       "zh": "有点",
       "ko": "약간"
-    }
+    },
+    "carriers": [
+      "It's {P} cold today.",
+      "I'm {P} tired.",
+      "That's {P} strange.",
+      "He's {P} shy."
+    ]
   },
   {
     "id": "cs039",
@@ -738,7 +966,13 @@
       "ja": "ある程度、まあ",
       "zh": "有点",
       "ko": "어느 정도"
-    }
+    },
+    "carriers": [
+      "It's {P} interesting.",
+      "I'm {P} hungry.",
+      "That's {P} odd.",
+      "She's {P} busy."
+    ]
   },
   {
     "id": "cs040",
@@ -757,7 +991,13 @@
       "ja": "彼らに尋ねる",
       "zh": "问他们",
       "ko": "그들에게 묻다"
-    }
+    },
+    "carriers": [
+      "I'll {P} later.",
+      "Let's {P} first.",
+      "Please {P} about it.",
+      "We should {P}."
+    ]
   },
   {
     "id": "cs041",
@@ -776,7 +1016,13 @@
       "ja": "彼に伝える",
       "zh": "告诉他",
       "ko": "그에게 말하다"
-    }
+    },
+    "carriers": [
+      "Please {P} the news.",
+      "I'll {P} tomorrow.",
+      "Don't {P} yet.",
+      "Can you {P}?"
+    ]
   },
   {
     "id": "cs042",
@@ -795,7 +1041,13 @@
       "ja": "彼女に渡す",
       "zh": "给她",
       "ko": "그녀에게 주다"
-    }
+    },
+    "carriers": [
+      "I'll {P} the book.",
+      "Please {P} a hand.",
+      "We should {P} a chance.",
+      "Let me {P} this."
+    ]
   },
   {
     "id": "cs043",
@@ -814,7 +1066,13 @@
       "ja": "一杯のお茶",
       "zh": "一杯茶",
       "ko": "차 한 잔"
-    }
+    },
+    "carriers": [
+      "I'd like a {P}.",
+      "She made a {P}.",
+      "A {P}, please.",
+      "He poured a {P}."
+    ]
   },
   {
     "id": "cs044",
@@ -833,7 +1091,13 @@
       "ja": "たっぷりの時間",
       "zh": "很多时间",
       "ko": "충분한 시간"
-    }
+    },
+    "carriers": [
+      "We have {P}.",
+      "There's {P} left.",
+      "Take {P}.",
+      "I need {P}."
+    ]
   },
   {
     "id": "cs045",
@@ -852,7 +1116,13 @@
       "ja": "彼らに送る",
       "zh": "发给他们",
       "ko": "그들에게 보내다"
-    }
+    },
+    "carriers": [
+      "I'll {P} the files.",
+      "We'll {P} a note.",
+      "Please {P} home.",
+      "Let me {P}."
+    ]
   },
   {
     "id": "cs046",
@@ -871,7 +1141,13 @@
       "ja": "何が欲しいの？",
       "zh": "你想要什么？",
       "ko": "뭘 원해?"
-    }
+    },
+    "carriers": [
+      "So, {P} for dinner?",
+      "Tell me, {P}?",
+      "{P} from the shop?",
+      "{P} to drink?"
+    ]
   },
   {
     "id": "cs047",
@@ -890,7 +1166,13 @@
       "ja": "調子はどう？",
       "zh": "你好吗？",
       "ko": "어떻게 지내?"
-    }
+    },
+    "carriers": [
+      "Hi, {P} today?",
+      "{P} these days?",
+      "So, {P}?",
+      "Hey, {P}?"
+    ]
   },
   {
     "id": "cs048",
@@ -909,7 +1191,13 @@
       "ja": "見に来て",
       "zh": "来看看",
       "ko": "와서 봐"
-    }
+    },
+    "carriers": [
+      "Please {P} for yourself.",
+      "{P} what I made.",
+      "{P} the new place.",
+      "Won't you {P}?"
+    ]
   },
   {
     "id": "cs049",
@@ -928,7 +1216,13 @@
       "ja": "それに気づく",
       "zh": "察觉到",
       "ko": "알아채다"
-    }
+    },
+    "carriers": [
+      "She'll {P} quickly.",
+      "Did you {P}?",
+      "I failed to {P}.",
+      "Try to {P}."
+    ]
   },
   {
     "id": "cs050",
@@ -947,7 +1241,13 @@
       "ja": "それのものすごい量",
       "zh": "好大一部分",
       "ko": "그것의 엄청난 양"
-    }
+    },
+    "carriers": [
+      "There was {P}.",
+      "We saw {P}.",
+      "He ate {P}.",
+      "I learned {P}."
+    ]
   },
   {
     "id": "cs051",
@@ -966,7 +1266,13 @@
       "ja": "さっさと終わらせる",
       "zh": "把它做完",
       "ko": "끝내 버리다"
-    }
+    },
+    "carriers": [
+      "Let's just {P}.",
+      "I want to {P}.",
+      "Please {P}.",
+      "We'll {P} now."
+    ]
   },
   {
     "id": "cs052",
@@ -985,7 +1291,13 @@
       "ja": "突然",
       "zh": "突然",
       "ko": "갑자기"
-    }
+    },
+    "carriers": [
+      "{P}, it started to rain.",
+      "{P}, she left.",
+      "Then, {P}, it stopped.",
+      "{P}, everyone cheered."
+    ]
   },
   {
     "id": "cs053",
@@ -1004,7 +1316,13 @@
       "ja": "もう食べた？",
       "zh": "你吃了吗？",
       "ko": "밥 먹었어?"
-    }
+    },
+    "carriers": [
+      "Hey, {P}?",
+      "{P}, or are you hungry?",
+      "So, {P}?",
+      "{P}, friend?"
+    ]
   },
   {
     "id": "cs054",
@@ -1023,7 +1341,13 @@
       "ja": "いかがですか？",
       "zh": "你想要一些吗？",
       "ko": "좀 드릴까요?"
-    }
+    },
+    "carriers": [
+      "{P} tea?",
+      "{P} more?",
+      "Excuse me, {P}?",
+      "{P} cake?"
+    ]
   },
   {
     "id": "cs055",
@@ -1042,7 +1366,13 @@
       "ja": "はじめまして",
       "zh": "很高兴见到你",
       "ko": "만나서 반가워요"
-    }
+    },
+    "carriers": [
+      "Hello, {P}.",
+      "{P}, finally!",
+      "It's {P}.",
+      "{P}, sir."
+    ]
   },
   {
     "id": "cs056",
@@ -1061,7 +1391,13 @@
       "ja": "わからないの？",
       "zh": "你看不出来吗？",
       "ko": "안 보여?"
-    }
+    },
+    "carriers": [
+      "{P} the problem?",
+      "{P} it clearly?",
+      "But {P}?",
+      "Really, {P}?"
+    ]
   },
   {
     "id": "cs057",
@@ -1080,7 +1416,13 @@
       "ja": "9時10分",
       "zh": "九点十分",
       "ko": "9시 10분"
-    }
+    },
+    "carriers": [
+      "It's {P}.",
+      "The train leaves at {P}.",
+      "We meet at {P}.",
+      "It's already {P}."
+    ]
   },
   {
     "id": "cs058",
@@ -1099,7 +1441,13 @@
       "ja": "グリーンパーク",
       "zh": "绿色公园",
       "ko": "그린 파크"
-    }
+    },
+    "carriers": [
+      "We walked through {P}.",
+      "{P} is lovely.",
+      "Meet me at {P}.",
+      "{P} has a pond."
+    ]
   },
   {
     "id": "cs059",
@@ -1118,7 +1466,13 @@
       "ja": "入りませんか？",
       "zh": "你不进来吗？",
       "ko": "들어오지 않을래요?"
-    }
+    },
+    "carriers": [
+      "{P}?",
+      "Please, {P}?",
+      "{P} for tea?",
+      "Oh, {P}?"
+    ]
   },
   {
     "id": "cs060",
@@ -1137,7 +1491,13 @@
       "ja": "今年",
       "zh": "今年",
       "ko": "올해"
-    }
+    },
+    "carriers": [
+      "I'll travel {P}.",
+      "{P} is busy.",
+      "We met {P}.",
+      "Maybe {P}."
+    ]
   },
   {
     "id": "cs061",
@@ -1156,7 +1516,13 @@
       "ja": "会いたい",
       "zh": "想你",
       "ko": "보고 싶어"
-    }
+    },
+    "carriers": [
+      "I {P} already.",
+      "We'll {P}.",
+      "I really {P}.",
+      "They {P} too."
+    ]
   },
   {
     "id": "cs062",
@@ -1175,7 +1541,13 @@
       "ja": "わからない",
       "zh": "我不知道",
       "ko": "몰라요"
-    }
+    },
+    "carriers": [
+      "Honestly, {P}.",
+      "{P} the answer.",
+      "Well, {P}.",
+      "Sorry, {P}."
+    ]
   },
   {
     "id": "cs063",
@@ -1194,7 +1566,13 @@
       "ja": "どうしたの？",
       "zh": "怎么了？",
       "ko": "무슨 일이야?"
-    }
+    },
+    "carriers": [
+      "{P}?",
+      "Tell me, {P}?",
+      "So, {P}?",
+      "Hey, {P}?"
+    ]
   },
   {
     "id": "cs064",
@@ -1213,7 +1591,13 @@
       "ja": "2、3日",
       "zh": "几天",
       "ko": "이삼 일"
-    }
+    },
+    "carriers": [
+      "It took {P}.",
+      "Give it {P}.",
+      "Wait {P}.",
+      "In {P}, we'll know."
+    ]
   },
   {
     "id": "cs065",
@@ -1232,7 +1616,13 @@
       "ja": "フィッシュ&チップス",
       "zh": "炸鱼薯条",
       "ko": "피시 앤 칩스"
-    }
+    },
+    "carriers": [
+      "We had {P}.",
+      "I love {P}.",
+      "Order {P}.",
+      "{P}, please."
+    ]
   },
   {
     "id": "cs066",
@@ -1251,7 +1641,13 @@
       "ja": "バターを塗ったパン",
       "zh": "黄油面包",
       "ko": "버터 바른 빵"
-    }
+    },
+    "carriers": [
+      "She likes {P}.",
+      "We had {P}.",
+      "Just {P}, please.",
+      "I made {P}."
+    ]
   },
   {
     "id": "cs067",
@@ -1270,7 +1666,13 @@
       "ja": "君と僕",
       "zh": "你和我",
       "ko": "너와 나"
-    }
+    },
+    "carriers": [
+      "It's just {P}.",
+      "{P} forever.",
+      "Between {P}, it's fine.",
+      "{P} against the world."
+    ]
   },
   {
     "id": "cs068",
@@ -1289,7 +1691,13 @@
       "ja": "気づくべきだった",
       "zh": "我早该知道",
       "ko": "알았어야 했는데"
-    }
+    },
+    "carriers": [
+      "{P} better.",
+      "{P} it would fail.",
+      "Honestly, {P}.",
+      "Well, {P}."
+    ]
   },
   {
     "id": "cs069",
@@ -1308,7 +1716,13 @@
       "ja": "朝飯前",
       "zh": "小菜一碟",
       "ko": "식은 죽 먹기"
-    }
+    },
+    "carriers": [
+      "It's {P}.",
+      "That test was {P}.",
+      "Easy — {P}.",
+      "Truly {P}."
+    ]
   },
   {
     "id": "cs070",
@@ -1327,7 +1741,13 @@
       "ja": "論外だ",
       "zh": "不可能",
       "ko": "말도 안 돼"
-    }
+    },
+    "carriers": [
+      "That's {P}.",
+      "It's totally {P}.",
+      "Sorry, it's {P}.",
+      "Quitting is {P}."
+    ]
   },
   {
     "id": "cs071",
@@ -1346,7 +1766,13 @@
       "ja": "その上に",
       "zh": "在上面",
       "ko": "그 위에"
-    }
+    },
+    "carriers": [
+      "I left my keys {P}.",
+      "There's a stain {P}.",
+      "Put your name {P}.",
+      "Don't step {P}."
+    ]
   },
   {
     "id": "cs072",
@@ -1365,7 +1791,13 @@
       "ja": "その中に",
       "zh": "在里面",
       "ko": "그 안에"
-    }
+    },
+    "carriers": [
+      "There's something {P}.",
+      "Look what's {P}.",
+      "Nothing is {P}.",
+      "Keep the money {P}."
+    ]
   },
   {
     "id": "cs073",
@@ -1384,7 +1816,13 @@
       "ja": "起きる",
       "zh": "起床",
       "ko": "일어나다"
-    }
+    },
+    "carriers": [
+      "I {P} early today.",
+      "Please {P} now.",
+      "We need to {P}.",
+      "Time to {P}."
+    ]
   },
   {
     "id": "cs074",
@@ -1403,7 +1841,13 @@
       "ja": "座る",
       "zh": "坐下",
       "ko": "앉다"
-    }
+    },
+    "carriers": [
+      "Please {P} here.",
+      "Come in and {P}.",
+      "Let's {P} together.",
+      "He told me to {P}."
+    ]
   },
   {
     "id": "cs075",
@@ -1422,7 +1866,13 @@
       "ja": "待って",
       "zh": "等等",
       "ko": "기다려"
-    }
+    },
+    "carriers": [
+      "{P}, I'm coming.",
+      "Please {P} a second.",
+      "{P} tight!",
+      "Just {P} for me."
+    ]
   },
   {
     "id": "cs076",
@@ -1441,7 +1891,13 @@
       "ja": "つける",
       "zh": "打开",
       "ko": "켜다"
-    }
+    },
+    "carriers": [
+      "Can you {P}?",
+      "Please {P} so we can see.",
+      "I'll {P} for you.",
+      "{P} when it gets dark."
+    ]
   },
   {
     "id": "cs077",
@@ -1460,7 +1916,13 @@
       "ja": "それを食べる",
       "zh": "吃掉它",
       "ko": "그것을 먹다"
-    }
+    },
+    "carriers": [
+      "Go ahead and {P}.",
+      "Please {P} while it's hot.",
+      "I'll {P} later.",
+      "Don't {P} too fast."
+    ]
   },
   {
     "id": "cs078",
@@ -1479,7 +1941,13 @@
       "ja": "それを読む",
       "zh": "读它",
       "ko": "그것을 읽다"
-    }
+    },
+    "carriers": [
+      "Please {P} aloud.",
+      "I'll {P} tonight.",
+      "Can you {P} for me?",
+      "She'll {P} to the class."
+    ]
   },
   {
     "id": "cs079",
@@ -1498,7 +1966,13 @@
       "ja": "私たちに電話して",
       "zh": "给我们打电话",
       "ko": "우리에게 전화해"
-    }
+    },
+    "carriers": [
+      "Please {P} when you arrive.",
+      "{P} if you need help.",
+      "They'll {P} tomorrow.",
+      "Just {P} anytime."
+    ]
   },
   {
     "id": "cs080",
@@ -1517,7 +1991,13 @@
       "ja": "助けて",
       "zh": "帮我们",
       "ko": "우리를 도와줘"
-    }
+    },
+    "carriers": [
+      "Please {P} move this.",
+      "Can you {P} out?",
+      "They came to {P}.",
+      "{P} carry the boxes."
+    ]
   },
   {
     "id": "cs081",
@@ -1536,7 +2016,13 @@
       "ja": "～していましたか",
       "zh": "你曾...吗",
       "ko": "너 ~했었니"
-    }
+    },
+    "carriers": [
+      "{P} ever been there?",
+      "{P} seen it before?",
+      "{P} finished it already?",
+      "{P} met him once?"
+    ]
   },
   {
     "id": "cs082",
@@ -1555,7 +2041,13 @@
       "ja": "あなたを得る",
       "zh": "找到你",
       "ko": "너를 잡다"
-    }
+    },
+    "carriers": [
+      "I'll {P} a coffee.",
+      "Let me {P} a seat.",
+      "We'll {P} there soon.",
+      "I'll {P} a ticket."
+    ]
   },
   {
     "id": "cs083",
@@ -1574,7 +2066,13 @@
       "ja": "あなたに許す",
       "zh": "让你",
       "ko": "너를 허락하다"
-    }
+    },
+    "carriers": [
+      "I'll {P} know soon.",
+      "They won't {P} in.",
+      "We'll {P} go early.",
+      "I'll {P} decide."
+    ]
   },
   {
     "id": "cs084",
@@ -1593,7 +2091,13 @@
       "ja": "言ったでしょ",
       "zh": "告诉过你",
       "ko": "말했잖아"
-    }
+    },
+    "carriers": [
+      "I {P} so!",
+      "We {P} the news.",
+      "She {P} the truth.",
+      "I already {P} that."
+    ]
   },
   {
     "id": "cs085",
@@ -1612,7 +2116,13 @@
       "ja": "10人の男",
       "zh": "十个男人",
       "ko": "열 명의 남자"
-    }
+    },
+    "carriers": [
+      "We hired {P}.",
+      "{P} were waiting.",
+      "There were {P}.",
+      "I counted {P}."
+    ]
   },
   {
     "id": "cs086",
@@ -1631,7 +2141,13 @@
       "ja": "ほとんどの人",
       "zh": "大多数人",
       "ko": "대부분의 사람"
-    }
+    },
+    "carriers": [
+      "{P} agree with this.",
+      "{P} like coffee.",
+      "I know {P} who tried it.",
+      "{P} were kind."
+    ]
   },
   {
     "id": "cs087",
@@ -1650,7 +2166,13 @@
       "ja": "初めて",
       "zh": "第一次",
       "ko": "처음"
-    }
+    },
+    "carriers": [
+      "It was my {P} there.",
+      "For the {P}, it worked.",
+      "That's the {P} I've seen it.",
+      "This is the {P} today."
+    ]
   },
   {
     "id": "cs088",
@@ -1669,7 +2191,13 @@
       "ja": "左折",
       "zh": "左转",
       "ko": "좌회전"
-    }
+    },
+    "carriers": [
+      "Make a {P} here.",
+      "Take the {P} ahead.",
+      "A {P} is coming up.",
+      "He made a {P}."
+    ]
   },
   {
     "id": "cs089",
@@ -1688,7 +2216,13 @@
       "ja": "黙っていた",
       "zh": "保持安静",
       "ko": "조용히 했다"
-    }
+    },
+    "carriers": [
+      "She {P} the whole time.",
+      "We {P} during the show.",
+      "They {P} about it.",
+      "He {P} all evening."
+    ]
   },
   {
     "id": "cs090",
@@ -1707,7 +2241,13 @@
       "ja": "寒い日",
       "zh": "寒冷的一天",
       "ko": "추운 날"
-    }
+    },
+    "carriers": [
+      "It was a {P}.",
+      "We hiked on a {P}.",
+      "What a {P}!",
+      "It's a {P} outside."
+    ]
   },
   {
     "id": "cs091",
@@ -1726,7 +2266,13 @@
       "ja": "調べる",
       "zh": "查一下",
       "ko": "찾아보다"
-    }
+    },
+    "carriers": [
+      "I'll {P} in the dictionary.",
+      "Can you {P}?",
+      "Let me {P}.",
+      "Please {P} online."
+    ]
   },
   {
     "id": "cs092",
@@ -1745,7 +2291,13 @@
       "ja": "考えてみて",
       "zh": "想想看",
       "ko": "생각해 봐"
-    }
+    },
+    "carriers": [
+      "I'll {P}.",
+      "Let me {P}.",
+      "Please {P} carefully.",
+      "We should {P}."
+    ]
   },
   {
     "id": "cs093",
@@ -1764,7 +2316,13 @@
       "ja": "～するとすぐに",
       "zh": "一...就",
       "ko": "~하자마자"
-    }
+    },
+    "carriers": [
+      "Call me {P} you arrive.",
+      "I'll come {P} I can.",
+      "Leave {P} possible.",
+      "We'll start {P} ready."
+    ]
   },
   {
     "id": "cs094",
@@ -1783,7 +2341,13 @@
       "ja": "～のような",
       "zh": "例如",
       "ko": "~와 같은"
-    }
+    },
+    "carriers": [
+      "Bring fruit, {P} apples.",
+      "Pick a color {P} blue.",
+      "Try a sport {P} tennis.",
+      "Use a tool {P} a hammer."
+    ]
   },
   {
     "id": "cs095",
@@ -1802,7 +2366,13 @@
       "ja": "結局～になる",
       "zh": "最终",
       "ko": "결국 ~하게 되다"
-    }
+    },
+    "carriers": [
+      "We might {P} late.",
+      "You'll {P} tired.",
+      "They {P} happy.",
+      "I always {P} here."
+    ]
   },
   {
     "id": "cs096",
@@ -1821,7 +2391,13 @@
       "ja": "記入する",
       "zh": "填写",
       "ko": "기입하다"
-    }
+    },
+    "carriers": [
+      "Please {P} on the form.",
+      "Can you {P}?",
+      "I'll {P} later.",
+      "{P} carefully."
+    ]
   },
   {
     "id": "cs097",
@@ -1840,7 +2416,13 @@
       "ja": "～を切らす",
       "zh": "用完",
       "ko": "다 떨어지다"
-    }
+    },
+    "carriers": [
+      "We {P} milk.",
+      "Don't {P} time.",
+      "They {P} money.",
+      "I'll {P} ideas soon."
+    ]
   },
   {
     "id": "cs098",
@@ -1859,7 +2441,13 @@
       "ja": "概して",
       "zh": "总的来说",
       "ko": "대체로"
-    }
+    },
+    "carriers": [
+      "{P}, it went well.",
+      "{P}, people agreed.",
+      "It's fine, {P}.",
+      "{P}, we're ready."
+    ]
   },
   {
     "id": "cs099",
@@ -1878,7 +2466,13 @@
       "ja": "～ですよね",
       "zh": "你不是吗",
       "ko": "너 ~아니니"
-    }
+    },
+    "carriers": [
+      "{P} the new student?",
+      "{P} coming too?",
+      "{P} happy now?",
+      "{P} ready yet?"
+    ]
   },
   {
     "id": "cs100",
@@ -1897,7 +2491,13 @@
       "ja": "～してないの",
       "zh": "你没...吗",
       "ko": "너 ~안 했니"
-    }
+    },
+    "carriers": [
+      "{P} finished it?",
+      "{P} heard the news?",
+      "{P} seen it?",
+      "{P} been there?"
+    ]
   },
   {
     "id": "cs101",
@@ -1916,7 +2516,13 @@
       "ja": "あなたについて",
       "zh": "关于你",
       "ko": "너에 대해"
-    }
+    },
+    "carriers": [
+      "It's {P}.",
+      "I heard {P}.",
+      "This is {P}.",
+      "Tell me {P}."
+    ]
   },
   {
     "id": "cs102",
@@ -1935,7 +2541,13 @@
       "ja": "あなたの後ろに",
       "zh": "在你后面",
       "ko": "네 뒤에"
-    }
+    },
+    "carriers": [
+      "He's right {P}.",
+      "Look {P}!",
+      "The door is {P}.",
+      "Someone is {P}."
+    ]
   },
   {
     "id": "cs103",
@@ -1954,7 +2566,13 @@
       "ja": "料理上手",
       "zh": "好厨师",
       "ko": "요리 잘하는 사람"
-    }
+    },
+    "carriers": [
+      "She's a {P}.",
+      "What a {P}!",
+      "He's a {P}.",
+      "Such a {P}."
+    ]
   },
   {
     "id": "cs104",
@@ -1973,7 +2591,13 @@
       "ja": "あの少年",
       "zh": "那个男孩",
       "ko": "저 소년"
-    }
+    },
+    "carriers": [
+      "{P} is my cousin.",
+      "I know {P}.",
+      "Tell {P} to wait.",
+      "{P} runs fast."
+    ]
   },
   {
     "id": "cs105",
@@ -1992,7 +2616,13 @@
       "ja": "もう一つ",
       "zh": "再来一个",
       "ko": "하나 더"
-    }
+    },
+    "carriers": [
+      "Just {P}, please.",
+      "I'll have {P}.",
+      "Give me {P}.",
+      "{P} won't hurt."
+    ]
   },
   {
     "id": "cs106",
@@ -2011,7 +2641,13 @@
       "ja": "茶色の袋",
       "zh": "棕色袋子",
       "ko": "갈색 가방"
-    }
+    },
+    "carriers": [
+      "She carried a {P}.",
+      "Pack a {P}.",
+      "The {P} tore.",
+      "Here's a {P}."
+    ]
   },
   {
     "id": "cs107",
@@ -2030,7 +2666,13 @@
       "ja": "多くの人",
       "zh": "很多人",
       "ko": "많은 사람들"
-    }
+    },
+    "carriers": [
+      "{P} came.",
+      "I know {P}.",
+      "{P} agreed.",
+      "There were {P}."
+    ]
   },
   {
     "id": "cs108",
@@ -2049,7 +2691,13 @@
       "ja": "彼らのほとんど",
       "zh": "他们大多数",
       "ko": "그들 대부분"
-    }
+    },
+    "carriers": [
+      "{P} agreed.",
+      "I know {P}.",
+      "{P} left early.",
+      "Take {P}."
+    ]
   },
   {
     "id": "cs109",
@@ -2068,7 +2716,13 @@
       "ja": "それを取って",
       "zh": "递给我那个",
       "ko": "그거 건네줘"
-    }
+    },
+    "carriers": [
+      "Please {P}.",
+      "Can you {P}?",
+      "{P}, please.",
+      "Could you {P}?"
+    ]
   },
   {
     "id": "cs110",
@@ -2087,7 +2741,13 @@
       "ja": "おじいちゃん",
       "zh": "爷爷",
       "ko": "할아버지"
-    }
+    },
+    "carriers": [
+      "My {P} is kind.",
+      "{P} told a story.",
+      "I visited {P}.",
+      "{P} is napping."
+    ]
   },
   {
     "id": "cs111",
@@ -2106,7 +2766,13 @@
       "ja": "友情",
       "zh": "友谊",
       "ko": "우정"
-    }
+    },
+    "carriers": [
+      "Their {P} is strong.",
+      "We value {P}.",
+      "{P} matters.",
+      "It's a true {P}."
+    ]
   },
   {
     "id": "cs112",
@@ -2125,7 +2791,13 @@
       "ja": "目の不自由な人",
       "zh": "盲人",
       "ko": "시각장애인"
-    }
+    },
+    "carriers": [
+      "The {P} crossed safely.",
+      "A {P} asked for help.",
+      "A {P} walked by.",
+      "That {P} is brave."
+    ]
   },
   {
     "id": "cs113",
@@ -2144,7 +2816,13 @@
       "ja": "彼女に尋ねる",
       "zh": "问她",
       "ko": "그녀에게 묻다"
-    }
+    },
+    "carriers": [
+      "I'll {P} later.",
+      "Please {P} first.",
+      "Let's {P}.",
+      "Can you {P}?"
+    ]
   },
   {
     "id": "cs114",
@@ -2163,7 +2841,13 @@
       "ja": "彼にそれを渡す",
       "zh": "把它给他",
       "ko": "그에게 그걸 줘"
-    }
+    },
+    "carriers": [
+      "Please {P}.",
+      "I'll {P}.",
+      "Can you {P}?",
+      "Let's {P}."
+    ]
   },
   {
     "id": "cs115",
@@ -2182,7 +2866,13 @@
       "ja": "何してるの？",
       "zh": "你在做什么？",
       "ko": "뭐 하고 있어?"
-    }
+    },
+    "carriers": [
+      "Hey, {P}?",
+      "So, {P} lately?",
+      "{P} this weekend?",
+      "{P} these days?"
+    ]
   },
   {
     "id": "cs116",
@@ -2201,7 +2891,13 @@
       "ja": "試してみる",
       "zh": "试一试",
       "ko": "한번 해 봐"
-    }
+    },
+    "carriers": [
+      "Just {P}.",
+      "Why not {P}?",
+      "Let's {P}.",
+      "I'll {P}."
+    ]
   },
   {
     "id": "cs117",
@@ -2220,7 +2916,13 @@
       "ja": "気楽にね",
       "zh": "放轻松",
       "ko": "편하게 해"
-    }
+    },
+    "carriers": [
+      "{P}, no rush.",
+      "Please {P}.",
+      "Just {P}.",
+      "{P} this weekend."
+    ]
   },
   {
     "id": "cs118",
@@ -2239,7 +2941,13 @@
       "ja": "たまに",
       "zh": "偶尔",
       "ko": "가끔"
-    }
+    },
+    "carriers": [
+      "We meet {P}.",
+      "It happens {P}.",
+      "{P}, treat yourself.",
+      "I call her {P}."
+    ]
   },
   {
     "id": "cs119",
@@ -2258,7 +2966,13 @@
       "ja": "上下に",
       "zh": "上上下下",
       "ko": "위아래로"
-    }
+    },
+    "carriers": [
+      "He paced {P}.",
+      "Prices go {P}.",
+      "The kids ran {P}.",
+      "It moved {P}."
+    ]
   },
   {
     "id": "cs120",
@@ -2277,7 +2991,13 @@
       "ja": "あちこちに",
       "zh": "到处",
       "ko": "여기저기"
-    }
+    },
+    "carriers": [
+      "Papers lay {P}.",
+      "We traveled {P}.",
+      "Flowers grew {P}.",
+      "People stood {P}."
+    ]
   },
   {
     "id": "cs121",
@@ -2296,7 +3016,13 @@
       "ja": "何度も",
       "zh": "一遍又一遍",
       "ko": "몇 번이고"
-    }
+    },
+    "carriers": [
+      "She read it {P}.",
+      "We practiced {P}.",
+      "It played {P}.",
+      "He said it {P}."
+    ]
   },
   {
     "id": "cs122",
@@ -2315,7 +3041,13 @@
       "ja": "心配しないで",
       "zh": "你别担心",
       "ko": "걱정 마"
-    }
+    },
+    "carriers": [
+      "{P}, it'll be fine.",
+      "{P} about a thing.",
+      "{P}, I've got this.",
+      "Please {P}."
+    ]
   },
   {
     "id": "cs123",
@@ -2334,7 +3066,13 @@
       "ja": "どう思う？",
       "zh": "你觉得呢？",
       "ko": "어떻게 생각해?"
-    }
+    },
+    "carriers": [
+      "So, {P}?",
+      "{P} of the plan?",
+      "Tell me, {P}?",
+      "Hey, {P}?"
+    ]
   },
   {
     "id": "cs124",
@@ -2353,7 +3091,13 @@
       "ja": "教えてくれますか？",
       "zh": "你能告诉我吗？",
       "ko": "알려 주시겠어요?"
-    }
+    },
+    "carriers": [
+      "{P} the way?",
+      "Excuse me, {P} the time?",
+      "{P} your name?",
+      "Please, {P}?"
+    ]
   },
   {
     "id": "cs125",
@@ -2372,7 +3116,13 @@
       "ja": "閉めていただけますか",
       "zh": "你介意关一下吗",
       "ko": "닫아 주시겠어요"
-    }
+    },
+    "carriers": [
+      "{P} the window?",
+      "{P} the door?",
+      "Excuse me, {P} it?",
+      "Sorry, {P} that?"
+    ]
   },
   {
     "id": "cs126",
@@ -2391,7 +3141,13 @@
       "ja": "今日はどう？",
       "zh": "你今天过得怎样？",
       "ko": "오늘 어때?"
-    }
+    },
+    "carriers": [
+      "So, {P}?",
+      "Hi, {P}?",
+      "Hey, {P} going?",
+      "{P} so far?"
+    ]
   },
   {
     "id": "cs127",
@@ -2410,7 +3166,13 @@
       "ja": "お望みのままに",
       "zh": "如你所愿",
       "ko": "원하는 대로"
-    }
+    },
+    "carriers": [
+      "{P}, sir.",
+      "{P}, then.",
+      "As you like — {P}.",
+      "Fine, {P}."
+    ]
   },
   {
     "id": "cs128",
@@ -2429,7 +3191,13 @@
       "ja": "押してください",
       "zh": "按你的",
       "ko": "당신의 ~을 누르다"
-    }
+    },
+    "carriers": [
+      "{P} card here.",
+      "Please {P} button.",
+      "{P} hand against it.",
+      "{P} key now."
+    ]
   },
   {
     "id": "cs129",
@@ -2448,7 +3216,13 @@
       "ja": "～するつもり",
       "zh": "我要",
       "ko": "~할 거야"
-    }
+    },
+    "carriers": [
+      "{P} call her.",
+      "{P} try again.",
+      "I think {P} win.",
+      "{P} leave soon."
+    ]
   },
   {
     "id": "cs130",
@@ -2467,7 +3241,13 @@
       "ja": "行きたい",
       "zh": "想去",
       "ko": "가고 싶어"
-    }
+    },
+    "carriers": [
+      "I {P} home.",
+      "Do you {P}?",
+      "We {P} now.",
+      "They {P} too."
+    ]
   },
   {
     "id": "cs131",
@@ -2486,7 +3266,13 @@
       "ja": "コップ一杯の水",
       "zh": "一杯水",
       "ko": "물 한 잔"
-    }
+    },
+    "carriers": [
+      "I'd like {P}.",
+      "She poured {P}.",
+      "{P}, please.",
+      "Bring me {P}."
+    ]
   },
   {
     "id": "cs132",
@@ -2505,7 +3291,13 @@
       "ja": "一杯のコーヒー",
       "zh": "一杯咖啡",
       "ko": "커피 한 잔"
-    }
+    },
+    "carriers": [
+      "I'd like a {P}.",
+      "A {P}, please.",
+      "She made a {P}.",
+      "Want a {P}?"
+    ]
   },
   {
     "id": "cs133",
@@ -2524,7 +3316,13 @@
       "ja": "結局のところ",
       "zh": "归根结底",
       "ko": "결국"
-    }
+    },
+    "carriers": [
+      "{P}, we're tired.",
+      "It's quiet {P}.",
+      "{P}, we go home.",
+      "By {P}, it's done."
+    ]
   },
   {
     "id": "cs134",
@@ -2543,7 +3341,13 @@
       "ja": "遅かれ早かれ",
       "zh": "迟早",
       "ko": "조만간"
-    }
+    },
+    "carriers": [
+      "{P}, you'll learn.",
+      "It'll happen {P}.",
+      "{P}, we all do.",
+      "You'll know {P}."
+    ]
   },
   {
     "id": "cs135",
@@ -2562,7 +3366,13 @@
       "ja": "時々",
       "zh": "偶尔",
       "ko": "이따금"
-    }
+    },
+    "carriers": [
+      "We meet {P}.",
+      "It rains {P}.",
+      "{P}, I visit.",
+      "She calls {P}."
+    ]
   },
   {
     "id": "cs136",
@@ -2581,7 +3391,13 @@
       "ja": "皆様",
       "zh": "女士们先生们",
       "ko": "신사 숙녀 여러분"
-    }
+    },
+    "carriers": [
+      "{P}, welcome.",
+      "{P}, please sit.",
+      "Good evening, {P}.",
+      "{P}, the show begins."
+    ]
   },
   {
     "id": "cs137",
@@ -2600,7 +3416,13 @@
       "ja": "行けたのに",
       "zh": "我本可以去",
       "ko": "갈 수 있었는데"
-    }
+    },
+    "carriers": [
+      "{P} too.",
+      "{P}, but I stayed.",
+      "Honestly, {P}.",
+      "{P} with you."
+    ]
   },
   {
     "id": "cs138",
@@ -2619,7 +3441,13 @@
       "ja": "着る",
       "zh": "穿上",
       "ko": "입다"
-    }
+    },
+    "carriers": [
+      "Here's your coat — please {P}.",
+      "It's cold, so {P}.",
+      "Grab your hat and {P}.",
+      "{P} before you leave."
+    ]
   },
   {
     "id": "cs139",
@@ -2638,7 +3466,13 @@
       "ja": "目を覚ます",
       "zh": "醒来",
       "ko": "깨다"
-    }
+    },
+    "carriers": [
+      "I {P} early today.",
+      "Please {P} now.",
+      "Time to {P}.",
+      "We {P} at dawn."
+    ]
   },
   {
     "id": "cs140",
@@ -2657,7 +3491,13 @@
       "ja": "立つ",
       "zh": "站起来",
       "ko": "일어서다"
-    }
+    },
+    "carriers": [
+      "Please {P} now.",
+      "Everyone, {P}.",
+      "Let's {P} together.",
+      "He told me to {P}."
+    ]
   },
   {
     "id": "cs141",
@@ -2676,7 +3516,13 @@
       "ja": "卵1つ",
       "zh": "一个鸡蛋",
       "ko": "달걀 하나"
-    }
+    },
+    "carriers": [
+      "I cooked {P}.",
+      "She wants {P}.",
+      "There's {P} left.",
+      "He dropped {P}."
+    ]
   },
   {
     "id": "cs142",
@@ -2695,7 +3541,13 @@
       "ja": "彼の目",
       "zh": "他的眼睛",
       "ko": "그의 눈"
-    }
+    },
+    "carriers": [
+      "I love {P}.",
+      "{P} are blue.",
+      "Look at {P}.",
+      "{P} were closed."
+    ]
   },
   {
     "id": "cs143",
@@ -2714,7 +3566,13 @@
       "ja": "これ",
       "zh": "这个",
       "ko": "이거"
-    }
+    },
+    "carriers": [
+      "I'll take {P}.",
+      "{P} is mine.",
+      "Try {P} instead.",
+      "{P} looks better."
+    ]
   },
   {
     "id": "cs144",
@@ -2733,7 +3591,13 @@
       "ja": "あなたに送る",
       "zh": "发给你",
       "ko": "너에게 보내다"
-    }
+    },
+    "carriers": [
+      "I'll {P} the file.",
+      "We'll {P} a copy.",
+      "They'll {P} the form.",
+      "Let me {P} it."
+    ]
   },
   {
     "id": "cs145",
@@ -2752,7 +3616,13 @@
       "ja": "あなたに会う",
       "zh": "见到你",
       "ko": "너를 만나다"
-    }
+    },
+    "carriers": [
+      "Nice to {P}.",
+      "I'll {P} there.",
+      "We'll {P} soon.",
+      "Glad to {P}."
+    ]
   },
   {
     "id": "cs146",
@@ -2771,7 +3641,13 @@
       "ja": "10個のカップ",
       "zh": "十个杯子",
       "ko": "열 개의 컵"
-    }
+    },
+    "carriers": [
+      "We need {P}.",
+      "There are {P}.",
+      "Buy {P}.",
+      "I counted {P}."
+    ]
   },
   {
     "id": "cs147",
@@ -2790,7 +3666,13 @@
       "ja": "緑の車",
       "zh": "绿色的车",
       "ko": "초록색 차"
-    }
+    },
+    "carriers": [
+      "A {P} drove by.",
+      "The {P} is mine.",
+      "I want a {P}.",
+      "That {P} is fast."
+    ]
   },
   {
     "id": "cs148",
@@ -2809,7 +3691,13 @@
       "ja": "清涼飲料",
       "zh": "软饮料",
       "ko": "탄산음료"
-    }
+    },
+    "carriers": [
+      "I'll have a {P}.",
+      "Order a {P}.",
+      "A {P}, please.",
+      "He drank a {P}."
+    ]
   },
   {
     "id": "cs149",
@@ -2828,7 +3716,13 @@
       "ja": "ホットドッグ",
       "zh": "热狗",
       "ko": "핫도그"
-    }
+    },
+    "carriers": [
+      "I'd like a {P}.",
+      "He ate a {P}.",
+      "A {P}, please.",
+      "She grilled a {P}."
+    ]
   },
   {
     "id": "cs150",
@@ -2847,7 +3741,13 @@
       "ja": "野鳥",
       "zh": "野鸟",
       "ko": "들새"
-    }
+    },
+    "carriers": [
+      "A {P} flew past.",
+      "We saw a {P}.",
+      "The {P} sang.",
+      "That {P} is rare."
+    ]
   },
   {
     "id": "cs151",
@@ -2866,7 +3766,13 @@
       "ja": "大賞",
       "zh": "大奖",
       "ko": "대상"
-    }
+    },
+    "carriers": [
+      "She won the {P}.",
+      "He took the {P}.",
+      "The {P} went to her.",
+      "They claimed the {P}."
+    ]
   },
   {
     "id": "cs152",
@@ -2885,7 +3791,13 @@
       "ja": "～の終わりに",
       "zh": "在...的末尾",
       "ko": "~의 끝에"
-    }
+    },
+    "carriers": [
+      "{P} the day, we rest.",
+      "It's {P} the street.",
+      "Wait {P} the line.",
+      "{P} the month, we pay."
+    ]
   },
   {
     "id": "cs153",
@@ -2904,7 +3816,13 @@
       "ja": "消す",
       "zh": "关掉它",
       "ko": "그것을 끄다"
-    }
+    },
+    "carriers": [
+      "Please {P}.",
+      "Can you {P}?",
+      "I'll {P}.",
+      "{P} before bed."
+    ]
   },
   {
     "id": "cs154",
@@ -2923,7 +3841,13 @@
       "ja": "芸術作品",
       "zh": "艺术品",
       "ko": "예술 작품"
-    }
+    },
+    "carriers": [
+      "These are {P}.",
+      "We admired the {P}.",
+      "Such {P}!",
+      "Famous {P} hang here."
+    ]
   },
   {
     "id": "cs155",
@@ -2942,7 +3866,13 @@
       "ja": "私たちの誰も～ない",
       "zh": "我们都不",
       "ko": "우리 중 누구도"
-    }
+    },
+    "carriers": [
+      "{P} knew.",
+      "{P} agreed.",
+      "It surprised {P}.",
+      "{P} were ready."
+    ]
   },
   {
     "id": "cs156",
@@ -2961,7 +3891,13 @@
       "ja": "～できますか",
       "zh": "你能...吗",
       "ko": "~할 수 있니"
-    }
+    },
+    "carriers": [
+      "{P} hear me?",
+      "{P} help?",
+      "{P} swim?",
+      "{P} see it?"
+    ]
   },
   {
     "id": "cs157",
@@ -2980,7 +3916,13 @@
       "ja": "あなたが～するとき",
       "zh": "当你...时",
       "ko": "네가 ~할 때"
-    }
+    },
+    "carriers": [
+      "Call me {P} arrive.",
+      "I'll wait {P} finish.",
+      "Smile {P} can.",
+      "Leave {P} like."
+    ]
   },
   {
     "id": "cs158",
@@ -2999,7 +3941,13 @@
       "ja": "厄介な問題",
       "zh": "烫手山芋",
       "ko": "뜨거운 감자"
-    }
+    },
+    "carriers": [
+      "It's a {P}.",
+      "That topic is a {P}.",
+      "A real {P}!",
+      "He dropped the {P}."
+    ]
   },
   {
     "id": "cs159",
@@ -3018,7 +3966,13 @@
       "ja": "かわいい子",
       "zh": "甜美的女孩",
       "ko": "착한 소녀"
-    }
+    },
+    "carriers": [
+      "She's a {P}.",
+      "What a {P}!",
+      "Such a {P}.",
+      "He met a {P}."
+    ]
   },
   {
     "id": "cs160",
@@ -3037,7 +3991,13 @@
       "ja": "続けた",
       "zh": "继续",
       "ko": "계속 갔다"
-    }
+    },
+    "carriers": [
+      "We {P} anyway.",
+      "They {P} all night.",
+      "She {P} despite it.",
+      "He {P} for hours."
+    ]
   },
   {
     "id": "cs161",
@@ -3056,7 +4016,13 @@
       "ja": "振り返った",
       "zh": "回头看",
       "ko": "돌아봤다"
-    }
+    },
+    "carriers": [
+      "She {P} once.",
+      "We {P} at the door.",
+      "He {P} sadly.",
+      "They {P} together."
+    ]
   },
   {
     "id": "cs162",
@@ -3075,7 +4041,13 @@
       "ja": "円卓",
       "zh": "圆桌",
       "ko": "원탁"
-    }
+    },
+    "carriers": [
+      "We sat at a {P}.",
+      "The {P} is full.",
+      "Buy a {P}.",
+      "A {P} fits everyone."
+    ]
   },
   {
     "id": "cs163",
@@ -3094,7 +4066,13 @@
       "ja": "彼らを見つける",
       "zh": "找到他们",
       "ko": "그들을 찾다"
-    }
+    },
+    "carriers": [
+      "I'll {P} soon.",
+      "Please {P}.",
+      "Can you {P}?",
+      "Let's {P}."
+    ]
   },
   {
     "id": "cs164",
@@ -3113,7 +4091,13 @@
       "ja": "実のところ",
       "zh": "事实上",
       "ko": "사실은"
-    }
+    },
+    "carriers": [
+      "{P}, I agree.",
+      "{P}, it's true.",
+      "Well, {P}.",
+      "{P}, she called."
+    ]
   },
   {
     "id": "cs165",
@@ -3132,7 +4116,13 @@
       "ja": "私の友人",
       "zh": "我的一个朋友",
       "ko": "내 친구"
-    }
+    },
+    "carriers": [
+      "He's {P}.",
+      "She's {P}.",
+      "That's {P}.",
+      "Meet {P}."
+    ]
   },
   {
     "id": "cs166",
@@ -3151,7 +4141,13 @@
       "ja": "出たり入ったり",
       "zh": "进进出出",
       "ko": "들락날락"
-    }
+    },
+    "carriers": [
+      "He went {P}.",
+      "People moved {P}.",
+      "It breathes {P}.",
+      "She ran {P}."
+    ]
   },
   {
     "id": "cs167",
@@ -3170,7 +4166,13 @@
       "ja": "少しずつ",
       "zh": "一点一点地",
       "ko": "조금씩"
-    }
+    },
+    "carriers": [
+      "We improve {P}.",
+      "It grows {P}.",
+      "{P}, we learn.",
+      "Save {P}."
+    ]
   },
   {
     "id": "cs168",
@@ -3189,7 +4191,13 @@
       "ja": "まだだ",
       "zh": "还没",
       "ko": "아직"
-    }
+    },
+    "carriers": [
+      "{P}, sorry.",
+      "It's {P} done.",
+      "No, {P}.",
+      "{P}, but soon."
+    ]
   },
   {
     "id": "cs169",
@@ -3208,7 +4216,13 @@
       "ja": "去年",
       "zh": "去年",
       "ko": "작년"
-    }
+    },
+    "carriers": [
+      "I visited {P}.",
+      "{P} was hard.",
+      "We met {P}.",
+      "It rained a lot {P}."
+    ]
   },
   {
     "id": "cs170",
@@ -3227,7 +4241,13 @@
       "ja": "信じられる？",
       "zh": "你相信吗",
       "ko": "믿어지니"
-    }
+    },
+    "carriers": [
+      "{P} it?",
+      "{P} the news?",
+      "Honestly, {P}?",
+      "{P} that?"
+    ]
   },
   {
     "id": "cs171",
@@ -3246,7 +4266,13 @@
       "ja": "知ってた？",
       "zh": "你知道吗",
       "ko": "알고 있었어?"
-    }
+    },
+    "carriers": [
+      "{P} the answer?",
+      "{P} about it?",
+      "Hey, {P}?",
+      "{P} the truth?"
+    ]
   },
   {
     "id": "cs172",
@@ -3265,7 +4291,13 @@
       "ja": "両方のいいとこ取り",
       "zh": "两全其美",
       "ko": "둘 다의 장점"
-    }
+    },
+    "carriers": [
+      "We got {P} worlds.",
+      "It's {P}.",
+      "Enjoy {P}.",
+      "That's {P}."
+    ]
   },
   {
     "id": "cs173",
@@ -3284,7 +4316,13 @@
       "ja": "時間の問題",
       "zh": "时间问题",
       "ko": "시간 문제"
-    }
+    },
+    "carriers": [
+      "It's {P}.",
+      "Just {P}.",
+      "Only {P}.",
+      "It's only {P}."
+    ]
   },
   {
     "id": "cs174",
@@ -3303,7 +4341,13 @@
       "ja": "十分な余地",
       "zh": "很多空间",
       "ko": "충분한 공간"
-    }
+    },
+    "carriers": [
+      "There's {P}.",
+      "We have {P}.",
+      "{P} here.",
+      "It has {P}."
+    ]
   },
   {
     "id": "cs175",
@@ -3322,7 +4366,13 @@
       "ja": "残りの彼ら",
       "zh": "其余的",
       "ko": "나머지"
-    }
+    },
+    "carriers": [
+      "Take {P}.",
+      "{P} agreed.",
+      "Where are {P}?",
+      "{P} stayed."
+    ]
   },
   {
     "id": "cs176",
@@ -3341,7 +4391,13 @@
       "ja": "何よりもまず",
       "zh": "首先",
       "ko": "무엇보다도"
-    }
+    },
+    "carriers": [
+      "{P}, be safe.",
+      "{P}, we plan.",
+      "Above all, {P}.",
+      "{P}, stay calm."
+    ]
   },
   {
     "id": "cs177",
@@ -3360,7 +4416,13 @@
       "ja": "四つん這い",
       "zh": "手脚并用",
       "ko": "엎드려"
-    }
+    },
+    "carriers": [
+      "He was on {P}.",
+      "We scrubbed on {P}.",
+      "She crawled on {P}.",
+      "On {P}, they searched."
+    ]
   },
   {
     "id": "cs178",
@@ -3379,7 +4441,13 @@
       "ja": "全く",
       "zh": "完全",
       "ko": "전혀"
-    }
+    },
+    "carriers": [
+      "It's not hard {P}.",
+      "I don't mind {P}.",
+      "Nothing {P}.",
+      "Is it cold {P}?"
+    ]
   },
   {
     "id": "cs179",
@@ -3398,7 +4466,13 @@
       "ja": "大きなリンゴ",
       "zh": "大苹果",
       "ko": "큰 사과"
-    }
+    },
+    "carriers": [
+      "I bought a {P}.",
+      "She ate a {P}.",
+      "That's a {P}!",
+      "Here's a {P}."
+    ]
   },
   {
     "id": "cs180",
@@ -3417,7 +4491,13 @@
       "ja": "準備運動する",
       "zh": "热身",
       "ko": "준비운동하다"
-    }
+    },
+    "carriers": [
+      "Let's {P} first.",
+      "Please {P} before the run.",
+      "We need to {P}.",
+      "Time to {P}."
+    ]
   },
   {
     "id": "cs181",
@@ -3436,7 +4516,13 @@
       "ja": "苦しい時",
       "zh": "艰难时期",
       "ko": "힘든 시기"
-    }
+    },
+    "carriers": [
+      "We went through {P}.",
+      "Those were {P}.",
+      "They faced {P}.",
+      "Through {P}, we coped."
+    ]
   },
   {
     "id": "cs182",
@@ -3455,7 +4541,13 @@
       "ja": "死角",
       "zh": "盲点",
       "ko": "사각지대"
-    }
+    },
+    "carriers": [
+      "That's a {P}.",
+      "Watch the {P}.",
+      "He has a {P}.",
+      "There's a {P} here."
+    ]
   },
   {
     "id": "cs183",
@@ -3474,7 +4566,13 @@
       "ja": "それで終わり",
       "zh": "就这样",
       "ko": "끝"
-    }
+    },
+    "carriers": [
+      "That's it, {P}.",
+      "It failed, {P}.",
+      "{P}, no more.",
+      "We lost, {P}."
+    ]
   },
   {
     "id": "cs184",
@@ -3493,7 +4591,13 @@
       "ja": "お互いに",
       "zh": "彼此",
       "ko": "서로"
-    }
+    },
+    "carriers": [
+      "They help {P}.",
+      "We support {P}.",
+      "Love {P}.",
+      "They met {P}."
+    ]
   },
   {
     "id": "cs185",
@@ -3512,7 +4616,13 @@
       "ja": "用意してあげる",
       "zh": "为你安排",
       "ko": "준비해 주다"
-    }
+    },
+    "carriers": [
+      "I'll {P} with a date.",
+      "We'll {P}.",
+      "Let me {P}.",
+      "They'll {P}."
+    ]
   },
   {
     "id": "cs186",
@@ -3531,7 +4641,13 @@
       "ja": "ここだけの話",
       "zh": "你我之间",
       "ko": "우리끼리 얘긴데"
-    }
+    },
+    "carriers": [
+      "{P}, it's a secret.",
+      "{P}, I'm worried.",
+      "{P}, this stays here.",
+      "Just {P}."
+    ]
   },
   {
     "id": "cs187",
@@ -3550,7 +4666,13 @@
       "ja": "すぐ戻る",
       "zh": "不会太久",
       "ko": "금방이야"
-    }
+    },
+    "carriers": [
+      "{P}, I promise.",
+      "It {P}.",
+      "Don't worry, {P}.",
+      "I {P}."
+    ]
   },
   {
     "id": "cs188",
@@ -3569,7 +4691,13 @@
       "ja": "とりわけ",
       "zh": "最重要的是",
       "ko": "무엇보다"
-    }
+    },
+    "carriers": [
+      "{P}, be kind.",
+      "I love it {P}.",
+      "{P}, stay safe.",
+      "Above all, {P}."
+    ]
   },
   {
     "id": "cs189",
@@ -3588,7 +4716,13 @@
       "ja": "どうしたの？",
       "zh": "你怎么了？",
       "ko": "무슨 일이야?"
-    }
+    },
+    "carriers": [
+      "Hey, {P}?",
+      "So, {P}?",
+      "{P} today?",
+      "{P}, friend?"
+    ]
   },
   {
     "id": "cs190",
@@ -3607,7 +4741,13 @@
       "ja": "知らせるね",
       "zh": "我会告诉你",
       "ko": "알려 줄게"
-    }
+    },
+    "carriers": [
+      "{P} soon.",
+      "{P} the result.",
+      "Don't worry, {P}.",
+      "{P} tomorrow."
+    ]
   },
   {
     "id": "cs191",
@@ -3626,7 +4766,13 @@
       "ja": "またね",
       "zh": "回头见",
       "ko": "또 봐"
-    }
+    },
+    "carriers": [
+      "{P}!",
+      "{P}, then.",
+      "Okay, {P}.",
+      "Bye, {P}."
+    ]
   },
   {
     "id": "cs192",
@@ -3645,7 +4791,13 @@
       "ja": "当面の間",
       "zh": "暂时",
       "ko": "당분간"
-    }
+    },
+    "carriers": [
+      "{P}, we'll wait.",
+      "It works {P}.",
+      "{P}, stay put.",
+      "Use this {P}."
+    ]
   },
   {
     "id": "cs193",
@@ -3664,7 +4816,13 @@
       "ja": "いくつかのこと",
       "zh": "一些事情",
       "ko": "여러 가지"
-    }
+    },
+    "carriers": [
+      "There are {P}.",
+      "I have {P} to do.",
+      "We discussed {P}.",
+      "{P} went wrong."
+    ]
   },
   {
     "id": "cs194",
@@ -3683,7 +4841,13 @@
       "ja": "結局のところ",
       "zh": "归根结底",
       "ko": "결국에는"
-    }
+    },
+    "carriers": [
+      "{P}, we rest.",
+      "{P}, it's fine.",
+      "By {P}, we're tired.",
+      "{P}, what matters is health."
+    ]
   },
   {
     "id": "cs195",
@@ -3702,7 +4866,13 @@
       "ja": "余計なお世話だ",
       "zh": "不关你的事",
       "ko": "네 알 바 아냐"
-    }
+    },
+    "carriers": [
+      "That's {P}.",
+      "It's {P}.",
+      "Frankly, {P}.",
+      "Sorry, {P}."
+    ]
   },
   {
     "id": "cs196",
@@ -3721,7 +4891,13 @@
       "ja": "噂をすれば",
       "zh": "说曹操曹操到",
       "ko": "호랑이도 제 말 하면 온다"
-    }
+    },
+    "carriers": [
+      "{P}!",
+      "Well, {P}.",
+      "Oh, {P}.",
+      "And {P}, here he is."
+    ]
   },
   {
     "id": "cs197",
@@ -3740,7 +4916,13 @@
       "ja": "反対側",
       "zh": "另一边",
       "ko": "반대편"
-    }
+    },
+    "carriers": [
+      "It's on {P}.",
+      "Cross to {P}.",
+      "{P} is quieter.",
+      "Look at {P}."
+    ]
   },
   {
     "id": "cs198",
@@ -3759,7 +4941,13 @@
       "ja": "多かれ少なかれ",
       "zh": "差不多",
       "ko": "대충"
-    }
+    },
+    "carriers": [
+      "It's {P} done.",
+      "{P}, I agree.",
+      "That's {P} right.",
+      "We're {P} ready."
+    ]
   },
   {
     "id": "cs199",
@@ -3778,7 +4966,13 @@
       "ja": "処分する",
       "zh": "扔掉它",
       "ko": "없애 버리다"
-    }
+    },
+    "carriers": [
+      "Let's {P}.",
+      "I'll {P}.",
+      "Please {P}.",
+      "We should {P}."
+    ]
   },
   {
     "id": "cs200",
@@ -3797,7 +4991,13 @@
       "ja": "ありがとう",
       "zh": "谢谢",
       "ko": "고마워"
-    }
+    },
+    "carriers": [
+      "{P} so much.",
+      "{P} for everything.",
+      "{P}, that's kind.",
+      "I just want to say {P}."
+    ]
   },
   {
     "id": "cs201",
@@ -3816,6 +5016,12 @@
       "ja": "またあとで",
       "zh": "回头见",
       "ko": "나중에 봐"
-    }
+    },
+    "carriers": [
+      "{P}, take care.",
+      "{P}!",
+      "Bye, {P}.",
+      "Okay, {P}."
+    ]
   }
 ]

@@ -122,7 +122,7 @@ aʊ: how /haʊ/, cow /kaʊ/, hour /ˈaʊɚ/
 ### 1.8 連結句タブ（STEP6・実装済み）
 
 - **データ:** `data/connected_speech.json`（201 句）。`cs_type`: linking / assimilation / elision。`level`: 1–3。
-- **練習:** Decode のみ（連結 IPA → 元フレーズ `w`）。
+- **練習:** Decode のみ（連結 IPA → 元フレーズ `w`）。出題は**キャリア文**に IPA を埋め込み（`carriers` 4種からランダム、`{P}` → IPA 表示）
 - **フィルタ:** Level ピル × Type ピル（AND）。
 - **TTS:** GA 固定（自然連結 `TTS_CONNECTED_INSTRUCTIONS`）。RP 連結は範囲外。
 - **表示 IPA:** `activeIpa()` で GA/RP 切替可（`rp_ipa` 付き）。

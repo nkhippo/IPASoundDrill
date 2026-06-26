@@ -66,6 +66,9 @@
 
   .readout{text-align:center;padding:10px 4px 4px}
   .readout .ipa{font-family:var(--ipa);font-size:clamp(32px,8.5vw,50px);line-height:1.15;letter-spacing:.5px}
+  .readout .ipa.connected-prompt{font-size:clamp(22px,5.5vw,34px);line-height:1.45;letter-spacing:normal}
+  .readout .carrier{font-family:var(--ui);font-size:1em;font-weight:500;color:var(--ink);letter-spacing:.01em}
+  .readout .ipa-inline{font-family:var(--ipa);letter-spacing:.5px}
   .readout .wordbig{font-size:clamp(30px,8vw,46px);font-weight:700;letter-spacing:-.01em}
   .slash{color:var(--signal);font-weight:400}
   .seg{cursor:pointer;border-radius:4px;padding:0 1px;transition:background .12s,color .12s}
@@ -509,6 +512,7 @@ function normalizeConnected(row) {
   if (row.id) c.id = row.id;
   if (row.level != null) c.level = row.level;
   if (row.rp_ipa) c.rp_ipa = row.rp_ipa;
+  if (row.carriers) c.carriers = row.carriers;
   return c;
 }
 
@@ -818,7 +822,7 @@ const MODEB_DISTRACTOR = { fromNeighbors: 2, fromBand: 1 };
 const MODEB_SESSION = { newCount: 5, reviewCount: 5 };
 const MODEB_BAND_UNLOCK_RATIO = 0.6;
 const BOX_INTERVAL_MS = [0, 3600000, 86400000, 259200000, 604800000, 2592000000];
-let S={appMode:localStorage.getItem("app_mode")||"a",tab:"words",csFilter:"all",csLevel:"all",dir:"decode",focus:"all",reg:"all",grp:"all",queue:[],idx:0,correct:0,weak:{},missed:[],cur:null,revealed:false,built:[],mbPhase:"mcq",mbQuiz:null};
+let S={appMode:localStorage.getItem("app_mode")||"a",tab:"words",csFilter:"all",csLevel:"all",dir:"decode",focus:"all",reg:"all",grp:"all",queue:[],idx:0,correct:0,weak:{},missed:[],cur:null,curCarrier:null,revealed:false,built:[],mbPhase:"mcq",mbQuiz:null};
 
 const PH_EXAMPLES={
   "p":[["pay","/peɪ/"],["up","/ʌp/"],["pea","/pi/"]],
@@ -1500,23 +1504,54 @@ function renderInfo(boxId,sym){
   box.classList.add("on");
 }
 function renderIpaInto(container,ipa,infoBoxId,markTokens){
-  const tk=tokenize(ipa);const nuc=nucleusIndex(tk);let html='<span class="slash">/</span>';
+  container.innerHTML=buildIpaHtml(ipa,markTokens);
+  container.classList.remove("connected-prompt");
+  bindIpaSegments(container,infoBoxId);
+}
+function buildIpaHtml(ipa,markTokens){
+  const tk=tokenize(ipa);const nuc=nucleusIndex(tk);let html='<span class="ipa-inline"><span class="slash">/</span>';
   tk.forEach((t,k)=>{
     if(t==="ˈ"||t==="ˌ"){html+='<span class="seg mark" data-sym="'+t+'">'+t+'</span>';return;}
     let cls="seg"+(k===nuc?" nucleus":"");
     if(markTokens){const st=markTokens(k,t);if(st)cls+=" "+st;}
     html+='<span class="'+cls+'" data-sym="'+t+'">'+t+'</span>';
   });
-  html+='<span class="slash">/</span>';container.innerHTML=html;
+  html+='<span class="slash">/</span></span>';
+  return html;
+}
+function bindIpaSegments(container,infoBoxId){
   container.querySelectorAll(".seg").forEach(seg=>seg.addEventListener("click",()=>{
     container.querySelectorAll(".seg").forEach(s=>s.classList.remove("sel"));seg.classList.add("sel");renderInfo(infoBoxId,seg.dataset.sym);
   }));
+}
+function pickCarrier(c){
+  if(!c.carriers||!c.carriers.length)return null;
+  return c.carriers[Math.floor(Math.random()*c.carriers.length)];
+}
+function capCarrierBefore(before){
+  if(!before)return "";
+  return before.charAt(0).toUpperCase()+before.slice(1);
+}
+function renderConnectedPrompt(c){
+  const container=$("dIpa");
+  const ipaHtml=buildIpaHtml(activeIpa(c),null);
+  const carrier=S.curCarrier||"{P}";
+  const parts=carrier.split("{P}");
+  const before=parts[0]||"";
+  const after=parts[1]||"";
+  container.innerHTML=
+    '<span class="carrier">'+escapeHtml(capCarrierBefore(before))+'</span>'+
+    ipaHtml+
+    '<span class="carrier">'+escapeHtml(after)+'</span>';
+  container.classList.add("connected-prompt");
+  bindIpaSegments(container,"dInfo");
 }
 
 /* ---------- render card (dispatch) ---------- */
 function renderCard(){
   if(S.idx>=S.queue.length)return renderSummary();
   const c=S.queue[S.idx];S.cur=c;S.revealed=false;S.built=[];S.mbQuiz=null;
+  S.curCarrier=isConnectedItem(c)?pickCarrier(c):null;
   show("reveal",false);hideModeBCards();
   $("meter").innerHTML='<b>'+(S.idx+1)+'</b> / '+S.queue.length;
   if(S.appMode==="b"){
@@ -1545,7 +1580,12 @@ function unlockInputScroll(){
 function renderDecode(c){
   show("cardEncode",false);show("cardDecode",true);
   $("dNo").textContent="#"+String(S.idx+1).padStart(2,"0");
-  renderIpaInto($("dIpa"),activeIpa(c),"dInfo",null);$("dInfo").classList.remove("on");
+  $("dInfo").classList.remove("on");
+  if(isConnectedItem(c)&&S.curCarrier){
+    renderConnectedPrompt(c);
+  }else{
+    renderIpaInto($("dIpa"),activeIpa(c),"dInfo",null);
+  }
   const inp=$("dInput");inp.value="";
   if(!COARSE)inp.focus({preventScroll:true});
 }
