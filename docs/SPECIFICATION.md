@@ -106,7 +106,7 @@
 - UI 言語: **en / ja / zh / ko / fil**（`localStorage.app_lang`、**151 キー**）
 - 音素解説: 各 UI 言語の `i18n/phonemes/<lang>.json`（43 記号）。欠落時は en にフォールバック
 - 学習ガイド: `data/guide.json`（en / ja / ko / zh-Hant / zh-Hans / **fil**）。UI i18n とは独立
-- 語義 gloss: en / ja / zh / ko / **fil（1,600/3,059語）**。**未マージ語は en gloss にフォールバック**
+- 語義 gloss: en / ja / zh / ko / **fil（3,059語・完走）**
 - 連結句・弱形ルール文（`cs_rule`）: en / ja のみ。**fil 選択時は en にフォールバック**
 - 学習対象の英単語・IPA・TTS は言語共通（常に英語）
 
@@ -313,7 +313,7 @@ UI i18n とは独立。各言語キー（`en`, `ja`, `ko`, `zh-Hans`, `zh-Hant`,
 | 進捗 | localStorage のみ（端末・ブラウザ単位） |
 | 連結句 TTS | GA 固定。RP 連結音声は未対応 |
 | 弱形 TTS | GA/RP 対応（`?weak=`）。キャリア文内の弱形 IPA を指示文で指定 |
-| gloss.fil / cs_rule.fil | gloss.fil **1,600/3,059**（batch01–20）。未マージ・cs_rule は en フォールバック |
+| gloss.fil / cs_rule.fil | gloss.fil **3,059/3,059**（batch01–34）。cs_rule.fil は en フォールバック |
 | Mode B 語彙 | 主データは A1–A2 + phonics。上級日常語拡張は継続 |
 | `neighbors_rp` | 保留（`docs/rp-neighbors-priority-decision.md`） |
 | 要注意音素 | `phonemes/*.json` の `t:1` + コード内 TRAPSET |
@@ -327,6 +327,7 @@ UI i18n とは独立。各言語キー（`en`, `ja`, `ko`, `zh-Hans`, `zh-Hant`,
 |------|------|
 | 2026-06-23 | 初版（Mode A のみ・GA 固定） |
 | 2026-06-26 | Mode B・連結句・GA/RP・SRS・TTS v2/accent キャッシュを反映 |
+| 2026-06-28 | gloss.fil 全語完走（3,059/3,059）。batch01/03–20 改訂 + batch21–34 追加 |
 | 2026-06-27 | gloss.fil batch04 更新 + batch17–20 追加（1,600/3,059語） |
 | 2026-06-27 | gloss.fil batch02/06–08 更新 + batch13–16 追加（1,280/3,059語） |
 | 2026-06-27 | gloss.fil batch02–05 更新 + batch09–12 追加（960/3,059語） |

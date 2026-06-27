@@ -72,7 +72,7 @@ reveal には必ず以下を表示する：
 
 - 出題語（headword）
 - 正解IPA（強勢核を琥珀色下線でハイライト）
-- **意味（gloss）を現在のUI言語で必ず添える** … gloss は en/ja/zh/ko/fil を保持。UI=fil なら `gloss.fil`（**1,600/3,059語**、未マージ時は `gloss.en` にフォールバック）。
+- **意味（gloss）を現在のUI言語で必ず添える** … gloss は en/ja/zh/ko/fil を保持。UI=fil なら `gloss.fil`（**3,059語完走**）。
 - 自分の解答との差分（Encodeはトークン色分け）
 - 音声再生（後述TTS）
 - 規則語なら綴り規則パターン（`ai → /eɪ/` 等）
@@ -222,7 +222,7 @@ Keep the delivery identical and consistent across all words.
 | Tier | 内容 | fil 状態 |
 |------|------|----------|
 | Tier 1 | UI 文言 151 キー + 言語ピッカー | ✅ `i18n/fil.json` |
-| Tier 2 | 語義 gloss（3,059 語） | 🔄 **1,600/3,059**（batch01–20 マージ済み） |
+| Tier 2 | 語義 gloss（3,059 語） | ✅ **3,059/3,059**（batch01–34） |
 | Tier 3 | 音素解説 43 記号 + 学習ガイド | ✅ `phonemes/fil.json` + `guide.json` fil |
 | Tier 4 | 連結句・弱形ルール文 `cs_rule` | ⬜ en フォールバック |
 
@@ -245,7 +245,7 @@ Keep the delivery identical and consistent across all words.
 | 中 | 薄い記号の補強 | 部分 |
 | 中 | `neighbors_rp` | ⏸ 保留 |
 | ― | gloss品質点検 | 継続（多言語学習ガイドと連動可） |
-| ― | gloss.fil（Tier 2） | 🔄 1,600/3,059（`tools/merge_gloss_fil.py`） |
+| ― | gloss.fil（Tier 2） | ✅ 3,059/3,059 |
 | ― | cs_rule.fil（Tier 4） | ⬜ 別タスク |
 | ― | 連結句 RP TTS | ⬜ 別タスク |
 
@@ -262,7 +262,7 @@ Keep the delivery identical and consistent across all words.
 | Mode B（Study/Quiz・vocab SRS） | ✅ |
 | UI 5言語（en/ja/zh/ko/fil） | ✅ Tier 1+3 |
 | 多言語学習ガイド（6言語） | ✅ フェーズ1 |
-| gloss.fil / cs_rule.fil | 🔄 1,600/3,059 gloss.fil。cs_rule.fil は en フォールバック |
+| gloss.fil / cs_rule.fil | ✅ gloss.fil 完走。cs_rule.fil は en フォールバック |
 | 連結句 RP TTS | ⬜ |
 
 **運用メモ:** Mode A/B の新規 UI 文字列は i18n キー経由。GAS は RP TTS 対応版を再デプロイ済み（`index.html` `GAS_TTS_URL` 参照）。
