@@ -9,7 +9,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "n links onto the next vowel: a-napple",
-      "ja": "n が次の母音へ連結: a-napple"
+      "ja": "n が次の母音へ連結: a-napple",
+      "fil": "n umuugnay sa kasunod na patinig: a-napple"
     },
     "gloss": {
       "en": "an apple",
@@ -34,7 +35,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "k→it, t→up link consonant to vowel",
-      "ja": "k→it, t→up が母音へ連結"
+      "ja": "k→it, t→up が母音へ連結",
+      "fil": "k→it, t→up nag-uugnay ng katinig sa patinig"
     },
     "gloss": {
       "en": "pick it up",
@@ -59,7 +61,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "m links into on: co-mon",
-      "ja": "m が on へ連結: co-mon"
+      "ja": "m が on へ連結: co-mon",
+      "fil": "m umuugnay sa on: co-mon"
     },
     "gloss": {
       "en": "come on",
@@ -84,7 +87,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "k links into at: loo-kat",
-      "ja": "k が at へ連結: loo-kat"
+      "ja": "k が at へ連結: loo-kat",
+      "fil": "k umuugnay sa at: loo-kat"
     },
     "gloss": {
       "en": "look at",
@@ -109,7 +113,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "k links into it: che-kit",
-      "ja": "k が it へ連結: che-kit"
+      "ja": "k が it へ連結: che-kit",
+      "fil": "k umuugnay sa it: che-kit"
     },
     "gloss": {
       "en": "check it",
@@ -134,7 +139,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "n links into off: tur-noff",
-      "ja": "n が off へ連結: tur-noff"
+      "ja": "n が off へ連結: tur-noff",
+      "fil": "n umuugnay sa off: tur-noff"
     },
     "gloss": {
       "en": "turn off",
@@ -159,7 +165,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "silent h; n links to the vowel",
-      "ja": "h は黙字; n が母音へ連結"
+      "ja": "h は黙字; n が母音へ連結",
+      "fil": "tahimik na h; n umuugnay sa patinig"
     },
     "gloss": {
       "en": "an hour",
@@ -184,7 +191,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "RP keeps r only because a vowel follows (linking r)",
-      "ja": "RPは母音が続くため r を保持(linking r)"
+      "ja": "RPは母音が続くため r を保持(linking r)",
+      "fil": "pinapanatili ng RP ang r dahil may patinig na sumusunod (linking r)"
     },
     "gloss": {
       "en": "far away",
@@ -209,7 +217,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "a /j/ glide bridges I→am",
-      "ja": "/j/ の渡り音が I→am をつなぐ"
+      "ja": "/j/ の渡り音が I→am をつなぐ",
+      "fil": "/j/ glide ang umuugnay sa I→am"
     },
     "gloss": {
       "en": "I am",
@@ -234,7 +243,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "a /w/ glide bridges go→away",
-      "ja": "/w/ の渡り音が go→away をつなぐ"
+      "ja": "/w/ の渡り音が go→away をつなぐ",
+      "fil": "/w/ glide ang umuugnay sa go→away"
     },
     "gloss": {
       "en": "go away",
@@ -259,7 +269,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "the→/ði/ before vowel, /j/ glide",
-      "ja": "母音前で the→/ði/、/j/ 渡り音"
+      "ja": "母音前で the→/ði/、/j/ 渡り音",
+      "fil": "bago ang patinig, the→/ði/, /j/ glide"
     },
     "gloss": {
       "en": "the end",
@@ -284,7 +295,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "d + y → /dʒ/ (yod-coalescence)",
-      "ja": "d + y → /dʒ/(同化)"
+      "ja": "d + y → /dʒ/(同化)",
+      "fil": "d + y → /dʒ/ (asimilasyon)"
     },
     "gloss": {
       "en": "did you",
@@ -309,7 +321,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "d + y → /dʒ/",
-      "ja": "d + y → /dʒ/(同化)"
+      "ja": "d + y → /dʒ/(同化)",
+      "fil": "d + y → /dʒ/ (asimilasyon)"
     },
     "gloss": {
       "en": "would you",
@@ -334,7 +347,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "d + y → /dʒ/",
-      "ja": "d + y → /dʒ/(同化)"
+      "ja": "d + y → /dʒ/(同化)",
+      "fil": "d + y → /dʒ/ (asimilasyon)"
     },
     "gloss": {
       "en": "could you",
@@ -359,7 +373,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "t + y → /tʃ/",
-      "ja": "t + y → /tʃ/(同化)"
+      "ja": "t + y → /tʃ/(同化)",
+      "fil": "t + y → /tʃ/ (asimilasyon)"
     },
     "gloss": {
       "en": "don't you",
@@ -384,7 +399,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "t + y → /tʃ/",
-      "ja": "t + y → /tʃ/(同化)"
+      "ja": "t + y → /tʃ/(同化)",
+      "fil": "t + y → /tʃ/ (asimilasyon)"
     },
     "gloss": {
       "en": "won't you",
@@ -409,7 +425,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "t dropped between s and d",
-      "ja": "s と d の間で t が脱落"
+      "ja": "s と d の間で t が脱落",
+      "fil": "t kinakaltas sa pagitan ng s at d"
     },
     "gloss": {
       "en": "next day",
@@ -434,7 +451,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "t dropped before b",
-      "ja": "b の前で t が脱落"
+      "ja": "b の前で t が脱落",
+      "fil": "bago ang b, kinakaltas ang t"
     },
     "gloss": {
       "en": "must be",
@@ -459,7 +477,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "d dropped between l and m",
-      "ja": "l と m の間で d が脱落"
+      "ja": "l と m の間で d が脱落",
+      "fil": "d kinakaltas sa pagitan ng l at m"
     },
     "gloss": {
       "en": "old man",
@@ -484,7 +503,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "t dropped between s and n",
-      "ja": "s と n の間で t が脱落"
+      "ja": "s と n の間で t が脱落",
+      "fil": "t kinakaltas sa pagitan ng s at n"
     },
     "gloss": {
       "en": "last night",
@@ -509,7 +529,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "t dropped between s and f",
-      "ja": "s と f の間で t が脱落"
+      "ja": "s と f の間で t が脱落",
+      "fil": "t kinakaltas sa pagitan ng s at f"
     },
     "gloss": {
       "en": "best friend",
@@ -534,7 +555,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "t→of links; GA flaps t to /ɾ/; of→/əv/ weak",
-      "ja": "t→of 連結; GAは t を /ɾ/、of は弱形 /əv/"
+      "ja": "t→of 連結; GAは t を /ɾ/、of は弱形 /əv/",
+      "fil": "t→of nag-uugnay; sa GA, t→/ɾ/, of→/əv/ mahina"
     },
     "gloss": {
       "en": "a lot of",
@@ -559,7 +581,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "two links: part-of-it; GA flap",
-      "ja": "二重連結 part-of-it; GAは t をフラップ"
+      "ja": "二重連結 part-of-it; GAは t をフラップ",
+      "fil": "dalawahang pag-uugnay: part-of-it; GA flap"
     },
     "gloss": {
       "en": "part of it",
@@ -584,7 +607,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "of→/əv/ weak, links into all",
-      "ja": "of→/əv/ 弱形、all へ連結"
+      "ja": "of→/əv/ 弱形、all へ連結",
+      "fil": "of→/əv/ mahina, umuugnay sa all"
     },
     "gloss": {
       "en": "first of all",
@@ -609,7 +633,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "and→/ən/; RP linking r on first more",
-      "ja": "and→/ən/; RPは最初の more に linking r"
+      "ja": "and→/ən/; RPは最初の more に linking r",
+      "fil": "and→/ən/; sa RP, linking r sa unang more"
     },
     "gloss": {
       "en": "more and more",
@@ -634,7 +659,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "get-out-of all link; GA double flap",
-      "ja": "get-out-of 連結; GAは t を二重フラップ"
+      "ja": "get-out-of 連結; GAは t を二重フラップ",
+      "fil": "get-out-of buong pag-uugnay; GA double flap"
     },
     "gloss": {
       "en": "get out of",
@@ -659,7 +685,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "on→a links: o-na",
-      "ja": "on→a 連結: o-na"
+      "ja": "on→a 連結: o-na",
+      "fil": "on→a pag-uugnay: o-na"
     },
     "gloss": {
       "en": "hold on a second",
@@ -684,7 +711,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "not-at-all all link; GA flap on not",
-      "ja": "not-at-all 連結; GAは not を flap"
+      "ja": "not-at-all 連結; GAは not を flap",
+      "fil": "not-at-all buong pag-uugnay; sa GA, flap ang not"
     },
     "gloss": {
       "en": "not at all",
@@ -709,7 +737,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "one→of links; of→/əv/, them→/ðəm/",
-      "ja": "one→of 連結; of→/əv/, them→/ðəm/"
+      "ja": "one→of 連結; of→/əv/, them→/ðəm/",
+      "fil": "one→of pag-uugnay; of→/əv/, them→/ðəm/"
     },
     "gloss": {
       "en": "one of them",
@@ -734,7 +763,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "t + y → /tʃ/ (cf. casual 'gotcha')",
-      "ja": "t + y → /tʃ/(口語 gotcha 相当)"
+      "ja": "t + y → /tʃ/(口語 gotcha 相当)",
+      "fil": "t + y → /tʃ/ (cf. impormal 'gotcha')"
     },
     "gloss": {
       "en": "got you (understood)",
@@ -759,7 +789,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "t + y → /tʃ/",
-      "ja": "t + y → /tʃ/(同化)"
+      "ja": "t + y → /tʃ/(同化)",
+      "fil": "t + y → /tʃ/ (asimilasyon)"
     },
     "gloss": {
       "en": "what you",
@@ -784,7 +815,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "d + y → /dʒ/",
-      "ja": "d + y → /dʒ/(同化)"
+      "ja": "d + y → /dʒ/(同化)",
+      "fil": "d + y → /dʒ/ (asimilasyon)"
     },
     "gloss": {
       "en": "would you mind",
@@ -809,7 +841,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "n→/ŋ/ before k (place assimilation)",
-      "ja": "k の前で n→/ŋ/(調音位置の同化)"
+      "ja": "k の前で n→/ŋ/(調音位置の同化)",
+      "fil": "bago ang k, n→/ŋ/ (asimilasyon ng pook)"
     },
     "gloss": {
       "en": "in case",
@@ -834,7 +867,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "n→/m/ before b (place assimilation)",
-      "ja": "b の前で n→/m/(調音位置の同化)"
+      "ja": "b の前で n→/m/(調音位置の同化)",
+      "fil": "bago ang b, n→/m/ (asimilasyon ng pook)"
     },
     "gloss": {
       "en": "ten boys",
@@ -859,7 +893,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "d→/b/ before b (place assimilation)",
-      "ja": "b の前で d→/b/(調音位置の同化)"
+      "ja": "b の前で d→/b/(調音位置の同化)",
+      "fil": "bago ang b, d→/b/ (asimilasyon ng pook)"
     },
     "gloss": {
       "en": "good boy",
@@ -884,7 +919,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "t→/k/ before k (place assimilation)",
-      "ja": "k の前で t→/k/(調音位置の同化)"
+      "ja": "k の前で t→/k/(調音位置の同化)",
+      "fil": "bago ang k, t→/k/ (asimilasyon ng pook)"
     },
     "gloss": {
       "en": "that case",
@@ -909,7 +945,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "s + y → /ʃ/",
-      "ja": "s + y → /ʃ/(同化)"
+      "ja": "s + y → /ʃ/(同化)",
+      "fil": "s + y → /ʃ/ (asimilasyon)"
     },
     "gloss": {
       "en": "bless you",
@@ -934,7 +971,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "of→/əv/; casual 'kinda' drops more",
-      "ja": "of→/əv/; 口語 kinda は更に脱落"
+      "ja": "of→/əv/; 口語 kinda は更に脱落",
+      "fil": "of→/əv/; impormal 'kinda' ay mas marami pang nakaltas"
     },
     "gloss": {
       "en": "kind of (somewhat)",
@@ -959,7 +997,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "of→/əv/; casual 'sorta'",
-      "ja": "of→/əv/; 口語 sorta"
+      "ja": "of→/əv/; 口語 sorta",
+      "fil": "of→/əv/; impormal 'sorta'"
     },
     "gloss": {
       "en": "sort of (somewhat)",
@@ -984,7 +1023,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "them→/ðəm/ weak; h-less",
-      "ja": "them→/ðəm/ 弱形"
+      "ja": "them→/ðəm/ 弱形",
+      "fil": "them→/ðəm/ mahina; walang h"
     },
     "gloss": {
       "en": "ask them",
@@ -1009,7 +1049,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "him→/ɪm/, h dropped after consonant",
-      "ja": "him→/ɪm/、子音後で h 脱落"
+      "ja": "him→/ɪm/、子音後で h 脱落",
+      "fil": "him→/ɪm/, pagkatapos ng katinig, kinakaltas ang h"
     },
     "gloss": {
       "en": "tell him",
@@ -1034,7 +1075,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "her→/ɝ/(GA)/ə/(RP), h dropped",
-      "ja": "her→/ɝ/(GA)/ə/(RP)、h 脱落"
+      "ja": "her→/ɝ/(GA)/ə/(RP)、h 脱落",
+      "fil": "her→/ɝ/(GA)/ə/(RP), kinakaltas ang h"
     },
     "gloss": {
       "en": "give her",
@@ -1059,7 +1101,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "of→/ə/ (v dropped before consonant)",
-      "ja": "of→/ə/(子音前で v 脱落)"
+      "ja": "of→/ə/(子音前で v 脱落)",
+      "fil": "of→/ə/ (bago katinig, kinakaltas ang v)"
     },
     "gloss": {
       "en": "cup of tea",
@@ -1084,7 +1127,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "of→/ə/ before consonant",
-      "ja": "子音前で of→/ə/"
+      "ja": "子音前で of→/ə/",
+      "fil": "bago katinig, of→/ə/"
     },
     "gloss": {
       "en": "lots of time",
@@ -1109,7 +1153,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "d dropped between n and ð; them→/ðəm/",
-      "ja": "n と ð の間で d 脱落; them→/ðəm/"
+      "ja": "n と ð の間で d 脱落; them→/ðəm/",
+      "fil": "d kinakaltas sa pagitan ng n at ð; them→/ðəm/"
     },
     "gloss": {
       "en": "send them",
@@ -1134,7 +1179,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "GA: flap+reduce; RP: d+you→/dʒə/",
-      "ja": "GAはフラップ+弱化; RPは d+you→/dʒə/"
+      "ja": "GAはフラップ+弱化; RPは d+you→/dʒə/",
+      "fil": "GA: flap+reduce; RP: d+you→/dʒə/"
     },
     "gloss": {
       "en": "what do you want?",
@@ -1159,7 +1205,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "/w/ glide how-are; you→/jə/",
-      "ja": "/w/ 渡り音 how-are; you→/jə/"
+      "ja": "/w/ 渡り音 how-are; you→/jə/",
+      "fil": "/w/ glide how-are; you→/jə/"
     },
     "gloss": {
       "en": "how are you doing?",
@@ -1184,7 +1231,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "and→/ən/ weak, links both sides",
-      "ja": "and→/ən/ 弱形、両側へ連結"
+      "ja": "and→/ən/ 弱形、両側へ連結",
+      "fil": "and→/ən/ mahina, umuugnay sa magkabilang panig"
     },
     "gloss": {
       "en": "come and see",
@@ -1209,7 +1257,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "three links: pic-ku-po-nit",
-      "ja": "三重連結 pic-ku-po-nit"
+      "ja": "三重連結 pic-ku-po-nit",
+      "fil": "tatlong pag-uugnay: pic-ku-po-nit"
     },
     "gloss": {
       "en": "pick up on it",
@@ -1234,7 +1283,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "chained links + GA flap + of→/əv/",
-      "ja": "連鎖連結 + GAフラップ + of→/əv/"
+      "ja": "連鎖連結 + GAフラップ + of→/əv/",
+      "fil": "sunod-sunod na pag-uugnay + GA flap + of→/əv/"
     },
     "gloss": {
       "en": "an awful lot of it",
@@ -1259,7 +1309,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "GA double flap; over-with link",
-      "ja": "GAは t を二重フラップ; over-with 連結"
+      "ja": "GAは t を二重フラップ; over-with 連結",
+      "fil": "GA double flap; over-with pag-uugnay"
     },
     "gloss": {
       "en": "get it over with",
@@ -1284,7 +1335,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "all-of-a all link; of→/əv/",
-      "ja": "all-of-a 連結; of→/əv/"
+      "ja": "all-of-a 連結; of→/əv/",
+      "fil": "all-of-a buong pag-uugnay; of→/əv/"
     },
     "gloss": {
       "en": "all of a sudden",
@@ -1309,7 +1361,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "d+you→/dʒ/, t+yet→/tʃ/",
-      "ja": "d+you→/dʒ/、t+yet→/tʃ/"
+      "ja": "d+you→/dʒ/、t+yet→/tʃ/",
+      "fil": "d+you→/dʒ/, t+yet→/tʃ/"
     },
     "gloss": {
       "en": "did you eat yet?",
@@ -1334,7 +1387,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "d+you→/dʒ/; some→/səm/",
-      "ja": "d+you→/dʒ/; some→/səm/"
+      "ja": "d+you→/dʒ/; some→/səm/",
+      "fil": "d+you→/dʒ/; some→/səm/"
     },
     "gloss": {
       "en": "would you like some?",
@@ -1359,7 +1413,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "meet+you → t+y → /tʃ/",
-      "ja": "meet+you の t+y → /tʃ/"
+      "ja": "meet+you の t+y → /tʃ/",
+      "fil": "sa meet+you, t+y → /tʃ/"
     },
     "gloss": {
       "en": "nice to meet you",
@@ -1384,7 +1439,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "t+you→/tʃ/",
-      "ja": "t+you→/tʃ/(同化)"
+      "ja": "t+you→/tʃ/(同化)",
+      "fil": "t+you→/tʃ/ (asimilasyon)"
     },
     "gloss": {
       "en": "can't you see?",
@@ -1409,7 +1465,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "n→/m/ before p; t elided in past",
-      "ja": "p の前で n→/m/; past の t 脱落"
+      "ja": "p の前で n→/m/; past の t 脱落",
+      "fil": "bago ang p, n→/m/; kinakaltas ang t sa past"
     },
     "gloss": {
       "en": "ten past nine",
@@ -1434,7 +1491,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "n→/m/ before p",
-      "ja": "p の前で n→/m/"
+      "ja": "p の前で n→/m/",
+      "fil": "bago ang p, n→/m/"
     },
     "gloss": {
       "en": "Green Park",
@@ -1459,7 +1517,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "t+you→/tʃ/; come-in link",
-      "ja": "t+you→/tʃ/; come-in 連結"
+      "ja": "t+you→/tʃ/; come-in 連結",
+      "fil": "t+you→/tʃ/; come-in pag-uugnay"
     },
     "gloss": {
       "en": "won't you come in?",
@@ -1484,7 +1543,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "s+y → /ʃ/",
-      "ja": "s+y → /ʃ/(同化)"
+      "ja": "s+y → /ʃ/(同化)",
+      "fil": "s+y → /ʃ/ (asimilasyon)"
     },
     "gloss": {
       "en": "this year",
@@ -1509,7 +1569,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "s+y → /ʃ/",
-      "ja": "s+y → /ʃ/(同化)"
+      "ja": "s+y → /ʃ/(同化)",
+      "fil": "s+y → /ʃ/ (asimilasyon)"
     },
     "gloss": {
       "en": "miss you",
@@ -1534,7 +1595,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "don't→/doʊ/, t dropped before n",
-      "ja": "n の前で don't の t 脱落"
+      "ja": "n の前で don't の t 脱落",
+      "fil": "bago ang n, kinakaltas ang t sa don't"
     },
     "gloss": {
       "en": "I don't know",
@@ -1559,7 +1621,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "the→/ðə/; GA flap on matter",
-      "ja": "the→/ðə/; GAは matter を flap"
+      "ja": "the→/ðə/; GAは matter を flap",
+      "fil": "the→/ðə/; sa GA, flap ang matter"
     },
     "gloss": {
       "en": "what's the matter?",
@@ -1584,7 +1647,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "of→/ə/ (v dropped before consonant)",
-      "ja": "of→/ə/(子音前で v 脱落)"
+      "ja": "of→/ə/(子音前で v 脱落)",
+      "fil": "of→/ə/ (bago katinig, kinakaltas ang v)"
     },
     "gloss": {
       "en": "a couple of days",
@@ -1609,7 +1673,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "and→/ən/ (d dropped)",
-      "ja": "and→/ən/(d 脱落)"
+      "ja": "and→/ən/(d 脱落)",
+      "fil": "and→/ən/ (kinakaltas ang d)"
     },
     "gloss": {
       "en": "fish and chips",
@@ -1634,7 +1699,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "and→/ən/; GA flaps both t/d",
-      "ja": "and→/ən/; GAは t/d をフラップ"
+      "ja": "and→/ən/; GAは t/d をフラップ",
+      "fil": "and→/ən/; sa GA, parehong t/d ay flap"
     },
     "gloss": {
       "en": "bread and butter",
@@ -1659,7 +1725,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "and→/ən/ (d dropped)",
-      "ja": "and→/ən/(d 脱落)"
+      "ja": "and→/ən/(d 脱落)",
+      "fil": "and→/ən/ (kinakaltas ang d)"
     },
     "gloss": {
       "en": "you and me",
@@ -1684,7 +1751,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "have→/əv/ weak; GA flap on should",
-      "ja": "have→/əv/ 弱形; GAは should を flap"
+      "ja": "have→/əv/ 弱形; GAは should を flap",
+      "fil": "have→/əv/ mahina; sa GA, flap ang should"
     },
     "gloss": {
       "en": "I should have known",
@@ -1709,7 +1777,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "of→/ə/ before consonant",
-      "ja": "子音前で of→/ə/"
+      "ja": "子音前で of→/ə/",
+      "fil": "bago katinig, of→/ə/"
     },
     "gloss": {
       "en": "a piece of cake (easy)",
@@ -1734,7 +1803,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "out-of link; the→/ðə/; GA flap",
-      "ja": "out-of 連結; the→/ðə/; GAフラップ"
+      "ja": "out-of 連結; the→/ðə/; GAフラップ",
+      "fil": "out-of pag-uugnay; the→/ðə/; GA flap"
     },
     "gloss": {
       "en": "out of the question",
@@ -1759,7 +1829,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "n→it link",
-      "ja": "n→it 連結"
+      "ja": "n→it 連結",
+      "fil": "n→it pag-uugnay"
     },
     "gloss": {
       "en": "on it",
@@ -1784,7 +1855,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "n→it link",
-      "ja": "n→it 連結"
+      "ja": "n→it 連結",
+      "fil": "n→it pag-uugnay"
     },
     "gloss": {
       "en": "in it",
@@ -1809,7 +1881,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "t→up link; GA flap",
-      "ja": "t→up 連結; GAフラップ"
+      "ja": "t→up 連結; GAフラップ",
+      "fil": "t→up pag-uugnay; GA flap"
     },
     "gloss": {
       "en": "get up",
@@ -1834,7 +1907,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "t→d link",
-      "ja": "t→d 連結"
+      "ja": "t→d 連結",
+      "fil": "t→d pag-uugnay"
     },
     "gloss": {
       "en": "sit down",
@@ -1859,7 +1933,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "d→on link",
-      "ja": "d→on 連結"
+      "ja": "d→on 連結",
+      "fil": "d→on pag-uugnay"
     },
     "gloss": {
       "en": "hold on",
@@ -1884,7 +1959,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "two links; GA flap",
-      "ja": "二重連結; GAフラップ"
+      "ja": "二重連結; GAフラップ",
+      "fil": "dalawahang pag-uugnay; GA flap"
     },
     "gloss": {
       "en": "turn it on",
@@ -1909,7 +1985,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "t→it link; GA flap",
-      "ja": "t→it 連結; GAフラップ"
+      "ja": "t→it 連結; GAフラップ",
+      "fil": "t→it pag-uugnay; GA flap"
     },
     "gloss": {
       "en": "eat it",
@@ -1934,7 +2011,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "d→it link; GA flap",
-      "ja": "d→it 連結; GAフラップ"
+      "ja": "d→it 連結; GAフラップ",
+      "fil": "d→it pag-uugnay; GA flap"
     },
     "gloss": {
       "en": "read it",
@@ -1959,7 +2037,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "l→us link; us→/əs/",
-      "ja": "l→us 連結; us→/əs/"
+      "ja": "l→us 連結; us→/əs/",
+      "fil": "l→us pag-uugnay; us→/əs/"
     },
     "gloss": {
       "en": "call us",
@@ -1984,7 +2063,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "p→us link",
-      "ja": "p→us 連結"
+      "ja": "p→us 連結",
+      "fil": "p→us pag-uugnay"
     },
     "gloss": {
       "en": "help us",
@@ -2009,7 +2089,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "d+y→/dʒ/",
-      "ja": "d+y→/dʒ/"
+      "ja": "d+y→/dʒ/",
+      "fil": "d+y→/dʒ/"
     },
     "gloss": {
       "en": "had you",
@@ -2034,7 +2115,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "t+y→/tʃ/",
-      "ja": "t+y→/tʃ/"
+      "ja": "t+y→/tʃ/",
+      "fil": "t+y→/tʃ/"
     },
     "gloss": {
       "en": "get you",
@@ -2059,7 +2141,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "t+y→/tʃ/",
-      "ja": "t+y→/tʃ/"
+      "ja": "t+y→/tʃ/",
+      "fil": "t+y→/tʃ/"
     },
     "gloss": {
       "en": "let you",
@@ -2084,7 +2167,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "d+y→/dʒ/",
-      "ja": "d+y→/dʒ/"
+      "ja": "d+y→/dʒ/",
+      "fil": "d+y→/dʒ/"
     },
     "gloss": {
       "en": "told you",
@@ -2109,7 +2193,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "n→/m/ before m",
-      "ja": "m の前で n→/m/"
+      "ja": "m の前で n→/m/",
+      "fil": "bago ang m, n→/m/"
     },
     "gloss": {
       "en": "ten men",
@@ -2134,7 +2219,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "t dropped (s_p)",
-      "ja": "t 脱落(s_p)"
+      "ja": "t 脱落(s_p)",
+      "fil": "t kinakaltas (s_p)"
     },
     "gloss": {
       "en": "most people",
@@ -2159,7 +2245,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "t dropped (s_t)",
-      "ja": "t 脱落(s_t)"
+      "ja": "t 脱落(s_t)",
+      "fil": "t kinakaltas (s_t)"
     },
     "gloss": {
       "en": "first time",
@@ -2184,7 +2271,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "t dropped (f_t)",
-      "ja": "t 脱落(f_t)"
+      "ja": "t 脱落(f_t)",
+      "fil": "t kinakaltas (f_t)"
     },
     "gloss": {
       "en": "left turn",
@@ -2209,7 +2297,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "t dropped (p_k)",
-      "ja": "t 脱落(p_k)"
+      "ja": "t 脱落(p_k)",
+      "fil": "t kinakaltas (p_k)"
     },
     "gloss": {
       "en": "kept quiet",
@@ -2234,7 +2323,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "d dropped (l_d)",
-      "ja": "d 脱落(l_d)"
+      "ja": "d 脱落(l_d)",
+      "fil": "d kinakaltas (l_d)"
     },
     "gloss": {
       "en": "cold day",
@@ -2259,7 +2349,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "look-it-up links; GA flap",
-      "ja": "look-it-up 連結; GAフラップ"
+      "ja": "look-it-up 連結; GAフラップ",
+      "fil": "look-it-up pag-uugnay; GA flap"
     },
     "gloss": {
       "en": "look it up",
@@ -2284,7 +2375,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "chained links; GA flap",
-      "ja": "連鎖連結; GAフラップ"
+      "ja": "連鎖連結; GAフラップ",
+      "fil": "sunod-sunod na pag-uugnay; GA flap"
     },
     "gloss": {
       "en": "think about it",
@@ -2309,7 +2401,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "as→/əz/; n→as link",
-      "ja": "as→/əz/; n→as 連結"
+      "ja": "as→/əz/; n→as 連結",
+      "fil": "as→/əz/; n→as pag-uugnay"
     },
     "gloss": {
       "en": "as soon as",
@@ -2334,7 +2427,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "as→/əz/ links",
-      "ja": "as→/əz/ 連結"
+      "ja": "as→/əz/ 連結",
+      "fil": "as→/əz/ pag-uugnay"
     },
     "gloss": {
       "en": "such as",
@@ -2359,7 +2453,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "d→up link",
-      "ja": "d→up 連結"
+      "ja": "d→up 連結",
+      "fil": "d→up pag-uugnay"
     },
     "gloss": {
       "en": "end up",
@@ -2384,7 +2479,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "fill-it-in links; GA flap",
-      "ja": "fill-it-in 連結; GAフラップ"
+      "ja": "fill-it-in 連結; GAフラップ",
+      "fil": "fill-it-in pag-uugnay; GA flap"
     },
     "gloss": {
       "en": "fill it in",
@@ -2409,7 +2505,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "run-out-of links; of→/əv/",
-      "ja": "run-out-of 連結; of→/əv/"
+      "ja": "run-out-of 連結; of→/əv/",
+      "fil": "run-out-of pag-uugnay; of→/əv/"
     },
     "gloss": {
       "en": "run out of",
@@ -2434,7 +2531,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "and→/ən/ link",
-      "ja": "and→/ən/ 連結"
+      "ja": "and→/ən/ 連結",
+      "fil": "and→/ən/ pag-uugnay"
     },
     "gloss": {
       "en": "by and large",
@@ -2459,7 +2557,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "t+y→/tʃ/; RP non-rhotic",
-      "ja": "t+y→/tʃ/; RPは非rhotic"
+      "ja": "t+y→/tʃ/; RPは非rhotic",
+      "fil": "t+y→/tʃ/; RP non-rhotic"
     },
     "gloss": {
       "en": "aren't you",
@@ -2484,7 +2583,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "t+y→/tʃ/",
-      "ja": "t+y→/tʃ/"
+      "ja": "t+y→/tʃ/",
+      "fil": "t+y→/tʃ/"
     },
     "gloss": {
       "en": "haven't you",
@@ -2509,7 +2609,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "t+y→/tʃ/",
-      "ja": "t+y→/tʃ/"
+      "ja": "t+y→/tʃ/",
+      "fil": "t+y→/tʃ/"
     },
     "gloss": {
       "en": "about you",
@@ -2534,7 +2635,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "d+y→/dʒ/",
-      "ja": "d+y→/dʒ/"
+      "ja": "d+y→/dʒ/",
+      "fil": "d+y→/dʒ/"
     },
     "gloss": {
       "en": "behind you",
@@ -2559,7 +2661,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "d→/ɡ/ before k",
-      "ja": "k の前で d→/ɡ/"
+      "ja": "k の前で d→/ɡ/",
+      "fil": "bago ang k, d→/ɡ/"
     },
     "gloss": {
       "en": "good cook",
@@ -2584,7 +2687,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "t→/b/ before b",
-      "ja": "b の前で t→/b/"
+      "ja": "b の前で t→/b/",
+      "fil": "bago ang b, t→/b/"
     },
     "gloss": {
       "en": "that boy",
@@ -2609,7 +2713,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "n→/m/ before m",
-      "ja": "m の前で n→/m/"
+      "ja": "m の前で n→/m/",
+      "fil": "bago ang m, n→/m/"
     },
     "gloss": {
       "en": "one more",
@@ -2634,7 +2739,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "n→/m/ before b",
-      "ja": "b の前で n→/m/"
+      "ja": "b の前で n→/m/",
+      "fil": "bago ang b, n→/m/"
     },
     "gloss": {
       "en": "brown bag",
@@ -2659,7 +2765,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "of→/ə/ before consonant",
-      "ja": "子音前で of→/ə/"
+      "ja": "子音前で of→/ə/",
+      "fil": "bago katinig, of→/ə/"
     },
     "gloss": {
       "en": "a lot of people",
@@ -2684,7 +2791,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "of→/əv/; them→/ðəm/",
-      "ja": "of→/əv/; them→/ðəm/"
+      "ja": "of→/əv/; them→/ðəm/",
+      "fil": "of→/əv/; them→/ðəm/"
     },
     "gloss": {
       "en": "most of them",
@@ -2709,7 +2817,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "d dropped (n_m)",
-      "ja": "d 脱落(n_m)"
+      "ja": "d 脱落(n_m)",
+      "fil": "d kinakaltas (n_m)"
     },
     "gloss": {
       "en": "hand me that",
@@ -2734,7 +2843,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "d dropped (n_p)",
-      "ja": "d 脱落(n_p)"
+      "ja": "d 脱落(n_p)",
+      "fil": "d kinakaltas (n_p)"
     },
     "gloss": {
       "en": "grandpa",
@@ -2759,7 +2869,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "d dropped (n_ʃ)",
-      "ja": "d 脱落(n_ʃ)"
+      "ja": "d 脱落(n_ʃ)",
+      "fil": "d kinakaltas (n_ʃ)"
     },
     "gloss": {
       "en": "friendship",
@@ -2784,7 +2895,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "d dropped (n_m)",
-      "ja": "d 脱落(n_m)"
+      "ja": "d 脱落(n_m)",
+      "fil": "d kinakaltas (n_m)"
     },
     "gloss": {
       "en": "blind man",
@@ -2809,7 +2921,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "her→/ɝ/(GA)/ə/(RP), h dropped",
-      "ja": "her→/ɝ/(GA)/ə/(RP)、h 脱落"
+      "ja": "her→/ɝ/(GA)/ə/(RP)、h 脱落",
+      "fil": "her→/ɝ/(GA)/ə/(RP), kinakaltas ang h"
     },
     "gloss": {
       "en": "ask her",
@@ -2834,7 +2947,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "to→/tə/; him→/ɪm/",
-      "ja": "to→/tə/; him→/ɪm/"
+      "ja": "to→/tə/; him→/ɪm/",
+      "fil": "to→/tə/; him→/ɪm/"
     },
     "gloss": {
       "en": "give it to him",
@@ -2859,7 +2973,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "GA flap+links; you→/jə/",
-      "ja": "GAフラップ+連結; you→/jə/"
+      "ja": "GAフラップ+連結; you→/jə/",
+      "fil": "GA flap+pag-uugnay; you→/jə/"
     },
     "gloss": {
       "en": "what are you up to?",
@@ -2884,7 +2999,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "give-it-a links; GA flap",
-      "ja": "give-it-a 連結; GAフラップ"
+      "ja": "give-it-a 連結; GAフラップ",
+      "fil": "give-it-a pag-uugnay; GA flap"
     },
     "gloss": {
       "en": "give it a go",
@@ -2909,7 +3025,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "take-it-easy links; GA flap",
-      "ja": "take-it-easy 連結; GAフラップ"
+      "ja": "take-it-easy 連結; GAフラップ",
+      "fil": "take-it-easy pag-uugnay; GA flap"
     },
     "gloss": {
       "en": "take it easy",
@@ -2934,7 +3051,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "once-in-a all link",
-      "ja": "once-in-a 連結"
+      "ja": "once-in-a 連結",
+      "fil": "once-in-a buong pag-uugnay"
     },
     "gloss": {
       "en": "once in a while",
@@ -2959,7 +3077,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "and→/ən/; p→an link",
-      "ja": "and→/ən/; p→an 連結"
+      "ja": "and→/ən/; p→an 連結",
+      "fil": "and→/ən/; p→an pag-uugnay"
     },
     "gloss": {
       "en": "up and down",
@@ -2984,7 +3103,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "and→/ən/; RP centring diphthongs",
-      "ja": "and→/ən/; RPは中向き二重母音"
+      "ja": "and→/ən/; RPは中向き二重母音",
+      "fil": "and→/ən/; RP centring diphthongs"
     },
     "gloss": {
       "en": "here and there",
@@ -3009,7 +3129,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "and→/ən/; RP linking r",
-      "ja": "and→/ən/; RPは linking r"
+      "ja": "and→/ən/; RPは linking r",
+      "fil": "and→/ən/; RP linking r"
     },
     "gloss": {
       "en": "over and over",
@@ -3034,7 +3155,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "t+you→/tʃ/",
-      "ja": "t+you→/tʃ/"
+      "ja": "t+you→/tʃ/",
+      "fil": "t+you→/tʃ/"
     },
     "gloss": {
       "en": "don't you worry",
@@ -3059,7 +3181,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "GA flap+reduce; RP d+you→/dʒə/",
-      "ja": "GAフラップ+弱化; RPは d+you→/dʒə/"
+      "ja": "GAフラップ+弱化; RPは d+you→/dʒə/",
+      "fil": "GA flap+reduce; RP d+you→/dʒə/"
     },
     "gloss": {
       "en": "what do you think?",
@@ -3084,7 +3207,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "d+you→/dʒ/",
-      "ja": "d+you→/dʒ/"
+      "ja": "d+you→/dʒ/",
+      "fil": "d+you→/dʒ/"
     },
     "gloss": {
       "en": "could you tell me?",
@@ -3109,7 +3233,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "d+you→/dʒ/; mind d elided",
-      "ja": "d+you→/dʒ/; mind の d 脱落"
+      "ja": "d+you→/dʒ/; mind の d 脱落",
+      "fil": "d+you→/dʒ/; kinakaltas ang d sa mind"
     },
     "gloss": {
       "en": "would you mind closing",
@@ -3134,7 +3259,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "z+your→/ʒ/",
-      "ja": "z+your→/ʒ/"
+      "ja": "z+your→/ʒ/",
+      "fil": "z+your→/ʒ/"
     },
     "gloss": {
       "en": "how's your day?",
@@ -3159,7 +3285,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "z+you→/ʒ/",
-      "ja": "z+you→/ʒ/"
+      "ja": "z+you→/ʒ/",
+      "fil": "z+you→/ʒ/"
     },
     "gloss": {
       "en": "as you wish",
@@ -3184,7 +3311,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "s+your→/ʃ/",
-      "ja": "s+your→/ʃ/"
+      "ja": "s+your→/ʃ/",
+      "fil": "s+your→/ʃ/"
     },
     "gloss": {
       "en": "press your",
@@ -3209,7 +3337,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "going to→/ɡʌnə/",
-      "ja": "going to→/ɡʌnə/"
+      "ja": "going to→/ɡʌnə/",
+      "fil": "going to→/ɡʌnə/"
     },
     "gloss": {
       "en": "I'm going to (gonna)",
@@ -3234,7 +3363,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "want to→/wɑnə/",
-      "ja": "want to→/wɒnə/"
+      "ja": "want to→/wɒnə/",
+      "fil": "want to→/wɑnə/"
     },
     "gloss": {
       "en": "want to go (wanna)",
@@ -3259,7 +3389,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "of→/ə/; GA flap on water",
-      "ja": "of→/ə/; GAは water を flap"
+      "ja": "of→/ə/; GAは water を flap",
+      "fil": "of→/ə/; sa GA, flap ang water"
     },
     "gloss": {
       "en": "a glass of water",
@@ -3284,7 +3415,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "of→/ə/ before consonant",
-      "ja": "子音前で of→/ə/"
+      "ja": "子音前で of→/ə/",
+      "fil": "bago katinig, of→/ə/"
     },
     "gloss": {
       "en": "cup of coffee",
@@ -3309,7 +3441,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "of→/əv/; the→/ðə/",
-      "ja": "of→/əv/; the→/ðə/"
+      "ja": "of→/əv/; the→/ðə/",
+      "fil": "of→/əv/; the→/ðə/"
     },
     "gloss": {
       "en": "the end of the day",
@@ -3334,7 +3467,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "or→/ɝ/(GA); GA flap later",
-      "ja": "or→/ɝ/(GA); GAは later を flap"
+      "ja": "or→/ɝ/(GA); GAは later を flap",
+      "fil": "or→/ɝ/(GA); sa GA, flap ang later"
     },
     "gloss": {
       "en": "sooner or later",
@@ -3359,7 +3493,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "and→/ən/ (d dropped)",
-      "ja": "and→/ən/(d 脱落)"
+      "ja": "and→/ən/(d 脱落)",
+      "fil": "and→/ən/ (kinakaltas ang d)"
     },
     "gloss": {
       "en": "now and then",
@@ -3384,7 +3519,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "and→/ən/; GA flaps gentle",
-      "ja": "and→/ən/; GAは gentle を flap"
+      "ja": "and→/ən/; GAは gentle を flap",
+      "fil": "and→/ən/; sa GA, flap ang gentle"
     },
     "gloss": {
       "en": "ladies and gentlemen",
@@ -3409,7 +3545,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "have→/əv/; GA flap could",
-      "ja": "have→/əv/; GAは could を flap"
+      "ja": "have→/əv/; GAは could を flap",
+      "fil": "have→/əv/; sa GA, flap ang could"
     },
     "gloss": {
       "en": "I could have gone",
@@ -3434,7 +3571,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "put-it-on links; GA flap",
-      "ja": "put-it-on 連結; GAフラップ"
+      "ja": "put-it-on 連結; GAフラップ",
+      "fil": "put-it-on pag-uugnay; GA flap"
     },
     "gloss": {
       "en": "put it on",
@@ -3459,7 +3597,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "k→up link",
-      "ja": "k→up 連結"
+      "ja": "k→up 連結",
+      "fil": "k→up pag-uugnay"
     },
     "gloss": {
       "en": "wake up",
@@ -3484,7 +3623,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "d→up link",
-      "ja": "d→up 連結"
+      "ja": "d→up 連結",
+      "fil": "d→up pag-uugnay"
     },
     "gloss": {
       "en": "stand up",
@@ -3509,7 +3649,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "n→egg link",
-      "ja": "n→egg 連結"
+      "ja": "n→egg 連結",
+      "fil": "n→egg pag-uugnay"
     },
     "gloss": {
       "en": "an egg",
@@ -3534,7 +3675,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "z→eyes link",
-      "ja": "z→eyes 連結"
+      "ja": "z→eyes 連結",
+      "fil": "z→eyes pag-uugnay"
     },
     "gloss": {
       "en": "his eyes",
@@ -3559,7 +3701,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "s→one link",
-      "ja": "s→one 連結"
+      "ja": "s→one 連結",
+      "fil": "s→one pag-uugnay"
     },
     "gloss": {
       "en": "this one",
@@ -3584,7 +3727,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "d+y→/dʒ/",
-      "ja": "d+y→/dʒ/"
+      "ja": "d+y→/dʒ/",
+      "fil": "d+y→/dʒ/"
     },
     "gloss": {
       "en": "send you",
@@ -3609,7 +3753,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "t+y→/tʃ/",
-      "ja": "t+y→/tʃ/"
+      "ja": "t+y→/tʃ/",
+      "fil": "t+y→/tʃ/"
     },
     "gloss": {
       "en": "meet you",
@@ -3634,7 +3779,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "n→/ŋ/ before k",
-      "ja": "k の前で n→/ŋ/"
+      "ja": "k の前で n→/ŋ/",
+      "fil": "bago ang k, n→/ŋ/"
     },
     "gloss": {
       "en": "ten cups",
@@ -3659,7 +3805,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "n→/ŋ/ before k",
-      "ja": "k の前で n→/ŋ/"
+      "ja": "k の前で n→/ŋ/",
+      "fil": "bago ang k, n→/ŋ/"
     },
     "gloss": {
       "en": "green car",
@@ -3684,7 +3831,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "t dropped (f_d)",
-      "ja": "t 脱落(f_d)"
+      "ja": "t 脱落(f_d)",
+      "fil": "t kinakaltas (f_d)"
     },
     "gloss": {
       "en": "soft drink",
@@ -3709,7 +3857,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "t dropped (t_d)",
-      "ja": "t 脱落(t_d)"
+      "ja": "t 脱落(t_d)",
+      "fil": "t kinakaltas (t_d)"
     },
     "gloss": {
       "en": "hot dog",
@@ -3734,7 +3883,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "d dropped (l_b)",
-      "ja": "d 脱落(l_b)"
+      "ja": "d 脱落(l_b)",
+      "fil": "d kinakaltas (l_b)"
     },
     "gloss": {
       "en": "wild bird",
@@ -3759,7 +3909,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "d dropped (n_p)",
-      "ja": "d 脱落(n_p)"
+      "ja": "d 脱落(n_p)",
+      "fil": "d kinakaltas (n_p)"
     },
     "gloss": {
       "en": "grand prize",
@@ -3784,7 +3935,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "end-of link; of→/əv/",
-      "ja": "end-of 連結; of→/əv/"
+      "ja": "end-of 連結; of→/əv/",
+      "fil": "end-of pag-uugnay; of→/əv/"
     },
     "gloss": {
       "en": "at the end of",
@@ -3809,7 +3961,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "turn-it-off links; GA flap",
-      "ja": "turn-it-off 連結; GAフラップ"
+      "ja": "turn-it-off 連結; GAフラップ",
+      "fil": "turn-it-off pag-uugnay; GA flap"
     },
     "gloss": {
       "en": "turn it off",
@@ -3834,7 +3987,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "of→/əv/ links into art",
-      "ja": "of→/əv/ が art へ連結"
+      "ja": "of→/əv/ が art へ連結",
+      "fil": "of→/əv/ umuugnay sa art"
     },
     "gloss": {
       "en": "works of art",
@@ -3859,7 +4013,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "of→/əv/; v→us link",
-      "ja": "of→/əv/; v→us 連結"
+      "ja": "of→/əv/; v→us 連結",
+      "fil": "of→/əv/; v→us pag-uugnay"
     },
     "gloss": {
       "en": "none of us",
@@ -3884,7 +4039,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "n+y→/ɲ/ palatalised",
-      "ja": "n+y→/ɲ/ 硬口蓋化"
+      "ja": "n+y→/ɲ/ 硬口蓋化",
+      "fil": "n+y→/ɲ/ palatalised"
     },
     "gloss": {
       "en": "can you",
@@ -3909,7 +4065,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "n+y→/ɲ/",
-      "ja": "n+y→/ɲ/"
+      "ja": "n+y→/ɲ/",
+      "fil": "n+y→/ɲ/"
     },
     "gloss": {
       "en": "when you",
@@ -3934,7 +4091,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "t→/p/ before p",
-      "ja": "p の前で t→/p/"
+      "ja": "p の前で t→/p/",
+      "fil": "bago ang p, t→/p/"
     },
     "gloss": {
       "en": "hot potato",
@@ -3959,7 +4117,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "t→/ɡ/ before g",
-      "ja": "g の前で t→/ɡ/"
+      "ja": "g の前で t→/ɡ/",
+      "fil": "bago ang g, t→/ɡ/"
     },
     "gloss": {
       "en": "sweet girl",
@@ -3984,7 +4143,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "t dropped (p_ɡ)",
-      "ja": "t 脱落(p_ɡ)"
+      "ja": "t 脱落(p_ɡ)",
+      "fil": "t kinakaltas (p_ɡ)"
     },
     "gloss": {
       "en": "kept going",
@@ -4009,7 +4169,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "t dropped (k_b)",
-      "ja": "t 脱落(k_b)"
+      "ja": "t 脱落(k_b)",
+      "fil": "t kinakaltas (k_b)"
     },
     "gloss": {
       "en": "looked back",
@@ -4034,7 +4195,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "d dropped (n_t)",
-      "ja": "d 脱落(n_t)"
+      "ja": "d 脱落(n_t)",
+      "fil": "d kinakaltas (n_t)"
     },
     "gloss": {
       "en": "round table",
@@ -4059,7 +4221,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "d dropped; them→/ðəm/",
-      "ja": "d 脱落; them→/ðəm/"
+      "ja": "d 脱落; them→/ðəm/",
+      "fil": "d kinakaltas; them→/ðəm/"
     },
     "gloss": {
       "en": "find them",
@@ -4084,7 +4247,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "chained; GA flap; RP linking r",
-      "ja": "連鎖; GAフラップ; RP linking r"
+      "ja": "連鎖; GAフラップ; RP linking r",
+      "fil": "sunod-sunod; GA flap; RP linking r"
     },
     "gloss": {
       "en": "as a matter of fact",
@@ -4109,7 +4273,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "of→/əv/ links",
-      "ja": "of→/əv/ 連結"
+      "ja": "of→/əv/ 連結",
+      "fil": "of→/əv/ pag-uugnay"
     },
     "gloss": {
       "en": "a friend of mine",
@@ -4134,7 +4299,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "and→/ən/; n→out link",
-      "ja": "and→/ən/; n→out 連結"
+      "ja": "and→/ən/; n→out 連結",
+      "fil": "and→/ən/; n→out pag-uugnay"
     },
     "gloss": {
       "en": "in and out",
@@ -4159,7 +4325,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "GA flaps both t",
-      "ja": "GAは両方の t を flap"
+      "ja": "GAは両方の t を flap",
+      "fil": "sa GA, parehong t ay flap"
     },
     "gloss": {
       "en": "little by little",
@@ -4184,7 +4351,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "t+yet→/tʃ/",
-      "ja": "t+yet→/tʃ/"
+      "ja": "t+yet→/tʃ/",
+      "fil": "t+yet→/tʃ/"
     },
     "gloss": {
       "en": "not yet",
@@ -4209,7 +4377,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "t+year→/tʃ/; (t retained, palatalised)",
-      "ja": "t+year→/tʃ/(硬口蓋化)"
+      "ja": "t+year→/tʃ/(硬口蓋化)",
+      "fil": "t+year→/tʃ/ (palatalised, t panatili)"
     },
     "gloss": {
       "en": "last year",
@@ -4234,7 +4403,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "d+you→/dʒ/",
-      "ja": "d+you→/dʒ/"
+      "ja": "d+you→/dʒ/",
+      "fil": "d+you→/dʒ/"
     },
     "gloss": {
       "en": "would you believe",
@@ -4259,7 +4429,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "d+you→/dʒ/",
-      "ja": "d+you→/dʒ/"
+      "ja": "d+you→/dʒ/",
+      "fil": "d+you→/dʒ/"
     },
     "gloss": {
       "en": "did you know",
@@ -4284,7 +4455,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "best t dropped; of→/əv/",
-      "ja": "best の t 脱落; of→/əv/"
+      "ja": "best の t 脱落; of→/əv/",
+      "fil": "t kinakaltas sa best; of→/əv/"
     },
     "gloss": {
       "en": "the best of both",
@@ -4309,7 +4481,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "of→/ə/; GA flap matter",
-      "ja": "of→/ə/; GAは matter を flap"
+      "ja": "of→/ə/; GAは matter を flap",
+      "fil": "of→/ə/; sa GA, flap ang matter"
     },
     "gloss": {
       "en": "a matter of time",
@@ -4334,7 +4507,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "of→/ə/; GA flap plenty",
-      "ja": "of→/ə/; GAは plenty を flap"
+      "ja": "of→/ə/; GAは plenty を flap",
+      "fil": "of→/ə/; sa GA, flap ang plenty"
     },
     "gloss": {
       "en": "plenty of room",
@@ -4359,7 +4533,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "of→/əv/; them→/ðəm/",
-      "ja": "of→/əv/; them→/ðəm/"
+      "ja": "of→/əv/; them→/ðəm/",
+      "fil": "of→/əv/; them→/ðəm/"
     },
     "gloss": {
       "en": "the rest of them",
@@ -4384,7 +4559,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "and→/ən/ (d dropped)",
-      "ja": "and→/ən/(d 脱落)"
+      "ja": "and→/ən/(d 脱落)",
+      "fil": "and→/ən/ (kinakaltas ang d)"
     },
     "gloss": {
       "en": "first and foremost",
@@ -4409,7 +4585,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "and→/ən/; silent k",
-      "ja": "and→/ən/; k は黙字"
+      "ja": "and→/ən/; k は黙字",
+      "fil": "and→/ən/; tahimik na k"
     },
     "gloss": {
       "en": "hands and knees",
@@ -4434,7 +4611,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "t→all link",
-      "ja": "t→all 連結"
+      "ja": "t→all 連結",
+      "fil": "t→all pag-uugnay"
     },
     "gloss": {
       "en": "at all",
@@ -4459,7 +4637,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "ɡ→apple link",
-      "ja": "ɡ→apple 連結"
+      "ja": "ɡ→apple 連結",
+      "fil": "ɡ→apple pag-uugnay"
     },
     "gloss": {
       "en": "big apple",
@@ -4484,7 +4663,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "m→up link",
-      "ja": "m→up 連結"
+      "ja": "m→up 連結",
+      "fil": "m→up pag-uugnay"
     },
     "gloss": {
       "en": "warm up",
@@ -4509,7 +4689,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "d dropped (r_t); RP non-rhotic",
-      "ja": "d 脱落(r_t); RP非rhotic"
+      "ja": "d 脱落(r_t); RP非rhotic",
+      "fil": "d kinakaltas (r_t); RP non-rhotic"
     },
     "gloss": {
       "en": "hard times",
@@ -4534,7 +4715,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "d dropped (n_s)",
-      "ja": "d 脱落(n_s)"
+      "ja": "d 脱落(n_s)",
+      "fil": "d kinakaltas (n_s)"
     },
     "gloss": {
       "en": "blind spot",
@@ -4559,7 +4741,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "end-of link; of→/əv/",
-      "ja": "end-of 連結; of→/əv/"
+      "ja": "end-of 連結; of→/əv/",
+      "fil": "end-of pag-uugnay; of→/əv/"
     },
     "gloss": {
       "en": "end of story",
@@ -4584,7 +4767,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "one-an-other links",
-      "ja": "one-an-other 連結"
+      "ja": "one-an-other 連結",
+      "fil": "one-an-other pag-uugnay"
     },
     "gloss": {
       "en": "one another",
@@ -4609,7 +4793,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "t+you→/tʃ/; you-up /w/ glide",
-      "ja": "t+you→/tʃ/; you-up に/w/渡り音"
+      "ja": "t+you→/tʃ/; you-up に/w/渡り音",
+      "fil": "t+you→/tʃ/; sa you-up /w/ glide"
     },
     "gloss": {
       "en": "set you up",
@@ -4634,7 +4819,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "n+you→/ɲ/; and→/ən/",
-      "ja": "n+you→/ɲ/; and→/ən/"
+      "ja": "n+you→/ɲ/; and→/ən/",
+      "fil": "n+you→/ɲ/; and→/ən/"
     },
     "gloss": {
       "en": "between you and me",
@@ -4659,7 +4845,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "t dropped before b",
-      "ja": "b の前で t 脱落"
+      "ja": "b の前で t 脱落",
+      "fil": "bago ang b, kinakaltas ang t"
     },
     "gloss": {
       "en": "won't be long",
@@ -4684,7 +4871,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "of→/əv/ links into all",
-      "ja": "of→/əv/ が all へ連結"
+      "ja": "of→/əv/ が all へ連結",
+      "fil": "of→/əv/ umuugnay sa all"
     },
     "gloss": {
       "en": "most of all",
@@ -4709,7 +4897,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "with+you→/tʃ/; what's-up link",
-      "ja": "with+you→/tʃ/; what's-up 連結"
+      "ja": "with+you→/tʃ/; what's-up 連結",
+      "fil": "with+you→/tʃ/; what's-up pag-uugnay"
     },
     "gloss": {
       "en": "what's up with you?",
@@ -4734,7 +4923,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "t+you→/tʃ/",
-      "ja": "t+you→/tʃ/"
+      "ja": "t+you→/tʃ/",
+      "fil": "t+you→/tʃ/"
     },
     "gloss": {
       "en": "I'll let you know",
@@ -4759,7 +4949,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "you-around /w/ glide",
-      "ja": "you-around に/w/渡り音"
+      "ja": "you-around に/w/渡り音",
+      "fil": "sa you-around /w/ glide"
     },
     "gloss": {
       "en": "see you around",
@@ -4784,7 +4975,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "for→/fɚ/; the→/ðə/",
-      "ja": "for→/fɚ/; the→/ðə/"
+      "ja": "for→/fɚ/; the→/ðə/",
+      "fil": "for→/fɚ/; the→/ðə/"
     },
     "gloss": {
       "en": "for the time being",
@@ -4809,7 +5001,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "of→/ə/; RP linking r",
-      "ja": "of→/ə/; RP linking r"
+      "ja": "of→/ə/; RP linking r",
+      "fil": "of→/ə/; RP linking r"
     },
     "gloss": {
       "en": "a number of things",
@@ -4834,7 +5027,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "of→/əv/; the→/ðə/ ×2",
-      "ja": "of→/əv/; the→/ðə/ ×2"
+      "ja": "of→/əv/; the→/ðə/ ×2",
+      "fil": "of→/əv/; the→/ðə/ ×2"
     },
     "gloss": {
       "en": "at the end of the day",
@@ -4859,7 +5053,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "of→/əv/; your→/jɔr/",
-      "ja": "of→/əv/; your→/jɔr/"
+      "ja": "of→/əv/; your→/jɔr/",
+      "fil": "of→/əv/; your→/jɔr/"
     },
     "gloss": {
       "en": "none of your business",
@@ -4884,7 +5079,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "of→/əv/; the→/ðə/",
-      "ja": "of→/əv/; the→/ðə/"
+      "ja": "of→/əv/; the→/ðə/",
+      "fil": "of→/əv/; the→/ðə/"
     },
     "gloss": {
       "en": "speak of the devil",
@@ -4909,7 +5105,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "the→/ði/ before vowel",
-      "ja": "母音前で the→/ði/"
+      "ja": "母音前で the→/ði/",
+      "fil": "bago ang patinig, the→/ði/"
     },
     "gloss": {
       "en": "the other side",
@@ -4934,7 +5131,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "or→/ɝ/(GA); RP linking r",
-      "ja": "or→/ɝ/(GA); RP linking r"
+      "ja": "or→/ɝ/(GA); RP linking r",
+      "fil": "or→/ɝ/(GA); RP linking r"
     },
     "gloss": {
       "en": "more or less",
@@ -4959,7 +5157,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "rid-of-it link; GA flap",
-      "ja": "rid-of-it 連結; GAフラップ"
+      "ja": "rid-of-it 連結; GAフラップ",
+      "fil": "rid-of-it pag-uugnay; GA flap"
     },
     "gloss": {
       "en": "get rid of it",
@@ -4984,7 +5183,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "n→/ŋ/ before k",
-      "ja": "k の前で n→/ŋ/"
+      "ja": "k の前で n→/ŋ/",
+      "fil": "bago ang k, n→/ŋ/"
     },
     "gloss": {
       "en": "thank you",
@@ -5009,7 +5209,8 @@
     "src": "connected_speech",
     "cs_rule": {
       "en": "see-you /j/; GA flap later",
-      "ja": "see-you に/j/; GAは later を flap"
+      "ja": "see-you に/j/; GAは later を flap",
+      "fil": "sa see-you /j/; sa GA, flap ang later"
     },
     "gloss": {
       "en": "see you later",

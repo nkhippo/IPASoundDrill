@@ -149,6 +149,12 @@
   .trapchip{font-family:var(--ipa);font-size:15px;color:var(--signal);background:var(--signal-soft);border-radius:8px;padding:3px 10px;cursor:pointer}
   .reveal-next{margin-top:16px;width:100%;border:none;border-radius:11px;cursor:pointer;background:var(--ink);color:#fff;font-family:var(--ui);font-weight:700;font-size:15px;padding:14px;letter-spacing:.03em}
   .reveal-next:active{transform:translateY(1px)}
+  .reveal-next.hidden{display:none}
+  #mbSMeaning.hidden{display:none}
+  #mbSMeaning{animation:mbsFadeIn .25s ease}
+  @keyframes mbsFadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+  .btn-reveal{width:100%;padding:14px;border:2px solid var(--signal);background:transparent;color:var(--signal);border-radius:12px;font-size:1rem;font-weight:600;cursor:pointer;margin-top:8px;font-family:var(--ui)}
+  .btn-reveal.hidden{display:none}
 
   .sumhead{text-align:center;margin-bottom:6px}
   .bigstat{font-size:54px;font-weight:800;letter-spacing:-.02em;line-height:1}
@@ -340,9 +346,12 @@
     <div class="card-top"><div class="qno" id="mbSNo"></div></div>
     <div class="readout"><button class="playicon" id="mbSPlay" type="button" aria-label="Listen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div>
     <div class="readout"><div class="ipa" id="mbSIpa"></div></div>
-    <div class="readout"><div class="wordbig" id="mbSWord"></div></div>
-    <div class="word-gloss" id="mbSGloss" style="text-align:center;margin-bottom:12px"></div>
-    <button class="reveal-next" id="mbSGotIt" type="button">Got it → Next</button>
+    <div id="mbSMeaning" class="mbsMeaning hidden">
+      <div class="readout"><div class="wordbig" id="mbSWord"></div></div>
+      <div class="word-gloss" id="mbSGloss" style="text-align:center;margin-bottom:12px"></div>
+    </div>
+    <button class="btn-reveal" id="mbSRevealBtn" type="button">Reveal meaning</button>
+    <button class="reveal-next hidden" id="mbSGotIt" type="button">Got it → Next</button>
   </section>
 
   <!-- MODE B QUIZ MCQ -->
@@ -693,6 +702,7 @@ function applyI18n() {
   $("leadModeB").innerHTML = t("modeb.lead_html");
   $("flabelModeBBand").textContent = t("modeb.band.label");
   $("mbSGotIt").textContent = t("modeb.study.got_it");
+  $("mbSRevealBtn").textContent = t("modeb.study.reveal_meaning");
   $("mbMHead").textContent = t("modeb.quiz.choose_meaning");
   $("mbDHead").textContent = t("modeb.quiz.type_word");
   $("mbDInput").placeholder = t("input_ph");
@@ -1073,6 +1083,16 @@ function updateModeBBandNote(){
   $("modebBandNote").textContent=t("modeb.band.note",{band,n:prog.total,pct:Math.round(prog.ratio*100),m:prog.mastered});
 }
 function modeBGloss(w){return wordGloss(w);}
+
+function modeBDisplayGloss(c) {
+  const g = wordGloss(c);
+  if (LANG === "en" && g === c.w) {
+    if (c.def) return c.def;
+    const pos = posLabel(c.pos);
+    return pos ? "(" + pos + ")" : "";
+  }
+  return g;
+}
 function isValidDistractor(cand,correct,used){
   if(!cand||cand.w===correct.w)return false;
   const g=modeBGloss(cand);if(!g)return false;
@@ -1137,8 +1157,11 @@ function renderModeBStudy(c){
   hideModeBCards();show("cardModeBStudy",true);
   $("mbSNo").textContent="#"+String(S.idx+1).padStart(2,"0");
   renderIpaInto($("mbSIpa"),activeIpa(c),"dInfo",null);
+  $("mbSMeaning").classList.add("hidden");
+  $("mbSRevealBtn").classList.remove("hidden");
+  $("mbSGotIt").classList.add("hidden");
   $("mbSWord").textContent=c.w;
-  $("mbSGloss").textContent=wordGloss(c);
+  $("mbSGloss").textContent=modeBDisplayGloss(c);
   setTimeout(()=>speak(c.w),250);
 }
 function renderModeBMcq(c){
@@ -1863,6 +1886,11 @@ function nextCard(){
   S.idx++;renderCard();
 }
 $("nextBtn").addEventListener("click",nextCard);
+$("mbSRevealBtn").addEventListener("click",()=>{
+  $("mbSMeaning").classList.remove("hidden");
+  $("mbSRevealBtn").classList.add("hidden");
+  $("mbSGotIt").classList.remove("hidden");
+});
 $("mbSGotIt").addEventListener("click",nextCard);
 $("mbSPlay").addEventListener("click",()=>{if(S.cur)speak(S.cur.w);});
 $("mbMPlay").addEventListener("click",()=>{if(S.cur)speak(S.cur.w);});

@@ -140,7 +140,7 @@ aʊ: how /haʊ/, cow /kaʊ/, hour /ˈaʊɚ/
 
 1キューで、語の履歴に応じて段階を自動選択。
 
-- **提示（Study／未習語）:** ▶音を自動再生 → IPA → 単語＋意味(gloss) を開示。採点なし、[覚えた→次へ]。
+- **提示（Study／未習語）:** ▶音を自動再生 → IPA のみ表示 → 学習者が [意味を確認する] を押すと単語＋意味(gloss) をフェードイン開示。採点なし、[覚えた→次へ]。英語 UI では `gloss.en === w` の自己参照を `modeBDisplayGloss()` が `(品詞)` または将来の `def` フィールドで代替。
 - **確認（Quiz／既習・復習期限）:** 客観2種を実施（採用＝両方）。
   - **(a) 意味認識MCQ:** ▶音 → 4択から意味を選ぶ。distractorは §2.2。順序シャッフル。
   - **(b) 音声ディクテーション:** ▶音 → 単語を入力。採点は Mode A Decode を流用（完全一致/Lev≤1/不一致）。
@@ -219,7 +219,7 @@ Keep the delivery identical and consistent across all words.
 | Tier 1 | UI 文言 151 キー + 言語ピッカー | ✅ `i18n/fil.json` |
 | Tier 2 | 語義 gloss（3,059 語） | ✅ **3,059/3,059**（batch01–34） |
 | Tier 3 | 音素解説 43 記号 + 学習ガイド | ✅ `phonemes/fil.json` + `guide.json` fil |
-| Tier 4 | 連結句・弱形ルール文 `cs_rule` | ⬜ en フォールバック |
+| Tier 4 | 連結句・弱形ルール文 `cs_rule` | ✅ 237/237（201+36） |
 
 検証: `python3 tools/validate_i18n.py`。拡張手順: `docs/i18n-language-scaling.md`。
 
@@ -241,7 +241,7 @@ Keep the delivery identical and consistent across all words.
 | 中 | `neighbors_rp` | ⏸ 保留 |
 | ― | gloss品質点検 | 継続（多言語学習ガイドと連動可） |
 | ― | gloss.fil（Tier 2） | ✅ 3,059/3,059 |
-| ― | cs_rule.fil（Tier 4） | ⬜ 別タスク |
+| ― | cs_rule.fil（Tier 4） | ✅ 237/237 |
 | ― | 連結句 RP TTS | ⬜ 別タスク |
 
 ---
@@ -258,7 +258,7 @@ Keep the delivery identical and consistent across all words.
 | 練習タブ統一（Connected ⊃ Weak） | ✅ |
 | UI 5言語（en/ja/zh/ko/fil） | ✅ Tier 1+3 |
 | 多言語学習ガイド（6言語） | ✅ フェーズ1 |
-| gloss.fil / cs_rule.fil | ✅ gloss.fil 完走。cs_rule.fil は en フォールバック |
+| gloss.fil / cs_rule.fil | ✅ **すべて完了**（3,059語 + 237件） |
 | 連結句 RP TTS | ⬜ |
 
 **運用メモ:** Mode A/B の新規 UI 文字列は i18n キー経由。GAS は RP TTS 対応版を再デプロイ済み（`index.html` `GAS_TTS_URL` 参照）。

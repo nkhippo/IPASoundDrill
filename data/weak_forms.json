@@ -16,7 +16,8 @@
     ],
     "cs_rule": {
       "en": "weak 'a' is always /ə/ before a consonant",
-      "ja": "弱形の a は子音前で常に /ə/"
+      "ja": "弱形の a は子音前で常に /ə/",
+      "fil": "mahinang 'a' ay laging /ə/ bago ang katinig"
     }
   },
   {
@@ -36,7 +37,8 @@
     ],
     "cs_rule": {
       "en": "weak 'an' → /ən/ before a vowel",
-      "ja": "弱形の an は母音前で /ən/"
+      "ja": "弱形の an は母音前で /ən/",
+      "fil": "mahinang 'an' → /ən/ bago ang patinig"
     }
   },
   {
@@ -56,7 +58,8 @@
     ],
     "cs_rule": {
       "en": "weak 'the' → /ðə/ before a consonant",
-      "ja": "弱形の the は子音前で /ðə/"
+      "ja": "弱形の the は子音前で /ðə/",
+      "fil": "mahinang 'the' → /ðə/ bago ang katinig"
     }
   },
   {
@@ -76,7 +79,8 @@
     ],
     "cs_rule": {
       "en": "weak 'to' → /tə/ before a consonant",
-      "ja": "弱形の to は子音前で /tə/"
+      "ja": "弱形の to は子音前で /tə/",
+      "fil": "mahinang 'to' → /tə/ bago ang katinig"
     }
   },
   {
@@ -96,7 +100,8 @@
     ],
     "cs_rule": {
       "en": "weak 'of' → /əv/, often /ə/ before a consonant",
-      "ja": "弱形の of は /əv/、子音前では /ə/ も"
+      "ja": "弱形の of は /əv/、子音前では /ə/ も",
+      "fil": "mahinang 'of' → /əv/, kadalasang /ə/ bago ang katinig"
     }
   },
   {
@@ -116,7 +121,8 @@
     ],
     "cs_rule": {
       "en": "weak 'and' → /ən/ (d dropped)",
-      "ja": "弱形の and は /ən/(d脱落)"
+      "ja": "弱形の and は /ən/(d脱落)",
+      "fil": "mahinang 'and' → /ən/ (kinakaltas ang d)"
     }
   },
   {
@@ -136,7 +142,8 @@
     ],
     "cs_rule": {
       "en": "weak 'for' → /fɚ/ (GA) / /fə/ (RP)",
-      "ja": "弱形の for は /fɚ/(GA)/fə/(RP)"
+      "ja": "弱形の for は /fɚ/(GA)/fə/(RP)",
+      "fil": "mahinang 'for' → /fɚ/ (GA) / /fə/ (RP)"
     }
   },
   {
@@ -156,7 +163,8 @@
     ],
     "cs_rule": {
       "en": "weak 'at' → /ət/",
-      "ja": "弱形の at は /ət/"
+      "ja": "弱形の at は /ət/",
+      "fil": "mahinang 'at' → /ət/"
     }
   },
   {
@@ -176,7 +184,8 @@
     ],
     "cs_rule": {
       "en": "weak 'but' → /bət/",
-      "ja": "弱形の but は /bət/"
+      "ja": "弱形の but は /bət/",
+      "fil": "mahinang 'but' → /bət/"
     }
   },
   {
@@ -196,7 +205,8 @@
     ],
     "cs_rule": {
       "en": "weak 'you' → /jə/ in connected speech",
-      "ja": "弱形の you は連結時 /jə/"
+      "ja": "弱形の you は連結時 /jə/",
+      "fil": "mahinang 'you' → /jə/ sa konektadong pananalita"
     }
   },
   {
@@ -216,7 +226,8 @@
     ],
     "cs_rule": {
       "en": "weak 'can' → /kən/ (strong /kæn/ when stressed)",
-      "ja": "弱形の can は /kən/(強形は /kæn/)"
+      "ja": "弱形の can は /kən/(強形は /kæn/)",
+      "fil": "mahinang 'can' → /kən/ (malakas /kæn/ kapag may diin)"
     }
   },
   {
@@ -236,7 +247,8 @@
     ],
     "cs_rule": {
       "en": "weak 'are' → /ɚ/ (GA) / /ə/ (RP)",
-      "ja": "弱形の are は /ɚ/(GA)/ə/(RP)"
+      "ja": "弱形の are は /ɚ/(GA)/ə/(RP)",
+      "fil": "mahinang 'are' → /ɚ/ (GA) / /ə/ (RP)"
     }
   },
   {
@@ -256,7 +268,8 @@
     ],
     "cs_rule": {
       "en": "weak 'was' → /wəz/",
-      "ja": "弱形の was は /wəz/"
+      "ja": "弱形の was は /wəz/",
+      "fil": "mahinang 'was' → /wəz/"
     }
   },
   {
@@ -276,7 +289,8 @@
     ],
     "cs_rule": {
       "en": "weak 'were' → /wɚ/ (GA) / /wə/ (RP)",
-      "ja": "弱形の were は /wɚ/(GA)/wə/(RP)"
+      "ja": "弱形の were は /wɚ/(GA)/wə/(RP)",
+      "fil": "mahinang 'were' → /wɚ/ (GA) / /wə/ (RP)"
     }
   },
   {
@@ -296,7 +310,8 @@
     ],
     "cs_rule": {
       "en": "weak 'have' → /həv/, often /əv/ after a pronoun",
-      "ja": "弱形の have は /həv/、代名詞後では /əv/ も"
+      "ja": "弱形の have は /həv/、代名詞後では /əv/ も",
+      "fil": "mahinang 'have' → /həv/, kadalasang /əv/ pagkatapos ng panghalip"
     }
   },
   {
@@ -316,7 +331,8 @@
     ],
     "cs_rule": {
       "en": "weak 'has' → /həz/",
-      "ja": "弱形の has は /həz/"
+      "ja": "弱形の has は /həz/",
+      "fil": "mahinang 'has' → /həz/"
     }
   },
   {
@@ -336,7 +352,8 @@
     ],
     "cs_rule": {
       "en": "weak 'had' → /həd/, often /əd/ after a pronoun",
-      "ja": "弱形の had は /həd/、代名詞後では /əd/ も"
+      "ja": "弱形の had は /həd/、代名詞後では /əd/ も",
+      "fil": "mahinang 'had' → /həd/, kadalasang /əd/ pagkatapos ng panghalip"
     }
   },
   {
@@ -356,7 +373,8 @@
     ],
     "cs_rule": {
       "en": "weak 'your' → /jɚ/ (GA) / /jə/ (RP)",
-      "ja": "弱形の your は /jɚ/(GA)/jə/(RP)"
+      "ja": "弱形の your は /jɚ/(GA)/jə/(RP)",
+      "fil": "mahinang 'your' → /jɚ/ (GA) / /jə/ (RP)"
     }
   },
   {
@@ -376,7 +394,8 @@
     ],
     "cs_rule": {
       "en": "weak 'them' → /ðəm/, often /əm/ casually",
-      "ja": "弱形の them は /ðəm/、口語では /əm/ も"
+      "ja": "弱形の them は /ðəm/、口語では /əm/ も",
+      "fil": "mahinang 'them' → /ðəm/, kadalasang /əm/ sa impormal"
     }
   },
   {
@@ -396,7 +415,8 @@
     ],
     "cs_rule": {
       "en": "weak 'us' → /əs/",
-      "ja": "弱形の us は /əs/"
+      "ja": "弱形の us は /əs/",
+      "fil": "mahinang 'us' → /əs/"
     }
   },
   {
@@ -416,7 +436,8 @@
     ],
     "cs_rule": {
       "en": "weak 'from' → /frəm/",
-      "ja": "弱形の from は /frəm/"
+      "ja": "弱形の from は /frəm/",
+      "fil": "mahinang 'from' → /frəm/"
     }
   },
   {
@@ -436,7 +457,8 @@
     ],
     "cs_rule": {
       "en": "weak 'as' → /əz/",
-      "ja": "弱形の as は /əz/"
+      "ja": "弱形の as は /əz/",
+      "fil": "mahinang 'as' → /əz/"
     }
   },
   {
@@ -456,7 +478,8 @@
     ],
     "cs_rule": {
       "en": "weak 'than' → /ðən/",
-      "ja": "弱形の than は /ðən/"
+      "ja": "弱形の than は /ðən/",
+      "fil": "mahinang 'than' → /ðən/"
     }
   },
   {
@@ -476,7 +499,8 @@
     ],
     "cs_rule": {
       "en": "weak 'some' → /səm/ (uncountable; strong when 'a few')",
-      "ja": "弱形の some は /səm/(不可算)"
+      "ja": "弱形の some は /səm/(不可算)",
+      "fil": "mahinang 'some' → /səm/ (di-mabilang; malakas kapag 'iilan')"
     }
   },
   {
@@ -496,7 +520,8 @@
     ],
     "cs_rule": {
       "en": "weak 'could' → /kəd/ (strong /kʊd/ when stressed)",
-      "ja": "弱形の could は /kəd/(強形 /kʊd/)"
+      "ja": "弱形の could は /kəd/(強形 /kʊd/)",
+      "fil": "mahinang 'could' → /kəd/ (malakas /kʊd/ kapag may diin)"
     }
   },
   {
@@ -516,7 +541,8 @@
     ],
     "cs_rule": {
       "en": "weak 'would' → /wəd/, often /əd/ after a pronoun",
-      "ja": "弱形の would は /wəd/、代名詞後では /əd/ も"
+      "ja": "弱形の would は /wəd/、代名詞後では /əd/ も",
+      "fil": "mahinang 'would' → /wəd/, kadalasang /əd/ pagkatapos ng panghalip"
     }
   },
   {
@@ -536,7 +562,8 @@
     ],
     "cs_rule": {
       "en": "weak 'should' → /ʃəd/",
-      "ja": "弱形の should は /ʃəd/"
+      "ja": "弱形の should は /ʃəd/",
+      "fil": "mahinang 'should' → /ʃəd/"
     }
   },
   {
@@ -556,7 +583,8 @@
     ],
     "cs_rule": {
       "en": "weak 'must' → /məst/",
-      "ja": "弱形の must は /məst/"
+      "ja": "弱形の must は /məst/",
+      "fil": "mahinang 'must' → /məst/"
     }
   },
   {
@@ -576,7 +604,8 @@
     ],
     "cs_rule": {
       "en": "weak 'do' → /də/ before a consonant in questions",
-      "ja": "弱形の do は疑問で子音前 /də/"
+      "ja": "弱形の do は疑問で子音前 /də/",
+      "fil": "mahinang 'do' → /də/ bago ang katinig sa mga tanong"
     }
   },
   {
@@ -596,7 +625,8 @@
     ],
     "cs_rule": {
       "en": "weak 'does' → /dəz/",
-      "ja": "弱形の does は /dəz/"
+      "ja": "弱形の does は /dəz/",
+      "fil": "mahinang 'does' → /dəz/"
     }
   },
   {
@@ -616,7 +646,8 @@
     ],
     "cs_rule": {
       "en": "weak 'am' → /əm/, often /m/ after I",
-      "ja": "弱形の am は /əm/、I の後では /m/ も"
+      "ja": "弱形の am は /əm/、I の後では /m/ も",
+      "fil": "mahinang 'am' → /əm/, kadalasang /m/ pagkatapos ng I"
     }
   },
   {
@@ -636,7 +667,8 @@
     ],
     "cs_rule": {
       "en": "weak 'he' → /i/ (h dropped after a word)",
-      "ja": "弱形の he は /i/(語の後で h 脱落)"
+      "ja": "弱形の he は /i/(語の後で h 脱落)",
+      "fil": "mahinang 'he' → /i/ (kinakaltas ang h pagkatapos ng salita)"
     }
   },
   {
@@ -656,7 +688,8 @@
     ],
     "cs_rule": {
       "en": "weak 'him' → /ɪm/ (h dropped)",
-      "ja": "弱形の him は /ɪm/(h脱落)"
+      "ja": "弱形の him は /ɪm/(h脱落)",
+      "fil": "mahinang 'him' → /ɪm/ (kinakaltas ang h)"
     }
   },
   {
@@ -676,7 +709,8 @@
     ],
     "cs_rule": {
       "en": "weak 'her' → /ɚ/ (GA) / /ə/ (RP), h dropped",
-      "ja": "弱形の her は /ɚ/(GA)/ə/(RP)、h脱落"
+      "ja": "弱形の her は /ɚ/(GA)/ə/(RP)、h脱落",
+      "fil": "mahinang 'her' → /ɚ/ (GA) / /ə/ (RP), kinakaltas ang h"
     }
   },
   {
@@ -696,7 +730,8 @@
     ],
     "cs_rule": {
       "en": "weak 'his' → /ɪz/ (h dropped mid-sentence)",
-      "ja": "弱形の his は /ɪz/(文中で h 脱落)"
+      "ja": "弱形の his は /ɪz/(文中で h 脱落)",
+      "fil": "mahinang 'his' → /ɪz/ (kinakaltas ang h sa gitna ng pangungusap)"
     }
   },
   {
@@ -716,7 +751,8 @@
     ],
     "cs_rule": {
       "en": "weak 'there' (existential) → /ðɚ/ (GA) / /ðə/ (RP)",
-      "ja": "存在の there は弱形 /ðɚ/(GA)/ðə/(RP)"
+      "ja": "存在の there は弱形 /ðɚ/(GA)/ðə/(RP)",
+      "fil": "mahinang 'there' (existential) → /ðɚ/ (GA) / /ðə/ (RP)"
     }
   }
 ]

@@ -1,7 +1,7 @@
 # i18n 監査レポート
 
 > 生成日: 2026-06-26 ／ 対象: `i18n/{en,ja,zh,ko,fil}.json`、`i18n/phonemes/*.json`、`index.html`
-> 生成: `python3 tools/gen_audit_docs.py` ／ UI キー数: **151** ／ `validate_i18n.py`: ERROR 0
+> 生成: `python3 tools/gen_audit_docs.py` ／ UI キー数: **152** ／ `validate_i18n.py`: ERROR 0
 
 翻訳の良し悪しは判断していません。キー所在・画面配線・ハードコードの可視化のみ。
 
@@ -97,6 +97,7 @@
 | `modeb.quiz.choose_meaning` | Choose the meaning | 意味を選ぶ | 选择意思 | 의미를 선택 | Piliin ang kahulugan | setup / Mode B |
 | `modeb.quiz.type_word` | Type the word | 単語を入力 | 输入单词 | 단어를 입력 | I-type ang salita | setup / Mode B |
 | `modeb.study.got_it` | Got it → Next | 覚えた→次へ | 记住了→下一个 | 외웠어요→다음 | Naintindihan → Susunod | setup / Mode B |
+| `modeb.study.reveal_meaning` | Reveal meaning | 意味を確認する | 查看含义 | 의미 확인하기 | Tingnan ang kahulugan | setup / Mode B |
 | `modeb.title` | Sound → Vocabulary | 音から語彙 | 从声音到词汇 | 소리에서 어휘로 | Tunog → Bokabularyo | setup / Mode B |
 | `next` | Next | 次へ | 下一题 | 다음 | Susunod | reveal |
 | `note.pattern` | Spelling pattern: {p} | 綴り規則: {p} | 拼写规则: {p} | 철자 규칙: {p} | Padron ng baybay: {p} | reveal |
@@ -127,10 +128,10 @@
 | `pos.限定詞` | determiner | 限定詞 | 限定词 | 한정사 | pantukoy | （未使用・posLabel定義のみ） |
 | `reg.all` | All | すべて | 全部 | 전체 | Lahat | setup（Words） |
 | `reg.irregular` | Irregular | 不規則 | 不规则 | 불규칙 | Di-regular | setup（Words） |
-| `reg.irregular_d` | Common words, irregular spelling | 日常語・不規則綴り | 常用词·不规则拼写 | 일상어·불규칙 철자 | Karaniwang salita, di-regular na baybay | setup（Words） |
-| `reg.label` | Spelling type | 綴りの種類 | 拼写类型 | 철자 유형 | Uri ng baybay | setup（Words） |
-| `reg.regular` | Regular patterns | 規則パターン | 规则模式 | 규칙 패턴 | Mga regular na padron | setup（Words） |
-| `reg.regular_d` | Phonics / spelling&ndash;sound rules | フォニックス / 綴りと音の規則 | 自然拼读 / 拼写&ndash;读音规则 | 파닉스 / 철자&ndash;소리 규칙 | Phonics / mga tuntunin ng baybay&ndash;tunog | setup（Words） |
+| `reg.irregular_d` | Common words with irregular spelling | 日常語の不規則綴り | 常用词的不规则拼写 | 일상어의 불규칙 철자 | Karaniwang salita na may di-regular na baybay | setup（Words） |
+| `reg.label` | Spelling pattern | 綴りパターン | 拼写模式 | 철자 패턴 | Padron ng baybay | setup（Words） |
+| `reg.regular` | Regular | 規則 | 规则 | 규칙 | Regular | setup（Words） |
+| `reg.regular_d` | Phonics and spelling–sound rules | フォニックス／綴りと音の対応 | 自然拼读／拼写–读音规则 | 파닉스／철자–소리 규칙 | Phonics at mga tuntunin ng baybay–tunog | setup（Words） |
 | `reveal.ga_note` | GA | GA（米） | GA（美） | GA（미） | GA (Amer.) | reveal |
 | `reveal.rp_note` | RP | RP（英） | RP（英） | RP（영） | RP (Brit.) | reveal |
 | `see_answer` | See the answer | 答えを確認 | 查看答案 | 정답 확인 | Tingnan ang sagot | reveal |
@@ -264,6 +265,7 @@
 - `modeb.quiz.choose_meaning`
 - `modeb.quiz.type_word`
 - `modeb.study.got_it`
+- `modeb.study.reveal_meaning`
 - `modeb.title`
 
 ### setup / summary
