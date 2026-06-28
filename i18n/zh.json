@@ -66,12 +66,12 @@
     "casual": "口语表达"
   },
   "reg": {
-    "label": "拼写类型",
+    "label": "拼写模式",
     "all": "全部",
-    "regular": "规则模式",
-    "regular_d": "自然拼读 / 拼写&ndash;读音规则",
+    "regular": "规则",
+    "regular_d": "自然拼读／拼写–读音规则",
     "irregular": "不规则",
-    "irregular_d": "常用词·不规则拼写"
+    "irregular_d": "常用词的不规则拼写"
   },
   "pool": {
     "count": "词库 {n} 词",

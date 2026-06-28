@@ -66,12 +66,12 @@
     "casual": "구어체"
   },
   "reg": {
-    "label": "철자 유형",
+    "label": "철자 패턴",
     "all": "전체",
-    "regular": "규칙 패턴",
-    "regular_d": "파닉스 / 철자&ndash;소리 규칙",
+    "regular": "규칙",
+    "regular_d": "파닉스／철자–소리 규칙",
     "irregular": "불규칙",
-    "irregular_d": "일상어·불규칙 철자"
+    "irregular_d": "일상어의 불규칙 철자"
   },
   "pool": {
     "count": "대상 {n}개 단어",

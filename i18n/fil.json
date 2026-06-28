@@ -160,10 +160,10 @@
   "reg": {
     "all": "Lahat",
     "irregular": "Di-regular",
-    "irregular_d": "Karaniwang salita, di-regular na baybay",
-    "label": "Uri ng baybay",
-    "regular": "Mga regular na padron",
-    "regular_d": "Phonics / mga tuntunin ng baybay&ndash;tunog"
+    "irregular_d": "Karaniwang salita na may di-regular na baybay",
+    "label": "Padron ng baybay",
+    "regular": "Regular",
+    "regular_d": "Phonics at mga tuntunin ng baybay–tunog"
   },
   "reveal": {
     "ga_note": "GA (Amer.)",

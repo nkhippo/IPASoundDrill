@@ -66,12 +66,12 @@
     "casual": "口語表現"
   },
   "reg": {
-    "label": "綴りの種類",
+    "label": "綴りパターン",
     "all": "すべて",
-    "regular": "規則パターン",
-    "regular_d": "フォニックス / 綴りと音の規則",
+    "regular": "規則",
+    "regular_d": "フォニックス／綴りと音の対応",
     "irregular": "不規則",
-    "irregular_d": "日常語・不規則綴り"
+    "irregular_d": "日常語の不規則綴り"
   },
   "pool": {
     "count": "対象 {n} 語",

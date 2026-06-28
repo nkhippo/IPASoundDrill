@@ -66,12 +66,12 @@
     "casual": "Casual speech"
   },
   "reg": {
-    "label": "Spelling type",
+    "label": "Spelling pattern",
     "all": "All",
-    "regular": "Regular patterns",
-    "regular_d": "Phonics / spelling&ndash;sound rules",
+    "regular": "Regular",
+    "regular_d": "Phonics and spelling–sound rules",
     "irregular": "Irregular",
-    "irregular_d": "Common words, irregular spelling"
+    "irregular_d": "Common words with irregular spelling"
   },
   "pool": {
     "count": "Pool: {n} words",

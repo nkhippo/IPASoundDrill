@@ -287,12 +287,13 @@
     </div>
 
     <div class="field" id="regField">
-      <div class="flabel" id="flabelReg">Spelling type</div>
-      <div class="opts" id="regOpts">
-        <button class="opt" data-reg="all" aria-pressed="true"><span class="ot" id="regAllT">All</span><span class="od" id="regAllD"></span></button>
-        <button class="opt" data-reg="regular" aria-pressed="false"><span class="ot" id="regRegularT">Regular patterns</span><span class="od" id="regRegularD"></span></button>
-        <button class="opt" data-reg="irregular" aria-pressed="false"><span class="ot" id="regIrregularT">Irregular</span><span class="od" id="regIrregularD"></span></button>
+      <div class="flabel" id="flabelReg">Spelling pattern</div>
+      <div class="pills" id="regOpts">
+        <button class="pill" data-reg="all" aria-pressed="true" id="regAll">All</button>
+        <button class="pill" data-reg="regular" aria-pressed="false" id="regRegular">Regular</button>
+        <button class="pill" data-reg="irregular" aria-pressed="false" id="regIrregular">Irregular</button>
       </div>
+      <div class="countnote" id="regNote"></div>
     </div>
 
     <div class="field hidden" id="grpField">
@@ -724,12 +725,9 @@ function applyI18n() {
   $("focusCasual").textContent = t("focus.casual");
   $("focusTrapNote").textContent = t("focus.traps_d");
   $("flabelReg").textContent = t("reg.label");
-  $("regAllT").textContent = t("reg.all");
-  $("regAllD").textContent = "";
-  $("regRegularT").textContent = t("reg.regular");
-  $("regRegularD").textContent = t("reg.regular_d");
-  $("regIrregularT").textContent = t("reg.irregular");
-  $("regIrregularD").textContent = t("reg.irregular_d");
+  $("regAll").textContent = t("reg.all");
+  $("regRegular").textContent = t("reg.regular");
+  $("regIrregular").textContent = t("reg.irregular");
   $("flabelGrp").textContent = t("grp.label");
   $("grpAll").textContent = t("grp.all");
   $("grpShort").textContent = t("grp.short");
@@ -958,6 +956,7 @@ function updateSetupFields(){
   show("leadWeak", S.tab === "connected" && !modeB && S.csFilter === "weak");
   show("grpField",words&&S.reg==="regular");
   $("focusTrapNote").textContent=words&&(S.focus==="traps"?t("focus.traps_d"):S.focus==="weak"?t("focus.weak_d"):"");
+  $("regNote").textContent=words&&(S.reg==="regular"?t("reg.regular_d"):S.reg==="irregular"?t("reg.irregular_d"):"");
   $("dInput").placeholder=(S.tab==="connected"&&S.csFilter!=="weak")?t("input_phrase"):t("input_ph");
   if(modeB)updateModeBBandNote();
 }
