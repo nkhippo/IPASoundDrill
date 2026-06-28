@@ -104,4 +104,5 @@ python3 tools/gen_audit_docs.py  # i18n-audit.md 再生成
 
 ## 6. コミット
 
-（push 後に SHA を記載）
+- **SHA:** `c7ada42`
+- **メッセージ:** Unify Weak Forms into Connected Speech practice tab.
