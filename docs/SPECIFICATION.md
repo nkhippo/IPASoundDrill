@@ -41,7 +41,7 @@
 | 聞き取りとの連動 | 「**発音できない音は聞き取れない**」という知覚–運動のギャップ |
 | IPA リテラシー不足 | 綴りと音が一致しない英語で、**IPA を読んで書ける力**が弱い |
 | 連結音の理解 | 辞書形 IPA と実際の連結発音のギャップ（Connected Speech タブ） |
-| 弱形の理解 | 機能語の強形と弱形のギャップ（Weak Forms タブ） |
+| 弱形の理解 | 機能語の強形と弱形のギャップ（Connected Speech → Type: Weak forms） |
 | 米英アクセント差 | GA 学習者が RP を、RP 学習者が GA を参照音声として聞く不整合 |
 
 ---
@@ -60,8 +60,7 @@
 | タブ | 内容 |
 |------|------|
 | **Words** | 単語の Decode / Encode |
-| **Connected Speech** | 連結 IPA → 元フレーズ（Decode のみ）。linking / assimilation / elision、L1–L3。キャリア文に IPA 埋め込み |
-| **Weak Forms** | 弱形 IPA → 機能語（Decode のみ）。36 語、L1–L3。キャリア文に IPA 埋め込み。reveal で強形↔弱形対比 |
+| **Connected Speech** | 連結 IPA → 元フレーズ、または弱形 IPA → 機能語（Decode のみ）。Type: All / linking / assimilation / elision / **weak**。Level L1–L3。キャリア文に IPA 埋め込み。All = 237 件（201 句 + 36 弱形） |
 
 ### 2.3 Mode A — Words の出題設計
 
@@ -189,12 +188,11 @@
 | 要素 | Mode A | Mode B |
 |------|--------|--------|
 | Learning mode | Pronunciation / Sound → Vocabulary | 同左 |
-| Practice mode | Words / Connected Speech / **Weak Forms** | （非表示） |
+| Practice mode | Words / Connected Speech | （非表示） |
 | Direction | Decode / Encode（Words のみ） | （非表示） |
 | Phoneme focus | 7 ピル（Words のみ） | （非表示） |
 | Spelling type / pattern group | あり（Words のみ） | （非表示） |
-| Connected filters | Level L1–L3、Type | （非表示） |
-| Weak Forms filters | Level L1–L3 のみ（Type なし） | （非表示） |
+| Connected filters | Level L1–L3、Type（All / linking / assimilation / elision / **weak**） | （非表示） |
 | Band | — | 現在 CEFR バンド表示 |
 | プール件数 + 開始 | あり | あり |
 
@@ -292,7 +290,7 @@ UI i18n とは独立。各言語キー（`en`, `ja`, `ko`, `zh-Hans`, `zh-Hant`,
 
 ### 5.4 セッション状態（メモリ `S`）
 
-`appMode`, `tab`（`words` / `connected` / `weak`）, `dir`, `focus`, `reg`, `grp`, `csFilter`, `csLevel`, `wfLevel`, `queue`, `idx`, `correct`, `weak`, `missed`, `cur`, `mbPhase` 等。リロードで消える。
+`appMode`, `tab`（`words` / `connected`）, `dir`, `focus`, `reg`, `grp`, `csFilter`, `csLevel`, `queue`, `idx`, `correct`, `weak`, `missed`, `cur`, `mbPhase` 等。リロードで消える。
 
 ### 5.5 i18n
 
@@ -327,7 +325,7 @@ UI i18n とは独立。各言語キー（`en`, `ja`, `ko`, `zh-Hans`, `zh-Hant`,
 |------|------|
 | 2026-06-23 | 初版（Mode A のみ・GA 固定） |
 | 2026-06-26 | Mode B・連結句・GA/RP・SRS・TTS v2/accent キャッシュを反映 |
-| 2026-06-28 | gloss.fil 全語完走（3,059/3,059）。batch01/03–20 改訂 + batch21–34 追加 |
+| 2026-06-28 | 練習タブ統一: Connected Speech ⊃ Weak Forms（2タブ化） |
 | 2026-06-27 | gloss.fil batch04 更新 + batch17–20 追加（1,600/3,059語） |
 | 2026-06-27 | gloss.fil batch02/06–08 更新 + batch13–16 追加（1,280/3,059語） |
 | 2026-06-27 | gloss.fil batch02–05 更新 + batch09–12 追加（960/3,059語） |

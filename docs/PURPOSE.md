@@ -1,4 +1,4 @@
-# English Pronunciation Trainer — 目的ステートメント（確定版 v2.2 / source of truth）
+# English Pronunciation Trainer — 目的ステートメント（確定版 v2.9 / source of truth）
 
 > アプリの**本丸（measured outcome）**と**モード構成**を確定し、背景メモ・Cursor仕様書・実装コードの目的を一致させる正本。
 > 目的・評価方針に関する記述が衝突した場合は、本ドキュメントを正とする。
@@ -28,7 +28,7 @@
 | 採点 | 客観（ok/near/bad）のみ | 客観のみ |
 | 進捗記録 | `ept_hist_v1`（per-word）＋ `ept_sym_v1`（per-symbol） | `ept_vocab_v1` / `ept_vocab_band`（別名前空間） |
 
-**Mode A の練習タブ:** **Words**（単語）・**Connected Speech**（連結句・GA 音声前提）・**Weak Forms**（機能語の弱形・36語）の3種。連結句は弱形・同化・脱落の聞き取り＋Decode を練習する補助軸。弱形タブは文中でのみ起きる機能語の弱読（/kən/ 等）をキャリア文＋IPA 埋め込みで練習する。
+**Mode A の練習タブ:** **Words**（単語）と **Connected Speech**（連結句＋弱形・GA 音声前提）の2種。Connected Speech 内の Type フィルタで linking / assimilation / elision / **Weak forms** を選択。弱形36語は連結発音現象の一部として内包（独立タブなし）。
 
 **UI 言語:** en / ja / zh / ko / **fil**（タガログ語・Tier 1+3 実装済み）。語義 gloss.fil は **3,059/3,059語**（Tier 2 **完了**）。連結/弱形ルール文（cs_rule.fil）は fil 未整備時 **en にフォールバック**（クラッシュなし）。
 
@@ -68,7 +68,7 @@
 |------|------|
 | gloss 品質（多言語UI） | en/ja/zh/ko/fil **実装済み**（gloss.fil 3,059語完走） |
 | UI 言語 fil（Tier 1） | **実装済み**（151キー + 音素解説 fil + 言語ピッカー） |
-| 弱形タブ（36語） | **実装済み**（`weak_forms.json` + `?weak=` TTS） |
+| 弱形（36語） | **実装済み**（Connected Speech 内 Type=weak。`weak_forms.json` + `?weak=` TTS） |
 | 連結句拡張（201句） | **実装済み**（STEP6・キャリア文出題） |
 | 多言語学習ガイド | ✅ フェーズ1（en/ja/ko/zh-Hant/zh-Hans/**fil**） |
 | `neighbors` 事前計算 | 実装済み（約2,600語） |
@@ -98,7 +98,7 @@
 | 2026-06-23 | v1 | 本丸をIPAリテラシーに確定（単一モード前提）。 |
 | 2026-06-24 | v2 | 2モード構成に拡張。Mode A＝音素カバー軸の本丸、Mode B＝CEFR軸の語彙サブテーマ。 |
 | 2026-06-26 | v2.1 | Mode A/B・GA/RP・連結句・RP TTS の実装完了を反映。依存表を実装状況に更新。 |
-| 2026-06-28 | v2.8 | gloss.fil 全語完走（3,059/3,059）。batch01/03–20 改訂 + batch21–34 追加。 |
+| 2026-06-28 | v2.9 | 練習タブ統一: Connected Speech ⊃ Weak Forms（2タブ化）。 |
 | 2026-06-27 | v2.7 | gloss.fil batch04 更新 + batch17–20 追加（1,600/3,059語）。 |
 | 2026-06-27 | v2.6 | gloss.fil batch02/06–08 更新 + batch13–16 追加（1,280/3,059語）。 |
 | 2026-06-27 | v2.5 | gloss.fil batch02–05 更新 + batch09–12 追加（960/3,059語）。 |

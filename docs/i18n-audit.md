@@ -105,8 +105,8 @@
 | `note.tricky` | Tricky sounds: {s} | 要注意音: {s} | 需注意音: {s} | 주의할 소리: {s} | Mga mahirap na tunog: {s} | reveal |
 | `patterns.magic_e` | silent e | マジックe | 不发音e | 묵음 e | tahimik na e | reveal（pattern置換） |
 | `pool.count` | Pool: {n} words | 対象 {n} 語 | 词库 {n} 词 | 대상 {n}개 단어 | Pool: {n} salita | setup |
-| `pool.count_phrases` | Pool: {n} phrases | 対象 {n} 句 | 词库 {n} 句 | 대상 {n}개 구 | Pool: {n} parirala | setup |
-| `pool.count_weak` | Pool: {n} weak forms | 対象 {n} 弱形 | 词库 {n} 弱读形式 | 대상 {n}개 약형 | Pool: {n} mahinang anyo | setup |
+| `pool.count_phrases` | Pool: {n} phrases | 対象 {n} 句 | 词库 {n} 句 | 대상 {n}개 구 | Pool: {n} parirala | （未参照） |
+| `pool.count_weak` | Pool: {n} weak forms | 対象 {n} 弱形 | 词库 {n} 弱读形式 | 대상 {n}개 약형 | Pool: {n} mahinang anyo | （未参照） |
 | `pos.be動詞` | be verb | be動詞 | be动词 | be동사 | pandiwang be | （未使用・posLabel定義のみ） |
 | `pos.代名詞` | pronoun | 代名詞 | 代词 | 대명사 | panghalip | （未使用・posLabel定義のみ） |
 | `pos.前置詞` | preposition | 前置詞 | 介词 | 전치사 | pang-ukol | （未使用・posLabel定義のみ） |
@@ -248,8 +248,6 @@
 ### setup
 
 - `pool.count`
-- `pool.count_phrases`
-- `pool.count_weak`
 - `tab.connected`
 - `tab.label`
 - `tab.weak`
@@ -389,6 +387,11 @@
 - `set.phonics_t`
 - `syl`
 - `syl_pl`
+
+### （未参照）
+
+- `pool.count_phrases`
+- `pool.count_weak`
 
 ---
 

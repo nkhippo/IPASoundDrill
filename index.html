@@ -245,7 +245,6 @@
       <div class="tabbar" id="tabOpts" role="tablist">
         <button class="opt" role="tab" data-tab="words" aria-pressed="true" id="tabWords"><span class="ot" id="tabWordsT">Words</span></button>
         <button class="opt" role="tab" data-tab="connected" aria-pressed="false" id="tabConnected"><span class="ot" id="tabConnectedT">Connected Speech</span></button>
-        <button class="opt" role="tab" data-tab="weak" aria-pressed="false" id="tabWeak"><span class="ot" id="tabWeakT">Weak Forms</span></button>
       </div>
     </div>
 
@@ -323,6 +322,7 @@
           <button class="pill" data-cs="linking" aria-pressed="false" id="csLinking">Linking</button>
           <button class="pill" data-cs="assimilation" aria-pressed="false" id="csAssim">Assimilation</button>
           <button class="pill" data-cs="elision" aria-pressed="false" id="csElision">Elision</button>
+          <button class="pill" data-cs="weak" aria-pressed="false" id="csWeak">Weak forms</button>
         </div>
       </div>
     </div>
@@ -699,7 +699,6 @@ function applyI18n() {
   $("mbDCheck").textContent = t("check");
   $("tabWordsT").textContent = t("tab.words");
   $("tabConnectedT").textContent = t("tab.connected");
-  $("tabWeakT").textContent = t("tab.weak");
   $("flabelCs").textContent = t("cs.label");
   $("flabelCsLevel").textContent = t("cs.level.label");
   $("csLevelAll").textContent = t("cs.level.all");
@@ -710,6 +709,7 @@ function applyI18n() {
   $("csLinking").textContent = t("cs.linking");
   $("csAssim").textContent = t("cs.assimilation");
   $("csElision").textContent = t("cs.elision");
+  $("csWeak").textContent = t("tab.weak");
   $("flabelDir").textContent = t("dir.label");
   $("dirDecodeT").innerHTML = t("dir.decode_t");
   $("dirDecodeD").textContent = t("dir.decode_d");
@@ -739,7 +739,7 @@ function applyI18n() {
   $("grpR").textContent = t("grp.r");
   if (dataReady()) $("startBtn").textContent = t("start");
   else $("startBtn").textContent = t("loading");
-  $("dInput").placeholder = S.tab === "connected" ? t("input_phrase") : t("input_ph");
+  $("dInput").placeholder = (S.tab === "connected" && S.csFilter !== "weak") ? t("input_phrase") : t("input_ph");
   $("dCheck").textContent = t("check");
   $("eClear").textContent = t("clear");
   $("eCheck").textContent = t("check");
@@ -818,7 +818,7 @@ async function initApp() {
   Promise.all([
     loadWordlist().catch(err => { console.error(err); $("poolNote").textContent = t("wordlist_fail"); }),
     loadConnected().catch(err => { console.error(err); if (S.tab === "connected") $("poolNote").textContent = t("load_fail"); }),
-    loadWeak().catch(err => { console.error(err); if (S.tab === "weak") $("poolNote").textContent = t("load_fail"); }),
+    loadWeak().catch(err => { console.error(err); if (S.tab === "connected") $("poolNote").textContent = t("load_fail"); }),
     loadGuide().catch(err => console.error("guide load failed", err))
   ]).then(() => {
     if (dataReady()) {
@@ -950,15 +950,15 @@ function updateSetupFields(){
   show("tabField",!modeB);
   show("modebSetup",modeB);
   show("wordsSetup",words);
-  show("connectedSetup",(S.tab==="connected"||S.tab==="weak")&&!modeB);
-  show("csTypeField",S.tab==="connected"&&!modeB);
-  show("lead",words);
-  show("leadModeB",modeB);
-  show("leadConnected",S.tab==="connected"&&!modeB);
-  show("leadWeak",S.tab==="weak"&&!modeB);
+  show("connectedSetup", S.tab === "connected" && !modeB);
+  show("csTypeField", S.tab === "connected" && !modeB);
+  show("lead", words);
+  show("leadModeB", modeB);
+  show("leadConnected", S.tab === "connected" && !modeB && S.csFilter !== "weak");
+  show("leadWeak", S.tab === "connected" && !modeB && S.csFilter === "weak");
   show("grpField",words&&S.reg==="regular");
   $("focusTrapNote").textContent=words&&(S.focus==="traps"?t("focus.traps_d"):S.focus==="weak"?t("focus.weak_d"):"");
-  $("dInput").placeholder=S.tab==="connected"?t("input_phrase"):t("input_ph");
+  $("dInput").placeholder=(S.tab==="connected"&&S.csFilter!=="weak")?t("input_phrase"):t("input_ph");
   if(modeB)updateModeBBandNote();
 }
 function hasTrapPhoneme(w){
@@ -997,15 +997,11 @@ function filteredPool(){
   else if(S.focus==="casual")p=p.filter(w=>w.src==="casual");
   return p;
 }
-function filteredConnectedPool(){
-  let p=CONNECTED.slice();
-  if(S.csLevel!=="all")p=p.filter(x=>String(x.level)===S.csLevel);
-  if(S.csFilter!=="all")p=p.filter(x=>x.cs_type===S.csFilter);
-  return p;
-}
-function filteredWeakPool(){
-  let p=WEAK.slice();
-  if(S.csLevel!=="all")p=p.filter(x=>String(x.level)===S.csLevel);
+function filteredCsPool(){
+  let p = CONNECTED.concat(WEAK);
+  if(S.csLevel!=="all") p = p.filter(x => String(x.level) === S.csLevel);
+  if(S.csFilter === "weak") p = p.filter(isWeakItem);
+  else if(S.csFilter !== "all") p = p.filter(x => x.cs_type === S.csFilter);
   return p;
 }
 function updatePool(){
@@ -1020,14 +1016,9 @@ function updatePool(){
     return;
   }
   if(S.tab==="connected"){
-    const n=filteredConnectedPool().length;
-    $("poolNote").textContent=t("pool.count_phrases",{n});
-    if(dataReady())$("startBtn").disabled=n===0;
-    return;
-  }
-  if(S.tab==="weak"){
-    const n=filteredWeakPool().length;
-    $("poolNote").textContent=t("pool.count_weak",{n});
+    const n=filteredCsPool().length;
+    const key=S.csFilter==="weak"?"pool.count_weak":"pool.count_phrases";
+    $("poolNote").textContent=t(key,{n});
     if(dataReady())$("startBtn").disabled=n===0;
     return;
   }
@@ -1369,7 +1360,7 @@ function refreshSpeakerFor(word, accent) {
 
 function refreshAllSpeakers() {
   if (speakBusy) return;
-  if (S.tab === "connected" || S.tab === "weak" || isConnectedItem(S.cur) || isWeakItem(S.cur)) {
+  if (S.tab === "connected" || isConnectedItem(S.cur) || isWeakItem(S.cur)) {
     speakerIdsForCurrentCard().forEach(id => { const b = $(id); if (b) b.disabled = false; });
     return;
   }
@@ -1426,7 +1417,7 @@ async function prefetchIdleBodies(words, accent, token) {
 }
 
 async function prefetchAccentBodies(accent) {
-  if (S.tab === "connected" || S.tab === "weak" || !S.queue.length) return;
+  if (S.tab === "connected" || !S.queue.length) return;
   const token = prefetchToken;
   const words = [...new Set(S.queue.map(c => c.w).filter(Boolean))];
   for (const w of words) {
@@ -1445,7 +1436,7 @@ async function prefetchAccentBodies(accent) {
 }
 
 function prefetchSessionAudio(queue) {
-  if (S.tab === "connected" || S.tab === "weak") return;
+  if (S.tab === "connected") return;
   prefetchToken++;
   const token = prefetchToken;
   const words = [...new Set(queue.map(c => c.w).filter(Boolean))];
@@ -1563,19 +1554,13 @@ function startSession(weakOnly){
   }
   let pool;
   if(S.tab==="connected"){
-    pool=shuffle(filteredConnectedPool().slice());
-    if(pool.length>QUESTION_COUNT)pool=pool.slice(0,QUESTION_COUNT);
-  }else if(S.tab==="weak"){
-    pool=weakOnly
-      ?shuffle(WEAK.filter(w=>S.missed.includes(w.w))).slice(0,QUESTION_COUNT)
-      :shuffle(filteredWeakPool().slice());
+    const base=(weakOnly&&S.missed.length)
+      ?CONNECTED.concat(WEAK).filter(w=>S.missed.includes(w.w))
+      :filteredCsPool();
+    pool=shuffle(base.slice());
     if(pool.length>QUESTION_COUNT)pool=pool.slice(0,QUESTION_COUNT);
   }else if(weakOnly&&S.missed.length){
-    if(S.tab==="connected"){
-      pool=shuffle(CONNECTED.filter(w=>S.missed.includes(w.w))).slice(0,QUESTION_COUNT);
-    }else{
-      pool=shuffle(PRESET.filter(w=>S.missed.includes(w.w))).slice(0,QUESTION_COUNT);
-    }
+    pool=shuffle(PRESET.filter(w=>S.missed.includes(w.w))).slice(0,QUESTION_COUNT);
   }else{
     pool=buildSessionQueue(filteredPool().slice(),QUESTION_COUNT);
   }
@@ -1659,7 +1644,7 @@ function renderCard(){
     refreshAllSpeakers();
     return;
   }
-  if(S.tab==="connected"||S.tab==="weak"||S.dir==="decode")renderDecode(c);else renderEncode(c);
+  if(S.tab==="connected"||S.dir==="decode")renderDecode(c);else renderEncode(c);
   refreshAllSpeakers();
 }
 /* DECODE */
@@ -1686,6 +1671,7 @@ function renderDecode(c){
     renderIpaInto($("dIpa"),activeIpa(c),"dInfo",null);
   }
   const inp=$("dInput");inp.value="";
+  inp.placeholder=(S.cur&&isConnectedItem(S.cur))?t("input_phrase"):t("input_ph");
   if(!COARSE)inp.focus({preventScroll:true});
 }
 function norm(s){return s.toLowerCase().replace(/[^a-z]/g,"");}
@@ -1706,13 +1692,13 @@ $("dInput").addEventListener("focus",()=>{
 $("dInput").addEventListener("blur",unlockInputScroll);
 $("dInput").addEventListener("beforeinput",e=>{
   if(e.inputType.startsWith("delete"))return;
-  const phrase=isConnectedItem(S.cur)||S.tab==="connected";
+  const phrase=isConnectedItem(S.cur);
   const ok=phrase?/^[A-Za-z ]*$/.test(e.data||""):/^[A-Za-z]*$/.test(e.data||"");
   if(e.data&&!ok)e.preventDefault();
 });
 $("dInput").addEventListener("input",e=>{
   const el=e.target;
-  const phrase=isConnectedItem(S.cur)||S.tab==="connected";
+  const phrase=isConnectedItem(S.cur);
   const cleaned=phrase?el.value.replace(/[^A-Za-z ]/g,"").replace(/\s+/g," "):el.value.replace(/[^A-Za-z]/g,"");
   if(cleaned!==el.value){const pos=el.selectionStart;el.value=cleaned;el.setSelectionRange(Math.min(pos,cleaned.length),Math.min(pos,cleaned.length));}
 });

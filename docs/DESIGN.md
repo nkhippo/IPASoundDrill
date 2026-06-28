@@ -119,21 +119,16 @@ aʊ: how /haʊ/, cow /kaʊ/, hour /ˈaʊɚ/
 | Encode キーボード | GA: ɑ ɔ ɝ ɚ 等 / RP: ɒ ɜː 長音ː・二重母音拡張 |
 | データ | 全 3,059 語 + 201 連結句に `rp_ipa` 付与 |
 
-### 1.8 連結句タブ（STEP6・実装済み）
+### 1.8 Connected Speech（連結句＋弱形・STEP6/弱形統合）
 
-- **データ:** `data/connected_speech.json`（201 句）。`cs_type`: linking / assimilation / elision。`level`: 1–3。
-- **練習:** Decode のみ（連結 IPA → 元フレーズ `w`）。出題は**キャリア文**に IPA を埋め込み（`carriers` 4種からランダム、`{P}` → IPA 表示）
-- **フィルタ:** Level ピル × Type ピル（AND）。
-- **TTS:** GA 固定（自然連結 `TTS_CONNECTED_INSTRUCTIONS`）。RP 連結は範囲外。
-- **表示 IPA:** `activeIpa()` で GA/RP 切替可（`rp_ipa` 付き）。
-
-### 1.9 弱形タブ（実装済み）
-
-- **データ:** `data/weak_forms.json`（36 機能語）。`level`: 1–3。`carriers` 各4種。
-- **練習:** Decode のみ（弱形 IPA → 機能語 `w`）。出題は連結句と同じキャリア文＋IPA 埋め込み。
-- **フィルタ:** Level ピルのみ（Type なし）。
-- **reveal:** 強形 ↔ 弱形 IPA 対比 + `cs_rule`。
-- **TTS:** `?weak=` + 弱形 IPA（GA/RP 両対応）。GAS 再デプロイ必須。
+- **データ:** `data/connected_speech.json`（201 句）+ `data/weak_forms.json`（36 語）。ランタイムで `filteredCsPool()` が合算。
+- **練習タブ:** Words / **Connected Speech** の2種。弱形は独立タブではなく Type ピル `weak` で選択。
+- **Type:** All / linking / assimilation / elision / **weak**（`tab.weak` ラベル流用）。
+- **Level:** 1–3（連結・弱形共通）。
+- **練習:** Decode のみ。連結は IPA → 元フレーズ `w`（句入力）。弱形は IPA → 機能語 `w`（単語入力）。キャリア文＋IPA 埋め込みは共通。
+- **TTS:** 連結句 GA 固定（`?phrase=`）。弱形 `?weak=` + 弱形 IPA（GA/RP）。
+- **reveal:** 連結は cs_type + cs_rule。弱形は強形↔弱形対比 + cs_rule。
+- **件数:** All = 237（201+36）。weak 選択時 `pool.count_weak`、それ以外 `pool.count_phrases`。
 
 ---
 
@@ -258,8 +253,9 @@ Keep the delivery identical and consistent across all words.
 | Mode A（音素軸UI・SRS・reveal・例語・TTS v2） | ✅ |
 | GA/RP 切替（IPA・キーボード・RP TTS） | ✅ |
 | 連結句 201句（キャリア文） | ✅ |
-| 弱形タブ 36語 + `?weak=` TTS | ✅ |
+| 弱形タブ 36語 + `?weak=` TTS | ✅ Connected Speech 内 Type=weak |
 | Mode B（Study/Quiz・vocab SRS） | ✅ |
+| 練習タブ統一（Connected ⊃ Weak） | ✅ |
 | UI 5言語（en/ja/zh/ko/fil） | ✅ Tier 1+3 |
 | 多言語学習ガイド（6言語） | ✅ フェーズ1 |
 | gloss.fil / cs_rule.fil | ✅ gloss.fil 完走。cs_rule.fil は en フォールバック |
