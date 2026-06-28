@@ -1,7 +1,6 @@
 {
   "brand": {
-    "name": "IPA听写 · Decoder / Encoder",
-    "sub": "CEFR A1–A2 · 美式英语"
+    "name": "IPA听写 · Decoder / Encoder"
   },
   "lead_html": "针对<b>已知单词</b>逐音素训练<b>IPA读写</b>。专攻<b>陷阱音</b>（θ, ð, æ, ʒ, ɝ）或练习记录中的<b>薄弱音</b>。仅客观评分；提升音标覆盖，而非词汇量。",
   "lead_connected_html": "听辨 GA 的<b>连读现象</b>（连读、同化、脱落）。根据连读后的 IPA 还原原短语。",

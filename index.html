@@ -23,7 +23,6 @@
   .brand{display:flex;align-items:center;gap:8px;min-width:0;flex:1}
   .brand .mark{font-family:var(--ipa);font-size:24px;color:var(--signal);letter-spacing:.5px;flex-shrink:0}
   .brand .name{font-weight:700;font-size:15px;letter-spacing:.04em;white-space:nowrap}
-  .brand .sub{font-family:var(--mono);font-size:10px;color:var(--faint);text-transform:uppercase;letter-spacing:.14em;white-space:nowrap}
   .meter{font-family:var(--mono);font-size:11px;color:var(--muted);text-align:right;letter-spacing:.04em;white-space:nowrap}
   .meter b{color:var(--ink);font-weight:700}
   .topbar-actions{display:flex;flex-direction:column;align-items:flex-end;gap:6px;flex-shrink:0}
@@ -215,7 +214,6 @@
   @media (max-width:520px){
     .brand .mark{font-size:17px}
     .brand .name{font-size:12px;letter-spacing:.02em}
-    .brand .sub{font-size:8.5px;letter-spacing:.1em}
     body.in-play .topbar-actions{flex-direction:row;align-items:center;gap:6px}
     .backtop{padding:4px 8px;font-size:9px}
     .meter{font-size:10px}
@@ -227,7 +225,7 @@
 <div class="wrap">
   <div class="topbar">
     <div class="brand"><span class="mark">/iː/</span>
-      <div><div class="name" id="brandName">IPA Dictation</div><div class="sub" id="brandSub">A1–A2 · GA</div></div>
+      <div class="name" id="brandName">IPA Dictation</div>
     </div>
     <div class="topbar-actions">
       <div class="topbar-btns">
@@ -691,7 +689,6 @@ function csRuleText(c) {
 function applyI18n() {
   document.title = t("brand.name");
   $("brandName").textContent = t("brand.name");
-  $("brandSub").textContent = t("brand.sub");
   $("lead").innerHTML = t("lead_html");
   $("leadConnected").innerHTML = t("lead_connected_html");
   $("leadWeak").innerHTML = t("lead_weak_html");

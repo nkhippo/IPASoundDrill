@@ -1,7 +1,6 @@
 {
   "brand": {
-    "name": "IPA Dictation · Decoder / Encoder",
-    "sub": "CEFR A1–A2 · General American"
+    "name": "IPA Dictation · Decoder / Encoder"
   },
   "lead_html": "Drill <b>IPA reading and writing</b> for words you already know&mdash;sound by sound. Target <b>trap phonemes</b> (θ, ð, æ, ʒ, ɝ) or your <b>weak spots</b> from practice history. Objective scoring only; build symbol coverage, not vocabulary lists.",
   "lead_connected_html": "Hear <b>connected speech</b> in GA&mdash;linking, assimilation, and elision. Read the connected IPA and recover the original phrase.",
