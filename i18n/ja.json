@@ -113,7 +113,7 @@
   "load_fail": "読み込み失敗",
   "wordlist_fail": "単語リストの読み込みに失敗しました",
   "back_top": "TOPへ",
-  "settings_btn": "設定",
+  "settings_btn": "言語",
   "settings_title": "設定",
   "settings_lang": "言語",
   "settings_close": "閉じる",
@@ -123,7 +123,7 @@
     "rp": "イギリス英語"
   },
   "guide": {
-    "open": "ガイド",
+    "open": "使い方ガイド",
     "title": "このアプリの使い方",
     "close": "閉じる"
   },

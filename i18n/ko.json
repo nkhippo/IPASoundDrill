@@ -113,7 +113,7 @@
   "load_fail": "불러오기 실패",
   "wordlist_fail": "단어 목록을 불러오지 못했습니다",
   "back_top": "처음",
-  "settings_btn": "설정",
+  "settings_btn": "언어",
   "settings_title": "설정",
   "settings_lang": "언어",
   "settings_close": "닫기",
@@ -123,7 +123,7 @@
     "rp": "영국식"
   },
   "guide": {
-    "open": "가이드",
+    "open": "사용 가이드",
     "title": "앱 사용 방법",
     "close": "닫기"
   },

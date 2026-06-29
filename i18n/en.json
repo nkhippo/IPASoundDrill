@@ -113,7 +113,7 @@
   "load_fail": "Load failed",
   "wordlist_fail": "Failed to load word list",
   "back_top": "Menu",
-  "settings_btn": "Settings",
+  "settings_btn": "Language",
   "settings_title": "Settings",
   "settings_lang": "Language",
   "settings_close": "Close",
@@ -123,7 +123,7 @@
     "rp": "British (RP)"
   },
   "guide": {
-    "open": "Guide",
+    "open": "Site guide",
     "title": "How to use this app",
     "close": "Close"
   },

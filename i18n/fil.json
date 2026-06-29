@@ -55,7 +55,7 @@
   },
   "guide": {
     "close": "Isara",
-    "open": "Gabay",
+    "open": "Gabay sa site",
     "title": "Paano gamitin ang app na ito"
   },
   "vocab": {
@@ -184,7 +184,7 @@
     "phonics_d": "Mga salitang may regular na tugma ng baybay&ndash;tunog",
     "phonics_t": "Mga padron ng phonics · baybay &harr; tunog"
   },
-  "settings_btn": "Mga Setting",
+  "settings_btn": "Wika",
   "settings_close": "Isara",
   "settings_lang": "Wika",
   "settings_title": "Mga Setting",
