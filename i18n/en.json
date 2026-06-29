@@ -127,6 +127,13 @@
     "title": "How to use this app",
     "close": "Close"
   },
+  "vocab": {
+    "title": "Vocabulary",
+    "tab_words": "Words",
+    "tab_phrases": "Phrases",
+    "search": "Search…",
+    "no_results": "No results"
+  },
   "reveal": {
     "rp_note": "RP",
     "ga_note": "GA"

@@ -1,7 +1,7 @@
 # i18n 監査レポート
 
 > 生成日: 2026-06-26 ／ 対象: `i18n/{en,ja,zh,ko,fil}.json`、`i18n/phonemes/*.json`、`index.html`
-> 生成: `python3 tools/gen_audit_docs.py` ／ UI キー数: **152** ／ `validate_i18n.py`: ERROR 0
+> 生成: `python3 tools/gen_audit_docs.py` ／ UI キー数: **156** ／ `validate_i18n.py`: ERROR 0
 
 翻訳の良し悪しは判断していません。キー所在・画面配線・ハードコードの可視化のみ。
 
@@ -16,7 +16,6 @@
 | `accent.rp` | British (RP) | イギリス英語 | 英式 | 영국식 | Britaniko (RP) | settings（動的参照） |
 | `back_top` | Menu | TOPへ | 首页 | 처음 | Menu | 共通 |
 | `brand.name` | IPA Dictation · Decoder / Encoder | IPA音写 · Decoder / Encoder | IPA听写 · Decoder / Encoder | IPA 받아쓰기 · Decoder / Encoder | IPA Diktasyon · Decoder / Encoder | 共通（トップバー） |
-| `brand.sub` | CEFR A1–A2 · General American | CEFR A1–A2 · アメリカ英語 | CEFR A1–A2 · 美式英语 | CEFR A1–A2 · 미국 영어 | CEFR A1–A2 · Amerikanong Ingles | 共通（トップバー） |
 | `build_ph` | Tap the IPA keys below to build the pronunciation | 下のIPAキーをタップして発音を組み立てる | 点击下方IPA键拼出发音 | 아래 IPA 키를 눌러 발음을 만드세요 | I-tap ang mga IPA key sa ibaba para buuin ang pagbigkas | encode |
 | `check` | Check | 答え合わせ | 核对 | 채점 | Suriin | decode / encode / Mode B |
 | `clear` | Clear | クリア | 清除 | 지우기 | Burahin | encode |
@@ -159,6 +158,11 @@
 | `tab.weak` | Weak Forms | 弱形 | 弱读形式 | 약형 | Mahihinang Anyo | setup |
 | `tab.words` | Words | 単語 | 单词 | 단어 | Mga Salita | setup |
 | `tips_head` | Pronunciation tips | 発音ポイント | 发音要点 | 발음 포인트 | Mga tip sa pagbigkas | reveal |
+| `vocab.no_results` | No results | 見つかりません | 无结果 | 결과 없음 | Walang resulta | setup / 練習 |
+| `vocab.search` | Search… | 検索… | 搜索… | 검색… | Maghanap… | setup / 練習 |
+| `vocab.tab_phrases` | Phrases | フレーズ | 短语 | 구문 | Mga Parirala | setup / 練習 |
+| `vocab.tab_words` | Words | 単語 | 单词 | 단어 | Mga Salita | setup / 練習 |
+| `vocab.title` | Vocabulary | 語彙リスト | 词汇表 | 단어 목록 | Talaan ng Bokabularyo | setup / 練習 |
 | `weak.strong_label` | Strong | 強形 | 强读 | 강형 | Malakas | reveal（Weak Forms） |
 | `weak.weak_label` | Weak | 弱形 | 弱读 | 약형 | Mahina | reveal（Weak Forms） |
 | `wordlist_fail` | Failed to load word list | 単語リストの読み込みに失敗しました | 词表加载失败 | 단어 목록을 불러오지 못했습니다 | Nabigong i-load ang listahan ng salita | setup / summary |
@@ -280,6 +284,11 @@
 
 - `mode.a`
 - `mode.label`
+- `vocab.no_results`
+- `vocab.search`
+- `vocab.tab_phrases`
+- `vocab.tab_words`
+- `vocab.title`
 
 ### setup（Connected / Weak）
 
@@ -348,7 +357,6 @@
 ### 共通（トップバー）
 
 - `brand.name`
-- `brand.sub`
 
 ### （未使用・posLabel定義のみ）
 

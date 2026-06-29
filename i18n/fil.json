@@ -58,6 +58,13 @@
     "open": "Gabay",
     "title": "Paano gamitin ang app na ito"
   },
+  "vocab": {
+    "title": "Talaan ng Bokabularyo",
+    "tab_words": "Mga Salita",
+    "tab_phrases": "Mga Parirala",
+    "search": "Maghanap…",
+    "no_results": "Walang resulta"
+  },
   "hint": {
     "first": "Unang titik",
     "pos": "Bahagi ng pananalita",
