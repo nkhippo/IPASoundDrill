@@ -161,21 +161,23 @@
   .vocab-tabbar{margin-bottom:10px;flex-shrink:0}
   .vocab-search{width:100%;border:1.5px solid var(--hair);border-radius:10px;padding:10px 13px;font-size:14px;font-family:var(--ui);color:var(--ink);background:#fff;margin-bottom:8px;flex-shrink:0}
   .vocab-search:focus{outline:none;border-color:var(--signal)}
-  .vocab-letters{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:8px;flex-shrink:0}
-  .vocab-letter-btn{border:1px solid var(--hair);background:#fff;border-radius:6px;padding:3px 7px;font-family:var(--mono);font-size:11px;font-weight:700;cursor:pointer;color:var(--muted);line-height:1.4}
-  .vocab-letter-btn:hover{border-color:var(--signal);color:var(--signal)}
+  @media (max-width:599px){.vocab-search{display:none}}
+  .vocab-letters{display:flex;flex-wrap:nowrap;gap:4px;margin-bottom:8px;flex-shrink:0;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding-bottom:2px}
+  .vocab-letters::-webkit-scrollbar{display:none}
+  .vocab-letter-btn{border:1px solid var(--hair);background:#fff;border-radius:6px;padding:5px 9px;font-family:var(--mono);font-size:12px;font-weight:700;cursor:pointer;color:var(--muted);line-height:1.4;flex-shrink:0;white-space:nowrap}
+  .vocab-letter-btn:hover,.vocab-letter-btn:active{border-color:var(--signal);color:var(--signal)}
   .vocab-body{overflow-y:auto;flex:1;min-height:0}
   .vocab-group-head{font-family:var(--mono);font-size:10.5px;color:var(--faint);text-transform:uppercase;letter-spacing:.14em;padding:12px 2px 5px;border-bottom:1px solid var(--hair);margin-bottom:2px;position:sticky;top:0;background:var(--panel);z-index:1}
-  .vocab-row{display:flex;align-items:center;gap:10px;padding:9px 2px;border-bottom:1px solid var(--hair)}
+  .vocab-row{display:flex;align-items:flex-start;gap:10px;padding:10px 2px;border-bottom:1px solid var(--hair)}
   .vocab-row:last-child{border-bottom:none}
-  .vocab-w{font-weight:700;font-size:14px;min-width:90px;flex-shrink:0}
-  .vocab-ipas{display:flex;flex-direction:column;gap:1px;flex-shrink:0;min-width:110px}
+  .vocab-w{font-weight:700;font-size:14px;min-width:90px;flex-shrink:0;padding-top:2px}
+  .vocab-ipas{display:flex;flex-direction:column;gap:1px;flex-shrink:0;min-width:110px;padding-top:1px}
   .vocab-ipa-ga{font-family:var(--ipa);font-size:13px;color:var(--signal);line-height:1.3}
   .vocab-ipa-rp{font-family:var(--ipa);font-size:11.5px;color:var(--faint);line-height:1.3}
   .vocab-ipa-label{font-family:var(--mono);font-size:9px;color:var(--faint);letter-spacing:.06em;margin-right:3px}
-  .vocab-gloss{flex:1;font-size:13px;color:var(--muted);min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-  .vocab-pos{font-family:var(--mono);font-size:9.5px;color:var(--faint);flex-shrink:0;white-space:nowrap}
-  .vocab-play{border:1px solid var(--hair);background:#fff;border-radius:50%;width:32px;height:32px;padding:0;cursor:pointer;color:var(--signal);display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;transition:border-color .15s,background .15s}
+  .vocab-gloss{flex:1;font-size:13px;color:var(--muted);min-width:0;white-space:normal;word-break:break-word;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;line-height:1.4}
+  .vocab-pos{font-family:var(--mono);font-size:9.5px;color:var(--faint);flex-shrink:0;white-space:nowrap;padding-top:2px}
+  .vocab-play{border:1px solid var(--hair);background:#fff;border-radius:50%;width:32px;height:32px;padding:0;cursor:pointer;color:var(--signal);display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;transition:border-color .15s,background .15s;margin-top:1px}
   .vocab-play:hover{border-color:var(--signal);background:var(--signal-soft)}
   .vocab-play svg{width:14px;height:14px}
   .vocab-type-badge{font-family:var(--mono);font-size:9px;font-weight:700;padding:2px 6px;border-radius:6px;flex-shrink:0;letter-spacing:.04em;text-transform:uppercase}
@@ -206,10 +208,10 @@
   .sumbtns .again{border:none;background:var(--ink);color:#fff} .sumbtns .weak{border:1px solid var(--signal);background:#fff;color:var(--signal)}
   .sumbtns button:disabled{opacity:.4;cursor:default}
   .hidden{display:none}
-  .modal{position:fixed;inset:0;z-index:100;padding:18px}
+  .modal{position:fixed;inset:0;z-index:100;padding:8px}
   .modal:not(.hidden){display:flex;align-items:center;justify-content:center}
   .modal-scrim{position:absolute;inset:0;border:none;background:rgba(25,28,32,.35);cursor:pointer}
-  .modal-card{position:relative;width:min(100%,320px);padding:18px 16px}
+  .modal-card{position:relative;width:min(100%,400px);padding:18px 16px}
   .modal-head{margin-bottom:12px}
   .modal-title{margin:0;font-size:14px;font-weight:700;letter-spacing:.02em}
   .langopts{display:flex;flex-direction:column;gap:8px}
@@ -690,6 +692,7 @@ function openVocab() {
     renderVocabTab("words");
     vocabBuilt = true;
   }
+  $("vocabLetters").scrollLeft = 0;
   applyI18nVocab();
 }
 
