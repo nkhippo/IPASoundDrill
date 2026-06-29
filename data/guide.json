@@ -13,14 +13,15 @@
       "title": "The idea behind it",
       "body": [
         "The whole app rests on one principle: **sounds you cannot produce correctly, you cannot hear correctly.** Perception and production are two sides of one skill. If your mouth has never learned the difference between the vowels in *ship* and *sheep*, or the consonants in *think* and *sink*, then your ears will keep blurring them too — no matter how many hours of listening you do. This is why a pronunciation tool can quietly improve your listening: by training the motor side of a sound, you sharpen the perception of it.",
-        "That is also why every reference voice here is a calm, citation-form pronunciation — the careful dictionary form, not fast conversational speech. You need a stable, clear target to internalize before you can recognize the messier real-world versions."
+        "That is also why every reference voice here is a calm, citation-form pronunciation — the careful dictionary form, not fast conversational speech. You need a stable, clear target to internalize before you can recognize the messier real-world versions.",
+        "The research behind this is well established. James Emil Flege's Speech Learning Model shows that the motor system and the auditory system share a common phonetic space: practicing a sound in production literally rewires how the brain categorizes it in perception. Patricia Kuhl's work on the 'perceptual magnet' effect explains the flip side — sounds that have never been produced are pulled toward the nearest native-language prototype in perception, which is why passive listening alone rarely breaks through an accent plateau. This app applies both findings directly: every Decode and Encode drill is simultaneously a production exercise and a perception calibration, using the same IPA symbol as the common anchor for mouth and ear."
       ]
     },
     "solves": {
       "title": "What this app fixes",
       "body": [
-        "Three gaps, specifically. First, the **vocabulary–pronunciation gap**: you know what a word means, but its sound is not yet settled in your body. Second, **IPA literacy**: English spelling lies constantly, so the only reliable map from letters to sound is the IPA — and most learners can read a little of it but cannot write it. Third, the **perception–production gap** described above, including the small contrasts (θ/f, ð/d, ʃ/tʃ, ɪ/iː) that decide whether you understand a sentence or guess at it.",
-        "It does **not** try to be a general speaking course or a fluency trainer. It works at the level of single words and short phrases, on purpose. Broad conversation practice belongs elsewhere; this is the precision tool."
+        "Three gaps, specifically. First, the **vocabulary–pronunciation gap**: you know what a word means, but its sound is not yet settled in your body. You can read *colonel* and *epitome* on a page, but if you have never drilled their IPA, you will likely mispronounce them in speech and mishear them in audio — even though you know their meaning perfectly. Second, **IPA literacy**: English spelling lies constantly — *though*, *through*, *tough*, and *thought* share five letters but sound nothing alike — so the only reliable map from letters to sound is the IPA. Most learners can read a little of it but cannot write it, which means they can recognize a word's pronunciation when shown it, but cannot reconstruct it from memory. Third, the **perception–production gap**: small phonetic contrasts (θ/f, ð/d, ʃ/tʃ, ɪ/iː) that a native ear treats as obvious decide whether you understand a spoken sentence or guess at it. This gap does not close from listening alone; it closes when you practice making the distinction with your own voice.",
+        "This app does **not** try to be a general speaking course or a fluency trainer. It works at the level of single words and short phrases, on purpose. That is not a limitation; it is the design. Fluency, intonation, and conversation flow are skills built on top of a phonetic foundation — and if the foundation has cracks, the layers above will always feel unstable. Broad conversation practice belongs in real interactions, lessons, and immersion. This tool handles the layer below: the precise mapping between symbols and sounds that every other skill depends on."
       ]
     },
     "modes": {
@@ -71,14 +72,15 @@
       "title": "このアプリの核心思想",
       "body": [
         "すべては一つの原則の上に成り立っています。**正しく発音できない音は、正しく聞き取れない。** 知覚（聞く）と産出（出す）は、一つの技能の表と裏です。もしあなたの口が ship と sheep の母音の違いや、think と sink の子音の違いを一度も学んでいなければ、何時間リスニングを重ねても、耳はその違いをぼかし続けます。だからこそ発音のトレーニングが、静かにリスニング力を押し上げます。ある音を「出す」運動を鍛えることで、その音を「聞き分ける」知覚が鋭くなるからです。",
-        "参照音声がすべて、落ち着いた citation（辞書）形である理由もここにあります。速い会話の音ではなく、丁寧な辞書発音です。現実の崩れた音を聞き分けられるようになる前に、安定した明瞭な手本を体に染み込ませる必要があるのです。"
+        "参照音声がすべて、落ち着いた citation（辞書）形である理由もここにあります。速い会話の音ではなく、丁寧な辞書発音です。現実の崩れた音を聞き分けられるようになる前に、安定した明瞭な手本を体に染み込ませる必要があるのです。",
+        "この原則には、しっかりとした研究の裏付けがあります。James Emil Flege の「音声学習モデル（Speech Learning Model）」は、運動系と聴覚系が共通の音韻空間を持つことを示しています。つまり、ある音を産出で練習することは、知覚においてその音を脳が分類する回路を文字通り書き換えます。Patricia Kuhl の「知覚マグネット効果」の研究は逆側を照らします。一度も産出したことのない音は、知覚において母語の最も近い原型に引き寄せられる、というものです。これが、受動的なリスニングだけではアクセントの高原を突破できない理由です。このアプリはこの両方を直接応用しています。Decode と Encode のすべてのドリルは、産出の練習と知覚の較正を同時に行い、IPA記号という共通のアンカーを使って口と耳を結びつけます。"
       ]
     },
     "solves": {
       "title": "このアプリが解決すること",
       "body": [
-        "具体的には三つのギャップです。第一に**語彙と発音のギャップ**。単語の意味は知っているのに、その音がまだ身体に定着していない状態です。第二に**IPAリテラシー**。英語の綴りは音を絶えず裏切るので、文字から音への唯一信頼できる地図はIPAだけです。けれど多くの学習者はIPAを少し読めても、書くことはできません。第三に前述の**知覚と産出のギャップ**。文の意味が分かるか当て推量になるかを左右する、θ/f、ð/d、ʃ/tʃ、ɪ/iː といった小さな対立を含みます。",
-        "このアプリは総合的なスピーキング講座でも、流暢さのトレーナーでもありません。あえて単語と短いフレーズの単位で機能します。幅広い会話練習は他に譲り、これは精度を磨くための道具です。"
+        "具体的には三つのギャップです。第一に**語彙と発音のギャップ**。単語の意味は知っているのに、その音がまだ身体に定着していない状態です。*colonel* や *epitome* は紙の上では読めるでしょうが、IPA でドリルしたことがなければ、会話では発音を誤り、音声では聞き逃す可能性があります。意味を完璧に知っているにもかかわらず、です。第二に**IPAリテラシー**。英語の綴りは絶えず嘘をつきます。*though*・*through*・*tough*・*thought* は5文字を共有しながら、まったく異なる音を持ちます。文字から音への唯一信頼できる地図はIPAだけです。多くの学習者はIPAを少し読めても書くことはできません。つまり、示されれば発音を認識できても、記憶から再構築することができない状態です。第三に**知覚と産出のギャップ**。θ/f、ð/d、ʃ/tʃ、ɪ/iː といった小さな音の対立は、ネイティブの耳には自明に聞こえますが、あなたが発話を理解できるか推測に頼るかを決定します。このギャップはリスニングだけでは閉じません。自分の声でその区別を練習することで初めて閉じます。",
+        "このアプリは総合的なスピーキング講座でも、流暢さのトレーナーでもありません。あえて単語と短いフレーズの単位で機能します。これは制約ではなく、設計です。流暢さ・イントネーション・会話の流れは、音韻の土台の上に積み上げられる技能です。土台にひびが入っていれば、その上に何を積んでも不安定に感じ続けます。幅広い会話練習は、実際のやりとり・レッスン・環境が担うべき領域です。このアプリが担うのはその一層下、他のあらゆる技能が依拠している「記号と音の正確な対応」という基盤です。"
       ]
     },
     "modes": {
@@ -126,17 +128,18 @@
       ]
     },
     "philosophy": {
-      "title": "앱의 핵심 사상",
+      "title": "이 앱의 핵심 원칙",
       "body": [
-        "모든 것은 하나의 원칙 위에 서 있습니다. **올바르게 발음할 수 없는 소리는, 올바르게 들을 수 없다.** 지각(듣기)과 산출(내기)은 하나의 기능의 양면입니다. 당신의 입이 ship과 sheep의 모음 차이, think와 sink의 자음 차이를 한 번도 배운 적이 없다면, 아무리 오래 듣기를 쌓아도 귀는 그 차이를 계속 뭉개 버립니다. 그래서 발음 훈련이 조용히 듣기 실력을 끌어올립니다. 어떤 소리를 '내는' 운동을 단련함으로써, 그 소리를 '가려내는' 지각이 날카로워지기 때문입니다.",
-        "참조 음성이 모두 차분한 citation(사전) 형태인 이유도 여기에 있습니다. 빠른 대화의 소리가 아니라 정성스러운 사전 발음입니다. 현실의 흐트러진 소리를 가려낼 수 있게 되기 전에, 안정되고 명료한 본보기를 몸에 새겨 넣어야 하기 때문입니다."
+        "이 앱 전체는 하나의 원칙 위에 세워져 있습니다. **정확하게 발음할 수 없는 소리는 정확하게 들을 수도 없다.** 지각(듣기)과 산출(말하기)은 하나의 기술의 두 면입니다. *ship*과 *sheep*의 모음 차이나, *think*와 *sink*의 자음 차이를 입이 한 번도 배우지 않았다면, 아무리 많은 시간을 리스닝에 쏟아도 귀는 그 차이를 계속 흐릿하게 들을 것입니다. 그래서 발음 훈련이 조용히 리스닝 실력을 끌어올립니다. 소리를 '내는' 운동을 훈련하면, 그 소리를 '듣고 구별하는' 지각이 날카로워집니다.",
+        "이 앱의 모든 참조 음성이 차분한 citation(사전) 형태 발음인 이유도 여기에 있습니다. 빠른 회화 음성이 아니라, 사전에서 들을 수 있는 정성스러운 발음입니다. 현실에서의 불분명한 소리를 알아들을 수 있게 되기 전에, 먼저 안정적이고 선명한 기준을 몸에 새길 필요가 있습니다.",
+        "이 원칙에는 탄탄한 연구 근거가 있습니다. James Emil Flege의 '음성 학습 모델(Speech Learning Model)'은 운동 시스템과 청각 시스템이 공통된 음운 공간을 공유한다는 것을 보여줍니다. 즉, 산출에서 소리를 연습하는 것이 지각에서 뇌가 그 소리를 범주화하는 회로를 문자 그대로 다시 씁니다. Patricia Kuhl의 '지각 자석 효과' 연구는 반대편을 밝혀 줍니다. 한 번도 산출한 적 없는 소리는 지각에서 모국어의 가장 가까운 원형에 끌려간다는 것입니다. 그것이 수동적인 리스닝만으로는 발음의 고원을 돌파하기 어려운 이유입니다. 이 앱은 두 연구 결과를 직접 적용합니다. 모든 Decode 및 Encode 드릴은 산출 연습과 지각 보정을 동시에 진행하며, IPA 기호라는 공통 앵커로 입과 귀를 연결합니다."
       ]
     },
     "solves": {
       "title": "이 앱이 해결하는 것",
       "body": [
-        "구체적으로는 세 가지 틈입니다. 첫째, **어휘와 발음의 틈**. 단어의 뜻은 아는데 그 소리가 아직 몸에 정착되지 않은 상태입니다. 둘째, **IPA 문해력**. 영어 철자는 소리를 끊임없이 배신하므로, 문자에서 소리로 가는 유일하게 믿을 수 있는 지도는 IPA뿐입니다. 그러나 많은 학습자는 IPA를 조금 읽을 수는 있어도 쓰지는 못합니다. 셋째, 앞서 말한 **지각과 산출의 틈**. 문장의 뜻을 이해하느냐 어림짐작하느냐를 가르는 θ/f, ð/d, ʃ/tʃ, ɪ/iː 같은 작은 대립을 포함합니다.",
-        "이 앱은 종합적인 말하기 강좌도, 유창함의 트레이너도 아닙니다. 일부러 단어와 짧은 구절 단위로 작동합니다. 폭넓은 회화 연습은 다른 곳에 맡기고, 이것은 정밀도를 갈고닦는 도구입니다."
+        "구체적으로 세 가지 격차입니다. 첫 번째는 **어휘와 발음의 격차**: 단어의 뜻은 알지만, 그 소리가 아직 몸에 자리 잡지 않은 상태입니다. *colonel*과 *epitome*은 종이에서 읽을 수 있지만, IPA로 드릴한 적이 없다면 말할 때는 잘못 발음하고 들을 때는 놓칠 가능성이 높습니다. 의미를 완벽하게 알고 있는데도 말이죠. 두 번째는 **IPA 리터러시**: 영어 철자는 끊임없이 거짓말을 합니다. *though*, *through*, *tough*, *thought*는 다섯 글자를 공유하지만 전혀 다른 소리를 냅니다. 문자에서 소리로 가는 유일하게 믿을 수 있는 지도는 IPA뿐입니다. 많은 학습자가 IPA를 조금 읽을 수는 있어도 쓰지는 못합니다. 즉, 제시되면 발음을 인식할 수 있지만, 기억에서 재구성하지는 못하는 상태입니다. 세 번째는 **지각과 산출의 격차**: θ/f, ð/d, ʃ/tʃ, ɪ/iː 같은 작은 음소 대립은 원어민에게는 자명하게 들리지만, 당신이 발화를 이해하느냐 추측하느냐를 결정합니다. 이 격차는 듣기만으로는 좁혀지지 않습니다. 자신의 목소리로 그 구분을 연습할 때 비로소 좁혀집니다.",
+        "이 앱은 종합적인 스피킹 강좌도, 유창성 트레이너도 아닙니다. 의도적으로 단어와 짧은 구문 단위에서 작동합니다. 이것은 한계가 아니라 설계입니다. 유창성, 억양, 대화의 흐름은 음운 기초 위에 쌓이는 기술입니다. 기초에 균열이 있으면, 그 위에 무엇을 쌓아도 항상 불안정하게 느껴집니다. 폭넓은 회화 연습은 실제 상호작용, 수업, 몰입 환경이 담당해야 할 영역입니다. 이 도구는 그 한 층 아래를, 다른 모든 기술이 의존하는 '기호와 소리의 정확한 대응'이라는 기반을 다룹니다."
       ]
     },
     "modes": {
@@ -184,17 +187,18 @@
       ]
     },
     "philosophy": {
-      "title": "這個應用背後的理念",
+      "title": "這款應用程式背後的核心思想",
       "body": [
-        "一切都建立在一條原則之上：**你無法正確發出的聲音，就無法正確聽辨。** 知覺（聽）與產出（發）是同一項能力的一體兩面。如果你的口腔從未學會 ship 與 sheep 的母音之別，或 think 與 sink 的子音之別，那麼無論累積多少小時的聽力，你的耳朵都會繼續把它們混為一談。這正是為什麼一套發音工具能悄悄提升你的聽力：透過鍛鍊一個聲音的「運動」面，你對它的「知覺」也隨之變得銳利。",
-        "這也是為什麼這裡所有的參考語音都是沉穩的 citation（字典）形——是字典裡那種仔細的發音，而非快速的口語。在你能聽辨現實中那些較凌亂的版本之前，必須先把一個穩定、清晰的標的內化進身體。"
+        "整個應用程式建立在一個原則之上：**你無法正確發出的音，你也無法正確聽到。** 聽覺感知與言語產出是同一種能力的兩面。如果你的嘴從未學過 *ship* 和 *sheep* 的母音差別，或 *think* 和 *sink* 的子音差別，那麼不管你聽多少小時英語，你的耳朵也會繼續把它們混在一起。正因如此，發音訓練能悄悄提升你的聽力：透過訓練發出某個音的動作，你對這個音的感知也會變得更敏銳。",
+        "這也是為什麼這裡所有的參考音頻都是平靜的 citation（詞典）形式——精心的詞典發音，而不是快速的對話語流。在你能辨認出現實中那些更模糊的版本之前，你需要先把一個穩定清晰的目標內化到身體裡。",
+        "支撐這一原則的研究相當扎實。James Emil Flege 的「語音學習模型（Speech Learning Model）」表明，運動系統和聽覺系統共享同一個語音空間——也就是說，在產出中練習某個音，會從字面上重寫大腦在感知中對這個音進行分類的神經迴路。Patricia Kuhl 關於「感知磁鐵效應」的研究則說明了另一面：從未被產出過的音，在感知中會被拉向母語中最近似的原型，這就是為什麼僅靠被動聽力往往無法突破發音瓶頸。這款應用程式直接應用了這兩項研究成果：每一個 Decode 和 Encode 練習，都在同時進行產出訓練和感知校準，以 IPA 符號作為連接嘴和耳的共同錨點。"
       ]
     },
     "solves": {
-      "title": "這個應用要解決什麼",
+      "title": "這款應用程式解決的問題",
       "body": [
-        "具體而言是三道縫隙。其一，**詞彙與發音的縫隙**：你知道單字的意思，但它的聲音尚未在身體裡安頓下來。其二，**音標素養**：英語拼寫不斷欺騙聲音，因此從字母通往聲音唯一可靠的地圖只有 IPA——而多數學習者能讀懂一點，卻寫不出來。其三，前述的**知覺與產出的縫隙**，包括那些決定你是聽懂一句話、還是用猜的小對立（θ/f、ð/d、ʃ/tʃ、ɪ/iː）。",
-        "它**並不**試圖成為一套通用的口說課程或流利度訓練。它刻意在單字與短語的層級上運作。廣泛的會話練習自有他處承擔；這是一把磨精度的工具。"
+        "具體是三個缺口。第一，**詞彙與發音的缺口**：你知道一個詞的意思，但它的聲音還沒在身體裡定下來。你能在書上認出 *colonel* 和 *epitome*，但如果從未用 IPA 練習過它們，很可能在說話時讀錯，在聽力時漏掉——儘管你對它們的意思了如指掌。第二，**IPA 讀寫能力**：英語拼字在不斷說謊——*though*、*through*、*tough*、*thought* 共用五個字母，發音卻完全不同——從字母到聲音唯一可靠的地圖就是 IPA。大多數學習者能讀一點 IPA，卻寫不出來，這意味著他們看到發音時能認出來，但無法從記憶中重建它。第三，**感知與產出的缺口**：θ/f、ð/d、ʃ/tʃ、ɪ/iː 這些細微的音素對立，對母語耳來說顯而易見，但正是這些對立決定了你是聽懂一句話還是在猜測。這個缺口不會靠聽力獨自彌合；它在你用自己的聲音練習區分時才會彌合。",
+        "這款應用程式**不**是綜合口語課程，也不是流利度訓練器。它有意在單字和短語層面上運行。這不是限制，而是設計。流利度、語調和對話節奏，都是建立在語音基礎之上的技能——如果基礎有裂縫，上面的層次永遠會感到不穩。廣泛的會話練習屬於真實互動、課程和沉浸式環境。這個工具負責的是更下面那一層：其他所有技能都依賴的、符號與聲音之間的精確對應關係。"
       ]
     },
     "modes": {
@@ -242,17 +246,18 @@
       ]
     },
     "philosophy": {
-      "title": "这个应用背后的理念",
+      "title": "这款应用背后的核心思想",
       "body": [
-        "一切都建立在一条原则之上：**你无法正确发出的声音，就无法正确听辨。** 知觉（听）与产出（发）是同一项能力的一体两面。如果你的口腔从未学会 ship 与 sheep 的元音之别，或 think 与 sink 的辅音之别，那么无论累积多少小时的听力，你的耳朵都会继续把它们混为一谈。这正是为什么一套发音工具能悄悄提升你的听力：通过锤炼一个声音的\"运动\"面，你对它的\"知觉\"也随之变得敏锐。",
-        "这也是为什么这里所有的参考语音都是沉稳的 citation（词典）形——是词典里那种仔细的发音，而非快速的口语。在你能听辨现实中那些较凌乱的版本之前，必须先把一个稳定、清晰的目标内化进身体。"
+        "整个应用建立在一个原则之上：**你无法正确发出的音，你也无法正确听到。** 听觉感知与言语产出是同一种能力的两面。如果你的嘴从未学过 *ship* 和 *sheep* 的元音差别，或 *think* 和 *sink* 的辅音差别，那么不管你听多少小时英语，你的耳朵也会继续把它们混在一起。正因如此，发音训练能悄悄提升你的听力：通过训练发出某个音的运动动作，你对这个音的感知也会变得更敏锐。",
+        "这也是为什么这里所有的参考音频都是平静的 citation（词典）形式——精心的词典发音，而不是快速的对话语流。在你能辨认出现实中那些更模糊的版本之前，你需要先把一个稳定清晰的目标内化到身体里。",
+        "支撑这一原则的研究相当扎实。James Emil Flege 的「言语学习模型（Speech Learning Model）」表明，运动系统和听觉系统共享同一个语音空间——也就是说，在产出中练习某个音，会从字面上重写大脑在感知中对这个音进行分类的神经回路。Patricia Kuhl 关于「感知磁铁效应」的研究则说明了另一面：从未被产出过的音，在感知中会被拉向母语中最近似的原型，这就是为什么仅靠被动听力往往无法突破发音瓶颈。这款应用直接应用了这两项研究成果：每一个 Decode 和 Encode 练习，都在同时进行产出训练和感知校准，以 IPA 符号作为连接嘴和耳的共同锚点。"
       ]
     },
     "solves": {
-      "title": "这个应用要解决什么",
+      "title": "这款应用解决的问题",
       "body": [
-        "具体而言是三道缝隙。其一，**词汇与发音的缝隙**：你知道单词的意思，但它的声音尚未在身体里安顿下来。其二，**音标素养**：英语拼写不断欺骗声音，因此从字母通往声音唯一可靠的地图只有 IPA——而多数学习者能读懂一点，却写不出来。其三，前述的**知觉与产出的缝隙**，包括那些决定你是听懂一句话、还是靠猜的小对立（θ/f、ð/d、ʃ/tʃ、ɪ/iː）。",
-        "它**并不**试图成为一套通用的口语课程或流利度训练。它刻意在单词与短语的层级上运作。广泛的会话练习自有他处承担；这是一把磨精度的工具。"
+        "具体是三个缺口。第一，**词汇与发音的缺口**：你知道一个词的意思，但它的声音还没在身体里定下来。你能在书上认出 *colonel* 和 *epitome*，但如果从未用 IPA 练习过它们，很可能在说话时读错，在听力时漏掉——尽管你对它们的意思了如指掌。第二，**IPA 读写能力**：英语拼写在不断撒谎——*though*、*through*、*tough*、*thought* 共用五个字母，发音却完全不同——从字母到声音唯一可靠的地图就是 IPA。大多数学习者能读一点 IPA，却写不出来，这意味着他们看到发音时能认出来，但无法从记忆中重建它。第三，**感知与产出的缺口**：θ/f、ð/d、ʃ/tʃ、ɪ/iː 这些细微的音素对立，对母语耳来说显而易见，但正是这些对立决定了你是听懂一句话还是在猜测。这个缺口不会靠听力独自弥合；它在你用自己的声音练习区分时才会弥合。",
+        "这款应用**不**是综合口语课程，也不是流利度训练器。它有意在单词和短语层面上运行。这不是局限，而是设计。流利度、语调和对话节奏，都是建立在语音基础之上的技能——如果基础有裂缝，上面的层次永远会感到不稳。广泛的会话练习属于真实互动、课程和沉浸式环境。这个工具负责的是更下面那一层：其他所有技能都依赖的、符号与声音之间的精确对应关系。"
       ]
     },
     "modes": {
@@ -302,15 +307,16 @@
     "philosophy": {
       "title": "Ang ideya sa likod nito",
       "body": [
-        "Ang buong app ay nakasalalay sa isang prinsipyo: **ang mga tunog na hindi mo kayang bigkasin nang tama ay hindi mo rin maririnig nang tama.** Ang pakikinig at ang pagbigkas ay dalawang mukha ng iisang kasanayan. Kung hindi pa kailanman natutunan ng iyong bibig ang pagkakaiba ng patinig sa *ship* at *sheep*, o ng katinig sa *think* at *sink*, patuloy na lalabuin ng iyong tainga ang mga iyon — gaano man karaming oras ka makinig. Ito ang dahilan kung bakit tahimik na napapabuti ng isang kasangkapan sa pagbigkas ang iyong pakikinig: sa pamamagitan ng pagsasanay sa panig na pang-galaw ng isang tunog, hinahasa mo ang pang-unawa rito.",
-        "Ito rin ang dahilan kung bakit ang bawat sangguniang tinig dito ay isang mahinahon, anyong-diksyunaryo (citation form) na pagbigkas — ang maingat na anyo sa diksyunaryo, hindi ang mabilis na pang-usapang tinig. Kailangan mo ng matatag at malinaw na target na maisaloob bago mo makilala ang mas magulong bersyon sa totoong buhay."
+        "Ang buong app ay nakapatong sa isang prinsipyo: **ang tunog na hindi mo mailuwal nang tama ay hindi mo maririnig nang tama.** Ang persepsyon at produksyon ay dalawang mukha ng iisang kasanayan. Kung ang iyong bibig ay hindi pa natututo sa pagkakaiba ng mga patinig sa *ship* at *sheep*, o ng mga katinig sa *think* at *sink*, ang iyong mga tainga ay magpapatuloy na mag-blur ng dalawa — gaano man karaming oras na makinig ka. Ito ang dahilan kung bakit ang pagsasanay sa pagbigkas ay tahimik na nagpapabuti ng iyong pakikinig: sa pagsasanay ng gawi ng bibig para sa isang tunog, natutukoy nang mas malinaw ng tainga ang tunog na iyon.",
+        "Iyon din ang dahilan kung bakit ang bawat reference na boses rito ay isang kalmadong citation-form na pagbigkas — ang maingat na porma ng diksyonaryo, hindi ang mabilis na pang-araw-araw na pananalita. Kailangan mong mag-internalize ng isang matatag at malinaw na target bago mo makilala ang mas magulo at mabilis na bersyon sa totoong buhay.",
+        "Ang pananaliksik sa likod nito ay malinaw na natatag. Ang Speech Learning Model ni James Emil Flege ay nagpapakita na ang motor system at auditory system ay nagbabahagi ng iisang phonetic space: ang pagsasanay ng isang tunog sa produksyon ay literal na muling nagsusulat ng mga neural circuit na nagkakategorya nito sa persepsyon. Ang pananaliksik ni Patricia Kuhl sa 'perceptual magnet effect' ay nagliliwanag ng kabilang panig — ang mga tunog na hindi pa nagagawa ay hinahatak sa persepsyon patungo sa pinaka-malapit na prototype ng unang wika, at ito ang dahilan kung bakit ang passive na pakikinig lamang ay bihirang makasira sa isang plateau ng aksento. Direktang inilalapat ng app na ito ang parehong natuklasan: ang bawat Decode at Encode drill ay sabay na pagsasanay ng produksyon at pag-calibrate ng persepsyon, gamit ang parehong simbolo ng IPA bilang common anchor para sa bibig at tainga."
       ]
     },
     "solves": {
       "title": "Ano ang inaayos ng app na ito",
       "body": [
-        "Tatlong puwang, sa partikular. Una, ang **puwang sa bokabularyo at pagbigkas**: alam mo ang kahulugan ng salita, ngunit hindi pa nakaayos sa katawan mo ang tunog nito. Pangalawa, ang **kakayahan sa IPA**: palaging nagsisinungaling ang baybay ng Ingles, kaya ang tanging mapagkakatiwalaang mapa mula titik patungong tunog ay ang IPA — at karamihan ng mga nag-aaral ay nakababasa ng kaunti ngunit hindi nakasusulat nito. Pangatlo, ang **puwang sa pagitan ng pang-unawa at pagbigkas** na binanggit sa itaas, kabilang ang maliliit na kaibahan (θ/f, ð/d, ʃ/tʃ, ɪ/iː) na nagpapasiya kung mauunawaan mo ang pangungusap o hihinuhin mo lamang.",
-        "**Hindi** nito sinusubukang maging pangkalahatang kurso sa pagsasalita o pagsasanay sa katatasan. Sinadya itong gumana sa antas ng iisang salita at maikling parirala. Ang malawak na pagsasanay sa pakikipag-usap ay nasa ibang lugar; ito ang kasangkapan para sa katumpakan."
+        "Tatlong puwang, tiyak. Una, ang **puwang sa pagitan ng bokabularyo at pagbigkas**: alam mo ang kahulugan ng salita, ngunit ang tunog nito ay hindi pa nakabaon sa iyong katawan. Mabasa mo ang *colonel* at *epitome* sa pahina, ngunit kung hindi mo pa pinag-aralan ang kanilang IPA, malamang na maling bigkasin sa pagsasalita at maligtaang marinig sa audio — kahit perpekto mong alam ang kahulugan. Ikalawa, ang **IPA literacy**: lagi nang nagsisinungaling ang baybay ng Ingles — *though*, *through*, *tough*, at *thought* ay nagbabahagi ng limang titik ngunit ganap na magkakaibang tunog ang ginagawa — ang tanging mapagkakatiwalaang mapa mula sa letra patungo sa tunog ay ang IPA. Karamihan sa mga nag-aaral ay kaunti pa lamang ang mababasang IPA ngunit hindi nasusulat, na nangangahulugang makikilala nila ang pagbigkas kapag ipinakita, ngunit hindi maaari itong muling itatayo mula sa memorya. Ikatlo, ang **puwang sa pagitan ng persepsyon at produksyon**: maliliit na kontrasteng ponema (θ/f, ð/d, ʃ/tʃ, ɪ/iː) na halata sa tainga ng native ay nagpapasya kung naiintindihan mo ang isang sinasalitang pangungusap o humahanap ka ng pahiwatig. Hindi nagsasara ang puwang na ito sa pakikinig lamang; nagsasara ito kapag nagsanay kang gumawa ng pagkakaiba gamit ang iyong sariling boses.",
+        "**Hindi** sinusubukan ng app na ito na maging pangkalahatang kurso sa pagsasalita o trainer para sa katatas. Ito ay nagtatrabaho sa antas ng mga salita at maikling parirala, sinadya. Hindi ito limitasyon; ito ang disenyo. Ang katatas, intonasyon, at daloy ng pag-uusap ay mga kasanayang itinayo sa ibabaw ng pundasyon ng ponetika — at kung may mga bitak ang pundasyon, ang mga antas sa itaas ay palaging mararamdamang hindi matatag. Ang malawak na pagsasanay sa pag-uusap ay kabilang sa mga tunay na interaksyon, aralin, at immersion. Ang kasangkapang ito ang humahawak sa antas sa ibaba: ang tumpak na pagmamapa sa pagitan ng mga simbolo at tunog na pinagtatamlan ng lahat ng iba pang kasanayan."
       ]
     },
     "modes": {
