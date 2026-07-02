@@ -1,0 +1,314 @@
+[
+  {
+    "w": "candy",
+    "respell_ga": "KAN-dee",
+    "respell_rp": "KAN-dee",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see phase2a_review_needed.json)"
+  },
+  {
+    "w": "contest",
+    "respell_ga": "KAHN-tehst",
+    "respell_rp": "KON-tehst",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see phase2a_review_needed.json)"
+  },
+  {
+    "w": "interview",
+    "respell_ga": "IN-ter-vyoo",
+    "respell_rp": "IN-tuh-vyoo",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see phase2a_review_needed.json)"
+  },
+  {
+    "w": "interviewer",
+    "respell_ga": "IN-ter-vyoo-er",
+    "respell_rp": "IN-tuh-vyoo-uh",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see phase2a_review_needed.json)"
+  },
+  {
+    "w": "into",
+    "respell_ga": "IN-too",
+    "respell_rp": "IN-too",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see phase2a_review_needed.json)"
+  },
+  {
+    "w": "monday",
+    "respell_ga": "MUHN-dee",
+    "respell_rp": "MUHN-dee",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see phase2a_review_needed.json)"
+  },
+  {
+    "w": "ninety",
+    "respell_ga": "NYN-tee",
+    "respell_rp": "NYN-tee",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see phase2a_review_needed.json)"
+  },
+  {
+    "w": "painting",
+    "respell_ga": "PAYN-ting",
+    "respell_rp": "PAYN-ting",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see phase2a_review_needed.json)"
+  },
+  {
+    "w": "scientist",
+    "respell_ga": "SY-uhn-tist",
+    "respell_rp": "SY-uhn-tist",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see phase2a_review_needed.json)"
+  },
+  {
+    "w": "seventy",
+    "respell_ga": "SEH-vuhn-tee",
+    "respell_rp": "SEH-vuhn-tee",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see phase2a_review_needed.json)"
+  },
+  {
+    "w": "sunday",
+    "respell_ga": "SUHN-day",
+    "respell_rp": "SUHN-day",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see phase2a_review_needed.json)"
+  },
+  {
+    "w": "twenty",
+    "respell_ga": "TWEHN-tee",
+    "respell_rp": "TWEHN-tee",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see phase2a_review_needed.json)"
+  },
+  {
+    "w": "under",
+    "respell_ga": "UHN-der",
+    "respell_rp": "UHN-duh",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see phase2a_review_needed.json)"
+  },
+  {
+    "w": "underline",
+    "respell_ga": "UHN-der-lyn",
+    "respell_rp": "UHN-duh-lyn",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see phase2a_review_needed.json)"
+  },
+  {
+    "w": "understood",
+    "respell_ga": "uhn-der-STUUD",
+    "respell_rp": "uhn-duh-STUUD",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see phase2a_review_needed.json)"
+  },
+  {
+    "w": "window",
+    "respell_ga": "WIN-doh",
+    "respell_rp": "WIN-doh",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see phase2a_review_needed.json)"
+  },
+  {
+    "w": "winter",
+    "respell_ga": "WIN-ter",
+    "respell_rp": "WIN-tuh",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see phase2a_review_needed.json)"
+  },
+  {
+    "w": "wonderful",
+    "respell_ga": "WUHN-der-fuhl",
+    "respell_rp": "WUHN-duh-fuhl",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see phase2a_review_needed.json)"
+  },
+  {
+    "w": "advantage",
+    "respell_ga": "ad-VAN-tij",
+    "respell_rp": "uhd-VAHN-tij",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see phase2a_review_needed.json)"
+  },
+  {
+    "w": "calendar",
+    "respell_ga": "KA-luhn-der",
+    "respell_rp": "KA-luhn-duh",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see phase2a_review_needed.json)"
+  },
+  {
+    "w": "contact",
+    "respell_ga": "KAHN-takt",
+    "respell_rp": "KON-takt",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see phase2a_review_needed.json)"
+  },
+  {
+    "w": "context",
+    "respell_ga": "KAHN-tehkst",
+    "respell_rp": "KON-tehkst",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see phase2a_review_needed.json)"
+  },
+  {
+    "w": "continent",
+    "respell_ga": "KAHN-tuh-nuhnt",
+    "respell_rp": "KON-ti-nuhnt",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see phase2a_review_needed.json)"
+  },
+  {
+    "w": "dentist",
+    "respell_ga": "DEHN-tuhst",
+    "respell_rp": "DEHN-tist",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see phase2a_review_needed.json)"
+  },
+  {
+    "w": "disadvantage",
+    "respell_ga": "di-suhd-VAN-tij",
+    "respell_rp": "di-suhd-VAHN-tij",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see phase2a_review_needed.json)"
+  },
+  {
+    "w": "disappointed",
+    "respell_ga": "di-suh-POYN-tid",
+    "respell_rp": "di-suh-POYN-tid",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see phase2a_review_needed.json)"
+  },
+  {
+    "w": "disappointing",
+    "respell_ga": "di-suh-POYN-ting",
+    "respell_rp": "di-suh-POYN-ting",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see phase2a_review_needed.json)"
+  },
+  {
+    "w": "ending",
+    "respell_ga": "EHN-ding",
+    "respell_rp": "EHN-ding",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see phase2a_review_needed.json)"
+  },
+  {
+    "w": "enter",
+    "respell_ga": "EHN-ter",
+    "respell_rp": "EHN-tuh",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see phase2a_review_needed.json)"
+  },
+  {
+    "w": "entertainment",
+    "respell_ga": "ehn-ter-TAYN-muhnt",
+    "respell_rp": "ehn-tuh-TAYN-muhnt",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see phase2a_review_needed.json)"
+  },
+  {
+    "w": "gender",
+    "respell_ga": "JEHN-der",
+    "respell_rp": "JEHN-duh",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see phase2a_review_needed.json)"
+  },
+  {
+    "w": "granddad",
+    "respell_ga": "GRAN-dad",
+    "respell_rp": "GRAN-dad",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see phase2a_review_needed.json)"
+  },
+  {
+    "w": "granddaughter",
+    "respell_ga": "GRAN-daw-der",
+    "respell_rp": "GRAN-daw-tuh",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see phase2a_review_needed.json)"
+  },
+  {
+    "w": "handicapped",
+    "respell_ga": "HAN-dee-kapt",
+    "respell_rp": "HAN-dee-kapt",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see phase2a_review_needed.json)"
+  },
+  {
+    "w": "hunter",
+    "respell_ga": "HUHN-ter",
+    "respell_rp": "HUHN-tuh",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see phase2a_review_needed.json)"
+  },
+  {
+    "w": "independence",
+    "respell_ga": "in-di-PEHN-dns",
+    "respell_rp": "in-di-PEHN-duhns",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see phase2a_review_needed.json)"
+  },
+  {
+    "w": "indicate",
+    "respell_ga": "IN-duh-kayt",
+    "respell_rp": "IN-duh-kayt",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see phase2a_review_needed.json)"
+  },
+  {
+    "w": "indoor",
+    "respell_ga": "IN-dor",
+    "respell_rp": "IN-daw",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see phase2a_review_needed.json)"
+  },
+  {
+    "w": "international",
+    "respell_ga": "in-ter-NA-shuh-nuhl",
+    "respell_rp": "in-tuh-NA-shuh-nuhl",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see phase2a_review_needed.json)"
+  },
+  {
+    "w": "kinda",
+    "respell_ga": "KYN-duh",
+    "respell_rp": "KYN-duh",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see phase2a_review_needed.json)"
+  },
+  {
+    "w": "painter",
+    "respell_ga": "PAYN-ter",
+    "respell_rp": "PAYN-tuh",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see phase2a_review_needed.json)"
+  },
+  {
+    "w": "plenty",
+    "respell_ga": "PLEHN-tee",
+    "respell_rp": "PLEHN-tee",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see phase2a_review_needed.json)"
+  },
+  {
+    "w": "printer",
+    "respell_ga": "PRIN-ter",
+    "respell_rp": "PRIN-tuh",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see phase2a_review_needed.json)"
+  },
+  {
+    "w": "romantic",
+    "respell_ga": "roh-MAN-tik",
+    "respell_rp": "roh-MAN-tik",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see phase2a_review_needed.json)"
+  },
+  {
+    "w": "roundabout",
+    "respell_ga": "ROWN-duh-bowt",
+    "respell_rp": "ROWN-duh-bowt",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see phase2a_review_needed.json)"
+  },
+  {
+    "w": "sandy",
+    "respell_ga": "SAN-dee",
+    "respell_rp": "SAN-dee",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see phase2a_review_needed.json)"
+  },
+  {
+    "w": "thunderstorm",
+    "respell_ga": "THUHN-der-storm",
+    "respell_rp": "THUHN-duh-stawm",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see phase2a_review_needed.json)"
+  },
+  {
+    "w": "understand",
+    "respell_ga": "uhn-der-STAND",
+    "respell_rp": "uhn-duh-STAND",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see phase2a_review_needed.json)"
+  },
+  {
+    "w": "underwater",
+    "respell_ga": "UHN-der-waw-der",
+    "respell_rp": "UHN-duh-waw-tuh",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see phase2a_review_needed.json)"
+  },
+  {
+    "w": "wander",
+    "respell_ga": "WAHN-der",
+    "respell_rp": "WON-duh",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see phase2a_review_needed.json)"
+  },
+  {
+    "w": "windy",
+    "respell_ga": "WIN-dee",
+    "respell_rp": "WIN-dee",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see phase2a_review_needed.json)"
+  },
+  {
+    "w": "wonder",
+    "respell_ga": "WUHN-der",
+    "respell_rp": "WUHN-duh",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see phase2a_review_needed.json)"
+  }
+]
