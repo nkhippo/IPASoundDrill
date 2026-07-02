@@ -1,0 +1,1118 @@
+[
+  {
+    "w": "activity",
+    "ipa": "/ækˈtɪvəti/",
+    "ipa_actual_ga": "/ækˈtɪvəɾi/",
+    "rule": "R1"
+  },
+  {
+    "w": "already",
+    "ipa": "/ɔlˈrɛdi/",
+    "ipa_actual_ga": "/ɔlˈrɛɾi/",
+    "rule": "R1"
+  },
+  {
+    "w": "anybody",
+    "ipa": "/ˈɛnibədi/",
+    "ipa_actual_ga": "/ˈɛnibəɾi/",
+    "rule": "R1"
+  },
+  {
+    "w": "article",
+    "ipa": "/ˈɑrtəkəl/",
+    "ipa_actual_ga": "/ˈɑrɾəkəl/",
+    "rule": "R1"
+  },
+  {
+    "w": "autumn",
+    "ipa": "/ˈɔtəm/",
+    "ipa_actual_ga": "/ˈɔɾəm/",
+    "rule": "R1"
+  },
+  {
+    "w": "beautiful",
+    "ipa": "/ˈbjutəfəl/",
+    "ipa_actual_ga": "/ˈbjuɾəfəl/",
+    "rule": "R1"
+  },
+  {
+    "w": "better",
+    "ipa": "/ˈbɛtɚ/",
+    "ipa_actual_ga": "/ˈbɛɾɚ/",
+    "rule": "R1"
+  },
+  {
+    "w": "body",
+    "ipa": "/ˈbɑdi/",
+    "ipa_actual_ga": "/ˈbɑɾi/",
+    "rule": "R1"
+  },
+  {
+    "w": "bottle",
+    "ipa": "/ˈbɑtəl/",
+    "ipa_actual_ga": "/ˈbɑɾl̩/",
+    "rule": "R2"
+  },
+  {
+    "w": "bottom",
+    "ipa": "/ˈbɑtəm/",
+    "ipa_actual_ga": "/ˈbɑɾəm/",
+    "rule": "R1"
+  },
+  {
+    "w": "butter",
+    "ipa": "/ˈbʌtɚ/",
+    "ipa_actual_ga": "/ˈbʌɾɚ/",
+    "rule": "R1"
+  },
+  {
+    "w": "butterfly",
+    "ipa": "/ˈbʌtɚˌflaɪ/",
+    "ipa_actual_ga": "/ˈbʌɾɚˌflaɪ/",
+    "rule": "R1"
+  },
+  {
+    "w": "button",
+    "ipa": "/ˈbʌtən/",
+    "ipa_actual_ga": "/ˈbʌʔn̩/",
+    "rule": "R3"
+  },
+  {
+    "w": "city",
+    "ipa": "/ˈsɪti/",
+    "ipa_actual_ga": "/ˈsɪɾi/",
+    "rule": "R1"
+  },
+  {
+    "w": "cloudy",
+    "ipa": "/ˈklaʊdi/",
+    "ipa_actual_ga": "/ˈklaʊɾi/",
+    "rule": "R1"
+  },
+  {
+    "w": "computer",
+    "ipa": "/kəmˈpjutɚ/",
+    "ipa_actual_ga": "/kəmˈpjuɾɚ/",
+    "rule": "R1"
+  },
+  {
+    "w": "could've",
+    "ipa": "/ˈkʊdəv/",
+    "ipa_actual_ga": "/ˈkʊɾəv/",
+    "rule": "R1"
+  },
+  {
+    "w": "couldn't",
+    "ipa": "/ˈkʊdənt/",
+    "ipa_actual_ga": "/ˈkʊdn̩t/",
+    "rule": "R3"
+  },
+  {
+    "w": "daddy",
+    "ipa": "/ˈdædi/",
+    "ipa_actual_ga": "/ˈdæɾi/",
+    "rule": "R1"
+  },
+  {
+    "w": "daughter",
+    "ipa": "/ˈdɔtɚ/",
+    "ipa_actual_ga": "/ˈdɔɾɚ/",
+    "rule": "R1"
+  },
+  {
+    "w": "didn't",
+    "ipa": "/ˈdɪdənt/",
+    "ipa_actual_ga": "/ˈdɪdn̩t/",
+    "rule": "R3"
+  },
+  {
+    "w": "dirty",
+    "ipa": "/ˈdɝti/",
+    "ipa_actual_ga": "/ˈdɝɾi/",
+    "rule": "R1"
+  },
+  {
+    "w": "eaten",
+    "ipa": "/ˈitən/",
+    "ipa_actual_ga": "/ˈiʔn̩/",
+    "rule": "R3"
+  },
+  {
+    "w": "eighty",
+    "ipa": "/ˈeɪti/",
+    "ipa_actual_ga": "/ˈeɪɾi/",
+    "rule": "R1"
+  },
+  {
+    "w": "everybody",
+    "ipa": "/ˈɛvriˌbɑdi/",
+    "ipa_actual_ga": "/ˈɛvriˌbɑɾi/",
+    "rule": "R1"
+  },
+  {
+    "w": "excited",
+    "ipa": "/ɪkˈsaɪtəd/",
+    "ipa_actual_ga": "/ɪkˈsaɪɾəd/",
+    "rule": "R1"
+  },
+  {
+    "w": "exciting",
+    "ipa": "/ɪkˈsaɪtɪŋ/",
+    "ipa_actual_ga": "/ɪkˈsaɪɾɪŋ/",
+    "rule": "R1"
+  },
+  {
+    "w": "forgotten",
+    "ipa": "/fɚˈɡɑtən/",
+    "ipa_actual_ga": "/fɚˈɡɑʔn̩/",
+    "rule": "R3"
+  },
+  {
+    "w": "forty",
+    "ipa": "/ˈfɔrti/",
+    "ipa_actual_ga": "/ˈfɔrɾi/",
+    "rule": "R1"
+  },
+  {
+    "w": "friday",
+    "ipa": "/ˈfraɪdi/",
+    "ipa_actual_ga": "/ˈfraɪɾi/",
+    "rule": "R1"
+  },
+  {
+    "w": "garden",
+    "ipa": "/ˈɡɑrdən/",
+    "ipa_actual_ga": "/ˈɡɑrdn̩/",
+    "rule": "R3"
+  },
+  {
+    "w": "gotten",
+    "ipa": "/ˈɡɑtən/",
+    "ipa_actual_ga": "/ˈɡɑʔn̩/",
+    "rule": "R3"
+  },
+  {
+    "w": "hadn't",
+    "ipa": "/ˈhædənt/",
+    "ipa_actual_ga": "/ˈhædn̩t/",
+    "rule": "R3"
+  },
+  {
+    "w": "headache",
+    "ipa": "/ˈhɛˌdeɪk/",
+    "ipa_actual_ga": "/ˈhɛˌɾeɪk/",
+    "rule": "R1"
+  },
+  {
+    "w": "holiday",
+    "ipa": "/ˈhɑləˌdeɪ/",
+    "ipa_actual_ga": "/ˈhɑləˌɾeɪ/",
+    "rule": "R1"
+  },
+  {
+    "w": "hospital",
+    "ipa": "/ˈhɑˌspɪtəl/",
+    "ipa_actual_ga": "/ˈhɑˌspɪɾl̩/",
+    "rule": "R2"
+  },
+  {
+    "w": "important",
+    "ipa": "/ˌɪmˈpɔrtənt/",
+    "ipa_actual_ga": "/ˌɪmˈpɔrʔn̩t/",
+    "rule": "R3"
+  },
+  {
+    "w": "item",
+    "ipa": "/ˈaɪtəm/",
+    "ipa_actual_ga": "/ˈaɪɾəm/",
+    "rule": "R1"
+  },
+  {
+    "w": "lady",
+    "ipa": "/ˈleɪdi/",
+    "ipa_actual_ga": "/ˈleɪɾi/",
+    "rule": "R1"
+  },
+  {
+    "w": "later",
+    "ipa": "/ˈleɪtɚ/",
+    "ipa_actual_ga": "/ˈleɪɾɚ/",
+    "rule": "R1"
+  },
+  {
+    "w": "leader",
+    "ipa": "/ˈlidɚ/",
+    "ipa_actual_ga": "/ˈliɾɚ/",
+    "rule": "R1"
+  },
+  {
+    "w": "letter",
+    "ipa": "/ˈlɛtɚ/",
+    "ipa_actual_ga": "/ˈlɛɾɚ/",
+    "rule": "R1"
+  },
+  {
+    "w": "little",
+    "ipa": "/ˈlɪtəl/",
+    "ipa_actual_ga": "/ˈlɪɾl̩/",
+    "rule": "R2"
+  },
+  {
+    "w": "matter",
+    "ipa": "/ˈmætɚ/",
+    "ipa_actual_ga": "/ˈmæɾɚ/",
+    "rule": "R1"
+  },
+  {
+    "w": "medicine",
+    "ipa": "/ˈmɛdəsən/",
+    "ipa_actual_ga": "/ˈmɛɾəsən/",
+    "rule": "R1"
+  },
+  {
+    "w": "meeting",
+    "ipa": "/ˈmitɪŋ/",
+    "ipa_actual_ga": "/ˈmiɾɪŋ/",
+    "rule": "R1"
+  },
+  {
+    "w": "middle",
+    "ipa": "/ˈmɪdəl/",
+    "ipa_actual_ga": "/ˈmɪdl̩/",
+    "rule": "R2"
+  },
+  {
+    "w": "mountain",
+    "ipa": "/ˈmaʊntən/",
+    "ipa_actual_ga": "/ˈmaʊnʔn̩/",
+    "rule": "R3"
+  },
+  {
+    "w": "nationality",
+    "ipa": "/ˌnæʃəˈnæləti/",
+    "ipa_actual_ga": "/ˌnæʃəˈnæləɾi/",
+    "rule": "R1"
+  },
+  {
+    "w": "order",
+    "ipa": "/ˈɔrdɚ/",
+    "ipa_actual_ga": "/ˈɔrɾɚ/",
+    "rule": "R1"
+  },
+  {
+    "w": "pardon",
+    "ipa": "/ˈpɑrdən/",
+    "ipa_actual_ga": "/ˈpɑrdn̩/",
+    "rule": "R3"
+  },
+  {
+    "w": "party",
+    "ipa": "/ˈpɑrti/",
+    "ipa_actual_ga": "/ˈpɑrɾi/",
+    "rule": "R1"
+  },
+  {
+    "w": "photo",
+    "ipa": "/ˈfoʊˌtoʊ/",
+    "ipa_actual_ga": "/ˈfoʊˌɾoʊ/",
+    "rule": "R1"
+  },
+  {
+    "w": "potato",
+    "ipa": "/pəˈteɪˌtoʊ/",
+    "ipa_actual_ga": "/pəˈteɪˌɾoʊ/",
+    "rule": "R1"
+  },
+  {
+    "w": "pretty",
+    "ipa": "/ˈprɪti/",
+    "ipa_actual_ga": "/ˈprɪɾi/",
+    "rule": "R1"
+  },
+  {
+    "w": "quarter",
+    "ipa": "/ˈkwɔrtɚ/",
+    "ipa_actual_ga": "/ˈkwɔrɾɚ/",
+    "rule": "R1"
+  },
+  {
+    "w": "radio",
+    "ipa": "/ˈreɪdiˌoʊ/",
+    "ipa_actual_ga": "/ˈreɪɾiˌoʊ/",
+    "rule": "R1"
+  },
+  {
+    "w": "reader",
+    "ipa": "/ˈridɚ/",
+    "ipa_actual_ga": "/ˈriɾɚ/",
+    "rule": "R1"
+  },
+  {
+    "w": "reading",
+    "ipa": "/ˈridɪŋ/",
+    "ipa_actual_ga": "/ˈriɾɪŋ/",
+    "rule": "R1"
+  },
+  {
+    "w": "ready",
+    "ipa": "/ˈrɛdi/",
+    "ipa_actual_ga": "/ˈrɛɾi/",
+    "rule": "R1"
+  },
+  {
+    "w": "reporter",
+    "ipa": "/rɪˈpɔrtɚ/",
+    "ipa_actual_ga": "/rɪˈpɔrɾɚ/",
+    "rule": "R1"
+  },
+  {
+    "w": "ridden",
+    "ipa": "/ˈrɪdən/",
+    "ipa_actual_ga": "/ˈrɪdn̩/",
+    "rule": "R3"
+  },
+  {
+    "w": "saturday",
+    "ipa": "/ˈsætɚdi/",
+    "ipa_actual_ga": "/ˈsæɾɚɾi/",
+    "rule": "R1"
+  },
+  {
+    "w": "sentence",
+    "ipa": "/ˈsɛntəns/",
+    "ipa_actual_ga": "/ˈsɛnʔn̩s/",
+    "rule": "R3"
+  },
+  {
+    "w": "should've",
+    "ipa": "/ˈʃʊdəv/",
+    "ipa_actual_ga": "/ˈʃʊɾəv/",
+    "rule": "R1"
+  },
+  {
+    "w": "shouldn't",
+    "ipa": "/ˈʃʊdənt/",
+    "ipa_actual_ga": "/ˈʃʊdn̩t/",
+    "rule": "R3"
+  },
+  {
+    "w": "student",
+    "ipa": "/ˈstudənt/",
+    "ipa_actual_ga": "/ˈstudn̩t/",
+    "rule": "R3"
+  },
+  {
+    "w": "study",
+    "ipa": "/ˈstʌdi/",
+    "ipa_actual_ga": "/ˈstʌɾi/",
+    "rule": "R1"
+  },
+  {
+    "w": "thirty",
+    "ipa": "/ˈθɝˌdi/",
+    "ipa_actual_ga": "/ˈθɝˌɾi/",
+    "rule": "R1"
+  },
+  {
+    "w": "tomato",
+    "ipa": "/təˈmeɪˌtoʊ/",
+    "ipa_actual_ga": "/təˈmeɪˌɾoʊ/",
+    "rule": "R1"
+  },
+  {
+    "w": "video",
+    "ipa": "/ˈvɪdioʊ/",
+    "ipa_actual_ga": "/ˈvɪɾioʊ/",
+    "rule": "R1"
+  },
+  {
+    "w": "waiter",
+    "ipa": "/ˈweɪtɚ/",
+    "ipa_actual_ga": "/ˈweɪɾɚ/",
+    "rule": "R1"
+  },
+  {
+    "w": "water",
+    "ipa": "/ˈwɔtɚ/",
+    "ipa_actual_ga": "/ˈwɔɾɚ/",
+    "rule": "R1"
+  },
+  {
+    "w": "would've",
+    "ipa": "/ˈwʊdəv/",
+    "ipa_actual_ga": "/ˈwʊɾəv/",
+    "rule": "R1"
+  },
+  {
+    "w": "wouldn't",
+    "ipa": "/ˈwʊdənt/",
+    "ipa_actual_ga": "/ˈwʊdn̩t/",
+    "rule": "R3"
+  },
+  {
+    "w": "writer",
+    "ipa": "/ˈraɪtɚ/",
+    "ipa_actual_ga": "/ˈraɪɾɚ/",
+    "rule": "R1"
+  },
+  {
+    "w": "written",
+    "ipa": "/ˈrɪtən/",
+    "ipa_actual_ga": "/ˈrɪʔn̩/",
+    "rule": "R3"
+  },
+  {
+    "w": "yesterday",
+    "ipa": "/ˈjɛstɚˌdeɪ/",
+    "ipa_actual_ga": "/ˈjɛstɚˌɾeɪ/",
+    "rule": "R1"
+  },
+  {
+    "w": "ability",
+    "ipa": "/əˈbɪləˌti/",
+    "ipa_actual_ga": "/əˈbɪləˌɾi/",
+    "rule": "R1"
+  },
+  {
+    "w": "accident",
+    "ipa": "/ˈæksədənt/",
+    "ipa_actual_ga": "/ˈæksədn̩t/",
+    "rule": "R3"
+  },
+  {
+    "w": "advertisement",
+    "ipa": "/ædˈvɝtəzmənt/",
+    "ipa_actual_ga": "/ædˈvɝɾəzmənt/",
+    "rule": "R1"
+  },
+  {
+    "w": "advertising",
+    "ipa": "/ˈædvɚˌtaɪzɪŋ/",
+    "ipa_actual_ga": "/ˈædvɚˌɾaɪzɪŋ/",
+    "rule": "R1"
+  },
+  {
+    "w": "architecture",
+    "ipa": "/ˈɑrkəˌtɛktʃɚ/",
+    "ipa_actual_ga": "/ˈɑrkəˌɾɛktʃɚ/",
+    "rule": "R1"
+  },
+  {
+    "w": "artificial",
+    "ipa": "/ˌɑrtəˈfɪʃəl/",
+    "ipa_actual_ga": "/ˌɑrɾəˈfɪʃəl/",
+    "rule": "R1"
+  },
+  {
+    "w": "assistant",
+    "ipa": "/əˈsɪstənt/",
+    "ipa_actual_ga": "/əˈsɪsʔn̩t/",
+    "rule": "R3"
+  },
+  {
+    "w": "atom",
+    "ipa": "/ˈætəm/",
+    "ipa_actual_ga": "/ˈæɾəm/",
+    "rule": "R1"
+  },
+  {
+    "w": "attitude",
+    "ipa": "/ˈætəˌtud/",
+    "ipa_actual_ga": "/ˈæɾəˌɾud/",
+    "rule": "R1"
+  },
+  {
+    "w": "audience",
+    "ipa": "/ˈɑdiəns/",
+    "ipa_actual_ga": "/ˈɑɾiəns/",
+    "rule": "R1"
+  },
+  {
+    "w": "audio",
+    "ipa": "/ˈɑdiˌoʊ/",
+    "ipa_actual_ga": "/ˈɑɾiˌoʊ/",
+    "rule": "R1"
+  },
+  {
+    "w": "automatic",
+    "ipa": "/ˌɔtəˈmætɪk/",
+    "ipa_actual_ga": "/ˌɔɾəˈmæɾɪk/",
+    "rule": "R1"
+  },
+  {
+    "w": "automatically",
+    "ipa": "/ˌɔtəˈmætɪkli/",
+    "ipa_actual_ga": "/ˌɔɾəˈmæɾɪkli/",
+    "rule": "R1"
+  },
+  {
+    "w": "badminton",
+    "ipa": "/ˈbædˌmɪntən/",
+    "ipa_actual_ga": "/ˈbædˌmɪnʔn̩/",
+    "rule": "R3"
+  },
+  {
+    "w": "battery",
+    "ipa": "/ˈbætɚi/",
+    "ipa_actual_ga": "/ˈbæɾɚi/",
+    "rule": "R1"
+  },
+  {
+    "w": "beauty",
+    "ipa": "/ˈbjuti/",
+    "ipa_actual_ga": "/ˈbjuɾi/",
+    "rule": "R1"
+  },
+  {
+    "w": "capital",
+    "ipa": "/ˈkæpətəl/",
+    "ipa_actual_ga": "/ˈkæpəɾl̩/",
+    "rule": "R2"
+  },
+  {
+    "w": "captain",
+    "ipa": "/ˈkæptən/",
+    "ipa_actual_ga": "/ˈkæpʔn̩/",
+    "rule": "R3"
+  },
+  {
+    "w": "certain",
+    "ipa": "/ˈsɝtən/",
+    "ipa_actual_ga": "/ˈsɝʔn̩/",
+    "rule": "R3"
+  },
+  {
+    "w": "certainly",
+    "ipa": "/ˈsɝtənli/",
+    "ipa_actual_ga": "/ˈsɝʔn̩li/",
+    "rule": "R3"
+  },
+  {
+    "w": "citizen",
+    "ipa": "/ˈsɪtəzən/",
+    "ipa_actual_ga": "/ˈsɪɾəzən/",
+    "rule": "R1"
+  },
+  {
+    "w": "comfortable",
+    "ipa": "/ˈkʌmfɚtəbəl/",
+    "ipa_actual_ga": "/ˈkʌmfɚɾəbəl/",
+    "rule": "R1"
+  },
+  {
+    "w": "committee",
+    "ipa": "/kəˈmɪti/",
+    "ipa_actual_ga": "/kəˈmɪɾi/",
+    "rule": "R1"
+  },
+  {
+    "w": "comparative",
+    "ipa": "/kəmˈpɛrətɪv/",
+    "ipa_actual_ga": "/kəmˈpɛrəɾɪv/",
+    "rule": "R1"
+  },
+  {
+    "w": "confident",
+    "ipa": "/ˈkɑnfədənt/",
+    "ipa_actual_ga": "/ˈkɑnfədn̩t/",
+    "rule": "R3"
+  },
+  {
+    "w": "consider",
+    "ipa": "/kənˈsɪdɚ/",
+    "ipa_actual_ga": "/kənˈsɪɾɚ/",
+    "rule": "R1"
+  },
+  {
+    "w": "creative",
+    "ipa": "/kriˈeɪtɪv/",
+    "ipa_actual_ga": "/kriˈeɪɾɪv/",
+    "rule": "R1"
+  },
+  {
+    "w": "creativity",
+    "ipa": "/ˌkrieɪˈtɪvəti/",
+    "ipa_actual_ga": "/ˌkrieɪˈtɪvəɾi/",
+    "rule": "R1"
+  },
+  {
+    "w": "credit",
+    "ipa": "/ˈkrɛdət/",
+    "ipa_actual_ga": "/ˈkrɛɾət/",
+    "rule": "R1"
+  },
+  {
+    "w": "crowded",
+    "ipa": "/ˈkraʊdəd/",
+    "ipa_actual_ga": "/ˈkraʊɾəd/",
+    "rule": "R1"
+  },
+  {
+    "w": "editor",
+    "ipa": "/ˈɛdətɚ/",
+    "ipa_actual_ga": "/ˈɛɾəɾɚ/",
+    "rule": "R1"
+  },
+  {
+    "w": "elevator",
+    "ipa": "/ˈɛləˌveɪtɚ/",
+    "ipa_actual_ga": "/ˈɛləˌveɪɾɚ/",
+    "rule": "R1"
+  },
+  {
+    "w": "energetic",
+    "ipa": "/ˌɛnɚˈdʒɛtɪk/",
+    "ipa_actual_ga": "/ˌɛnɚˈdʒɛɾɪk/",
+    "rule": "R1"
+  },
+  {
+    "w": "escalator",
+    "ipa": "/ˈɛskəˌleɪtɚ/",
+    "ipa_actual_ga": "/ˈɛskəˌleɪɾɚ/",
+    "rule": "R1"
+  },
+  {
+    "w": "evidence",
+    "ipa": "/ˈɛvədəns/",
+    "ipa_actual_ga": "/ˈɛvədn̩s/",
+    "rule": "R3"
+  },
+  {
+    "w": "fascinating",
+    "ipa": "/ˈfæsəˌneɪtɪŋ/",
+    "ipa_actual_ga": "/ˈfæsəˌneɪɾɪŋ/",
+    "rule": "R1"
+  },
+  {
+    "w": "fighter",
+    "ipa": "/ˈfaɪtɚ/",
+    "ipa_actual_ga": "/ˈfaɪɾɚ/",
+    "rule": "R1"
+  },
+  {
+    "w": "freedom",
+    "ipa": "/ˈfridəm/",
+    "ipa_actual_ga": "/ˈfriɾəm/",
+    "rule": "R1"
+  },
+  {
+    "w": "frighten",
+    "ipa": "/ˈfraɪtən/",
+    "ipa_actual_ga": "/ˈfraɪʔn̩/",
+    "rule": "R3"
+  },
+  {
+    "w": "frightened",
+    "ipa": "/ˈfraɪtənd/",
+    "ipa_actual_ga": "/ˈfraɪʔn̩d/",
+    "rule": "R3"
+  },
+  {
+    "w": "frightening",
+    "ipa": "/ˈfraɪtənɪŋ/",
+    "ipa_actual_ga": "/ˈfraɪɾənɪŋ/",
+    "rule": "R1"
+  },
+  {
+    "w": "gentle",
+    "ipa": "/ˈdʒɛntəl/",
+    "ipa_actual_ga": "/ˈdʒɛnʔl̩/",
+    "rule": "R2"
+  },
+  {
+    "w": "golden",
+    "ipa": "/ˈɡoʊldən/",
+    "ipa_actual_ga": "/ˈɡoʊldn̩/",
+    "rule": "R3"
+  },
+  {
+    "w": "gotta",
+    "ipa": "/ˈɡɑtə/",
+    "ipa_actual_ga": "/ˈɡɑɾə/",
+    "rule": "R1"
+  },
+  {
+    "w": "granddaughter",
+    "ipa": "/ˈɡrænˌdɔtɚ/",
+    "ipa_actual_ga": "/ˈɡrænˌdɔɾɚ/",
+    "rule": "R1"
+  },
+  {
+    "w": "greedy",
+    "ipa": "/ˈɡridi/",
+    "ipa_actual_ga": "/ˈɡriɾi/",
+    "rule": "R1"
+  },
+  {
+    "w": "handle",
+    "ipa": "/ˈhændəl/",
+    "ipa_actual_ga": "/ˈhændl̩/",
+    "rule": "R2"
+  },
+  {
+    "w": "heating",
+    "ipa": "/ˈhitɪŋ/",
+    "ipa_actual_ga": "/ˈhiɾɪŋ/",
+    "rule": "R1"
+  },
+  {
+    "w": "importance",
+    "ipa": "/ˌɪmˈpɔrtəns/",
+    "ipa_actual_ga": "/ˌɪmˈpɔrʔn̩s/",
+    "rule": "R3"
+  },
+  {
+    "w": "importantly",
+    "ipa": "/ˌɪmˈpɔrtəntli/",
+    "ipa_actual_ga": "/ˌɪmˈpɔrʔn̩tli/",
+    "rule": "R3"
+  },
+  {
+    "w": "independence",
+    "ipa": "/ˌɪndɪˈpɛndəns/",
+    "ipa_actual_ga": "/ˌɪndɪˈpɛndn̩s/",
+    "rule": "R3"
+  },
+  {
+    "w": "instant",
+    "ipa": "/ˈɪnstənt/",
+    "ipa_actual_ga": "/ˈɪnsʔn̩t/",
+    "rule": "R3"
+  },
+  {
+    "w": "latest",
+    "ipa": "/ˈleɪtəst/",
+    "ipa_actual_ga": "/ˈleɪɾəst/",
+    "rule": "R1"
+  },
+  {
+    "w": "latter",
+    "ipa": "/ˈlætɚ/",
+    "ipa_actual_ga": "/ˈlæɾɚ/",
+    "rule": "R1"
+  },
+  {
+    "w": "liberty",
+    "ipa": "/ˈlɪbɚˌti/",
+    "ipa_actual_ga": "/ˈlɪbɚˌɾi/",
+    "rule": "R1"
+  },
+  {
+    "w": "lotta",
+    "ipa": "/ˈlɑtə/",
+    "ipa_actual_ga": "/ˈlɑɾə/",
+    "rule": "R1"
+  },
+  {
+    "w": "medal",
+    "ipa": "/ˈmɛdəl/",
+    "ipa_actual_ga": "/ˈmɛdl̩/",
+    "rule": "R2"
+  },
+  {
+    "w": "medical",
+    "ipa": "/ˈmɛdəkəl/",
+    "ipa_actual_ga": "/ˈmɛɾəkəl/",
+    "rule": "R1"
+  },
+  {
+    "w": "metal",
+    "ipa": "/ˈmɛtəl/",
+    "ipa_actual_ga": "/ˈmɛɾl̩/",
+    "rule": "R2"
+  },
+  {
+    "w": "military",
+    "ipa": "/ˈmɪləˌtɛri/",
+    "ipa_actual_ga": "/ˈmɪləˌɾɛri/",
+    "rule": "R1"
+  },
+  {
+    "w": "model",
+    "ipa": "/ˈmɑdəl/",
+    "ipa_actual_ga": "/ˈmɑdl̩/",
+    "rule": "R2"
+  },
+  {
+    "w": "modern",
+    "ipa": "/ˈmɑdɚn/",
+    "ipa_actual_ga": "/ˈmɑɾɚn/",
+    "rule": "R1"
+  },
+  {
+    "w": "murder",
+    "ipa": "/ˈmɝdɚ/",
+    "ipa_actual_ga": "/ˈmɝɾɚ/",
+    "rule": "R1"
+  },
+  {
+    "w": "native",
+    "ipa": "/ˈneɪtɪv/",
+    "ipa_actual_ga": "/ˈneɪɾɪv/",
+    "rule": "R1"
+  },
+  {
+    "w": "negative",
+    "ipa": "/ˈnɛɡətɪv/",
+    "ipa_actual_ga": "/ˈnɛɡəɾɪv/",
+    "rule": "R1"
+  },
+  {
+    "w": "nobody",
+    "ipa": "/ˈnoʊˌbɑdi/",
+    "ipa_actual_ga": "/ˈnoʊˌbɑɾi/",
+    "rule": "R1"
+  },
+  {
+    "w": "notice",
+    "ipa": "/ˈnoʊtəs/",
+    "ipa_actual_ga": "/ˈnoʊɾəs/",
+    "rule": "R1"
+  },
+  {
+    "w": "nowadays",
+    "ipa": "/ˈnaʊəˌdeɪz/",
+    "ipa_actual_ga": "/ˈnaʊəˌɾeɪz/",
+    "rule": "R1"
+  },
+  {
+    "w": "opportunity",
+    "ipa": "/ˌɑpɚˈtunəti/",
+    "ipa_actual_ga": "/ˌɑpɚˈtunəɾi/",
+    "rule": "R1"
+  },
+  {
+    "w": "oughta",
+    "ipa": "/ˈɔtə/",
+    "ipa_actual_ga": "/ˈɔɾə/",
+    "rule": "R1"
+  },
+  {
+    "w": "outta",
+    "ipa": "/ˈaʊtə/",
+    "ipa_actual_ga": "/ˈaʊɾə/",
+    "rule": "R1"
+  },
+  {
+    "w": "personality",
+    "ipa": "/ˌpɝsəˈnælɪti/",
+    "ipa_actual_ga": "/ˌpɝsəˈnælɪɾi/",
+    "rule": "R1"
+  },
+  {
+    "w": "photograph",
+    "ipa": "/ˈfoʊtəˌɡræf/",
+    "ipa_actual_ga": "/ˈfoʊɾəˌɡræf/",
+    "rule": "R1"
+  },
+  {
+    "w": "pity",
+    "ipa": "/ˈpɪti/",
+    "ipa_actual_ga": "/ˈpɪɾi/",
+    "rule": "R1"
+  },
+  {
+    "w": "political",
+    "ipa": "/pəˈlɪtəkəl/",
+    "ipa_actual_ga": "/pəˈlɪɾəkəl/",
+    "rule": "R1"
+  },
+  {
+    "w": "product",
+    "ipa": "/ˈprɑdəkt/",
+    "ipa_actual_ga": "/ˈprɑɾəkt/",
+    "rule": "R1"
+  },
+  {
+    "w": "pudding",
+    "ipa": "/ˈpʊdɪŋ/",
+    "ipa_actual_ga": "/ˈpʊɾɪŋ/",
+    "rule": "R1"
+  },
+  {
+    "w": "quality",
+    "ipa": "/ˈkwɑləti/",
+    "ipa_actual_ga": "/ˈkwɑləɾi/",
+    "rule": "R1"
+  },
+  {
+    "w": "rating",
+    "ipa": "/ˈreɪtɪŋ/",
+    "ipa_actual_ga": "/ˈreɪɾɪŋ/",
+    "rule": "R1"
+  },
+  {
+    "w": "refrigerator",
+    "ipa": "/rəˈfrɪdʒɚˌeɪtɚ/",
+    "ipa_actual_ga": "/rəˈfrɪdʒɚˌeɪɾɚ/",
+    "rule": "R1"
+  },
+  {
+    "w": "satisfy",
+    "ipa": "/ˈsætəsˌfaɪ/",
+    "ipa_actual_ga": "/ˈsæɾəsˌfaɪ/",
+    "rule": "R1"
+  },
+  {
+    "w": "secretary",
+    "ipa": "/ˈsɛkrəˌtɛri/",
+    "ipa_actual_ga": "/ˈsɛkrəˌɾɛri/",
+    "rule": "R1"
+  },
+  {
+    "w": "shadow",
+    "ipa": "/ˈʃæˌdoʊ/",
+    "ipa_actual_ga": "/ˈʃæˌɾoʊ/",
+    "rule": "R1"
+  },
+  {
+    "w": "skateboarding",
+    "ipa": "/ˈskeɪtˌbɔrdɪŋ/",
+    "ipa_actual_ga": "/ˈskeɪtˌbɔrɾɪŋ/",
+    "rule": "R1"
+  },
+  {
+    "w": "skating",
+    "ipa": "/ˈskeɪtɪŋ/",
+    "ipa_actual_ga": "/ˈskeɪɾɪŋ/",
+    "rule": "R1"
+  },
+  {
+    "w": "society",
+    "ipa": "/səˈsaɪəti/",
+    "ipa_actual_ga": "/səˈsaɪəɾi/",
+    "rule": "R1"
+  },
+  {
+    "w": "soda",
+    "ipa": "/ˈsoʊdə/",
+    "ipa_actual_ga": "/ˈsoʊɾə/",
+    "rule": "R1"
+  },
+  {
+    "w": "somebody",
+    "ipa": "/ˈsʌmˌbɑdi/",
+    "ipa_actual_ga": "/ˈsʌmˌbɑɾi/",
+    "rule": "R1"
+  },
+  {
+    "w": "sorta",
+    "ipa": "/ˈsɔrtə/",
+    "ipa_actual_ga": "/ˈsɔrɾə/",
+    "rule": "R1"
+  },
+  {
+    "w": "spaghetti",
+    "ipa": "/spəˈɡɛti/",
+    "ipa_actual_ga": "/spəˈɡɛɾi/",
+    "rule": "R1"
+  },
+  {
+    "w": "stadium",
+    "ipa": "/ˈsteɪdiəm/",
+    "ipa_actual_ga": "/ˈsteɪɾiəm/",
+    "rule": "R1"
+  },
+  {
+    "w": "strategy",
+    "ipa": "/ˈstrætədʒi/",
+    "ipa_actual_ga": "/ˈstræɾədʒi/",
+    "rule": "R1"
+  },
+  {
+    "w": "sudden",
+    "ipa": "/ˈsʌdən/",
+    "ipa_actual_ga": "/ˈsʌdn̩/",
+    "rule": "R3"
+  },
+  {
+    "w": "suitable",
+    "ipa": "/ˈsutəbəl/",
+    "ipa_actual_ga": "/ˈsuɾəbəl/",
+    "rule": "R1"
+  },
+  {
+    "w": "superlative",
+    "ipa": "/sʊˈpɝlətɪv/",
+    "ipa_actual_ga": "/sʊˈpɝləɾɪv/",
+    "rule": "R1"
+  },
+  {
+    "w": "sweater",
+    "ipa": "/ˈswɛtɚ/",
+    "ipa_actual_ga": "/ˈswɛɾɚ/",
+    "rule": "R1"
+  },
+  {
+    "w": "tidy",
+    "ipa": "/ˈtaɪdi/",
+    "ipa_actual_ga": "/ˈtaɪɾi/",
+    "rule": "R1"
+  },
+  {
+    "w": "title",
+    "ipa": "/ˈtaɪtəl/",
+    "ipa_actual_ga": "/ˈtaɪɾl̩/",
+    "rule": "R2"
+  },
+  {
+    "w": "uncertain",
+    "ipa": "/ənˈsɝtən/",
+    "ipa_actual_ga": "/ənˈsɝʔn̩/",
+    "rule": "R3"
+  },
+  {
+    "w": "uncomfortable",
+    "ipa": "/ənˈkʌmfɚtəbəl/",
+    "ipa_actual_ga": "/ənˈkʌmfɚɾəbəl/",
+    "rule": "R1"
+  },
+  {
+    "w": "underwater",
+    "ipa": "/ˈʌndɚˌwɔtɚ/",
+    "ipa_actual_ga": "/ˈʌndɚˌwɔɾɚ/",
+    "rule": "R1"
+  },
+  {
+    "w": "unforgettable",
+    "ipa": "/ˌʌnfɚˈɡɛtəbəl/",
+    "ipa_actual_ga": "/ˌʌnfɚˈɡɛɾəbəl/",
+    "rule": "R1"
+  },
+  {
+    "w": "unimportant",
+    "ipa": "/ənɪmˈpɔrtənt/",
+    "ipa_actual_ga": "/ənɪmˈpɔrʔn̩t/",
+    "rule": "R3"
+  },
+  {
+    "w": "university",
+    "ipa": "/ˌjunəˈvɝsəti/",
+    "ipa_actual_ga": "/ˌjunəˈvɝsəɾi/",
+    "rule": "R1"
+  },
+  {
+    "w": "visitor",
+    "ipa": "/ˈvɪzɪtɚ/",
+    "ipa_actual_ga": "/ˈvɪzɪɾɚ/",
+    "rule": "R1"
+  },
+  {
+    "w": "wedding",
+    "ipa": "/ˈwɛdɪŋ/",
+    "ipa_actual_ga": "/ˈwɛɾɪŋ/",
+    "rule": "R1"
+  },
+  {
+    "w": "wooden",
+    "ipa": "/ˈwʊdən/",
+    "ipa_actual_ga": "/ˈwʊdn̩/",
+    "rule": "R3"
+  },
+  {
+    "w": "writing",
+    "ipa": "/ˈraɪtɪŋ/",
+    "ipa_actual_ga": "/ˈraɪɾɪŋ/",
+    "rule": "R1"
+  }
+]

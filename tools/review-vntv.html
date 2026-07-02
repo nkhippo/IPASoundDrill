@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VntV Review Tool (Phase 2a)</title>
+  <style>
+    body { font-family: system-ui, -apple-system, sans-serif; margin: 16px; color: #222; }
+    h1 { font-size: 20px; margin: 0 0 8px; }
+    .note { color: #666; font-size: 13px; margin-bottom: 10px; }
+    .topbar { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin-bottom: 12px; }
+    .badge { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; padding: 4px 8px; border-radius: 999px; border: 1px solid #ddd; background: #fafafa; }
+    button { cursor: pointer; border: 1px solid #bbb; border-radius: 8px; padding: 8px 10px; background: #fff; }
+    button:hover { border-color: #666; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { border-bottom: 1px solid #eee; padding: 8px 6px; vertical-align: top; font-size: 13px; }
+    th { text-align: left; background: #fafafa; position: sticky; top: 0; z-index: 1; }
+    .w { font-weight: 700; white-space: nowrap; }
+    .ipa { font-family: "Times New Roman", serif; white-space: nowrap; }
+    .group { display: flex; gap: 8px; flex-wrap: wrap; }
+    .group label { display: inline-flex; gap: 4px; align-items: center; white-space: nowrap; }
+    .note-input { width: 100%; min-width: 180px; }
+    .done { background: #f0fff4; }
+  </style>
+</head>
+<body>
+  <h1>VntV Review Tool (Phase 2a)</h1>
+  <div class="note">52語をTTSで確認し、nasal / consonant を判定して JSON をエクスポートします。</div>
+
+  <div class="topbar">
+    <span class="badge" id="progress">0/0 completed</span>
+    <button id="exportBtn" type="button">結果をエクスポート</button>
+    <button id="clearBtn" type="button">ローカル保存をクリア</button>
+  </div>
+
+  <table id="tbl">
+    <thead>
+      <tr>
+        <th>Word</th>
+        <th>IPA</th>
+        <th>Audio</th>
+        <th>Nasal (n)</th>
+        <th>t/d realization</th>
+        <th>Note</th>
+      </tr>
+    </thead>
+    <tbody id="rows"></tbody>
+  </table>
+
+  <script>
+  const GAS_TTS_URL = "https://script.google.com/macros/s/AKfycbx2B986USC4wzP5KrXto3HaFqBh0dQM1f-jErXhWYx13RzlKxokIf5NpdrD78EFzd35/exec";
+  const STORAGE_KEY = "vntv_review_v1";
+  let entries = [];
+  let state = {};
+  let currentAudio = null;
+
+  function loadState() {
+    try {
+      state = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
+    } catch (e) {
+      state = {};
+    }
+  }
+  function saveState() {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    renderProgress();
+  }
+  function renderProgress() {
+    const done = entries.filter(e => {
+      const r = state[e.w] || {};
+      return !!(r.nasal && r.consonant);
+    }).length;
+    document.getElementById("progress").textContent = `${done}/${entries.length} completed`;
+  }
+  function radio(name, value, checked) {
+    return `<label><input type="radio" name="${name}" value="${value}" ${checked ? "checked" : ""}>${value}</label>`;
+  }
+  function renderRows() {
+    const tbody = document.getElementById("rows");
+    tbody.innerHTML = entries.map(e => {
+      const r = state[e.w] || {};
+      const completed = r.nasal && r.consonant;
+      return `<tr data-w="${e.w}" class="${completed ? "done" : ""}">
+        <td class="w">${e.w}</td>
+        <td class="ipa">${e.ipa || ""}</td>
+        <td><button type="button" data-play="${e.w}">▶︎ GA</button></td>
+        <td><div class="group">
+          ${radio(`nasal-${e.w}`, "kept", r.nasal === "kept")}
+          ${radio(`nasal-${e.w}`, "deleted", r.nasal === "deleted")}
+          ${radio(`nasal-${e.w}`, "unknown", r.nasal === "unknown")}
+        </div></td>
+        <td><div class="group">
+          ${radio(`cons-${e.w}`, "flap", r.consonant === "flap")}
+          ${radio(`cons-${e.w}`, "original", r.consonant === "original")}
+          ${radio(`cons-${e.w}`, "unclear", r.consonant === "unclear")}
+        </div></td>
+        <td><input class="note-input" type="text" data-note="${e.w}" value="${(r.note || "").replace(/"/g, "&quot;")}"></td>
+      </tr>`;
+    }).join("");
+    renderProgress();
+  }
+  async function playWord(word) {
+    if (currentAudio) {
+      currentAudio.pause();
+      currentAudio = null;
+    }
+    const url = `${GAS_TTS_URL}?word=${encodeURIComponent(word)}&accent=ga`;
+    const res = await fetch(url);
+    if (!res.ok) throw new Error(`TTS failed: ${res.status}`);
+    const data = await res.json();
+    const b64 = data.audio || "";
+    const mime = data.mimeType || "audio/mpeg";
+    const bytes = Uint8Array.from(atob(b64), c => c.charCodeAt(0));
+    const blob = new Blob([bytes], { type: mime });
+    const objUrl = URL.createObjectURL(blob);
+    const audio = new Audio(objUrl);
+    currentAudio = audio;
+    audio.addEventListener("ended", () => URL.revokeObjectURL(objUrl), { once: true });
+    await audio.play();
+  }
+  function exportJson() {
+    const out = entries.map(e => {
+      const r = state[e.w] || {};
+      return {
+        w: e.w,
+        nasal: r.nasal || "",
+        consonant: r.consonant || "",
+        note: r.note || ""
+      };
+    });
+    const blob = new Blob([JSON.stringify(out, null, 2)], { type: "application/json" });
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = "phase2a_vntv_review_result.json";
+    a.click();
+    URL.revokeObjectURL(a.href);
+  }
+  async function init() {
+    const res = await fetch("phase2a_review_needed.json");
+    const raw = await res.json();
+    entries = Array.isArray(raw) ? raw : (raw.entries || []);
+    loadState();
+    renderRows();
+
+    document.getElementById("rows").addEventListener("change", (e) => {
+      const tr = e.target.closest("tr[data-w]");
+      if (!tr) return;
+      const w = tr.dataset.w;
+      const rec = state[w] || {};
+      const nasal = tr.querySelector(`input[name="nasal-${w}"]:checked`);
+      const cons = tr.querySelector(`input[name="cons-${w}"]:checked`);
+      rec.nasal = nasal ? nasal.value : "";
+      rec.consonant = cons ? cons.value : "";
+      state[w] = rec;
+      saveState();
+      tr.classList.toggle("done", !!(rec.nasal && rec.consonant));
+    });
+    document.getElementById("rows").addEventListener("input", (e) => {
+      if (!e.target.matches("input[data-note]")) return;
+      const w = e.target.dataset.note;
+      const rec = state[w] || {};
+      rec.note = e.target.value;
+      state[w] = rec;
+      saveState();
+    });
+    document.getElementById("rows").addEventListener("click", async (e) => {
+      const btn = e.target.closest("button[data-play]");
+      if (!btn) return;
+      try {
+        await playWord(btn.dataset.play);
+      } catch (err) {
+        alert(String(err));
+      }
+    });
+    document.getElementById("exportBtn").addEventListener("click", exportJson);
+    document.getElementById("clearBtn").addEventListener("click", () => {
+      if (!confirm("ローカル保存を削除しますか？")) return;
+      localStorage.removeItem(STORAGE_KEY);
+      loadState();
+      renderRows();
+    });
+  }
+  init();
+  </script>
+</body>
+</html>
