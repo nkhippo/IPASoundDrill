@@ -2086,7 +2086,7 @@ function refreshRevealIpa(marker){
   const respellEl=$("rRespell");
   const respell=activeRespell(c);
   if(respell){
-    respellEl.textContent=t("reveal.respell_label")+": "+respell;
+    respellEl.textContent=respell;
     respellEl.classList.remove("hidden");
   }else respellEl.classList.add("hidden");
   const dictEl=$("rDictIpa");
