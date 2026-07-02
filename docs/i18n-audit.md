@@ -1,7 +1,7 @@
 # i18n 監査レポート
 
 > 生成日: 2026-06-26 ／ 対象: `i18n/{en,ja,zh,ko,fil}.json`、`i18n/phonemes/*.json`、`index.html`
-> 生成: `python3 tools/gen_audit_docs.py` ／ UI キー数: **156** ／ `validate_i18n.py`: ERROR 0
+> 生成: `python3 tools/gen_audit_docs.py` ／ UI キー数: **158** ／ `validate_i18n.py`: ERROR 0
 
 翻訳の良し悪しは判断していません。キー所在・画面配線・ハードコードの可視化のみ。
 
@@ -52,7 +52,7 @@
 | `grp.short` | Short vowels | 短母音 | 短元音 | 단모음 | Maiikling patinig | setup（Words） |
 | `grp.team` | Vowel teams | 母音チーム | 元音组合 | 모음 팀 | Mga pangkat ng patinig | setup（Words） |
 | `guide.close` | Close | 閉じる | 关闭 | 닫기 | Isara | settings / guide |
-| `guide.open` | Guide | ガイド | 指南 | 가이드 | Gabay | settings / guide |
+| `guide.open` | Site guide | 使い方ガイド | 使用指南 | 사용 가이드 | Gabay sa site | settings / guide |
 | `guide.title` | How to use this app | このアプリの使い方 | 如何使用本应用 | 앱 사용 방법 | Paano gamitin ang app na ito | settings / guide |
 | `hint.first` | First letter | 最初の文字 | 首字母 | 첫 글자 | Unang titik | （未使用・予約） |
 | `hint.pos` | Part of speech | 品詞 | 词性 | 품사 | Bahagi ng pananalita | （未使用・予約） |
@@ -131,7 +131,9 @@
 | `reg.label` | Spelling pattern | 綴りパターン | 拼写模式 | 철자 패턴 | Padron ng baybay | setup（Words） |
 | `reg.regular` | Regular | 規則 | 规则 | 규칙 | Regular | setup（Words） |
 | `reg.regular_d` | Phonics and spelling–sound rules | フォニックス／綴りと音の対応 | 自然拼读／拼写–读音规则 | 파닉스／철자–소리 규칙 | Phonics at mga tuntunin ng baybay–tunog | setup（Words） |
+| `reveal.dict_label` | Dictionary | 辞書表記 | 词典表记 | 사전 표기 | Diksyonaryo | reveal |
 | `reveal.ga_note` | GA | GA（米） | GA（美） | GA（미） | GA (Amer.) | reveal |
+| `reveal.respell_label` | Respelling | 発音ガイド | 简易发音 | 발음 가이드 | Gabay sa bigkas | reveal |
 | `reveal.rp_note` | RP | RP（英） | RP（英） | RP（영） | RP (Brit.) | reveal |
 | `see_answer` | See the answer | 答えを確認 | 查看答案 | 정답 확인 | Tingnan ang sagot | reveal |
 | `set.daily_d` | Common words (including irregular spellings) | よく使う語（不規則綴りを含む） | 常用词（含不规则拼写） | 자주 쓰는 단어(불규칙 철자 포함) | Karaniwang salita (kasama ang di-regular na baybay) | （未使用・予約） |
@@ -139,7 +141,7 @@
 | `set.label` | Question set | 出題セット | 题库 | 문제 세트 | Set ng tanong | （未使用・予約） |
 | `set.phonics_d` | Words with regular spelling&ndash;sound correspondences | 綴りと発音が規則的に対応する語 | 拼写与读音规则对应的词 | 철자와 소리가 규칙적으로 대응하는 단어 | Mga salitang may regular na tugma ng baybay&ndash;tunog | （未使用・予約） |
 | `set.phonics_t` | Phonics patterns · spelling &harr; sound | 規則パターン · 綴り &harr; 音 | 拼读规则 · 拼写 &harr; 音 | 규칙 패턴 · 철자 &harr; 소리 | Mga padron ng phonics · baybay &harr; tunog | （未使用・予約） |
-| `settings_btn` | Settings | 設定 | 设置 | 설정 | Mga Setting | settings |
+| `settings_btn` | Language | 言語 | 语言 | 언어 | Wika | settings |
 | `settings_close` | Close | 閉じる | 关闭 | 닫기 | Isara | settings |
 | `settings_lang` | Language | 言語 | 语言 | 언어 | Wika | settings |
 | `settings_title` | Settings | 設定 | 设置 | 설정 | Mga Setting | settings |
@@ -211,7 +213,9 @@
 - `note.schwa`
 - `note.stress`
 - `note.tricky`
+- `reveal.dict_label`
 - `reveal.ga_note`
+- `reveal.respell_label`
 - `reveal.rp_note`
 - `see_answer`
 - `tips_head`
@@ -407,14 +411,14 @@
 
 ## 3. 音素解説（`i18n/phonemes/*.json`）
 
-- 音素記号数: en=43, ja=43, zh=43, ko=43
+- 音素記号数: en=47, ja=47, zh=47, ko=47
 - 4言語間で音素キー集合は一致（`validate_i18n.py` [B]）
 
 各記号のフィールド: `lab`, `ex`, `mouth`, `trap`, `t`（要注意フラグ）
 
 | 記号 | 画面 | フィールド |
 |------|------|-----------|
-| `θ` … `ʊə` 等 **43 記号** | decode / encode / reveal（音素パネル） | lab, ex, mouth, trap, t |
+| `θ` … `ʊə` 等 **47 記号** | decode / encode / reveal（音素パネル） | lab, ex, mouth, trap, t |
 
 ---
 

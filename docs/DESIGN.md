@@ -3,7 +3,7 @@
 > `PURPOSE.md` で確定した目的・2モード構成を、Cursorが実装に落とせる粒度まで具体化した仕様。
 > 本ドキュメントは「何を作るか（what / how）」の正本。目的の正本は `PURPOSE.md`。
 >
-> **更新日:** 2026-06-26 ／ **ステータス:** Mode A・Mode B・GA/RP・連結句・弱形タブ・RP TTS・UI 5言語（fil 含む）実装済み
+> **更新日:** 2026-07-02 ／ **ステータス:** Mode A・Mode B・GA/RP・連結句・弱形・RP TTS・語彙ブラウザ・TTS プリフェッチ・UI 5言語（fil 含む）実装済み
 
 ---
 
@@ -166,7 +166,33 @@ aʊ: how /haʊ/, cow /kaʊ/, hour /ˈaʊɚ/
 
 ### 2.4 選定
 
-現バンドの新規（提示）＋ 復習期限到来（確認）を混ぜる（例 新規5＋復習5、調整可）。
+現バンドの新規（提示）＋ 復習期限到来（確認）を混ぜる（新規5＋復習5、調整可）。
+
+- **プール除外:** `src` が `letter`（アルファベット）または `contraction`（短縮形）の語は Mode B 対象外。
+- **バンド解放:** 現バンド内の語の 60% 以上が box 4+ に到達すると次バンドへ自動解放（`MODEB_BAND_UNLOCK_RATIO = 0.6`）。セットアップ画面にマスタリー率を表示。
+
+---
+
+## 2b. 語彙ブラウザ（参照閲覧）
+
+トップバー `#vocabBtn` から起動するモーダル。練習セッション中も利用可（設定・ガイドはプレイ中非表示だが語彙ブラウザは常時表示）。
+
+| タブ | 内容 |
+|------|------|
+| **Words** | wordlist 全 3,059 語。A→Z ソート・検索（debounce 120ms）・A–Z ジャンプ |
+| **Phrases** | `connected_speech.json` 201 句。cs_type × level 順。弱形は含まない |
+
+各行: 単語 / GA+RP IPA / respelling / 意味（`vocabDisplayGloss()`）/ 品詞 / TTS。英語 UI で `gloss.en === w` の自己参照は `def`（英語定義文）または `(品詞)` で代替。モバイル（`<599px`）では検索欄を非表示。Escape で閉じる。
+
+### 2c. Narrow IPA + Respelling（Phase 1）
+
+- 既存 `ipa` / `rp_ipa`（phonemic）は **採点・音素カバー用**として不変。
+- 表示専用フィールドとして `ipa_actual_ga` / `ipa_actual_rp` を追加（narrow IPA）。
+- Respelling フィールド `respell_ga` / `respell_rp` を追加。
+- Reveal では `activeNarrowIpa()` を主表示、差分がある場合のみ dictionary（phonemic）行を併記。
+- Encode 採点・weak 集計・TRAPSET 判定は従来どおり `activeIpa()`（phonemic）を使用。
+
+i18n: `vocab.*`（5 キー × 5 言語）。
 
 ---
 
@@ -212,14 +238,52 @@ Keep the delivery identical and consistent across all words.
 - **弱形:** `GET ?weak=/IPA/&ww=word&accent=ga|rp`。`instructions` は弱形（連結内の reduced form）を強制。`input` はキャリア文内の機能語綴り。GA/RP で `TTS_WEAK_INSTRUCTIONS_*` を分岐。
 - 詳細: `docs/rp-tts-design-and-priority.md`、`docs/cursor-implementation-report-weak-forms.md`
 
+### 3.4b クライアント TTS プリフェッチ（2026-06-29 実装）
+
+Words / Mode B セッション開始時にキュー内の単語音声を先読みし、初回再生の待ち時間を削減する。Connected Speech タブではスキップ（連結句・弱形はオンデマンド）。
+
+| 定数 | 値 | 役割 |
+|------|-----|------|
+| `warmChunk` | 6 | `?warm=1` 1 リクエストあたりの語数 |
+| `warmParallel` | 2 | warm リクエストの並列数 |
+| `bodyParallel` | 3 | 音声 body 取得の並列数 |
+
+**フロー:**
+1. `prefetchSessionAudio(queue)` — セッション開始時に呼び出し
+2. GA + RP 両方に `gasWarm()`（Drive キャッシュ確認・未生成なら生成）
+3. 現アクセントの body を優先取得（`memAudioCache` + `audioReady` Map）
+4. 反対アクセントは `requestIdleCallback` / `setTimeout(2000)` でアイドル時に取得
+5. アクセント切替時は `prefetchAccentBodies()` で再取得
+6. スピーカーボタンはキャッシュ準備完了まで `disabled`（Connected/弱形は常時有効）
+7. `prefetchToken` でセッション再開始時に古いジョブをキャンセル
+
+### 3.4c GA バッチ warm（GAS 時間トリガー・2026-07 実装）
+
+全 3,059 語の GA 音声を Google Drive に事前ストックするオフラインジョブ。`gas/BatchWarm.gs` + `gas/BatchWords.gs`（`scripts/export_batch_words.py` で生成）。
+
+| 定数 | 値 |
+|------|-----|
+| `BATCH_MAX_WORDS_PER_RUN` | 500 |
+| `BATCH_MAX_MS` | 5.75 分 |
+| `BATCH_OPENAI_PARALLEL` | 20（`UrlFetchApp.fetchAll`） |
+
+- 時間トリガー `batchWarmGA()` が 5 分間隔で実行（`installBatchTriggerGA(5)`）
+- 既存 Drive キャッシュは `cached` でスキップ（OpenAI 課金なし）
+- 短すぎる blob は `isAudioBlobTooShort_()` で検出・再生成
+- 進捗: `getBatchStatusGA()` / スクリプトプロパティ `BATCH_INDEX_GA`
+- 任意: スプレッドシート `BATCH_SPREADSHEET_ID` で語彙リストを上書き
+
+詳細: `gas/README.md` §GA 一括バッチ
+
 ### 3.5 多言語 UI（fil 含む）
 
 | Tier | 内容 | fil 状態 |
 |------|------|----------|
-| Tier 1 | UI 文言 151 キー + 言語ピッカー | ✅ `i18n/fil.json` |
+| Tier 1 | UI 文言 156 キー + 言語ピッカー | ✅ `i18n/fil.json` |
 | Tier 2 | 語義 gloss（3,059 語） | ✅ **3,059/3,059**（batch01–34） |
 | Tier 3 | 音素解説 43 記号 + 学習ガイド | ✅ `phonemes/fil.json` + `guide.json` fil |
 | Tier 4 | 連結句・弱形ルール文 `cs_rule` | ✅ 237/237（201+36） |
+| — | 英語定義 `def`（3,059 語） | ✅ batch01–08（`tools/merge_def.py`） |
 
 検証: `python3 tools/validate_i18n.py`。拡張手順: `docs/i18n-language-scaling.md`。
 
@@ -230,11 +294,15 @@ Keep the delivery identical and consistent across all words.
 | 優先 | 内容 | 状態 |
 |---|---|---|
 | 高 | 欠落必須語・屈折形パッチ | ✅ 主要語追加済み（`data/*_patch.json`） |
-| 高 | `neighbors` 全語事前計算 | ✅ 約2,600語 |
+| 高 | `neighbors` 全語事前計算 | ✅ 2,623/3,059語 |
 | 高 | `ex`（記号別例語） | ✅ phonemes JSON に実装 |
 | 高 | `rp_ipa` 全語付与 | ✅ 3,059語 + 201連結句 |
 | 高 | 弱形 36語 + `?weak=` TTS | ✅ |
-| 高 | UI fil（Tier 1+3） | ✅ 151キー + phonemes + guide |
+| 高 | UI fil（Tier 1+3） | ✅ 156キー + phonemes + guide |
+| 高 | 英語定義 `def` | ✅ 3,059/3,059（`tools/merge_def.py`） |
+| 高 | TTS プリフェッチ（クライアント） | ✅ |
+| 高 | GA バッチ warm（GAS） | ✅ `BatchWarm.gs` |
+| 中 | 語彙ブラウザ | ✅ Words 3,059 / Phrases 201 |
 | 中 | 本物のB/C日常語彙 | ⬜ 継続 |
 | 中 | カジュアル表現 | ✅ 一部（`casual` src） |
 | 中 | 薄い記号の補強 | 部分 |
@@ -246,19 +314,24 @@ Keep the delivery identical and consistent across all words.
 
 ---
 
-## 5. 実装状況（2026-06-26）
+## 5. 実装状況（2026-07-02）
 
 | 項目 | 状態 |
 |---|---|
 | Mode A（音素軸UI・SRS・reveal・例語・TTS v2） | ✅ |
 | GA/RP 切替（IPA・キーボード・RP TTS） | ✅ |
 | 連結句 201句（キャリア文） | ✅ |
-| 弱形タブ 36語 + `?weak=` TTS | ✅ Connected Speech 内 Type=weak |
-| Mode B（Study/Quiz・vocab SRS） | ✅ |
+| 弱形 36語 + `?weak=` TTS | ✅ Connected Speech 内 Type=weak |
+| Mode B（Study/Quiz・vocab SRS・バンド解放） | ✅ |
 | 練習タブ統一（Connected ⊃ Weak） | ✅ |
-| UI 5言語（en/ja/zh/ko/fil） | ✅ Tier 1+3 |
+| 語彙ブラウザ（Words / Phrases） | ✅ |
+| TTS プリフェッチ（セッション先読み + スピーカー gating） | ✅ |
+| GA バッチ warm（GAS 時間トリガー） | ✅ |
+| UI 5言語（en/ja/zh/ko/fil） | ✅ Tier 1+3（156キー） |
 | 多言語学習ガイド（6言語） | ✅ フェーズ1 |
+| 英語定義 `def` | ✅ 3,059/3,059 |
+| narrow IPA + respelling（pilot 30語） | ✅ Phase 1 |
 | gloss.fil / cs_rule.fil | ✅ **すべて完了**（3,059語 + 237件） |
 | 連結句 RP TTS | ⬜ |
 
-**運用メモ:** Mode A/B の新規 UI 文字列は i18n キー経由。GAS は RP TTS 対応版を再デプロイ済み（`index.html` `GAS_TTS_URL` 参照）。
+**運用メモ:** Mode A/B の新規 UI 文字列は i18n キー経由。GAS は RP TTS + バッチ warm 対応版を再デプロイ済み（`index.html` `GAS_TTS_URL` 参照）。語彙リスト更新時は `python3 scripts/export_batch_words.py` で `BatchWords.gs` を再生成。

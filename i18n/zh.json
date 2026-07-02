@@ -136,7 +136,9 @@
   },
   "reveal": {
     "rp_note": "RP（英）",
-    "ga_note": "GA（美）"
+    "ga_note": "GA（美）",
+    "respell_label": "简易发音",
+    "dict_label": "词典表记"
   },
   "lang_opts": {
     "en": "English",

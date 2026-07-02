@@ -136,7 +136,9 @@
   },
   "reveal": {
     "rp_note": "RP（영）",
-    "ga_note": "GA（미）"
+    "ga_note": "GA（미）",
+    "respell_label": "발음 가이드",
+    "dict_label": "사전 표기"
   },
   "lang_opts": {
     "en": "English",

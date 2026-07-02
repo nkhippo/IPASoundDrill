@@ -1,0 +1,43 @@
+{
+  "_meta": {
+    "description": "Phase 1 pilot data: 30 words with ipa_actual_ga, ipa_actual_rp, respell_ga, respell_rp",
+    "generated_by": "Claude (hand-curated, 2026-07-02)",
+    "conventions": {
+      "narrow_ipa": "IPA narrow transcription. Flap = ɾ (U+027E). Glottal stop = ʔ (U+0294). Syllabic n/l = n̩ / l̩ (base + COMBINING VERTICAL LINE BELOW U+0329)",
+      "respell": "NBC/BBC style. Uppercase = stressed syllable. Hyphen = syllable boundary. Flap-t/d written as d in GA respelling.",
+      "null_policy": "ipa_actual_* is null when narrow equals phonemic (no allophonic change). respell_* is always populated."
+    }
+  },
+  "entries": [
+    { "w": "party",    "ipa_actual_ga": "/ˈpɑrɾi/",   "ipa_actual_rp": null, "respell_ga": "PAR-dee",   "respell_rp": "PAH-tee" },
+    { "w": "water",    "ipa_actual_ga": "/ˈwɔɾɚ/",    "ipa_actual_rp": null, "respell_ga": "WAW-der",   "respell_rp": "WAW-tuh" },
+    { "w": "city",     "ipa_actual_ga": "/ˈsɪɾi/",    "ipa_actual_rp": null, "respell_ga": "SI-dee",    "respell_rp": "SI-tee" },
+    { "w": "better",   "ipa_actual_ga": "/ˈbɛɾɚ/",    "ipa_actual_rp": null, "respell_ga": "BEH-der",   "respell_rp": "BEH-tuh" },
+    { "w": "butter",   "ipa_actual_ga": "/ˈbʌɾɚ/",    "ipa_actual_rp": null, "respell_ga": "BUH-der",   "respell_rp": "BUH-tuh" },
+    { "w": "letter",   "ipa_actual_ga": "/ˈlɛɾɚ/",    "ipa_actual_rp": null, "respell_ga": "LEH-der",   "respell_rp": "LEH-tuh" },
+    { "w": "later",    "ipa_actual_ga": "/ˈleɪɾɚ/",   "ipa_actual_rp": null, "respell_ga": "LAY-der",   "respell_rp": "LAY-tuh" },
+    { "w": "waiter",   "ipa_actual_ga": "/ˈweɪɾɚ/",   "ipa_actual_rp": null, "respell_ga": "WAY-der",   "respell_rp": "WAY-tuh" },
+    { "w": "pretty",   "ipa_actual_ga": "/ˈprɪɾi/",   "ipa_actual_rp": null, "respell_ga": "PRI-dee",   "respell_rp": "PRI-tee" },
+    { "w": "thirty",   "ipa_actual_ga": "/ˈθɝɾi/",    "ipa_actual_rp": null, "respell_ga": "THUR-dee",  "respell_rp": "THUR-tee" },
+    { "w": "body",     "ipa_actual_ga": "/ˈbɑɾi/",    "ipa_actual_rp": null, "respell_ga": "BAH-dee",   "respell_rp": "BOD-ee" },
+    { "w": "ready",    "ipa_actual_ga": "/ˈrɛɾi/",    "ipa_actual_rp": null, "respell_ga": "REH-dee",   "respell_rp": "REH-dee" },
+    { "w": "study",    "ipa_actual_ga": "/ˈstʌɾi/",   "ipa_actual_rp": null, "respell_ga": "STUH-dee",  "respell_rp": "STUH-dee" },
+    { "w": "video",    "ipa_actual_ga": "/ˈvɪɾioʊ/",  "ipa_actual_rp": null, "respell_ga": "VI-dee-oh", "respell_rp": "VI-dee-oh" },
+    { "w": "lady",     "ipa_actual_ga": "/ˈleɪɾi/",   "ipa_actual_rp": null, "respell_ga": "LAY-dee",   "respell_rp": "LAY-dee" },
+    { "w": "bottle",   "ipa_actual_ga": "/ˈbɑɾl̩/",   "ipa_actual_rp": null, "respell_ga": "BAH-dl",    "respell_rp": "BOT-uhl" },
+    { "w": "little",   "ipa_actual_ga": "/ˈlɪɾl̩/",   "ipa_actual_rp": null, "respell_ga": "LI-dl",     "respell_rp": "LIT-uhl" },
+    { "w": "middle",   "ipa_actual_ga": "/ˈmɪɾl̩/",   "ipa_actual_rp": null, "respell_ga": "MI-dl",     "respell_rp": "MID-uhl" },
+    { "w": "title",    "ipa_actual_ga": "/ˈtaɪɾl̩/",  "ipa_actual_rp": null, "respell_ga": "TY-dl",     "respell_rp": "TY-tuhl" },
+    { "w": "button",   "ipa_actual_ga": "/ˈbʌʔn̩/",   "ipa_actual_rp": null, "respell_ga": "BUH-tn",    "respell_rp": "BUT-n" },
+    { "w": "mountain", "ipa_actual_ga": "/ˈmaʊnʔn̩/", "ipa_actual_rp": null, "respell_ga": "MOWN-tn",   "respell_rp": "MOWN-tin" },
+    { "w": "written",  "ipa_actual_ga": "/ˈrɪʔn̩/",   "ipa_actual_rp": null, "respell_ga": "RI-tn",     "respell_rp": "RIT-n" },
+    { "w": "garden",   "ipa_actual_ga": "/ˈɡɑrdn̩/",  "ipa_actual_rp": null, "respell_ga": "GAR-dn",    "respell_rp": "GAR-duhn" },
+    { "w": "ridden",   "ipa_actual_ga": "/ˈrɪdn̩/",   "ipa_actual_rp": null, "respell_ga": "RID-n",     "respell_rp": "RID-n" },
+    { "w": "winter",   "ipa_actual_ga": "/ˈwɪɾɚ/",    "ipa_actual_rp": null, "respell_ga": "WI-ner",    "respell_rp": "WIN-tuh" },
+    { "w": "twenty",   "ipa_actual_ga": "/ˈtwɛɾi/",   "ipa_actual_rp": null, "respell_ga": "TWEH-nee",  "respell_rp": "TWEN-tee" },
+    { "w": "ninety",   "ipa_actual_ga": "/ˈnaɪɾi/",   "ipa_actual_rp": null, "respell_ga": "NY-nee",    "respell_rp": "NYN-tee" },
+    { "w": "stop",     "ipa_actual_ga": null,          "ipa_actual_rp": null, "respell_ga": "STAHP",     "respell_rp": "STOP" },
+    { "w": "think",    "ipa_actual_ga": null,          "ipa_actual_rp": null, "respell_ga": "THINGK",    "respell_rp": "THINGK" },
+    { "w": "night",    "ipa_actual_ga": null,          "ipa_actual_rp": null, "respell_ga": "NYT",       "respell_rp": "NYT" }
+  ]
+}

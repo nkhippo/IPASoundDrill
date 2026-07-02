@@ -286,6 +286,38 @@
     "trap": "—",
     "t": 0
   },
+  "ɾ": {
+    "lab": "flap / tap",
+    "ex": "butter /ˈbʌɾɚ/",
+    "mouth": "Voiced alveolar flap from a very quick tongue tap",
+    "trap": "Allophone of /t/ and /d/ in GA between vowels",
+    "t": 0,
+    "allophone": true
+  },
+  "ʔ": {
+    "lab": "glottal stop",
+    "ex": "button /ˈbʌʔn̩/",
+    "mouth": "Brief stop by closing the vocal folds",
+    "trap": "Often realizes /t/ before syllabic /n/ in GA",
+    "t": 0,
+    "allophone": true
+  },
+  "n̩": {
+    "lab": "syllabic n",
+    "ex": "button /ˈbʌʔn̩/",
+    "mouth": "/n/ becomes the nucleus of a syllable without a vowel",
+    "trap": "Common in unstressed final syllables",
+    "t": 0,
+    "allophone": true
+  },
+  "l̩": {
+    "lab": "syllabic l",
+    "ex": "bottle /ˈbɑɾl̩/",
+    "mouth": "/l/ becomes the nucleus of a syllable without a vowel",
+    "trap": "Common in unstressed final syllables",
+    "t": 0,
+    "allophone": true
+  },
   "s": {
     "lab": "s",
     "ex": "see",

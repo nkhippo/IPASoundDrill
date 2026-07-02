@@ -136,7 +136,9 @@
   },
   "reveal": {
     "rp_note": "RP（英）",
-    "ga_note": "GA（米）"
+    "ga_note": "GA（米）",
+    "respell_label": "発音ガイド",
+    "dict_label": "辞書表記"
   },
   "lang_opts": {
     "en": "English",

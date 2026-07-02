@@ -174,7 +174,9 @@
   },
   "reveal": {
     "ga_note": "GA (Amer.)",
-    "rp_note": "RP (Brit.)"
+    "rp_note": "RP (Brit.)",
+    "respell_label": "Gabay sa bigkas",
+    "dict_label": "Diksyonaryo"
   },
   "see_answer": "Tingnan ang sagot",
   "set": {

@@ -136,7 +136,9 @@
   },
   "reveal": {
     "rp_note": "RP",
-    "ga_note": "GA"
+    "ga_note": "GA",
+    "respell_label": "Respelling",
+    "dict_label": "Dictionary"
   },
   "lang_opts": {
     "en": "English",

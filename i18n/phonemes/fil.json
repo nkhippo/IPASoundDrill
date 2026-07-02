@@ -286,6 +286,38 @@
     "trap": "—",
     "t": 0
   },
+  "ɾ": {
+    "lab": "flap / tap",
+    "ex": "butter /ˈbʌɾɚ/",
+    "mouth": "Mabilis na isang pitik ng dulo ng dila sa may gilagid",
+    "trap": "Sa GA, ang /t/ at /d/ sa pagitan ng patinig ay madalas na ganitong allophone",
+    "t": 0,
+    "allophone": true
+  },
+  "ʔ": {
+    "lab": "glottal stop",
+    "ex": "button /ˈbʌʔn̩/",
+    "mouth": "Maikling paghinto na ginagawa sa pagsara ng vocal folds",
+    "trap": "Sa GA, ang /t/ bago ang syllabic /n̩/ ay madalas na ganito ang tunog",
+    "t": 0,
+    "allophone": true
+  },
+  "n̩": {
+    "lab": "syllabic n",
+    "ex": "button /ˈbʌʔn̩/",
+    "mouth": "Ang /n/ mismo ang nagiging nucleus ng pantig kahit walang patinig",
+    "trap": "Karaniwan sa mahihinang pantig sa hulihan ng salita",
+    "t": 0,
+    "allophone": true
+  },
+  "l̩": {
+    "lab": "syllabic l",
+    "ex": "bottle /ˈbɑɾl̩/",
+    "mouth": "Ang /l/ mismo ang nagiging nucleus ng pantig kahit walang patinig",
+    "trap": "Karaniwan sa mahihinang pantig sa hulihan ng salita",
+    "t": 0,
+    "allophone": true
+  },
   "s": {
     "lab": "s",
     "ex": "see",

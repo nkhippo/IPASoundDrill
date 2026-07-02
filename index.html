@@ -137,6 +137,8 @@
   #reveal.res-near .yourtry .try{color:var(--stress);font-weight:600;text-decoration:line-through;text-decoration-color:color-mix(in srgb,var(--stress) 55%,transparent)}
   #reveal.res-bad .yourtry .try{color:var(--bad);font-weight:600;text-decoration:line-through;text-decoration-color:color-mix(in srgb,var(--bad) 55%,transparent)}
   .alt-ipa{font-family:var(--ipa);font-size:13px;color:var(--faint);margin-top:6px}
+  .respell{font-family:var(--ui);font-size:clamp(15px,3.8vw,20px);color:var(--muted);letter-spacing:.5px;margin-top:4px;text-align:center}
+  .dict-ipa{font-family:var(--ipa);font-size:clamp(13px,3.2vw,17px);color:var(--muted);letter-spacing:.5px;margin-top:4px;text-align:center}
   .yourtry .uipa{font-family:var(--ipa)}
   #reveal.res-ok .yourtry .uipa{color:var(--ok)}
   #reveal.res-near .yourtry .uipa{color:var(--stress)}
@@ -175,6 +177,8 @@
   .vocab-ipa-ga{font-family:var(--ipa);font-size:13px;color:var(--signal);line-height:1.3}
   .vocab-ipa-rp{font-family:var(--ipa);font-size:11.5px;color:var(--faint);line-height:1.3}
   .vocab-ipa-label{font-family:var(--mono);font-size:9px;color:var(--faint);letter-spacing:.06em;margin-right:3px}
+  .vocab-respell{display:block;font-family:var(--ui);font-size:12px;color:var(--muted);letter-spacing:.3px;margin-top:2px}
+  .vocab-respell-sep{opacity:.5}
   .vocab-gloss{flex:1;font-size:13px;color:var(--muted);min-width:0;white-space:normal;word-break:break-word;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;line-height:1.4}
   .vocab-pos{font-family:var(--mono);font-size:9.5px;color:var(--faint);flex-shrink:0;white-space:nowrap;padding-top:2px}
   .vocab-play{border:1px solid var(--hair);background:#fff;border-radius:50%;width:32px;height:32px;padding:0;cursor:pointer;color:var(--signal);display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;transition:border-color .15s,background .15s;margin-top:1px}
@@ -454,6 +458,8 @@
       <div class="readout" style="padding-top:0"><div class="ipa" id="rIpa"></div>
         <button class="playicon" id="rPlay" type="button" aria-label="Listen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button>
       </div>
+      <div class="respell hidden" id="rRespell"></div>
+      <div class="dict-ipa hidden" id="rDictIpa"></div>
       <div class="alt-ipa hidden" id="rAltIpa"></div>
       <div class="info" id="rInfo"></div>
       <div class="note">
@@ -560,6 +566,10 @@ let vocabSearchTimer = null;
 function normalizeWord(row) {
   const w = { w: row.w, ipa: row.ipa, cefr: row.cefr, pos: row.pos };
   if (row.rp_ipa) w.rp_ipa = row.rp_ipa;
+  if (row.ipa_actual_ga != null) w.ipa_actual_ga = row.ipa_actual_ga;
+  if (row.ipa_actual_rp != null) w.ipa_actual_rp = row.ipa_actual_rp;
+  if (row.respell_ga) w.respell_ga = row.respell_ga;
+  if (row.respell_rp) w.respell_rp = row.respell_rp;
   if (row.src) w.src = row.src;
   if (row.pattern) w.pat = row.pattern;
   if (row.group) w.grp = row.group;
@@ -762,11 +772,16 @@ function renderVocabWords(query = "") {
 
     const gaIpa = c.ipa || "";
     const rpIpa = c.rp_ipa || "";
+    const respellGa = c.respell_ga || "";
+    const respellRp = c.respell_rp || "";
     const gloss = vocabDisplayGloss(c);
     const pos = posLabel(c.pos);
     const posStr = pos && pos !== "—" ? `<span class="vocab-pos">${escHtml(pos)}</span>` : "";
     const rpLine = rpIpa && rpIpa !== gaIpa
       ? `<span class="vocab-ipa-rp"><span class="vocab-ipa-label">RP</span>${escHtml(rpIpa)}</span>`
+      : "";
+    const respellLine = (respellGa || respellRp)
+      ? `<span class="vocab-respell">${escHtml(respellGa)}${respellRp && respellRp !== respellGa ? ' <span class="vocab-respell-sep">/</span> ' + escHtml(respellRp) : ""}</span>`
       : "";
 
     html += `<div class="vocab-row">
@@ -774,6 +789,7 @@ function renderVocabWords(query = "") {
       <span class="vocab-ipas">
         <span class="vocab-ipa-ga"><span class="vocab-ipa-label">GA</span>${escHtml(gaIpa)}</span>
         ${rpLine}
+        ${respellLine}
       </span>
       <span class="vocab-gloss">${escHtml(gloss)}</span>
       ${posStr}
@@ -855,6 +871,21 @@ function activeIpa(c) {
 function altIpa(c) {
   if (!c) return null;
   return ACCENT === "rp" ? c.ipa : (c.rp_ipa || null);
+}
+function activeNarrowIpa(c) {
+  if (!c) return "";
+  if (ACCENT === "rp") return c.ipa_actual_rp || c.rp_ipa || c.ipa;
+  return c.ipa_actual_ga || c.ipa;
+}
+function hasNarrowDifference(c) {
+  if (!c) return false;
+  const narrow = activeNarrowIpa(c);
+  const phonemic = activeIpa(c);
+  return !!(narrow && phonemic && narrow !== phonemic);
+}
+function activeRespell(c) {
+  if (!c) return null;
+  return ACCENT === "rp" ? (c.respell_rp || null) : (c.respell_ga || null);
 }
 /** GA neighbors for Mode B MCQ; RP-specific list deferred (see docs/rp-neighbors-priority-decision.md). */
 function activeNeighbors(c) {
@@ -1066,8 +1097,8 @@ async function initApp() {
   });
 }
 
-const MULTI_GA=["tʃ","dʒ","eɪ","aɪ","ɔɪ","oʊ","aʊ"];
-const MULTI_RP=["tʃ","dʒ","eɪ","aɪ","ɔɪ","əʊ","aʊ","ɪə","eə","ʊə","iː","uː","ɑː","ɔː","ɜː"];
+const MULTI_GA=["tʃ","dʒ","eɪ","aɪ","ɔɪ","oʊ","aʊ","n̩","l̩","m̩"];
+const MULTI_RP=["tʃ","dʒ","eɪ","aɪ","ɔɪ","əʊ","aʊ","ɪə","eə","ʊə","iː","uː","ɑː","ɔː","ɜː","n̩","l̩","m̩"];
 const VOWELS_GA=new Set(["i","ɪ","ɛ","æ","ə","ʌ","ɑ","ɔ","ʊ","u","ɝ","ɚ","eɪ","aɪ","ɔɪ","oʊ","aʊ"]);
 const VOWELS_RP=new Set(["iː","ɪ","e","æ","ə","ʌ","ɑː","ɒ","ɔː","ʊ","uː","ɜː","eɪ","aɪ","ɔɪ","əʊ","aʊ","ɪə","eə","ʊə"]);
 function multiList(){return ACCENT==="rp"?MULTI_RP:MULTI_GA;}
@@ -1140,7 +1171,11 @@ const PH_EXAMPLES={
   "aɪ":[["eye","/aɪ/"],["buy","/baɪ/"],["my","/maɪ/"]],
   "ɔɪ":[["boy","/bɔɪ/"],["toy","/tɔɪ/"],["joy","/dʒɔɪ/"]],
   "oʊ":[["go","/ɡoʊ/"],["owe","/oʊ/"],["show","/ʃoʊ/"]],
-  "aʊ":[["how","/haʊ/"],["cow","/kaʊ/"],["hour","/ˈaʊɚ/"]]
+  "aʊ":[["how","/haʊ/"],["cow","/kaʊ/"],["hour","/ˈaʊɚ/"]],
+  "ɾ":[["butter","/ˈbʌɾɚ/"],["city","/ˈsɪɾi/"],["water","/ˈwɔɾɚ/"]],
+  "ʔ":[["button","/ˈbʌʔn̩/"],["mountain","/ˈmaʊnʔn̩/"],["written","/ˈrɪʔn̩/"]],
+  "n̩":[["button","/ˈbʌʔn̩/"],["garden","/ˈɡɑrdn̩/"],["ridden","/ˈrɪdn̩/"]],
+  "l̩":[["bottle","/ˈbɑɾl̩/"],["little","/ˈlɪɾl̩/"],["middle","/ˈmɪɾl̩/"]]
 };
 
 function setSetupVisible(on){
@@ -1386,7 +1421,7 @@ function hideModeBCards(){show("cardModeBStudy",false);show("cardModeBMcq",false
 function renderModeBStudy(c){
   hideModeBCards();show("cardModeBStudy",true);
   $("mbSNo").textContent="#"+String(S.idx+1).padStart(2,"0");
-  renderIpaInto($("mbSIpa"),activeIpa(c),"dInfo",null);
+  renderIpaInto($("mbSIpa"),activeNarrowIpa(c),"dInfo",null);
   $("mbSMeaning").classList.add("hidden");
   $("mbSRevealBtn").classList.remove("hidden");
   $("mbSGotIt").classList.add("hidden");
@@ -1870,7 +1905,7 @@ function capCarrierBefore(before){
 }
 function renderConnectedPrompt(c){
   const container=$("dIpa");
-  const ipaHtml=buildIpaHtml(activeIpa(c),null);
+  const ipaHtml=buildIpaHtml(activeNarrowIpa(c),null);
   const carrier=S.curCarrier||"{P}";
   const parts=carrier.split("{P}");
   const before=parts[0]||"";
@@ -1920,7 +1955,7 @@ function renderDecode(c){
   if((isConnectedItem(c)||isWeakItem(c))&&S.curCarrier){
     renderConnectedPrompt(c);
   }else{
-    renderIpaInto($("dIpa"),activeIpa(c),"dInfo",null);
+    renderIpaInto($("dIpa"),activeNarrowIpa(c),"dInfo",null);
   }
   const inp=$("dInput");inp.value="";
   inp.placeholder=(S.cur&&isConnectedItem(S.cur))?t("input_phrase"):t("input_ph");
@@ -2046,11 +2081,23 @@ function autoNote(c){
 function tryLine(html){return t("you",{a:html});}
 function refreshRevealIpa(marker){
   const c=S.cur;if(!c)return;
-  const main=activeIpa(c);
+  const main=activeNarrowIpa(c);
   renderIpaInto($("rIpa"),main,"rInfo",marker||null);$("rInfo").classList.remove("on");
+  const respellEl=$("rRespell");
+  const respell=activeRespell(c);
+  if(respell){
+    respellEl.textContent=t("reveal.respell_label")+": "+respell;
+    respellEl.classList.remove("hidden");
+  }else respellEl.classList.add("hidden");
+  const dictEl=$("rDictIpa");
+  if(hasNarrowDifference(c)){
+    dictEl.textContent=t("reveal.dict_label")+": "+activeIpa(c);
+    dictEl.classList.remove("hidden");
+  }else dictEl.classList.add("hidden");
   const alt=altIpa(c);
   const altEl=$("rAltIpa");
-  if(alt&&alt!==main){
+  const currentPhonemic=activeIpa(c);
+  if(alt&&alt!==currentPhonemic){
     const label=ACCENT==="rp"?t("reveal.ga_note"):t("reveal.rp_note");
     altEl.textContent=label+": "+alt;
     altEl.classList.remove("hidden");
