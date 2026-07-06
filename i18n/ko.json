@@ -7,8 +7,8 @@
   "lead_weak_html": "기능어의 <b>약형</b>을 듣고 IPA를 읽어 단어를 맞히세요.",
   "tab": {
     "label": "연습 모드",
-    "words": "단어",
-    "connected": "연음·탈락·동화",
+    "words": "한 단어",
+    "connected": "연음",
     "weak": "약형"
   },
   "mode": {

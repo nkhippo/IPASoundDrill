@@ -41,10 +41,10 @@
       ]
     },
     "connected": {
-      "title": "The Connected Speech tab",
+      "title": "The Linking tab",
       "body": [
-        "Real speech does not pronounce words one clean piece at a time. It links them, blends them, and drops sounds: *what do you* becomes one smooth run, *next day* loses its middle *t*, *ten boys* turns its *n* toward an *m*. The Connected Speech tab collects these phrases and shows you the IPA of the *connected* result, asking you to recover the original words. The phrases are sorted into three phenomena — linking, assimilation, elision — and three difficulty levels. Start at Level 1 with two-word links, and climb to Level 3, where several effects stack inside one short sentence. This tab explains why fast English sounds nothing like the dictionary, and why that is normal.",
-        "There is a reason this surprises learners so consistently: dictionary pronunciation and connected speech pronunciation are, in a real sense, two different acoustic signals. The brain learns to recognize a word from a stable, citation-form template — but in fast speech, that template is never actually played back. Instead, the sounds bleed across word boundaries, consonants assimilate to their neighbors, and unstressed syllables reduce to a bare schwa or disappear entirely. If you have only ever trained your ear on isolated word pronunciations, fast native speech sounds like a wall of undifferentiated noise. The Connected Speech tab builds exactly the bridging skill you need: the ability to hear a connected stream and mentally reconstruct the words it contains.",
+        "Real speech does not pronounce words one clean piece at a time. It links them, blends them, and drops sounds: *what do you* becomes one smooth run, *next day* loses its middle *t*, *ten boys* turns its *n* toward an *m*. The Linking tab collects these phrases and shows you the IPA of the *connected* result, asking you to recover the original words. The phrases are sorted into three phenomena — linking, assimilation, elision — and three difficulty levels. Start at Level 1 with two-word links, and climb to Level 3, where several effects stack inside one short sentence. This tab explains why fast English sounds nothing like the dictionary, and why that is normal.",
+        "There is a reason this surprises learners so consistently: dictionary pronunciation and connected speech pronunciation are, in a real sense, two different acoustic signals. The brain learns to recognize a word from a stable, citation-form template — but in fast speech, that template is never actually played back. Instead, the sounds bleed across word boundaries, consonants assimilate to their neighbors, and unstressed syllables reduce to a bare schwa or disappear entirely. If you have only ever trained your ear on isolated word pronunciations, fast native speech sounds like a wall of undifferentiated noise. The Linking tab builds exactly the bridging skill you need: the ability to hear a connected stream and mentally reconstruct the words it contains.",
         "The **Weak Forms** filter (inside this tab, under Type) focuses on one specific mechanism: function words like *to*, *can*, *of*, and *them* carry two pronunciations — a strong form used in isolation, and a weak form reduced to a single vowel or consonant in natural speech. Native speakers almost never produce the strong form mid-sentence; learners almost always expect it. That mismatch is one of the most common causes of real-speech comprehension failures. Drilling Weak Forms teaches your ear the reduced versions that actually appear in the stream, so the gap between what you hear and what you expect steadily closes."
       ]
     },
@@ -57,9 +57,9 @@
     "how_to_use": {
       "title": "How to use it well",
       "body": [
-        "Begin in Mode A, Decode, with \"all sounds,\" and let the app learn your weak spots from your mistakes. After a few sessions, switch the focus to \"weak spots\" and let it hunt the symbols you keep missing. Add Encode once Decode feels easy — it will humble you, and that is the point. Visit the Connected Speech tab a couple of times a week to keep your ear ready for real speech. Turn to Mode B when you want to grow your vocabulary through the ear rather than the eye.",
+        "Begin in Mode A, Decode, with \"all sounds,\" and let the app learn your weak spots from your mistakes. After a few sessions, switch the focus to \"weak spots\" and let it hunt the symbols you keep missing. Add Encode once Decode feels easy — it will humble you, and that is the point. Visit the Linking tab a couple of times a week to keep your ear ready for real speech. Turn to Mode B when you want to grow your vocabulary through the ear rather than the eye.",
         "Keep sessions short and frequent rather than long and rare; the spaced-repetition system is built for daily returns. Tap any IPA symbol to open its explanation and example words — use this every time a symbol surprises you. And replay the audio often: the goal is not to answer once, but to make the correct sound feel ordinary. When a contrast finally clicks in your mouth, you will notice you can suddenly hear it too. That moment is the whole point of the app.",
-        "A concrete starting rhythm that tends to work: **Monday through Friday**, open the app for one short Decode session — ten questions, no more. Do not aim for a perfect score; aim for a honest one. **On two of those days**, swap Decode for Encode with the same word pool. The shock of Encode confirms what you actually know versus what you only think you know. **On one weekend day**, spend five minutes on the Connected Speech tab: one or two Level 1 phrases, gradually moving to Level 2 as they become comfortable. This schedule asks for less than fifteen minutes a day and produces compounding returns because spaced repetition rewards consistency far more than duration. Adjust the rhythm freely — the only thing that matters is coming back."
+        "A concrete starting rhythm that tends to work: **Monday through Friday**, open the app for one short Decode session — ten questions, no more. Do not aim for a perfect score; aim for a honest one. **On two of those days**, swap Decode for Encode with the same word pool. The shock of Encode confirms what you actually know versus what you only think you know. **On one weekend day**, spend five minutes on the Linking tab: one or two Level 1 phrases, gradually moving to Level 2 as they become comfortable. This schedule asks for less than fifteen minutes a day and produces compounding returns because spaced repetition rewards consistency far more than duration. Adjust the rhythm freely — the only thing that matters is coming back."
       ]
     }
   },
@@ -105,10 +105,10 @@
       ]
     },
     "connected": {
-      "title": "連結句タブ",
+      "title": "連結音タブ",
       "body": [
-        "実際の発話は、単語を一つずつきれいに区切って発音しません。つなげ、混ぜ、音を落とします。what do you は一続きの流れになり、next day は真ん中の t を失い、ten boys は n が m へ寄っていきます。連結句タブはこうしたフレーズを集め、**連結した結果**のIPAを見せて、元の単語を復元させます。フレーズは三つの現象（連結 linking／同化 assimilation／脱落 elision）と三つの難易度に分かれています。まずLevel 1の二語の連結から始め、複数の効果が一つの短い文の中で重なるLevel 3へと登っていきましょう。このタブは、なぜ速い英語が辞書とまるで違って聞こえるのか、そしてそれが当たり前なのだということを教えてくれます。",
-        "これが学習者をこれほど一貫して驚かせる理由があります。辞書発音と連結発音は、ある意味で二つの異なる音響信号です。脳は単語を、安定した辞書形式のテンプレートから認識することを学びます。しかし速い発話では、そのテンプレートが実際に再生されることは決してありません。代わりに音は語境界をまたいで滲み出し、子音は隣の音に同化し、強勢のない音節はか細い曖昧母音まで縮まるか消えてしまいます。孤立した単語の発音だけで耳を鍛えてきた場合、速いネイティブの発話は区別のつかない雑音の壁のように聞こえます。連結句タブは、あなたが必要としているまさにその橋渡しの技能を育てます。連結した音の流れを聞き取り、そこに含まれる単語を頭の中で再構築する能力です。",
+        "実際の発話は、単語を一つずつきれいに区切って発音しません。つなげ、混ぜ、音を落とします。what do you は一続きの流れになり、next day は真ん中の t を失い、ten boys は n が m へ寄っていきます。連結音タブはこうしたフレーズを集め、**連結した結果**のIPAを見せて、元の単語を復元させます。フレーズは三つの現象（連結 linking／同化 assimilation／脱落 elision）と三つの難易度に分かれています。まずLevel 1の二語の連結から始め、複数の効果が一つの短い文の中で重なるLevel 3へと登っていきましょう。このタブは、なぜ速い英語が辞書とまるで違って聞こえるのか、そしてそれが当たり前なのだということを教えてくれます。",
+        "これが学習者をこれほど一貫して驚かせる理由があります。辞書発音と連結発音は、ある意味で二つの異なる音響信号です。脳は単語を、安定した辞書形式のテンプレートから認識することを学びます。しかし速い発話では、そのテンプレートが実際に再生されることは決してありません。代わりに音は語境界をまたいで滲み出し、子音は隣の音に同化し、強勢のない音節はか細い曖昧母音まで縮まるか消えてしまいます。孤立した単語の発音だけで耳を鍛えてきた場合、速いネイティブの発話は区別のつかない雑音の壁のように聞こえます。連結音タブは、あなたが必要としているまさにその橋渡しの技能を育てます。連結した音の流れを聞き取り、そこに含まれる単語を頭の中で再構築する能力です。",
         "**弱形（Weak Forms）フィルタ**（このタブ内の「タイプ」フィルタにある）は、特定の一つのメカニズムに焦点を当てます。*to*・*can*・*of*・*them* のような機能語は二つの発音を持ちます。単独で使われるときの強形と、自然な発話の中で一つの母音または子音にまで縮まる弱形です。ネイティブは文の途中でほとんど強形を使いません。学習者はほとんど常に強形を期待します。このすれ違いが、実際の英語の聞き取り失敗のもっともよくある原因の一つです。弱形のドリルにより、音の流れの中で実際に現れる縮約形に耳が慣れ、「聞こえるもの」と「期待するもの」のギャップが着実に縮まっていきます。"
       ]
     },
@@ -121,9 +121,9 @@
     "how_to_use": {
       "title": "効果的な使い方",
       "body": [
-        "まずMode AのDecodeで「全部の音」から始め、あなたの間違いからアプリに弱点を学習させましょう。数セッションの後、フォーカスを「弱点」に切り替え、繰り返し外す記号を狙い撃ちさせます。Decodeが楽に感じたらEncodeを加えてください。打ちのめされるはずですが、それこそが狙いです。連結句タブには週に二度ほど立ち寄り、現実の発話に対する耳を保ちましょう。目ではなく耳から語彙を増やしたくなったらMode Bへ向かいます。",
+        "まずMode AのDecodeで「全部の音」から始め、あなたの間違いからアプリに弱点を学習させましょう。数セッションの後、フォーカスを「弱点」に切り替え、繰り返し外す記号を狙い撃ちさせます。Decodeが楽に感じたらEncodeを加えてください。打ちのめされるはずですが、それこそが狙いです。連結音タブには週に二度ほど立ち寄り、現実の発話に対する耳を保ちましょう。目ではなく耳から語彙を増やしたくなったらMode Bへ向かいます。",
         "セッションは長く稀にではなく、短く頻繁に。間隔反復は毎日戻ってくることを前提に設計されています。どのIPA記号もタップすれば解説と例語が開きます。記号に驚かされるたびに、これを使ってください。そして音声を何度も再生しましょう。目的は一度正解することではなく、正しい音を「当たり前」に感じられるようにすることです。ある対立がついに口で噛み合ったとき、それが急に聞き取れるようになっていることに気づくはずです。その瞬間こそ、このアプリのすべてです。",
-        "うまくいく傾向のある具体的なリズムを紹介します。**月曜から金曜**は、1日1回の短い Decode セッションを開きましょう。10問、それだけ。満点を目指すのではなく、正直な点数を目指してください。**そのうち2日は** Decode の代わりに、同じ単語プールで Encode に切り替えます。Encode の衝撃が、自分が「実際に知っていること」と「知っていると思っているだけのこと」を区別してくれます。**週末の1日は** 連結句タブに5分を使います。Level 1 のフレーズを1〜2個、慣れてきたら Level 2 へ。このスケジュールが求めるのは1日15分未満です。それでも間隔反復は、長さよりも継続を圧倒的に報いるため、複利的な成果が生まれます。リズムは自由に調整してください。大事なのは、戻ってくることだけです。"
+        "うまくいく傾向のある具体的なリズムを紹介します。**月曜から金曜**は、1日1回の短い Decode セッションを開きましょう。10問、それだけ。満点を目指すのではなく、正直な点数を目指してください。**そのうち2日は** Decode の代わりに、同じ単語プールで Encode に切り替えます。Encode の衝撃が、自分が「実際に知っていること」と「知っていると思っているだけのこと」を区別してくれます。**週末の1日は** 連結音タブに5分を使います。Level 1 のフレーズを1〜2個、慣れてきたら Level 2 へ。このスケジュールが求めるのは1日15分未満です。それでも間隔反復は、長さよりも継続を圧倒的に報いるため、複利的な成果が生まれます。リズムは自由に調整してください。大事なのは、戻ってくることだけです。"
       ]
     }
   },
@@ -169,10 +169,10 @@
       ]
     },
     "connected": {
-      "title": "연결 발화 탭",
+      "title": "연음 탭",
       "body": [
-        "실제 발화는 단어를 하나씩 깔끔하게 구분해 발음하지 않습니다. 이어 붙이고, 섞고, 소리를 빼버립니다. *what do you*는 하나의 매끄러운 흐름이 되고, *next day*는 가운데 *t*를 잃고, *ten boys*는 *n*이 *m*으로 가까워집니다. 연결 발화 탭은 이런 구문을 모아서 *연결된 결과*의 IPA를 보여주고, 원래 단어를 복원하도록 요구합니다. 구문은 세 가지 현상(연결 linking / 동화 assimilation / 탈락 elision)과 세 가지 난이도로 분류됩니다. Level 1의 두 단어 연결부터 시작하여, 짧은 한 문장 안에 여러 효과가 겹치는 Level 3으로 올라가세요. 이 탭은 빠른 영어가 왜 사전과 전혀 다르게 들리는지, 그리고 그것이 왜 정상인지를 설명합니다.",
-        "이것이 학습자들을 한결같이 놀라게 하는 이유가 있습니다. 사전 발음과 연결 발음은 실질적으로 두 개의 서로 다른 음향 신호입니다. 뇌는 안정적인 citation-form 템플릿에서 단어를 인식하는 법을 배웁니다. 하지만 빠른 발화에서는 그 템플릿이 실제로 재생되는 일이 없습니다. 대신 소리는 단어 경계를 넘어 스며들고, 자음은 이웃 소리에 동화되며, 강세 없는 음절은 희미한 슈와 하나로 줄어들거나 아예 사라집니다. 고립된 단어 발음만으로 귀를 훈련해 온 경우, 빠른 원어민 발화는 구분되지 않는 소음의 벽처럼 들립니다. 연결 발화 탭은 당신에게 필요한 정확히 그 연결 기술을 키워 줍니다. 연결된 음의 흐름을 듣고 머릿속에서 그 안에 담긴 단어를 재구성하는 능력입니다.",
+        "실제 발화는 단어를 하나씩 깔끔하게 구분해 발음하지 않습니다. 이어 붙이고, 섞고, 소리를 빼버립니다. *what do you*는 하나의 매끄러운 흐름이 되고, *next day*는 가운데 *t*를 잃고, *ten boys*는 *n*이 *m*으로 가까워집니다. 연음 탭은 이런 구문을 모아서 *연결된 결과*의 IPA를 보여주고, 원래 단어를 복원하도록 요구합니다. 구문은 세 가지 현상(연결 linking / 동화 assimilation / 탈락 elision)과 세 가지 난이도로 분류됩니다. Level 1의 두 단어 연결부터 시작하여, 짧은 한 문장 안에 여러 효과가 겹치는 Level 3으로 올라가세요. 이 탭은 빠른 영어가 왜 사전과 전혀 다르게 들리는지, 그리고 그것이 왜 정상인지를 설명합니다.",
+        "이것이 학습자들을 한결같이 놀라게 하는 이유가 있습니다. 사전 발음과 연결 발음은 실질적으로 두 개의 서로 다른 음향 신호입니다. 뇌는 안정적인 citation-form 템플릿에서 단어를 인식하는 법을 배웁니다. 하지만 빠른 발화에서는 그 템플릿이 실제로 재생되는 일이 없습니다. 대신 소리는 단어 경계를 넘어 스며들고, 자음은 이웃 소리에 동화되며, 강세 없는 음절은 희미한 슈와 하나로 줄어들거나 아예 사라집니다. 고립된 단어 발음만으로 귀를 훈련해 온 경우, 빠른 원어민 발화는 구분되지 않는 소음의 벽처럼 들립니다. 연음 탭은 당신에게 필요한 정확히 그 연결 기술을 키워 줍니다. 연결된 음의 흐름을 듣고 머릿속에서 그 안에 담긴 단어를 재구성하는 능력입니다.",
         "**약형(Weak Forms) 필터**（이 탭 안의 '유형' 필터에 있음）는 특정한 하나의 메커니즘에 집중합니다. *to*, *can*, *of*, *them* 같은 기능어는 두 가지 발음을 갖습니다. 단독으로 쓸 때의 강형과, 자연스러운 발화에서 하나의 모음이나 자음으로 줄어드는 약형입니다. 원어민은 문장 중간에 강형을 거의 사용하지 않습니다. 학습자는 거의 언제나 강형을 기대합니다. 이 엇갈림이 실제 발화 이해 실패의 가장 흔한 원인 중 하나입니다. 약형 드릴은 음의 흐름 속에 실제로 나타나는 축약형에 귀가 익숙해지도록 훈련해, 들리는 것과 기대하는 것의 격차를 꾸준히 좁혀 나갑니다."
       ]
     },
@@ -185,9 +185,9 @@
     "how_to_use": {
       "title": "효과적으로 사용하는 방법",
       "body": [
-        "Mode A, Decode, '모든 소리'로 시작하고, 앱이 당신의 실수에서 약점을 파악하도록 하세요. 몇 번의 세션 후, 포커스를 '약점'으로 전환해 계속 놓치는 기호들을 집중 공략하게 하세요. Decode가 쉽게 느껴지면 Encode를 추가하세요 — 좌절감을 줄 것이며, 그것이 바로 핵심입니다. 연결 발화 탭은 일주일에 두 번 정도 들러 실제 발화에 대비한 귀를 유지하세요. 눈이 아닌 귀로 어휘를 늘리고 싶을 때는 Mode B로 향하세요.",
+        "Mode A, Decode, '모든 소리'로 시작하고, 앱이 당신의 실수에서 약점을 파악하도록 하세요. 몇 번의 세션 후, 포커스를 '약점'으로 전환해 계속 놓치는 기호들을 집중 공략하게 하세요. Decode가 쉽게 느껴지면 Encode를 추가하세요 — 좌절감을 줄 것이며, 그것이 바로 핵심입니다. 연음 탭은 일주일에 두 번 정도 들러 실제 발화에 대비한 귀를 유지하세요. 눈이 아닌 귀로 어휘를 늘리고 싶을 때는 Mode B로 향하세요.",
         "세션은 길고 드물게 하기보다 짧고 자주 하세요. 간격 반복 시스템은 매일 돌아오는 것을 전제로 설계되어 있습니다. IPA 기호를 탭하면 설명과 예시 단어가 열립니다 — 기호가 당신을 놀라게 할 때마다 이것을 사용하세요. 음성을 자주 재생하세요. 목표는 한 번 맞추는 것이 아니라, 정확한 소리를 '당연하게' 느끼는 것입니다. 어떤 대조가 마침내 입에서 딱 맞을 때, 갑자기 그것을 들을 수 있게 됐다는 것도 알아차릴 것입니다. 그 순간이 이 앱의 전부입니다.",
-        "효과가 있는 구체적인 시작 리듬을 소개합니다. **월요일부터 금요일**까지, 하루 한 번 짧은 Decode 세션을 엽니다 — 10문제, 그것만. 완벽한 점수를 목표로 하지 말고, 정직한 점수를 목표로 하세요. **그중 이틀은** Decode 대신 같은 단어 풀로 Encode로 바꾸세요. Encode의 충격이 실제로 아는 것과 안다고 생각하는 것의 차이를 확인시켜 줍니다. **주말 하루에는** 연결 발화 탭에 5분을 쓰세요: Level 1 구문 하나 또는 둘, 편안해지면 점차 Level 2로 이동합니다. 이 일정이 요구하는 것은 하루에 15분 미만입니다. 그럼에도 간격 반복은 시간의 길이보다 일관성에 훨씬 더 크게 보상하기 때문에 복리 효과가 생깁니다. 리듬은 자유롭게 조정하세요 — 중요한 것은 오직 돌아오는 것뿐입니다."
+        "효과가 있는 구체적인 시작 리듬을 소개합니다. **월요일부터 금요일**까지, 하루 한 번 짧은 Decode 세션을 엽니다 — 10문제, 그것만. 완벽한 점수를 목표로 하지 말고, 정직한 점수를 목표로 하세요. **그중 이틀은** Decode 대신 같은 단어 풀로 Encode로 바꾸세요. Encode의 충격이 실제로 아는 것과 안다고 생각하는 것의 차이를 확인시켜 줍니다. **주말 하루에는** 연음 탭에 5분을 쓰세요: Level 1 구문 하나 또는 둘, 편안해지면 점차 Level 2로 이동합니다. 이 일정이 요구하는 것은 하루에 15분 미만입니다. 그럼에도 간격 반복은 시간의 길이보다 일관성에 훨씬 더 크게 보상하기 때문에 복리 효과가 생깁니다. 리듬은 자유롭게 조정하세요 — 중요한 것은 오직 돌아오는 것뿐입니다."
       ]
     }
   },
@@ -233,10 +233,10 @@
       ]
     },
     "connected": {
-      "title": "連讀短語標籤",
+      "title": "連讀音標籤",
       "body": [
-        "真實的發音不會把每個單字一個一個清晰地分開來說。它們相互連接、融合，並省略一些音：*what do you* 變成一個流暢的連續音流，*next day* 的中間那個 *t* 消失了，*ten boys* 的 *n* 向 *m* 靠攏。連讀短語標籤收集了這類短語，展示*連讀結果*的 IPA，要求你還原出原來的單字。這些短語按三種現象（連讀 linking / 同化 assimilation / 省音 elision）和三個難度級別分類。從 Level 1 的雙詞連讀開始，逐步升至 Level 3——多種效果疊加在一個短句裡。這個標籤解釋了為什麼快速英語聽起來與詞典相去甚遠，以及為什麼這是正常的。",
-        "這件事一直讓學習者感到意外，是有原因的：詞典發音和連讀發音在某種意義上是兩種不同的音訊信號。大腦學會透過穩定的詞典形式模板來識別單字——但在快速發音中，那個模板根本不會被播放出來。取而代之的是，聲音跨越詞界滲透，子音向相鄰音同化，非重讀音節縮減為一個微弱的 schwa 或乾脆消失。如果你只用孤立的單字發音訓練過耳朵，快速的母語發音聽起來就像一堵難以分辨的雜訊牆。連讀短語標籤正是培養你所需要的那種橋接能力：聽到連續的音流，在腦子裡還原出它所包含的單字。",
+        "真實的發音不會把每個單字一個一個清晰地分開來說。它們相互連接、融合，並省略一些音：*what do you* 變成一個流暢的連續音流，*next day* 的中間那個 *t* 消失了，*ten boys* 的 *n* 向 *m* 靠攏。連讀音標籤收集了這類短語，展示*連讀結果*的 IPA，要求你還原出原來的單字。這些短語按三種現象（連讀 linking / 同化 assimilation / 省音 elision）和三個難度級別分類。從 Level 1 的雙詞連讀開始，逐步升至 Level 3——多種效果疊加在一個短句裡。這個標籤解釋了為什麼快速英語聽起來與詞典相去甚遠，以及為什麼這是正常的。",
+        "這件事一直讓學習者感到意外，是有原因的：詞典發音和連讀發音在某種意義上是兩種不同的音訊信號。大腦學會透過穩定的詞典形式模板來識別單字——但在快速發音中，那個模板根本不會被播放出來。取而代之的是，聲音跨越詞界滲透，子音向相鄰音同化，非重讀音節縮減為一個微弱的 schwa 或乾脆消失。如果你只用孤立的單字發音訓練過耳朵，快速的母語發音聽起來就像一堵難以分辨的雜訊牆。連讀音標籤正是培養你所需要的那種橋接能力：聽到連續的音流，在腦子裡還原出它所包含的單字。",
         "**弱讀形式（Weak Forms）篩選器**（在此標籤的「類型」篩選器裡）專注於一種特定的機制：*to*、*can*、*of*、*them* 等虛詞有兩種發音——單獨使用時的強讀形式，以及在自然發音中縮減為一個母音或子音的弱讀形式。母語者在句中幾乎從不使用強讀形式；學習者幾乎總是預期強讀形式。這種錯位是真實語音理解失敗最常見的原因之一。弱讀形式的訓練讓你的耳朵習慣那些實際出現在音流中的縮減形式，從而讓你聽到的與你預期的之間的差距持續縮小。"
       ]
     },
@@ -249,9 +249,9 @@
     "how_to_use": {
       "title": "如何高效使用",
       "body": [
-        "從 Mode A、Decode、「所有發音」開始，讓應用程式從你的錯誤中學習你的薄弱環節。經過幾次練習後，把焦點切換到「薄弱環節」，讓它專門追蹤你反覆出錯的符號。一旦 Decode 感覺輕鬆，就加入 Encode——它會讓你感到挫敗，而這正是它的意義所在。每週抽兩次時間造訪連讀短語標籤，保持耳朵對真實發音的準備。當你想透過耳朵而不是眼睛來擴充詞彙時，轉向 Mode B。",
+        "從 Mode A、Decode、「所有發音」開始，讓應用程式從你的錯誤中學習你的薄弱環節。經過幾次練習後，把焦點切換到「薄弱環節」，讓它專門追蹤你反覆出錯的符號。一旦 Decode 感覺輕鬆，就加入 Encode——它會讓你感到挫敗，而這正是它的意義所在。每週抽兩次時間造訪連讀音標籤，保持耳朵對真實發音的準備。當你想透過耳朵而不是眼睛來擴充詞彙時，轉向 Mode B。",
         "保持練習短而頻繁，而不是長而偶爾；間隔重複系統是為每天回來而設計的。點擊任意 IPA 符號可以打開它的解釋和範例詞——每次某個符號讓你感到意外時都使用這個功能。經常重播音訊：目標不是回答一次，而是讓正確的發音感覺像是理所當然的。當某個對比終於在你口中順了，你會發現你也突然能聽出來了。那個時刻就是這款應用程式的全部意義。",
-        "一個傾向於有效的具體起始節奏：**週一至週五**，每天打開應用程式做一次短暫的 Decode 練習——十道題，僅此而已。不要追求滿分，追求一個真實的分數。**其中兩天**，把 Decode 換成用同一批單字做 Encode。Encode 的衝擊感會讓你清楚地區分你真正知道的和你以為你知道的。**週末某一天**，花五分鐘在連讀短語標籤上：一兩個 Level 1 短語，隨著熟悉再逐漸移向 Level 2。這個計劃每天只需要不到十五分鐘，但它產生的是複利回報，因為間隔重複對堅持的獎勵遠大於對時長的獎勵。可以自由調整節奏——唯一重要的是一直回來。"
+        "一個傾向於有效的具體起始節奏：**週一至週五**，每天打開應用程式做一次短暫的 Decode 練習——十道題，僅此而已。不要追求滿分，追求一個真實的分數。**其中兩天**，把 Decode 換成用同一批單字做 Encode。Encode 的衝擊感會讓你清楚地區分你真正知道的和你以為你知道的。**週末某一天**，花五分鐘在連讀音標籤上：一兩個 Level 1 短語，隨著熟悉再逐漸移向 Level 2。這個計劃每天只需要不到十五分鐘，但它產生的是複利回報，因為間隔重複對堅持的獎勵遠大於對時長的獎勵。可以自由調整節奏——唯一重要的是一直回來。"
       ]
     }
   },
@@ -297,10 +297,10 @@
       ]
     },
     "connected": {
-      "title": "连读短语标签",
+      "title": "连读音标签",
       "body": [
-        "真实的发音不会把每个单词一个一个清晰地分开来说。它们相互连接、融合，并省略一些音：*what do you* 变成一个流畅的连续音流，*next day* 的中间那个 *t* 消失了，*ten boys* 的 *n* 向 *m* 靠拢。连读短语标签收集了这类短语，展示*连读结果*的 IPA，要求你还原出原来的单词。这些短语按三种现象（连读 linking / 同化 assimilation / 省音 elision）和三个难度级别分类。从 Level 1 的双词连读开始，逐步升至 Level 3——多种效果叠加在一个短句里。这个标签解释了为什么快速英语听起来与词典相去甚远，以及为什么这是正常的。",
-        "这件事一直让学习者感到意外，是有原因的：词典发音和连读发音在某种意义上是两种不同的音频信号。大脑学会通过稳定的词典形式模板来识别单词——但在快速发音中，那个模板根本不会被播放出来。取而代之的是，声音跨越词界渗透，辅音向相邻音同化，非重读音节缩减为一个微弱的 schwa 或干脆消失。如果你只用孤立的单词发音训练过耳朵，快速的母语发音听起来就像一堵难以分辨的噪声墙。连读短语标签正是培养你所需要的那种桥接能力：听到连续的音流，在脑子里还原出它所包含的单词。",
+        "真实的发音不会把每个单词一个一个清晰地分开来说。它们相互连接、融合，并省略一些音：*what do you* 变成一个流畅的连续音流，*next day* 的中间那个 *t* 消失了，*ten boys* 的 *n* 向 *m* 靠拢。连读音标签收集了这类短语，展示*连读结果*的 IPA，要求你还原出原来的单词。这些短语按三种现象（连读 linking / 同化 assimilation / 省音 elision）和三个难度级别分类。从 Level 1 的双词连读开始，逐步升至 Level 3——多种效果叠加在一个短句里。这个标签解释了为什么快速英语听起来与词典相去甚远，以及为什么这是正常的。",
+        "这件事一直让学习者感到意外，是有原因的：词典发音和连读发音在某种意义上是两种不同的音频信号。大脑学会通过稳定的词典形式模板来识别单词——但在快速发音中，那个模板根本不会被播放出来。取而代之的是，声音跨越词界渗透，辅音向相邻音同化，非重读音节缩减为一个微弱的 schwa 或干脆消失。如果你只用孤立的单词发音训练过耳朵，快速的母语发音听起来就像一堵难以分辨的噪声墙。连读音标签正是培养你所需要的那种桥接能力：听到连续的音流，在脑子里还原出它所包含的单词。",
         "**弱读形式（Weak Forms）筛选器**（在此标签的「类型」筛选器里）专注于一种特定的机制：*to*、*can*、*of*、*them* 等虚词有两种发音——单独使用时的强读形式，以及在自然发音中缩减为一个元音或辅音的弱读形式。母语者在句中几乎从不使用强读形式；学习者几乎总是预期强读形式。这种错位是真实语音理解失败最常见的原因之一。弱读形式的训练让你的耳朵习惯那些实际出现在音流中的缩减形式，从而让你听到的与你预期的之间的差距持续缩小。"
       ]
     },
@@ -313,9 +313,9 @@
     "how_to_use": {
       "title": "如何高效使用",
       "body": [
-        "从 Mode A、Decode、「所有发音」开始，让应用从你的错误中学习你的薄弱环节。经过几次练习后，把焦点切换到「薄弱环节」，让它专门追踪你反复出错的符号。一旦 Decode 感觉轻松，就加入 Encode——它会让你感到挫败，而这正是它的意义所在。每周抽两次时间访问连读短语标签，保持耳朵对真实发音的准备。当你想通过耳朵而不是眼睛来扩充词汇时，转向 Mode B。",
+        "从 Mode A、Decode、「所有发音」开始，让应用从你的错误中学习你的薄弱环节。经过几次练习后，把焦点切换到「薄弱环节」，让它专门追踪你反复出错的符号。一旦 Decode 感觉轻松，就加入 Encode——它会让你感到挫败，而这正是它的意义所在。每周抽两次时间访问连读音标签，保持耳朵对真实发音的准备。当你想通过耳朵而不是眼睛来扩充词汇时，转向 Mode B。",
         "保持练习短而频繁，而不是长而偶尔；间隔重复系统是为每天回来而设计的。点击任意 IPA 符号可以打开它的解释和示例词——每次某个符号让你感到意外时都使用这个功能。经常重播音频：目标不是回答一次，而是让正确的发音感觉像是理所当然的。当某个对比终于在你口中顺了，你会发现你也突然能听出来了。那个时刻就是这款应用的全部意义。",
-        "一个倾向于有效的具体起始节奏：**周一至周五**，每天打开应用做一次短暂的 Decode 练习——十道题，仅此而已。不要追求满分，追求一个真实的分数。**其中两天**，把 Decode 换成用同一批单词做 Encode。Encode 的冲击感会让你清楚地区分你真正知道的和你以为你知道的。**周末某一天**，花五分钟在连读短语标签上：一两个 Level 1 短语，随着熟悉再逐渐移向 Level 2。这个计划每天只需要不到十五分钟，但它产生的是复利回报，因为间隔重复对坚持的奖励远大于对时长的奖励。可以自由调整节奏——唯一重要的是一直回来。"
+        "一个倾向于有效的具体起始节奏：**周一至周五**，每天打开应用做一次短暂的 Decode 练习——十道题，仅此而已。不要追求满分，追求一个真实的分数。**其中两天**，把 Decode 换成用同一批单词做 Encode。Encode 的冲击感会让你清楚地区分你真正知道的和你以为你知道的。**周末某一天**，花五分钟在连读音标签上：一两个 Level 1 短语，随着熟悉再逐渐移向 Level 2。这个计划每天只需要不到十五分钟，但它产生的是复利回报，因为间隔重复对坚持的奖励远大于对时长的奖励。可以自由调整节奏——唯一重要的是一直回来。"
       ]
     }
   },
@@ -361,10 +361,10 @@
       ]
     },
     "connected": {
-      "title": "Ang Connected Speech na tab",
+      "title": "Ang Linking na tab",
       "body": [
-        "Ang tunay na pananalita ay hindi nagbibigkas ng mga salita nang isa-isa at malinaw. Iniuugnay nito ang mga ito, pinaghahaluin, at ibinabagsak ang mga tunog: ang *what do you* ay nagiging isang maayos na daloy, nawawala ang gitnang *t* ng *next day*, at ang *n* ng *ten boys* ay lumalapit sa *m*. Ang Connected Speech tab ay nangongolekta ng mga pariralang ito at nagpapakita ng IPA ng *konektadong resulta*, at hinihingi sa iyo na mabawi ang orihinal na mga salita. Ang mga parirala ay inuri sa tatlong phenomena — linking, assimilation, elision — at tatlong antas ng kahirapan. Magsimula sa Level 1 na may dalawang-salitang link, at umakyat sa Level 3 kung saan maraming epekto ang nagtitipon sa loob ng isang maikling pangungusap. Ipinaliliwanag ng tab na ito kung bakit ang mabilis na Ingles ay walang pagkakatulad sa diksyonaryo, at kung bakit ito ay normal.",
-        "May dahilan kung bakit ito ay patuloy na nagugulat sa mga nag-aaral: ang pagbigkas sa diksyonaryo at ang pagbigkas sa konektadong pananalita ay, sa tunay na kahulugan, dalawang magkaibang akustikong signal. Natututo ang utak na makilala ang isang salita mula sa isang matatag na citation-form na template — ngunit sa mabilis na pananalita, ang template na iyon ay hindi kailanman talagang pinaplayan. Sa halip, ang mga tunog ay tumatawid sa mga hangganan ng salita, nag-aasimilasyon ang mga katinig sa kanilang mga kapitbahay, at nababawasan ang mga hindi-may-diin na pantig sa isang payak na schwa o nawawala. Kung naisanay mo lang ang iyong tainga sa pagbigkas ng mga nakahiwalay na salita, ang mabilis na pananalita ng native ay parang dingding ng hindi matukoy na ingay. Ang Connected Speech tab ay nagtatayo ng eksaktong bridging skill na kailangan mo: ang kakayahang marinig ang isang konektadong daloy at mental na muling buuin ang mga salitang nakapaloob dito.",
+        "Ang tunay na pananalita ay hindi nagbibigkas ng mga salita nang isa-isa at malinaw. Iniuugnay nito ang mga ito, pinaghahaluin, at ibinabagsak ang mga tunog: ang *what do you* ay nagiging isang maayos na daloy, nawawala ang gitnang *t* ng *next day*, at ang *n* ng *ten boys* ay lumalapit sa *m*. Ang Linking tab ay nangongolekta ng mga pariralang ito at nagpapakita ng IPA ng *konektadong resulta*, at hinihingi sa iyo na mabawi ang orihinal na mga salita. Ang mga parirala ay inuri sa tatlong phenomena — linking, assimilation, elision — at tatlong antas ng kahirapan. Magsimula sa Level 1 na may dalawang-salitang link, at umakyat sa Level 3 kung saan maraming epekto ang nagtitipon sa loob ng isang maikling pangungusap. Ipinaliliwanag ng tab na ito kung bakit ang mabilis na Ingles ay walang pagkakatulad sa diksyonaryo, at kung bakit ito ay normal.",
+        "May dahilan kung bakit ito ay patuloy na nagugulat sa mga nag-aaral: ang pagbigkas sa diksyonaryo at ang pagbigkas sa konektadong pananalita ay, sa tunay na kahulugan, dalawang magkaibang akustikong signal. Natututo ang utak na makilala ang isang salita mula sa isang matatag na citation-form na template — ngunit sa mabilis na pananalita, ang template na iyon ay hindi kailanman talagang pinaplayan. Sa halip, ang mga tunog ay tumatawid sa mga hangganan ng salita, nag-aasimilasyon ang mga katinig sa kanilang mga kapitbahay, at nababawasan ang mga hindi-may-diin na pantig sa isang payak na schwa o nawawala. Kung naisanay mo lang ang iyong tainga sa pagbigkas ng mga nakahiwalay na salita, ang mabilis na pananalita ng native ay parang dingding ng hindi matukoy na ingay. Ang Linking tab ay nagtatayo ng eksaktong bridging skill na kailangan mo: ang kakayahang marinig ang isang konektadong daloy at mental na muling buuin ang mga salitang nakapaloob dito.",
         "Ang **Weak Forms filter** (sa loob ng tab na ito, sa ilalim ng Type) ay nakatuon sa isang tiyak na mekanismo: ang mga function word tulad ng *to*, *can*, *of*, at *them* ay may dalawang pagbigkas — isang malakas na anyo na ginagamit nang hiwalay, at isang mahinang anyo na naibabawas sa isang patinig o katinig sa natural na pananalita. Ang mga native speaker ay halos hindi gumagamit ng malakas na anyo sa gitna ng pangungusap; ang mga nag-aaral ay halos palaging umaasa sa malakas na anyo. Ang pagkakaibang ito ay isa sa mga pinakakaraniwang sanhi ng pagkabigo sa pag-unawa sa tunay na pananalita. Ang pag-drill sa Weak Forms ay nagtuturo sa iyong tainga ng mga pinabababang anyo na talagang lumilitaw sa daloy, kaya ang agwat sa pagitan ng naririnig mo at ng inaasahan mo ay patuloy na sumasalim."
       ]
     },
@@ -377,9 +377,9 @@
     "how_to_use": {
       "title": "Paano ito gamitin nang mabuti",
       "body": [
-        "Magsimula sa Mode A, Decode, na may \"lahat ng tunog,\" at hayaan ang app na matuto ng iyong mga kahinaan mula sa iyong mga pagkakamali. Pagkatapos ng ilang session, palitan ang focus sa \"weak spots\" at hayaan itong hanapin ang mga simbolong patuloy mong naliligaw. Idagdag ang Encode kapag madali na ang Decode — magpapahina ito sa iyo, at iyon ang layunin. Bisitahin ang Connected Speech tab nang dalawang beses sa isang linggo para mapanatiling handa ang iyong tainga para sa tunay na pananalita. Pumunta sa Mode B kapag nais mong palakihin ang iyong bokabularyo sa pamamagitan ng tainga kaysa sa mata.",
+        "Magsimula sa Mode A, Decode, na may \"lahat ng tunog,\" at hayaan ang app na matuto ng iyong mga kahinaan mula sa iyong mga pagkakamali. Pagkatapos ng ilang session, palitan ang focus sa \"weak spots\" at hayaan itong hanapin ang mga simbolong patuloy mong naliligaw. Idagdag ang Encode kapag madali na ang Decode — magpapahina ito sa iyo, at iyon ang layunin. Bisitahin ang Linking tab nang dalawang beses sa isang linggo para mapanatiling handa ang iyong tainga para sa tunay na pananalita. Pumunta sa Mode B kapag nais mong palakihin ang iyong bokabularyo sa pamamagitan ng tainga kaysa sa mata.",
         "Panatilihing maikli at madalas ang mga session kaysa mahaba at bihira; ang sistema ng spaced repetition ay dinisenyo para sa pag-uwi araw-araw. I-tap ang anumang simbolo ng IPA upang mabuksan ang paliwanag at mga halimbawang salita nito — gamitin ito sa tuwing nagugulat sa iyo ang isang simbolo. At i-replay madalas ang audio: ang layunin ay hindi ang sumagot nang isang beses, kundi gawin ang tamang tunog ay parang ordinaryo na. Kapag ang isang kontraste ay nagsimulang mag-click sa iyong bibig, mapapansin mong bigla mong maririnig din ito. Ang sandaling iyon ang buong punto ng app.",
-        "Isang konkretong simula ng ritmo na karaniwang gumagana: **Lunes hanggang Biyernes**, buksan ang app para sa isang maikling Decode session — sampung tanong, wala nang iba. Huwag maghangad ng perpektong iskor; maghangad ng tapat na iskor. **Sa dalawa sa mga araw na iyon**, palitan ang Decode ng Encode gamit ang parehong grupo ng mga salita. Ang shock ng Encode ay nagpapatunay kung ano talaga ang alam mo kumpara sa kung ano ang sa tingin mo ay alam mo. **Sa isang araw ng weekend**, gumastos ng limang minuto sa Connected Speech tab: isa o dalawang Level 1 na parirala, dahan-dahang lumipat sa Level 2 habang nagiging komportable. Ang schedule na ito ay humihingi ng wala pang labinlimang minuto sa isang araw at nagbubunga ng compound returns dahil ang spaced repetition ay nagbibigay ng mas maraming gantimpala sa consistency kaysa sa tagal. I-adjust ang ritmo nang malaya — ang tanging mahalaga ay ang bumalik."
+        "Isang konkretong simula ng ritmo na karaniwang gumagana: **Lunes hanggang Biyernes**, buksan ang app para sa isang maikling Decode session — sampung tanong, wala nang iba. Huwag maghangad ng perpektong iskor; maghangad ng tapat na iskor. **Sa dalawa sa mga araw na iyon**, palitan ang Decode ng Encode gamit ang parehong grupo ng mga salita. Ang shock ng Encode ay nagpapatunay kung ano talaga ang alam mo kumpara sa kung ano ang sa tingin mo ay alam mo. **Sa isang araw ng weekend**, gumastos ng limang minuto sa Linking tab: isa o dalawang Level 1 na parirala, dahan-dahang lumipat sa Level 2 habang nagiging komportable. Ang schedule na ito ay humihingi ng wala pang labinlimang minuto sa isang araw at nagbubunga ng compound returns dahil ang spaced repetition ay nagbibigay ng mas maraming gantimpala sa consistency kaysa sa tagal. I-adjust ang ritmo nang malaya — ang tanging mahalaga ay ang bumalik."
       ]
     }
   }

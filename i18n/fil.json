@@ -203,10 +203,10 @@
   "syl": "{n} pantig",
   "syl_pl": "{n} pantig",
   "tab": {
-    "connected": "Konektadong Pananalita",
+    "connected": "Linking",
     "label": "Mode ng pagsasanay",
     "weak": "Mahihinang Anyo",
-    "words": "Mga Salita"
+    "words": "Isang salita"
   },
   "tips_head": "Mga tip sa pagbigkas",
   "weak": {

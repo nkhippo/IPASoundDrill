@@ -7,8 +7,8 @@
   "lead_weak_html": "Hear the <b>weak forms</b> of function words in connected speech. Read the IPA and recover the word.",
   "tab": {
     "label": "Practice mode",
-    "words": "Words",
-    "connected": "Connected Speech",
+    "words": "One word",
+    "connected": "Linking",
     "weak": "Weak Forms"
   },
   "mode": {

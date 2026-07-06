@@ -7,8 +7,8 @@
   "lead_weak_html": "听功能词的<b>弱读形式</b>，读出 IPA 还原单词。",
   "tab": {
     "label": "练习模式",
-    "words": "单词",
-    "connected": "连读·脱落·同化",
+    "words": "一词",
+    "connected": "连读音",
     "weak": "弱读形式"
   },
   "mode": {

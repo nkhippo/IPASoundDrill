@@ -7,8 +7,8 @@
   "lead_weak_html": "機能語の<b>弱形</b>を聞き取る。IPAを読んで元の語を答える。",
   "tab": {
     "label": "練習モード",
-    "words": "単語",
-    "connected": "連結・脱落・同化",
+    "words": "一単語",
+    "connected": "連結音",
     "weak": "弱形"
   },
   "mode": {
