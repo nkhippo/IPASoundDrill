@@ -27,9 +27,9 @@
     "ruleLabel": "Tuntunin"
   },
   "dir": {
-    "decode_d": "Basahin ang IPA at baybayin ang salita",
+    "decode_d": "Basahin ang simbolong ponetiko (IPA) at hulaan ang salita",
     "decode_t": "IPA &rarr; salita",
-    "encode_d": "Buuin ang pagbigkas gamit ang IPA keyboard",
+    "encode_d": "Buuin ang IPA mula sa baybay",
     "encode_t": "salita &rarr; IPA",
     "label": "Direksyon"
   },

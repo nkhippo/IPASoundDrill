@@ -85,9 +85,9 @@
   "dir": {
     "label": "방향",
     "decode_t": "IPA &rarr; 단어",
-    "decode_d": "IPA를 읽고 철자를 맞추기",
+    "decode_d": "발음 기호(IPA)를 읽고 단어 맞히기",
     "encode_t": "단어 &rarr; IPA",
-    "encode_d": "IPA 키보드로 발음 조립하기"
+    "encode_d": "철자에서 발음 기호(IPA) 조립하기"
   },
   "set": {
     "label": "문제 세트",
