@@ -38,8 +38,6 @@
   .panel{background:var(--panel);border:1px solid var(--hair);border-radius:14px;padding:24px 20px}
   .panel + .panel{margin-top:14px}
 
-  .lead{font-size:13.5px;color:var(--muted);margin:0 0 20px}
-  .lead b{color:var(--ink);font-weight:600}
   .field{margin-bottom:18px}
   .flabel{font-family:var(--mono);font-size:10.5px;color:var(--faint);text-transform:uppercase;letter-spacing:.14em;margin-bottom:9px}
   .opts{display:flex;flex-wrap:wrap;gap:8px}
@@ -302,12 +300,6 @@
         <button class="opt" role="tab" data-tab="connected" aria-pressed="false" id="tabConnected"><span class="ot" id="tabConnectedT">Connected Speech</span></button>
       </div>
     </div>
-
-    <p class="lead" id="lead">Drill <b>IPA reading and writing</b> for words you already know&mdash;sound by sound. Target <b>trap phonemes</b> (θ, ð, æ, ʒ, ɝ) or your <b>weak spots</b> from practice history. Objective scoring only; build symbol coverage, not vocabulary lists.</p>
-    <p class="lead hidden" id="leadConnected">Hear <b>connected speech</b> in GA&mdash;linking, assimilation, and elision. Read the connected IPA and recover the original phrase.</p>
-    <p class="lead hidden" id="leadWeak">Hear <b>weak forms</b> of function words in connected speech. Read the IPA and recover the word.</p>
-
-    <p class="lead hidden" id="leadModeB">Learn <b>new words from sound</b>&mdash;hear the word, then match meaning and spelling. CEFR band progression with spaced review.</p>
 
     <div id="modebSetup" class="hidden">
       <div class="field">
@@ -945,14 +937,10 @@ function csRuleText(c) {
 function applyI18n() {
   document.title = t("brand.name");
   $("brandName").textContent = t("brand.name");
-  $("lead").innerHTML = t("lead_html");
-  $("leadConnected").innerHTML = t("lead_connected_html");
-  $("leadWeak").innerHTML = t("lead_weak_html");
   $("flabelTab").textContent = t("tab.label");
   $("flabelMode").textContent = t("mode.label");
   $("modeAT").textContent = t("mode.a");
   $("modeBT").textContent = t("modeb.title");
-  $("leadModeB").innerHTML = t("modeb.lead_html");
   $("flabelModeBBand").textContent = t("modeb.band.label");
   $("mbSGotIt").textContent = t("modeb.study.got_it");
   $("mbSRevealBtn").textContent = t("modeb.study.reveal_meaning");
@@ -1225,10 +1213,6 @@ function updateSetupFields(){
   show("wordsSetup",words);
   show("connectedSetup", S.tab === "connected" && !modeB);
   show("csTypeField", S.tab === "connected" && !modeB);
-  show("lead", words);
-  show("leadModeB", modeB);
-  show("leadConnected", S.tab === "connected" && !modeB && S.csFilter !== "weak");
-  show("leadWeak", S.tab === "connected" && !modeB && S.csFilter === "weak");
   show("grpField",words&&S.reg==="regular");
   $("focusTrapNote").textContent=words&&(S.focus==="traps"?t("focus.traps_d"):S.focus==="weak"?t("focus.weak_d"):"");
   $("regNote").textContent=words&&(S.reg==="regular"?t("reg.regular_d"):S.reg==="irregular"?t("reg.irregular_d"):"");
