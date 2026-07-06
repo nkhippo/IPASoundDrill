@@ -24,6 +24,8 @@
   .brand .mark{font-family:var(--ipa);font-size:24px;color:var(--signal);letter-spacing:.5px;flex-shrink:0}
   .brand .name{font-weight:700;font-size:15px;letter-spacing:.04em;white-space:nowrap}
   .meter{font-family:var(--mono);font-size:11px;color:var(--muted);text-align:right;letter-spacing:.04em;white-space:nowrap}
+  .play-crumb{font-family:var(--mono);font-size:10.5px;color:var(--muted);letter-spacing:.03em;margin:-10px 0 14px;line-height:1.45}
+  body.in-play .play-crumb{margin:-2px 0 10px}
   .meter b{color:var(--ink);font-weight:700}
   .topbar-actions{display:flex;flex-direction:column;align-items:flex-end;gap:6px;flex-shrink:0}
   .langpick{display:flex;gap:4px}
@@ -292,6 +294,7 @@
       <div class="meter" id="meter"></div>
     </div>
   </div>
+  <div class="play-crumb hidden" id="playCrumb" aria-live="polite"></div>
 
   <!-- SETUP -->
   <section id="setup" class="panel">
@@ -1043,6 +1046,7 @@ async function setLang(lang) {
   await loadLocale(lang);
   applyI18n();
   buildKeyboard();
+  if (document.body.classList.contains("in-play")) updatePlayCrumb();
   if (S.cur && !$("reveal").classList.contains("hidden")) {
     $("rGloss").textContent = wordGloss(S.cur);
     if (isConnectedItem(S.cur)) {
@@ -1085,6 +1089,7 @@ function setAccent(accent) {
   buildKeyboard();
   if (S.cur && S.revealed) refreshRevealIpa();
   else if (S.cur && !S.revealed) renderCard();
+  if (document.body.classList.contains("in-play")) updatePlayCrumb();
   prefetchAccentBodies(accent);
 }
 
@@ -1202,12 +1207,25 @@ function setSetupVisible(on){
   $("backTopBtn").classList.toggle("hidden",on);
   $("settingsBtn").classList.toggle("hidden",!on);
   $("guideBtn").classList.toggle("hidden",!on);
+  $("playCrumb").classList.toggle("hidden",on);
   document.body.classList.toggle("in-play",!on);
   if(on){
     if(currentAudio){currentAudio.pause();currentAudio=null;}
     $("meter").textContent="";
     unlockInputScroll();
-  }
+  }else updatePlayCrumb();
+}
+function playCrumbPracticeLabel(){
+  if(S.appMode==="b")return t("modeb.title");
+  if(S.tab==="connected")return S.csFilter==="weak"?t("tab.weak"):t("tab.connected");
+  return t("tab.words");
+}
+function playCrumbLearningLabel(){
+  return S.appMode==="b"?t("modeb.title"):t("mode.a");
+}
+function updatePlayCrumb(){
+  const acc=ACCENT==="rp"?"RP":"GA";
+  $("playCrumb").textContent=playCrumbLearningLabel()+" > "+playCrumbPracticeLabel()+" ("+acc+")";
 }
 function goToTop(){setSetupVisible(true);}
 $("backTopBtn").addEventListener("click",goToTop);
