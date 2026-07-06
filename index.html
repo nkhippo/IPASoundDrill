@@ -158,8 +158,8 @@
   #mbSMeaning.hidden{display:none}
   #mbSMeaning:not(.hidden){animation:mbsFadeIn .25s ease}
   #mbSMeaning .word-gloss{text-align:center;margin-bottom:0}
-  #mbSMeaning .respell{margin-top:8px}
   #mbSMeaning .note{margin-top:10px;padding-top:12px}
+  #mbSRespell{margin-top:0;margin-bottom:4px}
   @keyframes mbsFadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
   .mbs-actions{position:relative;margin-top:16px;height:52px}
   .mbs-actions .btn-reveal,.mbs-actions .reveal-next{position:absolute;inset:0;margin:0;width:100%;box-sizing:border-box;min-height:52px}
@@ -396,12 +396,12 @@
     <div class="card-top"><div class="qno" id="mbSNo"></div></div>
     <div class="readout"><button class="playicon" id="mbSPlay" type="button" aria-label="Listen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div>
     <div class="readout"><div class="ipa" id="mbSIpa"></div></div>
+    <div class="respell hidden" id="mbSRespell"></div>
     <div class="info" id="mbSInfo"></div>
     <div class="mbs-meaning-slot">
       <div id="mbSMeaning" class="mbsMeaning hidden">
         <div class="readout"><div class="wordbig" id="mbSWord"></div></div>
         <div class="word-gloss" id="mbSGloss"></div>
-        <div class="respell hidden" id="mbSRespell"></div>
         <div class="note">
           <div class="nh" id="mbSTipsHead">Pronunciation tips</div>
           <p id="mbSNote"></p>
@@ -1435,6 +1435,7 @@ function renderModeBStudy(c){
   $("mbSWord").textContent=c.w;
   $("mbSGloss").textContent=modeBDisplayGloss(c);
   renderWordPronDetails(c,{respellId:"mbSRespell",noteId:"mbSNote",tipsHeadId:"mbSTipsHead",trapsId:"mbSTraps",infoId:"mbSInfo"});
+  $("mbSRespell").classList.add("hidden");
   setTimeout(()=>speak(c.w),250);
 }
 function renderModeBMcq(c){
@@ -2201,6 +2202,7 @@ function nextCard(){
 $("nextBtn").addEventListener("click",nextCard);
 $("mbSRevealBtn").addEventListener("click",()=>{
   $("mbSMeaning").classList.remove("hidden");
+  if($("mbSRespell").textContent)$("mbSRespell").classList.remove("hidden");
   $("mbSRevealBtn").classList.add("hidden");
   $("mbSGotIt").classList.remove("hidden");
 });
