@@ -153,11 +153,13 @@
   .reveal-next{margin-top:16px;width:100%;border:none;border-radius:11px;cursor:pointer;background:var(--ink);color:#fff;font-family:var(--ui);font-weight:700;font-size:15px;padding:14px;letter-spacing:.03em}
   .reveal-next:active{transform:translateY(1px)}
   .reveal-next.hidden{display:none}
-  .mbs-meaning-slot{min-height:6rem;display:flex;align-items:center;justify-content:center}
+  .mbs-meaning-slot{min-height:10rem;display:flex;align-items:flex-start;justify-content:center}
   #mbSMeaning{width:100%}
   #mbSMeaning.hidden{display:none}
   #mbSMeaning:not(.hidden){animation:mbsFadeIn .25s ease}
   #mbSMeaning .word-gloss{text-align:center;margin-bottom:0}
+  #mbSMeaning .respell{margin-top:8px}
+  #mbSMeaning .note{margin-top:10px;padding-top:12px}
   @keyframes mbsFadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
   .mbs-actions{position:relative;margin-top:16px;height:52px}
   .mbs-actions .btn-reveal,.mbs-actions .reveal-next{position:absolute;inset:0;margin:0;width:100%;box-sizing:border-box;min-height:52px}
@@ -394,10 +396,17 @@
     <div class="card-top"><div class="qno" id="mbSNo"></div></div>
     <div class="readout"><button class="playicon" id="mbSPlay" type="button" aria-label="Listen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div>
     <div class="readout"><div class="ipa" id="mbSIpa"></div></div>
+    <div class="info" id="mbSInfo"></div>
     <div class="mbs-meaning-slot">
       <div id="mbSMeaning" class="mbsMeaning hidden">
         <div class="readout"><div class="wordbig" id="mbSWord"></div></div>
         <div class="word-gloss" id="mbSGloss"></div>
+        <div class="respell hidden" id="mbSRespell"></div>
+        <div class="note">
+          <div class="nh" id="mbSTipsHead">Pronunciation tips</div>
+          <p id="mbSNote"></p>
+          <div class="trapchips" id="mbSTraps"></div>
+        </div>
       </div>
     </div>
     <div class="mbs-actions">
@@ -957,6 +966,7 @@ function applyI18n() {
   $("flabelModeBBand").textContent = t("modeb.band.label");
   $("mbSGotIt").textContent = t("modeb.study.got_it");
   $("mbSRevealBtn").textContent = t("modeb.study.reveal_meaning");
+  $("mbSTipsHead").textContent = t("tips_head");
   $("mbMHead").textContent = t("modeb.quiz.choose_meaning");
   $("mbDHead").textContent = t("modeb.quiz.type_word");
   $("mbDInput").placeholder = t("input_ph");
@@ -1418,12 +1428,13 @@ function hideModeBCards(){show("cardModeBStudy",false);show("cardModeBMcq",false
 function renderModeBStudy(c){
   hideModeBCards();show("cardModeBStudy",true);
   $("mbSNo").textContent="#"+String(S.idx+1).padStart(2,"0");
-  renderIpaInto($("mbSIpa"),activeNarrowIpa(c),"dInfo",null);
+  renderIpaInto($("mbSIpa"),activeNarrowIpa(c),"mbSInfo",null);
   $("mbSMeaning").classList.add("hidden");
   $("mbSRevealBtn").classList.remove("hidden");
   $("mbSGotIt").classList.add("hidden");
   $("mbSWord").textContent=c.w;
   $("mbSGloss").textContent=modeBDisplayGloss(c);
+  renderWordPronDetails(c,{respellId:"mbSRespell",noteId:"mbSNote",tipsHeadId:"mbSTipsHead",trapsId:"mbSTraps",infoId:"mbSInfo"});
   setTimeout(()=>speak(c.w),250);
 }
 function renderModeBMcq(c){
@@ -2090,6 +2101,23 @@ function autoNote(c){
   return parts.join(" · ");
 }
 function tryLine(html){return t("you",{a:html});}
+function renderWordPronDetails(c,ids){
+  const respellEl=ids.respellId?$(ids.respellId):null;
+  if(respellEl){
+    const respell=activeRespell(c);
+    if(respell){respellEl.textContent=respell;respellEl.classList.remove("hidden");}
+    else respellEl.classList.add("hidden");
+  }
+  if(ids.noteId)$(ids.noteId).textContent=autoNote(c);
+  if(ids.tipsHeadId)$(ids.tipsHeadId).textContent=t("tips_head");
+  if(ids.infoId)$(ids.infoId).classList.remove("on");
+  if(ids.trapsId){
+    const trapsEl=$(ids.trapsId);
+    const traps=[...new Set(phonemesOf(activeIpa(c)))].filter(s=>PH[s]&&PH[s].t===1);
+    trapsEl.innerHTML=traps.map(s=>'<span class="trapchip" data-sym="'+s+'">'+s+'</span>').join("");
+    trapsEl.querySelectorAll(".trapchip").forEach(ch=>ch.addEventListener("click",()=>renderInfo(ids.infoId,ch.dataset.sym)));
+  }
+}
 function refreshRevealIpa(marker){
   const c=S.cur;if(!c)return;
   const main=activeNarrowIpa(c);
@@ -2158,12 +2186,9 @@ function reveal(res,ctx){
     marker=(k,t)=>{if(t==="ˈ"||t==="ˌ")return null;return okTokens.has(k)?"tok-ok":"tok-bad";};
   }
   refreshRevealIpa(marker);
-  $("rNote").textContent=autoNote(c);
   if(!isConnectedItem(c)&&!isWeakItem(c)){
-    const traps=[...new Set(phonemesOf(activeIpa(c)))].filter(s=>PH[s].t===1);
-    $("rTraps").innerHTML=traps.map(s=>'<span class="trapchip" data-sym="'+s+'">'+s+'</span>').join("");
-    $("rTraps").querySelectorAll(".trapchip").forEach(ch=>ch.addEventListener("click",()=>renderInfo("rInfo",ch.dataset.sym)));
-  }
+    renderWordPronDetails(c,{respellId:"rRespell",noteId:"rNote",tipsHeadId:"tipsHead",trapsId:"rTraps",infoId:"rInfo"});
+  }else $("rNote").textContent=autoNote(c);
   setTimeout(()=>speak(c.w,speakOptsForItem(c)),200);
   refreshAllSpeakers();
 }
