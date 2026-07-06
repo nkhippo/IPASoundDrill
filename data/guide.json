@@ -27,15 +27,15 @@
     "modes": {
       "title": "The two modes",
       "body": [
-        "**Mode A — Pronunciation (the core).** Use this for words you already understand. You drill the link between sound and IPA symbol, scored objectively, with a light spaced-repetition system that brings back the words and the specific symbols you keep missing. This is the heart of the app and where most of your time should go. Pick a phoneme focus — all sounds, the notorious \"trap\" sounds, your own weak spots from history, the alphabet, contractions, irregular forms, casual speech — and the app feeds you matching words.",
-        "**Mode B — Sound → Vocabulary (the sub-theme).** Use this when you want to acquire genuinely new words, sound-first. You hear the word before you see its meaning, then confirm it two ways: choosing the meaning from four options, and typing the spelling from the sound. The wrong answers in the multiple choice are deliberately chosen to be *phonetic neighbors* — words that differ by a single sound — so you cannot pass by elimination. You have to actually hear the difference. In effect it turns every quiz into a minimal-pair listening test.",
-        "A simple rule of thumb: if you already know the word, that is Mode A. If you do not, that is Mode B."
+        "**IPA read & write (the core).** Use this for words you already understand. You drill the link between sound and IPA symbol, scored objectively, with a light spaced-repetition system that brings back the words and the specific symbols you keep missing. This is the heart of the app and where most of your time should go. Pick a phoneme focus — all sounds, the notorious \"trap\" sounds, your own weak spots from history, the alphabet, contractions, irregular forms, casual speech — under **Customize filters** if you need them, and the app feeds you matching words.",
+        "**Listen & learn (the sub-theme).** Use this when you want to acquire genuinely new words, sound-first. You hear the word before you see its meaning, then confirm it two ways: choosing the meaning from four options, and typing the spelling from the sound. The wrong answers in the multiple choice are deliberately chosen to be *phonetic neighbors* — words that differ by a single sound — so you cannot pass by elimination. You have to actually hear the difference. In effect it turns every quiz into a minimal-pair listening test.",
+        "A simple rule of thumb: if you already know the word, choose **IPA read & write**. If you do not, choose **Listen & learn**."
       ]
     },
     "decode_encode": {
       "title": "Decode and Encode",
       "body": [
-        "Mode A runs in two directions, and you should practice both. **Decode** shows you the IPA and asks you to write the ordinary spelling — this trains *reading* the phonetic alphabet. **Encode** shows you the word and asks you to build its pronunciation on the IPA keyboard, symbol by symbol — this trains *writing* it, which is far harder and far more revealing. Encode is where you discover that you never actually knew where the stress fell, or which vowel was really in there. Decode confirms you can read; Encode proves you understand.",
+        "IPA read & write runs in two directions, and you should practice both. **Decode** shows you the IPA and asks you to write the ordinary spelling — this trains *reading* the phonetic alphabet. **Encode** shows you the word and asks you to build its pronunciation on the IPA keyboard, symbol by symbol — this trains *writing* it, which is far harder and far more revealing. Encode is where you discover that you never actually knew where the stress fell, or which vowel was really in there. Decode confirms you can read; Encode proves you understand.",
         "The gap between the two directions is larger than most people expect. In Decode, the IPA is right in front of you — you are reading a map that has already been drawn. In Encode, you must draw the map from scratch: hear the word in your head, decompose it sound by sound, and place each phoneme on the keyboard in order. This forces you to confront every implicit assumption you carry about a word's sound. The stress mark ˈ before the wrong syllable, a ɪ where you wrote i, a missing ɚ at the end of a word — Encode surfaces these within seconds. Experienced language learners often describe their first Encode sessions as humbling, and that reaction is exactly right: Encode makes the invisible visible.",
         "A practical progression: spend your first week or two doing Decode only. Your goal is to build confidence reading IPA without the pressure of production. Once a symbol no longer surprises you when you see it, add Encode for the same pool of words. The contrast between the two sessions — how easy Decode feels versus how difficult Encode remains — tells you precisely where your phonetic knowledge is solid and where it is still hollow. When Encode stops surprising you, your IPA has become a real tool."
       ]
@@ -51,13 +51,13 @@
     "accents": {
       "title": "American (GA) and British (RP)",
       "body": [
-        "You can set the whole app to General American or to Received Pronunciation, and the choice changes the IPA you see, the keyboard you type on, and the voice you hear. They differ in real ways: RP drops the *r* at the end of *car* and *letter*; the two accents split words like *bath* and *lot* into different vowels. Pick the accent you actually want to sound like, and stay with it long enough to internalize it. When you reveal an answer, the app also shows the other accent's IPA as a footnote, so you can see the contrast without losing your main target. There is no \"correct\" accent — only the one you are choosing to learn."
+        "You can set the whole app to General American or to Received Pronunciation, and the choice changes the IPA you see, the keyboard you type on, and the voice you hear. They differ in real ways: RP drops the *r* at the end of *car* and *letter*; the two accents split words like *bath* and *lot* into different vowels. Pick the accent you actually want to sound like, and stay with it long enough to internalize it. While you practice, the app also shows the other accent's IPA as a quiet footnote — after you check an answer, during word Decode drills, in Listen & learn study, and in the vocabulary browser. When both accents share the same phonemic form, it says \"same (/…/)\" so you can verify they match. There is no \"correct\" accent — only the one you are choosing to learn."
       ]
     },
     "how_to_use": {
       "title": "How to use it well",
       "body": [
-        "Begin in Mode A, Decode, with \"all sounds,\" and let the app learn your weak spots from your mistakes. After a few sessions, switch the focus to \"weak spots\" and let it hunt the symbols you keep missing. Add Encode once Decode feels easy — it will humble you, and that is the point. Visit the Linking tab a couple of times a week to keep your ear ready for real speech. Turn to Mode B when you want to grow your vocabulary through the ear rather than the eye.",
+        "Begin in **IPA read & write**, Decode, with \"all sounds,\" and let the app learn your weak spots from your mistakes. After a few sessions, open **Customize filters**, switch the focus to \"weak spots,\" and let it hunt the symbols you keep missing. Add Encode once Decode feels easy — it will humble you, and that is the point. Visit the Linking tab a couple of times a week to keep your ear ready for real speech. Turn to **Listen & learn** when you want to grow your vocabulary through the ear rather than the eye.",
         "Keep sessions short and frequent rather than long and rare; the spaced-repetition system is built for daily returns. Tap any IPA symbol to open its explanation and example words — use this every time a symbol surprises you. And replay the audio often: the goal is not to answer once, but to make the correct sound feel ordinary. When a contrast finally clicks in your mouth, you will notice you can suddenly hear it too. That moment is the whole point of the app.",
         "A concrete starting rhythm that tends to work: **Monday through Friday**, open the app for one short Decode session — ten questions, no more. Do not aim for a perfect score; aim for a honest one. **On two of those days**, swap Decode for Encode with the same word pool. The shock of Encode confirms what you actually know versus what you only think you know. **On one weekend day**, spend five minutes on the Linking tab: one or two Level 1 phrases, gradually moving to Level 2 as they become comfortable. This schedule asks for less than fifteen minutes a day and produces compounding returns because spaced repetition rewards consistency far more than duration. Adjust the rhythm freely — the only thing that matters is coming back."
       ]
@@ -91,15 +91,15 @@
     "modes": {
       "title": "二つのモード",
       "body": [
-        "**Mode A — 発音（本丸）。** すでに意味を理解している単語に使います。音とIPA記号の対応を、客観採点でドリルします。軽い間隔反復（SRS）が、あなたが繰り返し間違える単語と、特定の記号を呼び戻してくれます。ここがアプリの心臓部で、学習時間の大半を注ぐべき場所です。音素フォーカス（全部／悪名高いトラップ音／履歴から割り出したあなたの弱点／アルファベット／短縮形／不規則形／カジュアル表現）を選ぶと、それに合う単語が出題されます。",
-        "**Mode B — 音から語彙（サブテーマ）。** 本当に新しい単語を、音から覚えたいときに使います。意味を見る前に音を聞き、二通りで確認します。四択から意味を選ぶことと、音から綴りを入力すること。四択の誤答は意図的に**音素近傍**（たった一つの音だけが違う語）から選ばれているため、消去法では通れません。実際に音の違いを聞き取るしかないのです。これにより、すべてのクイズが事実上のミニマルペア聞き取りテストになります。",
-        "簡単な目安。すでに知っている単語ならMode A。知らない単語ならMode Bです。"
+        "**IPA読み書き（本丸）。** すでに意味を理解している単語に使います。音とIPA記号の対応を、客観採点でドリルします。軽い間隔反復（SRS）が、あなたが繰り返し間違える単語と、特定の記号を呼び戻してくれます。ここがアプリの心臓部で、学習時間の大半を注ぐべき場所です。音素フォーカス（全部／悪名高いトラップ音／履歴から割り出したあなたの弱点／アルファベット／短縮形／不規則形／カジュアル表現）は**詳しい設定**から選べます。",
+        "**聞いて覚える（サブテーマ）。** 本当に新しい単語を、音から覚えたいときに使います。意味を見る前に音を聞き、二通りで確認します。四択から意味を選ぶことと、音から綴りを入力すること。四択の誤答は意図的に**音素近傍**（たった一つの音だけが違う語）から選ばれているため、消去法では通れません。実際に音の違いを聞き取るしかないのです。これにより、すべてのクイズが事実上のミニマルペア聞き取りテストになります。",
+        "簡単な目安。すでに知っている単語なら**IPA読み書き**。知らない単語なら**聞いて覚える**です。"
       ]
     },
     "decode_encode": {
       "title": "Decode と Encode",
       "body": [
-        "Mode A は二方向で動き、両方を練習すべきです。**Decode** はIPAを見せて普通の綴りを書かせます。これは発音記号を「読む」訓練です。**Encode** は単語を見せて、IPAキーボードで発音を一記号ずつ組み立てさせます。これは「書く」訓練で、はるかに難しく、はるかに多くを暴きます。Encodeでこそ、自分が実は強勢の位置を分かっていなかった、どの母音が入っているか曖昧だった、と気づくのです。Decodeは読めることの確認、Encodeは理解していることの証明です。",
+        "IPA読み書きは二方向で動き、両方を練習すべきです。**Decode** はIPAを見せて普通の綴りを書かせます。これは発音記号を「読む」訓練です。**Encode** は単語を見せて、IPAキーボードで発音を一記号ずつ組み立てさせます。これは「書く」訓練で、はるかに難しく、はるかに多くを暴きます。Encodeでこそ、自分が実は強勢の位置を分かっていなかった、どの母音が入っているか曖昧だった、と気づくのです。Decodeは読めることの確認、Encodeは理解していることの証明です。",
         "二つの方向の差は、多くの人が想像するよりずっと大きいです。Decode では、IPAがすでに目の前にあります。つまり誰かが描いた地図を読んでいる状態です。Encode では、その地図をゼロから自分で描かなければなりません。頭の中で単語を響かせ、音ひとつひとつに分解して、キーボードに順番に置いていく。この作業が、あなたがある単語の音について持っている暗黙の思い込みをすべて突きつけます。ˈ が違う音節の前にある、i と書いたところが ɪ だった、語末の ɚ を置き忘れていた——Encode はこれを数秒で浮かび上がらせます。経験豊富な語学学習者がしばしば最初の Encode セッションを「打ちのめされた」と表現するのは、まさに正しい反応です。Encode は見えなかったものを見えるようにするのです。",
         "実用的な進め方: 最初の一、二週間は Decode だけに絞りましょう。産出のプレッシャーなしにIPAを読む自信を積み上げることが目標です。ある記号を見て驚かなくなったら、同じプールの単語で Encode を加えます。二つのセッションの落差——Decode がどれほど楽に感じるか対 Encode がどれほど難しいままか——が、あなたの音韻知識がどこで固まっていてどこでまだ空洞かを正確に教えてくれます。Encode が驚かなくなったとき、IPAはようやく本物の道具になっています。"
       ]
@@ -115,13 +115,13 @@
     "accents": {
       "title": "アメリカ式（GA）とイギリス式（RP）",
       "body": [
-        "アプリ全体を General American か Received Pronunciation に設定でき、その選択によって、見えるIPA、入力するキーボード、聞こえる音声が変わります。両者は実際に異なります。RPは car や letter の語末の r を落とし、bath や lot のような単語の母音を二つのアクセントで別々に分けます。自分が実際にそう聞こえたいアクセントを選び、体に染み込むまで腰を据えて続けてください。答えを開いたとき、アプリはもう一方のアクセントのIPAも脚注として表示するので、主な手本を見失わずに対比を確認できます。「正しい」アクセントなどなく、あるのはあなたが学ぶと選んだものだけです。"
+        "アプリ全体を General American か Received Pronunciation に設定でき、その選択によって、見えるIPA、入力するキーボード、聞こえる音声が変わります。両者は実際に異なります。RPは car や letter の語末の r を落とし、bath や lot のような単語の母音を二つのアクセントで別々に分けます。自分が実際にそう聞こえたいアクセントを選び、体に染み込むまで腰を据えて続けてください。練習中も、もう一方のアクセントのIPAが控えめに表示されます。答え合わせ後、単語のDecode出題中、聞いて覚えるの学習画面、語彙ブラウザで確認できます。phonemic が同一のときは「同じ (/…/)」と表示され、一致していることが分かります。「正しい」アクセントなどなく、あるのはあなたが学ぶと選んだものだけです。"
       ]
     },
     "how_to_use": {
       "title": "効果的な使い方",
       "body": [
-        "まずMode AのDecodeで「全部の音」から始め、あなたの間違いからアプリに弱点を学習させましょう。数セッションの後、フォーカスを「弱点」に切り替え、繰り返し外す記号を狙い撃ちさせます。Decodeが楽に感じたらEncodeを加えてください。打ちのめされるはずですが、それこそが狙いです。連結音タブには週に二度ほど立ち寄り、現実の発話に対する耳を保ちましょう。目ではなく耳から語彙を増やしたくなったらMode Bへ向かいます。",
+        "まず**IPA読み書き**のDecodeで「全部の音」から始め、あなたの間違いからアプリに弱点を学習させましょう。数セッションの後、**詳しい設定**を開いてフォーカスを「弱点」に切り替え、繰り返し外す記号を狙い撃ちさせます。Decodeが楽に感じたらEncodeを加えてください。打ちのめされるはずですが、それこそが狙いです。連結音タブには週に二度ほど立ち寄り、現実の発話に対する耳を保ちましょう。目ではなく耳から語彙を増やしたくなったら**聞いて覚える**へ向かいます。",
         "セッションは長く稀にではなく、短く頻繁に。間隔反復は毎日戻ってくることを前提に設計されています。どのIPA記号もタップすれば解説と例語が開きます。記号に驚かされるたびに、これを使ってください。そして音声を何度も再生しましょう。目的は一度正解することではなく、正しい音を「当たり前」に感じられるようにすることです。ある対立がついに口で噛み合ったとき、それが急に聞き取れるようになっていることに気づくはずです。その瞬間こそ、このアプリのすべてです。",
         "うまくいく傾向のある具体的なリズムを紹介します。**月曜から金曜**は、1日1回の短い Decode セッションを開きましょう。10問、それだけ。満点を目指すのではなく、正直な点数を目指してください。**そのうち2日は** Decode の代わりに、同じ単語プールで Encode に切り替えます。Encode の衝撃が、自分が「実際に知っていること」と「知っていると思っているだけのこと」を区別してくれます。**週末の1日は** 連結音タブに5分を使います。Level 1 のフレーズを1〜2個、慣れてきたら Level 2 へ。このスケジュールが求めるのは1日15分未満です。それでも間隔反復は、長さよりも継続を圧倒的に報いるため、複利的な成果が生まれます。リズムは自由に調整してください。大事なのは、戻ってくることだけです。"
       ]
@@ -155,15 +155,15 @@
     "modes": {
       "title": "두 가지 모드",
       "body": [
-        "**Mode A — 발음 (핵심).** 이미 뜻을 이해하는 단어에 사용합니다. 소리와 IPA 기호의 대응을 객관 채점으로 훈련합니다. 가벼운 간격 반복(SRS)이 당신이 반복해서 틀리는 단어와 특정 기호를 다시 불러옵니다. 여기가 앱의 심장부이며, 학습 시간의 대부분을 쏟아야 할 곳입니다. 음소 포커스(전체／악명 높은 트랩 음／이력에서 찾아낸 당신의 약점／알파벳／축약형／불규칙형／구어 표현)를 고르면 거기에 맞는 단어가 출제됩니다.",
-        "**Mode B — 소리에서 어휘로 (보조 주제).** 정말로 새로운 단어를 소리부터 외우고 싶을 때 사용합니다. 뜻을 보기 전에 소리를 듣고, 두 가지로 확인합니다. 사지선다에서 뜻을 고르기, 그리고 소리에서 철자를 입력하기. 사지선다의 오답은 의도적으로 **음소 근방**(단 하나의 소리만 다른 단어)에서 골라지므로, 소거법으로는 통과할 수 없습니다. 실제로 소리의 차이를 들을 수밖에 없습니다. 이로써 모든 퀴즈가 사실상 미니멀 페어 듣기 시험이 됩니다.",
-        "간단한 기준. 이미 아는 단어라면 Mode A. 모르는 단어라면 Mode B입니다."
+        "**IPA 읽기·쓰기 (핵심).** 이미 뜻을 이해하는 단어에 사용합니다. 소리와 IPA 기호의 대응을 객관 채점으로 훈련합니다. 가벼운 간격 반복(SRS)이 당신이 반복해서 틀리는 단어와 특정 기호를 다시 불러옵니다. 여기가 앱의 심장부이며, 학습 시간의 대부분을 쏟아야 할 곳입니다. 음소 포커스(전체／악명 높은 트랩 음／이력에서 찾아낸 당신의 약점／알파벳／축약형／불규칙형／구어 표현)는 **상세 설정**에서 고를 수 있습니다.",
+        "**듣고 익히기 (보조 주제).** 정말로 새로운 단어를 소리부터 외우고 싶을 때 사용합니다. 뜻을 보기 전에 소리를 듣고, 두 가지로 확인합니다. 사지선다에서 뜻을 고르기, 그리고 소리에서 철자를 입력하기. 사지선다의 오답은 의도적으로 **음소 근방**(단 하나의 소리만 다른 단어)에서 골라지므로, 소거법으로는 통과할 수 없습니다. 실제로 소리의 차이를 들을 수밖에 없습니다. 이로써 모든 퀴즈가 사실상 미니멀 페어 듣기 시험이 됩니다.",
+        "간단한 기준. 이미 아는 단어라면 **IPA 읽기·쓰기**. 모르는 단어라면 **듣고 익히기**입니다."
       ]
     },
     "decode_encode": {
       "title": "Decode와 Encode",
       "body": [
-        "Mode A는 두 방향으로 작동하며, 둘 다 연습해야 합니다. **Decode**는 IPA를 보여주고 일반 철자를 쓰게 합니다 — 음성 기호를 *읽는* 훈련입니다. **Encode**는 단어를 보여주고 IPA 키보드에서 기호 하나하나를 선택해 발음을 구성하게 합니다 — 음성 기호를 *쓰는* 훈련으로, 훨씬 더 어렵고 훨씬 더 많은 것을 드러냅니다. 강세가 어디에 있는지 실제로는 몰랐다는 것, 어떤 모음이 들어가는지 흐릿했다는 것을 발견하는 것이 바로 Encode에서입니다. Decode는 읽을 수 있다는 것을 확인하고, Encode는 이해했다는 것을 증명합니다.",
+        "IPA 읽기·쓰기는 두 방향으로 작동하며, 둘 다 연습해야 합니다. **Decode**는 IPA를 보여주고 일반 철자를 쓰게 합니다 — 음성 기호를 *읽는* 훈련입니다. **Encode**는 단어를 보여주고 IPA 키보드에서 기호 하나하나를 선택해 발음을 구성하게 합니다 — 음성 기호를 *쓰는* 훈련으로, 훨씬 더 어렵고 훨씬 더 많은 것을 드러냅니다. 강세가 어디에 있는지 실제로는 몰랐다는 것, 어떤 모음이 들어가는지 흐릿했다는 것을 발견하는 것이 바로 Encode에서입니다. Decode는 읽을 수 있다는 것을 확인하고, Encode는 이해했다는 것을 증명합니다.",
         "두 방향의 차이는 대부분의 사람이 예상하는 것보다 훨씬 큽니다. Decode에서는 IPA가 이미 눈앞에 있습니다. 이미 그려진 지도를 읽는 것입니다. Encode에서는 그 지도를 처음부터 직접 그려야 합니다. 머릿속에서 단어의 소리를 떠올리고, 소리 하나하나로 분해해서, 키보드에 순서대로 놓아야 합니다. 이 과정이 당신이 어떤 단어의 소리에 대해 가진 모든 암묵적 가정을 들이밉니다. 틀린 음절 앞에 ˈ, i를 눌렀는데 사실은 ɪ, 단어 끝의 ɚ를 빠뜨린 것 — Encode는 이것들을 몇 초 만에 드러냅니다. 경험 있는 언어 학습자들이 첫 Encode 세션을 '좌절스러웠다'고 묘사하는 것은 정확히 맞는 반응입니다. Encode는 보이지 않던 것을 보이게 만듭니다.",
         "실용적인 순서: 처음 일주일 또는 이 주는 Decode만 하세요. 목표는 산출의 부담 없이 IPA를 읽는 자신감을 쌓는 것입니다. 어떤 기호를 봐도 더 이상 놀라지 않게 되면, 같은 단어 풀에 Encode를 추가하세요. 두 세션 사이의 차이 — Decode가 얼마나 쉽게 느껴지느냐 대 Encode가 얼마나 여전히 어려우냐 — 가 당신의 음운 지식이 어디서는 단단하고 어디서는 아직 비어 있는지를 정확히 알려 줍니다. Encode가 더 이상 놀랍지 않을 때, IPA는 진짜 도구가 된 것입니다."
       ]
@@ -179,13 +179,13 @@
     "accents": {
       "title": "미국식(GA)과 영국식(RP)",
       "body": [
-        "앱 전체를 General American 또는 Received Pronunciation으로 설정할 수 있고, 그 선택에 따라 보이는 IPA, 입력하는 키보드, 들리는 음성이 바뀝니다. 둘은 실제로 다릅니다. RP는 car와 letter의 어말 r을 떨어뜨리고, bath나 lot 같은 단어의 모음을 두 악센트에서 각각 다르게 가릅니다. 자신이 실제로 그렇게 들리고 싶은 악센트를 고르고, 몸에 밸 때까지 진득하게 이어 가세요. 답을 펼쳤을 때 앱은 다른 악센트의 IPA도 각주로 표시하므로, 주된 본보기를 잃지 않고 대비를 확인할 수 있습니다. '올바른' 악센트 같은 것은 없으며, 있는 것은 당신이 배우기로 고른 것뿐입니다."
+        "앱 전체를 General American 또는 Received Pronunciation으로 설정할 수 있고, 그 선택에 따라 보이는 IPA, 입력하는 키보드, 들리는 음성이 바뀝니다. 둘은 실제로 다릅니다. RP는 car와 letter의 어말 r을 떨어뜨리고, bath나 lot 같은 단어의 모음을 두 악센트에서 각각 다르게 가릅니다. 자신이 실제로 그렇게 들리고 싶은 악센트를 고르고, 몸에 밸 때까지 진득하게 이어 가세요. 연습 중에도 다른 악센트의 IPA가 조용히 표시됩니다. 답을 확인한 뒤, 단어 Decode 출제 중, 듣고 익히기 학습 화면, 어휘 브라우저에서 볼 수 있습니다. phonemic이 같으면 \"같음 (/…/)\"으로 표시되어 일치함을 확인할 수 있습니다. '올바른' 악센트 같은 것은 없으며, 있는 것은 당신이 배우기로 고른 것뿐입니다."
       ]
     },
     "how_to_use": {
       "title": "효과적으로 사용하는 방법",
       "body": [
-        "Mode A, Decode, '모든 소리'로 시작하고, 앱이 당신의 실수에서 약점을 파악하도록 하세요. 몇 번의 세션 후, 포커스를 '약점'으로 전환해 계속 놓치는 기호들을 집중 공략하게 하세요. Decode가 쉽게 느껴지면 Encode를 추가하세요 — 좌절감을 줄 것이며, 그것이 바로 핵심입니다. 연음 탭은 일주일에 두 번 정도 들러 실제 발화에 대비한 귀를 유지하세요. 눈이 아닌 귀로 어휘를 늘리고 싶을 때는 Mode B로 향하세요.",
+        "**IPA 읽기·쓰기**, Decode, '모든 소리'로 시작하고, 앱이 당신의 실수에서 약점을 파악하도록 하세요. 몇 번의 세션 후, **상세 설정**을 열어 포커스를 '약점'으로 전환해 계속 놓치는 기호들을 집중 공략하게 하세요. Decode가 쉽게 느껴지면 Encode를 추가하세요 — 좌절감을 줄 것이며, 그것이 바로 핵심입니다. 연음 탭은 일주일에 두 번 정도 들러 실제 발화에 대비한 귀를 유지하세요. 눈이 아닌 귀로 어휘를 늘리고 싶을 때는 **듣고 익히기**로 향하세요.",
         "세션은 길고 드물게 하기보다 짧고 자주 하세요. 간격 반복 시스템은 매일 돌아오는 것을 전제로 설계되어 있습니다. IPA 기호를 탭하면 설명과 예시 단어가 열립니다 — 기호가 당신을 놀라게 할 때마다 이것을 사용하세요. 음성을 자주 재생하세요. 목표는 한 번 맞추는 것이 아니라, 정확한 소리를 '당연하게' 느끼는 것입니다. 어떤 대조가 마침내 입에서 딱 맞을 때, 갑자기 그것을 들을 수 있게 됐다는 것도 알아차릴 것입니다. 그 순간이 이 앱의 전부입니다.",
         "효과가 있는 구체적인 시작 리듬을 소개합니다. **월요일부터 금요일**까지, 하루 한 번 짧은 Decode 세션을 엽니다 — 10문제, 그것만. 완벽한 점수를 목표로 하지 말고, 정직한 점수를 목표로 하세요. **그중 이틀은** Decode 대신 같은 단어 풀로 Encode로 바꾸세요. Encode의 충격이 실제로 아는 것과 안다고 생각하는 것의 차이를 확인시켜 줍니다. **주말 하루에는** 연음 탭에 5분을 쓰세요: Level 1 구문 하나 또는 둘, 편안해지면 점차 Level 2로 이동합니다. 이 일정이 요구하는 것은 하루에 15분 미만입니다. 그럼에도 간격 반복은 시간의 길이보다 일관성에 훨씬 더 크게 보상하기 때문에 복리 효과가 생깁니다. 리듬은 자유롭게 조정하세요 — 중요한 것은 오직 돌아오는 것뿐입니다."
       ]
@@ -219,15 +219,15 @@
     "modes": {
       "title": "兩種模式",
       "body": [
-        "**Mode A — 發音（核心）。** 用於你已經理解的單字。你反覆操練聲音與 IPA 符號之間的連結，採客觀計分，並搭配一套輕量的間隔重複系統（SRS），把你一再答錯的單字與特定符號帶回來。這是應用的心臟，也是你應投入最多時間之處。挑一個音素焦點——全部的音、惡名昭彰的「陷阱」音、從歷史紀錄找出的你的弱點、字母、縮寫、不規則形、口語表達——應用便會餵給你相符的單字。",
-        "**Mode B — 從聲音到詞彙（次要主題）。** 當你想以「聲音優先」的方式真正習得新單字時使用。你先聽到單字、再看見意思，然後以兩種方式確認：從四個選項中選出意思，以及依聲音輸入拼寫。選擇題的錯誤選項刻意取自**音素近鄰**（只差一個音的字），因此你無法靠刪去法過關。你只能真正聽出聲音的差別。如此一來，每一道測驗實際上都成了一場最小對立組的聽辨測試。",
-        "一個簡單的判準：已經認得的單字，走 Mode A；不認得的，走 Mode B。"
+        "**IPA 读写（核心）。** 用于你已经理解的单词。你反复操练声音与 IPA 符号之间的连结，采客观计分，并搭配一套轻量的间隔重复系统（SRS），把你一再答错的单词与特定符号带回来。这是应用的心脏，也是你应投入最多时间之处。音素焦点（全部的音、恶名昭彰的「陷阱」音、从历史记录找出的你的弱点、字母、缩写、不规则形、口语表达）可在**详细设置**中选取。",
+        "**听音学词（次要主题）。** 当你想以「声音优先」的方式真正习得新单词时使用。你先听到单词、再看见意思，然后以两种方式确认：从四个选项中选出意思，以及依声音输入拼写。选择题的错误选项刻意取自**音素近邻**（只差一个音的词），因此你无法靠删去法过关。你只能真正听出声音的差别。如此一来，每一道测验实际上都成了一场最小对立组的听辨测试。",
+        "一个简单的判准：已经认得的单词，选 **IPA 读写**；不认得的，选 **听音学词**。"
       ]
     },
     "decode_encode": {
       "title": "Decode 和 Encode",
       "body": [
-        "Mode A 雙向運行，兩個方向你都應該練習。**Decode** 展示 IPA 並要求你寫出普通拼字——這是訓練*閱讀*音標。**Encode** 展示單字並要求你在 IPA 鍵盤上逐個符號地建構發音——這是訓練*書寫*音標，難得多，揭示的也多得多。在 Encode 中，你會發現自己其實從來不知道重音在哪裡，也搞不清楚裡面究竟是哪個母音。Decode 確認你能讀；Encode 證明你真正理解了。",
+        "IPA 讀寫雙向運行，兩個方向你都應該練習。**Decode** 展示 IPA 並要求你寫出普通拼字——這是訓練*閱讀*音標。**Encode** 展示單字並要求你在 IPA 鍵盤上逐個符號地建構發音——這是訓練*書寫*音標，難得多，揭示的也多得多。在 Encode 中，你會發現自己其實從來不知道重音在哪裡，也搞不清楚裡面究竟是哪個母音。Decode 確認你能讀；Encode 證明你真正理解了。",
         "兩個方向之間的差距，比大多數人預期的要大得多。在 Decode 中，IPA 就擺在你面前——你讀的是一張已經畫好的地圖。在 Encode 中，你必須從頭開始畫那張地圖：在腦海中聽到這個單字，把它一個音一個音地分解，然後按順序把每個音素放到鍵盤上。這個過程會逼迫你面對自己對一個單字發音所持有的所有隱性假設。ˈ 放在了錯誤的音節前面、寫了 i 其實應該是 ɪ、忘記了詞尾的 ɚ——Encode 會在幾秒內讓這些問題浮出水面。有經驗的語言學習者常常把自己的第一次 Encode 練習描述為「令人沮喪的體驗」，而這正是對的反應：Encode 讓原本看不見的東西變得可見。",
         "實用的進階路徑：前一兩週只做 Decode，目標是在沒有產出壓力的情況下建立閱讀 IPA 的自信。當某個符號出現時不再感到意外，就為同一批單字加入 Encode。兩次練習之間的落差——Decode 有多輕鬆 vs Encode 仍有多難——會精確地告訴你，你的語音知識在哪裡是扎實的，在哪裡還是空洞的。當 Encode 不再讓你感到意外時，IPA 才真正成為你手中的工具。"
       ]
@@ -243,13 +243,13 @@
     "accents": {
       "title": "美式（GA）與英式（RP）",
       "body": [
-        "你可以把整個應用設為 General American 或 Received Pronunciation，這個選擇會改變你看到的 IPA、你輸入用的鍵盤，以及你聽到的語音。兩者確有實質差異：RP 會丟掉 car 與 letter 字尾的 r；兩種腔調也把 bath、lot 這類字分成不同的母音。挑你真正想聽起來像的那種腔調，並且穩穩地練到把它內化為止。當你揭曉答案時，應用也會把另一種腔調的 IPA 以註腳呈現，讓你在不失去主要標的的情況下對照差異。沒有所謂「正確」的腔調——只有你選擇去學的那一種。"
+        "你可以把整個應用設為 General American 或 Received Pronunciation，這個選擇會改變你看到的 IPA、你輸入用的鍵盤，以及你聽到的語音。兩者確有實質差異：RP 會丟掉 car 與 letter 字尾的 r；兩種腔調也把 bath、lot 這類字分成不同的母音。挑你真正想聽起來像的那種腔調，並且穩穩地練到把它內化為止。練習中，應用也會以註腳形式顯示另一種腔調的 IPA——答題後、單字 Decode 出題中、聽音學詞學習畫面、詞彙瀏覽器均可查看。phonemic 相同時會顯示「相同 (/…/)」，讓你知道兩者一致。沒有所謂「正確」的腔調——只有你選擇去學的那一種。"
       ]
     },
     "how_to_use": {
       "title": "如何高效使用",
       "body": [
-        "從 Mode A、Decode、「所有發音」開始，讓應用程式從你的錯誤中學習你的薄弱環節。經過幾次練習後，把焦點切換到「薄弱環節」，讓它專門追蹤你反覆出錯的符號。一旦 Decode 感覺輕鬆，就加入 Encode——它會讓你感到挫敗，而這正是它的意義所在。每週抽兩次時間造訪連讀音標籤，保持耳朵對真實發音的準備。當你想透過耳朵而不是眼睛來擴充詞彙時，轉向 Mode B。",
+        "從 **IPA 讀寫**、Decode、「所有發音」開始，讓應用程式從你的錯誤中學習你的薄弱環節。經過幾次練習後，打開**詳細設置**，把焦點切換到「薄弱環節」，讓它專門追蹤你反覆出錯的符號。一旦 Decode 感覺輕鬆，就加入 Encode——它會讓你感到挫敗，而這正是它的意義所在。每週抽兩次時間造訪連讀音標籤，保持耳朵對真實發音的準備。當你想透過耳朵而不是眼睛來擴充詞彙時，轉向 **聽音學詞**。",
         "保持練習短而頻繁，而不是長而偶爾；間隔重複系統是為每天回來而設計的。點擊任意 IPA 符號可以打開它的解釋和範例詞——每次某個符號讓你感到意外時都使用這個功能。經常重播音訊：目標不是回答一次，而是讓正確的發音感覺像是理所當然的。當某個對比終於在你口中順了，你會發現你也突然能聽出來了。那個時刻就是這款應用程式的全部意義。",
         "一個傾向於有效的具體起始節奏：**週一至週五**，每天打開應用程式做一次短暫的 Decode 練習——十道題，僅此而已。不要追求滿分，追求一個真實的分數。**其中兩天**，把 Decode 換成用同一批單字做 Encode。Encode 的衝擊感會讓你清楚地區分你真正知道的和你以為你知道的。**週末某一天**，花五分鐘在連讀音標籤上：一兩個 Level 1 短語，隨著熟悉再逐漸移向 Level 2。這個計劃每天只需要不到十五分鐘，但它產生的是複利回報，因為間隔重複對堅持的獎勵遠大於對時長的獎勵。可以自由調整節奏——唯一重要的是一直回來。"
       ]
@@ -283,15 +283,15 @@
     "modes": {
       "title": "两种模式",
       "body": [
-        "**Mode A — 发音（核心）。** 用于你已经理解的单词。你反复操练声音与 IPA 符号之间的连结，采客观计分，并搭配一套轻量的间隔重复系统（SRS），把你一再答错的单词与特定符号带回来。这是应用的心脏，也是你应投入最多时间之处。挑一个音素焦点——全部的音、臭名昭著的\"陷阱\"音、从历史记录找出的你的弱点、字母、缩写、不规则形、口语表达——应用便会喂给你相符的单词。",
-        "**Mode B — 从声音到词汇（次要主题）。** 当你想以\"声音优先\"的方式真正习得新单词时使用。你先听到单词、再看见意思，然后以两种方式确认：从四个选项中选出意思，以及依声音输入拼写。选择题的错误选项刻意取自**音素近邻**（只差一个音的词），因此你无法靠排除法过关。你只能真正听出声音的差别。如此一来，每一道测验实际上都成了一场最小对立组的听辨测试。",
-        "一个简单的判准：已经认得的单词，走 Mode A；不认得的，走 Mode B。"
+        "**IPA 读写（核心）。** 用于你已经理解的单词。你反复操练声音与 IPA 符号之间的连结，采客观计分，并搭配一套轻量的间隔重复系统（SRS），把你一再答错的单词与特定符号带回来。这是应用的心脏，也是你应投入最多时间之处。音素焦点（全部的音、臭名昭著的\"陷阱\"音、从历史记录找出的你的弱点、字母、缩写、不规则形、口语表达）可在**详细设置**中选取。",
+        "**听音学词（次要主题）。** 当你想以\"声音优先\"的方式真正习得新单词时使用。你先听到单词、再看见意思，然后以两种方式确认：从四个选项中选出意思，以及依声音输入拼写。选择题的错误选项刻意取自**音素近邻**（只差一个音的词），因此你无法靠排除法过关。你只能真正听出声音的差别。如此一来，每一道测验实际上都成了一场最小对立组的听辨测试。",
+        "一个简单的判准：已经认得的单词，选 **IPA 读写**；不认得的，选 **听音学词**。"
       ]
     },
     "decode_encode": {
       "title": "Decode 和 Encode",
       "body": [
-        "Mode A 双向运行，两个方向你都应该练习。**Decode** 展示 IPA 并要求你写出普通拼写——这是训练*阅读*音标。**Encode** 展示单词并要求你在 IPA 键盘上逐个符号地构建发音——这是训练*书写*音标，难得多，揭示的也多得多。在 Encode 中，你会发现自己其实从来不知道重音在哪里，也搞不清楚里面究竟是哪个元音。Decode 确认你能读；Encode 证明你真正理解了。",
+        "IPA 读写双向运行，两个方向你都应该练习。**Decode** 展示 IPA 并要求你写出普通拼写——这是训练*阅读*音标。**Encode** 展示单词并要求你在 IPA 键盘上逐个符号地构建发音——这是训练*书写*音标，难得多，揭示的也多得多。在 Encode 中，你会发现自己其实从来不知道重音在哪里，也搞不清楚里面究竟是哪个元音。Decode 确认你能读；Encode 证明你真正理解了。",
         "两个方向之间的差距，比大多数人预期的要大得多。在 Decode 中，IPA 就摆在你面前——你读的是一张已经画好的地图。在 Encode 中，你必须从头开始画那张地图：在脑海中听到这个单词，把它一个音一个音地分解，然后按顺序把每个音素放到键盘上。这个过程会逼迫你面对自己对一个单词发音所持有的所有隐性假设。ˈ 放在了错误的音节前面、写了 i 其实应该是 ɪ、忘记了词尾的 ɚ——Encode 会在几秒内让这些问题浮出水面。有经验的语言学习者常常把自己的第一次 Encode 练习描述为'令人沮丧的体验'，而这正是对的反应：Encode 让原本看不见的东西变得可见。",
         "实用的进阶路径：前一两周只做 Decode，目标是在没有产出压力的情况下建立阅读 IPA 的自信。当某个符号出现时不再感到意外，就为同一批单词加入 Encode。两次练习之间的落差——Decode 有多轻松 vs Encode 仍有多难——会精确地告诉你，你的语音知识在哪里是扎实的，在哪里还是空心的。当 Encode 不再让你感到意外时，IPA 才真正成为你手中的工具。"
       ]
@@ -307,13 +307,13 @@
     "accents": {
       "title": "美式（GA）与英式（RP）",
       "body": [
-        "你可以把整个应用设为 General American 或 Received Pronunciation，这个选择会改变你看到的 IPA、你输入用的键盘，以及你听到的语音。两者确有实质差异：RP 会丢掉 car 与 letter 词尾的 r；两种口音也把 bath、lot 这类词分成不同的元音。挑你真正想听起来像的那种口音，并且稳稳地练到把它内化为止。当你揭晓答案时，应用也会把另一种口音的 IPA 以脚注呈现，让你在不失去主要目标的情况下对照差异。没有所谓\"正确\"的口音——只有你选择去学的那一种。"
+        "你可以把整个应用设为 General American 或 Received Pronunciation，这个选择会改变你看到的 IPA、你输入用的键盘，以及你听到的语音。两者确有实质差异：RP 会丢掉 car 与 letter 词尾的 r；两种口音也把 bath、lot 这类词分成不同的元音。挑你真正想听起来像的那种口音，并且稳稳地练到把它内化为止。练习中，应用也会以脚注形式显示另一种口音的 IPA——答题后、单词 Decode 出题中、听音学词学习画面、词汇浏览器均可查看。phonemic 相同时会显示「相同 (/…/)」，让你知道两者一致。没有所谓\"正确\"的口音——只有你选择去学的那一种。"
       ]
     },
     "how_to_use": {
       "title": "如何高效使用",
       "body": [
-        "从 Mode A、Decode、「所有发音」开始，让应用从你的错误中学习你的薄弱环节。经过几次练习后，把焦点切换到「薄弱环节」，让它专门追踪你反复出错的符号。一旦 Decode 感觉轻松，就加入 Encode——它会让你感到挫败，而这正是它的意义所在。每周抽两次时间访问连读音标签，保持耳朵对真实发音的准备。当你想通过耳朵而不是眼睛来扩充词汇时，转向 Mode B。",
+        "从 **IPA 读写**、Decode、「所有发音」开始，让应用从你的错误中学习你的薄弱环节。经过几次练习后，打开**详细设置**，把焦点切换到「薄弱环节」，让它专门追踪你反复出错的符号。一旦 Decode 感觉轻松，就加入 Encode——它会让你感到挫败，而这正是它的意义所在。每周抽两次时间访问连读音标签，保持耳朵对真实发音的准备。当你想通过耳朵而不是眼睛来扩充词汇时，转向 **听音学词**。",
         "保持练习短而频繁，而不是长而偶尔；间隔重复系统是为每天回来而设计的。点击任意 IPA 符号可以打开它的解释和示例词——每次某个符号让你感到意外时都使用这个功能。经常重播音频：目标不是回答一次，而是让正确的发音感觉像是理所当然的。当某个对比终于在你口中顺了，你会发现你也突然能听出来了。那个时刻就是这款应用的全部意义。",
         "一个倾向于有效的具体起始节奏：**周一至周五**，每天打开应用做一次短暂的 Decode 练习——十道题，仅此而已。不要追求满分，追求一个真实的分数。**其中两天**，把 Decode 换成用同一批单词做 Encode。Encode 的冲击感会让你清楚地区分你真正知道的和你以为你知道的。**周末某一天**，花五分钟在连读音标签上：一两个 Level 1 短语，随着熟悉再逐渐移向 Level 2。这个计划每天只需要不到十五分钟，但它产生的是复利回报，因为间隔重复对坚持的奖励远大于对时长的奖励。可以自由调整节奏——唯一重要的是一直回来。"
       ]
@@ -347,15 +347,15 @@
     "modes": {
       "title": "Ang dalawang mode",
       "body": [
-        "**Mode A — Pagbigkas (ang pangunahin).** Gamitin ito para sa mga salitang naiintindihan mo na. Sinasanay mo ang ugnayan ng tunog at simbolong IPA, sinusuri nang obhetibo, kalakip ang magaan na sistema ng paulit-ulit na pagbabalik (spaced repetition) na nagbabalik ng mga salita at partikular na simbolo na madalas mong mali. Ito ang puso ng app at kung saan dapat mapunta ang halos lahat ng iyong oras. Pumili ng pokus na ponema — lahat ng tunog, ang kilalang \"trap\" na tunog, ang sarili mong kahinaan mula sa kasaysayan, ang alpabeto, mga pinaikling anyo (contractions), mga di-regular na anyo, pang-usapang pananalita — at ibibigay sa iyo ng app ang mga tugmang salita.",
-        "**Mode B — Tunog → Bokabularyo (ang pangalawang tema).** Gamitin ito kapag nais mong matuto ng tunay na bagong salita, tunog-muna. Naririnig mo ang salita bago mo makita ang kahulugan, pagkatapos ay kinukumpirma mo ito sa dalawang paraan: pagpili ng kahulugan mula sa apat na pagpipilian, at pag-type ng baybay mula sa tunog. Ang maling mga sagot sa multiple choice ay sinadyang piliin bilang *ponetikong kalapit* — mga salitang nagkakaiba sa isang tunog lamang — kaya hindi ka makadaraan sa pamamagitan ng pag-aalis. Kailangan mong talagang marinig ang pagkakaiba. Sa katunayan, ginagawa nitong pagsusulit sa pagkilala ng minimal pair ang bawat pagsusuri.",
-        "Isang simpleng panuntunan: kung kilala mo na ang salita, iyon ay Mode A. Kung hindi, iyon ay Mode B."
+        "**Basahin at isulat ang IPA (ang pangunahin).** Gamitin ito para sa mga salitang naiintindihan mo na. Sinasanay mo ang ugnayan ng tunog at simbolong IPA, sinusuri nang obhetibo, kalakip ang magaan na sistema ng paulit-ulit na pagbabalik (spaced repetition) na nagbabalik ng mga salita at partikular na simbolo na madalas mong mali. Ito ang puso ng app at kung saan dapat mapunta ang halos lahat ng iyong oras. Pumili ng pokus na ponema — lahat ng tunog, ang kilalang \"trap\" na tunog, ang sarili mong kahinaan mula sa kasaysayan, ang alpabeto, mga pinaikling anyo (contractions), mga di-regular na anyo, pang-usapang pananalita — sa ilalim ng **Mga detalyadong setting** kung kailangan mo.",
+        "**Makinig at matuto (ang pangalawang tema).** Gamitin ito kapag nais mong matuto ng tunay na bagong salita, tunog-muna. Naririnig mo ang salita bago mo makita ang kahulugan, pagkatapos ay kinukumpirma mo ito sa dalawang paraan: pagpili ng kahulugan mula sa apat na pagpipilian, at pag-type ng baybay mula sa tunog. Ang maling mga sagot sa multiple choice ay sinadyang piliin bilang *ponetikong kalapit* — mga salitang nagkakaiba sa isang tunog lamang — kaya hindi ka makadaraan sa pamamagitan ng pag-aalis. Kailangan mong talagang marinig ang pagkakaiba. Sa katunayan, ginagawa nitong pagsusulit sa pagkilala ng minimal pair ang bawat pagsusuri.",
+        "Isang simpleng panuntunan: kung kilala mo na ang salita, piliin ang **Basahin at isulat ang IPA**. Kung hindi, piliin ang **Makinig at matuto**."
       ]
     },
     "decode_encode": {
       "title": "Decode at Encode",
       "body": [
-        "Ang Mode A ay tumatakbo sa dalawang direksyon, at dapat mong isanay ang dalawa. Ang **Decode** ay nagpapakita ng IPA at hinihingi sa iyo na isulat ang karaniwang baybay — ito ay nagsasanay ng *pagbabasa* ng ponemikong alpabeto. Ang **Encode** ay nagpapakita ng salita at hinihingi sa iyo na buuin ang pagbigkas nito sa IPA keyboard, simbolo sa simbolo — ito ay nagsasanay ng *pagsulat* nito, na mas mahirap at mas nagbubunyag. Sa Encode mo malalaman na hindi mo pala talaga alam kung saan nahulog ang diin, o kung anong patinig talaga ang nasa loob. Ang Decode ay nagpapatunay na mababasa mo; ang Encode ay nagpapatunay na naiintindihan mo.",
+        "Ang Basahin at isulat ang IPA ay tumatakbo sa dalawang direksyon, at dapat mong isanay ang dalawa. Ang **Decode** ay nagpapakita ng IPA at hinihingi sa iyo na isulat ang karaniwang baybay — ito ay nagsasanay ng *pagbabasa* ng ponemikong alpabeto. Ang **Encode** ay nagpapakita ng salita at hinihingi sa iyo na buuin ang pagbigkas nito sa IPA keyboard, simbolo sa simbolo — ito ay nagsasanay ng *pagsulat* nito, na mas mahirap at mas nagbubunyag. Sa Encode mo malalaman na hindi mo pala talaga alam kung saan nahulog ang diin, o kung anong patinig talaga ang nasa loob. Ang Decode ay nagpapatunay na mababasa mo; ang Encode ay nagpapatunay na naiintindihan mo.",
         "Ang agwat sa pagitan ng dalawang direksyon ay mas malaki kaysa sa inaasahan ng karamihan. Sa Decode, nandito na ang IPA sa harap mo — nagbabasa ka ng mapa na naidrowing na. Sa Encode, kailangan mong iguhit ang mapang iyon mula sa simula: marinig ang salita sa iyong isipan, buwagin ito tunog sa tunog, at ilagay ang bawat ponema sa keyboard sa tamang pagkakasunod. Pinipilit nito kang harapin ang lahat ng iyong mga implicit na pagpapalagay tungkol sa tunog ng isang salita. Ang ˈ bago ang maling pantig, isang ɪ kung saan nagsulat ka ng i, isang nakalimutang ɚ sa dulo ng salita — inilalabas ng Encode ang mga ito sa loob ng ilang segundo. Ang mga may karanasang mag-aaral ng wika ay madalas na inilarawan ang kanilang unang Encode na session bilang 'nakalulungkot', at ang reaksyong iyon ay tama mismo: ginagawa ng Encode na visible ang hindi nakikita.",
         "Isang praktikal na pagkakasunod: gumastos ng isa o dalawang linggo sa Decode lamang. Ang layunin mo ay bumuo ng kumpiyansa sa pagbabasa ng IPA nang walang presyur ng produksyon. Kapag hindi ka na nagulat sa pagkakita ng isang simbolo, dagdagan ng Encode para sa parehong grupo ng mga salita. Ang kaibahan sa pagitan ng dalawang session — kung gaano kadali ang Decode kumpara sa kung gaano kahirap pa rin ang Encode — ang nagpapakita sa iyo nang tiyak kung saan matatag ang iyong kaalaman sa ponetika at kung saan ito ay mahollow pa rin. Kapag hindi ka na nagulat sa Encode, naging tunay na kasangkapan na ang IPA sa iyong mga kamay."
       ]
@@ -371,13 +371,13 @@
     "accents": {
       "title": "Amerikano (GA) at Britaniko (RP)",
       "body": [
-        "Maaari mong itakda ang buong app sa General American o sa Received Pronunciation, at binabago ng pagpiling iyon ang IPA na nakikita mo, ang keyboard na pinipindot mo, at ang tinig na naririnig mo. Tunay na nagkakaiba ang mga ito: ibinabagsak ng RP ang *r* sa dulo ng *car* at *letter*; hinahati ng dalawang punto ang mga salitang tulad ng *bath* at *lot* sa magkaibang patinig. Piliin ang punto na talagang nais mong tularan ang tunog, at manatili rito nang sapat na panahon upang maisaloob ito. Kapag inihayag mo ang sagot, ipinapakita rin ng app ang IPA ng kabilang punto bilang talababa, kaya makikita mo ang kaibahan nang hindi nawawala ang iyong pangunahing target. Walang \"tama\" na punto — mayroon lamang ang pinili mong pag-aralan."
+        "Maaari mong itakda ang buong app sa General American o sa Received Pronunciation, at binabago ng pagpiling iyon ang IPA na nakikita mo, ang keyboard na pinipindot mo, at ang tinig na naririnig mo. Tunay na nagkakaiba ang mga ito: ibinabagsak ng RP ang *r* sa dulo ng *car* at *letter*; hinahati ng dalawang punto ang mga salitang tulad ng *bath* at *lot* sa magkaibang patinig. Piliin ang punto na talagang nais mong tularan ang tunog, at manatili rito nang sapat na panahon upang maisaloob ito. Habang nagsasanay, ipinapakita rin ng app ang IPA ng kabilang punto bilang tahimik na talababa — pagkatapos suriin ang sagot, sa Decode ng salita, sa Makinig at matuto study, at sa vocabulary browser. Kapag pareho ang phonemic form, sinasabi nitong \"pareho (/…/)\" upang makumpirma mong magkatugma ang mga ito. Walang \"tama\" na punto — mayroon lamang ang pinili mong pag-aralan."
       ]
     },
     "how_to_use": {
       "title": "Paano ito gamitin nang mabuti",
       "body": [
-        "Magsimula sa Mode A, Decode, na may \"lahat ng tunog,\" at hayaan ang app na matuto ng iyong mga kahinaan mula sa iyong mga pagkakamali. Pagkatapos ng ilang session, palitan ang focus sa \"weak spots\" at hayaan itong hanapin ang mga simbolong patuloy mong naliligaw. Idagdag ang Encode kapag madali na ang Decode — magpapahina ito sa iyo, at iyon ang layunin. Bisitahin ang Linking tab nang dalawang beses sa isang linggo para mapanatiling handa ang iyong tainga para sa tunay na pananalita. Pumunta sa Mode B kapag nais mong palakihin ang iyong bokabularyo sa pamamagitan ng tainga kaysa sa mata.",
+        "Magsimula sa **Basahin at isulat ang IPA**, Decode, na may \"lahat ng tunog,\" at hayaan ang app na matuto ng iyong mga kahinaan mula sa iyong mga pagkakamali. Pagkatapos ng ilang session, buksan ang **Mga detalyadong setting**, palitan ang focus sa \"weak spots\" at hayaan itong hanapin ang mga simbolong patuloy mong naliligaw. Idagdag ang Encode kapag madali na ang Decode — magpapahina ito sa iyo, at iyon ang layunin. Bisitahin ang Linking tab nang dalawang beses sa isang linggo para mapanatiling handa ang iyong tainga para sa tunay na pananalita. Pumunta sa **Makinig at matuto** kapag nais mong palakihin ang iyong bokabularyo sa pamamagitan ng tainga kaysa sa mata.",
         "Panatilihing maikli at madalas ang mga session kaysa mahaba at bihira; ang sistema ng spaced repetition ay dinisenyo para sa pag-uwi araw-araw. I-tap ang anumang simbolo ng IPA upang mabuksan ang paliwanag at mga halimbawang salita nito — gamitin ito sa tuwing nagugulat sa iyo ang isang simbolo. At i-replay madalas ang audio: ang layunin ay hindi ang sumagot nang isang beses, kundi gawin ang tamang tunog ay parang ordinaryo na. Kapag ang isang kontraste ay nagsimulang mag-click sa iyong bibig, mapapansin mong bigla mong maririnig din ito. Ang sandaling iyon ang buong punto ng app.",
         "Isang konkretong simula ng ritmo na karaniwang gumagana: **Lunes hanggang Biyernes**, buksan ang app para sa isang maikling Decode session — sampung tanong, wala nang iba. Huwag maghangad ng perpektong iskor; maghangad ng tapat na iskor. **Sa dalawa sa mga araw na iyon**, palitan ang Decode ng Encode gamit ang parehong grupo ng mga salita. Ang shock ng Encode ay nagpapatunay kung ano talaga ang alam mo kumpara sa kung ano ang sa tingin mo ay alam mo. **Sa isang araw ng weekend**, gumastos ng limang minuto sa Linking tab: isa o dalawang Level 1 na parirala, dahan-dahang lumipat sa Level 2 habang nagiging komportable. Ang schedule na ito ay humihingi ng wala pang labinlimang minuto sa isang araw at nagbubunga ng compound returns dahil ang spaced repetition ay nagbibigay ng mas maraming gantimpala sa consistency kaysa sa tagal. I-adjust ang ritmo nang malaya — ang tanging mahalaga ay ang bumalik."
       ]

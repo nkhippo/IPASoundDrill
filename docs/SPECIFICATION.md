@@ -4,7 +4,7 @@
 > 機能追加や仕様相談の前提資料として利用してください。  
 > 目的の正本は `docs/PURPOSE.md`、実装設計は `docs/DESIGN.md`（衝突時は PURPOSE → DESIGN → 本書の順で参照）。
 
-**最終更新:** 2026-07-02  
+**最終更新:** 2026-07-06  
 **対象コード:** `index.html`、`wordlist_GA_a1a2_plus_phonics.json`、`data/connected_speech.json`、`data/weak_forms.json`、`data/guide.json`、`i18n/`、`gas/`（`Code.gs`・`BatchWarm.gs`・`BatchWords.gs`）
 
 ---
@@ -50,10 +50,10 @@
 
 ### 2.1 学習モード（2種）
 
-| モード | 目的 | 主なループ |
-|--------|------|-----------|
-| **Mode A：Pronunciation** | 既知語の IPA 読み書き（本丸） | Decode / Encode |
-| **Mode B：Sound → Vocabulary** | 音から語彙獲得（サブ） | Study → Quiz（MCQ + ディクテーション） |
+| モード | 目的 | UI ラベル（ja） | 主なループ |
+|--------|------|----------------|-----------|
+| **Mode A** | 既知語の IPA 読み書き（本丸） | IPA読み書き（`mode.a`） | Decode / Encode |
+| **Mode B** | 音から語彙獲得（サブ） | 聞いて覚える（`modeb.title`） | Study → Quiz（MCQ + ディクテーション） |
 
 ### 2.2 Mode A — 練習タブ
 
@@ -105,7 +105,7 @@
 
 ### 2.8 多言語 UI
 
-- UI 言語: **en / ja / zh / ko / fil**（`localStorage.app_lang`、**156 キー**）
+- UI 言語: **en / ja / zh / ko / fil**（`localStorage.app_lang`、**161 キー**）
 - 音素解説: 各 UI 言語の `i18n/phonemes/<lang>.json`（43 記号）。欠落時は en にフォールバック
 - 学習ガイド: `data/guide.json`（en / ja / ko / zh-Hant / zh-Hans / **fil**）。UI i18n とは独立
 - 語義 gloss: en / ja / zh / ko / **fil（3,059語・完走）**
@@ -190,17 +190,18 @@
 | 設定 | `#settingsBtn` — セットアップ時のみ表示 |
 | Menu | `#backTopBtn` — プレイ中のみ。セットアップへ戻る |
 | メーター | `3 / 10` または `done` |
+| プレイ中パンくず | `#playCrumb` — 学習モード > 練習モード (GA\|RP)。例: `IPA読み書き > 一単語 (GA)` |
 
 ### 4.1 セットアップ（`#setup`）
 
 | 要素 | Mode A | Mode B |
 |------|--------|--------|
-| Learning mode | Pronunciation / Sound → Vocabulary | 同左 |
-| Practice mode | Words / Connected Speech | （非表示） |
+| Learning mode | IPA read & write / Listen & learn（各言語 `mode.a` / `modeb.title`） | 同左 |
+| Practice mode | One word / Linking | （非表示） |
 | Direction | Decode / Encode（Words のみ） | （非表示） |
-| Phoneme focus | 7 ピル（Words のみ） | （非表示） |
-| Spelling type / pattern group | あり（Words のみ） | （非表示） |
-| Connected filters | Level L1–L3、Type（All / linking / assimilation / elision / **weak**） | （非表示） |
+| Phoneme focus | 7 ピル（Words のみ・**詳しい設定**内） | （非表示） |
+| Spelling type / pattern group | あり（Words のみ・**詳しい設定**内） | （非表示） |
+| Connected filters | Level L1–L3、Type（**詳しい設定**内） | （非表示） |
 | Band | — | 現在 CEFR バンド表示 |
 | プール件数 + 開始 | あり | あり |
 
@@ -214,7 +215,7 @@ IPA（タップ可）・TTS・綴り入力・Check。連結句・弱形時は cs
 
 ### 4.4 Mode B — Study（`#cardModeBStudy`）
 
-TTS・IPA・反対アクセント行（`#mbSAltIpa`、同一時は `reveal.alt_same`）・[意味を確認する] → 単語＋gloss フェードイン・「Got it → Next」。英語 UI では `modeBDisplayGloss()` が自己参照 gloss を `(品詞)` または `def` で代替。
+TTS・IPA・反対アクセント行（`#mbSAltIpa`、同一時は `reveal.alt_same`）・[意味を確認する] → 単語＋gloss フェードイン・発音ポイント（空なら非表示）・[次へ]。英語 UI では `modeBDisplayGloss()` が自己参照 gloss を `(品詞)` または `def` で代替。
 
 ### 4.5 Mode B — Quiz（`#cardModeBQuiz`）
 
@@ -275,7 +276,7 @@ topbar の `#vocabBtn` から起動。プレイ中も利用可。Words（wordlis
 | `ipa` | GA IPA（Decode/Encode/reveal） |
 | `rp_ipa` | RP IPA（accent=rp 時） |
 | `ipa_actual_ga` / `ipa_actual_rp` | narrow IPA（表示専用。採点・音素カバーには不使用） |
-| `respell_ga` / `respell_rp` | respelling（Reveal / 語彙ブラウザ表示） |
+| `respell_ga` / `respell_rp` | データ保持（UI 非表示・2026-07-06） |
 | `neighbors` | Mode B MCQ distractor（RP でも GA リスト流用） |
 | `neighbors_rp` | （将来用・未生成） |
 | `gloss` | reveal・Mode B |
@@ -316,7 +317,7 @@ UI i18n とは独立。各言語キー（`en`, `ja`, `ko`, `zh-Hans`, `zh-Hant`,
 
 | データ | パス |
 |--------|------|
-| UI 文言 | `i18n/{en,ja,zh,ko,fil}.json`（**156 キー**） |
+| UI 文言 | `i18n/{en,ja,zh,ko,fil}.json`（**161 キー**） |
 | 音素解説 | `i18n/phonemes/{en,ja,zh,ko,fil}.json`（43 記号） |
 
 検証: `python3 tools/validate_i18n.py`。監査ドキュメント再生成: `python3 tools/gen_audit_docs.py`。
@@ -346,6 +347,7 @@ UI i18n とは独立。各言語キー（`en`, `ja`, `ko`, `zh-Hans`, `zh-Hant`,
 
 | 日付 | 内容 |
 |------|------|
+| 2026-07-06 | 学習モード名称を行為ベースに刷新（`mode.a` / `modeb.title`）。セットアップの詳細フィルタを折りたたみ。プレイ中パンくず追加。反対アクセント表示拡張。respelling UI 非表示。Mode B [次へ] 統一。i18n 161 キー |
 | 2026-07-06 | 音素ガイド `i18n/phonemes/{ja,ko,zh}.json` を全面書き直し（47音素×3言語）。例語は英語のまま保持、機械翻訳による誤訳を解消 |
 | 2026-07-02 | respelling v2 品質パッチ。音節主音+コーダ子音パターン18語の `respell_ga` を可読性向上（`important`: `im-POR-tuhnt` 等） |
 | 2026-07-02 | Phase 2 完了。VntV 52語の TTS 判定を反映し respelling 最終52語をマージ。`respell_ga` 3,059/3,059語。pilot誤narrow 3語（winter/twenty/ninety）を除去 |

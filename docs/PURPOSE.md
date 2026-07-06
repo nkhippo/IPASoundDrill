@@ -3,7 +3,7 @@
 > アプリの**本丸（measured outcome）**と**モード構成**を確定し、背景メモ・Cursor仕様書・実装コードの目的を一致させる正本。
 > 目的・評価方針に関する記述が衝突した場合は、本ドキュメントを正とする。
 >
-> **更新日:** 2026-07-02 ／ **ステータス:** Mode A・Mode B 実装済み。GA/RP 切替・連結句・弱形・RP TTS・語彙ブラウザ・TTS プリフェッチ・UI 5言語（fil 含む）・**narrow IPA + respelling 全3,059語**対応済み。
+> **更新日:** 2026-07-06 ／ **ステータス:** Mode A・Mode B 実装済み。GA/RP 切替・連結句・弱形・RP TTS・語彙ブラウザ・TTS プリフェッチ・UI 5言語（fil 含む）・**narrow IPA 全3,059語**対応済み。反対アクセント（GA↔RP）表示・学習モード名称刷新（2026-07-06）を反映。
 > 詳細な実装仕様は `docs/DESIGN.md`、画面・データの正本は `docs/SPECIFICATION.md` を参照。
 
 ---
@@ -18,8 +18,9 @@
 
 本アプリは目的の異なる2モードを持つ。学習者の状態（意味を知っているか）で分岐する。
 
-| | **Mode A：既知語の発音再学習（本丸）** | **Mode B：音から語彙（サブテーマ）** |
+| | **Mode A：IPA読み書き（本丸）** | **Mode B：聞いて覚える（サブテーマ）** |
 |---|---|---|
+| UI ラベル（ja） | `mode.a` = IPA読み書き | `modeb.title` = 聞いて覚える |
 | 学習者の状態 | 意味を知っている | 意味を知らない |
 | 直す対象 | 音 ↔ IPA記号の対応 | 単語＋意味の獲得 |
 | 入口 | IPA / 単語 | 音（TTS） |
@@ -30,13 +31,13 @@
 
 **Mode A の練習タブ:** **Words**（単語）と **Connected Speech**（連結句＋弱形・GA 音声前提）の2種。Connected Speech 内の Type フィルタで linking / assimilation / elision / **Weak forms** を選択。弱形36語は連結発音現象の一部として内包（独立タブなし）。
 
-**UI 言語:** en / ja / zh / ko / **fil**（タガログ語・**Tier 1–4 すべて完了**、UI 文言 **156 キー**）。語義 gloss.fil は **3,059/3,059語**（Tier 2 **完了**）。連結/弱形ルール文（cs_rule.fil）は **237/237件**（Tier 4 **完了**）。英語定義 `def` は **3,059/3,059語**（Mode B Study reveal・語彙ブラウザで利用）。
+**UI 言語:** en / ja / zh / ko / **fil**（タガログ語・**Tier 1–4 すべて完了**、UI 文言 **161 キー**）。語義 gloss.fil は **3,059/3,059語**（Tier 2 **完了**）。連結/弱形ルール文（cs_rule.fil）は **237/237件**（Tier 4 **完了**）。英語定義 `def` は **3,059/3,059語**（Mode B Study reveal・語彙ブラウザで利用）。
 
 **語彙ブラウザ:** トップバーから全語彙（3,059語）・連結句（201句）を参照閲覧。検索・A–Z ジャンプ・TTS 付き。練習セッション中も利用可。
 
 **CEFRの位置づけ:** 主軸としてMode Aには不適（頻度はIPA読み書き難易度の弱い代理であり、本アプリは既知語前提のため頻度の意味が薄い）。CEFRは破棄せず **Mode B の主軸へ移設**する。Mode Aではコールドスタート時の出題順にのみ残す。
 
-**アクセント（GA / RP）:** 設定で切替。IPA 表示・Encode キーボード・TTS（単語・弱形）・reveal 補足が追従。連結句 TTS は GA 固定。Mode B の MCQ distractor は GA `neighbors` を RP でも流用（`neighbors_rp` 再計算は保留。`docs/rp-neighbors-priority-decision.md`）。
+**アクセント（GA / RP）:** 設定で切替。IPA 表示・Encode キーボード・TTS（単語・弱形）が追従。連結句 TTS は GA 固定。反対アクセントの phonemic IPA は Reveal・Decode（単語）・Mode B Study・語彙ブラウザに表示。同一時は `reveal.alt_same`（例: 同じ (/əˈbaʊt/)）で明示。Mode B の MCQ distractor は GA `neighbors` を RP でも流用（`neighbors_rp` 再計算は保留。`docs/rp-neighbors-priority-decision.md`）。
 
 ---
 
@@ -55,7 +56,7 @@
 ## 3. Mode B（サブテーマ）の確定方針
 
 - **目的 = 音から単語の意味（と綴り）を覚える。** 入口は必ず音（sound-first）。
-- **ループ = 提示→確認の2段**を1キューで自動切替（SRS標準）。Study 提示は **2段階 reveal**（IPA＋音声 → 学習者が「意味を確認する」→ 単語＋語義を開示）。
+- **ループ = 提示→確認の2段**を1キューで自動切替（SRS標準）。Study 提示は **2段階 reveal**（IPA＋音声 → 学習者が「意味を確認する」→ 単語＋語義を開示）。[次へ] で次の問題へ。
 - **確認は客観2種（採用：両方）:**
   1. 意味認識MCQ（音→意味）。**distractorは音素近傍語**を中心に毎回抽選＋順序シャッフル。
   2. 音声ディクテーション（音→綴り、Decode採点を流用）。
@@ -87,7 +88,9 @@
 | gloss.fil（3,059語） | **完了**（batch01–34、files 23 改訂版） |
 | cs_rule.fil（237件） | **完了**（201連結 + 36弱形） |
 | 本物の B/C 語彙拡張 | 部分（phonics 語は Mode B で利用可。上級日常語の追加は継続） |
-| narrow IPA + respelling（全語彙） | **完了**（`ipa_actual_ga` 192語 + respelling 3,059/3,059語。VntV 52語は TTS 実音判定で確定） |
+| narrow IPA（全語彙） | **完了**（`ipa_actual_ga` 192語。表示専用。採点は phonemic のまま） |
+| 反対アクセント表示（Reveal / Decode words / Mode B Study / 語彙ブラウザ） | **実装済み**（2026-07-06） |
+| 学習モード UI 名称（Set B: 行為ベース対比） | **実装済み**（2026-07-06） |
 
 ---
 
@@ -103,6 +106,7 @@
 
 | 日付 | 版 | 内容 |
 |------|----|------|
+| 2026-07-06 | v3.2 | 学習モード名称を行為ベースに刷新（IPA読み書き / 聞いて覚える 等）。反対アクセント全画面表示。respelling は UI 非表示（データは保持）。 |
 | 2026-07-02 | v3.1.1 | respelling v2 品質パッチ（18語の `respell_ga` 可読性修正）。 |
 | 2026-07-02 | v3.1 | narrow IPA + respelling を全3,059語で完了。VntV 52語は TTS 実音判定（nasal=kept, consonant=plain）で確定。 |
 | 2026-07-02 | v3.0 | 語彙ブラウザ・TTS プリフェッチ・GA バッチ warm・`def` 完走・i18n 156 キーを反映。 |
