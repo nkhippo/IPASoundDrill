@@ -369,6 +369,8 @@
     </div>
 
     <div id="connectedSetup" class="hidden">
+      <button type="button" class="setup-adv-toggle" id="connectedFilterToggle" aria-expanded="false" aria-controls="connectedFilterAdvanced">Customize filters</button>
+      <div id="connectedFilterAdvanced" class="hidden">
       <div class="field">
         <div class="flabel" id="flabelCsLevel">Level</div>
         <div class="pills" id="csLevelPills">
@@ -378,7 +380,7 @@
           <button class="pill" data-cs-level="3" aria-pressed="false" id="csLevelL3">Advanced</button>
         </div>
       </div>
-      <div class="field hidden" id="csTypeField">
+      <div class="field" id="csTypeField">
         <div class="flabel" id="flabelCs">Type</div>
         <div class="pills" id="csPills">
           <button class="pill" data-cs="all" aria-pressed="true" id="csAll">All</button>
@@ -387,6 +389,7 @@
           <button class="pill" data-cs="elision" aria-pressed="false" id="csElision">Elision</button>
           <button class="pill" data-cs="weak" aria-pressed="false" id="csWeak">Weak forms</button>
         </div>
+      </div>
       </div>
     </div>
 
@@ -995,6 +998,7 @@ function applyI18n() {
   $("regRegular").textContent = t("reg.regular");
   $("regIrregular").textContent = t("reg.irregular");
   $("wordsFilterToggle").textContent = $("wordsFilterAdvanced").classList.contains("hidden") ? t("setup.show_filters") : t("setup.hide_filters");
+  $("connectedFilterToggle").textContent = $("connectedFilterAdvanced").classList.contains("hidden") ? t("setup.show_filters") : t("setup.hide_filters");
   $("flabelGrp").textContent = t("grp.label");
   $("grpAll").textContent = t("grp.all");
   $("grpShort").textContent = t("grp.short");
@@ -1248,22 +1252,30 @@ bindPills("modeOpts","appMode",b=>{localStorage.setItem("app_mode",b.dataset.mod
 bindPills("csPills","csFilter",b=>b.dataset.cs);
 bindPills("csLevelPills","csLevel",b=>b.dataset.csLevel);
 $("wordsFilterToggle").addEventListener("click",()=>setWordsFilterAdvanced($("wordsFilterAdvanced").classList.contains("hidden")));
+$("connectedFilterToggle").addEventListener("click",()=>setConnectedFilterAdvanced($("connectedFilterAdvanced").classList.contains("hidden")));
 function setWordsFilterAdvanced(open){
   const show=!!open;
   $("wordsFilterAdvanced").classList.toggle("hidden",!show);
   $("wordsFilterToggle").setAttribute("aria-expanded",show?"true":"false");
   $("wordsFilterToggle").textContent=t(show?"setup.hide_filters":"setup.show_filters");
 }
+function setConnectedFilterAdvanced(open){
+  const show=!!open;
+  $("connectedFilterAdvanced").classList.toggle("hidden",!show);
+  $("connectedFilterToggle").setAttribute("aria-expanded",show?"true":"false");
+  $("connectedFilterToggle").textContent=t(show?"setup.hide_filters":"setup.show_filters");
+}
 function updateSetupFields(){
   const modeB=S.appMode==="b";
   const words=S.tab==="words"&&!modeB;
+  const connected=S.tab==="connected"&&!modeB;
   show("tabField",!modeB);
   show("modebSetup",modeB);
   show("wordsSetup",words);
   show("wordsFilterToggle",words);
   if(!words)setWordsFilterAdvanced(false);
-  show("connectedSetup", S.tab === "connected" && !modeB);
-  show("csTypeField", S.tab === "connected" && !modeB);
+  show("connectedSetup",connected);
+  if(!connected)setConnectedFilterAdvanced(false);
   show("grpField",words&&S.reg==="regular");
   $("focusTrapNote").textContent=words&&(S.focus==="traps"?t("focus.traps_d"):S.focus==="weak"?t("focus.weak_d"):"");
   $("regNote").textContent=words&&(S.reg==="regular"?t("reg.regular_d"):S.reg==="irregular"?t("reg.irregular_d"):"");
