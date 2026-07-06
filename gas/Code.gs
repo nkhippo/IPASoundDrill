@@ -12,11 +12,12 @@
 
 const FOLDER_NAME = 'IPA-TTS-Audio';
 const TTS_CACHE_VER = 'v2';
+const TTS_CONNECTED_CACHE_VER = 'v3';
 const TTS_MODEL = 'gpt-4o-mini-tts';
 const TTS_VOICE = 'alloy';
 const TTS_INSTRUCTIONS_GA = 'Pronounce the single English word in a clear General American accent. Use the citation (dictionary) form: full, unreduced vowels and the correct lexical stress — do not use the weak or reduced connected-speech form, even for function words. Say the word once, at a calm pace slightly slower than conversational, with neutral falling intonation. Articulate consonants precisely and keep contrasts distinct — especially /θ/–/f/, /ð/–/d/, /l/–/r/, /s/–/ʃ/, /b/–/v/, and word-final consonants — but stay natural and never exaggerate them into distortion. Do not spell the word, do not add any other words, do not pause, and do not use emotional or expressive delivery. Keep the delivery identical and consistent across all words.';
 const TTS_INSTRUCTIONS_RP = 'Pronounce the single English word in a clear modern Received Pronunciation (standard Southern British) accent. Use the citation (dictionary) form: full, unreduced vowels and the correct lexical stress — do not use the weak or reduced connected-speech form, even for function words. Say the word once, at a calm pace slightly slower than conversational, with neutral falling intonation. Articulate consonants precisely and keep contrasts distinct — especially /θ/–/f/, /ð/–/d/, /l/–/r/, /s/–/ʃ/, /b/–/v/, and word-final consonants — but stay natural and never exaggerate them into distortion. Do not spell the word, do not add any other words, do not pause, and do not use emotional or expressive delivery. Keep the delivery identical and consistent across all words.';
-const TTS_CONNECTED_INSTRUCTIONS = 'Pronounce the English phrase in a clear General American accent with natural connected speech. Link words smoothly and apply assimilation/elision where native speakers would. Use weak forms where appropriate, and strongly prefer reduced schwa-only realizations for function words before consonants when that reduction is natural (for example, "of" before a consonant may reduce to /ə/ without an audible /v/). Keep this reduction subtle and natural, not exaggerated. Say the phrase once at a calm conversational pace with neutral intonation. Do not spell letters, do not add extra words, and do not pause between words unnaturally.';
+const TTS_CONNECTED_INSTRUCTIONS = 'Pronounce the English phrase in a clear General American accent as one smooth, continuous utterance — like a native speaker in casual connected speech, not separate dictionary words. CRITICAL: never pause or break between words; there must be no audible gap or reset between syllables that belong to different words. Link across word boundaries: when a word ends in a consonant and the next begins with a vowel, run them together without re-articulating (e.g. "tell him" → tellim, not tell … him). Drop /h/ on weak pronouns after a consonant (him, her, his, he → im, er, is, i). For "of" before a consonant, use schwa only (/ə/): do NOT pronounce /v/ or /f/ (e.g. "lots of time" → lotsətime). Apply other natural weak forms, assimilation, and elision where expected. Keep reductions natural, not cartoonish. Say the phrase once at a calm conversational pace with neutral intonation. Do not spell letters, add words, or pause.';
 const TTS_WEAK_INSTRUCTIONS_GA = 'Pronounce this English function word using its WEAK (reduced) form exactly as the IPA indicates, as it sounds inside connected speech — typically with a schwa /ə/. Use a clear General American accent, calm and natural, said once. Do NOT use the strong citation form. Do not spell it, add words, or pause.';
 const TTS_WEAK_INSTRUCTIONS_RP = 'Pronounce this English function word using its WEAK (reduced) form exactly as the IPA indicates, as it sounds inside connected speech — typically with a schwa /ə/. Use a clear modern Received Pronunciation (standard Southern British) accent, calm and natural, said once. Do NOT use the strong citation form. Do not spell it, add words, or pause.';
 // Normal single-word MP3s are ~12 KB+; near-silent glitches (e.g. flight at 5.7 KB) stay below this.
@@ -37,9 +38,10 @@ function normalizeAccent_(accent) {
   return String(accent || 'ga').toLowerCase() === 'rp' ? 'rp' : 'ga';
 }
 
-function fileNameFor_(input, accent) {
+function fileNameFor_(input, accent, cacheVer) {
   const acc = normalizeAccent_(accent);
-  return slugForInput_(input) + '__' + acc + '_' + TTS_CACHE_VER + '.mp3';
+  const ver = cacheVer || TTS_CACHE_VER;
+  return slugForInput_(input) + '__' + acc + '_' + ver + '.mp3';
 }
 
 function fileNameForWeak_(weakWord, accent) {
@@ -65,13 +67,13 @@ function trashAudioOnDriveWeak_(weakWord, accent) {
   while (files.hasNext()) files.next().setTrashed(true);
 }
 
-function getAudioFromDrive_(input, accent) {
+function getAudioFromDrive_(input, accent, cacheVer) {
   const folder = getFolder_();
   const acc = normalizeAccent_(accent);
-  const name = fileNameFor_(input, acc);
+  const name = fileNameFor_(input, acc, cacheVer);
   const files = folder.getFilesByName(name);
   if (files.hasNext()) return files.next().getBlob();
-  if (acc === 'ga') {
+  if (acc === 'ga' && !cacheVer) {
     const legacy = legacyFileNameFor_(input);
     const legacyFiles = folder.getFilesByName(legacy);
     if (legacyFiles.hasNext()) return legacyFiles.next().getBlob();
@@ -83,9 +85,9 @@ function isAudioBlobTooShort_(blob) {
   return blob.getBytes().length < TTS_MIN_BYTES;
 }
 
-function trashAudioOnDrive_(input, accent) {
+function trashAudioOnDrive_(input, accent, cacheVer) {
   const folder = getFolder_();
-  const name = fileNameFor_(input, accent);
+  const name = fileNameFor_(input, accent, cacheVer);
   const files = folder.getFilesByName(name);
   while (files.hasNext()) files.next().setTrashed(true);
 }
@@ -138,9 +140,9 @@ function saveToDriveWeak_(weakWord, accent, blob) {
   folder.createFile(blob.setName(name));
 }
 
-function saveToDrive_(input, accent, blob) {
+function saveToDrive_(input, accent, blob, cacheVer) {
   const folder = getFolder_();
-  const name = fileNameFor_(input, accent);
+  const name = fileNameFor_(input, accent, cacheVer);
   const existing = folder.getFilesByName(name);
   while (existing.hasNext()) existing.next().setTrashed(true);
   folder.createFile(blob.setName(name));
@@ -228,14 +230,15 @@ function doGet(e) {
     }
 
     const instructions = weakMode ? instructionsForWeak_(accent) : instructionsFor_(accent, connected);
+    const phraseCacheVer = connected ? TTS_CONNECTED_CACHE_VER : null;
 
     let blob = weakMode
       ? getAudioFromDriveWeak_(cacheKey, cacheAccent)
-      : getAudioFromDrive_(cacheKey, cacheAccent);
+      : getAudioFromDrive_(cacheKey, cacheAccent, phraseCacheVer);
     let source = 'drive';
     if (blob && isAudioBlobTooShort_(blob)) {
       if (weakMode) trashAudioOnDriveWeak_(cacheKey, cacheAccent);
-      else trashAudioOnDrive_(cacheKey, cacheAccent);
+      else trashAudioOnDrive_(cacheKey, cacheAccent, phraseCacheVer);
       blob = null;
     }
     if (!blob) {
@@ -243,7 +246,7 @@ function doGet(e) {
       source = 'openai';
       if (!isAudioBlobTooShort_(blob)) {
         if (weakMode) saveToDriveWeak_(cacheKey, cacheAccent, blob);
-        else saveToDrive_(cacheKey, cacheAccent, blob);
+        else saveToDrive_(cacheKey, cacheAccent, blob, phraseCacheVer);
       }
     }
 
