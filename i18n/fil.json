@@ -107,7 +107,7 @@
   },
   "meter_done": "tapos na",
   "mode": {
-    "a": "Pagbigkas",
+    "a": "Basahin at isulat ang IPA",
     "label": "Mode ng pag-aaral"
   },
   "modeb": {
@@ -127,7 +127,7 @@
       "got_it": "Susunod",
       "reveal_meaning": "Tingnan ang kahulugan"
     },
-    "title": "Tunog → Bokabularyo"
+    "title": "Makinig at matuto"
   },
   "next": "Susunod",
   "note": {

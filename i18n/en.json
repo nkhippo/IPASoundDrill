@@ -13,10 +13,10 @@
   },
   "mode": {
     "label": "Learning mode",
-    "a": "Pronunciation"
+    "a": "IPA read & write"
   },
   "modeb": {
-    "title": "Sound → Vocabulary",
+    "title": "Listen & learn",
     "lead_html": "Learn <b>new words from sound</b>&mdash;hear the word, then match meaning and spelling. CEFR band progression with spaced review.",
     "study": {
       "got_it": "Next",
