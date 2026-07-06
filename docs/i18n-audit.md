@@ -1,7 +1,7 @@
 # i18n 監査レポート
 
 > 生成日: 2026-06-26 ／ 対象: `i18n/{en,ja,zh,ko,fil}.json`、`i18n/phonemes/*.json`、`index.html`
-> 生成: `python3 tools/gen_audit_docs.py` ／ UI キー数: **158** ／ `validate_i18n.py`: ERROR 0
+> 生成: `python3 tools/gen_audit_docs.py` ／ UI キー数: **160** ／ `validate_i18n.py`: ERROR 0
 
 翻訳の良し悪しは判断していません。キー所在・画面配線・ハードコードの可視化のみ。
 
@@ -15,7 +15,7 @@
 | `accent.label` | Accent | 発音 | 口音 | 발음 | Punto | settings |
 | `accent.rp` | British (RP) | イギリス英語 | 英式 | 영국식 | Britaniko (RP) | settings（動的参照） |
 | `back_top` | Menu | TOPへ | 首页 | 처음 | Menu | 共通 |
-| `brand.name` | IPA Dictation · Decoder / Encoder | IPA音写 · Decoder / Encoder | IPA听写 · Decoder / Encoder | IPA 받아쓰기 · Decoder / Encoder | IPA Diktasyon · Decoder / Encoder | 共通（トップバー） |
+| `brand.name` | IPA Drill | IPAドリル | IPA操练 | IPA 드릴 | IPA Drill | 共通（トップバー） |
 | `build_ph` | Tap the IPA keys below to build the pronunciation | 下のIPAキーをタップして発音を組み立てる | 点击下方IPA键拼出发音 | 아래 IPA 키를 눌러 발음을 만드세요 | I-tap ang mga IPA key sa ibaba para buuin ang pagbigkas | encode |
 | `check` | Check | 答え合わせ | 核对 | 채점 | Suriin | decode / encode / Mode B |
 | `clear` | Clear | クリア | 清除 | 지우기 | Burahin | encode |
@@ -72,9 +72,9 @@
 | `lang_opts.ja` | 日本語 | 日本語 | 日本語 | 日本語 | 日本語 | settings（動的参照） |
 | `lang_opts.ko` | 한국어 | 한국어 | 한국어 | 한국어 | 한국어 | settings（動的参照） |
 | `lang_opts.zh` | 中文 | 中文 | 中文 | 中文 | 中文 | settings（動的参照） |
-| `lead_connected_html` | Hear <b>connected speech</b> in GA&mdash;linking, as... | GAの<b>連結発音</b>（連結・同化・脱落）を聞き取り、連結後のIPAから元の句を当てます。 | 听辨 GA 的<b>连读现象</b>（连读、同化、脱落）。根据连读后的 IPA 还原原短语。 | GA <b>연음</b>(연음·동화·탈락)을 듣고, 연음된 IPA에서 원래 구를 맞춥니다. | Pakinggan ang <b>konektadong pananalita</b> sa GA—pa... | setup（Connected） |
-| `lead_html` | Drill <b>IPA reading and writing</b> for words you a... | 既知の単語で<b>IPAの読み書き</b>を音素単位で鍛えるツール。<b>トラップ音</b>（θ, ð,... | 针对<b>已知单词</b>逐音素训练<b>IPA读写</b>。专攻<b>陷阱音</b>（θ, ð, æ,... | 이미 아는 단어로 <b>IPA 읽기·쓰기</b>를 음소 단위로 훈련합니다. <b>함정 소리</... | Sanayin ang <b>pagbasa at pagsulat ng IPA</b> nang p... | setup（Words） |
-| `lead_weak_html` | Hear the <b>weak forms</b> of function words in conn... | 機能語の<b>弱形</b>を聞き取る。IPAを読んで元の語を答える。 | 听功能词的<b>弱读形式</b>，读出 IPA 还原单词。 | 기능어의 <b>약형</b>을 듣고 IPA를 읽어 단어를 맞히세요. | Pakinggan ang <b>mahihinang anyo</b> ng mga function... | setup（Connected / Weak） |
+| `lead_connected_html` | Hear <b>connected speech</b> in GA&mdash;linking, as... | GAの<b>連結発音</b>（連結・同化・脱落）を聞き取り、連結後のIPAから元の句を当てます。 | 听辨 GA 的<b>连读现象</b>（连读、同化、脱落）。根据连读后的 IPA 还原原短语。 | GA <b>연음</b>(연음·동화·탈락)을 듣고, 연음된 IPA에서 원래 구를 맞춥니다. | Pakinggan ang <b>konektadong pananalita</b> sa GA—pa... | （未参照） |
+| `lead_html` | Drill <b>IPA reading and writing</b> for words you a... | 既知の単語で<b>IPAの読み書き</b>を音素単位で鍛えるツール。<b>トラップ音</b>（θ, ð,... | 针对<b>已知单词</b>逐音素训练<b>IPA读写</b>。专攻<b>陷阱音</b>（θ, ð, æ,... | 이미 아는 단어로 <b>IPA 읽기·쓰기</b>를 음소 단위로 훈련합니다. <b>함정 소리</... | Sanayin ang <b>pagbasa at pagsulat ng IPA</b> nang p... | （未参照） |
+| `lead_weak_html` | Hear the <b>weak forms</b> of function words in conn... | 機能語の<b>弱形</b>を聞き取る。IPAを読んで元の語を答える。 | 听功能词的<b>弱读形式</b>，读出 IPA 还原单词。 | 기능어의 <b>약형</b>을 듣고 IPA를 읽어 단어를 맞히세요. | Pakinggan ang <b>mahihinang anyo</b> ng mga function... | （未参照） |
 | `listen` | Listen | 音を聞く | 播放发音 | 듣기 | Makinig | decode / encode / reveal |
 | `load_fail` | Load failed | 読み込み失敗 | 加载失败 | 불러오기 실패 | Nabigo ang pag-load | setup / summary |
 | `loading` | Loading… | 読み込み中… | 加载中… | 불러오는 중… | Naglo-load… | setup / summary |
@@ -91,11 +91,11 @@
 | `modeb.band.note` | {band}: {n} words · {pct}% mastered ({m} at box 4+) | {band}: {n}語 · 習得率{pct}%（box4+ {m}語） | {band}：{n}词 · 掌握率{pct}%（box4+ {m}词） | {band}: {n}개 단어 · 습득률 {pct}% (box4+ {m}개) | {band}: {n} salita · {pct}% na-master ({m} sa box 4+) | setup / Mode B |
 | `modeb.correct` | Correct | 正解 | 正确 | 정답 | Tama | setup / Mode B |
 | `modeb.incorrect` | Try again | 不正解 | 错误 | 오답 | Subukang muli | setup / Mode B |
-| `modeb.lead_html` | Learn <b>new words from sound</b>&mdash;hear the wor... | 既知語ではなく<b>音から新しい語彙</b>を覚える。音を聞き、意味と綴りを確認。CEFRバンドで段階的... | 从<b>声音学习新词</b>——先听发音，再匹配意思和拼写。按 CEFR 级别递进，并自动安排复习。 | <b>소리로 새 단어</b>를 익힙니다. 발음을 듣고 의미와 철자를 확인합니다. CEFR 밴드... | Sa halip na alam nang salita, matuto ng <b>bagong bo... | setup / Mode B |
+| `modeb.lead_html` | Learn <b>new words from sound</b>&mdash;hear the wor... | 既知語ではなく<b>音から新しい語彙</b>を覚える。音を聞き、意味と綴りを確認。CEFRバンドで段階的... | 从<b>声音学习新词</b>——先听发音，再匹配意思和拼写。按 CEFR 级别递进，并自动安排复习。 | <b>소리로 새 단어</b>를 익힙니다. 발음을 듣고 의미와 철자를 확인합니다. CEFR 밴드... | Sa halip na alam nang salita, matuto ng <b>bagong bo... | （未参照） |
 | `modeb.pool` | Band {band}: {n} words · {pct}% mastered | バンド {band}: {n}語 · 習得率{pct}% | 级别 {band}：{n}词 · 掌握率{pct}% | 밴드 {band}: {n}개 단어 · 습득률 {pct}% | Band {band}: {n} salita · {pct}% na-master | setup / Mode B |
 | `modeb.quiz.choose_meaning` | Choose the meaning | 意味を選ぶ | 选择意思 | 의미를 선택 | Piliin ang kahulugan | setup / Mode B |
 | `modeb.quiz.type_word` | Type the word | 単語を入力 | 输入单词 | 단어를 입력 | I-type ang salita | setup / Mode B |
-| `modeb.study.got_it` | Got it → Next | 覚えた→次へ | 记住了→下一个 | 외웠어요→다음 | Naintindihan → Susunod | setup / Mode B |
+| `modeb.study.got_it` | Next | 次へ | 下一题 | 다음 | Susunod | setup / Mode B |
 | `modeb.study.reveal_meaning` | Reveal meaning | 意味を確認する | 查看含义 | 의미 확인하기 | Tingnan ang kahulugan | setup / Mode B |
 | `modeb.title` | Sound → Vocabulary | 音から語彙 | 从声音到词汇 | 소리에서 어휘로 | Tunog → Bokabularyo | setup / Mode B |
 | `next` | Next | 次へ | 下一题 | 다음 | Susunod | reveal |
@@ -133,7 +133,7 @@
 | `reg.regular_d` | Phonics and spelling–sound rules | フォニックス／綴りと音の対応 | 自然拼读／拼写–读音规则 | 파닉스／철자–소리 규칙 | Phonics at mga tuntunin ng baybay–tunog | setup（Words） |
 | `reveal.dict_label` | Dictionary | 辞書表記 | 词典表记 | 사전 표기 | Diksyonaryo | reveal |
 | `reveal.ga_note` | GA | GA（米） | GA（美） | GA（미） | GA (Amer.) | reveal |
-| `reveal.respell_label` | Respelling | 発音ガイド | 简易发音 | 발음 가이드 | Gabay sa bigkas | reveal |
+| `reveal.respell_label` | Respelling | 発音ガイド | 简易发音 | 발음 가이드 | Gabay sa bigkas | （未参照） |
 | `reveal.rp_note` | RP | RP（英） | RP（英） | RP（영） | RP (Brit.) | reveal |
 | `see_answer` | See the answer | 答えを確認 | 查看答案 | 정답 확인 | Tingnan ang sagot | reveal |
 | `set.daily_d` | Common words (including irregular spellings) | よく使う語（不規則綴りを含む） | 常用词（含不规则拼写） | 자주 쓰는 단어(불규칙 철자 포함) | Karaniwang salita (kasama ang di-regular na baybay) | （未使用・予約） |
@@ -145,6 +145,8 @@
 | `settings_close` | Close | 閉じる | 关闭 | 닫기 | Isara | settings |
 | `settings_lang` | Language | 言語 | 语言 | 언어 | Wika | settings |
 | `settings_title` | Settings | 設定 | 设置 | 설정 | Mga Setting | settings |
+| `setup.hide_filters` | Hide filters | 設定を閉じる | 收起设置 | 설정 닫기 | Itago ang mga setting | setup / 練習 |
+| `setup.show_filters` | Customize filters | 詳しい設定 | 详细设置 | 상세 설정 | Mga detalyadong setting | setup / 練習 |
 | `start` | Start | はじめる | 开始 | 시작 | Simulan | setup / summary |
 | `summary.again` | Play again | もう一周 | 再来一轮 | 다시 하기 | Maglaro muli | summary |
 | `summary.line` | {c} / {t} correct · {m} to review | {c} / {t} 正解 · 復習 {m} 語 | {c} / {t} 正确 · 复习 {m} 词 | {c} / {t} 정답 · 복습 {m}개 | {c} / {t} tama · {m} babalikan | summary |
@@ -155,10 +157,10 @@
 | `summary.weak_none_t` | No weak sounds detected | 苦手音は検出されませんでした | 未检测到薄弱音 | 약한 소리가 감지되지 않았습니다 | Walang natukoy na mahinang tunog | summary |
 | `syl` | {n} syllable | {n}音節 | {n}个音节 | {n}음절 | {n} pantig | （未使用・予約） |
 | `syl_pl` | {n} syllables | {n}音節 | {n}个音节 | {n}음절 | {n} pantig | （未使用・予約） |
-| `tab.connected` | Connected Speech | 連結・脱落・同化 | 连读·脱落·同化 | 연음·탈락·동화 | Konektadong Pananalita | setup |
+| `tab.connected` | Linking | 連結音 | 连读音 | 연음 | Linking | setup |
 | `tab.label` | Practice mode | 練習モード | 练习模式 | 연습 모드 | Mode ng pagsasanay | setup |
 | `tab.weak` | Weak Forms | 弱形 | 弱读形式 | 약형 | Mahihinang Anyo | setup |
-| `tab.words` | Words | 単語 | 单词 | 단어 | Mga Salita | setup |
+| `tab.words` | One word | 一単語 | 一词 | 한 단어 | Isang salita | setup |
 | `tips_head` | Pronunciation tips | 発音ポイント | 发音要点 | 발음 포인트 | Mga tip sa pagbigkas | reveal |
 | `vocab.no_results` | No results | 見つかりません | 无结果 | 결과 없음 | Walang resulta | setup / 練習 |
 | `vocab.search` | Search… | 検索… | 搜索… | 검색… | Maghanap… | setup / 練習 |
@@ -215,7 +217,6 @@
 - `note.tricky`
 - `reveal.dict_label`
 - `reveal.ga_note`
-- `reveal.respell_label`
 - `reveal.rp_note`
 - `see_answer`
 - `tips_head`
@@ -268,7 +269,6 @@
 - `modeb.band.note`
 - `modeb.correct`
 - `modeb.incorrect`
-- `modeb.lead_html`
 - `modeb.pool`
 - `modeb.quiz.choose_meaning`
 - `modeb.quiz.type_word`
@@ -288,6 +288,8 @@
 
 - `mode.a`
 - `mode.label`
+- `setup.hide_filters`
+- `setup.show_filters`
 - `vocab.no_results`
 - `vocab.search`
 - `vocab.tab_phrases`
@@ -301,7 +303,6 @@
 - `cs.level.l2`
 - `cs.level.l3`
 - `cs.level.label`
-- `lead_weak_html`
 
 ### setup（Connected）
 
@@ -311,7 +312,6 @@
 - `cs.label`
 - `cs.linking`
 - `cs.ruleLabel`
-- `lead_connected_html`
 
 ### setup（Words）
 
@@ -336,7 +336,6 @@
 - `grp.r`
 - `grp.short`
 - `grp.team`
-- `lead_html`
 - `reg.all`
 - `reg.irregular`
 - `reg.irregular_d`
@@ -404,8 +403,13 @@
 
 ### （未参照）
 
+- `lead_connected_html`
+- `lead_html`
+- `lead_weak_html`
+- `modeb.lead_html`
 - `pool.count_phrases`
 - `pool.count_weak`
+- `reveal.respell_label`
 
 ---
 
