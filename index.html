@@ -402,7 +402,7 @@
       <div id="mbSMeaning" class="mbsMeaning hidden">
         <div class="readout"><div class="wordbig" id="mbSWord"></div></div>
         <div class="word-gloss" id="mbSGloss"></div>
-        <div class="note">
+        <div class="note" id="mbSNoteBlock">
           <div class="nh" id="mbSTipsHead">Pronunciation tips</div>
           <p id="mbSNote"></p>
           <div class="trapchips" id="mbSTraps"></div>
@@ -476,7 +476,7 @@
       <div class="dict-ipa hidden" id="rDictIpa"></div>
       <div class="alt-ipa hidden" id="rAltIpa"></div>
       <div class="info" id="rInfo"></div>
-      <div class="note">
+      <div class="note" id="rNoteBlock">
         <div class="nh" id="tipsHead">Pronunciation tips</div>
         <p id="rNote"></p>
         <div class="trapchips" id="rTraps"></div>
@@ -1059,18 +1059,19 @@ async function setLang(lang) {
     if (isConnectedItem(S.cur)) {
       $("rCsMeta").textContent = csTypeLabel(S.cur.cs_type) + " · " + t("cs.ruleLabel") + ": " + csRuleText(S.cur);
       $("rCsMeta").classList.remove("hidden");
-      $("tipsHead").textContent = t("cs.ruleLabel");
     } else if (isWeakItem(S.cur)) {
       $("rCsMeta").textContent = t("weak.strong_label") + ": " + activeStrongIpa(S.cur)
         + "  ↔  " + t("weak.weak_label") + ": " + activeIpa(S.cur);
       $("rCsMeta").classList.remove("hidden");
-      $("tipsHead").textContent = t("cs.ruleLabel");
     } else {
       $("rCsMeta").classList.add("hidden");
-      renderWordPronDetails(S.cur, { respellId: "rRespell", noteId: "rNote", tipsHeadId: "tipsHead", trapsId: "rTraps", infoId: "rInfo" });
     }
-    if (isConnectedItem(S.cur) || isWeakItem(S.cur)) $("rNote").textContent = autoNote(S.cur);
     refreshRevealIpa();
+    if (isConnectedItem(S.cur) || isWeakItem(S.cur)) {
+      renderWordPronDetails(S.cur, { noteId: "rNote", tipsHeadId: "tipsHead", tipsHeadText: t("cs.ruleLabel"), noteBlockId: "rNoteBlock", includeTraps: false, infoId: "rInfo" });
+    } else {
+      renderWordPronDetails(S.cur, { respellId: "rRespell", noteId: "rNote", tipsHeadId: "tipsHead", trapsId: "rTraps", infoId: "rInfo", noteBlockId: "rNoteBlock" });
+    }
   }
   if (S.cur && S.appMode === "b" && !$("cardModeBStudy").classList.contains("hidden")) {
     refreshModeBStudyContent(S.cur);
@@ -1436,7 +1437,7 @@ function recordModeBQuiz(c,mcqRes,spellRes){
   return passed?"ok":(spellRes==="near"?"near":"bad");
 }
 function hideModeBCards(){show("cardModeBStudy",false);show("cardModeBMcq",false);show("cardModeBDict",false);}
-const MB_S_PRON_IDS={respellId:"mbSRespell",noteId:"mbSNote",tipsHeadId:"mbSTipsHead",trapsId:"mbSTraps",infoId:"mbSInfo"};
+const MB_S_PRON_IDS={respellId:"mbSRespell",noteId:"mbSNote",tipsHeadId:"mbSTipsHead",trapsId:"mbSTraps",infoId:"mbSInfo",noteBlockId:"mbSNoteBlock"};
 function refreshModeBStudyContent(c){
   $("mbSGloss").textContent=modeBDisplayGloss(c);
   const meaningRevealed=!$("mbSMeaning").classList.contains("hidden");
@@ -2119,6 +2120,9 @@ function autoNote(c){
   return parts.join(" · ");
 }
 function tryLine(html){return t("you",{a:html});}
+function trickyPhonemes(c){
+  return [...new Set(phonemesOf(activeIpa(c)))].filter(s=>PH[s]&&PH[s].t===1);
+}
 function renderWordPronDetails(c,ids){
   const respellEl=ids.respellId?$(ids.respellId):null;
   if(respellEl){
@@ -2126,12 +2130,21 @@ function renderWordPronDetails(c,ids){
     if(respell){respellEl.textContent=respell;respellEl.classList.remove("hidden");}
     else respellEl.classList.add("hidden");
   }
-  if(ids.noteId)$(ids.noteId).textContent=autoNote(c);
-  if(ids.tipsHeadId)$(ids.tipsHeadId).textContent=t("tips_head");
+  const noteText=autoNote(c);
+  const traps=ids.includeTraps===false?[]:trickyPhonemes(c);
+  const hasTips=!!(noteText||traps.length);
+  if(ids.noteBlockId)$(ids.noteBlockId).classList.toggle("hidden",!hasTips);
+  if(!hasTips){
+    if(ids.noteId)$(ids.noteId).textContent="";
+    if(ids.trapsId)$(ids.trapsId).innerHTML="";
+    if(ids.infoId)$(ids.infoId).classList.remove("on");
+    return;
+  }
+  if(ids.noteId)$(ids.noteId).textContent=noteText;
+  if(ids.tipsHeadId)$(ids.tipsHeadId).textContent=ids.tipsHeadText||t("tips_head");
   if(ids.infoId)$(ids.infoId).classList.remove("on");
   if(ids.trapsId){
     const trapsEl=$(ids.trapsId);
-    const traps=[...new Set(phonemesOf(activeIpa(c)))].filter(s=>PH[s]&&PH[s].t===1);
     trapsEl.innerHTML=traps.map(s=>'<span class="trapchip" data-sym="'+s+'">'+s+'</span>').join("");
     trapsEl.querySelectorAll(".trapchip").forEach(ch=>ch.addEventListener("click",()=>renderInfo(ids.infoId,ch.dataset.sym)));
   }
@@ -2176,16 +2189,11 @@ function reveal(res,ctx){
     $("rCsMeta").textContent=t("weak.strong_label")+": "+activeStrongIpa(c)
       +"  ↔  "+t("weak.weak_label")+": "+activeIpa(c);
     $("rCsMeta").classList.remove("hidden");
-    $("rTraps").innerHTML="";
-    $("tipsHead").textContent=t("cs.ruleLabel");
   }else if(isConnectedItem(c)){
     $("rCsMeta").textContent=csTypeLabel(c.cs_type)+" · "+t("cs.ruleLabel")+": "+csRuleText(c);
     $("rCsMeta").classList.remove("hidden");
-    $("rTraps").innerHTML="";
-    $("tipsHead").textContent=t("cs.ruleLabel");
   }else{
     $("rCsMeta").classList.add("hidden");
-    $("tipsHead").textContent=t("tips_head");
   }
   if(ctx.type==="decode"||ctx.type==="modeb-quiz"){
     const raw=ctx.tryRaw?ctx.tryRaw.replace(/[<>]/g,""):"";
@@ -2204,9 +2212,11 @@ function reveal(res,ctx){
     marker=(k,t)=>{if(t==="ˈ"||t==="ˌ")return null;return okTokens.has(k)?"tok-ok":"tok-bad";};
   }
   refreshRevealIpa(marker);
-  if(!isConnectedItem(c)&&!isWeakItem(c)){
-    renderWordPronDetails(c,{respellId:"rRespell",noteId:"rNote",tipsHeadId:"tipsHead",trapsId:"rTraps",infoId:"rInfo"});
-  }else $("rNote").textContent=autoNote(c);
+  if(isConnectedItem(c)||isWeakItem(c)){
+    renderWordPronDetails(c,{noteId:"rNote",tipsHeadId:"tipsHead",tipsHeadText:t("cs.ruleLabel"),noteBlockId:"rNoteBlock",includeTraps:false,infoId:"rInfo"});
+  }else{
+    renderWordPronDetails(c,{respellId:"rRespell",noteId:"rNote",tipsHeadId:"tipsHead",trapsId:"rTraps",infoId:"rInfo",noteBlockId:"rNoteBlock"});
+  }
   setTimeout(()=>speak(c.w,speakOptsForItem(c)),200);
   refreshAllSpeakers();
 }
