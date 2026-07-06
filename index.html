@@ -139,7 +139,6 @@
   #reveal.res-near .yourtry .try{color:var(--stress);font-weight:600;text-decoration:line-through;text-decoration-color:color-mix(in srgb,var(--stress) 55%,transparent)}
   #reveal.res-bad .yourtry .try{color:var(--bad);font-weight:600;text-decoration:line-through;text-decoration-color:color-mix(in srgb,var(--bad) 55%,transparent)}
   .alt-ipa{font-family:var(--ipa);font-size:13px;color:var(--faint);margin-top:6px}
-  .respell{font-family:var(--ui);font-size:clamp(15px,3.8vw,20px);color:var(--muted);letter-spacing:.5px;margin-top:4px;text-align:center}
   .dict-ipa{font-family:var(--ipa);font-size:clamp(13px,3.2vw,17px);color:var(--muted);letter-spacing:.5px;margin-top:4px;text-align:center}
   .yourtry .uipa{font-family:var(--ipa)}
   #reveal.res-ok .yourtry .uipa{color:var(--ok)}
@@ -159,7 +158,6 @@
   #mbSMeaning:not(.hidden){animation:mbsFadeIn .25s ease}
   #mbSMeaning .word-gloss{text-align:center;margin-bottom:0}
   #mbSMeaning .note{margin-top:10px;padding-top:12px}
-  #mbSRespell{margin-top:0;margin-bottom:4px}
   @keyframes mbsFadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
   .mbs-actions{position:relative;margin-top:16px;height:52px}
   .mbs-actions .btn-reveal,.mbs-actions .reveal-next{position:absolute;inset:0;margin:0;width:100%;box-sizing:border-box;min-height:52px}
@@ -186,8 +184,6 @@
   .vocab-ipa-ga{font-family:var(--ipa);font-size:13px;color:var(--signal);line-height:1.3}
   .vocab-ipa-rp{font-family:var(--ipa);font-size:11.5px;color:var(--faint);line-height:1.3}
   .vocab-ipa-label{font-family:var(--mono);font-size:9px;color:var(--faint);letter-spacing:.06em;margin-right:3px}
-  .vocab-respell{display:block;font-family:var(--ui);font-size:12px;color:var(--muted);letter-spacing:.3px;margin-top:2px}
-  .vocab-respell-sep{opacity:.5}
   .vocab-gloss{flex:1;font-size:13px;color:var(--muted);min-width:0;white-space:normal;word-break:break-word;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;line-height:1.4}
   .vocab-pos{font-family:var(--mono);font-size:9.5px;color:var(--faint);flex-shrink:0;white-space:nowrap;padding-top:2px}
   .vocab-play{border:1px solid var(--hair);background:#fff;border-radius:50%;width:32px;height:32px;padding:0;cursor:pointer;color:var(--signal);display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;transition:border-color .15s,background .15s;margin-top:1px}
@@ -396,7 +392,6 @@
     <div class="card-top"><div class="qno" id="mbSNo"></div></div>
     <div class="readout"><button class="playicon" id="mbSPlay" type="button" aria-label="Listen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div>
     <div class="readout"><div class="ipa" id="mbSIpa"></div></div>
-    <div class="respell hidden" id="mbSRespell"></div>
     <div class="info" id="mbSInfo"></div>
     <div class="mbs-meaning-slot">
       <div id="mbSMeaning" class="mbsMeaning hidden">
@@ -472,7 +467,6 @@
       <div class="readout" style="padding-top:0"><div class="ipa" id="rIpa"></div>
         <button class="playicon" id="rPlay" type="button" aria-label="Listen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button>
       </div>
-      <div class="respell hidden" id="rRespell"></div>
       <div class="dict-ipa hidden" id="rDictIpa"></div>
       <div class="alt-ipa hidden" id="rAltIpa"></div>
       <div class="info" id="rInfo"></div>
@@ -786,16 +780,11 @@ function renderVocabWords(query = "") {
 
     const gaIpa = c.ipa || "";
     const rpIpa = c.rp_ipa || "";
-    const respellGa = c.respell_ga || "";
-    const respellRp = c.respell_rp || "";
     const gloss = vocabDisplayGloss(c);
     const pos = posLabel(c.pos);
     const posStr = pos && pos !== "—" ? `<span class="vocab-pos">${escHtml(pos)}</span>` : "";
     const rpLine = rpIpa && rpIpa !== gaIpa
       ? `<span class="vocab-ipa-rp"><span class="vocab-ipa-label">RP</span>${escHtml(rpIpa)}</span>`
-      : "";
-    const respellLine = (respellGa || respellRp)
-      ? `<span class="vocab-respell">${escHtml(respellGa)}${respellRp && respellRp !== respellGa ? ' <span class="vocab-respell-sep">/</span> ' + escHtml(respellRp) : ""}</span>`
       : "";
 
     html += `<div class="vocab-row">
@@ -803,7 +792,6 @@ function renderVocabWords(query = "") {
       <span class="vocab-ipas">
         <span class="vocab-ipa-ga"><span class="vocab-ipa-label">GA</span>${escHtml(gaIpa)}</span>
         ${rpLine}
-        ${respellLine}
       </span>
       <span class="vocab-gloss">${escHtml(gloss)}</span>
       ${posStr}
@@ -897,10 +885,6 @@ function hasNarrowDifference(c) {
   const phonemic = activeIpa(c);
   return !!(narrow && phonemic && narrow !== phonemic);
 }
-function activeRespell(c) {
-  if (!c) return null;
-  return ACCENT === "rp" ? (c.respell_rp || null) : (c.respell_ga || null);
-}
 /** GA neighbors for Mode B MCQ; RP-specific list deferred (see docs/rp-neighbors-priority-decision.md). */
 function activeNeighbors(c) {
   if (!c) return [];
@@ -967,7 +951,6 @@ function applyI18n() {
   $("mbSGotIt").textContent = t("modeb.study.got_it");
   $("mbSRevealBtn").textContent = t("modeb.study.reveal_meaning");
   $("mbSTipsHead").textContent = t("tips_head");
-  $("mbSRespell").setAttribute("aria-label", t("reveal.respell_label"));
   $("mbMHead").textContent = t("modeb.quiz.choose_meaning");
   $("mbDHead").textContent = t("modeb.quiz.type_word");
   $("mbDInput").placeholder = t("input_ph");
@@ -1070,7 +1053,7 @@ async function setLang(lang) {
     if (isConnectedItem(S.cur) || isWeakItem(S.cur)) {
       renderWordPronDetails(S.cur, { noteId: "rNote", tipsHeadId: "tipsHead", tipsHeadText: t("cs.ruleLabel"), noteBlockId: "rNoteBlock", includeTraps: false, infoId: "rInfo" });
     } else {
-      renderWordPronDetails(S.cur, { respellId: "rRespell", noteId: "rNote", tipsHeadId: "tipsHead", trapsId: "rTraps", infoId: "rInfo", noteBlockId: "rNoteBlock" });
+      renderWordPronDetails(S.cur, { noteId: "rNote", tipsHeadId: "tipsHead", trapsId: "rTraps", infoId: "rInfo", noteBlockId: "rNoteBlock" });
     }
   }
   if (S.cur && S.appMode === "b" && !$("cardModeBStudy").classList.contains("hidden")) {
@@ -1437,13 +1420,10 @@ function recordModeBQuiz(c,mcqRes,spellRes){
   return passed?"ok":(spellRes==="near"?"near":"bad");
 }
 function hideModeBCards(){show("cardModeBStudy",false);show("cardModeBMcq",false);show("cardModeBDict",false);}
-const MB_S_PRON_IDS={respellId:"mbSRespell",noteId:"mbSNote",tipsHeadId:"mbSTipsHead",trapsId:"mbSTraps",infoId:"mbSInfo",noteBlockId:"mbSNoteBlock"};
+const MB_S_PRON_IDS={noteId:"mbSNote",tipsHeadId:"mbSTipsHead",trapsId:"mbSTraps",infoId:"mbSInfo",noteBlockId:"mbSNoteBlock"};
 function refreshModeBStudyContent(c){
   $("mbSGloss").textContent=modeBDisplayGloss(c);
-  const meaningRevealed=!$("mbSMeaning").classList.contains("hidden");
   renderWordPronDetails(c,MB_S_PRON_IDS);
-  if(!meaningRevealed)$("mbSRespell").classList.add("hidden");
-  else if($("mbSRespell").textContent)$("mbSRespell").classList.remove("hidden");
 }
 function renderModeBStudy(c){
   hideModeBCards();show("cardModeBStudy",true);
@@ -2124,12 +2104,6 @@ function trickyPhonemes(c){
   return [...new Set(phonemesOf(activeIpa(c)))].filter(s=>PH[s]&&PH[s].t===1);
 }
 function renderWordPronDetails(c,ids){
-  const respellEl=ids.respellId?$(ids.respellId):null;
-  if(respellEl){
-    const respell=activeRespell(c);
-    if(respell){respellEl.textContent=respell;respellEl.classList.remove("hidden");}
-    else respellEl.classList.add("hidden");
-  }
   const noteText=autoNote(c);
   const traps=ids.includeTraps===false?[]:trickyPhonemes(c);
   const hasTips=!!(noteText||traps.length);
@@ -2153,12 +2127,6 @@ function refreshRevealIpa(marker){
   const c=S.cur;if(!c)return;
   const main=activeNarrowIpa(c);
   renderIpaInto($("rIpa"),main,"rInfo",marker||null);$("rInfo").classList.remove("on");
-  const respellEl=$("rRespell");
-  const respell=activeRespell(c);
-  if(respell){
-    respellEl.textContent=respell;
-    respellEl.classList.remove("hidden");
-  }else respellEl.classList.add("hidden");
   const dictEl=$("rDictIpa");
   if(hasNarrowDifference(c)){
     dictEl.textContent=t("reveal.dict_label")+": "+activeIpa(c);
@@ -2215,7 +2183,7 @@ function reveal(res,ctx){
   if(isConnectedItem(c)||isWeakItem(c)){
     renderWordPronDetails(c,{noteId:"rNote",tipsHeadId:"tipsHead",tipsHeadText:t("cs.ruleLabel"),noteBlockId:"rNoteBlock",includeTraps:false,infoId:"rInfo"});
   }else{
-    renderWordPronDetails(c,{respellId:"rRespell",noteId:"rNote",tipsHeadId:"tipsHead",trapsId:"rTraps",infoId:"rInfo",noteBlockId:"rNoteBlock"});
+    renderWordPronDetails(c,{noteId:"rNote",tipsHeadId:"tipsHead",trapsId:"rTraps",infoId:"rInfo",noteBlockId:"rNoteBlock"});
   }
   setTimeout(()=>speak(c.w,speakOptsForItem(c)),200);
   refreshAllSpeakers();
@@ -2229,7 +2197,6 @@ function nextCard(){
 $("nextBtn").addEventListener("click",nextCard);
 $("mbSRevealBtn").addEventListener("click",()=>{
   $("mbSMeaning").classList.remove("hidden");
-  if($("mbSRespell").textContent)$("mbSRespell").classList.remove("hidden");
   $("mbSRevealBtn").classList.add("hidden");
   $("mbSGotIt").classList.remove("hidden");
 });
