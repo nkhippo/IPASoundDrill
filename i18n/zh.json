@@ -142,7 +142,8 @@
     "rp_note": "RP（英）",
     "ga_note": "GA（美）",
     "respell_label": "简易发音",
-    "dict_label": "词典表记"
+    "dict_label": "词典表记",
+    "alt_same": "相同"
   },
   "lang_opts": {
     "en": "English",

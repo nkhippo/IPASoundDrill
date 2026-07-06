@@ -142,7 +142,8 @@
     "rp_note": "RP",
     "ga_note": "GA",
     "respell_label": "Respelling",
-    "dict_label": "Dictionary"
+    "dict_label": "Dictionary",
+    "alt_same": "same"
   },
   "lang_opts": {
     "en": "English",

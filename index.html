@@ -142,7 +142,7 @@
   #reveal.res-ok .yourtry .try{color:var(--ok);font-weight:600}
   #reveal.res-near .yourtry .try{color:var(--stress);font-weight:600;text-decoration:line-through;text-decoration-color:color-mix(in srgb,var(--stress) 55%,transparent)}
   #reveal.res-bad .yourtry .try{color:var(--bad);font-weight:600;text-decoration:line-through;text-decoration-color:color-mix(in srgb,var(--bad) 55%,transparent)}
-  .alt-ipa{font-family:var(--ipa);font-size:13px;color:var(--faint);margin-top:6px}
+  .alt-ipa{font-family:var(--ipa);font-size:13px;color:var(--faint);margin-top:6px;text-align:center}
   .dict-ipa{font-family:var(--ipa);font-size:clamp(13px,3.2vw,17px);color:var(--muted);letter-spacing:.5px;margin-top:4px;text-align:center}
   .yourtry .uipa{font-family:var(--ipa)}
   #reveal.res-ok .yourtry .uipa{color:var(--ok)}
@@ -403,6 +403,7 @@
     <div class="card-top"><div class="qno" id="mbSNo"></div></div>
     <div class="readout"><button class="playicon" id="mbSPlay" type="button" aria-label="Listen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div>
     <div class="readout"><div class="ipa" id="mbSIpa"></div></div>
+    <div class="alt-ipa hidden" id="mbSAltIpa"></div>
     <div class="info" id="mbSInfo"></div>
     <div class="mbs-meaning-slot">
       <div id="mbSMeaning" class="mbsMeaning hidden">
@@ -447,6 +448,7 @@
     <div class="readout"><div class="ipa" id="dIpa"></div>
       <button class="playicon" id="dPlay" type="button" aria-label="Listen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button>
     </div>
+    <div class="alt-ipa hidden" id="dAltIpa"></div>
     <div class="info" id="dInfo"></div>
     <div class="answer">
       <input id="dInput" type="text" lang="en" inputmode="latin" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" pattern="[A-Za-z]*" placeholder="Type the word">
@@ -794,8 +796,12 @@ function renderVocabWords(query = "") {
     const gloss = vocabDisplayGloss(c);
     const pos = posLabel(c.pos);
     const posStr = pos && pos !== "—" ? `<span class="vocab-pos">${escHtml(pos)}</span>` : "";
-    const rpLine = rpIpa && rpIpa !== gaIpa
-      ? `<span class="vocab-ipa-rp"><span class="vocab-ipa-label">RP</span>${escHtml(rpIpa)}</span>`
+    const rpLine = rpIpa
+      ? `<span class="vocab-ipa-rp"><span class="vocab-ipa-label">RP</span>${
+          rpIpa === gaIpa
+            ? escHtml(t("reveal.alt_same") + " (" + rpIpa + ")")
+            : escHtml(rpIpa)
+        }</span>`
       : "";
 
     html += `<div class="vocab-row">
@@ -832,8 +838,12 @@ function renderVocabPhrases() {
     const type = c.cs_type || "";
     const level = c.level || "";
 
-    const rpLine = rpIpa && rpIpa !== gaIpa
-      ? `<span class="vocab-ipa-rp"><span class="vocab-ipa-label">RP</span>${escHtml(rpIpa)}</span>`
+    const rpLine = rpIpa
+      ? `<span class="vocab-ipa-rp"><span class="vocab-ipa-label">RP</span>${
+          rpIpa === gaIpa
+            ? escHtml(t("reveal.alt_same") + " (" + rpIpa + ")")
+            : escHtml(rpIpa)
+        }</span>`
       : "";
 
     html += `<div class="vocab-row">
@@ -895,6 +905,18 @@ function hasNarrowDifference(c) {
   const narrow = activeNarrowIpa(c);
   const phonemic = activeIpa(c);
   return !!(narrow && phonemic && narrow !== phonemic);
+}
+function altAccentLabel() {
+  return ACCENT === "rp" ? t("reveal.ga_note") : t("reveal.rp_note");
+}
+function altAccentValue(c) {
+  const alt = altIpa(c);
+  if (!alt) return { value: "", isSame: false, hasAlt: false };
+  const active = activeIpa(c);
+  if (alt === active) {
+    return { value: t("reveal.alt_same") + " (" + alt + ")", isSame: true, hasAlt: true };
+  }
+  return { value: alt, isSame: false, hasAlt: true };
 }
 /** GA neighbors for Mode B MCQ; RP-specific list deferred (see docs/rp-neighbors-priority-decision.md). */
 function activeNeighbors(c) {
@@ -1474,6 +1496,12 @@ function renderModeBStudy(c){
   hideModeBCards();show("cardModeBStudy",true);
   $("mbSNo").textContent="#"+String(S.idx+1).padStart(2,"0");
   renderIpaInto($("mbSIpa"),activeNarrowIpa(c),"mbSInfo",null);
+  const mbSAltEl=$("mbSAltIpa");
+  const mbSAlt=altAccentValue(c);
+  if(mbSAlt.hasAlt){
+    mbSAltEl.textContent=altAccentLabel()+": "+mbSAlt.value;
+    mbSAltEl.classList.remove("hidden");
+  }else mbSAltEl.classList.add("hidden");
   $("mbSMeaning").classList.add("hidden");
   $("mbSRevealBtn").classList.remove("hidden");
   $("mbSGotIt").classList.add("hidden");
@@ -2023,6 +2051,16 @@ function renderDecode(c){
   }else{
     renderIpaInto($("dIpa"),activeNarrowIpa(c),"dInfo",null);
   }
+  const dAltEl=$("dAltIpa");
+  if(isConnectedItem(c)||isWeakItem(c)){
+    dAltEl.classList.add("hidden");
+  }else{
+    const alt=altAccentValue(c);
+    if(alt.hasAlt){
+      dAltEl.textContent=altAccentLabel()+": "+alt.value;
+      dAltEl.classList.remove("hidden");
+    }else dAltEl.classList.add("hidden");
+  }
   const inp=$("dInput");inp.value="";
   inp.placeholder=(S.cur&&isConnectedItem(S.cur))?t("input_phrase"):t("input_ph");
   if(!COARSE)inp.focus({preventScroll:true});
@@ -2177,12 +2215,10 @@ function refreshRevealIpa(marker){
     dictEl.textContent=t("reveal.dict_label")+": "+activeIpa(c);
     dictEl.classList.remove("hidden");
   }else dictEl.classList.add("hidden");
-  const alt=altIpa(c);
   const altEl=$("rAltIpa");
-  const currentPhonemic=activeIpa(c);
-  if(alt&&alt!==currentPhonemic){
-    const label=ACCENT==="rp"?t("reveal.ga_note"):t("reveal.rp_note");
-    altEl.textContent=label+": "+alt;
+  const alt=altAccentValue(c);
+  if(alt.hasAlt){
+    altEl.textContent=altAccentLabel()+": "+alt.value;
     altEl.classList.remove("hidden");
   }else altEl.classList.add("hidden");
 }

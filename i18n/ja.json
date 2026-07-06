@@ -142,7 +142,8 @@
     "rp_note": "RP（英）",
     "ga_note": "GA（米）",
     "respell_label": "発音ガイド",
-    "dict_label": "辞書表記"
+    "dict_label": "辞書表記",
+    "alt_same": "同じ"
   },
   "lang_opts": {
     "en": "English",
