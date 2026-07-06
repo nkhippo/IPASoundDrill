@@ -84,9 +84,9 @@
   },
   "dir": {
     "label": "Direction",
-    "decode_t": "Decode · IPA &rarr; word",
+    "decode_t": "IPA &rarr; word",
     "decode_d": "Read the IPA and spell the word",
-    "encode_t": "Encode · word &rarr; IPA",
+    "encode_t": "word &rarr; IPA",
     "encode_d": "Build the pronunciation with the IPA keyboard"
   },
   "set": {

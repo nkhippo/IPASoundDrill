@@ -84,9 +84,9 @@
   },
   "dir": {
     "label": "方向",
-    "decode_t": "読む · IPA &rarr; 単語",
+    "decode_t": "IPA &rarr; 単語",
     "decode_d": "発音記号を読んで綴りを当てる",
-    "encode_t": "書く · 単語 &rarr; IPA",
+    "encode_t": "単語 &rarr; IPA",
     "encode_d": "IPAキーボードで発音を組み立てる"
   },
   "set": {

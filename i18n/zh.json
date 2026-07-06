@@ -84,9 +84,9 @@
   },
   "dir": {
     "label": "方向",
-    "decode_t": "解码 · IPA &rarr; 单词",
+    "decode_t": "IPA &rarr; 单词",
     "decode_d": "读IPA并拼写单词",
-    "encode_t": "编码 · 单词 &rarr; IPA",
+    "encode_t": "单词 &rarr; IPA",
     "encode_d": "用IPA键盘拼出发音"
   },
   "set": {

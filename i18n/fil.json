@@ -28,9 +28,9 @@
   },
   "dir": {
     "decode_d": "Basahin ang IPA at baybayin ang salita",
-    "decode_t": "Decode · IPA &rarr; salita",
+    "decode_t": "IPA &rarr; salita",
     "encode_d": "Buuin ang pagbigkas gamit ang IPA keyboard",
-    "encode_t": "Encode · salita &rarr; IPA",
+    "encode_t": "salita &rarr; IPA",
     "label": "Direksyon"
   },
   "focus": {
