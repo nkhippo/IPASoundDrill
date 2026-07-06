@@ -153,9 +153,14 @@
   .reveal-next{margin-top:16px;width:100%;border:none;border-radius:11px;cursor:pointer;background:var(--ink);color:#fff;font-family:var(--ui);font-weight:700;font-size:15px;padding:14px;letter-spacing:.03em}
   .reveal-next:active{transform:translateY(1px)}
   .reveal-next.hidden{display:none}
+  .mbs-meaning-slot{min-height:6rem;display:flex;align-items:center;justify-content:center}
+  #mbSMeaning{width:100%}
   #mbSMeaning.hidden{display:none}
-  #mbSMeaning{animation:mbsFadeIn .25s ease}
+  #mbSMeaning:not(.hidden){animation:mbsFadeIn .25s ease}
+  #mbSMeaning .word-gloss{text-align:center;margin-bottom:0}
   @keyframes mbsFadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+  .mbs-actions{position:relative;margin-top:16px;height:52px}
+  .mbs-actions .btn-reveal,.mbs-actions .reveal-next{position:absolute;inset:0;margin:0;width:100%;box-sizing:border-box;min-height:52px}
   .btn-reveal{width:100%;padding:14px;border:2px solid var(--signal);background:transparent;color:var(--signal);border-radius:12px;font-size:1rem;font-weight:600;cursor:pointer;margin-top:8px;font-family:var(--ui)}
   .btn-reveal.hidden{display:none}
 
@@ -389,12 +394,16 @@
     <div class="card-top"><div class="qno" id="mbSNo"></div></div>
     <div class="readout"><button class="playicon" id="mbSPlay" type="button" aria-label="Listen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div>
     <div class="readout"><div class="ipa" id="mbSIpa"></div></div>
-    <div id="mbSMeaning" class="mbsMeaning hidden">
-      <div class="readout"><div class="wordbig" id="mbSWord"></div></div>
-      <div class="word-gloss" id="mbSGloss" style="text-align:center;margin-bottom:12px"></div>
+    <div class="mbs-meaning-slot">
+      <div id="mbSMeaning" class="mbsMeaning hidden">
+        <div class="readout"><div class="wordbig" id="mbSWord"></div></div>
+        <div class="word-gloss" id="mbSGloss"></div>
+      </div>
     </div>
-    <button class="btn-reveal" id="mbSRevealBtn" type="button">Reveal meaning</button>
-    <button class="reveal-next hidden" id="mbSGotIt" type="button">Next</button>
+    <div class="mbs-actions">
+      <button class="btn-reveal" id="mbSRevealBtn" type="button">Reveal meaning</button>
+      <button class="reveal-next hidden" id="mbSGotIt" type="button">Next</button>
+    </div>
   </section>
 
   <!-- MODE B QUIZ MCQ -->
