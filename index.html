@@ -967,6 +967,7 @@ function applyI18n() {
   $("mbSGotIt").textContent = t("modeb.study.got_it");
   $("mbSRevealBtn").textContent = t("modeb.study.reveal_meaning");
   $("mbSTipsHead").textContent = t("tips_head");
+  $("mbSRespell").setAttribute("aria-label", t("reveal.respell_label"));
   $("mbMHead").textContent = t("modeb.quiz.choose_meaning");
   $("mbDHead").textContent = t("modeb.quiz.type_word");
   $("mbDInput").placeholder = t("input_ph");
@@ -1058,11 +1059,21 @@ async function setLang(lang) {
     if (isConnectedItem(S.cur)) {
       $("rCsMeta").textContent = csTypeLabel(S.cur.cs_type) + " · " + t("cs.ruleLabel") + ": " + csRuleText(S.cur);
       $("rCsMeta").classList.remove("hidden");
+      $("tipsHead").textContent = t("cs.ruleLabel");
+    } else if (isWeakItem(S.cur)) {
+      $("rCsMeta").textContent = t("weak.strong_label") + ": " + activeStrongIpa(S.cur)
+        + "  ↔  " + t("weak.weak_label") + ": " + activeIpa(S.cur);
+      $("rCsMeta").classList.remove("hidden");
+      $("tipsHead").textContent = t("cs.ruleLabel");
     } else {
       $("rCsMeta").classList.add("hidden");
+      renderWordPronDetails(S.cur, { respellId: "rRespell", noteId: "rNote", tipsHeadId: "tipsHead", trapsId: "rTraps", infoId: "rInfo" });
     }
-    $("rNote").textContent = autoNote(S.cur);
+    if (isConnectedItem(S.cur) || isWeakItem(S.cur)) $("rNote").textContent = autoNote(S.cur);
     refreshRevealIpa();
+  }
+  if (S.cur && S.appMode === "b" && !$("cardModeBStudy").classList.contains("hidden")) {
+    refreshModeBStudyContent(S.cur);
   }
   if (!$("summary").classList.contains("hidden")) renderSummary();
   if (!$("guideModal").classList.contains("hidden")) renderGuide(mapAppLangToGuide(LANG));
@@ -1425,6 +1436,14 @@ function recordModeBQuiz(c,mcqRes,spellRes){
   return passed?"ok":(spellRes==="near"?"near":"bad");
 }
 function hideModeBCards(){show("cardModeBStudy",false);show("cardModeBMcq",false);show("cardModeBDict",false);}
+const MB_S_PRON_IDS={respellId:"mbSRespell",noteId:"mbSNote",tipsHeadId:"mbSTipsHead",trapsId:"mbSTraps",infoId:"mbSInfo"};
+function refreshModeBStudyContent(c){
+  $("mbSGloss").textContent=modeBDisplayGloss(c);
+  const meaningRevealed=!$("mbSMeaning").classList.contains("hidden");
+  renderWordPronDetails(c,MB_S_PRON_IDS);
+  if(!meaningRevealed)$("mbSRespell").classList.add("hidden");
+  else if($("mbSRespell").textContent)$("mbSRespell").classList.remove("hidden");
+}
 function renderModeBStudy(c){
   hideModeBCards();show("cardModeBStudy",true);
   $("mbSNo").textContent="#"+String(S.idx+1).padStart(2,"0");
@@ -1433,9 +1452,7 @@ function renderModeBStudy(c){
   $("mbSRevealBtn").classList.remove("hidden");
   $("mbSGotIt").classList.add("hidden");
   $("mbSWord").textContent=c.w;
-  $("mbSGloss").textContent=modeBDisplayGloss(c);
-  renderWordPronDetails(c,{respellId:"mbSRespell",noteId:"mbSNote",tipsHeadId:"mbSTipsHead",trapsId:"mbSTraps",infoId:"mbSInfo"});
-  $("mbSRespell").classList.add("hidden");
+  refreshModeBStudyContent(c);
   setTimeout(()=>speak(c.w),250);
 }
 function renderModeBMcq(c){
