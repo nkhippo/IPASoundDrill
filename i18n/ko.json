@@ -78,6 +78,10 @@
     "count_phrases": "대상 {n}개 구",
     "count_weak": "대상 {n}개 약형"
   },
+  "setup": {
+    "show_filters": "상세 설정",
+    "hide_filters": "설정 닫기"
+  },
   "dir": {
     "label": "방향",
     "decode_t": "읽기 · IPA &rarr; 단어",

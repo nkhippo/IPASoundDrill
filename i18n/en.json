@@ -78,6 +78,10 @@
     "count_phrases": "Pool: {n} phrases",
     "count_weak": "Pool: {n} weak forms"
   },
+  "setup": {
+    "show_filters": "Customize filters",
+    "hide_filters": "Hide filters"
+  },
   "dir": {
     "label": "Direction",
     "decode_t": "Decode · IPA &rarr; word",

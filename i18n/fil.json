@@ -144,6 +144,10 @@
     "count_phrases": "Pool: {n} parirala",
     "count_weak": "Pool: {n} mahinang anyo"
   },
+  "setup": {
+    "show_filters": "Mga detalyadong setting",
+    "hide_filters": "Itago ang mga setting"
+  },
   "pos": {
     "be動詞": "pandiwang be",
     "代名詞": "panghalip",

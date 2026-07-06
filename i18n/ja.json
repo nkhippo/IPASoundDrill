@@ -78,6 +78,10 @@
     "count_phrases": "対象 {n} 句",
     "count_weak": "対象 {n} 弱形"
   },
+  "setup": {
+    "show_filters": "詳しい設定",
+    "hide_filters": "設定を閉じる"
+  },
   "dir": {
     "label": "方向",
     "decode_t": "読む · IPA &rarr; 単語",

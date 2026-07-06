@@ -78,6 +78,10 @@
     "count_phrases": "词库 {n} 句",
     "count_weak": "词库 {n} 弱读形式"
   },
+  "setup": {
+    "show_filters": "详细设置",
+    "hide_filters": "收起设置"
+  },
   "dir": {
     "label": "方向",
     "decode_t": "解码 · IPA &rarr; 单词",
