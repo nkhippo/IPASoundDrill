@@ -96,11 +96,15 @@
   .answer input{flex:1;border:1.5px solid var(--hair);border-radius:10px;padding:13px 14px;font-size:17px;font-family:var(--ui);color:var(--ink);background:#fff}
   .answer input:focus{outline:none;border-color:var(--signal)}
   .answer .go{border:none;background:var(--signal);color:#fff;border-radius:10px;padding:0 18px;font-weight:700;cursor:pointer;font-size:14px}
-  .playicon{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border:1px solid var(--hair);background:#fff;border-radius:50%;color:var(--signal);cursor:pointer;margin-top:10px;transition:border-color .15s,background .15s,transform .08s}
-  .playicon svg{width:18px;height:18px}
+  .playicon{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border:1px solid var(--hair);background:#fff;border-radius:50%;color:var(--signal);cursor:pointer;margin-top:10px;transition:border-color .15s,background .15s,transform .08s;position:relative}
+  .playicon svg{width:18px;height:18px;transition:opacity .15s}
   .playicon:hover{border-color:var(--signal);background:var(--signal-soft)}
   .playicon:active{transform:scale(.96)}
   .playicon:disabled{opacity:.55;cursor:wait}
+  .playicon.loading{opacity:1;cursor:wait}
+  .playicon.loading svg{opacity:0}
+  .playicon.loading::after{content:"";position:absolute;width:18px;height:18px;border:2px solid var(--signal-soft);border-top-color:var(--signal);border-radius:50%;animation:playicon-spin .7s linear infinite}
+  @keyframes playicon-spin{to{transform:rotate(360deg)}}
 
   /* IPA keyboard (encode mode) */
   .build{border:1.5px solid var(--hair);border-radius:11px;background:#fff;min-height:58px;display:flex;align-items:center;justify-content:center;padding:10px 14px;margin:4px 0 12px}
@@ -1617,22 +1621,33 @@ function speakerIdsForCurrentCard() {
   return ["dPlay", "ePlay", "rPlay"];
 }
 
+function setPlayiconState(btn, { disabled, loading }) {
+  if (!btn) return;
+  btn.disabled = !!disabled;
+  btn.classList.toggle("loading", !!loading);
+  btn.setAttribute("aria-busy", loading ? "true" : "false");
+}
+
 function refreshSpeakerFor(word, accent) {
   const w = currentCardWord();
   if (!w || w.toLowerCase() !== String(word).toLowerCase()) return;
   if (accent !== currentAccent()) return;
   const st = audioReady.get(audioReadyKey(word, accent));
   const enabled = hasCachedAudioFor(word, accent) || st === "ready" || st === "failed";
+  const loading = !enabled && st === "pending";
   speakerIdsForCurrentCard().forEach(id => {
     const btn = $(id);
-    if (btn && !speakBusy) btn.disabled = !enabled;
+    if (btn && !speakBusy) setPlayiconState(btn, { disabled: !enabled, loading });
   });
 }
 
 function refreshAllSpeakers() {
   if (speakBusy) return;
   if (S.tab === "connected" || isConnectedItem(S.cur) || isWeakItem(S.cur)) {
-    speakerIdsForCurrentCard().forEach(id => { const b = $(id); if (b) b.disabled = false; });
+    speakerIdsForCurrentCard().forEach(id => {
+      const b = $(id);
+      if (b) setPlayiconState(b, { disabled: false, loading: false });
+    });
     return;
   }
   const w = currentCardWord();
@@ -1743,7 +1758,10 @@ function prefetchSessionAudio(queue) {
 function setSpeakerBusy(busy) {
   speakBusy = busy;
   if (busy) {
-    speakerIdsForCurrentCard().forEach(id => { const btn = $(id); if (btn) btn.disabled = true; });
+    speakerIdsForCurrentCard().forEach(id => {
+      const btn = $(id);
+      if (btn) setPlayiconState(btn, { disabled: true, loading: true });
+    });
   } else {
     refreshAllSpeakers();
   }
