@@ -70,7 +70,7 @@
 
 | 前提 | 状態 |
 |------|------|
-| gloss 品質（多言語UI） | en/ja/zh/ko/fil **実装済み**（gloss.fil 3,059語完走） |
+| gloss 品質（多言語UI） | en/ja/zh/ko/fil **実装済み**（gloss.fil 3,059語完走、Phase 1 M1で180語追加、合計3,239語） |
 | UI 言語 fil（Tier 1） | **実装済み**（156キー + 音素解説 fil + 言語ピッカー） |
 | 英語定義 `def` | **完了**（3,059/3,059語。batch01–08） |
 | 弱形（36語） | **実装済み**（Connected Speech 内 Type=weak。`weak_forms.json` + `?weak=` TTS） |
@@ -109,6 +109,7 @@
 
 | 日付 | 版 | 内容 |
 |------|----|------|
+| 2026-07-07 | v3.6 | Phase 1 M1: パイロット180語の gloss 5言語（ja/zh/ko/fil）翻訳を追加。Claude によるスタイル準拠翻訳、同義語ペアの整合性確認済み。 |
 | 2026-07-07 | v3.5 | Phase 1 M1 パイロット: CEFR-J B1 拡充対象の先頭 180 語を wordlist に追加（3,239語）。gloss ja/zh/ko/fil は未着手。 |
 | 2026-07-07 | v3.4 | Phase 0-b: Mode A に CEFR 複数選択フィルタを追加（A1/A2/B1、デフォルト A1+A2）。Mode B の空バンド解放防止。C1 は UI 非表示（キー残置）。 |
 | 2026-07-07 | v3.3.1 | Phase 0-a の訂正: phonics 652語の cefr null化を復元。CEFR-J 一次データとの照合で 652語全てが正当な B1/B2 語彙と判明したため。詳細は docs/wordlist-cefr-audit.md 訂正セクション参照。 |

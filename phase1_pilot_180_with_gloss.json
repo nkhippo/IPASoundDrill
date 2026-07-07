@@ -1,0 +1,3422 @@
+[
+  {
+    "w": "abandon",
+    "ipa": "/əˈbændən/",
+    "rp_ipa": "/əˈbændən/",
+    "cefr": "B1",
+    "pos": "動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "abandon",
+      "ja": "見捨てる、放棄する",
+      "zh": "抛弃、放弃",
+      "ko": "버리다, 포기하다",
+      "fil": "iwan, talikuran"
+    },
+    "def": "To leave a place, thing, or person permanently or for a long time.",
+    "neighbors": []
+  },
+  {
+    "w": "able",
+    "ipa": "/ˈeɪbəl/",
+    "rp_ipa": "/ˈeɪbəl/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "able",
+      "ja": "できる、有能な",
+      "zh": "能够的、有能力的",
+      "ko": "할 수 있는, 유능한",
+      "fil": "kaya, may kakayahan"
+    },
+    "def": "Having the power, skill, or means to do something.",
+    "neighbors": []
+  },
+  {
+    "w": "abnormal",
+    "ipa": "/æbˈnɔrməl/",
+    "rp_ipa": "/æbˈnɔːməl/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "abnormal",
+      "ja": "異常な、正常でない",
+      "zh": "异常的、不正常的",
+      "ko": "비정상적인, 이상한",
+      "fil": "hindi normal, abnormal"
+    },
+    "def": "Different from what is usual or expected, often in a way that causes concern.",
+    "neighbors": []
+  },
+  {
+    "w": "aboard",
+    "ipa": "/əˈbɔrd/",
+    "rp_ipa": "/əˈbɔːd/",
+    "cefr": "B1",
+    "pos": "副詞 / 前置詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "aboard",
+      "ja": "乗って、乗車して",
+      "zh": "在船上、在车上",
+      "ko": "탑승한, 승선한",
+      "fil": "nakasakay"
+    },
+    "def": "On or into a ship, aircraft, train, or other vehicle.",
+    "neighbors": []
+  },
+  {
+    "w": "aborigine",
+    "ipa": "/ˌæbəˈrɪdʒəni/",
+    "rp_ipa": "/ˌæbəˈrɪdʒəni/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "aborigine",
+      "ja": "先住民、アボリジニ",
+      "zh": "原住民、土著",
+      "ko": "원주민",
+      "fil": "katutubo"
+    },
+    "def": "A person belonging to the original people of a country, especially Australia.",
+    "neighbors": []
+  },
+  {
+    "w": "absence",
+    "ipa": "/ˈæbsəns/",
+    "rp_ipa": "/ˈæbsəns/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "absence",
+      "ja": "不在、欠席",
+      "zh": "缺席、不在",
+      "ko": "부재, 결석",
+      "fil": "kawalan, pagliban"
+    },
+    "def": "The state of being away from a place where you are usually expected to be.",
+    "neighbors": []
+  },
+  {
+    "w": "absent",
+    "ipa": "/ˈæbsənt/",
+    "rp_ipa": "/ˈæbsənt/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "absent",
+      "ja": "欠席の、不在の",
+      "zh": "缺席的、不在的",
+      "ko": "결석한, 부재중인",
+      "fil": "wala, liban"
+    },
+    "def": "Not present at a place where you are usually expected to be.",
+    "neighbors": []
+  },
+  {
+    "w": "absolute",
+    "ipa": "/ˈæbsəˌlut/",
+    "rp_ipa": "/ˈæbsəˌluːt/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "absolute",
+      "ja": "絶対的な、完全な",
+      "zh": "绝对的、完全的",
+      "ko": "절대적인, 완전한",
+      "fil": "ganap, walang kondisyon"
+    },
+    "def": "Complete and total; not limited in any way.",
+    "neighbors": []
+  },
+  {
+    "w": "absolutely",
+    "ipa": "/ˌæbsəˈlutli/",
+    "rp_ipa": "/ˌæbsəˈluːtli/",
+    "cefr": "B1",
+    "pos": "副詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "absolutely",
+      "ja": "絶対に、完全に",
+      "zh": "绝对地、完全地",
+      "ko": "절대적으로, 완전히",
+      "fil": "tiyak, lubusan"
+    },
+    "def": "Completely and totally; used to emphasize agreement.",
+    "neighbors": []
+  },
+  {
+    "w": "absorb",
+    "ipa": "/əbˈzɔrb/",
+    "rp_ipa": "/əbˈzɔːb/",
+    "cefr": "B1",
+    "pos": "動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "absorb",
+      "ja": "吸収する、吸い込む",
+      "zh": "吸收、吸入",
+      "ko": "흡수하다, 빨아들이다",
+      "fil": "sumipsip, hitikin"
+    },
+    "def": "To take in a liquid, gas, or other substance gradually.",
+    "neighbors": []
+  },
+  {
+    "w": "abstract",
+    "ipa": "/æbˈstrækt/",
+    "rp_ipa": "/æbˈstrækt/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "abstract",
+      "ja": "抽象的な、観念的な",
+      "zh": "抽象的、观念的",
+      "ko": "추상적인, 관념적인",
+      "fil": "abstrakto, mahirap unawain"
+    },
+    "def": "Existing as an idea rather than as a physical or concrete thing.",
+    "neighbors": []
+  },
+  {
+    "w": "abundance",
+    "ipa": "/əˈbʌndəns/",
+    "rp_ipa": "/əˈbʌndəns/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "abundance",
+      "ja": "豊富、大量",
+      "zh": "丰富、大量",
+      "ko": "풍부, 다량",
+      "fil": "kasaganaan, dami"
+    },
+    "def": "A very large quantity of something.",
+    "neighbors": []
+  },
+  {
+    "w": "abundant",
+    "ipa": "/əˈbʌndənt/",
+    "rp_ipa": "/əˈbʌndənt/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "abundant",
+      "ja": "豊富な、あり余るほどの",
+      "zh": "丰富的、大量的",
+      "ko": "풍부한, 많은",
+      "fil": "sagana, marami"
+    },
+    "def": "Existing in large quantities; more than enough.",
+    "neighbors": []
+  },
+  {
+    "w": "academic",
+    "ipa": "/ˌækəˈdɛmɪk/",
+    "rp_ipa": "/ˌækəˈdemɪk/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "academic",
+      "ja": "学問の、学術的な",
+      "zh": "学术的、学院的",
+      "ko": "학문의, 학술적인",
+      "fil": "akademiko"
+    },
+    "def": "Relating to schools, colleges, and universities, especially studying rather than practical skills.",
+    "neighbors": []
+  },
+  {
+    "w": "academy",
+    "ipa": "/əˈkædəmi/",
+    "rp_ipa": "/əˈkædəmi/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "academy",
+      "ja": "学校、学院、アカデミー",
+      "zh": "学院、学会",
+      "ko": "학교, 학원, 학회",
+      "fil": "akademya, paaralan"
+    },
+    "def": "A school or college for special training, or a society of scholars or artists.",
+    "neighbors": []
+  },
+  {
+    "w": "accent",
+    "ipa": "/əkˈsɛnt/",
+    "rp_ipa": "/əkˈsent/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "accent",
+      "ja": "訛り、アクセント",
+      "zh": "口音、重音",
+      "ko": "억양, 강세",
+      "fil": "punto, tuldik"
+    },
+    "def": "A particular way of pronouncing words that shows which country, region, or social class a person is from.",
+    "neighbors": []
+  },
+  {
+    "w": "acceptance",
+    "ipa": "/ækˈsɛptəns/",
+    "rp_ipa": "/əkˈseptəns/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "acceptance",
+      "ja": "受諾、承認、受容",
+      "zh": "接受、承认",
+      "ko": "수락, 승인, 수용",
+      "fil": "pagtanggap"
+    },
+    "def": "The act of agreeing to receive or take something that is offered.",
+    "neighbors": []
+  },
+  {
+    "w": "access",
+    "ipa": "/ˈækˌsɛs/",
+    "rp_ipa": "/ˈækˌses/",
+    "cefr": "B1",
+    "pos": "名詞 / 動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "access",
+      "ja": "アクセス、利用する権利、入る",
+      "zh": "访问、进入、使用权",
+      "ko": "접근, 이용, 접속하다",
+      "fil": "akses, pagpasok"
+    },
+    "def": "The means or opportunity to enter, use, or reach something.",
+    "neighbors": []
+  },
+  {
+    "w": "accessible",
+    "ipa": "/ækˈsɛsəbəl/",
+    "rp_ipa": "/əkˈsesɪbəl/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "accessible",
+      "ja": "利用しやすい、近づきやすい",
+      "zh": "易接近的、可使用的",
+      "ko": "접근하기 쉬운, 이용하기 쉬운",
+      "fil": "madaling puntahan, madaling gamitin"
+    },
+    "def": "Able to be reached, entered, or used easily.",
+    "neighbors": []
+  },
+  {
+    "w": "accessory",
+    "ipa": "/ækˈsɛsɚi/",
+    "rp_ipa": "/ækˈsesəri/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "accessory",
+      "ja": "アクセサリー、付属品",
+      "zh": "配件、附件、饰品",
+      "ko": "액세서리, 부속품",
+      "fil": "aksesorya, kasangkapan"
+    },
+    "def": "An extra item added to something to make it more useful, decorative, or complete.",
+    "neighbors": []
+  },
+  {
+    "w": "accidental",
+    "ipa": "/ˌæksəˈdɛntəl/",
+    "rp_ipa": "/ˌæksɪˈdentəl/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "accidental",
+      "ja": "偶然の、思いがけない",
+      "zh": "偶然的、意外的",
+      "ko": "우연한, 뜻밖의",
+      "fil": "aksidenteng, di-sinasadya"
+    },
+    "def": "Happening by chance and not planned.",
+    "neighbors": []
+  },
+  {
+    "w": "accidentally",
+    "ipa": "/ˌæksəˈdɛntəli/",
+    "rp_ipa": "/ˌæksɪˈdentəli/",
+    "cefr": "B1",
+    "pos": "副詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "accidentally",
+      "ja": "偶然に、うっかり",
+      "zh": "偶然地、意外地",
+      "ko": "우연히, 실수로",
+      "fil": "hindi sinasadya, aksidenteng"
+    },
+    "def": "By chance, without intending to do it.",
+    "neighbors": []
+  },
+  {
+    "w": "accompany",
+    "ipa": "/əˈkʌmpəni/",
+    "rp_ipa": "/əˈkʌmpəni/",
+    "cefr": "B1",
+    "pos": "動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "accompany",
+      "ja": "同伴する、付き添う",
+      "zh": "陪伴、伴随",
+      "ko": "동행하다, 함께 가다",
+      "fil": "samahan"
+    },
+    "def": "To go somewhere with someone, or to happen at the same time as something else.",
+    "neighbors": []
+  },
+  {
+    "w": "accomplish",
+    "ipa": "/əˈkɑmplɪʃ/",
+    "rp_ipa": "/əˈkɒmplɪʃ/",
+    "cefr": "B1",
+    "pos": "動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "accomplish",
+      "ja": "成し遂げる、達成する",
+      "zh": "完成、达成",
+      "ko": "성취하다, 완수하다",
+      "fil": "matupad, magawa"
+    },
+    "def": "To succeed in doing or finishing something.",
+    "neighbors": []
+  },
+  {
+    "w": "accountant",
+    "ipa": "/əˈkaʊntənt/",
+    "rp_ipa": "/əˈkaʊntənt/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "accountant",
+      "ja": "会計士、経理担当者",
+      "zh": "会计师",
+      "ko": "회계사",
+      "fil": "kontador, akawntant"
+    },
+    "def": "A person whose job is to keep and check financial records.",
+    "neighbors": []
+  },
+  {
+    "w": "accuracy",
+    "ipa": "/ˈækjɚəsi/",
+    "rp_ipa": "/ˈækjʊrəsi/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "accuracy",
+      "ja": "正確さ、精度",
+      "zh": "准确性、精确度",
+      "ko": "정확성, 정확도",
+      "fil": "kawastuhan, katumpakan"
+    },
+    "def": "The quality of being correct and exact.",
+    "neighbors": []
+  },
+  {
+    "w": "accurate",
+    "ipa": "/ˈækjɚət/",
+    "rp_ipa": "/ˈækjʊrɪt/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "accurate",
+      "ja": "正確な、精密な",
+      "zh": "准确的、精确的",
+      "ko": "정확한, 정밀한",
+      "fil": "wasto, tumpak"
+    },
+    "def": "Correct and exact, without any mistakes.",
+    "neighbors": []
+  },
+  {
+    "w": "accurately",
+    "ipa": "/ˈækjɚətli/",
+    "rp_ipa": "/ˈækjʊrɪtli/",
+    "cefr": "B1",
+    "pos": "副詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "accurately",
+      "ja": "正確に、精密に",
+      "zh": "准确地、精确地",
+      "ko": "정확하게, 정밀하게",
+      "fil": "nang tumpak, nang wasto"
+    },
+    "def": "In a correct and exact way.",
+    "neighbors": []
+  },
+  {
+    "w": "accuse",
+    "ipa": "/əˈkjuz/",
+    "rp_ipa": "/əˈkjuːz/",
+    "cefr": "B1",
+    "pos": "動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "accuse",
+      "ja": "非難する、告発する",
+      "zh": "指控、控告",
+      "ko": "고발하다, 비난하다",
+      "fil": "akusahan, paratangan"
+    },
+    "def": "To say that someone has done something wrong or committed a crime.",
+    "neighbors": []
+  },
+  {
+    "w": "accustom",
+    "ipa": "/əˈkʌstəm/",
+    "rp_ipa": "/əˈkʌstəm/",
+    "cefr": "B1",
+    "pos": "動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "accustom",
+      "ja": "慣れさせる",
+      "zh": "使习惯于",
+      "ko": "익숙하게 하다",
+      "fil": "isanay, ihiyanay"
+    },
+    "def": "To make someone become used to a new situation.",
+    "neighbors": []
+  },
+  {
+    "w": "achievement",
+    "ipa": "/əˈtʃivmənt/",
+    "rp_ipa": "/əˈtʃiːvmənt/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "achievement",
+      "ja": "達成、業績",
+      "zh": "成就、成绩",
+      "ko": "성취, 업적",
+      "fil": "tagumpay, nagawa"
+    },
+    "def": "Something that has been done successfully, especially with effort or skill.",
+    "neighbors": []
+  },
+  {
+    "w": "acknowledge",
+    "ipa": "/ækˈnɑlɪdʒ/",
+    "rp_ipa": "/əkˈnɒlɪdʒ/",
+    "cefr": "B1",
+    "pos": "動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "acknowledge",
+      "ja": "認める、感謝する",
+      "zh": "承认、致谢",
+      "ko": "인정하다, 감사를 표하다",
+      "fil": "kilalanin, tanggapin"
+    },
+    "def": "To accept or admit that something is true, or to show that you have noticed something.",
+    "neighbors": []
+  },
+  {
+    "w": "acknowledgement",
+    "ipa": "/ækˈnɑlɪdʒmənt/",
+    "rp_ipa": "/əkˈnɒlɪdʒmənt/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "acknowledgement",
+      "ja": "承認、謝辞",
+      "zh": "承认、致谢",
+      "ko": "인정, 감사의 표시",
+      "fil": "pagkilala, pasasalamat"
+    },
+    "def": "The act of accepting that something is true, or a message showing that something has been received.",
+    "neighbors": []
+  },
+  {
+    "w": "acknowledgment",
+    "ipa": "/ækˈnɑlɪdʒmənt/",
+    "rp_ipa": "/əkˈnɒlɪdʒmənt/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "acknowledgment",
+      "ja": "承認、謝辞",
+      "zh": "承认、致谢",
+      "ko": "인정, 감사의 표시",
+      "fil": "pagkilala, pasasalamat"
+    },
+    "def": "The act of accepting that something is true, or a message showing that something has been received.",
+    "neighbors": []
+  },
+  {
+    "w": "acquaintance",
+    "ipa": "/əˈkweɪntəns/",
+    "rp_ipa": "/əˈkweɪntəns/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "acquaintance",
+      "ja": "知人、面識",
+      "zh": "熟人、认识",
+      "ko": "지인, 아는 사람",
+      "fil": "kakilala"
+    },
+    "def": "A person you know a little but who is not a close friend.",
+    "neighbors": []
+  },
+  {
+    "w": "acquire",
+    "ipa": "/əˈkwaɪɚ/",
+    "rp_ipa": "/əˈkwaɪə/",
+    "cefr": "B1",
+    "pos": "動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "acquire",
+      "ja": "獲得する、身につける",
+      "zh": "获得、取得",
+      "ko": "얻다, 습득하다",
+      "fil": "matamo, makuha"
+    },
+    "def": "To get or obtain something, often over time or with effort.",
+    "neighbors": []
+  },
+  {
+    "w": "active",
+    "ipa": "/ˈæktɪv/",
+    "rp_ipa": "/ˈæktɪv/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "active",
+      "ja": "活動的な、活発な",
+      "zh": "活跃的、积极的",
+      "ko": "활동적인, 적극적인",
+      "fil": "aktibo, masigla"
+    },
+    "def": "Doing things that need energy or movement; not staying still.",
+    "neighbors": []
+  },
+  {
+    "w": "actress",
+    "ipa": "/ˈæktrəs/",
+    "rp_ipa": "/ˈæktrɪs/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "actress",
+      "ja": "女優",
+      "zh": "女演员",
+      "ko": "여배우",
+      "fil": "artista (babae)"
+    },
+    "def": "A woman whose job is acting in plays, films, or television.",
+    "neighbors": []
+  },
+  {
+    "w": "adapt",
+    "ipa": "/əˈdæpt/",
+    "rp_ipa": "/əˈdæpt/",
+    "cefr": "B1",
+    "pos": "動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "adapt",
+      "ja": "適応する、順応させる",
+      "zh": "适应、改编",
+      "ko": "적응하다, 맞추다",
+      "fil": "iangkop, umangkop"
+    },
+    "def": "To change something, or to change your behavior, to suit a new situation.",
+    "neighbors": []
+  },
+  {
+    "w": "addressee",
+    "ipa": "/ˌædrɛˈsi/",
+    "rp_ipa": "/ˌædreˈsiː/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "addressee",
+      "ja": "受取人、宛先人",
+      "zh": "收件人、收信人",
+      "ko": "수신인, 받는 사람",
+      "fil": "tatanggap"
+    },
+    "def": "The person a letter or message is sent to.",
+    "neighbors": []
+  },
+  {
+    "w": "administration",
+    "ipa": "/ædˌmɪnɪˈstreɪʃən/",
+    "rp_ipa": "/ədˌmɪnɪˈstreɪʃən/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "administration",
+      "ja": "管理、行政、経営",
+      "zh": "管理、行政",
+      "ko": "관리, 행정, 경영",
+      "fil": "administrasyon, pamamahala"
+    },
+    "def": "The activities involved in managing an organization, or the group of people who manage it.",
+    "neighbors": []
+  },
+  {
+    "w": "admiration",
+    "ipa": "/ˌædmɚˈeɪʃən/",
+    "rp_ipa": "/ˌædmɪˈreɪʃən/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "admiration",
+      "ja": "感嘆、賞賛",
+      "zh": "钦佩、赞赏",
+      "ko": "감탄, 존경",
+      "fil": "paghanga"
+    },
+    "def": "A feeling of respect and approval for someone or something.",
+    "neighbors": []
+  },
+  {
+    "w": "admission",
+    "ipa": "/ædˈmɪʃən/",
+    "rp_ipa": "/ədˈmɪʃən/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "admission",
+      "ja": "入場、入学、承認",
+      "zh": "入场、入学、承认",
+      "ko": "입장, 입학, 인정",
+      "fil": "pagpasok, pag-amin"
+    },
+    "def": "Permission to enter a place or organization, or the act of admitting something is true.",
+    "neighbors": []
+  },
+  {
+    "w": "adopt",
+    "ipa": "/əˈdɑpt/",
+    "rp_ipa": "/əˈdɒpt/",
+    "cefr": "B1",
+    "pos": "動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "adopt",
+      "ja": "採用する、養子にする",
+      "zh": "采用、收养",
+      "ko": "채택하다, 입양하다",
+      "fil": "ampunin, gamitin"
+    },
+    "def": "To legally take another person’s child into your family, or to start using a method or plan.",
+    "neighbors": []
+  },
+  {
+    "w": "adorable",
+    "ipa": "/əˈdɔrəbəl/",
+    "rp_ipa": "/əˈdɔːrəbəl/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "adorable",
+      "ja": "愛らしい、かわいい",
+      "zh": "可爱的、讨人喜欢的",
+      "ko": "사랑스러운, 귀여운",
+      "fil": "kaibig-ibig, cute"
+    },
+    "def": "Very attractive or lovable, especially something small or cute.",
+    "neighbors": []
+  },
+  {
+    "w": "advance",
+    "ipa": "/ədˈvæns/",
+    "rp_ipa": "/ədˈvɑːns/",
+    "cefr": "B1",
+    "pos": "動詞 / 名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "advance",
+      "ja": "前進する、進歩、前もっての",
+      "zh": "前进、进步、预先",
+      "ko": "전진하다, 진보, 사전의",
+      "fil": "sumulong, pag-unlad"
+    },
+    "def": "To move forward, or progress made in something.",
+    "neighbors": []
+  },
+  {
+    "w": "adverb",
+    "ipa": "/ˈædˌvɝb/",
+    "rp_ipa": "/ˈædvɜːb/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "adverb",
+      "ja": "副詞",
+      "zh": "副词",
+      "ko": "부사",
+      "fil": "pang-abay"
+    },
+    "def": "A word that describes how, when, or where an action happens.",
+    "neighbors": []
+  },
+  {
+    "w": "adverbial",
+    "ipa": "/ædˈvɝbiəl/",
+    "rp_ipa": "/ædˈvɜːbiəl/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "adverbial",
+      "ja": "副詞的な、副詞の",
+      "zh": "副词的",
+      "ko": "부사의, 부사적인",
+      "fil": "pang-abay (uri)"
+    },
+    "def": "Relating to or working as an adverb.",
+    "neighbors": []
+  },
+  {
+    "w": "advert",
+    "ipa": "/ˈædvɚt/",
+    "rp_ipa": "/ædˈvɜːt/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "advert",
+      "ja": "広告(英)",
+      "zh": "广告(英式)",
+      "ko": "광고(영국식)",
+      "fil": "patalastas"
+    },
+    "def": "A notice or announcement, especially in the media, promoting a product or service (British English, short for advertisement).",
+    "neighbors": []
+  },
+  {
+    "w": "advertise",
+    "ipa": "/ˈædvɚˌtaɪz/",
+    "rp_ipa": "/ˈædvəˌtaɪz/",
+    "cefr": "B1",
+    "pos": "動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "advertise",
+      "ja": "宣伝する、広告する",
+      "zh": "做广告、宣传",
+      "ko": "광고하다, 홍보하다",
+      "fil": "mag-anunsyo, i-patalastas"
+    },
+    "def": "To tell the public about a product or service in order to sell it.",
+    "neighbors": []
+  },
+  {
+    "w": "adviser",
+    "ipa": "/ædˈvaɪzɚ/",
+    "rp_ipa": "/ədˈvaɪzə/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "adviser",
+      "ja": "顧問、助言者",
+      "zh": "顾问",
+      "ko": "고문, 조언자",
+      "fil": "tagapayo"
+    },
+    "def": "A person who gives advice, especially as their job.",
+    "neighbors": []
+  },
+  {
+    "w": "advisor",
+    "ipa": "/ædˈvaɪzɚ/",
+    "rp_ipa": "/ədˈvaɪzə/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "advisor",
+      "ja": "顧問、助言者",
+      "zh": "顾问",
+      "ko": "고문, 조언자",
+      "fil": "tagapayo"
+    },
+    "def": "A person who gives advice, especially as their job.",
+    "neighbors": []
+  },
+  {
+    "w": "aerobics",
+    "ipa": "/ɛˈroʊbɪks/",
+    "rp_ipa": "/eəˈrəʊbɪks/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "aerobics",
+      "ja": "エアロビクス",
+      "zh": "有氧运动",
+      "ko": "에어로빅",
+      "fil": "aerobiks"
+    },
+    "def": "Physical exercises usually done with music to improve fitness.",
+    "neighbors": []
+  },
+  {
+    "w": "affect",
+    "ipa": "/əˈfɛkt/",
+    "rp_ipa": "/əˈfekt/",
+    "cefr": "B1",
+    "pos": "動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "affect",
+      "ja": "影響を与える、作用する",
+      "zh": "影响、感动",
+      "ko": "영향을 주다, 작용하다",
+      "fil": "makaapekto"
+    },
+    "def": "To cause a change in someone or something.",
+    "neighbors": []
+  },
+  {
+    "w": "affection",
+    "ipa": "/əˈfɛkʃən/",
+    "rp_ipa": "/əˈfekʃən/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "affection",
+      "ja": "愛情、好意",
+      "zh": "感情、爱情",
+      "ko": "애정, 호의",
+      "fil": "pagmamahal, damdamin"
+    },
+    "def": "A feeling of caring or fondness for someone.",
+    "neighbors": []
+  },
+  {
+    "w": "afford",
+    "ipa": "/əˈfɔrd/",
+    "rp_ipa": "/əˈfɔːd/",
+    "cefr": "B1",
+    "pos": "動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "afford",
+      "ja": "余裕がある、~する余裕がある",
+      "zh": "买得起、负担得起",
+      "ko": "여유가 있다, 감당하다",
+      "fil": "kayanin (bumili)"
+    },
+    "def": "To have enough money or time to be able to do or buy something.",
+    "neighbors": []
+  },
+  {
+    "w": "afterward",
+    "ipa": "/ˈæftɚwɚd/",
+    "rp_ipa": "/ˈɑːftəwəd/",
+    "cefr": "B1",
+    "pos": "副詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "afterward",
+      "ja": "その後、後で",
+      "zh": "之后、后来",
+      "ko": "그 후, 나중에",
+      "fil": "pagkatapos, mamaya"
+    },
+    "def": "At a later time; after something has happened.",
+    "neighbors": []
+  },
+  {
+    "w": "afterwards",
+    "ipa": "/ˈæftɚwɚdz/",
+    "rp_ipa": "/ˈɑːftəwədz/",
+    "cefr": "B1",
+    "pos": "副詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "afterwards",
+      "ja": "その後、後で",
+      "zh": "之后、后来",
+      "ko": "그 후, 나중에",
+      "fil": "pagkatapos, mamaya"
+    },
+    "def": "At a later time; after something has happened.",
+    "neighbors": []
+  },
+  {
+    "w": "agenda",
+    "ipa": "/əˈdʒɛndə/",
+    "rp_ipa": "/əˈdʒendə/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "agenda",
+      "ja": "議題、予定表",
+      "zh": "议程、日程",
+      "ko": "의제, 안건",
+      "fil": "agenda, talaan ng gagawin"
+    },
+    "def": "A list of items to be discussed at a meeting, or a plan of things to do.",
+    "neighbors": []
+  },
+  {
+    "w": "aggressive",
+    "ipa": "/əˈɡrɛsɪv/",
+    "rp_ipa": "/əˈɡresɪv/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "aggressive",
+      "ja": "攻撃的な、積極的な",
+      "zh": "好斗的、积极进取的",
+      "ko": "공격적인, 적극적인",
+      "fil": "agresibo, marahas"
+    },
+    "def": "Ready to attack or behave in a forceful, unfriendly way.",
+    "neighbors": []
+  },
+  {
+    "w": "agreement",
+    "ipa": "/əˈɡrimənt/",
+    "rp_ipa": "/əˈɡriːmənt/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "agreement",
+      "ja": "合意、契約",
+      "zh": "协议、同意",
+      "ko": "합의, 계약",
+      "fil": "kasunduan"
+    },
+    "def": "A decision or arrangement that two or more people or groups have reached together.",
+    "neighbors": []
+  },
+  {
+    "w": "agricultural",
+    "ipa": "/ˌæɡrəˈkʌltʃɚəl/",
+    "rp_ipa": "/ˌæɡrɪˈkʌltʃərəl/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "agricultural",
+      "ja": "農業の",
+      "zh": "农业的",
+      "ko": "농업의",
+      "fil": "pang-agrikultura"
+    },
+    "def": "Relating to farming and growing crops or raising animals.",
+    "neighbors": []
+  },
+  {
+    "w": "agriculture",
+    "ipa": "/ˈæɡrɪˌkʌltʃɚ/",
+    "rp_ipa": "/ˈæɡrɪˌkʌltʃə/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "agriculture",
+      "ja": "農業",
+      "zh": "农业",
+      "ko": "농업",
+      "fil": "agrikultura"
+    },
+    "def": "The practice of farming, including growing crops and raising animals.",
+    "neighbors": []
+  },
+  {
+    "w": "airline",
+    "ipa": "/ˈɛrˌlaɪn/",
+    "rp_ipa": "/ˈeəˌlaɪn/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "airline",
+      "ja": "航空会社",
+      "zh": "航空公司",
+      "ko": "항공사",
+      "fil": "airline, kumpanya ng eroplano"
+    },
+    "def": "A company that provides air travel services.",
+    "neighbors": []
+  },
+  {
+    "w": "alcohol",
+    "ipa": "/ˈælkəˌhɑl/",
+    "rp_ipa": "/ˈælkəˌhɒl/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "alcohol",
+      "ja": "アルコール、酒",
+      "zh": "酒精、酒",
+      "ko": "알코올, 술",
+      "fil": "alak, alkohol"
+    },
+    "def": "A drink such as beer or wine that can make people drunk, or the substance in it.",
+    "neighbors": []
+  },
+  {
+    "w": "alcoholic",
+    "ipa": "/ˌælkəˈhɔlɪk/",
+    "rp_ipa": "/ˌælkəˈhɒlɪk/",
+    "cefr": "B1",
+    "pos": "形容詞 / 名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "alcoholic",
+      "ja": "アルコールの、アルコール依存症の人",
+      "zh": "含酒精的、酒鬼",
+      "ko": "알코올의, 알코올 중독자",
+      "fil": "alkoholiko"
+    },
+    "def": "Containing alcohol, or a person who is addicted to alcohol.",
+    "neighbors": []
+  },
+  {
+    "w": "alike",
+    "ipa": "/əˈlaɪk/",
+    "rp_ipa": "/əˈlaɪk/",
+    "cefr": "B1",
+    "pos": "形容詞 / 副詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "alike",
+      "ja": "似ている、同様に",
+      "zh": "相似的、同样地",
+      "ko": "비슷한, 마찬가지로",
+      "fil": "magkatulad, magkapareho"
+    },
+    "def": "Similar or the same in some way.",
+    "neighbors": []
+  },
+  {
+    "w": "allergic",
+    "ipa": "/əˈlɝdʒɪk/",
+    "rp_ipa": "/əˈlɜːdʒɪk/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "allergic",
+      "ja": "アレルギーの、アレルギー体質の",
+      "zh": "过敏的",
+      "ko": "알레르기가 있는",
+      "fil": "may allergy"
+    },
+    "def": "Having a bad physical reaction to a particular substance.",
+    "neighbors": []
+  },
+  {
+    "w": "allowance",
+    "ipa": "/əˈlaʊəns/",
+    "rp_ipa": "/əˈlaʊəns/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "allowance",
+      "ja": "手当、小遣い",
+      "zh": "津贴、零花钱",
+      "ko": "수당, 용돈",
+      "fil": "allowance, baon"
+    },
+    "def": "An amount of money given regularly, or a permitted amount of something.",
+    "neighbors": []
+  },
+  {
+    "w": "aloud",
+    "ipa": "/əˈlaʊd/",
+    "rp_ipa": "/əˈlaʊd/",
+    "cefr": "B1",
+    "pos": "副詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "aloud",
+      "ja": "声に出して",
+      "zh": "出声地、大声地",
+      "ko": "소리 내어",
+      "fil": "malakas (basahin)"
+    },
+    "def": "Using your normal speaking voice so that people can hear you, rather than silently.",
+    "neighbors": []
+  },
+  {
+    "w": "alphabet",
+    "ipa": "/ˈælfəˌbɛt/",
+    "rp_ipa": "/ˈælfəbet/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "alphabet",
+      "ja": "アルファベット、文字体系",
+      "zh": "字母表、字母",
+      "ko": "알파벳, 자모",
+      "fil": "alpabeto"
+    },
+    "def": "The set of letters used to write a language, in a fixed order.",
+    "neighbors": []
+  },
+  {
+    "w": "alternative",
+    "ipa": "/ɔlˈtɝnətɪv/",
+    "rp_ipa": "/ɔːlˈtɜːnətɪv/",
+    "cefr": "B1",
+    "pos": "形容詞 / 名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "alternative",
+      "ja": "代替、選択肢",
+      "zh": "替代的、选择",
+      "ko": "대안, 대체 가능한",
+      "fil": "alternatibo, kapalit"
+    },
+    "def": "Available as another possibility or choice.",
+    "neighbors": []
+  },
+  {
+    "w": "altogether",
+    "ipa": "/ˌɔltəˈɡɛðɚ/",
+    "rp_ipa": "/ˌɔːltəˈɡeðə/",
+    "cefr": "B1",
+    "pos": "副詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "altogether",
+      "ja": "全部で、まったく",
+      "zh": "总共、完全",
+      "ko": "전부, 완전히",
+      "fil": "sa kabuuan, ganap"
+    },
+    "def": "Completely, or when everything is included.",
+    "neighbors": []
+  },
+  {
+    "w": "amazed",
+    "ipa": "/əˈmeɪzd/",
+    "rp_ipa": "/əˈmeɪzd/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "amazed",
+      "ja": "驚いた、びっくりした",
+      "zh": "惊讶的、吃惊的",
+      "ko": "놀란, 감탄한",
+      "fil": "namangha, nagulat"
+    },
+    "def": "Feeling great surprise or wonder.",
+    "neighbors": []
+  },
+  {
+    "w": "amazing",
+    "ipa": "/əˈmeɪzɪŋ/",
+    "rp_ipa": "/əˈmeɪzɪŋ/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "amazing",
+      "ja": "驚くべき、素晴らしい",
+      "zh": "惊人的、了不起的",
+      "ko": "놀라운, 굉장한",
+      "fil": "kamangha-mangha"
+    },
+    "def": "Causing great surprise or wonder; very impressive.",
+    "neighbors": []
+  },
+  {
+    "w": "ambitious",
+    "ipa": "/æmˈbɪʃəs/",
+    "rp_ipa": "/æmˈbɪʃəs/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "ambitious",
+      "ja": "野心的な、意欲的な",
+      "zh": "有雄心的、有抱负的",
+      "ko": "야심적인, 포부가 큰",
+      "fil": "ambisyoso"
+    },
+    "def": "Having a strong desire to succeed or achieve something.",
+    "neighbors": []
+  },
+  {
+    "w": "ambulance",
+    "ipa": "/ˈæmbjələns/",
+    "rp_ipa": "/ˈæmbjʊləns/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "ambulance",
+      "ja": "救急車",
+      "zh": "救护车",
+      "ko": "구급차",
+      "fil": "ambulansya"
+    },
+    "def": "A vehicle used to take sick or injured people to the hospital.",
+    "neighbors": []
+  },
+  {
+    "w": "amount",
+    "ipa": "/əˈmaʊnt/",
+    "rp_ipa": "/əˈmaʊnt/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "amount",
+      "ja": "量、金額",
+      "zh": "数量、金额",
+      "ko": "양, 금액",
+      "fil": "halaga, dami"
+    },
+    "def": "A quantity of something, especially money.",
+    "neighbors": []
+  },
+  {
+    "w": "amusing",
+    "ipa": "/əˈmjuzɪŋ/",
+    "rp_ipa": "/əˈmjuːzɪŋ/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "amusing",
+      "ja": "面白い、愉快な",
+      "zh": "有趣的、好笑的",
+      "ko": "재미있는, 즐거운",
+      "fil": "nakakaaliw, nakakatawa"
+    },
+    "def": "Causing laughter or making you smile; entertaining.",
+    "neighbors": []
+  },
+  {
+    "w": "analyse",
+    "ipa": "/ˈænəˌlaɪz/",
+    "rp_ipa": "/ˈænəlaɪz/",
+    "cefr": "B1",
+    "pos": "動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "analyse",
+      "ja": "分析する(英)",
+      "zh": "分析(英式)",
+      "ko": "분석하다(영국식)",
+      "fil": "suriin (British)"
+    },
+    "def": "To examine something carefully in order to understand it (British spelling of analyze).",
+    "neighbors": []
+  },
+  {
+    "w": "analysis",
+    "ipa": "/əˈnæləsəs/",
+    "rp_ipa": "/əˈnælɪsɪs/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "analysis",
+      "ja": "分析、解析",
+      "zh": "分析、解析",
+      "ko": "분석, 해석",
+      "fil": "pagsusuri, analisis"
+    },
+    "def": "A careful and detailed examination of something.",
+    "neighbors": []
+  },
+  {
+    "w": "analyze",
+    "ipa": "/ˈænəˌlaɪz/",
+    "rp_ipa": "/ˈænəˌlaɪz/",
+    "cefr": "B1",
+    "pos": "動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "analyze",
+      "ja": "分析する",
+      "zh": "分析",
+      "ko": "분석하다",
+      "fil": "suriin, analisahin"
+    },
+    "def": "To examine something carefully in order to understand it.",
+    "neighbors": []
+  },
+  {
+    "w": "anger",
+    "ipa": "/ˈæŋɡɚ/",
+    "rp_ipa": "/ˈæŋɡə/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "anger",
+      "ja": "怒り、憤り",
+      "zh": "愤怒、生气",
+      "ko": "분노, 화",
+      "fil": "galit"
+    },
+    "def": "A strong feeling of displeasure caused by something wrong or unfair.",
+    "neighbors": []
+  },
+  {
+    "w": "angle",
+    "ipa": "/ˈæŋɡəl/",
+    "rp_ipa": "/ˈæŋɡəl/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "angle",
+      "ja": "角度、視点",
+      "zh": "角度、观点",
+      "ko": "각도, 관점",
+      "fil": "anggulo"
+    },
+    "def": "The space between two lines that meet, measured in degrees, or a point of view.",
+    "neighbors": []
+  },
+  {
+    "w": "animated",
+    "ipa": "/ˈænəˌmeɪtɪd/",
+    "rp_ipa": "/ˈænɪˌmeɪtɪd/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "animated",
+      "ja": "活気のある、アニメーションの",
+      "zh": "生动的、动画的",
+      "ko": "생동감 있는, 애니메이션의",
+      "fil": "buhay na buhay, animated"
+    },
+    "def": "Full of energy and excitement, or made using animation techniques.",
+    "neighbors": []
+  },
+  {
+    "w": "animation",
+    "ipa": "/ˌænəˈmeɪʃən/",
+    "rp_ipa": "/ˌænɪˈmeɪʃən/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "animation",
+      "ja": "アニメーション、活気",
+      "zh": "动画、生气",
+      "ko": "애니메이션, 활기",
+      "fil": "animasyon, sigla"
+    },
+    "def": "The technique of making moving pictures from drawings or models, or lively energy.",
+    "neighbors": []
+  },
+  {
+    "w": "announce",
+    "ipa": "/əˈnaʊns/",
+    "rp_ipa": "/əˈnaʊns/",
+    "cefr": "B1",
+    "pos": "動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "announce",
+      "ja": "発表する、告知する",
+      "zh": "宣布、宣告",
+      "ko": "발표하다, 알리다",
+      "fil": "i-anunsyo, ipahayag"
+    },
+    "def": "To officially tell people about something, often in public.",
+    "neighbors": []
+  },
+  {
+    "w": "announcement",
+    "ipa": "/əˈnaʊnsmənt/",
+    "rp_ipa": "/əˈnaʊnsmənt/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "announcement",
+      "ja": "発表、告知",
+      "zh": "宣布、公告",
+      "ko": "발표, 공지",
+      "fil": "anunsyo, pahayag"
+    },
+    "def": "A public statement that gives information about something.",
+    "neighbors": []
+  },
+  {
+    "w": "annoyance",
+    "ipa": "/əˈnɔɪəns/",
+    "rp_ipa": "/əˈnɔɪəns/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "annoyance",
+      "ja": "いらだち、迷惑",
+      "zh": "烦恼、恼怒",
+      "ko": "짜증, 성가심",
+      "fil": "inis, abala"
+    },
+    "def": "A feeling of mild anger, or something that causes this feeling.",
+    "neighbors": []
+  },
+  {
+    "w": "annoyed",
+    "ipa": "/əˈnɔɪd/",
+    "rp_ipa": "/əˈnɔɪd/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "annoyed",
+      "ja": "いらいらした、腹を立てた",
+      "zh": "恼怒的、烦躁的",
+      "ko": "짜증난, 화가 난",
+      "fil": "naiinis"
+    },
+    "def": "Feeling slightly angry.",
+    "neighbors": []
+  },
+  {
+    "w": "annual",
+    "ipa": "/ˈænjuəl/",
+    "rp_ipa": "/ˈænjʊəl/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "annual",
+      "ja": "年一回の、毎年の",
+      "zh": "每年的、年度的",
+      "ko": "매년의, 연간의",
+      "fil": "taun-taon, taunan"
+    },
+    "def": "Happening once every year.",
+    "neighbors": []
+  },
+  {
+    "w": "annually",
+    "ipa": "/ˈænjuəli/",
+    "rp_ipa": "/ˈænjʊəli/",
+    "cefr": "B1",
+    "pos": "副詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "annually",
+      "ja": "毎年、年に一回",
+      "zh": "每年地",
+      "ko": "매년, 해마다",
+      "fil": "taun-taon"
+    },
+    "def": "Once every year.",
+    "neighbors": []
+  },
+  {
+    "w": "anti",
+    "ipa": "/ˈænˌti/",
+    "rp_ipa": "/ˈænti/",
+    "cefr": "B1",
+    "pos": "前置詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "anti",
+      "ja": "反~、反対の",
+      "zh": "反~、反对的",
+      "ko": "반~, 반대의",
+      "fil": "kontra, laban sa"
+    },
+    "def": "Opposed to or against something.",
+    "neighbors": []
+  },
+  {
+    "w": "antique",
+    "ipa": "/ænˈtik/",
+    "rp_ipa": "/ænˈtiːk/",
+    "cefr": "B1",
+    "pos": "形容詞 / 名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "antique",
+      "ja": "骨董品、古美術品",
+      "zh": "古董、古玩",
+      "ko": "골동품",
+      "fil": "antigo"
+    },
+    "def": "Very old and often valuable, or an object of this kind.",
+    "neighbors": []
+  },
+  {
+    "w": "antonym",
+    "ipa": "/ˈæntəˌnɪm/",
+    "rp_ipa": "/ˈæntənɪm/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "antonym",
+      "ja": "対義語、反意語",
+      "zh": "反义词",
+      "ko": "반의어",
+      "fil": "kasalungat na salita"
+    },
+    "def": "A word that means the opposite of another word.",
+    "neighbors": []
+  },
+  {
+    "w": "anxiety",
+    "ipa": "/æŋˈzaɪəti/",
+    "rp_ipa": "/æŋˈzaɪəti/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "anxiety",
+      "ja": "不安、心配",
+      "zh": "焦虑、担心",
+      "ko": "불안, 걱정",
+      "fil": "pagkabalisa, pag-aalala"
+    },
+    "def": "A feeling of worry or nervousness about something.",
+    "neighbors": []
+  },
+  {
+    "w": "anxiously",
+    "ipa": "/ˈæŋkʃəsli/",
+    "rp_ipa": "/ˈæŋkʃəsli/",
+    "cefr": "B1",
+    "pos": "副詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "anxiously",
+      "ja": "心配そうに、不安げに",
+      "zh": "焦虑地、担心地",
+      "ko": "불안하게, 걱정스럽게",
+      "fil": "may pagkabalisa"
+    },
+    "def": "In a worried or nervous way.",
+    "neighbors": []
+  },
+  {
+    "w": "anyhow",
+    "ipa": "/ˈɛniˌhaʊ/",
+    "rp_ipa": "/ˈenɪˌhaʊ/",
+    "cefr": "B1",
+    "pos": "副詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "anyhow",
+      "ja": "とにかく、ともかく",
+      "zh": "无论如何、总之",
+      "ko": "어쨌든, 하여튼",
+      "fil": "sa kahit paano"
+    },
+    "def": "In any case; whatever happens.",
+    "neighbors": []
+  },
+  {
+    "w": "apology",
+    "ipa": "/əˈpɑləˌdʒi/",
+    "rp_ipa": "/əˈpɒlədʒi/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "apology",
+      "ja": "謝罪、弁明",
+      "zh": "道歉、歉意",
+      "ko": "사과, 사죄",
+      "fil": "paumanhin, pasensya"
+    },
+    "def": "A statement saying you are sorry for something you did wrong.",
+    "neighbors": []
+  },
+  {
+    "w": "apparent",
+    "ipa": "/əˈpɛrənt/",
+    "rp_ipa": "/əˈpeərənt/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "apparent",
+      "ja": "明らかな、見かけ上の",
+      "zh": "明显的、表面上的",
+      "ko": "명백한, 겉으로 보이는",
+      "fil": "malinaw, halata"
+    },
+    "def": "Clearly seen or understood; seeming to be true.",
+    "neighbors": []
+  },
+  {
+    "w": "appeal",
+    "ipa": "/əˈpil/",
+    "rp_ipa": "/əˈpiːl/",
+    "cefr": "B1",
+    "pos": "動詞 / 名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "appeal",
+      "ja": "訴える、魅力、上訴",
+      "zh": "呼吁、吸引力、上诉",
+      "ko": "호소하다, 매력, 항소",
+      "fil": "apela, halina"
+    },
+    "def": "To be attractive or interesting, or a formal request for something.",
+    "neighbors": []
+  },
+  {
+    "w": "appetite",
+    "ipa": "/ˈæpəˌtaɪt/",
+    "rp_ipa": "/ˈæpɪˌtaɪt/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "appetite",
+      "ja": "食欲、欲求",
+      "zh": "食欲、欲望",
+      "ko": "식욕, 욕구",
+      "fil": "gana, gutom"
+    },
+    "def": "A desire to eat food, or a strong desire for something.",
+    "neighbors": []
+  },
+  {
+    "w": "applaud",
+    "ipa": "/əˈplɔd/",
+    "rp_ipa": "/əˈplɔːd/",
+    "cefr": "B1",
+    "pos": "動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "applaud",
+      "ja": "拍手する、賞賛する",
+      "zh": "鼓掌、赞扬",
+      "ko": "박수치다, 칭찬하다",
+      "fil": "palakpakan"
+    },
+    "def": "To clap your hands to show approval or enjoyment.",
+    "neighbors": []
+  },
+  {
+    "w": "applause",
+    "ipa": "/əˈplɔz/",
+    "rp_ipa": "/əˈplɔːz/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "applause",
+      "ja": "拍手、称賛",
+      "zh": "掌声、喝彩",
+      "ko": "박수, 갈채",
+      "fil": "palakpak"
+    },
+    "def": "Clapping to show approval or enjoyment.",
+    "neighbors": []
+  },
+  {
+    "w": "application",
+    "ipa": "/ˌæpləˈkeɪʃən/",
+    "rp_ipa": "/ˌæplɪˈkeɪʃən/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "application",
+      "ja": "申請、応用、アプリ",
+      "zh": "申请、应用",
+      "ko": "신청, 응용, 앱",
+      "fil": "aplikasyon, paggamit"
+    },
+    "def": "A formal request, or the act of putting something into use.",
+    "neighbors": []
+  },
+  {
+    "w": "appreciation",
+    "ipa": "/əˌpriʃiˈeɪʃən/",
+    "rp_ipa": "/əˌpriːʃɪˈeɪʃən/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "appreciation",
+      "ja": "感謝、評価、理解",
+      "zh": "感激、赏识",
+      "ko": "감사, 인정",
+      "fil": "pagpapahalaga, pasasalamat"
+    },
+    "def": "A feeling of being grateful for something, or understanding its value.",
+    "neighbors": []
+  },
+  {
+    "w": "approach",
+    "ipa": "/əˈproʊtʃ/",
+    "rp_ipa": "/əˈprəʊtʃ/",
+    "cefr": "B1",
+    "pos": "動詞 / 名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "approach",
+      "ja": "近づく、取り組み方",
+      "zh": "接近、方法",
+      "ko": "접근하다, 방법",
+      "fil": "lumapit, paraan"
+    },
+    "def": "To move closer to something, or a way of dealing with something.",
+    "neighbors": []
+  },
+  {
+    "w": "approval",
+    "ipa": "/əˈpruvəl/",
+    "rp_ipa": "/əˈpruːvəl/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "approval",
+      "ja": "承認、賛成",
+      "zh": "批准、赞同",
+      "ko": "승인, 찬성",
+      "fil": "pag-apruba"
+    },
+    "def": "A feeling that something is good, or official agreement to something.",
+    "neighbors": []
+  },
+  {
+    "w": "approve",
+    "ipa": "/əˈpruv/",
+    "rp_ipa": "/əˈpruːv/",
+    "cefr": "B1",
+    "pos": "動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "approve",
+      "ja": "承認する、賛成する",
+      "zh": "批准、赞成",
+      "ko": "승인하다, 찬성하다",
+      "fil": "aprubahan, pumayag"
+    },
+    "def": "To officially agree to something, or to think something is good.",
+    "neighbors": []
+  },
+  {
+    "w": "approximately",
+    "ipa": "/əˈprɑksəmətli/",
+    "rp_ipa": "/əˈprɒksɪmətli/",
+    "cefr": "B1",
+    "pos": "副詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "approximately",
+      "ja": "およそ、約",
+      "zh": "大约、大概",
+      "ko": "대략, 약",
+      "fil": "humigit-kumulang, mga"
+    },
+    "def": "Close to a particular number or amount, but not exact.",
+    "neighbors": []
+  },
+  {
+    "w": "architect",
+    "ipa": "/ˈɑrkəˌtɛkt/",
+    "rp_ipa": "/ˈɑːkɪˌtekt/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "architect",
+      "ja": "建築家、設計者",
+      "zh": "建筑师、设计者",
+      "ko": "건축가, 설계자",
+      "fil": "arkitekto"
+    },
+    "def": "A person who designs buildings.",
+    "neighbors": []
+  },
+  {
+    "w": "arise",
+    "ipa": "/ɚˈaɪz/",
+    "rp_ipa": "/əˈraɪz/",
+    "cefr": "B1",
+    "pos": "動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "arise",
+      "ja": "生じる、発生する",
+      "zh": "出现、发生",
+      "ko": "생기다, 발생하다",
+      "fil": "mangyari, sumibol"
+    },
+    "def": "To happen or begin to exist, especially as a result of something.",
+    "neighbors": []
+  },
+  {
+    "w": "arithmetic",
+    "ipa": "/ˌɛrɪθˈmɛtɪk/",
+    "rp_ipa": "/əˈrɪθmətɪk/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "arithmetic",
+      "ja": "算数、計算",
+      "zh": "算术、算数",
+      "ko": "산수, 계산",
+      "fil": "aritmetika"
+    },
+    "def": "The part of mathematics that deals with adding, subtracting, multiplying, and dividing numbers.",
+    "neighbors": []
+  },
+  {
+    "w": "army",
+    "ipa": "/ˈɑrmi/",
+    "rp_ipa": "/ˈɑːmi/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "army",
+      "ja": "軍隊、陸軍",
+      "zh": "军队、陆军",
+      "ko": "군대, 육군",
+      "fil": "hukbo, sundalo"
+    },
+    "def": "A large organized group of soldiers trained to fight on land.",
+    "neighbors": []
+  },
+  {
+    "w": "arrange",
+    "ipa": "/ɚˈeɪndʒ/",
+    "rp_ipa": "/əˈreɪndʒ/",
+    "cefr": "B1",
+    "pos": "動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "arrange",
+      "ja": "手配する、整える",
+      "zh": "安排、整理",
+      "ko": "준비하다, 정리하다",
+      "fil": "ayusin, isaayos"
+    },
+    "def": "To plan or organize something in advance, or to put things in a particular order.",
+    "neighbors": []
+  },
+  {
+    "w": "arrangement",
+    "ipa": "/ɚˈeɪndʒmənt/",
+    "rp_ipa": "/əˈreɪndʒmənt/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "arrangement",
+      "ja": "手配、配置、取り決め",
+      "zh": "安排、布置",
+      "ko": "준비, 배열, 합의",
+      "fil": "kaayusan, ayos"
+    },
+    "def": "A plan made in advance, or the way things are organized.",
+    "neighbors": []
+  },
+  {
+    "w": "arrest",
+    "ipa": "/ɚˈɛst/",
+    "rp_ipa": "/əˈrest/",
+    "cefr": "B1",
+    "pos": "動詞 / 名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "arrest",
+      "ja": "逮捕する、逮捕",
+      "zh": "逮捕、拘留",
+      "ko": "체포하다, 체포",
+      "fil": "arestuhin, aresto"
+    },
+    "def": "To officially stop someone and take them into custody by the police.",
+    "neighbors": []
+  },
+  {
+    "w": "arrival",
+    "ipa": "/ɚˈaɪvəl/",
+    "rp_ipa": "/əˈraɪvəl/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "arrival",
+      "ja": "到着、到来",
+      "zh": "到达、到来",
+      "ko": "도착, 도래",
+      "fil": "pagdating"
+    },
+    "def": "The act of reaching a place, especially at the end of a journey.",
+    "neighbors": []
+  },
+  {
+    "w": "arrow",
+    "ipa": "/ˈæroʊ/",
+    "rp_ipa": "/ˈærəʊ/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "arrow",
+      "ja": "矢、矢印",
+      "zh": "箭、箭头",
+      "ko": "화살, 화살표",
+      "fil": "palaso, arrow"
+    },
+    "def": "A thin pointed stick shot from a bow, or a symbol showing direction.",
+    "neighbors": []
+  },
+  {
+    "w": "artist",
+    "ipa": "/ˈɑrtəst/",
+    "rp_ipa": "/ˈɑːtɪst/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "artist",
+      "ja": "芸術家、アーティスト",
+      "zh": "艺术家、画家",
+      "ko": "예술가, 화가",
+      "fil": "artista, pintor"
+    },
+    "def": "A person who creates art, such as paintings or drawings.",
+    "neighbors": []
+  },
+  {
+    "w": "artistic",
+    "ipa": "/ɑrˈtɪstɪk/",
+    "rp_ipa": "/ˌɑːˈtɪstɪk/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "artistic",
+      "ja": "芸術的な、美的な",
+      "zh": "艺术的、有艺术天分的",
+      "ko": "예술적인, 미술의",
+      "fil": "artistiko"
+    },
+    "def": "Having a natural skill for art, or relating to art.",
+    "neighbors": []
+  },
+  {
+    "w": "ashamed",
+    "ipa": "/əˈʃeɪmd/",
+    "rp_ipa": "/əˈʃeɪmd/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "ashamed",
+      "ja": "恥ずかしい、恥じて",
+      "zh": "羞愧的、惭愧的",
+      "ko": "부끄러운, 창피한",
+      "fil": "napahiya, nahiya"
+    },
+    "def": "Feeling embarrassed or guilty because of something you did.",
+    "neighbors": []
+  },
+  {
+    "w": "aside",
+    "ipa": "/əˈsaɪd/",
+    "rp_ipa": "/əˈsaɪd/",
+    "cefr": "B1",
+    "pos": "副詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "aside",
+      "ja": "わきへ、離れて",
+      "zh": "在一边、除…之外",
+      "ko": "옆으로, 따로",
+      "fil": "sa gilid"
+    },
+    "def": "To one side; away from the main point or place.",
+    "neighbors": []
+  },
+  {
+    "w": "aspect",
+    "ipa": "/ˈæˌspɛkt/",
+    "rp_ipa": "/ˈæˌspekt/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "aspect",
+      "ja": "側面、面",
+      "zh": "方面、层面",
+      "ko": "측면, 양상",
+      "fil": "aspekto, bahagi"
+    },
+    "def": "One part or feature of a situation or idea.",
+    "neighbors": []
+  },
+  {
+    "w": "aspirin",
+    "ipa": "/ˈæsprɪn/",
+    "rp_ipa": "/ˈæsprɪn/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "aspirin",
+      "ja": "アスピリン",
+      "zh": "阿司匹林",
+      "ko": "아스피린",
+      "fil": "aspirin"
+    },
+    "def": "A common medicine used to reduce pain and fever.",
+    "neighbors": []
+  },
+  {
+    "w": "assign",
+    "ipa": "/əˈsaɪn/",
+    "rp_ipa": "/əˈsaɪn/",
+    "cefr": "B1",
+    "pos": "動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "assign",
+      "ja": "割り当てる、任命する",
+      "zh": "分配、指定",
+      "ko": "할당하다, 임명하다",
+      "fil": "italaga, ibigay"
+    },
+    "def": "To give someone a particular job or task.",
+    "neighbors": []
+  },
+  {
+    "w": "assignment",
+    "ipa": "/əˈsaɪnmənt/",
+    "rp_ipa": "/əˈsaɪnmənt/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "assignment",
+      "ja": "課題、任務、割り当て",
+      "zh": "作业、任务、分配",
+      "ko": "과제, 임무",
+      "fil": "takdang-aralin, gawain"
+    },
+    "def": "A task or piece of work given to someone, especially as part of a job or course.",
+    "neighbors": []
+  },
+  {
+    "w": "assist",
+    "ipa": "/əˈsɪst/",
+    "rp_ipa": "/əˈsɪst/",
+    "cefr": "B1",
+    "pos": "動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "assist",
+      "ja": "手伝う、援助する",
+      "zh": "帮助、协助",
+      "ko": "돕다, 지원하다",
+      "fil": "tumulong, umassist"
+    },
+    "def": "To help someone do something.",
+    "neighbors": []
+  },
+  {
+    "w": "assistance",
+    "ipa": "/əˈsɪstəns/",
+    "rp_ipa": "/əˈsɪstəns/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "assistance",
+      "ja": "援助、支援",
+      "zh": "帮助、援助",
+      "ko": "지원, 도움",
+      "fil": "tulong, asistensya"
+    },
+    "def": "Help given to someone.",
+    "neighbors": []
+  },
+  {
+    "w": "associate",
+    "ipa": "/əˈsoʊsiət/",
+    "rp_ipa": "/əˈsəʊʃɪˌeɪt/",
+    "cefr": "B1",
+    "pos": "動詞 / 名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "associate",
+      "ja": "関連づける、仲間、同僚",
+      "zh": "联想、伙伴、同事",
+      "ko": "연관 짓다, 동료",
+      "fil": "iugnay, kasama"
+    },
+    "def": "To connect one thing with another in your mind, or a person you work with.",
+    "neighbors": []
+  },
+  {
+    "w": "assume",
+    "ipa": "/əˈsum/",
+    "rp_ipa": "/əˈsjuːm/",
+    "cefr": "B1",
+    "pos": "動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "assume",
+      "ja": "仮定する、思い込む",
+      "zh": "假定、认为",
+      "ko": "가정하다, 추측하다",
+      "fil": "ipalagay, akalain"
+    },
+    "def": "To think that something is true without having proof.",
+    "neighbors": []
+  },
+  {
+    "w": "astronomer",
+    "ipa": "/əˈstrɑnəmɚ/",
+    "rp_ipa": "/əˈstrɒnəmə/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "astronomer",
+      "ja": "天文学者",
+      "zh": "天文学家",
+      "ko": "천문학자",
+      "fil": "astronomo"
+    },
+    "def": "A scientist who studies stars, planets, and space.",
+    "neighbors": []
+  },
+  {
+    "w": "athletic",
+    "ipa": "/æθˈlɛtɪk/",
+    "rp_ipa": "/æθˈletɪk/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "athletic",
+      "ja": "運動の得意な、運動競技の",
+      "zh": "运动的、体育的",
+      "ko": "운동을 잘하는, 운동의",
+      "fil": "atletiko, palaro"
+    },
+    "def": "Physically strong and good at sports.",
+    "neighbors": []
+  },
+  {
+    "w": "atlantic",
+    "ipa": "/ətˈlæntɪk/",
+    "rp_ipa": "/ətˈlæntɪk/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "atlantic",
+      "ja": "大西洋の",
+      "zh": "大西洋的",
+      "ko": "대서양의",
+      "fil": "Atlantiko"
+    },
+    "def": "Relating to the Atlantic Ocean, the large ocean between the Americas and Europe/Africa.",
+    "neighbors": []
+  },
+  {
+    "w": "atmosphere",
+    "ipa": "/ˈætməˌsfɪr/",
+    "rp_ipa": "/ˈætməˌsfɪə/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "atmosphere",
+      "ja": "大気、雰囲気",
+      "zh": "大气、气氛",
+      "ko": "대기, 분위기",
+      "fil": "atmospera, himpapawid"
+    },
+    "def": "The layer of gases around a planet, or the general mood of a place.",
+    "neighbors": []
+  },
+  {
+    "w": "atomic",
+    "ipa": "/əˈtɑmɪk/",
+    "rp_ipa": "/əˈtɒmɪk/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "atomic",
+      "ja": "原子の、原子力の",
+      "zh": "原子的、原子能的",
+      "ko": "원자의, 원자력의",
+      "fil": "atomiko"
+    },
+    "def": "Relating to atoms, or using the power made by splitting atoms.",
+    "neighbors": []
+  },
+  {
+    "w": "attach",
+    "ipa": "/əˈtætʃ/",
+    "rp_ipa": "/əˈtætʃ/",
+    "cefr": "B1",
+    "pos": "動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "attach",
+      "ja": "取り付ける、添付する",
+      "zh": "附上、连接",
+      "ko": "붙이다, 첨부하다",
+      "fil": "ilakip, ikabit"
+    },
+    "def": "To connect or fasten one thing to another.",
+    "neighbors": []
+  },
+  {
+    "w": "attachment",
+    "ipa": "/əˈtætʃmənt/",
+    "rp_ipa": "/əˈtætʃmənt/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "attachment",
+      "ja": "愛着、添付ファイル、付属品",
+      "zh": "依恋、附件",
+      "ko": "애착, 첨부 파일",
+      "fil": "attachment, kalakip"
+    },
+    "def": "A feeling of love or connection to someone, or something joined to another thing.",
+    "neighbors": []
+  },
+  {
+    "w": "attain",
+    "ipa": "/əˈteɪn/",
+    "rp_ipa": "/əˈteɪn/",
+    "cefr": "B1",
+    "pos": "動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "attain",
+      "ja": "達成する、獲得する",
+      "zh": "达到、获得",
+      "ko": "달성하다, 이루다",
+      "fil": "makamit, matamo"
+    },
+    "def": "To succeed in getting or achieving something, usually after effort.",
+    "neighbors": []
+  },
+  {
+    "w": "attend",
+    "ipa": "/əˈtɛnd/",
+    "rp_ipa": "/əˈtend/",
+    "cefr": "B1",
+    "pos": "動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "attend",
+      "ja": "出席する、通う",
+      "zh": "出席、参加",
+      "ko": "출석하다, 참석하다",
+      "fil": "dumalo, pumasok"
+    },
+    "def": "To go to an event or place, such as school or a meeting.",
+    "neighbors": []
+  },
+  {
+    "w": "attract",
+    "ipa": "/əˈtrækt/",
+    "rp_ipa": "/əˈtrækt/",
+    "cefr": "B1",
+    "pos": "動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "attract",
+      "ja": "引きつける、魅了する",
+      "zh": "吸引、招引",
+      "ko": "끌다, 매혹하다",
+      "fil": "makaakit, humatak"
+    },
+    "def": "To cause someone to like or be interested in something, or to pull something toward itself.",
+    "neighbors": []
+  },
+  {
+    "w": "attraction",
+    "ipa": "/əˈtrækʃən/",
+    "rp_ipa": "/əˈtrækʃən/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "attraction",
+      "ja": "魅力、名所",
+      "zh": "吸引力、景点",
+      "ko": "매력, 명소",
+      "fil": "atraksyon, halina"
+    },
+    "def": "A feeling of liking someone or something, or a place people like to visit.",
+    "neighbors": []
+  },
+  {
+    "w": "authority",
+    "ipa": "/əˈθɔrəti/",
+    "rp_ipa": "/ɔːˈθɒrɪti/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "authority",
+      "ja": "権威、当局、権限",
+      "zh": "权威、当局、权限",
+      "ko": "권위, 당국, 권한",
+      "fil": "awtoridad, kapangyarihan"
+    },
+    "def": "The power to control or direct people, or an official organization with this power.",
+    "neighbors": []
+  },
+  {
+    "w": "auxiliary",
+    "ipa": "/ɑɡˈzɪljɚi/",
+    "rp_ipa": "/ɔːɡˈzɪljəri/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "auxiliary",
+      "ja": "補助の、助動詞",
+      "zh": "辅助的、助动词",
+      "ko": "보조의, 조동사",
+      "fil": "pantulong"
+    },
+    "def": "Giving extra help or support; additional.",
+    "neighbors": []
+  },
+  {
+    "w": "available",
+    "ipa": "/əˈveɪləbəl/",
+    "rp_ipa": "/əˈveɪləbəl/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "available",
+      "ja": "利用可能な、入手できる",
+      "zh": "可用的、可获得的",
+      "ko": "이용 가능한, 사용할 수 있는",
+      "fil": "magagamit, mabibili"
+    },
+    "def": "Able to be obtained, used, or reached.",
+    "neighbors": []
+  },
+  {
+    "w": "avenue",
+    "ipa": "/ˈævəˌnu/",
+    "rp_ipa": "/ˈævɪˌnjuː/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "avenue",
+      "ja": "大通り、方法",
+      "zh": "大街、途径",
+      "ko": "대로, 방법",
+      "fil": "abenida, daan"
+    },
+    "def": "A wide street, often lined with trees, or a way of achieving something.",
+    "neighbors": []
+  },
+  {
+    "w": "aware",
+    "ipa": "/əˈwɛr/",
+    "rp_ipa": "/əˈweə/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "aware",
+      "ja": "気づいている、意識している",
+      "zh": "意识到的、知道的",
+      "ko": "알고 있는, 인식하는",
+      "fil": "may kamalayan, alam"
+    },
+    "def": "Knowing that something exists or is happening.",
+    "neighbors": []
+  },
+  {
+    "w": "awareness",
+    "ipa": "/əˈwɛrnəs/",
+    "rp_ipa": "/əˈweənɪs/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "awareness",
+      "ja": "意識、認識",
+      "zh": "意识、认知",
+      "ko": "인식, 자각",
+      "fil": "kamalayan, kaalaman"
+    },
+    "def": "Knowledge that something exists or understanding of a situation.",
+    "neighbors": []
+  },
+  {
+    "w": "awesome",
+    "ipa": "/ˈɑsəm/",
+    "rp_ipa": "/ˈɔːsəm/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "awesome",
+      "ja": "素晴らしい、すごい",
+      "zh": "了不起的、极好的",
+      "ko": "굉장한, 멋진",
+      "fil": "kahanga-hanga, ang galing"
+    },
+    "def": "Extremely good, impressive, or causing wonder.",
+    "neighbors": []
+  },
+  {
+    "w": "awkward",
+    "ipa": "/ˈɑkwɚd/",
+    "rp_ipa": "/ˈɔːkwəd/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "awkward",
+      "ja": "気まずい、不器用な",
+      "zh": "尴尬的、笨拙的",
+      "ko": "어색한, 서투른",
+      "fil": "awkward, nakakahiya"
+    },
+    "def": "Causing difficulty, embarrassment, or a lack of comfort.",
+    "neighbors": []
+  },
+  {
+    "w": "babysit",
+    "ipa": "/ˈbeɪbiˌsɪt/",
+    "rp_ipa": "/ˈbeɪbisɪt/",
+    "cefr": "B1",
+    "pos": "動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "babysit",
+      "ja": "子守をする",
+      "zh": "临时照看孩子",
+      "ko": "아기를 봐 주다",
+      "fil": "mag-alaga ng bata"
+    },
+    "def": "To take care of a child while the parents are away for a short time.",
+    "neighbors": []
+  },
+  {
+    "w": "babysitter",
+    "ipa": "/ˈbeɪbiˌsɪtɚ/",
+    "rp_ipa": "/ˈbeɪbisɪtə/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "babysitter",
+      "ja": "ベビーシッター",
+      "zh": "临时保姆",
+      "ko": "베이비시터",
+      "fil": "yaya, tagapag-alaga ng bata"
+    },
+    "def": "A person who takes care of a child while the parents are away.",
+    "neighbors": []
+  },
+  {
+    "w": "backache",
+    "ipa": "/ˈbækˌeɪk/",
+    "rp_ipa": "/ˈbækeɪk/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "backache",
+      "ja": "腰痛、背中の痛み",
+      "zh": "背痛、腰痛",
+      "ko": "요통, 등의 통증",
+      "fil": "sakit sa likod"
+    },
+    "def": "A pain in the back.",
+    "neighbors": []
+  },
+  {
+    "w": "backpack",
+    "ipa": "/ˈbækˌpæk/",
+    "rp_ipa": "/ˈbækpæk/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "backpack",
+      "ja": "リュックサック、バックパック",
+      "zh": "背包",
+      "ko": "배낭",
+      "fil": "backpack, bag na pasan"
+    },
+    "def": "A bag carried on the back, held on by straps over the shoulders.",
+    "neighbors": []
+  },
+  {
+    "w": "backpacker",
+    "ipa": "/ˈbækˌpækɚ/",
+    "rp_ipa": "/ˈbækpækə/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "backpacker",
+      "ja": "バックパッカー",
+      "zh": "背包客",
+      "ko": "배낭 여행자",
+      "fil": "backpacker"
+    },
+    "def": "A person who travels carrying their belongings in a backpack, usually cheaply.",
+    "neighbors": []
+  },
+  {
+    "w": "backpacking",
+    "ipa": "/ˈbækˌpækɪŋ/",
+    "rp_ipa": "/ˈbækpækɪŋ/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "backpacking",
+      "ja": "バックパック旅行",
+      "zh": "背包旅行",
+      "ko": "배낭 여행",
+      "fil": "paglalakbay na may backpack"
+    },
+    "def": "The activity of traveling and hiking while carrying your belongings in a backpack.",
+    "neighbors": []
+  },
+  {
+    "w": "bacon",
+    "ipa": "/ˈbeɪkən/",
+    "rp_ipa": "/ˈbeɪkən/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "bacon",
+      "ja": "ベーコン",
+      "zh": "培根",
+      "ko": "베이컨",
+      "fil": "beykon"
+    },
+    "def": "Meat from a pig that has been salted or smoked, often eaten for breakfast.",
+    "neighbors": []
+  },
+  {
+    "w": "baggage",
+    "ipa": "/ˈbæɡɪdʒ/",
+    "rp_ipa": "/ˈbæɡɪdʒ/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "baggage",
+      "ja": "手荷物、荷物",
+      "zh": "行李",
+      "ko": "수하물, 짐",
+      "fil": "bagahe"
+    },
+    "def": "Bags and suitcases used for traveling.",
+    "neighbors": []
+  },
+  {
+    "w": "baker",
+    "ipa": "/ˈbeɪkɚ/",
+    "rp_ipa": "/ˈbeɪkə/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "baker",
+      "ja": "パン職人、パン屋の人",
+      "zh": "面包师",
+      "ko": "제빵사",
+      "fil": "panadero"
+    },
+    "def": "A person whose job is to make and sell bread and cakes.",
+    "neighbors": []
+  },
+  {
+    "w": "bakery",
+    "ipa": "/ˈbeɪkəri/",
+    "rp_ipa": "/ˈbeɪkəri/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "bakery",
+      "ja": "パン屋、ベーカリー",
+      "zh": "面包店",
+      "ko": "빵집, 제과점",
+      "fil": "panaderya"
+    },
+    "def": "A shop or place where bread and cakes are made and sold.",
+    "neighbors": []
+  },
+  {
+    "w": "balance",
+    "ipa": "/ˈbæləns/",
+    "rp_ipa": "/ˈbæləns/",
+    "cefr": "B1",
+    "pos": "名詞 / 動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "balance",
+      "ja": "バランス、残高、釣り合わせる",
+      "zh": "平衡、余额",
+      "ko": "균형, 잔고, 균형을 맞추다",
+      "fil": "balanse, timbang"
+    },
+    "def": "A state of steadiness, or to keep something steady and not falling.",
+    "neighbors": []
+  },
+  {
+    "w": "bandage",
+    "ipa": "/ˈbændɪdʒ/",
+    "rp_ipa": "/ˈbændɪdʒ/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "bandage",
+      "ja": "包帯、絆創膏",
+      "zh": "绷带",
+      "ko": "붕대",
+      "fil": "benda"
+    },
+    "def": "A strip of cloth used to cover and protect a wound.",
+    "neighbors": []
+  },
+  {
+    "w": "barely",
+    "ipa": "/ˈbɛrli/",
+    "rp_ipa": "/ˈbeəli/",
+    "cefr": "B1",
+    "pos": "副詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "barely",
+      "ja": "かろうじて、ほとんど~ない",
+      "zh": "几乎不、勉强",
+      "ko": "거의 ~않다, 간신히",
+      "fil": "halos hindi, saktong-sakto"
+    },
+    "def": "Only just; almost not.",
+    "neighbors": []
+  },
+  {
+    "w": "barman",
+    "ipa": "/ˈbɑrmən/",
+    "rp_ipa": "/ˈbɑːmən/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "barman",
+      "ja": "バーテン、男性バーテンダー",
+      "zh": "男酒保、男服务生",
+      "ko": "남자 바텐더",
+      "fil": "bartender (lalaki)"
+    },
+    "def": "A man who serves drinks in a bar (British English).",
+    "neighbors": []
+  },
+  {
+    "w": "barrel",
+    "ipa": "/ˈbærəl/",
+    "rp_ipa": "/ˈbærəl/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "barrel",
+      "ja": "樽、バレル",
+      "zh": "桶、大桶",
+      "ko": "통, 배럴",
+      "fil": "bariles"
+    },
+    "def": "A large round container, usually made of wood or metal, used for storing liquids.",
+    "neighbors": []
+  },
+  {
+    "w": "basement",
+    "ipa": "/ˈbeɪsmənt/",
+    "rp_ipa": "/ˈbeɪsmənt/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "basement",
+      "ja": "地下室、地階",
+      "zh": "地下室",
+      "ko": "지하실",
+      "fil": "silong, basement"
+    },
+    "def": "The floor of a building that is partly or fully below ground level.",
+    "neighbors": []
+  },
+  {
+    "w": "basin",
+    "ipa": "/ˈbeɪsən/",
+    "rp_ipa": "/ˈbeɪsɪn/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "basin",
+      "ja": "洗面器、盆地",
+      "zh": "盆、盆地",
+      "ko": "대야, 분지",
+      "fil": "planggana, lambak"
+    },
+    "def": "A round open container used for holding water or food, or a low area of land.",
+    "neighbors": []
+  },
+  {
+    "w": "basis",
+    "ipa": "/ˈbeɪsəs/",
+    "rp_ipa": "/ˈbeɪsɪs/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "basis",
+      "ja": "基礎、根拠",
+      "zh": "基础、根据",
+      "ko": "기초, 근거",
+      "fil": "batayan"
+    },
+    "def": "The main reason or foundation for something.",
+    "neighbors": []
+  },
+  {
+    "w": "battle",
+    "ipa": "/ˈbætəl/",
+    "rp_ipa": "/ˈbætəl/",
+    "cefr": "B1",
+    "pos": "名詞 / 動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "battle",
+      "ja": "戦い、戦闘",
+      "zh": "战斗、战役",
+      "ko": "전투, 싸움",
+      "fil": "labanan, digmaan"
+    },
+    "def": "A fight between opposing armies or groups, or to fight or struggle.",
+    "neighbors": []
+  },
+  {
+    "w": "beautifully",
+    "ipa": "/ˈbjutəfli/",
+    "rp_ipa": "/ˈbjuːtɪfli/",
+    "cefr": "B1",
+    "pos": "副詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "beautifully",
+      "ja": "美しく、見事に",
+      "zh": "美丽地、漂亮地",
+      "ko": "아름답게, 훌륭하게",
+      "fil": "nang maganda"
+    },
+    "def": "In a way that is very pleasing or attractive.",
+    "neighbors": []
+  },
+  {
+    "w": "beaver",
+    "ipa": "/ˈbivɚ/",
+    "rp_ipa": "/ˈbiːvə/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "beaver",
+      "ja": "ビーバー",
+      "zh": "海狸",
+      "ko": "비버",
+      "fil": "beaver"
+    },
+    "def": "A large animal with a flat tail that builds dams in rivers.",
+    "neighbors": []
+  },
+  {
+    "w": "bedside",
+    "ipa": "/ˈbɛdˌsaɪd/",
+    "rp_ipa": "/ˈbedsaɪd/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "bedside",
+      "ja": "枕元、ベッドサイド",
+      "zh": "床边",
+      "ko": "머리맡, 침대 옆",
+      "fil": "tabi ng kama"
+    },
+    "def": "The area next to a bed.",
+    "neighbors": []
+  },
+  {
+    "w": "behalf",
+    "ipa": "/bɪˈhæf/",
+    "rp_ipa": "/bɪˈhɑːf/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "behalf",
+      "ja": "~の代わりに、~の代表として",
+      "zh": "代表、为了…的利益",
+      "ko": "~를 대신하여, ~를 대표하여",
+      "fil": "kinatawan (para kay)"
+    },
+    "def": "Used to say that something is done for someone else, as their representative.",
+    "neighbors": []
+  },
+  {
+    "w": "behave",
+    "ipa": "/bɪˈheɪv/",
+    "rp_ipa": "/bɪˈheɪv/",
+    "cefr": "B1",
+    "pos": "動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "behave",
+      "ja": "振る舞う、行儀よくする",
+      "zh": "表现、举止",
+      "ko": "행동하다, 처신하다",
+      "fil": "kumilos, umasal"
+    },
+    "def": "To act in a particular way, especially in a way that is proper or acceptable.",
+    "neighbors": []
+  },
+  {
+    "w": "belief",
+    "ipa": "/bɪˈlif/",
+    "rp_ipa": "/bɪˈliːf/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "belief",
+      "ja": "信念、信仰",
+      "zh": "信念、信仰",
+      "ko": "믿음, 신념",
+      "fil": "paniniwala, pananampalataya"
+    },
+    "def": "A feeling that something is true or that someone can be trusted.",
+    "neighbors": []
+  },
+  {
+    "w": "beloved",
+    "ipa": "/bɪˈlʌvd/",
+    "rp_ipa": "/bɪˈlʌvd/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "beloved",
+      "ja": "最愛の、愛しい",
+      "zh": "心爱的、深爱的",
+      "ko": "사랑하는, 소중한",
+      "fil": "minamahal"
+    },
+    "def": "Loved very much.",
+    "neighbors": []
+  },
+  {
+    "w": "beneath",
+    "ipa": "/bɪˈniθ/",
+    "rp_ipa": "/bɪˈniːθ/",
+    "cefr": "B1",
+    "pos": "前置詞 / 副詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "beneath",
+      "ja": "~の下に、下方に",
+      "zh": "在…下面、下方",
+      "ko": "~아래에, 밑에",
+      "fil": "sa ilalim ng"
+    },
+    "def": "In or to a lower position than something; under.",
+    "neighbors": []
+  },
+  {
+    "w": "benefit",
+    "ipa": "/ˈbɛnəfɪt/",
+    "rp_ipa": "/ˈbenɪfɪt/",
+    "cefr": "B1",
+    "pos": "名詞 / 動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "benefit",
+      "ja": "利益、利点、恩恵を受ける",
+      "zh": "利益、好处",
+      "ko": "이익, 혜택",
+      "fil": "benepisyo, pakinabang"
+    },
+    "def": "An advantage or good result, or to receive an advantage from something.",
+    "neighbors": []
+  },
+  {
+    "w": "bilingual",
+    "ipa": "/baɪˈlɪŋɡwəl/",
+    "rp_ipa": "/baɪˈlɪŋɡwəl/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "bilingual",
+      "ja": "バイリンガルの、二か国語の",
+      "zh": "双语的",
+      "ko": "이중 언어의, 두 언어를 하는",
+      "fil": "bilinggwal, dalawang wika"
+    },
+    "def": "Able to speak two languages well.",
+    "neighbors": []
+  },
+  {
+    "w": "biochemistry",
+    "ipa": "/ˌbaɪoʊˈkɛməstri/",
+    "rp_ipa": "/ˌbaɪəʊˈkeməstri/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "biochemistry",
+      "ja": "生化学",
+      "zh": "生物化学",
+      "ko": "생화학",
+      "fil": "biochemistry"
+    },
+    "def": "The scientific study of the chemical processes that happen inside living things.",
+    "neighbors": []
+  }
+]
