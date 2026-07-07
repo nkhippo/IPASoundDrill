@@ -1565,9 +1565,14 @@ function modeBMcqPick(c,btn,choices){
 }
 function renderModeBDict(c){
   hideModeBCards();show("cardModeBDict",true);S.mbPhase="dict";
+  if(!S.mbQuiz)S.mbQuiz={mcq:"ok",spell:null};
   $("mbDNo").textContent="#"+String(S.idx+1).padStart(2,"0");
   const inp=$("mbDInput");inp.value="";if(!COARSE)inp.focus({preventScroll:true});
   setTimeout(()=>speak(c.w),200);
+}
+function renderModeBQuizSpell(c){
+  S.mbQuiz={mcq:"ok",spell:null};
+  renderModeBDict(c);
 }
 function modeBDictCheck(){
   if(S.revealed||S.mbPhase!=="dict")return;
@@ -2050,7 +2055,7 @@ function renderCard(){
   $("meter").innerHTML='<b>'+(S.idx+1)+'</b> / '+S.queue.length;
   if(S.appMode==="b"){
     if(c.mbKind==="study")renderModeBStudy(c);
-    else renderModeBMcq(c);
+    else renderModeBQuizSpell(c);
     refreshAllSpeakers();
     return;
   }
