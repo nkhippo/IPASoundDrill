@@ -30,7 +30,17 @@
 | 規則性（従・任意） | 規則語(phonics) ↔ 不規則語 のフィルタ | 補助トグル |
 | 音節数 | 短→長の難易度スキャフォールド | 内部スケール（新規語の出題順） |
 
-**付随する是正（データ）:** C1（0語）はUIから撤去。B1/B2の誤ラベル phonics 652語は Phase 0-a で `cefr: null` 化済み（フォニックス軸と CEFR 軸を直交化）。UI 配線は Phase 0-b。
+**付随する是正（データ）:** C1（0語）はUIから撤去。B1/B2の誤ラベル phonics 652語は Phase 0-a で `cefr: null` 化済み（フォニックス軸と CEFR 軸を直交化）。UI 配線は Phase 0-b で実装済み。
+
+### Mode A の CEFR フィルタ（Phase 0-b 実装）
+
+- 状態: `S.cefrLevels` (Set<string>)、初期値 `{"A1","A2"}`
+- UI: `cefrField` (3 pills: A1, A2, B1)、複数選択トグル
+- localStorage 保存なし（既存 `S.reg` / `S.focus` と同じセッション単位）
+- `filteredPool()` で `w.cefr && S.cefrLevels.has(w.cefr)` を適用
+- `reg === "regular"` 時は CEFR フィルタをスキップ + UI 非表示（`cefr === null` の phonics 語のため意味を成さないため）
+- 全 CEFR 解除時は空プール（`S.cefrLevels.size === 0` → `p = []`）
+- B2/C1 は UI に露出しない（i18n キーは残置、Phase 1/2 で復活予定）
 
 ### 1.2 採点（客観のみ・現行踏襲）
 

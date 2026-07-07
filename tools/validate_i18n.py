@@ -33,7 +33,7 @@ BASE = "en"  # 正本言語
 # 値が en と一致していても正常なキー（記号・コードなど言語非依存）
 ALLOW_EN_IDENTICAL = {
     "focus.traps_d",          # IPA 記号列
-    "lvl.all", "lvl.b1", "lvl.b2", "lvl.c1",  # CEFR コード
+    "lvl.a1", "lvl.a2", "lvl.b1", "lvl.b2", "lvl.c1",  # CEFR コード
     "lang_opts.en", "lang_opts.ja", "lang_opts.zh-Hant", "lang_opts.zh-Hans", "lang_opts.ko", "lang_opts.fil",  # 言語名(自称)
 }
 

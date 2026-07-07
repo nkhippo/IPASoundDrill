@@ -199,6 +199,7 @@
 | Learning mode | IPA read & write / Listen & learn（各言語 `mode.a` / `modeb.title`） | 同左 |
 | Practice mode | One word / Linking | （非表示） |
 | Direction | Decode / Encode（Words のみ） | （非表示） |
+| CEFR level | A1 / A2 / B1 複数選択ピル（Words のみ・`reg≠regular` 時表示） | （非表示） |
 | Phoneme focus | 7 ピル（Words のみ・**詳しい設定**内） | （非表示） |
 | Spelling type / pattern group | あり（Words のみ・**詳しい設定**内） | （非表示） |
 | Connected filters | Level L1–L3、Type（**詳しい設定**内） | （非表示） |

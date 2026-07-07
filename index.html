@@ -322,6 +322,16 @@
       </div>
     </div>
 
+    <div class="field" id="cefrField">
+      <div class="flabel" id="flabelCefr">Level</div>
+      <div class="pills" id="cefrPills">
+        <button class="pill" data-cefr="A1" aria-pressed="true" id="cefrA1">A1</button>
+        <button class="pill" data-cefr="A2" aria-pressed="true" id="cefrA2">A2</button>
+        <button class="pill" data-cefr="B1" aria-pressed="false" id="cefrB1">B1</button>
+      </div>
+      <div class="countnote" id="cefrNote"></div>
+    </div>
+
     <button type="button" class="setup-adv-toggle" id="wordsFilterToggle" aria-expanded="false" aria-controls="wordsFilterAdvanced">Customize filters</button>
     <div id="wordsFilterAdvanced" class="hidden">
     <div class="field" id="focusField">
@@ -1007,6 +1017,11 @@ function applyI18n() {
   $("dirDecodeD").textContent = t("dir.decode_d");
   $("dirEncodeT").innerHTML = t("dir.encode_t");
   $("dirEncodeD").textContent = t("dir.encode_d");
+  $("flabelCefr").textContent = t("lvl.label");
+  $("cefrPills").querySelectorAll(".pill").forEach(b => {
+    b.textContent = t("lvl." + b.dataset.cefr.toLowerCase());
+    b.setAttribute("aria-pressed", S.cefrLevels.has(b.dataset.cefr) ? "true" : "false");
+  });
   $("flabelFocus").textContent = t("focus.label");
   $("focusAll").textContent = t("focus.all");
   $("focusTraps").textContent = t("focus.traps");
@@ -1172,7 +1187,7 @@ const MODEB_DISTRACTOR = { fromNeighbors: 2, fromBand: 1 };
 const MODEB_SESSION = { newCount: 5, reviewCount: 5 };
 const MODEB_BAND_UNLOCK_RATIO = 0.6;
 const BOX_INTERVAL_MS = [0, 3600000, 86400000, 259200000, 604800000, 2592000000];
-let S={appMode:localStorage.getItem("app_mode")||"a",tab:"words",csFilter:"all",csLevel:"all",dir:"decode",focus:"all",reg:"all",grp:"all",queue:[],idx:0,correct:0,weak:{},missed:[],cur:null,curCarrier:null,revealed:false,built:[],mbPhase:"mcq",mbQuiz:null};
+let S={appMode:localStorage.getItem("app_mode")||"a",tab:"words",csFilter:"all",csLevel:"all",dir:"decode",focus:"all",reg:"all",grp:"all",cefrLevels:new Set(["A1","A2"]),queue:[],idx:0,correct:0,weak:{},missed:[],cur:null,curCarrier:null,revealed:false,built:[],mbPhase:"mcq",mbQuiz:null};
 
 const PH_EXAMPLES={
   "p":[["pay","/peɪ/"],["up","/ʌp/"],["pea","/pi/"]],
@@ -1274,6 +1289,13 @@ bindPills("tabOpts","tab",b=>b.dataset.tab);
 bindPills("modeOpts","appMode",b=>{localStorage.setItem("app_mode",b.dataset.mode);return b.dataset.mode;});
 bindPills("csPills","csFilter",b=>b.dataset.cs);
 bindPills("csLevelPills","csLevel",b=>b.dataset.csLevel);
+$("cefrPills").querySelectorAll(".pill").forEach(b=>b.addEventListener("click",()=>{
+  const lvl=b.dataset.cefr;
+  if(S.cefrLevels.has(lvl))S.cefrLevels.delete(lvl);
+  else S.cefrLevels.add(lvl);
+  b.setAttribute("aria-pressed",S.cefrLevels.has(lvl)?"true":"false");
+  updatePool();
+}));
 $("wordsFilterToggle").addEventListener("click",()=>setWordsFilterAdvanced($("wordsFilterAdvanced").classList.contains("hidden")));
 $("connectedFilterToggle").addEventListener("click",()=>setConnectedFilterAdvanced($("connectedFilterAdvanced").classList.contains("hidden")));
 function setWordsFilterAdvanced(open){
@@ -1299,6 +1321,7 @@ function updateSetupFields(){
   show("connectedSetup",connected);
   if(!connected)setConnectedFilterAdvanced(false);
   show("grpField",words&&S.reg==="regular");
+  show("cefrField",words&&S.reg!=="regular");
   $("focusTrapNote").textContent=words&&(S.focus==="traps"?t("focus.traps_d"):S.focus==="weak"?t("focus.weak_d"):"");
   $("regNote").textContent=words&&(S.reg==="regular"?t("reg.regular_d"):S.reg==="irregular"?t("reg.irregular_d"):"");
   $("dInput").placeholder=(S.tab==="connected"&&S.csFilter!=="weak")?t("input_phrase"):t("input_ph");
@@ -1331,6 +1354,10 @@ function filteredPool(){
   if(S.reg==="regular")p=p.filter(w=>w.grp);
   else if(S.reg==="irregular")p=p.filter(w=>!w.grp);
   if(S.reg==="regular"&&S.grp!=="all")p=p.filter(w=>w.grp===S.grp);
+  if(S.reg!=="regular"){
+    if(S.cefrLevels.size===0)p=[];
+    else p=p.filter(w=>w.cefr&&S.cefrLevels.has(w.cefr));
+  }
   if(S.focus==="traps")p=p.filter(hasTrapPhoneme);
   else if(S.focus==="weak")p=p.filter(matchesWeakFocus);
   else if(S.focus==="letters")p=p.filter(w=>w.src==="letter");
@@ -1405,9 +1432,16 @@ function bandProgress(band){
 }
 function refreshVocabBandUnlock(){
   let idx=MODEB_BANDS.indexOf(getVocabBand());if(idx<0)idx=0;
+  while(idx>0&&modeBBandPool(MODEB_BANDS[idx]).length===0){
+    idx--;
+    setVocabBand(MODEB_BANDS[idx]);
+  }
   while(idx<MODEB_BANDS.length-1){
-    if(bandProgress(MODEB_BANDS[idx]).ratio>=MODEB_BAND_UNLOCK_RATIO){idx++;setVocabBand(MODEB_BANDS[idx]);}
-    else break;
+    if(bandProgress(MODEB_BANDS[idx]).ratio<MODEB_BAND_UNLOCK_RATIO)break;
+    const nextBand=MODEB_BANDS[idx+1];
+    if(modeBBandPool(nextBand).length===0)break;
+    idx++;
+    setVocabBand(nextBand);
   }
 }
 function modeBGloss(w){return wordGloss(w);}

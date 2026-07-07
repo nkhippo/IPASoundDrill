@@ -99,11 +99,12 @@
   "load_fail": "Nabigo ang pag-load",
   "loading": "Naglo-load…",
   "lvl": {
-    "all": "A1+A2",
+    "label": "Antas",
+    "a1": "A1",
+    "a2": "A2",
     "b1": "B1",
     "b2": "B2",
     "c1": "C1",
-    "label": "Antas",
     "pool": "Pool: {n} salita"
   },
   "meter_done": "tapos na",
