@@ -103,3 +103,45 @@ tent -> {'ipa': '/tɛnt/', 'cefr': None, 'src': 'phonics', 'pattern': 'e → /ɛ
 spice -> {'ipa': '/spaɪs/', 'cefr': None, 'src': 'phonics', 'pattern': 'i → /aɪ/', 'group': 'long'}
 shame -> {'ipa': '/ʃeɪm/', 'cefr': None, 'src': 'phonics', 'pattern': 'a_e → /eɪ/ (マジックe)', 'group': 'long'}
 ```
+
+---
+
+## 訂正（2026-07-07）
+
+### 訂正の経緯
+
+上記の監査（セクション1〜6）は、`src: phonics` の 652 語について「B1/B2 は暫定的な誤ラベルであり、真の CEFR 語彙ではない」という仮説に基づいていました。この仮説は HANDOFF 資料の推測であり、一次データで検証されていませんでした。
+
+### 検証結果
+
+CEFR-J Wordlist v1.5（`openlanguageprofiles/olp-en-cefrj`）を直接取得し、652 語全てを照合した結果:
+
+- 652 語のうち CEFR-J に実在する語: **652 / 652（100%）**
+- app 内のラベルと CEFR-J の実レベルが一致: **652 / 652（100%）**
+- 参考: app 全体 3,059 語の CEFR ラベル正確性: 2,856 / 2,879（99.2%）が CEFR-J と一致
+
+652 語は正当な CEFR-J B1/B2 語彙であり、上記の「是正」は誤りでした。
+
+### 対応
+
+`wordlist_GA_a1a2_plus_phonics.json` の 652 語の `cefr` を元の値（B1: 322語 / B2: 330語）に復元しました。詳細は `docs/cursor-instructions-cefr-phase0a-revert.md` を参照してください。
+
+### 訂正後の正しい分布
+
+| CEFR | 語数 | 内訳 |
+|---|---:|---|
+| A1 | 1,187 | 変更なし |
+| A2 | 1,195 | 変更なし |
+| B1 | 347 | 322語（CEFR-J 由来の正当な B1 語彙）+ 25語（phoneme_fill） |
+| B2 | 330 | 全て CEFR-J 由来の正当な B2 語彙 |
+
+### 今後の CEFR 拡充（Phase 1/2）への含意
+
+CEFR-J Wordlist 全体（単一語のみ、app 既存語と重複除外後）との比較:
+
+| レベル | CEFR-J 総語数（単一語） | app 既存カバー数 | 新規拡充が必要な語数 |
+|---|---:|---:|---:|
+| B1 | 2,332 | 347 | **1,769** |
+| B2 | 2,727 | 330 | **2,186**（B1と重複72語除く） |
+
+652 語分の完成済みデータ資産（IPA・5言語 gloss・英語定義・respelling）がそのまま活用できるため、Phase 1/2 は「ゼロから作る」のではなく「既存分 + 新規拡充分」で CEFR-J 完全版を目指す設計になります。

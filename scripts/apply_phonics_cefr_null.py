@@ -1,5 +1,21 @@
 #!/usr/bin/env python3
 """
+⚠️ HISTORICAL / DO NOT RUN AGAINST PRODUCTION DATA ⚠️
+
+This script was used in Phase 0-a (2026-07-07) to null the cefr field on
+652 phonics-source words, based on an UNVERIFIED assumption that these
+were placeholder labels rather than genuine CEFR-J vocabulary.
+
+Direct verification against the CEFR-J Wordlist v1.5 primary source
+(openlanguageprofiles/olp-en-cefrj) showed all 652 words are 100%
+genuine, correctly-labeled CEFR-J B1/B2 vocabulary. The change was
+reverted; see docs/wordlist-cefr-audit.md "訂正" section and
+docs/cursor-instructions-cefr-phase0a-revert.md for details.
+
+This script is kept for historical record only. Do not run it again.
+
+<original docstring follows>
+
 Phase 0-a: Null out the cefr field on all phonics-source words that are
 currently labeled B1 or B2. These 652 entries were assigned B1/B2 during
 initial data generation because they were not present in the CEFR-J A1/A2

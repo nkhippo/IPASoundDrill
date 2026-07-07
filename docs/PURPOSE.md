@@ -88,7 +88,7 @@
 | gloss.fil（3,059語） | **完了**（batch01–34、files 23 改訂版） |
 | cs_rule.fil（237件） | **完了**（201連結 + 36弱形） |
 | 本物の B/C 語彙拡張 | 部分（phonics 語はフォニックス軸で利用。CEFR B1/B2 拡充は Phase 1/2） |
-| B1/B2 語彙の実データ | **不足**（Phase 0-a 是正済み。B1=25語 phoneme_fill、B2=0語。Phase 1/2 で拡充） |
+| B1/B2 語彙の実データ | **既存 347語（B1）/ 330語（B2）が CEFR-J 由来の正当な語彙と確認済み**（2026-07-07 訂正）。CEFR-J 完全版との差分（B1: 1,769語 / B2: 2,186語）を Phase 1/2 で拡充予定 |
 | Mode A の CEFR フィルタ | **実装済み**（Phase 0-b。A1/A2/B1 の複数選択。デフォルト A1+A2） |
 | Mode B 空バンド対応 | **実装済み**（Phase 0-b。空プールへの解放を防止） |
 | narrow IPA（全語彙） | **完了**（`ipa_actual_ga` 192語。表示専用。採点は phonemic のまま） |
@@ -110,7 +110,8 @@
 | 日付 | 版 | 内容 |
 |------|----|------|
 | 2026-07-07 | v3.4 | Phase 0-b: Mode A に CEFR 複数選択フィルタを追加（A1/A2/B1、デフォルト A1+A2）。Mode B の空バンド解放防止。C1 は UI 非表示（キー残置）。 |
-| 2026-07-07 | v3.3 | Phase 0-a: 誤ラベル phonics 語 652 件の cefr を null 化。B1/B2 実データ状況を依存表に明記。 |
+| 2026-07-07 | v3.3.1 | Phase 0-a の訂正: phonics 652語の cefr null化を復元。CEFR-J 一次データとの照合で 652語全てが正当な B1/B2 語彙と判明したため。詳細は docs/wordlist-cefr-audit.md 訂正セクション参照。 |
+| 2026-07-07 | v3.3 | Phase 0-a: 誤った前提に基づく変更として phonics 652語の cefr を null 化（後日 v3.3.1 で訂正）。 |
 | 2026-07-06 | v3.2 | 学習モード名称を行為ベースに刷新（IPA読み書き / 聞いて覚える 等）。反対アクセント全画面表示。respelling は UI 非表示（データは保持）。 |
 | 2026-07-02 | v3.1.1 | respelling v2 品質パッチ（18語の `respell_ga` 可読性修正）。 |
 | 2026-07-02 | v3.1 | narrow IPA + respelling を全3,059語で完了。VntV 52語は TTS 実音判定（nasal=kept, consonant=plain）で確定。 |
