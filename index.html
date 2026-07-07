@@ -1176,7 +1176,7 @@ function stressSyllable(ipa){const VOWELS=vowelSet();const tk=tokenize(ipa);let 
 
 /* ---------- state ---------- */
 const TRAPSET=new Set(["θ","ð","æ","ʒ","ɝ"]);
-const QUESTION_COUNT = 10;
+const QUESTION_COUNT = 20;
 const LS_HIST_KEY = "ept_hist_v1";
 const LS_SYM_KEY = "ept_sym_v1";
 const LS_VOCAB_KEY = "ept_vocab_v1";
@@ -1184,7 +1184,7 @@ const LS_VOCAB_BAND_KEY = "ept_vocab_band";
 const MODEB_BANDS = ["A1", "A2", "B1", "B2"];
 const MODEB_EXCLUDED_SRC = new Set(["letter", "contraction"]);
 const MODEB_DISTRACTOR = { fromNeighbors: 2, fromBand: 1 };
-const MODEB_SESSION = { newCount: 5, reviewCount: 5 };
+const MODEB_SESSION = { newCount: 10, reviewCount: 10 };
 const MODEB_BAND_UNLOCK_RATIO = 0.6;
 const BOX_INTERVAL_MS = [0, 3600000, 86400000, 259200000, 604800000, 2592000000];
 let S={appMode:localStorage.getItem("app_mode")||"a",tab:"words",csFilter:"all",csLevel:"all",dir:"decode",focus:"all",reg:"all",grp:"all",cefrLevels:new Set(["A1","A2"]),queue:[],idx:0,correct:0,weak:{},missed:[],cur:null,curCarrier:null,revealed:false,built:[],mbPhase:"mcq",mbQuiz:null};
