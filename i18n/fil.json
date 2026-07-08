@@ -6,7 +6,8 @@
   },
   "back_top": "Menu",
   "brand": {
-    "name": "IPA Drill"
+    "name": "IPA Drill",
+    "home": "Bumalik sa itaas"
   },
   "build_ph": "I-tap ang mga IPA key sa ibaba para buuin ang pagbigkas",
   "check": "Suriin",
@@ -221,5 +222,9 @@
     "weak_label": "Mahina"
   },
   "wordlist_fail": "Nabigong i-load ang listahan ng salita",
-  "you": "Ikaw: {a}"
+  "you": "Ikaw: {a}",
+  "cefr": {
+    "pending": "CEFR?",
+    "pending_hint": "Wala pang CEFR"
+  }
 }

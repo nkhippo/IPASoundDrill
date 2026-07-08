@@ -4,13 +4,22 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>IPA Drill</title>
+<link rel="preload" href="fonts/DoulosSIL-Regular.woff2" as="font" type="font/woff2" crossorigin>
 <style>
+  /* Self-hosted IPA font: system stacks often lack RP glyphs like ɒ (U+0252). */
+  @font-face{
+    font-family:"Doulos SIL";
+    src:url("fonts/DoulosSIL-Regular.woff2") format("woff2");
+    font-weight:400;
+    font-style:normal;
+    font-display:block;
+  }
   :root{
     --paper:#F4F3EE; --panel:#FFFFFF; --ink:#191C20; --muted:#6C717A; --faint:#9AA0A8;
     --hair:#E2E0D8; --signal:#0C7C7E; --signal-soft:#E2F0EF;
     --stress:#D9911B; --stress-soft:#F8ECD3; --ok:#2E7D54; --ok-soft:#E4F0E8;
     --bad:#BC4F3A; --bad-soft:#F6E6E1;
-    --ipa:"Doulos SIL","Charis SIL","Gentium Plus",Cambria,Georgia,"Times New Roman",serif;
+    --ipa:"Doulos SIL","Charis SIL","Gentium Plus","Times New Roman","Apple Symbols",serif;
     --ui:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
     --mono:"SF Mono","Roboto Mono",ui-monospace,Menlo,Consolas,monospace;
   }
@@ -20,7 +29,8 @@
   body.scroll-locked{position:fixed;left:0;right:0;width:100%;overflow:hidden}
   .wrap{max-width:600px;margin:0 auto;padding:20px 18px 72px}
   .topbar{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:20px}
-  .brand{display:flex;align-items:center;gap:8px;min-width:0;flex:1}
+  .brand{display:flex;align-items:center;gap:8px;min-width:0;flex:1;margin:0;padding:0;border:none;background:transparent;color:inherit;font:inherit;cursor:pointer;text-align:left}
+  .brand:focus-visible{outline:2px solid var(--signal);outline-offset:3px;border-radius:8px}
   .brand .mark{font-family:var(--ipa);font-size:24px;color:var(--signal);letter-spacing:.5px;flex-shrink:0}
   .brand .name{font-weight:700;font-size:15px;letter-spacing:.04em;white-space:nowrap}
   .meter{font-family:var(--mono);font-size:11px;color:var(--muted);text-align:right;letter-spacing:.04em;white-space:nowrap}
@@ -63,8 +73,10 @@
   .setup-adv-toggle{display:block;width:100%;margin-top:10px;padding:10px 12px;border:1px dashed var(--hair);background:transparent;border-radius:10px;color:var(--signal);font-family:var(--ui);font-size:13px;font-weight:600;cursor:pointer;text-align:center}
   .setup-adv-toggle:hover{border-color:var(--signal);background:var(--signal-soft)}
 
-  .card-top{display:flex;justify-content:flex-end;align-items:center;margin-bottom:16px}
-  .qno{font-family:var(--mono);font-size:11px;color:var(--faint)}
+  .card-top{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:16px}
+  .card-top .cefr{font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.06em;color:var(--signal);background:var(--signal-soft);border-radius:999px;padding:3px 9px;line-height:1.2;white-space:nowrap}
+  .card-top .cefr.is-unknown{color:var(--faint);background:transparent;border:1px dashed var(--hair);font-weight:600}
+  .qno{font-family:var(--mono);font-size:11px;color:var(--faint);margin-left:auto}
 
   .readout{text-align:center;padding:10px 4px 4px}
   .readout .ipa{font-family:var(--ipa);font-size:clamp(32px,8.5vw,50px);line-height:1.15;letter-spacing:.5px}
@@ -274,9 +286,10 @@
 <body>
 <div class="wrap">
   <div class="topbar">
-    <div class="brand"><span class="mark">/iː/</span>
+    <button class="brand" id="brandBtn" type="button" aria-label="Back to top">
+      <span class="mark">/iː/</span>
       <div class="name" id="brandName">IPA Drill</div>
-    </div>
+    </button>
     <div class="topbar-actions">
       <div class="topbar-btns">
         <button class="topbtn vocab" id="vocabBtn" type="button" aria-label="Vocabulary">
@@ -403,7 +416,7 @@
 
   <!-- MODE B STUDY -->
   <section id="cardModeBStudy" class="panel hidden">
-    <div class="card-top"><div class="qno" id="mbSNo"></div></div>
+    <div class="card-top"><span class="cefr" id="mbSCefr" hidden></span><div class="qno" id="mbSNo"></div></div>
     <div class="readout"><button class="playicon" id="mbSPlay" type="button" aria-label="Listen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div>
     <div class="readout"><div class="ipa" id="mbSIpa"></div></div>
     <div class="alt-ipa hidden" id="mbSAltIpa"></div>
@@ -427,7 +440,7 @@
 
   <!-- MODE B QUIZ MCQ -->
   <section id="cardModeBMcq" class="panel hidden">
-    <div class="card-top"><div class="qno" id="mbMNo"></div></div>
+    <div class="card-top"><span class="cefr" id="mbMCefr" hidden></span><div class="qno" id="mbMNo"></div></div>
     <div class="flabel" style="text-align:center;margin-bottom:4px" id="mbMHead">Choose the meaning</div>
     <div class="readout"><button class="playicon" id="mbMPlay" type="button" aria-label="Listen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div>
     <div class="mcqopts" id="mbMOpts"></div>
@@ -436,7 +449,7 @@
 
   <!-- MODE B QUIZ DICTATION -->
   <section id="cardModeBDict" class="panel hidden">
-    <div class="card-top"><div class="qno" id="mbDNo"></div></div>
+    <div class="card-top"><span class="cefr" id="mbDCefr" hidden></span><div class="qno" id="mbDNo"></div></div>
     <div class="flabel" style="text-align:center;margin-bottom:4px" id="mbDHead">Type the word</div>
     <div class="readout"><button class="playicon" id="mbDPlay" type="button" aria-label="Listen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div>
     <div class="answer">
@@ -447,7 +460,7 @@
 
   <!-- DECODE CARD -->
   <section id="cardDecode" class="panel hidden">
-    <div class="card-top"><div class="qno" id="dNo"></div></div>
+    <div class="card-top"><span class="cefr" id="dCefr" hidden></span><div class="qno" id="dNo"></div></div>
     <div class="readout"><div class="ipa" id="dIpa"></div>
       <button class="playicon" id="dPlay" type="button" aria-label="Listen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button>
     </div>
@@ -461,7 +474,7 @@
 
   <!-- ENCODE CARD -->
   <section id="cardEncode" class="panel hidden">
-    <div class="card-top"><div class="qno" id="eNo"></div></div>
+    <div class="card-top"><span class="cefr" id="eCefr" hidden></span><div class="qno" id="eNo"></div></div>
     <div class="readout"><div class="wordbig" id="eWord"></div>
       <button class="playicon" id="ePlay" type="button" aria-label="Listen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button>
     </div>
@@ -475,6 +488,7 @@
 
   <!-- REVEAL -->
   <section id="reveal" class="panel hidden">
+    <div class="card-top"><span class="cefr" id="rCefr" hidden></span><div class="qno" id="rNo"></div></div>
     <div class="reveal">
       <div class="word" id="rWord"></div>
       <div class="word-gloss" id="rGloss"></div>
@@ -627,6 +641,7 @@ function normalizeConnected(row) {
   };
   if (row.id) c.id = row.id;
   if (row.level != null) c.level = row.level;
+  if (row.cefr) c.cefr = row.cefr;
   if (row.rp_ipa) c.rp_ipa = row.rp_ipa;
   if (row.carriers) c.carriers = row.carriers;
   return c;
@@ -659,6 +674,7 @@ function normalizeWeak(row) {
     carriers: row.carriers || null
   };
   if (row.id) c.id = row.id;
+  if (row.cefr) c.cefr = row.cefr;
   if (row.rp_ipa) c.rp_ipa = row.rp_ipa;
   if (row.rp_ipa_strong) c.rp_ipa_strong = row.rp_ipa_strong;
   return c;
@@ -988,6 +1004,7 @@ function csRuleText(c) {
 function applyI18n() {
   document.title = t("brand.name");
   $("brandName").textContent = t("brand.name");
+  $("brandBtn").setAttribute("aria-label", t("brand.home"));
   $("flabelTab").textContent = t("tab.label");
   $("flabelMode").textContent = t("mode.label");
   $("modeAT").textContent = t("mode.a");
@@ -1271,6 +1288,36 @@ function updatePlayCrumb(){
 }
 function goToTop(){setSetupVisible(true);}
 $("backTopBtn").addEventListener("click",goToTop);
+$("brandBtn").addEventListener("click",goToTop);
+
+function itemCefrLabel(c){
+  if(!c)return "";
+  const raw=c.cefr;
+  if(typeof raw==="string"&&/^[ABC][12]$/.test(raw))return raw;
+  return "";
+}
+function setCardCefr(elId,c,qnoId){
+  const el=$(elId);
+  if(!el)return;
+  const label=itemCefrLabel(c);
+  if(label){
+    el.textContent=label;
+    el.classList.remove("is-unknown");
+    el.hidden=false;
+    el.title="CEFR "+label;
+  }else if(c&&(isConnectedItem(c)||isWeakItem(c))){
+    el.textContent=t("cefr.pending");
+    el.classList.add("is-unknown");
+    el.hidden=false;
+    el.title=t("cefr.pending_hint");
+  }else{
+    el.textContent="";
+    el.classList.remove("is-unknown");
+    el.hidden=true;
+    el.removeAttribute("title");
+  }
+  if(qnoId)$(qnoId).textContent="#"+String(S.idx+1).padStart(2,"0");
+}
 
 /* ---------- setup ---------- */
 function bindPills(group,key,parse,after){
@@ -1520,7 +1567,7 @@ function refreshModeBStudyContent(c){
 }
 function renderModeBStudy(c){
   hideModeBCards();show("cardModeBStudy",true);
-  $("mbSNo").textContent="#"+String(S.idx+1).padStart(2,"0");
+  setCardCefr("mbSCefr",c,"mbSNo");
   renderIpaInto($("mbSIpa"),activeNarrowIpa(c),"mbSInfo",null);
   const mbSAltEl=$("mbSAltIpa");
   const mbSAlt=altAccentValue(c);
@@ -1537,7 +1584,7 @@ function renderModeBStudy(c){
 }
 function renderModeBMcq(c){
   hideModeBCards();show("cardModeBMcq",true);S.mbPhase="mcq";S.mbQuiz={mcq:null,spell:null};
-  $("mbMNo").textContent="#"+String(S.idx+1).padStart(2,"0");
+  setCardCefr("mbMCefr",c,"mbMNo");
   $("mbMFb").classList.add("hidden");
   const choices=buildMcqChoices(c);
   $("mbMOpts").innerHTML=choices.map((w,i)=>'<button type="button" class="mcqopt" data-i="'+i+'" data-w="'+w.w.replace(/"/g,"")+'">'+modeBGloss(w).replace(/[<>]/g,"")+'</button>').join("");
@@ -1564,7 +1611,7 @@ function modeBMcqPick(c,btn,choices){
 function renderModeBDict(c){
   hideModeBCards();show("cardModeBDict",true);S.mbPhase="dict";
   if(!S.mbQuiz)S.mbQuiz={mcq:"ok",spell:null};
-  $("mbDNo").textContent="#"+String(S.idx+1).padStart(2,"0");
+  setCardCefr("mbDCefr",c,"mbDNo");
   const inp=$("mbDInput");inp.value="";if(!COARSE)inp.focus({preventScroll:true});
   setTimeout(()=>speak(c.w),200);
 }
@@ -2076,7 +2123,7 @@ function unlockInputScroll(){
 }
 function renderDecode(c){
   show("cardEncode",false);show("cardDecode",true);
-  $("dNo").textContent="#"+String(S.idx+1).padStart(2,"0");
+  setCardCefr("dCefr",c,"dNo");
   $("dInfo").classList.remove("on");
   if((isConnectedItem(c)||isWeakItem(c))&&S.curCarrier){
     renderConnectedPrompt(c);
@@ -2165,7 +2212,7 @@ function renderBuild(){
 }
 function renderEncode(c){
   show("cardDecode",false);show("cardEncode",true);
-  $("eNo").textContent="#"+String(S.idx+1).padStart(2,"0");
+  setCardCefr("eCefr",c,"eNo");
   $("eWord").textContent=c.w;S.built=[];renderBuild();
 }
 $("ePlay").addEventListener("click",()=>speak(S.cur.w));
@@ -2261,6 +2308,7 @@ function reveal(res,ctx){
   if(res==="ok")S.correct++;
   if(res==="bad"&&!S.missed.includes(c.w))S.missed.push(c.w);
   show("cardDecode",false);show("cardEncode",false);hideModeBCards();show("reveal",true);
+  setCardCefr("rCefr",c,"rNo");
   const panel=$("reveal");
   panel.classList.remove("res-ok","res-near","res-bad");
   panel.classList.add("res-"+res);

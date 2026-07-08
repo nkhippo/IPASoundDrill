@@ -1,6 +1,7 @@
 {
   "brand": {
-    "name": "IPA Drill"
+    "name": "IPA Drill",
+    "home": "Back to top"
   },
   "lead_html": "Drill <b>IPA reading and writing</b> for words you already know&mdash;sound by sound. Target <b>trap phonemes</b> (θ, ð, æ, ʒ, ɝ) or your <b>weak spots</b> from practice history. Objective scoring only; build symbol coverage, not vocabulary lists.",
   "lead_connected_html": "Hear <b>connected speech</b> in GA&mdash;linking, assimilation, and elision. Read the connected IPA and recover the original phrase.",
@@ -221,5 +222,9 @@
     "動詞（不規則変化）": "irregular verb form",
     "名詞（不規則複数）": "irregular plural",
     "口語表現": "casual expression"
+  },
+  "cefr": {
+    "pending": "CEFR?",
+    "pending_hint": "CEFR not assigned yet"
   }
 }
