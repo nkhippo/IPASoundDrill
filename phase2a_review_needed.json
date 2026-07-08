@@ -404,5 +404,61 @@
     "flags": [
       "R4-VntV-excluded"
     ]
+  },
+  {
+    "w": "certainty",
+    "ipa": "/ˈsɝtənti/",
+    "flags": [
+      "R4-VntV-excluded"
+    ]
+  },
+  {
+    "w": "conduct",
+    "ipa": "/ˈkɑndəkt/",
+    "flags": [
+      "R4-VntV-excluded"
+    ]
+  },
+  {
+    "w": "content",
+    "ipa": "/ˈkɑntɛnt/",
+    "flags": [
+      "R4-VntV-excluded"
+    ]
+  },
+  {
+    "w": "counter",
+    "ipa": "/ˈkaʊntɚ/",
+    "flags": [
+      "R4-VntV-excluded"
+    ]
+  },
+  {
+    "w": "county",
+    "ipa": "/ˈkaʊnti/",
+    "flags": [
+      "R4-VntV-excluded"
+    ]
+  },
+  {
+    "w": "defender",
+    "ipa": "/dɪˈfɛndɚ/",
+    "flags": [
+      "R4-VntV-excluded"
+    ]
+  },
+  {
+    "w": "documentary",
+    "ipa": "/ˌdɑkjəˈmɛntɚi/",
+    "flags": [
+      "R4-VntV-excluded"
+    ]
+  },
+  {
+    "w": "encounter",
+    "ipa": "/ɪnˈkaʊntɚ/",
+    "flags": [
+      "R4-VntV-excluded"
+    ]
   }
 ]

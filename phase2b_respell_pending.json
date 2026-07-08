@@ -346,5 +346,53 @@
     "respell_ga": "BAN-dij",
     "respell_rp": "BAN-dij",
     "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see phase2a_review_needed.json)"
+  },
+  {
+    "w": "certainty",
+    "respell_ga": "SUR-tn-tee",
+    "respell_rp": "SUR-tuhn-tee",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see phase2a_review_needed.json)"
+  },
+  {
+    "w": "conduct",
+    "respell_ga": "KAHN-duhkt",
+    "respell_rp": "kuhn-DUHKT",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see phase2a_review_needed.json)"
+  },
+  {
+    "w": "content",
+    "respell_ga": "KAHN-tehnt",
+    "respell_rp": "kuhn-TEHNT",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see phase2a_review_needed.json)"
+  },
+  {
+    "w": "counter",
+    "respell_ga": "KOWN-ter",
+    "respell_rp": "KOWN-tuh",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see phase2a_review_needed.json)"
+  },
+  {
+    "w": "county",
+    "respell_ga": "KOWN-tee",
+    "respell_rp": "KOWN-tee",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see phase2a_review_needed.json)"
+  },
+  {
+    "w": "defender",
+    "respell_ga": "di-FEHN-der",
+    "respell_rp": "di-FEHN-duh",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see phase2a_review_needed.json)"
+  },
+  {
+    "w": "documentary",
+    "respell_ga": "dah-kyuh-MEHN-ter-ee",
+    "respell_rp": "do-kyuu-MEHN-tuh-ree",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see phase2a_review_needed.json)"
+  },
+  {
+    "w": "encounter",
+    "respell_ga": "in-KOWN-ter",
+    "respell_rp": "in-KOWN-tuh",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see phase2a_review_needed.json)"
   }
 ]

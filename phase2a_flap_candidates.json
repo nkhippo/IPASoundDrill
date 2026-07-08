@@ -1246,5 +1246,335 @@
     "ipa": "/ˈbjutəfli/",
     "ipa_actual_ga": "/ˈbjuɾəfli/",
     "rule": "R1"
+  },
+  {
+    "w": "bitter",
+    "ipa": "/ˈbɪtɚ/",
+    "ipa_actual_ga": "/ˈbɪɾɚ/",
+    "rule": "R1"
+  },
+  {
+    "w": "border",
+    "ipa": "/ˈbɔrdɚ/",
+    "ipa_actual_ga": "/ˈbɔrɾɚ/",
+    "rule": "R1"
+  },
+  {
+    "w": "boredom",
+    "ipa": "/ˈbɔrdəm/",
+    "ipa_actual_ga": "/ˈbɔrɾəm/",
+    "rule": "R1"
+  },
+  {
+    "w": "breeding",
+    "ipa": "/ˈbridɪŋ/",
+    "ipa_actual_ga": "/ˈbriɾɪŋ/",
+    "rule": "R1"
+  },
+  {
+    "w": "buddy",
+    "ipa": "/ˈbʌdi/",
+    "ipa_actual_ga": "/ˈbʌɾi/",
+    "rule": "R1"
+  },
+  {
+    "w": "bulletin",
+    "ipa": "/ˈbʊlɪtən/",
+    "ipa_actual_ga": "/ˈbʊlɪʔn̩/",
+    "rule": "R3"
+  },
+  {
+    "w": "burden",
+    "ipa": "/ˈbɝdən/",
+    "ipa_actual_ga": "/ˈbɝdn̩/",
+    "rule": "R3"
+  },
+  {
+    "w": "calculator",
+    "ipa": "/ˈkælkjəˌleɪtɚ/",
+    "ipa_actual_ga": "/ˈkælkjəˌleɪɾɚ/",
+    "rule": "R1"
+  },
+  {
+    "w": "candle",
+    "ipa": "/ˈkændəl/",
+    "ipa_actual_ga": "/ˈkændl̩/",
+    "rule": "R2"
+  },
+  {
+    "w": "capacity",
+    "ipa": "/kəˈpæsəti/",
+    "ipa_actual_ga": "/kəˈpæsəɾi/",
+    "rule": "R1"
+  },
+  {
+    "w": "carton",
+    "ipa": "/ˈkɑrtən/",
+    "ipa_actual_ga": "/ˈkɑrʔn̩/",
+    "rule": "R3"
+  },
+  {
+    "w": "categorise",
+    "ipa": "/ˈkætəɡəˌraɪz/",
+    "ipa_actual_ga": "/ˈkæɾəɡəˌraɪz/",
+    "rule": "R1"
+  },
+  {
+    "w": "categorize",
+    "ipa": "/ˈkætəɡəˌraɪz/",
+    "ipa_actual_ga": "/ˈkæɾəɡəˌraɪz/",
+    "rule": "R1"
+  },
+  {
+    "w": "category",
+    "ipa": "/ˈkætəˌɡɔri/",
+    "ipa_actual_ga": "/ˈkæɾəˌɡɔri/",
+    "rule": "R1"
+  },
+  {
+    "w": "cattle",
+    "ipa": "/ˈkætəl/",
+    "ipa_actual_ga": "/ˈkæɾl̩/",
+    "rule": "R2"
+  },
+  {
+    "w": "celebrity",
+    "ipa": "/səˈlɛbrɪti/",
+    "ipa_actual_ga": "/səˈlɛbrɪɾi/",
+    "rule": "R1"
+  },
+  {
+    "w": "certainty",
+    "ipa": "/ˈsɝtənti/",
+    "ipa_actual_ga": "/ˈsɝʔn̩ti/",
+    "rule": "R3"
+  },
+  {
+    "w": "charity",
+    "ipa": "/ˈtʃɛrɪti/",
+    "ipa_actual_ga": "/ˈtʃɛrɪɾi/",
+    "rule": "R1"
+  },
+  {
+    "w": "citizenship",
+    "ipa": "/ˈsɪtɪzənˌʃɪp/",
+    "ipa_actual_ga": "/ˈsɪɾɪzənˌʃɪp/",
+    "rule": "R1"
+  },
+  {
+    "w": "coastal",
+    "ipa": "/ˈkoʊstəl/",
+    "ipa_actual_ga": "/ˈkoʊsɾl̩/",
+    "rule": "R2"
+  },
+  {
+    "w": "comedian",
+    "ipa": "/kəˈmidiən/",
+    "ipa_actual_ga": "/kəˈmiɾiən/",
+    "rule": "R1"
+  },
+  {
+    "w": "comedy",
+    "ipa": "/ˈkɑmədi/",
+    "ipa_actual_ga": "/ˈkɑməɾi/",
+    "rule": "R1"
+  },
+  {
+    "w": "competitive",
+    "ipa": "/kəmˈpɛtətɪv/",
+    "ipa_actual_ga": "/kəmˈpɛɾəɾɪv/",
+    "rule": "R1"
+  },
+  {
+    "w": "competitor",
+    "ipa": "/kəmˈpɛtətɚ/",
+    "ipa_actual_ga": "/kəmˈpɛɾəɾɚ/",
+    "rule": "R1"
+  },
+  {
+    "w": "complicated",
+    "ipa": "/ˈkɑmpləˌkeɪtəd/",
+    "ipa_actual_ga": "/ˈkɑmpləˌkeɪɾəd/",
+    "rule": "R1"
+  },
+  {
+    "w": "confidence",
+    "ipa": "/ˈkɑnfədəns/",
+    "ipa_actual_ga": "/ˈkɑnfədn̩s/",
+    "rule": "R3"
+  },
+  {
+    "w": "conservative",
+    "ipa": "/kənˈsɝvətɪv/",
+    "ipa_actual_ga": "/kənˈsɝvəɾɪv/",
+    "rule": "R1"
+  },
+  {
+    "w": "considerable",
+    "ipa": "/kənˈsɪdɚəbəl/",
+    "ipa_actual_ga": "/kənˈsɪɾɚəbəl/",
+    "rule": "R1"
+  },
+  {
+    "w": "consideration",
+    "ipa": "/kənˌsɪdɚˈeɪʃən/",
+    "ipa_actual_ga": "/kənˌsɪɾɚˈeɪʃən/",
+    "rule": "R1"
+  },
+  {
+    "w": "constantly",
+    "ipa": "/ˈkɑnstəntli/",
+    "ipa_actual_ga": "/ˈkɑnsʔn̩tli/",
+    "rule": "R3"
+  },
+  {
+    "w": "constitute",
+    "ipa": "/ˈkɑnstəˌtut/",
+    "ipa_actual_ga": "/ˈkɑnstəˌɾut/",
+    "rule": "R1"
+  },
+  {
+    "w": "cotton",
+    "ipa": "/ˈkɑtən/",
+    "ipa_actual_ga": "/ˈkɑʔn̩/",
+    "rule": "R3"
+  },
+  {
+    "w": "creator",
+    "ipa": "/kriˈeɪtɚ/",
+    "ipa_actual_ga": "/kriˈeɪɾɚ/",
+    "rule": "R1"
+  },
+  {
+    "w": "critic",
+    "ipa": "/ˈkrɪtɪk/",
+    "ipa_actual_ga": "/ˈkrɪɾɪk/",
+    "rule": "R1"
+  },
+  {
+    "w": "critical",
+    "ipa": "/ˈkrɪtɪkəl/",
+    "ipa_actual_ga": "/ˈkrɪɾɪkəl/",
+    "rule": "R1"
+  },
+  {
+    "w": "curiosity",
+    "ipa": "/ˌkjʊriˈɑsəti/",
+    "ipa_actual_ga": "/ˌkjʊriˈɑsəɾi/",
+    "rule": "R1"
+  },
+  {
+    "w": "curtain",
+    "ipa": "/ˈkɝtən/",
+    "ipa_actual_ga": "/ˈkɝʔn̩/",
+    "rule": "R3"
+  },
+  {
+    "w": "dating",
+    "ipa": "/ˈdeɪtɪŋ/",
+    "ipa_actual_ga": "/ˈdeɪɾɪŋ/",
+    "rule": "R1"
+  },
+  {
+    "w": "dedicate",
+    "ipa": "/ˈdɛdəˌkeɪt/",
+    "ipa_actual_ga": "/ˈdɛɾəˌkeɪt/",
+    "rule": "R1"
+  },
+  {
+    "w": "delighted",
+    "ipa": "/dɪˈlaɪtəd/",
+    "ipa_actual_ga": "/dɪˈlaɪɾəd/",
+    "rule": "R1"
+  },
+  {
+    "w": "democratic",
+    "ipa": "/ˌdɛməˈkrætɪk/",
+    "ipa_actual_ga": "/ˌdɛməˈkræɾɪk/",
+    "rule": "R1"
+  },
+  {
+    "w": "dependent",
+    "ipa": "/dɪˈpɛndənt/",
+    "ipa_actual_ga": "/dɪˈpɛndn̩t/",
+    "rule": "R3"
+  },
+  {
+    "w": "determination",
+    "ipa": "/dɪˌtɝməˈneɪʃən/",
+    "ipa_actual_ga": "/dɪˌɾɝməˈneɪʃən/",
+    "rule": "R1"
+  },
+  {
+    "w": "devastating",
+    "ipa": "/ˈdɛvəˌsteɪtɪŋ/",
+    "ipa_actual_ga": "/ˈdɛvəˌsteɪɾɪŋ/",
+    "rule": "R1"
+  },
+  {
+    "w": "diameter",
+    "ipa": "/daɪˈæmətɚ/",
+    "ipa_actual_ga": "/daɪˈæməɾɚ/",
+    "rule": "R1"
+  },
+  {
+    "w": "digital",
+    "ipa": "/ˈdɪdʒətəl/",
+    "ipa_actual_ga": "/ˈdɪdʒəɾl̩/",
+    "rule": "R2"
+  },
+  {
+    "w": "disability",
+    "ipa": "/ˌdɪsəˈbɪlɪti/",
+    "ipa_actual_ga": "/ˌdɪsəˈbɪlɪɾi/",
+    "rule": "R1"
+  },
+  {
+    "w": "distance",
+    "ipa": "/ˈdɪstəns/",
+    "ipa_actual_ga": "/ˈdɪsʔn̩s/",
+    "rule": "R3"
+  },
+  {
+    "w": "distant",
+    "ipa": "/ˈdɪstənt/",
+    "ipa_actual_ga": "/ˈdɪsʔn̩t/",
+    "rule": "R3"
+  },
+  {
+    "w": "dramatic",
+    "ipa": "/drəˈmætɪk/",
+    "ipa_actual_ga": "/drəˈmæɾɪk/",
+    "rule": "R1"
+  },
+  {
+    "w": "duty",
+    "ipa": "/ˈduti/",
+    "ipa_actual_ga": "/ˈduɾi/",
+    "rule": "R1"
+  },
+  {
+    "w": "duty-free",
+    "ipa": "/ˌdutiˈfri/",
+    "ipa_actual_ga": "/ˌduɾiˈfri/",
+    "rule": "R1"
+  },
+  {
+    "w": "electricity",
+    "ipa": "/ɪˌlɛkˈtrɪsəti/",
+    "ipa_actual_ga": "/ɪˌlɛkˈtrɪsəɾi/",
+    "rule": "R1"
+  },
+  {
+    "w": "encyclopaedia",
+    "ipa": "/ɪnˌsaɪkləˈpidiə/",
+    "ipa_actual_ga": "/ɪnˌsaɪkləˈpiɾiə/",
+    "rule": "R1"
+  },
+  {
+    "w": "encyclopedia",
+    "ipa": "/ɪnˌsaɪkləˈpidiə/",
+    "ipa_actual_ga": "/ɪnˌsaɪkləˈpiɾiə/",
+    "rule": "R1"
   }
 ]
