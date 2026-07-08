@@ -89,7 +89,8 @@
   .seg:hover{background:var(--signal-soft)}
   .seg.sel{background:var(--signal-soft);color:var(--signal)}
   .seg.mark{color:var(--faint);font-size:.62em;vertical-align:.35em}
-  .seg.nucleus{background:linear-gradient(transparent 60%, var(--stress-soft) 60%);box-shadow:inset 0 -3px 0 var(--stress)}
+  /* Underline only — filled backgrounds blot out narrow glyphs like i / ɪ at large IPA sizes. */
+  .seg.nucleus{background:transparent;border-radius:0;box-shadow:none;border-bottom:3px solid var(--stress);padding-bottom:1px}
   .seg.tok-ok{color:var(--ok)} .seg.tok-bad{color:var(--bad);background:var(--bad-soft)}
   .readout .sub{margin-top:8px;font-family:var(--mono);font-size:11px;color:var(--faint);letter-spacing:.1em}
 
