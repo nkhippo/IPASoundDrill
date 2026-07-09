@@ -842,7 +842,7 @@ function renderVocabWords(query = "") {
     const rpLine = rpIpa
       ? `<span class="vocab-ipa-rp"><span class="vocab-ipa-label">RP</span>${
           rpIpa === gaIpa
-            ? escHtml(t("reveal.alt_same") + " (" + rpIpa + ")")
+            ? escHtml(formatSameAccentIpa(rpIpa))
             : escHtml(rpIpa)
         }</span>`
       : "";
@@ -884,7 +884,7 @@ function renderVocabPhrases() {
     const rpLine = rpIpa
       ? `<span class="vocab-ipa-rp"><span class="vocab-ipa-label">RP</span>${
           rpIpa === gaIpa
-            ? escHtml(t("reveal.alt_same") + " (" + rpIpa + ")")
+            ? escHtml(formatSameAccentIpa(rpIpa))
             : escHtml(rpIpa)
         }</span>`
       : "";
@@ -957,12 +957,18 @@ function hasNarrowDifference(c) {
 function altAccentLabel() {
   return ACCENT === "rp" ? t("reveal.ga_note") : t("reveal.rp_note");
 }
+function formatSameAccentIpa(ipa) {
+  if (LANG === "ja" || LANG === "zh-Hans" || LANG === "zh-Hant") {
+    return ipa + "（" + t("reveal.alt_same") + "）";
+  }
+  return ipa + " (" + t("reveal.alt_same") + ")";
+}
 function altAccentValue(c) {
   const alt = altIpa(c);
   if (!alt) return { value: "", isSame: false, hasAlt: false };
   const active = activeIpa(c);
   if (alt === active) {
-    return { value: t("reveal.alt_same") + " (" + alt + ")", isSame: true, hasAlt: true };
+    return { value: formatSameAccentIpa(alt), isSame: true, hasAlt: true };
   }
   return { value: alt, isSame: false, hasAlt: true };
 }
