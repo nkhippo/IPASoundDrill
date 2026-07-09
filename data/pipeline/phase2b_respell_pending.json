@@ -574,5 +574,89 @@
     "respell_ga": "reh-pruh-ZEHN-tuh-div",
     "respell_rp": "reh-pri-ZEHN-tuh-tiv",
     "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see data/pipeline/phase2a_review_needed.json)"
+  },
+  {
+    "w": "standard",
+    "respell_ga": "STAN-derd",
+    "respell_rp": "STAN-duhd",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see data/pipeline/phase2a_review_needed.json)"
+  },
+  {
+    "w": "sundial",
+    "respell_ga": "SUHN-dy-uhl",
+    "respell_rp": "SUHN-dy-uhl",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see data/pipeline/phase2a_review_needed.json)"
+  },
+  {
+    "w": "surrounding",
+    "respell_ga": "ser-OWN-ding",
+    "respell_rp": "suh-ROWN-ding",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see data/pipeline/phase2a_review_needed.json)"
+  },
+  {
+    "w": "talented",
+    "respell_ga": "TA-luhn-tid",
+    "respell_rp": "TA-luhn-tid",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see data/pipeline/phase2a_review_needed.json)"
+  },
+  {
+    "w": "thunder",
+    "respell_ga": "THUHN-der",
+    "respell_rp": "THUHN-duh",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see data/pipeline/phase2a_review_needed.json)"
+  },
+  {
+    "w": "thunderous",
+    "respell_ga": "THUHN-der-uhs",
+    "respell_rp": "THUHN-duh-ruhs",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see data/pipeline/phase2a_review_needed.json)"
+  },
+  {
+    "w": "tremendous",
+    "respell_ga": "truh-MEHN-duhs",
+    "respell_rp": "tri-MEHN-duhs",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see data/pipeline/phase2a_review_needed.json)"
+  },
+  {
+    "w": "uncertainty",
+    "respell_ga": "uhn-SUR-tn-tee",
+    "respell_rp": "uhn-SUR-tuhn-tee",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see data/pipeline/phase2a_review_needed.json)"
+  },
+  {
+    "w": "underage",
+    "respell_ga": "uhn-der-AYJ",
+    "respell_rp": "uhn-duh-RAYJ",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see data/pipeline/phase2a_review_needed.json)"
+  },
+  {
+    "w": "undergo",
+    "respell_ga": "uhn-der-GOH",
+    "respell_rp": "uhn-duh-GOH",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see data/pipeline/phase2a_review_needed.json)"
+  },
+  {
+    "w": "underneath",
+    "respell_ga": "uhn-der-NEETH",
+    "respell_rp": "uhn-duh-NEETH",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see data/pipeline/phase2a_review_needed.json)"
+  },
+  {
+    "w": "underpants",
+    "respell_ga": "UHN-der-pants",
+    "respell_rp": "UHN-duh-pants",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see data/pipeline/phase2a_review_needed.json)"
+  },
+  {
+    "w": "unwanted",
+    "respell_ga": "uhn-WAWN-tid",
+    "respell_rp": "uhn-WON-tid",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see data/pipeline/phase2a_review_needed.json)"
+  },
+  {
+    "w": "warranty",
+    "respell_ga": "WAW-ruhn-tee",
+    "respell_rp": "WO-ruhn-tee",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see data/pipeline/phase2a_review_needed.json)"
   }
 ]

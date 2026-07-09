@@ -10,7 +10,7 @@
 | Layer | Role |
 |-------|------|
 | **Runtime (GitHub Pages)** | `index.html` + JSON/i18n/fonts loaded by the browser |
-| **Production wordlist** | `wordlist_GA_a1a2_plus_phonics.json` at repo root (**4,439 words**, Jul 2026) |
+| **Production wordlist** | `wordlist_GA_a1a2_plus_phonics.json` at repo root (**4,828 words**, Jul 2026) |
 | **Pipeline** | `scripts/*.py` read/write `data/pipeline/` staging JSON, merge into wordlist |
 | **Batch imports** | `data/batches/phase1_m*_*.json` — Phase 1 B1 expansion sources |
 | **GAS TTS** | `gas/` — Google Apps Script proxy; not loaded by static site |
@@ -113,16 +113,15 @@ These paths are **hard-coded** in the app. Do not move without updating `index.h
 
 | Metric | Value |
 |--------|------:|
-| Total words | 4,439 |
+| Total words | 4,828 |
 | CEFR A1 | 1,187 |
 | CEFR A2 | 1,195 |
-| CEFR B1 | 1,727 (incl. Phase 1 M1–M4: 1,380 new B1) |
+| CEFR B1 | 2,116 (Phase 1 B1 expansion **complete**) |
 | CEFR B2 | 330 |
-| `ipa_actual_ga` (flap candidates) | ~391 |
-| R4 pending (TTS review) | ~96 |
-| `respell_ga` drafted | ~4,343 |
-| gloss 5 langs (en/ja/zh/ko/fil) | 4,439 |
-| `neighbors` precomputed | ~2,623 of original 3,059 (M1–M4 words: empty `[]`) |
+| `ipa_actual_ga` (flap candidates) | ~434 |
+| R4 pending (TTS review) | ~110 |
+| `respell_ga` drafted | ~4,718 |
+| gloss 5 langs (en/ja/zh/ko/fil) | 4,828 |
 
 ---
 
@@ -166,7 +165,9 @@ Staging outputs go to `data/pipeline/`. Merge scripts write `wordlist_GA_a1a2_pl
 4. Verify counts; commit wordlist + `data/pipeline/` updates
 5. Add `docs/cursor/instructions/` + `docs/cursor/reports/` for the task
 
-**Remaining B1 gap (CEFR-J):** ~389 words after M4 (M5 planned).
+| `neighbors` precomputed | ~2,623 of original 3,059 (Phase 1 words: empty `[]`) |
+
+**Remaining B1 gap (CEFR-J):** Phase 1 complete. Next: neighbors, B2 expansion review.
 
 ---
 

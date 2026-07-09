@@ -21713,5 +21713,1880 @@
     "w": "restore",
     "respell_ga": "ri-STOR",
     "respell_rp": "ri-STAW"
+  },
+  {
+    "w": "restrict",
+    "respell_ga": "ree-STRIKT",
+    "respell_rp": "ri-STRIKT"
+  },
+  {
+    "w": "retail",
+    "respell_ga": "REE-dayl",
+    "respell_rp": "REE-tayl"
+  },
+  {
+    "w": "retain",
+    "respell_ga": "ri-TAYN",
+    "respell_rp": "ri-TAYN"
+  },
+  {
+    "w": "retell",
+    "respell_ga": "ree-TEHL",
+    "respell_rp": "ree-TEHL"
+  },
+  {
+    "w": "retrospect",
+    "respell_ga": "REH-truh-spehkt",
+    "respell_rp": "REH-truh-spehkt"
+  },
+  {
+    "w": "reunification",
+    "respell_ga": "ree-oo-nuh-fuh-KAY-shuhn",
+    "respell_rp": "ree-yoo-ni-fi-KAY-shuhn"
+  },
+  {
+    "w": "reunify",
+    "respell_ga": "ree-YOO-nuh-fy",
+    "respell_rp": "ree-YOO-ni-fy"
+  },
+  {
+    "w": "revise",
+    "respell_ga": "ri-VYZ",
+    "respell_rp": "ri-VYZ"
+  },
+  {
+    "w": "reward",
+    "respell_ga": "ri-WORD",
+    "respell_rp": "ri-WAWD"
+  },
+  {
+    "w": "rewrite",
+    "respell_ga": "ree-RYT",
+    "respell_rp": "ree-RYT"
+  },
+  {
+    "w": "riddle",
+    "respell_ga": "RI-dl",
+    "respell_rp": "RI-duhl"
+  },
+  {
+    "w": "ridiculous",
+    "respell_ga": "ri-DI-kyuh-luhs",
+    "respell_rp": "ri-DI-kyuu-luhs"
+  },
+  {
+    "w": "roadside",
+    "respell_ga": "ROHD-syd",
+    "respell_rp": "ROHD-syd"
+  },
+  {
+    "w": "robot",
+    "respell_ga": "ROH-baht",
+    "respell_rp": "ROH-bot"
+  },
+  {
+    "w": "rolling",
+    "respell_ga": "ROH-ling",
+    "respell_rp": "ROH-ling"
+  },
+  {
+    "w": "rotten",
+    "respell_ga": "RAH-tn",
+    "respell_rp": "RO-tuhn"
+  },
+  {
+    "w": "routine",
+    "respell_ga": "roo-TEEN",
+    "respell_rp": "roo-TEEN"
+  },
+  {
+    "w": "rubber",
+    "respell_ga": "RUH-ber",
+    "respell_rp": "RUH-buh"
+  },
+  {
+    "w": "rubbish",
+    "respell_ga": "RUH-bish",
+    "respell_rp": "RUH-bish"
+  },
+  {
+    "w": "rudely",
+    "respell_ga": "ROOD-lee",
+    "respell_rp": "ROOD-lee"
+  },
+  {
+    "w": "runaway",
+    "respell_ga": "RUH-nuh-way",
+    "respell_rp": "RUH-nuh-way"
+  },
+  {
+    "w": "runway",
+    "respell_ga": "RUHN-way",
+    "respell_rp": "RUHN-way"
+  },
+  {
+    "w": "sacred",
+    "respell_ga": "SAY-kruhd",
+    "respell_rp": "SAY-krid"
+  },
+  {
+    "w": "sadness",
+    "respell_ga": "SAD-nuhs",
+    "respell_rp": "SAD-nis"
+  },
+  {
+    "w": "safari",
+    "respell_ga": "suh-FAH-ree",
+    "respell_rp": "suh-FAH-ree"
+  },
+  {
+    "w": "safeguard",
+    "respell_ga": "SAYF-gard",
+    "respell_rp": "SAYF-gahd"
+  },
+  {
+    "w": "safely",
+    "respell_ga": "SAY-flee",
+    "respell_rp": "SAY-flee"
+  },
+  {
+    "w": "safety",
+    "respell_ga": "SAYF-tee",
+    "respell_rp": "SAYF-tee"
+  },
+  {
+    "w": "salesman",
+    "respell_ga": "SAYLZ-muhn",
+    "respell_rp": "SAYLZ-muhn"
+  },
+  {
+    "w": "salmon",
+    "respell_ga": "SA-muhn",
+    "respell_rp": "SA-muhn"
+  },
+  {
+    "w": "sandal",
+    "respell_ga": "SAN-dl",
+    "respell_rp": "SAN-duhl"
+  },
+  {
+    "w": "satellite",
+    "respell_ga": "SA-duh-lyt",
+    "respell_rp": "SA-tuh-lyt"
+  },
+  {
+    "w": "satisfaction",
+    "respell_ga": "sa-duh-SFAK-shuhn",
+    "respell_rp": "sa-ti-SFAK-shuhn"
+  },
+  {
+    "w": "satisfied",
+    "respell_ga": "SA-duh-sfyd",
+    "respell_rp": "SA-ti-sfyd"
+  },
+  {
+    "w": "saucepan",
+    "respell_ga": "SAW-span",
+    "respell_rp": "SAW-span"
+  },
+  {
+    "w": "saucer",
+    "respell_ga": "SAW-ser",
+    "respell_rp": "SAW-suh"
+  },
+  {
+    "w": "scared",
+    "respell_ga": "SKERD",
+    "respell_rp": "SKAIRD"
+  },
+  {
+    "w": "scary",
+    "respell_ga": "SKEH-ree",
+    "respell_rp": "SKAIR-ree"
+  },
+  {
+    "w": "scatter",
+    "respell_ga": "SKA-der",
+    "respell_rp": "SKA-tuh"
+  },
+  {
+    "w": "scenic",
+    "respell_ga": "SEE-nik",
+    "respell_rp": "SEE-nik"
+  },
+  {
+    "w": "scholar",
+    "respell_ga": "SKAH-ler",
+    "respell_rp": "SKO-luh"
+  },
+  {
+    "w": "scholarship",
+    "respell_ga": "SKAH-ler-ship",
+    "respell_rp": "SKO-luh-ship"
+  },
+  {
+    "w": "schoolmate",
+    "respell_ga": "SKOOL-mayt",
+    "respell_rp": "SKOOL-mayt"
+  },
+  {
+    "w": "schoolteacher",
+    "respell_ga": "SKOOL-tee-cher",
+    "respell_rp": "SKOOL-tee-chuh"
+  },
+  {
+    "w": "sculpture",
+    "respell_ga": "SKUHLP-cher",
+    "respell_rp": "SKUHLP-chuh"
+  },
+  {
+    "w": "season",
+    "respell_ga": "SEE-zuhn",
+    "respell_rp": "SEE-zuhn"
+  },
+  {
+    "w": "seawater",
+    "respell_ga": "SEE-waw-der",
+    "respell_rp": "SEE-waw-tuh"
+  },
+  {
+    "w": "seaweed",
+    "respell_ga": "SEE-weed",
+    "respell_rp": "SEE-weed"
+  },
+  {
+    "w": "second-hand",
+    "respell_ga": "seh-kuhnd-HAND",
+    "respell_rp": "seh-kuhnd-HAND"
+  },
+  {
+    "w": "secretly",
+    "respell_ga": "SEE-kruht-lee",
+    "respell_rp": "SEE-kruht-lee"
+  },
+  {
+    "w": "security",
+    "respell_ga": "si-KYUU-ruh-dee",
+    "respell_rp": "si-KYOOR-ri-tee"
+  },
+  {
+    "w": "seize",
+    "respell_ga": "SEEZ",
+    "respell_rp": "SEEZ"
+  },
+  {
+    "w": "select",
+    "respell_ga": "suh-LEHKT",
+    "respell_rp": "si-LEHKT"
+  },
+  {
+    "w": "selection",
+    "respell_ga": "suh-LEHK-shuhn",
+    "respell_rp": "si-LEHK-shuhn"
+  },
+  {
+    "w": "self-service",
+    "respell_ga": "sehlf-SUR-vuhs",
+    "respell_rp": "sehlf-SUR-vis"
+  },
+  {
+    "w": "selfish",
+    "respell_ga": "SEHL-fish",
+    "respell_rp": "SEHL-fish"
+  },
+  {
+    "w": "sensation",
+    "respell_ga": "sehn-SAY-shuhn",
+    "respell_rp": "sehn-SAY-shuhn"
+  },
+  {
+    "w": "separation",
+    "respell_ga": "seh-per-AY-shuhn",
+    "respell_rp": "seh-puh-RAY-shuhn"
+  },
+  {
+    "w": "sequence",
+    "respell_ga": "SEE-kwuhns",
+    "respell_rp": "SEE-kwuhns"
+  },
+  {
+    "w": "series",
+    "respell_ga": "SI-reez",
+    "respell_rp": "SEER-reez"
+  },
+  {
+    "w": "serious",
+    "respell_ga": "SI-ree-uhs",
+    "respell_rp": "SEER-reers"
+  },
+  {
+    "w": "server",
+    "respell_ga": "SUR-ver",
+    "respell_rp": "SUR-vuh"
+  },
+  {
+    "w": "service",
+    "respell_ga": "SUR-vuhs",
+    "respell_rp": "SUR-vis"
+  },
+  {
+    "w": "session",
+    "respell_ga": "SEH-shuhn",
+    "respell_rp": "SEH-shuhn"
+  },
+  {
+    "w": "setting",
+    "respell_ga": "SEH-ding",
+    "respell_rp": "SEH-ting"
+  },
+  {
+    "w": "settle",
+    "respell_ga": "SEH-dl",
+    "respell_rp": "SEH-tuhl"
+  },
+  {
+    "w": "settlement",
+    "respell_ga": "SEH-dl-muhnt",
+    "respell_rp": "SEH-tuhl-muhnt"
+  },
+  {
+    "w": "settler",
+    "respell_ga": "SEHT-ler",
+    "respell_rp": "SEHT-luh"
+  },
+  {
+    "w": "severe",
+    "respell_ga": "suh-VEER",
+    "respell_rp": "suh-VEER"
+  },
+  {
+    "w": "severely",
+    "respell_ga": "suh-VEER-lee",
+    "respell_rp": "suh-VEER-lee"
+  },
+  {
+    "w": "shadowy",
+    "respell_ga": "SHA-doh-ee",
+    "respell_rp": "SHA-doh-ee"
+  },
+  {
+    "w": "shallow",
+    "respell_ga": "SHA-loh",
+    "respell_rp": "SHA-loh"
+  },
+  {
+    "w": "shameful",
+    "respell_ga": "SHAYM-fuhl",
+    "respell_rp": "SHAYM-fuhl"
+  },
+  {
+    "w": "shelter",
+    "respell_ga": "SHEHL-ter",
+    "respell_rp": "SHEHL-tuh"
+  },
+  {
+    "w": "sheriff",
+    "respell_ga": "SHEH-ruhf",
+    "respell_rp": "SHEH-rif"
+  },
+  {
+    "w": "shiny",
+    "respell_ga": "SHY-nee",
+    "respell_rp": "SHY-nee"
+  },
+  {
+    "w": "shiver",
+    "respell_ga": "SHI-ver",
+    "respell_rp": "SHI-vuh"
+  },
+  {
+    "w": "shocked",
+    "respell_ga": "SHAHKT",
+    "respell_rp": "SHOKT"
+  },
+  {
+    "w": "shocking",
+    "respell_ga": "SHAH-king",
+    "respell_rp": "SHO-king"
+  },
+  {
+    "w": "shopper",
+    "respell_ga": "SHAH-per",
+    "respell_rp": "SHO-puh"
+  },
+  {
+    "w": "shortage",
+    "respell_ga": "SHOR-duhj",
+    "respell_rp": "SHAW-tij"
+  },
+  {
+    "w": "shortly",
+    "respell_ga": "SHORT-lee",
+    "respell_rp": "SHAWT-lee"
+  },
+  {
+    "w": "sickness",
+    "respell_ga": "SIK-nuhs",
+    "respell_rp": "SIK-nis"
+  },
+  {
+    "w": "sidewalk",
+    "respell_ga": "SY-dwawk",
+    "respell_rp": "SY-dwawk"
+  },
+  {
+    "w": "signal",
+    "respell_ga": "SIG-nuhl",
+    "respell_rp": "SIG-nuhl"
+  },
+  {
+    "w": "signature",
+    "respell_ga": "SIG-nuh-cher",
+    "respell_rp": "SIG-nuh-chuh"
+  },
+  {
+    "w": "significance",
+    "respell_ga": "suhg-NI-fi-kuhns",
+    "respell_rp": "sig-NI-fi-kuhns"
+  },
+  {
+    "w": "signpost",
+    "respell_ga": "SYN-pohst",
+    "respell_rp": "SYN-pohst"
+  },
+  {
+    "w": "silent",
+    "respell_ga": "SY-luhnt",
+    "respell_rp": "SY-luhnt"
+  },
+  {
+    "w": "similarity",
+    "respell_ga": "si-muh-LEH-ruh-dee",
+    "respell_rp": "si-mi-LA-ri-tee"
+  },
+  {
+    "w": "similarly",
+    "respell_ga": "SI-muh-ler-lee",
+    "respell_rp": "SI-mi-luh-lee"
+  },
+  {
+    "w": "simplify",
+    "respell_ga": "SIM-pluh-fy",
+    "respell_rp": "SIM-pli-fy"
+  },
+  {
+    "w": "simultaneously",
+    "respell_ga": "sy-muhl-TAY-nee-uh-slee",
+    "respell_rp": "si-muhl-TAY-neer-slee"
+  },
+  {
+    "w": "skeleton",
+    "respell_ga": "SKEH-luh-tn",
+    "respell_rp": "SKEH-li-tuhn"
+  },
+  {
+    "w": "skyscraper",
+    "respell_ga": "SKY-skray-per",
+    "respell_rp": "SKY-skray-puh"
+  },
+  {
+    "w": "slavery",
+    "respell_ga": "SLAY-ver-ee",
+    "respell_rp": "SLAY-vuh-ree"
+  },
+  {
+    "w": "slightly",
+    "respell_ga": "SLYT-lee",
+    "respell_rp": "SLYT-lee"
+  },
+  {
+    "w": "slogan",
+    "respell_ga": "SLOH-guhn",
+    "respell_rp": "SLOH-guhn"
+  },
+  {
+    "w": "smoker",
+    "respell_ga": "SMOH-ker",
+    "respell_rp": "SMOH-kuh"
+  },
+  {
+    "w": "snowboard",
+    "respell_ga": "SNOH-bord",
+    "respell_rp": "SNOH-bawd"
+  },
+  {
+    "w": "snowstorm",
+    "respell_ga": "SNOH-storm",
+    "respell_rp": "SNOH-stawm"
+  },
+  {
+    "w": "socially",
+    "respell_ga": "SOH-shuh-lee",
+    "respell_rp": "SOH-shuh-lee"
+  },
+  {
+    "w": "solid",
+    "respell_ga": "SAH-luhd",
+    "respell_rp": "SO-lid"
+  },
+  {
+    "w": "somehow",
+    "respell_ga": "SUHM-how",
+    "respell_rp": "SUHM-how"
+  },
+  {
+    "w": "someplace",
+    "respell_ga": "SUHM-plays",
+    "respell_rp": "SUHM-plays"
+  },
+  {
+    "w": "sometime",
+    "respell_ga": "SUHM-tym",
+    "respell_rp": "SUHM-tym"
+  },
+  {
+    "w": "sometimes",
+    "respell_ga": "suhm-TYMZ",
+    "respell_rp": "suhm-TYMZ"
+  },
+  {
+    "w": "sophomore",
+    "respell_ga": "SAH-fuh-mor",
+    "respell_rp": "SO-fuh-maw"
+  },
+  {
+    "w": "sorrow",
+    "respell_ga": "SAH-roh",
+    "respell_rp": "SO-roh"
+  },
+  {
+    "w": "sour",
+    "respell_ga": "SOW-er",
+    "respell_rp": "SOW-uh"
+  },
+  {
+    "w": "southeast",
+    "respell_ga": "sow-THEEST",
+    "respell_rp": "sow-THEEST"
+  },
+  {
+    "w": "southwest",
+    "respell_ga": "sow-THWEHST",
+    "respell_rp": "sow-THWEHST"
+  },
+  {
+    "w": "souvenir",
+    "respell_ga": "soo-vuh-NEER",
+    "respell_rp": "SOO-vuh-neer"
+  },
+  {
+    "w": "sparkle",
+    "respell_ga": "SPAR-kuhl",
+    "respell_rp": "SPAH-kuhl"
+  },
+  {
+    "w": "specialise",
+    "respell_ga": "SPEH-shuh-lyz",
+    "respell_rp": "SPEH-shuh-lyz"
+  },
+  {
+    "w": "specialist",
+    "respell_ga": "SPEH-shuh-luhst",
+    "respell_rp": "SPEH-shuh-list"
+  },
+  {
+    "w": "specialize",
+    "respell_ga": "SPEH-shuh-lyz",
+    "respell_rp": "SPEH-shuh-lyz"
+  },
+  {
+    "w": "specially",
+    "respell_ga": "SPEH-shuh-lee",
+    "respell_rp": "SPEHSH-lee"
+  },
+  {
+    "w": "spectacular",
+    "respell_ga": "spehk-TA-kyuh-ler",
+    "respell_rp": "spehk-TA-kyuu-luh"
+  },
+  {
+    "w": "spectator",
+    "respell_ga": "SPEHK-tay-der",
+    "respell_rp": "spehk-TAY-tuh"
+  },
+  {
+    "w": "spelling",
+    "respell_ga": "SPEH-ling",
+    "respell_rp": "SPEH-ling"
+  },
+  {
+    "w": "spicy",
+    "respell_ga": "SPY-see",
+    "respell_rp": "SPY-see"
+  },
+  {
+    "w": "spider",
+    "respell_ga": "SPY-der",
+    "respell_rp": "SPY-duh"
+  },
+  {
+    "w": "spinach",
+    "respell_ga": "SPI-nuhch",
+    "respell_rp": "SPI-nij"
+  },
+  {
+    "w": "spiral",
+    "respell_ga": "SPY-ruhl",
+    "respell_rp": "SPY-uh-ruhl"
+  },
+  {
+    "w": "spirit",
+    "respell_ga": "SPI-ruht",
+    "respell_rp": "SPI-rit"
+  },
+  {
+    "w": "spiritual",
+    "respell_ga": "SPI-ri-choo-uhl",
+    "respell_rp": "SPI-rich-yoorl"
+  },
+  {
+    "w": "sponge",
+    "respell_ga": "SPUHNJ",
+    "respell_rp": "SPUHNJ"
+  },
+  {
+    "w": "sponsor",
+    "respell_ga": "SPAHN-ser",
+    "respell_rp": "SPON-suh"
+  },
+  {
+    "w": "sports",
+    "respell_ga": "SPORTS",
+    "respell_rp": "SPAWTS"
+  },
+  {
+    "w": "sportsmanship",
+    "respell_ga": "SPORT-smuhn-ship",
+    "respell_rp": "SPAWT-smuhn-ship"
+  },
+  {
+    "w": "stable",
+    "respell_ga": "STAY-buhl",
+    "respell_rp": "STAY-buhl"
+  },
+  {
+    "w": "status",
+    "respell_ga": "STA-duhs",
+    "respell_rp": "STAY-tuhs"
+  },
+  {
+    "w": "steadily",
+    "respell_ga": "STEH-duh-lee",
+    "respell_rp": "STEH-di-lee"
+  },
+  {
+    "w": "steady",
+    "respell_ga": "STEH-dee",
+    "respell_rp": "STEH-dee"
+  },
+  {
+    "w": "sticker",
+    "respell_ga": "STI-ker",
+    "respell_rp": "STI-kuh"
+  },
+  {
+    "w": "sticky",
+    "respell_ga": "STI-kee",
+    "respell_rp": "STI-kee"
+  },
+  {
+    "w": "storage",
+    "respell_ga": "STAW-ruhj",
+    "respell_rp": "STO-rij"
+  },
+  {
+    "w": "stormy",
+    "respell_ga": "STOR-mee",
+    "respell_rp": "STAW-mee"
+  },
+  {
+    "w": "storyteller",
+    "respell_ga": "STAW-ree-deh-ler",
+    "respell_rp": "STAW-ree-teh-luh"
+  },
+  {
+    "w": "strangely",
+    "respell_ga": "STRAYNJ-lee",
+    "respell_rp": "STRAYNJ-lee"
+  },
+  {
+    "w": "strategic",
+    "respell_ga": "struh-TEE-jik",
+    "respell_rp": "struh-TEE-jik"
+  },
+  {
+    "w": "strawberry",
+    "respell_ga": "STRAW-beh-ree",
+    "respell_rp": "STRAW-buh-ree"
+  },
+  {
+    "w": "strengthen",
+    "respell_ga": "STREHNG-thuhn",
+    "respell_rp": "STREHNG-thuhn"
+  },
+  {
+    "w": "stressed",
+    "respell_ga": "STREHST",
+    "respell_rp": "STREHST"
+  },
+  {
+    "w": "stressful",
+    "respell_ga": "STREH-sfuhl",
+    "respell_rp": "STREH-sfuhl"
+  },
+  {
+    "w": "stricken",
+    "respell_ga": "STRI-kuhn",
+    "respell_rp": "STRI-kuhn"
+  },
+  {
+    "w": "struggle",
+    "respell_ga": "STRUH-guhl",
+    "respell_rp": "STRUH-guhl"
+  },
+  {
+    "w": "stubborn",
+    "respell_ga": "STUH-bern",
+    "respell_rp": "STUH-buhn"
+  },
+  {
+    "w": "studio",
+    "respell_ga": "STOO-dee-oh",
+    "respell_rp": "STYOO-di-oh"
+  },
+  {
+    "w": "stuffed",
+    "respell_ga": "STUHFT",
+    "respell_rp": "STUHFT"
+  },
+  {
+    "w": "stumble",
+    "respell_ga": "STUHM-buhl",
+    "respell_rp": "STUHM-buhl"
+  },
+  {
+    "w": "stunning",
+    "respell_ga": "STUH-ning",
+    "respell_rp": "STUH-ning"
+  },
+  {
+    "w": "stupid",
+    "respell_ga": "STOO-puhd",
+    "respell_rp": "STYOO-pid"
+  },
+  {
+    "w": "stylish",
+    "respell_ga": "STY-lish",
+    "respell_rp": "STY-lish"
+  },
+  {
+    "w": "subconscious",
+    "respell_ga": "suhb-KAHN-shuhs",
+    "respell_rp": "suhb-KON-shuhs"
+  },
+  {
+    "w": "submarine",
+    "respell_ga": "SUHB-muh-reen",
+    "respell_rp": "suhb-muh-REEN"
+  },
+  {
+    "w": "substantial",
+    "respell_ga": "suhb-STAN-shuhl",
+    "respell_rp": "suhb-STAN-shuhl"
+  },
+  {
+    "w": "substitute",
+    "respell_ga": "SUHB-stuh-doot",
+    "respell_rp": "SUHB-sti-tyoot"
+  },
+  {
+    "w": "suddenly",
+    "respell_ga": "SUH-dn-lee",
+    "respell_rp": "SUH-duhn-lee"
+  },
+  {
+    "w": "suffer",
+    "respell_ga": "SUH-fer",
+    "respell_rp": "SUH-fuh"
+  },
+  {
+    "w": "sufficient",
+    "respell_ga": "suh-FI-shuhnt",
+    "respell_rp": "suh-FI-shuhnt"
+  },
+  {
+    "w": "suffix",
+    "respell_ga": "SUH-fiks",
+    "respell_rp": "SUH-fiks"
+  },
+  {
+    "w": "suicide",
+    "respell_ga": "SOO-uh-syd",
+    "respell_rp": "SOO-i-syd"
+  },
+  {
+    "w": "summarise",
+    "respell_ga": "SUH-muh-ryz",
+    "respell_rp": "SUH-muh-ryz"
+  },
+  {
+    "w": "summarize",
+    "respell_ga": "SUH-muh-ryz",
+    "respell_rp": "SUH-muh-ryz"
+  },
+  {
+    "w": "summit",
+    "respell_ga": "SUH-muht",
+    "respell_rp": "SUH-mit"
+  },
+  {
+    "w": "sunbathe",
+    "respell_ga": "SUHN-bayth",
+    "respell_rp": "SUHN-bayth"
+  },
+  {
+    "w": "sunrise",
+    "respell_ga": "SUHN-ryz",
+    "respell_rp": "SUHN-ryz"
+  },
+  {
+    "w": "sunset",
+    "respell_ga": "SUHN-seht",
+    "respell_rp": "SUHN-seht"
+  },
+  {
+    "w": "superior",
+    "respell_ga": "soo-PI-ree-er",
+    "respell_rp": "soo-PEER-reer"
+  },
+  {
+    "w": "superstition",
+    "respell_ga": "soo-per-STI-shuhn",
+    "respell_rp": "soo-puh-STI-shuhn"
+  },
+  {
+    "w": "supply",
+    "respell_ga": "suh-PLY",
+    "respell_rp": "suh-PLY"
+  },
+  {
+    "w": "supporter",
+    "respell_ga": "suh-POR-der",
+    "respell_rp": "suh-PAW-tuh"
+  },
+  {
+    "w": "supportive",
+    "respell_ga": "suh-POR-div",
+    "respell_rp": "suh-PAW-tiv"
+  },
+  {
+    "w": "suppose",
+    "respell_ga": "suh-POHZ",
+    "respell_rp": "suh-POHZ"
+  },
+  {
+    "w": "supposedly",
+    "respell_ga": "suh-POH-zuhd-lee",
+    "respell_rp": "suh-POH-zuhd-lee"
+  },
+  {
+    "w": "surely",
+    "respell_ga": "SHUUR-lee",
+    "respell_rp": "SHAW-lee"
+  },
+  {
+    "w": "surface",
+    "respell_ga": "SUR-fuhs",
+    "respell_rp": "SUR-fis"
+  },
+  {
+    "w": "surgeon",
+    "respell_ga": "SUR-juhn",
+    "respell_rp": "SUR-juhn"
+  },
+  {
+    "w": "surgery",
+    "respell_ga": "SUR-jer-ee",
+    "respell_rp": "SUR-juh-ree"
+  },
+  {
+    "w": "surprisingly",
+    "respell_ga": "ser-PRY-zing-lee",
+    "respell_rp": "suh-PRY-zing-lee"
+  },
+  {
+    "w": "surround",
+    "respell_ga": "ser-OWND",
+    "respell_rp": "suh-ROWND"
+  },
+  {
+    "w": "survival",
+    "respell_ga": "ser-VY-vuhl",
+    "respell_rp": "suh-VY-vuhl"
+  },
+  {
+    "w": "survivor",
+    "respell_ga": "ser-VY-ver",
+    "respell_rp": "suh-VY-vuh"
+  },
+  {
+    "w": "suspect",
+    "respell_ga": "suh-SPEHKT",
+    "respell_rp": "suh-SPEHKT"
+  },
+  {
+    "w": "suspicion",
+    "respell_ga": "suh-SPI-shuhn",
+    "respell_rp": "suh-SPI-shuhn"
+  },
+  {
+    "w": "sweatshirt",
+    "respell_ga": "SWEHT-shurt",
+    "respell_rp": "SWEH-churt"
+  },
+  {
+    "w": "swimmer",
+    "respell_ga": "SWI-mer",
+    "respell_rp": "SWI-muh"
+  },
+  {
+    "w": "swollen",
+    "respell_ga": "SWOH-luhn",
+    "respell_rp": "SWOH-luhn"
+  },
+  {
+    "w": "sword",
+    "respell_ga": "SORD",
+    "respell_rp": "SAWD"
+  },
+  {
+    "w": "sympathy",
+    "respell_ga": "SIM-puh-thee",
+    "respell_rp": "SIM-puh-thee"
+  },
+  {
+    "w": "symptom",
+    "respell_ga": "SIMP-tuhm",
+    "respell_rp": "SIMP-tuhm"
+  },
+  {
+    "w": "syndrome",
+    "respell_ga": "SIN-drohm",
+    "respell_rp": "SIN-drohm"
+  },
+  {
+    "w": "systematic",
+    "respell_ga": "si-stuh-MA-dik",
+    "respell_rp": "si-stuh-MA-tik"
+  },
+  {
+    "w": "tablet",
+    "respell_ga": "TA-bluht",
+    "respell_rp": "TA-blit"
+  },
+  {
+    "w": "take-off",
+    "respell_ga": "TAY-kawf",
+    "respell_rp": "TAY-kof"
+  },
+  {
+    "w": "takeaway",
+    "respell_ga": "TAY-kuh-way",
+    "respell_rp": "TAY-kuh-way"
+  },
+  {
+    "w": "takeoff",
+    "respell_ga": "TAY-kawf",
+    "respell_rp": "TAY-kof"
+  },
+  {
+    "w": "talkative",
+    "respell_ga": "TAW-kuh-div",
+    "respell_rp": "TAW-kuh-tiv"
+  },
+  {
+    "w": "tank",
+    "respell_ga": "TANGK",
+    "respell_rp": "TANGK"
+  },
+  {
+    "w": "tasteless",
+    "respell_ga": "TAYST-luhs",
+    "respell_rp": "TAYST-luhs"
+  },
+  {
+    "w": "tasty",
+    "respell_ga": "TAY-stee",
+    "respell_rp": "TAY-stee"
+  },
+  {
+    "w": "teaching",
+    "respell_ga": "TEE-ching",
+    "respell_rp": "TEE-ching"
+  },
+  {
+    "w": "teammate",
+    "respell_ga": "TEEM-mayt",
+    "respell_rp": "TEEM-mayt"
+  },
+  {
+    "w": "teamwork",
+    "respell_ga": "TEEM-wurk",
+    "respell_rp": "TEEM-wurk"
+  },
+  {
+    "w": "technique",
+    "respell_ga": "tehk-NEEK",
+    "respell_rp": "tehk-NEEK"
+  },
+  {
+    "w": "technological",
+    "respell_ga": "tehk-nuh-LAH-ji-kuhl",
+    "respell_rp": "tehk-nuh-LO-ji-kuhl"
+  },
+  {
+    "w": "telecommunications",
+    "respell_ga": "teh-luh-kuh-myoo-nuh-KAY-shuhnz",
+    "respell_rp": "teh-li-kuh-myoo-ni-KAY-shuhnz"
+  },
+  {
+    "w": "telegram",
+    "respell_ga": "TEH-luh-gram",
+    "respell_rp": "TEH-li-gram"
+  },
+  {
+    "w": "teller",
+    "respell_ga": "TEH-ler",
+    "respell_rp": "TEH-luh"
+  },
+  {
+    "w": "temper",
+    "respell_ga": "TEHM-per",
+    "respell_rp": "TEHM-puh"
+  },
+  {
+    "w": "temporary",
+    "respell_ga": "TEHM-per-eh-ree",
+    "respell_rp": "TEHM-puh-ruh-ree"
+  },
+  {
+    "w": "tendency",
+    "respell_ga": "TEHN-dn-see",
+    "respell_rp": "TEHN-duhn-see"
+  },
+  {
+    "w": "tension",
+    "respell_ga": "TEHN-shuhn",
+    "respell_rp": "TEHN-shuhn"
+  },
+  {
+    "w": "terminal",
+    "respell_ga": "TUR-muh-nuhl",
+    "respell_rp": "TUR-mi-nuhl"
+  },
+  {
+    "w": "terribly",
+    "respell_ga": "TEH-ruh-blee",
+    "respell_rp": "TEH-ri-blee"
+  },
+  {
+    "w": "terrific",
+    "respell_ga": "ter-I-fik",
+    "respell_rp": "tuh-RI-fik"
+  },
+  {
+    "w": "terrified",
+    "respell_ga": "TEH-ruh-fyd",
+    "respell_rp": "TEH-ri-fyd"
+  },
+  {
+    "w": "terror",
+    "respell_ga": "TEH-rer",
+    "respell_rp": "TEH-ruh"
+  },
+  {
+    "w": "terrorism",
+    "respell_ga": "TEH-rer-i-zuhm",
+    "respell_rp": "TEH-ruh-ri-zuhm"
+  },
+  {
+    "w": "thankful",
+    "respell_ga": "THANGK-fuhl",
+    "respell_rp": "THANGK-fuhl"
+  },
+  {
+    "w": "theory",
+    "respell_ga": "THI-ree",
+    "respell_rp": "THEER-ree"
+  },
+  {
+    "w": "thorough",
+    "respell_ga": "THUR-oh",
+    "respell_rp": "THUH-ruh"
+  },
+  {
+    "w": "threatening",
+    "respell_ga": "THREH-duh-ning",
+    "respell_rp": "THREHT-ning"
+  },
+  {
+    "w": "thriller",
+    "respell_ga": "THRI-ler",
+    "respell_rp": "THRI-luh"
+  },
+  {
+    "w": "throughout",
+    "respell_ga": "throo-OWT",
+    "respell_rp": "throo-OWT"
+  },
+  {
+    "w": "tighten",
+    "respell_ga": "TY-tn",
+    "respell_rp": "TY-tuhn"
+  },
+  {
+    "w": "tightly",
+    "respell_ga": "TYT-lee",
+    "respell_rp": "TYT-lee"
+  },
+  {
+    "w": "timely",
+    "respell_ga": "TYM-lee",
+    "respell_rp": "TYM-lee"
+  },
+  {
+    "w": "tiny",
+    "respell_ga": "TY-nee",
+    "respell_rp": "TY-nee"
+  },
+  {
+    "w": "tire",
+    "respell_ga": "TY-er",
+    "respell_rp": "TY-uh"
+  },
+  {
+    "w": "tiring",
+    "respell_ga": "TY-ring",
+    "respell_rp": "TY-uh-ring"
+  },
+  {
+    "w": "tissue",
+    "respell_ga": "TI-syoo",
+    "respell_rp": "TI-shoo"
+  },
+  {
+    "w": "tobacco",
+    "respell_ga": "tuh-BA-koh",
+    "respell_rp": "tuh-BA-koh"
+  },
+  {
+    "w": "tongue",
+    "respell_ga": "TUHNG",
+    "respell_rp": "TUHNG"
+  },
+  {
+    "w": "toothpaste",
+    "respell_ga": "TOOTH-payst",
+    "respell_rp": "TOOTH-payst"
+  },
+  {
+    "w": "tornado",
+    "respell_ga": "tor-NAY-doh",
+    "respell_rp": "taw-NAY-doh"
+  },
+  {
+    "w": "total",
+    "respell_ga": "TOH-dl",
+    "respell_rp": "TOH-tuhl"
+  },
+  {
+    "w": "totally",
+    "respell_ga": "TOH-duh-lee",
+    "respell_rp": "TOH-tuh-lee"
+  },
+  {
+    "w": "tournament",
+    "respell_ga": "TUUR-nuh-muhnt",
+    "respell_rp": "TAW-nuh-muhnt"
+  },
+  {
+    "w": "tracksuit",
+    "respell_ga": "TRAK-soot",
+    "respell_rp": "TRAK-soot"
+  },
+  {
+    "w": "traditionally",
+    "respell_ga": "truh-DI-shuh-nuh-lee",
+    "respell_rp": "truh-DISH-nuh-lee"
+  },
+  {
+    "w": "tragedy",
+    "respell_ga": "TRA-juh-dee",
+    "respell_rp": "TRA-ji-dee"
+  },
+  {
+    "w": "tragic",
+    "respell_ga": "TRA-jik",
+    "respell_rp": "TRA-jik"
+  },
+  {
+    "w": "transfer",
+    "respell_ga": "tran-SFUR",
+    "respell_rp": "tran-SFUR"
+  },
+  {
+    "w": "transform",
+    "respell_ga": "tran-SFORM",
+    "respell_rp": "tran-SFAWM"
+  },
+  {
+    "w": "transformation",
+    "respell_ga": "tran-sfer-MAY-shuhn",
+    "respell_rp": "tran-sfuh-MAY-shuhn"
+  },
+  {
+    "w": "transitional",
+    "respell_ga": "tran-ZI-shuh-nuhl",
+    "respell_rp": "tran-ZI-shuh-nuhl"
+  },
+  {
+    "w": "translate",
+    "respell_ga": "tranz-LAYT",
+    "respell_rp": "tran-SLAYT"
+  },
+  {
+    "w": "transport",
+    "respell_ga": "tran-SPORT",
+    "respell_rp": "tran-SPAWT"
+  },
+  {
+    "w": "transportation",
+    "respell_ga": "tran-sper-TAY-shuhn",
+    "respell_rp": "tran-spuh-TAY-shuhn"
+  },
+  {
+    "w": "treatment",
+    "respell_ga": "TREET-muhnt",
+    "respell_rp": "TREET-muhnt"
+  },
+  {
+    "w": "tremble",
+    "respell_ga": "TREHM-buhl",
+    "respell_rp": "TREHM-buhl"
+  },
+  {
+    "w": "trigger",
+    "respell_ga": "TRI-ger",
+    "respell_rp": "TRI-guh"
+  },
+  {
+    "w": "triumph",
+    "respell_ga": "TRY-uhmf",
+    "respell_rp": "TRY-uhmf"
+  },
+  {
+    "w": "tropical",
+    "respell_ga": "TRAH-pi-kuhl",
+    "respell_rp": "TRO-pi-kuhl"
+  },
+  {
+    "w": "trumpet",
+    "respell_ga": "TRUHM-puht",
+    "respell_rp": "TRUHM-pit"
+  },
+  {
+    "w": "trustworthy",
+    "respell_ga": "TRUHS-twur-thee",
+    "respell_rp": "TRUHS-twur-thee"
+  },
+  {
+    "w": "tumble",
+    "respell_ga": "TUHM-buhl",
+    "respell_rp": "TUHM-buhl"
+  },
+  {
+    "w": "tuna",
+    "respell_ga": "TOO-nuh",
+    "respell_rp": "TYOO-nuh"
+  },
+  {
+    "w": "turbulence",
+    "respell_ga": "TUR-byuh-luhns",
+    "respell_rp": "TUR-byuh-luhns"
+  },
+  {
+    "w": "turning",
+    "respell_ga": "TUR-ning",
+    "respell_rp": "TUR-ning"
+  },
+  {
+    "w": "turtle",
+    "respell_ga": "TUR-dl",
+    "respell_rp": "TUR-tuhl"
+  },
+  {
+    "w": "typical",
+    "respell_ga": "TI-puh-kuhl",
+    "respell_rp": "TI-pi-kuhl"
+  },
+  {
+    "w": "typically",
+    "respell_ga": "TI-pi-klee",
+    "respell_rp": "TI-pi-klee"
+  },
+  {
+    "w": "unable",
+    "respell_ga": "uh-NAY-buhl",
+    "respell_rp": "uh-NAY-buhl"
+  },
+  {
+    "w": "unafraid",
+    "respell_ga": "uh-nuh-FRAYD",
+    "respell_rp": "uh-nuh-FRAYD"
+  },
+  {
+    "w": "unbelievable",
+    "respell_ga": "uhn-buh-LEE-vuh-buhl",
+    "respell_rp": "uhn-buh-LEE-vuh-buhl"
+  },
+  {
+    "w": "unclear",
+    "respell_ga": "uhn-KLEER",
+    "respell_rp": "uhn-KLEER"
+  },
+  {
+    "w": "uncontrollable",
+    "respell_ga": "uhn-kuhn-TROH-luh-buhl",
+    "respell_rp": "uhn-kuhn-TROH-luh-buhl"
+  },
+  {
+    "w": "uncover",
+    "respell_ga": "uhn-KUH-ver",
+    "respell_rp": "uhn-KUH-vuh"
+  },
+  {
+    "w": "undo",
+    "respell_ga": "uhn-DOO",
+    "respell_rp": "uhn-DOO"
+  },
+  {
+    "w": "undress",
+    "respell_ga": "uhn-DREHS",
+    "respell_rp": "uhn-DREHS"
+  },
+  {
+    "w": "unemployed",
+    "respell_ga": "uh-nehm-PLOYD",
+    "respell_rp": "uh-nehm-PLOYD"
+  },
+  {
+    "w": "unemployment",
+    "respell_ga": "uh-nim-PLOY-muhnt",
+    "respell_rp": "uh-nim-PLOY-muhnt"
+  },
+  {
+    "w": "unexpected",
+    "respell_ga": "uh-nik-SPEHK-tid",
+    "respell_rp": "uh-nik-SPEHK-tid"
+  },
+  {
+    "w": "unexpectedly",
+    "respell_ga": "uh-nik-SPEHK-tid-lee",
+    "respell_rp": "uh-nik-SPEHK-tid-lee"
+  },
+  {
+    "w": "unfairly",
+    "respell_ga": "uhn-FER-lee",
+    "respell_rp": "uhn-FAIR-lee"
+  },
+  {
+    "w": "unfit",
+    "respell_ga": "uhn-FIT",
+    "respell_rp": "uhn-FIT"
+  },
+  {
+    "w": "unfold",
+    "respell_ga": "uhn-FOHLD",
+    "respell_rp": "uhn-FOHLD"
+  },
+  {
+    "w": "unfortunate",
+    "respell_ga": "uhn-FOR-chuh-nuht",
+    "respell_rp": "uhn-FAW-chuh-nit"
+  },
+  {
+    "w": "unfriendly",
+    "respell_ga": "uhn-FREHND-lee",
+    "respell_rp": "uhn-FREHND-lee"
+  },
+  {
+    "w": "unheard",
+    "respell_ga": "uhn-HURD",
+    "respell_rp": "uhn-HURD"
+  },
+  {
+    "w": "unify",
+    "respell_ga": "YOO-nuh-fy",
+    "respell_rp": "YOO-ni-fy"
+  },
+  {
+    "w": "uninterested",
+    "respell_ga": "uh-NIN-truh-stuhd",
+    "respell_rp": "uh-NIN-truh-stid"
+  },
+  {
+    "w": "uninteresting",
+    "respell_ga": "uh-NIN-truh-sting",
+    "respell_rp": "uh-NIN-truh-sting"
+  },
+  {
+    "w": "union",
+    "respell_ga": "YOO-nyuhn",
+    "respell_rp": "YOO-nyuhn"
+  },
+  {
+    "w": "unique",
+    "respell_ga": "yoo-NEEK",
+    "respell_rp": "yoo-NEEK"
+  },
+  {
+    "w": "unite",
+    "respell_ga": "YOO-nyt",
+    "respell_rp": "yoo-NYT"
+  },
+  {
+    "w": "universe",
+    "respell_ga": "YOO-nuh-vurs",
+    "respell_rp": "YOO-ni-vurs"
+  },
+  {
+    "w": "unless",
+    "respell_ga": "uhn-LEHS",
+    "respell_rp": "uhn-LEHS"
+  },
+  {
+    "w": "unlikely",
+    "respell_ga": "uhn-LY-klee",
+    "respell_rp": "uhn-LY-klee"
+  },
+  {
+    "w": "unlucky",
+    "respell_ga": "uhn-LUH-kee",
+    "respell_rp": "uhn-LUH-kee"
+  },
+  {
+    "w": "unpack",
+    "respell_ga": "uhn-PAK",
+    "respell_rp": "uhn-PAK"
+  },
+  {
+    "w": "unpredictable",
+    "respell_ga": "uhn-pri-DIK-tuh-buhl",
+    "respell_rp": "uhn-pri-DIK-tuh-buhl"
+  },
+  {
+    "w": "unrelated",
+    "respell_ga": "uhn-ri-LAY-duhd",
+    "respell_rp": "uhn-ri-LAY-tid"
+  },
+  {
+    "w": "untidy",
+    "respell_ga": "uhn-TY-dee",
+    "respell_rp": "uhn-TY-dee"
+  },
+  {
+    "w": "unusually",
+    "respell_ga": "uh-NYOO-zhoo-uh-lee",
+    "respell_rp": "uh-NYOO-zhoor-lee"
+  },
+  {
+    "w": "unwell",
+    "respell_ga": "uhn-WEHL",
+    "respell_rp": "uhn-WEHL"
+  },
+  {
+    "w": "up-to-date",
+    "respell_ga": "uhp-tuh-DAYT",
+    "respell_rp": "uhp-tuh-DAYT"
+  },
+  {
+    "w": "update",
+    "respell_ga": "uhp-DAYT",
+    "respell_rp": "UHP-dayt"
+  },
+  {
+    "w": "uplifted",
+    "respell_ga": "uh-PLIF-tuhd",
+    "respell_rp": "uh-PLIF-tid"
+  },
+  {
+    "w": "upload",
+    "respell_ga": "UH-plohd",
+    "respell_rp": "UH-plohd"
+  },
+  {
+    "w": "upper",
+    "respell_ga": "UH-per",
+    "respell_rp": "UH-puh"
+  },
+  {
+    "w": "upward",
+    "respell_ga": "UHP-werd",
+    "respell_rp": "UHP-wuhd"
+  },
+  {
+    "w": "urgent",
+    "respell_ga": "UR-juhnt",
+    "respell_rp": "UR-juhnt"
+  },
+  {
+    "w": "usage",
+    "respell_ga": "YOO-suhj",
+    "respell_rp": "YOO-sij"
+  },
+  {
+    "w": "useless",
+    "respell_ga": "YOO-sluhs",
+    "respell_rp": "YOO-slis"
+  },
+  {
+    "w": "vacancy",
+    "respell_ga": "VAY-kuhn-see",
+    "respell_rp": "VAY-kuhn-see"
+  },
+  {
+    "w": "vague",
+    "respell_ga": "VAYG",
+    "respell_rp": "VAYG"
+  },
+  {
+    "w": "valuable",
+    "respell_ga": "VA-lyuh-buhl",
+    "respell_rp": "VA-lyuu-buhl"
+  },
+  {
+    "w": "variety",
+    "respell_ga": "ver-Y-uh-dee",
+    "respell_rp": "vuh-RY-uh-tee"
+  },
+  {
+    "w": "various",
+    "respell_ga": "VEH-ree-uhs",
+    "respell_rp": "VAIR-reers"
+  },
+  {
+    "w": "vary",
+    "respell_ga": "VEH-ree",
+    "respell_rp": "VAIR-ree"
+  },
+  {
+    "w": "vegetarian",
+    "respell_ga": "veh-juh-TEH-ree-uhn",
+    "respell_rp": "veh-ji-TAIR-reern"
+  },
+  {
+    "w": "vehicle",
+    "respell_ga": "VEE-hi-kuhl",
+    "respell_rp": "VEE-i-kuhl"
+  },
+  {
+    "w": "vein",
+    "respell_ga": "VAYN",
+    "respell_rp": "VAYN"
+  },
+  {
+    "w": "vessel",
+    "respell_ga": "VEH-suhl",
+    "respell_rp": "VEH-suhl"
+  },
+  {
+    "w": "via",
+    "respell_ga": "VY-uh",
+    "respell_rp": "VY-uh"
+  },
+  {
+    "w": "victim",
+    "respell_ga": "VIK-tuhm",
+    "respell_rp": "VIK-tim"
+  },
+  {
+    "w": "victory",
+    "respell_ga": "VIK-ter-ee",
+    "respell_rp": "VIK-tree"
+  },
+  {
+    "w": "viewpoint",
+    "respell_ga": "VYOO-poynt",
+    "respell_rp": "VYOO-poynt"
+  },
+  {
+    "w": "violence",
+    "respell_ga": "VY-uh-luhns",
+    "respell_rp": "VY-uh-luhns"
+  },
+  {
+    "w": "violently",
+    "respell_ga": "VY-uh-luhnt-lee",
+    "respell_rp": "VY-uh-luhnt-lee"
+  },
+  {
+    "w": "virtual",
+    "respell_ga": "VUR-choo-uhl",
+    "respell_rp": "VUR-choorl"
+  },
+  {
+    "w": "virus",
+    "respell_ga": "VY-ruhs",
+    "respell_rp": "VY-ruhs"
+  },
+  {
+    "w": "visa",
+    "respell_ga": "VEE-zuh",
+    "respell_rp": "VEE-zuh"
+  },
+  {
+    "w": "visible",
+    "respell_ga": "VI-zuh-buhl",
+    "respell_rp": "VI-zi-buhl"
+  },
+  {
+    "w": "visually",
+    "respell_ga": "VI-zhuh-wuh-lee",
+    "respell_rp": "VI-zhoo-uh-lee"
+  },
+  {
+    "w": "vivid",
+    "respell_ga": "VI-vuhd",
+    "respell_rp": "VI-vid"
+  },
+  {
+    "w": "vividly",
+    "respell_ga": "VI-vuhd-lee",
+    "respell_rp": "VI-vid-lee"
+  },
+  {
+    "w": "volcano",
+    "respell_ga": "vahl-KAY-noh",
+    "respell_rp": "vol-KAY-noh"
+  },
+  {
+    "w": "volume",
+    "respell_ga": "VAH-lyoom",
+    "respell_rp": "VO-lyoom"
+  },
+  {
+    "w": "volunteer",
+    "respell_ga": "vah-luhn-TEER",
+    "respell_rp": "vo-luhn-TEER"
+  },
+  {
+    "w": "vowel",
+    "respell_ga": "VOW-uhl",
+    "respell_rp": "VOW-uhl"
+  },
+  {
+    "w": "wagon",
+    "respell_ga": "WA-guhn",
+    "respell_rp": "WA-guhn"
+  },
+  {
+    "w": "wardrobe",
+    "respell_ga": "WOR-drohb",
+    "respell_rp": "WAW-drohb"
+  },
+  {
+    "w": "warmly",
+    "respell_ga": "WORM-lee",
+    "respell_rp": "WAWM-lee"
+  },
+  {
+    "w": "warning",
+    "respell_ga": "WOR-ning",
+    "respell_rp": "WAW-ning"
+  },
+  {
+    "w": "warrior",
+    "respell_ga": "WAW-ree-er",
+    "respell_rp": "WO-reer"
+  },
+  {
+    "w": "washbowl",
+    "respell_ga": "WAHSH-bohl",
+    "respell_rp": "WOSH-bohl"
+  },
+  {
+    "w": "wasteful",
+    "respell_ga": "WAYST-fuhl",
+    "respell_rp": "WAYST-fuhl"
+  },
+  {
+    "w": "waterfall",
+    "respell_ga": "WAW-der-fawl",
+    "respell_rp": "WAW-tuh-fawl"
+  },
+  {
+    "w": "weakness",
+    "respell_ga": "WEEK-nuhs",
+    "respell_rp": "WEEK-nis"
+  },
+  {
+    "w": "weapon",
+    "respell_ga": "WEH-puhn",
+    "respell_rp": "WEH-puhn"
+  },
+  {
+    "w": "webcam",
+    "respell_ga": "WEHB-kam",
+    "respell_rp": "WEHB-kam"
+  },
+  {
+    "w": "well-dressed",
+    "respell_ga": "wehl-DREHST",
+    "respell_rp": "wehl-DREHST"
+  },
+  {
+    "w": "westward",
+    "respell_ga": "WEHS-twerd",
+    "respell_rp": "WEHS-twuhd"
+  },
+  {
+    "w": "wetland",
+    "respell_ga": "WEHT-land",
+    "respell_rp": "WEHT-land"
+  },
+  {
+    "w": "whenever",
+    "respell_ga": "weh-NEH-ver",
+    "respell_rp": "weh-NEH-vuh"
+  },
+  {
+    "w": "wherever",
+    "respell_ga": "weh-REH-ver",
+    "respell_rp": "wair-REH-vuh"
+  },
+  {
+    "w": "whichever",
+    "respell_ga": "wi-CHEH-ver",
+    "respell_rp": "wi-CHEH-vuh"
+  },
+  {
+    "w": "whisper",
+    "respell_ga": "WI-sper",
+    "respell_rp": "WI-spuh"
+  },
+  {
+    "w": "whistle",
+    "respell_ga": "WI-suhl",
+    "respell_rp": "WI-suhl"
+  },
+  {
+    "w": "whoever",
+    "respell_ga": "hoo-EH-ver",
+    "respell_rp": "hoo-EH-vuh"
+  },
+  {
+    "w": "widespread",
+    "respell_ga": "WYD-SPREHD",
+    "respell_rp": "WYD-sprehd"
+  },
+  {
+    "w": "wildlife",
+    "respell_ga": "WYLD-lyf",
+    "respell_rp": "WYLD-lyf"
+  },
+  {
+    "w": "wildly",
+    "respell_ga": "WYLD-lee",
+    "respell_rp": "WYLD-lee"
+  },
+  {
+    "w": "willingness",
+    "respell_ga": "WI-ling-nuhs",
+    "respell_rp": "WI-ling-nis"
+  },
+  {
+    "w": "windscreen",
+    "respell_ga": "WIND-skreen",
+    "respell_rp": "WIND-skreen"
+  },
+  {
+    "w": "windsurfing",
+    "respell_ga": "WIND-sur-fing",
+    "respell_rp": "WIND-sur-fing"
+  },
+  {
+    "w": "wire",
+    "respell_ga": "WY-er",
+    "respell_rp": "WY-uh"
+  },
+  {
+    "w": "wither",
+    "respell_ga": "WI-ther",
+    "respell_rp": "WI-thuh"
+  },
+  {
+    "w": "witness",
+    "respell_ga": "WIT-nuhs",
+    "respell_rp": "WIT-nis"
+  },
+  {
+    "w": "wizard",
+    "respell_ga": "WI-zerd",
+    "respell_rp": "WI-zuhd"
+  },
+  {
+    "w": "working",
+    "respell_ga": "WUR-king",
+    "respell_rp": "WUR-king"
+  },
+  {
+    "w": "workout",
+    "respell_ga": "WUR-kowt",
+    "respell_rp": "WUR-kowt"
+  },
+  {
+    "w": "workplace",
+    "respell_ga": "WURK-plays",
+    "respell_rp": "WURK-plays"
+  },
+  {
+    "w": "workshop",
+    "respell_ga": "WURK-shahp",
+    "respell_rp": "WURK-shop"
+  },
+  {
+    "w": "worthwhile",
+    "respell_ga": "WUR-THWYL",
+    "respell_rp": "wur-THWYL"
+  },
+  {
+    "w": "worthy",
+    "respell_ga": "WUR-thee",
+    "respell_rp": "WUR-thee"
+  },
+  {
+    "w": "wrapping",
+    "respell_ga": "RA-ping",
+    "respell_rp": "RA-ping"
+  },
+  {
+    "w": "wristwatch",
+    "respell_ga": "RIS-twahch",
+    "respell_rp": "RIS-twoch"
+  },
+  {
+    "w": "yoga",
+    "respell_ga": "YOH-guh",
+    "respell_rp": "YOH-guh"
   }
 ]

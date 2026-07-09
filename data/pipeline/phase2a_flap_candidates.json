@@ -2344,5 +2344,263 @@
     "ipa": "/riˌspɑnsəˈbɪləti/",
     "ipa_actual_ga": "/riˌspɑnsəˈbɪləɾi/",
     "rule": "R1"
+  },
+  {
+    "w": "retail",
+    "ipa": "/ˈriˌteɪl/",
+    "ipa_actual_ga": "/ˈriˌɾeɪl/",
+    "rule": "R1"
+  },
+  {
+    "w": "riddle",
+    "ipa": "/ˈrɪdəl/",
+    "ipa_actual_ga": "/ˈrɪdl̩/",
+    "rule": "R2"
+  },
+  {
+    "w": "rotten",
+    "ipa": "/ˈrɑtən/",
+    "ipa_actual_ga": "/ˈrɑʔn̩/",
+    "rule": "R3"
+  },
+  {
+    "w": "sandal",
+    "ipa": "/ˈsændəl/",
+    "ipa_actual_ga": "/ˈsændl̩/",
+    "rule": "R2"
+  },
+  {
+    "w": "satellite",
+    "ipa": "/ˈsætəˌlaɪt/",
+    "ipa_actual_ga": "/ˈsæɾəˌlaɪt/",
+    "rule": "R1"
+  },
+  {
+    "w": "satisfaction",
+    "ipa": "/ˌsætəˈsfækʃən/",
+    "ipa_actual_ga": "/ˌsæɾəˈsfækʃən/",
+    "rule": "R1"
+  },
+  {
+    "w": "satisfied",
+    "ipa": "/ˈsætəˌsfaɪd/",
+    "ipa_actual_ga": "/ˈsæɾəˌsfaɪd/",
+    "rule": "R1"
+  },
+  {
+    "w": "scatter",
+    "ipa": "/ˈskætɚ/",
+    "ipa_actual_ga": "/ˈskæɾɚ/",
+    "rule": "R1"
+  },
+  {
+    "w": "seawater",
+    "ipa": "/ˈsiˌwɔtɚ/",
+    "ipa_actual_ga": "/ˈsiˌwɔɾɚ/",
+    "rule": "R1"
+  },
+  {
+    "w": "security",
+    "ipa": "/sɪˈkjʊrəti/",
+    "ipa_actual_ga": "/sɪˈkjʊrəɾi/",
+    "rule": "R1"
+  },
+  {
+    "w": "setting",
+    "ipa": "/ˈsɛtɪŋ/",
+    "ipa_actual_ga": "/ˈsɛɾɪŋ/",
+    "rule": "R1"
+  },
+  {
+    "w": "settle",
+    "ipa": "/ˈsɛtəl/",
+    "ipa_actual_ga": "/ˈsɛɾl̩/",
+    "rule": "R2"
+  },
+  {
+    "w": "settlement",
+    "ipa": "/ˈsɛtəlmənt/",
+    "ipa_actual_ga": "/ˈsɛɾl̩mənt/",
+    "rule": "R2"
+  },
+  {
+    "w": "shadowy",
+    "ipa": "/ˈʃædoʊi/",
+    "ipa_actual_ga": "/ˈʃæɾoʊi/",
+    "rule": "R1"
+  },
+  {
+    "w": "shortage",
+    "ipa": "/ˈʃɔrtədʒ/",
+    "ipa_actual_ga": "/ˈʃɔrɾədʒ/",
+    "rule": "R1"
+  },
+  {
+    "w": "similarity",
+    "ipa": "/ˌsɪməˈlɛrəti/",
+    "ipa_actual_ga": "/ˌsɪməˈlɛrəɾi/",
+    "rule": "R1"
+  },
+  {
+    "w": "skeleton",
+    "ipa": "/ˈskɛlətən/",
+    "ipa_actual_ga": "/ˈskɛləʔn̩/",
+    "rule": "R3"
+  },
+  {
+    "w": "spectator",
+    "ipa": "/ˈspɛkteɪtɚ/",
+    "ipa_actual_ga": "/ˈspɛkteɪɾɚ/",
+    "rule": "R1"
+  },
+  {
+    "w": "spider",
+    "ipa": "/ˈspaɪdɚ/",
+    "ipa_actual_ga": "/ˈspaɪɾɚ/",
+    "rule": "R1"
+  },
+  {
+    "w": "status",
+    "ipa": "/ˈstætəs/",
+    "ipa_actual_ga": "/ˈstæɾəs/",
+    "rule": "R1"
+  },
+  {
+    "w": "steadily",
+    "ipa": "/ˈstɛdəli/",
+    "ipa_actual_ga": "/ˈstɛɾəli/",
+    "rule": "R1"
+  },
+  {
+    "w": "steady",
+    "ipa": "/ˈstɛdi/",
+    "ipa_actual_ga": "/ˈstɛɾi/",
+    "rule": "R1"
+  },
+  {
+    "w": "storyteller",
+    "ipa": "/ˈstɔriˌtɛlɚ/",
+    "ipa_actual_ga": "/ˈstɔriˌɾɛlɚ/",
+    "rule": "R1"
+  },
+  {
+    "w": "studio",
+    "ipa": "/ˈstudiˌoʊ/",
+    "ipa_actual_ga": "/ˈstuɾiˌoʊ/",
+    "rule": "R1"
+  },
+  {
+    "w": "substitute",
+    "ipa": "/ˈsʌbstəˌtut/",
+    "ipa_actual_ga": "/ˈsʌbstəˌɾut/",
+    "rule": "R1"
+  },
+  {
+    "w": "suddenly",
+    "ipa": "/ˈsʌdənli/",
+    "ipa_actual_ga": "/ˈsʌdn̩li/",
+    "rule": "R3"
+  },
+  {
+    "w": "supporter",
+    "ipa": "/səˈpɔrtɚ/",
+    "ipa_actual_ga": "/səˈpɔrɾɚ/",
+    "rule": "R1"
+  },
+  {
+    "w": "supportive",
+    "ipa": "/səˈpɔrtɪv/",
+    "ipa_actual_ga": "/səˈpɔrɾɪv/",
+    "rule": "R1"
+  },
+  {
+    "w": "systematic",
+    "ipa": "/ˌsɪstəˈmætɪk/",
+    "ipa_actual_ga": "/ˌsɪstəˈmæɾɪk/",
+    "rule": "R1"
+  },
+  {
+    "w": "talkative",
+    "ipa": "/ˈtɔkətɪv/",
+    "ipa_actual_ga": "/ˈtɔkəɾɪv/",
+    "rule": "R1"
+  },
+  {
+    "w": "tendency",
+    "ipa": "/ˈtɛndənsi/",
+    "ipa_actual_ga": "/ˈtɛndn̩si/",
+    "rule": "R3"
+  },
+  {
+    "w": "threatening",
+    "ipa": "/ˈθrɛtənɪŋ/",
+    "ipa_actual_ga": "/ˈθrɛɾənɪŋ/",
+    "rule": "R1"
+  },
+  {
+    "w": "tighten",
+    "ipa": "/ˈtaɪtən/",
+    "ipa_actual_ga": "/ˈtaɪʔn̩/",
+    "rule": "R3"
+  },
+  {
+    "w": "tornado",
+    "ipa": "/tɔrˈneɪˌdoʊ/",
+    "ipa_actual_ga": "/tɔrˈneɪˌɾoʊ/",
+    "rule": "R1"
+  },
+  {
+    "w": "total",
+    "ipa": "/ˈtoʊtəl/",
+    "ipa_actual_ga": "/ˈtoʊɾl̩/",
+    "rule": "R2"
+  },
+  {
+    "w": "totally",
+    "ipa": "/ˈtoʊtəli/",
+    "ipa_actual_ga": "/ˈtoʊɾəli/",
+    "rule": "R1"
+  },
+  {
+    "w": "tragedy",
+    "ipa": "/ˈtrædʒədi/",
+    "ipa_actual_ga": "/ˈtrædʒəɾi/",
+    "rule": "R1"
+  },
+  {
+    "w": "turtle",
+    "ipa": "/ˈtɝtəl/",
+    "ipa_actual_ga": "/ˈtɝɾl̩/",
+    "rule": "R2"
+  },
+  {
+    "w": "uncertainty",
+    "ipa": "/ənˈsɝtənti/",
+    "ipa_actual_ga": "/ənˈsɝʔn̩ti/",
+    "rule": "R3"
+  },
+  {
+    "w": "unrelated",
+    "ipa": "/ˌʌnrɪˈleɪtəd/",
+    "ipa_actual_ga": "/ˌʌnrɪˈleɪɾəd/",
+    "rule": "R1"
+  },
+  {
+    "w": "untidy",
+    "ipa": "/ʌnˈtaɪdi/",
+    "ipa_actual_ga": "/ʌnˈtaɪɾi/",
+    "rule": "R1"
+  },
+  {
+    "w": "variety",
+    "ipa": "/vɚˈaɪəti/",
+    "ipa_actual_ga": "/vɚˈaɪəɾi/",
+    "rule": "R1"
+  },
+  {
+    "w": "waterfall",
+    "ipa": "/ˈwɔtɚˌfɔl/",
+    "ipa_actual_ga": "/ˈwɔɾɚˌfɔl/",
+    "rule": "R1"
   }
 ]

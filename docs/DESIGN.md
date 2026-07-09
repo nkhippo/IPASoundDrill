@@ -3,7 +3,7 @@
 > `PURPOSE.md` で確定した目的・2モード構成を、Cursorが実装に落とせる粒度まで具体化した仕様。
 > 本ドキュメントは「何を作るか（what / how）」の正本。目的の正本は `PURPOSE.md`。
 >
-> **更新日:** 2026-07-09（夕方） ／ **ステータス:** Mode A・Mode B・GA/RP・連結句・弱形・RP TTS・語彙ブラウザ・TTS プリフェッチ・無制限セッション・離脱確認モーダル・UI 6言語（fil 含む）実装済み。語彙 4,439語（Phase 1 M4 まで）。
+> **更新日:** 2026-07-09 ／ **ステータス:** Mode A・Mode B・GA/RP・連結句・弱形・RP TTS・語彙ブラウザ・TTS プリフェッチ・無制限セッション・離脱確認モーダル・UI 6言語（fil 含む）実装済み。語彙 4,828語（**Phase 1 B1 拡充完了**）。
 
 ---
 
@@ -230,7 +230,7 @@ aʊ: how /haʊ/, cow /kaʊ/, hour /ˈaʊɚ/
 - **最終:** `respell_ga` 3,059/3,059語、`ipa_actual_ga` 192語（narrow 差分がある語のみ）。
 - **v2 品質パッチ（2026-07-02）:** 音節主音 n/l + 追加コーダ子音パターン（`tnt` 等）18語の `respell_ga` を `uh` 補完表記に修正（`generate_respelling.py` v2、`data/pipeline/phase2b_respell_draft_v2.json`）。
 
-**現行（2026-07-09）:** ステージング JSON は `data/pipeline/`。語彙 4,439語、`ipa_actual_ga` 候補 ~391語、R4 pending ~96語。パス正本は `scripts/paths.py` / `docs/REPOSITORY-STRUCTURE.md`。
+**現行（2026-07-09）:** ステージング JSON は `data/pipeline/`。語彙 4,828語、`ipa_actual_ga` 候補 ~434語、R4 pending ~110語。パス正本は `scripts/paths.py` / `docs/REPOSITORY-STRUCTURE.md`。
 
 i18n: `vocab.*`（5 キー × 5 言語）。
 
