@@ -34,8 +34,9 @@
   .brand .mark{font-family:var(--ipa);font-size:24px;color:var(--signal);letter-spacing:.5px;flex-shrink:0}
   .brand .name{font-weight:700;font-size:15px;letter-spacing:.04em;white-space:nowrap}
   .meter{font-family:var(--mono);font-size:11px;color:var(--muted);text-align:right;letter-spacing:.04em;white-space:nowrap}
-  .play-crumb{font-family:var(--mono);font-size:10.5px;color:var(--muted);letter-spacing:.03em;margin:-10px 0 14px;line-height:1.45}
-  body.in-play .play-crumb{margin:-2px 0 10px}
+  .play-line{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin:-10px 0 14px}
+  body.in-play .play-line{margin:-2px 0 10px}
+  .play-crumb{font-family:var(--mono);font-size:10.5px;color:var(--muted);letter-spacing:.03em;line-height:1.45;min-width:0}
   .meter b{color:var(--ink);font-weight:700}
   .topbar-actions{display:flex;flex-direction:column;align-items:flex-end;gap:6px;flex-shrink:0}
   .langpick{display:flex;gap:4px}
@@ -317,10 +318,12 @@
         <button class="topbtn settings" id="settingsBtn" type="button" aria-label="Settings"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></button>
       </div>
       <button class="backtop hidden" id="backTopBtn" type="button">Menu</button>
-      <div class="meter" id="meter"></div>
     </div>
   </div>
-  <div class="play-crumb hidden" id="playCrumb" aria-live="polite"></div>
+  <div class="play-line hidden" id="playLine">
+    <div class="play-crumb" id="playCrumb" aria-live="polite"></div>
+    <div class="meter" id="meter"></div>
+  </div>
 
   <!-- SETUP -->
   <section id="setup" class="panel">
@@ -1282,7 +1285,7 @@ function setSetupVisible(on){
   $("backTopBtn").classList.toggle("hidden",on);
   $("settingsBtn").classList.toggle("hidden",!on);
   $("guideBtn").classList.toggle("hidden",!on);
-  $("playCrumb").classList.toggle("hidden",on);
+  $("playLine").classList.toggle("hidden",on);
   document.body.classList.toggle("in-play",!on);
   if(on){
     if(currentAudio){currentAudio.pause();currentAudio=null;}
