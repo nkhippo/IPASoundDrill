@@ -99746,7 +99746,7 @@
   },
   {
     "w": "friendliness",
-    "ipa": "/ˈfrɛndliːnəs/",
+    "ipa": "/ˈfrɛndlinəs/",
     "rp_ipa": "/ˈfrendlinəs/",
     "cefr": "B1",
     "pos": "名詞",
@@ -99761,7 +99761,9 @@
       "fil": "kabutihang-loob"
     },
     "def": "The quality of being kind and pleasant to others.",
-    "neighbors": []
+    "neighbors": [],
+    "respell_ga": "FREHND-lee-nuhs",
+    "respell_rp": "FREHND-lee-nuhs"
   },
   {
     "w": "frozen",
