@@ -658,5 +658,35 @@
     "respell_ga": "WAW-ruhn-tee",
     "respell_rp": "WO-ruhn-tee",
     "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see data/pipeline/phase2a_review_needed.json)"
+  },
+  {
+    "w": "antibacterial",
+    "respell_ga": "an-tee-bak-TI-ree-uhl",
+    "respell_rp": "an-tee-bak-TI-ree-uhl",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see data/pipeline/phase2a_review_needed.json)"
+  },
+  {
+    "w": "anticipation",
+    "respell_ga": "an-ti-suh-PAY-shuhn",
+    "respell_rp": "an-ti-suh-PAY-shuhn",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see data/pipeline/phase2a_review_needed.json)"
+  },
+  {
+    "w": "antipollution",
+    "respell_ga": "an-tee-puh-LOO-shuhn",
+    "respell_rp": "an-tee-puh-LOO-shuhn",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see data/pipeline/phase2a_review_needed.json)"
+  },
+  {
+    "w": "antistatic",
+    "respell_ga": "an-tee-STA-dik",
+    "respell_rp": "an-tee-STA-tik",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see data/pipeline/phase2a_review_needed.json)"
+  },
+  {
+    "w": "antivirus",
+    "respell_ga": "an-tee-VY-ruhs",
+    "respell_rp": "an-tee-VY-ruhs",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see data/pipeline/phase2a_review_needed.json)"
   }
 ]

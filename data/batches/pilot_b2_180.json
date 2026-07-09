@@ -1,0 +1,1082 @@
+[
+  {
+    "w": "DNA",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "Olympia",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "Olympiad",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "Shakespearean",
+    "pos": "adjective",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "Soviet",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "abandoned",
+    "pos": "adjective",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "abnormally",
+    "pos": "adverb",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "abolish",
+    "pos": "verb",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "aboriginal",
+    "pos": "adjective",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "abruptly",
+    "pos": "adverb",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "absentee",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "absurd",
+    "pos": "adjective",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "abuse",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "accessibility",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "accommodation",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "accordingly",
+    "pos": "adverb",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "accumulate",
+    "pos": "verb",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "accusation",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "achievable",
+    "pos": "adjective",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "acid",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "acquisition",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "actively",
+    "pos": "adverb",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "actual",
+    "pos": "adjective",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "acute",
+    "pos": "adjective",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "adaptable",
+    "pos": "adjective",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "addict",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "addicted",
+    "pos": "adjective",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "addiction",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "additionally",
+    "pos": "adverb",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "adequate",
+    "pos": "adjective",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "adequately",
+    "pos": "adverb",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "adjustment",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "administrative",
+    "pos": "adjective",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "admirable",
+    "pos": "adjective",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "admiringly",
+    "pos": "adverb",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "admittedly",
+    "pos": "adverb",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "adopted",
+    "pos": "adjective",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "adoption",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "adore",
+    "pos": "verb",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "adorn",
+    "pos": "verb",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "advancement",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "advent",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "adventurous",
+    "pos": "adjective",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "adverse",
+    "pos": "adjective",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "adversely",
+    "pos": "adverb",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "adversity",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "affectionate",
+    "pos": "adjective",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "affectionately",
+    "pos": "adverb",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "affordable",
+    "pos": "adjective",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "ageless",
+    "pos": "adjective",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "aggressively",
+    "pos": "adverb",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "agony",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "aircraft",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "aircrew",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "alcoholism",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "alert",
+    "pos": "verb",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "allegation",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "alliance",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "ally",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "alongside",
+    "pos": "preposition",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "alphabetical",
+    "pos": "adjective",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "altar",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "alter",
+    "pos": "verb",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "alternate",
+    "pos": "verb",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "alternatively",
+    "pos": "adverb",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "altitude",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "amaze",
+    "pos": "verb",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "amazement",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "amazingly",
+    "pos": "adverb",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "ambassador",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "ambiguity",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "ambiguous",
+    "pos": "adjective",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "ammonia",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "amongst",
+    "pos": "preposition",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "ample",
+    "pos": "adjective",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "amplifier",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "amplify",
+    "pos": "verb",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "amuse",
+    "pos": "verb",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "analogy",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "analyst",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "anchor",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "anchorage",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "anchorman",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "anchorperson",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "anguish",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "animate",
+    "pos": "verb",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "anonymous",
+    "pos": "adjective",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "antiaircraft",
+    "pos": "adjective",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "antibacterial",
+    "pos": "adjective",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "anticancer",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "anticipate",
+    "pos": "verb",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "anticipation",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "antipollution",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "antistatic",
+    "pos": "adjective",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "antivirus",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "apostrophe",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "applicant",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "appreciative",
+    "pos": "adjective",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "appropriately",
+    "pos": "adverb",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "approximate",
+    "pos": "adjective",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "arctic",
+    "pos": "adjective",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "arena",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "aristocracy",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "armful",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "arouse",
+    "pos": "verb",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "arrogant",
+    "pos": "adjective",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "artery",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "articulate",
+    "pos": "verb",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "artificially",
+    "pos": "adverb",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "artistry",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "aspiration",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "aspire",
+    "pos": "verb",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "assault",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "assemble",
+    "pos": "verb",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "assembly",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "assert",
+    "pos": "verb",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "assess",
+    "pos": "verb",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "assessment",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "assumption",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "assurance",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "assure",
+    "pos": "verb",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "astonish",
+    "pos": "verb",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "astonished",
+    "pos": "adjective",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "astonishing",
+    "pos": "adjective",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "astonishment",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "astronomy",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "athletics",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "attached",
+    "pos": "adjective",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "attainable",
+    "pos": "adjective",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "attainment",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "attendance",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "attentive",
+    "pos": "adjective",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "attentively",
+    "pos": "adverb",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "attractiveness",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "attribute",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "attribute",
+    "pos": "verb",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "atypical",
+    "pos": "adjective",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "aubergine",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "audit",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "audition",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "authoritative",
+    "pos": "adjective",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "availability",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "await",
+    "pos": "verb",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "awe",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "axis",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "backup",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "backyard",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "balanced",
+    "pos": "adjective",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "balky",
+    "pos": "adjective",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "ballad",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "ballet",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "ballot",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "banker",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "bankrupt",
+    "pos": "verb",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "bankruptcy",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "barbershop",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "barley",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "barometer",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "barren",
+    "pos": "adjective",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "barrier",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "bartender",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "bathhouse",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "battlefield",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "beagle",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "bearing",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "beautify",
+    "pos": "verb",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "bellow",
+    "pos": "verb",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "belongings",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "beneficial",
+    "pos": "adjective",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "benevolence",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "benevolent",
+    "pos": "adjective",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "berry",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "bestow",
+    "pos": "verb",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "bestseller",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "betray",
+    "pos": "verb",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "bewilder",
+    "pos": "verb",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "bewilderment",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "bidding",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "bikini",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  },
+  {
+    "w": "billion",
+    "pos": "noun",
+    "cefr": "B2",
+    "_source": "CEFR-J v1.5 (pilot)"
+  }
+]

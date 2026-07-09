@@ -1,1 +1,387 @@
-[]
+[
+  {
+    "w": "DNA",
+    "reason": "rp: \"unknown coda consonant 'ɛ'\"",
+    "ipa": "/ˌdiˌɛnˈeɪ/"
+  },
+  {
+    "w": "Olympia",
+    "reason": "rp: \"unknown onset consonant 'o'\"",
+    "ipa": "/oʊˈlɪmpiə/"
+  },
+  {
+    "w": "Olympiad",
+    "reason": "rp: \"unknown onset consonant 'o'\"",
+    "ipa": "/oʊˈlɪmpiˌæd/"
+  },
+  {
+    "w": "Soviet",
+    "reason": "rp: \"unknown onset consonant 'o'\"",
+    "ipa": "/ˈsoʊviət/"
+  },
+  {
+    "w": "abolish",
+    "reason": "rp: \"unknown coda consonant 'ɑ'\"",
+    "ipa": "/əˈbɑlɪʃ/"
+  },
+  {
+    "w": "absurd",
+    "reason": "rp: \"unknown coda consonant 'ɝ'\"",
+    "ipa": "/əbˈsɝd/"
+  },
+  {
+    "w": "accessibility",
+    "reason": "rp: \"unknown coda consonant 'ɛ'\"",
+    "ipa": "/ækˌsɛsəˈbɪləti/"
+  },
+  {
+    "w": "accommodation",
+    "reason": "rp: \"unknown coda consonant 'ɑ'\"",
+    "ipa": "/əˌkɑməˈdeɪʃən/"
+  },
+  {
+    "w": "adopted",
+    "reason": "rp: \"unknown coda consonant 'ɑ'\"",
+    "ipa": "/əˈdɑptəd/"
+  },
+  {
+    "w": "adoption",
+    "reason": "rp: \"unknown coda consonant 'ɑ'\"",
+    "ipa": "/əˈdɑpʃən/"
+  },
+  {
+    "w": "advent",
+    "reason": "rp: \"unknown coda consonant 'ɛ'\"",
+    "ipa": "/ˈædˌvɛnt/"
+  },
+  {
+    "w": "adventurous",
+    "reason": "rp: \"unknown coda consonant 'ɛ'\"",
+    "ipa": "/ædˈvɛntʃərəs/"
+  },
+  {
+    "w": "adverse",
+    "reason": "rp: \"unknown coda consonant 'ɝ'\"",
+    "ipa": "/ædˈvɝs/"
+  },
+  {
+    "w": "adversely",
+    "reason": "rp: \"unknown coda consonant 'ɝ'\"",
+    "ipa": "/ædˈvɝsli/"
+  },
+  {
+    "w": "adversity",
+    "reason": "rp: \"unknown coda consonant 'ɝ'\"",
+    "ipa": "/ædˈvɝsəti/"
+  },
+  {
+    "w": "affectionate",
+    "reason": "rp: \"unknown coda consonant 'ɛ'\"",
+    "ipa": "/əˈfɛkʃənət/"
+  },
+  {
+    "w": "affectionately",
+    "reason": "rp: \"unknown coda consonant 'ɛ'\"",
+    "ipa": "/əˈfɛkʃənətli/"
+  },
+  {
+    "w": "aggressively",
+    "reason": "rp: \"unknown coda consonant 'ɛ'\"",
+    "ipa": "/əˈɡrɛsɪvli/"
+  },
+  {
+    "w": "aircraft",
+    "reason": "rp: \"unknown onset consonant 'ɛ'\"",
+    "ipa": "/ˈɛrˌkræft/"
+  },
+  {
+    "w": "aircrew",
+    "reason": "rp: \"unknown onset consonant 'ɛ'\"",
+    "ipa": "/ˈɛrˌkru/"
+  },
+  {
+    "w": "alert",
+    "reason": "rp: \"unknown coda consonant 'ɝ'\"",
+    "ipa": "/əˈlɝt/"
+  },
+  {
+    "w": "alphabetical",
+    "reason": "rp: \"unknown coda consonant 'ɛ'\"",
+    "ipa": "/ˌælfəˈbɛtɪkəl/"
+  },
+  {
+    "w": "altar",
+    "reason": "rp: \"unknown coda consonant 'ɚ'\"",
+    "ipa": "/ˈɔltɚ/"
+  },
+  {
+    "w": "alter",
+    "reason": "rp: \"unknown coda consonant 'ɚ'\"",
+    "ipa": "/ˈɔltɚ/"
+  },
+  {
+    "w": "alternate",
+    "reason": "rp: \"unknown coda consonant 'ɚ'\"",
+    "ipa": "/ˈɔltɚˌneɪt/"
+  },
+  {
+    "w": "alternatively",
+    "reason": "rp: \"unknown coda consonant 'ɝ'\"",
+    "ipa": "/ɔlˈtɝnətɪvli/"
+  },
+  {
+    "w": "ambassador",
+    "reason": "rp: \"unknown coda consonant 'ɚ'\"",
+    "ipa": "/æmˈbæsədɚ/"
+  },
+  {
+    "w": "ammonia",
+    "reason": "rp: \"unknown onset consonant 'o'\"",
+    "ipa": "/əˈmoʊnjə/"
+  },
+  {
+    "w": "amplifier",
+    "reason": "rp: \"unknown coda consonant 'ɚ'\"",
+    "ipa": "/ˈæmpləˌfaɪɚ/"
+  },
+  {
+    "w": "anchor",
+    "reason": "rp: \"unknown coda consonant 'ɚ'\"",
+    "ipa": "/ˈæŋkɚ/"
+  },
+  {
+    "w": "anchorman",
+    "reason": "rp: \"unknown coda consonant 'ɚ'\"",
+    "ipa": "/ˈæŋkɚˌmæn/"
+  },
+  {
+    "w": "anchorperson",
+    "reason": "rp: \"unknown coda consonant 'ɚ'\"",
+    "ipa": "/ˈæŋkɚˌpɝsən/"
+  },
+  {
+    "w": "anonymous",
+    "reason": "rp: \"unknown coda consonant 'ɑ'\"",
+    "ipa": "/əˈnɑnəməs/"
+  },
+  {
+    "w": "antiaircraft",
+    "reason": "rp: \"unknown coda consonant 'ɛ'\"",
+    "ipa": "/ˌæntiˈɛrˌkræft/"
+  },
+  {
+    "w": "anticancer",
+    "reason": "rp: \"unknown coda consonant 'ɚ'\"",
+    "ipa": "/ˌæntiˈkænsɚ/"
+  },
+  {
+    "w": "apostrophe",
+    "reason": "rp: \"unknown coda consonant 'ɑ'\"",
+    "ipa": "/əˈpɑstrəfi/"
+  },
+  {
+    "w": "appropriately",
+    "reason": "rp: \"unknown onset consonant 'o'\"",
+    "ipa": "/əˈproʊpriətli/"
+  },
+  {
+    "w": "approximate",
+    "reason": "rp: \"unknown coda consonant 'ɑ'\"",
+    "ipa": "/əˈprɑksəmət/"
+  },
+  {
+    "w": "arctic",
+    "reason": "rp: \"unknown onset consonant 'ɑ'\"",
+    "ipa": "/ˈɑrktɪk/"
+  },
+  {
+    "w": "aristocracy",
+    "reason": "rp: \"unknown coda consonant 'ɑ'\"",
+    "ipa": "/ˌærəˈstɑkrəsi/"
+  },
+  {
+    "w": "armful",
+    "reason": "rp: \"unknown onset consonant 'ɑ'\"",
+    "ipa": "/ˈɑrmˌfʊl/"
+  },
+  {
+    "w": "artery",
+    "reason": "rp: \"unknown onset consonant 'ɑ'\"",
+    "ipa": "/ˈɑrtəri/"
+  },
+  {
+    "w": "articulate",
+    "reason": "rp: \"unknown onset consonant 'ɑ'\"",
+    "ipa": "/ɑrˈtɪkjəˌleɪt/"
+  },
+  {
+    "w": "artificially",
+    "reason": "rp: \"unknown onset consonant 'ɑ'\"",
+    "ipa": "/ˌɑrtəˈfɪʃəli/"
+  },
+  {
+    "w": "artistry",
+    "reason": "rp: \"unknown onset consonant 'ɑ'\"",
+    "ipa": "/ˈɑrtəstri/"
+  },
+  {
+    "w": "assemble",
+    "reason": "rp: \"unknown coda consonant 'ɛ'\"",
+    "ipa": "/əˈsɛmbəl/"
+  },
+  {
+    "w": "assembly",
+    "reason": "rp: \"unknown coda consonant 'ɛ'\"",
+    "ipa": "/əˈsɛmbli/"
+  },
+  {
+    "w": "assert",
+    "reason": "rp: \"unknown coda consonant 'ɝ'\"",
+    "ipa": "/əˈsɝt/"
+  },
+  {
+    "w": "assess",
+    "reason": "rp: \"unknown coda consonant 'ɛ'\"",
+    "ipa": "/əˈsɛs/"
+  },
+  {
+    "w": "assessment",
+    "reason": "rp: \"unknown coda consonant 'ɛ'\"",
+    "ipa": "/əˈsɛsmənt/"
+  },
+  {
+    "w": "astonish",
+    "reason": "rp: \"unknown coda consonant 'ɑ'\"",
+    "ipa": "/əˈstɑnɪʃ/"
+  },
+  {
+    "w": "astonished",
+    "reason": "rp: \"unknown coda consonant 'ɑ'\"",
+    "ipa": "/əˈstɑnɪʃt/"
+  },
+  {
+    "w": "astonishing",
+    "reason": "rp: \"unknown coda consonant 'ɑ'\"",
+    "ipa": "/əˈstɑnɪʃɪŋ/"
+  },
+  {
+    "w": "astonishment",
+    "reason": "rp: \"unknown coda consonant 'ɑ'\"",
+    "ipa": "/əˈstɑnɪʃmənt/"
+  },
+  {
+    "w": "astronomy",
+    "reason": "rp: \"unknown coda consonant 'ɑ'\"",
+    "ipa": "/əˈstrɑnəmi/"
+  },
+  {
+    "w": "athletics",
+    "reason": "rp: \"unknown coda consonant 'ɛ'\"",
+    "ipa": "/æθˈlɛtɪks/"
+  },
+  {
+    "w": "attendance",
+    "reason": "rp: \"unknown coda consonant 'ɛ'\"",
+    "ipa": "/əˈtɛndəns/"
+  },
+  {
+    "w": "attentive",
+    "reason": "rp: \"unknown coda consonant 'ɛ'\"",
+    "ipa": "/əˈtɛntɪv/"
+  },
+  {
+    "w": "attentively",
+    "reason": "rp: \"unknown coda consonant 'ɛ'\"",
+    "ipa": "/əˈtɛntɪvli/"
+  },
+  {
+    "w": "aubergine",
+    "reason": "rp: \"unknown onset consonant 'o'\"",
+    "ipa": "/ˈoʊbɚˌʒin/"
+  },
+  {
+    "w": "backyard",
+    "reason": "rp: \"unknown coda consonant 'ɑ'\"",
+    "ipa": "/ˈbækˌjɑrd/"
+  },
+  {
+    "w": "banker",
+    "reason": "rp: \"unknown coda consonant 'ɚ'\"",
+    "ipa": "/ˈbæŋkɚ/"
+  },
+  {
+    "w": "barbershop",
+    "reason": "rp: no nucleus found",
+    "ipa": "/ˈbɑrbɚˌʃɑp/"
+  },
+  {
+    "w": "barley",
+    "reason": "rp: \"unknown onset consonant 'ɑ'\"",
+    "ipa": "/ˈbɑrli/"
+  },
+  {
+    "w": "barometer",
+    "reason": "rp: \"unknown coda consonant 'ɑ'\"",
+    "ipa": "/bəˈrɑmətɚ/"
+  },
+  {
+    "w": "barrier",
+    "reason": "rp: \"unknown coda consonant 'ɚ'\"",
+    "ipa": "/ˈbæriɚ/"
+  },
+  {
+    "w": "bartender",
+    "reason": "rp: no nucleus found",
+    "ipa": "/ˈbɑrˌtɛndɚ/"
+  },
+  {
+    "w": "bearing",
+    "reason": "rp: \"unknown onset consonant 'ɛ'\"",
+    "ipa": "/ˈbɛrɪŋ/"
+  },
+  {
+    "w": "bellow",
+    "reason": "rp: \"unknown onset consonant 'ɛ'\"",
+    "ipa": "/ˈbɛloʊ/"
+  },
+  {
+    "w": "beneficial",
+    "reason": "rp: \"unknown onset consonant 'ɛ'\"",
+    "ipa": "/ˌbɛnəˈfɪʃəl/"
+  },
+  {
+    "w": "benevolence",
+    "reason": "rp: \"unknown coda consonant 'ɛ'\"",
+    "ipa": "/bəˈnɛvələns/"
+  },
+  {
+    "w": "benevolent",
+    "reason": "rp: \"unknown coda consonant 'ɛ'\"",
+    "ipa": "/bəˈnɛvələnt/"
+  },
+  {
+    "w": "berry",
+    "reason": "rp: \"unknown onset consonant 'ɛ'\"",
+    "ipa": "/ˈbɛri/"
+  },
+  {
+    "w": "bestow",
+    "reason": "rp: \"unknown onset consonant 'o'\"",
+    "ipa": "/bɪˈstoʊ/"
+  },
+  {
+    "w": "bestseller",
+    "reason": "rp: no nucleus found",
+    "ipa": "/ˌbɛstˈsɛlɚ/"
+  },
+  {
+    "w": "bewilder",
+    "reason": "rp: \"unknown coda consonant 'ɚ'\"",
+    "ipa": "/bɪˈwɪldɚ/"
+  },
+  {
+    "w": "bewilderment",
+    "reason": "rp: \"unknown coda consonant 'ɚ'\"",
+    "ipa": "/bɪˈwɪldɚmənt/"
+  }
+]

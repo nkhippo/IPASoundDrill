@@ -2602,5 +2602,185 @@
     "ipa": "/ˈwɔtɚˌfɔl/",
     "ipa_actual_ga": "/ˈwɔɾɚˌfɔl/",
     "rule": "R1"
+  },
+  {
+    "w": "abandoned",
+    "ipa": "/əˈbændənd/",
+    "ipa_actual_ga": "/əˈbændn̩d/",
+    "rule": "R3"
+  },
+  {
+    "w": "accessibility",
+    "ipa": "/ækˌsɛsəˈbɪləti/",
+    "ipa_actual_ga": "/ækˌsɛsəˈbɪləɾi/",
+    "rule": "R1"
+  },
+  {
+    "w": "accordingly",
+    "ipa": "/əˈkɔrdɪŋli/",
+    "ipa_actual_ga": "/əˈkɔrɾɪŋli/",
+    "rule": "R1"
+  },
+  {
+    "w": "addict",
+    "ipa": "/ˈæˌdɪkt/",
+    "ipa_actual_ga": "/ˈæˌɾɪkt/",
+    "rule": "R1"
+  },
+  {
+    "w": "adequate",
+    "ipa": "/ˈædəkwət/",
+    "ipa_actual_ga": "/ˈæɾəkwət/",
+    "rule": "R1"
+  },
+  {
+    "w": "adequately",
+    "ipa": "/ˈædəkwətli/",
+    "ipa_actual_ga": "/ˈæɾəkwətli/",
+    "rule": "R1"
+  },
+  {
+    "w": "administrative",
+    "ipa": "/ædˈmɪnəˌstreɪtɪv/",
+    "ipa_actual_ga": "/ædˈmɪnəˌstreɪɾɪv/",
+    "rule": "R1"
+  },
+  {
+    "w": "admittedly",
+    "ipa": "/ædˈmɪtədli/",
+    "ipa_actual_ga": "/ædˈmɪɾədli/",
+    "rule": "R1"
+  },
+  {
+    "w": "adversity",
+    "ipa": "/ædˈvɝsəti/",
+    "ipa_actual_ga": "/ædˈvɝsəɾi/",
+    "rule": "R1"
+  },
+  {
+    "w": "affordable",
+    "ipa": "/əˈfɔrdəbəl/",
+    "ipa_actual_ga": "/əˈfɔrɾəbəl/",
+    "rule": "R1"
+  },
+  {
+    "w": "alphabetical",
+    "ipa": "/ˌælfəˈbɛtɪkəl/",
+    "ipa_actual_ga": "/ˌælfəˈbɛɾɪkəl/",
+    "rule": "R1"
+  },
+  {
+    "w": "alternatively",
+    "ipa": "/ɔlˈtɝnətɪvli/",
+    "ipa_actual_ga": "/ɔlˈtɝnəɾɪvli/",
+    "rule": "R1"
+  },
+  {
+    "w": "altitude",
+    "ipa": "/ˈæltəˌtud/",
+    "ipa_actual_ga": "/ˈæltəˌɾud/",
+    "rule": "R1"
+  },
+  {
+    "w": "ambassador",
+    "ipa": "/æmˈbæsədɚ/",
+    "ipa_actual_ga": "/æmˈbæsəɾɚ/",
+    "rule": "R1"
+  },
+  {
+    "w": "ambiguity",
+    "ipa": "/ˌæmbəˈɡjuəti/",
+    "ipa_actual_ga": "/ˌæmbəˈɡjuəɾi/",
+    "rule": "R1"
+  },
+  {
+    "w": "antistatic",
+    "ipa": "/ˌæntiˈstætɪk/",
+    "ipa_actual_ga": "/ˌæntiˈstæɾɪk/",
+    "rule": "R1"
+  },
+  {
+    "w": "appreciative",
+    "ipa": "/əˈpriʃətɪv/",
+    "ipa_actual_ga": "/əˈpriʃəɾɪv/",
+    "rule": "R1"
+  },
+  {
+    "w": "artery",
+    "ipa": "/ˈɑrtəri/",
+    "ipa_actual_ga": "/ˈɑrɾəri/",
+    "rule": "R1"
+  },
+  {
+    "w": "artificially",
+    "ipa": "/ˌɑrtəˈfɪʃəli/",
+    "ipa_actual_ga": "/ˌɑrɾəˈfɪʃəli/",
+    "rule": "R1"
+  },
+  {
+    "w": "artistry",
+    "ipa": "/ˈɑrtəstri/",
+    "ipa_actual_ga": "/ˈɑrɾəstri/",
+    "rule": "R1"
+  },
+  {
+    "w": "athletics",
+    "ipa": "/æθˈlɛtɪks/",
+    "ipa_actual_ga": "/æθˈlɛɾɪks/",
+    "rule": "R1"
+  },
+  {
+    "w": "attendance",
+    "ipa": "/əˈtɛndəns/",
+    "ipa_actual_ga": "/əˈtɛndn̩s/",
+    "rule": "R3"
+  },
+  {
+    "w": "audit",
+    "ipa": "/ˈɔdət/",
+    "ipa_actual_ga": "/ˈɔɾət/",
+    "rule": "R1"
+  },
+  {
+    "w": "authoritative",
+    "ipa": "/əˈθɔrəˌteɪtɪv/",
+    "ipa_actual_ga": "/əˈθɔrəˌɾeɪɾɪv/",
+    "rule": "R1"
+  },
+  {
+    "w": "availability",
+    "ipa": "/əˌveɪləˈbɪləti/",
+    "ipa_actual_ga": "/əˌveɪləˈbɪləɾi/",
+    "rule": "R1"
+  },
+  {
+    "w": "barometer",
+    "ipa": "/bəˈrɑmətɚ/",
+    "ipa_actual_ga": "/bəˈrɑməɾɚ/",
+    "rule": "R1"
+  },
+  {
+    "w": "bartender",
+    "ipa": "/ˈbɑrˌtɛndɚ/",
+    "ipa_actual_ga": "/ˈbɑrˌɾɛndɚ/",
+    "rule": "R1"
+  },
+  {
+    "w": "battlefield",
+    "ipa": "/ˈbætəlˌfild/",
+    "ipa_actual_ga": "/ˈbæɾl̩ˌfild/",
+    "rule": "R2"
+  },
+  {
+    "w": "beautify",
+    "ipa": "/ˈbjutəˌfaɪ/",
+    "ipa_actual_ga": "/ˈbjuɾəˌfaɪ/",
+    "rule": "R1"
+  },
+  {
+    "w": "bidding",
+    "ipa": "/ˈbɪdɪŋ/",
+    "ipa_actual_ga": "/ˈbɪɾɪŋ/",
+    "rule": "R1"
   }
 ]

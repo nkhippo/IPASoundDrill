@@ -1,0 +1,38 @@
+[
+  {
+    "w": "footballer",
+    "pos": "noun",
+    "cefr": "A2",
+    "_source": "CEFR-J v1.5"
+  },
+  {
+    "w": "headteacher",
+    "pos": "noun",
+    "cefr": "A2",
+    "_source": "CEFR-J v1.5"
+  },
+  {
+    "w": "motorway",
+    "pos": "noun",
+    "cefr": "A2",
+    "_source": "CEFR-J v1.5"
+  },
+  {
+    "w": "snowboarding",
+    "pos": "noun",
+    "cefr": "A2",
+    "_source": "CEFR-J v1.5"
+  },
+  {
+    "w": "stomachache",
+    "pos": "noun",
+    "cefr": "A2",
+    "_source": "CEFR-J v1.5"
+  },
+  {
+    "w": "toothache",
+    "pos": "noun",
+    "cefr": "A2",
+    "_source": "CEFR-J v1.5"
+  }
+]

@@ -1,22 +1,22 @@
 # neighbors 生成レポート (STEP4-b, v2 — adaptive)
 
-- 総語数: **4828**
+- 総語数: **5007**
 - K (近傍上限): 8
 - MAX_DIST: 2 (短 <7) / 3 (7≤ 長 <11) / 4 (超長 ≥11)
-- 近傍0語: **255** (5%)  ← Mode B実行時はランダム補填
-- 近傍3語未満: 881 (18%)
-- 近傍K語フル: 2954 (61%)
+- 近傍0語: **263** (5%)  ← Mode B実行時はランダム補填
+- 近傍3語未満: 930 (18%)
+- 近傍K語フル: 3034 (60%)
 - 平均近傍数: 6.0
-- ミニマルペア(sub)を1つ以上持つ語: **2291** (47%)
+- ミニマルペア(sub)を1つ以上持つ語: **2328** (46%)
 
 ## CEFR別カバー率
 
 | CEFR | 総数 | 0近傍 | 0近傍% | フルK% | sub保有% |
 |---|---:|---:|---:|---:|---:|
 | A1 | 1187 | 20 | 2% | 82% | 71% |
-| A2 | 1195 | 64 | 5% | 60% | 43% |
-| B1 | 2116 | 171 | 8% | 44% | 30% |
-| B2 | 330 | 0 | 0% | 99% | 91% |
+| A2 | 1195 | 57 | 5% | 61% | 43% |
+| B1 | 2116 | 161 | 8% | 45% | 31% |
+| B2 | 509 | 25 | 5% | 75% | 64% |
 
 ## サンプル: 主要なミニマルペアが取れているか
 
@@ -35,21 +35,21 @@
 - **basketball** /ˈbæskətˌbɔl/ (9 tokens) → basket/mix33
 - **submarine** /ˈsʌbməˌrin/ (8 tokens) → summarise/mix33, summarize/mix33
 - **rainforest** /ˈreɪnˌfɔrəst/ (9 tokens) → forest/mix33
-- **entertainment** /ˌɛntɚˈteɪnmənt/ (11 tokens) → entertainer/mix44, entertain/mix44
+- **entertainment** /ˌɛntɚˈteɪnmənt/ (11 tokens) → attainment/mix44, entertainer/mix44, entertain/mix44
 - **international** /ˌɪntɚˈnæʃənəl/ (11 tokens) → internationally/ins1, intentionally/mix33, interaction/mix44, intermission/mix44, national/mix44
 - **organization** /ˌɔrɡənəˈzeɪʃən/ (11 tokens) → organisation/sub1, civilisation/mix44, organism/mix44
 - **information** /ˌɪnfɚˈmeɪʃən/ (9 tokens) → intermission/mix2, confirmation/mix2, inspiration/mix33, interaction/mix33, invitation/mix33, animation/mix33
 - **representative** /ˌrɛprəˈzɛntətɪv/ (13 tokens) → (0 neighbors — genuinely isolated in wordlist)
-- **advertisement** /ædˈvɝtəzmənt/ (11 tokens) → (0 neighbors — genuinely isolated in wordlist)
+- **advertisement** /ædˈvɝtəzmənt/ (11 tokens) → advancement/mix44
 - **literature** /ˈlɪtɚətʃɚ/ (7 tokens) → literary/mix33, signature/mix33, little/mix33
 
 ## 近傍数の分布
-  - 0近傍: 255語
-  - 1近傍: 318語
-  - 2近傍: 308語
-  - 3近傍: 275語
-  - 4近傍: 217語
-  - 5近傍: 199語
-  - 6近傍: 168語
-  - 7近傍: 134語
-  - 8近傍: 2954語
+  - 0近傍: 263語
+  - 1近傍: 345語
+  - 2近傍: 322語
+  - 3近傍: 290語
+  - 4近傍: 231語
+  - 5近傍: 203語
+  - 6近傍: 170語
+  - 7近傍: 149語
+  - 8近傍: 3034語

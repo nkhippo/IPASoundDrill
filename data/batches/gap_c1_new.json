@@ -1,0 +1,6092 @@
+[
+  {
+    "w": "abound",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "abstraction",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "accustomed",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "acidic",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "acoustic",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "acoustically",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "acoustics",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "acre",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "acutely",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "adjoin",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "adjoining",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "adjustable",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "adrenaline",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "advantageous",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "adversary",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "advisory",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "aesthetic",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "aesthetically",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "agonize",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "agreeable",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "aimless",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "aimlessly",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "alienate",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "align",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "align",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "alignment",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "alignment",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "allegation",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "allege",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "alleviate",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "altruism",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "altruistic",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "amateur",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "amateur",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "amid",
+    "pos": "preposition",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "amplification",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "amply",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "anchor",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "anchored",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "animatedly",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "anthropologist",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "anthropology",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "anticlimactic",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "antics",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "antiquated",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "antiquity",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "appalling",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "appallingly",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "appliance",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "apprehensive",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "apprentice",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "apprentice",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "apprenticeship",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "apt",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "aqua",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "aquarium",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "artistically",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "assertion",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "astray",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "atmospheric",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "avid",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "awe",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "baldly",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "batter",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "batter",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "batter",
+    "pos": "",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "battered",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "battered",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "bearded",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "beforehand",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "beguiling",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "beguilingly",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "believably",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "benign",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "benignly",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "bequeath",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "billiards",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "blankness",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "bliss",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "blister",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "blister",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "blithely",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "blockbuster",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "bouquet",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "brainwash",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "brainwashing",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "bribe",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "bribe",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "bribery",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "bubbly",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "buffer",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "buffer",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "buffoon",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "bulk",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "bulky",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "bureaucratic",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "bureaucratically",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "buzzer",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "bypass",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "calorie",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "campaign",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "candid",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "candidly",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "canoe",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "carpenter",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "carpentry",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "carrier",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "cavity",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "ceaseless",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "ceaselessly",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "cessation",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "chaotically",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "charter",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "charter",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "chauffer",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "chauffer",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "chill",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "chill",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "chilly",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "chisel",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "chiselled",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "churn",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "circulate",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "circulation",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "citation",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "cite",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "clammy",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "clan",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "classy",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "claustrophobia",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "claustrophobic",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "cleanly",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "clench",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "cleverness",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "climactic",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "climax",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "clinical",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "cloak",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "closeness",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "clutch",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "clutch",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "clutter",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "clutter",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "collaborate",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "collaboration",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "collaborative",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "collaborator",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "commend",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "commendation",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "commercially",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "commission",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "commission",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "compel",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "compel",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "complementary",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "complexity",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "compliance",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "compliant",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "compliantly",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "complimentary",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "comply",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "comprise",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "compromised",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "compulsion",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "con",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "con",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "conceivable",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "conceive",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "concerto",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "concur",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "conditional",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "conditionally",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "confide",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "confinement",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "conform",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "conformity",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "congregate",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "conjure",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "connoisseur",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "conscientious",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "conscientiously",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "conservatory",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "conserve",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "constraint",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "consultancy",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "consultation",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "contested",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "contextual",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "contextually",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "continuity",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "continuity",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "contract",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "contract",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "contractor",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "convict",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "convict",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "conviction",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "convoluted",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "corps",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "coupled",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "coverage",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "crave",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "craving",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "creamy",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "credential",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "credibility",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "credible",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "credibly",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "criteria",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "crude",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "crudely",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "crumb",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "crumble",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "customary",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "cynic",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "cynical",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "cynically",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "cynicism",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "damply",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "darkroom",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "daunt",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "daunting",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "daydream",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "daydream",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "debut",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "debut",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "deceit",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "degradation",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "degrade",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "degrading",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "demise",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "demo",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "demographic",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "demographic",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "demographically",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "demography",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "demolition",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "depict",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "depiction",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "deprivation",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "descent",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "desertion",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "detest",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "detestable",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "detriment",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "detrimental",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "detrimentally",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "detritus",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "devotee",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "discard",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "discourse",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "disdain",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "disillusionment",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "dislodge",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "dismal",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "dismally",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "dismay",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "dismay",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "dispensable",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "dispensary",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "dispense",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "disquieting",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "dissect",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "dissection",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "dither",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "diverge",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "divergence",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "divergent",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "diversity",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "docile",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "docilely",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "domestically",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "domesticate",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "domestication",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "dominant",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "dominantly",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "domination",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "dramatist",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "drawback",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "durable",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "durable",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "duration",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "dutiful",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "dutifully",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "dynamically",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "eccentric",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "eccentric",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "eccentric",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "eccentrically",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "eclectic",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "eclectic",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "eclectically",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "ecstatic",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "ecstatically",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "effortless",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "ego",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "elaborate",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "elaborate",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "elaboration",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "elastic",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "elastic",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "elevate",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "elevation",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "elitist",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "elongate",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "elude",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "elusive",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "embark",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "endorsement",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "engross",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "engrossing",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "enormously",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "enterprising",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "enviable",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "envisage",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "estimation",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "ethical",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "ethically",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "evoke",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "ewe",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "exert",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "exhaust",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "exhibitionist",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "exhilarate",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "exhilarating",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "exhilaration",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "exodus",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "exotic",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "exotically",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "expedite",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "expedition",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "expire",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "explanatory",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "exploit",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "exploitation",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "explosively",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "exterior",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "extortion",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "extravagance",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "exuberance",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "exuberant",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "exuberantly",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "fabulously",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "facial",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "facial",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "facilitation",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "faction",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "fanatic",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "fanatic",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "fanatically",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "fanciful",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "farce",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "fatality",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "fatigue",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "ferocious",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "ferociously",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "fiddle",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "fiddle",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "fiddler",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "fiddly",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "fiend",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "fiendish",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "fiendishly",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "fiercely",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "firewall",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "fissure",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "fixture",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "flashback",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "flask",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "flatter",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "flattery",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "flick",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "flicker",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "flourish",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "flourish",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "folktale",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "forensic",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "forfeit",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "formality",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "formulate",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "fossil",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "fraction",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "fragmentation",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "frostily",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "frosty",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "fuse",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "fusion",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "gadget",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "gamely",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "gape",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "gape",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "gem",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "genome",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "geological",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "geologically",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "ghostly",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "gig",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "glean",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "glum",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "glumly",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "gnaw",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "gourmet",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "gourmet",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "graft",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "grapefruit",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "grounds",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "grounds",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "grounds",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "gruelling",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "gruesome",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "gruesomely",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "grumble",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "gush",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "gush",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "gushing",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "gushingly",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "gusto",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "gutsy",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "gypsy",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "hack",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "hack",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "haggle",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "harass",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "harassment",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "headstrong",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "hedgehog",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "heifer",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "heighten",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "hence",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "heroine",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "hibernate",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "hibernation",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "homely",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "honk",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "honk",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "hostess",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "hostile",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "hostile",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "hostility",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "hostility",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "humble",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "humble",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "hypocrisy",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "hypocrite",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "hypocritical",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "hypocritically",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "immense",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "immensely",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "immortalize",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "imp",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "impede",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "impediment",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "imperative",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "imperative",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "impersonal",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "impersonally",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "impersonate",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "impersonation",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "impersonator",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "impervious",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "impish",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "impishly",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "implicate",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "implicate",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "impoverished",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "incision",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "incisor",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "inclusion",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "inclusive",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "inclusively",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "indefinite",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "indefinitely",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "indispensable",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "individuality",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "induct",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "induction",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "inexcusable",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "inexcusably",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "inexhaustible",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "inexhaustible",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "inexplicable",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "inexplicably",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "ingenious",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "ingenuity",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "inherent",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "inherently",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "inheritance",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "injustice",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "innovate",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "innovation",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "innovative",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "insecure",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "insecurely",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "insensitive",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "insensitively",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "insightful",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "insightful",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "insightfully",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "instinctive",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "instinctively",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "insubordinate",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "insubordinately",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "insubordination",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "integral",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "intellect",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "interject",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "interjection",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "intuit",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "intuition",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "intuitive",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "intuitively",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "invoice",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "irate",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "irately",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "irony",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "isolate",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "isolated",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "itinerary",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "jersey",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "jersey",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "jurisdiction",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "justly",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "juvenile",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "juvenile",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "knowledgeable",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "lapse",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "lapse",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "lapse",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "latent",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "lavatory",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "legacy",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "lethargic",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "lethargically",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "lethargy",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "liaison",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "likelihood",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "limitless",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "linear",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "linearly",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "loom",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "ludicrous",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "ludicrously",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "lust",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "macabre",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "magnetic",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "magnetically",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "magnetism",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "malfunction",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "manicure",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "manicure",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "manipulation",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "marginal",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "marginally",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "marvel",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "maternal",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "maternalistic",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "meaningless",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "meaninglessly",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "mechanism",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "methodical",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "midwife",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "mingle",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "minutiae",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "misplace",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "monotonous",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "monotonously",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "monotony",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "motley",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "mountaineer",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "munch",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "muscular",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "mutually",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "mythological",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "mythology",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "naive",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "naively",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "naivety",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "naturalness",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "neglectful",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "negligent",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "negligently",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "negligible",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "niche",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "nocturnal",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "nondescript",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "norms",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "notable",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "notwithstanding",
+    "pos": "preposition",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "numb",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "numb",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "oblige",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "obscure",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "obscure",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "obscurely",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "occupant",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "occupational",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "oddity",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "offspring",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "orchard",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "ordinarily",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "organizational",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "ornamental",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "otter",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "outset",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "overalls",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "overdraft",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "overdraft",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "oversee",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "overseer",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "panorama",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "panoramic",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "parasite",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "paternal",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "paternalistic",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "pathos",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "paywall",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "peacock",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "peasant",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "pedicure",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "pendulous",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "pendulum",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "pendulum",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "peninsula",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "perceptive",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "perceptively",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "perpetuate",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "persecute",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "persecution",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "personification",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "persuasively",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "pertinent",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "phenomenal",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "phenomenally",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "physicality",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "physique",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "pigeon",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "pinnacle",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "pioneer",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "pioneer",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "placid",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "placidly",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "plague",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "plaque",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "plaster",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "plaster",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "plausibility",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "plausible",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "plausibly",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "pleasurable",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "ploy",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "plumbing",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "plummet",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "plunge",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "plunge",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "poetess",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "poise",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "popularization",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "portable",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "portable",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "portray",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "portrayal",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "possessor",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "posture",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "pounce",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "preach",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "preacher",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "precision",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "predecessor",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "premier",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "premier",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "premise",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "premise",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "premises",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "primitively",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "principally",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "privileged",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "profess",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "professionalism",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "profound",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "profoundly",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "prohibitive",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "prohibitively",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "proliferate",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "prolific",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "prolifically",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "prop",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "prop",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "prophet",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "prophetic",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "prospective",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "protagonist",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "provisions",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "provocative",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "provocatively",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "provoke",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "prowl",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "psyche",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "psychiatric",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "psychiatrist",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "purity",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "quarry",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "query",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "quest",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "quip",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "quip",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "quirk",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "quirky",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "quirky",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "radiator",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "rally",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "rapport",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "rarity",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "raunchily",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "raunchy",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "readable",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "realism",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "realist",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "reap",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "reassurance",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "reassure",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "recess",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "recess",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "recessive",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "recharge",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "recollection",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "rediscover",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "reenact",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "refresh",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "refreshing",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "refreshingly",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "refreshingly",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "refurbish",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "refurbishment",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "relapse",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "relapse",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "relinquish",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "reluctantly",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "remedial",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "reminisce",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "reminiscent",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "remorse",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "remorsefully",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "remorseless",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "remorselessly",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "remotely",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "removed",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "render",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "rendering",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "renown",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "repel",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "repellant",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "repellant",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "repertory",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "repute",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "resent",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "resilience",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "resilient",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "resin",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "resonate",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "respite",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "restoration",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "restorative",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "retention",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "retrace",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "revealing",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "revere",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "riveting",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "robust",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "robustly",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "rotate",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "roundup",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "rudimentary",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "rudiments",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "rumble",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "rumble",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "rustle",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "rustle",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "ruthless",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "ruthlessness",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "sacrifice",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "sacrifice",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "salivate",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "saloon",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "salvage",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "salvation",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "salve",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "sanctity",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "sap",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "sarcasm",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "sarcastic",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "sarcastically",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "sauna",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "scathing",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "scenario",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "scoff",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "scorn",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "scornful",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "scornfully",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "scramble",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "screenplay",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "screenwriter",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "scrutiny",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "sedate",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "sedate",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "sedately",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "sedentary",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "seedling",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "sentient",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "sentiment",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "sentimental",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "sentimentally",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "sequel",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "settee",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "shambles",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "shed",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "shortlist",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "shortlist",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "showy",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "silhouette",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "simplicity",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "sketchbook",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "slack",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "slack",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "slack",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "slackly",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "slob",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "smug",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "smugly",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "snail",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "snooze",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "socialization",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "somersault",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "somersault",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "spacious",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "spartan",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "specification",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "specimen",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "speculate",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "speculation",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "speculative",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "splatter",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "sponsorship",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "spontaneous",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "spontaneously",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "sprawl",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "sprawl",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "sprout",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "sprout",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "squander",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "staccato",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "staccato",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "stagger",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "staggering",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "stamina",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "staple",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "startling",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "startlingly",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "stately",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "stiffen",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "stimuli",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "stoke",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "strap",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "strap",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "strapping",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "stray",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "stray",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "stray",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "stressfully",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "stretching",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "structural",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "structurally",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "stuffily",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "stuffiness",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "stuffy",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "stylistic",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "stylistically",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "subordinate",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "substantially",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "subtly",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "suburban",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "suburbia",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "succession",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "succulent",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "succulent",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "succulently",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "suds",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "suffice",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "suitor",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "superficial",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "superficially",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "supple",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "suspension",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "sustainable",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "sustainably",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "swap",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "swap",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "swap",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "symptomatic",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "synopsis",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "synthetic",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "synthetically",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "tact",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "tactful",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "tactfully",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "tailor",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "tailor",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "tangle",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "tangle",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "tangled",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "tantamount",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "tantrum",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "tastebud",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "taut",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "tautly",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "tedious",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "tedious",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "tediously",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "tedium",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "telltale",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "temperament",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "temperamental",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "temperamentally",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "terrain",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "testament",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "thereby",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "timid",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "tinker",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "tinker",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "torment",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "torment",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "torturous",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "toughness",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "tract",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "trampoline",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "tranquil",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "tranquility",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "transatlantic",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "transfix",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "transit",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "trauma",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "traumatic",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "trying",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "turmoil",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "twitch",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "twitch",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "tycoon",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "unassisted",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "unconventional",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "unconvincing",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "unconvincingly",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "undaunted",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "unenviable",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "unenviably",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "uneventful",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "uniformity",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "uninspiring",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "unison",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "unmanageable",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "unmanned",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "unmusical",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "unmusically",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "unoccupied",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "unplug",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "unreliably",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "unscathing",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "unsettle",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "unsettling",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "unsustainable",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "unsustainably",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "untangle",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "untangled",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "unwavering",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "unwaveringly",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "upheaval",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "usher",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "utensil",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "vegetation",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "venerate",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "veneration",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "ventilate",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "ventilation",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "verandah",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "verdict",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "versatile",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "versatility",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "vertical",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "verve",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "vicious",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "viciously",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "victorious",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "victoriously",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "violet",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "vitality",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "voluntarily",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "voluntary",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "voracious",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "voraciously",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "wares",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "wary",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "washtub",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "waterfront",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "wayside",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "whilst",
+    "pos": "conjunction",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "wicked",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "wickedly",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "withdrawal",
+    "pos": "noun",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "withdrawn",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "wizened",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "woo",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "wooded",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "wrangle",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "wrench",
+    "pos": "verb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "wry",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "wryly",
+    "pos": "adverb",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  },
+  {
+    "w": "zany",
+    "pos": "adjective",
+    "cefr": "C1",
+    "_source": "Octanove C1/C2 v1.0"
+  }
+]
