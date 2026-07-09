@@ -78,8 +78,9 @@
   .card-top .cefr{font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.06em;color:var(--signal);background:var(--signal-soft);border-radius:999px;padding:3px 9px;line-height:1.2;white-space:nowrap}
   .card-top .cefr.is-unknown{color:var(--faint);background:transparent;border:1px dashed var(--hair);font-weight:600}
   .card-top-right{margin-left:auto;display:flex;align-items:center;gap:8px;flex-shrink:0}
-  .reflect-btn{font-size:10px;font-family:var(--mono);letter-spacing:.03em;padding:3px 8px;border-radius:999px;border:1px solid var(--hair);background:transparent;color:var(--muted);cursor:pointer;white-space:nowrap}
-  .reflect-btn:hover{color:var(--ink);border-color:var(--muted)}
+  .reflect-dock{position:fixed;right:max(16px, calc((100vw - 600px)/2 + 18px));bottom:18px;z-index:30}
+  .reflect-dock .reflect-btn{font-size:12px;font-family:var(--ui);font-weight:700;letter-spacing:.02em;padding:10px 16px;border-radius:12px;border:1px solid var(--hair);background:#fff;color:var(--ink);cursor:pointer;white-space:nowrap;box-shadow:0 6px 14px rgba(25,28,32,.08)}
+  .reflect-dock .reflect-btn:hover{border-color:var(--signal);color:var(--signal)}
   .qno{font-family:var(--mono);font-size:11px;color:var(--faint)}
 
   .readout{display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;padding:10px 4px 6px}
@@ -293,6 +294,8 @@
     body.in-play .readout{gap:10px;padding:8px 2px 6px}
     body.in-play .readout .ipa{font-size:clamp(26px,8vw,40px);line-height:1.55}
     .alt-ipa{font-size:12px;margin-top:4px}
+    .reflect-dock{right:12px;bottom:12px}
+    .reflect-dock .reflect-btn{padding:9px 14px;font-size:11.5px;border-radius:11px}
   }
   @media (prefers-reduced-motion:no-preference){.panel{animation:rise .26s ease}@keyframes rise{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}}
 </style>
@@ -432,7 +435,7 @@
 
   <!-- MODE B STUDY -->
   <section id="cardModeBStudy" class="panel hidden">
-    <div class="card-top"><span class="cefr" id="mbSCefr" hidden></span><div class="card-top-right"><button class="reflect-btn" type="button" data-reflect></button><div class="qno" id="mbSNo"></div></div></div>
+    <div class="card-top"><span class="cefr" id="mbSCefr" hidden></span><div class="card-top-right"><div class="qno" id="mbSNo"></div></div></div>
     <div class="readout"><button class="playicon" id="mbSPlay" type="button" aria-label="Listen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div>
     <div class="readout"><div class="ipa" id="mbSIpa"></div></div>
     <div class="alt-ipa hidden" id="mbSAltIpa"></div>
@@ -456,7 +459,7 @@
 
   <!-- MODE B QUIZ MCQ -->
   <section id="cardModeBMcq" class="panel hidden">
-    <div class="card-top"><span class="cefr" id="mbMCefr" hidden></span><div class="card-top-right"><button class="reflect-btn" type="button" data-reflect></button><div class="qno" id="mbMNo"></div></div></div>
+    <div class="card-top"><span class="cefr" id="mbMCefr" hidden></span><div class="card-top-right"><div class="qno" id="mbMNo"></div></div></div>
     <div class="flabel" style="text-align:center;margin-bottom:4px" id="mbMHead">Choose the meaning</div>
     <div class="readout"><button class="playicon" id="mbMPlay" type="button" aria-label="Listen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div>
     <div class="mcqopts" id="mbMOpts"></div>
@@ -465,7 +468,7 @@
 
   <!-- MODE B QUIZ DICTATION -->
   <section id="cardModeBDict" class="panel hidden">
-    <div class="card-top"><span class="cefr" id="mbDCefr" hidden></span><div class="card-top-right"><button class="reflect-btn" type="button" data-reflect></button><div class="qno" id="mbDNo"></div></div></div>
+    <div class="card-top"><span class="cefr" id="mbDCefr" hidden></span><div class="card-top-right"><div class="qno" id="mbDNo"></div></div></div>
     <div class="flabel" style="text-align:center;margin-bottom:4px" id="mbDHead">Type the word</div>
     <div class="readout"><button class="playicon" id="mbDPlay" type="button" aria-label="Listen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div>
     <div class="answer">
@@ -476,7 +479,7 @@
 
   <!-- DECODE CARD -->
   <section id="cardDecode" class="panel hidden">
-    <div class="card-top"><span class="cefr" id="dCefr" hidden></span><div class="card-top-right"><button class="reflect-btn" type="button" data-reflect></button><div class="qno" id="dNo"></div></div></div>
+    <div class="card-top"><span class="cefr" id="dCefr" hidden></span><div class="card-top-right"><div class="qno" id="dNo"></div></div></div>
     <div class="readout"><div class="ipa" id="dIpa"></div>
       <button class="playicon" id="dPlay" type="button" aria-label="Listen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button>
     </div>
@@ -490,7 +493,7 @@
 
   <!-- ENCODE CARD -->
   <section id="cardEncode" class="panel hidden">
-    <div class="card-top"><span class="cefr" id="eCefr" hidden></span><div class="card-top-right"><button class="reflect-btn" type="button" data-reflect></button><div class="qno" id="eNo"></div></div></div>
+    <div class="card-top"><span class="cefr" id="eCefr" hidden></span><div class="card-top-right"><div class="qno" id="eNo"></div></div></div>
     <div class="readout"><div class="wordbig" id="eWord"></div>
       <button class="playicon" id="ePlay" type="button" aria-label="Listen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button>
     </div>
@@ -504,7 +507,7 @@
 
   <!-- REVEAL -->
   <section id="reveal" class="panel hidden">
-    <div class="card-top"><span class="cefr" id="rCefr" hidden></span><div class="card-top-right"><button class="reflect-btn" type="button" data-reflect></button><div class="qno" id="rNo"></div></div></div>
+    <div class="card-top"><span class="cefr" id="rCefr" hidden></span><div class="card-top-right"><div class="qno" id="rNo"></div></div></div>
     <div class="reveal">
       <div class="word" id="rWord"></div>
       <div class="word-gloss" id="rGloss"></div>
@@ -532,6 +535,9 @@
     <div class="reviewlist" id="reviewList"></div>
     <div class="sumbtns"><button class="again" id="againBtn">Play again</button><button class="weak" id="weakBtn">Review misses only</button></div>
   </section>
+</div>
+<div class="reflect-dock hidden" id="reflectDock">
+  <button class="reflect-btn" id="reflectDockBtn" type="button"></button>
 </div>
 
 <div class="modal hidden" id="settingsModal" role="dialog" aria-modal="true" aria-labelledby="settingsTitle">
@@ -1087,7 +1093,7 @@ function applyI18n() {
   $("weakHead").textContent = t("summary.weak_head");
   $("againBtn").textContent = t("back_top");
   $("weakBtn").textContent = t("summary.weak_btn");
-  document.querySelectorAll("[data-reflect]").forEach(b => { b.textContent = t("reflect.btn"); });
+  $("reflectDockBtn").textContent = t("reflect.btn");
   ["dPlay", "ePlay", "rPlay"].forEach(id => { const b = $(id); if (b) b.setAttribute("aria-label", t("listen")); });
   $("settingsBtn").setAttribute("aria-label", t("settings_btn"));
   $("settingsScrim").setAttribute("aria-label", t("settings_close"));
@@ -1286,6 +1292,7 @@ function setSetupVisible(on){
   $("settingsBtn").classList.toggle("hidden",!on);
   $("guideBtn").classList.toggle("hidden",!on);
   $("playLine").classList.toggle("hidden",on);
+  $("reflectDock").classList.toggle("hidden",on);
   document.body.classList.toggle("in-play",!on);
   if(on){
     if(currentAudio){currentAudio.pause();currentAudio=null;}
@@ -2192,7 +2199,7 @@ function showReflection(){renderSummary();}
 $("startBtn").addEventListener("click",()=>startSession(false));
 $("againBtn").addEventListener("click",goToTop);
 $("weakBtn").addEventListener("click",()=>startSession(true));
-document.querySelectorAll("[data-reflect]").forEach(btn=>btn.addEventListener("click",showReflection));
+$("reflectDockBtn").addEventListener("click",showReflection);
 
 /* ---------- info rendering ---------- */
 function renderInfo(boxId,sym){
@@ -2260,6 +2267,7 @@ function renderCard(){
   const c=S.queue[S.idx];S.cur=c;S.revealed=false;S.built=[];S.mbQuiz=null;
   S.curCarrier=(isConnectedItem(c)||isWeakItem(c))?pickCarrier(c):null;
   show("reveal",false);hideModeBCards();
+  $("reflectDock").classList.remove("hidden");
   $("meter").innerHTML="<b>"+(S.idx+1)+"</b> / "+S.poolTotal;
   if(S.appMode==="b"){
     if(MODEB_QUIZ_ENABLED&&c.mbKind==="quiz")renderModeBQuizSpell(c);
@@ -2549,6 +2557,7 @@ $("rPlay").addEventListener("click",()=>{if(S.cur)speak(S.cur.w,speakOptsForItem
 /* ---------- summary ---------- */
 function renderSummary(){
   show("cardDecode",false);show("cardEncode",false);show("reveal",false);hideModeBCards();show("summary",true);
+  $("reflectDock").classList.add("hidden");
   const total=S.answered,pct=total?Math.round(S.correct/total*100):0;
   $("sumPct").textContent=pct;
   $("sumLine").textContent=t("summary.line",{c:S.correct,t:total,m:S.missed.length});
