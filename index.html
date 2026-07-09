@@ -335,6 +335,16 @@
       </div>
     </div>
 
+    <div class="field" id="cefrField">
+      <div class="flabel" id="flabelCefr">CEFR level</div>
+      <div class="pills" id="cefrPills">
+        <button class="pill" data-cefr="A1" aria-pressed="true" id="cefrA1">A1</button>
+        <button class="pill" data-cefr="A2" aria-pressed="true" id="cefrA2">A2</button>
+        <button class="pill" data-cefr="B1" aria-pressed="false" id="cefrB1">B1</button>
+      </div>
+      <div class="countnote" id="cefrNote"></div>
+    </div>
+
     <div id="wordsSetup">
     <div class="field" id="dirField">
       <div class="flabel" id="flabelDir">Direction</div>
@@ -342,16 +352,6 @@
         <button class="opt" data-dir="decode" aria-pressed="true"><span class="ot" id="dirDecodeT">IPA &rarr; word</span><span class="od" id="dirDecodeD">Read the IPA and type the word</span></button>
         <button class="opt" data-dir="encode" aria-pressed="false"><span class="ot" id="dirEncodeT">word &rarr; IPA</span><span class="od" id="dirEncodeD">Build the IPA from the spelling</span></button>
       </div>
-    </div>
-
-    <div class="field" id="cefrField">
-      <div class="flabel" id="flabelCefr">Level</div>
-      <div class="pills" id="cefrPills">
-        <button class="pill" data-cefr="A1" aria-pressed="true" id="cefrA1">A1</button>
-        <button class="pill" data-cefr="A2" aria-pressed="true" id="cefrA2">A2</button>
-        <button class="pill" data-cefr="B1" aria-pressed="false" id="cefrB1">B1</button>
-      </div>
-      <div class="countnote" id="cefrNote"></div>
     </div>
 
     <button type="button" class="setup-adv-toggle" id="wordsFilterToggle" aria-expanded="false" aria-controls="wordsFilterAdvanced">Customize filters</button>
@@ -1377,7 +1377,7 @@ function updateSetupFields(){
   show("connectedSetup",connected);
   if(!connected)setConnectedFilterAdvanced(false);
   show("grpField",words&&S.reg==="regular");
-  show("cefrField",words);
+  show("cefrField",words||modeB);
   $("focusTrapNote").textContent=words&&(S.focus==="traps"?t("focus.traps_d"):S.focus==="weak"?t("focus.weak_d"):"");
   $("regNote").textContent=words&&(S.reg==="regular"?t("reg.regular_d"):S.reg==="irregular"?t("reg.irregular_d"):"");
   $("dInput").placeholder=(S.tab==="connected"&&S.csFilter!=="weak")?t("input_phrase"):t("input_ph");
@@ -1429,10 +1429,9 @@ function filteredCsPool(){
 }
 function updatePool(){
   if(S.appMode==="b"){
-    refreshVocabBandUnlock();
-    const band=getVocabBand();
-    const pool=modeBBandPool(band);
-    $("poolNote").classList.add("hidden");
+    const pool=modeBPool();
+    $("poolNote").classList.remove("hidden");
+    $("poolNote").textContent=t("pool.count",{n:pool.length});
     if(dataReady())$("startBtn").disabled=pool.length===0;
     return;
   }
@@ -1478,6 +1477,10 @@ function setVocabBand(b){try{localStorage.setItem(LS_VOCAB_BAND_KEY,b);}catch(e)
 function vocabEntry(w){return loadVocab()[w]||null;}
 function modeBEligible(w){return!!(w&&w.gloss&&w.cefr&&MODEB_BANDS.includes(w.cefr)&&!MODEB_EXCLUDED_SRC.has(w.src));}
 function modeBBandPool(band){return PRESET.filter(w=>modeBEligible(w)&&w.cefr===band);}
+function modeBPool(){
+  if(S.cefrLevels.size===0)return [];
+  return PRESET.filter(w=>modeBEligible(w)&&S.cefrLevels.has(w.cefr));
+}
 function bandProgress(band){
   const pool=modeBBandPool(band),vocab=loadVocab();
   let mastered=0;
@@ -1536,8 +1539,7 @@ function buildMcqChoices(correct){
   return shuffle([correct,...picks].slice(0,4));
 }
 function buildModeBQueue(){
-  refreshVocabBandUnlock();
-  const band=getVocabBand(),pool=modeBBandPool(band),vocab=loadVocab();
+  const pool=modeBPool(),vocab=loadVocab();
   const study=shuffle(pool.filter(w=>{const e=vocab[w.w];return!e||!e.seen;}));
   const quiz=shuffle(pool.filter(w=>{const e=vocab[w.w];return e&&e.seen&&isDue(e);}));
   const used=new Set(),out=[];
