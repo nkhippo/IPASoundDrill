@@ -614,5 +614,62 @@
     "flags": [
       "R4-VntV-excluded"
     ]
+  },
+  {
+    "w": "mentally",
+    "ipa": "/ˈmɛntəli/",
+    "flags": [
+      "R4-VntV-excluded"
+    ]
+  },
+  {
+    "w": "misunderstanding",
+    "ipa": "/ˌmɪsəndɚˈstændɪŋ/",
+    "flags": [
+      "R4-VntV-excluded",
+      "R4-VntV-excluded"
+    ]
+  },
+  {
+    "w": "mountaintop",
+    "ipa": "/ˈmaʊntənˌtɑp/",
+    "flags": [
+      "R4-VntV-excluded"
+    ]
+  },
+  {
+    "w": "outstanding",
+    "ipa": "/ˌaʊtˈstændɪŋ/",
+    "flags": [
+      "R4-VntV-excluded"
+    ]
+  },
+  {
+    "w": "phantom",
+    "ipa": "/ˈfæntəm/",
+    "flags": [
+      "R4-VntV-excluded"
+    ]
+  },
+  {
+    "w": "quantity",
+    "ipa": "/ˈkwɑntəti/",
+    "flags": [
+      "R4-VntV-excluded"
+    ]
+  },
+  {
+    "w": "remainder",
+    "ipa": "/rɪˈmeɪndɚ/",
+    "flags": [
+      "R4-VntV-excluded"
+    ]
+  },
+  {
+    "w": "representative",
+    "ipa": "/ˌrɛprəˈzɛntətɪv/",
+    "flags": [
+      "R4-VntV-excluded"
+    ]
   }
 ]

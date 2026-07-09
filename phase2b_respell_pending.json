@@ -526,5 +526,53 @@
     "respell_ga": "MAYN-tuh-nuhns",
     "respell_rp": "MAYNT-nuhns",
     "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see phase2a_review_needed.json)"
+  },
+  {
+    "w": "mentally",
+    "respell_ga": "MEHN-tuh-lee",
+    "respell_rp": "MEHN-tuh-lee",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see phase2a_review_needed.json)"
+  },
+  {
+    "w": "misunderstanding",
+    "respell_ga": "mi-suhn-der-STAN-ding",
+    "respell_rp": "mi-suhn-duh-STAN-ding",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see phase2a_review_needed.json)"
+  },
+  {
+    "w": "mountaintop",
+    "respell_ga": "MOWN-tn-tahp",
+    "respell_rp": "MOWN-tuhn-top",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see phase2a_review_needed.json)"
+  },
+  {
+    "w": "outstanding",
+    "respell_ga": "owt-STAN-ding",
+    "respell_rp": "owt-STAN-ding",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see phase2a_review_needed.json)"
+  },
+  {
+    "w": "phantom",
+    "respell_ga": "FAN-tuhm",
+    "respell_rp": "FAN-tuhm",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see phase2a_review_needed.json)"
+  },
+  {
+    "w": "quantity",
+    "respell_ga": "KWAHN-tuh-dee",
+    "respell_rp": "KWON-ti-tee",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see phase2a_review_needed.json)"
+  },
+  {
+    "w": "remainder",
+    "respell_ga": "ri-MAYN-der",
+    "respell_rp": "ri-MAYN-duh",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see phase2a_review_needed.json)"
+  },
+  {
+    "w": "representative",
+    "respell_ga": "reh-pruh-ZEHN-tuh-div",
+    "respell_rp": "reh-pri-ZEHN-tuh-tiv",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see phase2a_review_needed.json)"
   }
 ]
