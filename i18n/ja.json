@@ -141,8 +141,8 @@
     "no_results": "見つかりません"
   },
   "reveal": {
-    "rp_note": "RP（英）",
-    "ga_note": "GA（米）",
+    "rp_note": "RP",
+    "ga_note": "GA",
     "respell_label": "発音ガイド",
     "dict_label": "辞書表記",
     "alt_same": "同じ"

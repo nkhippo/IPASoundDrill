@@ -141,8 +141,8 @@
     "no_results": "결과 없음"
   },
   "reveal": {
-    "rp_note": "RP（영）",
-    "ga_note": "GA（미）",
+    "rp_note": "RP",
+    "ga_note": "GA",
     "respell_label": "발음 가이드",
     "dict_label": "사전 표기",
     "alt_same": "같음"

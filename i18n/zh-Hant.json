@@ -141,8 +141,8 @@
     "no_results": "無結果"
   },
   "reveal": {
-    "rp_note": "RP(英)",
-    "ga_note": "GA(美)",
+    "rp_note": "RP",
+    "ga_note": "GA",
     "respell_label": "簡易發音",
     "dict_label": "詞典標記",
     "alt_same": "相同"
