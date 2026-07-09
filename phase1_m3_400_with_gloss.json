@@ -1,0 +1,8002 @@
+[
+  {
+    "w": "entertain",
+    "ipa": "/ˌɛntɚˈteɪn/",
+    "rp_ipa": "/ˌentəˈteɪn/",
+    "cefr": "B1",
+    "pos": "動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "entertain",
+      "ja": "楽しませる、もてなす",
+      "zh": "娱乐、招待",
+      "ko": "즐겁게 하다, 접대하다",
+      "fil": "aliwin"
+    },
+    "def": "To provide amusement or enjoyment for people.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "entertainer",
+    "ipa": "/ˌɛntɚˈteɪnɚ/",
+    "rp_ipa": "/ˌentəˈteɪnə/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "entertainer",
+      "ja": "エンターテイナー、芸人",
+      "zh": "艺人、表演者",
+      "ko": "연예인, 예능인",
+      "fil": "entertainer"
+    },
+    "def": "A person whose job is to entertain audiences, such as a singer or comedian.",
+    "neighbors": [],
+    "_generation_source": "manual_phonological"
+  },
+  {
+    "w": "enthusiasm",
+    "ipa": "/ɪnˈθuziˌæzəm/",
+    "rp_ipa": "/ɪnˈθuːzɪˌæzəm/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "enthusiasm",
+      "ja": "熱意、熱狂",
+      "zh": "热情、热忱",
+      "ko": "열정, 열의",
+      "fil": "sigasig"
+    },
+    "def": "A strong feeling of excitement and interest in something.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "enthusiast",
+    "ipa": "/ɛnˈθuziˌæst/",
+    "rp_ipa": "/ɪnˈθuːzɪˌæst/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "enthusiast",
+      "ja": "熱心な愛好者",
+      "zh": "爱好者、热衷者",
+      "ko": "열성팬, 애호가",
+      "fil": "mahilig"
+    },
+    "def": "A person who is very interested in and enthusiastic about a particular activity.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "enthusiastic",
+    "ipa": "/ɪnˌθuziˈæstɪk/",
+    "rp_ipa": "/ɪnθˌjuːzɪˈæstɪk/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "enthusiastic",
+      "ja": "熱心な、熱狂的な",
+      "zh": "热情的、热心的",
+      "ko": "열정적인, 열렬한",
+      "fil": "masigasig"
+    },
+    "def": "Feeling or showing great excitement and interest.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "entire",
+    "ipa": "/ɪnˈtaɪɚ/",
+    "rp_ipa": "/ɪnˈtaɪə/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "entire",
+      "ja": "全体の、完全な",
+      "zh": "整个的、全部的",
+      "ko": "전체의, 완전한",
+      "fil": "buo"
+    },
+    "def": "Whole; complete, with no part left out.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "entirely",
+    "ipa": "/ɪnˈtaɪɚli/",
+    "rp_ipa": "/ɪnˈtaɪəli/",
+    "cefr": "B1",
+    "pos": "副詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "entirely",
+      "ja": "完全に、まったく",
+      "zh": "完全地",
+      "ko": "완전히",
+      "fil": "ganap na"
+    },
+    "def": "Completely; totally.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "entry",
+    "ipa": "/ˈɛntri/",
+    "rp_ipa": "/ˈentri/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "entry",
+      "ja": "入場、項目",
+      "zh": "进入、条目",
+      "ko": "입장, 항목",
+      "fil": "pagpasok"
+    },
+    "def": "The act of entering, or an item added to a list or record.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "environmental",
+    "ipa": "/ɪnˌvaɪrənˈmɛntəl/",
+    "rp_ipa": "/ɪnˌvaɪrənˈmentəl/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "environmental",
+      "ja": "環境の",
+      "zh": "环境的",
+      "ko": "환경의",
+      "fil": "pangkapaligiran"
+    },
+    "def": "Relating to the natural world and the impact of human activity on it.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "environmentalist",
+    "ipa": "/ɪnˌvaɪrənˈmɛntələst/",
+    "rp_ipa": "/ɪnˌvaɪərənˈmentəlɪst/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "environmentalist",
+      "ja": "環境保護活動家",
+      "zh": "环保主义者",
+      "ko": "환경운동가",
+      "fil": "environmentalist"
+    },
+    "def": "A person who works to protect the environment.",
+    "neighbors": [],
+    "_generation_source": "manual_phonological"
+  },
+  {
+    "w": "equal",
+    "ipa": "/ˈikwəl/",
+    "rp_ipa": "/ˈiːkwəl/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "equal",
+      "ja": "等しい、平等な",
+      "zh": "相等的、平等的",
+      "ko": "동등한, 평등한",
+      "fil": "pantay, magkapareho"
+    },
+    "def": "The same in amount, value, or status.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "equality",
+    "ipa": "/ɪˈkwɑləti/",
+    "rp_ipa": "/ɪˈkwɒlɪti/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "equality",
+      "ja": "平等",
+      "zh": "平等",
+      "ko": "평등",
+      "fil": "pagkakapantay-pantay"
+    },
+    "def": "The state of being equal, especially in rights or status.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "equally",
+    "ipa": "/ˈikwəli/",
+    "rp_ipa": "/ˈiːkwəli/",
+    "cefr": "B1",
+    "pos": "副詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "equally",
+      "ja": "等しく、同様に",
+      "zh": "同样地、平等地",
+      "ko": "동등하게, 똑같이",
+      "fil": "pantay-pantay"
+    },
+    "def": "In an equal way; to the same degree.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "equipment",
+    "ipa": "/ɪˈkwɪpmənt/",
+    "rp_ipa": "/ɪˈkwɪpmənt/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "equipment",
+      "ja": "設備、機器",
+      "zh": "设备、装备",
+      "ko": "장비, 설비",
+      "fil": "kagamitan"
+    },
+    "def": "The tools, machines, or items needed for a particular activity.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "era",
+    "ipa": "/ˈɛrə/",
+    "rp_ipa": "/ˈɪərə/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "era",
+      "ja": "時代",
+      "zh": "时代、纪元",
+      "ko": "시대",
+      "fil": "panahon"
+    },
+    "def": "A period of time marked by particular events or features.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "essence",
+    "ipa": "/ˈɛsəns/",
+    "rp_ipa": "/ˈesəns/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "essence",
+      "ja": "本質、要点",
+      "zh": "本质、精髓",
+      "ko": "본질, 핵심",
+      "fil": "diwa, kakanyahan"
+    },
+    "def": "The most basic and important quality of something.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "essential",
+    "ipa": "/ɛˈsɛnʃəl/",
+    "rp_ipa": "/ɪˈsenʃəl/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "essential",
+      "ja": "不可欠な、本質的な",
+      "zh": "必要的、本质的",
+      "ko": "필수적인, 본질적인",
+      "fil": "mahalaga"
+    },
+    "def": "Absolutely necessary; extremely important.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "establishment",
+    "ipa": "/ɪˈstæblɪʃmənt/",
+    "rp_ipa": "/ɪˈstæblɪʃmənt/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "establishment",
+      "ja": "設立、施設",
+      "zh": "建立、机构",
+      "ko": "설립, 시설",
+      "fil": "pagtatatag"
+    },
+    "def": "The act of setting something up, or an organization or business.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "estimate",
+    "ipa": "/ˈɛstəmət/",
+    "rp_ipa": "/ˈestɪmɪt/",
+    "cefr": "B1",
+    "pos": "動詞 / 名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "estimate",
+      "ja": "見積もる、見積もり",
+      "zh": "估计、估算",
+      "ko": "추정하다, 견적",
+      "fil": "tantiyahin, tantya"
+    },
+    "def": "To judge the approximate value or amount of something, or such a judgment.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "eternal",
+    "ipa": "/ɪˈtɝnəl/",
+    "rp_ipa": "/ɪˈtɜːnəl/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "eternal",
+      "ja": "永遠の",
+      "zh": "永恒的",
+      "ko": "영원한",
+      "fil": "walang hanggan"
+    },
+    "def": "Lasting forever; without end.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "eternity",
+    "ipa": "/ɪˈtɝnəti/",
+    "rp_ipa": "/ɪˈtɜːnɪti/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "eternity",
+      "ja": "永遠",
+      "zh": "永恒",
+      "ko": "영원",
+      "fil": "kawalang-hanggan"
+    },
+    "def": "Time without end.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "evenly",
+    "ipa": "/ˈivənli/",
+    "rp_ipa": "/ˈiːvənli/",
+    "cefr": "B1",
+    "pos": "副詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "evenly",
+      "ja": "均等に、平らに",
+      "zh": "均匀地、平等地",
+      "ko": "고르게, 균등하게",
+      "fil": "pantay-pantay"
+    },
+    "def": "In a smooth, equal, or balanced way.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "eventually",
+    "ipa": "/ɪˈvɛntʃəwəli/",
+    "rp_ipa": "/ɪˈventʃʊəli/",
+    "cefr": "B1",
+    "pos": "副詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "eventually",
+      "ja": "最終的に、結局",
+      "zh": "最终、终于",
+      "ko": "결국, 마침내",
+      "fil": "sa huli"
+    },
+    "def": "In the end, after a period of time or difficulty.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "evident",
+    "ipa": "/ˈɛvədənt/",
+    "rp_ipa": "/ˈevɪdənt/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "evident",
+      "ja": "明白な、明らかな",
+      "zh": "明显的、显然的",
+      "ko": "명백한, 분명한",
+      "fil": "malinaw"
+    },
+    "def": "Clearly seen or understood; obvious.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "exact",
+    "ipa": "/ɪɡˈzækt/",
+    "rp_ipa": "/ɪɡˈzækt/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "exact",
+      "ja": "正確な、まさに",
+      "zh": "确切的、精确的",
+      "ko": "정확한",
+      "fil": "eksakto"
+    },
+    "def": "Completely accurate and correct.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "examination",
+    "ipa": "/ɪɡˌzæməˈneɪʃən/",
+    "rp_ipa": "/ɪɡˌzæmɪˈneɪʃən/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "examination",
+      "ja": "試験、検査",
+      "zh": "考试、检查",
+      "ko": "시험, 검사",
+      "fil": "pagsusulit, pagsusuri"
+    },
+    "def": "A formal test, or a careful inspection.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "examine",
+    "ipa": "/ɪɡˈzæmɪn/",
+    "rp_ipa": "/ɪɡˈzæmɪn/",
+    "cefr": "B1",
+    "pos": "動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "examine",
+      "ja": "調べる、検査する",
+      "zh": "检查、审查",
+      "ko": "조사하다, 검사하다",
+      "fil": "suriin"
+    },
+    "def": "To look at something carefully in order to check or study it.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "examiner",
+    "ipa": "/ɪɡˈzæmənɚ/",
+    "rp_ipa": "/ɪɡˈzæmɪnə/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "examiner",
+      "ja": "試験官、検査官",
+      "zh": "主考人、审查员",
+      "ko": "시험관, 검사관",
+      "fil": "tagasuri"
+    },
+    "def": "A person who gives or marks an examination.",
+    "neighbors": [],
+    "_generation_source": "manual_phonological"
+  },
+  {
+    "w": "excellence",
+    "ipa": "/ˈɛksələns/",
+    "rp_ipa": "/ˈeksələns/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "excellence",
+      "ja": "優秀さ、卓越性",
+      "zh": "卓越、优秀",
+      "ko": "탁월함, 우수함",
+      "fil": "kahusayan"
+    },
+    "def": "The quality of being extremely good.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "excess",
+    "ipa": "/ˈɛkˌsɛs/",
+    "rp_ipa": "/ɪkˈses/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "excess",
+      "ja": "超過、過剰",
+      "zh": "过量、超额",
+      "ko": "초과, 과잉",
+      "fil": "labis"
+    },
+    "def": "An amount that is more than necessary or usual.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "excitedly",
+    "ipa": "/ɪkˈsaɪtədli/",
+    "rp_ipa": "/ɪkˈsaɪtɪdli/",
+    "cefr": "B1",
+    "pos": "副詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "excitedly",
+      "ja": "興奮して",
+      "zh": "兴奋地",
+      "ko": "흥분하여",
+      "fil": "may pananabik"
+    },
+    "def": "In a way that shows great enthusiasm or eagerness.",
+    "neighbors": [],
+    "_generation_source": "manual_phonological"
+  },
+  {
+    "w": "excitement",
+    "ipa": "/ɪkˈsaɪtmənt/",
+    "rp_ipa": "/ɪkˈsaɪtmənt/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "excitement",
+      "ja": "興奮、わくわく感",
+      "zh": "兴奋、激动",
+      "ko": "흥분, 신남",
+      "fil": "kasabikan"
+    },
+    "def": "A feeling of great enthusiasm or eagerness.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "exclusive",
+    "ipa": "/ɪkˈsklusɪv/",
+    "rp_ipa": "/ɪkˈskluːsɪv/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "exclusive",
+      "ja": "独占的な、限定の",
+      "zh": "独家的、专属的",
+      "ko": "독점적인, 배타적인",
+      "fil": "eksklusibo"
+    },
+    "def": "Limited to a particular person or group; not shared.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "exhausted",
+    "ipa": "/ɪɡˈzɔstɪd/",
+    "rp_ipa": "/ɪɡˈzɔːstɪd/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "exhausted",
+      "ja": "疲れ果てた",
+      "zh": "筋疲力尽的",
+      "ko": "지친, 기진맥진한",
+      "fil": "pagod na pagod"
+    },
+    "def": "Extremely tired.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "existence",
+    "ipa": "/ɛɡˈzɪstəns/",
+    "rp_ipa": "/eɡˈzɪstəns/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "existence",
+      "ja": "存在",
+      "zh": "存在",
+      "ko": "존재",
+      "fil": "pag-iral"
+    },
+    "def": "The state of existing or being alive.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "exit",
+    "ipa": "/ˈɛɡzɪt/",
+    "rp_ipa": "/ˈeɡzɪt/",
+    "cefr": "B1",
+    "pos": "名詞 / 動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "exit",
+      "ja": "出口、退出する",
+      "zh": "出口、离开",
+      "ko": "출구, 나가다",
+      "fil": "labasan, lumabas"
+    },
+    "def": "A way out of a place, or to leave a place.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "expand",
+    "ipa": "/ɪkˈspænd/",
+    "rp_ipa": "/ɪkˈspænd/",
+    "cefr": "B1",
+    "pos": "動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "expand",
+      "ja": "拡大する、広げる",
+      "zh": "扩大、扩展",
+      "ko": "확장하다, 넓히다",
+      "fil": "palawakin"
+    },
+    "def": "To become larger, or to make something larger.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "expense",
+    "ipa": "/ɪkˈspɛns/",
+    "rp_ipa": "/ɪkˈspens/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "expense",
+      "ja": "費用、出費",
+      "zh": "费用、开支",
+      "ko": "비용, 지출",
+      "fil": "gastos"
+    },
+    "def": "The cost of something, especially in money.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "experienced",
+    "ipa": "/ɪkˈspɪriənst/",
+    "rp_ipa": "/ɪkˈspɪərɪənst/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "experienced",
+      "ja": "経験豊富な",
+      "zh": "有经验的",
+      "ko": "경험이 풍부한",
+      "fil": "may karanasan"
+    },
+    "def": "Having knowledge or skill from doing something many times.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "experiment",
+    "ipa": "/ɪkˈspɛrəmənt/",
+    "rp_ipa": "/ɪkˈsperɪmənt/",
+    "cefr": "B1",
+    "pos": "名詞 / 動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "experiment",
+      "ja": "実験",
+      "zh": "实验",
+      "ko": "실험",
+      "fil": "eksperimento"
+    },
+    "def": "A scientific test to discover something, or to try something new.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "exploration",
+    "ipa": "/ˌɛksplɚˈeɪʃən/",
+    "rp_ipa": "/ˌekspləˈreɪʃən/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "exploration",
+      "ja": "探検、探査",
+      "zh": "探索、勘探",
+      "ko": "탐험, 탐사",
+      "fil": "paggalugad"
+    },
+    "def": "The act of traveling to learn about a place, or careful study of a subject.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "explosion",
+    "ipa": "/ɪkˈsploʊʒən/",
+    "rp_ipa": "/ɪkˈspləʊʒən/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "explosion",
+      "ja": "爆発",
+      "zh": "爆炸",
+      "ko": "폭발",
+      "fil": "pagsabog"
+    },
+    "def": "A sudden violent burst, often with a loud noise.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "expose",
+    "ipa": "/ɪkˈspoʊz/",
+    "rp_ipa": "/ɪkˈspəʊz/",
+    "cefr": "B1",
+    "pos": "動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "expose",
+      "ja": "さらす、暴露する",
+      "zh": "暴露、揭露",
+      "ko": "노출시키다, 폭로하다",
+      "fil": "ilantad"
+    },
+    "def": "To uncover something, or to reveal the truth about something.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "extend",
+    "ipa": "/ɪkˈstɛnd/",
+    "rp_ipa": "/ɪkˈstend/",
+    "cefr": "B1",
+    "pos": "動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "extend",
+      "ja": "延長する、広げる",
+      "zh": "延长、延伸",
+      "ko": "연장하다, 확대하다",
+      "fil": "pahabain"
+    },
+    "def": "To make something longer, larger, or last longer.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "extensively",
+    "ipa": "/ɪkˈstɛnsɪvli/",
+    "rp_ipa": "/ɪkˈstensɪvli/",
+    "cefr": "B1",
+    "pos": "副詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "extensively",
+      "ja": "広範囲に、詳細に",
+      "zh": "广泛地",
+      "ko": "광범위하게",
+      "fil": "malawakan"
+    },
+    "def": "Over a large area, or in great detail.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "extent",
+    "ipa": "/ɪkˈstɛnt/",
+    "rp_ipa": "/ɪkˈstent/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "extent",
+      "ja": "程度、範囲",
+      "zh": "程度、范围",
+      "ko": "정도, 범위",
+      "fil": "sukat, saklaw"
+    },
+    "def": "The size, length, or degree of something.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "extinct",
+    "ipa": "/ɪkˈstɪŋkt/",
+    "rp_ipa": "/ɪkˈstɪŋkt/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "extinct",
+      "ja": "絶滅した",
+      "zh": "灭绝的",
+      "ko": "멸종된",
+      "fil": "naubos na uri"
+    },
+    "def": "No longer existing; died out completely.",
+    "neighbors": [],
+    "_generation_source": "manual_phonological"
+  },
+  {
+    "w": "extinction",
+    "ipa": "/ɪkˈstɪŋkʃən/",
+    "rp_ipa": "/ɪkˈstɪŋkʃən/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "extinction",
+      "ja": "絶滅",
+      "zh": "灭绝",
+      "ko": "멸종",
+      "fil": "pagkalipol"
+    },
+    "def": "The state of no longer existing.",
+    "neighbors": [],
+    "_generation_source": "manual_phonological"
+  },
+  {
+    "w": "extraordinary",
+    "ipa": "/ˌɛkstrəˈɔrdəˌnɛri/",
+    "rp_ipa": "/ɪkˈstrɔːdɪnəri/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "extraordinary",
+      "ja": "並外れた、驚くべき",
+      "zh": "非凡的、特别的",
+      "ko": "비범한, 놀라운",
+      "fil": "kakaiba, di-pangkaraniwan"
+    },
+    "def": "Very unusual or remarkable.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "extreme",
+    "ipa": "/ɛkˈstrim/",
+    "rp_ipa": "/ɪkˈstriːm/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "extreme",
+      "ja": "極端な",
+      "zh": "极端的",
+      "ko": "극단적인",
+      "fil": "sukdulan"
+    },
+    "def": "Very great in degree; far from normal.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "eyesight",
+    "ipa": "/ˈaɪˌsaɪt/",
+    "rp_ipa": "/ˈaɪsaɪt/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "eyesight",
+      "ja": "視力",
+      "zh": "视力",
+      "ko": "시력",
+      "fil": "paningin"
+    },
+    "def": "The ability to see.",
+    "neighbors": [],
+    "_generation_source": "manual_phonological"
+  },
+  {
+    "w": "face-to-face",
+    "ipa": "/ˌfeɪstəˈfeɪs/",
+    "rp_ipa": "/ˌfeɪstəˈfeɪs/",
+    "cefr": "B1",
+    "pos": "副詞 / 形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "face-to-face",
+      "ja": "対面で",
+      "zh": "面对面地",
+      "ko": "직접 만나서, 대면으로",
+      "fil": "harapan"
+    },
+    "def": "In person, with people directly facing each other.",
+    "neighbors": [],
+    "_generation_source": "manual_phonological"
+  },
+  {
+    "w": "facility",
+    "ipa": "/fəˈsɪlɪti/",
+    "rp_ipa": "/fəˈsɪlɪti/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "facility",
+      "ja": "施設、機能",
+      "zh": "设施、便利",
+      "ko": "시설, 기능",
+      "fil": "pasilidad"
+    },
+    "def": "A building or equipment provided for a particular purpose.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "failure",
+    "ipa": "/ˈfeɪljɚ/",
+    "rp_ipa": "/ˈfeɪljə/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "failure",
+      "ja": "失敗",
+      "zh": "失败",
+      "ko": "실패",
+      "fil": "kabiguan"
+    },
+    "def": "A lack of success, or the state of not working properly.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "faithful",
+    "ipa": "/ˈfeɪθfəl/",
+    "rp_ipa": "/ˈfeɪθfəl/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "faithful",
+      "ja": "忠実な、誠実な",
+      "zh": "忠诚的、忠实的",
+      "ko": "충실한, 성실한",
+      "fil": "tapat"
+    },
+    "def": "Loyal and remaining true to someone or something.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "fantasy",
+    "ipa": "/ˈfæntəsi/",
+    "rp_ipa": "/ˈfæntəsi/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "fantasy",
+      "ja": "空想、ファンタジー",
+      "zh": "幻想、幻想小说",
+      "ko": "환상, 판타지",
+      "fil": "pantasya"
+    },
+    "def": "An imaginative story or idea not based on reality.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "faraway",
+    "ipa": "/ˈfɑrəˌweɪ/",
+    "rp_ipa": "/ˈfɑːrəweɪ/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "faraway",
+      "ja": "遠く離れた",
+      "zh": "遥远的",
+      "ko": "먼, 아득한",
+      "fil": "malayo"
+    },
+    "def": "Very distant.",
+    "neighbors": [],
+    "_generation_source": "manual_phonological"
+  },
+  {
+    "w": "farewell",
+    "ipa": "/ˌfɛrˈwɛl/",
+    "rp_ipa": "/ˌfeəˈwel/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "farewell",
+      "ja": "別れ、送別",
+      "zh": "告别、再见",
+      "ko": "작별, 이별",
+      "fil": "paalam"
+    },
+    "def": "An act of saying goodbye.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "farming",
+    "ipa": "/ˈfɑrmɪŋ/",
+    "rp_ipa": "/ˈfɑːmɪŋ/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "farming",
+      "ja": "農業",
+      "zh": "农业、务农",
+      "ko": "농사, 농업",
+      "fil": "pagsasaka"
+    },
+    "def": "The activity of growing crops or raising animals.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "farmland",
+    "ipa": "/ˈfɑrmˌlænd/",
+    "rp_ipa": "/ˈfɑːmlænd/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "farmland",
+      "ja": "農地",
+      "zh": "农田、耕地",
+      "ko": "농지",
+      "fil": "sakahan"
+    },
+    "def": "Land used for farming.",
+    "neighbors": [],
+    "_generation_source": "manual_phonological"
+  },
+  {
+    "w": "farthest",
+    "ipa": "/ˈfɑrðəst/",
+    "rp_ipa": "/ˈfɑːðɪst/",
+    "cefr": "B1",
+    "pos": "形容詞 / 副詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "farthest",
+      "ja": "最も遠い",
+      "zh": "最远的",
+      "ko": "가장 먼",
+      "fil": "pinakamalayo"
+    },
+    "def": "Most distant; at the greatest distance.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "fascinate",
+    "ipa": "/ˈfæsəˌneɪt/",
+    "rp_ipa": "/ˈfæsɪˌneɪt/",
+    "cefr": "B1",
+    "pos": "動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "fascinate",
+      "ja": "魅了する",
+      "zh": "使着迷、吸引",
+      "ko": "매혹시키다",
+      "fil": "mabighani"
+    },
+    "def": "To attract and interest someone greatly.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "fashionable",
+    "ipa": "/ˈfæʃənəbəl/",
+    "rp_ipa": "/ˈfæʃnəbəl/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "fashionable",
+      "ja": "流行の、おしゃれな",
+      "zh": "时髦的、流行的",
+      "ko": "유행하는, 세련된",
+      "fil": "moderno, uso"
+    },
+    "def": "Popular and stylish at a particular time.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "fasten",
+    "ipa": "/ˈfæsən/",
+    "rp_ipa": "/ˈfɑːsən/",
+    "cefr": "B1",
+    "pos": "動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "fasten",
+      "ja": "留める、固定する",
+      "zh": "系紧、固定",
+      "ko": "매다, 고정하다",
+      "fil": "ikabit"
+    },
+    "def": "To close or attach something firmly.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "favorable",
+    "ipa": "/ˈfeɪvɚəbəl/",
+    "rp_ipa": "/ˈfeɪvrəbəl/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "favorable",
+      "ja": "好意的な、有利な",
+      "zh": "有利的、赞成的",
+      "ko": "호의적인, 유리한",
+      "fil": "paborable"
+    },
+    "def": "Showing approval, or likely to bring good results.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "favourable",
+    "ipa": "/ˈfeɪvɚəbəl/",
+    "rp_ipa": "/ˈfeɪvərəbəl/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "favourable",
+      "ja": "好意的な、有利な(英)",
+      "zh": "有利的(英式)",
+      "ko": "호의적인(영국식)",
+      "fil": "paborable (British)"
+    },
+    "def": "Showing approval, or likely to bring good results (British spelling of favorable).",
+    "neighbors": [],
+    "_generation_source": "manual_phonological"
+  },
+  {
+    "w": "fellow",
+    "ipa": "/ˈfɛloʊ/",
+    "rp_ipa": "/ˈfeləʊ/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "fellow",
+      "ja": "仲間、男",
+      "zh": "伙伴、家伙",
+      "ko": "동료, 녀석",
+      "fil": "kasamahan"
+    },
+    "def": "A man or boy, or a person in the same group or situation.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "ferry",
+    "ipa": "/ˈfɛri/",
+    "rp_ipa": "/ˈferi/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "ferry",
+      "ja": "フェリー、渡し船",
+      "zh": "渡轮、渡船",
+      "ko": "페리, 나룻배",
+      "fil": "bapor"
+    },
+    "def": "A boat that carries people or vehicles across water.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "festive",
+    "ipa": "/ˈfɛstɪv/",
+    "rp_ipa": "/ˈfestɪv/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "festive",
+      "ja": "祝祭的な、お祭り気分の",
+      "zh": "节日的、喜庆的",
+      "ko": "축제 분위기의",
+      "fil": "may kasiyahan"
+    },
+    "def": "Cheerful and suitable for a celebration.",
+    "neighbors": [],
+    "_generation_source": "manual_phonological"
+  },
+  {
+    "w": "feverishly",
+    "ipa": "/ˈfivɚɪʃli/",
+    "rp_ipa": "/ˈfiːvərɪʃli/",
+    "cefr": "B1",
+    "pos": "副詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "feverishly",
+      "ja": "熱に浮かされたように、必死に",
+      "zh": "狂热地",
+      "ko": "열에 들뜬 듯이",
+      "fil": "may sigla (masigasig)"
+    },
+    "def": "In a very excited or energetic way, as if with a fever.",
+    "neighbors": [],
+    "_generation_source": "manual_phonological"
+  },
+  {
+    "w": "filling",
+    "ipa": "/ˈfɪlɪŋ/",
+    "rp_ipa": "/ˈfɪlɪŋ/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "filling",
+      "ja": "詰め物、充填物",
+      "zh": "填充物、馅料",
+      "ko": "충전재, 소",
+      "fil": "laman (pagkain)"
+    },
+    "def": "A substance used to fill something, such as a tooth or a pie.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "film-maker",
+    "ipa": "/ˈfɪlmˌmeɪkɚ/",
+    "rp_ipa": "/ˈfɪlmmeɪkə/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "film-maker",
+      "ja": "映画製作者",
+      "zh": "电影制作人",
+      "ko": "영화 제작자",
+      "fil": "gumagawa ng pelikula"
+    },
+    "def": "A person who makes films.",
+    "neighbors": [],
+    "_generation_source": "manual_phonological"
+  },
+  {
+    "w": "filter",
+    "ipa": "/ˈfɪltɚ/",
+    "rp_ipa": "/ˈfɪltə/",
+    "cefr": "B1",
+    "pos": "名詞 / 動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "filter",
+      "ja": "フィルター、ろ過する",
+      "zh": "过滤器、过滤",
+      "ko": "필터, 여과하다",
+      "fil": "salaan"
+    },
+    "def": "A device that removes unwanted substances, or to pass through such a device.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "finance",
+    "ipa": "/fəˈnæns/",
+    "rp_ipa": "/ˈfaɪˌnæns/",
+    "cefr": "B1",
+    "pos": "名詞 / 動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "finance",
+      "ja": "財務、資金を調達する",
+      "zh": "财务、融资",
+      "ko": "재정, 자금을 조달하다",
+      "fil": "pananalapi"
+    },
+    "def": "The management of money, or to provide money for something.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "financial",
+    "ipa": "/fəˈnænʃəl/",
+    "rp_ipa": "/ˌfaɪˈnænʃəl/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "financial",
+      "ja": "財政の、金融の",
+      "zh": "财务的、金融的",
+      "ko": "재정의, 금융의",
+      "fil": "pinansyal"
+    },
+    "def": "Relating to money.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "finding",
+    "ipa": "/ˈfaɪndɪŋ/",
+    "rp_ipa": "/ˈfaɪndɪŋ/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "finding",
+      "ja": "発見、調査結果",
+      "zh": "发现、调查结果",
+      "ko": "발견, 조사 결과",
+      "fil": "natuklasan"
+    },
+    "def": "A piece of information discovered through research.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "finger",
+    "ipa": "/ˈfɪŋɡɚ/",
+    "rp_ipa": "/ˈfɪŋɡə/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "finger",
+      "ja": "指",
+      "zh": "手指",
+      "ko": "손가락",
+      "fil": "daliri"
+    },
+    "def": "One of the five parts at the end of the hand.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "firefighter",
+    "ipa": "/ˈfaɪɚˌfaɪtɚ/",
+    "rp_ipa": "/ˈfaɪəfaɪtə/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "firefighter",
+      "ja": "消防士",
+      "zh": "消防员",
+      "ko": "소방관",
+      "fil": "bumbero"
+    },
+    "def": "A person whose job is to put out fires.",
+    "neighbors": [],
+    "_generation_source": "manual_phonological"
+  },
+  {
+    "w": "firework",
+    "ipa": "/ˈfaɪɚˌwɝk/",
+    "rp_ipa": "/ˈfaɪəwɜːk/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "firework",
+      "ja": "花火",
+      "zh": "烟花、烟火",
+      "ko": "불꽃놀이",
+      "fil": "paputok"
+    },
+    "def": "A device that explodes to produce colorful light and sound, used for celebrations.",
+    "neighbors": [],
+    "_generation_source": "manual_phonological"
+  },
+  {
+    "w": "firmly",
+    "ipa": "/ˈfɝmli/",
+    "rp_ipa": "/ˈfɜːmli/",
+    "cefr": "B1",
+    "pos": "副詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "firmly",
+      "ja": "しっかりと、断固として",
+      "zh": "坚定地、牢固地",
+      "ko": "확고하게, 단단히",
+      "fil": "matatag"
+    },
+    "def": "In a strong and steady way.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "first-floor",
+    "ipa": "/ˌfɝstˈflɔr/",
+    "rp_ipa": "/ˌfɜːstˈflɔː/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "first-floor",
+      "ja": "2階の(米)、1階の(英)",
+      "zh": "二楼的(美式)",
+      "ko": "2층의(미국식)",
+      "fil": "unang palapag"
+    },
+    "def": "Relating to the floor above ground level.",
+    "neighbors": [],
+    "_generation_source": "manual_phonological"
+  },
+  {
+    "w": "fitness",
+    "ipa": "/ˈfɪtnəs/",
+    "rp_ipa": "/ˈfɪtnɪs/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "fitness",
+      "ja": "健康、体力",
+      "zh": "健康、体能",
+      "ko": "건강, 체력",
+      "fil": "kalusugan"
+    },
+    "def": "The state of being physically healthy and strong.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "flavor",
+    "ipa": "/ˈfleɪvɚ/",
+    "rp_ipa": "/ˈfleɪvə/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "flavor",
+      "ja": "風味、味",
+      "zh": "味道、风味",
+      "ko": "맛, 풍미",
+      "fil": "lasa"
+    },
+    "def": "The taste of food or drink.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "flavour",
+    "ipa": "/ˈfleɪvɚ/",
+    "rp_ipa": "/ˈfleɪvə/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "flavour",
+      "ja": "風味、味(英)",
+      "zh": "味道(英式)",
+      "ko": "맛(영국식)",
+      "fil": "lasa (British)"
+    },
+    "def": "The taste of food or drink (British spelling of flavor).",
+    "neighbors": [],
+    "_generation_source": "manual_phonological"
+  },
+  {
+    "w": "fluent",
+    "ipa": "/ˈfluənt/",
+    "rp_ipa": "/ˈfluənt/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "fluent",
+      "ja": "流暢な",
+      "zh": "流利的",
+      "ko": "유창한",
+      "fil": "matatas"
+    },
+    "def": "Able to speak or write a language easily and accurately.",
+    "neighbors": [],
+    "_generation_source": "manual_phonological"
+  },
+  {
+    "w": "fluently",
+    "ipa": "/ˈfluəntli/",
+    "rp_ipa": "/ˈfluəntli/",
+    "cefr": "B1",
+    "pos": "副詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "fluently",
+      "ja": "流暢に",
+      "zh": "流利地",
+      "ko": "유창하게",
+      "fil": "nang matatas"
+    },
+    "def": "In a way that shows ease and skill, especially with language.",
+    "neighbors": [],
+    "_generation_source": "manual_phonological"
+  },
+  {
+    "w": "flunk",
+    "ipa": "/ˈflʌŋk/",
+    "rp_ipa": "/flʌŋk/",
+    "cefr": "B1",
+    "pos": "動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "flunk",
+      "ja": "落第する(俗)",
+      "zh": "考试不及格(非正式)",
+      "ko": "낙제하다(비격식)",
+      "fil": "bumagsak (sa exam)"
+    },
+    "def": "To fail a test or course (informal).",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "folk",
+    "ipa": "/ˈfoʊk/",
+    "rp_ipa": "/fəʊk/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "folk",
+      "ja": "人々、民族の",
+      "zh": "人们、民间的",
+      "ko": "사람들, 민속의",
+      "fil": "mga tao"
+    },
+    "def": "People in general, or traditional music and customs.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "fondness",
+    "ipa": "/ˈfɑndnəs/",
+    "rp_ipa": "/ˈfɒndnəs/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "fondness",
+      "ja": "好み、愛着",
+      "zh": "喜爱、爱好",
+      "ko": "애정, 좋아함",
+      "fil": "pagmamahal"
+    },
+    "def": "A feeling of liking or affection.",
+    "neighbors": [],
+    "_generation_source": "manual_phonological"
+  },
+  {
+    "w": "foolish",
+    "ipa": "/ˈfulɪʃ/",
+    "rp_ipa": "/ˈfuːlɪʃ/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "foolish",
+      "ja": "愚かな",
+      "zh": "愚蠢的",
+      "ko": "어리석은",
+      "fil": "hangal"
+    },
+    "def": "Lacking good sense; silly.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "forbidden",
+    "ipa": "/ˈfɔrbɪdən/",
+    "rp_ipa": "/fəˈbɪdən/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "forbidden",
+      "ja": "禁じられた",
+      "zh": "被禁止的",
+      "ko": "금지된",
+      "fil": "bawal"
+    },
+    "def": "Not allowed.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "forecast",
+    "ipa": "/ˈfɔrˌkæst/",
+    "rp_ipa": "/ˈfɔːˌkɑːst/",
+    "cefr": "B1",
+    "pos": "名詞 / 動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "forecast",
+      "ja": "予報、予測する",
+      "zh": "预报、预测",
+      "ko": "예보, 예측하다",
+      "fil": "hula (panahon)"
+    },
+    "def": "A prediction, especially about the weather, or to predict something.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "forehead",
+    "ipa": "/ˈfɔrhɛd/",
+    "rp_ipa": "/ˈfɔːhed/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "forehead",
+      "ja": "額",
+      "zh": "额头",
+      "ko": "이마",
+      "fil": "noo"
+    },
+    "def": "The part of the face above the eyebrows.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "forgive",
+    "ipa": "/fɚˈɡɪv/",
+    "rp_ipa": "/fəˈɡɪv/",
+    "cefr": "B1",
+    "pos": "動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "forgive",
+      "ja": "許す",
+      "zh": "原谅",
+      "ko": "용서하다",
+      "fil": "patawarin"
+    },
+    "def": "To stop being angry with someone for something they did.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "formal",
+    "ipa": "/ˈfɔrməl/",
+    "rp_ipa": "/ˈfɔːməl/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "formal",
+      "ja": "正式な、形式的な",
+      "zh": "正式的",
+      "ko": "공식적인, 격식을 차린",
+      "fil": "pormal"
+    },
+    "def": "Following established rules or customs; official.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "formally",
+    "ipa": "/ˈfɔrməli/",
+    "rp_ipa": "/ˈfɔːməli/",
+    "cefr": "B1",
+    "pos": "副詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "formally",
+      "ja": "正式に",
+      "zh": "正式地",
+      "ko": "공식적으로",
+      "fil": "pormal na paraan"
+    },
+    "def": "In an official or proper way.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "format",
+    "ipa": "/ˈfɔrˌmæt/",
+    "rp_ipa": "/ˈfɔːˌmæt/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "format",
+      "ja": "形式、書式",
+      "zh": "格式、形式",
+      "ko": "형식, 서식",
+      "fil": "format"
+    },
+    "def": "The way something is arranged or presented.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "former",
+    "ipa": "/ˈfɔrmɚ/",
+    "rp_ipa": "/ˈfɔːmə/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "former",
+      "ja": "以前の、前者の",
+      "zh": "以前的、前者的",
+      "ko": "이전의, 전자의",
+      "fil": "dating"
+    },
+    "def": "Having been something in the past but not now.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "formula",
+    "ipa": "/ˈfɔrmjələ/",
+    "rp_ipa": "/ˈfɔːmjʊlə/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "formula",
+      "ja": "公式、方式",
+      "zh": "公式、配方",
+      "ko": "공식, 방식",
+      "fil": "pormula"
+    },
+    "def": "A set method or rule, especially in mathematics or science.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "fortnight",
+    "ipa": "/ˈfɔrtˌnaɪt/",
+    "rp_ipa": "/ˈfɔːtˌnaɪt/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "fortnight",
+      "ja": "2週間(英)",
+      "zh": "两周(英式)",
+      "ko": "2주일(영국식)",
+      "fil": "dalawang linggo (British)"
+    },
+    "def": "A period of two weeks (British English).",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "fortunate",
+    "ipa": "/ˈfɔrtʃənət/",
+    "rp_ipa": "/ˈfɔːtʃənɪt/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "fortunate",
+      "ja": "幸運な",
+      "zh": "幸运的",
+      "ko": "운이 좋은",
+      "fil": "swerte"
+    },
+    "def": "Lucky; having good things happen.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "foundation",
+    "ipa": "/faʊnˈdeɪʃən/",
+    "rp_ipa": "/faʊnˈdeɪʃən/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "foundation",
+      "ja": "土台、基礎、財団",
+      "zh": "基础、地基、基金会",
+      "ko": "기초, 토대, 재단",
+      "fil": "pundasyon"
+    },
+    "def": "The base of a building, or the basic principle something is built on.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "fountain",
+    "ipa": "/ˈfaʊntən/",
+    "rp_ipa": "/ˈfaʊntɪn/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "fountain",
+      "ja": "噴水",
+      "zh": "喷泉",
+      "ko": "분수",
+      "fil": "bukal, fountain"
+    },
+    "def": "A structure that shoots water into the air, often decorative.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "fragment",
+    "ipa": "/ˈfræɡmənt/",
+    "rp_ipa": "/ˈfræɡmənt/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "fragment",
+      "ja": "断片、破片",
+      "zh": "碎片、片段",
+      "ko": "조각, 파편",
+      "fil": "piraso"
+    },
+    "def": "A small piece broken off from something larger.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "freely",
+    "ipa": "/ˈfrili/",
+    "rp_ipa": "/ˈfriːli/",
+    "cefr": "B1",
+    "pos": "副詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "freely",
+      "ja": "自由に、快く",
+      "zh": "自由地、随意地",
+      "ko": "자유롭게, 기꺼이",
+      "fil": "malaya"
+    },
+    "def": "Without restriction; willingly.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "freezer",
+    "ipa": "/ˈfrizɚ/",
+    "rp_ipa": "/ˈfriːzə/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "freezer",
+      "ja": "冷凍庫",
+      "zh": "冰柜、冷冻室",
+      "ko": "냉동고",
+      "fil": "freezer"
+    },
+    "def": "An appliance used to store food at very low temperatures.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "freezing",
+    "ipa": "/ˈfrizɪŋ/",
+    "rp_ipa": "/ˈfriːzɪŋ/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "freezing",
+      "ja": "凍えるように寒い",
+      "zh": "冰冻的、极冷的",
+      "ko": "몹시 추운, 얼어붙는",
+      "fil": "malamig na malamig"
+    },
+    "def": "Extremely cold.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "frequency",
+    "ipa": "/ˈfrikwənsi/",
+    "rp_ipa": "/ˈfriːkwənsi/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "frequency",
+      "ja": "頻度、周波数",
+      "zh": "频率",
+      "ko": "빈도, 주파수",
+      "fil": "dalas"
+    },
+    "def": "How often something happens.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "frequent",
+    "ipa": "/ˈfrikwənt/",
+    "rp_ipa": "/ˈfriːkwənt/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "frequent",
+      "ja": "頻繁な",
+      "zh": "频繁的",
+      "ko": "빈번한, 잦은",
+      "fil": "madalas"
+    },
+    "def": "Happening often.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "frequently",
+    "ipa": "/ˈfrikwəntli/",
+    "rp_ipa": "/ˈfriːkwəntli/",
+    "cefr": "B1",
+    "pos": "副詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "frequently",
+      "ja": "頻繁に",
+      "zh": "频繁地",
+      "ko": "자주, 빈번히",
+      "fil": "madalas"
+    },
+    "def": "Often.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "freshman",
+    "ipa": "/ˈfrɛʃmən/",
+    "rp_ipa": "/ˈfreʃmən/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "freshman",
+      "ja": "新入生、1年生",
+      "zh": "新生、大一学生",
+      "ko": "신입생, 1학년",
+      "fil": "freshman"
+    },
+    "def": "A student in the first year of high school or college.",
+    "neighbors": [],
+    "_generation_source": "manual_phonological"
+  },
+  {
+    "w": "friendliness",
+    "ipa": "/ˈfrɛndliːnəs/",
+    "rp_ipa": "/ˈfrendlinəs/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "friendliness",
+      "ja": "友好的な態度、親しみやすさ",
+      "zh": "友好、亲切",
+      "ko": "친절함, 다정함",
+      "fil": "kabutihang-loob"
+    },
+    "def": "The quality of being kind and pleasant to others.",
+    "neighbors": [],
+    "_generation_source": "manual_phonological"
+  },
+  {
+    "w": "frozen",
+    "ipa": "/ˈfroʊzən/",
+    "rp_ipa": "/ˈfrəʊzən/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "frozen",
+      "ja": "凍った、冷凍の",
+      "zh": "冷冻的、结冰的",
+      "ko": "얼어붙은, 냉동된",
+      "fil": "frozen, nagyelo"
+    },
+    "def": "Turned into ice, or kept at a very low temperature.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "frustrated",
+    "ipa": "/ˈfrʌˌstreɪtəd/",
+    "rp_ipa": "/frʌˈstreɪtɪd/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "frustrated",
+      "ja": "いらだった、挫折した",
+      "zh": "沮丧的、受挫的",
+      "ko": "좌절한, 답답한",
+      "fil": "nabigo"
+    },
+    "def": "Feeling upset because you cannot achieve something.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "frustration",
+    "ipa": "/frəˈstreɪʃən/",
+    "rp_ipa": "/frʌˈstreɪʃən/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "frustration",
+      "ja": "欲求不満、いらだち",
+      "zh": "沮丧、挫折感",
+      "ko": "좌절감, 답답함",
+      "fil": "pagkabigo"
+    },
+    "def": "A feeling of being upset because you cannot achieve something.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "fuel",
+    "ipa": "/ˈfjuəl/",
+    "rp_ipa": "/ˈfjuːəl/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "fuel",
+      "ja": "燃料",
+      "zh": "燃料",
+      "ko": "연료",
+      "fil": "gasolina, panggatong"
+    },
+    "def": "A substance burned to produce energy, such as gas or oil.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "full-time",
+    "ipa": "/ˈfʊlˌtaɪm/",
+    "rp_ipa": "/ˈfʊlˌtaɪm/",
+    "cefr": "B1",
+    "pos": "形容詞 / 副詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "full-time",
+      "ja": "常勤の、フルタイムの",
+      "zh": "全职的",
+      "ko": "전일제의, 정규직의",
+      "fil": "full-time"
+    },
+    "def": "Working or studying the standard number of hours per week.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "funeral",
+    "ipa": "/ˈfjunɚəl/",
+    "rp_ipa": "/ˈfjuːnərəl/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "funeral",
+      "ja": "葬式",
+      "zh": "葬礼",
+      "ko": "장례식",
+      "fil": "libing"
+    },
+    "def": "A ceremony held for a person who has died.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "furnish",
+    "ipa": "/ˈfɝnɪʃ/",
+    "rp_ipa": "/ˈfɜːnɪʃ/",
+    "cefr": "B1",
+    "pos": "動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "furnish",
+      "ja": "家具を備え付ける",
+      "zh": "配备家具",
+      "ko": "가구를 비치하다",
+      "fil": "lagyan ng muwebles"
+    },
+    "def": "To put furniture into a room or house.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "furthermore",
+    "ipa": "/ˈfɝðɚˌmɔr/",
+    "rp_ipa": "/ˈfɜːðəˌmɔː/",
+    "cefr": "B1",
+    "pos": "副詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "furthermore",
+      "ja": "さらに、その上",
+      "zh": "此外、而且",
+      "ko": "게다가, 더욱이",
+      "fil": "bukod dito"
+    },
+    "def": "In addition; moreover.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "furthest",
+    "ipa": "/ˈfɝθəst/",
+    "rp_ipa": "/ˈfɜːðɪst/",
+    "cefr": "B1",
+    "pos": "形容詞 / 副詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "furthest",
+      "ja": "最も遠い",
+      "zh": "最远的",
+      "ko": "가장 먼",
+      "fil": "pinakamalayo"
+    },
+    "def": "Most distant; at the greatest distance (same as farthest).",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "gallon",
+    "ipa": "/ˈɡælən/",
+    "rp_ipa": "/ˈɡælən/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "gallon",
+      "ja": "ガロン",
+      "zh": "加仑",
+      "ko": "갤런",
+      "fil": "galon"
+    },
+    "def": "A unit for measuring liquid.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "gaol",
+    "ipa": "/dʒeɪl/",
+    "rp_ipa": "/dʒeɪl/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "gaol",
+      "ja": "刑務所(英古)",
+      "zh": "监狱(旧式英式)",
+      "ko": "감옥(구식 영국식)",
+      "fil": "bilangguan (matandang British)"
+    },
+    "def": "A place where criminals are kept (older British spelling of jail).",
+    "neighbors": [],
+    "_generation_source": "manual_phonological"
+  },
+  {
+    "w": "gardening",
+    "ipa": "/ˈɡɑrdənɪŋ/",
+    "rp_ipa": "/ˈɡɑːdnɪŋ/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "gardening",
+      "ja": "園芸、庭いじり",
+      "zh": "园艺",
+      "ko": "정원 가꾸기",
+      "fil": "paghahalaman"
+    },
+    "def": "The activity of growing and caring for plants in a garden.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "garment",
+    "ipa": "/ˈɡɑrmənt/",
+    "rp_ipa": "/ˈɡɑːmənt/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "garment",
+      "ja": "衣類、衣服",
+      "zh": "衣服、服装",
+      "ko": "의류, 옷",
+      "fil": "kasuotan"
+    },
+    "def": "A piece of clothing.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "general",
+    "ipa": "/ˈdʒɛnɚəl/",
+    "rp_ipa": "/ˈdʒenrəl/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "general",
+      "ja": "一般的な、全体的な",
+      "zh": "一般的、普遍的",
+      "ko": "일반적인, 전반적인",
+      "fil": "pangkalahatan"
+    },
+    "def": "Affecting all or most people or things; not specific.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "generally",
+    "ipa": "/ˈdʒɛnɚəli/",
+    "rp_ipa": "/ˈdʒenrəli/",
+    "cefr": "B1",
+    "pos": "副詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "generally",
+      "ja": "一般に、通常",
+      "zh": "通常、一般来说",
+      "ko": "일반적으로",
+      "fil": "sa pangkalahatan"
+    },
+    "def": "In most cases; usually.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "generate",
+    "ipa": "/ˈdʒɛnɚˌeɪt/",
+    "rp_ipa": "/ˈdʒenəˌreɪt/",
+    "cefr": "B1",
+    "pos": "動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "generate",
+      "ja": "生み出す、発生させる",
+      "zh": "产生、生成",
+      "ko": "발생시키다, 만들어내다",
+      "fil": "likhain, gumawa"
+    },
+    "def": "To produce or create something.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "generous",
+    "ipa": "/ˈdʒɛnɚəs/",
+    "rp_ipa": "/ˈdʒenərəs/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "generous",
+      "ja": "気前の良い、寛大な",
+      "zh": "慷慨的、大方的",
+      "ko": "관대한, 후한",
+      "fil": "bukas-palad"
+    },
+    "def": "Willing to give more of something, such as money or time, than expected.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "genetic",
+    "ipa": "/dʒəˈnɛtɪk/",
+    "rp_ipa": "/dʒəˈnetɪk/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "genetic",
+      "ja": "遺伝の、遺伝子の",
+      "zh": "基因的、遗传的",
+      "ko": "유전의, 유전자의",
+      "fil": "henetiko"
+    },
+    "def": "Relating to genes or heredity.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "genetically",
+    "ipa": "/dʒəˈnɛtɪkli/",
+    "rp_ipa": "/dʒəˈnetɪkəli/",
+    "cefr": "B1",
+    "pos": "副詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "genetically",
+      "ja": "遺伝的に",
+      "zh": "基因上地、遗传地",
+      "ko": "유전적으로",
+      "fil": "sa paraang henetiko"
+    },
+    "def": "In a way relating to genes or heredity.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "genetics",
+    "ipa": "/dʒəˈnɛtɪks/",
+    "rp_ipa": "/dʒəˈnetɪks/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "genetics",
+      "ja": "遺伝学",
+      "zh": "遗传学",
+      "ko": "유전학",
+      "fil": "genetics"
+    },
+    "def": "The scientific study of genes and heredity.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "gentleman",
+    "ipa": "/ˈdʒɛntəlmən/",
+    "rp_ipa": "/ˈdʒentəlmən/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "gentleman",
+      "ja": "紳士",
+      "zh": "绅士",
+      "ko": "신사",
+      "fil": "ginoo"
+    },
+    "def": "A polite word for a man, especially one who behaves well.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "geographical",
+    "ipa": "/ˌdʒiəˈɡræfɪkəl/",
+    "rp_ipa": "/dʒɪəˈɡræfɪkəl/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "geographical",
+      "ja": "地理的な、地理学の",
+      "zh": "地理的",
+      "ko": "지리적인, 지리학의",
+      "fil": "heograpikal"
+    },
+    "def": "Relating to geography, such as places and physical features.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "geography",
+    "ipa": "/dʒiˈɑɡrəfi/",
+    "rp_ipa": "/dʒɪˈɒɡrəfi/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "geography",
+      "ja": "地理学",
+      "zh": "地理学",
+      "ko": "지리학",
+      "fil": "heograpiya"
+    },
+    "def": "The study of the earth's physical features, climate, and population.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "geology",
+    "ipa": "/dʒiˈɑlədʒi/",
+    "rp_ipa": "/dʒɪˈɒlədʒi/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "geology",
+      "ja": "地質学",
+      "zh": "地质学",
+      "ko": "지질학",
+      "fil": "heolohiya"
+    },
+    "def": "The scientific study of the earth's rocks and structure.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "gesture",
+    "ipa": "/ˈdʒɛstʃɚ/",
+    "rp_ipa": "/ˈdʒestʃə/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "gesture",
+      "ja": "身振り、ジェスチャー",
+      "zh": "手势、姿态",
+      "ko": "몸짓, 제스처",
+      "fil": "kilos, senyas"
+    },
+    "def": "A movement of the body, especially the hands, to express meaning.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "giant",
+    "ipa": "/ˈdʒaɪənt/",
+    "rp_ipa": "/ˈdʒaɪənt/",
+    "cefr": "B1",
+    "pos": "形容詞 / 名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "giant",
+      "ja": "巨大な、巨人",
+      "zh": "巨大的、巨人",
+      "ko": "거대한, 거인",
+      "fil": "higante"
+    },
+    "def": "Very large, or a huge imaginary person or creature.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "gifted",
+    "ipa": "/ˈɡɪftəd/",
+    "rp_ipa": "/ˈɡɪftɪd/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "gifted",
+      "ja": "才能のある",
+      "zh": "有天赋的",
+      "ko": "재능이 있는",
+      "fil": "may talento"
+    },
+    "def": "Having a natural talent or ability.",
+    "neighbors": [],
+    "_generation_source": "manual_phonological"
+  },
+  {
+    "w": "giggle",
+    "ipa": "/ˈɡɪɡəl/",
+    "rp_ipa": "/ˈɡɪɡəl/",
+    "cefr": "B1",
+    "pos": "動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "giggle",
+      "ja": "くすくす笑う",
+      "zh": "咯咯笑",
+      "ko": "키득거리다",
+      "fil": "kumindat, humalakhak (mahina)"
+    },
+    "def": "To laugh in a light, nervous, or silly way.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "ginger",
+    "ipa": "/ˈdʒɪndʒɚ/",
+    "rp_ipa": "/ˈdʒɪndʒə/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "ginger",
+      "ja": "しょうが、赤褐色の",
+      "zh": "生姜、姜黄色的",
+      "ko": "생강, 적갈색의",
+      "fil": "luya"
+    },
+    "def": "A spicy root used in cooking, or a reddish-orange color.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "giraffe",
+    "ipa": "/dʒɚˈæf/",
+    "rp_ipa": "/dʒɪˈrɑːf/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "giraffe",
+      "ja": "キリン",
+      "zh": "长颈鹿",
+      "ko": "기린",
+      "fil": "giraffe"
+    },
+    "def": "A tall African animal with a very long neck.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "global",
+    "ipa": "/ˈɡloʊbəl/",
+    "rp_ipa": "/ˈɡləʊbəl/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "global",
+      "ja": "地球規模の、世界的な",
+      "zh": "全球的",
+      "ko": "세계적인, 지구의",
+      "fil": "pandaigdigan"
+    },
+    "def": "Relating to the whole world.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "glorious",
+    "ipa": "/ˈɡlɔriəs/",
+    "rp_ipa": "/ˈɡlɒrɪəs/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "glorious",
+      "ja": "輝かしい、壮麗な",
+      "zh": "光荣的、壮丽的",
+      "ko": "영광스러운, 눈부신",
+      "fil": "maluwalhati"
+    },
+    "def": "Extremely beautiful, impressive, or deserving praise.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "glory",
+    "ipa": "/ˈɡlɔri/",
+    "rp_ipa": "/ˈɡlɒri/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "glory",
+      "ja": "栄光、名誉",
+      "zh": "荣耀、光荣",
+      "ko": "영광",
+      "fil": "kaluwalhatian"
+    },
+    "def": "Great honor, praise, or beauty.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "goalkeeper",
+    "ipa": "/ˈɡoʊlˌkipɚ/",
+    "rp_ipa": "/ˈɡəʊlˌkiːpə/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "goalkeeper",
+      "ja": "ゴールキーパー",
+      "zh": "守门员",
+      "ko": "골키퍼",
+      "fil": "goalkeeper"
+    },
+    "def": "The player who guards the goal in sports such as soccer.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "goddess",
+    "ipa": "/ˈɡɑdəs/",
+    "rp_ipa": "/ˈɡɒdəs/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "goddess",
+      "ja": "女神",
+      "zh": "女神",
+      "ko": "여신",
+      "fil": "diyosa"
+    },
+    "def": "A female god.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "golfer",
+    "ipa": "/ˈɡɑlfɚ/",
+    "rp_ipa": "/ˈɡɒlfə/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "golfer",
+      "ja": "ゴルファー",
+      "zh": "高尔夫球手",
+      "ko": "골퍼",
+      "fil": "manlalaro ng golf"
+    },
+    "def": "A person who plays golf.",
+    "neighbors": [],
+    "_generation_source": "manual_phonological"
+  },
+  {
+    "w": "goodness",
+    "ipa": "/ˈɡʊdnəs/",
+    "rp_ipa": "/ˈɡʊdnɪs/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "goodness",
+      "ja": "善良さ、良さ",
+      "zh": "善良、优点",
+      "ko": "선함, 좋음",
+      "fil": "kabutihan"
+    },
+    "def": "The quality of being kind and morally good.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "goods",
+    "ipa": "/ˈɡʊdz/",
+    "rp_ipa": "/ɡʊdz/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "goods",
+      "ja": "商品、品物",
+      "zh": "商品、货物",
+      "ko": "상품, 물품",
+      "fil": "kalakal"
+    },
+    "def": "Things that are made, bought, or sold.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "gorgeous",
+    "ipa": "/ˈɡɔrdʒəs/",
+    "rp_ipa": "/ˈɡɔːdʒəs/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "gorgeous",
+      "ja": "とても美しい、素晴らしい",
+      "zh": "华丽的、极美的",
+      "ko": "아름다운, 매력적인",
+      "fil": "napakaganda"
+    },
+    "def": "Extremely beautiful or pleasant.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "gorilla",
+    "ipa": "/ɡɚˈɪlə/",
+    "rp_ipa": "/ɡəˈrɪlə/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "gorilla",
+      "ja": "ゴリラ",
+      "zh": "大猩猩",
+      "ko": "고릴라",
+      "fil": "gorilya"
+    },
+    "def": "A very large African ape.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "gossip",
+    "ipa": "/ˈɡɑsəp/",
+    "rp_ipa": "/ˈɡɒsɪp/",
+    "cefr": "B1",
+    "pos": "名詞 / 動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "gossip",
+      "ja": "うわさ話、ゴシップ",
+      "zh": "闲话、八卦",
+      "ko": "소문, 험담",
+      "fil": "tsismis"
+    },
+    "def": "Casual talk about other people's private lives, or to talk in this way.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "govern",
+    "ipa": "/ˈɡʌvɚn/",
+    "rp_ipa": "/ˈɡʌvən/",
+    "cefr": "B1",
+    "pos": "動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "govern",
+      "ja": "統治する",
+      "zh": "统治、管理",
+      "ko": "통치하다, 다스리다",
+      "fil": "mamahala"
+    },
+    "def": "To officially control and manage a country or organization.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "governor",
+    "ipa": "/ˈɡʌvɚnɚ/",
+    "rp_ipa": "/ˈɡʌvənə/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "governor",
+      "ja": "知事、統治者",
+      "zh": "州长、总督",
+      "ko": "주지사, 총독",
+      "fil": "gobernador"
+    },
+    "def": "A person who officially governs a state or region.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "graceful",
+    "ipa": "/ˈɡreɪsfəl/",
+    "rp_ipa": "/ˈɡreɪsfəl/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "graceful",
+      "ja": "優雅な",
+      "zh": "优雅的",
+      "ko": "우아한",
+      "fil": "magaslaw"
+    },
+    "def": "Moving in a smooth, attractive way.",
+    "neighbors": [],
+    "_generation_source": "manual_phonological"
+  },
+  {
+    "w": "graduation",
+    "ipa": "/ˌɡrædʒuˈeɪʃən/",
+    "rp_ipa": "/ˌɡrædjʊˈeɪʃən/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "graduation",
+      "ja": "卒業",
+      "zh": "毕业",
+      "ko": "졸업",
+      "fil": "pagtatapos"
+    },
+    "def": "The act of completing a course of study, often marked by a ceremony.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "graphic",
+    "ipa": "/ˈɡræfɪk/",
+    "rp_ipa": "/ˈɡræfɪk/",
+    "cefr": "B1",
+    "pos": "形容詞 / 名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "graphic",
+      "ja": "グラフィックの、生々しい",
+      "zh": "图形的、生动的",
+      "ko": "그래픽의, 생생한",
+      "fil": "graphic"
+    },
+    "def": "Relating to visual images, or a visual image.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "graphics",
+    "ipa": "/ˈɡræfɪks/",
+    "rp_ipa": "/ˈɡræfɪks/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "graphics",
+      "ja": "グラフィックス、図表",
+      "zh": "图形、图像",
+      "ko": "그래픽, 도표",
+      "fil": "graphics"
+    },
+    "def": "Visual images, especially on a computer screen.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "gratitude",
+    "ipa": "/ˈɡrætəˌtud/",
+    "rp_ipa": "/ˈɡrætɪˌtjuːd/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "gratitude",
+      "ja": "感謝",
+      "zh": "感激、感谢",
+      "ko": "감사",
+      "fil": "pasasalamat"
+    },
+    "def": "A feeling of being thankful.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "gravy",
+    "ipa": "/ˈɡreɪvi/",
+    "rp_ipa": "/ˈɡreɪvi/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "gravy",
+      "ja": "グレイビーソース、肉汁",
+      "zh": "肉汁",
+      "ko": "그레이비 소스, 육즙",
+      "fil": "sarsa (karne)"
+    },
+    "def": "A sauce made from the juices of cooked meat.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "greenhouse",
+    "ipa": "/ˈɡrinˌhaʊs/",
+    "rp_ipa": "/ˈɡriːnˌhaʊs/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "greenhouse",
+      "ja": "温室",
+      "zh": "温室",
+      "ko": "온실",
+      "fil": "greenhouse"
+    },
+    "def": "A glass building used for growing plants.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "greeting",
+    "ipa": "/ˈɡritɪŋ/",
+    "rp_ipa": "/ˈɡriːtɪŋ/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "greeting",
+      "ja": "挨拶",
+      "zh": "问候、致意",
+      "ko": "인사",
+      "fil": "pagbati"
+    },
+    "def": "A word or gesture used to welcome someone.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "grouping",
+    "ipa": "/ˈɡrupɪŋ/",
+    "rp_ipa": "/ˈɡruːpɪŋ/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "grouping",
+      "ja": "グループ分け、集団",
+      "zh": "分组、群体",
+      "ko": "그룹화, 집단",
+      "fil": "pangkat"
+    },
+    "def": "A set of people or things gathered together based on shared features.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "guarantee",
+    "ipa": "/ˌɡɛrənˈti/",
+    "rp_ipa": "/ˌɡærənˈtiː/",
+    "cefr": "B1",
+    "pos": "動詞 / 名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "guarantee",
+      "ja": "保証する、保証",
+      "zh": "保证",
+      "ko": "보장하다, 보증",
+      "fil": "garantiya"
+    },
+    "def": "To promise that something will happen, or such a promise.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "guidance",
+    "ipa": "/ˈɡaɪdəns/",
+    "rp_ipa": "/ˈɡaɪdəns/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "guidance",
+      "ja": "指導、助言",
+      "zh": "指导、指引",
+      "ko": "지도, 안내",
+      "fil": "gabay"
+    },
+    "def": "Help or advice given to guide someone.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "guide",
+    "ipa": "/ˈɡaɪd/",
+    "rp_ipa": "/ɡaɪd/",
+    "cefr": "B1",
+    "pos": "名詞 / 動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "guide",
+      "ja": "案内人、案内書、導く",
+      "zh": "指南、导游、引导",
+      "ko": "가이드, 안내서, 안내하다",
+      "fil": "gabay, giya"
+    },
+    "def": "A person or book that gives information or directions, or to lead someone.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "guilty",
+    "ipa": "/ˈɡɪlti/",
+    "rp_ipa": "/ˈɡɪlti/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "guilty",
+      "ja": "有罪の、罪悪感のある",
+      "zh": "有罪的、内疚的",
+      "ko": "유죄의, 죄책감을 느끼는",
+      "fil": "may kasalanan"
+    },
+    "def": "Having done something wrong, or feeling responsible for something bad.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "guitarist",
+    "ipa": "/ɡɪˈtɑrəst/",
+    "rp_ipa": "/ɡɪˈtɑːrɪst/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "guitarist",
+      "ja": "ギタリスト",
+      "zh": "吉他手",
+      "ko": "기타리스트",
+      "fil": "gitarista"
+    },
+    "def": "A person who plays the guitar.",
+    "neighbors": [],
+    "_generation_source": "manual_phonological"
+  },
+  {
+    "w": "gymnastics",
+    "ipa": "/dʒɪmˈnæstɪks/",
+    "rp_ipa": "/dʒɪmˈnæstɪks/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "gymnastics",
+      "ja": "体操",
+      "zh": "体操",
+      "ko": "체조",
+      "fil": "gymnastics"
+    },
+    "def": "A sport involving physical exercises that require strength and balance.",
+    "neighbors": [],
+    "_generation_source": "manual_phonological"
+  },
+  {
+    "w": "habitat",
+    "ipa": "/ˈhæbəˌtæt/",
+    "rp_ipa": "/ˈhæbɪˌtæt/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "habitat",
+      "ja": "生息地",
+      "zh": "栖息地",
+      "ko": "서식지",
+      "fil": "tirahan (hayop)"
+    },
+    "def": "The natural home of an animal or plant.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "hairdresser",
+    "ipa": "/ˈhɛrˌdrɛsɚ/",
+    "rp_ipa": "/ˈheəˌdresə/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "hairdresser",
+      "ja": "美容師",
+      "zh": "美发师",
+      "ko": "미용사",
+      "fil": "tagagupit"
+    },
+    "def": "A person whose job is to cut and style hair.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "hairdryer",
+    "ipa": "/ˈhɛrˌdraɪɚ/",
+    "rp_ipa": "/ˈheədraɪə/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "hairdryer",
+      "ja": "ヘアドライヤー",
+      "zh": "吹风机",
+      "ko": "헤어드라이어",
+      "fil": "pambuhaghag ng buhok"
+    },
+    "def": "An electric device used to dry hair.",
+    "neighbors": [],
+    "_generation_source": "manual_phonological"
+  },
+  {
+    "w": "hammer",
+    "ipa": "/ˈhæmɚ/",
+    "rp_ipa": "/ˈhæmə/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "hammer",
+      "ja": "金づち、ハンマー",
+      "zh": "锤子",
+      "ko": "망치",
+      "fil": "martilyo"
+    },
+    "def": "A tool with a heavy head used for hitting nails.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "hand-held",
+    "ipa": "/ˈhændˌhɛld/",
+    "rp_ipa": "/ˈhændheld/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "hand-held",
+      "ja": "手持ちの",
+      "zh": "手持的",
+      "ko": "휴대용의, 손에 드는",
+      "fil": "hawak sa kamay"
+    },
+    "def": "Small enough to be held in the hand.",
+    "neighbors": [],
+    "_generation_source": "manual_phonological"
+  },
+  {
+    "w": "handball",
+    "ipa": "/ˈhændˌbɔl/",
+    "rp_ipa": "/ˈhændbɔːl/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "handball",
+      "ja": "ハンドボール",
+      "zh": "手球",
+      "ko": "핸드볼",
+      "fil": "handball"
+    },
+    "def": "A sport played by throwing a ball with the hands.",
+    "neighbors": [],
+    "_generation_source": "manual_phonological"
+  },
+  {
+    "w": "handkerchief",
+    "ipa": "/ˈhæŋkɚtʃɪf/",
+    "rp_ipa": "/ˈhæŋkətʃɪf/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "handkerchief",
+      "ja": "ハンカチ",
+      "zh": "手帕",
+      "ko": "손수건",
+      "fil": "panyo"
+    },
+    "def": "A small piece of cloth used for wiping the nose or face.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "handshake",
+    "ipa": "/ˈhændˌʃeɪk/",
+    "rp_ipa": "/ˈhændʃeɪk/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "handshake",
+      "ja": "握手",
+      "zh": "握手",
+      "ko": "악수",
+      "fil": "pakikipagkamay"
+    },
+    "def": "The act of grasping and shaking someone's hand as a greeting.",
+    "neighbors": [],
+    "_generation_source": "manual_phonological"
+  },
+  {
+    "w": "handwriting",
+    "ipa": "/ˈhændˌraɪtɪŋ/",
+    "rp_ipa": "/ˈhændraɪtɪŋ/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "handwriting",
+      "ja": "手書き、筆跡",
+      "zh": "笔迹、手写",
+      "ko": "필적, 손글씨",
+      "fil": "sulat-kamay"
+    },
+    "def": "A person's own style of writing by hand.",
+    "neighbors": [],
+    "_generation_source": "manual_phonological"
+  },
+  {
+    "w": "handy",
+    "ipa": "/ˈhændi/",
+    "rp_ipa": "/ˈhændi/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "handy",
+      "ja": "便利な、手先が器用な",
+      "zh": "方便的、手巧的",
+      "ko": "편리한, 손재주가 있는",
+      "fil": "kapaki-pakinabang"
+    },
+    "def": "Useful and convenient, or skillful with your hands.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "hanging",
+    "ipa": "/ˈhæŋɪŋ/",
+    "rp_ipa": "/ˈhæŋɪŋ/",
+    "cefr": "B1",
+    "pos": "形容詞 / 名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "hanging",
+      "ja": "吊るされた、吊るすこと",
+      "zh": "悬挂的、悬挂",
+      "ko": "매달린, 매달기",
+      "fil": "nakabitin"
+    },
+    "def": "Suspended from above, or the act of suspending something.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "harbor",
+    "ipa": "/ˈhɑrbɚ/",
+    "rp_ipa": "/ˈhɑːbə/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "harbor",
+      "ja": "港",
+      "zh": "港口",
+      "ko": "항구",
+      "fil": "daungan"
+    },
+    "def": "A protected area of water where ships can dock.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "harbour",
+    "ipa": "/ˈhɑrbɚ/",
+    "rp_ipa": "/ˈhɑːbə/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "harbour",
+      "ja": "港(英)",
+      "zh": "港口(英式)",
+      "ko": "항구(영국식)",
+      "fil": "daungan (British)"
+    },
+    "def": "A protected area of water where ships can dock (British spelling of harbor).",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "hard-working",
+    "ipa": "/ˌhɑrdˈwɝkɪŋ/",
+    "rp_ipa": "/ˌhɑːdˈwɜːkɪŋ/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "hard-working",
+      "ja": "勤勉な、よく働く",
+      "zh": "勤劳的、努力的",
+      "ko": "근면한, 열심히 일하는",
+      "fil": "masipag"
+    },
+    "def": "Putting a lot of effort into work.",
+    "neighbors": [],
+    "_generation_source": "manual_phonological"
+  },
+  {
+    "w": "hardship",
+    "ipa": "/ˈhɑrdʃɪp/",
+    "rp_ipa": "/ˈhɑːdʃɪp/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "hardship",
+      "ja": "苦難、困難",
+      "zh": "困难、艰辛",
+      "ko": "고난, 어려움",
+      "fil": "hirap"
+    },
+    "def": "Difficult conditions or suffering.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "harness",
+    "ipa": "/ˈhɑrnəs/",
+    "rp_ipa": "/ˈhɑːnɪs/",
+    "cefr": "B1",
+    "pos": "名詞 / 動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "harness",
+      "ja": "馬具、活用する",
+      "zh": "马具、利用",
+      "ko": "마구, 이용하다",
+      "fil": "kabit (kabayo)"
+    },
+    "def": "A set of straps used to control an animal, or to control and use energy.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "hasty",
+    "ipa": "/ˈheɪsti/",
+    "rp_ipa": "/ˈheɪsti/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "hasty",
+      "ja": "急いだ、性急な",
+      "zh": "匆忙的、草率的",
+      "ko": "성급한, 서두른",
+      "fil": "nagmamadali"
+    },
+    "def": "Done too quickly, often without enough thought.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "hatred",
+    "ipa": "/ˈheɪtrəd/",
+    "rp_ipa": "/ˈheɪtrɪd/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "hatred",
+      "ja": "憎しみ",
+      "zh": "仇恨、憎恶",
+      "ko": "증오",
+      "fil": "poot"
+    },
+    "def": "A very strong feeling of dislike.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "haven",
+    "ipa": "/ˈheɪvən/",
+    "rp_ipa": "/ˈheɪvən/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "haven",
+      "ja": "避難所、安全な場所",
+      "zh": "避风港、避难所",
+      "ko": "안식처, 피난처",
+      "fil": "kanlungan"
+    },
+    "def": "A place of safety and shelter.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "hazard",
+    "ipa": "/ˈhæzɚd/",
+    "rp_ipa": "/ˈhæzəd/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "hazard",
+      "ja": "危険",
+      "zh": "危险、隐患",
+      "ko": "위험",
+      "fil": "panganib"
+    },
+    "def": "A danger or risk.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "headline",
+    "ipa": "/ˈhɛdˌlaɪn/",
+    "rp_ipa": "/ˈhedˌlaɪn/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "headline",
+      "ja": "見出し",
+      "zh": "标题、头条",
+      "ko": "표제, 헤드라인",
+      "fil": "pamagat (balita)"
+    },
+    "def": "The title of a newspaper article, printed in large letters.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "healing",
+    "ipa": "/ˈhilɪŋ/",
+    "rp_ipa": "/ˈhiːlɪŋ/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "healing",
+      "ja": "治癒、癒し",
+      "zh": "治愈、康复",
+      "ko": "치유",
+      "fil": "paggaling"
+    },
+    "def": "The process of becoming healthy again.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "hearing",
+    "ipa": "/ˈhirɪŋ/",
+    "rp_ipa": "/ˈhɪərɪŋ/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "hearing",
+      "ja": "聴力、公聴会",
+      "zh": "听力、听证会",
+      "ko": "청력, 청문회",
+      "fil": "pandinig"
+    },
+    "def": "The ability to hear, or an official meeting to examine facts.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "hearted",
+    "ipa": "/ˈhɑrtəd/",
+    "rp_ipa": "/ˈhɑːtɪd/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "hearted",
+      "ja": "~な心の(複合語)",
+      "zh": "~心的(用于合成词)",
+      "ko": "~한 마음의(합성어)",
+      "fil": "may puso"
+    },
+    "def": "Having a particular type of heart or character (used in compounds like kind-hearted).",
+    "neighbors": [],
+    "_generation_source": "manual_phonological"
+  },
+  {
+    "w": "hearty",
+    "ipa": "/ˈhɑrti/",
+    "rp_ipa": "/ˈhɑːti/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "hearty",
+      "ja": "心のこもった、たっぷりの",
+      "zh": "热诚的、丰盛的",
+      "ko": "진심어린, 푸짐한",
+      "fil": "taos-puso"
+    },
+    "def": "Warm and enthusiastic, or large and satisfying.",
+    "neighbors": [],
+    "_generation_source": "manual_phonological"
+  },
+  {
+    "w": "heater",
+    "ipa": "/ˈhitɚ/",
+    "rp_ipa": "/ˈhiːtə/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "heater",
+      "ja": "暖房器具、ヒーター",
+      "zh": "加热器、暖气",
+      "ko": "히터, 난방기",
+      "fil": "pampainit"
+    },
+    "def": "A device used to make a place warm.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "heaven",
+    "ipa": "/ˈhɛvən/",
+    "rp_ipa": "/ˈhevən/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "heaven",
+      "ja": "天国",
+      "zh": "天堂",
+      "ko": "천국",
+      "fil": "langit"
+    },
+    "def": "The place where God and good people are believed to live after death.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "heavenly",
+    "ipa": "/ˈhɛvənli/",
+    "rp_ipa": "/ˈhevənli/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "heavenly",
+      "ja": "天国のような、素晴らしい",
+      "zh": "天堂般的、极好的",
+      "ko": "천상의, 매우 좋은",
+      "fil": "makalangit"
+    },
+    "def": "Relating to heaven, or extremely pleasant.",
+    "neighbors": [],
+    "_generation_source": "manual_phonological"
+  },
+  {
+    "w": "helmet",
+    "ipa": "/ˈhɛlmət/",
+    "rp_ipa": "/ˈhelmɪt/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "helmet",
+      "ja": "ヘルメット",
+      "zh": "头盔",
+      "ko": "헬멧",
+      "fil": "helmet"
+    },
+    "def": "A hard hat worn to protect the head.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "helpless",
+    "ipa": "/ˈhɛlpləs/",
+    "rp_ipa": "/ˈhelplɪs/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "helpless",
+      "ja": "無力な、どうしようもない",
+      "zh": "无助的",
+      "ko": "무력한, 속수무책의",
+      "fil": "walang magawa"
+    },
+    "def": "Unable to help yourself; needing help from others.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "hesitate",
+    "ipa": "/ˈhɛzəˌteɪt/",
+    "rp_ipa": "/ˈhezɪˌteɪt/",
+    "cefr": "B1",
+    "pos": "動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "hesitate",
+      "ja": "ためらう、躊躇する",
+      "zh": "犹豫、迟疑",
+      "ko": "망설이다, 주저하다",
+      "fil": "mag-alinlangan"
+    },
+    "def": "To pause before doing or saying something because you are unsure.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "hidden",
+    "ipa": "/ˈhɪdən/",
+    "rp_ipa": "/ˈhɪdən/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "hidden",
+      "ja": "隠れた、隠された",
+      "zh": "隐藏的",
+      "ko": "숨겨진",
+      "fil": "nakatago"
+    },
+    "def": "Kept out of sight; not easily noticed.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "highlight",
+    "ipa": "/ˈhaɪˌlaɪt/",
+    "rp_ipa": "/ˈhaɪˌlaɪt/",
+    "cefr": "B1",
+    "pos": "動詞 / 名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "highlight",
+      "ja": "強調する、見どころ",
+      "zh": "强调、突出、亮点",
+      "ko": "강조하다, 하이라이트",
+      "fil": "bigyang-diin"
+    },
+    "def": "To emphasize something important, or the most interesting part of something.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "highly",
+    "ipa": "/ˈhaɪli/",
+    "rp_ipa": "/ˈhaɪli/",
+    "cefr": "B1",
+    "pos": "副詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "highly",
+      "ja": "非常に、大いに",
+      "zh": "高度地、非常",
+      "ko": "매우, 대단히",
+      "fil": "napaka-"
+    },
+    "def": "To a great degree; very.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "hire",
+    "ipa": "/ˈhaɪɚ/",
+    "rp_ipa": "/ˈhaɪə/",
+    "cefr": "B1",
+    "pos": "動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "hire",
+      "ja": "雇う、賃借りする",
+      "zh": "雇用、租用",
+      "ko": "고용하다, 빌리다",
+      "fil": "umupa, kumuha ng trabahador"
+    },
+    "def": "To pay to use something temporarily, or to employ someone.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "historian",
+    "ipa": "/hɪˈstɔriən/",
+    "rp_ipa": "/hɪˈstɔːrɪən/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "historian",
+      "ja": "歴史家",
+      "zh": "历史学家",
+      "ko": "역사가",
+      "fil": "istoryador"
+    },
+    "def": "A person who studies or writes about history.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "historic",
+    "ipa": "/hɪˈstɔrɪk/",
+    "rp_ipa": "/hɪˈstɒrɪk/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "historic",
+      "ja": "歴史的に重要な",
+      "zh": "有历史意义的",
+      "ko": "역사적으로 중요한",
+      "fil": "makasaysayan"
+    },
+    "def": "Important in history, or likely to be remembered.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "historical",
+    "ipa": "/hɪˈstɔrɪkəl/",
+    "rp_ipa": "/hɪˈstɒrɪkəl/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "historical",
+      "ja": "歴史の、史実に基づく",
+      "zh": "历史的",
+      "ko": "역사의, 역사적인",
+      "fil": "makasaysayan"
+    },
+    "def": "Relating to the study of history or past events.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "hiv",
+    "ipa": "/ˌeɪtʃaɪˈvi/",
+    "rp_ipa": "/ˌeɪtʃaɪˈviː/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "hiv",
+      "ja": "HIV(ヒト免疫不全ウイルス)",
+      "zh": "艾滋病病毒",
+      "ko": "에이즈 바이러스",
+      "fil": "HIV"
+    },
+    "def": "A virus that can cause AIDS (Human Immunodeficiency Virus).",
+    "neighbors": [],
+    "_generation_source": "manual_phonological"
+  },
+  {
+    "w": "holy",
+    "ipa": "/ˈhoʊli/",
+    "rp_ipa": "/ˈhəʊli/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "holy",
+      "ja": "神聖な",
+      "zh": "神圣的",
+      "ko": "신성한",
+      "fil": "banal"
+    },
+    "def": "Relating to God or religion; sacred.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "homeless",
+    "ipa": "/ˈhoʊmləs/",
+    "rp_ipa": "/ˈhəʊmlɪs/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "homeless",
+      "ja": "ホームレスの、家のない",
+      "zh": "无家可归的",
+      "ko": "노숙자의, 집 없는",
+      "fil": "walang tirahan"
+    },
+    "def": "Having no home.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "honest",
+    "ipa": "/ˈɑnəst/",
+    "rp_ipa": "/ˈɒnɪst/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "honest",
+      "ja": "正直な",
+      "zh": "诚实的",
+      "ko": "정직한",
+      "fil": "matapat"
+    },
+    "def": "Telling the truth; not lying or cheating.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "honestly",
+    "ipa": "/ˈɑnəstli/",
+    "rp_ipa": "/ˈɒnɪstli/",
+    "cefr": "B1",
+    "pos": "副詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "honestly",
+      "ja": "正直に言って、正直に",
+      "zh": "老实说、诚实地",
+      "ko": "솔직히, 정직하게",
+      "fil": "totoo lang"
+    },
+    "def": "In a truthful way, or used to emphasize sincerity.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "honesty",
+    "ipa": "/ˈɑnəsti/",
+    "rp_ipa": "/ˈɒnɪsti/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "honesty",
+      "ja": "正直さ",
+      "zh": "诚实",
+      "ko": "정직함",
+      "fil": "katapatan"
+    },
+    "def": "The quality of being truthful and sincere.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "honeymoon",
+    "ipa": "/ˈhʌniˌmun/",
+    "rp_ipa": "/ˈhʌnɪˌmuːn/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "honeymoon",
+      "ja": "新婚旅行",
+      "zh": "蜜月",
+      "ko": "신혼여행",
+      "fil": "honeymoon"
+    },
+    "def": "A vacation taken by a couple after their wedding.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "hopeful",
+    "ipa": "/ˈhoʊpfəl/",
+    "rp_ipa": "/ˈhəʊpfəl/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "hopeful",
+      "ja": "希望に満ちた",
+      "zh": "抱有希望的",
+      "ko": "희망에 찬",
+      "fil": "may pag-asa"
+    },
+    "def": "Feeling or expressing hope.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "hopefully",
+    "ipa": "/ˈhoʊpfəli/",
+    "rp_ipa": "/ˈhəʊpfəli/",
+    "cefr": "B1",
+    "pos": "副詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "hopefully",
+      "ja": "願わくは、うまくいけば",
+      "zh": "希望地",
+      "ko": "바라건대",
+      "fil": "sana"
+    },
+    "def": "It is hoped that; in a hopeful way.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "hopeless",
+    "ipa": "/ˈhoʊpləs/",
+    "rp_ipa": "/ˈhəʊplɪs/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "hopeless",
+      "ja": "絶望的な、お手上げの",
+      "zh": "绝望的、无望的",
+      "ko": "절망적인, 가망 없는",
+      "fil": "walang pag-asa"
+    },
+    "def": "Having no hope, or very bad at something.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "horizon",
+    "ipa": "/hɚˈaɪzən/",
+    "rp_ipa": "/həˈraɪzən/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "horizon",
+      "ja": "地平線、水平線",
+      "zh": "地平线、视野",
+      "ko": "지평선, 수평선",
+      "fil": "abot-tanaw"
+    },
+    "def": "The line where the sky meets the land or sea.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "horrible",
+    "ipa": "/ˈhɔrəbəl/",
+    "rp_ipa": "/ˈhɒrɪbəl/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "horrible",
+      "ja": "恐ろしい、ひどい",
+      "zh": "可怕的、糟糕的",
+      "ko": "끔찍한, 소름끼치는",
+      "fil": "kakila-kilabot"
+    },
+    "def": "Very unpleasant or shocking.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "horrify",
+    "ipa": "/ˈhɔrəˌfaɪ/",
+    "rp_ipa": "/ˈhɒrɪfaɪ/",
+    "cefr": "B1",
+    "pos": "動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "horrify",
+      "ja": "ぞっとさせる",
+      "zh": "使恐惧、使震惊",
+      "ko": "소름끼치게 하다",
+      "fil": "sindakin"
+    },
+    "def": "To shock or disgust someone greatly.",
+    "neighbors": [],
+    "_generation_source": "manual_phonological"
+  },
+  {
+    "w": "hostel",
+    "ipa": "/ˈhɑstəl/",
+    "rp_ipa": "/ˈhɒstəl/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "hostel",
+      "ja": "ホステル、簡易宿泊所",
+      "zh": "旅舍、青年旅馆",
+      "ko": "호스텔, 유스호스텔",
+      "fil": "hostel"
+    },
+    "def": "A cheap place to stay, often for young travelers.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "household",
+    "ipa": "/ˈhaʊsˌhoʊld/",
+    "rp_ipa": "/ˈhaʊsˌhəʊld/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "household",
+      "ja": "世帯、家庭",
+      "zh": "家庭、住户",
+      "ko": "가정, 세대",
+      "fil": "sambahayan"
+    },
+    "def": "A house and the people living in it.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "housework",
+    "ipa": "/ˈhaʊˌswɝk/",
+    "rp_ipa": "/ˈhaʊˌswɜːk/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "housework",
+      "ja": "家事",
+      "zh": "家务",
+      "ko": "집안일",
+      "fil": "gawaing-bahay"
+    },
+    "def": "Tasks done to keep a home clean and tidy.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "humanity",
+    "ipa": "/hjuˈmænɪti/",
+    "rp_ipa": "/hjuːˈmænɪti/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "humanity",
+      "ja": "人類、人間性",
+      "zh": "人类、人性",
+      "ko": "인류, 인간성",
+      "fil": "sangkatauhan"
+    },
+    "def": "All people considered as a group, or kindness.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "humid",
+    "ipa": "/ˈhjuməd/",
+    "rp_ipa": "/ˈhjuːmɪd/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "humid",
+      "ja": "湿気の多い",
+      "zh": "潮湿的",
+      "ko": "습한",
+      "fil": "halumigmig"
+    },
+    "def": "Containing a lot of moisture in the air.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "humor",
+    "ipa": "/ˈhjumɚ/",
+    "rp_ipa": "/ˈhjuːmə/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "humor",
+      "ja": "ユーモア、おかしさ",
+      "zh": "幽默",
+      "ko": "유머",
+      "fil": "katatawanan"
+    },
+    "def": "The quality of being funny.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "humorous",
+    "ipa": "/ˈhjumɚəs/",
+    "rp_ipa": "/ˈhjuːmərəs/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "humorous",
+      "ja": "ユーモラスな、面白い",
+      "zh": "幽默的",
+      "ko": "유머러스한, 재미있는",
+      "fil": "nakakatawa"
+    },
+    "def": "Funny; causing laughter.",
+    "neighbors": [],
+    "_generation_source": "manual_phonological"
+  },
+  {
+    "w": "humour",
+    "ipa": "/ˈhjumɚ/",
+    "rp_ipa": "/ˈhjuːmə/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "humour",
+      "ja": "ユーモア(英)",
+      "zh": "幽默(英式)",
+      "ko": "유머(영국식)",
+      "fil": "katatawanan (British)"
+    },
+    "def": "The quality of being funny (British spelling of humor).",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "hunger",
+    "ipa": "/ˈhʌŋɡɚ/",
+    "rp_ipa": "/ˈhʌŋɡə/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "hunger",
+      "ja": "空腹、飢え",
+      "zh": "饥饿",
+      "ko": "배고픔, 굶주림",
+      "fil": "gutom"
+    },
+    "def": "The feeling of wanting or needing food.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "hurriedly",
+    "ipa": "/ˈhɝidli/",
+    "rp_ipa": "/ˈhʌridli/",
+    "cefr": "B1",
+    "pos": "副詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "hurriedly",
+      "ja": "急いで、慌てて",
+      "zh": "匆忙地",
+      "ko": "서둘러서, 급하게",
+      "fil": "nagmamadali"
+    },
+    "def": "In a quick and often careless way.",
+    "neighbors": [],
+    "_generation_source": "manual_phonological"
+  },
+  {
+    "w": "identity",
+    "ipa": "/aɪˈdɛntɪˌti/",
+    "rp_ipa": "/aɪˈdentɪti/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "identity",
+      "ja": "アイデンティティ、正体",
+      "zh": "身份、特性",
+      "ko": "정체성, 신원",
+      "fil": "pagkakakilanlan"
+    },
+    "def": "Who a person is, or the qualities that make something what it is.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "idiom",
+    "ipa": "/ˈɪdiəm/",
+    "rp_ipa": "/ˈɪdɪəm/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "idiom",
+      "ja": "熟語、慣用句",
+      "zh": "习语、成语",
+      "ko": "관용구, 숙어",
+      "fil": "idyoma"
+    },
+    "def": "A phrase whose meaning is different from the meanings of its individual words.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "idol",
+    "ipa": "/ˈaɪdəl/",
+    "rp_ipa": "/ˈaɪdəl/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "idol",
+      "ja": "アイドル、偶像",
+      "zh": "偶像",
+      "ko": "우상, 아이돌",
+      "fil": "idolo"
+    },
+    "def": "A person who is greatly admired, or an image worshipped as a god.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "ignore",
+    "ipa": "/ˌɪɡˈnɔr/",
+    "rp_ipa": "/ɪɡˈnɔː/",
+    "cefr": "B1",
+    "pos": "動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "ignore",
+      "ja": "無視する",
+      "zh": "忽视、忽略",
+      "ko": "무시하다",
+      "fil": "huwag pansinin"
+    },
+    "def": "To deliberately not pay attention to something.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "illegally",
+    "ipa": "/ɪˈliɡəli/",
+    "rp_ipa": "/ɪˈliːɡəli/",
+    "cefr": "B1",
+    "pos": "副詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "illegally",
+      "ja": "違法に",
+      "zh": "非法地",
+      "ko": "불법으로",
+      "fil": "labag sa batas"
+    },
+    "def": "In a way that is against the law.",
+    "neighbors": [],
+    "_generation_source": "manual_phonological"
+  },
+  {
+    "w": "illness",
+    "ipa": "/ˈɪlnəs/",
+    "rp_ipa": "/ˈɪlnɪs/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "illness",
+      "ja": "病気",
+      "zh": "疾病",
+      "ko": "질병",
+      "fil": "sakit"
+    },
+    "def": "A disease or period of bad health.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "illuminate",
+    "ipa": "/ɪˈluməˌneɪt/",
+    "rp_ipa": "/ɪˈluːmɪneɪt/",
+    "cefr": "B1",
+    "pos": "動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "illuminate",
+      "ja": "照らす、明らかにする",
+      "zh": "照亮、阐明",
+      "ko": "비추다, 밝히다",
+      "fil": "liwanagan"
+    },
+    "def": "To light something up, or to make something clear.",
+    "neighbors": [],
+    "_generation_source": "manual_phonological"
+  },
+  {
+    "w": "imaginary",
+    "ipa": "/ˌɪˈmædʒəˌnɛri/",
+    "rp_ipa": "/ɪˈmædʒɪnəri/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "imaginary",
+      "ja": "想像上の、架空の",
+      "zh": "想象的、虚构的",
+      "ko": "상상의, 가상의",
+      "fil": "haka-haka"
+    },
+    "def": "Existing only in the mind; not real.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "imitate",
+    "ipa": "/ˈɪməˌteɪt/",
+    "rp_ipa": "/ˈɪmɪteɪt/",
+    "cefr": "B1",
+    "pos": "動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "imitate",
+      "ja": "まねる、模倣する",
+      "zh": "模仿",
+      "ko": "모방하다, 흉내내다",
+      "fil": "gayahin"
+    },
+    "def": "To copy the way someone behaves or does something.",
+    "neighbors": [],
+    "_generation_source": "manual_phonological"
+  },
+  {
+    "w": "immediate",
+    "ipa": "/ˌɪˈmiˌdiət/",
+    "rp_ipa": "/ɪˈmiːdɪət/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "immediate",
+      "ja": "即座の、直接の",
+      "zh": "立即的、直接的",
+      "ko": "즉각적인, 직접적인",
+      "fil": "kaagad"
+    },
+    "def": "Happening or done right away.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "immediately",
+    "ipa": "/ˌɪˈmiˌdiətli/",
+    "rp_ipa": "/ɪˈmiːdɪətli/",
+    "cefr": "B1",
+    "pos": "副詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "immediately",
+      "ja": "直ちに、すぐに",
+      "zh": "立即、马上",
+      "ko": "즉시, 곧바로",
+      "fil": "kaagad-agad"
+    },
+    "def": "At once; without delay.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "immigrate",
+    "ipa": "/ˈɪməˌɡreɪt/",
+    "rp_ipa": "/ˈɪmɪˌɡreɪt/",
+    "cefr": "B1",
+    "pos": "動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "immigrate",
+      "ja": "移住する",
+      "zh": "移民",
+      "ko": "이주하다",
+      "fil": "lumipat (bansa)"
+    },
+    "def": "To come to live permanently in a foreign country.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "immigration",
+    "ipa": "/ˌɪməˈɡreɪʃən/",
+    "rp_ipa": "/ˌɪmɪˈɡreɪʃən/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "immigration",
+      "ja": "移住、移民",
+      "zh": "移民",
+      "ko": "이민, 이주",
+      "fil": "imigrasyon"
+    },
+    "def": "The act of coming to live permanently in a foreign country.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "impair",
+    "ipa": "/ɪmˈpɛr/",
+    "rp_ipa": "/ɪmˈpeə/",
+    "cefr": "B1",
+    "pos": "動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "impair",
+      "ja": "損なう、弱める",
+      "zh": "损害、削弱",
+      "ko": "손상시키다, 약화시키다",
+      "fil": "hinaan"
+    },
+    "def": "To weaken or damage something, such as an ability.",
+    "neighbors": [],
+    "_generation_source": "manual_phonological"
+  },
+  {
+    "w": "impression",
+    "ipa": "/ˌɪmˈprɛʃən/",
+    "rp_ipa": "/ɪmˈpreʃən/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "impression",
+      "ja": "印象",
+      "zh": "印象",
+      "ko": "인상",
+      "fil": "impresyon"
+    },
+    "def": "An idea or feeling about something, based on how it appears.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "impressive",
+    "ipa": "/ˌɪmˈprɛsɪv/",
+    "rp_ipa": "/ɪmˈpresɪv/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "impressive",
+      "ja": "印象的な、見事な",
+      "zh": "令人印象深刻的",
+      "ko": "인상적인",
+      "fil": "kahanga-hanga"
+    },
+    "def": "Causing admiration because of size, quality, or skill.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "improper",
+    "ipa": "/ɪmˈprɑpɚ/",
+    "rp_ipa": "/ɪmˈprɒpə/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "improper",
+      "ja": "不適切な",
+      "zh": "不恰当的",
+      "ko": "부적절한",
+      "fil": "hindi angkop"
+    },
+    "def": "Not suitable or correct; not proper.",
+    "neighbors": [],
+    "_generation_source": "manual_phonological"
+  },
+  {
+    "w": "improvement",
+    "ipa": "/ˌɪmˈpruvmənt/",
+    "rp_ipa": "/ɪmˈpruːvmənt/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "improvement",
+      "ja": "改善、向上",
+      "zh": "改善、进步",
+      "ko": "개선, 향상",
+      "fil": "pagpapabuti"
+    },
+    "def": "The act of making or becoming better.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "incident",
+    "ipa": "/ˈɪnsədənt/",
+    "rp_ipa": "/ˈɪnsɪdənt/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "incident",
+      "ja": "出来事、事件",
+      "zh": "事件、事故",
+      "ko": "사건, 사고",
+      "fil": "insidente"
+    },
+    "def": "An event, especially one that is unusual or unpleasant.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "including",
+    "ipa": "/ˌɪnˈkludɪŋ/",
+    "rp_ipa": "/ɪnˈkluːdɪŋ/",
+    "cefr": "B1",
+    "pos": "前置詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "including",
+      "ja": "~を含めて",
+      "zh": "包括",
+      "ko": "~을 포함하여",
+      "fil": "kasama"
+    },
+    "def": "Having as part of the whole; among others.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "income",
+    "ipa": "/ˈɪnˌkʌm/",
+    "rp_ipa": "/ˈɪnˌkʌm/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "income",
+      "ja": "収入",
+      "zh": "收入",
+      "ko": "소득, 수입",
+      "fil": "kita"
+    },
+    "def": "Money received regularly, especially from work.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "inconvenient",
+    "ipa": "/ˌɪnkənˈvinjənt/",
+    "rp_ipa": "/ˌɪnkənˈviːnjənt/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "inconvenient",
+      "ja": "不便な",
+      "zh": "不方便的",
+      "ko": "불편한",
+      "fil": "hindi maginhawa"
+    },
+    "def": "Causing difficulty or trouble; not convenient.",
+    "neighbors": [],
+    "_generation_source": "manual_phonological"
+  },
+  {
+    "w": "incorrect",
+    "ipa": "/ˌɪnkɚˈɛkt/",
+    "rp_ipa": "/ɪnkəˈrekt/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "incorrect",
+      "ja": "不正確な、間違った",
+      "zh": "不正确的",
+      "ko": "부정확한, 틀린",
+      "fil": "mali"
+    },
+    "def": "Not correct; wrong.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "increasingly",
+    "ipa": "/ɪnˈkrisɪŋli/",
+    "rp_ipa": "/ɪnˈkriːsɪŋli/",
+    "cefr": "B1",
+    "pos": "副詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "increasingly",
+      "ja": "ますます、次第に",
+      "zh": "越来越",
+      "ko": "점점 더",
+      "fil": "unti-unting dumadami"
+    },
+    "def": "More and more.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "incredible",
+    "ipa": "/ˌɪnˈkrɛdəbəl/",
+    "rp_ipa": "/ɪnˈkredɪbəl/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "incredible",
+      "ja": "信じられない、驚くべき",
+      "zh": "难以置信的",
+      "ko": "믿을 수 없는, 놀라운",
+      "fil": "hindi kapani-paniwala"
+    },
+    "def": "Very hard to believe; amazing.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "incredibly",
+    "ipa": "/ˌɪnˈkrɛdəbli/",
+    "rp_ipa": "/ɪnˈkredɪbli/",
+    "cefr": "B1",
+    "pos": "副詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "incredibly",
+      "ja": "信じられないほど",
+      "zh": "难以置信地",
+      "ko": "믿을 수 없을 정도로",
+      "fil": "sobra"
+    },
+    "def": "In a way that is very hard to believe; extremely.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "independent",
+    "ipa": "/ˌɪndɪˈpɛndənt/",
+    "rp_ipa": "/ˌɪndɪˈpendənt/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "independent",
+      "ja": "独立した、自立した",
+      "zh": "独立的",
+      "ko": "독립적인",
+      "fil": "malaya, independyente"
+    },
+    "def": "Not controlled or influenced by others; able to manage on your own.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "indirect",
+    "ipa": "/ˌɪndɚˈɛkt/",
+    "rp_ipa": "/ˌɪndɪˈrekt/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "indirect",
+      "ja": "間接的な",
+      "zh": "间接的",
+      "ko": "간접적인",
+      "fil": "hindi direkta"
+    },
+    "def": "Not going straight to the point; not direct.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "indirectly",
+    "ipa": "/ˌɪndɚˈɛktˌli/",
+    "rp_ipa": "/ɪndɪˈrektli/",
+    "cefr": "B1",
+    "pos": "副詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "indirectly",
+      "ja": "間接的に",
+      "zh": "间接地",
+      "ko": "간접적으로",
+      "fil": "di-tuwiran"
+    },
+    "def": "In a way that is not direct.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "individual",
+    "ipa": "/ˌɪndəˈvɪdʒəwəl/",
+    "rp_ipa": "/ˌɪndɪˈvɪdjʊəl/",
+    "cefr": "B1",
+    "pos": "名詞 / 形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "individual",
+      "ja": "個人、個々の",
+      "zh": "个人、个体的",
+      "ko": "개인, 개개의",
+      "fil": "indibidwal"
+    },
+    "def": "A single person, or relating to a single person or thing.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "indoors",
+    "ipa": "/ˈɪnˌdɔrz/",
+    "rp_ipa": "/ˈɪnˌdɔːz/",
+    "cefr": "B1",
+    "pos": "副詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "indoors",
+      "ja": "屋内で",
+      "zh": "在室内",
+      "ko": "실내에서",
+      "fil": "sa loob ng bahay"
+    },
+    "def": "Inside a building.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "industrial",
+    "ipa": "/ˌɪnˈdʌstriəl/",
+    "rp_ipa": "/ɪnˈdʌstrɪəl/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "industrial",
+      "ja": "産業の、工業の",
+      "zh": "工业的",
+      "ko": "산업의, 공업의",
+      "fil": "industriyal"
+    },
+    "def": "Relating to industry, such as factories and manufacturing.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "industry",
+    "ipa": "/ˈɪndəstri/",
+    "rp_ipa": "/ˈɪndəstri/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "industry",
+      "ja": "産業、勤勉",
+      "zh": "工业、行业",
+      "ko": "산업, 근면",
+      "fil": "industriya"
+    },
+    "def": "The production of goods, or a particular branch of business.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "inevitable",
+    "ipa": "/ˌɪˈnɛvətəbəl/",
+    "rp_ipa": "/ɪˈnevɪtəbəl/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "inevitable",
+      "ja": "避けられない、必然の",
+      "zh": "不可避免的",
+      "ko": "불가피한, 필연적인",
+      "fil": "hindi maiiwasan"
+    },
+    "def": "Certain to happen; unavoidable.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "infection",
+    "ipa": "/ˌɪnˈfɛkʃən/",
+    "rp_ipa": "/ɪnˈfekʃən/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "infection",
+      "ja": "感染、伝染病",
+      "zh": "感染",
+      "ko": "감염",
+      "fil": "impeksyon"
+    },
+    "def": "A disease caused by germs entering the body.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "infinitive",
+    "ipa": "/ɪnˈfɪnətɪv/",
+    "rp_ipa": "/ɪnˈfɪnətɪv/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "infinitive",
+      "ja": "不定詞",
+      "zh": "不定式",
+      "ko": "부정사",
+      "fil": "infinitive"
+    },
+    "def": "The basic form of a verb, often used with 'to'.",
+    "neighbors": [],
+    "_generation_source": "manual_phonological"
+  },
+  {
+    "w": "inform",
+    "ipa": "/ˌɪnˈfɔrm/",
+    "rp_ipa": "/ɪnˈfɔːm/",
+    "cefr": "B1",
+    "pos": "動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "inform",
+      "ja": "知らせる、伝える",
+      "zh": "通知、告知",
+      "ko": "알리다, 통지하다",
+      "fil": "ipaalam"
+    },
+    "def": "To give someone information.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "informative",
+    "ipa": "/ˌɪnˈfɔrmətɪv/",
+    "rp_ipa": "/ɪnˈfɔːmətɪv/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "informative",
+      "ja": "有益な、情報を与える",
+      "zh": "提供信息的",
+      "ko": "유익한, 정보를 주는",
+      "fil": "nagbibigay-kaalaman"
+    },
+    "def": "Giving useful information.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "ingredient",
+    "ipa": "/ˌɪnˈɡridiənt/",
+    "rp_ipa": "/ɪnˈɡriːdɪənt/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "ingredient",
+      "ja": "材料、成分",
+      "zh": "原料、成分",
+      "ko": "재료, 성분",
+      "fil": "sangkap"
+    },
+    "def": "One of the items used to make a food dish.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "inhabitant",
+    "ipa": "/ɪnˈhæbətənt/",
+    "rp_ipa": "/ɪnˈhæbɪtənt/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "inhabitant",
+      "ja": "住民、居住者",
+      "zh": "居民",
+      "ko": "주민, 거주자",
+      "fil": "naninirahan"
+    },
+    "def": "A person or animal that lives in a particular place.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "inhale",
+    "ipa": "/ˌɪnˈheɪl/",
+    "rp_ipa": "/ɪnˈheɪl/",
+    "cefr": "B1",
+    "pos": "動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "inhale",
+      "ja": "吸い込む、吸入する",
+      "zh": "吸入",
+      "ko": "숨을 들이쉬다",
+      "fil": "huminga (papasok)"
+    },
+    "def": "To breathe in.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "initial",
+    "ipa": "/ˌɪˈnɪʃəl/",
+    "rp_ipa": "/ɪˈnɪʃəl/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "initial",
+      "ja": "最初の、初期の",
+      "zh": "最初的、开始的",
+      "ko": "초기의, 처음의",
+      "fil": "una"
+    },
+    "def": "Happening at the beginning; first.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "initially",
+    "ipa": "/ˌɪˈnɪʃəli/",
+    "rp_ipa": "/ɪˈnɪʃəli/",
+    "cefr": "B1",
+    "pos": "副詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "initially",
+      "ja": "最初は、当初",
+      "zh": "最初、起初",
+      "ko": "처음에는, 초기에",
+      "fil": "sa una"
+    },
+    "def": "At the beginning.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "inject",
+    "ipa": "/ˌɪnˈdʒɛkt/",
+    "rp_ipa": "/ɪnˈdʒekt/",
+    "cefr": "B1",
+    "pos": "動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "inject",
+      "ja": "注射する",
+      "zh": "注射",
+      "ko": "주사하다, 주입하다",
+      "fil": "iturok"
+    },
+    "def": "To put a liquid into the body using a needle.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "injury",
+    "ipa": "/ˈɪndʒɚi/",
+    "rp_ipa": "/ˈɪndʒəri/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "injury",
+      "ja": "けが、負傷",
+      "zh": "受伤、伤害",
+      "ko": "부상, 상처",
+      "fil": "sugat, pinsala"
+    },
+    "def": "Physical harm or damage to the body.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "ink",
+    "ipa": "/ˈɪŋk/",
+    "rp_ipa": "/ɪŋk/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "ink",
+      "ja": "インク",
+      "zh": "墨水",
+      "ko": "잉크",
+      "fil": "tinta"
+    },
+    "def": "A colored liquid used for writing or printing.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "innermost",
+    "ipa": "/ˈɪnɚˌmoʊst/",
+    "rp_ipa": "/ˈɪnəməʊst/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "innermost",
+      "ja": "最も内側の、最も奥の",
+      "zh": "最内部的",
+      "ko": "가장 깊은 곳의",
+      "fil": "kaloob-looban"
+    },
+    "def": "Furthest inside; most private.",
+    "neighbors": [],
+    "_generation_source": "manual_phonological"
+  },
+  {
+    "w": "innocent",
+    "ipa": "/ˈɪnəsənt/",
+    "rp_ipa": "/ˈɪnəsənt/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "innocent",
+      "ja": "無罪の、無邪気な",
+      "zh": "无罪的、天真的",
+      "ko": "무죄인, 순진한",
+      "fil": "walang-sala"
+    },
+    "def": "Not guilty of a crime; free from wrongdoing.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "innovator",
+    "ipa": "/ˈɪnəˌveɪtɚ/",
+    "rp_ipa": "/ˈɪnəveɪtə/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "innovator",
+      "ja": "革新者",
+      "zh": "创新者",
+      "ko": "혁신가",
+      "fil": "innovator"
+    },
+    "def": "A person who introduces new ideas or methods.",
+    "neighbors": [],
+    "_generation_source": "manual_phonological"
+  },
+  {
+    "w": "inquiry",
+    "ipa": "/ˌɪnˈkwaɪˌri/",
+    "rp_ipa": "/ɪnˈkwaɪəri/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "inquiry",
+      "ja": "問い合わせ、調査",
+      "zh": "询问、调查",
+      "ko": "문의, 조사",
+      "fil": "pagtatanong"
+    },
+    "def": "A request for information, or an official investigation.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "insane",
+    "ipa": "/ˌɪnˈseɪn/",
+    "rp_ipa": "/ɪnˈseɪn/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "insane",
+      "ja": "正気でない、狂気の",
+      "zh": "疯狂的、精神失常的",
+      "ko": "정신 이상의, 미친",
+      "fil": "baliw"
+    },
+    "def": "Seriously mentally ill, or very foolish.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "inscribe",
+    "ipa": "/ɪnˈskraɪb/",
+    "rp_ipa": "/ɪnˈskraɪb/",
+    "cefr": "B1",
+    "pos": "動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "inscribe",
+      "ja": "刻む、書き記す",
+      "zh": "铭刻、题写",
+      "ko": "새기다, 새겨넣다",
+      "fil": "iukit"
+    },
+    "def": "To write or carve words onto a surface.",
+    "neighbors": [],
+    "_generation_source": "manual_phonological"
+  },
+  {
+    "w": "inscription",
+    "ipa": "/ɪnˈskrɪpʃən/",
+    "rp_ipa": "/ɪnˈskrɪpʃən/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "inscription",
+      "ja": "刻まれた文字、銘",
+      "zh": "铭文、题词",
+      "ko": "새겨진 글, 비문",
+      "fil": "nakaukit na sulat"
+    },
+    "def": "Words written or carved onto a surface.",
+    "neighbors": [],
+    "_generation_source": "manual_phonological"
+  },
+  {
+    "w": "insight",
+    "ipa": "/ˈɪnˌsaɪt/",
+    "rp_ipa": "/ˈɪnˌsaɪt/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "insight",
+      "ja": "洞察、洞察力",
+      "zh": "洞察力、见解",
+      "ko": "통찰력",
+      "fil": "kaalaman (malalim)"
+    },
+    "def": "A clear understanding of a complex situation or problem.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "insist",
+    "ipa": "/ˌɪnˈsɪst/",
+    "rp_ipa": "/ɪnˈsɪst/",
+    "cefr": "B1",
+    "pos": "動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "insist",
+      "ja": "主張する、要求する",
+      "zh": "坚持、坚决要求",
+      "ko": "주장하다, 고집하다",
+      "fil": "igiit"
+    },
+    "def": "To demand something firmly, refusing to accept anything else.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "inspection",
+    "ipa": "/ˌɪnˈspɛkʃən/",
+    "rp_ipa": "/ɪnˈspekʃən/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "inspection",
+      "ja": "検査、点検",
+      "zh": "检查、视察",
+      "ko": "검사, 점검",
+      "fil": "pagsisiyasat"
+    },
+    "def": "A careful examination of something.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "inspire",
+    "ipa": "/ˌɪnˈspaɪr/",
+    "rp_ipa": "/ɪnˈspaɪə/",
+    "cefr": "B1",
+    "pos": "動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "inspire",
+      "ja": "鼓舞する、着想を与える",
+      "zh": "激励、启发",
+      "ko": "영감을 주다, 격려하다",
+      "fil": "bigyang inspirasyon"
+    },
+    "def": "To give someone the desire or motivation to do something.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "instal",
+    "ipa": "/ɪnˈstɔl/",
+    "rp_ipa": "/ɪnˈstɔːl/",
+    "cefr": "B1",
+    "pos": "動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "instal",
+      "ja": "設置する、インストールする(英)",
+      "zh": "安装(英式变体)",
+      "ko": "설치하다(영국식 변형)",
+      "fil": "i-install (British)"
+    },
+    "def": "To put equipment or software in place ready for use (British spelling variant of install).",
+    "neighbors": [],
+    "_generation_source": "manual_phonological"
+  },
+  {
+    "w": "install",
+    "ipa": "/ˌɪnˈstɔl/",
+    "rp_ipa": "/ɪnˈstɔːl/",
+    "cefr": "B1",
+    "pos": "動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "install",
+      "ja": "設置する、インストールする",
+      "zh": "安装",
+      "ko": "설치하다",
+      "fil": "i-install"
+    },
+    "def": "To put equipment or software in place ready for use.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "instance",
+    "ipa": "/ˈɪnstəns/",
+    "rp_ipa": "/ˈɪnstəns/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "instance",
+      "ja": "例、事例",
+      "zh": "例子、实例",
+      "ko": "예, 사례",
+      "fil": "halimbawa"
+    },
+    "def": "A particular example or occurrence of something.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "institute",
+    "ipa": "/ˈɪnstəˌtut/",
+    "rp_ipa": "/ˈɪnstɪˌtjuːt/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "institute",
+      "ja": "研究所、協会",
+      "zh": "研究所、机构",
+      "ko": "연구소, 협회",
+      "fil": "institusyon"
+    },
+    "def": "An organization created for a particular purpose, such as research or education.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "instruction",
+    "ipa": "/ˌɪnˈstrʌkʃən/",
+    "rp_ipa": "/ɪnˈstrʌkʃən/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "instruction",
+      "ja": "指示、説明、教育",
+      "zh": "指示、教学",
+      "ko": "지시, 설명, 교육",
+      "fil": "tagubilin"
+    },
+    "def": "A statement telling someone what to do, or the process of teaching.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "instructor",
+    "ipa": "/ˌɪnˈstrʌktɚ/",
+    "rp_ipa": "/ɪnˈstrʌktə/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "instructor",
+      "ja": "指導員、教師",
+      "zh": "教练、指导者",
+      "ko": "강사, 지도자",
+      "fil": "tagapagturo"
+    },
+    "def": "A person who teaches a skill, especially a practical one.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "insurance",
+    "ipa": "/ˌɪnˈʃʊrəns/",
+    "rp_ipa": "/ɪnˈʃɔːrəns/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "insurance",
+      "ja": "保険",
+      "zh": "保险",
+      "ko": "보험",
+      "fil": "seguro"
+    },
+    "def": "An agreement to pay money if something bad happens, in exchange for regular payments.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "intend",
+    "ipa": "/ˌɪnˈtɛnd/",
+    "rp_ipa": "/ɪnˈtend/",
+    "cefr": "B1",
+    "pos": "動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "intend",
+      "ja": "意図する、~するつもりである",
+      "zh": "打算、意图",
+      "ko": "의도하다, ~할 작정이다",
+      "fil": "balak"
+    },
+    "def": "To plan or mean to do something.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "intense",
+    "ipa": "/ˌɪnˈtɛns/",
+    "rp_ipa": "/ɪnˈtens/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "intense",
+      "ja": "強烈な、激しい",
+      "zh": "强烈的、剧烈的",
+      "ko": "강렬한, 극심한",
+      "fil": "matindi"
+    },
+    "def": "Very strong or extreme.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "intensive",
+    "ipa": "/ˌɪnˈtɛnsɪv/",
+    "rp_ipa": "/ɪnˈtensɪv/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "intensive",
+      "ja": "集中的な",
+      "zh": "密集的、深入的",
+      "ko": "집중적인",
+      "fil": "masinsinan"
+    },
+    "def": "Involving a lot of effort in a short time.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "intention",
+    "ipa": "/ˌɪnˈtɛntʃən/",
+    "rp_ipa": "/ɪnˈtenʃən/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "intention",
+      "ja": "意図、目的",
+      "zh": "意图、打算",
+      "ko": "의도, 목적",
+      "fil": "hangarin"
+    },
+    "def": "A plan or aim to do something.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "intentionally",
+    "ipa": "/ɪnˈtɛnʃənəli/",
+    "rp_ipa": "/ɪnˈtenʃənəli/",
+    "cefr": "B1",
+    "pos": "副詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "intentionally",
+      "ja": "意図的に、わざと",
+      "zh": "故意地",
+      "ko": "고의로, 의도적으로",
+      "fil": "sinasadya"
+    },
+    "def": "On purpose; deliberately.",
+    "neighbors": [],
+    "_generation_source": "manual_phonological"
+  },
+  {
+    "w": "interact",
+    "ipa": "/ˌɪntɚˈækt/",
+    "rp_ipa": "/ˌɪntəˈrækt/",
+    "cefr": "B1",
+    "pos": "動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "interact",
+      "ja": "交流する、相互作用する",
+      "zh": "互动、相互作用",
+      "ko": "상호작용하다, 교류하다",
+      "fil": "makipag-ugnayan"
+    },
+    "def": "To communicate with or react to each other.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "interaction",
+    "ipa": "/ˌɪntɚˈækʃən/",
+    "rp_ipa": "/ˌɪntəˈrækʃən/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "interaction",
+      "ja": "交流、相互作用",
+      "zh": "互动、相互作用",
+      "ko": "상호작용, 교류",
+      "fil": "pakikipag-ugnayan"
+    },
+    "def": "Communication or reaction between people or things.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "intermediate",
+    "ipa": "/ˌɪntɚˈmidiɪt/",
+    "rp_ipa": "/ˌɪntəˈmiːdɪət/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "intermediate",
+      "ja": "中級の、中間の",
+      "zh": "中级的、中间的",
+      "ko": "중급의, 중간의",
+      "fil": "katamtaman"
+    },
+    "def": "At a level between beginner and advanced.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "intermission",
+    "ipa": "/ˌɪntɚˈmɪʃən/",
+    "rp_ipa": "/ˌɪntəˈmɪʃən/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "intermission",
+      "ja": "休憩、幕間",
+      "zh": "休息时间、幕间",
+      "ko": "휴식 시간, 막간",
+      "fil": "intermisyon"
+    },
+    "def": "A short break during a performance or event.",
+    "neighbors": [],
+    "_generation_source": "manual_phonological"
+  },
+  {
+    "w": "internal",
+    "ipa": "/ˌɪnˈtɝnəl/",
+    "rp_ipa": "/ɪnˈtɜːnəl/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "internal",
+      "ja": "内部の、内的な",
+      "zh": "内部的",
+      "ko": "내부의, 내적인",
+      "fil": "panloob"
+    },
+    "def": "Existing or happening inside something.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "internationally",
+    "ipa": "/ˌɪntɚˈnæʃənəli/",
+    "rp_ipa": "/ˌɪntəˈnæʃnəli/",
+    "cefr": "B1",
+    "pos": "副詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "internationally",
+      "ja": "国際的に",
+      "zh": "国际上地",
+      "ko": "국제적으로",
+      "fil": "internasyonal"
+    },
+    "def": "In a way involving more than one country.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "interrupt",
+    "ipa": "/ˌɪntɚˈʌpt/",
+    "rp_ipa": "/ˌɪntəˈrʌpt/",
+    "cefr": "B1",
+    "pos": "動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "interrupt",
+      "ja": "中断する、遮る",
+      "zh": "打断、打扰",
+      "ko": "방해하다, 중단시키다",
+      "fil": "sumabat"
+    },
+    "def": "To stop someone while they are speaking or doing something.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "interval",
+    "ipa": "/ˈɪntɚvəl/",
+    "rp_ipa": "/ˈɪntəvəl/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "interval",
+      "ja": "間隔、休憩時間",
+      "zh": "间隔、休息时间",
+      "ko": "간격, 휴식 시간",
+      "fil": "pagitan"
+    },
+    "def": "A period of time between two events, or a short break.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "interviewee",
+    "ipa": "/ˌɪntɚvjuˈi/",
+    "rp_ipa": "/ˌɪntəvjuːˈiː/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "interviewee",
+      "ja": "インタビューを受ける人",
+      "zh": "受访者",
+      "ko": "인터뷰 대상자",
+      "fil": "interviewee"
+    },
+    "def": "A person who is being interviewed.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "introduction",
+    "ipa": "/ˌɪntrəˈdʌkʃən/",
+    "rp_ipa": "/ˌɪntrəˈdʌkʃən/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "introduction",
+      "ja": "紹介、導入",
+      "zh": "介绍、导言",
+      "ko": "소개, 도입",
+      "fil": "panimula"
+    },
+    "def": "The act of presenting something for the first time, or an opening section of a text.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "invasion",
+    "ipa": "/ˌɪnˈveɪʒən/",
+    "rp_ipa": "/ɪnˈveɪʒən/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "invasion",
+      "ja": "侵略、侵入",
+      "zh": "入侵、侵略",
+      "ko": "침략, 침입",
+      "fil": "pananalakay"
+    },
+    "def": "An act of entering a place by force, especially with an army.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "invest",
+    "ipa": "/ˌɪnˈvɛst/",
+    "rp_ipa": "/ɪnˈvest/",
+    "cefr": "B1",
+    "pos": "動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "invest",
+      "ja": "投資する",
+      "zh": "投资",
+      "ko": "투자하다",
+      "fil": "mamuhunan"
+    },
+    "def": "To put money into something in the hope of making a profit.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "investigation",
+    "ipa": "/ˌɪnˌvɛstəˈɡeɪʃən/",
+    "rp_ipa": "/ɪnˌvestɪˈɡeɪʃən/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "investigation",
+      "ja": "調査、捜査",
+      "zh": "调查、侦查",
+      "ko": "조사, 수사",
+      "fil": "imbestigasyon"
+    },
+    "def": "A careful examination of the facts of a situation.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "invitation",
+    "ipa": "/ˌɪnvɪˈteɪʃən/",
+    "rp_ipa": "/ˌɪnvɪˈteɪʃən/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "invitation",
+      "ja": "招待",
+      "zh": "邀请",
+      "ko": "초대",
+      "fil": "imbitasyon"
+    },
+    "def": "A request for someone to come to an event.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "involuntarily",
+    "ipa": "/ɪnˌvɑlənˈtɛrəli/",
+    "rp_ipa": "/ɪnˈvɒləntərəli/",
+    "cefr": "B1",
+    "pos": "副詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "involuntarily",
+      "ja": "無意識に、不本意に",
+      "zh": "不由自主地",
+      "ko": "무의식적으로, 본의 아니게",
+      "fil": "hindi sinasadya"
+    },
+    "def": "Without intending to; not by choice.",
+    "neighbors": [],
+    "_generation_source": "manual_phonological"
+  },
+  {
+    "w": "involve",
+    "ipa": "/ˌɪnˈvɑlv/",
+    "rp_ipa": "/ɪnˈvɒlv/",
+    "cefr": "B1",
+    "pos": "動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "involve",
+      "ja": "含む、巻き込む",
+      "zh": "涉及、包含",
+      "ko": "포함하다, 관련시키다",
+      "fil": "isali"
+    },
+    "def": "To include something as a necessary part, or to cause someone to take part.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "involved",
+    "ipa": "/ˌɪnˈvɑlvd/",
+    "rp_ipa": "/ɪnˈvɒlvd/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "involved",
+      "ja": "関与している、複雑な",
+      "zh": "参与的、复杂的",
+      "ko": "관련된, 복잡한",
+      "fil": "sangkot"
+    },
+    "def": "Taking part in something, or complicated.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "iron",
+    "ipa": "/ˈaɪɚn/",
+    "rp_ipa": "/ˈaɪən/",
+    "cefr": "B1",
+    "pos": "名詞 / 動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "iron",
+      "ja": "鉄、アイロン",
+      "zh": "铁、熨斗",
+      "ko": "철, 다리미",
+      "fil": "bakal, plantsa"
+    },
+    "def": "A strong metal, or a device used to remove wrinkles from clothes.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "ironing",
+    "ipa": "/ˈaɪɚnɪŋ/",
+    "rp_ipa": "/ˈaɪənɪŋ/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "ironing",
+      "ja": "アイロンがけ",
+      "zh": "熨烫",
+      "ko": "다림질",
+      "fil": "pagpaplantsa"
+    },
+    "def": "The activity of pressing clothes to remove wrinkles.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "irregular",
+    "ipa": "/ˌɪˈrɛɡjəlɚ/",
+    "rp_ipa": "/ɪˈreɡjʊlə/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "irregular",
+      "ja": "不規則な",
+      "zh": "不规则的",
+      "ko": "불규칙한",
+      "fil": "hindi regular"
+    },
+    "def": "Not following the usual rule or pattern.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "irritate",
+    "ipa": "/ˈɪrəˌteɪt/",
+    "rp_ipa": "/ˈɪrɪteɪt/",
+    "cefr": "B1",
+    "pos": "動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "irritate",
+      "ja": "いらいらさせる、刺激する",
+      "zh": "使恼怒、刺激",
+      "ko": "짜증나게 하다, 자극하다",
+      "fil": "inisin"
+    },
+    "def": "To make someone slightly angry, or to cause physical discomfort.",
+    "neighbors": [],
+    "_generation_source": "manual_phonological"
+  },
+  {
+    "w": "isle",
+    "ipa": "/ˈaɪl/",
+    "rp_ipa": "/aɪl/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "isle",
+      "ja": "島",
+      "zh": "岛、小岛",
+      "ko": "섬",
+      "fil": "isla"
+    },
+    "def": "An island (often used in place names or poetry).",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "isolation",
+    "ipa": "/ˌaɪsəˈleɪʃən/",
+    "rp_ipa": "/ˌaɪsəˈleɪʃən/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "isolation",
+      "ja": "孤立、隔離",
+      "zh": "孤立、隔离",
+      "ko": "고립, 격리",
+      "fil": "paghihiwalay"
+    },
+    "def": "The state of being separate or alone.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "ivory",
+    "ipa": "/ˈaɪvɚi/",
+    "rp_ipa": "/ˈaɪvəri/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "ivory",
+      "ja": "象牙",
+      "zh": "象牙",
+      "ko": "상아",
+      "fil": "garing"
+    },
+    "def": "The hard white substance from an elephant's tusk.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "jail",
+    "ipa": "/ˈdʒeɪl/",
+    "rp_ipa": "/dʒeɪl/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "jail",
+      "ja": "刑務所",
+      "zh": "监狱",
+      "ko": "감옥, 교도소",
+      "fil": "bilangguan"
+    },
+    "def": "A place where criminals are kept.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "jealous",
+    "ipa": "/ˈdʒɛləs/",
+    "rp_ipa": "/ˈdʒeləs/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "jealous",
+      "ja": "嫉妬深い、やきもちを焼く",
+      "zh": "嫉妒的",
+      "ko": "질투하는",
+      "fil": "seloso"
+    },
+    "def": "Feeling envious of someone else's success or possessions.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "jewel",
+    "ipa": "/ˈdʒuəl/",
+    "rp_ipa": "/ˈdʒuːəl/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "jewel",
+      "ja": "宝石",
+      "zh": "珠宝、宝石",
+      "ko": "보석",
+      "fil": "hiyas"
+    },
+    "def": "A precious stone, often used in jewelry.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "jogging",
+    "ipa": "/ˈdʒɑɡɪŋ/",
+    "rp_ipa": "/ˈdʒɒɡɪŋ/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "jogging",
+      "ja": "ジョギング",
+      "zh": "慢跑",
+      "ko": "조깅",
+      "fil": "jogging"
+    },
+    "def": "The activity of running slowly for exercise.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "journal",
+    "ipa": "/ˈdʒɝnəl/",
+    "rp_ipa": "/ˈdʒɜːnəl/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "journal",
+      "ja": "日記、専門誌",
+      "zh": "日记、期刊",
+      "ko": "일기, 학술지",
+      "fil": "journal, talaarawan"
+    },
+    "def": "A diary, or a magazine about a particular subject.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "journalist",
+    "ipa": "/ˈdʒɝnələst/",
+    "rp_ipa": "/ˈdʒɜːnəlɪst/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "journalist",
+      "ja": "ジャーナリスト、記者",
+      "zh": "记者",
+      "ko": "언론인, 기자",
+      "fil": "peryodista"
+    },
+    "def": "A person who writes news articles for newspapers or other media.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "judgement",
+    "ipa": "/ˈdʒʌdʒmənt/",
+    "rp_ipa": "/ˈdʒʌdʒmənt/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "judgement",
+      "ja": "判断、判決(英)",
+      "zh": "判断、判决(英式)",
+      "ko": "판단, 판결(영국식)",
+      "fil": "paghatol (British)"
+    },
+    "def": "The ability to make sensible decisions, or an official decision (British spelling of judgment).",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "judgment",
+    "ipa": "/ˈdʒʌdʒmənt/",
+    "rp_ipa": "/ˈdʒʌdʒmənt/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "judgment",
+      "ja": "判断、判決",
+      "zh": "判断、判决",
+      "ko": "판단, 판결",
+      "fil": "paghatol"
+    },
+    "def": "The ability to make sensible decisions, or an official decision.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "juicy",
+    "ipa": "/ˈdʒusi/",
+    "rp_ipa": "/ˈdʒuːsi/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "juicy",
+      "ja": "汁の多い、ジューシーな",
+      "zh": "多汁的",
+      "ko": "즙이 많은",
+      "fil": "matubig"
+    },
+    "def": "Full of juice.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "jumper",
+    "ipa": "/ˈdʒʌmpɚ/",
+    "rp_ipa": "/ˈdʒʌmpə/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "jumper",
+      "ja": "セーター(英)、跳ぶ人",
+      "zh": "毛衣(英式)、跳跃者",
+      "ko": "스웨터(영국식), 뛰는 사람",
+      "fil": "jumper (British)"
+    },
+    "def": "A sweater (British English), or a person who jumps.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "jungle",
+    "ipa": "/ˈdʒʌŋɡəl/",
+    "rp_ipa": "/ˈdʒʌŋɡəl/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "jungle",
+      "ja": "ジャングル、密林",
+      "zh": "丛林",
+      "ko": "정글, 밀림",
+      "fil": "gubat"
+    },
+    "def": "A thick forest in a tropical area.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "justice",
+    "ipa": "/ˈdʒʌstəs/",
+    "rp_ipa": "/ˈdʒʌstɪs/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "justice",
+      "ja": "正義、司法",
+      "zh": "正义、司法",
+      "ko": "정의, 사법",
+      "fil": "katarungan"
+    },
+    "def": "Fair treatment according to the law or moral rightness.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "kettle",
+    "ipa": "/ˈkɛtəl/",
+    "rp_ipa": "/ˈketəl/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "kettle",
+      "ja": "やかん",
+      "zh": "水壶",
+      "ko": "주전자",
+      "fil": "takure"
+    },
+    "def": "A container used for boiling water.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "keyboard",
+    "ipa": "/ˈkiˌbɔrd/",
+    "rp_ipa": "/ˈkiːˌbɔːd/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "keyboard",
+      "ja": "キーボード",
+      "zh": "键盘",
+      "ko": "키보드",
+      "fil": "keyboard"
+    },
+    "def": "A set of keys used to operate a computer or musical instrument.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "killing",
+    "ipa": "/ˈkɪlɪŋ/",
+    "rp_ipa": "/ˈkɪlɪŋ/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "killing",
+      "ja": "殺害",
+      "zh": "杀害、杀戮",
+      "ko": "살해",
+      "fil": "pagpatay"
+    },
+    "def": "The act of causing death.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "kindness",
+    "ipa": "/ˈkaɪndnəs/",
+    "rp_ipa": "/ˈkaɪndnɪs/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "kindness",
+      "ja": "親切、優しさ",
+      "zh": "善良、亲切",
+      "ko": "친절함",
+      "fil": "kabaitan"
+    },
+    "def": "The quality of being kind and caring.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "kitten",
+    "ipa": "/ˈkɪtən/",
+    "rp_ipa": "/ˈkɪtən/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "kitten",
+      "ja": "子猫",
+      "zh": "小猫",
+      "ko": "새끼 고양이",
+      "fil": "batang pusa"
+    },
+    "def": "A young cat.",
+    "neighbors": [],
+    "_generation_source": "manual_phonological"
+  },
+  {
+    "w": "laboratory",
+    "ipa": "/ˈlæbrəˌtɔri/",
+    "rp_ipa": "/ləˈbɒrətəri/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "laboratory",
+      "ja": "実験室、研究所",
+      "zh": "实验室",
+      "ko": "실험실, 연구소",
+      "fil": "laboratoryo"
+    },
+    "def": "A room or building equipped for scientific experiments.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "ladder",
+    "ipa": "/ˈlædɚ/",
+    "rp_ipa": "/ˈlædə/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "ladder",
+      "ja": "はしご",
+      "zh": "梯子",
+      "ko": "사다리",
+      "fil": "hagdanan"
+    },
+    "def": "A structure with steps used for climbing up or down.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "landlord",
+    "ipa": "/ˈlændˌlɔrd/",
+    "rp_ipa": "/ˈlændˌlɔːd/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "landlord",
+      "ja": "大家、地主",
+      "zh": "房东、地主",
+      "ko": "집주인, 지주",
+      "fil": "may-ari ng bahay"
+    },
+    "def": "A person who rents property to tenants.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "largely",
+    "ipa": "/ˈlɑrdʒli/",
+    "rp_ipa": "/ˈlɑːdʒli/",
+    "cefr": "B1",
+    "pos": "副詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "largely",
+      "ja": "主に、大部分は",
+      "zh": "在很大程度上、主要地",
+      "ko": "대체로, 주로",
+      "fil": "sa kalakhan"
+    },
+    "def": "Mostly; to a great extent.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "lasting",
+    "ipa": "/ˈlæstɪŋ/",
+    "rp_ipa": "/ˈlɑːstɪŋ/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "lasting",
+      "ja": "長続きする、永続的な",
+      "zh": "持久的",
+      "ko": "지속되는, 오래가는",
+      "fil": "tumatagal"
+    },
+    "def": "Continuing for a long time.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "latecomer",
+    "ipa": "/ˈleɪtˌkʌmɚ/",
+    "rp_ipa": "/ˈleɪtkʌmə/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "latecomer",
+      "ja": "遅刻者",
+      "zh": "迟到者",
+      "ko": "지각한 사람",
+      "fil": "huling dumating"
+    },
+    "def": "A person who arrives late.",
+    "neighbors": [],
+    "_generation_source": "manual_phonological"
+  },
+  {
+    "w": "lately",
+    "ipa": "/ˈleɪtli/",
+    "rp_ipa": "/ˈleɪtli/",
+    "cefr": "B1",
+    "pos": "副詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "lately",
+      "ja": "最近、近ごろ",
+      "zh": "最近",
+      "ko": "최근에, 요즘",
+      "fil": "kamakailan"
+    },
+    "def": "Recently; in the near past.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "laughter",
+    "ipa": "/ˈlæftɚ/",
+    "rp_ipa": "/ˈlɑːftə/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "laughter",
+      "ja": "笑い、笑い声",
+      "zh": "笑、笑声",
+      "ko": "웃음",
+      "fil": "tawa"
+    },
+    "def": "The sound or act of laughing.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "lawful",
+    "ipa": "/ˈlɔfəl/",
+    "rp_ipa": "/ˈlɔːfəl/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "lawful",
+      "ja": "合法の",
+      "zh": "合法的",
+      "ko": "합법적인",
+      "fil": "legal"
+    },
+    "def": "Allowed by law.",
+    "neighbors": [],
+    "_generation_source": "manual_phonological"
+  },
+  {
+    "w": "layer",
+    "ipa": "/ˈleɪɚ/",
+    "rp_ipa": "/ˈleɪə/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "layer",
+      "ja": "層",
+      "zh": "层",
+      "ko": "층, 겹",
+      "fil": "layer, patong"
+    },
+    "def": "A single thickness of material covering a surface.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "leadership",
+    "ipa": "/ˈlidɚˌʃɪp/",
+    "rp_ipa": "/ˈliːdəˌʃɪp/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "leadership",
+      "ja": "リーダーシップ、指導力",
+      "zh": "领导力、领导层",
+      "ko": "리더십, 지도력",
+      "fil": "pamumuno"
+    },
+    "def": "The ability to lead a group, or the position of a leader.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "leading",
+    "ipa": "/ˈlidɪŋ/",
+    "rp_ipa": "/ˈliːdɪŋ/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "leading",
+      "ja": "主要な、先導する",
+      "zh": "领先的、主要的",
+      "ko": "선도적인, 주요한",
+      "fil": "nangunguna"
+    },
+    "def": "Most important or successful.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "league",
+    "ipa": "/ˈliɡ/",
+    "rp_ipa": "/liːɡ/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "league",
+      "ja": "リーグ、連盟",
+      "zh": "联盟、联赛",
+      "ko": "리그, 연맹",
+      "fil": "liga"
+    },
+    "def": "A group of sports teams that compete against each other.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "lecture",
+    "ipa": "/ˈlɛktʃɚ/",
+    "rp_ipa": "/ˈlektʃə/",
+    "cefr": "B1",
+    "pos": "名詞 / 動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "lecture",
+      "ja": "講義",
+      "zh": "讲座、讲课",
+      "ko": "강의",
+      "fil": "lektyur"
+    },
+    "def": "A talk given to teach people about a subject, or to give such a talk.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "legal",
+    "ipa": "/ˈliɡəl/",
+    "rp_ipa": "/ˈliːɡəl/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "legal",
+      "ja": "法的な、合法の",
+      "zh": "法律的、合法的",
+      "ko": "법적인, 합법적인",
+      "fil": "legal"
+    },
+    "def": "Relating to the law, or allowed by law.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "legally",
+    "ipa": "/ˈliɡəli/",
+    "rp_ipa": "/ˈliːɡəli/",
+    "cefr": "B1",
+    "pos": "副詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "legally",
+      "ja": "法的に、合法的に",
+      "zh": "在法律上、合法地",
+      "ko": "법적으로, 합법적으로",
+      "fil": "ayon sa batas"
+    },
+    "def": "In a way that is allowed by law.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "length",
+    "ipa": "/ˈlɛŋkθ/",
+    "rp_ipa": "/leŋθ/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "length",
+      "ja": "長さ",
+      "zh": "长度",
+      "ko": "길이",
+      "fil": "haba"
+    },
+    "def": "The measurement of how long something is.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "lessen",
+    "ipa": "/ˈlɛsən/",
+    "rp_ipa": "/ˈlesən/",
+    "cefr": "B1",
+    "pos": "動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "lessen",
+      "ja": "減らす、和らげる",
+      "zh": "减少、减轻",
+      "ko": "줄이다, 완화하다",
+      "fil": "bawasan"
+    },
+    "def": "To make or become smaller in size or amount.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "lettuce",
+    "ipa": "/ˈlɛtəs/",
+    "rp_ipa": "/ˈletɪs/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "lettuce",
+      "ja": "レタス",
+      "zh": "生菜",
+      "ko": "상추",
+      "fil": "letsugas"
+    },
+    "def": "A leafy green vegetable used in salads.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "liar",
+    "ipa": "/ˈlaɪɚ/",
+    "rp_ipa": "/ˈlaɪə/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "liar",
+      "ja": "嘘つき",
+      "zh": "说谎者",
+      "ko": "거짓말쟁이",
+      "fil": "sinungaling"
+    },
+    "def": "A person who tells lies.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "liberate",
+    "ipa": "/ˈlɪbəˌreɪt/",
+    "rp_ipa": "/ˈlɪbəreɪt/",
+    "cefr": "B1",
+    "pos": "動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "liberate",
+      "ja": "解放する",
+      "zh": "解放、使自由",
+      "ko": "해방시키다, 자유롭게 하다",
+      "fil": "palayain"
+    },
+    "def": "To set someone free.",
+    "neighbors": [],
+    "_generation_source": "manual_phonological"
+  },
+  {
+    "w": "liberation",
+    "ipa": "/ˌlɪˌbɝˈeɪʃən/",
+    "rp_ipa": "/ˌlɪbəˈreɪʃən/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "liberation",
+      "ja": "解放",
+      "zh": "解放",
+      "ko": "해방",
+      "fil": "kalayaan"
+    },
+    "def": "The act of setting someone free.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "librarian",
+    "ipa": "/laɪˈbrɛˌriən/",
+    "rp_ipa": "/laɪˈbreərɪən/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "librarian",
+      "ja": "図書館員、司書",
+      "zh": "图书管理员",
+      "ko": "사서",
+      "fil": "aklatan (tagapangasiwa)"
+    },
+    "def": "A person who works in or manages a library.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "lifeguard",
+    "ipa": "/ˈlaɪfˌɡɑrd/",
+    "rp_ipa": "/ˈlaɪfɡɑːd/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "lifeguard",
+      "ja": "ライフガード、監視員",
+      "zh": "救生员",
+      "ko": "인명구조원",
+      "fil": "lifeguard"
+    },
+    "def": "A person who watches over swimmers to prevent accidents.",
+    "neighbors": [],
+    "_generation_source": "manual_phonological"
+  },
+  {
+    "w": "lifelong",
+    "ipa": "/ˈlaɪfˌlɔŋ/",
+    "rp_ipa": "/ˈlaɪflɒŋ/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "lifelong",
+      "ja": "生涯の、一生の",
+      "zh": "终身的",
+      "ko": "평생의",
+      "fil": "habambuhay"
+    },
+    "def": "Continuing for the whole of a person's life.",
+    "neighbors": [],
+    "_generation_source": "manual_phonological"
+  },
+  {
+    "w": "lighter",
+    "ipa": "/ˈlaɪtɚ/",
+    "rp_ipa": "/ˈlaɪtə/",
+    "cefr": "B1",
+    "pos": "名詞 / 形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "lighter",
+      "ja": "ライター、より軽い",
+      "zh": "打火机、更轻的",
+      "ko": "라이터, 더 가벼운",
+      "fil": "lighter"
+    },
+    "def": "A device used to light cigarettes or fires, or having less weight or brightness.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "lightly",
+    "ipa": "/ˈlaɪtli/",
+    "rp_ipa": "/ˈlaɪtli/",
+    "cefr": "B1",
+    "pos": "副詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "lightly",
+      "ja": "軽く、そっと",
+      "zh": "轻轻地",
+      "ko": "가볍게, 살짝",
+      "fil": "banayad"
+    },
+    "def": "With little force or weight; gently.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "lightning",
+    "ipa": "/ˈlaɪtnɪŋ/",
+    "rp_ipa": "/ˈlaɪtnɪŋ/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "lightning",
+      "ja": "稲妻、雷",
+      "zh": "闪电",
+      "ko": "번개",
+      "fil": "kidlat"
+    },
+    "def": "A flash of light in the sky during a storm.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "likeness",
+    "ipa": "/ˈlaɪknəs/",
+    "rp_ipa": "/ˈlaɪknəs/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "likeness",
+      "ja": "類似、そっくりであること",
+      "zh": "相似、相像",
+      "ko": "닮음, 유사함",
+      "fil": "pagkakahawig"
+    },
+    "def": "The state of being similar to someone or something.",
+    "neighbors": [],
+    "_generation_source": "manual_phonological"
+  },
+  {
+    "w": "limit",
+    "ipa": "/ˈlɪmət/",
+    "rp_ipa": "/ˈlɪmɪt/",
+    "cefr": "B1",
+    "pos": "名詞 / 動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "limit",
+      "ja": "限界、制限する",
+      "zh": "限制、极限",
+      "ko": "한계, 제한하다",
+      "fil": "hangganan"
+    },
+    "def": "The furthest point allowed, or to restrict something.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "limitation",
+    "ipa": "/ˌlɪmɪˈteɪʃən/",
+    "rp_ipa": "/ˌlɪmɪˈteɪʃən/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "limitation",
+      "ja": "限界、制約",
+      "zh": "限制、局限",
+      "ko": "제한, 한계",
+      "fil": "limitasyon"
+    },
+    "def": "A restriction, or a weakness that reduces effectiveness.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "limited",
+    "ipa": "/ˈlɪmətəd/",
+    "rp_ipa": "/ˈlɪmɪtɪd/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "limited",
+      "ja": "限られた",
+      "zh": "有限的",
+      "ko": "제한된",
+      "fil": "limitado"
+    },
+    "def": "Restricted in amount, extent, or scope.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "link",
+    "ipa": "/ˈlɪŋk/",
+    "rp_ipa": "/lɪŋk/",
+    "cefr": "B1",
+    "pos": "名詞 / 動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "link",
+      "ja": "つながり、リンク",
+      "zh": "链接、联系",
+      "ko": "연결, 링크",
+      "fil": "koneksyon"
+    },
+    "def": "A connection between things, or to connect things.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "liquid",
+    "ipa": "/ˈlɪkwəd/",
+    "rp_ipa": "/ˈlɪkwɪd/",
+    "cefr": "B1",
+    "pos": "名詞 / 形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "liquid",
+      "ja": "液体",
+      "zh": "液体",
+      "ko": "액체",
+      "fil": "likido"
+    },
+    "def": "A substance that flows freely, like water.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "literary",
+    "ipa": "/ˈlɪtɚˌɛri/",
+    "rp_ipa": "/ˈlɪtərəri/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "literary",
+      "ja": "文学の",
+      "zh": "文学的",
+      "ko": "문학의",
+      "fil": "pampanitikan"
+    },
+    "def": "Relating to literature.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "literature",
+    "ipa": "/ˈlɪtɚətʃɚ/",
+    "rp_ipa": "/ˈlɪtərətʃə/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "literature",
+      "ja": "文学",
+      "zh": "文学",
+      "ko": "문학",
+      "fil": "panitikan"
+    },
+    "def": "Written works, especially those valued for artistic quality.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "liver",
+    "ipa": "/ˈlɪvɚ/",
+    "rp_ipa": "/ˈlɪvə/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "liver",
+      "ja": "肝臓",
+      "zh": "肝脏",
+      "ko": "간",
+      "fil": "atay"
+    },
+    "def": "An organ in the body that cleans the blood.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "locate",
+    "ipa": "/ˈloʊˌkeɪt/",
+    "rp_ipa": "/ˈləʊˌkeɪt/",
+    "cefr": "B1",
+    "pos": "動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "locate",
+      "ja": "位置を特定する",
+      "zh": "确定位置、找到",
+      "ko": "위치를 찾다",
+      "fil": "hanapin (lokasyon)"
+    },
+    "def": "To find the exact position of something.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "location",
+    "ipa": "/loʊˈkeɪʃən/",
+    "rp_ipa": "/ləʊˈkeɪʃən/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "location",
+      "ja": "位置、場所",
+      "zh": "位置、地点",
+      "ko": "위치, 장소",
+      "fil": "lokasyon"
+    },
+    "def": "A particular place or position.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "logic",
+    "ipa": "/ˈlɑdʒɪk/",
+    "rp_ipa": "/ˈlɒdʒɪk/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "logic",
+      "ja": "論理、論理学",
+      "zh": "逻辑",
+      "ko": "논리, 논리학",
+      "fil": "lohika"
+    },
+    "def": "Reasoning conducted according to strict rules.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "logo",
+    "ipa": "/ˈloʊɡoʊ/",
+    "rp_ipa": "/ˈləʊɡəʊ/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "logo",
+      "ja": "ロゴ",
+      "zh": "标志、logo",
+      "ko": "로고",
+      "fil": "logo"
+    },
+    "def": "A symbol or design used to represent a company or organization.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "lorry",
+    "ipa": "/ˈlɔri/",
+    "rp_ipa": "/ˈlɒri/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "lorry",
+      "ja": "トラック(英)",
+      "zh": "卡车(英式)",
+      "ko": "트럭(영국식)",
+      "fil": "trak (British)"
+    },
+    "def": "A large vehicle used to carry goods (British English; American: truck).",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "lottery",
+    "ipa": "/ˈlɑtɚi/",
+    "rp_ipa": "/ˈlɒtəri/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "lottery",
+      "ja": "宝くじ",
+      "zh": "彩票、抽奖",
+      "ko": "복권",
+      "fil": "loterya"
+    },
+    "def": "A game in which people win prizes based on random numbers.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "loudspeaker",
+    "ipa": "/ˈlaʊdˌspikɚ/",
+    "rp_ipa": "/ˈlaʊdspiːkə/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "loudspeaker",
+      "ja": "拡声器、スピーカー",
+      "zh": "扬声器、喇叭",
+      "ko": "확성기, 스피커",
+      "fil": "loudspeaker"
+    },
+    "def": "A device that makes sound louder.",
+    "neighbors": [],
+    "_generation_source": "manual_phonological"
+  },
+  {
+    "w": "lovingly",
+    "ipa": "/ˈlʌvɪŋli/",
+    "rp_ipa": "/ˈlʌvɪŋli/",
+    "cefr": "B1",
+    "pos": "副詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "lovingly",
+      "ja": "愛情を込めて",
+      "zh": "深情地",
+      "ko": "사랑스럽게, 애정을 담아",
+      "fil": "may pagmamahal"
+    },
+    "def": "In a way that shows love and care.",
+    "neighbors": [],
+    "_generation_source": "manual_phonological"
+  },
+  {
+    "w": "loyalty",
+    "ipa": "/ˈlɔɪəlti/",
+    "rp_ipa": "/ˈlɔɪəlti/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "loyalty",
+      "ja": "忠誠心",
+      "zh": "忠诚",
+      "ko": "충성심",
+      "fil": "katapatan"
+    },
+    "def": "Firm support for someone or something.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "luggage",
+    "ipa": "/ˈlʌɡədʒ/",
+    "rp_ipa": "/ˈlʌɡɪdʒ/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "luggage",
+      "ja": "手荷物",
+      "zh": "行李",
+      "ko": "짐, 수하물",
+      "fil": "bagahe"
+    },
+    "def": "Bags and suitcases used for traveling.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "magical",
+    "ipa": "/ˈmædʒɪkəl/",
+    "rp_ipa": "/ˈmædʒɪkəl/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "magical",
+      "ja": "魔法のような、不思議な",
+      "zh": "魔法的、神奇的",
+      "ko": "마법 같은, 신비로운",
+      "fil": "mahiwaga"
+    },
+    "def": "Having qualities of magic; wonderful.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "magician",
+    "ipa": "/məˈdʒɪʃən/",
+    "rp_ipa": "/məˈdʒɪʃən/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "magician",
+      "ja": "手品師、魔法使い",
+      "zh": "魔术师、巫师",
+      "ko": "마술사, 마법사",
+      "fil": "mahiko"
+    },
+    "def": "A person who performs magic tricks.",
+    "neighbors": [],
+    "_generation_source": "manual_phonological"
+  },
+  {
+    "w": "magnificent",
+    "ipa": "/mæɡˈnɪfəsənt/",
+    "rp_ipa": "/mæɡˈnɪfɪsənt/",
+    "cefr": "B1",
+    "pos": "形容詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "magnificent",
+      "ja": "壮大な、素晴らしい",
+      "zh": "壮丽的、宏伟的",
+      "ko": "장엄한, 훌륭한",
+      "fil": "kahanga-hanga"
+    },
+    "def": "Extremely impressive or beautiful.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "mailbox",
+    "ipa": "/ˈmeɪlˌbɑks/",
+    "rp_ipa": "/ˈmeɪlbɒks/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "mailbox",
+      "ja": "郵便受け(米)",
+      "zh": "邮箱(美式)",
+      "ko": "우편함(미국식)",
+      "fil": "mailbox (American)"
+    },
+    "def": "A box for receiving mail (American English).",
+    "neighbors": [],
+    "_generation_source": "manual_phonological"
+  },
+  {
+    "w": "maintain",
+    "ipa": "/meɪnˈteɪn/",
+    "rp_ipa": "/meɪnˈteɪn/",
+    "cefr": "B1",
+    "pos": "動詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "maintain",
+      "ja": "維持する、保つ",
+      "zh": "维护、保持",
+      "ko": "유지하다, 관리하다",
+      "fil": "panatilihin"
+    },
+    "def": "To keep something in good condition, or to continue something.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "maintenance",
+    "ipa": "/ˈmeɪntənəns/",
+    "rp_ipa": "/ˈmeɪntnəns/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "maintenance",
+      "ja": "維持、保守",
+      "zh": "维护、维修",
+      "ko": "유지보수",
+      "fil": "pagpapanatili"
+    },
+    "def": "The act of keeping something in good condition.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "majority",
+    "ipa": "/məˈdʒɔrəti/",
+    "rp_ipa": "/məˈdʒɒrɪti/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "majority",
+      "ja": "大多数、過半数",
+      "zh": "大多数、多数",
+      "ko": "다수, 과반수",
+      "fil": "karamihan"
+    },
+    "def": "More than half of a group.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "management",
+    "ipa": "/ˈmænədʒmənt/",
+    "rp_ipa": "/ˈmænɪdʒmənt/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "management",
+      "ja": "経営、管理",
+      "zh": "管理、经营",
+      "ko": "경영, 관리",
+      "fil": "pamamahala"
+    },
+    "def": "The act of controlling or organizing something, or the people who do this.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "mankind",
+    "ipa": "/ˈmænˈkaɪnd/",
+    "rp_ipa": "/ˌmænˈkaɪnd/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "mankind",
+      "ja": "人類",
+      "zh": "人类",
+      "ko": "인류",
+      "fil": "sangkatauhan"
+    },
+    "def": "All human beings considered together.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "maple",
+    "ipa": "/ˈmeɪpəl/",
+    "rp_ipa": "/ˈmeɪpəl/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "maple",
+      "ja": "カエデ",
+      "zh": "枫树",
+      "ko": "단풍나무",
+      "fil": "maple"
+    },
+    "def": "A type of tree known for its colorful autumn leaves and syrup.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "marble",
+    "ipa": "/ˈmɑrbəl/",
+    "rp_ipa": "/ˈmɑːbəl/",
+    "cefr": "B1",
+    "pos": "名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "marble",
+      "ja": "大理石、ビー玉",
+      "zh": "大理石、弹珠",
+      "ko": "대리석, 구슬",
+      "fil": "marmol"
+    },
+    "def": "A hard stone used for building and sculpture, or a small glass ball used in games.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  },
+  {
+    "w": "marine",
+    "ipa": "/mɚˈin/",
+    "rp_ipa": "/məˈriːn/",
+    "cefr": "B1",
+    "pos": "形容詞 / 名詞",
+    "src": "cefr",
+    "pattern": null,
+    "group": null,
+    "gloss": {
+      "en": "marine",
+      "ja": "海の、海兵隊員",
+      "zh": "海洋的、海军陆战队员",
+      "ko": "바다의, 해병대원",
+      "fil": "dagat, marino"
+    },
+    "def": "Relating to the sea, or a soldier trained for service at sea.",
+    "neighbors": [],
+    "_generation_source": "dict_verified"
+  }
+]
