@@ -68,6 +68,7 @@
   .pills{display:flex;gap:8px;flex-wrap:wrap}
   .pill{border:1px solid var(--hair);background:#fff;border-radius:999px;padding:8px 15px;cursor:pointer;font-size:13px;font-weight:600;color:var(--ink)}
   .pill[aria-pressed="true"]{border-color:var(--signal);background:var(--signal-soft);color:var(--signal)}
+  .pill:disabled{cursor:not-allowed;opacity:.45;color:var(--faint);background:#f7f7f5;border-color:var(--hair)}
   .start{width:100%;margin-top:6px;border:none;border-radius:11px;cursor:pointer;background:var(--ink);color:#fff;font-family:var(--ui);font-weight:700;font-size:15px;padding:15px;letter-spacing:.03em;transition:transform .08s}
   .start:active{transform:translateY(1px)}
   .countnote{font-size:11px;color:var(--faint);margin-top:8px;font-family:var(--mono)}
@@ -1426,20 +1427,66 @@ function matchesWeakFocus(w){
   const ph=phonemesOf(w.ipa);
   return tops.some(s=>ph.includes(s));
 }
-function filteredPool(){
+function filteredWordPoolWith(overrides){
+  const opts=overrides||{};
+  const reg=opts.reg??S.reg;
+  const grp=opts.grp??S.grp;
+  const focus=opts.focus??S.focus;
+  const cefrLevels=opts.cefrLevels??S.cefrLevels;
   let p=PRESET.slice();
-  if(S.reg==="regular")p=p.filter(w=>w.grp);
-  else if(S.reg==="irregular")p=p.filter(w=>!w.grp);
-  if(S.reg==="regular"&&S.grp!=="all")p=p.filter(w=>w.grp===S.grp);
-  if(S.cefrLevels.size===0)p=[];
-  else p=p.filter(w=>w.cefr&&S.cefrLevels.has(w.cefr));
-  if(S.focus==="traps")p=p.filter(hasTrapPhoneme);
-  else if(S.focus==="weak")p=p.filter(matchesWeakFocus);
-  else if(S.focus==="letters")p=p.filter(w=>w.src==="letter");
-  else if(S.focus==="contractions")p=p.filter(w=>w.src==="contraction");
-  else if(S.focus==="irregular")p=p.filter(w=>w.src==="irregular_verb"||w.src==="irregular_plural");
-  else if(S.focus==="casual")p=p.filter(w=>w.src==="casual");
+  if(reg==="regular")p=p.filter(w=>w.grp);
+  else if(reg==="irregular")p=p.filter(w=>!w.grp);
+  if(reg==="regular"&&grp!=="all")p=p.filter(w=>w.grp===grp);
+  if(cefrLevels.size===0)p=[];
+  else p=p.filter(w=>w.cefr&&cefrLevels.has(w.cefr));
+  if(focus==="traps")p=p.filter(hasTrapPhoneme);
+  else if(focus==="weak")p=p.filter(matchesWeakFocus);
+  else if(focus==="letters")p=p.filter(w=>w.src==="letter");
+  else if(focus==="contractions")p=p.filter(w=>w.src==="contraction");
+  else if(focus==="irregular")p=p.filter(w=>w.src==="irregular_verb"||w.src==="irregular_plural");
+  else if(focus==="casual")p=p.filter(w=>w.src==="casual");
   return p;
+}
+function filteredPool(){
+  return filteredWordPoolWith();
+}
+function setSinglePill(groupId,dataAttr,value){
+  $(groupId).querySelectorAll(".pill,.opt").forEach(el=>{
+    const key="data-"+dataAttr;
+    el.setAttribute("aria-pressed",el.getAttribute(key)===value?"true":"false");
+  });
+}
+function ensureEnabledSelection(groupId,dataAttr,currentValue,fallbackValue,setter){
+  const group=$(groupId);
+  const selected=group.querySelector('.pill[data-'+dataAttr+'="'+currentValue+'"]');
+  if(selected&&!selected.disabled)return false;
+  const next=group.querySelector(".pill:not(:disabled)")||group.querySelector('.pill[data-'+dataAttr+'="'+fallbackValue+'"]');
+  if(!next)return false;
+  setter(next.getAttribute("data-"+dataAttr));
+  setSinglePill(groupId,dataAttr,next.getAttribute("data-"+dataAttr));
+  return true;
+}
+function updateWordFilterAvailability(){
+  if(!dataReady())return;
+  const focusBtns=[...$("focusPills").querySelectorAll(".pill")];
+  focusBtns.forEach(btn=>{
+    const focus=btn.dataset.focus;
+    btn.disabled=filteredWordPoolWith({focus}).length===0;
+  });
+  const regBtns=[...$("regOpts").querySelectorAll(".pill")];
+  regBtns.forEach(btn=>{
+    const reg=btn.dataset.reg;
+    btn.disabled=filteredWordPoolWith({reg,grp:reg==="regular"?S.grp:"all"}).length===0;
+  });
+  const grpBtns=[...$("grpPills").querySelectorAll(".pill")];
+  grpBtns.forEach(btn=>{
+    const grp=btn.dataset.grp;
+    btn.disabled=filteredWordPoolWith({reg:"regular",grp}).length===0;
+  });
+  const focusChanged=ensureEnabledSelection("focusPills","focus",S.focus,"all",v=>{S.focus=v;});
+  const regChanged=ensureEnabledSelection("regOpts","reg",S.reg,"all",v=>{S.reg=v;});
+  const grpChanged=ensureEnabledSelection("grpPills","grp",S.grp,"all",v=>{S.grp=v;});
+  if(focusChanged||regChanged||grpChanged)updateSetupFields();
 }
 function filteredCsPool(){
   let p = CONNECTED.concat(WEAK);
@@ -1449,6 +1496,7 @@ function filteredCsPool(){
   return p;
 }
 function updatePool(){
+  updateWordFilterAvailability();
   if(S.appMode==="b"){
     const pool=modeBPool();
     $("poolNote").classList.remove("hidden");
