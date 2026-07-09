@@ -35,6 +35,15 @@ GitHub Pages: https://nkhippo.github.io/English-Pronunciation-Trainer/
 | `scripts/paths.py` | パイプライン用パス正本 |
 | `gas/` | TTS プロキシ（`gas/README.md` 参照） |
 
+## ドキュメント
+
+| パス | 説明 |
+|------|------|
+| `docs/REPOSITORY-STRUCTURE.md` | フォルダ構成・AI 向けオリエンテーション |
+| `docs/PURPOSE.md` / `DESIGN.md` / `SPECIFICATION.md` | 正本仕様 |
+| `docs/reference/README.md` | 相談用 reference 資料の索引 |
+| `docs/cursor/briefs/cursor-ga-rp-same-flag-consultation.md` | GA↔RP 同一判定フラグ（Claude 相談ブリーフ） |
+
 ## ローカル確認
 
 ```bash

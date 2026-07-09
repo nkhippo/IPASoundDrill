@@ -1,7 +1,7 @@
 # Repository Structure
 
 > **Purpose:** Share this file with Claude (or other AI assistants) at the start of a task so it knows where data, scripts, and docs live.  
-> **Last updated:** 2026-07-09 (unlimited session + streaming prefetch v3.12)
+> **Last updated:** 2026-07-09 (exit confirm, alt-accent format, CEFR filter disable, reference index, ga_rp_same consultation)
 
 ---
 
@@ -69,12 +69,15 @@ english-pronunciation-trainer/
 │   ├── cursor/
 │   │   ├── instructions/        # cursor-instructions-*.md (task briefs)
 │   │   ├── reports/           # cursor-implementation-report-*.md
-│   │   └── briefs/            # Other cursor-* design/task docs
+│   │   └── briefs/            # Design consultations (incl. cursor-ga-rp-same-flag-consultation.md)
 │   ├── reference/               # Audits, consultations, decision records
+│   │   ├── README.md            # ★ index for AI consultation (start here)
 │   │   ├── wordlist-cefr-audit.md
-│   │   ├── i18n-audit.md
-│   │   ├── neighbors_report.md
+│   │   ├── i18n-audit.md        # regenerate: tools/gen_audit_docs.py
+│   │   ├── gloss-flags.md
+│   │   ├── report-alt-accent-display.md
 │   │   ├── rp-neighbors-priority-decision.md
+│   │   ├── rp-tts-design-and-priority.md
 │   │   └── …
 │   ├── testing/                 # Manual test checklists
 │   └── archive/
@@ -189,6 +192,20 @@ Staging outputs go to `data/pipeline/`. Merge scripts write `wordlist_GA_a1a2_pl
 | Phase 2 staging | `data/pipeline/` (not root) |
 | Cursor task docs | `docs/cursor/**` (old reports may cite pre-reorg paths) |
 | Spec truth | `docs/PURPOSE.md` > `docs/DESIGN.md` > `docs/SPECIFICATION.md` |
+
+---
+
+## UI behaviour snapshot (2026-07-09 PM)
+
+| Feature | Implementation |
+|---------|----------------|
+| Alt-accent same display | `/ipa/ (same)` via `formatSameAccentIpa()`; compare `ipa === rp_ipa` |
+| Alt-accent labels | `GA` / `RP` only (`reveal.ga_note` / `reveal.rp_note`) |
+| Session exit | `#exitConfirmModal` on drill screens; Yes → summary |
+| CEFR setup filters | Pills with 0 results for selected CEFR levels are `disabled` |
+| Nucleus highlight | Soft amber fill + `text-decoration` underline (iOS-safe) |
+
+Planned: `ga_rp_same` flag — see `docs/cursor/briefs/cursor-ga-rp-same-flag-consultation.md`.
 
 ---
 

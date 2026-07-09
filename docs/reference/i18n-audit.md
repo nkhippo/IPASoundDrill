@@ -1,7 +1,7 @@
 # i18n 監査レポート
 
-> 生成日: 2026-07-07 ／ 対象: `i18n/{en,ja,zh-Hans,zh-Hant,ko,fil}.json`、`i18n/phonemes/*.json`、`index.html`
-> 生成: `python3 tools/gen_audit_docs.py` ／ UI キー数: **162** ／ `validate_i18n.py`: ERROR 0
+> 生成日: 2026-07-09 ／ 対象: `i18n/{en,ja,zh-Hans,zh-Hant,ko,fil}.json`、`i18n/phonemes/*.json`、`index.html`
+> 生成: `python3 tools/gen_audit_docs.py` ／ UI キー数: **171** ／ `validate_i18n.py`: ERROR 0
 
 翻訳の良し悪しは判断していません。キー所在・画面配線・ハードコードの可視化のみ。
 
@@ -15,8 +15,11 @@
 | `accent.label` | Accent | 発音 | 口音 | 口音 | 발음 | Punto | settings |
 | `accent.rp` | British (RP) | イギリス英語 | 英式 | 英式 | 영국식 | Britaniko (RP) | settings（動的参照） |
 | `back_top` | Menu | TOPへ | 首页 | 首頁 | 처음 | Menu | 共通 |
+| `brand.home` | Back to top | トップへ戻る | 返回首页 | 返回首頁 | 처음으로 | Bumalik sa itaas | 共通（トップバー） |
 | `brand.name` | IPA Drill | IPAドリル | IPA操练 | IPA操練 | IPA 드릴 | IPA Drill | 共通（トップバー） |
 | `build_ph` | Tap the IPA keys below to build the pronunciation | 下のIPAキーをタップして発音を組み立てる | 点击下方IPA键拼出发音 | 點選下方IPA鍵拼出發音 | 아래 IPA 키를 눌러 발음을 만드세요 | I-tap ang mga IPA key sa ibaba para buuin ang pagbigkas | encode |
+| `cefr.pending` | CEFR? | CEFR? | CEFR? | CEFR? | CEFR? | CEFR? | setup / 練習 |
+| `cefr.pending_hint` | CEFR not assigned yet | CEFR未設定（相談中） | 尚未设定 CEFR | 尚未設定 CEFR | CEFR 미설정 | Wala pang CEFR | setup / 練習 |
 | `check` | Check | 答え合わせ | 核对 | 核對 | 채점 | Suriin | decode / encode / Mode B |
 | `clear` | Clear | クリア | 清除 | 清除 | 지우기 | Burahin | encode |
 | `cs.all` | All | すべて | 全部 | 全部 | 전체 | Lahat | setup（Connected） |
@@ -35,6 +38,10 @@
 | `dir.encode_d` | Build the IPA from the spelling | 綴りから発音記号（IPA）を組み立てる | 根据拼写组装发音符号（IPA） | 根據拼寫組合發音符號(IPA) | 철자에서 발음 기호(IPA) 조립하기 | Buuin ang IPA mula sa baybay | setup（Words） |
 | `dir.encode_t` | word &rarr; IPA | 単語 &rarr; IPA | 单词 &rarr; IPA | 單字 &rarr; IPA | 단어 &rarr; IPA | salita &rarr; IPA | setup（Words） |
 | `dir.label` | Direction | 方向 | 方向 | 方向 | 방향 | Direksyon | setup（Words） |
+| `exit_confirm.body` | Do you want to end this session? | このセッションを終了しますか？ | 要结束本次练习吗？ | 要結束本次練習嗎？ | 이 세션을 종료할까요? | Gusto mo bang tapusin ang session na ito? | setup / 練習 |
+| `exit_confirm.no` | No | No | No | No | No | No | setup / 練習 |
+| `exit_confirm.title` | End session? | 終了しますか？ | 要结束吗？ | 要結束嗎？ | 종료하시겠어요? | Tapusin ang session? | setup / 練習 |
+| `exit_confirm.yes` | Yes | Yes | Yes | Yes | Yes | Yes | setup / 練習 |
 | `focus.all` | All sounds | すべて | 全部 | 全部 | 전체 | Lahat ng tunog | setup（Words） |
 | `focus.casual` | Casual speech | 口語表現 | 口语表达 | 口語表達 | 구어체 | Pang-araw-araw na pananalita | setup（Words） |
 | `focus.contractions` | Contractions | 短縮形 | 缩写形式 | 縮寫形式 | 축약형 | Mga pinaikli | setup（Words） |
@@ -79,13 +86,14 @@
 | `listen` | Listen | 音を聞く | 播放发音 | 播放發音 | 듣기 | Makinig | decode / encode / reveal |
 | `load_fail` | Load failed | 読み込み失敗 | 加载失败 | 載入失敗 | 불러오기 실패 | Nabigo ang pag-load | setup / summary |
 | `loading` | Loading… | 読み込み中… | 加载中… | 載入中… | 불러오는 중… | Naglo-load… | setup / summary |
-| `lvl.all` | A1+A2 | A1+A2 | A1+A2 | A1+A2 | A1+A2 | A1+A2 | （未使用・予約） |
+| `lvl.a1` | A1 | A1 | A1 | A1 | A1 | A1 | （未使用・予約） |
+| `lvl.a2` | A2 | A2 | A2 | A2 | A2 | A2 | （未使用・予約） |
 | `lvl.b1` | B1 | B1 | B1 | B1 | B1 | B1 | （未使用・予約） |
 | `lvl.b2` | B2 | B2 | B2 | B2 | B2 | B2 | （未使用・予約） |
 | `lvl.c1` | C1 | C1 | C1 | C1 | C1 | C1 | （未使用・予約） |
-| `lvl.label` | Level | レベル | 级别 | 級別 | 레벨 | Antas | （未使用・予約） |
+| `lvl.label` | CEFR level | CEFR レベル | CEFR 级别 | CEFR 級別 | CEFR 레벨 | CEFR antas | setup / 練習 |
 | `lvl.pool` | Pool: {n} words | 対象 {n} 語 | 词库 {n} 词 | 詞庫 {n} 詞 | 대상 {n}개 단어 | Pool: {n} salita | （未使用・予約） |
-| `meter_done` | done | 完了 | 完成 | 完成 | 완료 | tapos na | setup / summary |
+| `meter_done` | done | 完了 | 完成 | 完成 | 완료 | tapos na | （未参照） |
 | `mode.a` | IPA read & write | IPA読み書き | IPA 读写 | IPA 讀寫 | IPA 읽기·쓰기 | Basahin at isulat ang IPA | setup / 練習 |
 | `mode.label` | Learning mode | 学習モード | 学习模式 | 學習模式 | 학습 모드 | Mode ng pag-aaral | setup / 練習 |
 | `modeb.band.label` | Band | バンド | 词汇级别 | 詞彙級別 | 레벨 | Banda | （未参照） |
@@ -126,6 +134,7 @@
 | `pos.短縮形` | contraction | 短縮形 | 缩写形式 | 縮寫形式 | 축약형 | pinaikli | （未使用・posLabel定義のみ） |
 | `pos.間投詞` | interjection | 間投詞 | 感叹词 | 感嘆詞 | 감탄사 | pandamdam | （未使用・posLabel定義のみ） |
 | `pos.限定詞` | determiner | 限定詞 | 限定词 | 限定詞 | 한정사 | pantukoy | （未使用・posLabel定義のみ） |
+| `reflect.btn` | Reflect | 振り返り | 回顾 | 回顧 | 돌아보기 | Pagbalik-tanaw | setup / 練習 |
 | `reg.all` | All | すべて | 全部 | 全部 | 전체 | Lahat | setup（Words） |
 | `reg.irregular` | Irregular | 不規則 | 不规则 | 不規則 | 불규칙 | Di-regular | setup（Words） |
 | `reg.irregular_d` | Common words with irregular spelling | 日常語の不規則綴り | 常用词的不规则拼写 | 常用詞的不規則拼寫 | 일상어의 불규칙 철자 | Karaniwang salita na may di-regular na baybay | setup（Words） |
@@ -134,9 +143,9 @@
 | `reg.regular_d` | Phonics and spelling–sound rules | フォニックス／綴りと音の対応 | 自然拼读／拼写–读音规则 | 自然發音／拼寫–讀音規則 | 파닉스／철자–소리 규칙 | Phonics at mga tuntunin ng baybay–tunog | setup（Words） |
 | `reveal.alt_same` | same | 同じ | 相同 | 相同 | 같음 | pareho | reveal |
 | `reveal.dict_label` | Dictionary | 辞書表記 | 词典表记 | 詞典標記 | 사전 표기 | Diksyonaryo | reveal |
-| `reveal.ga_note` | GA | GA（米） | GA（美） | GA(美) | GA（미） | GA (Amer.) | reveal |
+| `reveal.ga_note` | GA | GA | GA | GA | GA | GA | reveal |
 | `reveal.respell_label` | Respelling | 発音ガイド | 简易发音 | 簡易發音 | 발음 가이드 | Gabay sa bigkas | （未参照） |
-| `reveal.rp_note` | RP | RP（英） | RP（英） | RP(英) | RP（영） | RP (Brit.) | reveal |
+| `reveal.rp_note` | RP | RP | RP | RP | RP | RP | reveal |
 | `see_answer` | See the answer | 答えを確認 | 查看答案 | 查看答案 | 정답 확인 | Tingnan ang sagot | reveal |
 | `set.daily_d` | Common words (including irregular spellings) | よく使う語（不規則綴りを含む） | 常用词（含不规则拼写） | 常用詞(含不規則拼寫) | 자주 쓰는 단어(불규칙 철자 포함) | Karaniwang salita (kasama ang di-regular na baybay) | （未使用・予約） |
 | `set.daily_t` | Daily words · CEFR A1–A2 | 日常語 · CEFR A1–A2 | 日常词 · CEFR A1–A2 | 日常詞 · CEFR A1–A2 | 일상 어휘 · CEFR A1–A2 | Pang-araw-araw na salita · CEFR A1–A2 | （未使用・予約） |
@@ -150,7 +159,7 @@
 | `setup.hide_filters` | Hide filters | 設定を閉じる | 收起设置 | 收合設定 | 설정 닫기 | Itago ang mga setting | setup / 練習 |
 | `setup.show_filters` | Customize filters | 詳しい設定 | 详细设置 | 詳細設定 | 상세 설정 | Mga detalyadong setting | setup / 練習 |
 | `start` | Start | はじめる | 开始 | 開始 | 시작 | Simulan | setup / summary |
-| `summary.again` | Play again | もう一周 | 再来一轮 | 再來一輪 | 다시 하기 | Maglaro muli | summary |
+| `summary.again` | Play again | もう一周 | 再来一轮 | 再來一輪 | 다시 하기 | Maglaro muli | （未参照） |
 | `summary.line` | {c} / {t} correct · {m} to review | {c} / {t} 正解 · 復習 {m} 語 | {c} / {t} 正确 · 复习 {m} 词 | {c} / {t} 正確 · 複習 {m} 詞 | {c} / {t} 정답 · 복습 {m}개 | {c} / {t} tama · {m} babalikan | summary |
 | `summary.review` | Review list: {list} | 復習リスト: {list} | 复习列表: {list} | 複習清單: {list} | 복습 목록: {list} | Listahan ng babalikan: {list} | summary |
 | `summary.weak_btn` | Review misses only | 苦手だけ復習 | 只复习错题 | 只複習錯題 | 틀린 것만 복습 | Balikan ang mga mali lamang | summary |
@@ -281,14 +290,21 @@
 
 - `load_fail`
 - `loading`
-- `meter_done`
 - `start`
 - `wordlist_fail`
 
 ### setup / 練習
 
+- `cefr.pending`
+- `cefr.pending_hint`
+- `exit_confirm.body`
+- `exit_confirm.no`
+- `exit_confirm.title`
+- `exit_confirm.yes`
+- `lvl.label`
 - `mode.a`
 - `mode.label`
+- `reflect.btn`
 - `setup.hide_filters`
 - `setup.show_filters`
 - `vocab.no_results`
@@ -346,7 +362,6 @@
 
 ### summary
 
-- `summary.again`
 - `summary.line`
 - `summary.review`
 - `summary.weak_btn`
@@ -360,6 +375,7 @@
 
 ### 共通（トップバー）
 
+- `brand.home`
 - `brand.name`
 
 ### （未使用・posLabel定義のみ）
@@ -388,11 +404,11 @@
 - `hint.first`
 - `hint.pos`
 - `hint.syl`
-- `lvl.all`
+- `lvl.a1`
+- `lvl.a2`
 - `lvl.b1`
 - `lvl.b2`
 - `lvl.c1`
-- `lvl.label`
 - `lvl.pool`
 - `set.daily_d`
 - `set.daily_t`
@@ -407,6 +423,7 @@
 - `lead_connected_html`
 - `lead_html`
 - `lead_weak_html`
+- `meter_done`
 - `modeb.band.label`
 - `modeb.band.note`
 - `modeb.lead_html`
@@ -414,6 +431,7 @@
 - `pool.count_phrases`
 - `pool.count_weak`
 - `reveal.respell_label`
+- `summary.again`
 
 ---
 

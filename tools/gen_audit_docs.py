@@ -22,7 +22,7 @@ WORDLIST = str(paths.WORDLIST)
 AUDIT_OUT = str(paths.DOCS / "reference" / "i18n-audit.md")
 FLAGS_OUT = str(paths.DOCS / "reference" / "gloss-flags.md")
 LANGS = ["en", "ja", "zh-Hans", "zh-Hant", "ko", "fil"]
-GEN_DATE = "2026-07-07"
+GEN_DATE = "2026-07-09"
 
 
 def load(path):

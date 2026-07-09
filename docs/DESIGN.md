@@ -3,7 +3,7 @@
 > `PURPOSE.md` で確定した目的・2モード構成を、Cursorが実装に落とせる粒度まで具体化した仕様。
 > 本ドキュメントは「何を作るか（what / how）」の正本。目的の正本は `PURPOSE.md`。
 >
-> **更新日:** 2026-07-09 ／ **ステータス:** Mode A・Mode B・GA/RP・連結句・弱形・RP TTS・語彙ブラウザ・TTS プリフェッチ・無制限セッション・振り返り・UI 5言語（fil 含む）実装済み。語彙 4,439語（Phase 1 M4 まで）。
+> **更新日:** 2026-07-09（夕方） ／ **ステータス:** Mode A・Mode B・GA/RP・連結句・弱形・RP TTS・語彙ブラウザ・TTS プリフェッチ・無制限セッション・離脱確認モーダル・UI 6言語（fil 含む）実装済み。語彙 4,439語（Phase 1 M4 まで）。
 
 ---
 
@@ -128,7 +128,7 @@ aʊ: how /haʊ/, cow /kaʊ/, hour /ˈaʊɚ/
 |------|------|
 | 設定 | `localStorage.app_accent` = `ga` \| `rp`（既定 `ga`） |
 | 表示 IPA | `activeIpa(c)` — RP 時は `rp_ipa`、なければ GA `ipa` にフォールバック |
-| reveal 補足 | 選択外アクセントの phonemic IPA を表示（`altAccentLabel()` + `altAccentValue()`）。同一時は `reveal.alt_same`。対象: `#rAltIpa`（Reveal）、`#dAltIpa`（Decode・単語のみ）、`#mbSAltIpa`（Mode B Study）、語彙ブラウザ RP 行 |
+| reveal 補足 | 選択外アクセントの phonemic IPA を表示（`altAccentLabel()` + `altAccentValue()`）。ラベルは `GA` / `RP` のみ。同一時は `/ipa/（同じ）` 形式（`formatSameAccentIpa()` + `reveal.alt_same`）。判定は **`ipa === rp_ipa` の文字列一致**（`ga_rp_same` フラグは未実装）。対象: `#rAltIpa`（Reveal）、`#dAltIpa`（Decode・単語のみ）、`#mbSAltIpa`（Mode B Study）、語彙ブラウザ RP 行 |
 | Encode キーボード | GA: ɑ ɔ ɝ ɚ 等 / RP: ɒ ɜː 長音ː・二重母音拡張 |
 | データ | 全 3,059 語 + 201 連結句に `rp_ipa` 付与 |
 
@@ -299,7 +299,7 @@ Keep the delivery identical and consistent across all words.
 4. 弱形: `?weak=` body を GA/RP 両方で先読み
 5. スピーカーボタンはキャッシュ準備完了まで `disabled`（**全モード共通**）
 6. `prefetchToken` で古いジョブをキャンセル
-7. 振り返りボタン（`data-reflect`）で任意タイミングのサマリー表示（再開なし）
+7. 離脱確認（`#exitConfirmModal`）— Decode / Encode / Mode B Study / Reveal から Menu またはブランドタップ時に Yes/No。Yes でサマリー（再開なし）。Summary・セットアップではモーダルなし
 
 ### 3.4c GA バッチ warm（GAS 時間トリガー・2026-07 実装）
 
@@ -371,7 +371,8 @@ Keep the delivery identical and consistent across all words.
 | 練習タブ統一（Connected ⊃ Weak） | ✅ |
 | 語彙ブラウザ（Words / Phrases） | ✅ |
 | TTS プリフェッチ（ストリーミング先読み + 全モードスピーカー gating） | ✅ |
-| 無制限セッション（プール全件・6/5 先読み・振り返りボタン） | ✅ |
+| 無制限セッション（プール全件・6/5 先読み・離脱確認→サマリー） | ✅ |
+| CEFR 連動フィルタ（0 件ピル非活性） | ✅ |
 | Mode B Study のみ（Quiz コード温存） | ✅ |
 | GA バッチ warm（GAS 時間トリガー） | ✅ |
 | UI 6言語（en/ja/zh-Hans/zh-Hant/ko/fil） | ✅ Tier 1+3（162キー） |

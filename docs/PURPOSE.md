@@ -3,7 +3,7 @@
 > アプリの**本丸（measured outcome）**と**モード構成**を確定し、背景メモ・Cursor仕様書・実装コードの目的を一致させる正本。
 > 目的・評価方針に関する記述が衝突した場合は、本ドキュメントを正とする。
 >
-> **更新日:** 2026-07-09 ／ **ステータス:** Mode A・Mode B 実装済み。語彙 4,439語。GA/RP 切替・連結句・弱形・RP TTS・語彙ブラウザ・TTS プリフェッチ・無制限セッション・振り返り・UI 5言語（fil 含む）・narrow IPA 対応済み。
+> **更新日:** 2026-07-09（夕方） ／ **ステータス:** Mode A・Mode B 実装済み。語彙 4,439語。GA/RP 切替・連結句・弱形・RP TTS・語彙ブラウザ・TTS プリフェッチ・無制限セッション・離脱確認モーダル・UI 6言語（zh-Hans/zh-Hant 分離・fil 含む）・narrow IPA 対応済み。
 > 詳細な実装仕様は `docs/DESIGN.md`、画面・データの正本は `docs/SPECIFICATION.md` を参照。
 
 ---
@@ -37,7 +37,7 @@
 
 **CEFRの位置づけ:** 主軸としてMode Aには不適（頻度はIPA読み書き難易度の弱い代理であり、本アプリは既知語前提のため頻度の意味が薄い）。CEFRは破棄せず **Mode B の主軸へ移設**する。Mode Aではコールドスタート時の出題順にのみ残す。
 
-**アクセント（GA / RP）:** 設定で切替。IPA 表示・Encode キーボード・TTS（単語・弱形）が追従。連結句 TTS は GA 固定。反対アクセントの phonemic IPA は Reveal・Decode（単語）・Mode B Study・語彙ブラウザに表示。同一時は `reveal.alt_same`（例: 同じ (/əˈbaʊt/)）で明示。Mode B の MCQ distractor は GA `neighbors` を RP でも流用（`neighbors_rp` 再計算は保留。`docs/reference/rp-neighbors-priority-decision.md`）。
+**アクセント（GA / RP）:** 設定で切替。IPA 表示・Encode キーボード・TTS（単語・弱形）が追従。連結句 TTS は GA 固定。反対アクセントの phonemic IPA は Reveal・Decode（単語）・Mode B Study・語彙ブラウザに表示（ラベルは `GA` / `RP` のみ）。phonemic 文字列が完全一致するときは `reveal.alt_same`（例: `/əˈbaʊt/（同じ）`）。**実質同一の判定フラグは未実装**（`ipa === rp_ipa` のみ。相談ブリーフ: `docs/cursor/briefs/cursor-ga-rp-same-flag-consultation.md`）。Mode B の MCQ distractor は GA `neighbors` を RP でも流用（`neighbors_rp` 再計算は保留。`docs/reference/rp-neighbors-priority-decision.md`）。
 
 ---
 
@@ -57,7 +57,7 @@
 
 - **目的 = 音から単語の意味（と綴り）を覚える。** 入口は必ず音（sound-first）。
 - **ループ = Study 提示**（`MODEB_QUIZ_ENABLED=false` の間は Quiz 非表示。MCQ・ディクテーションのコードは将来復活用に温存）。Study 提示は **2段階 reveal**（IPA＋音声 → 学習者が「意味を確認する」→ 単語＋語義を開示）。[次へ] で次の問題へ。
-- **セッション:** フィルタ後プールの全件を重複なしで消化。先読みキュー（6 問初期 / ストック&lt;5 で 5 問追加）と振り返りボタンで任意終了（`docs/SPECIFICATION.md` §2.3b）。
+- **セッション:** フィルタ後プールの全件を重複なしで消化。先読みキュー（6 問初期 / ストック&lt;5 で 5 問追加）。Decode / Encode / Mode B Study / Reveal から離脱する際は Yes/No 確認モーダル → Yes でサマリー表示（`docs/SPECIFICATION.md` §2.3b）。
 - **確認は客観2種（採用：両方）:**
   1. 意味認識MCQ（音→意味）。**distractorは音素近傍語**を中心に毎回抽選＋順序シャッフル。
   2. 音声ディクテーション（音→綴り、Decode採点を流用）。
@@ -83,7 +83,8 @@
 | GA/RP IPA・キーボード | **実装済み**（STEP5） |
 | RP TTS（単語） | **実装済み**（GAS 再デプロイ済み） |
 | TTS プリフェッチ（クライアント） | **実装済み**（ストリーミング先読み + 全モードスピーカー gating） |
-| 無制限セッション（プール全件・振り返り） | **実装済み**（2026-07-09） |
+| 無制限セッション（プール全件・離脱確認→サマリー） | **実装済み**（2026-07-09） |
+| CEFR フィルタ連動（0 件の詳細設定ピルを非活性） | **実装済み**（2026-07-09） |
 | Mode B Study のみ（Quiz 温存） | **実装済み**（2026-07-09） |
 | GA バッチ warm（GAS 時間トリガー） | **実装済み**（`BatchWarm.gs`・500語/回・20並列） |
 | `neighbors_rp` | **保留**（GA neighbors 流用） |
@@ -112,6 +113,7 @@
 
 | 日付 | 版 | 内容 |
 |------|----|------|
+| 2026-07-09 | v3.13 | 反対アクセント同一表示を `/ipa/（同じ）` 形式に変更。GA/RP ラベルを `GA`/`RP` のみに簡素化。振り返りフローティングボタンを廃止し、離脱時（Menu/ブランド）に Yes/No 確認→サマリーへ。CEFR 選択に連動して 0 件の詳細フィルタピルを非活性化。 |
 | 2026-07-09 | v3.12 | セッションをプール全件の重複なし消化に変更（6 問初期 / ストック&lt;5 で 5 問先読み）。全モード TTS 先読み。振り返りボタン・サマリー TOP へ。Mode B は Study のみ（Quiz UI 非表示・コード温存）。 |
 | 2026-07-09 | v3.11 | リポジトリ構成を整理（`data/batches`・`data/pipeline`・`data/patches`・`docs/cursor` 等）。`docs/REPOSITORY-STRUCTURE.md` 追加。`scripts/paths.py` でパス正本化。 |
 | 2026-07-09 | v3.10 | Phase 1 M4: B1 拡充 400語（`marked`〜`restore`）を IPA/pos/def/gloss5言語付きでマージ。総語数 4,439、B1=1,727。 |

@@ -1,10 +1,10 @@
 # gloss 機械フラグ
 
-> 生成日: 2026-07-07 ／ 対象: `wordlist_GA_a1a2_plus_phonics.json`
+> 生成日: 2026-07-09 ／ 対象: `wordlist_GA_a1a2_plus_phonics.json`
 > 生成: `python3 tools/gen_audit_docs.py`
 
-- 総語数: 3059
-- フラグ付き語数: 1778
+- 総語数: 4439
+- フラグ付き語数: 1971
 
 正誤判断はしていません。機械的ヒューリスティックのみ。
 
@@ -33,6 +33,7 @@
 | address | address | 住所 | 地址 | 주소 | ko:音写疑い |
 | advantage | advantage | アドバンテージ | 优势 | 이점 | ko:音写疑い |
 | adventure | adventure | アドベンチャー | 冒险 | 모험 | ko:音写疑い |
+| adverb | adverb | 副詞 | 副词 | 부사 | ko:音写疑い |
 | advertisement | advertisement | 広告 | 广告 | 광고 | ko:音写疑い |
 | advertising | advertising | 広告 | 广告 | 광고 | ko:音写疑い |
 | advice | advice | アドバイス | 建议 | 조언 | ko:音写疑い |
@@ -43,6 +44,7 @@
 | age | age | 年 | 年龄 | 나이 | ja:1文字; ko:音写疑い |
 | aged | aged | 老人 | 老年的 | 늙은 | ko:音写疑い |
 | ago | ago | 前 | 前 | ~ 전에 | ja:1文字; zh:1文字 |
+| agriculture | agriculture | 農業 | 农业 | 농업 | ko:音写疑い |
 | aid | aid | 援助 | 援助 | 지원 | ko:音写疑い |
 | aim | aim | 標的 | 目的 | 목표 | ko:音写疑い |
 | air | air | 空気 | 空气 | 공기 | ko:音写疑い |
@@ -98,6 +100,7 @@
 | B | letter B | 文字 B | 字母 B | 문자 B | ko:音写疑い |
 | baby | baby | 赤ちゃん | 婴儿 | 아기 | ko:音写疑い |
 | background | background | 背景 | 背景 | 배경 | ko:音写疑い |
+| backpack | backpack | リュックサック、バックパック | 背包 | 배낭 | ko:音写疑い |
 | bad | bad | 悪い | 坏的 | 나쁜 | ko:音写疑い |
 | badge | badge | バッジ | 徽章 | 배지 | ko:音写疑い |
 | bag | bag | バッグ | 包 | 가방 | zh:1文字; ko:音写疑い |
@@ -107,6 +110,7 @@
 | balloon | balloon | バルーン | 气球 | 풍선 | ko:音写疑い |
 | ban | ban | 禁止 | 禁止 | 반 | ko:1文字 |
 | band | band | バンド | 乐队 | 밴드 | ko:音写疑い |
+| bandage | bandage | 包帯、絆創膏 | 绷带 | 붕대 | ko:音写疑い |
 | bang | bang | 強打 | 砰 | 쾅 | zh:1文字; ko:1文字 |
 | bar | bar | バー | 酒吧 | 술집 | ko:音写疑い |
 | bare | bare | 裸 | 裸 | 없는 | ja:1文字; zh:1文字; ko:音写疑い |
@@ -127,6 +131,7 @@
 | beard | beard | あごひげ | 胡须 | 수염 | ko:音写疑い |
 | beast | beast | 獣 | 兽 | 짐승 | ja:1文字; zh:1文字; ko:音写疑い |
 | beat | beat | ビート | 打 | 이기다 | zh:1文字 |
+| beaver | beaver | ビーバー | 海狸 | 비버 | ko:音写疑い |
 | became | past tense of become | なる（becomeの過去形） | 变得（become的过去式） | ~이 되다 (become의 과거형) | ko:音写疑い |
 | bed | bed | ベッド | 床 | 침대 | zh:1文字; ko:音写疑い |
 | bedroom | bedroom | 寝室 | 卧室 | 침실 | ko:音写疑い |
@@ -150,9 +155,11 @@
 | between | between | 間 | 之间 | ~ 사이 | ja:1文字 |
 | big | big | 大きい | 大的 | 큰 | ko:1文字 |
 | bind | bind | バインド | 绑定 | 묶다 | ko:音写疑い |
+| biography | biography | 伝記 | 传记 | 전기 | ko:音写疑い |
 | bird | bird | 鳥 | 鸟 | 새 | ja:1文字; zh:1文字; ko:1文字 |
 | birth | birth | 誕生 | 出生 | 출생 | ko:音写疑い |
 | birthday | birthday | 誕生日 | 生日 | 생일 | ko:音写疑い |
+| bishop | bishop | 司教 | 主教 | 주교 | ko:音写疑い |
 | bit | bit | 少し | 少量 | 조금 | ko:音写疑い |
 | bite | bite | 噛む | 咬 | 깨물다 | zh:1文字 |
 | blackboard | blackboard | 黒板 | 黑板 | 칠판 | ko:音写疑い |
@@ -175,6 +182,7 @@
 | bond | bond | ボンド | 纽带 | 노예 | ko:音写疑い |
 | bone | bone | 骨 | 骨 | 뼈 | ja:1文字; zh:1文字; ko:1文字 |
 | bookcase | bookcase | 本棚 | 书柜 | 책장 | ko:音写疑い |
+| booking | booking | 予約 | 预订 | 예약 | ko:音写疑い |
 | bookshelf | bookshelf | 本棚 | 书架 | 책장 | ko:音写疑い |
 | bookshop | bookshop | 書店 | 书店 | 서점 | ko:音写疑い |
 | bookstore | bookstore | 本屋 | 书店 | 서점 | ko:音写疑い |
@@ -194,6 +202,7 @@
 | bowl | bowl | ボウル | 碗 | 그릇 | zh:1文字; ko:音写疑い |
 | box | box | 箱 | 盒子 | 상자 | ja:1文字; ko:音写疑い |
 | boy | boy | 男の子 | 男生 | 소년 | ko:音写疑い |
+| bracelet | bracelet | ブレスレット、腕輪 | 手镯、手链 | 팔찌 | ko:音写疑い |
 | brain | brain | 脳 | 脑 | 뇌 | ja:1文字; zh:1文字; ko:1文字 |
 | brainstorm | brainstorm | ブレーンストーミング | 头脑风暴 | 영감 | ko:音写疑い |
 | brand | brand | ブランド | 品牌 | 상표 | ko:音写疑い |
@@ -208,11 +217,15 @@
 | bridge | bridge | 橋 | 桥 | 다리 | ja:1文字; zh:1文字; ko:音写疑い |
 | brief | brief | 簡単な | 简短的 | 짧은 | ko:音写疑い |
 | bright | bright | 明るい | 明亮的 | 밝은 | ko:音写疑い |
+| brightly | brightly | 明るく | 明亮地、鲜艳地 | 밝게 | ko:音写疑い |
 | brilliant | brilliant | 素晴らしい | 杰出的 | 멋진 | ko:音写疑い |
+| broad | broad | 広い | 宽的、广泛的 | 넓은 | ko:音写疑い |
 | broke | past tense of break | 壊す、休憩、折れる（breakの過去形） | 打破、休息、断裂（break的过去式） | 부수다, 휴식, 꺾이다 (bre... | ko:音写疑い |
+| bronze | bronze | 青銅、ブロンズ | 青铜 | 청동 | ko:音写疑い |
 | brother | brother | 兄弟 | 兄弟 | 형제 | ko:音写疑い |
 | brought | past tense / past participle of bring | 持ってくる（bringの過去形・過... | 带来（bring的过去式/过去分词） | 가져오다 (bring의 과거형·... | ko:音写疑い |
 | browse | browse | ブラウズ | 浏览 | 먹다 | ko:音写疑い |
+| bubble | bubble | 泡 | 泡泡、气泡 | 거품, 방울 | ja:1文字 |
 | bucket | bucket | バケツ | 桶 | 버킷 | zh:1文字; ko:音写疑い |
 | bud | bud | つぼみ | 芽 | 싹 | zh:1文字; ko:1文字 |
 | budget | budget | 予算 | 预算 | 예산 | ko:音写疑い |
@@ -240,16 +253,22 @@
 | C | letter C | 文字 C | 字母 C | 문자 C | ko:音写疑い |
 | cab | cab | タクシー | 出租车 | 택시 | ko:音写疑い |
 | cage | cage | ケージ | 笼 | 새장 | zh:1文字; ko:音写疑い |
+| calculation | calculation | 計算 | 计算 | 계산 | ko:音写疑い |
 | calendar | calendar | カレンダー | 日历 | 달력 | ko:音写疑い |
 | came | past tense of come | 来る（comeの過去形） | 来（come的过去式） | 오다 (come의 과거형) | ko:音写疑い |
+| camel | camel | ラクダ | 骆驼 | 낙타 | ko:音写疑い |
 | camping | camping | キャンプ | 野营 | 캠핑 | ko:音写疑い |
 | campus | campus | キャンパス | 校园 | 교정 | ko:音写疑い |
 | can | can | できる | 能 | ~할 수 있다 | zh:1文字 |
 | can't | cannot | cannotの短縮形 | cannot的缩写 | cannot의 축약형 | ko:音写疑い |
+| canal | canal | 運河 | 运河 | 운하 | ko:音写疑い |
+| cancer | cancer | がん | 癌症 | 암 | ko:1文字 |
+| candle | candle | ろうそく | 蜡烛 | 양초 | ko:音写疑い |
 | candy | candy | あめ | 糖果 | 사탕 | ko:音写疑い |
 | cane | cane | 杖 | 甘蔗 | 지팡이 | ja:1文字 |
 | cap | cap | キャップ | 帽 | 캡 | zh:1文字; ko:1文字 |
 | capital | capital | 資本 | 首都 | 수도 | ko:音写疑い |
+| capsule | capsule | カプセル | 胶囊 | 캡슐 | ko:音写疑い |
 | captain | captain | キャプテン | 队长 | 선장 | ko:音写疑い |
 | car | car | 車 | 车 | 자동차 | ja:1文字; zh:1文字 |
 | card | card | カード | 卡片 | 카드 | ko:音写疑い |
@@ -265,6 +284,7 @@
 | cause | cause | 原因 | 原因 | 원인 | ko:音写疑い |
 | cave | cave | 洞窟 | 洞穴 | 동굴 | ko:音写疑い |
 | cd | cd | CD（音楽ディスク） | 光盘 | 시디 | ko:音写疑い |
+| cd-rom | cd-rom | CD-ROM | 光盘 | 시디롬 | ja:enと同一 |
 | cease | cease | やめる | 停止 | 중지 | ko:音写疑い |
 | celebration | celebration | お祝い | 庆典 | 축하 | ko:音写疑い |
 | cell | cell | 細胞 | 细胞 | 셀 | ko:1文字 |
@@ -283,6 +303,7 @@
 | cheek | cheek | 頬 | 脸颊 | 볼 | ja:1文字; ko:1文字 |
 | cheer | cheer | 乾杯 | 欢呼 | 환호 | ko:音写疑い |
 | cheese | cheese | チーズ | 奶酪 | 치즈 | ko:音写疑い |
+| chemistry | chemistry | 化学 | 化学 | 화학 | ko:音写疑い |
 | chess | chess | チェス | 棋 | 체스 | zh:1文字; ko:音写疑い |
 | chest | chest | 胸 | 胸部 | 가슴 | ja:1文字; ko:音写疑い |
 | chew | chew | 噛む | 嚼 | 씹다 | zh:1文字; ko:音写疑い |
@@ -303,12 +324,14 @@
 | circle | circle | 丸 | 圆圈 | 원 | ja:1文字; ko:1文字 |
 | citizen | citizen | 市民 | 公民 | 시민 | ko:音写疑い |
 | city | city | 市 | 城市 | 도시 | ja:1文字; ko:音写疑い |
+| civilization | civilization | 文明 | 文明 | 문명 | ko:音写疑い |
 | clam | clam | ハマグリ | 蛤 | 대합 | zh:1文字; ko:音写疑い |
 | clap | clap | 拍手する | 拍 | 박수 | zh:1文字; ko:音写疑い |
 | class | class | クラス | 班级 | 수업 | ko:音写疑い |
 | classroom | classroom | 教室 | 课堂 | 교실 | ko:音写疑い |
 | clause | clause | 句 | 条款 | 절 | ja:1文字; ko:1文字 |
 | cliff | cliff | 崖 | 悬崖 | 낭떠러지 | ja:1文字 |
+| climate | climate | 気候 | 气候 | 기후 | ko:音写疑い |
 | climbing | climbing | クライミング | 攀登 | 등산 | ko:音写疑い |
 | clip | clip | クリップ | 夹子 | 클립 | ko:音写疑い |
 | clock | clock | クロック | 钟 | 시계 | zh:1文字; ko:音写疑い |
@@ -328,6 +351,7 @@
 | cod | cod | タラ | 鳕鱼 | 대구 | ko:音写疑い |
 | code | code | コード | 代码 | 암호 | ko:音写疑い |
 | coffee | coffee | コーヒー | 咖啡 | 커피 | ko:音写疑い |
+| coffin | coffin | 棺、ひつぎ | 棺材 | 관 | ko:1文字 |
 | coin | coin | コイン | 硬币 | 동전 | ko:音写疑い |
 | cola | cola | コーラ | 可乐 | 콜라 | ko:音写疑い |
 | collection | collection | コレクション | 收藏 | 수집 | ko:音写疑い |
@@ -336,15 +360,24 @@
 | column | column | カラム | 柱子 | 열 | ko:1文字 |
 | comb | comb | 櫛 | 梳子 | 빗 | ja:1文字; ko:1文字 |
 | come | come | 来る | 来 | 오다 | zh:1文字; ko:音写疑い |
+| comet | comet | 彗星 | 彗星 | 혜성 | ko:音写疑い |
+| comma | comma | コンマ、読点 | 逗号 | 쉼표 | ko:音写疑い |
 | commitment | commitment | 献身 | 承诺 | 약속 | ko:音写疑い |
 | common | common | 一般 | 常见的 | 흔한 | ko:音写疑い |
 | company | company | 会社 | 公司 | 회사 | ko:音写疑い |
+| comparison | comparison | 比較 | 比较 | 비교 | ko:音写疑い |
 | competition | competition | 競争 | 竞赛 | 경쟁 | ko:音写疑い |
 | complaint | complaint | 苦情 | 抱怨 | 불평 | ko:音写疑い |
+| compliment | compliment | 褒め言葉、賛辞 | 赞美、恭维 | 칭찬 | ko:音写疑い |
+| concept | concept | 概念、コンセプト | 概念 | 개념 | ko:音写疑い |
 | concern | concern | 懸念 | 忧虑 | 우려 | ko:音写疑い |
 | condition | condition | 状態 | 状况 | 상태 | ko:音写疑い |
 | cone | cone | 円錐 | 锥体 | 원뿔 | ko:音写疑い |
+| confirmation | confirmation | 確認 | 确认 | 확인 | ko:音写疑い |
+| confusion | confusion | 混乱 | 困惑、混乱 | 혼란 | ko:音写疑い |
 | consequence | consequence | 結果 | 结果 | 결과 | ko:音写疑い |
+| consonant | consonant | 子音 | 辅音 | 자음 | ko:音写疑い |
+| consumption | consumption | 消費 | 消费、消耗 | 소비 | ko:音写疑い |
 | contest | contest | コンテスト | 竞赛 | 경쟁 | ko:音写疑い |
 | context | context | コンテクスト | 语境 | 문맥 | ko:音写疑い |
 | continent | continent | 大陸 | 大陆 | 대륙 | ko:音写疑い |
@@ -360,9 +393,11 @@
 | couch | couch | ソファー | 长椅 | 침상 | ko:音写疑い |
 | could've | could have | could haveの短縮形 | could have的缩写 | could have의 축약형 | ko:音写疑い |
 | couldn't | could not | could notの短縮形 | could not的缩写 | could not의 축약형 | ko:音写疑い |
+| counseling | counseling | カウンセリング | 咨询、辅导 | 상담 | ko:音写疑い |
 | count | count | カウント | 数数 | 세다 | ko:音写疑い |
 | country | country | 国 | 国家 | 국가 | ja:1文字; ko:音写疑い |
 | couple | couple | カップル | 夫妻 | 커플 | ko:音写疑い |
+| courage | courage | 勇気 | 勇气 | 용기 | ko:音写疑い |
 | course | course | コース | 课程 | 강의 | ko:音写疑い |
 | court | court | 裁判所 | 法庭 | 법원 | ko:音写疑い |
 | cousin | cousin | いとこ | 表哥 | 사촌 | ko:音写疑い |
@@ -375,21 +410,26 @@
 | creature | creature | 生き物 | 生物 | 생물 | ko:音写疑い |
 | creek | creek | クリーク | 溪 | 작은 만 | zh:1文字 |
 | crime | crime | 犯罪 | 犯罪 | 범죄 | ko:音写疑い |
+| crisis | crisis | 危機 | 危机 | 위기 | ko:音写疑い |
 | crisp | crisp | さわやかな | 脆 | 상쾌한 | zh:1文字 |
 | crowd | crowd | 群衆 | 人群 | 군중 | ko:音写疑い |
 | crowded | crowded | 混雑した | 挤 | 붐비는 | zh:1文字 |
 | crown | crown | クラウン | 王冠 | 왕관 | ko:音写疑い |
 | cruise | cruise | クルーズ | 巡航 | 순항 | ko:音写疑い |
+| cucumber | cucumber | キュウリ | 黄瓜 | 오이 | ko:音写疑い |
 | cuff | cuff | 袖口 | 袖口 | 동 | ko:1文字 |
 | culture | culture | 文化 | 文化 | 문화 | ko:音写疑い |
 | cup | cup | カップ | 杯子 | 컵 | ko:1文字 |
 | cupboard | cupboard | 戸棚 | 橱柜 | 찬장 | ko:音写疑い |
 | curl | curl | カール | 卷曲 | 컬 | ko:1文字 |
+| currently | currently | 現在、目下 | 目前、当前 | 현재 | ko:音写疑い |
 | curry | curry | カレー | 咖喱 | 카레 | ko:音写疑い |
 | curse | curse | 呪い | 诅咒 | 저주 | ko:音写疑い |
+| curtain | curtain | カーテン | 窗帘 | 커튼 | ko:音写疑い |
 | curve | curve | 曲線 | 曲线 | 곡선 | ko:音写疑い |
 | custom | custom | カスタム | 风俗 | 관습 | ko:音写疑い |
 | customer | customer | お客様 | 顾客 | 고객 | ko:音写疑い |
+| customs | customs | 税関 | 海关 | 세관 | ko:音写疑い |
 | cut | cut | カット | 切 | 자르다 | zh:1文字 |
 | cuz | because | 〜だから（becauseの口語形） | 因为（because的口语形式） | 왜냐하면 (because의 구어체) | ko:音写疑い |
 | D | letter D | 文字 D | 字母 D | 문자 D | ko:音写疑い |
@@ -400,6 +440,7 @@
 | dancing | dancing | ダンシング | 跳舞 | 댄스 | ko:音写疑い |
 | danger | danger | 危険 | 危险 | 위험 | ko:音写疑い |
 | dare | dare | 敢えて | 敢 | 도전 | zh:1文字; ko:音写疑い |
+| darkness | darkness | 暗闇 | 黑暗 | 어둠 | ko:音写疑い |
 | dash | dash | ダッシュ | 短跑 | 대시 | ko:音写疑い |
 | date | date | 日付 | 日期 | 날짜 | ko:音写疑い |
 | daughter | daughter | 娘 | 女儿 | 딸 | ja:1文字; ko:1文字 |
@@ -417,13 +458,20 @@
 | deep | deep | 深い | 深的 | 깊은 | ko:音写疑い |
 | deeply | deeply | 深く | 深 | 깊이 | zh:1文字; ko:音写疑い |
 | deer | deer | 鹿 | 鹿 | 사슴 | ja:1文字; zh:1文字; ko:音写疑い |
+| defense | defense | 防御、防衛 | 防御 | 방어 | ko:音写疑い |
+| definition | definition | 定義 | 定义 | 정의 | ko:音写疑い |
 | degree | degree | 程度 | 程度 | 도 | ko:1文字 |
 | delay | delay | 遅れ | 延迟 | 지연 | ko:音写疑い |
+| delivery | delivery | 配達 | 递送、交付 | 배달 | ko:音写疑い |
+| departure | departure | 出発 | 离开、出发 | 출발 | ko:音写疑い |
 | depth | depth | 深さ | 深度 | 깊이 | ko:音写疑い |
 | description | description | 説明 | 描述 | 설명 | ko:音写疑い |
 | desert | desert | 砂漠 | 沙漠 | 사막 | ko:音写疑い |
 | design | design | デザイン | 设计 | 설계 | ko:音写疑い |
 | desk | desk | 机 | 桌子 | 책상 | ja:1文字; ko:音写疑い |
+| despair | despair | 絶望 | 绝望 | 절망 | ko:音写疑い |
+| destruction | destruction | 破壊 | 破坏、毁灭 | 파괴 | ko:音写疑い |
+| dialogue | dialogue | 対話、会話 | 对话 | 대화 | ko:音写疑い |
 | dictionary | dictionary | 辞書 | 字典 | 사전 | ko:音写疑い |
 | did | did | した | 做过 | 했다 | ko:音写疑い |
 | didn't | did not | did notの短縮形 | did not的缩写 | did not의 축약형 | ko:音写疑い |
@@ -437,9 +485,16 @@
 | direction | direction | 方向 | 方向 | 방향 | ko:音写疑い |
 | director | director | 監督 | 导演 | 감독 | ko:音写疑い |
 | dirt | dirt | ダート | 污垢 | 흙 | ko:1文字 |
+| disability | disability | 障害 | 残疾 | 장애 | ko:音写疑い |
 | disadvantage | disadvantage | デメリット | 劣势 | 불리 | ko:音写疑い |
+| disappointment | disappointment | 失望 | 失望 | 실망 | ko:音写疑い |
+| discount | discount | 割引 | 折扣 | 할인 | ko:音写疑い |
+| discovery | discovery | 発見 | 发现 | 발견 | ko:音写疑い |
+| discrimination | discrimination | 差別 | 歧视 | 차별 | ko:音写疑い |
 | discussion | discussion | 議論 | 讨论 | 논의 | ko:音写疑い |
+| disease | disease | 病気 | 疾病 | 질병 | ko:音写疑い |
 | dish | dish | 皿 | 盘子 | 접시 | ja:1文字; ko:音写疑い |
+| distance | distance | 距離 | 距离 | 거리 | ko:音写疑い |
 | dive | dive | ダイビング | 潜水 | 잠수 | ko:音写疑い |
 | do | do | する | 做 | 하다 | zh:1文字; ko:音写疑い |
 | doc | doc | 博士 | 文档 | 의사 | ko:音写疑い |
@@ -483,6 +538,7 @@
 | dump | dump | ごみ | 倾倒 | 덤프 | ko:音写疑い |
 | dunno | don't know | 知らない、わからない（don't ... | 不知道（don't know的口语形式） | 몰라 (don't know의 구어체) | ko:音写疑い |
 | dust | dust | ほこり | 灰尘 | 먼지 | ko:音写疑い |
+| dynasty | dynasty | 王朝 | 王朝 | 왕조 | ko:音写疑い |
 | E | letter E | 文字 E | 字母 E | 문자 E | ko:音写疑い |
 | each | each | それぞれ | 每个 | 각 | ko:1文字 |
 | ear | ear | 耳 | 耳朵 | 귀 | ja:1文字; ko:1文字 |
@@ -494,6 +550,7 @@
 | easy | easy | 簡単 | 简单的 | 쉬운 | ko:音写疑い |
 | eat | eat | 食べる | 吃 | 먹다 | zh:1文字; ko:音写疑い |
 | eaten | past participle of eat | 食べる（eatの過去分詞） | 吃（eat的过去分词） | 먹다 (eat의 과거분사) | ko:音写疑い |
+| economy | economy | 経済 | 经济 | 경제 | ko:音写疑い |
 | edge | edge | 角 | 边缘 | 가장자리 | ja:1文字 |
 | education | education | 教育 | 教育 | 교육 | ko:音写疑い |
 | effect | effect | 効果 | 影响 | 효과 | ko:音写疑い |
@@ -502,16 +559,31 @@
 | eight | eight | 八 | 八 | 여덟 | ja:1文字; zh:1文字; ko:音写疑い |
 | eighteen | eighteen | 十八 | 十八 | 십팔 | ko:音写疑い |
 | eighty | eighty | 八十 | 八十 | 여든 | ko:音写疑い |
+| elbow | elbow | 肘 | 肘部 | 팔꿈치 | ja:1文字 |
+| election | election | 選挙 | 选举 | 선거 | ko:音写疑い |
+| electricity | electricity | 電気 | 电、电力 | 전기 | ko:音写疑い |
+| electron | electron | 電子 | 电子 | 전자 | ko:音写疑い |
 | elephant | elephant | 象 | 大象 | 코끼리 | ja:1文字 |
 | emergency | emergency | 緊急 | 紧急情况 | 비상 | ko:音写疑い |
+| emotion | emotion | 感情 | 情感、情绪 | 감정 | ko:音写疑い |
+| emperor | emperor | 皇帝 | 皇帝 | 황제 | ko:音写疑い |
+| emphasis | emphasis | 強調 | 强调、重点 | 강조 | ko:音写疑い |
+| empire | empire | 帝国 | 帝国 | 제국 | ko:音写疑い |
+| encouragement | encouragement | 励まし | 鼓励 | 격려 | ko:音写疑い |
 | ending | ending | エンディング | 结束 | 종결 | ko:音写疑い |
+| enemy | enemy | 敵 | 敌人 | 적 | ja:1文字; ko:1文字 |
+| engine | engine | エンジン、機関 | 引擎、发动机 | 엔진 | ko:音写疑い |
+| engineering | engineering | 工学、エンジニアリング | 工程学 | 공학 | ko:音写疑い |
 | entertainment | entertainment | エンターテインメント | 娱乐 | 오락 | ko:音写疑い |
 | entrance | entrance | 入り口 | 入口 | 입구 | ko:音写疑い |
 | envelope | envelope | 封筒 | 信封 | 봉투 | ko:音写疑い |
 | episode | episode | エピソード | 插曲 | 삽화 | ko:音写疑い |
+| equality | equality | 平等 | 平等 | 평등 | ko:音写疑い |
+| era | era | 時代 | 时代、纪元 | 시대 | ko:音写疑い |
 | error | error | エラー | 错误 | 오류 | ko:音写疑い |
 | especially | especially | 特に | 尤其 | 특히 | ko:音写疑い |
 | essay | essay | エッセイ | 散文 | 수필 | ko:音写疑い |
+| eternity | eternity | 永遠 | 永恒 | 영원 | ko:音写疑い |
 | euro | euro | ユーロ | 欧元 | 유로 | ko:音写疑い |
 | even | even | 平 | 甚至 | 심지어 | ja:1文字 |
 | evening | evening | 夕方 | 晚上 | 저녁 | ko:音写疑い |
@@ -523,13 +595,19 @@
 | example | example | 例 | 例子 | 예 | ja:1文字; ko:1文字 |
 | exchange | exchange | 交換 | 交换 | 교환 | ko:音写疑い |
 | excuse | excuse | 言い訳 | 原谅 | 변명 | ko:音写疑い |
+| existence | existence | 存在 | 存在 | 존재 | ko:音写疑い |
 | experience | experience | 経験 | 经验 | 경험 | ko:音写疑い |
+| experiment | experiment | 実験 | 实验 | 실험 | ko:音写疑い |
 | explanation | explanation | 説明 | 解释 | 설명 | ko:音写疑い |
+| explosion | explosion | 爆発 | 爆炸 | 폭발 | ko:音写疑い |
 | expression | expression | 表現 | 表达 | 표현 | ko:音写疑い |
+| extinction | extinction | 絶滅 | 灭绝 | 멸종 | ko:音写疑い |
 | eye | eye | 目 | 眼睛 | 눈 | ja:1文字; ko:1文字 |
+| eyesight | eyesight | 視力 | 视力 | 시력 | ko:音写疑い |
 | F | letter F | 文字 F | 字母 F | 문자 F | ko:音写疑い |
 | fact | fact | 事実 | 事实 | 사실 | ko:音写疑い |
 | factory | factory | 工場 | 工厂 | 공장 | ko:音写疑い |
+| failure | failure | 失敗 | 失败 | 실패 | ko:音写疑い |
 | fairly | fairly | かなり | 相当 | 꽤 | ko:1文字 |
 | fairy | fairy | 妖精 | 仙女 | 요정 | ko:音写疑い |
 | faith | faith | 信仰 | 信仰 | 믿음 | ko:音写疑い |
@@ -542,6 +620,7 @@
 | far | far | 遠い | 远的 | 멀리 | ko:音写疑い |
 | fare | fare | 運賃 | 票价 | 요금 | ko:音写疑い |
 | farm | farm | 農場 | 农场 | 농장 | ko:音写疑い |
+| farmland | farmland | 農地 | 农田、耕地 | 농지 | ko:音写疑い |
 | fashion | fashion | ファッション | 时尚 | 패션 | ko:音写疑い |
 | fat | fat | 脂肪 | 胖的 | 지방 | ko:音写疑い |
 | fate | fate | 運命 | 命运 | 운명 | ko:音写疑い |
@@ -568,6 +647,7 @@
 | file | file | ファイル | 文件 | 파일 | ko:音写疑い |
 | film | film | 膜 | 电影 | 영화 | ja:1文字; ko:音写疑い |
 | find | find | 探す | 寻找 | 찾다 | ko:音写疑い |
+| finger | finger | 指 | 手指 | 손가락 | ja:1文字 |
 | fisherman | fisherman | 漁師 | 渔夫 | 어부 | ko:音写疑い |
 | fishing | fishing | 釣り | 钓鱼 | 어업 | ko:音写疑い |
 | fit | fit | フィット | 合身 | 맞다 | ko:音写疑い |
@@ -597,6 +677,7 @@
 | foot | foot | 足 | 脚 | 발 | ja:1文字; zh:1文字; ko:1文字 |
 | football | football | フットボール | 足球 | 축구 | ko:音写疑い |
 | force | force | 力 | 力量 | 힘 | ja:1文字; ko:1文字 |
+| forehead | forehead | 額 | 额头 | 이마 | ja:1文字; ko:音写疑い |
 | forest | forest | 森 | 森林 | 숲 | ja:1文字; ko:1文字 |
 | forget | forget | 忘れる | 忘记 | 잊다 | ko:音写疑い |
 | forgot | past tense of forget | 忘れる（forgetの過去形） | 忘记（forget的过去式） | 잊다 (forget의 과거형) | ko:音写疑い |
@@ -605,6 +686,7 @@
 | fortune | fortune | 運 | 财富 | 행운 | ja:1文字; ko:音写疑い |
 | forty | forty | 40 | 四十 | 사십 | ko:音写疑い |
 | foul | foul | ファウル | 犯规 | 반칙 | ko:音写疑い |
+| fountain | fountain | 噴水 | 喷泉 | 분수 | ko:音写疑い |
 | four | four | 4 | 四 | 네 | ja:1文字; zh:1文字; ko:1文字 |
 | fourteen | fourteen | 14 | 十四 | 십사 | ko:音写疑い |
 | fox | fox | キツネ | 狐狸 | 여우 | ko:音写疑い |
@@ -620,6 +702,7 @@
 | frost | frost | 霜 | 霜 | 서리 | ja:1文字; zh:1文字; ko:音写疑い |
 | fruit | fruit | フルーツ | 水果 | 과일 | ko:音写疑い |
 | fry | fry | 稚魚 | 炒 | 튀김 | zh:1文字; ko:音写疑い |
+| fuel | fuel | 燃料 | 燃料 | 연료 | ko:音写疑い |
 | fume | fume | ヒューム | 烟 | 연기 | zh:1文字; ko:音写疑い |
 | function | function | 関数 | 功能 | 기능 | ko:音写疑い |
 | fund | fund | 基金 | 基金 | 축적 | ko:音写疑い |
@@ -630,6 +713,7 @@
 | gain | gain | 得 | 获得 | 얻다 | ja:1文字; ko:音写疑い |
 | gall | gall | 胆汁 | 瘿 | 담즙 | zh:1文字; ko:音写疑い |
 | gallery | gallery | ギャラリー | 画廊 | 갱도 | ko:音写疑い |
+| gallon | gallon | ガロン | 加仑 | 갤런 | ko:音写疑い |
 | game | game | ゲーム | 游戏 | 게임 | ko:音写疑い |
 | gang | gang | ギャング | 帮派 | 가다 | ko:音写疑い |
 | gap | gap | ギャップ | 差距 | 갭 | ko:1文字 |
@@ -646,11 +730,13 @@
 | geese | plural of goose | ガチョウ（gooseの複数形） | 鹅（goose的复数） | 거위 (goose의 복수형) | ko:音写疑い |
 | gender | gender | 性別 | 性别 | 성별 | ko:音写疑い |
 | generation | generation | 世代 | 一代 | 세대 | ko:音写疑い |
+| gentleman | gentleman | 紳士 | 绅士 | 신사 | ko:音写疑い |
 | germ | germ | 胚芽 | 胚芽 | 세균 | ko:音写疑い |
 | get | get | 得る | 得到 | 얻다 | ko:音写疑い |
 | ghost | ghost | おばけ | 鬼 | 귀신 | zh:1文字; ko:音写疑い |
 | gift | gift | 贈り物 | 礼物 | 선물 | ko:音写疑い |
 | gimme | give me | ちょうだい、くれ（give meの... | 给我（give me的口语形式） | 나에게 줘 (give me의 구어체) | ko:音写疑い |
+| giraffe | giraffe | キリン | 长颈鹿 | 기린 | ko:音写疑い |
 | girl | girl | 女の子 | 女孩 | 소녀 | ko:音写疑い |
 | give | give | 与える | 给 | 주다 | zh:1文字; ko:音写疑い |
 | glad | glad | 嬉しい | 高兴的 | 기쁜 | ko:音写疑い |
@@ -662,12 +748,15 @@
 | glide | glide | 滑る | 滑行 | 활주 | ko:音写疑い |
 | glimpse | glimpse | 垣間見る | 一瞥 | 일견 | ko:音写疑い |
 | globe | globe | グローブ | 地球 | 지구 | ko:音写疑い |
+| glory | glory | 栄光、名誉 | 荣耀、光荣 | 영광 | ko:音写疑い |
 | glove | glove | グローブ | 手套 | 장갑 | ko:音写疑い |
 | go | go | 行く | 去 | 가다 | zh:1文字; ko:音写疑い |
 | goal | goal | ゴール | 目标 | 목표 | ko:音写疑い |
 | goat | goat | ヤギ | 山羊 | 염소 | ko:音写疑い |
 | god | god | 神 | 上帝 | 하나님 | ja:1文字 |
+| goddess | goddess | 女神 | 女神 | 여신 | ko:音写疑い |
 | golf | golf | ゴルフ | 高尔夫球 | 골프 | ko:音写疑い |
+| golfer | golfer | ゴルファー | 高尔夫球手 | 골퍼 | ko:音写疑い |
 | gone | past participle of go | 行く（goの過去分詞） | 去（go的过去分词） | 가다 (go의 과거분사) | ko:音写疑い |
 | gonna | going to | 〜するつもり（going toの口語形） | 将要（going to的口语形式） | ~할 것이다 (going to의... | ko:音写疑い |
 | good | good | 良い | 好的 | 좋은 | ko:音写疑い |
@@ -681,6 +770,7 @@
 | government | government | 政府 | 政府 | 정부 | ko:音写疑い |
 | gown | gown | ガウン | 袍 | 겉옷 | zh:1文字; ko:音写疑い |
 | grade | grade | 学年 | 年级 | 등급 | ko:音写疑い |
+| graduation | graduation | 卒業 | 毕业 | 졸업 | ko:音写疑い |
 | grain | grain | 粒 | 粮食 | 곡물 | ja:1文字; ko:音写疑い |
 | grammar | grammar | 文法 | 语法 | 문법 | ko:音写疑い |
 | grand | grand | 壮大な | 盛大 | 멋진 | ko:音写疑い |
@@ -690,8 +780,11 @@
 | grape | grape | グレープ | 葡萄 | 포도 | ko:音写疑い |
 | grasp | grasp | 把握する | 抓牢 | 파악 | ko:音写疑い |
 | grass | grass | 草 | 草 | 잔디 | ja:1文字; zh:1文字; ko:音写疑い |
+| gratitude | gratitude | 感謝 | 感激、感谢 | 감사 | ko:音写疑い |
 | grave | grave | 墓 | 严重 | 무덤 | ja:1文字; ko:音写疑い |
 | greatly | greatly | 大いに | 大大地 | 매우 | ko:音写疑い |
+| greenhouse | greenhouse | 温室 | 温室 | 온실 | ko:音写疑い |
+| greeting | greeting | 挨拶 | 问候、致意 | 인사 | ko:音写疑い |
 | grew | past tense of grow | 育つ（growの過去形） | 生长（grow的过去式） | 자라다 (grow의 과거형) | ko:音写疑い |
 | grief | grief | 悲しみ | 悲伤 | 고통 | ko:音写疑い |
 | grill | grill | グリル | 炙烤 | 그릴 | ko:音写疑い |
@@ -708,6 +801,7 @@
 | gum | gum | ガム | 胶 | 잇몸 | zh:1文字; ko:音写疑い |
 | gun | gun | 銃 | 枪 | 총 | ja:1文字; zh:1文字; ko:1文字 |
 | guy | guy | 男 | 家伙 | 남자 | ja:1文字; ko:音写疑い |
+| gymnastics | gymnastics | 体操 | 体操 | 체조 | ko:音写疑い |
 | H | letter H | 文字 H | 字母 H | 문자 H | ko:音写疑い |
 | habit | habit | 癖 | 习惯 | 습관 | ja:1文字; ko:音写疑い |
 | had | had | 持っていた | 有 | 가졌다 | zh:1文字 |
@@ -720,9 +814,12 @@
 | hall | hall | ホール | 大厅 | 홀 | ko:1文字 |
 | halves | plural of half | 半分（halfの複数形） | 一半（half的复数） | 반 (half의 복수형) | ko:音写疑い |
 | ham | ham | ハム | 火腿 | 햄 | ko:1文字 |
+| hammer | hammer | 金づち、ハンマー | 锤子 | 망치 | ko:音写疑い |
 | handle | handle | ハンドル | 处理 | 핸들 | ko:音写疑い |
+| handshake | handshake | 握手 | 握手 | 악수 | ko:音写疑い |
 | hang | hang | 下がる | 悬挂 | 걸다 | ko:音写疑い |
 | happiness | happiness | 幸せ | 幸福 | 행복 | ko:音写疑い |
+| harbor | harbor | 港 | 港口 | 항구 | ja:1文字; ko:音写疑い |
 | harm | harm | 危害 | 伤害 | 피해 | ko:音写疑い |
 | harmony | harmony | 調和 | 和谐 | 조화 | ko:音写疑い |
 | has | has | もっている | 有 | 가지다 | zh:1文字 |
@@ -730,14 +827,17 @@
 | hat | hat | 帽子 | 帽子 | 모자 | ko:音写疑い |
 | hatch | hatch | ハッチ | 孵化 | 해치 | ko:音写疑い |
 | hate | hate | 嫌い | 恨 | 싫어하다 | zh:1文字 |
+| hatred | hatred | 憎しみ | 仇恨、憎恶 | 증오 | ko:音写疑い |
 | have | have | 持っている | 有 | 가지다 | zh:1文字 |
 | haven't | have not | have notの短縮形 | have not的缩写 | have not의 축약형 | ko:音写疑い |
 | hay | hay | 干し草 | 干草 | 건초 | ko:音写疑い |
+| hazard | hazard | 危険 | 危险、隐患 | 위험 | ko:音写疑い |
 | he | he | 彼 | 他 | 그 | ja:1文字; zh:1文字; ko:1文字 |
 | he'd | he would / he had | he would / he had... | he would / he had的缩写 | he would / he had... | ko:音写疑い |
 | he'll | he will | he willの短縮形 | he will的缩写 | he will의 축약형 | ko:音写疑い |
 | he's | he is | he isの短縮形 | he is的缩写 | he is의 축약형 | ko:音写疑い |
 | headache | headache | 頭痛 | 头痛 | 두통 | ko:音写疑い |
+| healing | healing | 治癒、癒し | 治愈、康复 | 치유 | ko:音写疑い |
 | health | health | 健康 | 健康 | 건강 | ko:音写疑い |
 | heap | heap | ヒープ | 堆 | 더미 | zh:1文字; ko:音写疑い |
 | hear | hear | 聞く | 听到 | 듣다 | ko:音写疑い |
@@ -745,10 +845,12 @@
 | heart | heart | 心臓 | 心 | 마음 | zh:1文字; ko:音写疑い |
 | heat | heat | 熱 | 热 | 열 | ja:1文字; zh:1文字; ko:1文字 |
 | heating | heating | 加熱 | 加热 | 난방 | ko:音写疑い |
+| heaven | heaven | 天国 | 天堂 | 천국 | ko:音写疑い |
 | heel | heel | ヒール | 脚跟 | 힐 | ko:1文字 |
 | height | height | 身長 | 高度 | 키 | ko:1文字 |
 | held | past tense / past participle of hold | 持つ、開催する、保持（holdの過... | 握住、举办、保持（hold的过去式... | 잡다, 개최하다, 유지하다 (h... | ko:音写疑い |
 | hell | hell | 地獄 | 地狱 | 지옥 | ko:音写疑い |
+| helmet | helmet | ヘルメット | 头盔 | 헬멧 | ko:音写疑い |
 | hemp | hemp | 麻 | 麻 | 마 | ja:1文字; zh:1文字; ko:1文字 |
 | her | her | 彼女 | 她 | 그녀의 | zh:1文字 |
 | herd | herd | 群れ | 一群 | 떼 | ko:1文字 |
@@ -785,6 +887,8 @@
 | hour | hour | 時間 | 小时 | 시간 | ko:音写疑い |
 | house | house | 家 | 房子 | 집 | ja:1文字; ko:1文字 |
 | human | human | 人間 | 人类 | 인간 | ko:音写疑い |
+| humid | humid | 湿気の多い | 潮湿的 | 습한 | ko:音写疑い |
+| humor | humor | ユーモア、おかしさ | 幽默 | 유머 | ko:音写疑い |
 | hundred | hundred | 百 | 百 | 백 | ja:1文字; zh:1文字; ko:1文字 |
 | hunt | hunt | ハント | 打猎 | 사냥 | ko:音写疑い |
 | husband | husband | 夫 | 丈夫 | 남편 | ja:1文字; ko:音写疑い |
@@ -797,32 +901,40 @@
 | i've | I have | I haveの短縮形 | I have的缩写 | I have의 축약형 | ko:音写疑い |
 | ice | ice | 氷 | 冰 | 얼음 | ja:1文字; zh:1文字; ko:音写疑い |
 | ill | ill | 病気 | 患病的 | 아픈 | ko:音写疑い |
+| illness | illness | 病気 | 疾病 | 질병 | ko:音写疑い |
 | image | image | 画像 | 图像 | 영상 | ko:音写疑い |
 | impact | impact | インパクト | 影响 | 영향 | ko:音写疑い |
 | impress | impress | 印象づける | 留下深刻印象 | 날인 | ko:音写疑い |
+| impression | impression | 印象 | 印象 | 인상 | ko:音写疑い |
 | in | in | で | 在 | ~에 | ja:1文字; zh:1文字 |
 | inch | inch | インチ | 英寸 | 인치 | ko:音写疑い |
 | indeed | indeed | 確かに | 的确 | 물론 | ko:音写疑い |
 | independence | independence | 独立 | 独立 | 독립 | ko:音写疑い |
 | indoor | indoor | 屋内 | 室内的 | 실내 | ko:音写疑い |
+| infection | infection | 感染、伝染病 | 感染 | 감염 | ko:音写疑い |
 | influence | influence | 影響 | 影响 | 영향 | ko:音写疑い |
 | information | information | 情報 | 信息 | 정보 | ko:音写疑い |
+| ink | ink | インク | 墨水 | 잉크 | ko:音写疑い |
 | inner | inner | 内側 | 内 | 안의 | zh:1文字; ko:音写疑い |
 | insect | insect | 昆虫 | 昆虫 | 곤충 | ko:音写疑い |
 | inspiration | inspiration | インスピレーション | 灵感 | 영감 | ko:音写疑い |
 | instrument | instrument | 楽器 | 乐器 | 기구 | ko:音写疑い |
+| insurance | insurance | 保険 | 保险 | 보험 | ko:音写疑い |
 | intelligence | intelligence | 知能 | 智力 | 지능 | ko:音写疑い |
 | interest | interest | 興味 | 兴趣 | 관심 | ko:音写疑い |
 | interview | interview | インタビュー | 面试 | 회견 | ko:音写疑い |
 | invention | invention | 発明 | 发明 | 발명 | ko:音写疑い |
+| invitation | invitation | 招待 | 邀请 | 초대 | ko:音写疑い |
 | is | is | は | 是 | ~이다 | ja:1文字; zh:1文字 |
 | island | island | 島 | 岛 | 섬 | ja:1文字; zh:1文字; ko:1文字 |
+| isle | isle | 島 | 岛、小岛 | 섬 | ja:1文字; ko:1文字 |
 | isn't | is not | is notの短縮形 | is not的缩写 | is not의 축약형 | ko:音写疑い |
 | issue | issue | 問題 | 问题 | 문제 | ko:音写疑い |
 | it | it | それ | 它 | 그것 | zh:1文字; ko:音写疑い |
 | it's | it is | it isの短縮形 | it is的缩写 | it is의 축약형 | ko:音写疑い |
 | itch | itch | かゆみ | 痒 | 가려움 | zh:1文字 |
 | item | item | アイテム | 物品 | 목 | ko:1文字 |
+| ivory | ivory | 象牙 | 象牙 | 상아 | ko:音写疑い |
 | J | letter J | 文字 J | 字母 J | 문자 J | ko:音写疑い |
 | jacket | jacket | ジャケット | 夹克 | 재킷 | ko:音写疑い |
 | jade | jade | 翡翠 | 玉 | 옥 | zh:1文字; ko:1文字 |
@@ -831,7 +943,9 @@
 | jaw | jaw | 顎 | 颚 | 턱 | ja:1文字; zh:1文字; ko:1文字 |
 | jazz | jazz | ジャズ | 爵士乐 | 재즈 | ko:音写疑い |
 | jelly | jelly | ゼリー | 果冻 | 젤리 | ko:音写疑い |
+| jewel | jewel | 宝石 | 珠宝、宝石 | 보석 | ko:音写疑い |
 | job | job | 仕事 | 工作 | 직업 | ko:音写疑い |
+| jogging | jogging | ジョギング | 慢跑 | 조깅 | ko:音写疑い |
 | joint | joint | ジョイント | 联合的 | 관절 | ko:音写疑い |
 | joke | joke | ジョーク | 开玩笑 | 농담 | ko:音写疑い |
 | journey | journey | 旅 | 旅行 | 여행 | ja:1文字; ko:音写疑い |
@@ -846,6 +960,7 @@
 | K | letter K | 文字 K | 字母 K | 문자 K | ko:音写疑い |
 | kept | past tense / past participle of keep | 保つ（keepの過去形・過去分詞） | 保持（keep的过去式/过去分词） | 유지하다 (keep의 과거형·과... | ko:音写疑い |
 | kill | kill | 殺す | 杀 | 죽이다 | zh:1文字 |
+| killing | killing | 殺害 | 杀害、杀戮 | 살해 | ko:音写疑い |
 | kilo | kilo | キロ | 公斤 | 킬로 | ko:音写疑い |
 | kinda | kind of | なんとなく、ちょっと（kind o... | 有点（kind of的口语形式） | 약간, 어느 정도 (kind o... | ko:音写疑い |
 | king | king | 王 | 国王 | 왕 | ja:1文字; ko:1文字 |
@@ -877,9 +992,11 @@
 | latest | latest | 最新 | 最新的 | 최신 | ko:音写疑い |
 | latter | latter | 後者 | 后者 | 후자 | ko:音写疑い |
 | laugh | laugh | 笑う | 笑 | 웃다 | zh:1文字; ko:音写疑い |
+| laughter | laughter | 笑い、笑い声 | 笑、笑声 | 웃음 | ko:音写疑い |
 | law | law | 法 | 法律 | 법 | ja:1文字; ko:1文字 |
 | lawn | lawn | 芝生 | 草地 | 잔디 | ko:音写疑い |
 | lay | lay | 横たわる | 躺着 | 놓다 | ko:音写疑い |
+| layer | layer | 層 | 层 | 층, 겹 | ja:1文字; zh:1文字 |
 | lead | lead | 鉛 | 带领 | 선두 | ja:1文字; ko:音写疑い |
 | leaf | leaf | 葉 | 叶子 | 잎 | ja:1文字; ko:1文字 |
 | leak | leak | リーク | 泄露 | 새다 | ko:音写疑い |
@@ -889,40 +1006,51 @@
 | least | least | 少しでも | 至少 | 최소 | ko:音写疑い |
 | leather | leather | レザー | 皮革 | 가죽 | ko:音写疑い |
 | leaves | plural of leaf | 葉（leafの複数形） | 叶子（leaf的复数） | 잎 (leaf의 복수형) | ko:音写疑い |
+| lecture | lecture | 講義 | 讲座、讲课 | 강의 | ko:音写疑い |
 | leek | leek | リーキ | 韭葱 | 부추 | ko:音写疑い |
 | leg | leg | 脚 | 腿 | 다리 | ja:1文字; zh:1文字; ko:音写疑い |
 | leisure | leisure | レジャー | 闲暇 | 여가 | ko:音写疑い |
 | lemme | let me | 〜させて（let meの口語形） | 让我（let me的口语形式） | 내가 ~하게 해줘 (let me... | ko:音写疑い |
 | lemon | lemon | レモン | 柠檬 | 레몬 | ko:音写疑い |
 | lend | lend | 貸す | 借 | 빌려주다 | zh:1文字 |
+| length | length | 長さ | 长度 | 길이 | ko:音写疑い |
 | lent | past tense / past participle of lend | 貸す（lendの過去形・過去分詞） | 借（lend的过去式/过去分词） | 빌려주다 (lend의 과거형·과... | ko:音写疑い |
 | lesson | lesson | レッスン | 课 | 수업 | zh:1文字; ko:音写疑い |
 | let | let | させて | 让 | 허락하다 | zh:1文字 |
 | let's | let us | let usの短縮形 | let us的缩写 | let us의 축약형 | ko:音写疑い |
+| lettuce | lettuce | レタス | 生菜 | 상추 | ko:音写疑い |
 | level | level | レベル | 等级 | 수준 | ko:音写疑い |
+| liberation | liberation | 解放 | 解放 | 해방 | ko:音写疑い |
 | liberty | liberty | 自由 | 自由 | 자유 | ko:音写疑い |
+| librarian | librarian | 図書館員、司書 | 图书管理员 | 사서 | ko:音写疑い |
 | lick | lick | なめる | 舔 | 핥다 | zh:1文字; ko:音写疑い |
 | lid | lid | 蓋 | 盖 | 뚜껑 | ja:1文字; zh:1文字; ko:音写疑い |
 | lie | lie | 嘘 | 说谎 | 거짓말하다 | ja:1文字 |
 | life | life | 人生 | 生活 | 삶 | ko:1文字 |
+| lightning | lightning | 稲妻、雷 | 闪电 | 번개 | ko:音写疑い |
 | like | like | のように | 喜欢 | 좋다 | ko:音写疑い |
 | lily | lily | ユリ | 百合 | 백합 | ko:音写疑い |
 | limb | limb | 手足 | 肢 | 수족 | zh:1文字; ko:音写疑い |
 | ling | ling | リン | 令 | 링 | zh:1文字; ko:1文字 |
 | lion | lion | ライオン | 狮子 | 사자 | ko:音写疑い |
 | lip | lip | リップ | 唇 | 말뿐인 | zh:1文字 |
+| liquid | liquid | 液体 | 液体 | 액체 | ko:音写疑い |
 | list | list | リスト | 列表 | 목록 | ko:音写疑い |
 | listen | listen | 聞く | 听 | 듣다 | zh:1文字; ko:音写疑い |
+| literature | literature | 文学 | 文学 | 문학 | ko:音写疑い |
 | live | live | ライブ | 居住 | 살다 | ko:音写疑い |
+| liver | liver | 肝臓 | 肝脏 | 간 | ko:1文字 |
 | lives | plural of life | 人生（lifeの複数形） | 生活（life的复数） | 삶 (life의 복수형) | ko:音写疑い |
 | living | living | リビング | 活的 | 생활 | ko:音写疑い |
 | load | load | 負荷 | 加载 | 짐 | ko:1文字 |
 | loan | loan | ローン | 贷款 | 대출 | ko:音写疑い |
 | lock | lock | ロック | 锁 | 잠그다 | zh:1文字 |
 | lodge | lodge | ロッジ | 小屋 | 별장 | ko:音写疑い |
+| logo | logo | ロゴ | 标志、logo | 로고 | ko:音写疑い |
 | lose | lose | 失う | 失去 | 잃다 | ko:音写疑い |
 | loss | loss | 損失 | 损失 | 손실 | ko:音写疑い |
 | lotta | lot of / lots of | たくさんの（lot ofの口語形） | 很多（lot of的口语形式） | 많은 (lot of의 구어체) | ko:音写疑い |
+| lottery | lottery | 宝くじ | 彩票、抽奖 | 복권 | ko:音写疑い |
 | lover | lover | 愛人 | 情人 | 애인 | ko:音写疑い |
 | luck | luck | 運 | 运气 | 운 | ja:1文字; ko:1文字 |
 | lunch | lunch | ランチ | 午餐 | 점심 | ko:音写疑い |
@@ -937,14 +1065,18 @@
 | mainly | mainly | 主に | 主要是 | 주로 | ko:音写疑い |
 | male | male | 男 | 男性 | 남성 | ja:1文字; ko:音写疑い |
 | man | man | 男 | 男人 | 남성 | ja:1文字; ko:音写疑い |
+| mankind | mankind | 人類 | 人类 | 인류 | ko:音写疑い |
 | manner | manner | マナー | 方式 | 방법 | ko:音写疑い |
 | many | many | 多くの | 许多 | 많은 | ko:音写疑い |
 | map | map | 地図 | 地图 | 지도 | ko:音写疑い |
 | market | market | 市場 | 市场 | 시장 | ko:音写疑い |
+| marriage | marriage | 結婚 | 婚姻、结婚 | 결혼 | ko:音写疑い |
 | married | married | 既婚 | 已婚 | 기혼 | ko:音写疑い |
 | mate | mate | メイト | 伴侣 | 친구 | ko:音写疑い |
 | material | material | 材料 | 材料 | 재료 | ko:音写疑い |
+| mathematics | mathematics | 数学 | 数学 | 수학 | ko:音写疑い |
 | max | max | 最大 | 最大限度 | 최대 | ko:音写疑い |
+| mayor | mayor | 市長 | 市长 | 시장 | ko:音写疑い |
 | me | me | 私を | 我 | 나 | zh:1文字; ko:1文字 |
 | meal | meal | 食事 | 一顿饭 | 식사 | ko:音写疑い |
 | meaning | meaning | 意味 | 意义 | 의미 | ko:音写疑い |
@@ -953,6 +1085,7 @@
 | medal | medal | メダル | 勋章 | 메달 | ko:音写疑い |
 | medical | medical | 医学 | 医疗的 | 의료 | ko:音写疑い |
 | medicine | medicine | 薬 | 药品 | 약 | ja:1文字; ko:1文字 |
+| meditation | meditation | 瞑想 | 冥想 | 명상 | ko:音写疑い |
 | meeting | meeting | ミーティング | 会议 | 회의 | ko:音写疑い |
 | melon | melon | メロン | 瓜 | 멜론 | zh:1文字; ko:音写疑い |
 | melt | melt | 溶ける | 熔化 | 녹다 | ko:音写疑い |
@@ -960,6 +1093,7 @@
 | men | plural of man | 男（manの複数形） | 男人（man的复数） | 남성 (man의 복수형) | ko:音写疑い |
 | mend | mend | 直す | 修补 | 수선 | ko:音写疑い |
 | menu | menu | メニュー | 菜单 | 메뉴 | ko:音写疑い |
+| merchant | merchant | 商人 | 商人 | 상인 | ko:音写疑い |
 | mere | mere | 単なる | 仅仅 | 호수 | ko:音写疑い |
 | merge | merge | マージ | 合并 | 병합 | ko:音写疑い |
 | mess | mess | 混乱 | 混乱 | 엉망 | ko:音写疑い |
@@ -977,23 +1111,31 @@
 | million | million | 百万 | 百万 | 백만 | ko:音写疑い |
 | mint | mint | ミント | 薄荷 | 박하 | ko:音写疑い |
 | minute | minute | 分 | 分钟 | 분 | ja:1文字; ko:1文字 |
+| miracle | miracle | 奇跡 | 奇迹 | 기적 | ko:音写疑い |
 | mirror | mirror | 鏡 | 镜子 | 거울 | ja:1文字; ko:音写疑い |
+| mischief | mischief | いたずら | 恶作剧、淘气 | 장난 | ko:音写疑い |
 | mist | mist | ミスト | 薄雾 | 안개 | ko:音写疑い |
 | mistake | mistake | 間違い | 错误 | 실수 | ko:音写疑い |
+| misunderstanding | misunderstanding | 誤解 | 误解 | 오해 | ko:音写疑い |
 | mix | mix | ミックス | 混合 | 혼합 | ko:音写疑い |
 | model | model | モデル | 模型 | 모델 | ko:音写疑い |
+| modem | modem | モデム | 调制解调器 | 모뎀 | ko:音写疑い |
+| molecule | molecule | 分子 | 分子 | 분자 | ko:音写疑い |
 | mom | mom | お母さん | 妈妈 | 엄마 | ko:音写疑い |
 | moment | moment | 一瞬 | 片刻 | 순간 | ko:音写疑い |
 | money | money | お金 | 钱 | 돈 | zh:1文字; ko:1文字 |
 | monkey | monkey | 猿 | 猴 | 원숭이 | ja:1文字; zh:1文字 |
+| monster | monster | 怪物 | 怪物 | 괴물 | ko:音写疑い |
 | month | month | 月 | 月 | 월 | ja:1文字; zh:1文字; ko:1文字 |
 | moon | moon | 月 | 月亮 | 달 | ja:1文字; ko:1文字 |
 | more | more | もっと | 更多的 | 더 | ko:1文字 |
 | morning | morning | 朝 | 早晨 | 아침 | ja:1文字; ko:音写疑い |
 | mosque | mosque | モスク | 清真寺 | 사원 | ko:音写疑い |
+| mosquito | mosquito | 蚊 | 蚊子 | 모기 | ja:1文字; ko:音写疑い |
 | moss | moss | 苔 | 苔藓 | 이끼 | ja:1文字; ko:音写疑い |
 | most | most | ほとんど | 最多 | 최대 | ko:音写疑い |
 | mostly | mostly | たいてい | 大多 | 주로 | ko:音写疑い |
+| motive | motive | 動機 | 动机 | 동기 | ko:音写疑い |
 | mount | mount | マウント | 山 | 산 | zh:1文字; ko:1文字 |
 | mountain | mountain | 山 | 山 | 산 | ja:1文字; zh:1文字; ko:1文字 |
 | mouse | mouse | ねずみ | 老鼠 | 생쥐 | ko:音写疑い |
@@ -1005,8 +1147,10 @@
 | mule | mule | ラバ | 骡子 | 노새 | ko:音写疑い |
 | mum | mum | お母さん | 妈妈 | 침묵 | ko:音写疑い |
 | murder | murder | 殺人 | 谋杀 | 살인 | ko:音写疑い |
+| muscle | muscle | 筋肉 | 肌肉 | 근육 | ko:音写疑い |
 | mushroom | mushroom | キノコ | 蘑菇 | 버섯 | ko:音写疑い |
 | music | music | 音楽 | 音乐 | 음악 | ko:音写疑い |
+| mustard | mustard | マスタード、からし | 芥末 | 겨자 | ko:音写疑い |
 | mustn't | must not | must notの短縮形 | must not的缩写 | must not의 축약형 | ko:音写疑い |
 | my | my | 私の | 我的 | 나의 | ko:音写疑い |
 | mystery | mystery | ミステリー | 神秘 | 신비 | ko:音写疑い |
@@ -1015,18 +1159,23 @@
 | nail | nail | 釘 | 指甲 | 못 | ja:1文字; ko:1文字 |
 | nap | nap | 昼寝 | 打盹 | 선잠 | ko:音写疑い |
 | napkin | napkin | ナプキン | 餐巾 | 냅킨 | ko:音写疑い |
+| narrow | narrow | 狭い | 狭窄的 | 좁은 | ko:音写疑い |
 | nation | nation | 国家 | 国家 | 국가 | ko:音写疑い |
 | nationality | nationality | 国籍 | 国籍 | 국적 | ko:音写疑い |
 | nature | nature | 自然 | 自然 | 자연 | ko:音写疑い |
 | nearly | nearly | ほぼ | 几乎 | 거의 | ko:音写疑い |
 | neck | neck | ネック | 脖子 | 목 | ko:1文字 |
 | need | need | 必要 | 需要 | 필요 | ko:音写疑い |
+| needle | needle | 針 | 针 | 바늘 | ja:1文字; zh:1文字; ko:音写疑い |
+| negotiation | negotiation | 交渉 | 谈判、协商 | 협상 | ko:音写疑い |
+| nephew | nephew | 甥 | 侄子、外甥 | 조카(남) | ja:1文字 |
 | net | net | ネット | 网 | 그물 | zh:1文字; ko:音写疑い |
 | never | never | 一度もない | 绝不 | 절대 | ko:音写疑い |
 | news | news | ニュース | 消息 | 소식 | ko:音写疑い |
 | newspaper | newspaper | 新聞 | 报纸 | 신문 | ko:音写疑い |
 | next | next | 次 | 下一个 | 다음 | ja:1文字; ko:音写疑い |
 | nice | nice | ニース | 好的 | 멋진 | ko:音写疑い |
+| nickname | nickname | あだ名、愛称 | 绰号、昵称 | 별명 | ko:音写疑い |
 | niece | niece | 姪 | 侄女 | 조카 | ja:1文字; ko:音写疑い |
 | night | night | 夜 | 夜晚 | 밤 | ja:1文字; ko:1文字 |
 | nine | nine | 九 | 九 | 아홉 | ja:1文字; zh:1文字; ko:音写疑い |
@@ -1044,8 +1193,10 @@
 | now | now | 今 | 现在 | 지금 | ja:1文字; ko:音写疑い |
 | number | number | 番号 | 数字 | 숫자 | ko:音写疑い |
 | nut | nut | ナット | 坚果 | 너트 | ko:音写疑い |
+| nutrition | nutrition | 栄養 | 营养 | 영양 | ko:音写疑い |
 | O | letter O | 文字 O | 字母 O | 문자 O | ko:音写疑い |
 | oath | oath | 誓い | 誓言 | 맹세 | ko:音写疑い |
+| occasionally | occasionally | 時々 | 偶尔 | 가끔 | ko:音写疑い |
 | occupation | occupation | 職業 | 职业 | 직업 | ko:音写疑い |
 | october | october | 10月 | 十月 | 십월 | ko:音写疑い |
 | of | of | の | 的 | ~의 | ja:1文字; zh:1文字 |
@@ -1058,6 +1209,7 @@
 | opinion | opinion | 意見 | 观点 | 의견 | ko:音写疑い |
 | opportunity | opportunity | 機会 | 机会 | 기회 | ko:音写疑い |
 | opposite | opposite | 反対 | 对面的 | 반대 | ko:音写疑い |
+| oppression | oppression | 抑圧 | 压迫 | 억압 | ko:音写疑い |
 | or | or | または | 或者 | 또는 | ko:音写疑い |
 | orphan | orphan | 孤児 | 孤儿 | 유아 | ko:音写疑い |
 | other | other | 他の | 其他 | 다른 | ko:音写疑い |
@@ -1070,7 +1222,9 @@
 | overseas | overseas | 海外 | 海外 | 해외 | ko:音写疑い |
 | ow | ow | ああ | 噢 | 아야 | zh:1文字; ko:音写疑い |
 | owe | owe | 借りている | 欠 | 빚지다 | zh:1文字 |
+| owing | owing | ~のために(owing toで)、... | 由于(owing to)、未偿还的 | ~때문에(owing to), 미지불의 | ko:音写疑い |
 | ox | ox | 牛 | 牛 | 황소 | ja:1文字; zh:1文字; ko:音写疑い |
+| oxygen | oxygen | 酸素 | 氧气 | 산소 | ko:音写疑い |
 | oyster | oyster | 牡蠣 | 牡蛎、生蚝 | 굴 | ko:1文字 |
 | P | letter P | 文字 P | 字母 P | 문자 P | ko:音写疑い |
 | pa | pa | パ | 帕 | 아빠 | ja:1文字; zh:1文字; ko:音写疑い |
@@ -1088,10 +1242,16 @@
 | pants | pants | パンツ | 裤子 | 바지 | ko:音写疑い |
 | paper | paper | 紙 | 纸 | 종이 | ja:1文字; zh:1文字; ko:音写疑い |
 | paragraph | paragraph | 段落 | 段落 | 절 | ko:1文字 |
+| parcel | parcel | 小包 | 包裹 | 소포 | ko:音写疑い |
 | parent | parent | 親 | 家长 | 조상 | ja:1文字; ko:音写疑い |
+| parking | parking | 駐車 | 停车 | 주차 | ko:音写疑い |
+| participle | participle | 分詞 | 分词 | 분사 | ko:音写疑い |
+| particularly | particularly | 特に | 尤其、特别地 | 특히 | ko:音写疑い |
 | party | party | パーティー | 派对 | 파티 | ko:音写疑い |
 | passage | passage | 通路 | 通道 | 통로 | ko:音写疑い |
 | passenger | passenger | 乗客 | 乘客 | 승객 | ko:音写疑い |
+| passion | passion | 情熱 | 热情、激情 | 열정 | ko:音写疑い |
+| passport | passport | パスポート | 护照 | 여권 | ko:音写疑い |
 | past | past | 過去 | 过去的 | 과거 | ko:音写疑い |
 | patch | patch | パッチ | 修补 | 반점 | ko:音写疑い |
 | path | path | パス | 小路 | 길 | ko:1文字 |
@@ -1099,6 +1259,7 @@
 | peace | peace | 平和 | 和平 | 평화 | ko:音写疑い |
 | peach | peach | 桃 | 桃 | 복숭아 | ja:1文字; zh:1文字 |
 | peak | peak | ピーク | 顶峰 | 정점 | ko:音写疑い |
+| peanut | peanut | ピーナッツ | 花生 | 땅콩 | ko:音写疑い |
 | pear | pear | 梨 | 梨 | 배 | ja:1文字; zh:1文字; ko:1文字 |
 | pearl | pearl | パール | 珍珠 | 진주 | ko:音写疑い |
 | pee | pee | おしっこ | 撒尿 | 오줌 | ko:音写疑い |
@@ -1116,7 +1277,10 @@
 | permission | permission | 許可 | 允许 | 허가 | ko:音写疑い |
 | person | person | 人 | 人 | 사람 | ja:1文字; zh:1文字; ko:音写疑い |
 | personality | personality | 人格 | 性格 | 성격 | ko:音写疑い |
+| pharmacy | pharmacy | 薬局 | 药店 | 약국 | ko:音写疑い |
 | phase | phase | 段階 | 阶段 | 단계 | ko:音写疑い |
+| phenomenon | phenomenon | 現象 | 现象 | 현상 | ko:音写疑い |
+| philosophy | philosophy | 哲学 | 哲学 | 철학 | ko:音写疑い |
 | photo | photo | 写真 | 照片 | 사진 | ko:音写疑い |
 | photograph | photograph | 写真 | 照片 | 사진 | ko:音写疑い |
 | phrase | phrase | フレーズ | 短语 | 구절 | ko:音写疑い |
@@ -1126,6 +1290,7 @@
 | pig | pig | 豚 | 猪 | 돼지 | ja:1文字; zh:1文字; ko:音写疑い |
 | pile | pile | パイル | 桩 | 말뚝 | zh:1文字; ko:音写疑い |
 | pill | pill | ピル | 丸 | 알약 | zh:1文字; ko:音写疑い |
+| pillow | pillow | 枕 | 枕头 | 베개 | ja:1文字; ko:音写疑い |
 | pin | pin | ピン | 别针 | 핀 | ko:1文字 |
 | pine | pine | 松 | 松树 | 소나무 | ja:1文字 |
 | pit | pit | ピット | 坑 | 피트 | zh:1文字; ko:音写疑い |
@@ -1144,19 +1309,23 @@
 | plus | plus | プラス | 加 | ...을 더한 | zh:1文字 |
 | pocket | pocket | ポケット | 口袋 | 포켓 | ko:音写疑い |
 | poem | poem | 詩 | 诗 | 시 | ja:1文字; zh:1文字; ko:1文字 |
+| poet | poet | 詩人 | 诗人 | 시인 | ko:音写疑い |
 | pole | pole | ポール | 极 | 폴 | zh:1文字; ko:1文字 |
 | police | police | 警察 | 警察 | 경찰 | ko:音写疑い |
 | policeman | policeman | 警官 | 警察 | 경관 | ko:音写疑い |
 | policewoman | policewoman | 婦人警官 | 女警察 | 경찰 | ko:音写疑い |
+| politics | politics | 政治 | 政治 | 정치 | ko:音写疑い |
 | pollution | pollution | 汚染 | 污染 | 오염 | ko:音写疑い |
 | pond | pond | 池 | 池塘 | 연못 | ja:1文字; ko:音写疑い |
 | pop | pop | ポップ | 流行音乐 | 팝 | ko:1文字 |
+| popcorn | popcorn | ポップコーン | 爆米花 | 팝콘 | ko:音写疑い |
 | population | population | 人口 | 人口 | 인구 | ko:音写疑い |
 | porch | porch | ポーチ | 门廊 | 현관 | ko:音写疑い |
 | port | port | ポート | 港口 | 포트 | ko:音写疑い |
 | pose | pose | ポーズ | 姿势 | 포즈 | ko:音写疑い |
 | position | position | 位置 | 位置 | 위치 | ko:音写疑い |
 | possibly | possibly | おそらく | 可能 | 혹시 | ko:音写疑い |
+| postcard | postcard | はがき | 明信片 | 엽서 | ko:音写疑い |
 | pot | pot | ポット | 锅 | 냄비 | zh:1文字; ko:音写疑い |
 | potato | potato | じゃがいも | 土豆 | 감자 | ko:音写疑い |
 | pound | pound | ポンド | 磅 | 파운드 | zh:1文字 |
@@ -1167,14 +1336,19 @@
 | praise | praise | 賞賛 | 称赞 | 칭찬 | ko:音写疑い |
 | prance | prance | 飛び跳ねる | 腾跃 | 도약 | ko:音写疑い |
 | prawn | prawn | エビ | 虾 | 왕새우 | zh:1文字 |
+| prayer | prayer | 祈り | 祈祷 | 기도 | ko:音写疑い |
 | prediction | prediction | 予測 | 预言 | 예측 | ko:音写疑い |
+| prejudice | prejudice | 偏見 | 偏见 | 편견 | ko:音写疑い |
+| preparation | preparation | 準備 | 准备 | 준비 | ko:音写疑い |
 | pressure | pressure | プレッシャー | 压力 | 압력 | ko:音写疑い |
 | price | price | 価格 | 价格 | 가격 | ko:音写疑い |
 | prick | prick | 刺す | 刺 | 찌르기 | zh:1文字 |
+| primarily | primarily | 主に | 主要地 | 주로 | ko:音写疑い |
 | prime | prime | プライム | 主要的 | 초기 | ko:音写疑い |
 | prince | prince | 王子 | 王子 | 왕자 | ko:音写疑い |
 | princess | princess | お姫様 | 公主 | 공주 | ko:音写疑い |
 | print | print | 印刷する | 打印 | 인쇄 | ko:音写疑い |
+| prisoner | prisoner | 囚人 | 囚犯 | 죄수 | ko:音写疑い |
 | prize | prize | 賞 | 奖 | 상 | ja:1文字; zh:1文字; ko:1文字 |
 | pro | pro | プロ | 亲 | 찬성 | zh:1文字; ko:音写疑い |
 | probably | probably | おそらく | 大概 | 아마 | ko:音写疑い |
@@ -1182,15 +1356,23 @@
 | problem | problem | 問題 | 问题 | 문제 | ko:音写疑い |
 | product | product | 製品 | 产品 | 제품 | ko:音写疑い |
 | production | production | 生産 | 生产 | 생산 | ko:音写疑い |
+| profession | profession | 職業 | 职业 | 직업 | ko:音写疑い |
+| professor | professor | 教授 | 教授 | 교수 | ko:音写疑い |
+| prohibition | prohibition | 禁止 | 禁止 | 금지 | ko:音写疑い |
 | pronunciation | pronunciation | 発音 | 发音 | 발음 | ko:音写疑い |
 | proof | proof | 証拠 | 证明 | 증거 | ko:音写疑い |
+| proposal | proposal | 提案 | 提议、建议 | 제안 | ko:音写疑い |
 | prose | prose | 散文 | 散文 | 산문 | ko:音写疑い |
+| prosperity | prosperity | 繁栄 | 繁荣 | 번영 | ko:音写疑い |
+| protection | protection | 保護 | 保护 | 보호 | ko:音写疑い |
+| proverb | proverb | ことわざ | 谚语 | 속담 | ko:音写疑い |
 | pudding | pudding | プリン、プディング | 布丁 | 푸딩 | ko:音写疑い |
 | pull | pull | 引く | 拉 | 당기다 | zh:1文字 |
 | pulse | pulse | 脈 | 脉冲 | 맥박 | ja:1文字; ko:音写疑い |
 | pump | pump | ポンプ | 泵 | 펌프 | zh:1文字; ko:音写疑い |
 | punch | punch | パンチ | 冲床 | 펀치 | ko:音写疑い |
 | punctuation | punctuation | 句読点 | 标点 | 구두 | ko:音写疑い |
+| punishment | punishment | 罰 | 惩罚 | 처벌 | ja:1文字; ko:音写疑い |
 | purpose | purpose | 目的 | 目的 | 목적 | ko:音写疑い |
 | purse | purse | 財布 | 钱包 | 지갑 | ko:音写疑い |
 | push | push | 押す | 推 | 푸시 | zh:1文字; ko:音写疑い |
@@ -1225,17 +1407,28 @@
 | ray | ray | 光線 | 射线 | 레이 | ko:音写疑い |
 | reader | reader | リーダー | 读者 | 리더 | ko:音写疑い |
 | reading | reading | 読む | 阅读 | 독서 | ko:音写疑い |
+| reality | reality | 現実 | 现实 | 현실 | ko:音写疑い |
 | really | really | 本当に | 真的 | 정말 | ko:音写疑い |
 | rear | rear | 後方 | 后部 | 뒤쪽 | ko:音写疑い |
 | reason | reason | 理由 | 原因 | 이유 | ko:音写疑い |
 | receive | receive | 受け取る | 收到 | 받다 | ko:音写疑い |
+| recovery | recovery | 回復 | 恢复、康复 | 회복 | ko:音写疑い |
 | reed | reed | 葦 | 芦苇 | 갈대 | ja:1文字; ko:音写疑い |
 | reef | reef | リーフ | 礁 | 암초 | zh:1文字; ko:音写疑い |
+| referee | referee | 審判、レフリー | 裁判 | 심판 | ko:音写疑い |
+| refund | refund | 返金 | 退款 | 환불 | ko:音写疑い |
+| refusal | refusal | 拒否 | 拒绝 | 거절 | ko:音写疑い |
+| region | region | 地域、地方 | 地区、地域 | 지역 | ko:音写疑い |
+| registration | registration | 登録 | 登记、注册 | 등록 | ko:音写疑い |
 | regret | regret | 後悔 | 后悔 | 후회 | ko:音写疑い |
+| relationship | relationship | 関係 | 关系 | 관계 | ko:音写疑い |
+| religion | religion | 宗教 | 宗教 | 종교 | ko:音写疑い |
 | remote | remote | リモート | 偏僻的 | 원격 | ko:音写疑い |
 | request | request | リクエスト | 要求 | 요구 | ko:音写疑い |
 | research | research | 研究 | 研究 | 연구 | ko:音写疑い |
+| resource | resource | 資源 | 资源 | 자원 | ko:音写疑い |
 | response | response | 応答 | 回复 | 응답 | ko:音写疑い |
+| responsibility | responsibility | 責任 | 责任 | 책임 | ko:音写疑い |
 | restaurant | restaurant | レストラン | 餐厅 | 식당 | ko:音写疑い |
 | result | result | 結果 | 结果 | 결과 | ko:音写疑い |
 | review | review | レビュー | 审查 | 검토 | ko:音写疑い |
