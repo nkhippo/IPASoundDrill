@@ -34,7 +34,7 @@
   .brand .mark{font-family:var(--ipa);font-size:24px;color:var(--signal);letter-spacing:.5px;flex-shrink:0}
   .brand .name{font-weight:700;font-size:15px;letter-spacing:.04em;white-space:nowrap}
   .meter{font-family:var(--mono);font-size:11px;color:var(--muted);text-align:right;letter-spacing:.04em;white-space:nowrap}
-  .play-line{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin:-10px 0 14px}
+  .play-line{margin:-10px 0 14px}
   body.in-play .play-line{margin:-2px 0 10px}
   .play-crumb{font-family:var(--mono);font-size:10.5px;color:var(--muted);letter-spacing:.03em;line-height:1.45;min-width:0}
   .meter b{color:var(--ink);font-weight:700}
@@ -81,7 +81,8 @@
   .reflect-dock{position:fixed;right:max(16px, calc((100vw - 600px)/2 + 18px));bottom:18px;z-index:30}
   .reflect-dock .reflect-btn{font-size:12px;font-family:var(--ui);font-weight:700;letter-spacing:.02em;padding:10px 16px;border-radius:12px;border:1px solid var(--hair);background:#fff;color:var(--ink);cursor:pointer;white-space:nowrap;box-shadow:0 6px 14px rgba(25,28,32,.08)}
   .reflect-dock .reflect-btn:hover{border-color:var(--signal);color:var(--signal)}
-  .qno{font-family:var(--mono);font-size:11px;color:var(--faint)}
+  .qno{font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.04em;white-space:nowrap}
+  .qno b{color:var(--ink);font-weight:700}
 
   .readout{display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;padding:10px 4px 6px}
   .readout .ipa{font-family:var(--ipa);font-size:clamp(32px,8.5vw,50px);line-height:1.45;letter-spacing:.5px;min-height:1.45em}
@@ -325,7 +326,6 @@
   </div>
   <div class="play-line hidden" id="playLine">
     <div class="play-crumb" id="playCrumb" aria-live="polite"></div>
-    <div class="meter" id="meter"></div>
   </div>
 
   <!-- SETUP -->
@@ -1296,7 +1296,6 @@ function setSetupVisible(on){
   document.body.classList.toggle("in-play",!on);
   if(on){
     if(currentAudio){currentAudio.pause();currentAudio=null;}
-    $("meter").textContent="";
     unlockInputScroll();
   }else updatePlayCrumb();
 }
@@ -1347,7 +1346,7 @@ function setCardCefr(elId,c,qnoId){
     el.hidden=true;
     el.removeAttribute("title");
   }
-  if(qnoId)$(qnoId).textContent="#"+String(S.idx+1).padStart(2,"0");
+  if(qnoId)$(qnoId).innerHTML="<b>"+(S.idx+1)+"</b> / "+S.poolTotal;
 }
 
 /* ---------- setup ---------- */
@@ -2268,7 +2267,6 @@ function renderCard(){
   S.curCarrier=(isConnectedItem(c)||isWeakItem(c))?pickCarrier(c):null;
   show("reveal",false);hideModeBCards();
   $("reflectDock").classList.remove("hidden");
-  $("meter").innerHTML="<b>"+(S.idx+1)+"</b> / "+S.poolTotal;
   if(S.appMode==="b"){
     if(MODEB_QUIZ_ENABLED&&c.mbKind==="quiz")renderModeBQuizSpell(c);
     else renderModeBStudy(c);
@@ -2561,7 +2559,6 @@ function renderSummary(){
   const total=S.answered,pct=total?Math.round(S.correct/total*100):0;
   $("sumPct").textContent=pct;
   $("sumLine").textContent=t("summary.line",{c:S.correct,t:total,m:S.missed.length});
-  $("meter").innerHTML='<b>'+t("meter_done")+'</b>';
   const ent=Object.entries(S.weak).sort((a,b)=>b[1]-a[1]).slice(0,5);
   if(ent.length){
     $("weakList").innerHTML=ent.map(([s,n])=>{const p=PH[s];return '<div class="wk"><div class="wsym">'+s+'</div><div style="flex:1"><div class="wlab">'+p.lab+'</div><div class="wtip">'+p.mouth+'</div></div><div class="wcount">×'+n+'</div></div>';}).join("");
