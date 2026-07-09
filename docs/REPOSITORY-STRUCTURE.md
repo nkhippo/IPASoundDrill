@@ -1,7 +1,7 @@
 # Repository Structure
 
 > **Purpose:** Share this file with Claude (or other AI assistants) at the start of a task so it knows where data, scripts, and docs live.  
-> **Last updated:** 2026-07-09 (post–folder reorganization v3.11)
+> **Last updated:** 2026-07-09 (unlimited session + streaming prefetch v3.12)
 
 ---
 
@@ -25,7 +25,7 @@
 
 ```
 english-pronunciation-trainer/
-├── index.html                 # SPA app (Decode/Encode, Mode A/B, Connected Speech, vocab browser)
+├── index.html                 # SPA app (Decode/Encode, Mode A/B, Connected Speech, vocab browser, streaming session queue)
 ├── README.md
 ├── wordlist_GA_a1a2_plus_phonics.json   # ★ PRODUCTION wordlist (runtime fetch)
 ├── wordlist_GA_a1a2_plus_phonics.csv    # CSV export (pipeline / i18n tooling)

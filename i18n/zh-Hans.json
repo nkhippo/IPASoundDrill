@@ -156,6 +156,9 @@
     "fil": "Filipino"
   },
   "listen": "播放发音",
+  "reflect": {
+    "btn": "回顾"
+  },
   "meter_done": "完成",
   "hint": {
     "syl": "音节数",

@@ -10,8 +10,9 @@
  *   6. Monitor with getBatchStatusGA()
  */
 
-const BATCH_MAX_MS = 4.5 * 60 * 1000;
-const BATCH_MAX_WORDS_PER_RUN = 24;
+const BATCH_MAX_MS = 5.75 * 60 * 1000;
+const BATCH_MAX_WORDS_PER_RUN = 500;
+const BATCH_OPENAI_PARALLEL = 20;
 const BATCH_SHEET_NAME = 'words';
 const PROP_BATCH_SPREADSHEET_ID = 'BATCH_SPREADSHEET_ID';
 const PROP_BATCH_INDEX_GA = 'BATCH_INDEX_GA';
@@ -69,6 +70,120 @@ function summarizeBatchResults_(results) {
   return summary;
 }
 
+function classifyBatchWord_(word, accent) {
+  if (!isValidBatchWord_(word)) {
+    return { word: word, status: 'failed', error: 'invalid' };
+  }
+  let blob = getAudioFromDrive_(word, accent);
+  if (blob && isAudioBlobTooShort_(blob)) {
+    trashAudioOnDrive_(word, accent);
+    blob = null;
+  }
+  if (blob) return { word: word, status: 'cached' };
+  return { word: word, status: 'pending' };
+}
+
+function buildOpenAISpeechRequest_(word, instructions, apiKey) {
+  return {
+    url: 'https://api.openai.com/v1/audio/speech',
+    method: 'post',
+    headers: {
+      Authorization: 'Bearer ' + apiKey,
+      'Content-Type': 'application/json',
+    },
+    payload: JSON.stringify({
+      model: TTS_MODEL,
+      input: word,
+      voice: TTS_VOICE,
+      instructions: instructions,
+    }),
+    muteHttpExceptions: true,
+  };
+}
+
+function generateOneFromResponse_(word, accent, response, request) {
+  if (response.getResponseCode() !== 200) {
+    return {
+      word: word,
+      status: 'failed',
+      error: ('OpenAI ' + response.getResponseCode() + ': ' + response.getContentText().slice(0, 80)),
+    };
+  }
+  let blob = response.getBlob();
+  if (isAudioBlobTooShort_(blob)) {
+    const retry = UrlFetchApp.fetch(request.url, request);
+    if (retry.getResponseCode() === 200) blob = retry.getBlob();
+  }
+  if (!isAudioBlobTooShort_(blob)) {
+    saveToDrive_(word, accent, blob);
+    return { word: word, status: 'generated' };
+  }
+  return { word: word, status: 'failed', error: 'too_short' };
+}
+
+function generateWave_(words, accent, instructions, apiKey) {
+  const requests = words.map(function(word) {
+    return buildOpenAISpeechRequest_(word, instructions, apiKey);
+  });
+  const responses = UrlFetchApp.fetchAll(requests);
+  const out = [];
+  for (let i = 0; i < words.length; i++) {
+    try {
+      out.push(generateOneFromResponse_(words[i], accent, responses[i], requests[i]));
+    } catch (err) {
+      out.push({
+        word: words[i],
+        status: 'failed',
+        error: String(err.message || err).slice(0, 120),
+      });
+    }
+  }
+  return out;
+}
+
+/**
+ * Classify up to maxWords, generate missing audio in parallel waves, return ordered results.
+ */
+function warmWordsChunk_(words, accent, started, maxMs) {
+  const apiKey = PropertiesService.getScriptProperties().getProperty('OPENAI_API_KEY');
+  if (!apiKey) throw new Error('OPENAI_API_KEY is not set in Script Properties');
+
+  const instructions = instructionsFor_(accent, false);
+  const classified = [];
+  for (let i = 0; i < words.length; i++) {
+    if (Date.now() - started > maxMs) break;
+    classified.push(classifyBatchWord_(words[i], accent));
+  }
+
+  const pending = [];
+  for (let i = 0; i < classified.length; i++) {
+    if (classified[i].status === 'pending') pending.push(classified[i].word);
+  }
+
+  const generatedMap = {};
+  for (let i = 0; i < pending.length; i += BATCH_OPENAI_PARALLEL) {
+    if (Date.now() - started > maxMs) break;
+    const wave = pending.slice(i, i + BATCH_OPENAI_PARALLEL);
+    const waveResults = generateWave_(wave, accent, instructions, apiKey);
+    for (let j = 0; j < waveResults.length; j++) {
+      generatedMap[waveResults[j].word] = waveResults[j];
+    }
+  }
+
+  const results = [];
+  for (let i = 0; i < classified.length; i++) {
+    const entry = classified[i];
+    if (entry.status === 'pending') {
+      const done = generatedMap[entry.word];
+      if (!done) break;
+      results.push(done);
+    } else {
+      results.push(entry);
+    }
+  }
+  return results;
+}
+
 /**
  * Time-trigger entry point — warms GA audio for the next chunk of words.
  */
@@ -82,12 +197,9 @@ function batchWarmGA() {
     return;
   }
 
-  const results = [];
-  while (index < words.length && results.length < BATCH_MAX_WORDS_PER_RUN) {
-    if (Date.now() - started > BATCH_MAX_MS) break;
-    results.push(warmOne_(words[index], 'ga'));
-    index++;
-  }
+  const slice = words.slice(index, index + BATCH_MAX_WORDS_PER_RUN);
+  const results = warmWordsChunk_(slice, 'ga', started, BATCH_MAX_MS);
+  index += results.length;
 
   setBatchIndexGA_(index);
   const summary = summarizeBatchResults_(results);

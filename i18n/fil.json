@@ -109,6 +109,9 @@
     "pool": "Pool: {n} salita"
   },
   "meter_done": "tapos na",
+  "reflect": {
+    "btn": "Pagbalik-tanaw"
+  },
   "mode": {
     "a": "Basahin at isulat ang IPA",
     "label": "Mode ng pag-aaral"

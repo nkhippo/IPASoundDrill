@@ -156,6 +156,9 @@
     "fil": "Filipino"
   },
   "listen": "듣기",
+  "reflect": {
+    "btn": "돌아보기"
+  },
   "meter_done": "완료",
   "hint": {
     "syl": "음절 수",

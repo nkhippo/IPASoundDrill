@@ -76,7 +76,10 @@
   .card-top{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:16px}
   .card-top .cefr{font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.06em;color:var(--signal);background:var(--signal-soft);border-radius:999px;padding:3px 9px;line-height:1.2;white-space:nowrap}
   .card-top .cefr.is-unknown{color:var(--faint);background:transparent;border:1px dashed var(--hair);font-weight:600}
-  .qno{font-family:var(--mono);font-size:11px;color:var(--faint);margin-left:auto}
+  .card-top-right{margin-left:auto;display:flex;align-items:center;gap:8px;flex-shrink:0}
+  .reflect-btn{font-size:10px;font-family:var(--mono);letter-spacing:.03em;padding:3px 8px;border-radius:999px;border:1px solid var(--hair);background:transparent;color:var(--muted);cursor:pointer;white-space:nowrap}
+  .reflect-btn:hover{color:var(--ink);border-color:var(--muted)}
+  .qno{font-family:var(--mono);font-size:11px;color:var(--faint)}
 
   .readout{display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;padding:10px 4px 6px}
   .readout .ipa{font-family:var(--ipa);font-size:clamp(32px,8.5vw,50px);line-height:1.45;letter-spacing:.5px;min-height:1.45em}
@@ -426,7 +429,7 @@
 
   <!-- MODE B STUDY -->
   <section id="cardModeBStudy" class="panel hidden">
-    <div class="card-top"><span class="cefr" id="mbSCefr" hidden></span><div class="qno" id="mbSNo"></div></div>
+    <div class="card-top"><span class="cefr" id="mbSCefr" hidden></span><div class="card-top-right"><button class="reflect-btn" type="button" data-reflect></button><div class="qno" id="mbSNo"></div></div></div>
     <div class="readout"><button class="playicon" id="mbSPlay" type="button" aria-label="Listen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div>
     <div class="readout"><div class="ipa" id="mbSIpa"></div></div>
     <div class="alt-ipa hidden" id="mbSAltIpa"></div>
@@ -450,7 +453,7 @@
 
   <!-- MODE B QUIZ MCQ -->
   <section id="cardModeBMcq" class="panel hidden">
-    <div class="card-top"><span class="cefr" id="mbMCefr" hidden></span><div class="qno" id="mbMNo"></div></div>
+    <div class="card-top"><span class="cefr" id="mbMCefr" hidden></span><div class="card-top-right"><button class="reflect-btn" type="button" data-reflect></button><div class="qno" id="mbMNo"></div></div></div>
     <div class="flabel" style="text-align:center;margin-bottom:4px" id="mbMHead">Choose the meaning</div>
     <div class="readout"><button class="playicon" id="mbMPlay" type="button" aria-label="Listen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div>
     <div class="mcqopts" id="mbMOpts"></div>
@@ -459,7 +462,7 @@
 
   <!-- MODE B QUIZ DICTATION -->
   <section id="cardModeBDict" class="panel hidden">
-    <div class="card-top"><span class="cefr" id="mbDCefr" hidden></span><div class="qno" id="mbDNo"></div></div>
+    <div class="card-top"><span class="cefr" id="mbDCefr" hidden></span><div class="card-top-right"><button class="reflect-btn" type="button" data-reflect></button><div class="qno" id="mbDNo"></div></div></div>
     <div class="flabel" style="text-align:center;margin-bottom:4px" id="mbDHead">Type the word</div>
     <div class="readout"><button class="playicon" id="mbDPlay" type="button" aria-label="Listen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div>
     <div class="answer">
@@ -470,7 +473,7 @@
 
   <!-- DECODE CARD -->
   <section id="cardDecode" class="panel hidden">
-    <div class="card-top"><span class="cefr" id="dCefr" hidden></span><div class="qno" id="dNo"></div></div>
+    <div class="card-top"><span class="cefr" id="dCefr" hidden></span><div class="card-top-right"><button class="reflect-btn" type="button" data-reflect></button><div class="qno" id="dNo"></div></div></div>
     <div class="readout"><div class="ipa" id="dIpa"></div>
       <button class="playicon" id="dPlay" type="button" aria-label="Listen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button>
     </div>
@@ -484,7 +487,7 @@
 
   <!-- ENCODE CARD -->
   <section id="cardEncode" class="panel hidden">
-    <div class="card-top"><span class="cefr" id="eCefr" hidden></span><div class="qno" id="eNo"></div></div>
+    <div class="card-top"><span class="cefr" id="eCefr" hidden></span><div class="card-top-right"><button class="reflect-btn" type="button" data-reflect></button><div class="qno" id="eNo"></div></div></div>
     <div class="readout"><div class="wordbig" id="eWord"></div>
       <button class="playicon" id="ePlay" type="button" aria-label="Listen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button>
     </div>
@@ -498,7 +501,7 @@
 
   <!-- REVEAL -->
   <section id="reveal" class="panel hidden">
-    <div class="card-top"><span class="cefr" id="rCefr" hidden></span><div class="qno" id="rNo"></div></div>
+    <div class="card-top"><span class="cefr" id="rCefr" hidden></span><div class="card-top-right"><button class="reflect-btn" type="button" data-reflect></button><div class="qno" id="rNo"></div></div></div>
     <div class="reveal">
       <div class="word" id="rWord"></div>
       <div class="word-gloss" id="rGloss"></div>
@@ -1079,8 +1082,9 @@ function applyI18n() {
   $("nextBtn").textContent = t("next");
   $("tipsHead").textContent = t("tips_head");
   $("weakHead").textContent = t("summary.weak_head");
-  $("againBtn").textContent = t("summary.again");
+  $("againBtn").textContent = t("back_top");
   $("weakBtn").textContent = t("summary.weak_btn");
+  document.querySelectorAll("[data-reflect]").forEach(b => { b.textContent = t("reflect.btn"); });
   ["dPlay", "ePlay", "rPlay"].forEach(id => { const b = $(id); if (b) b.setAttribute("aria-label", t("listen")); });
   $("settingsBtn").setAttribute("aria-label", t("settings_btn"));
   $("settingsScrim").setAttribute("aria-label", t("settings_close"));
@@ -1203,7 +1207,9 @@ function stressSyllable(ipa){const VOWELS=vowelSet();const tk=tokenize(ipa);let 
 
 /* ---------- state ---------- */
 const TRAPSET=new Set(["θ","ð","æ","ʒ","ɝ"]);
-const QUESTION_COUNT = 20;
+const SESSION_INITIAL = 6;
+const SESSION_REFILL = 5;
+const MODEB_QUIZ_ENABLED = false;
 const LS_HIST_KEY = "ept_hist_v1";
 const LS_SYM_KEY = "ept_sym_v1";
 const LS_VOCAB_KEY = "ept_vocab_v1";
@@ -1214,7 +1220,7 @@ const MODEB_DISTRACTOR = { fromNeighbors: 2, fromBand: 1 };
 const MODEB_SESSION = { newCount: 10, reviewCount: 10 };
 const MODEB_BAND_UNLOCK_RATIO = 0.6;
 const BOX_INTERVAL_MS = [0, 3600000, 86400000, 259200000, 604800000, 2592000000];
-let S={appMode:localStorage.getItem("app_mode")||"a",tab:"words",csFilter:"all",csLevel:"all",dir:"decode",focus:"all",reg:"all",grp:"all",cefrLevels:new Set(["A1","A2"]),queue:[],idx:0,correct:0,weak:{},missed:[],cur:null,curCarrier:null,revealed:false,built:[],mbPhase:"mcq",mbQuiz:null};
+let S={appMode:localStorage.getItem("app_mode")||"a",tab:"words",csFilter:"all",csLevel:"all",dir:"decode",focus:"all",reg:"all",grp:"all",cefrLevels:new Set(["A1","A2"]),sessionPool:[],sessionNext:0,poolTotal:0,queue:[],idx:0,answered:0,correct:0,weak:{},missed:[],cur:null,curCarrier:null,revealed:false,built:[],mbPhase:"mcq",mbQuiz:null};
 
 const PH_EXAMPLES={
   "p":[["pay","/peɪ/"],["up","/ʌp/"],["pea","/pi/"]],
@@ -1296,7 +1302,12 @@ function updatePlayCrumb(){
   const acc=ACCENT==="rp"?"RP":"GA";
   $("playCrumb").textContent=playCrumbLearningLabel()+" > "+playCrumbPracticeLabel()+" ("+acc+")";
 }
-function goToTop(){setSetupVisible(true);}
+function goToTop(){
+  if(document.body.classList.contains("in-play")){
+    S.missed=[];S.correct=0;S.weak={};S.answered=0;
+  }
+  setSetupVisible(true);
+}
 $("backTopBtn").addEventListener("click",goToTop);
 $("brandBtn").addEventListener("click",goToTop);
 
@@ -1642,7 +1653,7 @@ function modeBDictCheck(){
 
 
 /* ---------- speech (GAS → Drive → localStorage) ---------- */
-const GAS_TTS_URL = "https://script.google.com/macros/s/AKfycbya7_gej4GlOoeaORxO8fYm6auwtG3qhtbGZtw2ZR8dlyTFtaW6D2JcHJVyyMcCB8Ga/exec";
+const GAS_TTS_URL = "https://script.google.com/macros/s/AKfycbzjvLjcuv19zWm-boiGgREsQCdp4O0dXZh_eYQTFsyyBfAv8Jb2MjAMQpyOT61thgU0/exec";
 const LS_TTS_PREFIX = "ipa_tts_v2:";
 const PREFETCH = { warmChunk: 6, warmParallel: 2, bodyParallel: 3 };
 const memAudioCache = new Map();
@@ -1658,7 +1669,7 @@ function parseSpeakOpts(opts) {
 function ttsAccent(opts) {
   const o = parseSpeakOpts(opts);
   if (o.connected) return "ga";
-  if (o.weak) return currentAccent();
+  if (o.weak) return o.accent || currentAccent();
   return ACCENT === "rp" ? "rp" : "ga";
 }
 function ttsCacheSlug(text, opts) {
@@ -1681,7 +1692,10 @@ function legacyLsKey(text, connected) {
 }
 function memCacheKey(text, opts) {
   const o = parseSpeakOpts(opts);
-  if (o.weak) return currentAccent() + ":weak:" + o.ww;
+  if (o.weak) {
+    const acc = o.accent || currentAccent();
+    return acc + ":weak:" + o.ww + ":" + o.weak;
+  }
   return ttsAccent(o) + ":" + (o.connected ? "p4:" + text.toLowerCase() : text);
 }
 function memKeyAccent(word, accent) {
@@ -1773,7 +1787,7 @@ async function fetchAudioFromGas(text, opts) {
   const o = parseSpeakOpts(opts);
   let q;
   if (o.weak) {
-    const accent = currentAccent();
+    const accent = o.accent || currentAccent();
     q = "weak=" + encodeURIComponent(o.weak) + "&ww=" + encodeURIComponent(o.ww) + "&accent=" + accent;
   } else if (o.connected) {
     q = "phrase=" + encodeURIComponent(text) + "&accent=ga";
@@ -1811,30 +1825,39 @@ function setPlayiconState(btn, { disabled, loading }) {
   btn.setAttribute("aria-busy", loading ? "true" : "false");
 }
 
-function refreshSpeakerFor(word, accent) {
-  const w = currentCardWord();
-  if (!w || w.toLowerCase() !== String(word).toLowerCase()) return;
-  if (accent !== currentAccent()) return;
-  const st = audioReady.get(audioReadyKey(word, accent));
-  const enabled = hasCachedAudioFor(word, accent) || st === "ready" || st === "failed";
-  const loading = !enabled && st === "pending";
-  speakerIdsForCurrentCard().forEach(id => {
-    const btn = $(id);
-    if (btn && !speakBusy) setPlayiconState(btn, { disabled: !enabled, loading });
-  });
+function itemAudioReadyKey(c, accent) {
+  if (!c) return "";
+  if (isWeakItem(c)) return "weak:" + accent + ":" + c.w + ":" + activeIpa(c);
+  if (isConnectedItem(c)) return "conn:ga:" + c.w + ":" + activeIpa(c);
+  return audioReadyKey(c.w, accent);
 }
-
-function refreshAllSpeakers() {
-  if (speakBusy) return;
-  if (S.tab === "connected" || isConnectedItem(S.cur) || isWeakItem(S.cur)) {
+function hasCachedAudioForItem(c, accent) {
+  if (!c) return false;
+  const baseOpts = speakOptsForItem(c);
+  if (!baseOpts.connected && !baseOpts.weak) return hasCachedAudioFor(c.w, accent);
+  const text = c.w;
+  const opts = isWeakItem(c) ? { ...baseOpts, accent } : baseOpts;
+  if (memAudioCache.has(memCacheKey(text, opts))) return true;
+  return !!loadAudioFromLS(text, opts);
+}
+function refreshSpeakerForItem(c) {
+  if (!isCurrentItem(c)) return;
+  if (isConnectedItem(c) || isWeakItem(c)) {
+    const key = itemAudioReadyKey(c, isConnectedItem(c) ? "ga" : currentAccent());
+    const st = audioReady.get(key);
+    const enabled = hasCachedAudioForItem(c, currentAccent()) || st === "ready" || st === "failed";
+    const loading = !enabled && st === "pending";
     speakerIdsForCurrentCard().forEach(id => {
-      const b = $(id);
-      if (b) setPlayiconState(b, { disabled: false, loading: false });
+      const btn = $(id);
+      if (btn && !speakBusy) setPlayiconState(btn, { disabled: !enabled, loading });
     });
     return;
   }
-  const w = currentCardWord();
-  if (w) refreshSpeakerFor(w, currentAccent());
+  refreshSpeakerFor(c.w, currentAccent());
+}
+function refreshAllSpeakers() {
+  if (speakBusy) return;
+  if (S.cur) refreshSpeakerForItem(S.cur);
 }
 
 async function gasWarm(words, accent, token) {
@@ -1852,6 +1875,45 @@ async function gasWarm(words, accent, token) {
         await fetch(GAS_TTS_URL + "?" + q);
       } catch (e) { /* warm failure; body fetch will retry */ }
     }));
+  }
+}
+
+function refreshSpeakerFor(word, accent) {
+  const w = currentCardWord();
+  if (!w || w.toLowerCase() !== String(word).toLowerCase()) return;
+  if (accent !== currentAccent()) return;
+  if (S.cur && (isConnectedItem(S.cur) || isWeakItem(S.cur))) return;
+  const st = audioReady.get(audioReadyKey(word, accent));
+  const enabled = hasCachedAudioFor(word, accent) || st === "ready" || st === "failed";
+  const loading = !enabled && st === "pending";
+  speakerIdsForCurrentCard().forEach(id => {
+    const btn = $(id);
+    if (btn && !speakBusy) setPlayiconState(btn, { disabled: !enabled, loading });
+  });
+}
+
+async function fetchBodyToCacheItem(c, accent, token) {
+  if (token !== prefetchToken || !c) return;
+  const key = itemAudioReadyKey(c, accent);
+  const text = c.w;
+  const baseOpts = speakOptsForItem(c);
+  const opts = isWeakItem(c) ? { ...baseOpts, accent } : baseOpts;
+  if (hasCachedAudioForItem(c, accent)) {
+    audioReady.set(key, "ready");
+    refreshSpeakerForItem(c);
+    return;
+  }
+  try {
+    const data = await fetchAudioFromGas(text, opts);
+    if (token !== prefetchToken) return;
+    saveAudioToLS(text, opts, data.mimeType, data.audio);
+    const blob = new Blob([bytesFromB64(data.audio)], { type: data.mimeType || "audio/mpeg" });
+    memAudioCache.set(memCacheKey(text, opts), URL.createObjectURL(blob));
+    audioReady.set(key, "ready");
+    refreshSpeakerForItem(c);
+  } catch (e) {
+    audioReady.set(key, "failed");
+    refreshSpeakerForItem(c);
   }
 }
 
@@ -1886,56 +1948,100 @@ async function prefetchIdleBodies(words, accent, token) {
 }
 
 async function prefetchAccentBodies(accent) {
-  if (S.tab === "connected" || !S.queue.length) return;
-  const token = prefetchToken;
-  const words = [...new Set(S.queue.map(c => c.w).filter(Boolean))];
-  for (const w of words) {
-    if (!hasCachedAudioFor(w, accent)) audioReady.set(audioReadyKey(w, accent), "pending");
-  }
+  if (!S.queue.length) return;
+  const token = ++prefetchToken;
+  const items = S.queue.slice(S.idx);
+  const words = [...new Set(items.filter(c => !isConnectedItem(c) && !isWeakItem(c)).map(c => c.w).filter(Boolean))];
+  items.forEach(c => {
+    if (isConnectedItem(c)) {
+      const k = itemAudioReadyKey(c, "ga");
+      if (!hasCachedAudioForItem(c, "ga")) audioReady.set(k, "pending");
+    } else if (isWeakItem(c)) {
+      const k = itemAudioReadyKey(c, accent);
+      if (!hasCachedAudioForItem(c, accent)) audioReady.set(k, "pending");
+    } else if (!hasCachedAudioFor(c.w, accent)) {
+      audioReady.set(audioReadyKey(c.w, accent), "pending");
+    }
+  });
   refreshAllSpeakers();
-  let i = 0;
-  async function worker() {
-    while (i < words.length) {
+  let wi = 0;
+  async function wordWorker() {
+    while (wi < words.length) {
       if (token !== prefetchToken) return;
-      const w = words[i++];
+      const w = words[wi++];
       await fetchBodyToCache(w, accent, token);
     }
   }
-  await Promise.all(Array.from({ length: PREFETCH.bodyParallel }, worker));
+  await Promise.all(Array.from({ length: PREFETCH.bodyParallel }, wordWorker));
+  for (const c of items) {
+    if (token !== prefetchToken) return;
+    if (isConnectedItem(c)) await fetchBodyToCacheItem(c, "ga", token);
+    else if (isWeakItem(c)) await fetchBodyToCacheItem(c, accent, token);
+  }
 }
 
-function prefetchSessionAudio(queue) {
-  if (S.tab === "connected") return;
+function prefetchItemsAudio(items) {
+  if (!items.length) return;
   prefetchToken++;
   const token = prefetchToken;
-  const words = [...new Set(queue.map(c => c.w).filter(Boolean))];
-  if (!words.length) return;
   const cur = currentAccent();
   const other = cur === "rp" ? "ga" : "rp";
+  const wordItems = items.filter(c => !isConnectedItem(c) && !isWeakItem(c));
+  const specialItems = items.filter(c => isConnectedItem(c) || isWeakItem(c));
+  const words = [...new Set(wordItems.map(c => c.w).filter(Boolean))];
 
-  for (const w of words) {
-    audioReady.set(audioReadyKey(w, cur), hasCachedAudioFor(w, cur) ? "ready" : "pending");
-    audioReady.set(audioReadyKey(w, other), hasCachedAudioFor(w, other) ? "ready" : "pending");
-  }
+  items.forEach(c => {
+    if (isConnectedItem(c)) {
+      const k = itemAudioReadyKey(c, "ga");
+      audioReady.set(k, hasCachedAudioForItem(c, "ga") ? "ready" : "pending");
+    } else if (isWeakItem(c)) {
+      [cur, other].forEach(acc => {
+        const k = itemAudioReadyKey(c, acc);
+        audioReady.set(k, hasCachedAudioForItem(c, acc) ? "ready" : "pending");
+      });
+    } else {
+      audioReady.set(audioReadyKey(c.w, cur), hasCachedAudioFor(c.w, cur) ? "ready" : "pending");
+      audioReady.set(audioReadyKey(c.w, other), hasCachedAudioFor(c.w, other) ? "ready" : "pending");
+    }
+  });
   refreshAllSpeakers();
 
   (async () => {
-    await Promise.all([gasWarm(words, cur, token), gasWarm(words, other, token)]);
+    if (words.length) {
+      await Promise.all([gasWarm(words, cur, token), gasWarm(words, other, token)]);
+    }
     if (token !== prefetchToken) return;
-    let i = 0;
+    let wi = 0;
     async function bodyWorker() {
-      while (i < words.length) {
+      while (wi < words.length) {
         if (token !== prefetchToken) return;
-        const w = words[i++];
+        const w = words[wi++];
         await fetchBodyToCache(w, cur, token);
       }
     }
     await Promise.all(Array.from({ length: PREFETCH.bodyParallel }, bodyWorker));
     if (token !== prefetchToken) return;
-    const idleFn = () => prefetchIdleBodies(words, other, token);
-    if (typeof requestIdleCallback === "function") requestIdleCallback(idleFn, { timeout: 30000 });
-    else setTimeout(idleFn, 2000);
+    for (const c of specialItems) {
+      if (token !== prefetchToken) return;
+      if (isConnectedItem(c)) await fetchBodyToCacheItem(c, "ga", token);
+      else {
+        await fetchBodyToCacheItem(c, cur, token);
+        if (token !== prefetchToken) return;
+        if (cur !== other) await fetchBodyToCacheItem(c, other, token);
+      }
+    }
+    if (token !== prefetchToken) return;
+    if (words.length) {
+      const idleFn = () => prefetchIdleBodies(words, other, token);
+      if (typeof requestIdleCallback === "function") requestIdleCallback(idleFn, { timeout: 30000 });
+      else setTimeout(idleFn, 2000);
+    }
   })();
+}
+
+/** @deprecated Use prefetchItemsAudio — kept for reference if batch API changes */
+function prefetchSessionAudio(queue) {
+  prefetchItemsAudio(queue);
 }
 
 function setSpeakerBusy(busy) {
@@ -2016,34 +2122,74 @@ function buildSessionQueue(pool,count){
   for(const w of rest){if(out.length>=count)break;out.push(w);used.add(w.w);}
   return shuffle(out).slice(0,count);
 }
-function startSession(weakOnly){
+function sessionItemKey(c){return c&&(c.id||c.w)||"";}
+function isCurrentItem(c){return S.cur&&sessionItemKey(S.cur)===sessionItemKey(c);}
+function queueStock(){return S.queue.length-S.idx-1;}
+function buildSessionPool(weakOnly,missedWords){
   if(S.appMode==="b"){
-    S.queue=buildModeBQueue();S.idx=0;S.correct=0;S.weak={};S.missed=[];S.mbPhase="mcq";S.mbQuiz=null;
-    setSetupVisible(false);
-    prefetchSessionAudio(S.queue);
-    renderCard();
+    const pool=modeBPool();
+    if(MODEB_QUIZ_ENABLED)return buildModeBQueue();
+    return shuffle(pool.map(w=>({...w,mbKind:"study"})));
+  }
+  if(S.tab==="connected"){
+    const all=CONNECTED.concat(WEAK);
+    if(weakOnly&&missedWords.length){
+      return shuffle(all.filter(w=>missedWords.includes(w.w)));
+    }
+    return shuffle(filteredCsPool().slice());
+  }
+  if(weakOnly&&missedWords.length){
+    return shuffle(PRESET.filter(w=>missedWords.includes(w.w)));
+  }
+  const pool=filteredPool().slice();
+  return buildSessionQueue(pool,pool.length);
+}
+function appendSessionBatch(n){
+  if(S.sessionNext>=S.sessionPool.length||n<=0)return[];
+  const batch=S.sessionPool.slice(S.sessionNext,S.sessionNext+Math.min(n,S.sessionPool.length-S.sessionNext));
+  S.sessionNext+=batch.length;
+  S.queue.push(...batch);
+  return batch;
+}
+function ensureQueueStock(){
+  if(queueStock()<5&&S.sessionNext<S.sessionPool.length){
+    const batch=appendSessionBatch(SESSION_REFILL);
+    if(batch.length)prefetchItemsAudio(batch);
+  }
+}
+function sessionFinished(){
+  return S.idx>=S.poolTotal||(S.idx>=S.queue.length&&S.sessionNext>=S.sessionPool.length);
+}
+function initSessionQueue(weakOnly,missedWords){
+  missedWords=missedWords||[];
+  S.sessionPool=buildSessionPool(weakOnly,missedWords);
+  S.poolTotal=S.sessionPool.length;
+  S.sessionNext=0;
+  S.queue=[];
+  const initial=appendSessionBatch(Math.min(SESSION_INITIAL,S.poolTotal));
+  if(initial.length)prefetchItemsAudio(initial);
+}
+function startSession(weakOnly){
+  S.queue=[];S.idx=0;S.answered=0;S.correct=0;S.weak={};
+  const keepMissed=weakOnly?S.missed.slice():[];
+  S.missed=[];
+  S.mbPhase="mcq";S.mbQuiz=null;
+  initSessionQueue(weakOnly,keepMissed);
+  if(weakOnly&&!keepMissed.length){
+    S.sessionPool=[];S.poolTotal=0;
+  }
+  setSetupVisible(false);
+  if(S.poolTotal===0){
+    renderSummary();
     return;
   }
-  let pool;
-  if(S.tab==="connected"){
-    const base=(weakOnly&&S.missed.length)
-      ?CONNECTED.concat(WEAK).filter(w=>S.missed.includes(w.w))
-      :filteredCsPool();
-    pool=shuffle(base.slice());
-    if(pool.length>QUESTION_COUNT)pool=pool.slice(0,QUESTION_COUNT);
-  }else if(weakOnly&&S.missed.length){
-    pool=shuffle(PRESET.filter(w=>S.missed.includes(w.w))).slice(0,QUESTION_COUNT);
-  }else{
-    pool=buildSessionQueue(filteredPool().slice(),QUESTION_COUNT);
-  }
-  S.queue=pool;S.idx=0;S.correct=0;S.weak={};S.missed=[];
-  setSetupVisible(false);
-  prefetchSessionAudio(S.queue);
   renderCard();
 }
+function showReflection(){renderSummary();}
 $("startBtn").addEventListener("click",()=>startSession(false));
-$("againBtn").addEventListener("click",()=>startSession(false));
+$("againBtn").addEventListener("click",goToTop);
 $("weakBtn").addEventListener("click",()=>startSession(true));
+document.querySelectorAll("[data-reflect]").forEach(btn=>btn.addEventListener("click",showReflection));
 
 /* ---------- info rendering ---------- */
 function renderInfo(boxId,sym){
@@ -2105,14 +2251,16 @@ function renderConnectedPrompt(c){
 
 /* ---------- render card (dispatch) ---------- */
 function renderCard(){
+  if(sessionFinished())return renderSummary();
+  ensureQueueStock();
   if(S.idx>=S.queue.length)return renderSummary();
   const c=S.queue[S.idx];S.cur=c;S.revealed=false;S.built=[];S.mbQuiz=null;
   S.curCarrier=(isConnectedItem(c)||isWeakItem(c))?pickCarrier(c):null;
   show("reveal",false);hideModeBCards();
-  $("meter").innerHTML='<b>'+(S.idx+1)+'</b> / '+S.queue.length;
+  $("meter").innerHTML="<b>"+(S.idx+1)+"</b> / "+S.poolTotal;
   if(S.appMode==="b"){
-    if(c.mbKind==="study")renderModeBStudy(c);
-    else renderModeBQuizSpell(c);
+    if(MODEB_QUIZ_ENABLED&&c.mbKind==="quiz")renderModeBQuizSpell(c);
+    else renderModeBStudy(c);
     refreshAllSpeakers();
     return;
   }
@@ -2317,6 +2465,8 @@ function reveal(res,ctx){
   const c=S.cur;S.revealed=true;
   if(S.appMode!=="b")recordHist(c.w,res);
   if(ctx.type==="encode")recordSymEncode(c,ctx.usr||[]);
+  const scored=S.appMode!=="b"||(MODEB_QUIZ_ENABLED&&c.mbKind==="quiz");
+  if(scored)S.answered++;
   if(res==="ok")S.correct++;
   if(res==="bad"&&!S.missed.includes(c.w))S.missed.push(c.w);
   show("cardDecode",false);show("cardEncode",false);hideModeBCards();show("reveal",true);
@@ -2363,9 +2513,11 @@ function reveal(res,ctx){
 }
 function nextCard(){
   const c=S.cur;
-  if(S.appMode==="b"&&c.mbKind==="study"&&!S.revealed){recordModeBStudy(c);S.idx++;renderCard();return;}
+  if(S.appMode==="b"&&c.mbKind==="study"&&!S.revealed){recordModeBStudy(c);S.idx++;ensureQueueStock();renderCard();return;}
   if(S.missed.includes(c.w))phonemesOf(activeIpa(c)).forEach(s=>{if(PH[s].t===1)S.weak[s]=(S.weak[s]||0)+1;});
-  S.idx++;renderCard();
+  S.idx++;
+  ensureQueueStock();
+  renderCard();
 }
 $("nextBtn").addEventListener("click",nextCard);
 $("mbSRevealBtn").addEventListener("click",()=>{
@@ -2393,8 +2545,8 @@ $("rPlay").addEventListener("click",()=>{if(S.cur)speak(S.cur.w,speakOptsForItem
 
 /* ---------- summary ---------- */
 function renderSummary(){
-  show("cardDecode",false);show("cardEncode",false);show("reveal",false);show("summary",true);
-  const total=S.queue.length,pct=total?Math.round(S.correct/total*100):0;
+  show("cardDecode",false);show("cardEncode",false);show("reveal",false);hideModeBCards();show("summary",true);
+  const total=S.answered,pct=total?Math.round(S.correct/total*100):0;
   $("sumPct").textContent=pct;
   $("sumLine").textContent=t("summary.line",{c:S.correct,t:total,m:S.missed.length});
   $("meter").innerHTML='<b>'+t("meter_done")+'</b>';
