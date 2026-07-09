@@ -18,7 +18,8 @@
       "en": "weak 'a' is always /ə/ before a consonant",
       "ja": "弱形の a は子音前で常に /ə/",
       "fil": "mahinang 'a' ay laging /ə/ bago ang katinig"
-    }
+    },
+    "cefr": "A2"
   },
   {
     "id": "wf002",
@@ -39,7 +40,8 @@
       "en": "weak 'an' → /ən/ before a vowel",
       "ja": "弱形の an は母音前で /ən/",
       "fil": "mahinang 'an' → /ən/ bago ang patinig"
-    }
+    },
+    "cefr": "A2"
   },
   {
     "id": "wf003",
@@ -60,7 +62,8 @@
       "en": "weak 'the' → /ðə/ before a consonant",
       "ja": "弱形の the は子音前で /ðə/",
       "fil": "mahinang 'the' → /ðə/ bago ang katinig"
-    }
+    },
+    "cefr": "A2"
   },
   {
     "id": "wf004",
@@ -81,7 +84,8 @@
       "en": "weak 'to' → /tə/ before a consonant",
       "ja": "弱形の to は子音前で /tə/",
       "fil": "mahinang 'to' → /tə/ bago ang katinig"
-    }
+    },
+    "cefr": "A2"
   },
   {
     "id": "wf005",
@@ -102,7 +106,8 @@
       "en": "weak 'of' → /əv/, often /ə/ before a consonant",
       "ja": "弱形の of は /əv/、子音前では /ə/ も",
       "fil": "mahinang 'of' → /əv/, kadalasang /ə/ bago ang katinig"
-    }
+    },
+    "cefr": "A2"
   },
   {
     "id": "wf006",
@@ -123,7 +128,8 @@
       "en": "weak 'and' → /ən/ (d dropped)",
       "ja": "弱形の and は /ən/(d脱落)",
       "fil": "mahinang 'and' → /ən/ (kinakaltas ang d)"
-    }
+    },
+    "cefr": "A2"
   },
   {
     "id": "wf007",
@@ -144,7 +150,8 @@
       "en": "weak 'for' → /fɚ/ (GA) / /fə/ (RP)",
       "ja": "弱形の for は /fɚ/(GA)/fə/(RP)",
       "fil": "mahinang 'for' → /fɚ/ (GA) / /fə/ (RP)"
-    }
+    },
+    "cefr": "A2"
   },
   {
     "id": "wf008",
@@ -165,7 +172,8 @@
       "en": "weak 'at' → /ət/",
       "ja": "弱形の at は /ət/",
       "fil": "mahinang 'at' → /ət/"
-    }
+    },
+    "cefr": "A2"
   },
   {
     "id": "wf009",
@@ -186,7 +194,8 @@
       "en": "weak 'but' → /bət/",
       "ja": "弱形の but は /bət/",
       "fil": "mahinang 'but' → /bət/"
-    }
+    },
+    "cefr": "A2"
   },
   {
     "id": "wf010",
@@ -207,7 +216,8 @@
       "en": "weak 'you' → /jə/ in connected speech",
       "ja": "弱形の you は連結時 /jə/",
       "fil": "mahinang 'you' → /jə/ sa konektadong pananalita"
-    }
+    },
+    "cefr": "A2"
   },
   {
     "id": "wf011",
@@ -228,7 +238,8 @@
       "en": "weak 'can' → /kən/ (strong /kæn/ when stressed)",
       "ja": "弱形の can は /kən/(強形は /kæn/)",
       "fil": "mahinang 'can' → /kən/ (malakas /kæn/ kapag may diin)"
-    }
+    },
+    "cefr": "A2"
   },
   {
     "id": "wf012",
@@ -249,7 +260,8 @@
       "en": "weak 'are' → /ɚ/ (GA) / /ə/ (RP)",
       "ja": "弱形の are は /ɚ/(GA)/ə/(RP)",
       "fil": "mahinang 'are' → /ɚ/ (GA) / /ə/ (RP)"
-    }
+    },
+    "cefr": "B1"
   },
   {
     "id": "wf013",
@@ -270,7 +282,8 @@
       "en": "weak 'was' → /wəz/",
       "ja": "弱形の was は /wəz/",
       "fil": "mahinang 'was' → /wəz/"
-    }
+    },
+    "cefr": "A2"
   },
   {
     "id": "wf014",
@@ -291,7 +304,8 @@
       "en": "weak 'were' → /wɚ/ (GA) / /wə/ (RP)",
       "ja": "弱形の were は /wɚ/(GA)/wə/(RP)",
       "fil": "mahinang 'were' → /wɚ/ (GA) / /wə/ (RP)"
-    }
+    },
+    "cefr": "B1"
   },
   {
     "id": "wf015",
@@ -312,7 +326,8 @@
       "en": "weak 'have' → /həv/, often /əv/ after a pronoun",
       "ja": "弱形の have は /həv/、代名詞後では /əv/ も",
       "fil": "mahinang 'have' → /həv/, kadalasang /əv/ pagkatapos ng panghalip"
-    }
+    },
+    "cefr": "A2"
   },
   {
     "id": "wf016",
@@ -333,7 +348,8 @@
       "en": "weak 'has' → /həz/",
       "ja": "弱形の has は /həz/",
       "fil": "mahinang 'has' → /həz/"
-    }
+    },
+    "cefr": "A2"
   },
   {
     "id": "wf017",
@@ -354,7 +370,8 @@
       "en": "weak 'had' → /həd/, often /əd/ after a pronoun",
       "ja": "弱形の had は /həd/、代名詞後では /əd/ も",
       "fil": "mahinang 'had' → /həd/, kadalasang /əd/ pagkatapos ng panghalip"
-    }
+    },
+    "cefr": "A2"
   },
   {
     "id": "wf018",
@@ -375,7 +392,8 @@
       "en": "weak 'your' → /jɚ/ (GA) / /jə/ (RP)",
       "ja": "弱形の your は /jɚ/(GA)/jə/(RP)",
       "fil": "mahinang 'your' → /jɚ/ (GA) / /jə/ (RP)"
-    }
+    },
+    "cefr": "A2"
   },
   {
     "id": "wf019",
@@ -396,7 +414,8 @@
       "en": "weak 'them' → /ðəm/, often /əm/ casually",
       "ja": "弱形の them は /ðəm/、口語では /əm/ も",
       "fil": "mahinang 'them' → /ðəm/, kadalasang /əm/ sa impormal"
-    }
+    },
+    "cefr": "A2"
   },
   {
     "id": "wf020",
@@ -417,7 +436,8 @@
       "en": "weak 'us' → /əs/",
       "ja": "弱形の us は /əs/",
       "fil": "mahinang 'us' → /əs/"
-    }
+    },
+    "cefr": "A2"
   },
   {
     "id": "wf021",
@@ -438,7 +458,8 @@
       "en": "weak 'from' → /frəm/",
       "ja": "弱形の from は /frəm/",
       "fil": "mahinang 'from' → /frəm/"
-    }
+    },
+    "cefr": "A2"
   },
   {
     "id": "wf022",
@@ -459,7 +480,8 @@
       "en": "weak 'as' → /əz/",
       "ja": "弱形の as は /əz/",
       "fil": "mahinang 'as' → /əz/"
-    }
+    },
+    "cefr": "A2"
   },
   {
     "id": "wf023",
@@ -480,7 +502,8 @@
       "en": "weak 'than' → /ðən/",
       "ja": "弱形の than は /ðən/",
       "fil": "mahinang 'than' → /ðən/"
-    }
+    },
+    "cefr": "A2"
   },
   {
     "id": "wf024",
@@ -501,7 +524,8 @@
       "en": "weak 'some' → /səm/ (uncountable; strong when 'a few')",
       "ja": "弱形の some は /səm/(不可算)",
       "fil": "mahinang 'some' → /səm/ (di-mabilang; malakas kapag 'iilan')"
-    }
+    },
+    "cefr": "A2"
   },
   {
     "id": "wf025",
@@ -522,7 +546,8 @@
       "en": "weak 'could' → /kəd/ (strong /kʊd/ when stressed)",
       "ja": "弱形の could は /kəd/(強形 /kʊd/)",
       "fil": "mahinang 'could' → /kəd/ (malakas /kʊd/ kapag may diin)"
-    }
+    },
+    "cefr": "A2"
   },
   {
     "id": "wf026",
@@ -543,7 +568,8 @@
       "en": "weak 'would' → /wəd/, often /əd/ after a pronoun",
       "ja": "弱形の would は /wəd/、代名詞後では /əd/ も",
       "fil": "mahinang 'would' → /wəd/, kadalasang /əd/ pagkatapos ng panghalip"
-    }
+    },
+    "cefr": "A2"
   },
   {
     "id": "wf027",
@@ -564,7 +590,8 @@
       "en": "weak 'should' → /ʃəd/",
       "ja": "弱形の should は /ʃəd/",
       "fil": "mahinang 'should' → /ʃəd/"
-    }
+    },
+    "cefr": "A2"
   },
   {
     "id": "wf028",
@@ -585,7 +612,8 @@
       "en": "weak 'must' → /məst/",
       "ja": "弱形の must は /məst/",
       "fil": "mahinang 'must' → /məst/"
-    }
+    },
+    "cefr": "A2"
   },
   {
     "id": "wf029",
@@ -606,7 +634,8 @@
       "en": "weak 'do' → /də/ before a consonant in questions",
       "ja": "弱形の do は疑問で子音前 /də/",
       "fil": "mahinang 'do' → /də/ bago ang katinig sa mga tanong"
-    }
+    },
+    "cefr": "B1"
   },
   {
     "id": "wf030",
@@ -627,7 +656,8 @@
       "en": "weak 'does' → /dəz/",
       "ja": "弱形の does は /dəz/",
       "fil": "mahinang 'does' → /dəz/"
-    }
+    },
+    "cefr": "B1"
   },
   {
     "id": "wf031",
@@ -648,7 +678,8 @@
       "en": "weak 'am' → /əm/, often /m/ after I",
       "ja": "弱形の am は /əm/、I の後では /m/ も",
       "fil": "mahinang 'am' → /əm/, kadalasang /m/ pagkatapos ng I"
-    }
+    },
+    "cefr": "B1"
   },
   {
     "id": "wf032",
@@ -669,7 +700,8 @@
       "en": "weak 'he' → /i/ (h dropped after a word)",
       "ja": "弱形の he は /i/(語の後で h 脱落)",
       "fil": "mahinang 'he' → /i/ (kinakaltas ang h pagkatapos ng salita)"
-    }
+    },
+    "cefr": "B1"
   },
   {
     "id": "wf033",
@@ -690,7 +722,8 @@
       "en": "weak 'him' → /ɪm/ (h dropped)",
       "ja": "弱形の him は /ɪm/(h脱落)",
       "fil": "mahinang 'him' → /ɪm/ (kinakaltas ang h)"
-    }
+    },
+    "cefr": "B1"
   },
   {
     "id": "wf034",
@@ -711,7 +744,8 @@
       "en": "weak 'her' → /ɚ/ (GA) / /ə/ (RP), h dropped",
       "ja": "弱形の her は /ɚ/(GA)/ə/(RP)、h脱落",
       "fil": "mahinang 'her' → /ɚ/ (GA) / /ə/ (RP), kinakaltas ang h"
-    }
+    },
+    "cefr": "B1"
   },
   {
     "id": "wf035",
@@ -732,7 +766,8 @@
       "en": "weak 'his' → /ɪz/ (h dropped mid-sentence)",
       "ja": "弱形の his は /ɪz/(文中で h 脱落)",
       "fil": "mahinang 'his' → /ɪz/ (kinakaltas ang h sa gitna ng pangungusap)"
-    }
+    },
+    "cefr": "B1"
   },
   {
     "id": "wf036",
@@ -753,6 +788,7 @@
       "en": "weak 'there' (existential) → /ðɚ/ (GA) / /ðə/ (RP)",
       "ja": "存在の there は弱形 /ðɚ/(GA)/ðə/(RP)",
       "fil": "mahinang 'there' (existential) → /ðɚ/ (GA) / /ðə/ (RP)"
-    }
+    },
+    "cefr": "B1"
   }
 ]

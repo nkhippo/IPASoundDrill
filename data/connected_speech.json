@@ -23,7 +23,8 @@
       "She bought {P} at the store.",
       "There's {P} on the table.",
       "He gave me {P}."
-    ]
+    ],
+    "cefr": "A1"
   },
   {
     "id": "cs002",
@@ -49,7 +50,8 @@
       "He bent down to {P}.",
       "Please {P} before you go.",
       "I'll {P} on my way out."
-    ]
+    ],
+    "cefr": "A1"
   },
   {
     "id": "cs003",
@@ -75,7 +77,8 @@
       "Oh {P}, you can do it.",
       "{P}, the bus is here.",
       "Hey, {P} and join us."
-    ]
+    ],
+    "cefr": "A1"
   },
   {
     "id": "cs004",
@@ -101,7 +104,8 @@
       "Just {P} the time!",
       "Let's {P} the map first.",
       "{P} what you did."
-    ]
+    ],
+    "cefr": "A1"
   },
   {
     "id": "cs005",
@@ -127,7 +131,8 @@
       "Can you {P} for me?",
       "I'll {P} one more time.",
       "Please {P} carefully."
-    ]
+    ],
+    "cefr": "A1"
   },
   {
     "id": "cs006",
@@ -153,7 +158,8 @@
       "Please {P} your phone.",
       "Can you {P} the TV?",
       "I'll {P} the heater now."
-    ]
+    ],
+    "cefr": "A1"
   },
   {
     "id": "cs007",
@@ -179,7 +185,8 @@
       "The meeting lasted {P}.",
       "I'll be there in {P}.",
       "It takes {P} to get there."
-    ]
+    ],
+    "cefr": "A1"
   },
   {
     "id": "cs008",
@@ -205,7 +212,8 @@
       "The beach is {P}.",
       "He moved {P} last year.",
       "It's not that {P}."
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs009",
@@ -231,7 +239,8 @@
       "I think {P} ready now.",
       "Yes, {P} listening.",
       "{P} sure it will work."
-    ]
+    ],
+    "cefr": "A1"
   },
   {
     "id": "cs010",
@@ -257,7 +266,8 @@
       "The clouds will {P} soon.",
       "Tell them to {P}.",
       "I watched the train {P}."
-    ]
+    ],
+    "cefr": "A1"
   },
   {
     "id": "cs011",
@@ -283,7 +293,8 @@
       "This is {P} of the road.",
       "Read it to {P}.",
       "That was {P} of the movie."
-    ]
+    ],
+    "cefr": "A1"
   },
   {
     "id": "cs012",
@@ -309,7 +320,8 @@
       "{P} see that?",
       "Where {P} put my keys?",
       "{P} call her yesterday?"
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs013",
@@ -335,7 +347,8 @@
       "{P} like some tea?",
       "{P} mind helping me?",
       "{P} come with us?"
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs014",
@@ -361,7 +374,8 @@
       "{P} open the window?",
       "{P} explain it again?",
       "{P} wait a moment?"
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs015",
@@ -387,7 +401,8 @@
       "{P} want to come along?",
       "{P} like this one better?",
       "{P} agree with me?"
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs016",
@@ -413,7 +428,8 @@
       "{P} stay a little longer?",
       "{P} try the other door?",
       "{P} call me later?"
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs017",
@@ -439,7 +455,8 @@
       "Let's meet the {P}.",
       "I'll start the {P}.",
       "The {P} was sunny."
-    ]
+    ],
+    "cefr": "B1"
   },
   {
     "id": "cs018",
@@ -465,7 +482,8 @@
       "He {P} home by now.",
       "There {P} a reason.",
       "That {P} the answer."
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs019",
@@ -491,7 +509,8 @@
       "An {P} told the story.",
       "That {P} is my neighbor.",
       "A kind {P} helped us."
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs020",
@@ -517,7 +536,8 @@
       "We met {P}.",
       "It rained all {P}.",
       "She called me {P}."
-    ]
+    ],
+    "cefr": "B1"
   },
   {
     "id": "cs021",
@@ -543,7 +563,8 @@
       "He's my {P}.",
       "My {P} lives nearby.",
       "You're my {P}."
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs022",
@@ -569,7 +590,8 @@
       "There's {P} food left.",
       "She knows {P} people.",
       "We had {P} fun."
-    ]
+    ],
+    "cefr": "A1"
   },
   {
     "id": "cs023",
@@ -595,7 +617,8 @@
       "I missed {P}.",
       "This is {P}.",
       "He explained {P}."
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs024",
@@ -621,7 +644,8 @@
       "{P}, we need a plan.",
       "{P}, check the date.",
       "{P}, sit down."
-    ]
+    ],
+    "cefr": "A1"
   },
   {
     "id": "cs025",
@@ -647,7 +671,8 @@
       "She likes him {P}.",
       "Prices rise {P}.",
       "We hear it {P}."
-    ]
+    ],
+    "cefr": "A1"
   },
   {
     "id": "cs026",
@@ -673,7 +698,8 @@
       "I need to {P} the house.",
       "Try to {P} trouble.",
       "Help me {P} this."
-    ]
+    ],
+    "cefr": "A1"
   },
   {
     "id": "cs027",
@@ -699,7 +725,8 @@
       "Please {P}.",
       "{P}, let me check.",
       "Just {P}."
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs028",
@@ -725,7 +752,8 @@
       "I'm {P} tired.",
       "That's {P} true.",
       "No trouble {P}."
-    ]
+    ],
+    "cefr": "A1"
   },
   {
     "id": "cs029",
@@ -751,7 +779,8 @@
       "Take {P}.",
       "He's {P}.",
       "Pick {P}."
-    ]
+    ],
+    "cefr": "A1"
   },
   {
     "id": "cs030",
@@ -777,7 +806,8 @@
       "Ah, {P}!",
       "{P} on that one.",
       "Okay, {P}."
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs031",
@@ -803,7 +833,8 @@
       "Is that {P} want?",
       "Tell me {P} need.",
       "That's {P} said."
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs032",
@@ -829,7 +860,8 @@
       "{P} waiting a moment?",
       "{P} helping me?",
       "{P} repeating that?"
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs033",
@@ -855,7 +887,8 @@
       "Take a map {P} you get lost.",
       "Save some {P} we need it.",
       "Call me {P} of trouble."
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs034",
@@ -881,7 +914,8 @@
       "I saw {P}.",
       "{P} were playing.",
       "We counted {P}."
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs035",
@@ -907,7 +941,8 @@
       "What a {P}!",
       "Such a {P}.",
       "That's a {P}."
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs036",
@@ -933,7 +968,8 @@
       "{P} is closed.",
       "Take {P} to court.",
       "We dropped {P}."
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs037",
@@ -959,7 +995,8 @@
       "Oh, {P}.",
       "{P}, take care.",
       "{P}! That was a big sneeze."
-    ]
+    ],
+    "cefr": "B2"
   },
   {
     "id": "cs038",
@@ -985,7 +1022,8 @@
       "I'm {P} tired.",
       "That's {P} strange.",
       "He's {P} shy."
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs039",
@@ -1011,7 +1049,8 @@
       "I'm {P} hungry.",
       "That's {P} odd.",
       "She's {P} busy."
-    ]
+    ],
+    "cefr": "B2"
   },
   {
     "id": "cs040",
@@ -1037,7 +1076,8 @@
       "Let's {P} first.",
       "Please {P} about it.",
       "We should {P}."
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs041",
@@ -1063,7 +1103,8 @@
       "I'll {P} tomorrow.",
       "Don't {P} yet.",
       "Can you {P}?"
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs042",
@@ -1089,7 +1130,8 @@
       "Please {P} a hand.",
       "We should {P} a chance.",
       "Let me {P} this."
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs043",
@@ -1115,7 +1157,8 @@
       "She made a {P}.",
       "A {P}, please.",
       "He poured a {P}."
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs044",
@@ -1141,7 +1184,8 @@
       "There's {P} left.",
       "Take {P}.",
       "I need {P}."
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs045",
@@ -1167,7 +1211,8 @@
       "We'll {P} a note.",
       "Please {P} home.",
       "Let me {P}."
-    ]
+    ],
+    "cefr": "B1"
   },
   {
     "id": "cs046",
@@ -1193,7 +1238,8 @@
       "Tell me, {P}?",
       "{P} from the shop?",
       "{P} to drink?"
-    ]
+    ],
+    "cefr": "A1"
   },
   {
     "id": "cs047",
@@ -1219,7 +1265,8 @@
       "{P} these days?",
       "So, {P}?",
       "Hey, {P}?"
-    ]
+    ],
+    "cefr": "A1"
   },
   {
     "id": "cs048",
@@ -1245,7 +1292,8 @@
       "{P} what I made.",
       "{P} the new place.",
       "Won't you {P}?"
-    ]
+    ],
+    "cefr": "A1"
   },
   {
     "id": "cs049",
@@ -1271,7 +1319,8 @@
       "Did you {P}?",
       "I failed to {P}.",
       "Try to {P}."
-    ]
+    ],
+    "cefr": "A1"
   },
   {
     "id": "cs050",
@@ -1297,7 +1346,8 @@
       "We saw {P}.",
       "He ate {P}.",
       "I learned {P}."
-    ]
+    ],
+    "cefr": "B1"
   },
   {
     "id": "cs051",
@@ -1323,7 +1373,8 @@
       "I want to {P}.",
       "Please {P}.",
       "We'll {P} now."
-    ]
+    ],
+    "cefr": "A1"
   },
   {
     "id": "cs052",
@@ -1349,7 +1400,8 @@
       "{P}, she left.",
       "Then, {P}, it stopped.",
       "{P}, everyone cheered."
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs053",
@@ -1375,7 +1427,8 @@
       "{P}, or are you hungry?",
       "So, {P}?",
       "{P}, friend?"
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs054",
@@ -1401,7 +1454,8 @@
       "{P} more?",
       "Excuse me, {P}?",
       "{P} cake?"
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs055",
@@ -1427,7 +1481,8 @@
       "{P}, finally!",
       "It's {P}.",
       "{P}, sir."
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs056",
@@ -1453,7 +1508,8 @@
       "{P} it clearly?",
       "But {P}?",
       "Really, {P}?"
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs057",
@@ -1479,7 +1535,8 @@
       "The train leaves at {P}.",
       "We meet at {P}.",
       "It's already {P}."
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs058",
@@ -1505,7 +1562,8 @@
       "{P} is lovely.",
       "Meet me at {P}.",
       "{P} has a pond."
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs059",
@@ -1531,7 +1589,8 @@
       "Please, {P}?",
       "{P} for tea?",
       "Oh, {P}?"
-    ]
+    ],
+    "cefr": "B1"
   },
   {
     "id": "cs060",
@@ -1557,7 +1616,8 @@
       "{P} is busy.",
       "We met {P}.",
       "Maybe {P}."
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs061",
@@ -1583,7 +1643,8 @@
       "We'll {P}.",
       "I really {P}.",
       "They {P} too."
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs062",
@@ -1609,7 +1670,8 @@
       "{P} the answer.",
       "Well, {P}.",
       "Sorry, {P}."
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs063",
@@ -1635,7 +1697,8 @@
       "Tell me, {P}?",
       "So, {P}?",
       "Hey, {P}?"
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs064",
@@ -1661,7 +1724,8 @@
       "Give it {P}.",
       "Wait {P}.",
       "In {P}, we'll know."
-    ]
+    ],
+    "cefr": "B1"
   },
   {
     "id": "cs065",
@@ -1687,7 +1751,8 @@
       "I love {P}.",
       "Order {P}.",
       "{P}, please."
-    ]
+    ],
+    "cefr": "B2"
   },
   {
     "id": "cs066",
@@ -1713,7 +1778,8 @@
       "We had {P}.",
       "Just {P}, please.",
       "I made {P}."
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs067",
@@ -1739,7 +1805,8 @@
       "{P} forever.",
       "Between {P}, it's fine.",
       "{P} against the world."
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs068",
@@ -1765,7 +1832,8 @@
       "{P} it would fail.",
       "Honestly, {P}.",
       "Well, {P}."
-    ]
+    ],
+    "cefr": "B2"
   },
   {
     "id": "cs069",
@@ -1791,7 +1859,8 @@
       "That test was {P}.",
       "Easy — {P}.",
       "Truly {P}."
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs070",
@@ -1817,7 +1886,8 @@
       "It's totally {P}.",
       "Sorry, it's {P}.",
       "Quitting is {P}."
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs071",
@@ -1843,7 +1913,8 @@
       "There's a stain {P}.",
       "Put your name {P}.",
       "Don't step {P}."
-    ]
+    ],
+    "cefr": "A1"
   },
   {
     "id": "cs072",
@@ -1869,7 +1940,8 @@
       "Look what's {P}.",
       "Nothing is {P}.",
       "Keep the money {P}."
-    ]
+    ],
+    "cefr": "A1"
   },
   {
     "id": "cs073",
@@ -1895,7 +1967,8 @@
       "Please {P} now.",
       "We need to {P}.",
       "Time to {P}."
-    ]
+    ],
+    "cefr": "A1"
   },
   {
     "id": "cs074",
@@ -1921,7 +1994,8 @@
       "Come in and {P}.",
       "Let's {P} together.",
       "He told me to {P}."
-    ]
+    ],
+    "cefr": "A1"
   },
   {
     "id": "cs075",
@@ -1947,7 +2021,8 @@
       "Please {P} a second.",
       "{P} tight!",
       "Just {P} for me."
-    ]
+    ],
+    "cefr": "A1"
   },
   {
     "id": "cs076",
@@ -1973,7 +2048,8 @@
       "Please {P} so we can see.",
       "I'll {P} for you.",
       "{P} when it gets dark."
-    ]
+    ],
+    "cefr": "A1"
   },
   {
     "id": "cs077",
@@ -1999,7 +2075,8 @@
       "Please {P} while it's hot.",
       "I'll {P} later.",
       "Don't {P} too fast."
-    ]
+    ],
+    "cefr": "A1"
   },
   {
     "id": "cs078",
@@ -2025,7 +2102,8 @@
       "I'll {P} tonight.",
       "Can you {P} for me?",
       "She'll {P} to the class."
-    ]
+    ],
+    "cefr": "A1"
   },
   {
     "id": "cs079",
@@ -2051,7 +2129,8 @@
       "{P} if you need help.",
       "They'll {P} tomorrow.",
       "Just {P} anytime."
-    ]
+    ],
+    "cefr": "A1"
   },
   {
     "id": "cs080",
@@ -2077,7 +2156,8 @@
       "Can you {P} out?",
       "They came to {P}.",
       "{P} carry the boxes."
-    ]
+    ],
+    "cefr": "A1"
   },
   {
     "id": "cs081",
@@ -2103,7 +2183,8 @@
       "{P} seen it before?",
       "{P} finished it already?",
       "{P} met him once?"
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs082",
@@ -2129,7 +2210,8 @@
       "Let me {P} a seat.",
       "We'll {P} there soon.",
       "I'll {P} a ticket."
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs083",
@@ -2155,7 +2237,8 @@
       "They won't {P} in.",
       "We'll {P} go early.",
       "I'll {P} decide."
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs084",
@@ -2181,7 +2264,8 @@
       "We {P} the news.",
       "She {P} the truth.",
       "I already {P} that."
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs085",
@@ -2207,7 +2291,8 @@
       "{P} were waiting.",
       "There were {P}.",
       "I counted {P}."
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs086",
@@ -2233,7 +2318,8 @@
       "{P} like coffee.",
       "I know {P} who tried it.",
       "{P} were kind."
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs087",
@@ -2259,7 +2345,8 @@
       "For the {P}, it worked.",
       "That's the {P} I've seen it.",
       "This is the {P} today."
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs088",
@@ -2285,7 +2372,8 @@
       "Take the {P} ahead.",
       "A {P} is coming up.",
       "He made a {P}."
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs089",
@@ -2311,7 +2399,8 @@
       "We {P} during the show.",
       "They {P} about it.",
       "He {P} all evening."
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs090",
@@ -2337,7 +2426,8 @@
       "We hiked on a {P}.",
       "What a {P}!",
       "It's a {P} outside."
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs091",
@@ -2363,7 +2453,8 @@
       "Can you {P}?",
       "Let me {P}.",
       "Please {P} online."
-    ]
+    ],
+    "cefr": "A1"
   },
   {
     "id": "cs092",
@@ -2389,7 +2480,8 @@
       "Let me {P}.",
       "Please {P} carefully.",
       "We should {P}."
-    ]
+    ],
+    "cefr": "A1"
   },
   {
     "id": "cs093",
@@ -2415,7 +2507,8 @@
       "I'll come {P} I can.",
       "Leave {P} possible.",
       "We'll start {P} ready."
-    ]
+    ],
+    "cefr": "A1"
   },
   {
     "id": "cs094",
@@ -2441,7 +2534,8 @@
       "Pick a color {P} blue.",
       "Try a sport {P} tennis.",
       "Use a tool {P} a hammer."
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs095",
@@ -2467,7 +2561,8 @@
       "You'll {P} tired.",
       "They {P} happy.",
       "I always {P} here."
-    ]
+    ],
+    "cefr": "A1"
   },
   {
     "id": "cs096",
@@ -2493,7 +2588,8 @@
       "Can you {P}?",
       "I'll {P} later.",
       "{P} carefully."
-    ]
+    ],
+    "cefr": "A1"
   },
   {
     "id": "cs097",
@@ -2519,7 +2615,8 @@
       "Don't {P} time.",
       "They {P} money.",
       "I'll {P} ideas soon."
-    ]
+    ],
+    "cefr": "A1"
   },
   {
     "id": "cs098",
@@ -2545,7 +2642,8 @@
       "{P}, people agreed.",
       "It's fine, {P}.",
       "{P}, we're ready."
-    ]
+    ],
+    "cefr": "A1"
   },
   {
     "id": "cs099",
@@ -2571,7 +2669,8 @@
       "{P} coming too?",
       "{P} happy now?",
       "{P} ready yet?"
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs100",
@@ -2597,7 +2696,8 @@
       "{P} heard the news?",
       "{P} seen it?",
       "{P} been there?"
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs101",
@@ -2623,7 +2723,8 @@
       "I heard {P}.",
       "This is {P}.",
       "Tell me {P}."
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs102",
@@ -2649,7 +2750,8 @@
       "Look {P}!",
       "The door is {P}.",
       "Someone is {P}."
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs103",
@@ -2675,7 +2777,8 @@
       "What a {P}!",
       "He's a {P}.",
       "Such a {P}."
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs104",
@@ -2701,7 +2804,8 @@
       "I know {P}.",
       "Tell {P} to wait.",
       "{P} runs fast."
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs105",
@@ -2727,7 +2831,8 @@
       "I'll have {P}.",
       "Give me {P}.",
       "{P} won't hurt."
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs106",
@@ -2753,7 +2858,8 @@
       "Pack a {P}.",
       "The {P} tore.",
       "Here's a {P}."
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs107",
@@ -2779,7 +2885,8 @@
       "I know {P}.",
       "{P} agreed.",
       "There were {P}."
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs108",
@@ -2805,7 +2912,8 @@
       "I know {P}.",
       "{P} left early.",
       "Take {P}."
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs109",
@@ -2831,7 +2939,8 @@
       "Can you {P}?",
       "{P}, please.",
       "Could you {P}?"
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs110",
@@ -2857,7 +2966,8 @@
       "{P} told a story.",
       "I visited {P}.",
       "{P} is napping."
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs111",
@@ -2883,7 +2993,8 @@
       "We value {P}.",
       "{P} matters.",
       "It's a true {P}."
-    ]
+    ],
+    "cefr": "B1"
   },
   {
     "id": "cs112",
@@ -2909,7 +3020,8 @@
       "A {P} asked for help.",
       "A {P} walked by.",
       "That {P} is brave."
-    ]
+    ],
+    "cefr": "B2"
   },
   {
     "id": "cs113",
@@ -2935,7 +3047,8 @@
       "Please {P} first.",
       "Let's {P}.",
       "Can you {P}?"
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs114",
@@ -2961,7 +3074,8 @@
       "I'll {P}.",
       "Can you {P}?",
       "Let's {P}."
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs115",
@@ -2987,7 +3101,8 @@
       "So, {P} lately?",
       "{P} this weekend?",
       "{P} these days?"
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs116",
@@ -3013,7 +3128,8 @@
       "Why not {P}?",
       "Let's {P}.",
       "I'll {P}."
-    ]
+    ],
+    "cefr": "A1"
   },
   {
     "id": "cs117",
@@ -3039,7 +3155,8 @@
       "Please {P}.",
       "Just {P}.",
       "{P} this weekend."
-    ]
+    ],
+    "cefr": "A1"
   },
   {
     "id": "cs118",
@@ -3065,7 +3182,8 @@
       "It happens {P}.",
       "{P}, treat yourself.",
       "I call her {P}."
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs119",
@@ -3091,7 +3209,8 @@
       "Prices go {P}.",
       "The kids ran {P}.",
       "It moved {P}."
-    ]
+    ],
+    "cefr": "A1"
   },
   {
     "id": "cs120",
@@ -3117,7 +3236,8 @@
       "We traveled {P}.",
       "Flowers grew {P}.",
       "People stood {P}."
-    ]
+    ],
+    "cefr": "A1"
   },
   {
     "id": "cs121",
@@ -3143,7 +3263,8 @@
       "We practiced {P}.",
       "It played {P}.",
       "He said it {P}."
-    ]
+    ],
+    "cefr": "A1"
   },
   {
     "id": "cs122",
@@ -3169,7 +3290,8 @@
       "{P} about a thing.",
       "{P}, I've got this.",
       "Please {P}."
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs123",
@@ -3195,7 +3317,8 @@
       "{P} of the plan?",
       "Tell me, {P}?",
       "Hey, {P}?"
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs124",
@@ -3221,7 +3344,8 @@
       "Excuse me, {P} the time?",
       "{P} your name?",
       "Please, {P}?"
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs125",
@@ -3247,7 +3371,8 @@
       "{P} the door?",
       "Excuse me, {P} it?",
       "Sorry, {P} that?"
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs126",
@@ -3273,7 +3398,8 @@
       "Hi, {P}?",
       "Hey, {P} going?",
       "{P} so far?"
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs127",
@@ -3299,7 +3425,8 @@
       "{P}, then.",
       "As you like — {P}.",
       "Fine, {P}."
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs128",
@@ -3325,7 +3452,8 @@
       "Please {P} button.",
       "{P} hand against it.",
       "{P} key now."
-    ]
+    ],
+    "cefr": "B2"
   },
   {
     "id": "cs129",
@@ -3351,7 +3479,8 @@
       "{P} try again.",
       "I think {P} win.",
       "{P} leave soon."
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs130",
@@ -3377,7 +3506,8 @@
       "Do you {P}?",
       "We {P} now.",
       "They {P} too."
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs131",
@@ -3403,7 +3533,8 @@
       "She poured {P}.",
       "{P}, please.",
       "Bring me {P}."
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs132",
@@ -3429,7 +3560,8 @@
       "A {P}, please.",
       "She made a {P}.",
       "Want a {P}?"
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs133",
@@ -3455,7 +3587,8 @@
       "It's quiet {P}.",
       "{P}, we go home.",
       "By {P}, it's done."
-    ]
+    ],
+    "cefr": "B1"
   },
   {
     "id": "cs134",
@@ -3481,7 +3614,8 @@
       "It'll happen {P}.",
       "{P}, we all do.",
       "You'll know {P}."
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs135",
@@ -3507,7 +3641,8 @@
       "It rains {P}.",
       "{P}, I visit.",
       "She calls {P}."
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs136",
@@ -3533,7 +3668,8 @@
       "{P}, please sit.",
       "Good evening, {P}.",
       "{P}, the show begins."
-    ]
+    ],
+    "cefr": "B2"
   },
   {
     "id": "cs137",
@@ -3559,7 +3695,8 @@
       "{P}, but I stayed.",
       "Honestly, {P}.",
       "{P} with you."
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs138",
@@ -3585,7 +3722,8 @@
       "It's cold, so {P}.",
       "Grab your hat and {P}.",
       "{P} before you leave."
-    ]
+    ],
+    "cefr": "A1"
   },
   {
     "id": "cs139",
@@ -3611,7 +3749,8 @@
       "Please {P} now.",
       "Time to {P}.",
       "We {P} at dawn."
-    ]
+    ],
+    "cefr": "A1"
   },
   {
     "id": "cs140",
@@ -3637,7 +3776,8 @@
       "Everyone, {P}.",
       "Let's {P} together.",
       "He told me to {P}."
-    ]
+    ],
+    "cefr": "A1"
   },
   {
     "id": "cs141",
@@ -3663,7 +3803,8 @@
       "She wants {P}.",
       "There's {P} left.",
       "He dropped {P}."
-    ]
+    ],
+    "cefr": "A1"
   },
   {
     "id": "cs142",
@@ -3689,7 +3830,8 @@
       "{P} are blue.",
       "Look at {P}.",
       "{P} were closed."
-    ]
+    ],
+    "cefr": "A1"
   },
   {
     "id": "cs143",
@@ -3715,7 +3857,8 @@
       "{P} is mine.",
       "Try {P} instead.",
       "{P} looks better."
-    ]
+    ],
+    "cefr": "A1"
   },
   {
     "id": "cs144",
@@ -3741,7 +3884,8 @@
       "We'll {P} a copy.",
       "They'll {P} the form.",
       "Let me {P} it."
-    ]
+    ],
+    "cefr": "B1"
   },
   {
     "id": "cs145",
@@ -3767,7 +3911,8 @@
       "I'll {P} there.",
       "We'll {P} soon.",
       "Glad to {P}."
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs146",
@@ -3793,7 +3938,8 @@
       "There are {P}.",
       "Buy {P}.",
       "I counted {P}."
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs147",
@@ -3819,7 +3965,8 @@
       "The {P} is mine.",
       "I want a {P}.",
       "That {P} is fast."
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs148",
@@ -3845,7 +3992,8 @@
       "Order a {P}.",
       "A {P}, please.",
       "He drank a {P}."
-    ]
+    ],
+    "cefr": "B1"
   },
   {
     "id": "cs149",
@@ -3871,7 +4019,8 @@
       "He ate a {P}.",
       "A {P}, please.",
       "She grilled a {P}."
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs150",
@@ -3897,7 +4046,8 @@
       "We saw a {P}.",
       "The {P} sang.",
       "That {P} is rare."
-    ]
+    ],
+    "cefr": "B1"
   },
   {
     "id": "cs151",
@@ -3923,7 +4073,8 @@
       "He took the {P}.",
       "The {P} went to her.",
       "They claimed the {P}."
-    ]
+    ],
+    "cefr": "B2"
   },
   {
     "id": "cs152",
@@ -3949,7 +4100,8 @@
       "It's {P} the street.",
       "Wait {P} the line.",
       "{P} the month, we pay."
-    ]
+    ],
+    "cefr": "A1"
   },
   {
     "id": "cs153",
@@ -3975,7 +4127,8 @@
       "Can you {P}?",
       "I'll {P}.",
       "{P} before bed."
-    ]
+    ],
+    "cefr": "A1"
   },
   {
     "id": "cs154",
@@ -4001,7 +4154,8 @@
       "We admired the {P}.",
       "Such {P}!",
       "Famous {P} hang here."
-    ]
+    ],
+    "cefr": "A1"
   },
   {
     "id": "cs155",
@@ -4027,7 +4181,8 @@
       "{P} agreed.",
       "It surprised {P}.",
       "{P} were ready."
-    ]
+    ],
+    "cefr": "A1"
   },
   {
     "id": "cs156",
@@ -4053,7 +4208,8 @@
       "{P} help?",
       "{P} swim?",
       "{P} see it?"
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs157",
@@ -4079,7 +4235,8 @@
       "I'll wait {P} finish.",
       "Smile {P} can.",
       "Leave {P} like."
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs158",
@@ -4105,7 +4262,8 @@
       "That topic is a {P}.",
       "A real {P}!",
       "He dropped the {P}."
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs159",
@@ -4131,7 +4289,8 @@
       "What a {P}!",
       "Such a {P}.",
       "He met a {P}."
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs160",
@@ -4157,7 +4316,8 @@
       "They {P} all night.",
       "She {P} despite it.",
       "He {P} for hours."
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs161",
@@ -4183,7 +4343,8 @@
       "We {P} at the door.",
       "He {P} sadly.",
       "They {P} together."
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs162",
@@ -4209,7 +4370,8 @@
       "The {P} is full.",
       "Buy a {P}.",
       "A {P} fits everyone."
-    ]
+    ],
+    "cefr": "B1"
   },
   {
     "id": "cs163",
@@ -4235,7 +4397,8 @@
       "Please {P}.",
       "Can you {P}?",
       "Let's {P}."
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs164",
@@ -4261,7 +4424,8 @@
       "{P}, it's true.",
       "Well, {P}.",
       "{P}, she called."
-    ]
+    ],
+    "cefr": "B1"
   },
   {
     "id": "cs165",
@@ -4287,7 +4451,8 @@
       "She's {P}.",
       "That's {P}.",
       "Meet {P}."
-    ]
+    ],
+    "cefr": "A1"
   },
   {
     "id": "cs166",
@@ -4313,7 +4478,8 @@
       "People moved {P}.",
       "It breathes {P}.",
       "She ran {P}."
-    ]
+    ],
+    "cefr": "A1"
   },
   {
     "id": "cs167",
@@ -4339,7 +4505,8 @@
       "It grows {P}.",
       "{P}, we learn.",
       "Save {P}."
-    ]
+    ],
+    "cefr": "A1"
   },
   {
     "id": "cs168",
@@ -4365,7 +4532,8 @@
       "It's {P} done.",
       "No, {P}.",
       "{P}, but soon."
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs169",
@@ -4391,7 +4559,8 @@
       "{P} was hard.",
       "We met {P}.",
       "It rained a lot {P}."
-    ]
+    ],
+    "cefr": "B1"
   },
   {
     "id": "cs170",
@@ -4417,7 +4586,8 @@
       "{P} the news?",
       "Honestly, {P}?",
       "{P} that?"
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs171",
@@ -4443,7 +4613,8 @@
       "{P} about it?",
       "Hey, {P}?",
       "{P} the truth?"
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs172",
@@ -4469,7 +4640,8 @@
       "It's {P}.",
       "Enjoy {P}.",
       "That's {P}."
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs173",
@@ -4495,7 +4667,8 @@
       "Just {P}.",
       "Only {P}.",
       "It's only {P}."
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs174",
@@ -4521,7 +4694,8 @@
       "We have {P}.",
       "{P} here.",
       "It has {P}."
-    ]
+    ],
+    "cefr": "B1"
   },
   {
     "id": "cs175",
@@ -4547,7 +4721,8 @@
       "{P} agreed.",
       "Where are {P}?",
       "{P} stayed."
-    ]
+    ],
+    "cefr": "B2"
   },
   {
     "id": "cs176",
@@ -4573,7 +4748,8 @@
       "{P}, we plan.",
       "Above all, {P}.",
       "{P}, stay calm."
-    ]
+    ],
+    "cefr": "B2"
   },
   {
     "id": "cs177",
@@ -4599,7 +4775,8 @@
       "We scrubbed on {P}.",
       "She crawled on {P}.",
       "On {P}, they searched."
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs178",
@@ -4625,7 +4802,8 @@
       "I don't mind {P}.",
       "Nothing {P}.",
       "Is it cold {P}?"
-    ]
+    ],
+    "cefr": "A1"
   },
   {
     "id": "cs179",
@@ -4651,7 +4829,8 @@
       "She ate a {P}.",
       "That's a {P}!",
       "Here's a {P}."
-    ]
+    ],
+    "cefr": "A1"
   },
   {
     "id": "cs180",
@@ -4677,7 +4856,8 @@
       "Please {P} before the run.",
       "We need to {P}.",
       "Time to {P}."
-    ]
+    ],
+    "cefr": "A1"
   },
   {
     "id": "cs181",
@@ -4703,7 +4883,8 @@
       "Those were {P}.",
       "They faced {P}.",
       "Through {P}, we coped."
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs182",
@@ -4729,7 +4910,8 @@
       "Watch the {P}.",
       "He has a {P}.",
       "There's a {P} here."
-    ]
+    ],
+    "cefr": "B2"
   },
   {
     "id": "cs183",
@@ -4755,7 +4937,8 @@
       "It failed, {P}.",
       "{P}, no more.",
       "We lost, {P}."
-    ]
+    ],
+    "cefr": "A1"
   },
   {
     "id": "cs184",
@@ -4781,7 +4964,8 @@
       "We support {P}.",
       "Love {P}.",
       "They met {P}."
-    ]
+    ],
+    "cefr": "A1"
   },
   {
     "id": "cs185",
@@ -4807,7 +4991,8 @@
       "We'll {P}.",
       "Let me {P}.",
       "They'll {P}."
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs186",
@@ -4833,7 +5018,8 @@
       "{P}, I'm worried.",
       "{P}, this stays here.",
       "Just {P}."
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs187",
@@ -4859,7 +5045,8 @@
       "It {P}.",
       "Don't worry, {P}.",
       "I {P}."
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs188",
@@ -4885,7 +5072,8 @@
       "I love it {P}.",
       "{P}, stay safe.",
       "Above all, {P}."
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs189",
@@ -4911,7 +5099,8 @@
       "So, {P}?",
       "{P} today?",
       "{P}, friend?"
-    ]
+    ],
+    "cefr": "B1"
   },
   {
     "id": "cs190",
@@ -4937,7 +5126,8 @@
       "{P} the result.",
       "Don't worry, {P}.",
       "{P} tomorrow."
-    ]
+    ],
+    "cefr": "B1"
   },
   {
     "id": "cs191",
@@ -4963,7 +5153,8 @@
       "{P}, then.",
       "Okay, {P}.",
       "Bye, {P}."
-    ]
+    ],
+    "cefr": "A1"
   },
   {
     "id": "cs192",
@@ -4989,7 +5180,8 @@
       "It works {P}.",
       "{P}, stay put.",
       "Use this {P}."
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs193",
@@ -5015,7 +5207,8 @@
       "I have {P} to do.",
       "We discussed {P}.",
       "{P} went wrong."
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs194",
@@ -5041,7 +5234,8 @@
       "{P}, it's fine.",
       "By {P}, we're tired.",
       "{P}, what matters is health."
-    ]
+    ],
+    "cefr": "B1"
   },
   {
     "id": "cs195",
@@ -5067,7 +5261,8 @@
       "It's {P}.",
       "Frankly, {P}.",
       "Sorry, {P}."
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs196",
@@ -5093,7 +5288,8 @@
       "Well, {P}.",
       "Oh, {P}.",
       "And {P}, here he is."
-    ]
+    ],
+    "cefr": "B2"
   },
   {
     "id": "cs197",
@@ -5119,7 +5315,8 @@
       "Cross to {P}.",
       "{P} is quieter.",
       "Look at {P}."
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs198",
@@ -5145,7 +5342,8 @@
       "{P}, I agree.",
       "That's {P} right.",
       "We're {P} ready."
-    ]
+    ],
+    "cefr": "B1"
   },
   {
     "id": "cs199",
@@ -5171,7 +5369,8 @@
       "I'll {P}.",
       "Please {P}.",
       "We should {P}."
-    ]
+    ],
+    "cefr": "B2"
   },
   {
     "id": "cs200",
@@ -5197,7 +5396,8 @@
       "{P} for everything.",
       "{P}, that's kind.",
       "I just want to say {P}."
-    ]
+    ],
+    "cefr": "A2"
   },
   {
     "id": "cs201",
@@ -5223,6 +5423,7 @@
       "{P}!",
       "Bye, {P}.",
       "Okay, {P}."
-    ]
+    ],
+    "cefr": "A1"
   }
 ]

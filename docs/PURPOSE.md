@@ -73,8 +73,8 @@
 | gloss 品質（多言語UI） | en/ja/zh/ko/fil **実装済み**（既存3,059語 + Phase 1 M1:180 + M2:400 + M3:400、合計4,039語） |
 | UI 言語 fil（Tier 1） | **実装済み**（156キー + 音素解説 fil + 言語ピッカー） |
 | 英語定義 `def` | **完了**（3,059/3,059語。batch01–08） |
-| 弱形（36語） | **実装済み**（Connected Speech 内 Type=weak。`weak_forms.json` + `?weak=` TTS） |
-| 連結句拡張（201句） | **実装済み**（STEP6・キャリア文出題） |
+| 弱形（36語） | **実装済み**（Connected Speech 内 Type=weak。`weak_forms.json` + `?weak=` TTS。**CEFR ラベル付与済み**） |
+| 連結句拡張（201句） | **実装済み**（STEP6・キャリア文出題。**CEFR ラベル付与済み**） |
 | 多言語学習ガイド | ✅ フェーズ1（en/ja/ko/zh-Hant/zh-Hans/**fil**） |
 | 語彙ブラウザ | **実装済み**（Words 3,059 / Phrases 201） |
 | `neighbors` 事前計算 | 実装済み（2,623/3,059語） |
@@ -109,6 +109,7 @@
 
 | 日付 | 版 | 内容 |
 |------|----|------|
+| 2026-07-09 | v3.9 | 連結句 201句・弱形 36語に `cefr` フィールドを付与（Claude 提案を算出結果どおり採用）。UI バッジ表示は別途。 |
 | 2026-07-09 | v3.8.1 | `friendliness` の GA IPA 誤記（RP 用 `ː` 混入）を訂正。respelling 例外を解消（`FREHND-lee-nuhs`）。 |
 | 2026-07-09 | v3.8 | Phase 1 M3: B1 拡充 400語（`entertain`〜`marine`）を IPA/pos/def/gloss5言語付きでマージ。総語数 4,039、B1=1,327。`merge_respelling.py` の pending クリア問題を恒久修正。 |
 | 2026-07-08 | v3.7 | Phase 1 M2: B1 拡充 400語（`biography`〜`enrich`）を IPA/pos/def/gloss5言語付きでマージ。総語数 3,639、B1=927。 |

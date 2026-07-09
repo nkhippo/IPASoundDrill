@@ -1,0 +1,1187 @@
+[
+  {
+    "id": "cs001",
+    "w": "an apple",
+    "cefr": "A1"
+  },
+  {
+    "id": "cs002",
+    "w": "pick it up",
+    "cefr": "A1"
+  },
+  {
+    "id": "cs003",
+    "w": "come on",
+    "cefr": "A1"
+  },
+  {
+    "id": "cs004",
+    "w": "look at",
+    "cefr": "A1"
+  },
+  {
+    "id": "cs005",
+    "w": "check it",
+    "cefr": "A1"
+  },
+  {
+    "id": "cs006",
+    "w": "turn off",
+    "cefr": "A1"
+  },
+  {
+    "id": "cs007",
+    "w": "an hour",
+    "cefr": "A1"
+  },
+  {
+    "id": "cs008",
+    "w": "far away",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs009",
+    "w": "I am",
+    "cefr": "A1"
+  },
+  {
+    "id": "cs010",
+    "w": "go away",
+    "cefr": "A1"
+  },
+  {
+    "id": "cs011",
+    "w": "the end",
+    "cefr": "A1"
+  },
+  {
+    "id": "cs012",
+    "w": "did you",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs013",
+    "w": "would you",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs014",
+    "w": "could you",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs015",
+    "w": "don't you",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs016",
+    "w": "won't you",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs017",
+    "w": "next day",
+    "cefr": "B1"
+  },
+  {
+    "id": "cs018",
+    "w": "must be",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs019",
+    "w": "old man",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs020",
+    "w": "last night",
+    "cefr": "B1"
+  },
+  {
+    "id": "cs021",
+    "w": "best friend",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs022",
+    "w": "a lot of",
+    "cefr": "A1"
+  },
+  {
+    "id": "cs023",
+    "w": "part of it",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs024",
+    "w": "first of all",
+    "cefr": "A1"
+  },
+  {
+    "id": "cs025",
+    "w": "more and more",
+    "cefr": "A1"
+  },
+  {
+    "id": "cs026",
+    "w": "get out of",
+    "cefr": "A1"
+  },
+  {
+    "id": "cs027",
+    "w": "hold on a sec",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs028",
+    "w": "not at all",
+    "cefr": "A1"
+  },
+  {
+    "id": "cs029",
+    "w": "one of them",
+    "cefr": "A1"
+  },
+  {
+    "id": "cs030",
+    "w": "got you",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs031",
+    "w": "what you",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs032",
+    "w": "would you mind",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs033",
+    "w": "in case",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs034",
+    "w": "ten boys",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs035",
+    "w": "good boy",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs036",
+    "w": "that case",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs037",
+    "w": "bless you",
+    "cefr": "B2"
+  },
+  {
+    "id": "cs038",
+    "w": "kind of",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs039",
+    "w": "sort of",
+    "cefr": "B2"
+  },
+  {
+    "id": "cs040",
+    "w": "ask them",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs041",
+    "w": "tell him",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs042",
+    "w": "give her",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs043",
+    "w": "cup of tea",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs044",
+    "w": "lots of time",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs045",
+    "w": "send them",
+    "cefr": "B1"
+  },
+  {
+    "id": "cs046",
+    "w": "what do you want",
+    "cefr": "A1"
+  },
+  {
+    "id": "cs047",
+    "w": "how are you doing",
+    "cefr": "A1"
+  },
+  {
+    "id": "cs048",
+    "w": "come and see",
+    "cefr": "A1"
+  },
+  {
+    "id": "cs049",
+    "w": "pick up on it",
+    "cefr": "A1"
+  },
+  {
+    "id": "cs050",
+    "w": "an awful lot of it",
+    "cefr": "B1"
+  },
+  {
+    "id": "cs051",
+    "w": "get it over with",
+    "cefr": "A1"
+  },
+  {
+    "id": "cs052",
+    "w": "all of a sudden",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs053",
+    "w": "did you eat yet",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs054",
+    "w": "would you like some",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs055",
+    "w": "nice to meet you",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs056",
+    "w": "can't you see",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs057",
+    "w": "ten past nine",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs058",
+    "w": "green park",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs059",
+    "w": "won't you come in",
+    "cefr": "B1"
+  },
+  {
+    "id": "cs060",
+    "w": "this year",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs061",
+    "w": "miss you",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs062",
+    "w": "I don't know",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs063",
+    "w": "what's the matter",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs064",
+    "w": "a couple of days",
+    "cefr": "B1"
+  },
+  {
+    "id": "cs065",
+    "w": "fish and chips",
+    "cefr": "B2"
+  },
+  {
+    "id": "cs066",
+    "w": "bread and butter",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs067",
+    "w": "you and me",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs068",
+    "w": "I should have known",
+    "cefr": "B2"
+  },
+  {
+    "id": "cs069",
+    "w": "a piece of cake",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs070",
+    "w": "out of the question",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs071",
+    "w": "on it",
+    "cefr": "A1"
+  },
+  {
+    "id": "cs072",
+    "w": "in it",
+    "cefr": "A1"
+  },
+  {
+    "id": "cs073",
+    "w": "get up",
+    "cefr": "A1"
+  },
+  {
+    "id": "cs074",
+    "w": "sit down",
+    "cefr": "A1"
+  },
+  {
+    "id": "cs075",
+    "w": "hold on",
+    "cefr": "A1"
+  },
+  {
+    "id": "cs076",
+    "w": "turn it on",
+    "cefr": "A1"
+  },
+  {
+    "id": "cs077",
+    "w": "eat it",
+    "cefr": "A1"
+  },
+  {
+    "id": "cs078",
+    "w": "read it",
+    "cefr": "A1"
+  },
+  {
+    "id": "cs079",
+    "w": "call us",
+    "cefr": "A1"
+  },
+  {
+    "id": "cs080",
+    "w": "help us",
+    "cefr": "A1"
+  },
+  {
+    "id": "cs081",
+    "w": "had you",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs082",
+    "w": "get you",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs083",
+    "w": "let you",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs084",
+    "w": "told you",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs085",
+    "w": "ten men",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs086",
+    "w": "most people",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs087",
+    "w": "first time",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs088",
+    "w": "left turn",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs089",
+    "w": "kept quiet",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs090",
+    "w": "cold day",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs091",
+    "w": "look it up",
+    "cefr": "A1"
+  },
+  {
+    "id": "cs092",
+    "w": "think about it",
+    "cefr": "A1"
+  },
+  {
+    "id": "cs093",
+    "w": "as soon as",
+    "cefr": "A1"
+  },
+  {
+    "id": "cs094",
+    "w": "such as",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs095",
+    "w": "end up",
+    "cefr": "A1"
+  },
+  {
+    "id": "cs096",
+    "w": "fill it in",
+    "cefr": "A1"
+  },
+  {
+    "id": "cs097",
+    "w": "run out of",
+    "cefr": "A1"
+  },
+  {
+    "id": "cs098",
+    "w": "by and large",
+    "cefr": "A1"
+  },
+  {
+    "id": "cs099",
+    "w": "aren't you",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs100",
+    "w": "haven't you",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs101",
+    "w": "about you",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs102",
+    "w": "behind you",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs103",
+    "w": "good cook",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs104",
+    "w": "that boy",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs105",
+    "w": "one more",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs106",
+    "w": "brown bag",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs107",
+    "w": "a lot of people",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs108",
+    "w": "most of them",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs109",
+    "w": "hand me that",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs110",
+    "w": "grandpa",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs111",
+    "w": "friendship",
+    "cefr": "B1"
+  },
+  {
+    "id": "cs112",
+    "w": "blind man",
+    "cefr": "B2"
+  },
+  {
+    "id": "cs113",
+    "w": "ask her",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs114",
+    "w": "give it to him",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs115",
+    "w": "what are you up to",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs116",
+    "w": "give it a go",
+    "cefr": "A1"
+  },
+  {
+    "id": "cs117",
+    "w": "take it easy",
+    "cefr": "A1"
+  },
+  {
+    "id": "cs118",
+    "w": "once in a while",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs119",
+    "w": "up and down",
+    "cefr": "A1"
+  },
+  {
+    "id": "cs120",
+    "w": "here and there",
+    "cefr": "A1"
+  },
+  {
+    "id": "cs121",
+    "w": "over and over",
+    "cefr": "A1"
+  },
+  {
+    "id": "cs122",
+    "w": "don't you worry",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs123",
+    "w": "what do you think",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs124",
+    "w": "could you tell me",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs125",
+    "w": "would you mind closing",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs126",
+    "w": "how's your day",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs127",
+    "w": "as you wish",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs128",
+    "w": "press your",
+    "cefr": "B2"
+  },
+  {
+    "id": "cs129",
+    "w": "I'm going to",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs130",
+    "w": "want to go",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs131",
+    "w": "a glass of water",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs132",
+    "w": "cup of coffee",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs133",
+    "w": "the end of the day",
+    "cefr": "B1"
+  },
+  {
+    "id": "cs134",
+    "w": "sooner or later",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs135",
+    "w": "now and then",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs136",
+    "w": "ladies and gentlemen",
+    "cefr": "B2"
+  },
+  {
+    "id": "cs137",
+    "w": "I could have gone",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs138",
+    "w": "put it on",
+    "cefr": "A1"
+  },
+  {
+    "id": "cs139",
+    "w": "wake up",
+    "cefr": "A1"
+  },
+  {
+    "id": "cs140",
+    "w": "stand up",
+    "cefr": "A1"
+  },
+  {
+    "id": "cs141",
+    "w": "an egg",
+    "cefr": "A1"
+  },
+  {
+    "id": "cs142",
+    "w": "his eyes",
+    "cefr": "A1"
+  },
+  {
+    "id": "cs143",
+    "w": "this one",
+    "cefr": "A1"
+  },
+  {
+    "id": "cs144",
+    "w": "send you",
+    "cefr": "B1"
+  },
+  {
+    "id": "cs145",
+    "w": "meet you",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs146",
+    "w": "ten cups",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs147",
+    "w": "green car",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs148",
+    "w": "soft drink",
+    "cefr": "B1"
+  },
+  {
+    "id": "cs149",
+    "w": "hot dog",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs150",
+    "w": "wild bird",
+    "cefr": "B1"
+  },
+  {
+    "id": "cs151",
+    "w": "grand prize",
+    "cefr": "B2"
+  },
+  {
+    "id": "cs152",
+    "w": "at the end of",
+    "cefr": "A1"
+  },
+  {
+    "id": "cs153",
+    "w": "turn it off",
+    "cefr": "A1"
+  },
+  {
+    "id": "cs154",
+    "w": "works of art",
+    "cefr": "A1"
+  },
+  {
+    "id": "cs155",
+    "w": "none of us",
+    "cefr": "A1"
+  },
+  {
+    "id": "cs156",
+    "w": "can you",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs157",
+    "w": "when you",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs158",
+    "w": "hot potato",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs159",
+    "w": "sweet girl",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs160",
+    "w": "kept going",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs161",
+    "w": "looked back",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs162",
+    "w": "round table",
+    "cefr": "B1"
+  },
+  {
+    "id": "cs163",
+    "w": "find them",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs164",
+    "w": "as a matter of fact",
+    "cefr": "B1"
+  },
+  {
+    "id": "cs165",
+    "w": "a friend of mine",
+    "cefr": "A1"
+  },
+  {
+    "id": "cs166",
+    "w": "in and out",
+    "cefr": "A1"
+  },
+  {
+    "id": "cs167",
+    "w": "little by little",
+    "cefr": "A1"
+  },
+  {
+    "id": "cs168",
+    "w": "not yet",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs169",
+    "w": "last year",
+    "cefr": "B1"
+  },
+  {
+    "id": "cs170",
+    "w": "would you believe",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs171",
+    "w": "did you know",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs172",
+    "w": "the best of both",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs173",
+    "w": "a matter of time",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs174",
+    "w": "plenty of room",
+    "cefr": "B1"
+  },
+  {
+    "id": "cs175",
+    "w": "the rest of them",
+    "cefr": "B2"
+  },
+  {
+    "id": "cs176",
+    "w": "first and foremost",
+    "cefr": "B2"
+  },
+  {
+    "id": "cs177",
+    "w": "hands and knees",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs178",
+    "w": "at all",
+    "cefr": "A1"
+  },
+  {
+    "id": "cs179",
+    "w": "big apple",
+    "cefr": "A1"
+  },
+  {
+    "id": "cs180",
+    "w": "warm up",
+    "cefr": "A1"
+  },
+  {
+    "id": "cs181",
+    "w": "hard times",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs182",
+    "w": "blind spot",
+    "cefr": "B2"
+  },
+  {
+    "id": "cs183",
+    "w": "end of story",
+    "cefr": "A1"
+  },
+  {
+    "id": "cs184",
+    "w": "one another",
+    "cefr": "A1"
+  },
+  {
+    "id": "cs185",
+    "w": "set you up",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs186",
+    "w": "between you and me",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs187",
+    "w": "won't be long",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs188",
+    "w": "most of all",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs189",
+    "w": "what's up with you",
+    "cefr": "B1"
+  },
+  {
+    "id": "cs190",
+    "w": "I'll let you know",
+    "cefr": "B1"
+  },
+  {
+    "id": "cs191",
+    "w": "see you around",
+    "cefr": "A1"
+  },
+  {
+    "id": "cs192",
+    "w": "for the time being",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs193",
+    "w": "a number of things",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs194",
+    "w": "at the end of the day",
+    "cefr": "B1"
+  },
+  {
+    "id": "cs195",
+    "w": "none of your business",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs196",
+    "w": "speak of the devil",
+    "cefr": "B2"
+  },
+  {
+    "id": "cs197",
+    "w": "the other side",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs198",
+    "w": "more or less",
+    "cefr": "B1"
+  },
+  {
+    "id": "cs199",
+    "w": "get rid of it",
+    "cefr": "B2"
+  },
+  {
+    "id": "cs200",
+    "w": "thank you",
+    "cefr": "A2"
+  },
+  {
+    "id": "cs201",
+    "w": "see you later",
+    "cefr": "A1"
+  },
+  {
+    "id": "wf001",
+    "w": "a",
+    "cefr": "A2"
+  },
+  {
+    "id": "wf002",
+    "w": "an",
+    "cefr": "A2"
+  },
+  {
+    "id": "wf003",
+    "w": "the",
+    "cefr": "A2"
+  },
+  {
+    "id": "wf004",
+    "w": "to",
+    "cefr": "A2"
+  },
+  {
+    "id": "wf005",
+    "w": "of",
+    "cefr": "A2"
+  },
+  {
+    "id": "wf006",
+    "w": "and",
+    "cefr": "A2"
+  },
+  {
+    "id": "wf007",
+    "w": "for",
+    "cefr": "A2"
+  },
+  {
+    "id": "wf008",
+    "w": "at",
+    "cefr": "A2"
+  },
+  {
+    "id": "wf009",
+    "w": "but",
+    "cefr": "A2"
+  },
+  {
+    "id": "wf010",
+    "w": "you",
+    "cefr": "A2"
+  },
+  {
+    "id": "wf011",
+    "w": "can",
+    "cefr": "A2"
+  },
+  {
+    "id": "wf012",
+    "w": "are",
+    "cefr": "B1"
+  },
+  {
+    "id": "wf013",
+    "w": "was",
+    "cefr": "A2"
+  },
+  {
+    "id": "wf014",
+    "w": "were",
+    "cefr": "B1"
+  },
+  {
+    "id": "wf015",
+    "w": "have",
+    "cefr": "A2"
+  },
+  {
+    "id": "wf016",
+    "w": "has",
+    "cefr": "A2"
+  },
+  {
+    "id": "wf017",
+    "w": "had",
+    "cefr": "A2"
+  },
+  {
+    "id": "wf018",
+    "w": "your",
+    "cefr": "A2"
+  },
+  {
+    "id": "wf019",
+    "w": "them",
+    "cefr": "A2"
+  },
+  {
+    "id": "wf020",
+    "w": "us",
+    "cefr": "A2"
+  },
+  {
+    "id": "wf021",
+    "w": "from",
+    "cefr": "A2"
+  },
+  {
+    "id": "wf022",
+    "w": "as",
+    "cefr": "A2"
+  },
+  {
+    "id": "wf023",
+    "w": "than",
+    "cefr": "A2"
+  },
+  {
+    "id": "wf024",
+    "w": "some",
+    "cefr": "A2"
+  },
+  {
+    "id": "wf025",
+    "w": "could",
+    "cefr": "A2"
+  },
+  {
+    "id": "wf026",
+    "w": "would",
+    "cefr": "A2"
+  },
+  {
+    "id": "wf027",
+    "w": "should",
+    "cefr": "A2"
+  },
+  {
+    "id": "wf028",
+    "w": "must",
+    "cefr": "A2"
+  },
+  {
+    "id": "wf029",
+    "w": "do",
+    "cefr": "B1"
+  },
+  {
+    "id": "wf030",
+    "w": "does",
+    "cefr": "B1"
+  },
+  {
+    "id": "wf031",
+    "w": "am",
+    "cefr": "B1"
+  },
+  {
+    "id": "wf032",
+    "w": "he",
+    "cefr": "B1"
+  },
+  {
+    "id": "wf033",
+    "w": "him",
+    "cefr": "B1"
+  },
+  {
+    "id": "wf034",
+    "w": "her",
+    "cefr": "B1"
+  },
+  {
+    "id": "wf035",
+    "w": "his",
+    "cefr": "B1"
+  },
+  {
+    "id": "wf036",
+    "w": "there",
+    "cefr": "B1"
+  }
+]
