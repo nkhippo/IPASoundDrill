@@ -145508,9 +145508,9 @@
     ],
     "respell_ga": "shayk-SPI-ree-uhn",
     "respell_rp": "shayk-SPI-ree-uhn",
-    "rp_ipa": "/ˌʃeɪkˈspɪəiːən/",
-    "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "rp_ipa": "/ˌʃeɪkˈspɪriːən/",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "length_marking_only"
   },
   {
     "w": "Soviet",
@@ -146333,9 +146333,9 @@
     ],
     "respell_ga": "AD-muh-ruh-buhl",
     "respell_rp": "AD-muh-ruh-buhl",
-    "rp_ipa": "/ˈædməəbəl/",
-    "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "rp_ipa": "/ˈædmərəbəl/",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
   },
   {
     "w": "admiringly",
@@ -146356,9 +146356,9 @@
     "neighbors": [],
     "respell_ga": "ad-MY-ring-lee",
     "respell_rp": "ad-MY-ring-lee",
-    "rp_ipa": "/ædˈmaɪəɪŋliː/",
-    "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "rp_ipa": "/ædˈmaɪrɪŋliː/",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "length_marking_only"
   },
   {
     "w": "admittedly",
@@ -146783,9 +146783,9 @@
     "neighbors": [
       "aggressive"
     ],
-    "rp_ipa": "/əˈɡesɪvliː/",
-    "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "rp_ipa": "/əˈɡresɪvliː/",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "notation_composite"
   },
   {
     "w": "agony",
@@ -146857,9 +146857,9 @@
       "screw",
       "crew"
     ],
-    "rp_ipa": "/ˈeəˌkuː/",
+    "rp_ipa": "/ˈeəˌkruː/",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same_reason": "rhoticity"
   },
   {
     "w": "alcoholism",
@@ -147638,9 +147638,9 @@
     ],
     "respell_ga": "ANG-kuh-rij",
     "respell_rp": "ANG-kuh-rij",
-    "rp_ipa": "/ˈæŋkəɪdʒ/",
-    "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "rp_ipa": "/ˈæŋkərɪdʒ/",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
   },
   {
     "w": "anchorman",
@@ -147778,9 +147778,9 @@
     "neighbors": [
       "aircraft"
     ],
-    "rp_ipa": "/ˌæntiːˈeəˌkæft/",
+    "rp_ipa": "/ˌæntiːˈeəˌkræft/",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same_reason": "rhoticity"
   },
   {
     "w": "antibacterial",
@@ -147799,9 +147799,9 @@
     "group": null,
     "pattern": null,
     "neighbors": [],
-    "rp_ipa": "/ˌæntiːbækˈtɪəiːəl/",
-    "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "rp_ipa": "/ˌæntiːbækˈtɪriːəl/",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "length_marking_only"
   },
   {
     "w": "anticancer",
@@ -148017,7 +148017,7 @@
     "ipa_actual_ga": "/əˈpriʃəɾɪv/",
     "respell_ga": "uh-PREE-shuh-div",
     "respell_rp": "uh-PREE-shuh-tiv",
-    "rp_ipa": "/əˈpiːʃətɪv/",
+    "rp_ipa": "/əˈpriːʃətɪv/",
     "ga_rp_same": false,
     "ga_rp_same_reason": "ga_allophony"
   },
@@ -148134,9 +148134,9 @@
     "group": null,
     "pattern": null,
     "neighbors": [],
-    "rp_ipa": "/ˌæəˈstɒkəsiː/",
+    "rp_ipa": "/ˌærəˈstɒkrəsiː/",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same_reason": "lot_vowel"
   },
   {
     "w": "armful",
@@ -148221,9 +148221,9 @@
     ],
     "respell_ga": "A-ruh-guhnt",
     "respell_rp": "A-ruh-guhnt",
-    "rp_ipa": "/ˈæəɡənt/",
-    "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "rp_ipa": "/ˈærəɡənt/",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
   },
   {
     "w": "artery",
@@ -148323,7 +148323,7 @@
       "honesty"
     ],
     "ipa_actual_ga": "/ˈɑrɾəstri/",
-    "rp_ipa": "/ˈɑːtəstiː/",
+    "rp_ipa": "/ˈɑːtəstriː/",
     "ga_rp_same": false,
     "ga_rp_same_reason": "ga_allophony"
   },
@@ -149007,9 +149007,9 @@
     ],
     "respell_ga": "uh-TRAK-tiv-nuhs",
     "respell_rp": "uh-TRAK-tiv-nuhs",
-    "rp_ipa": "/əˈtæktɪvnəs/",
-    "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "rp_ipa": "/əˈtræktɪvnəs/",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
   },
   {
     "w": "attribute",
@@ -149166,7 +149166,7 @@
     "ipa_actual_ga": "/əˈθɔrəˌɾeɪɾɪv/",
     "respell_ga": "uh-THAW-ruh-day-div",
     "respell_rp": "uh-THAW-ruh-tay-tiv",
-    "rp_ipa": "/əˈθɔːəˌteɪtɪv/",
+    "rp_ipa": "/əˈθɔːrəˌteɪtɪv/",
     "ga_rp_same": false,
     "ga_rp_same_reason": "ga_allophony"
   },
@@ -149560,9 +149560,9 @@
     ],
     "respell_ga": "BANG-kruhpt",
     "respell_rp": "BANG-kruhpt",
-    "rp_ipa": "/ˈbæŋˌkʌpt/",
-    "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "rp_ipa": "/ˈbæŋˌkrʌpt/",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
   },
   {
     "w": "bankruptcy",
@@ -149660,7 +149660,7 @@
     "pattern": null,
     "neighbors": [],
     "ipa_actual_ga": "/bəˈrɑməɾɚ/",
-    "rp_ipa": "/bəˈɒmətə/",
+    "rp_ipa": "/bəˈrɒmətə/",
     "ga_rp_same": false,
     "ga_rp_same_reason": "ga_allophony"
   },
@@ -149692,9 +149692,9 @@
     ],
     "respell_ga": "BA-ruhn",
     "respell_rp": "BA-ruhn",
-    "rp_ipa": "/ˈbæən/",
-    "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "rp_ipa": "/ˈbærən/",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
   },
   {
     "w": "barrier",

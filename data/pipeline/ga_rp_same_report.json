@@ -1,21 +1,21 @@
 {
   "wordlist": {
     "total": 5007,
-    "same": 2407,
-    "different": 2600,
+    "same": 2417,
+    "different": 2590,
     "by_reason": {
-      "identical": 1429,
+      "identical": 1435,
       "ga_allophony": 464,
-      "rhoticity": 737,
+      "rhoticity": 736,
       "dress_notation_only": 381,
       "trap_bath": 72,
       "goat_vowel": 263,
-      "length_marking_only": 504,
-      "structural_other": 711,
+      "length_marking_only": 507,
+      "structural_other": 701,
       "stress_placement": 29,
-      "notation_composite": 58,
+      "notation_composite": 59,
       "weak_vowel": 99,
-      "lot_vowel": 204,
+      "lot_vowel": 205,
       "yod": 21,
       "stress_marking_only": 35
     }
