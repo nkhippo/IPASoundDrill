@@ -199,8 +199,7 @@ def primary_syllable_index(s: str) -> int:
 
 RHOTICITY_MAP = [
     ("aʊr", "aʊə"), ("aɪr", "aɪə"), ("ɔɪr", "ɔɪə"), ("eɪr", "eɪə"),
-    ("ɑr", "ɑː"),   ("ɔr", "ɔː"),   ("ɪr", "ɪə"),   ("ɛr", "eə"),
-    ("ʊr", "ʊə"),
+    ("ɑr", "ɑː"),   ("ɔr", "ɔː"),
 ]
 
 def apply_rhoticity(ga_inner: str) -> str:
@@ -260,38 +259,36 @@ def reason_when_different(word: str, ga_raw: str, rp_raw: str) -> str:
         if notation_norm(expand_ga_rhotic_vowels(ga_inner.replace("u", "ju"))) == rp_norm:
             return "yod"
 
-    # 2. Rhoticity — apply non-rhotic transform to GA, compare
+    # 2. SQUARE / NEAR / CURE (before rhoticity so ɛr/ɪr/ʊr are not absorbed)
+    ga_sq = expand_ga_rhotic_vowels(ga_inner).replace("ɛr", "eə").replace("ɪr", "ɪə").replace("ʊr", "ʊə")
+    if notation_norm(ga_sq) == rp_norm:
+        return "square_near_cure"
+
+    # 3. Rhoticity — apply non-rhotic transform to GA, compare
     ga_derhotic = apply_rhoticity(ga_inner)
     if notation_norm(ga_derhotic) == rp_norm:
         return "rhoticity"
 
-    # 3. GOAT — after rhoticity
+    # 4. GOAT — after rhoticity
     ga_goat = ga_derhotic.replace("oʊ", "əʊ")
     if notation_norm(ga_goat) == rp_norm:
         return "goat_vowel" if ga_derhotic != ga_goat else "rhoticity"
 
-    # 4. LOT
+    # 5. LOT
     ga_lot = ga_goat.replace("ɑ", "ɒ")
     if notation_norm(ga_lot) == rp_norm:
         return "lot_vowel" if ga_goat != ga_lot else "goat_vowel"
 
-    # 5. TRAP-BATH (word-triggered)
+    # 6. TRAP-BATH (word-triggered)
     if word.lower() in BATH_WORDS or ("æ" in ga_inner and "ɑː" in rp_inner):
         ga_bath = ga_lot.replace("æ", "ɑː")
         if notation_norm(ga_bath) == rp_norm:
             return "trap_bath"
 
-    # 6. CLOTH-LOT / COT-CAUGHT split (GA merges ɔ/ɑ; RP separates)
-    #    GA "bought" /bɑt/ vs RP /bɔːt/: GA ɑ → RP ɔː
-    ga_cot = ga_lot.replace("ɑ", "ɔː")
+    # 7. CLOTH-LOT / COT-CAUGHT split (base on ga_goat so ɑ is still available)
+    ga_cot = ga_goat.replace("ɑ", "ɔː")
     if notation_norm(ga_cot) == rp_norm:
         return "cot_caught"
-
-    # 7. SQUARE / NEAR / CURE composites (peel goat/lot after rhoticity)
-    #    "bear" /bɛr/ → /beə/, "dear" /dɪr/ → /dɪə/
-    ga_sq = expand_ga_rhotic_vowels(ga_inner).replace("ɛr", "eə").replace("ɪr", "ɪə").replace("ʊr", "ʊə")
-    if notation_norm(ga_sq) == rp_norm:
-        return "square_near_cure"
 
     # 8. Composite structural (rhoticity + BATH / rhoticity + LOT etc.)
     ga_combo = apply_rhoticity(ga_inner)
@@ -300,6 +297,13 @@ def reason_when_different(word: str, ga_raw: str, rp_raw: str) -> str:
         ga_combo = ga_combo.replace("æ", "ɑː")
     if notation_norm(ga_combo) == rp_norm:
         return "composite_structural"
+
+    # 8b. Composite structural v2: BATH middle-syllable + first-syllable weak-vowel
+    if word.lower() in BATH_WORDS and "æ" in ga_inner:
+        ga_combo_v2 = apply_rhoticity(ga_inner).replace("oʊ", "əʊ").replace("ɑ", "ɒ")
+        ga_combo_v2 = ga_combo_v2.replace("æ", "ə", 1).replace("æ", "ɑː")
+        if notation_norm(ga_combo_v2) == rp_norm:
+            return "composite_structural"
 
     # 9. Try weak-vowel: ə ↔ ɪ swap in unstressed syllables
     ga_exp = expand_ga_rhotic_vowels(ga_inner)

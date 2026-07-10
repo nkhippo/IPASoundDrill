@@ -1737,7 +1737,7 @@
     ],
     "cefr": "A2",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "id": "cs061",
@@ -4898,7 +4898,7 @@
     ],
     "cefr": "B1",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "trap_bath"
+    "ga_rp_same_reason": "structural_other"
   },
   {
     "id": "cs170",

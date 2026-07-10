@@ -526,7 +526,7 @@
     "respell_ga": "ER-port",
     "respell_rp": "AIR-pawt",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "structural_other"
   },
   {
     "w": "album",
@@ -1561,7 +1561,7 @@
     "respell_ga": "AH-guhst",
     "respell_rp": "AW-guhst",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same_reason": "cot_caught"
   },
   {
     "w": "aunt",
@@ -2268,7 +2268,7 @@
     "respell_ga": "BER",
     "respell_rp": "BAIR",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "beautiful",
@@ -3641,7 +3641,7 @@
     "respell_ga": "BAHT",
     "respell_rp": "BAWT",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same_reason": "cot_caught"
   },
   {
     "w": "bowl",
@@ -5102,7 +5102,7 @@
     "respell_ga": "KER",
     "respell_rp": "KAIR",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "careful",
@@ -5134,7 +5134,7 @@
     "respell_ga": "KER-fuhl",
     "respell_rp": "KAIR-fuhl",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "carefully",
@@ -5166,7 +5166,7 @@
     "respell_ga": "KER-fuh-lee",
     "respell_rp": "KAIR-fuh-lee",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "carry",
@@ -5355,7 +5355,7 @@
     "respell_ga": "KAHT",
     "respell_rp": "KAWT",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same_reason": "cot_caught"
   },
   {
     "w": "cd",
@@ -5471,7 +5471,7 @@
     "respell_ga": "CHER",
     "respell_rp": "CHAIR",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "change",
@@ -7844,7 +7844,7 @@
     "respell_ga": "DEER",
     "respell_rp": "DEER",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "december",
@@ -9764,7 +9764,7 @@
     "respell_ga": "ehn-juh-NEER",
     "respell_rp": "ehn-juh-NEER",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "enjoy",
@@ -10396,7 +10396,7 @@
     "respell_ga": "FER",
     "respell_rp": "FAIR",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "fairy",
@@ -13985,7 +13985,7 @@
     "respell_ga": "HER",
     "respell_rp": "HAIR",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "haircut",
@@ -14008,7 +14008,7 @@
     "respell_ga": "HER-kuht",
     "respell_rp": "HAIR-kuht",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "half",
@@ -15014,7 +15014,7 @@
     "respell_ga": "HEERZ",
     "respell_rp": "HEERZ",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "hers",
@@ -20958,7 +20958,7 @@
     "respell_ga": "NEER",
     "respell_rp": "NEER",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "neck",
@@ -22604,7 +22604,7 @@
     "respell_ga": "PER",
     "respell_rp": "PAIR",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "palace",
@@ -26862,7 +26862,7 @@
     "respell_ga": "SHER",
     "respell_rp": "SHAIR",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "she",
@@ -30417,7 +30417,7 @@
     "respell_ga": "SHUUR",
     "respell_rp": "SHOOR",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "surf",
@@ -31574,7 +31574,7 @@
     "respell_ga": "THER",
     "respell_rp": "THAIR",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "them",
@@ -31670,7 +31670,7 @@
     "respell_ga": "THER",
     "respell_rp": "THAIR",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "there's",
@@ -31702,7 +31702,7 @@
     "respell_ga": "THERZ",
     "respell_rp": "THAIRZ",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "these",
@@ -31862,7 +31862,7 @@
     "respell_ga": "THER",
     "respell_rp": "THAIR",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "they've",
@@ -34928,7 +34928,7 @@
     "respell_ga": "WER",
     "respell_rp": "WAIR",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "weather",
@@ -35353,7 +35353,7 @@
     "respell_ga": "WER",
     "respell_rp": "WAIR",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "which",
@@ -36662,7 +36662,7 @@
     "respell_ga": "YEER",
     "respell_rp": "YEER",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "yellow",
@@ -36913,7 +36913,7 @@
     "respell_ga": "YUUR",
     "respell_rp": "YOOR",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "you've",
@@ -37710,7 +37710,7 @@
     "respell_ga": "ad-VAN-tij",
     "respell_rp": "uhd-VAHN-tij",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same_reason": "composite_structural"
   },
   {
     "w": "adventure",
@@ -37885,7 +37885,7 @@
     "respell_ga": "uh-FER",
     "respell_rp": "uh-FAIR",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "against",
@@ -38066,7 +38066,7 @@
     "respell_ga": "ER",
     "respell_rp": "AIR",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "aisle",
@@ -38847,7 +38847,7 @@
     "respell_ga": "uh-PEER",
     "respell_rp": "uh-PEER",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "appearance",
@@ -39119,7 +39119,7 @@
     "respell_ga": "ARM-cher",
     "respell_rp": "AHM-chair",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "structural_other"
   },
   {
     "w": "armed",
@@ -39293,7 +39293,7 @@
     "respell_ga": "A-struh-naht",
     "respell_rp": "A-struh-nawt",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same_reason": "cot_caught"
   },
   {
     "w": "athlete",
@@ -39763,7 +39763,7 @@
     "respell_ga": "AH-fuhl",
     "respell_rp": "AW-fuhl",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same_reason": "cot_caught"
   },
   {
     "w": "background",
@@ -40367,7 +40367,7 @@
     "respell_ga": "BEER",
     "respell_rp": "BEER",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "beg",
@@ -42175,7 +42175,7 @@
     "respell_ga": "KAHZ",
     "respell_rp": "KAWZ",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same_reason": "cot_caught"
   },
   {
     "w": "cent",
@@ -42388,7 +42388,7 @@
     "respell_ga": "CHER-muhn",
     "respell_rp": "CHAIR-muhn",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "challenge",
@@ -42690,7 +42690,7 @@
     "respell_ga": "CHEER",
     "respell_rp": "CHEER",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "chef",
@@ -43177,7 +43177,7 @@
     "respell_ga": "KLEER",
     "respell_rp": "KLEER",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "clearly",
@@ -43208,7 +43208,7 @@
     "respell_ga": "KLEER-lee",
     "respell_rp": "KLEER-lee",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "clerk",
@@ -43844,7 +43844,7 @@
     "respell_ga": "kuhm-PER",
     "respell_rp": "kuhm-PAIR",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "competition",
@@ -46710,7 +46710,7 @@
     "respell_ga": "di-suh-PEER",
     "respell_rp": "di-suh-PEER",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "disappointed",
@@ -47184,7 +47184,7 @@
     "respell_ga": "down-STERZ",
     "respell_rp": "down-STAIRZ",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "downtown",
@@ -47998,7 +47998,7 @@
     "respell_ga": "EHL-swer",
     "respell_rp": "EHL-swair",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "email",
@@ -48539,7 +48539,7 @@
     "respell_ga": "EH-rer",
     "respell_rp": "EH-ruh",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same_reason": "rhoticity"
   },
   {
     "w": "escalator",
@@ -49362,7 +49362,7 @@
     "respell_ga": "FER-lee",
     "respell_rp": "FAIR-lee",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "fall",
@@ -49540,7 +49540,7 @@
     "respell_ga": "FER",
     "respell_rp": "FAIR",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "fascinating",
@@ -49662,7 +49662,7 @@
     "respell_ga": "FEER",
     "respell_rp": "FEER",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "feather",
@@ -57200,7 +57200,7 @@
     "respell_ga": "MI-rer",
     "respell_rp": "MI-ruh",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same_reason": "rhoticity"
   },
   {
     "w": "missing",
@@ -57887,7 +57887,7 @@
     "respell_ga": "NEER-lee",
     "respell_rp": "NEER-lee",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "necessary",
@@ -59575,7 +59575,7 @@
     "respell_ga": "PER",
     "respell_rp": "PAIR",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "pence",
@@ -62484,7 +62484,7 @@
     "respell_ga": "RAH",
     "respell_rp": "RAW",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same_reason": "cot_caught"
   },
   {
     "w": "ray",
@@ -63163,7 +63163,7 @@
     "respell_ga": "ri-PER",
     "respell_rp": "ri-PAIR",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "replace",
@@ -63399,7 +63399,7 @@
     "respell_ga": "ri-TYR",
     "respell_rp": "ri-TY-uh",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "retired",
@@ -63426,7 +63426,7 @@
     "respell_ga": "ri-TYRD",
     "respell_rp": "ri-TY-uhd",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "return",
@@ -67116,7 +67116,7 @@
     "respell_ga": "SUHM-wer",
     "respell_rp": "SUHM-wair",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "sorta",
@@ -67640,7 +67640,7 @@
     "respell_ga": "SKWER",
     "respell_rp": "SKWAIR",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "stadium",
@@ -67737,7 +67737,7 @@
     "respell_ga": "STER",
     "respell_rp": "STAIR",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "stamp",
@@ -69387,7 +69387,7 @@
     "respell_ga": "TER",
     "respell_rp": "TAIR",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "teenage",
@@ -69613,7 +69613,7 @@
     "respell_ga": "THERZ",
     "respell_rp": "THAIRZ",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "themselves",
@@ -69661,7 +69661,7 @@
     "respell_ga": "THER-for",
     "respell_rp": "THAIR-faw",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "structural_other"
   },
   {
     "w": "thief",
@@ -70241,7 +70241,7 @@
     "respell_ga": "TUUR",
     "respell_rp": "TOOR",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "tourism",
@@ -70998,7 +70998,7 @@
     "respell_ga": "uhn-FER",
     "respell_rp": "uhn-FAIR",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "unforgettable",
@@ -71446,7 +71446,7 @@
     "respell_ga": "uhp-STERZ",
     "respell_rp": "uhp-STAIRZ",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "used",
@@ -72444,7 +72444,7 @@
     "respell_ga": "WEEL-cher",
     "respell_rp": "WEEL-chair",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "whether",
@@ -73577,7 +73577,7 @@
     "respell_ga": "BER",
     "respell_rp": "BAIR",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "bark",
@@ -73673,7 +73673,7 @@
     "respell_ga": "BEERD",
     "respell_rp": "BEERD",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "beast",
@@ -75461,7 +75461,7 @@
     "respell_ga": "KYUUR",
     "respell_rp": "KYOOR",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "curve",
@@ -75557,7 +75557,7 @@
     "respell_ga": "DER",
     "respell_rp": "DAIR",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "daze",
@@ -78916,7 +78916,7 @@
     "respell_ga": "MEER",
     "respell_rp": "MEER",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "mess",
@@ -80443,7 +80443,7 @@
     "respell_ga": "PYUUR",
     "respell_rp": "PYOOR",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "purse",
@@ -80635,7 +80635,7 @@
     "respell_ga": "RER",
     "respell_rp": "RAIR",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "reef",
@@ -81019,7 +81019,7 @@
     "respell_ga": "SKER",
     "respell_rp": "SKAIR",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "scold",
@@ -81172,7 +81172,7 @@
     "respell_ga": "si-KYUUR",
     "respell_rp": "si-KYOOR",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "sex",
@@ -81332,7 +81332,7 @@
     "respell_ga": "SHEER",
     "respell_rp": "SHEER",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "sheet",
@@ -81908,7 +81908,7 @@
     "respell_ga": "SFEER",
     "respell_rp": "SFEER",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "spice",
@@ -82036,7 +82036,7 @@
     "respell_ga": "STER",
     "respell_rp": "STAIR",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "steam",
@@ -82580,7 +82580,7 @@
     "respell_ga": "SWER",
     "respell_rp": "SWAIR",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "swell",
@@ -84052,7 +84052,7 @@
     "respell_ga": "WEERD",
     "respell_rp": "WEERD",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "whale",
@@ -86068,7 +86068,7 @@
     "respell_ga": "DEER",
     "respell_rp": "DEER",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "dense",
@@ -86740,7 +86740,7 @@
     "respell_ga": "FEERS",
     "respell_rp": "FEERS",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "flame",
@@ -87316,7 +87316,7 @@
     "respell_ga": "GEER",
     "respell_rp": "GEER",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "germ",
@@ -87380,7 +87380,7 @@
     "respell_ga": "GLER",
     "respell_rp": "GLAIR",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "gleam",
@@ -90004,7 +90004,7 @@
     "respell_ga": "PEER",
     "respell_rp": "PEER",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "peg",
@@ -90768,7 +90768,7 @@
     "respell_ga": "KWEER",
     "respell_rp": "KWEER",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "quote",
@@ -91024,7 +91024,7 @@
     "respell_ga": "REER",
     "respell_rp": "REER",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "reed",
@@ -92047,7 +92047,7 @@
     "respell_ga": "SNEER",
     "respell_rp": "SNEER",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "sniff",
@@ -92303,7 +92303,7 @@
     "respell_ga": "SPER",
     "respell_rp": "SPAIR",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "spark",
@@ -92781,7 +92781,7 @@
     "respell_ga": "STEER",
     "respell_rp": "STEER",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "stern",
@@ -96695,7 +96695,7 @@
     "respell_ga": "ER-lyn",
     "respell_rp": "AIR-lyn",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "alcohol",
@@ -98758,7 +98758,7 @@
     "respell_ga": "AT-muh-sfeer",
     "respell_rp": "AT-muh-sfeer",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "atomic",
@@ -99026,7 +99026,7 @@
     "respell_ga": "ahg-ZI-lyer-ee",
     "respell_rp": "awg-ZI-lyuh-ree",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same_reason": "cot_caught"
   },
   {
     "w": "available",
@@ -99117,7 +99117,7 @@
     "respell_ga": "uh-WER",
     "respell_rp": "uh-WAIR",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "awareness",
@@ -99181,7 +99181,7 @@
     "respell_ga": "AH-suhm",
     "respell_rp": "AW-suhm",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same_reason": "cot_caught"
   },
   {
     "w": "awkward",
@@ -99209,7 +99209,7 @@
     "respell_ga": "AH-kwerd",
     "respell_rp": "AW-kwuhd",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same_reason": "cot_caught"
   },
   {
     "w": "babysit",
@@ -99587,7 +99587,7 @@
     "respell_ga": "BER-lee",
     "respell_rp": "BAIR-lee",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "barman",
@@ -101799,7 +101799,7 @@
     "respell_ga": "ker-EER",
     "respell_rp": "kuh-REER",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "careless",
@@ -101828,7 +101828,7 @@
     "respell_ga": "KER-luhs",
     "respell_rp": "KAIR-luhs",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "carelessly",
@@ -101860,7 +101860,7 @@
     "respell_ga": "KER-luh-slee",
     "respell_rp": "KAIR-luh-slee",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "carelessness",
@@ -101887,7 +101887,7 @@
     "respell_ga": "KER-luh-snuhs",
     "respell_rp": "KAIR-luh-snuhs",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "carpet",
@@ -102158,7 +102158,7 @@
     "respell_ga": "KAH-shuhn",
     "respell_rp": "KAW-shuhn",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same_reason": "cot_caught"
   },
   {
     "w": "cautious",
@@ -102631,7 +102631,7 @@
     "respell_ga": "CHEER-fuhl",
     "respell_rp": "CHEER-fuhl",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "chemist",
@@ -105785,7 +105785,7 @@
     "respell_ga": "kuur-ZHEHT",
     "respell_rp": "koor-ZHEHT",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "creator",
@@ -106875,7 +106875,7 @@
     "respell_ga": "di-KLER",
     "respell_rp": "di-KLAIR",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "decline",
@@ -108065,7 +108065,7 @@
     "respell_ga": "di-SPER",
     "respell_rp": "di-SPAIR",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "desperate",
@@ -113466,7 +113466,7 @@
     "respell_ga": "fer-WEHL",
     "respell_rp": "fair-WEHL",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "farming",
@@ -116772,7 +116772,7 @@
     "respell_ga": "HER-dreh-ser",
     "respell_rp": "HAIR-dreh-suh",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "structural_other"
   },
   {
     "w": "hairdryer",
@@ -116798,7 +116798,7 @@
     "respell_ga": "HER-dry-er",
     "respell_rp": "HAIR-dry-uh",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "structural_other"
   },
   {
     "w": "hammer",
@@ -118886,7 +118886,7 @@
     "respell_ga": "im-PER",
     "respell_rp": "im-PAIR",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "impression",
@@ -120090,7 +120090,7 @@
     "respell_ga": "in-SPYR",
     "respell_rp": "in-SPY-uh",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "instal",
@@ -124051,7 +124051,7 @@
     "respell_ga": "MEER-lee",
     "respell_rp": "MEER-lee",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "messy",
@@ -126423,7 +126423,7 @@
     "respell_ga": "NOH-wer",
     "respell_rp": "NOH-wair",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "goat_vowel"
+    "ga_rp_same_reason": "structural_other"
   },
   {
     "w": "nuclear",
@@ -132170,7 +132170,7 @@
     "respell_ga": "kwehs-chuh-NER",
     "respell_rp": "kwehs-chuh-NAIR",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "queue",
@@ -132491,7 +132491,7 @@
     "respell_ga": "RER-lee",
     "respell_rp": "RAIR-lee",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "raspberry",
@@ -134290,7 +134290,7 @@
     "respell_ga": "ri-KWYR-muhnt",
     "respell_rp": "ri-KWY-uh-muhnt",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "rescue",
@@ -136813,7 +136813,7 @@
     "respell_ga": "suh-VEER",
     "respell_rp": "suh-VEER",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "severely",
@@ -136845,7 +136845,7 @@
     "respell_ga": "suh-VEER-lee",
     "respell_rp": "suh-VEER-lee",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "shadowy",
@@ -141268,7 +141268,7 @@
     "respell_ga": "TEH-rer",
     "respell_rp": "TEH-ruh",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same_reason": "rhoticity"
   },
   {
     "w": "terrorism",
@@ -143164,7 +143164,7 @@
     "respell_ga": "uhn-FER-lee",
     "respell_rp": "uhn-FAIR-lee",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "unfit",
@@ -144765,7 +144765,7 @@
     "respell_ga": "vah-luhn-TEER",
     "respell_rp": "vo-luhn-TEER",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "lot_vowel"
+    "ga_rp_same_reason": "structural_other"
   },
   {
     "w": "vowel",
@@ -147409,7 +147409,7 @@
     ],
     "rp_ipa": "/ˈeəkrˌɑːft/",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "trap_bath",
+    "ga_rp_same_reason": "structural_other",
     "respell_ga": "ER-kraft",
     "respell_rp": "AIR-krahft"
   },
@@ -147435,7 +147435,7 @@
     ],
     "rp_ipa": "/ˈeəˌkruː/",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity",
+    "ga_rp_same_reason": "square_near_cure",
     "respell_ga": "ER-kroo",
     "respell_rp": "AIR-kroo"
   },
@@ -148386,7 +148386,7 @@
     ],
     "rp_ipa": "/ˌæntiːˈeəˌkræft/",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "antibacterial",
@@ -152168,7 +152168,7 @@
     "respell_ga": "broh-SHUUR",
     "respell_rp": "broh-SHOOR",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "goat_vowel"
+    "ga_rp_same_reason": "structural_other"
   },
   {
     "w": "browser",
@@ -152925,7 +152925,7 @@
     "respell_ga": "KER-free",
     "respell_rp": "KAIR-free",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "caring",
@@ -153666,7 +153666,7 @@
     "respell_ga": "CHEER-fuh-lee",
     "respell_rp": "CHEER-fuh-lee",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "cheerfulness",
@@ -153692,7 +153692,7 @@
     "respell_ga": "CHEER-fuhl-nuhs",
     "respell_rp": "CHEER-fuhl-nuhs",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "chemotherapy",
@@ -153715,7 +153715,7 @@
     "respell_ga": "kee-moh-THEH-ruh-pee",
     "respell_rp": "kee-moh-THEH-ruh-pee",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same_reason": "goat_vowel"
   },
   {
     "w": "cherished",
@@ -154061,7 +154061,7 @@
     "respell_ga": "KLEER-nuhs",
     "respell_rp": "KLEER-nuhs",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "clerical",
@@ -154415,7 +154415,7 @@
     "respell_ga": "koh-HI-ruhns",
     "respell_rp": "koh-HI-ruhns",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same_reason": "goat_vowel"
   },
   {
     "w": "coherent",
@@ -154440,7 +154440,7 @@
     "respell_ga": "koh-HI-ruhnt",
     "respell_rp": "koh-HI-ruhnt",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same_reason": "goat_vowel"
   },
   {
     "w": "coincide",
@@ -158522,7 +158522,7 @@
     "respell_ga": "DEER-lee",
     "respell_rp": "DEER-lee",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "square_near_cure"
   },
   {
     "w": "debit",
