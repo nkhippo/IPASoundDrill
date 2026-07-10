@@ -1734,6 +1734,7 @@ function updatePool(){
     $("poolNote").classList.remove("hidden");
     $("poolNote").textContent=t("pool.count",{n:pool.length});
     if(dataReady())$("startBtn").disabled=pool.length===0;
+    schedulePoolPreread();
     return;
   }
   $("poolNote").classList.remove("hidden");
@@ -1742,11 +1743,61 @@ function updatePool(){
     const key=S.csFilter==="weak"?"pool.count_weak":"pool.count_phrases";
     $("poolNote").textContent=t(key,{n});
     if(dataReady())$("startBtn").disabled=n===0;
+    schedulePoolPreread();
     return;
   }
   const n=filteredPool().length;
   $("poolNote").textContent=t("pool.count",{n});
   if(dataReady())$("startBtn").disabled=n===0;
+  schedulePoolPreread();
+}
+
+/** Setup-screen idle preread: cache top-N pool words for current accent before Start. */
+function schedulePoolPreread() {
+  const setup = $("setup");
+  if (!setup || setup.classList.contains("hidden")) return;
+  if (S && S.queue && S.queue.length > 0) return;
+  if (!dataReady()) return;
+
+  prefetchToken++;
+  const token = prefetchToken;
+
+  scheduleIdle(() => {
+    if (token !== prefetchToken) return;
+    if (setup.classList.contains("hidden")) return;
+    if (S && S.queue && S.queue.length > 0) return;
+    let preview = [];
+    try {
+      preview = buildSessionPool(false, []);
+    } catch (e) {
+      return;
+    }
+    const N = SESSION_INITIAL;
+    // Plain words only (connected/weak stay on Start path)
+    const target = preview
+      .filter(c => c && c.w && !isConnectedItem(c) && !isWeakItem(c))
+      .slice(0, N)
+      .map(c => c.w);
+    if (!target.length) return;
+    const cur = currentAccent();
+    const uncached = [...new Set(target)].filter(w => !hasCachedAudioFor(w, cur));
+    if (!uncached.length) return;
+    (async () => {
+      try {
+        const urlMap = await fetchUrlsFromGas(uncached, cur);
+        for (const w of uncached) {
+          if (token !== prefetchToken) return;
+          const url = urlMap.get(w);
+          if (!url) continue;
+          const data = await fetchAudioFromDriveUrl(url);
+          if (token !== prefetchToken) return;
+          saveAudioToLSAccent(w, cur, data.mimeType, data.audio);
+          const blob = new Blob([bytesFromB64(data.audio)], { type: data.mimeType || "audio/mpeg" });
+          memAudioCache.set(memKeyAccent(w, cur), URL.createObjectURL(blob));
+        }
+      } catch (e) { /* preread failure is silent */ }
+    })();
+  }, 3000);
 }
 function recordHist(word,res){
   const h=loadHist();
