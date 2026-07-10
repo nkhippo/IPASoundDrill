@@ -1,0 +1,1802 @@
+[
+  {
+    "w": "conversely",
+    "ipa": "/kənˈvɝsli/",
+    "cefr": "B2",
+    "pos": "副詞",
+    "def": "In a way that is opposite or reversed.",
+    "gloss": {
+      "en": "conversely",
+      "ja": "逆に",
+      "zh": "相反地",
+      "ko": "반대로",
+      "fil": "sa kabaligtaran"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kənˈvɜːsliː/"
+  },
+  {
+    "w": "conversion",
+    "ipa": "/kənˈvɝʒən/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "The act of changing from one form to another.",
+    "gloss": {
+      "en": "conversion",
+      "ja": "転換",
+      "zh": "转变",
+      "ko": "전환",
+      "fil": "pagbabago"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kənˈvɜːʒən/"
+  },
+  {
+    "w": "convert",
+    "ipa": "/kənˈvɝt/",
+    "cefr": "B2",
+    "pos": "動詞",
+    "def": "To change something into a different form.",
+    "gloss": {
+      "en": "convert",
+      "ja": "変える、改宗させる",
+      "zh": "转变",
+      "ko": "전환하다",
+      "fil": "gawing iba"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kənˈvɜːt/"
+  },
+  {
+    "w": "convinced",
+    "ipa": "/kənˈvɪnst/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Certain that something is true.",
+    "gloss": {
+      "en": "convinced",
+      "ja": "確信している",
+      "zh": "确信的",
+      "ko": "확신하는",
+      "fil": "kumbinsido"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kənˈvɪnst/"
+  },
+  {
+    "w": "cooperate",
+    "ipa": "/koʊˈɑpəˌreɪt/",
+    "cefr": "B2",
+    "pos": "動詞",
+    "def": "To work together toward a common goal.",
+    "gloss": {
+      "en": "cooperate",
+      "ja": "協力する",
+      "zh": "合作",
+      "ko": "협력하다",
+      "fil": "makipagtulungan"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kəʊˈɒpəˌreɪt/"
+  },
+  {
+    "w": "cooperation",
+    "ipa": "/koʊˌɑpəˈreɪʃən/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "Working together for a shared purpose.",
+    "gloss": {
+      "en": "cooperation",
+      "ja": "協力",
+      "zh": "合作",
+      "ko": "협력",
+      "fil": "kooperasyon"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kəʊˌɒpəˈreɪʃən/"
+  },
+  {
+    "w": "cooperative",
+    "ipa": "/koʊˈɑpərətɪv/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Willing to help; involving joint effort.",
+    "gloss": {
+      "en": "cooperative",
+      "ja": "協力的な",
+      "zh": "合作的",
+      "ko": "협조적인",
+      "fil": "matulungin"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kəʊˈɒpərətɪv/"
+  },
+  {
+    "w": "copper",
+    "ipa": "/ˈkɑpɚ/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A reddish-brown metal used in wiring and coins.",
+    "gloss": {
+      "en": "copper",
+      "ja": "銅",
+      "zh": "铜",
+      "ko": "구리",
+      "fil": "tanso"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkɒpə/"
+  },
+  {
+    "w": "coral",
+    "ipa": "/ˈkɔrəl/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A hard substance formed by tiny sea creatures.",
+    "gloss": {
+      "en": "coral",
+      "ja": "サンゴ",
+      "zh": "珊瑚",
+      "ko": "산호",
+      "fil": "coral"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkɔːrəl/"
+  },
+  {
+    "w": "cornerstone",
+    "ipa": "/ˈkɔrnɚˌstoʊn/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A basic and important part of something.",
+    "gloss": {
+      "en": "cornerstone",
+      "ja": "基礎、礎",
+      "zh": "基石",
+      "ko": "초석",
+      "fil": "batayang bato"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkɔːnəˌstəʊn/"
+  },
+  {
+    "w": "cornet",
+    "ipa": "/kɔrˈnɛt/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A brass musical instrument similar to a trumpet.",
+    "gloss": {
+      "en": "cornet",
+      "ja": "コルネット",
+      "zh": "短号",
+      "ko": "코넷",
+      "fil": "cornet"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kɔːˈnet/"
+  },
+  {
+    "w": "corona",
+    "ipa": "/kəˈroʊnə/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A ring of light around the sun or moon.",
+    "gloss": {
+      "en": "corona",
+      "ja": "コロナ",
+      "zh": "日冕",
+      "ko": "코로나",
+      "fil": "korona"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kəˈrəʊnə/"
+  },
+  {
+    "w": "corporal",
+    "ipa": "/ˈkɔrpərəl/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Relating to the body, especially physical punishment.",
+    "gloss": {
+      "en": "corporal",
+      "ja": "身体の",
+      "zh": "身体的的",
+      "ko": "신체의",
+      "fil": "pisikal"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkɔːpərəl/"
+  },
+  {
+    "w": "corporate",
+    "ipa": "/ˈkɔrpərət/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Relating to a large company.",
+    "gloss": {
+      "en": "corporate",
+      "ja": "企業の",
+      "zh": "公司的",
+      "ko": "기업의",
+      "fil": "korporasyon"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkɔːpərət/"
+  },
+  {
+    "w": "corporation",
+    "ipa": "/ˌkɔrpəˈreɪʃən/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A large company or group treated as a single legal entity.",
+    "gloss": {
+      "en": "corporation",
+      "ja": "企業、法人",
+      "zh": "公司",
+      "ko": "법인",
+      "fil": "korporasyon"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˌkɔːpəˈreɪʃən/"
+  },
+  {
+    "w": "correctness",
+    "ipa": "/kəˈrɛktnəs/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "The quality of being accurate or proper.",
+    "gloss": {
+      "en": "correctness",
+      "ja": "正しさ",
+      "zh": "正确性",
+      "ko": "정확성",
+      "fil": "kawastuhan"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kəˈrektnəs/"
+  },
+  {
+    "w": "correspond",
+    "ipa": "/ˌkɔrəˈspɑnd/",
+    "cefr": "B2",
+    "pos": "動詞",
+    "def": "To match or be similar to; to exchange letters.",
+    "gloss": {
+      "en": "correspond",
+      "ja": "一致する、文通する",
+      "zh": "相符、通信",
+      "ko": "일치하다, 서신 왕래하다",
+      "fil": "tumugma"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˌkɔːrəˈspɒnd/"
+  },
+  {
+    "w": "correspondence",
+    "ipa": "/ˌkɔrəˈspɑndəns/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "Letters exchanged; agreement between things.",
+    "gloss": {
+      "en": "correspondence",
+      "ja": "文通、対応",
+      "zh": "通信、对应",
+      "ko": "서신, 대응",
+      "fil": "sulatan"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˌkɔːrəˈspɒndəns/"
+  },
+  {
+    "w": "correspondent",
+    "ipa": "/ˌkɔrəˈspɑndənt/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A journalist who reports from a distant place.",
+    "gloss": {
+      "en": "correspondent",
+      "ja": "特派員",
+      "zh": "记者",
+      "ko": "특파원",
+      "fil": "kaugnay"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˌkɔːrəˈspɒndənt/"
+  },
+  {
+    "w": "corresponding",
+    "ipa": "/ˌkɔrəˈspɑndɪŋ/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Matching or equivalent.",
+    "gloss": {
+      "en": "corresponding",
+      "ja": "対応する",
+      "zh": "相应的",
+      "ko": "상응하는",
+      "fil": "katumbas"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˌkɔːrəˈspɒndɪŋ/"
+  },
+  {
+    "w": "corridor",
+    "ipa": "/ˈkɔrədɚ/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A long passage in a building.",
+    "gloss": {
+      "en": "corridor",
+      "ja": "廊下",
+      "zh": "走廊",
+      "ko": "복도",
+      "fil": "koridor"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkɔːrədə/"
+  },
+  {
+    "w": "corrupt",
+    "ipa": "/kəˈrʌpt/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Dishonest, especially involving bribery.",
+    "gloss": {
+      "en": "corrupt",
+      "ja": "腐敗した",
+      "zh": "腐败的",
+      "ko": "부패한",
+      "fil": "korap"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kəˈrʌpt/"
+  },
+  {
+    "w": "corruption",
+    "ipa": "/kəˈrʌpʃən/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "Dishonest or illegal behavior, especially by officials.",
+    "gloss": {
+      "en": "corruption",
+      "ja": "腐敗",
+      "zh": "腐败",
+      "ko": "부패",
+      "fil": "korapsyon"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kəˈrʌpʃən/"
+  },
+  {
+    "w": "costly",
+    "ipa": "/ˈkɔstli/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Expensive; causing loss.",
+    "gloss": {
+      "en": "costly",
+      "ja": "高価な",
+      "zh": "昂贵的",
+      "ko": "값비싼",
+      "fil": "mahal"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkɔːstliː/"
+  },
+  {
+    "w": "costume",
+    "ipa": "/ˈkɑˌstum/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "Clothing worn to represent a character or era.",
+    "gloss": {
+      "en": "costume",
+      "ja": "衣装",
+      "zh": "服装",
+      "ko": "의상",
+      "fil": "kasuotan"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkɒˌstuːm/"
+  },
+  {
+    "w": "cottage",
+    "ipa": "/ˈkɑtɪdʒ/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A small house, especially in the countryside.",
+    "gloss": {
+      "en": "cottage",
+      "ja": "小屋、コテージ",
+      "zh": "小屋",
+      "ko": "오두막",
+      "fil": "kubo"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkɒtɪdʒ/"
+  },
+  {
+    "w": "countryman",
+    "ipa": "/ˈkʌntrimən/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A person from the same country as another.",
+    "gloss": {
+      "en": "countryman",
+      "ja": "同郷人",
+      "zh": "同胞",
+      "ko": "동포",
+      "fil": "kababayan"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkʌntriːmən/"
+  },
+  {
+    "w": "countrywide",
+    "ipa": "/ˈkʌntriˌwaɪd/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Extending across an entire country.",
+    "gloss": {
+      "en": "countrywide",
+      "ja": "全国的な",
+      "zh": "全国性的",
+      "ko": "전국적인",
+      "fil": "buong bansa"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkʌntriːˌwaɪd/"
+  },
+  {
+    "w": "courtesy",
+    "ipa": "/ˈkɝtəsi/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "Polite behavior; a considerate act.",
+    "gloss": {
+      "en": "courtesy",
+      "ja": "礼儀",
+      "zh": "礼貌",
+      "ko": "예의",
+      "fil": "kagandahang-loob"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkɜːtəsiː/"
+  },
+  {
+    "w": "coward",
+    "ipa": "/ˈkaʊɚd/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A person who lacks courage.",
+    "gloss": {
+      "en": "coward",
+      "ja": "臆病者",
+      "zh": "懦夫",
+      "ko": "겁쟁이",
+      "fil": "duwag"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkaʊəd/"
+  },
+  {
+    "w": "cowardly",
+    "ipa": "/ˈkaʊɚdli/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Lacking courage; showing fear.",
+    "gloss": {
+      "en": "cowardly",
+      "ja": "臆病な",
+      "zh": "懦弱的",
+      "ko": "겁많은",
+      "fil": "duwag"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkaʊədliː/"
+  },
+  {
+    "w": "craftsman",
+    "ipa": "/ˈkræftsmən/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A skilled worker who makes things by hand.",
+    "gloss": {
+      "en": "craftsman",
+      "ja": "職人",
+      "zh": "工匠",
+      "ko": "장인",
+      "fil": "manggagawa"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkræftsmən/"
+  },
+  {
+    "w": "crater",
+    "ipa": "/ˈkreɪtɚ/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A large bowl-shaped hollow, especially from an impact or volcano.",
+    "gloss": {
+      "en": "crater",
+      "ja": "クレーター",
+      "zh": "陨石坑",
+      "ko": "분화구",
+      "fil": "bunganga"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkreɪtə/"
+  },
+  {
+    "w": "creation",
+    "ipa": "/kriˈeɪʃən/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "The act of making something new.",
+    "gloss": {
+      "en": "creation",
+      "ja": "創造",
+      "zh": "创造",
+      "ko": "창조",
+      "fil": "paglikha"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kriːˈeɪʃən/"
+  },
+  {
+    "w": "creatively",
+    "ipa": "/kriˈeɪtɪvli/",
+    "cefr": "B2",
+    "pos": "副詞",
+    "def": "In an imaginative and original way.",
+    "gloss": {
+      "en": "creatively",
+      "ja": "創造的に",
+      "zh": "创造性地",
+      "ko": "창의적으로",
+      "fil": "malikhain"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kriːˈeɪtɪvliː/"
+  },
+  {
+    "w": "creepy",
+    "ipa": "/ˈkripi/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Causing a feeling of fear or unease.",
+    "gloss": {
+      "en": "creepy",
+      "ja": "気味の悪い",
+      "zh": "令人毛骨悚然的",
+      "ko": "으스스한",
+      "fil": "nakakakilabot"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkriːpiː/"
+  },
+  {
+    "w": "cripple",
+    "ipa": "/ˈkrɪpəl/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A person who is unable to walk or move normally (dated, offensive).",
+    "gloss": {
+      "en": "cripple",
+      "ja": "身体障害者（差別的とされる古い語）",
+      "zh": "残疾人（旧词，具冒犯性）",
+      "ko": "장애인(구식, 모욕적)",
+      "fil": "lumpo (lumang salita)"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkrɪpəl/"
+  },
+  {
+    "w": "critically",
+    "ipa": "/ˈkrɪtɪkəli/",
+    "cefr": "B2",
+    "pos": "副詞",
+    "def": "In a way that judges carefully; seriously (as in illness).",
+    "gloss": {
+      "en": "critically",
+      "ja": "批判的に、危篤に",
+      "zh": "批判性地、危急地",
+      "ko": "비판적으로, 위독하게",
+      "fil": "kritikal"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkrɪtɪkəliː/"
+  },
+  {
+    "w": "criticism",
+    "ipa": "/ˈkrɪtəˌsɪzəm/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "Expressing disapproval; the analysis of art or literature.",
+    "gloss": {
+      "en": "criticism",
+      "ja": "批判、批評",
+      "zh": "批评",
+      "ko": "비판",
+      "fil": "kritisismo"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkrɪtəˌsɪzəm/"
+  },
+  {
+    "w": "crocodile",
+    "ipa": "/ˈkrɑkəˌdaɪl/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A large reptile living in rivers and swamps.",
+    "gloss": {
+      "en": "crocodile",
+      "ja": "ワニ",
+      "zh": "鳄鱼",
+      "ko": "악어",
+      "fil": "buwaya"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkrɒkəˌdaɪl/"
+  },
+  {
+    "w": "crossly",
+    "ipa": "/ˈkrɔsli/",
+    "cefr": "B2",
+    "pos": "副詞",
+    "def": "In an angry or annoyed way.",
+    "gloss": {
+      "en": "crossly",
+      "ja": "怒って",
+      "zh": "生气地",
+      "ko": "화가 나서",
+      "fil": "may inis"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkrɔːsliː/"
+  },
+  {
+    "w": "crucial",
+    "ipa": "/ˈkruʃəl/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Extremely important.",
+    "gloss": {
+      "en": "crucial",
+      "ja": "重要な、決定的な",
+      "zh": "至关重要的",
+      "ko": "결정적인",
+      "fil": "mahalaga"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkruːʃəl/"
+  },
+  {
+    "w": "cruelly",
+    "ipa": "/ˈkruəli/",
+    "cefr": "B2",
+    "pos": "副詞",
+    "def": "In a way that causes pain or suffering.",
+    "gloss": {
+      "en": "cruelly",
+      "ja": "残酷に",
+      "zh": "残忍地",
+      "ko": "잔인하게",
+      "fil": "malupit"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkruːəliː/"
+  },
+  {
+    "w": "cruelty",
+    "ipa": "/ˈkruəlti/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "Behavior that causes pain or suffering.",
+    "gloss": {
+      "en": "cruelty",
+      "ja": "残酷さ",
+      "zh": "残忍",
+      "ko": "잔인함",
+      "fil": "kalupitan"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkruːəltiː/"
+  },
+  {
+    "w": "cubism",
+    "ipa": "/ˈkjubˌɪzəm/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "An early 20th-century art style using geometric shapes.",
+    "gloss": {
+      "en": "cubism",
+      "ja": "キュビスム",
+      "zh": "立体主义",
+      "ko": "입체파",
+      "fil": "cubism"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkjuːbˌɪzəm/"
+  },
+  {
+    "w": "culmination",
+    "ipa": "/ˌkʌlməˈneɪʃən/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "The highest point or final result of a process.",
+    "gloss": {
+      "en": "culmination",
+      "ja": "頂点、集大成",
+      "zh": "顶点",
+      "ko": "정점",
+      "fil": "kasukdulan"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˌkʌlməˈneɪʃən/"
+  },
+  {
+    "w": "culturally",
+    "ipa": "/ˈkʌltʃərəli/",
+    "cefr": "B2",
+    "pos": "副詞",
+    "def": "In a way related to culture.",
+    "gloss": {
+      "en": "culturally",
+      "ja": "文化的に",
+      "zh": "文化上",
+      "ko": "문화적으로",
+      "fil": "kultural"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkʌltʃərəliː/"
+  },
+  {
+    "w": "cursor",
+    "ipa": "/ˈkɝsɚ/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A movable indicator on a computer screen.",
+    "gloss": {
+      "en": "cursor",
+      "ja": "カーソル",
+      "zh": "光标",
+      "ko": "커서",
+      "fil": "cursor"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkɜːsə/"
+  },
+  {
+    "w": "cyberaddict",
+    "ipa": "/ˈsaɪbɚˌædɪkt/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A person addicted to using the internet.",
+    "gloss": {
+      "en": "cyberaddict",
+      "ja": "ネット依存者",
+      "zh": "网络成瘾者",
+      "ko": "인터넷 중독자",
+      "fil": "adik sa internet"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈsaɪbəˌrædɪkt/"
+  },
+  {
+    "w": "cybercrime",
+    "ipa": "/ˈsaɪbɚˌkraɪm/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "Crime committed using computers or the internet.",
+    "gloss": {
+      "en": "cybercrime",
+      "ja": "サイバー犯罪",
+      "zh": "网络犯罪",
+      "ko": "사이버 범죄",
+      "fil": "cybercrime"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈsaɪbəˌkraɪm/"
+  },
+  {
+    "w": "cyberpet",
+    "ipa": "/ˈsaɪbɚˌpɛt/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A virtual pet kept on a computer or device.",
+    "gloss": {
+      "en": "cyberpet",
+      "ja": "デジタルペット",
+      "zh": "电子宠物",
+      "ko": "사이버 애완동물",
+      "fil": "cyberpet"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈsaɪbəˌpet/"
+  },
+  {
+    "w": "cyberschool",
+    "ipa": "/ˈsaɪbɚˌskul/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A school conducted online.",
+    "gloss": {
+      "en": "cyberschool",
+      "ja": "オンラインスクール",
+      "zh": "网络学校",
+      "ko": "사이버 학교",
+      "fil": "cyberschool"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈsaɪbəˌskuːl/"
+  },
+  {
+    "w": "cyberspace",
+    "ipa": "/ˈsaɪbɚˌspeɪs/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "The online environment of computer networks.",
+    "gloss": {
+      "en": "cyberspace",
+      "ja": "サイバースペース",
+      "zh": "网络空间",
+      "ko": "사이버 공간",
+      "fil": "cyberspace"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈsaɪbəˌspeɪs/"
+  },
+  {
+    "w": "cyclist",
+    "ipa": "/ˈsaɪkləst/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A person who rides a bicycle.",
+    "gloss": {
+      "en": "cyclist",
+      "ja": "サイクリスト",
+      "zh": "骑自行车的人",
+      "ko": "자전거 타는 사람",
+      "fil": "siklista"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈsaɪkləst/"
+  },
+  {
+    "w": "damn",
+    "ipa": "/dæm/",
+    "cefr": "B2",
+    "pos": "形容詞 / 副詞 / 感嘆詞",
+    "def": "Used for emphasis or to express annoyance (mildly vulgar).",
+    "gloss": {
+      "en": "damn",
+      "ja": "（俗）くそ、非常に",
+      "zh": "该死",
+      "ko": "빌어먹을",
+      "fil": "sumpain"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/dæm/"
+  },
+  {
+    "w": "dandelion",
+    "ipa": "/ˈdændəˌlaɪən/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A yellow-flowered wild plant.",
+    "gloss": {
+      "en": "dandelion",
+      "ja": "タンポポ",
+      "zh": "蒲公英",
+      "ko": "민들레",
+      "fil": "dandelion"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈdændəˌlaɪən/"
+  },
+  {
+    "w": "darling",
+    "ipa": "/ˈdɑrlɪŋ/",
+    "cefr": "B2",
+    "pos": "形容詞 / 名詞",
+    "def": "Much loved; a term of affection for a loved one.",
+    "gloss": {
+      "en": "darling",
+      "ja": "最愛の、あなた（呼びかけ）",
+      "zh": "亲爱的",
+      "ko": "사랑하는 사람",
+      "fil": "mahal"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈdɑːlɪŋ/"
+  },
+  {
+    "w": "data",
+    "ipa": "/ˈdeɪtə/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "Facts and statistics collected for reference or analysis.",
+    "gloss": {
+      "en": "data",
+      "ja": "データ",
+      "zh": "数据",
+      "ko": "데이터",
+      "fil": "datos"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈdeɪtə/"
+  },
+  {
+    "w": "database",
+    "ipa": "/ˈdeɪtəˌbeɪs/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "An organized collection of data on a computer.",
+    "gloss": {
+      "en": "database",
+      "ja": "データベース",
+      "zh": "数据库",
+      "ko": "데이터베이스",
+      "fil": "database"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈdeɪtəˌbeɪs/"
+  },
+  {
+    "w": "dated",
+    "ipa": "/ˈdeɪtəd/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Old-fashioned; marked with a date.",
+    "gloss": {
+      "en": "dated",
+      "ja": "時代遅れの",
+      "zh": "过时的",
+      "ko": "구식의",
+      "fil": "luma na"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈdeɪtəd/"
+  },
+  {
+    "w": "daytime",
+    "ipa": "/ˈdeɪˌtaɪm/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "The time when it is light outside.",
+    "gloss": {
+      "en": "daytime",
+      "ja": "昼間",
+      "zh": "白天",
+      "ko": "낮",
+      "fil": "araw"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈdeɪˌtaɪm/"
+  },
+  {
+    "w": "dearly",
+    "ipa": "/ˈdɪrli/",
+    "cefr": "B2",
+    "pos": "副詞",
+    "def": "Very much; at great cost.",
+    "gloss": {
+      "en": "dearly",
+      "ja": "心から、高くついて",
+      "zh": "深切地",
+      "ko": "매우, 비싸게",
+      "fil": "taos-puso"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈdɪəliː/"
+  },
+  {
+    "w": "debit",
+    "ipa": "/ˈdɛbət/",
+    "cefr": "B2",
+    "pos": "名詞 / 動詞",
+    "def": "A record of money owed or removed from an account; to remove money from an account.",
+    "gloss": {
+      "en": "debit",
+      "ja": "引き落とし、（口座から）引き落とす",
+      "zh": "借方、扣款",
+      "ko": "인출, 인출하다",
+      "fil": "debit"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈdebət/"
+  },
+  {
+    "w": "decade",
+    "ipa": "/ˈdɛˌkeɪd/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A period of ten years.",
+    "gloss": {
+      "en": "decade",
+      "ja": "10年間",
+      "zh": "十年",
+      "ko": "십년",
+      "fil": "dekada"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈdeˌkeɪd/"
+  },
+  {
+    "w": "decay",
+    "ipa": "/dɪˈkeɪ/",
+    "cefr": "B2",
+    "pos": "動詞",
+    "def": "To rot or gradually deteriorate.",
+    "gloss": {
+      "en": "decay",
+      "ja": "腐敗する、衰える",
+      "zh": "腐烂",
+      "ko": "부패하다",
+      "fil": "mabulok"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/dɪˈkeɪ/"
+  },
+  {
+    "w": "deceive",
+    "ipa": "/dɪˈsiv/",
+    "cefr": "B2",
+    "pos": "動詞",
+    "def": "To make someone believe something false.",
+    "gloss": {
+      "en": "deceive",
+      "ja": "欺く",
+      "zh": "欺骗",
+      "ko": "속이다",
+      "fil": "linlangin"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/dɪˈsiːv/"
+  },
+  {
+    "w": "decent",
+    "ipa": "/ˈdisənt/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Acceptable in standard or quality; respectable.",
+    "gloss": {
+      "en": "decent",
+      "ja": "きちんとした、まともな",
+      "zh": "体面的",
+      "ko": "괜찮은",
+      "fil": "disente"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈdiːsənt/"
+  },
+  {
+    "w": "deceptive",
+    "ipa": "/dɪˈsɛptɪv/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Giving a false or misleading impression.",
+    "gloss": {
+      "en": "deceptive",
+      "ja": "人を欺くような",
+      "zh": "有欺骗性的",
+      "ko": "기만적인",
+      "fil": "mapanlinlang"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/dɪˈseptɪv/"
+  },
+  {
+    "w": "decisive",
+    "ipa": "/dɪˈsaɪsɪv/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Settling an issue clearly; able to make decisions quickly.",
+    "gloss": {
+      "en": "decisive",
+      "ja": "決定的な、決断力のある",
+      "zh": "决定性的",
+      "ko": "결단력 있는",
+      "fil": "mapagpasyahan"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/dɪˈsaɪsɪv/"
+  },
+  {
+    "w": "decomposition",
+    "ipa": "/ˌdikɑmpəˈzɪʃən/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "The process of rotting or breaking down.",
+    "gloss": {
+      "en": "decomposition",
+      "ja": "分解、腐敗",
+      "zh": "分解",
+      "ko": "분해",
+      "fil": "pagkabulok"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˌdiːkɒmpəˈzɪʃən/"
+  },
+  {
+    "w": "decorate",
+    "ipa": "/ˈdɛkəˌreɪt/",
+    "cefr": "B2",
+    "pos": "動詞",
+    "def": "To make something look more attractive by adding items.",
+    "gloss": {
+      "en": "decorate",
+      "ja": "飾る",
+      "zh": "装饰",
+      "ko": "장식하다",
+      "fil": "gayakan"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈdekəˌreɪt/"
+  },
+  {
+    "w": "decoration",
+    "ipa": "/ˌdɛkəˈreɪʃən/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "An item used to make something more attractive.",
+    "gloss": {
+      "en": "decoration",
+      "ja": "装飾",
+      "zh": "装饰品",
+      "ko": "장식",
+      "fil": "dekorasyon"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˌdekəˈreɪʃən/"
+  },
+  {
+    "w": "decorative",
+    "ipa": "/ˈdɛkərətɪv/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Serving to make something look more attractive.",
+    "gloss": {
+      "en": "decorative",
+      "ja": "装飾的な",
+      "zh": "装饰性的",
+      "ko": "장식적인",
+      "fil": "dekoratibo"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈdekərətɪv/"
+  },
+  {
+    "w": "dedication",
+    "ipa": "/ˌdɛdəˈkeɪʃən/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "Wholehearted commitment to a task or purpose.",
+    "gloss": {
+      "en": "dedication",
+      "ja": "献身、専念",
+      "zh": "奉献",
+      "ko": "헌신",
+      "fil": "debosyon"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˌdedəˈkeɪʃən/"
+  },
+  {
+    "w": "deduce",
+    "ipa": "/dɪˈdus/",
+    "cefr": "B2",
+    "pos": "動詞",
+    "def": "To reach a conclusion through reasoning.",
+    "gloss": {
+      "en": "deduce",
+      "ja": "推論する",
+      "zh": "推断",
+      "ko": "추론하다",
+      "fil": "unawain"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/dɪˈduːs/"
+  },
+  {
+    "w": "deduction",
+    "ipa": "/dɪˈdʌkʃən/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "The act of reasoning to a conclusion; an amount subtracted.",
+    "gloss": {
+      "en": "deduction",
+      "ja": "推論、控除",
+      "zh": "推论、扣除",
+      "ko": "추론, 공제",
+      "fil": "pagbabawas"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/dɪˈdʌkʃən/"
+  },
+  {
+    "w": "deficit",
+    "ipa": "/ˈdɛfəsət/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "The amount by which spending exceeds income.",
+    "gloss": {
+      "en": "deficit",
+      "ja": "赤字",
+      "zh": "赤字",
+      "ko": "적자",
+      "fil": "kakulangan"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈdefəsət/"
+  },
+  {
+    "w": "deforestation",
+    "ipa": "/diˌfɔrəˈsteɪʃən/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "The clearing of forests on a large scale.",
+    "gloss": {
+      "en": "deforestation",
+      "ja": "森林伐採",
+      "zh": "森林砍伐",
+      "ko": "삼림 벌채",
+      "fil": "pagkalbo ng gubat"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/diːˌfɔːrəˈsteɪʃən/"
+  },
+  {
+    "w": "defy",
+    "ipa": "/dɪˈfaɪ/",
+    "cefr": "B2",
+    "pos": "動詞",
+    "def": "To openly resist or refuse to obey.",
+    "gloss": {
+      "en": "defy",
+      "ja": "反抗する",
+      "zh": "违抗",
+      "ko": "반항하다",
+      "fil": "sumuway"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/dɪˈfaɪ/"
+  },
+  {
+    "w": "delegate",
+    "ipa": "/ˈdɛləɡət/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A person sent to represent others at a meeting.",
+    "gloss": {
+      "en": "delegate",
+      "ja": "代表者",
+      "zh": "代表",
+      "ko": "대표",
+      "fil": "delegado"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈdeləɡət/"
+  },
+  {
+    "w": "deliberate",
+    "ipa": "/dɪˈlɪbərət/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Done consciously and intentionally.",
+    "gloss": {
+      "en": "deliberate",
+      "ja": "意図的な",
+      "zh": "故意的",
+      "ko": "고의적인",
+      "fil": "sinadya"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/dɪˈlɪbərət/"
+  },
+  {
+    "w": "deliberately",
+    "ipa": "/dɪˈlɪbərətli/",
+    "cefr": "B2",
+    "pos": "副詞",
+    "def": "On purpose; intentionally.",
+    "gloss": {
+      "en": "deliberately",
+      "ja": "故意に",
+      "zh": "故意地",
+      "ko": "고의로",
+      "fil": "sinasadya"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/dɪˈlɪbərətliː/"
+  },
+  {
+    "w": "delicacy",
+    "ipa": "/ˈdɛləkəsi/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A fine or expensive food; sensitivity in handling a matter.",
+    "gloss": {
+      "en": "delicacy",
+      "ja": "珍味、繊細さ",
+      "zh": "美味、精细",
+      "ko": "진미, 섬세함",
+      "fil": "manamit"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈdeləkəsiː/"
+  },
+  {
+    "w": "delicately",
+    "ipa": "/ˈdɛləkətli/",
+    "cefr": "B2",
+    "pos": "副詞",
+    "def": "In a fine, gentle, or sensitive way.",
+    "gloss": {
+      "en": "delicately",
+      "ja": "繊細に",
+      "zh": "精细地",
+      "ko": "섬세하게",
+      "fil": "maingat"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈdeləkətliː/"
+  },
+  {
+    "w": "demanding",
+    "ipa": "/dɪˈmændɪŋ/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Requiring much effort or attention.",
+    "gloss": {
+      "en": "demanding",
+      "ja": "要求の厳しい",
+      "zh": "苛刻的",
+      "ko": "까다로운",
+      "fil": "mapaghingi"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/dɪˈmændɪŋ/"
+  },
+  {
+    "w": "demolish",
+    "ipa": "/dɪˈmɑlɪʃ/",
+    "cefr": "B2",
+    "pos": "動詞",
+    "def": "To tear down a building; to destroy completely.",
+    "gloss": {
+      "en": "demolish",
+      "ja": "取り壊す",
+      "zh": "拆毁",
+      "ko": "철거하다",
+      "fil": "gibain"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/dɪˈmɒlɪʃ/"
+  },
+  {
+    "w": "denim",
+    "ipa": "/ˈdɛnəm/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A sturdy cotton fabric used for jeans.",
+    "gloss": {
+      "en": "denim",
+      "ja": "デニム",
+      "zh": "牛仔布",
+      "ko": "데님",
+      "fil": "denim"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈdenəm/"
+  },
+  {
+    "w": "densely",
+    "ipa": "/ˈdɛnsli/",
+    "cefr": "B2",
+    "pos": "副詞",
+    "def": "In a closely packed way.",
+    "gloss": {
+      "en": "densely",
+      "ja": "密集して",
+      "zh": "密集地",
+      "ko": "빽빽하게",
+      "fil": "makapal"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈdensliː/"
+  },
+  {
+    "w": "dental",
+    "ipa": "/ˈdɛntəl/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Relating to the teeth.",
+    "gloss": {
+      "en": "dental",
+      "ja": "歯科の",
+      "zh": "牙齿的",
+      "ko": "치아의",
+      "fil": "dental"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈdentəl/"
+  },
+  {
+    "w": "dependable",
+    "ipa": "/dɪˈpɛndəbəl/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Reliable; able to be trusted.",
+    "gloss": {
+      "en": "dependable",
+      "ja": "頼りになる",
+      "zh": "可靠的",
+      "ko": "믿을 수 있는",
+      "fil": "maaasahan"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/dɪˈpendəbəl/"
+  },
+  {
+    "w": "deputy",
+    "ipa": "/ˈdɛpjəti/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A person appointed to act as a substitute for another.",
+    "gloss": {
+      "en": "deputy",
+      "ja": "代理、副官",
+      "zh": "副手",
+      "ko": "부관",
+      "fil": "kinatawan"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈdepjətiː/"
+  },
+  {
+    "w": "descend",
+    "ipa": "/dɪˈsɛnd/",
+    "cefr": "B2",
+    "pos": "動詞",
+    "def": "To go or come down.",
+    "gloss": {
+      "en": "descend",
+      "ja": "降りる",
+      "zh": "下降",
+      "ko": "내려가다",
+      "fil": "bumaba"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/dɪˈsend/"
+  },
+  {
+    "w": "descriptive",
+    "ipa": "/dɪˈskrɪptɪv/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Describing something in detail.",
+    "gloss": {
+      "en": "descriptive",
+      "ja": "説明的な",
+      "zh": "描述性的",
+      "ko": "묘사적인",
+      "fil": "paglalarawan"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/dɪˈskrɪptɪv/"
+  },
+  {
+    "w": "desirable",
+    "ipa": "/dɪˈzaɪərəbəl/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Worth having or wanting.",
+    "gloss": {
+      "en": "desirable",
+      "ja": "望ましい",
+      "zh": "值得拥有的",
+      "ko": "바람직한",
+      "fil": "kanais-nais"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/dɪˈzaɪərəbəl/"
+  },
+  {
+    "w": "desktop",
+    "ipa": "/ˈdɛskˌtɑp/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A personal computer designed for a desk; the main screen of a computer.",
+    "gloss": {
+      "en": "desktop",
+      "ja": "デスクトップ",
+      "zh": "台式电脑",
+      "ko": "데스크톱",
+      "fil": "desktop"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈdeskˌtɒp/"
+  },
+  {
+    "w": "desolation",
+    "ipa": "/ˌdɛsəˈleɪʃən/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A state of complete emptiness or destruction; misery.",
+    "gloss": {
+      "en": "desolation",
+      "ja": "荒廃、孤独",
+      "zh": "荒凉",
+      "ko": "황량함",
+      "fil": "kapanglawan"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˌdesəˈleɪʃən/"
+  },
+  {
+    "w": "desperately",
+    "ipa": "/ˈdɛspərətli/",
+    "cefr": "B2",
+    "pos": "副詞",
+    "def": "In a way that shows great urgency or hopelessness.",
+    "gloss": {
+      "en": "desperately",
+      "ja": "必死に",
+      "zh": "拼命地",
+      "ko": "필사적으로",
+      "fil": "desperado"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈdespərətliː/"
+  },
+  {
+    "w": "desperation",
+    "ipa": "/ˌdɛspəˈreɪʃən/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A state of hopelessness leading to rash action.",
+    "gloss": {
+      "en": "desperation",
+      "ja": "絶望",
+      "zh": "绝望",
+      "ko": "절망",
+      "fil": "kawalang-pag-asa"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˌdespəˈreɪʃən/"
+  },
+  {
+    "w": "despise",
+    "ipa": "/dɪˈspaɪz/",
+    "cefr": "B2",
+    "pos": "動詞",
+    "def": "To feel strong dislike or contempt for.",
+    "gloss": {
+      "en": "despise",
+      "ja": "軽蔑する",
+      "zh": "鄙视",
+      "ko": "경멸하다",
+      "fil": "hamakin"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/dɪˈspaɪz/"
+  },
+  {
+    "w": "destiny",
+    "ipa": "/ˈdɛstəni/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "The events that will necessarily happen to someone; fate.",
+    "gloss": {
+      "en": "destiny",
+      "ja": "運命",
+      "zh": "命运",
+      "ko": "운명",
+      "fil": "kapalaran"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈdestəniː/"
+  }
+]

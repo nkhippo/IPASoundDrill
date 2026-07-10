@@ -2968,5 +2968,209 @@
     "ipa": "/kənˈsʌltənt/",
     "ipa_actual_ga": "/kənˈsʌlʔn̩t/",
     "rule": "R3"
+  },
+  {
+    "w": "cooperative",
+    "ipa": "/koʊˈɑpərətɪv/",
+    "ipa_actual_ga": "/koʊˈɑpərəɾɪv/",
+    "rule": "R1"
+  },
+  {
+    "w": "correspondence",
+    "ipa": "/ˌkɔrəˈspɑndəns/",
+    "ipa_actual_ga": "/ˌkɔrəˈspɑndn̩s/",
+    "rule": "R3"
+  },
+  {
+    "w": "correspondent",
+    "ipa": "/ˌkɔrəˈspɑndənt/",
+    "ipa_actual_ga": "/ˌkɔrəˈspɑndn̩t/",
+    "rule": "R3"
+  },
+  {
+    "w": "corridor",
+    "ipa": "/ˈkɔrədɚ/",
+    "ipa_actual_ga": "/ˈkɔrəɾɚ/",
+    "rule": "R1"
+  },
+  {
+    "w": "cottage",
+    "ipa": "/ˈkɑtɪdʒ/",
+    "ipa_actual_ga": "/ˈkɑɾɪdʒ/",
+    "rule": "R1"
+  },
+  {
+    "w": "courtesy",
+    "ipa": "/ˈkɝtəsi/",
+    "ipa_actual_ga": "/ˈkɝɾəsi/",
+    "rule": "R1"
+  },
+  {
+    "w": "crater",
+    "ipa": "/ˈkreɪtɚ/",
+    "ipa_actual_ga": "/ˈkreɪɾɚ/",
+    "rule": "R1"
+  },
+  {
+    "w": "creatively",
+    "ipa": "/kriˈeɪtɪvli/",
+    "ipa_actual_ga": "/kriˈeɪɾɪvli/",
+    "rule": "R1"
+  },
+  {
+    "w": "critically",
+    "ipa": "/ˈkrɪtɪkəli/",
+    "ipa_actual_ga": "/ˈkrɪɾɪkəli/",
+    "rule": "R1"
+  },
+  {
+    "w": "criticism",
+    "ipa": "/ˈkrɪtəˌsɪzəm/",
+    "ipa_actual_ga": "/ˈkrɪɾəˌsɪzəm/",
+    "rule": "R1"
+  },
+  {
+    "w": "crocodile",
+    "ipa": "/ˈkrɑkəˌdaɪl/",
+    "ipa_actual_ga": "/ˈkrɑkəˌɾaɪl/",
+    "rule": "R1"
+  },
+  {
+    "w": "cyberaddict",
+    "ipa": "/ˈsaɪbɚˌædɪkt/",
+    "ipa_actual_ga": "/ˈsaɪbɚˌæɾɪkt/",
+    "rule": "R1"
+  },
+  {
+    "w": "data",
+    "ipa": "/ˈdeɪtə/",
+    "ipa_actual_ga": "/ˈdeɪɾə/",
+    "rule": "R1"
+  },
+  {
+    "w": "database",
+    "ipa": "/ˈdeɪtəˌbeɪs/",
+    "ipa_actual_ga": "/ˈdeɪɾəˌbeɪs/",
+    "rule": "R1"
+  },
+  {
+    "w": "dated",
+    "ipa": "/ˈdeɪtəd/",
+    "ipa_actual_ga": "/ˈdeɪɾəd/",
+    "rule": "R1"
+  },
+  {
+    "w": "daytime",
+    "ipa": "/ˈdeɪˌtaɪm/",
+    "ipa_actual_ga": "/ˈdeɪˌɾaɪm/",
+    "rule": "R1"
+  },
+  {
+    "w": "decorative",
+    "ipa": "/ˈdɛkərətɪv/",
+    "ipa_actual_ga": "/ˈdɛkərəɾɪv/",
+    "rule": "R1"
+  },
+  {
+    "w": "dedication",
+    "ipa": "/ˌdɛdəˈkeɪʃən/",
+    "ipa_actual_ga": "/ˌdɛɾəˈkeɪʃən/",
+    "rule": "R1"
+  },
+  {
+    "w": "dental",
+    "ipa": "/ˈdɛntəl/",
+    "ipa_actual_ga": "/ˈdɛnʔl̩/",
+    "rule": "R2"
+  },
+  {
+    "w": "deputy",
+    "ipa": "/ˈdɛpjəti/",
+    "ipa_actual_ga": "/ˈdɛpjəɾi/",
+    "rule": "R1"
+  },
+  {
+    "w": "devoted",
+    "ipa": "/dɪˈvoʊtəd/",
+    "ipa_actual_ga": "/dɪˈvoʊɾəd/",
+    "rule": "R1"
+  },
+  {
+    "w": "dictator",
+    "ipa": "/ˈdɪkˌteɪtɚ/",
+    "ipa_actual_ga": "/ˈdɪkˌteɪɾɚ/",
+    "rule": "R1"
+  },
+  {
+    "w": "dignity",
+    "ipa": "/ˈdɪɡnəti/",
+    "ipa_actual_ga": "/ˈdɪɡnəɾi/",
+    "rule": "R1"
+  },
+  {
+    "w": "discredit",
+    "ipa": "/dɪsˈkrɛdət/",
+    "ipa_actual_ga": "/dɪsˈkrɛɾət/",
+    "rule": "R1"
+  },
+  {
+    "w": "disorder",
+    "ipa": "/dɪsˈɔrdɚ/",
+    "ipa_actual_ga": "/dɪsˈɔrɾɚ/",
+    "rule": "R1"
+  },
+  {
+    "w": "disorderly",
+    "ipa": "/dɪsˈɔrdɚli/",
+    "ipa_actual_ga": "/dɪsˈɔrɾɚli/",
+    "rule": "R1"
+  },
+  {
+    "w": "dissatisfaction",
+    "ipa": "/ˌdɪsˌsætəsˈfækʃən/",
+    "ipa_actual_ga": "/ˌdɪsˌsæɾəsˈfækʃən/",
+    "rule": "R1"
+  },
+  {
+    "w": "dissatisfied",
+    "ipa": "/dɪsˈsætəsˌfaɪd/",
+    "ipa_actual_ga": "/dɪsˈsæɾəsˌfaɪd/",
+    "rule": "R1"
+  },
+  {
+    "w": "dissident",
+    "ipa": "/ˈdɪsədənt/",
+    "ipa_actual_ga": "/ˈdɪsədn̩t/",
+    "rule": "R3"
+  },
+  {
+    "w": "distributor",
+    "ipa": "/dɪˈstrɪbjətɚ/",
+    "ipa_actual_ga": "/dɪˈstrɪbjəɾɚ/",
+    "rule": "R1"
+  },
+  {
+    "w": "divided",
+    "ipa": "/dəˈvaɪdəd/",
+    "ipa_actual_ga": "/dəˈvaɪɾəd/",
+    "rule": "R1"
+  },
+  {
+    "w": "dormitory",
+    "ipa": "/ˈdɔrməˌtɔri/",
+    "ipa_actual_ga": "/ˈdɔrməˌɾɔri/",
+    "rule": "R1"
+  },
+  {
+    "w": "dramatically",
+    "ipa": "/drəˈmætɪkəli/",
+    "ipa_actual_ga": "/drəˈmæɾɪkəli/",
+    "rule": "R1"
+  },
+  {
+    "w": "ecstatic",
+    "ipa": "/ɛkˈstætɪk/",
+    "ipa_actual_ga": "/ɛkˈstæɾɪk/",
+    "rule": "R1"
   }
 ]

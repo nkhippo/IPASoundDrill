@@ -736,5 +736,29 @@
     "respell_ga": "kuh-MAN-der",
     "respell_rp": "kuh-MAN-duh",
     "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see data/pipeline/phase2a_review_needed.json)"
+  },
+  {
+    "w": "corresponding",
+    "respell_ga": "kaw-ruh-SPAHN-ding",
+    "respell_rp": "kaw-ruh-SPON-ding",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see data/pipeline/phase2a_review_needed.json)"
+  },
+  {
+    "w": "dandelion",
+    "respell_ga": "DAN-duh-ly-uhn",
+    "respell_rp": "DAN-duh-ly-uhn",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see data/pipeline/phase2a_review_needed.json)"
+  },
+  {
+    "w": "demanding",
+    "respell_ga": "di-MAN-ding",
+    "respell_rp": "di-MAN-ding",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see data/pipeline/phase2a_review_needed.json)"
+  },
+  {
+    "w": "dependable",
+    "respell_ga": "di-PEHN-duh-buhl",
+    "respell_rp": "di-PEHN-duh-buhl",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see data/pipeline/phase2a_review_needed.json)"
   }
 ]

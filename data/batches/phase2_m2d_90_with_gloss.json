@@ -1,0 +1,1622 @@
+[
+  {
+    "w": "detach",
+    "ipa": "/dɪˈtætʃ/",
+    "cefr": "B2",
+    "pos": "動詞",
+    "def": "To disconnect or separate something.",
+    "gloss": {
+      "en": "detach",
+      "ja": "取り外す",
+      "zh": "拆卸",
+      "ko": "분리하다",
+      "fil": "alisin"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/dɪˈtætʃ/"
+  },
+  {
+    "w": "detachment",
+    "ipa": "/dɪˈtætʃmənt/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "The state of being separate; emotional distance.",
+    "gloss": {
+      "en": "detachment",
+      "ja": "分離、超然",
+      "zh": "分离、超然",
+      "ko": "분리, 초연함",
+      "fil": "paghihiwalay"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/dɪˈtætʃmənt/"
+  },
+  {
+    "w": "detailed",
+    "ipa": "/dɪˈteɪld/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Having many details; thorough.",
+    "gloss": {
+      "en": "detailed",
+      "ja": "詳細な",
+      "zh": "详细的",
+      "ko": "상세한",
+      "fil": "detalyado"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/dɪˈteɪld/"
+  },
+  {
+    "w": "detect",
+    "ipa": "/dɪˈtɛkt/",
+    "cefr": "B2",
+    "pos": "動詞",
+    "def": "To discover or notice something.",
+    "gloss": {
+      "en": "detect",
+      "ja": "検出する",
+      "zh": "检测",
+      "ko": "감지하다",
+      "fil": "matuklasan"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/dɪˈtekt/"
+  },
+  {
+    "w": "determined",
+    "ipa": "/dɪˈtɝmənd/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Having firmly decided to do something.",
+    "gloss": {
+      "en": "determined",
+      "ja": "決意した",
+      "zh": "坚定的",
+      "ko": "결심한",
+      "fil": "determinado"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/dɪˈtɜːmənd/"
+  },
+  {
+    "w": "determiner",
+    "ipa": "/dɪˈtɝmənɚ/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A word that introduces a noun, such as 'the' or 'this'.",
+    "gloss": {
+      "en": "determiner",
+      "ja": "限定詞",
+      "zh": "限定词",
+      "ko": "한정사",
+      "fil": "determiner"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/dɪˈtɜːmənə/"
+  },
+  {
+    "w": "developing",
+    "ipa": "/dɪˈvɛləpɪŋ/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "In the process of growth or industrialization.",
+    "gloss": {
+      "en": "developing",
+      "ja": "発展途上の",
+      "zh": "发展中的",
+      "ko": "발전하는",
+      "fil": "umuunlad"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/dɪˈveləpɪŋ/"
+  },
+  {
+    "w": "devil",
+    "ipa": "/ˈdɛvəl/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "An evil spirit; a wicked person.",
+    "gloss": {
+      "en": "devil",
+      "ja": "悪魔",
+      "zh": "魔鬼",
+      "ko": "악마",
+      "fil": "diyablo"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈdevəl/"
+  },
+  {
+    "w": "devote",
+    "ipa": "/dɪˈvoʊt/",
+    "cefr": "B2",
+    "pos": "動詞",
+    "def": "To give time or effort wholly to a purpose.",
+    "gloss": {
+      "en": "devote",
+      "ja": "捧げる",
+      "zh": "奉献",
+      "ko": "바치다",
+      "fil": "italaga"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/dɪˈvəʊt/"
+  },
+  {
+    "w": "devoted",
+    "ipa": "/dɪˈvoʊtəd/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Very loving or loyal.",
+    "gloss": {
+      "en": "devoted",
+      "ja": "献身的な",
+      "zh": "忠诚的",
+      "ko": "헌신적인",
+      "fil": "tapat"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/dɪˈvəʊtəd/"
+  },
+  {
+    "w": "dictator",
+    "ipa": "/ˈdɪkˌteɪtɚ/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A ruler with total power, often obtained by force.",
+    "gloss": {
+      "en": "dictator",
+      "ja": "独裁者",
+      "zh": "独裁者",
+      "ko": "독재자",
+      "fil": "diktador"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈdɪkˌteɪtə/"
+  },
+  {
+    "w": "digest",
+    "ipa": "/ˈdaɪˌdʒɛst/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A summary of information; digestion (as a noun sense).",
+    "gloss": {
+      "en": "digest",
+      "ja": "要約",
+      "zh": "文摘",
+      "ko": "요약",
+      "fil": "buod"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈdaɪˌdʒest/"
+  },
+  {
+    "w": "dignify",
+    "ipa": "/ˈdɪɡnəˌfaɪ/",
+    "cefr": "B2",
+    "pos": "動詞",
+    "def": "To give an air of dignity or importance to.",
+    "gloss": {
+      "en": "dignify",
+      "ja": "威厳を与える",
+      "zh": "使有尊严",
+      "ko": "위엄을 부여하다",
+      "fil": "dignguhin"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈdɡnəˌfaɪ/"
+  },
+  {
+    "w": "dignity",
+    "ipa": "/ˈdɪɡnəti/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "The state of being worthy of respect.",
+    "gloss": {
+      "en": "dignity",
+      "ja": "尊厳",
+      "zh": "尊严",
+      "ko": "존엄",
+      "fil": "dignidad"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈdɡnətiː/"
+  },
+  {
+    "w": "dilemma",
+    "ipa": "/dəˈlɛmə/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A situation requiring a choice between difficult options.",
+    "gloss": {
+      "en": "dilemma",
+      "ja": "ジレンマ",
+      "zh": "困境",
+      "ko": "딜레마",
+      "fil": "dilemma"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/dəˈlemə/"
+  },
+  {
+    "w": "dimension",
+    "ipa": "/dəˈmɛnʃən/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A measurable extent, such as length or width; an aspect.",
+    "gloss": {
+      "en": "dimension",
+      "ja": "次元、寸法",
+      "zh": "维度",
+      "ko": "차원",
+      "fil": "dimensyon"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/dəˈmenʃən/"
+  },
+  {
+    "w": "diphtheria",
+    "ipa": "/dɪfˈθɪriə/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A serious bacterial infection of the throat.",
+    "gloss": {
+      "en": "diphtheria",
+      "ja": "ジフテリア",
+      "zh": "白喉",
+      "ko": "디프테리아",
+      "fil": "diphtheria"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/dɪfˈθɪriːə/"
+  },
+  {
+    "w": "diploma",
+    "ipa": "/dəˈploʊmə/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A certificate awarded for completing a course of study.",
+    "gloss": {
+      "en": "diploma",
+      "ja": "卒業証書",
+      "zh": "文凭",
+      "ko": "졸업장",
+      "fil": "diploma"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/dəˈpləʊmə/"
+  },
+  {
+    "w": "diplomat",
+    "ipa": "/ˈdɪpləˌmæt/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "An official representing a country abroad.",
+    "gloss": {
+      "en": "diplomat",
+      "ja": "外交官",
+      "zh": "外交官",
+      "ko": "외교관",
+      "fil": "diplomatiko"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈdɪpləˌmæt/"
+  },
+  {
+    "w": "disappearance",
+    "ipa": "/ˌdɪsəˈpɪrəns/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "The act of vanishing or ceasing to exist.",
+    "gloss": {
+      "en": "disappearance",
+      "ja": "消失",
+      "zh": "消失",
+      "ko": "실종",
+      "fil": "pagkawala"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˌdɪsəˈpɪrəns/"
+  },
+  {
+    "w": "disapproval",
+    "ipa": "/ˌdɪsəˈpruvəl/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A feeling of not liking or supporting something.",
+    "gloss": {
+      "en": "disapproval",
+      "ja": "不承認、不満",
+      "zh": "不赞成",
+      "ko": "반대",
+      "fil": "hindi pagsang-ayon"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˌdɪsəˈpruːvəl/"
+  },
+  {
+    "w": "disapprove",
+    "ipa": "/ˌdɪsəˈpruv/",
+    "cefr": "B2",
+    "pos": "動詞",
+    "def": "To have or express an unfavorable opinion.",
+    "gloss": {
+      "en": "disapprove",
+      "ja": "反対する",
+      "zh": "不赞成",
+      "ko": "반대하다",
+      "fil": "hindi sumang-ayon"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˌdɪsəˈpruːv/"
+  },
+  {
+    "w": "discharge",
+    "ipa": "/ˈdɪsˌtʃɑrdʒ/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "An official release; a substance emitted from something.",
+    "gloss": {
+      "en": "discharge",
+      "ja": "解雇、放出",
+      "zh": "释放、排放",
+      "ko": "해고, 배출",
+      "fil": "pagpapalabas"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈdɪsˌtʃɑːdʒ/"
+  },
+  {
+    "w": "disciple",
+    "ipa": "/dɪˈsaɪpəl/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A follower or student of a teacher or belief.",
+    "gloss": {
+      "en": "disciple",
+      "ja": "弟子",
+      "zh": "门徒",
+      "ko": "제자",
+      "fil": "alagad"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/dɪˈsaɪpəl/"
+  },
+  {
+    "w": "discipline",
+    "ipa": "/ˈdɪsəplən/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "Controlled behavior; a field of study.",
+    "gloss": {
+      "en": "discipline",
+      "ja": "規律、学問分野",
+      "zh": "纪律、学科",
+      "ko": "규율, 학문",
+      "fil": "disiplina"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈdɪsəplən/"
+  },
+  {
+    "w": "disconnect",
+    "ipa": "/ˌdɪskəˈnɛkt/",
+    "cefr": "B2",
+    "pos": "動詞",
+    "def": "To break the connection between things.",
+    "gloss": {
+      "en": "disconnect",
+      "ja": "切断する",
+      "zh": "断开连接",
+      "ko": "연결을 끊다",
+      "fil": "putulin"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˌdɪskəˈnekt/"
+  },
+  {
+    "w": "discredit",
+    "ipa": "/dɪsˈkrɛdət/",
+    "cefr": "B2",
+    "pos": "動詞",
+    "def": "To harm someone's reputation.",
+    "gloss": {
+      "en": "discredit",
+      "ja": "信用を傷つける",
+      "zh": "使名誉扫地",
+      "ko": "명예를 훼손하다",
+      "fil": "sirain ang reputasyon"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/dɪsˈkredət/"
+  },
+  {
+    "w": "discriminate",
+    "ipa": "/dɪˈskrɪməˌneɪt/",
+    "cefr": "B2",
+    "pos": "動詞",
+    "def": "To treat someone unfairly based on a category; to distinguish.",
+    "gloss": {
+      "en": "discriminate",
+      "ja": "差別する、識別する",
+      "zh": "歧视、区分",
+      "ko": "차별하다, 구별하다",
+      "fil": "magtangi"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/dɪˈskrɪməˌneɪt/"
+  },
+  {
+    "w": "disgrace",
+    "ipa": "/dɪsˈɡreɪs/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "Loss of respect or reputation; shame.",
+    "gloss": {
+      "en": "disgrace",
+      "ja": "不名誉",
+      "zh": "耻辱",
+      "ko": "불명예",
+      "fil": "kahihiyan"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/dɪsˈɡreɪs/"
+  },
+  {
+    "w": "disguise",
+    "ipa": "/dɪsˈɡaɪz/",
+    "cefr": "B2",
+    "pos": "名詞 / 動詞",
+    "def": "A costume or means to hide one's identity; to hide identity.",
+    "gloss": {
+      "en": "disguise",
+      "ja": "変装（する）",
+      "zh": "伪装",
+      "ko": "변장(하다)",
+      "fil": "pagbabalatkayo"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/dɪsˈɡaɪz/"
+  },
+  {
+    "w": "dishonesty",
+    "ipa": "/dɪsˈɑnəsti/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A lack of honesty; deceitfulness.",
+    "gloss": {
+      "en": "dishonesty",
+      "ja": "不正直",
+      "zh": "不诚实",
+      "ko": "부정직",
+      "fil": "kawalan ng katapatan"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/dɪsˈɒnəstiː/"
+  },
+  {
+    "w": "disillusion",
+    "ipa": "/ˌdɪsəˈluʒən/",
+    "cefr": "B2",
+    "pos": "動詞",
+    "def": "To disappoint someone by revealing an unpleasant truth.",
+    "gloss": {
+      "en": "disillusion",
+      "ja": "幻滅させる",
+      "zh": "使幻灭",
+      "ko": "환멸을 느끼게 하다",
+      "fil": "biguin"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˌdɪsəˈluːʒən/"
+  },
+  {
+    "w": "dismiss",
+    "ipa": "/dɪsˈmɪs/",
+    "cefr": "B2",
+    "pos": "動詞",
+    "def": "To send away; to reject an idea; to fire from a job.",
+    "gloss": {
+      "en": "dismiss",
+      "ja": "解雇する、退ける",
+      "zh": "解雇、驳回",
+      "ko": "해고하다, 일축하다",
+      "fil": "paalisin"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/dɪsˈmɪs/"
+  },
+  {
+    "w": "disorder",
+    "ipa": "/dɪsˈɔrdɚ/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A lack of order; a medical or mental condition.",
+    "gloss": {
+      "en": "disorder",
+      "ja": "無秩序、障害",
+      "zh": "混乱、疾病",
+      "ko": "무질서, 장애",
+      "fil": "kaguluhan"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/dɪsˈɔːdə/"
+  },
+  {
+    "w": "disorderly",
+    "ipa": "/dɪsˈɔrdɚli/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Lacking order; unruly.",
+    "gloss": {
+      "en": "disorderly",
+      "ja": "無秩序な",
+      "zh": "混乱的",
+      "ko": "무질서한",
+      "fil": "magulo"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/dɪsˈɔːdəliː/"
+  },
+  {
+    "w": "dispensable",
+    "ipa": "/dɪˈspɛnsəbəl/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Not essential; able to be done without.",
+    "gloss": {
+      "en": "dispensable",
+      "ja": "なくてもよい",
+      "zh": "可有可无的",
+      "ko": "없어도 되는",
+      "fil": "hindi kailangan"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/dɪˈspensəbəl/"
+  },
+  {
+    "w": "displace",
+    "ipa": "/dɪsˈpleɪs/",
+    "cefr": "B2",
+    "pos": "動詞",
+    "def": "To force something or someone out of its usual place.",
+    "gloss": {
+      "en": "displace",
+      "ja": "追い出す、置き換える",
+      "zh": "取代、迫使离开",
+      "ko": "대체하다, 이주시키다",
+      "fil": "palitan"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/dɪsˈpleɪs/"
+  },
+  {
+    "w": "displeasure",
+    "ipa": "/dɪsˈplɛʒɚ/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A feeling of annoyance or dissatisfaction.",
+    "gloss": {
+      "en": "displeasure",
+      "ja": "不快",
+      "zh": "不满",
+      "ko": "불쾌감",
+      "fil": "kalungkutan"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/dɪsˈpleʒə/"
+  },
+  {
+    "w": "disposal",
+    "ipa": "/dɪˈspoʊzəl/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "The act of getting rid of something.",
+    "gloss": {
+      "en": "disposal",
+      "ja": "処分",
+      "zh": "处理",
+      "ko": "처분",
+      "fil": "pagtatapon"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/dɪˈspəʊzəl/"
+  },
+  {
+    "w": "disposition",
+    "ipa": "/ˌdɪspəˈzɪʃən/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A person's natural tendency or temperament.",
+    "gloss": {
+      "en": "disposition",
+      "ja": "気質",
+      "zh": "性情",
+      "ko": "성향",
+      "fil": "ugali"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˌdɪspəˈzɪʃən/"
+  },
+  {
+    "w": "dispute",
+    "ipa": "/dɪˈspjut/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A disagreement or argument.",
+    "gloss": {
+      "en": "dispute",
+      "ja": "論争",
+      "zh": "争议",
+      "ko": "분쟁",
+      "fil": "alitan"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/dɪˈspjuːt/"
+  },
+  {
+    "w": "disqualify",
+    "ipa": "/dɪsˈkwɑləˌfaɪ/",
+    "cefr": "B2",
+    "pos": "動詞",
+    "def": "To officially exclude someone for breaking a rule.",
+    "gloss": {
+      "en": "disqualify",
+      "ja": "失格させる",
+      "zh": "取消资格",
+      "ko": "실격시키다",
+      "fil": "diskwalipikahin"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/dɪsˈkwɒləˌfaɪ/"
+  },
+  {
+    "w": "disregard",
+    "ipa": "/ˌdɪsrɪˈɡɑrd/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "The act of ignoring or not considering something.",
+    "gloss": {
+      "en": "disregard",
+      "ja": "無視",
+      "zh": "无视",
+      "ko": "무시",
+      "fil": "pagwawalang-bahala"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˌdɪsrɪˈɡɑːd/"
+  },
+  {
+    "w": "disrupt",
+    "ipa": "/dɪsˈrʌpt/",
+    "cefr": "B2",
+    "pos": "動詞",
+    "def": "To interrupt the normal flow of something.",
+    "gloss": {
+      "en": "disrupt",
+      "ja": "混乱させる",
+      "zh": "扰乱",
+      "ko": "방해하다",
+      "fil": "guluhin"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/dɪsˈrʌpt/"
+  },
+  {
+    "w": "dissatisfaction",
+    "ipa": "/ˌdɪsˌsætəsˈfækʃən/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A feeling of not being satisfied.",
+    "gloss": {
+      "en": "dissatisfaction",
+      "ja": "不満",
+      "zh": "不满",
+      "ko": "불만",
+      "fil": "kawalang-kasiyahan"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˌdɪsˌsætəsˈfækʃən/"
+  },
+  {
+    "w": "dissatisfied",
+    "ipa": "/dɪsˈsætəsˌfaɪd/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Not satisfied or pleased.",
+    "gloss": {
+      "en": "dissatisfied",
+      "ja": "不満な",
+      "zh": "不满意的",
+      "ko": "불만족스러운",
+      "fil": "hindi nasisiyahan"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/dɪsˈsætəsˌfaɪd/"
+  },
+  {
+    "w": "dissident",
+    "ipa": "/ˈdɪsədənt/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A person who opposes official policy, especially in politics.",
+    "gloss": {
+      "en": "dissident",
+      "ja": "反体制派",
+      "zh": "持不同政见者",
+      "ko": "반체제 인사",
+      "fil": "dissidente"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈdɪsədənt/"
+  },
+  {
+    "w": "distinguished",
+    "ipa": "/dɪˈstɪŋɡwɪʃt/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Successful and respected; having a dignified appearance.",
+    "gloss": {
+      "en": "distinguished",
+      "ja": "著名な、気品のある",
+      "zh": "杰出的",
+      "ko": "저명한",
+      "fil": "kilala"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/dɪˈstɪŋɡwɪʃt/"
+  },
+  {
+    "w": "distortion",
+    "ipa": "/dɪˈstɔrʃən/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A change that misrepresents the original form.",
+    "gloss": {
+      "en": "distortion",
+      "ja": "歪曲",
+      "zh": "扭曲",
+      "ko": "왜곡",
+      "fil": "distorsyon"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/dɪˈstɔːʃən/"
+  },
+  {
+    "w": "distract",
+    "ipa": "/dɪˈstrækt/",
+    "cefr": "B2",
+    "pos": "動詞",
+    "def": "To draw attention away from something.",
+    "gloss": {
+      "en": "distract",
+      "ja": "気を散らす",
+      "zh": "分散注意力",
+      "ko": "산만하게 하다",
+      "fil": "guluhin ang isip"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/dɪˈstrækt/"
+  },
+  {
+    "w": "distraction",
+    "ipa": "/dɪˈstrækʃən/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "Something that takes attention away from a task.",
+    "gloss": {
+      "en": "distraction",
+      "ja": "気を散らすもの",
+      "zh": "分心的事物",
+      "ko": "주의 분산",
+      "fil": "kaguluhan sa isip"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/dɪˈstrækʃən/"
+  },
+  {
+    "w": "distressing",
+    "ipa": "/dɪˈstrɛsɪŋ/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Causing worry, sadness, or suffering.",
+    "gloss": {
+      "en": "distressing",
+      "ja": "苦痛を与える",
+      "zh": "令人痛心的",
+      "ko": "괴로운",
+      "fil": "nakakabahala"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/dɪˈstresɪŋ/"
+  },
+  {
+    "w": "distributor",
+    "ipa": "/dɪˈstrɪbjətɚ/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A company or person that supplies goods to shops.",
+    "gloss": {
+      "en": "distributor",
+      "ja": "販売代理店",
+      "zh": "经销商",
+      "ko": "유통업자",
+      "fil": "distributor"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/dɪˈstrɪbjətə/"
+  },
+  {
+    "w": "diversion",
+    "ipa": "/dəˈvɝʒən/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A change of direction; something that distracts or entertains.",
+    "gloss": {
+      "en": "diversion",
+      "ja": "転換、気晴らし",
+      "zh": "转移、消遣",
+      "ko": "전환, 기분전환",
+      "fil": "paglilibang"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/dəˈvɜːʒən/"
+  },
+  {
+    "w": "divert",
+    "ipa": "/dəˈvɝt/",
+    "cefr": "B2",
+    "pos": "動詞",
+    "def": "To cause something to change direction.",
+    "gloss": {
+      "en": "divert",
+      "ja": "そらす、迂回させる",
+      "zh": "转移",
+      "ko": "우회시키다",
+      "fil": "ilihis"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/dəˈvɜːt/"
+  },
+  {
+    "w": "divided",
+    "ipa": "/dəˈvaɪdəd/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Split into parts; disagreeing.",
+    "gloss": {
+      "en": "divided",
+      "ja": "分裂した",
+      "zh": "分裂的",
+      "ko": "분열된",
+      "fil": "nahahati"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/dəˈvaɪdəd/"
+  },
+  {
+    "w": "divorce",
+    "ipa": "/dəˈvɔrs/",
+    "cefr": "B2",
+    "pos": "名詞 / 動詞",
+    "def": "The legal ending of a marriage; to legally end a marriage.",
+    "gloss": {
+      "en": "divorce",
+      "ja": "離婚（する）",
+      "zh": "离婚",
+      "ko": "이혼(하다)",
+      "fil": "diborsyo"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/dəˈvɔːs/"
+  },
+  {
+    "w": "domestic",
+    "ipa": "/dəˈmɛstɪk/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Relating to the home or one's own country.",
+    "gloss": {
+      "en": "domestic",
+      "ja": "家庭の、国内の",
+      "zh": "国内的、家庭的",
+      "ko": "국내의, 가정의",
+      "fil": "domestiko"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/dəˈmestɪk/"
+  },
+  {
+    "w": "dominate",
+    "ipa": "/ˈdɑməˌneɪt/",
+    "cefr": "B2",
+    "pos": "動詞",
+    "def": "To have control over or be the most important part of something.",
+    "gloss": {
+      "en": "dominate",
+      "ja": "支配する",
+      "zh": "支配",
+      "ko": "지배하다",
+      "fil": "mangibabaw"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈdɒməˌneɪt/"
+  },
+  {
+    "w": "donate",
+    "ipa": "/ˈdoʊˌneɪt/",
+    "cefr": "B2",
+    "pos": "動詞",
+    "def": "To give something, especially money, to a cause.",
+    "gloss": {
+      "en": "donate",
+      "ja": "寄付する",
+      "zh": "捐赠",
+      "ko": "기부하다",
+      "fil": "magbigay"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈdəʊˌneɪt/"
+  },
+  {
+    "w": "donation",
+    "ipa": "/doʊˈneɪʃən/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "Something given to help a person or cause.",
+    "gloss": {
+      "en": "donation",
+      "ja": "寄付",
+      "zh": "捐赠",
+      "ko": "기부",
+      "fil": "donasyon"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/dəʊˈneɪʃən/"
+  },
+  {
+    "w": "donkey",
+    "ipa": "/ˈdɑŋki/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A domesticated animal related to the horse.",
+    "gloss": {
+      "en": "donkey",
+      "ja": "ロバ",
+      "zh": "驴",
+      "ko": "당나귀",
+      "fil": "asno"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈdɒŋkiː/"
+  },
+  {
+    "w": "doorkeeper",
+    "ipa": "/ˈdɔrˌkipɚ/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A person who guards or attends the entrance of a building.",
+    "gloss": {
+      "en": "doorkeeper",
+      "ja": "門番",
+      "zh": "看门人",
+      "ko": "문지기",
+      "fil": "bantay-pinto"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈdɔːˌkiːpə/"
+  },
+  {
+    "w": "doorway",
+    "ipa": "/ˈdɔrˌweɪ/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "An entrance to a room or building.",
+    "gloss": {
+      "en": "doorway",
+      "ja": "出入り口",
+      "zh": "门口",
+      "ko": "출입구",
+      "fil": "pintuan"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈdɔːˌweɪ/"
+  },
+  {
+    "w": "dormitory",
+    "ipa": "/ˈdɔrməˌtɔri/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A large room or building with beds for many people.",
+    "gloss": {
+      "en": "dormitory",
+      "ja": "寮",
+      "zh": "宿舍",
+      "ko": "기숙사",
+      "fil": "dormitoryo"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈdɔːməˌtɔːriː/"
+  },
+  {
+    "w": "doubly",
+    "ipa": "/ˈdʌbli/",
+    "cefr": "B2",
+    "pos": "副詞",
+    "def": "To twice the usual extent.",
+    "gloss": {
+      "en": "doubly",
+      "ja": "二重に",
+      "zh": "加倍地",
+      "ko": "두 배로",
+      "fil": "doble"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈdʌbliː/"
+  },
+  {
+    "w": "doubtful",
+    "ipa": "/ˈdaʊtfəl/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Feeling uncertain; unlikely to be true.",
+    "gloss": {
+      "en": "doubtful",
+      "ja": "疑わしい",
+      "zh": "怀疑的",
+      "ko": "의심스러운",
+      "fil": "may pag-aalinlangan"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈdaʊtfəl/"
+  },
+  {
+    "w": "dove",
+    "ipa": "/dʌv/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A bird similar to a pigeon, symbolizing peace.",
+    "gloss": {
+      "en": "dove",
+      "ja": "鳩",
+      "zh": "鸽子",
+      "ko": "비둘기",
+      "fil": "kalapati"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/dʌv/"
+  },
+  {
+    "w": "downfall",
+    "ipa": "/ˈdaʊnˌfɔl/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A sudden loss of power, success, or status.",
+    "gloss": {
+      "en": "downfall",
+      "ja": "没落",
+      "zh": "垮台",
+      "ko": "몰락",
+      "fil": "pagbagsak"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈdaʊnˌfɔːl/"
+  },
+  {
+    "w": "downsize",
+    "ipa": "/ˈdaʊnˌsaɪz/",
+    "cefr": "B2",
+    "pos": "動詞",
+    "def": "To reduce the size of a company or organization.",
+    "gloss": {
+      "en": "downsize",
+      "ja": "縮小する",
+      "zh": "裁员",
+      "ko": "축소하다",
+      "fil": "paliitin"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈdaʊnˌsaɪz/"
+  },
+  {
+    "w": "dowry",
+    "ipa": "/ˈdaʊri/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "Property or money brought by a bride to her husband at marriage.",
+    "gloss": {
+      "en": "dowry",
+      "ja": "持参金",
+      "zh": "嫁妆",
+      "ko": "지참금",
+      "fil": "bigay-kaya"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈdaʊriː/"
+  },
+  {
+    "w": "dramatically",
+    "ipa": "/drəˈmætɪkəli/",
+    "cefr": "B2",
+    "pos": "副詞",
+    "def": "In a striking or sudden way.",
+    "gloss": {
+      "en": "dramatically",
+      "ja": "劇的に",
+      "zh": "戏剧性地",
+      "ko": "극적으로",
+      "fil": "dramatiko"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/drəˈmætɪkəliː/"
+  },
+  {
+    "w": "drapery",
+    "ipa": "/ˈdreɪpəri/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "Cloth arranged in loose folds, as curtains.",
+    "gloss": {
+      "en": "drapery",
+      "ja": "垂れ布、カーテン地",
+      "zh": "布幔",
+      "ko": "커튼감",
+      "fil": "kurtina"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈdreɪpəriː/"
+  },
+  {
+    "w": "dreadful",
+    "ipa": "/ˈdrɛdfəl/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Extremely bad or unpleasant.",
+    "gloss": {
+      "en": "dreadful",
+      "ja": "ひどい",
+      "zh": "可怕的",
+      "ko": "끔찍한",
+      "fil": "kakila-kilabot"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈdredfəl/"
+  },
+  {
+    "w": "dreamy",
+    "ipa": "/ˈdrimi/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Vague and impractical; peaceful and soft.",
+    "gloss": {
+      "en": "dreamy",
+      "ja": "夢見心地の",
+      "zh": "梦幻般的",
+      "ko": "몽환적인",
+      "fil": "parang panaginip"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈdriːmiː/"
+  },
+  {
+    "w": "drinkable",
+    "ipa": "/ˈdrɪŋkəbəl/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Safe or suitable for drinking.",
+    "gloss": {
+      "en": "drinkable",
+      "ja": "飲用に適した",
+      "zh": "可饮用的",
+      "ko": "마실 수 있는",
+      "fil": "mainom"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈdrɪŋkəbəl/"
+  },
+  {
+    "w": "dropout",
+    "ipa": "/ˈdrɑpˌaʊt/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A person who leaves school before finishing.",
+    "gloss": {
+      "en": "dropout",
+      "ja": "中退者",
+      "zh": "辍学者",
+      "ko": "중퇴자",
+      "fil": "dropout"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈdrɒpˌaʊt/"
+  },
+  {
+    "w": "duel",
+    "ipa": "/ˈduəl/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A formal fight between two people over a matter of honor.",
+    "gloss": {
+      "en": "duel",
+      "ja": "決闘",
+      "zh": "决斗",
+      "ko": "결투",
+      "fil": "duwelo"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈduːəl/"
+  },
+  {
+    "w": "duplicate",
+    "ipa": "/ˈdupləkət/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "An exact copy of something.",
+    "gloss": {
+      "en": "duplicate",
+      "ja": "複製",
+      "zh": "复制品",
+      "ko": "복제품",
+      "fil": "duplicate"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈduːpləkət/"
+  },
+  {
+    "w": "duplication",
+    "ipa": "/ˌdupləˈkeɪʃən/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "The act of copying or repeating something.",
+    "gloss": {
+      "en": "duplication",
+      "ja": "複製、重複",
+      "zh": "重复",
+      "ko": "중복",
+      "fil": "pagdodoble"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˌduːpləˈkeɪʃən/"
+  },
+  {
+    "w": "dynamic",
+    "ipa": "/daɪˈnæmɪk/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Characterized by energy or constant change.",
+    "gloss": {
+      "en": "dynamic",
+      "ja": "活動的な、動的な",
+      "zh": "动态的",
+      "ko": "역동적인",
+      "fil": "dynamic"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/daɪˈnæmɪk/"
+  },
+  {
+    "w": "eagerly",
+    "ipa": "/ˈiɡɚli/",
+    "cefr": "B2",
+    "pos": "副詞",
+    "def": "With enthusiasm and impatience.",
+    "gloss": {
+      "en": "eagerly",
+      "ja": "熱心に",
+      "zh": "热切地",
+      "ko": "열심히",
+      "fil": "masigasig"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈiːɡəliː/"
+  },
+  {
+    "w": "eagle",
+    "ipa": "/ˈiɡəl/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A large bird of prey with strong sight.",
+    "gloss": {
+      "en": "eagle",
+      "ja": "鷲",
+      "zh": "鹰",
+      "ko": "독수리",
+      "fil": "agila"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈiːɡəl/"
+  },
+  {
+    "w": "earnings",
+    "ipa": "/ˈɝnɪŋz/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "Money earned from work or investment.",
+    "gloss": {
+      "en": "earnings",
+      "ja": "収入、所得",
+      "zh": "收入",
+      "ko": "수입",
+      "fil": "kinita"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈɜːnɪŋz/"
+  },
+  {
+    "w": "eastward",
+    "ipa": "/ˈistwɚd/",
+    "cefr": "B2",
+    "pos": "副詞",
+    "def": "Toward the east.",
+    "gloss": {
+      "en": "eastward",
+      "ja": "東へ",
+      "zh": "向东",
+      "ko": "동쪽으로",
+      "fil": "pasilangan"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈiːstwəd/"
+  },
+  {
+    "w": "ecologically",
+    "ipa": "/ˌikəˈlɑdʒɪkəli/",
+    "cefr": "B2",
+    "pos": "副詞",
+    "def": "In a way related to the environment.",
+    "gloss": {
+      "en": "ecologically",
+      "ja": "生態学的に",
+      "zh": "生态上",
+      "ko": "생태학적으로",
+      "fil": "ekolohikal"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˌiːkəˈlɒdʒɪkəliː/"
+  },
+  {
+    "w": "ecologist",
+    "ipa": "/iˈkɑlədʒəst/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A scientist who studies the environment.",
+    "gloss": {
+      "en": "ecologist",
+      "ja": "生態学者",
+      "zh": "生态学家",
+      "ko": "생태학자",
+      "fil": "ekologo"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/iːˈkɒlədʒəst/"
+  },
+  {
+    "w": "economical",
+    "ipa": "/ˌɛkəˈnɑmɪkəl/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Giving good value; not wasteful.",
+    "gloss": {
+      "en": "economical",
+      "ja": "経済的な、節約的な",
+      "zh": "经济实惠的",
+      "ko": "경제적인",
+      "fil": "matipid"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˌekəˈnɒmɪkəl/"
+  },
+  {
+    "w": "economist",
+    "ipa": "/ɪˈkɑnəməst/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "An expert in economics.",
+    "gloss": {
+      "en": "economist",
+      "ja": "経済学者",
+      "zh": "经济学家",
+      "ko": "경제학자",
+      "fil": "ekonomista"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ɪˈkɒnəməst/"
+  },
+  {
+    "w": "ecstatic",
+    "ipa": "/ɛkˈstætɪk/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Feeling or expressing overwhelming happiness.",
+    "gloss": {
+      "en": "ecstatic",
+      "ja": "有頂天の",
+      "zh": "欣喜若狂的",
+      "ko": "황홀한",
+      "fil": "labis na masaya"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ekˈstætɪk/"
+  }
+]
