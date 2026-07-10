@@ -46,13 +46,13 @@
 ## 2. commit 一覧
 
 ```
+f06f5e0 Merge branch 'feat/phase-v-vocab-page' (Phase V vocab page)
+2241315 docs(phase-v): update SPEC §4.8b, changelog, implementation report
 c65bdc4 i18n(vocab): add vocab.back for all 6 languages
 0623ad4 style(vocab): two-line rows, CEFR badges, sticky header polish
 62720fa feat(vocab): hash routing (#/vocab, #/vocab/phrases) + back button
 8cd23be refactor(vocab): migrate modal to independent page (#vocabPage)
 ```
-
-（本 docs commit はこの後）
 
 ## 3. 変更ファイル
 

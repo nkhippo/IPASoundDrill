@@ -475,6 +475,7 @@ UI i18n とは独立。各言語キー（`en`, `ja`, `ko`, `zh-Hans`, `zh-Hant`,
 
 | 日付 | 内容 |
 |------|------|
+| 2026-07-10 | Phase V: 語彙ブラウザを `#vocabPage` に移設。hash routing (`#/vocab`, `#/vocab/phrases`)、2段組行・CEFR バッジ両タブ・`vocab.back` |
 | 2026-07-10 | Phase R: `ga_rp_same` 分類器修正、`fix_happy_i.py`（91語）、`phonology_lexicon.py`。語彙 5,397・B2=899 |
 | 2026-07-09 | v3.15 `ga_rp_same` / `ga_rp_same_reason` フラグ導入（`scripts/gen_ga_rp_same.py`）。UI 同一判定をフラグ参照に切替 |
 | 2026-07-09 | v3.14 Phase 1 M5: B1 最終 389語マージ。語数 4,828・B1=2,116（Phase 1 B1 拡充完了） |
