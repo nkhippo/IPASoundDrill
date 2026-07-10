@@ -159991,7 +159991,7 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/ˈdɡnəˌfaɪ/",
+    "rp_ipa": "/ˈdɪɡnəˌfaɪ/",
     "neighbors": [
       "dignity",
       "signature",
@@ -160002,8 +160002,8 @@
     ],
     "respell_ga": "DIG-nuh-fy",
     "respell_rp": "DGNUH-fy",
-    "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
   },
   {
     "w": "dignity",
@@ -160021,7 +160021,7 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/ˈdɡnətiː/",
+    "rp_ipa": "/ˈdɪɡnətiː/",
     "neighbors": [
       "dignify",
       "deputy",

@@ -1,17 +1,17 @@
 {
   "wordlist": {
     "total": 5397,
-    "same": 2668,
-    "different": 2729,
+    "same": 2669,
+    "different": 2728,
     "by_reason": {
-      "identical": 1507,
+      "identical": 1508,
       "ga_allophony": 529,
       "rhoticity": 798,
       "dress_notation_only": 446,
       "trap_bath": 72,
       "goat_vowel": 287,
       "length_marking_only": 574,
-      "structural_other": 631,
+      "structural_other": 630,
       "rhotic_vowel_notation": 37,
       "stress_placement": 30,
       "notation_composite": 69,

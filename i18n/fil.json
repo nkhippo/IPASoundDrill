@@ -235,5 +235,11 @@
   "cefr": {
     "pending": "CEFR?",
     "pending_hint": "Wala pang CEFR"
+  },
+  "checks": {
+    "progress": "Progreso",
+    "mode_d": "IPA → salita",
+    "mode_e": "salita → IPA",
+    "mode_l": "Makinig"
   }
 }

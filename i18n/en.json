@@ -235,5 +235,11 @@
   "cefr": {
     "pending": "CEFR?",
     "pending_hint": "CEFR not assigned yet"
+  },
+  "checks": {
+    "progress": "Progress",
+    "mode_d": "IPA → word",
+    "mode_e": "word → IPA",
+    "mode_l": "Listen"
   }
 }

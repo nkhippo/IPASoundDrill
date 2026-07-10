@@ -220,6 +220,16 @@
   .vocab-play:hover{border-color:var(--signal);background:var(--signal-soft)}
   .vocab-play svg{width:14px;height:14px}
   .vocab-type-badge{font-family:var(--mono);font-size:9px;font-weight:700;padding:2px 6px;border-radius:6px;flex-shrink:0;letter-spacing:.04em;text-transform:uppercase}
+  .vocab-cefr-badge{font-family:var(--mono);font-size:9px;font-weight:700;padding:2px 6px;border-radius:6px;flex-shrink:0;letter-spacing:.04em;color:var(--signal);background:var(--signal-soft)}
+  .progress-checks{display:inline-flex;gap:8px;align-items:center;margin-left:4px;flex-shrink:0;padding-top:2px}
+  .pc-mode{display:inline-flex;gap:2px}
+  .pc-slot{width:10px;height:10px;border:1px solid var(--hair);border-radius:2px;background:#fff;cursor:pointer;padding:0}
+  .pc-slot[data-filled="1"]{background:var(--ink);border-color:var(--ink)}
+  .pc-slot:hover{border-color:var(--ink)}
+  .reveal-checks{margin-top:14px;padding-top:12px;border-top:1px solid var(--hair)}
+  .reveal-checks .rc-label{font-family:var(--mono);font-size:10px;color:var(--faint);text-transform:uppercase;letter-spacing:.12em;margin-bottom:8px}
+  .reveal-checks .pc-mode{gap:4px}
+  .reveal-checks .pc-slot{width:14px;height:14px;border-radius:3px}
   .vocab-type-linking{background:#ddf4ff;color:#0550ae}
   .vocab-type-assimilation{background:#fff3cd;color:#9a5700}
   .vocab-type-elision{background:#fde8e8;color:#cf222e}
@@ -229,6 +239,8 @@
     .vocab-pos{display:none}
     .vocab-ipas{min-width:90px}
     .vocab-w{min-width:70px;font-size:13px}
+    .progress-checks{gap:4px;margin-left:2px}
+    .pc-slot{width:8px;height:8px}
   }
 
   .sumhead{text-align:center;margin-bottom:6px}
@@ -456,6 +468,14 @@
           <p id="mbSNote"></p>
           <div class="trapchips" id="mbSTraps"></div>
         </div>
+        <div class="reveal-checks hidden" id="mbSChecks">
+          <div class="rc-label" id="mbSChecksLabel">Progress</div>
+          <div class="pc-mode" data-mode="l" data-word="">
+            <button type="button" class="pc-slot" data-slot="1" aria-label="1/3"></button>
+            <button type="button" class="pc-slot" data-slot="2" aria-label="2/3"></button>
+            <button type="button" class="pc-slot" data-slot="3" aria-label="3/3"></button>
+          </div>
+        </div>
       </div>
     </div>
     <div class="mbs-actions">
@@ -530,6 +550,14 @@
         <div class="nh" id="tipsHead">Pronunciation tips</div>
         <p id="rNote"></p>
         <div class="trapchips" id="rTraps"></div>
+      </div>
+      <div class="reveal-checks" id="revealChecks">
+        <div class="rc-label" id="revealChecksLabel">Progress</div>
+        <div class="pc-mode" data-mode="" data-word="">
+          <button type="button" class="pc-slot" data-slot="1" aria-label="1/3"></button>
+          <button type="button" class="pc-slot" data-slot="2" aria-label="2/3"></button>
+          <button type="button" class="pc-slot" data-slot="3" aria-label="3/3"></button>
+        </div>
       </div>
       <button class="reveal-next" id="nextBtn">Next</button>
     </div>
@@ -828,6 +856,57 @@ function vocabDisplayGloss(c) {
   return wordGloss(c);
 }
 
+function progressChecksHtml(item) {
+  const key = escAttr(sessionItemKey(item));
+  const modes = [
+    { mode: "d", titleKey: "checks.mode_d" },
+    { mode: "e", titleKey: "checks.mode_e" },
+    { mode: "l", titleKey: "checks.mode_l" }
+  ];
+  let html = `<span class="progress-checks" data-word="${key}">`;
+  modes.forEach(({ mode, titleKey }) => {
+    const count = getCheckCount(item, mode);
+    html += `<span class="pc-mode" data-mode="${mode}" title="${escAttr(t(titleKey))}">`;
+    for (let slot = 1; slot <= CHECK_MAX; slot++) {
+      const filled = slot <= count ? "1" : "0";
+      html += `<button type="button" class="pc-slot" data-slot="${slot}" data-filled="${filled}" aria-label="${slot}/${CHECK_MAX}"></button>`;
+    }
+    html += `</span>`;
+  });
+  html += `</span>`;
+  return html;
+}
+
+function findItemByKey(wordKey) {
+  return PRESET.find(c => sessionItemKey(c) === wordKey) ||
+    CONNECTED.find(c => sessionItemKey(c) === wordKey) ||
+    WEAK.find(c => sessionItemKey(c) === wordKey);
+}
+
+function refreshChecksInDom(wrap, item) {
+  ["d", "e", "l"].forEach(mode => {
+    const count = getCheckCount(item, mode);
+    wrap.querySelectorAll(`.pc-mode[data-mode="${mode}"] .pc-slot`).forEach(btn => {
+      const slot = parseInt(btn.dataset.slot, 10);
+      btn.setAttribute("data-filled", slot <= count ? "1" : "0");
+    });
+  });
+}
+
+function refreshRevealChecksPanel(wrapId, item, mode) {
+  const wrap = $(wrapId);
+  if (!wrap || !item) return;
+  const rcMode = wrap.querySelector(".pc-mode");
+  if (!rcMode) return;
+  rcMode.dataset.word = sessionItemKey(item);
+  rcMode.dataset.mode = mode;
+  const count = getCheckCount(item, mode);
+  rcMode.querySelectorAll(".pc-slot").forEach(btn => {
+    const s = parseInt(btn.dataset.slot, 10);
+    btn.setAttribute("data-filled", s <= count ? "1" : "0");
+  });
+}
+
 function renderVocabWords(query = "") {
   const q = query.trim().toLowerCase();
   const sorted = [...PRESET].sort((a, b) => a.w.toLowerCase().localeCompare(b.w.toLowerCase()));
@@ -874,6 +953,7 @@ function renderVocabWords(query = "") {
       </span>
       <span class="vocab-gloss">${escHtml(gloss)}</span>
       ${posStr}
+      ${progressChecksHtml(c)}
       <button class="vocab-play" type="button" data-vw="${escAttr(c.w)}" aria-label="${escAttr(t("listen"))}">${SPEAKER_SVG}</button>
     </div>`;
   });
@@ -899,6 +979,10 @@ function renderVocabPhrases() {
     const rule = csRuleText(c);
     const type = c.cs_type || "";
     const level = c.level || "";
+    const cefrLabel = itemCefrLabel(c);
+    const cefrBadge = cefrLabel
+      ? `<span class="vocab-cefr-badge vocab-cefr-${cefrLabel}">${escHtml(cefrLabel)}</span>`
+      : "";
 
     const isSame = (c.ga_rp_same !== undefined) ? c.ga_rp_same : (rpIpa === gaIpa);
     const rpLine = rpIpa
@@ -917,7 +1001,9 @@ function renderVocabPhrases() {
       </span>
       <span class="vocab-gloss" title="${escAttr(rule)}">${escHtml(gloss)}${rule ? `<span style="color:var(--faint);font-size:11px;margin-left:5px">${escHtml(rule)}</span>` : ""}</span>
       <span class="vocab-type-badge vocab-type-${escAttr(type)}">${escHtml(type)}</span>
+      ${cefrBadge}
       <span class="vocab-level">L${level}</span>
+      ${progressChecksHtml(c)}
       <button class="vocab-play" type="button" data-vipa="${escAttr(gaIpa)}" data-vconn="1" aria-label="${escAttr(t("listen"))}">${SPEAKER_SVG}</button>
     </div>`;
   });
@@ -1120,6 +1206,8 @@ function applyI18n() {
   $("eCheck").textContent = t("check");
   $("nextBtn").textContent = t("next");
   $("tipsHead").textContent = t("tips_head");
+  $("revealChecksLabel").textContent = t("checks.progress");
+  $("mbSChecksLabel").textContent = t("checks.progress");
   $("weakHead").textContent = t("summary.weak_head");
   $("againBtn").textContent = t("back_top");
   $("weakBtn").textContent = t("summary.weak_btn");
@@ -1256,6 +1344,8 @@ const SESSION_REFILL = 5;
 const MODEB_QUIZ_ENABLED = false;
 const LS_HIST_KEY = "ept_hist_v1";
 const LS_SYM_KEY = "ept_sym_v1";
+const LS_CHECKS_KEY = "ept_checks_v1";
+const CHECK_MAX = 3;
 const LS_VOCAB_KEY = "ept_vocab_v1";
 const LS_VOCAB_BAND_KEY = "ept_vocab_band";
 const MODEB_BANDS = ["A1", "A2", "B1", "B2"];
@@ -1447,6 +1537,49 @@ function hasTrapPhoneme(w){
 }
 function loadHist(){try{return JSON.parse(localStorage.getItem(LS_HIST_KEY)||"{}")||{};}catch(e){return {};}}
 function saveHist(h){try{localStorage.setItem(LS_HIST_KEY,JSON.stringify(h));}catch(e){}}
+function loadChecks(){
+  try{return JSON.parse(localStorage.getItem(LS_CHECKS_KEY)||"{}")||{};}
+  catch(e){return {};}
+}
+function saveChecks(obj){
+  try{localStorage.setItem(LS_CHECKS_KEY,JSON.stringify(obj));}catch(e){}
+}
+function currentCheckMode(){
+  if(S.appMode==="b")return "l";
+  return S.dir==="encode"?"e":"d";
+}
+function getCheckCount(item,mode){
+  if(!item||!mode)return 0;
+  const key=sessionItemKey(item);
+  const all=loadChecks();
+  return(all[key]&&all[key][mode])||0;
+}
+function setCheckCount(item,mode,value){
+  if(!item||!mode)return;
+  const key=sessionItemKey(item);
+  const v=Math.max(0,Math.min(CHECK_MAX,value|0));
+  const all=loadChecks();
+  if(!all[key])all[key]={};
+  if(v===0)delete all[key][mode];
+  else all[key][mode]=v;
+  if(!Object.keys(all[key]).length)delete all[key];
+  saveChecks(all);
+}
+function toggleCheckSlot(item,mode,slot){
+  const cur=getCheckCount(item,mode);
+  const next=(cur>=slot)?(slot-1):slot;
+  setCheckCount(item,mode,next);
+  return next;
+}
+function frequencyWeight(item,mode){
+  return Math.max(1,(CHECK_MAX+1)-getCheckCount(item,mode));
+}
+function weightedShuffle(arr,weightFn){
+  return arr
+    .map(x=>({x,score:Math.random()/Math.max(0.1,weightFn(x))}))
+    .sort((a,b)=>a.score-b.score)
+    .map(o=>o.x);
+}
 function loadSym(){try{return JSON.parse(localStorage.getItem(LS_SYM_KEY)||"{}")||{};}catch(e){return {};}}
 function saveSym(s){try{localStorage.setItem(LS_SYM_KEY,JSON.stringify(s));}catch(e){}}
 function histEntry(word){const h=loadHist();return h[word]||null;}
@@ -1694,6 +1827,7 @@ function renderModeBStudy(c){
     mbSAltEl.classList.remove("hidden");
   }else mbSAltEl.classList.add("hidden");
   $("mbSMeaning").classList.add("hidden");
+  $("mbSChecks").classList.add("hidden");
   $("mbSRevealBtn").classList.remove("hidden");
   $("mbSGotIt").classList.add("hidden");
   $("mbSWord").textContent=c.w;
@@ -2215,7 +2349,8 @@ function buildSessionQueue(pool,count){
   for(const w of newCands){if(out.length>=nDue+nSym+nNew)break;out.push(w);used.add(w.w);}
   const rest=shuffle(pool.filter(w=>!used.has(w.w)));
   for(const w of rest){if(out.length>=count)break;out.push(w);used.add(w.w);}
-  return shuffle(out).slice(0,count);
+  const mode=currentCheckMode();
+  return weightedShuffle(out,it=>frequencyWeight(it,mode)).slice(0,count);
 }
 function sessionItemKey(c){return c&&(c.id||c.w)||"";}
 function isCurrentItem(c){return S.cur&&sessionItemKey(S.cur)===sessionItemKey(c);}
@@ -2224,14 +2359,15 @@ function buildSessionPool(weakOnly,missedWords){
   if(S.appMode==="b"){
     const pool=modeBPool();
     if(MODEB_QUIZ_ENABLED)return buildModeBQueue();
-    return shuffle(pool.map(w=>({...w,mbKind:"study"})));
+    return weightedShuffle(pool.map(w=>({...w,mbKind:"study"})),it=>frequencyWeight(it,"l"));
   }
   if(S.tab==="connected"){
     const all=CONNECTED.concat(WEAK);
     if(weakOnly&&missedWords.length){
       return shuffle(all.filter(w=>missedWords.includes(w.w)));
     }
-    return shuffle(filteredCsPool().slice());
+    const mode=currentCheckMode();
+    return weightedShuffle(filteredCsPool().slice(),it=>frequencyWeight(it,mode));
   }
   if(weakOnly&&missedWords.length){
     return shuffle(PRESET.filter(w=>missedWords.includes(w.w)));
@@ -2618,6 +2754,7 @@ function reveal(res,ctx){
   }else{
     renderWordPronDetails(c,{noteId:"rNote",tipsHeadId:"tipsHead",trapsId:"rTraps",infoId:"rInfo",noteBlockId:"rNoteBlock"});
   }
+  refreshRevealChecksPanel("revealChecks",c,currentCheckMode());
   setTimeout(()=>speak(c.w,speakOptsForItem(c)),200);
   refreshAllSpeakers();
 }
@@ -2634,6 +2771,10 @@ $("mbSRevealBtn").addEventListener("click",()=>{
   $("mbSMeaning").classList.remove("hidden");
   $("mbSRevealBtn").classList.add("hidden");
   $("mbSGotIt").classList.remove("hidden");
+  if(S.cur){
+    $("mbSChecks").classList.remove("hidden");
+    refreshRevealChecksPanel("mbSChecks",S.cur,"l");
+  }
 });
 $("mbSGotIt").addEventListener("click",nextCard);
 $("mbSPlay").addEventListener("click",()=>{if(S.cur)speak(S.cur.w);});
@@ -2703,6 +2844,17 @@ $("vocabLetters").addEventListener("click",e=>{
   if(target)target.scrollIntoView({behavior:"smooth",block:"start"});
 });
 $("vocabBody").addEventListener("click",e=>{
+  const pcBtn=e.target.closest(".pc-slot");
+  if(pcBtn){
+    const modeEl=pcBtn.closest(".pc-mode");
+    const wrap=pcBtn.closest(".progress-checks");
+    if(!modeEl||!wrap)return;
+    const item=findItemByKey(wrap.dataset.word);
+    if(!item)return;
+    toggleCheckSlot(item,modeEl.dataset.mode,parseInt(pcBtn.dataset.slot,10));
+    refreshChecksInDom(wrap,item);
+    return;
+  }
   const btn=e.target.closest(".vocab-play");
   if(!btn)return;
   if(btn.dataset.vconn){
@@ -2711,6 +2863,23 @@ $("vocabBody").addEventListener("click",e=>{
     speak(btn.dataset.vw);
   }
 });
+function bindRevealCheckClicks(wrapId,itemFn,modeFn){
+  const wrap=$(wrapId);
+  if(!wrap||wrap._checksBound)return;
+  wrap._checksBound=true;
+  wrap.addEventListener("click",ev=>{
+    const btn=ev.target.closest(".pc-slot");
+    if(!btn)return;
+    const rcMode=btn.closest(".pc-mode");
+    const item=itemFn();
+    if(!rcMode||!item)return;
+    const mode=modeFn();
+    toggleCheckSlot(item,mode,parseInt(btn.dataset.slot,10));
+    refreshRevealChecksPanel(wrapId,item,mode);
+  });
+}
+bindRevealCheckClicks("revealChecks",()=>S.cur,()=>currentCheckMode());
+bindRevealCheckClicks("mbSChecks",()=>S.cur,()=>"l");
 document.addEventListener("keydown",e=>{
   if(e.key==="Escape"&&!$("vocabModal").classList.contains("hidden"))closeVocab();
 });

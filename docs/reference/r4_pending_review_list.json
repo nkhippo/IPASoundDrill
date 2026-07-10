@@ -1,0 +1,1781 @@
+[
+  {
+    "w": "candy",
+    "cefr": "A1",
+    "ipa": "/ˈkændi/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˈkændi/",
+    "gloss_ja": "あめ",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "original(pre-Phase1)",
+    "has_respell_ga": true,
+    "has_respell_rp": true
+  },
+  {
+    "w": "contest",
+    "cefr": "A1",
+    "ipa": "/ˈkɑntɛst/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˈkɒntest/",
+    "gloss_ja": "コンテスト",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "original(pre-Phase1)",
+    "has_respell_ga": true,
+    "has_respell_rp": true
+  },
+  {
+    "w": "interview",
+    "cefr": "A1",
+    "ipa": "/ˈɪntɚˌvju/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˈɪntəˌvjuː/",
+    "gloss_ja": "インタビュー",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "original(pre-Phase1)",
+    "has_respell_ga": true,
+    "has_respell_rp": true
+  },
+  {
+    "w": "interviewer",
+    "cefr": "A1",
+    "ipa": "/ˈɪntɚˌvjuɚ/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˈɪntəˌvjuːə/",
+    "gloss_ja": "インタビュアー",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "original(pre-Phase1)",
+    "has_respell_ga": true,
+    "has_respell_rp": true
+  },
+  {
+    "w": "into",
+    "cefr": "A1",
+    "ipa": "/ˈɪntu/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˈɪntuː/",
+    "gloss_ja": "の中へ",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "original(pre-Phase1)",
+    "has_respell_ga": true,
+    "has_respell_rp": true
+  },
+  {
+    "w": "monday",
+    "cefr": "A1",
+    "ipa": "/ˈmʌndi/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˈmʌndi/",
+    "gloss_ja": "月曜日",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "original(pre-Phase1)",
+    "has_respell_ga": true,
+    "has_respell_rp": true
+  },
+  {
+    "w": "ninety",
+    "cefr": "A1",
+    "ipa": "/ˈnaɪnti/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˈnaɪnti/",
+    "gloss_ja": "九十",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "original(pre-Phase1)",
+    "has_respell_ga": true,
+    "has_respell_rp": true
+  },
+  {
+    "w": "painting",
+    "cefr": "A1",
+    "ipa": "/ˈpeɪntɪŋ/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˈpeɪntɪŋ/",
+    "gloss_ja": "絵画",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "original(pre-Phase1)",
+    "has_respell_ga": true,
+    "has_respell_rp": true
+  },
+  {
+    "w": "scientist",
+    "cefr": "A1",
+    "ipa": "/ˈsaɪəntɪst/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˈsaɪəntɪst/",
+    "gloss_ja": "科学者",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "original(pre-Phase1)",
+    "has_respell_ga": true,
+    "has_respell_rp": true
+  },
+  {
+    "w": "seventy",
+    "cefr": "A1",
+    "ipa": "/ˈsɛvənti/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˈsevənti/",
+    "gloss_ja": "70",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "original(pre-Phase1)",
+    "has_respell_ga": true,
+    "has_respell_rp": true
+  },
+  {
+    "w": "sunday",
+    "cefr": "A1",
+    "ipa": "/ˈsʌnˌdeɪ/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˈsʌnˌdeɪ/",
+    "gloss_ja": "日曜日",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "original(pre-Phase1)",
+    "has_respell_ga": true,
+    "has_respell_rp": true
+  },
+  {
+    "w": "twenty",
+    "cefr": "A1",
+    "ipa": "/ˈtwɛnti/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˈtwenti/",
+    "gloss_ja": "二十",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "original(pre-Phase1)",
+    "has_respell_ga": true,
+    "has_respell_rp": true
+  },
+  {
+    "w": "under",
+    "cefr": "A1",
+    "ipa": "/ˈʌndɚ/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˈʌndə/",
+    "gloss_ja": "下",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "original(pre-Phase1)",
+    "has_respell_ga": true,
+    "has_respell_rp": true
+  },
+  {
+    "w": "underline",
+    "cefr": "A1",
+    "ipa": "/ˈʌndɚˌlaɪn/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˈʌndəˌlaɪn/",
+    "gloss_ja": "下線",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "original(pre-Phase1)",
+    "has_respell_ga": true,
+    "has_respell_rp": true
+  },
+  {
+    "w": "understood",
+    "cefr": "A1",
+    "ipa": "/ˌʌndɚˈstʊd/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˌʌndəˈstʊd/",
+    "gloss_ja": "理解する（understandの過去形・過去分詞）",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "original(pre-Phase1)",
+    "has_respell_ga": true,
+    "has_respell_rp": true
+  },
+  {
+    "w": "window",
+    "cefr": "A1",
+    "ipa": "/ˈwɪndoʊ/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˈwɪndəʊ/",
+    "gloss_ja": "ウィンドウ",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "original(pre-Phase1)",
+    "has_respell_ga": true,
+    "has_respell_rp": true
+  },
+  {
+    "w": "winter",
+    "cefr": "A1",
+    "ipa": "/ˈwɪntɚ/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˈwɪntə/",
+    "gloss_ja": "冬",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "original(pre-Phase1)",
+    "has_respell_ga": true,
+    "has_respell_rp": true
+  },
+  {
+    "w": "wonderful",
+    "cefr": "A1",
+    "ipa": "/ˈwʌndɚfəl/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˈwʌndəfəl/",
+    "gloss_ja": "素晴らしい",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "original(pre-Phase1)",
+    "has_respell_ga": true,
+    "has_respell_rp": true
+  },
+  {
+    "w": "advantage",
+    "cefr": "A2",
+    "ipa": "/ædˈvæntɪdʒ/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ədˈvɑːntɪdʒ/",
+    "gloss_ja": "アドバンテージ",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "original(pre-Phase1)",
+    "has_respell_ga": true,
+    "has_respell_rp": true
+  },
+  {
+    "w": "calendar",
+    "cefr": "A2",
+    "ipa": "/ˈkæləndɚ/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˈkæləndə/",
+    "gloss_ja": "カレンダー",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "original(pre-Phase1)",
+    "has_respell_ga": true,
+    "has_respell_rp": true
+  },
+  {
+    "w": "contact",
+    "cefr": "A2",
+    "ipa": "/ˈkɑnˌtækt/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˈkɒnˌtækt/",
+    "gloss_ja": "連絡、連絡する",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "original(pre-Phase1)",
+    "has_respell_ga": true,
+    "has_respell_rp": true
+  },
+  {
+    "w": "context",
+    "cefr": "A2",
+    "ipa": "/ˈkɑntɛkst/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˈkɒntekst/",
+    "gloss_ja": "コンテクスト",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "original(pre-Phase1)",
+    "has_respell_ga": true,
+    "has_respell_rp": true
+  },
+  {
+    "w": "continent",
+    "cefr": "A2",
+    "ipa": "/ˈkɑntənənt/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˈkɒntɪnənt/",
+    "gloss_ja": "大陸",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "original(pre-Phase1)",
+    "has_respell_ga": true,
+    "has_respell_rp": true
+  },
+  {
+    "w": "dentist",
+    "cefr": "A2",
+    "ipa": "/ˈdɛntəst/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˈdentɪst/",
+    "gloss_ja": "歯医者",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "original(pre-Phase1)",
+    "has_respell_ga": true,
+    "has_respell_rp": true
+  },
+  {
+    "w": "disadvantage",
+    "cefr": "A2",
+    "ipa": "/ˌdɪsədˈvæntɪdʒ/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˌdɪsədˈvɑːntɪdʒ/",
+    "gloss_ja": "デメリット",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "original(pre-Phase1)",
+    "has_respell_ga": true,
+    "has_respell_rp": true
+  },
+  {
+    "w": "disappointed",
+    "cefr": "A2",
+    "ipa": "/ˌdɪsəˈpɔɪntɪd/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˌdɪsəˈpɔɪntɪd/",
+    "gloss_ja": "残念だった",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "original(pre-Phase1)",
+    "has_respell_ga": true,
+    "has_respell_rp": true
+  },
+  {
+    "w": "disappointing",
+    "cefr": "A2",
+    "ipa": "/ˌdɪsəˈpɔɪntɪŋ/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˌdɪsəˈpɔɪntɪŋ/",
+    "gloss_ja": "残念な",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "original(pre-Phase1)",
+    "has_respell_ga": true,
+    "has_respell_rp": true
+  },
+  {
+    "w": "ending",
+    "cefr": "A2",
+    "ipa": "/ˈɛndɪŋ/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˈendɪŋ/",
+    "gloss_ja": "エンディング",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "original(pre-Phase1)",
+    "has_respell_ga": true,
+    "has_respell_rp": true
+  },
+  {
+    "w": "enter",
+    "cefr": "A2",
+    "ipa": "/ˈɛntɚ/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˈentə/",
+    "gloss_ja": "入力",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "original(pre-Phase1)",
+    "has_respell_ga": true,
+    "has_respell_rp": true
+  },
+  {
+    "w": "entertainment",
+    "cefr": "A2",
+    "ipa": "/ˌɛntɚˈteɪnmənt/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˌentəˈteɪnmənt/",
+    "gloss_ja": "エンターテインメント",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "original(pre-Phase1)",
+    "has_respell_ga": true,
+    "has_respell_rp": true
+  },
+  {
+    "w": "gender",
+    "cefr": "A2",
+    "ipa": "/ˈdʒɛndɚ/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˈdʒendə/",
+    "gloss_ja": "性別",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "original(pre-Phase1)",
+    "has_respell_ga": true,
+    "has_respell_rp": true
+  },
+  {
+    "w": "granddad",
+    "cefr": "A2",
+    "ipa": "/ˈɡrænˌdæd/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˈɡrænˌdæd/",
+    "gloss_ja": "祖父",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "original(pre-Phase1)",
+    "has_respell_ga": true,
+    "has_respell_rp": true
+  },
+  {
+    "w": "granddaughter",
+    "cefr": "A2",
+    "ipa": "/ˈɡrænˌdɔtɚ/",
+    "ipa_actual_ga": "/ˈɡrænˌdɔɾɚ/",
+    "rp_ipa": "/ˈɡrænˌdɔːtə/",
+    "gloss_ja": "孫娘",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "original(pre-Phase1)",
+    "has_respell_ga": true,
+    "has_respell_rp": true
+  },
+  {
+    "w": "handicapped",
+    "cefr": "A2",
+    "ipa": "/ˈhændiˌkæpt/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˈhændiˌkæpt/",
+    "gloss_ja": "障害者",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "original(pre-Phase1)",
+    "has_respell_ga": true,
+    "has_respell_rp": true
+  },
+  {
+    "w": "hunter",
+    "cefr": "A2",
+    "ipa": "/ˈhʌntɚ/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˈhʌntə/",
+    "gloss_ja": "ハンター",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "original(pre-Phase1)",
+    "has_respell_ga": true,
+    "has_respell_rp": true
+  },
+  {
+    "w": "independence",
+    "cefr": "A2",
+    "ipa": "/ˌɪndɪˈpɛndəns/",
+    "ipa_actual_ga": "/ˌɪndɪˈpɛndn̩s/",
+    "rp_ipa": "/ˌɪndɪˈpendəns/",
+    "gloss_ja": "独立",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "original(pre-Phase1)",
+    "has_respell_ga": true,
+    "has_respell_rp": true
+  },
+  {
+    "w": "indicate",
+    "cefr": "A2",
+    "ipa": "/ˈɪndəˌkeɪt/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˈɪndəˌkeɪt/",
+    "gloss_ja": "示す",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "original(pre-Phase1)",
+    "has_respell_ga": true,
+    "has_respell_rp": true
+  },
+  {
+    "w": "indoor",
+    "cefr": "A2",
+    "ipa": "/ˈɪnˌdɔr/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˈɪnˌdɔː/",
+    "gloss_ja": "屋内",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "original(pre-Phase1)",
+    "has_respell_ga": true,
+    "has_respell_rp": true
+  },
+  {
+    "w": "international",
+    "cefr": "A2",
+    "ipa": "/ˌɪntɚˈnæʃənəl/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˌɪntəˈnæʃənəl/",
+    "gloss_ja": "国際的",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "original(pre-Phase1)",
+    "has_respell_ga": true,
+    "has_respell_rp": true
+  },
+  {
+    "w": "kinda",
+    "cefr": "A2",
+    "ipa": "/ˈkaɪndə/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˈkaɪndə/",
+    "gloss_ja": "なんとなく、ちょっと（kind ofの口語形）",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "original(pre-Phase1)",
+    "has_respell_ga": true,
+    "has_respell_rp": true
+  },
+  {
+    "w": "painter",
+    "cefr": "A2",
+    "ipa": "/ˈpeɪntɚ/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˈpeɪntə/",
+    "gloss_ja": "画家",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "original(pre-Phase1)",
+    "has_respell_ga": true,
+    "has_respell_rp": true
+  },
+  {
+    "w": "plenty",
+    "cefr": "A2",
+    "ipa": "/ˈplɛnti/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˈplenti/",
+    "gloss_ja": "多くの",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "original(pre-Phase1)",
+    "has_respell_ga": true,
+    "has_respell_rp": true
+  },
+  {
+    "w": "printer",
+    "cefr": "A2",
+    "ipa": "/ˈprɪntɚ/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˈprɪntə/",
+    "gloss_ja": "プリンター",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "original(pre-Phase1)",
+    "has_respell_ga": true,
+    "has_respell_rp": true
+  },
+  {
+    "w": "romantic",
+    "cefr": "A2",
+    "ipa": "/roʊˈmæntɪk/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/rəʊˈmæntɪk/",
+    "gloss_ja": "ロマンチック",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "original(pre-Phase1)",
+    "has_respell_ga": true,
+    "has_respell_rp": true
+  },
+  {
+    "w": "roundabout",
+    "cefr": "A2",
+    "ipa": "/ˈraʊndəˌbaʊt/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˈraʊndəˌbaʊt/",
+    "gloss_ja": "ラウンドアバウト",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "original(pre-Phase1)",
+    "has_respell_ga": true,
+    "has_respell_rp": true
+  },
+  {
+    "w": "sandy",
+    "cefr": "A2",
+    "ipa": "/ˈsændi/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˈsændi/",
+    "gloss_ja": "砂っぽい",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "original(pre-Phase1)",
+    "has_respell_ga": true,
+    "has_respell_rp": true
+  },
+  {
+    "w": "thunderstorm",
+    "cefr": "A2",
+    "ipa": "/ˈθʌndɚˌstɔrm/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˈθʌndəˌstɔːm/",
+    "gloss_ja": "雷雨",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "original(pre-Phase1)",
+    "has_respell_ga": true,
+    "has_respell_rp": true
+  },
+  {
+    "w": "understand",
+    "cefr": "A2",
+    "ipa": "/ˌʌndɚˈstænd/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˌʌndəˈstænd/",
+    "gloss_ja": "理解する",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "original(pre-Phase1)",
+    "has_respell_ga": true,
+    "has_respell_rp": true
+  },
+  {
+    "w": "underwater",
+    "cefr": "A2",
+    "ipa": "/ˈʌndɚˌwɔtɚ/",
+    "ipa_actual_ga": "/ˈʌndɚˌwɔɾɚ/",
+    "rp_ipa": "/ˈʌndəˌwɔːtə/",
+    "gloss_ja": "水中",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "original(pre-Phase1)",
+    "has_respell_ga": true,
+    "has_respell_rp": true
+  },
+  {
+    "w": "wander",
+    "cefr": "A2",
+    "ipa": "/ˈwɑndɚ/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˈwɒndə/",
+    "gloss_ja": "放浪する",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "original(pre-Phase1)",
+    "has_respell_ga": true,
+    "has_respell_rp": true
+  },
+  {
+    "w": "windy",
+    "cefr": "A2",
+    "ipa": "/ˈwɪndi/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˈwɪndi/",
+    "gloss_ja": "風が強い",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "original(pre-Phase1)",
+    "has_respell_ga": true,
+    "has_respell_rp": true
+  },
+  {
+    "w": "wonder",
+    "cefr": "A2",
+    "ipa": "/ˈwʌndɚ/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˈwʌndə/",
+    "gloss_ja": "不思議に思う、驚異、疑問",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "original(pre-Phase1)",
+    "has_respell_ga": true,
+    "has_respell_rp": true
+  },
+  {
+    "w": "accidentally",
+    "cefr": "B1",
+    "ipa": "/ˌæksəˈdɛntəli/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˌæksɪˈdentəli/",
+    "gloss_ja": "偶然に、うっかり",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "P1_pilot",
+    "has_respell_ga": false,
+    "has_respell_rp": false
+  },
+  {
+    "w": "agenda",
+    "cefr": "B1",
+    "ipa": "/əˈdʒɛndə/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/əˈdʒendə/",
+    "gloss_ja": "議題、予定表",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "P1_pilot",
+    "has_respell_ga": false,
+    "has_respell_rp": false
+  },
+  {
+    "w": "anti",
+    "cefr": "B1",
+    "ipa": "/ˈænˌti/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˈænti/",
+    "gloss_ja": "反~、反対の",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "P1_pilot",
+    "has_respell_ga": false,
+    "has_respell_rp": false
+  },
+  {
+    "w": "antonym",
+    "cefr": "B1",
+    "ipa": "/ˈæntəˌnɪm/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˈæntənɪm/",
+    "gloss_ja": "対義語、反意語",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "P1_pilot",
+    "has_respell_ga": false,
+    "has_respell_rp": false
+  },
+  {
+    "w": "atlantic",
+    "cefr": "B1",
+    "ipa": "/ətˈlæntɪk/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ətˈlæntɪk/",
+    "gloss_ja": "大西洋の",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "P1_pilot",
+    "has_respell_ga": false,
+    "has_respell_rp": false
+  },
+  {
+    "w": "bandage",
+    "cefr": "B1",
+    "ipa": "/ˈbændɪdʒ/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˈbændɪdʒ/",
+    "gloss_ja": "包帯、絆創膏",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "P1_pilot",
+    "has_respell_ga": false,
+    "has_respell_rp": false
+  },
+  {
+    "w": "certainty",
+    "cefr": "B1",
+    "ipa": "/ˈsɝtənti/",
+    "ipa_actual_ga": "/ˈsɝʔn̩ti/",
+    "rp_ipa": "/ˈsɜːtənti/",
+    "gloss_ja": "確実性、確信",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "P1_M2",
+    "has_respell_ga": false,
+    "has_respell_rp": false
+  },
+  {
+    "w": "conduct",
+    "cefr": "B1",
+    "ipa": "/ˈkɑndəkt/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/kənˈdʌkt/",
+    "gloss_ja": "実施する、行い",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "P1_M2",
+    "has_respell_ga": false,
+    "has_respell_rp": false
+  },
+  {
+    "w": "content",
+    "cefr": "B1",
+    "ipa": "/ˈkɑntɛnt/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/kənˈtent/",
+    "gloss_ja": "内容、満足した",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "P1_M2",
+    "has_respell_ga": false,
+    "has_respell_rp": false
+  },
+  {
+    "w": "counter",
+    "cefr": "B1",
+    "ipa": "/ˈkaʊntɚ/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˈkaʊntə/",
+    "gloss_ja": "カウンター、台",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "P1_M2",
+    "has_respell_ga": false,
+    "has_respell_rp": false
+  },
+  {
+    "w": "county",
+    "cefr": "B1",
+    "ipa": "/ˈkaʊnti/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˈkaʊnti/",
+    "gloss_ja": "郡、州",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "P1_M2",
+    "has_respell_ga": false,
+    "has_respell_rp": false
+  },
+  {
+    "w": "defender",
+    "cefr": "B1",
+    "ipa": "/dɪˈfɛndɚ/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/dɪˈfendə/",
+    "gloss_ja": "守る人、ディフェンダー",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "P1_M2",
+    "has_respell_ga": false,
+    "has_respell_rp": false
+  },
+  {
+    "w": "documentary",
+    "cefr": "B1",
+    "ipa": "/ˌdɑkjəˈmɛntɚi/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˌdɒkjʊˈmentəri/",
+    "gloss_ja": "ドキュメンタリー",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "P1_M2",
+    "has_respell_ga": false,
+    "has_respell_rp": false
+  },
+  {
+    "w": "encounter",
+    "cefr": "B1",
+    "ipa": "/ɪnˈkaʊntɚ/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ɪnˈkaʊntə/",
+    "gloss_ja": "出会う、遭遇する、出会い",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "P1_M2",
+    "has_respell_ga": false,
+    "has_respell_rp": false
+  },
+  {
+    "w": "entertain",
+    "cefr": "B1",
+    "ipa": "/ˌɛntɚˈteɪn/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˌentəˈteɪn/",
+    "gloss_ja": "楽しませる、もてなす",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "P1_M3",
+    "has_respell_ga": false,
+    "has_respell_rp": false
+  },
+  {
+    "w": "entertainer",
+    "cefr": "B1",
+    "ipa": "/ˌɛntɚˈteɪnɚ/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˌentəˈteɪnə/",
+    "gloss_ja": "エンターテイナー、芸人",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "P1_M3",
+    "has_respell_ga": false,
+    "has_respell_rp": false
+  },
+  {
+    "w": "environmentalist",
+    "cefr": "B1",
+    "ipa": "/ɪnˌvaɪrənˈmɛntələst/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ɪnˌvaɪərənˈmentəlɪst/",
+    "gloss_ja": "環境保護活動家",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "P1_M3",
+    "has_respell_ga": false,
+    "has_respell_rp": false
+  },
+  {
+    "w": "fantasy",
+    "cefr": "B1",
+    "ipa": "/ˈfæntəsi/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˈfæntəsi/",
+    "gloss_ja": "空想、ファンタジー",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "P1_M3",
+    "has_respell_ga": false,
+    "has_respell_rp": false
+  },
+  {
+    "w": "finding",
+    "cefr": "B1",
+    "ipa": "/ˈfaɪndɪŋ/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˈfaɪndɪŋ/",
+    "gloss_ja": "発見、調査結果",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "P1_M3",
+    "has_respell_ga": false,
+    "has_respell_rp": false
+  },
+  {
+    "w": "handy",
+    "cefr": "B1",
+    "ipa": "/ˈhændi/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˈhændi/",
+    "gloss_ja": "便利な、手先が器用な",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "P1_M3",
+    "has_respell_ga": false,
+    "has_respell_rp": false
+  },
+  {
+    "w": "identity",
+    "cefr": "B1",
+    "ipa": "/aɪˈdɛntɪˌti/",
+    "ipa_actual_ga": "/aɪˈdɛntɪˌɾi/",
+    "rp_ipa": "/aɪˈdentɪti/",
+    "gloss_ja": "アイデンティティ、正体",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "P1_M3",
+    "has_respell_ga": false,
+    "has_respell_rp": false
+  },
+  {
+    "w": "independent",
+    "cefr": "B1",
+    "ipa": "/ˌɪndɪˈpɛndənt/",
+    "ipa_actual_ga": "/ˌɪndɪˈpɛndn̩t/",
+    "rp_ipa": "/ˌɪndɪˈpendənt/",
+    "gloss_ja": "独立した、自立した",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "P1_M3",
+    "has_respell_ga": false,
+    "has_respell_rp": false
+  },
+  {
+    "w": "indirect",
+    "cefr": "B1",
+    "ipa": "/ˌɪndɚˈɛkt/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˌɪndɪˈrekt/",
+    "gloss_ja": "間接的な",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "P1_M3",
+    "has_respell_ga": false,
+    "has_respell_rp": false
+  },
+  {
+    "w": "indirectly",
+    "cefr": "B1",
+    "ipa": "/ˌɪndɚˈɛktˌli/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ɪndɪˈrektli/",
+    "gloss_ja": "間接的に",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "P1_M3",
+    "has_respell_ga": false,
+    "has_respell_rp": false
+  },
+  {
+    "w": "individual",
+    "cefr": "B1",
+    "ipa": "/ˌɪndəˈvɪdʒəwəl/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˌɪndɪˈvɪdjʊəl/",
+    "gloss_ja": "個人、個々の",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "P1_M3",
+    "has_respell_ga": false,
+    "has_respell_rp": false
+  },
+  {
+    "w": "indoors",
+    "cefr": "B1",
+    "ipa": "/ˈɪnˌdɔrz/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˈɪnˌdɔːz/",
+    "gloss_ja": "屋内で",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "P1_M3",
+    "has_respell_ga": false,
+    "has_respell_rp": false
+  },
+  {
+    "w": "industry",
+    "cefr": "B1",
+    "ipa": "/ˈɪndəstri/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˈɪndəstri/",
+    "gloss_ja": "産業、勤勉",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "P1_M3",
+    "has_respell_ga": false,
+    "has_respell_rp": false
+  },
+  {
+    "w": "interact",
+    "cefr": "B1",
+    "ipa": "/ˌɪntɚˈækt/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˌɪntəˈrækt/",
+    "gloss_ja": "交流する、相互作用する",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "P1_M3",
+    "has_respell_ga": false,
+    "has_respell_rp": false
+  },
+  {
+    "w": "interaction",
+    "cefr": "B1",
+    "ipa": "/ˌɪntɚˈækʃən/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˌɪntəˈrækʃən/",
+    "gloss_ja": "交流、相互作用",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "P1_M3",
+    "has_respell_ga": false,
+    "has_respell_rp": false
+  },
+  {
+    "w": "intermediate",
+    "cefr": "B1",
+    "ipa": "/ˌɪntɚˈmidiɪt/",
+    "ipa_actual_ga": "/ˌɪntɚˈmiɾiɪt/",
+    "rp_ipa": "/ˌɪntəˈmiːdɪət/",
+    "gloss_ja": "中級の、中間の",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "P1_M3",
+    "has_respell_ga": false,
+    "has_respell_rp": false
+  },
+  {
+    "w": "intermission",
+    "cefr": "B1",
+    "ipa": "/ˌɪntɚˈmɪʃən/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˌɪntəˈmɪʃən/",
+    "gloss_ja": "休憩、幕間",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "P1_M3",
+    "has_respell_ga": false,
+    "has_respell_rp": false
+  },
+  {
+    "w": "internationally",
+    "cefr": "B1",
+    "ipa": "/ˌɪntɚˈnæʃənəli/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˌɪntəˈnæʃnəli/",
+    "gloss_ja": "国際的に",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "P1_M3",
+    "has_respell_ga": false,
+    "has_respell_rp": false
+  },
+  {
+    "w": "interrupt",
+    "cefr": "B1",
+    "ipa": "/ˌɪntɚˈʌpt/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˌɪntəˈrʌpt/",
+    "gloss_ja": "中断する、遮る",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "P1_M3",
+    "has_respell_ga": false,
+    "has_respell_rp": false
+  },
+  {
+    "w": "interval",
+    "cefr": "B1",
+    "ipa": "/ˈɪntɚvəl/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˈɪntəvəl/",
+    "gloss_ja": "間隔、休憩時間",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "P1_M3",
+    "has_respell_ga": false,
+    "has_respell_rp": false
+  },
+  {
+    "w": "interviewee",
+    "cefr": "B1",
+    "ipa": "/ˌɪntɚvjuˈi/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˌɪntəvjuːˈiː/",
+    "gloss_ja": "インタビューを受ける人",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "P1_M3",
+    "has_respell_ga": false,
+    "has_respell_rp": false
+  },
+  {
+    "w": "maintenance",
+    "cefr": "B1",
+    "ipa": "/ˈmeɪntənəns/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˈmeɪntnəns/",
+    "gloss_ja": "維持、保守",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "P1_M3",
+    "has_respell_ga": false,
+    "has_respell_rp": false
+  },
+  {
+    "w": "mentally",
+    "cefr": "B1",
+    "ipa": "/ˈmɛntəli/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˈmentəli/",
+    "gloss_ja": "精神的に",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "P1_M4",
+    "has_respell_ga": false,
+    "has_respell_rp": false
+  },
+  {
+    "w": "misunderstanding",
+    "cefr": "B1",
+    "ipa": "/ˌmɪsəndɚˈstændɪŋ/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˌmɪsʌndəˈstændɪŋ/",
+    "gloss_ja": "誤解",
+    "flags": [
+      "R4-VntV-excluded",
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "P1_M4",
+    "has_respell_ga": false,
+    "has_respell_rp": false
+  },
+  {
+    "w": "mountaintop",
+    "cefr": "B1",
+    "ipa": "/ˈmaʊntənˌtɑp/",
+    "ipa_actual_ga": "/ˈmaʊnʔn̩ˌtɑp/",
+    "rp_ipa": "/ˈmaʊntəntɒp/",
+    "gloss_ja": "山頂",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "P1_M4",
+    "has_respell_ga": false,
+    "has_respell_rp": false
+  },
+  {
+    "w": "outstanding",
+    "cefr": "B1",
+    "ipa": "/ˌaʊtˈstændɪŋ/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˌaʊtˈstændɪŋ/",
+    "gloss_ja": "際立った、優れた",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "P1_M4",
+    "has_respell_ga": false,
+    "has_respell_rp": false
+  },
+  {
+    "w": "phantom",
+    "cefr": "B1",
+    "ipa": "/ˈfæntəm/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˈfæntəm/",
+    "gloss_ja": "幽霊、幻",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "P1_M4",
+    "has_respell_ga": false,
+    "has_respell_rp": false
+  },
+  {
+    "w": "quantity",
+    "cefr": "B1",
+    "ipa": "/ˈkwɑntəti/",
+    "ipa_actual_ga": "/ˈkwɑntəɾi/",
+    "rp_ipa": "/ˈkwɒntɪti/",
+    "gloss_ja": "量、数量",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "P1_M4",
+    "has_respell_ga": false,
+    "has_respell_rp": false
+  },
+  {
+    "w": "remainder",
+    "cefr": "B1",
+    "ipa": "/rɪˈmeɪndɚ/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/rɪˈmeɪndə/",
+    "gloss_ja": "残り",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "P1_M4",
+    "has_respell_ga": false,
+    "has_respell_rp": false
+  },
+  {
+    "w": "representative",
+    "cefr": "B1",
+    "ipa": "/ˌrɛprəˈzɛntətɪv/",
+    "ipa_actual_ga": "/ˌrɛprəˈzɛntəɾɪv/",
+    "rp_ipa": "/ˌreprɪˈzentətɪv/",
+    "gloss_ja": "代表者、代表的な",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "P1_M4",
+    "has_respell_ga": false,
+    "has_respell_rp": false
+  },
+  {
+    "w": "standard",
+    "cefr": "B1",
+    "ipa": "/ˈstændɚd/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˈstændəd/",
+    "gloss_ja": "基準、標準的な",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "original(pre-Phase1)",
+    "has_respell_ga": false,
+    "has_respell_rp": false
+  },
+  {
+    "w": "sundial",
+    "cefr": "B1",
+    "ipa": "/ˈsʌnˌdaɪəl/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˈsʌndaɪəl/",
+    "gloss_ja": "日時計",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "original(pre-Phase1)",
+    "has_respell_ga": false,
+    "has_respell_rp": false
+  },
+  {
+    "w": "surrounding",
+    "cefr": "B1",
+    "ipa": "/sɚˈaʊndɪŋ/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/səˈraʊndɪŋ/",
+    "gloss_ja": "周囲の",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "original(pre-Phase1)",
+    "has_respell_ga": false,
+    "has_respell_rp": false
+  },
+  {
+    "w": "talented",
+    "cefr": "B1",
+    "ipa": "/ˈtæləntɪd/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˈtæləntɪd/",
+    "gloss_ja": "才能のある",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "original(pre-Phase1)",
+    "has_respell_ga": false,
+    "has_respell_rp": false
+  },
+  {
+    "w": "thunder",
+    "cefr": "B1",
+    "ipa": "/ˈθʌndɚ/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˈθʌndə/",
+    "gloss_ja": "雷",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "original(pre-Phase1)",
+    "has_respell_ga": false,
+    "has_respell_rp": false
+  },
+  {
+    "w": "thunderous",
+    "cefr": "B1",
+    "ipa": "/ˈθʌndɚəs/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˈθʌndərəs/",
+    "gloss_ja": "雷鳴のような",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "original(pre-Phase1)",
+    "has_respell_ga": false,
+    "has_respell_rp": false
+  },
+  {
+    "w": "tremendous",
+    "cefr": "B1",
+    "ipa": "/trəˈmɛndəs/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/trɪˈmendəs/",
+    "gloss_ja": "とてつもない",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "original(pre-Phase1)",
+    "has_respell_ga": false,
+    "has_respell_rp": false
+  },
+  {
+    "w": "uncertainty",
+    "cefr": "B1",
+    "ipa": "/ənˈsɝtənti/",
+    "ipa_actual_ga": "/ənˈsɝʔn̩ti/",
+    "rp_ipa": "/ʌnˈsɜːtənti/",
+    "gloss_ja": "不確実性",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "original(pre-Phase1)",
+    "has_respell_ga": false,
+    "has_respell_rp": false
+  },
+  {
+    "w": "underage",
+    "cefr": "B1",
+    "ipa": "/ˌʌndɚˈeɪdʒ/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˌʌndərˈeɪdʒ/",
+    "gloss_ja": "未成年の",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "original(pre-Phase1)",
+    "has_respell_ga": false,
+    "has_respell_rp": false
+  },
+  {
+    "w": "undergo",
+    "cefr": "B1",
+    "ipa": "/ˌʌndɚˈɡoʊ/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˌʌndəˈɡəʊ/",
+    "gloss_ja": "経験する",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "original(pre-Phase1)",
+    "has_respell_ga": false,
+    "has_respell_rp": false
+  },
+  {
+    "w": "underneath",
+    "cefr": "B1",
+    "ipa": "/ˌʌndɚˈniθ/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˌʌndəˈniːθ/",
+    "gloss_ja": "~の下に",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "original(pre-Phase1)",
+    "has_respell_ga": false,
+    "has_respell_rp": false
+  },
+  {
+    "w": "underpants",
+    "cefr": "B1",
+    "ipa": "/ˈʌndɚˌpænts/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˈʌndəpænts/",
+    "gloss_ja": "下着(パンツ)",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "original(pre-Phase1)",
+    "has_respell_ga": false,
+    "has_respell_rp": false
+  },
+  {
+    "w": "unwanted",
+    "cefr": "B1",
+    "ipa": "/ənˈwɔntɪd/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ʌnˈwɒntɪd/",
+    "gloss_ja": "望まれない",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "original(pre-Phase1)",
+    "has_respell_ga": false,
+    "has_respell_rp": false
+  },
+  {
+    "w": "warranty",
+    "cefr": "B1",
+    "ipa": "/ˈwɔrənti/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˈwɒrənti/",
+    "gloss_ja": "保証書",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "original(pre-Phase1)",
+    "has_respell_ga": false,
+    "has_respell_rp": false
+  },
+  {
+    "w": "antiaircraft",
+    "cefr": "B2",
+    "ipa": "/ˌæntiˈɛrˌkræft/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˌæntiːˈeəˌkræft/",
+    "gloss_ja": "対空の",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "P2_pilot",
+    "has_respell_ga": false,
+    "has_respell_rp": false
+  },
+  {
+    "w": "antibacterial",
+    "cefr": "B2",
+    "ipa": "/ˌæntibækˈtɪriəl/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˌæntiːbækˈtɪriːəl/",
+    "gloss_ja": "抗菌の",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "P2_pilot",
+    "has_respell_ga": false,
+    "has_respell_rp": false
+  },
+  {
+    "w": "anticancer",
+    "cefr": "B2",
+    "ipa": "/ˌæntiˈkænsɚ/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˌæntiːˈkænsə/",
+    "gloss_ja": "抗がん剤",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "P2_pilot",
+    "has_respell_ga": false,
+    "has_respell_rp": false
+  },
+  {
+    "w": "anticipation",
+    "cefr": "B2",
+    "ipa": "/ænˌtɪsəˈpeɪʃən/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˌæntɪsɪpˈeɪʃən/",
+    "gloss_ja": "予想、期待",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "P2_pilot",
+    "has_respell_ga": false,
+    "has_respell_rp": false
+  },
+  {
+    "w": "antipollution",
+    "cefr": "B2",
+    "ipa": "/ˌæntipəˈluʃən/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˌæntiːpəˈluːʃən/",
+    "gloss_ja": "汚染対策",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "P2_pilot",
+    "has_respell_ga": false,
+    "has_respell_rp": false
+  },
+  {
+    "w": "antistatic",
+    "cefr": "B2",
+    "ipa": "/ˌæntiˈstætɪk/",
+    "ipa_actual_ga": "/ˌæntiˈstæɾɪk/",
+    "rp_ipa": "/ˌæntiːˈstætɪk/",
+    "gloss_ja": "静電気防止の",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "P2_pilot",
+    "has_respell_ga": false,
+    "has_respell_rp": false
+  },
+  {
+    "w": "antivirus",
+    "cefr": "B2",
+    "ipa": "/ˌæntiˈvaɪrəs/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˌæntɪvˈaɪrəs/",
+    "gloss_ja": "アンチウイルス",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "P2_pilot",
+    "has_respell_ga": false,
+    "has_respell_rp": false
+  },
+  {
+    "w": "attentive",
+    "cefr": "B2",
+    "ipa": "/əˈtɛntɪv/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/əˈtentɪv/",
+    "gloss_ja": "注意深い、気配りのある",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "P2_pilot",
+    "has_respell_ga": false,
+    "has_respell_rp": false
+  },
+  {
+    "w": "attentively",
+    "cefr": "B2",
+    "ipa": "/əˈtɛntɪvli/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/əˈtentɪvliː/",
+    "gloss_ja": "注意深く",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "P2_pilot",
+    "has_respell_ga": false,
+    "has_respell_rp": false
+  },
+  {
+    "w": "bartender",
+    "cefr": "B2",
+    "ipa": "/ˈbɑrˌtɛndɚ/",
+    "ipa_actual_ga": "/ˈbɑrˌɾɛndɚ/",
+    "rp_ipa": "/ˈbɑːˌtendə/",
+    "gloss_ja": "バーテンダー",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "P2_pilot",
+    "has_respell_ga": false,
+    "has_respell_rp": false
+  },
+  {
+    "w": "candidate",
+    "cefr": "B2",
+    "ipa": "/ˈkændəˌdeɪt/",
+    "ipa_actual_ga": "/ˈkændəˌɾeɪt/",
+    "rp_ipa": "/ˈkændəˌdeɪt/",
+    "gloss_ja": "候補者",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "P2_M2a",
+    "has_respell_ga": false,
+    "has_respell_rp": false
+  },
+  {
+    "w": "centigrade",
+    "cefr": "B2",
+    "ipa": "/ˈsɛntəˌɡreɪd/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˈsentəˌɡreɪd/",
+    "gloss_ja": "摂氏",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "P2_M2a",
+    "has_respell_ga": false,
+    "has_respell_rp": false
+  },
+  {
+    "w": "commander",
+    "cefr": "B2",
+    "ipa": "/kəˈmændɚ/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/kəˈmændə/",
+    "gloss_ja": "指揮官",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "P2_M2b",
+    "has_respell_ga": false,
+    "has_respell_rp": false
+  },
+  {
+    "w": "corresponding",
+    "cefr": "B2",
+    "ipa": "/ˌkɔrəˈspɑndɪŋ/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˌkɔːrəˈspɒndɪŋ/",
+    "gloss_ja": "対応する",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "P2_M2c",
+    "has_respell_ga": false,
+    "has_respell_rp": false
+  },
+  {
+    "w": "dandelion",
+    "cefr": "B2",
+    "ipa": "/ˈdændəˌlaɪən/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/ˈdændəˌlaɪən/",
+    "gloss_ja": "タンポポ",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "P2_M2c",
+    "has_respell_ga": false,
+    "has_respell_rp": false
+  },
+  {
+    "w": "demanding",
+    "cefr": "B2",
+    "ipa": "/dɪˈmændɪŋ/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/dɪˈmændɪŋ/",
+    "gloss_ja": "要求の厳しい",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "P2_M2c",
+    "has_respell_ga": false,
+    "has_respell_rp": false
+  },
+  {
+    "w": "dependable",
+    "cefr": "B2",
+    "ipa": "/dɪˈpɛndəbəl/",
+    "ipa_actual_ga": null,
+    "rp_ipa": "/dɪˈpendəbəl/",
+    "gloss_ja": "頼りになる",
+    "flags": [
+      "R4-VntV-excluded"
+    ],
+    "phase_origin": "P2_M2c",
+    "has_respell_ga": false,
+    "has_respell_rp": false
+  }
+]

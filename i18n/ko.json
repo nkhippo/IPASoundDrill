@@ -235,5 +235,11 @@
   "cefr": {
     "pending": "CEFR?",
     "pending_hint": "CEFR 미설정"
+  },
+  "checks": {
+    "progress": "진행",
+    "mode_d": "IPA → 단어",
+    "mode_e": "단어 → IPA",
+    "mode_l": "듣기"
   }
 }

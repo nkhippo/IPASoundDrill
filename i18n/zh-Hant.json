@@ -235,5 +235,11 @@
   "cefr": {
     "pending": "CEFR?",
     "pending_hint": "尚未設定 CEFR"
+  },
+  "checks": {
+    "progress": "進度",
+    "mode_d": "IPA → 單字",
+    "mode_e": "單字 → IPA",
+    "mode_l": "聽力"
   }
 }
