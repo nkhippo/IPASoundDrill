@@ -4,7 +4,7 @@
 > 本ドキュメントは「何を作るか（what / how）」の正本。目的の正本は `PURPOSE.md`。
 > 画面・JSON フィールド・localStorage の正本は **`SPECIFICATION.md`**。フォルダマップは **`REPOSITORY-STRUCTURE.md`**。
 >
-> **更新日:** 2026-07-10 ／ **ステータス:** Mode A・Mode B・GA/RP・連結句・弱形・語彙ブラウザ・進捗チェック・`ga_rp_same` 実装済み。語彙 **5,397語**（B2=899、Phase 2 M2 完了）。Phase R（RP パイプライン品質修正）完了。
+> **更新日:** 2026-07-10 ／ **ステータス:** Mode A・Mode B・GA/RP・連結句・弱形・語彙ページ（`#vocabPage`）・進捗チェック・`ga_rp_same` 実装済み。語彙 **5,397語**（B2=899、Phase 2 M2 完了）。Phase R（RP）/ T（TTS 遅延）/ V（語彙ページ）/ B（バッチ監査）完了。UI **177 キー**。GAS 手動残作業は `docs/reference/remaining-ops-checklist.md`。
 
 ---
 
@@ -41,7 +41,7 @@
 - `filteredPool()` で `w.cefr && S.cefrLevels.has(w.cefr)` を適用
 - `filteredPool()` で `w.cefr && S.cefrLevels.has(w.cefr)` を適用（`reg` の値によらず常に適用）
 - 全 CEFR 解除時は空プール（`S.cefrLevels.size === 0` → `p = []`）
-- B2/C1 は UI に露出しない（i18n キーは残置、Phase 1/2 で復活予定）
+- Mode A の CEFR ピルは **A1 / A2 / B1** のみ露出（B2/C1 の i18n キーは残置）。B2 語彙データ自体は本番 wordlist に含まれ、**Mode B の CEFR バンド**で利用する（Mode A ピルへの B2 露出は別タスク）
 
 ### 1.2 採点（客観のみ・現行踏襲）
 
@@ -195,14 +195,16 @@ aʊ: how /haʊ/, cow /kaʊ/, hour /ˈaʊɚ/
 
 ## 2b. 語彙ブラウザ（参照閲覧）
 
-トップバー `#vocabBtn` から起動するモーダル。練習セッション中も利用可（設定・ガイドはプレイ中非表示だが語彙ブラウザは常時表示）。
+トップバー `#vocabBtn` から起動する**独立ページ**（`<section id="vocabPage">`）。hash routing: `#/vocab`（Words）/ `#/vocab/phrases`（Phrases）。練習セッション中も利用可（設定・ガイドはプレイ中非表示だが語彙ブラウザは常時表示）。Back（`#vocabBackBtn`）は Menu（`#backTopBtn`）と独立し、セットアップまたは直前の練習 view へ戻る。
 
 | タブ | 内容 |
 |------|------|
-| **Words** | wordlist 全 **5,397** 語。A→Z ソート・検索（debounce 120ms）・A–Z ジャンプ・**進捗チェック（d/e/l）** |
+| **Words** | wordlist 全 **5,397** 語。A→Z ソート・検索（debounce 120ms）・A–Z ジャンプ・**進捗チェック（d/e/l）**・**CEFR バッジ** |
 | **Phrases** | `connected_speech.json` 201 句。cs_type × level 順。**CEFR バッジ**付き。弱形は含まない |
 
-各行: 単語 / GA+RP IPA / 意味（`vocabDisplayGloss()`）/ 品詞 / TTS / 進捗チェック。RP 行は常時表示（`ga_rp_same` 時は `reveal.alt_same` 形式）。英語 UI で `gloss.en === w` の自己参照は `def` または `(品詞)` で代替。モバイル（`<599px`）では検索欄を非表示。Escape で閉じる。
+各行（2 段組）: 上段に単語 + バッジ、下段に GA+RP IPA + 意味（`vocabDisplayGloss()`）、右端に進捗チェック + TTS。RP 行は常時表示（`ga_rp_same` 時は `reveal.alt_same` 形式）。英語 UI で `gloss.en === w` の自己参照は `def` または `(品詞)` で代替。検索欄は**モバイルでも常時表示**。モーダル scrim / Escape 閉じは廃止（ページ全体スクロール）。
+
+詳細: `docs/SPECIFICATION.md` §4.8b、`docs/cursor/reports/cursor-implementation-report-phase-v.md`
 
 ### 2c. Narrow IPA + Respelling（Phase 1）
 
@@ -253,7 +255,7 @@ aʊ: how /haʊ/, cow /kaʊ/, hour /ˈaʊɚ/
 
 **現行（2026-07-10）:** ステージング JSON は `data/pipeline/`。語彙 **5,397語**、`ipa_actual_ga` 候補 ~529語、R4 pending **127語**。RP 品質: Phase R で `fix_happy_i.py`・`phonology_lexicon.py` 導入。パス正本は `scripts/paths.py` / `docs/REPOSITORY-STRUCTURE.md`。
 
-i18n: `vocab.*`（5 キー × 5 言語）。
+i18n: `vocab.*`（**6 キー × 6 言語**、`vocab.back` 含む）。
 
 ---
 
@@ -313,14 +315,18 @@ Keep the delivery identical and consistent across all words.
 
 **ストック:** `queue.length - idx - 1`（現問を除く先読み数）。初期ロード直後は 5 のためリフィルなし。2 問目以降で &lt; 5 になるたびに 5 問追加。
 
-**フロー:**
+**フロー（Phase T 以降）:**
 1. `prefetchItemsAudio(batch)` — キューへ追加した分を先読み
-2. 単語: GA + RP 両方に `gasWarm()` → 現アクセント body 優先 → 反対アクセントはアイドル時
-3. 連結句: `?phrase=` body を GA で先読み
-4. 弱形: `?weak=` body を GA/RP 両方で先読み
-5. スピーカーボタンはキャッシュ準備完了まで `disabled`（**全モード共通**）
-6. `prefetchToken` で古いジョブをキャンセル
-7. 離脱確認（`#exitConfirmModal`）— Decode / Encode / Mode B Study / Reveal から Menu またはブランドタップ時に Yes/No。Yes でサマリー（再開なし）。Summary・セットアップではモーダルなし
+2. 単語: **1問目 body を warm 完了前に開始**（body-first）。現アクセント `gasWarm` は非ブロック。反対アクセント warm は idle 延期
+3. body 取得は Drive 公開 URL（`?urls=1`）優先、失敗時は従来 base64（`?word=` 等）
+4. 連結句: `?phrase=` body を GA で先読み
+5. 弱形: `?weak=` body を GA/RP 両方で先読み
+6. setup 表示中はプール先頭を preread（フィルタ変更でキャンセル）
+7. スピーカーボタンはキャッシュ準備完了まで `disabled`（**全モード共通**）
+8. `prefetchToken` で古いジョブをキャンセル
+9. 離脱確認（`#exitConfirmModal`）— Decode / Encode / Mode B Study / Reveal から Menu またはブランドタップ時に Yes/No。Yes でサマリー（再開なし）。Summary・セットアップではモーダルなし
+
+GAS 側の `?urls=1` / `migratePublicSharing` 反映は `docs/reference/remaining-ops-checklist.md`。
 
 ### 3.4c GA バッチ warm（GAS 時間トリガー・2026-07 実装）
 
@@ -344,7 +350,7 @@ Keep the delivery identical and consistent across all words.
 
 | Tier | 内容 | fil 状態 |
 |------|------|----------|
-| Tier 1 | UI 文言 162 キー + 言語ピッカー（zh-Hant/zh-Hans 分離） | ✅ `i18n/fil.json` |
+| Tier 1 | UI 文言 **177** キー + 言語ピッカー（zh-Hant/zh-Hans 分離） | ✅ `i18n/fil.json` |
 | Tier 2 | 語義 gloss（5,397 語） | ✅ **5,397/5,397** |
 | Tier 3 | 音素解説 47 記号 + 学習ガイド | ✅ 全6言語（2026-07-07: zh→zh-Hant/zh-Hans 分離） |
 | Tier 4 | 連結句・弱形ルール文 `cs_rule` | ✅ 237/237（201+36） |
@@ -363,12 +369,12 @@ Keep the delivery identical and consistent across all words.
 | 高 | `ex`（記号別例語） | ✅ phonemes JSON に実装 |
 | 高 | `rp_ipa` 全語付与 | ✅ **5,397語** + 201連結句 |
 | 高 | 弱形 36語 + `?weak=` TTS | ✅ |
-| 高 | UI fil（Tier 1+3） | ✅ 167キー + phonemes + guide |
+| 高 | UI fil（Tier 1+3） | ✅ **177**キー + phonemes + guide |
 | 高 | 英語定義 `def` | ✅ 5,397/5,397 |
-| 高 | TTS プリフェッチ（クライアント） | ✅ |
-| 高 | GA バッチ warm（GAS） | ✅ `BatchWarm.gs`（5,397語） |
+| 高 | TTS プリフェッチ（クライアント） | ✅ Phase T（body-first / `?urls=1` / preread） |
+| 高 | GA バッチ warm（GAS） | ✅ `BatchWarm.gs`（5,397語。Drive 進捗は残作業チェックリスト） |
 | 高 | `ga_rp_same` フラグ | ✅ Phase R で分類器・happY rp_ipa 修正 |
-| 中 | 語彙ブラウザ | ✅ Words 5,397 / Phrases 201 / 進捗チェック / CEFR バッジ |
+| 中 | 語彙ブラウザ | ✅ `#vocabPage`・hash routing・Words 5,397 / Phrases 201 / 進捗チェック / CEFR バッジ両タブ |
 | 中 | B1/B2 語彙拡充 | ✅ B1=2,116 / **B2=899**（Phase 2 M2 完了。M3+ 継続） |
 | 高 | CEFR 誤ラベル phonics 是正 | ✅ Phase 0-a（652語 `cefr` null 化） |
 | 中 | カジュアル表現 | ✅ 一部（`casual` src） |
@@ -391,21 +397,22 @@ Keep the delivery identical and consistent across all words.
 | 弱形 36語 + `?weak=` TTS | ✅ Connected Speech 内 Type=weak |
 | Mode B（Study/Quiz・vocab SRS・バンド解放） | ✅ Study のみ（Quiz コード温存） |
 | 練習タブ統一（Connected ⊃ Weak） | ✅ |
-| 語彙ブラウザ（Words / Phrases / 進捗チェック / CEFR バッジ） | ✅ |
-| TTS プリフェッチ（ストリーミング先読み + 全モードスピーカー gating） | ✅ |
+| 語彙ブラウザ（`#vocabPage` / hash / 進捗チェック / CEFR バッジ両タブ） | ✅ Phase V |
+| TTS プリフェッチ（body-first + `?urls=1` + setup preread + スピーカー gating） | ✅ Phase T（GAS 反映は残作業） |
 | 無制限セッション（プール全件・6/5 先読み・離脱確認→サマリー） | ✅ |
 | CEFR 連動フィルタ（0 件ピル非活性） | ✅ |
-| GA バッチ warm（GAS 時間トリガー・5,397語） | ✅ |
-| UI 6言語（en/ja/zh-Hans/zh-Hant/ko/fil） | ✅ Tier 1+3（167キー） |
+| GA バッチ warm（GAS 時間トリガー・5,397語） | ✅（Drive 全件完走は運用確認） |
+| UI 6言語（en/ja/zh-Hans/zh-Hant/ko/fil） | ✅ Tier 1+3（**177**キー） |
 | 多言語学習ガイド（6言語） | ✅ |
 | 英語定義 `def` | ✅ 5,397/5,397 |
 | narrow IPA + respelling | ✅ 全語彙 |
 | gloss.fil / cs_rule.fil | ✅ **すべて完了**（5,397語 + 237件） |
 | `ga_rp_same` フラグ + 分類器（Phase R） | ✅ same=2,674 / different=2,723 |
 | Phase R: happY rp_ipa 修正・`phonology_lexicon.py` | ✅ 2026-07-10 |
+| Phase B: バッチ品質監査（gloss.zh / Fil / バッチ同期） | ✅ 2026-07-10 |
 | 連結句 RP TTS | ⬜ |
 | 反対アクセント全画面表示（Reveal / Decode words / Mode B Study / 語彙ブラウザ） | ✅ |
 | 学習モード名称（行為ベース: IPA読み書き / 聞いて覚える 等） | ✅ |
 | セットアップ詳細フィルタ折りたたみ・プレイ中パンくず | ✅ |
 
-**運用メモ:** Mode A/B の新規 UI 文字列は i18n キー経由。GAS は RP TTS + バッチ warm 対応版を再デプロイ済み（`index.html` `GAS_TTS_URL` 参照）。語彙リスト更新時は `python3 scripts/export_batch_words.py` で `BatchWords.gs` を再生成。`rp_ipa` 変更後は `fix_happy_i.py` → `gen_ga_rp_same.py` の順で実行推奨（Phase R 参照: `docs/cursor/reports/cursor-implementation-report-phase-r.md`）。
+**運用メモ:** Mode A/B の新規 UI 文字列は i18n キー経由。GAS は RP TTS + バッチ warm 対応版を過去にデプロイ済み。**Phase T の `?urls=1` / パブリック共有は Apps Script への再デプロイと `migratePublicSharing` が別途必要**（`docs/reference/remaining-ops-checklist.md`、`index.html` `GAS_TTS_URL` 参照）。語彙リスト更新時は `python3 scripts/export_batch_words.py` で `BatchWords.gs` を再生成し GAS に貼り付け。`rp_ipa` 変更後は `fix_happy_i.py` → `gen_ga_rp_same.py` の順で実行推奨（Phase R 参照: `docs/cursor/reports/cursor-implementation-report-phase-r.md`）。

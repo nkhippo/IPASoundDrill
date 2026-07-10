@@ -25,7 +25,13 @@
 ## 現行スナップショット（2026-07-10）
 
 - 語彙 **5,397**（B2=899、Phase 2 M2 完了）
-- Phase R（RP パイプライン品質修正）完了 — `cursor/reports/cursor-implementation-report-phase-r.md`
+- UI i18n **177 キー** × 6 言語（`vocab.back`・複合 POS `形容詞 / 副詞 / 間投詞` 含む）
+- 語彙ブラウザ: 独立ページ `#vocabPage`（hash `#/vocab` / `#/vocab/phrases`）
+- Phase R（RP パイプライン）— [`cursor/reports/cursor-implementation-report-phase-r.md`](cursor/reports/cursor-implementation-report-phase-r.md)
+- Phase T（TTS 1問目遅延・`?urls=1`）— [`cursor/reports/cursor-implementation-report-phase-t.md`](cursor/reports/cursor-implementation-report-phase-t.md)
+- Phase V（語彙ページ化）— [`cursor/reports/cursor-implementation-report-phase-v.md`](cursor/reports/cursor-implementation-report-phase-v.md)
+- Phase B（Phase 2 バッチ品質監査）— [`cursor/reports/cursor-implementation-report-phase-b-batch-audit.md`](cursor/reports/cursor-implementation-report-phase-b-batch-audit.md)
+- **手動残作業（GAS 再デプロイ等）:** [`reference/remaining-ops-checklist.md`](reference/remaining-ops-checklist.md)
 - GitHub Pages: https://nkhippo.github.io/English-Pronunciation-Trainer/
 
 ## 人間向け概要

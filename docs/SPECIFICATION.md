@@ -4,7 +4,7 @@
 > 機能追加や仕様相談の前提資料として利用してください。  
 > 目的の正本は `docs/PURPOSE.md`、実装設計は `docs/DESIGN.md`（衝突時は PURPOSE → DESIGN → 本書の順で参照）。
 
-**最終更新:** 2026-07-10（Phase V 語彙ページ化・Phase T TTS・語彙 5,397）  
+**最終更新:** 2026-07-10（Phase V 語彙ページ化・Phase T TTS・Phase B バッチ監査・語彙 5,397）  
 **対象コード:** `index.html`、`wordlist_GA_a1a2_plus_phonics.json`（**5,397 語**）、`data/connected_speech.json`、`data/weak_forms.json`、`data/guide.json`、`i18n/`、`gas/`  
 **リポジトリ構成:** `docs/REPOSITORY-STRUCTURE.md`（フォルダマップ・AI向け）
 
@@ -111,7 +111,7 @@
 ### 2.7 フィードバック設計
 
 - **TTS:** 各問・解答後に参照発音（単語は GA/RP、連結句は GA、弱形は `?weak=`＋弱形 IPA で GA/RP）
-- **TTS プリフェッチ:** キュー追加時に当該分の音声を先読み（`prefetchItemsAudio`）。単語は GA+RP 両方 warm → 現アクセント body 優先 → 反対アクセントはアイドル時。連結句（GA）・弱形（GA/RP）も同様。スピーカーボタンはキャッシュ準備完了まで無効化
+- **TTS プリフェッチ（Phase T）:** キュー追加時に `prefetchItemsAudio`。1問目の body 取得を warm 完了前に開始。現アクセント `gasWarm` は非ブロック。反対アクセント warm は idle 延期。Drive 公開 URL（`?urls=1`）優先、失敗時は従来 base64（`?word=` 等）。setup 表示中はプール先頭を preread。連結句（GA）・弱形（GA/RP）も先読み対象。スピーカーはキャッシュ準備完了まで無効化。GAS 反映手順は `docs/reference/remaining-ops-checklist.md`
 - **音素タップ:** IPA 各記号の解説パネル（例語付き）
 - **Reveal:** 正解単語・IPA・gloss・自分の回答・発音ポイント。運用アクセントと異なる phonemic IPA を補足表示（`#rAltIpa`）。実質同一時は `/ipa/（同じ）` 形式（`reveal.alt_same`）。判定は **`ga_rp_same` フラグ**（未設定時は `ipa === rp_ipa` にフォールバック）
 - **Encode:** 音素ごと OK/NG 色分け（LCS ベース）
@@ -150,7 +150,7 @@
 │  localStorage: 言語・アクセント・SRS・TTSキャッシュ              │
 │  メモリ: memAudioCache / audioReady（セッション TTS 先読み）     │
 └──────────────┬──────────────────────────┬───────────────────┘
-               │ fetch（静的）              │ GET ?word= / ?phrase= / ?weak= / ?warm=
+               │ fetch（静的）              │ GET ?word= / ?phrase= / ?weak= / ?warm= / ?urls=1
                ▼                          ▼
 ┌──────────────────────────┐   ┌──────────────────────────────┐
 │  GitHub Pages             │   │  Google Apps Script           │
@@ -162,8 +162,9 @@
                           ┌───────────────┼───────────────┐
                           ▼               ▼               ▼
                    OpenAI API      Google Drive      base64 MP3
-                   gpt-4o-mini-tts  IPA-TTS-Audio/    → ブラウザ
+                   gpt-4o-mini-tts  IPA-TTS-Audio/    または Drive 直 URL
                    voice: alloy       {slug}__{accent}_v2.mp3
+                                      （?urls=1 → クライアント直 fetch）
 ```
 
 ### 3.2 コンポーネント一覧
@@ -172,7 +173,7 @@
 |--------|------|------|
 | フロントエンド | 単一 `index.html`（Vanilla JS） | UI・ゲームロジック・採点・SRS |
 | ホスティング | GitHub Pages + `.github/workflows/static.yml` | 静的配信 |
-| 音声 API | GAS Web App → OpenAI `gpt-4o-mini-tts` | API キー非露出。`?warm=1` で Drive 先読み |
+| 音声 API | GAS Web App → OpenAI `gpt-4o-mini-tts` | API キー非露出。`?warm=1` で Drive 先読み。`?urls=1` で公開 URL（クライアント直 fetch）。未反映時は base64 フォールバック |
 | GA バッチ warm | `gas/BatchWarm.gs`（時間トリガー） | 全 **5,397** 語の GA 音声を Drive に事前ストック（500語/回・20並列） |
 | サーバーキャッシュ | Google Drive `IPA-TTS-Audio/` | `{slug}__ga_v2.mp3` / `{slug}__rp_v2.mp3` |
 | クライアント TTS キャッシュ | `localStorage` + メモリ Map | `ipa_tts_v2:{accent}:{slug}` + `memAudioCache` / `audioReady` |
@@ -186,13 +187,13 @@
 
 - **本番 URL:** https://nkhippo.github.io/English-Pronunciation-Trainer/
 - **ローカル:** `python3 -m http.server 8080`（`file://` 不可）
-- **GAS:** `gas/README.md` 参照。`index.html` の `GAS_TTS_URL` に Web App URL を設定
+- **GAS:** `gas/README.md` 参照。`index.html` の `GAS_TTS_URL` に Web App URL を設定。Phase T（`?urls=1` / `migratePublicSharing`）の手動手順は `docs/reference/remaining-ops-checklist.md`
 
 ---
 
 ## 4. 画面設計
 
-画面切替はルーターなし。`<section>` の `hidden` で表示制御。
+画面切替は主に `<section>` の `hidden` で表示制御。**語彙ブラウザのみ** hash routing（`#/vocab` / `#/vocab/phrases`）を用いる（`navigate` / `hashchange`）。その他の練習画面はルーターなし。
 
 ### 4.0 全画面共通 — トップバー
 
@@ -445,7 +446,7 @@ UI i18n とは独立。各言語キー（`en`, `ja`, `ko`, `zh-Hans`, `zh-Hant`,
 
 | データ | パス |
 |--------|------|
-| UI 文言 | `i18n/{en,ja,zh,ko,fil}.json`（**167 キー**） |
+| UI 文言 | `i18n/{en,ja,zh,ko,fil}.json`（**177 キー**。`vocab.back`・複合 POS `形容詞 / 副詞 / 間投詞` 含む） |
 | 音素解説 | `i18n/phonemes/{en,ja,zh,ko,fil}.json`（43 記号） |
 
 検証: `python3 tools/validate_i18n.py`。監査ドキュメント再生成: `python3 tools/gen_audit_docs.py`。
@@ -464,8 +465,9 @@ UI i18n とは独立。各言語キー（`en`, `ja`, `ko`, `zh-Hans`, `zh-Hant`,
 | `def`（英語定義） | 全語彙（Phase 1/2 バッチ含む） |
 | Mode B 語彙 | B1=2,116 / **B2=899**（Phase 2 M2 完了 2026-07-10） |
 | `neighbors_rp` | 保留（`docs/reference/rp-neighbors-priority-decision.md`） |
-| TTS プリフェッチ | 全モード。キュー追加時に `prefetchItemsAudio`（6 問初期 / ストック&lt;5 で 5 問追加） |
-| GA バッチ warm | `gas/BatchWarm.gs`（`gas/README.md` 参照） |
+| TTS プリフェッチ | 全モード。Phase T（body-first / `?urls=1` / setup preread）。キュー追加時に `prefetchItemsAudio`（6 問初期 / ストック&lt;5 で 5 問追加） |
+| GA バッチ warm | `gas/BatchWarm.gs`（`gas/README.md` 参照。語彙リスト **5,397**） |
+| 手動残作業 | `docs/reference/remaining-ops-checklist.md`（GAS 再デプロイ・`migratePublicSharing`・BatchWarm 進捗） |
 | 要注意音素 | `phonemes/*.json` の `t:1` + コード内 TRAPSET |
 | 関連ドキュメント | `PURPOSE.md`, `DESIGN.md`, `REPOSITORY-STRUCTURE.md`, `gas/README.md`, `docs/reference/rp-tts-design-and-priority.md` |
 
@@ -475,6 +477,8 @@ UI i18n とは独立。各言語キー（`en`, `ja`, `ko`, `zh-Hans`, `zh-Hant`,
 
 | 日付 | 内容 |
 |------|------|
+| 2026-07-10 | Phase B: Phase 2 バッチ監査反映（gloss.zh 的的・damn POS・Fil 13・バッチ 86 同期・複合 POS i18n）。UI キー 177 |
+| 2026-07-10 | Phase T: TTS 1問目遅延対策（body-first、`?urls=1`、setup preread）。GAS 再デプロイは残作業 |
 | 2026-07-10 | Phase V: 語彙ブラウザを `#vocabPage` に移設。hash routing (`#/vocab`, `#/vocab/phrases`)、2段組行・CEFR バッジ両タブ・`vocab.back` |
 | 2026-07-10 | Phase R: `ga_rp_same` 分類器修正、`fix_happy_i.py`（91語）、`phonology_lexicon.py`。語彙 5,397・B2=899 |
 | 2026-07-09 | v3.15 `ga_rp_same` / `ga_rp_same_reason` フラグ導入（`scripts/gen_ga_rp_same.py`）。UI 同一判定をフラグ参照に切替 |

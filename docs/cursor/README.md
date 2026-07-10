@@ -28,7 +28,7 @@ AI エージェント向けの**作業指示・実装レポート・設計相談
 | **Phase B**（Phase 2 バッチ品質監査） | `instructions/cursor-instructions-phase-b-batch-audit.md` | `reports/cursor-implementation-report-phase-b-batch-audit.md` |
 | **Phase V**（語彙ブラウザのページ化 + UI 整備） | `instructions/cursor-instructions-phase-v-vocab-page.md` | `reports/cursor-implementation-report-phase-v.md` |
 | **Phase R**（RP パイプライン品質修正） | `instructions/cursor-instructions-phase-r-rp-pipeline-repair.md` | `reports/cursor-implementation-report-phase-r.md` |
-| **Phase T**（TTS 1問目遅延解消） | `instructions/cursor-instructions-phase-t-tts-latency.md` | `reports/cursor-implementation-report-phase-t.md` |
+| **Phase T**（TTS 1問目遅延解消） | `instructions/cursor-instructions-phase-t-tts-latency.md` | `reports/cursor-implementation-report-phase-t.md`（**GAS 再デプロイは残作業** → [`../reference/remaining-ops-checklist.md`](../reference/remaining-ops-checklist.md)） |
 | リポジトリ構成見直し（AI 向け README） | — | `reports/cursor-implementation-report-repo-structure-review.md` |
 | Phase 2 M2 完了（B2 +569） | `instructions/cursor-instructions-phase2-m2*.md` | `reports/cursor-implementation-report-phase2-m2*.md` |
 | 進捗チェック UI | `instructions/cursor-instructions-progress-checks.md` | `reports/cursor-implementation-report-progress-checks.md` |
@@ -41,3 +41,4 @@ AI エージェント向けの**作業指示・実装レポート・設計相談
 2. `docs/PURPOSE.md` — なぜそう作るか（本丸 vs サブテーマ）
 3. タスクに応じて `DESIGN.md` または `SPECIFICATION.md`
 4. 類似の過去タスクがあれば `instructions/` + `reports/` の該当ペア
+5. 運用の手動残作業は `docs/reference/remaining-ops-checklist.md`

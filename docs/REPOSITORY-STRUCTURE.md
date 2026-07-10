@@ -1,7 +1,7 @@
 # Repository Structure
 
 > **Purpose:** Share this file with Claude (or other AI assistants) at the start of a task so it knows where data, scripts, and docs live.  
-> **Last updated:** 2026-07-10（Phase R 完了・Phase 2 M2 完了・進捗チェック・フォルダ README 整備）
+> **Last updated:** 2026-07-10（Phase R / T / V / B 完了・Phase 2 M2 完了・進捗チェック・フォルダ README 整備）
 
 ---
 
@@ -207,10 +207,11 @@ Staging outputs → `data/pipeline/`. Neighbors / RP progress → `data/derived/
 
 | File | Role |
 |------|------|
-| `gas/Code.gs` | TTS proxy（word / phrase / weak / warm） |
+| `gas/Code.gs` | TTS proxy（word / phrase / weak / warm / **`?urls=1`**） |
 | `gas/BatchWarm.gs` | Scheduled GA Drive pre-generation |
 | `gas/BatchWords.gs` | Word list for batch warm（**5,397 語** — `export_batch_words.py` で更新） |
 | `gas/README.md` | Deploy + API reference |
+| 手動残作業 | [`docs/reference/remaining-ops-checklist.md`](reference/remaining-ops-checklist.md)（再デプロイ・`migratePublicSharing`・BatchWarm） |
 
 ---
 
@@ -234,9 +235,10 @@ Staging outputs → `data/pipeline/`. Neighbors / RP progress → `data/derived/
 | Progress checks | `ept_checks_v1` — 3 slots × 3 modes（`d`/`e`/`l`）; vocab browser + Reveal + Mode B Study |
 | Frequency weighting | `weightedShuffle` + `frequencyWeight` in session pool build |
 | Alt-accent same display | `/ipa/（同じ）` via `ga_rp_same` flag（`scripts/gen_ga_rp_same.py`） |
-| Vocab browser Phrases | CEFR badge per row（`itemCefrLabel`） |
+| Vocab browser | 独立ページ `#vocabPage`；hash `#/vocab`（Words）/ `#/vocab/phrases`；Words・Phrases とも CEFR バッジ；検索はモバイルでも常時表示 |
 | Session exit | `#exitConfirmModal` on drill screens |
 | CEFR setup filters | Pills with 0 results disabled; Mode A: A1/A2/B1（B2 は Mode B バンドで利用） |
+| TTS first-question | Phase T: body-first prefetch、`?urls=1` Drive 直 fetch、setup preread（GAS 再デプロイ後に有効） |
 
 ---
 

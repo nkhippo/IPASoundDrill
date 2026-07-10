@@ -3,7 +3,7 @@
 > アプリの**本丸（measured outcome）**と**モード構成**を確定し、背景メモ・Cursor仕様書・実装コードの目的を一致させる正本。
 > 目的・評価方針に関する記述が衝突した場合は、本ドキュメントを正とする。
 >
-> **更新日:** 2026-07-10 ／ **ステータス:** 語彙 **5,397語**（Phase 2 M2 完了、B2=899）。Phase B（Phase 2 バッチ品質監査）完了。GA/RP 切替・連結句・弱形・RP TTS・語彙ページ（hash routing）・進捗チェック（3×3）・`ga_rp_same` フラグ・neighbors v2・TTS プリフェッチ・無制限セッション・離脱確認モーダル・UI 6言語対応済み。
+> **更新日:** 2026-07-10 ／ **ステータス:** 語彙 **5,397語**（Phase 2 M2 完了、B2=899）。Phase R / T / V / B 完了（RP 修正・TTS 遅延対策・語彙ページ化・バッチ品質監査）。GA/RP 切替・連結句・弱形・RP TTS・語彙ページ（hash routing）・進捗チェック（3×3）・`ga_rp_same` フラグ・neighbors v2・TTS プリフェッチ（`?urls=1`）・無制限セッション・離脱確認モーダル・UI 6言語対応済み。GAS 再デプロイ等の手動残作業は `docs/reference/remaining-ops-checklist.md`。
 > 詳細な実装仕様は `docs/DESIGN.md`、画面・データの正本は `docs/SPECIFICATION.md` を参照。
 
 ---
@@ -31,7 +31,7 @@
 
 **Mode A の練習タブ:** **Words**（単語）と **Connected Speech**（連結句＋弱形・GA 音声前提）の2種。Connected Speech 内の Type フィルタで linking / assimilation / elision / **Weak forms** を選択。弱形36語は連結発音現象の一部として内包（独立タブなし）。
 
-**UI 言語:** en / ja / zh / ko / **fil**（タガログ語・**Tier 1–4 すべて完了**、UI 文言 **167 キー**）。語義 gloss.fil は **5,397/5,397語**。連結/弱形ルール文（cs_rule.fil）は **237/237件**（Tier 4 **完了**）。英語定義 `def` は **5,397/5,397語**（Mode B Study reveal・語彙ブラウザで利用）。
+**UI 言語:** en / ja / zh / ko / **fil**（タガログ語・**Tier 1–4 すべて完了**、UI 文言 **177 キー**）。語義 gloss.fil は **5,397/5,397語**。連結/弱形ルール文（cs_rule.fil）は **237/237件**（Tier 4 **完了**）。英語定義 `def` は **5,397/5,397語**（Mode B Study reveal・語彙ブラウザで利用）。
 
 **語彙ブラウザ:** 独立ページ（`#vocabPage`、hash `#/vocab` / `#/vocab/phrases`）。トップバーから全語彙（5,397語）・連結句（201句）を参照閲覧。検索・A–Z ジャンプ・TTS・**進捗チェック（d/e/l 各3スロット）**・Words/Phrases 双方に CEFR バッジ。Back は Menu（`#backTopBtn`）と独立。
 
@@ -63,7 +63,7 @@
   2. 音声ディクテーション（音→綴り、Decode採点を流用）。
 - **音素近傍distractorの意義:** 選択肢暗記（セット記憶）と消去法を同時に潰し、MCQを実質ミニマルペアの知覚テストに変える。本丸の思想「発音できない音は聞き取れない」をサブテーマでも訓練する。
 - **主軸 = CEFR/頻度バンド。** 段階配列でA1→A2→B1…と進む（現データは主に A1/A2 + phonics 語彙）。アルファベット（`letter`）・短縮形（`contraction`）は Mode B プールから除外。バンド内 60% 以上が box 4+ に到達すると次バンドへ自動解放。
-- **TTS プリフェッチ:** 全モードでキュー追加時に音声を先読み（GA+RP 両方 warm、現アクセント body を優先取得。連結句・弱形も対象）。再生ボタンはキャッシュ準備完了まで無効化。
+- **TTS プリフェッチ:** 全モードでキュー追加時に音声を先読み（Phase T: 1問目 body-first、現アクセント warm を非ブロック、反対アクセント warm は idle 延期、Drive 直リンク `?urls=1`、setup 画面 preread。連結句・弱形も対象）。再生ボタンはキャッシュ準備完了まで無効化。GAS 側の `?urls=1` / パブリック共有は `docs/reference/remaining-ops-checklist.md` 参照。
 
 ---
 
@@ -78,7 +78,7 @@
 | `neighbors` 事前計算 | **実装済み**（neighbors v2・全 5,397 語・0 近傍率 5%） |
 | `ga_rp_same` フラグ | **実装済み**（wordlist + connected + weak。same=2,674 / different=2,723） |
 | 進捗チェック（3×3） | **実装済み**（`ept_checks_v1`・頻度重み付け出題） |
-| GA/RP IPA・TTS・プリフェッチ | **実装済み** |
+| GA/RP IPA・TTS・プリフェッチ | **実装済み**（Phase T: body-first / `?urls=1` / setup preread。GAS 再デプロイは残作業チェックリスト） |
 | B1/B2 語彙の実データ | **B1: 2,116 / B2: 899**（Phase 2 M2 完了。CEFR-J B2 残り約 1,423 語は M3 以降） |
 | narrow IPA | **完了**（`ipa_actual_ga` ~529。**R4 pending 127 語**は TTS レビュー待ち） |
 | `neighbors_rp` | **保留**（GA neighbors 流用） |

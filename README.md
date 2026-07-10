@@ -12,7 +12,8 @@ GitHub Pages: https://nkhippo.github.io/English-Pronunciation-Trainer/
 - **聞いて覚える (Mode B)** — Study、CEFR バンド進行（A1–B2）
 - **連結音・弱形** — 201 句 + 36 弱形（Connected Speech タブ）
 - 語彙 **5,397 語**（gloss 5 言語、B2=899）、進捗チェック（3 スロット × 3 モード）
-- TTS は GAS プロキシ + Drive/localStorage キャッシュ
+- 語彙ブラウザ（`#/vocab` / `#/vocab/phrases`）— 検索・A–Z・CEFR バッジ・TTS
+- TTS は GAS プロキシ + Drive/localStorage キャッシュ（Drive 直リンク `?urls=1` 対応。運用手順は [`gas/README.md`](gas/README.md) / [`docs/reference/remaining-ops-checklist.md`](docs/reference/remaining-ops-checklist.md)）
 
 ## ドキュメント（AI / 開発者向け）
 

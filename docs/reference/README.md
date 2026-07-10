@@ -41,7 +41,10 @@ Use this folder when sharing context with Claude **in addition to** [`../REPOSIT
 | CEFR on connected / weak | `cefr-connected-weak-proposal-report.md` | Phrases tab CEFR badges（実装済） |
 | RP neighbors (deferred) | `rp-neighbors-priority-decision.md` | `neighbors_report.md` |
 | RP TTS | `rp-tts-design-and-priority.md` | `gas/README.md` |
-| Vocab page migration (draft) | [`../cursor/briefs/cursor-vocab-page-migration.md`](../cursor/briefs/cursor-vocab-page-migration.md) | モーダル→別ページ案 |
+| Vocab page migration | [`../cursor/reports/cursor-implementation-report-phase-v.md`](../cursor/reports/cursor-implementation-report-phase-v.md) | 実装済（`#vocabPage` / `#/vocab`）。設計メモ: [`../cursor/briefs/cursor-vocab-page-migration.md`](../cursor/briefs/cursor-vocab-page-migration.md) |
+| TTS first-question latency | [`../cursor/reports/cursor-implementation-report-phase-t.md`](../cursor/reports/cursor-implementation-report-phase-t.md) | `?urls=1` / preread。GAS 手動残作業: [`remaining-ops-checklist.md`](remaining-ops-checklist.md) |
+| Phase 2 batch quality audit | [`../cursor/reports/cursor-implementation-report-phase-b-batch-audit.md`](../cursor/reports/cursor-implementation-report-phase-b-batch-audit.md) | gloss.zh / Fil / バッチ同期 |
+| **Remaining ops (GAS / BatchWarm)** | [`remaining-ops-checklist.md`](remaining-ops-checklist.md) | 再デプロイ・`migratePublicSharing`・検証 |
 
 ---
 
