@@ -834,23 +834,6 @@ function closeGuide() {
   show("guideModal", false);
 }
 
-function openVocab() {
-  closeSettings();
-  closeGuide();
-  show("vocabPage", true);
-  if (!vocabBuilt) {
-    buildVocabLetterBar();
-    renderVocabTab("words");
-    vocabBuilt = true;
-  }
-  $("vocabLetters").scrollLeft = 0;
-  applyI18nVocab();
-}
-
-function closeVocab() {
-  show("vocabPage", false);
-}
-
 function applyI18nVocab() {
   $("vocabTitle").textContent = t("vocab.title");
   $("vocabTabWords").textContent = t("vocab.tab_words");
@@ -1385,6 +1368,91 @@ function setAccent(accent) {
 function openSettings(){show("settingsModal",true);}
 function closeSettings(){show("settingsModal",false);}
 
+/* ---------- Phase V2: Hash routing ---------- */
+const VOCAB_VIEW_IDS = ["setup","cardDecode","cardEncode","reveal","summary","cardModeBStudy","cardModeBMcq","cardModeBDict"];
+let vocabReturnViews = null;
+
+const ROUTES = {
+  "": { onEnter: () => showSetupOrPractice() },
+  "vocab": { onEnter: () => showVocabView("words") },
+  "vocab/phrases": { onEnter: () => showVocabView("phrases") },
+};
+
+function parseHash() {
+  const raw = (location.hash || "").replace(/^#\/?/, "");
+  return raw.split("?")[0];
+}
+
+function navigate(path) {
+  const target = path ? "#/" + path : "#/";
+  if (location.hash !== target) location.hash = target;
+  else onRouteChange();
+}
+
+function onRouteChange() {
+  const path = parseHash();
+  const route = ROUTES[path] || ROUTES[""];
+  route.onEnter();
+}
+
+function showSetupOrPractice() {
+  show("vocabPage", false);
+  if (vocabReturnViews && vocabReturnViews.length) {
+    vocabReturnViews.forEach(id => show(id, true));
+    if (document.body.classList.contains("in-play")) show("playLine", true);
+    vocabReturnViews = null;
+    return;
+  }
+  if (S && S.queue && S.queue.length > 0) {
+    // Fallback: restore practice without re-running renderCard (preserves reveal state)
+    if (S.revealed) {
+      show("reveal", true);
+      hideModeBCards();
+      show("cardDecode", false);
+      show("cardEncode", false);
+    } else if (S.appMode === "b") {
+      if (S.mbPhase === "mcq") show("cardModeBMcq", true);
+      else if (S.mbPhase === "dict") show("cardModeBDict", true);
+      else show("cardModeBStudy", true);
+    } else if (S.tab === "connected" || S.dir === "decode") {
+      show("cardDecode", true);
+    } else {
+      show("cardEncode", true);
+    }
+    if (document.body.classList.contains("in-play")) show("playLine", true);
+    return;
+  }
+  show("setup", true);
+}
+
+function showVocabView(tab) {
+  closeSettings();
+  closeGuide();
+  // Remember visible practice/setup views so Back can restore without re-render
+  if (!$("vocabPage") || $("vocabPage").classList.contains("hidden")) {
+    vocabReturnViews = VOCAB_VIEW_IDS.filter(id => {
+      const el = $(id);
+      return el && !el.classList.contains("hidden");
+    });
+  }
+  VOCAB_VIEW_IDS.forEach(id => show(id, false));
+  show("playLine", false);
+  show("vocabPage", true);
+  vocabTabCurrent = tab || "words";
+  if (!vocabBuilt) {
+    buildVocabLetterBar();
+    vocabBuilt = true;
+  }
+  renderVocabTab(vocabTabCurrent);
+  applyI18nVocab();
+  window.scrollTo(0, 0);
+}
+
+function openVocab() { navigate("vocab"); }
+function closeVocab() { navigate(""); }
+
+window.addEventListener("hashchange", onRouteChange);
+
 async function initApp() {
   await loadLocale(LANG);
   applyI18n();
@@ -1400,6 +1468,7 @@ async function initApp() {
       $("startBtn").textContent = t("start");
       updatePool();
     }
+    onRouteChange();
   });
 }
 
@@ -3055,7 +3124,8 @@ $("guideBtn").addEventListener("click",openGuide);
 $("guideScrim").addEventListener("click",closeGuide);
 $("guideCloseBtn").addEventListener("click",closeGuide);
 $("guideLangPills").querySelectorAll(".pill").forEach(b=>b.addEventListener("click",()=>renderGuide(b.dataset.guideLang)));
-$("vocabBtn").addEventListener("click",openVocab);
+$("vocabBtn").addEventListener("click",e=>{e.preventDefault();navigate("vocab");});
+$("vocabBackBtn").addEventListener("click",e=>{e.preventDefault();navigate("");});
 ["exitConfirmScrim","exitConfirmNo"].forEach(id=>$(id).addEventListener("click",closeExitConfirm));
 $("exitConfirmYes").addEventListener("click",()=>{
   const fn=exitConfirmOnYes;
@@ -3063,7 +3133,11 @@ $("exitConfirmYes").addEventListener("click",()=>{
   if(typeof fn==="function")fn();
 });
 document.querySelectorAll("#vocabTabBar .vocab-tab").forEach(b=>{
-  b.addEventListener("click",()=>renderVocabTab(b.dataset.tab));
+  b.addEventListener("click",()=>{
+    const tab=b.dataset.tab;
+    if(!tab)return;
+    navigate(tab==="phrases"?"vocab/phrases":"vocab");
+  });
 });
 $("vocabSearchInput").addEventListener("input",e=>{
   clearTimeout(vocabSearchTimer);
