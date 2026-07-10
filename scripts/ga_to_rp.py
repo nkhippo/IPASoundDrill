@@ -21,6 +21,14 @@ remaining gaps. This script exists for words neither source covers.
 """
 from __future__ import annotations
 
+import sys
+from pathlib import Path
+
+_SCRIPTS = Path(__file__).resolve().parent
+if str(_SCRIPTS) not in sys.path:
+    sys.path.insert(0, str(_SCRIPTS))
+from phonology_lexicon import is_bath_word, PALM_WORDS, YOD_CORONALS
+
 MULTI = ["tʃ", "dʒ", "eɪ", "aɪ", "ɔɪ", "oʊ", "aʊ"]
 
 # Full monophthong + diphthong + rhotic-vowel inventory (verified against
@@ -31,11 +39,7 @@ VOWELS = {
     "aɪ", "aʊ", "eɪ", "ɔɪ", "oʊ",
 }
 
-BATH_WORDS = {
-    "after", "answer", "ask", "bath", "branch", "castle", "chance", "class",
-    "dance", "example", "fast", "glass", "graph", "half", "laugh", "last",
-    "master", "pass", "past", "path", "plant", "rather", "staff",
-}
+# BATH_WORDS moved to phonology_lexicon.py — use is_bath_word() instead
 
 OVERRIDES = {
     "Z": "/zɛd/",
@@ -94,8 +98,21 @@ def ga_to_rp(word: str, ga_ipa: str) -> str:
     inner = ga_ipa.strip("/")
 
     # TRAP-BATH before other vowel rules (word-triggered, unaffected by r-bug)
-    if word in BATH_WORDS:
+    if is_bath_word(word):
         inner = inner.replace("æ", "ɑː")
+
+    # Yod-insertion: after coronals, GA /u/ → RP /juː/
+    if word.lower() not in PALM_WORDS:
+        result = []
+        i = 0
+        while i < len(inner):
+            ch = inner[i]
+            if ch == "u" and i > 0 and inner[i - 1] in YOD_CORONALS:
+                if not (i > 1 and inner[i - 2] == "j"):
+                    result.append("j")
+            result.append(ch)
+            i += 1
+        inner = "".join(result)
 
     tokens = tokenize("/" + inner + "/")
     n = len(tokens)
@@ -179,15 +196,32 @@ def ga_to_rp(word: str, ga_ipa: str) -> str:
         elif t == "oʊ":
             final.append("əʊ")
         elif t == "i":
-            final.append("iː")
+            is_last = (j == m - 1)
+            prev_is_stress = (j > 0 and pass1[j - 1] in ("ˈ", "ˌ"))
+            has_stress = any(x in ("ˈ", "ˌ") for x in pass1)
+            if is_last and has_stress and not prev_is_stress:
+                final.append("i")
+            else:
+                final.append("iː")
         elif t == "u":
-            final.append("uː")
+            is_last = (j == m - 1)
+            prev_is_stress = (j > 0 and pass1[j - 1] in ("ˈ", "ˌ"))
+            has_stress = any(x in ("ˈ", "ˌ") for x in pass1)
+            if is_last and has_stress and not prev_is_stress:
+                final.append("u")
+            else:
+                final.append("uː")
         elif t == "ɔ" and nx != "ː":
             final.append("ɔː")
         elif t == "ɛ":
             final.append("e")
         elif t == "ɑ" and nx != "ː":
-            final.append("ɒ")
+            is_word_final = (nx is None)
+            is_palm = word.lower() in PALM_WORDS
+            if is_word_final or is_palm:
+                final.append("ɑː")
+            else:
+                final.append("ɒ")
         else:
             final.append(t)
         j += 1

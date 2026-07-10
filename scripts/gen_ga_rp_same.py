@@ -64,6 +64,11 @@ import json
 import sys
 from pathlib import Path
 
+_SCRIPTS_DIR = Path(__file__).resolve().parent
+if str(_SCRIPTS_DIR) not in sys.path:
+    sys.path.insert(0, str(_SCRIPTS_DIR))
+from phonology_lexicon import is_bath_word
+
 # --- normalisation helpers ---------------------------------------------------
 
 def strip_slashes(s: str) -> str:
@@ -208,14 +213,6 @@ def apply_rhoticity(ga_inner: str) -> str:
         s = s.replace(src, dst)
     return s
 
-BATH_WORDS = {
-    "after","answer","ask","bath","branch","castle","chance","class",
-    "dance","example","fast","glass","graph","half","laugh","last",
-    "master","pass","past","path","plant","rather","staff","aunt",
-    "banana","can't","aren't","afternoon","france","french","grass",
-    "advantage","advance","afterwards",
-}
-
 # --- reason detectors --------------------------------------------------------
 
 def reason_when_same(ga_raw: str, rp_raw: str) -> str:
@@ -280,7 +277,7 @@ def reason_when_different(word: str, ga_raw: str, rp_raw: str) -> str:
         return "lot_vowel" if ga_goat != ga_lot else "goat_vowel"
 
     # 6. TRAP-BATH (word-triggered)
-    if word.lower() in BATH_WORDS or ("æ" in ga_inner and "ɑː" in rp_inner):
+    if is_bath_word(word) or ("æ" in ga_inner and "ɑː" in rp_inner):
         ga_bath = ga_lot.replace("æ", "ɑː")
         if notation_norm(ga_bath) == rp_norm:
             return "trap_bath"
@@ -293,13 +290,13 @@ def reason_when_different(word: str, ga_raw: str, rp_raw: str) -> str:
     # 8. Composite structural (rhoticity + BATH / rhoticity + LOT etc.)
     ga_combo = apply_rhoticity(ga_inner)
     ga_combo = ga_combo.replace("oʊ", "əʊ").replace("ɑ", "ɒ")
-    if word.lower() in BATH_WORDS:
+    if is_bath_word(word):
         ga_combo = ga_combo.replace("æ", "ɑː")
     if notation_norm(ga_combo) == rp_norm:
         return "composite_structural"
 
     # 8b. Composite structural v2: BATH middle-syllable + first-syllable weak-vowel
-    if word.lower() in BATH_WORDS and "æ" in ga_inner:
+    if is_bath_word(word) and "æ" in ga_inner:
         ga_combo_v2 = apply_rhoticity(ga_inner).replace("oʊ", "əʊ").replace("ɑ", "ɒ")
         ga_combo_v2 = ga_combo_v2.replace("æ", "ə", 1).replace("æ", "ɑː")
         if notation_norm(ga_combo_v2) == rp_norm:
