@@ -36,8 +36,12 @@ STRICT RULES for RP transcription:
    Exception: linking-r before vowels may be shown but is NOT required here.
 4. Vowel inventory differences from GA:
    GA /ɑ/ (hot)  → RP /ɒ/      (short rounded o)
-   GA /i/        → RP /iː/
-   GA /u/        → RP /uː/
+   GA /i/ (FLEECE, stressed)       → RP /iː/   (only when stressed)
+   GA /i/ (happY, word-final unstressed) → RP /i/  (short tense, MODERN RP)
+     e.g. happy /ˈhæpi/, city /ˈsɪti/, family /ˈfæməli/, dictionary /ˈdɪkʃənəri/
+     Do NOT use /iː/ or /ɪ/ for word-final happY. Always /i/.
+   GA /u/ (GOOSE, stressed)        → RP /uː/
+   GA /u/ (word-final unstressed)  → RP /u/   (short, rare — e.g. into /ˈɪntu/)
    GA /ɔ/        → RP /ɔː/
    GA /oʊ/       → RP /əʊ/
    GA /ɝ/        → RP /ɜː/
@@ -82,6 +86,12 @@ STRICT RULES for RP transcription:
 11. CASUAL reduced forms (gonna, sorta, outta...) keep their reduced shape, apply rules:
      sorta GA:/ˈsɔrtə/ → RP:/ˈsɔːtə/    gonna GA:/ˈɡɑnə/ → RP:/ˈɡɒnə/
      gotta GA:/ˈɡɑtə/ → RP:/ˈɡɒtə/      outta GA:/ˈaʊtə/ → RP:/ˈaʊtə/
+   Note on "happY" rule:
+   - "happy" ending words (-y, -ly, -ry, -ery, -ity, -ary, -ory, -ey, -e in "-phe")
+     end in short /i/ in modern RP, never /iː/ or /ɪ/.
+   - Exceptions: "-ee" endings (employee, chimpanzee, referee, guarantee, absentee,
+     addressee, interviewee), compounds with "-free" (carefree, duty-free, tax-free),
+     and stressed monosyllables (be, he, she, key, tree, see, sea) keep /iː/.
 12. Output ONLY a JSON object mapping word → RP IPA. No explanation. No markdown.
    Example: {"cat":"/kæt/","water":"/ˈwɔːtə/","bird":"/bɜːd/"}"""
 

@@ -1,24 +1,27 @@
 {
   "wordlist": {
     "total": 5397,
-    "same": 2669,
-    "different": 2728,
+    "same": 2674,
+    "different": 2723,
     "by_reason": {
-      "identical": 1508,
+      "identical": 1527,
       "ga_allophony": 529,
-      "rhoticity": 798,
-      "dress_notation_only": 446,
-      "trap_bath": 72,
-      "goat_vowel": 287,
-      "length_marking_only": 574,
-      "structural_other": 630,
-      "rhotic_vowel_notation": 37,
+      "rhoticity": 691,
+      "dress_notation_only": 457,
+      "trap_bath": 71,
+      "goat_vowel": 288,
+      "length_marking_only": 558,
+      "structural_other": 615,
+      "rhotic_vowel_notation": 38,
+      "cot_caught": 11,
       "stress_placement": 30,
-      "notation_composite": 69,
+      "square_near_cure": 105,
+      "notation_composite": 59,
       "weak_vowel": 102,
       "lot_vowel": 258,
       "yod": 22,
-      "stress_marking_only": 35
+      "stress_marking_only": 35,
+      "composite_structural": 1
     }
   },
   "connected": {
@@ -29,12 +32,13 @@
       "identical": 48,
       "lot_vowel": 10,
       "dress_notation_only": 27,
-      "structural_other": 62,
+      "structural_other": 63,
       "length_marking_only": 16,
       "goat_vowel": 17,
-      "trap_bath": 4,
+      "trap_bath": 3,
       "notation_composite": 3,
-      "rhoticity": 14
+      "rhoticity": 13,
+      "square_near_cure": 1
     }
   },
   "weak": {

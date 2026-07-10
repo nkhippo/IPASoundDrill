@@ -10359,12 +10359,12 @@
       "actor",
       "fact"
     ],
-    "rp_ipa": "/ˈfæktərɪ/",
+    "rp_ipa": "/ˈfæktəri/",
     "def": "A building where goods are manufactured in large quantities.",
     "respell_ga": "FAK-ter-ee",
     "respell_rp": "FAK-tuh-ri",
-    "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "rhotic_vowel_notation"
   },
   {
     "w": "fair",
@@ -10423,7 +10423,7 @@
       "vary",
       "fair"
     ],
-    "rp_ipa": "/ˈfeərɪ/",
+    "rp_ipa": "/ˈfeəri/",
     "def": "A tiny imaginary being with wings that has magical powers.",
     "respell_ga": "FEH-ree",
     "respell_rp": "FAIR-ri",
@@ -10516,12 +10516,12 @@
       "firmly",
       "formally"
     ],
-    "rp_ipa": "/ˈfæməlɪ/",
+    "rp_ipa": "/ˈfæməli/",
     "def": "A group of people related by blood or marriage.",
     "respell_ga": "FA-muh-lee",
     "respell_rp": "FA-muh-li",
-    "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
   },
   {
     "w": "famous",
@@ -10759,12 +10759,12 @@
       "fil": "Pebrero"
     },
     "neighbors": [],
-    "rp_ipa": "/ˈfebjəˌwerɪ/",
+    "rp_ipa": "/ˈfebjəˌweri/",
     "def": "The second month of the year, with 28 or 29 days.",
     "respell_ga": "FEH-byuh-weh-ree",
     "respell_rp": "FEH-byuh-weh-ri",
-    "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "dress_notation_only"
   },
   {
     "w": "feed",
@@ -11101,12 +11101,12 @@
       "city",
       "gift"
     ],
-    "rp_ipa": "/ˈfɪftɪ/",
+    "rp_ipa": "/ˈfɪfti/",
     "def": "The number 50.",
     "respell_ga": "FIF-tee",
     "respell_rp": "FIF-ti",
-    "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
   },
   {
     "w": "fight",
@@ -11739,12 +11739,12 @@
       "father",
       "frog"
     ],
-    "rp_ipa": "/ˈfɒɡɪ/",
+    "rp_ipa": "/ˈfɒɡi/",
     "def": "Covered with fog; difficult to see clearly due to mist.",
     "respell_ga": "FAH-gee",
     "respell_rp": "FO-gi",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same_reason": "lot_vowel"
   },
   {
     "w": "following",
@@ -12069,7 +12069,7 @@
       "hearty",
       "sorta"
     ],
-    "rp_ipa": "/ˈfɔːtɪ/",
+    "rp_ipa": "/ˈfɔːti/",
     "def": "The number 40.",
     "ipa_actual_ga": "/ˈfɔrɾi/",
     "respell_ga": "FOR-dee",
@@ -12194,7 +12194,7 @@
       "fright",
       "pride"
     ],
-    "rp_ipa": "/ˈfraɪdɪ/",
+    "rp_ipa": "/ˈfraɪdi/",
     "def": "The fifth day of the working week, coming before Saturday.",
     "ipa_actual_ga": "/ˈfraɪɾi/",
     "respell_ga": "FRY-dee",
@@ -12451,12 +12451,12 @@
       "find",
       "foggy"
     ],
-    "rp_ipa": "/ˈfʌnɪ/",
+    "rp_ipa": "/ˈfʌni/",
     "def": "Causing laughter; humorous.",
     "respell_ga": "FUH-nee",
     "respell_rp": "FUH-ni",
-    "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
   },
   {
     "w": "future",
@@ -146125,7 +146125,7 @@
     ],
     "respell_ga": "ab-NOR-muh-lee",
     "respell_rp": "ab-NAW-muh-lee",
-    "rp_ipa": "/æbˈnɔːməliː/",
+    "rp_ipa": "/æbˈnɔːməli/",
     "ga_rp_same": false,
     "ga_rp_same_reason": "rhoticity"
   },
@@ -146907,9 +146907,9 @@
     "neighbors": [],
     "respell_ga": "ad-MY-ring-lee",
     "respell_rp": "ad-MY-ring-lee",
-    "rp_ipa": "/ædˈmaɪrɪŋliː/",
+    "rp_ipa": "/ædˈmaɪrɪŋli/",
     "ga_rp_same": true,
-    "ga_rp_same_reason": "length_marking_only"
+    "ga_rp_same_reason": "identical"
   },
   {
     "w": "admittedly",
@@ -147193,7 +147193,7 @@
       "adverb",
       "advice"
     ],
-    "rp_ipa": "/ædˈvɜːsliː/",
+    "rp_ipa": "/ædˈvɜːsli/",
     "ga_rp_same": false,
     "ga_rp_same_reason": "rhoticity",
     "respell_ga": "ad-VUR-slee",
@@ -147220,7 +147220,7 @@
       "adverse"
     ],
     "ipa_actual_ga": "/ædˈvɝsəɾi/",
-    "rp_ipa": "/ædˈvɜːsətiː/",
+    "rp_ipa": "/ædˈvɜːsəti/",
     "ga_rp_same": false,
     "ga_rp_same_reason": "ga_allophony",
     "respell_ga": "ad-VUR-suh-dee",
@@ -147277,9 +147277,9 @@
       "definitely",
       "affection"
     ],
-    "rp_ipa": "/əˈfekʃənətliː/",
+    "rp_ipa": "/əˈfekʃənətli/",
     "ga_rp_same": true,
-    "ga_rp_same_reason": "notation_composite",
+    "ga_rp_same_reason": "dress_notation_only",
     "respell_ga": "uh-FEHK-shuh-nuht-lee",
     "respell_rp": "uh-FEHK-shuh-nuht-lee"
   },
@@ -147355,9 +147355,9 @@
     "neighbors": [
       "aggressive"
     ],
-    "rp_ipa": "/əˈɡresɪvliː/",
+    "rp_ipa": "/əˈɡresɪvli/",
     "ga_rp_same": true,
-    "ga_rp_same_reason": "notation_composite",
+    "ga_rp_same_reason": "dress_notation_only",
     "respell_ga": "uh-GREH-siv-lee",
     "respell_rp": "uh-GREH-siv-lee"
   },
@@ -147870,9 +147870,9 @@
     ],
     "respell_ga": "uh-MAY-zing-lee",
     "respell_rp": "uh-MAY-zing-lee",
-    "rp_ipa": "/əˈmeɪzɪŋliː/",
+    "rp_ipa": "/əˈmeɪzɪŋli/",
     "ga_rp_same": true,
-    "ga_rp_same_reason": "length_marking_only"
+    "ga_rp_same_reason": "identical"
   },
   {
     "w": "ambassador",
@@ -148751,7 +148751,7 @@
     "group": null,
     "pattern": null,
     "neighbors": [],
-    "rp_ipa": "/ˌærəˈstɒkrəsiː/",
+    "rp_ipa": "/ˌærəˈstɒkrəsi/",
     "ga_rp_same": false,
     "ga_rp_same_reason": "lot_vowel",
     "respell_ga": "a-ruh-STAH-kruh-see",
@@ -148918,7 +148918,7 @@
       "officially"
     ],
     "ipa_actual_ga": "/ˌɑrɾəˈfɪʃəli/",
-    "rp_ipa": "/ˌɑːtəˈfɪʃəliː/",
+    "rp_ipa": "/ˌɑːtəˈfɪʃəli/",
     "ga_rp_same": false,
     "ga_rp_same_reason": "ga_allophony",
     "respell_ga": "ar-duh-FI-shuh-lee",
@@ -148951,7 +148951,7 @@
       "honesty"
     ],
     "ipa_actual_ga": "/ˈɑrɾəstri/",
-    "rp_ipa": "/ˈɑːtəstriː/",
+    "rp_ipa": "/ˈɑːtəstri/",
     "ga_rp_same": false,
     "ga_rp_same_reason": "ga_allophony",
     "respell_ga": "AR-duh-stree",
@@ -149640,9 +149640,9 @@
     "neighbors": [
       "attentive"
     ],
-    "rp_ipa": "/əˈtentɪvliː/",
+    "rp_ipa": "/əˈtentɪvli/",
     "ga_rp_same": true,
-    "ga_rp_same_reason": "notation_composite"
+    "ga_rp_same_reason": "dress_notation_only"
   },
   {
     "w": "attractiveness",
@@ -150074,7 +150074,7 @@
     ],
     "respell_ga": "BAW-kee",
     "respell_rp": "BAW-kee",
-    "rp_ipa": "/ˈbɔːkiː/",
+    "rp_ipa": "/ˈbɔːki/",
     "ga_rp_same": true,
     "ga_rp_same_reason": "length_marking_only"
   },
@@ -150308,7 +150308,7 @@
       "hearty",
       "merely"
     ],
-    "rp_ipa": "/ˈbɑːliː/",
+    "rp_ipa": "/ˈbɑːli/",
     "ga_rp_same": false,
     "ga_rp_same_reason": "rhoticity",
     "respell_ga": "BAR-lee",
@@ -151030,7 +151030,7 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/ˌbaɪəʊtekˈnɒlədʒiː/",
+    "rp_ipa": "/ˌbaɪəʊtekˈnɒlədʒi/",
     "neighbors": [
       "technology"
     ],
@@ -151109,7 +151109,7 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/ˈbɪtəliː/",
+    "rp_ipa": "/ˈbɪtəli/",
     "neighbors": [
       "battery",
       "bitter"
@@ -151165,7 +151165,7 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/ˈblaɪndliː/",
+    "rp_ipa": "/ˈblaɪndli/",
     "neighbors": [
       "kindly",
       "blind",
@@ -151179,7 +151179,7 @@
     "respell_ga": "BLYND-lee",
     "respell_rp": "BLYND-lee",
     "ga_rp_same": true,
-    "ga_rp_same_reason": "length_marking_only"
+    "ga_rp_same_reason": "identical"
   },
   {
     "w": "blindness",
@@ -151281,7 +151281,7 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/ˈblʌdiː/",
+    "rp_ipa": "/ˈblʌdi/",
     "neighbors": [
       "blood",
       "buddy",
@@ -151489,7 +151489,7 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/ˈbəʊniː/",
+    "rp_ipa": "/ˈbəʊni/",
     "neighbors": [
       "bone",
       "balky",
@@ -151606,7 +151606,7 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/ˈbɔːsiː/",
+    "rp_ipa": "/ˈbɔːsi/",
     "neighbors": [
       "balky",
       "berry",
@@ -151638,7 +151638,7 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/ˈbɒtəniː/",
+    "rp_ipa": "/ˈbɒtəni/",
     "neighbors": [
       "bottle",
       "bottom",
@@ -151822,7 +151822,7 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/ˈbreɪvəriː/",
+    "rp_ipa": "/ˈbreɪvəri/",
     "neighbors": [
       "drapery",
       "brewery",
@@ -151836,7 +151836,7 @@
     "respell_ga": "BRAY-vuh-ree",
     "respell_rp": "BRAY-vuh-ree",
     "ga_rp_same": true,
-    "ga_rp_same_reason": "length_marking_only"
+    "ga_rp_same_reason": "identical"
   },
   {
     "w": "breakable",
@@ -151964,7 +151964,7 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/ˈbriːziː/",
+    "rp_ipa": "/ˈbriːzi/",
     "neighbors": [
       "breeze",
       "browser",
@@ -151996,7 +151996,7 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/ˈbruːəriː/",
+    "rp_ipa": "/ˈbruːəri/",
     "neighbors": [
       "artery",
       "cruelly",
@@ -152024,14 +152024,14 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/ˈbrɪljəntliː/",
+    "rp_ipa": "/ˈbrɪljəntli/",
     "neighbors": [
       "brilliant"
     ],
     "respell_ga": "BRI-lyuhnt-lee",
     "respell_rp": "BRI-lyuhnt-lee",
     "ga_rp_same": true,
-    "ga_rp_same_reason": "length_marking_only"
+    "ga_rp_same_reason": "identical"
   },
   {
     "w": "broadband",
@@ -152131,7 +152131,7 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/ˈbrɔːdliː/",
+    "rp_ipa": "/ˈbrɔːdli/",
     "neighbors": [
       "broaden",
       "crossly",
@@ -152241,7 +152241,7 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/ˈbʊliː/",
+    "rp_ipa": "/ˈbʊli/",
     "neighbors": [
       "belly",
       "fully",
@@ -152255,7 +152255,7 @@
     "respell_ga": "BUU-lee",
     "respell_rp": "BUU-lee",
     "ga_rp_same": true,
-    "ga_rp_same_reason": "length_marking_only"
+    "ga_rp_same_reason": "identical"
   },
   {
     "w": "bumper",
@@ -152331,7 +152331,7 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/bjʊˈrɒkrəsiː/",
+    "rp_ipa": "/bjʊˈrɒkrəsi/",
     "neighbors": [],
     "respell_ga": "byuu-RAH-kruh-see",
     "respell_rp": "byuu-RO-kruh-see",
@@ -152354,7 +152354,7 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/ˈbɜːɡləriː/",
+    "rp_ipa": "/ˈbɜːɡləri/",
     "neighbors": [
       "bravery",
       "biology",
@@ -152569,7 +152569,7 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/ˈkɒmliː/",
+    "rp_ipa": "/ˈkɒmli/",
     "neighbors": [
       "barley",
       "colleague",
@@ -152715,7 +152715,7 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/ˌkeɪpəˈbɪlətiː/",
+    "rp_ipa": "/ˌkeɪpəˈbɪləti/",
     "neighbors": [
       "possibility",
       "availability",
@@ -153051,7 +153051,7 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/ˈkæʒuːəliː/",
+    "rp_ipa": "/ˈkæʒuːəli/",
     "neighbors": [
       "cruelly",
       "cruelty",
@@ -153114,14 +153114,14 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/kəˈtæstrəfiː/",
+    "rp_ipa": "/kəˈtæstrəfi/",
     "neighbors": [
       "apostrophe"
     ],
     "respell_ga": "kuh-TA-struh-fee",
     "respell_rp": "kuh-TA-struh-fee",
     "ga_rp_same": true,
-    "ga_rp_same_reason": "length_marking_only"
+    "ga_rp_same_reason": "identical"
   },
   {
     "w": "catastrophic",
@@ -153163,7 +153163,7 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/ˈkætʃiː/",
+    "rp_ipa": "/ˈkætʃi/",
     "neighbors": [
       "carry",
       "catch",
@@ -153177,7 +153177,7 @@
     "respell_ga": "KA-chee",
     "respell_rp": "KA-chee",
     "ga_rp_same": true,
-    "ga_rp_same_reason": "length_marking_only"
+    "ga_rp_same_reason": "identical"
   },
   {
     "w": "catering",
@@ -153370,7 +153370,7 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/ˈseməˌteriː/",
+    "rp_ipa": "/ˈseməˌteri/",
     "neighbors": [
       "secretary",
       "chemistry",
@@ -153620,7 +153620,7 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/ˈtʃiːkiː/",
+    "rp_ipa": "/ˈtʃiːki/",
     "neighbors": [
       "cheek",
       "balky",
@@ -153652,7 +153652,7 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/ˈtʃɪəfəliː/",
+    "rp_ipa": "/ˈtʃɪəfəli/",
     "neighbors": [
       "cheerful",
       "carefully",
@@ -153710,7 +153710,7 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/ˌkiːməʊˈθerəpiː/",
+    "rp_ipa": "/ˌkiːməʊˈθerəpi/",
     "neighbors": [],
     "respell_ga": "kee-moh-THEH-ruh-pee",
     "respell_rp": "kee-moh-THEH-ruh-pee",
@@ -153759,7 +153759,7 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/ˈtʃeriː/",
+    "rp_ipa": "/ˈtʃeri/",
     "neighbors": [
       "berry",
       "bury",
@@ -153773,7 +153773,7 @@
     "respell_ga": "CHEH-ree",
     "respell_rp": "CHEH-ree",
     "ga_rp_same": true,
-    "ga_rp_same_reason": "notation_composite"
+    "ga_rp_same_reason": "dress_notation_only"
   },
   {
     "w": "childish",
@@ -153816,7 +153816,7 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/ˈtʃɪmniː/",
+    "rp_ipa": "/ˈtʃɪmni/",
     "neighbors": [
       "gimme",
       "chin"
@@ -153824,7 +153824,7 @@
     "respell_ga": "CHIM-nee",
     "respell_rp": "CHIM-nee",
     "ga_rp_same": true,
-    "ga_rp_same_reason": "length_marking_only"
+    "ga_rp_same_reason": "identical"
   },
   {
     "w": "chunk",
@@ -153906,7 +153906,7 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/ˈsɜːkətriː/",
+    "rp_ipa": "/ˈsɜːkətri/",
     "neighbors": [
       "circuit",
       "certainly",
@@ -154203,12 +154203,12 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/ˈklʌmziː/",
+    "rp_ipa": "/ˈklʌmzi/",
     "neighbors": [],
     "respell_ga": "KLUHM-zee",
     "respell_rp": "KLUHM-zee",
     "ga_rp_same": true,
-    "ga_rp_same_reason": "length_marking_only"
+    "ga_rp_same_reason": "identical"
   },
   {
     "w": "coaching",
@@ -154702,7 +154702,7 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/ˈkʌmfətəbliː/",
+    "rp_ipa": "/ˈkʌmfətəbli/",
     "neighbors": [
       "comfortable"
     ],
@@ -154898,7 +154898,7 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/kəˈmjuːnətiː/",
+    "rp_ipa": "/kəˈmjuːnəti/",
     "neighbors": [
       "communicate",
       "commute"
@@ -155256,7 +155256,7 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/kəmˈpleksətiː/",
+    "rp_ipa": "/kəmˈpleksəti/",
     "neighbors": [
       "complexion",
       "compulsory",
@@ -155434,12 +155434,12 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/kəmˈpʌlsəriː/",
+    "rp_ipa": "/kəmˈpʌlsəri/",
     "neighbors": [],
     "respell_ga": "kuhm-PUHL-suh-ree",
     "respell_rp": "kuhm-PUHL-suh-ree",
     "ga_rp_same": true,
-    "ga_rp_same_reason": "length_marking_only"
+    "ga_rp_same_reason": "identical"
   },
   {
     "w": "compute",
@@ -155944,7 +155944,7 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/ˈkɒnfədəntliː/",
+    "rp_ipa": "/ˈkɒnfədəntli/",
     "neighbors": [
       "confident",
       "consequently",
@@ -156212,7 +156212,7 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/kənˈsɪdərəbliː/",
+    "rp_ipa": "/kənˈsɪdərəbli/",
     "neighbors": [
       "considerable",
       "considering"
@@ -156473,12 +156473,12 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/kənˈtempəˌreriː/",
+    "rp_ipa": "/kənˈtempəˌreri/",
     "neighbors": [],
     "respell_ga": "kuhn-TEHM-puh-reh-ree",
     "respell_rp": "kuhn-TEHM-puh-reh-ree",
     "ga_rp_same": true,
-    "ga_rp_same_reason": "notation_composite"
+    "ga_rp_same_reason": "dress_notation_only"
   },
   {
     "w": "contempt",
@@ -156617,7 +156617,7 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/ˌkɒntrəˈdɪktəriː/",
+    "rp_ipa": "/ˌkɒntrəˈdɪktəri/",
     "neighbors": [
       "contradiction",
       "contradict"
@@ -156643,7 +156643,7 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/ˈkɒntrəˌvɜːsiː/",
+    "rp_ipa": "/ˈkɒntrəˌvɜːsi/",
     "neighbors": [
       "controversial"
     ],
@@ -156668,7 +156668,7 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/kənˈviːniːəntliː/",
+    "rp_ipa": "/kənˈviːniːəntli/",
     "neighbors": [
       "convenient",
       "conventional",
@@ -156785,7 +156785,7 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/kənˈvɜːsliː/",
+    "rp_ipa": "/kənˈvɜːsli/",
     "neighbors": [
       "conversion",
       "adversely",
@@ -157437,7 +157437,7 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/ˈkɔːstliː/",
+    "rp_ipa": "/ˈkɔːstli/",
     "neighbors": [
       "crossly",
       "mostly",
@@ -157577,7 +157577,7 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/ˈkɜːtəsiː/",
+    "rp_ipa": "/ˈkɜːtəsi/",
     "neighbors": [
       "currency",
       "curtain",
@@ -157637,7 +157637,7 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/ˈkaʊədliː/",
+    "rp_ipa": "/ˈkaʊədli/",
     "neighbors": [
       "kindly",
       "loudly",
@@ -157752,7 +157752,7 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/kriːˈeɪtɪvliː/",
+    "rp_ipa": "/kriːˈeɪtɪvli/",
     "neighbors": [
       "creativity",
       "creative"
@@ -157779,7 +157779,7 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/ˈkriːpiː/",
+    "rp_ipa": "/ˈkriːpi/",
     "neighbors": [
       "breezy",
       "dreamy",
@@ -157840,7 +157840,7 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/ˈkrɪtɪkəliː/",
+    "rp_ipa": "/ˈkrɪtɪkəli/",
     "neighbors": [
       "critical",
       "physically",
@@ -157916,7 +157916,7 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/ˈkrɔːsliː/",
+    "rp_ipa": "/ˈkrɔːsli/",
     "neighbors": [
       "broadly",
       "costly",
@@ -157975,7 +157975,7 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/ˈkruːəliː/",
+    "rp_ipa": "/ˈkruːəli/",
     "neighbors": [
       "cruelty",
       "cruel",
@@ -158007,7 +158007,7 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/ˈkruːəltiː/",
+    "rp_ipa": "/ˈkruːəlti/",
     "neighbors": [
       "cruelly",
       "cruel",
@@ -158088,14 +158088,14 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/ˈkʌltʃərəliː/",
+    "rp_ipa": "/ˈkʌltʃərəli/",
     "neighbors": [
       "cultural"
     ],
     "respell_ga": "KUHL-chuh-ruh-lee",
     "respell_rp": "KUHL-chuh-ruh-lee",
     "ga_rp_same": true,
-    "ga_rp_same_reason": "length_marking_only"
+    "ga_rp_same_reason": "identical"
   },
   {
     "w": "cursor",
@@ -158508,7 +158508,7 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/ˈdɪəliː/",
+    "rp_ipa": "/ˈdɪəli/",
     "neighbors": [
       "merely",
       "nearly",
@@ -159112,7 +159112,7 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/dɪˈlɪbərətliː/",
+    "rp_ipa": "/dɪˈlɪbərətli/",
     "neighbors": [
       "deliberate",
       "desperately",
@@ -159121,7 +159121,7 @@
     "respell_ga": "di-LI-buh-ruht-lee",
     "respell_rp": "di-LI-buh-ruht-lee",
     "ga_rp_same": true,
-    "ga_rp_same_reason": "length_marking_only"
+    "ga_rp_same_reason": "identical"
   },
   {
     "w": "delicacy",
@@ -159139,7 +159139,7 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/ˈdeləkəsiː/",
+    "rp_ipa": "/ˈdeləkəsi/",
     "neighbors": [
       "delicately",
       "delicate",
@@ -159148,7 +159148,7 @@
     "respell_ga": "DEH-luh-kuh-see",
     "respell_rp": "DEH-luh-kuh-see",
     "ga_rp_same": true,
-    "ga_rp_same_reason": "notation_composite"
+    "ga_rp_same_reason": "dress_notation_only"
   },
   {
     "w": "delicately",
@@ -159166,7 +159166,7 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/ˈdeləkətliː/",
+    "rp_ipa": "/ˈdeləkətli/",
     "neighbors": [
       "definitely",
       "delicacy",
@@ -159177,7 +159177,7 @@
     "respell_ga": "DEH-luh-kuht-lee",
     "respell_rp": "DEH-luh-kuht-lee",
     "ga_rp_same": true,
-    "ga_rp_same_reason": "notation_composite"
+    "ga_rp_same_reason": "dress_notation_only"
   },
   {
     "w": "demanding",
@@ -159275,7 +159275,7 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/ˈdensliː/",
+    "rp_ipa": "/ˈdensli/",
     "neighbors": [
       "deadly",
       "dense"
@@ -159283,7 +159283,7 @@
     "respell_ga": "DEHN-slee",
     "respell_rp": "DEHN-slee",
     "ga_rp_same": true,
-    "ga_rp_same_reason": "notation_composite"
+    "ga_rp_same_reason": "dress_notation_only"
   },
   {
     "w": "dental",
@@ -159358,7 +159358,7 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/ˈdepjətiː/",
+    "rp_ipa": "/ˈdepjəti/",
     "neighbors": [
       "destiny",
       "dignity",
@@ -159527,7 +159527,7 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/ˈdespərətliː/",
+    "rp_ipa": "/ˈdespərətli/",
     "neighbors": [
       "delicately",
       "definitely"
@@ -159535,7 +159535,7 @@
     "respell_ga": "DEH-spuh-ruht-lee",
     "respell_rp": "DEH-spuh-ruht-lee",
     "ga_rp_same": true,
-    "ga_rp_same_reason": "notation_composite"
+    "ga_rp_same_reason": "dress_notation_only"
   },
   {
     "w": "desperation",
@@ -159615,7 +159615,7 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/ˈdestəniː/",
+    "rp_ipa": "/ˈdestəni/",
     "neighbors": [
       "distance",
       "distant",
@@ -159629,7 +159629,7 @@
     "respell_ga": "DEH-stuh-nee",
     "respell_rp": "DEH-stuh-nee",
     "ga_rp_same": true,
-    "ga_rp_same_reason": "notation_composite"
+    "ga_rp_same_reason": "dress_notation_only"
   },
   {
     "w": "detach",
@@ -160021,7 +160021,7 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/ˈdɪɡnətiː/",
+    "rp_ipa": "/ˈdɪɡnəti/",
     "neighbors": [
       "dignify",
       "deputy",
@@ -160506,7 +160506,7 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/dɪsˈɒnəstiː/",
+    "rp_ipa": "/dɪsˈɒnəsti/",
     "neighbors": [
       "dishonest",
       "dignity",
@@ -160620,7 +160620,7 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/dɪsˈɔːdəliː/",
+    "rp_ipa": "/dɪsˈɔːdəli/",
     "neighbors": [
       "disorder",
       "orderly"
@@ -161402,7 +161402,7 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/ˈdɒŋkiː/",
+    "rp_ipa": "/ˈdɒŋki/",
     "neighbors": [
       "conquer",
       "monkey",
@@ -161484,7 +161484,7 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/ˈdɔːməˌtɔːriː/",
+    "rp_ipa": "/ˈdɔːməˌtɔːri/",
     "neighbors": [],
     "ipa_actual_ga": "/ˈdɔrməˌɾɔri/",
     "respell_ga": "DOR-muh-daw-ree",
@@ -161508,7 +161508,7 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/ˈdʌbliː/",
+    "rp_ipa": "/ˈdʌbli/",
     "neighbors": [
       "dearly",
       "deadly",
@@ -161522,7 +161522,7 @@
     "respell_ga": "DUH-blee",
     "respell_rp": "DUH-blee",
     "ga_rp_same": true,
-    "ga_rp_same_reason": "length_marking_only"
+    "ga_rp_same_reason": "identical"
   },
   {
     "w": "doubtful",
@@ -161647,7 +161647,7 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/ˈdaʊriː/",
+    "rp_ipa": "/ˈdaʊri/",
     "neighbors": [
       "berry",
       "cherry",
@@ -161661,7 +161661,7 @@
     "respell_ga": "DOW-ree",
     "respell_rp": "DOW-ree",
     "ga_rp_same": true,
-    "ga_rp_same_reason": "length_marking_only"
+    "ga_rp_same_reason": "identical"
   },
   {
     "w": "dramatically",
@@ -161679,7 +161679,7 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/drəˈmætɪkəliː/",
+    "rp_ipa": "/drəˈmætɪkəli/",
     "neighbors": [
       "automatically",
       "dramatic",
@@ -161707,7 +161707,7 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/ˈdreɪpəriː/",
+    "rp_ipa": "/ˈdreɪpəri/",
     "neighbors": [
       "bravery",
       "artery",
@@ -161717,7 +161717,7 @@
     "respell_ga": "DRAY-puh-ree",
     "respell_rp": "DRAY-puh-ree",
     "ga_rp_same": true,
-    "ga_rp_same_reason": "length_marking_only"
+    "ga_rp_same_reason": "identical"
   },
   {
     "w": "dreadful",
@@ -161767,7 +161767,7 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/ˈdriːmiː/",
+    "rp_ipa": "/ˈdriːmi/",
     "neighbors": [
       "dream",
       "breezy",
@@ -161963,7 +161963,7 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/ˈiːɡəliː/",
+    "rp_ipa": "/ˈiːɡəli/",
     "neighbors": [
       "easily",
       "eagle",
@@ -162078,7 +162078,7 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/ˌiːkəˈlɒdʒɪkəliː/",
+    "rp_ipa": "/ˌiːkəˈlɒdʒɪkəli/",
     "neighbors": [
       "ecological",
       "psychological",
