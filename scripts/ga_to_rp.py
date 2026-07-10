@@ -75,6 +75,18 @@ def _is_vowel(tok: str | None) -> bool:
     return tok is not None and tok in VOWELS
 
 
+STRESS = {"ˈ", "ˌ"}
+
+
+def _next_phoneme(tokens: list[str], i: int) -> str | None:
+    j = i + 1
+    while j < len(tokens):
+        if tokens[j] not in STRESS:
+            return tokens[j]
+        j += 1
+    return None
+
+
 def ga_to_rp(word: str, ga_ipa: str) -> str:
     if word in OVERRIDES:
         return OVERRIDES[word]
@@ -118,14 +130,22 @@ def ga_to_rp(word: str, ga_ipa: str) -> str:
             i += 2
             continue
 
-        # ɝ / ɚ are inherently rhotic vowels (fused r-colouring); always
-        # vocalise. (No known corpus case of these followed by a vowel.)
-        if tok == "ɝ":
-            pass1.append("ɜː")
-            i += 1
-            continue
-        if tok == "ɚ":
-            pass1.append("ə")
+        # ɝ / ɚ: vocalise only when coda; onset/intervocalic expands to ə+r.
+        if tok in ("ɝ", "ɚ"):
+            nxt2 = tokens[i + 2] if i + 2 < n else None
+            vowel_tok = "ɜː" if tok == "ɝ" else "ə"
+            if nxt in STRESS and _is_vowel(nxt2):
+                pass1.append(vowel_tok)
+                pass1.append(nxt)
+                pass1.append("r")
+                i += 2
+                continue
+            if _is_vowel(nxt):
+                pass1.append(vowel_tok)
+                pass1.append("r")
+                i += 1
+                continue
+            pass1.append(vowel_tok)
             i += 1
             continue
 

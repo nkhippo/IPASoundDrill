@@ -10,6 +10,8 @@ in transcription conventions that do not affect what a learner hears:
   * Length marks (ː)                              — GA omits, RP shows
   * Secondary-stress markers (ˌ)                  — dictionary-source variation
   * DRESS vowel notation (ɛ ↔ e)                  — same phoneme, editorial choice
+  * Rhotic-vowel notation (ɚ ↔ ər, ɝ ↔ ɜːr)     — onset/intervocalic /r/ kept
+    in both accents; GA fuses schwa+r into ɚ/ɝ
 
 Everything else is `different`, in particular:
 
@@ -31,6 +33,7 @@ same:
   length_marking_only     only ː differs
   stress_marking_only     only ˌ differs
   dress_notation_only     only ɛ↔e differs
+  rhotic_vowel_notation   only ɚ↔ər / ɝ↔ɜːr differs (onset / intervocalic)
   notation_composite      combination of the above
 
 different:
@@ -81,6 +84,109 @@ def unify_dress(s: str) -> str:
 def notation_norm(s: str) -> str:
     return unify_dress(drop_secondary(drop_length(strip_slashes(s))))
 
+# --- tokenisation (mirrors ga_to_rp.py) -------------------------------------
+
+MULTI = ["tʃ", "dʒ", "eɪ", "aɪ", "ɔɪ", "oʊ", "aʊ"]
+
+VOWELS = {
+    "i", "ɪ", "ɛ", "æ", "ʌ", "ɑ", "ɔ", "ʊ", "u", "ə", "ɝ", "ɚ",
+    "aɪ", "aʊ", "eɪ", "ɔɪ", "oʊ",
+}
+
+STRESS = {"ˈ", "ˌ"}
+
+
+def tokenize(ipa: str) -> list[str]:
+    s = strip_slashes(ipa)
+    out: list[str] = []
+    i = 0
+    while i < len(s):
+        matched = None
+        for x in MULTI:
+            if s.startswith(x, i):
+                matched = x
+                break
+        if matched:
+            out.append(matched)
+            i += len(matched)
+        else:
+            out.append(s[i])
+            i += 1
+    return out
+
+
+def detokenize(tokens: list[str]) -> str:
+    return "".join(tokens)
+
+
+def _next_phoneme(tokens: list[str], i: int) -> str | None:
+    j = i + 1
+    while j < len(tokens):
+        if tokens[j] not in STRESS:
+            return tokens[j]
+        j += 1
+    return None
+
+
+def _is_vowel_tok(tok: str | None) -> bool:
+    return tok is not None and tok in VOWELS
+
+
+def expand_ga_rhotic_vowels(ga_inner: str) -> str:
+    """Split GA onset/intervocalic r-colored vowels for cross-accent comparison.
+
+    Coda r-coloring (ɚ/ɝ not followed by a vowel) is left intact so that
+    apply_rhoticity() can still detect true non-rhotic differences (actor, etc.).
+
+    Stress-aware: /ɚˈɪ…/ → /əˈrɪ…/ (not /ərˈɪ…/) to align with RP notation.
+    """
+    tokens = tokenize(ga_inner)
+    out: list[str] = []
+    i = 0
+    while i < len(tokens):
+        tok = tokens[i]
+        if tok in ("ɚ", "ɝ"):
+            nxt = tokens[i + 1] if i + 1 < len(tokens) else None
+            nxt2 = tokens[i + 2] if i + 2 < len(tokens) else None
+            vowel_tok = "ə" if tok == "ɚ" else "ɜː"
+
+            # ɚˈV / ɝˈV  →  əˈrV / ɜːrV
+            if nxt in STRESS and _is_vowel_tok(nxt2):
+                out.append(vowel_tok)
+                out.append(nxt)
+                out.append("r")
+                i += 2
+                continue
+
+            # ɚV / ɝV  (intervocalic, no primary-stress marker between)
+            if _is_vowel_tok(nxt):
+                out.append(vowel_tok)
+                out.append("r")
+                i += 1
+                continue
+
+            # Coda — keep r-colored vowel symbol unchanged
+            out.append(tok)
+            i += 1
+            continue
+
+        out.append(tok)
+        i += 1
+    return detokenize(out)
+
+
+def vocalise_coda_rhotic_vowels(ga_inner: str) -> str:
+    """Convert remaining (coda) ɚ/ɝ after onset expansion."""
+    return ga_inner.replace("ɝ", "ɜː").replace("ɚ", "ə")
+
+
+def ga_compare_norm(ga_raw: str) -> str:
+    return notation_norm(expand_ga_rhotic_vowels(strip_slashes(ga_raw)))
+
+
+def rp_compare_norm(rp_raw: str) -> str:
+    return notation_norm(strip_slashes(rp_raw))
+
 # --- primary-stress position ------------------------------------------------
 
 def primary_syllable_index(s: str) -> int:
@@ -94,11 +200,11 @@ def primary_syllable_index(s: str) -> int:
 RHOTICITY_MAP = [
     ("aʊr", "aʊə"), ("aɪr", "aɪə"), ("ɔɪr", "ɔɪə"), ("eɪr", "eɪə"),
     ("ɑr", "ɑː"),   ("ɔr", "ɔː"),   ("ɪr", "ɪə"),   ("ɛr", "eə"),
-    ("ʊr", "ʊə"),   ("ɝ", "ɜː"),    ("ɚ", "ə"),
+    ("ʊr", "ʊə"),
 ]
 
 def apply_rhoticity(ga_inner: str) -> str:
-    s = ga_inner
+    s = vocalise_coda_rhotic_vowels(expand_ga_rhotic_vowels(ga_inner))
     for src, dst in RHOTICITY_MAP:
         s = s.replace(src, dst)
     return s
@@ -116,11 +222,14 @@ BATH_WORDS = {
 def reason_when_same(ga_raw: str, rp_raw: str) -> str:
     ga = strip_slashes(ga_raw)
     rp = strip_slashes(rp_raw)
+    ga_exp = expand_ga_rhotic_vowels(ga)
     if ga == rp:
         return "identical"
-    only_length = drop_length(ga) == drop_length(rp)
-    only_stress = drop_secondary(ga) == drop_secondary(rp)
-    only_dress  = unify_dress(ga) == unify_dress(rp)
+    if ga_exp == rp:
+        return "rhotic_vowel_notation"
+    only_length = drop_length(ga_exp) == drop_length(rp)
+    only_stress = drop_secondary(ga_exp) == drop_secondary(rp)
+    only_dress  = unify_dress(ga_exp) == unify_dress(rp)
     # single-axis wins
     if only_length and not only_stress and not only_dress:
         return "length_marking_only"
@@ -133,53 +242,55 @@ def reason_when_same(ga_raw: str, rp_raw: str) -> str:
 def reason_when_different(word: str, ga_raw: str, rp_raw: str) -> str:
     ga_inner = strip_slashes(ga_raw)
     rp_inner = strip_slashes(rp_raw)
+    ga_norm = ga_compare_norm(ga_raw)
+    rp_norm = rp_compare_norm(rp_raw)
 
     # 0. Stress-placement check (only if not just secondary-stress diff).
     ga_pri = primary_syllable_index(ga_inner)
     rp_pri = primary_syllable_index(rp_inner)
     if ga_pri >= 0 and rp_pri >= 0 and ga_pri != rp_pri:
         # Confirm rest matches when stress is stripped
-        if notation_norm(ga_inner.replace("ˈ","")) == notation_norm(rp_inner.replace("ˈ","")):
+        if ga_norm.replace("ˈ", "") == rp_norm.replace("ˈ", ""):
             return "stress_placement"
 
     # 1. Yod (GA drops /j/ before /u/ after coronals: new, tune, due, produce)
     #    GA has /Cu/ where RP has /Cjuː/
     if "j" in rp_inner and "j" not in ga_inner:
         # Insert j before every u in ga_inner and see if it matches
-        if notation_norm(ga_inner.replace("u", "ju")) == notation_norm(rp_inner):
+        if notation_norm(expand_ga_rhotic_vowels(ga_inner.replace("u", "ju"))) == rp_norm:
             return "yod"
 
     # 2. Rhoticity — apply non-rhotic transform to GA, compare
     ga_derhotic = apply_rhoticity(ga_inner)
-    if notation_norm(ga_derhotic) == notation_norm(rp_inner):
+    if notation_norm(ga_derhotic) == rp_norm:
         return "rhoticity"
 
     # 3. GOAT — after rhoticity
     ga_goat = ga_derhotic.replace("oʊ", "əʊ")
-    if notation_norm(ga_goat) == notation_norm(rp_inner):
+    if notation_norm(ga_goat) == rp_norm:
         return "goat_vowel" if ga_derhotic != ga_goat else "rhoticity"
 
     # 4. LOT
     ga_lot = ga_goat.replace("ɑ", "ɒ")
-    if notation_norm(ga_lot) == notation_norm(rp_inner):
+    if notation_norm(ga_lot) == rp_norm:
         return "lot_vowel" if ga_goat != ga_lot else "goat_vowel"
 
     # 5. TRAP-BATH (word-triggered)
     if word.lower() in BATH_WORDS or ("æ" in ga_inner and "ɑː" in rp_inner):
         ga_bath = ga_lot.replace("æ", "ɑː")
-        if notation_norm(ga_bath) == notation_norm(rp_inner):
+        if notation_norm(ga_bath) == rp_norm:
             return "trap_bath"
 
     # 6. CLOTH-LOT / COT-CAUGHT split (GA merges ɔ/ɑ; RP separates)
     #    GA "bought" /bɑt/ vs RP /bɔːt/: GA ɑ → RP ɔː
     ga_cot = ga_lot.replace("ɑ", "ɔː")
-    if notation_norm(ga_cot) == notation_norm(rp_inner):
+    if notation_norm(ga_cot) == rp_norm:
         return "cot_caught"
 
     # 7. SQUARE / NEAR / CURE composites (peel goat/lot after rhoticity)
     #    "bear" /bɛr/ → /beə/, "dear" /dɪr/ → /dɪə/
-    ga_sq = ga_inner.replace("ɛr", "eə").replace("ɪr", "ɪə").replace("ʊr", "ʊə")
-    if notation_norm(ga_sq) == notation_norm(rp_inner):
+    ga_sq = expand_ga_rhotic_vowels(ga_inner).replace("ɛr", "eə").replace("ɪr", "ɪə").replace("ʊr", "ʊə")
+    if notation_norm(ga_sq) == rp_norm:
         return "square_near_cure"
 
     # 8. Composite structural (rhoticity + BATH / rhoticity + LOT etc.)
@@ -187,12 +298,13 @@ def reason_when_different(word: str, ga_raw: str, rp_raw: str) -> str:
     ga_combo = ga_combo.replace("oʊ", "əʊ").replace("ɑ", "ɒ")
     if word.lower() in BATH_WORDS:
         ga_combo = ga_combo.replace("æ", "ɑː")
-    if notation_norm(ga_combo) == notation_norm(rp_inner):
+    if notation_norm(ga_combo) == rp_norm:
         return "composite_structural"
 
     # 9. Try weak-vowel: ə ↔ ɪ swap in unstressed syllables
-    if notation_norm(ga_inner.replace("ə", "ɪ")) == notation_norm(rp_inner) or \
-       notation_norm(ga_inner.replace("ɪ", "ə")) == notation_norm(rp_inner):
+    ga_exp = expand_ga_rhotic_vowels(ga_inner)
+    if notation_norm(ga_exp.replace("ə", "ɪ")) == rp_norm or \
+       notation_norm(ga_exp.replace("ɪ", "ə")) == rp_norm:
         return "weak_vowel"
 
     return "structural_other"
@@ -217,7 +329,7 @@ def classify(word: str, ipa: str, rp_ipa: str,
             return (False, "ga_allophony")
 
     # ---- Same-under-notation check ----
-    if notation_norm(ipa) == notation_norm(rp_ipa):
+    if ga_compare_norm(ipa) == rp_compare_norm(rp_ipa):
         return (True, reason_when_same(ipa, rp_ipa))
 
     # ---- Different: find the best reason ----
@@ -226,7 +338,7 @@ def classify(word: str, ipa: str, rp_ipa: str,
 # --- driver -----------------------------------------------------------------
 
 SAME_REASONS = {"identical", "length_marking_only", "stress_marking_only",
-                "dress_notation_only", "notation_composite"}
+                "dress_notation_only", "rhotic_vowel_notation", "notation_composite"}
 
 def process(items: list[dict], word_field: str = "w") -> dict:
     stats: dict[str, int] = {}

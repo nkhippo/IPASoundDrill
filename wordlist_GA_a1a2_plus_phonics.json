@@ -1304,8 +1304,8 @@
     "def": "On all sides of something; in the surrounding area; approximately.",
     "respell_ga": "er-OWND",
     "respell_rp": "uh-ROWND",
-    "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "rhotic_vowel_notation"
   },
   {
     "w": "arrive",
@@ -1336,8 +1336,8 @@
     "def": "To reach a destination after traveling.",
     "respell_ga": "er-YV",
     "respell_rp": "uh-RYV",
-    "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "rhotic_vowel_notation"
   },
   {
     "w": "art",
@@ -4842,8 +4842,8 @@
     "def": "A device for taking photographs or recording video.",
     "respell_ga": "KA-mer-uh",
     "respell_rp": "KA-muh-ruh",
-    "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "rhotic_vowel_notation"
   },
   {
     "w": "camp",
@@ -7064,8 +7064,8 @@
     "def": "Free from error; accurately following rules.",
     "respell_ga": "ker-EHKT",
     "respell_rp": "kuh-REHKT",
-    "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "dress_notation_only"
   },
   {
     "w": "couch",
@@ -8106,8 +8106,8 @@
     "def": "The way in which two things are not the same.",
     "respell_ga": "DI-fer-uhns",
     "respell_rp": "DI-fuh-ruhns",
-    "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "rhotic_vowel_notation"
   },
   {
     "w": "different",
@@ -8138,8 +8138,8 @@
     "def": "Not the same as another thing; unlike.",
     "respell_ga": "DI-fer-uhnt",
     "respell_rp": "DI-fuh-ruhnt",
-    "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "rhotic_vowel_notation"
   },
   {
     "w": "difficult",
@@ -19708,8 +19708,8 @@
     "def": "The ability to remember; something remembered from the past.",
     "respell_ga": "MEH-mer-ee",
     "respell_rp": "MEH-muh-ree",
-    "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "dress_notation_only"
   },
   {
     "w": "men",
@@ -25146,7 +25146,7 @@
     "respell_ga": "REH-ster-ahnt",
     "respell_rp": "REH-stuh-ront",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same_reason": "lot_vowel"
   },
   {
     "w": "result",
@@ -38526,7 +38526,7 @@
     "respell_ga": "a-nuh-VUR-ser-ee",
     "respell_rp": "a-nuh-VUR-suh-ree",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same_reason": "rhoticity"
   },
   {
     "w": "annoy",
@@ -39639,8 +39639,8 @@
     "def": "The typical or usual amount; calculated by dividing the total.",
     "respell_ga": "A-ver-ij",
     "respell_rp": "A-vuh-rij",
-    "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "rhotic_vowel_notation"
   },
   {
     "w": "avoid",
@@ -42203,8 +42203,8 @@
     "def": "A period of one hundred years.",
     "respell_ga": "SEHN-cher-ee",
     "respell_rp": "SEHN-chuh-ree",
-    "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "dress_notation_only"
   },
   {
     "w": "cereal",
@@ -42991,8 +42991,8 @@
     "def": "A thin roll of tobacco wrapped in paper for smoking.",
     "respell_ga": "si-ger-EHT",
     "respell_rp": "si-guh-REHT",
-    "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "dress_notation_only"
   },
   {
     "w": "citizen",
@@ -44624,8 +44624,8 @@
     "def": "In a way that is accurate; without error.",
     "respell_ga": "ker-EHKT-lee",
     "respell_rp": "kuh-REHKT-lee",
-    "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "dress_notation_only"
   },
   {
     "w": "cost",
@@ -45636,8 +45636,8 @@
     "def": "Able to cause harm or injury.",
     "respell_ga": "DAYN-jer-uhs",
     "respell_rp": "DAYN-juh-ruhs",
-    "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "rhotic_vowel_notation"
   },
   {
     "w": "daylight",
@@ -46298,8 +46298,8 @@
     "def": "A book in which you record events and thoughts each day.",
     "respell_ga": "DY-er-ee",
     "respell_rp": "DY-uh-ree",
-    "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "rhotic_vowel_notation"
   },
   {
     "w": "die",
@@ -46475,7 +46475,7 @@
     "respell_ga": "der-EHKT",
     "respell_rp": "di-REHKT",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same_reason": "weak_vowel"
   },
   {
     "w": "direction",
@@ -50433,7 +50433,7 @@
     "respell_ga": "fer-EH-ver",
     "respell_rp": "fuh-EH-vuh",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "structural_other"
   },
   {
     "w": "fork",
@@ -51067,8 +51067,8 @@
     "def": "A room or building for displaying art.",
     "respell_ga": "GA-ler-ee",
     "respell_rp": "GA-luh-ree",
-    "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "rhotic_vowel_notation"
   },
   {
     "w": "garage",
@@ -51278,8 +51278,8 @@
     "def": "All the people born around the same time.",
     "respell_ga": "jeh-ner-AY-shuhn",
     "respell_rp": "jeh-nuh-RAY-shuhn",
-    "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "dress_notation_only"
   },
   {
     "w": "gentle",
@@ -53917,8 +53917,8 @@
     "def": "Something that makes you want to create or do something.",
     "respell_ga": "in-sper-AY-shuhn",
     "respell_rp": "in-spuh-RAY-shuhn",
-    "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "rhotic_vowel_notation"
   },
   {
     "w": "instant",
@@ -57713,8 +57713,8 @@
     "def": "Existing in or derived from nature; not artificial.",
     "respell_ga": "NA-cher-uhl",
     "respell_rp": "NA-chuh-ruhl",
-    "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "rhotic_vowel_notation"
   },
   {
     "w": "nature",
@@ -58549,7 +58549,7 @@
     "respell_ga": "AH-per-ayt",
     "respell_rp": "O-puh-rayt",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same_reason": "lot_vowel"
   },
   {
     "w": "opinion",
@@ -58691,8 +58691,8 @@
     "def": "Existing from the beginning; not a copy; creative.",
     "respell_ga": "er-I-juh-nuhl",
     "respell_rp": "uh-RI-juh-nuhl",
-    "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "rhotic_vowel_notation"
   },
   {
     "w": "orphan",
@@ -63557,7 +63557,7 @@
     "respell_ga": "RAH-ber-ee",
     "respell_rp": "RO-buh-ree",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same_reason": "lot_vowel"
   },
   {
     "w": "robin",
@@ -64517,8 +64517,8 @@
     "def": "The natural features of a landscape; the painted backdrops in a play.",
     "respell_ga": "SEE-ner-ee",
     "respell_rp": "SEE-nuh-ree",
-    "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "length_marking_only"
   },
   {
     "w": "schedule",
@@ -65161,8 +65161,8 @@
     "def": "To divide or detach; not connected.",
     "respell_ga": "SEH-per-ayt",
     "respell_rp": "SEH-puh-rayt",
-    "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "dress_notation_only"
   },
   {
     "w": "seriously",
@@ -68468,8 +68468,8 @@
     "def": "A brief statement of the main points of something.",
     "respell_ga": "SUH-mer-ee",
     "respell_rp": "SUH-muh-ree",
-    "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "rhotic_vowel_notation"
   },
   {
     "w": "sunflower",
@@ -69394,8 +69394,8 @@
     "def": "A person who uses violence to achieve political aims.",
     "respell_ga": "TEH-rer-ist",
     "respell_rp": "TEH-ruh-rist",
-    "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "dress_notation_only"
   },
   {
     "w": "text",
@@ -78567,8 +78567,8 @@
     "def": "Something very comfortable or expensive; great comfort.",
     "respell_ga": "LUHG-zher-ee",
     "respell_rp": "LUHG-zhuh-ree",
-    "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "rhotic_vowel_notation"
   },
   {
     "w": "main",
@@ -95304,8 +95304,8 @@
     ],
     "respell_ga": "ak-SEH-ser-ee",
     "respell_rp": "ak-SEH-suh-ree",
-    "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "dress_notation_only"
   },
   {
     "w": "accidental",
@@ -97931,8 +97931,8 @@
     ],
     "respell_ga": "er-YZ",
     "respell_rp": "uh-RYZ",
-    "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "rhotic_vowel_notation"
   },
   {
     "w": "arithmetic",
@@ -98019,8 +98019,8 @@
     ],
     "respell_ga": "er-AYNJ",
     "respell_rp": "uh-RAYNJ",
-    "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "rhotic_vowel_notation"
   },
   {
     "w": "arrangement",
@@ -98051,8 +98051,8 @@
     ],
     "respell_ga": "er-AYNJ-muhnt",
     "respell_rp": "uh-RAYNJ-muhnt",
-    "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "rhotic_vowel_notation"
   },
   {
     "w": "arrest",
@@ -98083,8 +98083,8 @@
     ],
     "respell_ga": "er-EHST",
     "respell_rp": "uh-REHST",
-    "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "dress_notation_only"
   },
   {
     "w": "arrival",
@@ -98115,8 +98115,8 @@
     ],
     "respell_ga": "er-Y-vuhl",
     "respell_rp": "uh-RY-vuhl",
-    "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "rhotic_vowel_notation"
   },
   {
     "w": "arrow",
@@ -101649,7 +101649,7 @@
     "respell_ga": "ker-EER",
     "respell_rp": "kuh-REER",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same_reason": "rhoticity"
   },
   {
     "w": "careless",
@@ -105211,8 +105211,8 @@
     ],
     "respell_ga": "ker-EHK-shuhn",
     "respell_rp": "kuh-REHK-shuhn",
-    "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "dress_notation_only"
   },
   {
     "w": "cotton",
@@ -105833,8 +105833,8 @@
     ],
     "respell_ga": "KUHL-cher-uhl",
     "respell_rp": "KUHL-chuh-ruhl",
-    "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "rhotic_vowel_notation"
   },
   {
     "w": "curiosity",
@@ -106306,8 +106306,8 @@
     ],
     "respell_ga": "DAYN-jer-uh-slee",
     "respell_rp": "DAYN-juh-ruh-slee",
-    "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "rhotic_vowel_notation"
   },
   {
     "w": "darkness",
@@ -106581,8 +106581,8 @@
     ],
     "respell_ga": "deh-kler-AY-shuhn",
     "respell_rp": "deh-kluh-RAY-shuhn",
-    "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "dress_notation_only"
   },
   {
     "w": "declare",
@@ -107211,8 +107211,8 @@
     ],
     "respell_ga": "di-LI-ver-ee",
     "respell_rp": "di-LI-vuh-ree",
-    "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "rhotic_vowel_notation"
   },
   {
     "w": "demand",
@@ -107654,8 +107654,8 @@
     ],
     "respell_ga": "der-YV",
     "respell_rp": "duh-RYV",
-    "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "rhotic_vowel_notation"
   },
   {
     "w": "deserve",
@@ -110867,7 +110867,7 @@
     "respell_ga": "EHM-per-er",
     "respell_rp": "EHM-puh-ruh",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same_reason": "rhoticity"
   },
   {
     "w": "emphasis",
@@ -112650,8 +112650,8 @@
     ],
     "respell_ga": "ehk-spler-AY-shuhn",
     "respell_rp": "ehk-spluh-RAY-shuhn",
-    "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "dress_notation_only"
   },
   {
     "w": "explosion",
@@ -113348,8 +113348,8 @@
     ],
     "respell_ga": "FAY-ver-uh-buhl",
     "respell_rp": "FAY-vuh-ruh-buhl",
-    "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "rhotic_vowel_notation"
   },
   {
     "w": "fellow",
@@ -113460,8 +113460,8 @@
     "neighbors": [],
     "respell_ga": "FEE-ver-ish-lee",
     "respell_rp": "FEE-vuh-rish-lee",
-    "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "length_marking_only"
   },
   {
     "w": "filling",
@@ -114852,8 +114852,8 @@
     ],
     "respell_ga": "FYOO-ner-uhl",
     "respell_rp": "FYOO-nuh-ruhl",
-    "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "length_marking_only"
   },
   {
     "w": "furnish",
@@ -115150,8 +115150,8 @@
     ],
     "respell_ga": "JEH-ner-ayt",
     "respell_rp": "JEH-nuh-rayt",
-    "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "dress_notation_only"
   },
   {
     "w": "generous",
@@ -115180,8 +115180,8 @@
     ],
     "respell_ga": "JEH-ner-uhs",
     "respell_rp": "JEH-nuh-ruhs",
-    "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "dress_notation_only"
   },
   {
     "w": "genetic",
@@ -115836,8 +115836,8 @@
     ],
     "respell_ga": "ger-I-luh",
     "respell_rp": "guh-RI-luh",
-    "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "rhotic_vowel_notation"
   },
   {
     "w": "gossip",
@@ -117788,8 +117788,8 @@
     "neighbors": [],
     "respell_ga": "her-Y-zuhn",
     "respell_rp": "huh-RY-zuhn",
-    "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "rhotic_vowel_notation"
   },
   {
     "w": "horrible",
@@ -118043,8 +118043,8 @@
     ],
     "respell_ga": "HYOO-mer-uhs",
     "respell_rp": "HYOO-muh-ruhs",
-    "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "length_marking_only"
   },
   {
     "w": "humour",
@@ -118785,8 +118785,8 @@
     ],
     "respell_ga": "in-ker-EHKT",
     "respell_rp": "in-kuh-REHKT",
-    "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "notation_composite"
   },
   {
     "w": "increasingly",
@@ -118916,7 +118916,7 @@
       "expect"
     ],
     "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same_reason": "weak_vowel"
   },
   {
     "w": "indirectly",
@@ -118942,7 +118942,7 @@
       "correctly"
     ],
     "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same_reason": "weak_vowel"
   },
   {
     "w": "individual",
@@ -119372,8 +119372,8 @@
     ],
     "respell_ga": "IN-jer-ee",
     "respell_rp": "IN-juh-ree",
-    "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "rhotic_vowel_notation"
   },
   {
     "w": "ink",
@@ -120113,8 +120113,8 @@
       "interview",
       "attract"
     ],
-    "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "rhotic_vowel_notation"
   },
   {
     "w": "interaction",
@@ -120142,8 +120142,8 @@
       "instruction",
       "interact"
     ],
-    "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "rhotic_vowel_notation"
   },
   {
     "w": "intermediate",
@@ -120273,8 +120273,8 @@
       "interest",
       "interview"
     ],
-    "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "rhotic_vowel_notation"
   },
   {
     "w": "interval",
@@ -120762,8 +120762,8 @@
     ],
     "respell_ga": "Y-ver-ee",
     "respell_rp": "Y-vuh-ree",
-    "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "rhotic_vowel_notation"
   },
   {
     "w": "jail",
@@ -122994,8 +122994,8 @@
     ],
     "respell_ga": "mer-EEN",
     "respell_rp": "muh-REEN",
-    "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "length_marking_only"
   },
   {
     "w": "marked",
@@ -123499,8 +123499,8 @@
     ],
     "respell_ga": "MEH-mer-uh-buhl",
     "respell_rp": "MEH-muh-ruh-buhl",
-    "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "dress_notation_only"
   },
   {
     "w": "memorise",
@@ -123557,8 +123557,8 @@
     ],
     "respell_ga": "MEH-mer-yz",
     "respell_rp": "MEH-muh-ryz",
-    "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "dress_notation_only"
   },
   {
     "w": "mental",
@@ -123768,8 +123768,8 @@
     ],
     "respell_ga": "MI-ner-uhl",
     "respell_rp": "MI-nuh-ruhl",
-    "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "rhotic_vowel_notation"
   },
   {
     "w": "minimise",
@@ -124070,8 +124070,8 @@
     ],
     "respell_ga": "MI-zer-ee",
     "respell_rp": "MI-zuh-ree",
-    "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "rhotic_vowel_notation"
   },
   {
     "w": "mislead",
@@ -126133,7 +126133,7 @@
     "respell_ga": "NOO-mer-uhs",
     "respell_rp": "NYOO-muh-ruhs",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same_reason": "yod"
   },
   {
     "w": "nutrient",
@@ -126845,7 +126845,7 @@
     "respell_ga": "ah-per-AY-shuhn",
     "respell_rp": "o-puh-RAY-shuhn",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same_reason": "lot_vowel"
   },
   {
     "w": "opposition",
@@ -130067,8 +130067,8 @@
     ],
     "respell_ga": "preh-per-AY-shuhn",
     "respell_rp": "preh-puh-RAY-shuhn",
-    "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "dress_notation_only"
   },
   {
     "w": "prepared",
@@ -131220,7 +131220,7 @@
     "respell_ga": "PRAH-sper-uhs",
     "respell_rp": "PRO-spuh-ruhs",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same_reason": "lot_vowel"
   },
   {
     "w": "protect",
@@ -132804,8 +132804,8 @@
     ],
     "respell_ga": "reh-fer-EE",
     "respell_rp": "reh-fuh-REE",
-    "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "notation_composite"
   },
   {
     "w": "reflection",
@@ -136066,8 +136066,8 @@
     ],
     "respell_ga": "seh-per-AY-shuhn",
     "respell_rp": "seh-puh-RAY-shuhn",
-    "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "dress_notation_only"
   },
   {
     "w": "sequence",
@@ -137189,8 +137189,8 @@
     ],
     "respell_ga": "SLAY-ver-ee",
     "respell_rp": "SLAY-vuh-ree",
-    "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "rhotic_vowel_notation"
   },
   {
     "w": "slightly",
@@ -139680,7 +139680,7 @@
     "respell_ga": "SUR-jer-ee",
     "respell_rp": "SUR-juh-ree",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same_reason": "rhoticity"
   },
   {
     "w": "surprisingly",
@@ -139736,8 +139736,8 @@
     ],
     "respell_ga": "ser-OWND",
     "respell_rp": "suh-ROWND",
-    "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "rhotic_vowel_notation"
   },
   {
     "w": "surrounding",
@@ -139765,8 +139765,8 @@
       "around",
       "sound"
     ],
-    "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "rhotic_vowel_notation"
   },
   {
     "w": "survival",
@@ -140792,8 +140792,8 @@
     ],
     "respell_ga": "ter-I-fik",
     "respell_rp": "tuh-RI-fik",
-    "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "rhotic_vowel_notation"
   },
   {
     "w": "terrified",
@@ -140882,8 +140882,8 @@
     ],
     "respell_ga": "TEH-rer-i-zuhm",
     "respell_rp": "TEH-ruh-ri-zuhm",
-    "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "dress_notation_only"
   },
   {
     "w": "thankful",
@@ -141126,8 +141126,8 @@
       "endless",
       "generous"
     ],
-    "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "rhotic_vowel_notation"
   },
   {
     "w": "tighten",
@@ -142486,7 +142486,7 @@
       "under"
     ],
     "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same_reason": "stress_placement"
   },
   {
     "w": "undergo",
