@@ -142,6 +142,13 @@ python3 tools/validate_i18n.py
 
 **Do not run** `merge_rp_ipa.py` on production wordlist（`connected_speech.json` を上書きする既知バグ）。
 
+**Phase R 追加スクリプト:**
+
+| Script | 役割 |
+|--------|------|
+| `scripts/phonology_lexicon.py` | 共有語彙リスト（BATH_WORDS, PALM_WORDS, YOD_CORONALS）— `ga_to_rp.py` と `gen_ga_rp_same.py` から import |
+| `scripts/fix_happy_i.py` | rp_ipa の happY 位置 `/iː/`/`/ɪ/` → `/i/` 是正（Phase R2 で1回実行済み。将来バッチ追加時にも実行推奨） |
+
 Staging outputs → `data/pipeline/`. Neighbors / RP progress → `data/derived/`. Merge scripts write `wordlist_GA_a1a2_plus_phonics.json`.
 
 ---
