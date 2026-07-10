@@ -62,7 +62,8 @@
 ## 3. commit 一覧
 
 ```
-(docs commit)
+b653ee1 Merge branch 'fix/phase-b-batch-quality-audit' (Phase B batch quality audit)
+ce0ab0d docs(phase-b): update changelog, add implementation report, regenerate derived data
 fd1590e i18n(pos): add 形容詞 / 副詞 / 間投詞 compound key across 6 languages (for damn)
 81781ed sync(batches): apply Phase R + Phase B fixes to Phase 2 batch source files
 1b439c1 i18n(fil): apply Opus-proposed Filipino translations for 13 words
