@@ -730,5 +730,11 @@
     "respell_ga": "SEHN-tuh-grayd",
     "respell_rp": "SEHN-tuh-grayd",
     "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see data/pipeline/phase2a_review_needed.json)"
+  },
+  {
+    "w": "commander",
+    "respell_ga": "kuh-MAN-der",
+    "respell_rp": "kuh-MAN-duh",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see data/pipeline/phase2a_review_needed.json)"
   }
 ]

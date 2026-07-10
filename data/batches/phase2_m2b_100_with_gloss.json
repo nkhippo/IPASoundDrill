@@ -1,0 +1,1802 @@
+[
+  {
+    "w": "chunk",
+    "ipa": "/tʃʌŋk/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A thick, solid piece of something.",
+    "gloss": {
+      "en": "chunk",
+      "ja": "大きな塊",
+      "zh": "大块",
+      "ko": "덩어리",
+      "fil": "malaking piraso"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/tʃʌŋk/"
+  },
+  {
+    "w": "circuit",
+    "ipa": "/ˈsɝkət/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A closed path for electricity; a circular route or series of events.",
+    "gloss": {
+      "en": "circuit",
+      "ja": "回路、周回",
+      "zh": "电路、巡回",
+      "ko": "회로, 순회",
+      "fil": "sirkito"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈsɜːkət/"
+  },
+  {
+    "w": "circuitry",
+    "ipa": "/ˈsɝkətri/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A system of electrical circuits.",
+    "gloss": {
+      "en": "circuitry",
+      "ja": "回路網",
+      "zh": "电路系统",
+      "ko": "회로망",
+      "fil": "sistema ng sirkito"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈsɜːkətriː/"
+  },
+  {
+    "w": "circumstance",
+    "ipa": "/ˈsɝkəmˌstæns/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A fact or condition connected with an event.",
+    "gloss": {
+      "en": "circumstance",
+      "ja": "状況、事情",
+      "zh": "情况",
+      "ko": "상황",
+      "fil": "kalagayan"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈsɜːkəmˌstæns/"
+  },
+  {
+    "w": "citywide",
+    "ipa": "/ˈsɪtiˌwaɪd/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Covering or affecting an entire city.",
+    "gloss": {
+      "en": "citywide",
+      "ja": "市全体の",
+      "zh": "全市的",
+      "ko": "시 전체의",
+      "fil": "buong lungsod"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈsɪtiːˌwaɪd/"
+  },
+  {
+    "w": "clarify",
+    "ipa": "/ˈklɛrəˌfaɪ/",
+    "cefr": "B2",
+    "pos": "動詞",
+    "def": "To make something clearer or easier to understand.",
+    "gloss": {
+      "en": "clarify",
+      "ja": "明確にする",
+      "zh": "澄清",
+      "ko": "명확히 하다",
+      "fil": "linawin"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈklerəˌfaɪ/"
+  },
+  {
+    "w": "classification",
+    "ipa": "/ˌklæsəfəˈkeɪʃən/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "The act of grouping things into categories.",
+    "gloss": {
+      "en": "classification",
+      "ja": "分類",
+      "zh": "分类",
+      "ko": "분류",
+      "fil": "pag-uuri"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˌklæsəfəˈkeɪʃən/"
+  },
+  {
+    "w": "clearness",
+    "ipa": "/ˈklɪrnəs/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "The quality of being easy to see, hear, or understand.",
+    "gloss": {
+      "en": "clearness",
+      "ja": "明瞭さ",
+      "zh": "清晰",
+      "ko": "명료함",
+      "fil": "kalinawan"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈklɪənəs/"
+  },
+  {
+    "w": "clerical",
+    "ipa": "/ˈklɛrɪkəl/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Relating to office work; relating to the clergy.",
+    "gloss": {
+      "en": "clerical",
+      "ja": "事務の、聖職者の",
+      "zh": "文书的",
+      "ko": "사무의",
+      "fil": "klerikal"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈklerɪkəl/"
+  },
+  {
+    "w": "client",
+    "ipa": "/ˈklaɪənt/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A person who uses the services of a professional or company.",
+    "gloss": {
+      "en": "client",
+      "ja": "顧客、依頼人",
+      "zh": "客户",
+      "ko": "고객",
+      "fil": "kliyente"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈklaɪənt/"
+  },
+  {
+    "w": "closure",
+    "ipa": "/ˈkloʊʒɚ/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "The act of closing something; a sense of resolution.",
+    "gloss": {
+      "en": "closure",
+      "ja": "閉鎖、終結",
+      "zh": "关闭",
+      "ko": "폐쇄",
+      "fil": "pagsasara"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkləʊʒə/"
+  },
+  {
+    "w": "clothing",
+    "ipa": "/ˈkloʊðɪŋ/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "Clothes collectively.",
+    "gloss": {
+      "en": "clothing",
+      "ja": "衣類",
+      "zh": "衣物",
+      "ko": "의류",
+      "fil": "damit"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkləʊðɪŋ/"
+  },
+  {
+    "w": "clumsy",
+    "ipa": "/ˈklʌmzi/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Awkward in movement; lacking grace.",
+    "gloss": {
+      "en": "clumsy",
+      "ja": "不器用な",
+      "zh": "笨拙的",
+      "ko": "서투른",
+      "fil": "pabigla-bigla"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈklʌmziː/"
+  },
+  {
+    "w": "coaching",
+    "ipa": "/ˈkoʊtʃɪŋ/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "The activity of training or instructing someone.",
+    "gloss": {
+      "en": "coaching",
+      "ja": "コーチング、指導",
+      "zh": "教练指导",
+      "ko": "코칭",
+      "fil": "pagsasanay"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkəʊtʃɪŋ/"
+  },
+  {
+    "w": "coalition",
+    "ipa": "/ˌkoʊəˈlɪʃən/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A temporary alliance of groups or parties.",
+    "gloss": {
+      "en": "coalition",
+      "ja": "連立、連合",
+      "zh": "联盟",
+      "ko": "연합",
+      "fil": "koalisyon"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˌkəʊəˈlɪʃən/"
+  },
+  {
+    "w": "coastline",
+    "ipa": "/ˈkoʊstˌlaɪn/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "The line where the land meets the sea.",
+    "gloss": {
+      "en": "coastline",
+      "ja": "海岸線",
+      "zh": "海岸线",
+      "ko": "해안선",
+      "fil": "baybayin"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkəʊstˌlaɪn/"
+  },
+  {
+    "w": "cocktail",
+    "ipa": "/ˈkɑkˌteɪl/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A mixed alcoholic drink.",
+    "gloss": {
+      "en": "cocktail",
+      "ja": "カクテル",
+      "zh": "鸡尾酒",
+      "ko": "칵테일",
+      "fil": "kaktel"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkɒkˌteɪl/"
+  },
+  {
+    "w": "cocoa",
+    "ipa": "/ˈkoʊkoʊ/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A powder made from cacao seeds; a drink made from it.",
+    "gloss": {
+      "en": "cocoa",
+      "ja": "ココア",
+      "zh": "可可",
+      "ko": "코코아",
+      "fil": "kakaw"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkəʊkəʊ/"
+  },
+  {
+    "w": "coconut",
+    "ipa": "/ˈkoʊkəˌnʌt/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "The large fruit of the coconut palm.",
+    "gloss": {
+      "en": "coconut",
+      "ja": "ココナッツ",
+      "zh": "椰子",
+      "ko": "코코넛",
+      "fil": "niyog"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkəʊkəˌnʌt/"
+  },
+  {
+    "w": "coherence",
+    "ipa": "/koʊˈhɪrəns/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "The quality of being logical and consistent.",
+    "gloss": {
+      "en": "coherence",
+      "ja": "一貫性",
+      "zh": "连贯性",
+      "ko": "일관성",
+      "fil": "pagkakaugnay"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kəʊˈhɪrəns/"
+  },
+  {
+    "w": "coherent",
+    "ipa": "/koʊˈhɪrənt/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Logical and consistent; easy to follow.",
+    "gloss": {
+      "en": "coherent",
+      "ja": "一貫した",
+      "zh": "连贯的",
+      "ko": "일관성 있는",
+      "fil": "magkaugnay"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kəʊˈhɪrənt/"
+  },
+  {
+    "w": "coincide",
+    "ipa": "/ˌkoʊənˈsaɪd/",
+    "cefr": "B2",
+    "pos": "動詞",
+    "def": "To happen at the same time; to correspond exactly.",
+    "gloss": {
+      "en": "coincide",
+      "ja": "同時に起こる、一致する",
+      "zh": "同时发生、一致",
+      "ko": "동시에 일어나다",
+      "fil": "magkataon"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˌkəʊənˈsaɪd/"
+  },
+  {
+    "w": "coincidence",
+    "ipa": "/koʊˈɪnsədəns/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A chance occurrence of events at the same time.",
+    "gloss": {
+      "en": "coincidence",
+      "ja": "偶然の一致",
+      "zh": "巧合",
+      "ko": "우연의 일치",
+      "fil": "pagkakataon"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kəʊˈɪnsədəns/"
+  },
+  {
+    "w": "colleague",
+    "ipa": "/ˈkɑliɡ/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A person one works with, especially in a profession.",
+    "gloss": {
+      "en": "colleague",
+      "ja": "同僚",
+      "zh": "同事",
+      "ko": "동료",
+      "fil": "kasamahan"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkɒliːɡ/"
+  },
+  {
+    "w": "collector",
+    "ipa": "/kəˈlɛktɚ/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A person who collects things as a hobby or for a job.",
+    "gloss": {
+      "en": "collector",
+      "ja": "収集家",
+      "zh": "收藏家",
+      "ko": "수집가",
+      "fil": "kolektor"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kəˈlektə/"
+  },
+  {
+    "w": "collocation",
+    "ipa": "/ˌkɑləˈkeɪʃən/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A natural combination of words often used together.",
+    "gloss": {
+      "en": "collocation",
+      "ja": "連語",
+      "zh": "搭配",
+      "ko": "연어",
+      "fil": "kolokasyon"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˌkɒləˈkeɪʃən/"
+  },
+  {
+    "w": "colon",
+    "ipa": "/ˈkoʊlən/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A punctuation mark (:); part of the large intestine.",
+    "gloss": {
+      "en": "colon",
+      "ja": "コロン、結腸",
+      "zh": "冒号、结肠",
+      "ko": "콜론, 결장",
+      "fil": "kolon"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkəʊlən/"
+  },
+  {
+    "w": "colonial",
+    "ipa": "/kəˈloʊniəl/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Relating to a colony or colonialism.",
+    "gloss": {
+      "en": "colonial",
+      "ja": "植民地の",
+      "zh": "殖民地的",
+      "ko": "식민지의",
+      "fil": "kolonyal"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kəˈləʊniːəl/"
+  },
+  {
+    "w": "coma",
+    "ipa": "/ˈkoʊmə/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A deep state of unconsciousness.",
+    "gloss": {
+      "en": "coma",
+      "ja": "昏睡状態",
+      "zh": "昏迷",
+      "ko": "혼수상태",
+      "fil": "koma"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkəʊmə/"
+  },
+  {
+    "w": "comfortably",
+    "ipa": "/ˈkʌmfɚtəbli/",
+    "cefr": "B2",
+    "pos": "副詞",
+    "def": "In a way that is physically relaxed or free from worry.",
+    "gloss": {
+      "en": "comfortably",
+      "ja": "快適に",
+      "zh": "舒适地",
+      "ko": "편안하게",
+      "fil": "komportable"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkʌmfətəbliː/"
+  },
+  {
+    "w": "commander",
+    "ipa": "/kəˈmændɚ/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A person in charge, especially in the military.",
+    "gloss": {
+      "en": "commander",
+      "ja": "指揮官",
+      "zh": "指挥官",
+      "ko": "지휘관",
+      "fil": "komandante"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kəˈmændə/"
+  },
+  {
+    "w": "commemorate",
+    "ipa": "/kəˈmɛməˌreɪt/",
+    "cefr": "B2",
+    "pos": "動詞",
+    "def": "To honor the memory of someone or something.",
+    "gloss": {
+      "en": "commemorate",
+      "ja": "記念する",
+      "zh": "纪念",
+      "ko": "기념하다",
+      "fil": "gunitain"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kəˈmeməˌreɪt/"
+  },
+  {
+    "w": "commerce",
+    "ipa": "/ˈkɑmɚs/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "The activity of buying and selling goods.",
+    "gloss": {
+      "en": "commerce",
+      "ja": "商業",
+      "zh": "商业",
+      "ko": "상업",
+      "fil": "komersyo"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkɒməs/"
+  },
+  {
+    "w": "commission",
+    "ipa": "/kəˈmɪʃən/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A group given official authority; a fee for a service.",
+    "gloss": {
+      "en": "commission",
+      "ja": "委員会、手数料",
+      "zh": "委员会、佣金",
+      "ko": "위원회, 수수료",
+      "fil": "komisyon"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kəˈmɪʃən/"
+  },
+  {
+    "w": "commonwealth",
+    "ipa": "/ˈkɑmənˌwɛlθ/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A group of independent countries associated together.",
+    "gloss": {
+      "en": "commonwealth",
+      "ja": "連邦、共同体",
+      "zh": "联邦",
+      "ko": "연방",
+      "fil": "komonwelt"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkɒmənˌwelθ/"
+  },
+  {
+    "w": "communicative",
+    "ipa": "/kəˈmjunəˌkeɪtɪv/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Willing and able to share information; talkative.",
+    "gloss": {
+      "en": "communicative",
+      "ja": "話好きな、意思疎通のできる",
+      "zh": "善于交流的",
+      "ko": "의사소통을 잘하는",
+      "fil": "palakaibigan"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kəˈmjuːnəˌkeɪtɪv/"
+  },
+  {
+    "w": "community",
+    "ipa": "/kəˈmjunəti/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A group of people living in the same place or sharing interests.",
+    "gloss": {
+      "en": "community",
+      "ja": "地域社会、共同体",
+      "zh": "社区",
+      "ko": "공동체",
+      "fil": "komunidad"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kəˈmjuːnətiː/"
+  },
+  {
+    "w": "commute",
+    "ipa": "/kəˈmjut/",
+    "cefr": "B2",
+    "pos": "動詞",
+    "def": "To travel regularly between home and work.",
+    "gloss": {
+      "en": "commute",
+      "ja": "通勤する",
+      "zh": "通勤",
+      "ko": "통근하다",
+      "fil": "mag-commute"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kəˈmjuːt/"
+  },
+  {
+    "w": "compassion",
+    "ipa": "/kəmˈpæʃən/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "Sympathy and concern for the suffering of others.",
+    "gloss": {
+      "en": "compassion",
+      "ja": "思いやり、慈悲",
+      "zh": "同情",
+      "ko": "동정심",
+      "fil": "habag"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kəmˈpæʃən/"
+  },
+  {
+    "w": "compassionate",
+    "ipa": "/kəmˈpæʃənət/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Feeling or showing sympathy for others.",
+    "gloss": {
+      "en": "compassionate",
+      "ja": "思いやりのある",
+      "zh": "有同情心的",
+      "ko": "동정심 많은",
+      "fil": "mahabagin"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kəmˈpæʃənət/"
+  },
+  {
+    "w": "compatible",
+    "ipa": "/kəmˈpætəbəl/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Able to exist or work together without conflict.",
+    "gloss": {
+      "en": "compatible",
+      "ja": "互換性のある",
+      "zh": "兼容的",
+      "ko": "호환되는",
+      "fil": "tugma"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kəmˈpætəbəl/"
+  },
+  {
+    "w": "compensate",
+    "ipa": "/ˈkɑmpənˌseɪt/",
+    "cefr": "B2",
+    "pos": "動詞",
+    "def": "To give something to make up for loss or harm.",
+    "gloss": {
+      "en": "compensate",
+      "ja": "補償する",
+      "zh": "补偿",
+      "ko": "보상하다",
+      "fil": "bayaran"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkɒmpənˌseɪt/"
+  },
+  {
+    "w": "compensation",
+    "ipa": "/ˌkɑmpənˈseɪʃən/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "Something given to make up for loss, harm, or work.",
+    "gloss": {
+      "en": "compensation",
+      "ja": "補償、報酬",
+      "zh": "补偿",
+      "ko": "보상",
+      "fil": "kabayaran"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˌkɒmpənˈseɪʃən/"
+  },
+  {
+    "w": "competence",
+    "ipa": "/ˈkɑmpətəns/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "The ability to do something well.",
+    "gloss": {
+      "en": "competence",
+      "ja": "能力、適性",
+      "zh": "能力",
+      "ko": "능력",
+      "fil": "kakayahan"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkɒmpətəns/"
+  },
+  {
+    "w": "competent",
+    "ipa": "/ˈkɑmpətənt/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Having the necessary skill or knowledge to do something well.",
+    "gloss": {
+      "en": "competent",
+      "ja": "有能な",
+      "zh": "有能力的",
+      "ko": "유능한",
+      "fil": "may kakayahan"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkɒmpətənt/"
+  },
+  {
+    "w": "compile",
+    "ipa": "/kəmˈpaɪl/",
+    "cefr": "B2",
+    "pos": "動詞",
+    "def": "To collect information and put it together.",
+    "gloss": {
+      "en": "compile",
+      "ja": "編集する、まとめる",
+      "zh": "编制",
+      "ko": "편집하다",
+      "fil": "tipunin"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kəmˈpaɪl/"
+  },
+  {
+    "w": "completion",
+    "ipa": "/kəmˈpliʃən/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "The act of finishing something.",
+    "gloss": {
+      "en": "completion",
+      "ja": "完了",
+      "zh": "完成",
+      "ko": "완료",
+      "fil": "pagkumpleto"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kəmˈpliːʃən/"
+  },
+  {
+    "w": "complexion",
+    "ipa": "/kəmˈplɛkʃən/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "The natural color and texture of the skin, especially the face.",
+    "gloss": {
+      "en": "complexion",
+      "ja": "肌の色つや",
+      "zh": "肤色",
+      "ko": "안색",
+      "fil": "kutis"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kəmˈplekʃən/"
+  },
+  {
+    "w": "complexity",
+    "ipa": "/kəmˈplɛksəti/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "The state of being complicated.",
+    "gloss": {
+      "en": "complexity",
+      "ja": "複雑さ",
+      "zh": "复杂性",
+      "ko": "복잡성",
+      "fil": "kumplikado"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kəmˈpleksətiː/"
+  },
+  {
+    "w": "component",
+    "ipa": "/kəmˈpoʊnənt/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A part of a larger whole, especially a machine or system.",
+    "gloss": {
+      "en": "component",
+      "ja": "構成要素",
+      "zh": "组成部分",
+      "ko": "구성 요소",
+      "fil": "sangkap"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kəmˈpəʊnənt/"
+  },
+  {
+    "w": "comprehension",
+    "ipa": "/ˌkɑmprəˈhɛnʃən/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "The ability to understand something.",
+    "gloss": {
+      "en": "comprehension",
+      "ja": "理解力",
+      "zh": "理解力",
+      "ko": "이해력",
+      "fil": "pang-unawa"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˌkɒmprəˈhenʃən/"
+  },
+  {
+    "w": "comprehensive",
+    "ipa": "/ˌkɑmprəˈhɛnsɪv/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Complete and including everything necessary.",
+    "gloss": {
+      "en": "comprehensive",
+      "ja": "包括的な",
+      "zh": "全面的的",
+      "ko": "포괄적인",
+      "fil": "komprehensibo"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˌkɒmprəˈhensɪv/"
+  },
+  {
+    "w": "compress",
+    "ipa": "/ˈkɑmˌprɛs/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A cloth pressed onto a part of the body to relieve pain or swelling.",
+    "gloss": {
+      "en": "compress",
+      "ja": "湿布",
+      "zh": "敷布",
+      "ko": "찜질팩",
+      "fil": "compress"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkɒmˌpres/"
+  },
+  {
+    "w": "compression",
+    "ipa": "/kəmˈprɛʃən/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "The act of pressing something into a smaller space.",
+    "gloss": {
+      "en": "compression",
+      "ja": "圧縮",
+      "zh": "压缩",
+      "ko": "압축",
+      "fil": "compresyon"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kəmˈpreʃən/"
+  },
+  {
+    "w": "compulsory",
+    "ipa": "/kəmˈpʌlsəri/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Required by law or rule; mandatory.",
+    "gloss": {
+      "en": "compulsory",
+      "ja": "義務的な、必修の",
+      "zh": "强制性的",
+      "ko": "의무적인",
+      "fil": "sapilitan"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kəmˈpʌlsəriː/"
+  },
+  {
+    "w": "compute",
+    "ipa": "/kəmˈpjut/",
+    "cefr": "B2",
+    "pos": "動詞",
+    "def": "To calculate a number or amount.",
+    "gloss": {
+      "en": "compute",
+      "ja": "計算する",
+      "zh": "计算",
+      "ko": "계산하다",
+      "fil": "kalkulahin"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kəmˈpjuːt/"
+  },
+  {
+    "w": "conceal",
+    "ipa": "/kənˈsil/",
+    "cefr": "B2",
+    "pos": "動詞",
+    "def": "To hide something from view or knowledge.",
+    "gloss": {
+      "en": "conceal",
+      "ja": "隠す",
+      "zh": "隐藏",
+      "ko": "숨기다",
+      "fil": "itago"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kənˈsiːl/"
+  },
+  {
+    "w": "concede",
+    "ipa": "/kənˈsid/",
+    "cefr": "B2",
+    "pos": "動詞",
+    "def": "To admit that something is true; to give up a position.",
+    "gloss": {
+      "en": "concede",
+      "ja": "認める、譲歩する",
+      "zh": "承认、让步",
+      "ko": "인정하다",
+      "fil": "aminin"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kənˈsiːd/"
+  },
+  {
+    "w": "conceit",
+    "ipa": "/kənˈsit/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "Excessive pride in oneself.",
+    "gloss": {
+      "en": "conceit",
+      "ja": "うぬぼれ",
+      "zh": "自负",
+      "ko": "자만심",
+      "fil": "kayabangan"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kənˈsiːt/"
+  },
+  {
+    "w": "conceivable",
+    "ipa": "/kənˈsivəbəl/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Capable of being imagined or believed.",
+    "gloss": {
+      "en": "conceivable",
+      "ja": "考えられる",
+      "zh": "可想象的",
+      "ko": "상상할 수 있는",
+      "fil": "maiisip"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kənˈsiːvəbəl/"
+  },
+  {
+    "w": "conceive",
+    "ipa": "/kənˈsiv/",
+    "cefr": "B2",
+    "pos": "動詞",
+    "def": "To form an idea in the mind; to become pregnant.",
+    "gloss": {
+      "en": "conceive",
+      "ja": "思いつく、妊娠する",
+      "zh": "构想、怀孕",
+      "ko": "생각해내다, 임신하다",
+      "fil": "isipin"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kənˈsiːv/"
+  },
+  {
+    "w": "conception",
+    "ipa": "/kənˈsɛpʃən/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "The forming of an idea; the beginning of pregnancy.",
+    "gloss": {
+      "en": "conception",
+      "ja": "着想、受胎",
+      "zh": "构想、受孕",
+      "ko": "구상, 수태",
+      "fil": "paglilihi"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kənˈsepʃən/"
+  },
+  {
+    "w": "concerning",
+    "ipa": "/kənˈsɝnɪŋ/",
+    "cefr": "B2",
+    "pos": "前置詞",
+    "def": "About; regarding.",
+    "gloss": {
+      "en": "concerning",
+      "ja": "〜に関して",
+      "zh": "关于",
+      "ko": "~에 관하여",
+      "fil": "hinggil sa"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kənˈsɜːnɪŋ/"
+  },
+  {
+    "w": "concession",
+    "ipa": "/kənˈsɛʃən/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "Something granted or given up, especially in an agreement.",
+    "gloss": {
+      "en": "concession",
+      "ja": "譲歩",
+      "zh": "让步",
+      "ko": "양보",
+      "fil": "konsesyon"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kənˈseʃən/"
+  },
+  {
+    "w": "concrete",
+    "ipa": "/ˈkɑnˌkrit/",
+    "cefr": "B2",
+    "pos": "形容詞 / 名詞",
+    "def": "Specific and real, not abstract; a hard building material.",
+    "gloss": {
+      "en": "concrete",
+      "ja": "具体的な、コンクリート",
+      "zh": "具体的、混凝土",
+      "ko": "구체적인, 콘크리트",
+      "fil": "konkreto"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkɒnˌkriːt/"
+  },
+  {
+    "w": "condemn",
+    "ipa": "/kənˈdɛm/",
+    "cefr": "B2",
+    "pos": "動詞",
+    "def": "To express strong disapproval of; to sentence to punishment.",
+    "gloss": {
+      "en": "condemn",
+      "ja": "非難する、有罪判決を下す",
+      "zh": "谴责、判刑",
+      "ko": "비난하다",
+      "fil": "sumbatan"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kənˈdem/"
+  },
+  {
+    "w": "conductor",
+    "ipa": "/kənˈdʌktɚ/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A person who directs an orchestra; a substance that conducts electricity.",
+    "gloss": {
+      "en": "conductor",
+      "ja": "指揮者、導体",
+      "zh": "指挥、导体",
+      "ko": "지휘자, 도체",
+      "fil": "konduktor"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kənˈdʌktə/"
+  },
+  {
+    "w": "conference",
+    "ipa": "/ˈkɑnfərəns/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A formal meeting for discussion.",
+    "gloss": {
+      "en": "conference",
+      "ja": "会議",
+      "zh": "会议",
+      "ko": "회의",
+      "fil": "kumperensya"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkɒnfərəns/"
+  },
+  {
+    "w": "conferencing",
+    "ipa": "/ˈkɑnfərənsɪŋ/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "The activity of holding a conference, especially remotely.",
+    "gloss": {
+      "en": "conferencing",
+      "ja": "会議（開催）",
+      "zh": "会议召开",
+      "ko": "회의 진행",
+      "fil": "pagkumperensya"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkɒnfərənsɪŋ/"
+  },
+  {
+    "w": "confess",
+    "ipa": "/kənˈfɛs/",
+    "cefr": "B2",
+    "pos": "動詞",
+    "def": "To admit to something, especially a fault or crime.",
+    "gloss": {
+      "en": "confess",
+      "ja": "告白する、自白する",
+      "zh": "承认、坦白",
+      "ko": "고백하다",
+      "fil": "aminin"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kənˈfes/"
+  },
+  {
+    "w": "confession",
+    "ipa": "/kənˈfɛʃən/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A statement admitting guilt or a fact.",
+    "gloss": {
+      "en": "confession",
+      "ja": "告白、自白",
+      "zh": "坦白",
+      "ko": "고백",
+      "fil": "pag-amin"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kənˈfeʃən/"
+  },
+  {
+    "w": "confidently",
+    "ipa": "/ˈkɑnfədəntli/",
+    "cefr": "B2",
+    "pos": "副詞",
+    "def": "In a way that shows self-assurance.",
+    "gloss": {
+      "en": "confidently",
+      "ja": "自信を持って",
+      "zh": "自信地",
+      "ko": "자신 있게",
+      "fil": "may kumpiyansa"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkɒnfədəntliː/"
+  },
+  {
+    "w": "confine",
+    "ipa": "/kənˈfaɪn/",
+    "cefr": "B2",
+    "pos": "動詞",
+    "def": "To keep within limits; to restrict to a place.",
+    "gloss": {
+      "en": "confine",
+      "ja": "制限する、閉じ込める",
+      "zh": "限制",
+      "ko": "제한하다",
+      "fil": "hangganan"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kənˈfaɪn/"
+  },
+  {
+    "w": "confront",
+    "ipa": "/kənˈfrʌnt/",
+    "cefr": "B2",
+    "pos": "動詞",
+    "def": "To face a difficult situation or person directly.",
+    "gloss": {
+      "en": "confront",
+      "ja": "立ち向かう、対決する",
+      "zh": "面对、对抗",
+      "ko": "직면하다",
+      "fil": "harapin"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kənˈfrʌnt/"
+  },
+  {
+    "w": "conjunction",
+    "ipa": "/kənˈdʒʌŋkʃən/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A word that connects clauses or words; a combination of events.",
+    "gloss": {
+      "en": "conjunction",
+      "ja": "接続詞、結合",
+      "zh": "连词、结合",
+      "ko": "접속사, 결합",
+      "fil": "pang-ugnay"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kənˈdʒʌŋkʃən/"
+  },
+  {
+    "w": "conquest",
+    "ipa": "/ˈkɑnˌkwɛst/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "The act of conquering a place or people.",
+    "gloss": {
+      "en": "conquest",
+      "ja": "征服",
+      "zh": "征服",
+      "ko": "정복",
+      "fil": "pananakop"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkɒnˌkwest/"
+  },
+  {
+    "w": "conscience",
+    "ipa": "/ˈkɑnʃəns/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A person's sense of right and wrong.",
+    "gloss": {
+      "en": "conscience",
+      "ja": "良心",
+      "zh": "良心",
+      "ko": "양심",
+      "fil": "budhi"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkɒnʃəns/"
+  },
+  {
+    "w": "consciousness",
+    "ipa": "/ˈkɑnʃəsnəs/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "The state of being awake and aware; awareness of an issue.",
+    "gloss": {
+      "en": "consciousness",
+      "ja": "意識",
+      "zh": "意识",
+      "ko": "의식",
+      "fil": "kamalayan"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkɒnʃəsnəs/"
+  },
+  {
+    "w": "consensus",
+    "ipa": "/kənˈsɛnsəs/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "General agreement among a group.",
+    "gloss": {
+      "en": "consensus",
+      "ja": "合意",
+      "zh": "共识",
+      "ko": "합의",
+      "fil": "pagkakaisa"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kənˈsensəs/"
+  },
+  {
+    "w": "consent",
+    "ipa": "/kənˈsɛnt/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "Permission for something to happen.",
+    "gloss": {
+      "en": "consent",
+      "ja": "同意",
+      "zh": "同意",
+      "ko": "동의",
+      "fil": "pahintulot"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kənˈsent/"
+  },
+  {
+    "w": "considerably",
+    "ipa": "/kənˈsɪdərəbli/",
+    "cefr": "B2",
+    "pos": "副詞",
+    "def": "By a large amount; greatly.",
+    "gloss": {
+      "en": "considerably",
+      "ja": "かなり",
+      "zh": "相当地",
+      "ko": "상당히",
+      "fil": "malaki"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kənˈsɪdərəbliː/"
+  },
+  {
+    "w": "considering",
+    "ipa": "/kənˈsɪdərɪŋ/",
+    "cefr": "B2",
+    "pos": "接続詞 / 前置詞",
+    "def": "Taking into account; in view of.",
+    "gloss": {
+      "en": "considering",
+      "ja": "〜を考慮すると",
+      "zh": "考虑到",
+      "ko": "~을 고려하면",
+      "fil": "isaalang-alang"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kənˈsɪdərɪŋ/"
+  },
+  {
+    "w": "consistent",
+    "ipa": "/kənˈsɪstənt/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Always acting or happening in the same way.",
+    "gloss": {
+      "en": "consistent",
+      "ja": "一貫した",
+      "zh": "一致的",
+      "ko": "일관된",
+      "fil": "pare-pareho"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kənˈsɪstənt/"
+  },
+  {
+    "w": "consolation",
+    "ipa": "/ˌkɑnsəˈleɪʃən/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "Comfort given after a loss or disappointment.",
+    "gloss": {
+      "en": "consolation",
+      "ja": "慰め",
+      "zh": "安慰",
+      "ko": "위안",
+      "fil": "aliw"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˌkɒnsəˈleɪʃən/"
+  },
+  {
+    "w": "console",
+    "ipa": "/kənˈsoʊl/",
+    "cefr": "B2",
+    "pos": "動詞",
+    "def": "To comfort someone in distress.",
+    "gloss": {
+      "en": "console",
+      "ja": "慰める",
+      "zh": "安慰",
+      "ko": "위로하다",
+      "fil": "aliwin"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kənˈsəʊl/"
+  },
+  {
+    "w": "constant",
+    "ipa": "/ˈkɑnstənt/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Happening continuously; unchanging.",
+    "gloss": {
+      "en": "constant",
+      "ja": "絶え間ない、一定の",
+      "zh": "不断的、恒定的",
+      "ko": "끊임없는",
+      "fil": "walang tigil"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkɒnstənt/"
+  },
+  {
+    "w": "consult",
+    "ipa": "/kənˈsʌlt/",
+    "cefr": "B2",
+    "pos": "動詞",
+    "def": "To seek information or advice from someone.",
+    "gloss": {
+      "en": "consult",
+      "ja": "相談する",
+      "zh": "咨询",
+      "ko": "상담하다",
+      "fil": "kumunsulta"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kənˈsʌlt/"
+  },
+  {
+    "w": "consultant",
+    "ipa": "/kənˈsʌltənt/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A person who gives expert advice professionally.",
+    "gloss": {
+      "en": "consultant",
+      "ja": "コンサルタント",
+      "zh": "顾问",
+      "ko": "컨설턴트",
+      "fil": "konsultant"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kənˈsʌltənt/"
+  },
+  {
+    "w": "contaminate",
+    "ipa": "/kənˈtæməˌneɪt/",
+    "cefr": "B2",
+    "pos": "動詞",
+    "def": "To make something impure or harmful by adding a substance.",
+    "gloss": {
+      "en": "contaminate",
+      "ja": "汚染する",
+      "zh": "污染",
+      "ko": "오염시키다",
+      "fil": "kontaminahin"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kənˈtæməˌneɪt/"
+  },
+  {
+    "w": "contemporary",
+    "ipa": "/kənˈtɛmpəˌrɛri/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Belonging to the present time; modern.",
+    "gloss": {
+      "en": "contemporary",
+      "ja": "現代の、同時代の",
+      "zh": "当代的",
+      "ko": "현대의",
+      "fil": "kontemporaryo"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kənˈtempəˌreriː/"
+  },
+  {
+    "w": "contempt",
+    "ipa": "/kənˈtɛmpt/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A feeling that someone or something deserves no respect.",
+    "gloss": {
+      "en": "contempt",
+      "ja": "軽蔑",
+      "zh": "蔑视",
+      "ko": "경멸",
+      "fil": "paghamak"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kənˈtempt/"
+  },
+  {
+    "w": "contract",
+    "ipa": "/ˈkɑnˌtrækt/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A written or spoken agreement intended to be enforceable.",
+    "gloss": {
+      "en": "contract",
+      "ja": "契約",
+      "zh": "合同",
+      "ko": "계약",
+      "fil": "kontrata"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkɒnˌtrækt/"
+  },
+  {
+    "w": "contradict",
+    "ipa": "/ˌkɑntrəˈdɪkt/",
+    "cefr": "B2",
+    "pos": "動詞",
+    "def": "To state the opposite of something already said.",
+    "gloss": {
+      "en": "contradict",
+      "ja": "矛盾する",
+      "zh": "反驳",
+      "ko": "반박하다",
+      "fil": "sumalungat"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˌkɒntrəˈdɪkt/"
+  },
+  {
+    "w": "contradiction",
+    "ipa": "/ˌkɑntrəˈdɪkʃən/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A situation where two statements or ideas are opposed.",
+    "gloss": {
+      "en": "contradiction",
+      "ja": "矛盾",
+      "zh": "矛盾",
+      "ko": "모순",
+      "fil": "pagkakasalungat"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˌkɒntrəˈdɪkʃən/"
+  },
+  {
+    "w": "contradictory",
+    "ipa": "/ˌkɑntrəˈdɪktəri/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Opposed to or inconsistent with something else.",
+    "gloss": {
+      "en": "contradictory",
+      "ja": "矛盾した",
+      "zh": "矛盾的",
+      "ko": "모순되는",
+      "fil": "salungat"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˌkɒntrəˈdɪktəriː/"
+  },
+  {
+    "w": "controversy",
+    "ipa": "/ˈkɑntrəˌvɝsi/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "Public disagreement or debate over a matter.",
+    "gloss": {
+      "en": "controversy",
+      "ja": "論争",
+      "zh": "争议",
+      "ko": "논쟁",
+      "fil": "kontrobersya"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkɒntrəˌvɜːsiː/"
+  },
+  {
+    "w": "conveniently",
+    "ipa": "/kənˈviniəntli/",
+    "cefr": "B2",
+    "pos": "副詞",
+    "def": "In a way that suits one's needs easily.",
+    "gloss": {
+      "en": "conveniently",
+      "ja": "都合よく、便利に",
+      "zh": "方便地",
+      "ko": "편리하게",
+      "fil": "maginhawa"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kənˈviːniːəntliː/"
+  },
+  {
+    "w": "convention",
+    "ipa": "/kənˈvɛnʃən/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A large meeting; an accepted way of doing things.",
+    "gloss": {
+      "en": "convention",
+      "ja": "大会、慣習",
+      "zh": "大会、惯例",
+      "ko": "대회, 관습",
+      "fil": "kombensyon"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kənˈvenʃən/"
+  },
+  {
+    "w": "conventional",
+    "ipa": "/kənˈvɛnʃənəl/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Based on what is generally done or believed; traditional.",
+    "gloss": {
+      "en": "conventional",
+      "ja": "従来の、慣習的な",
+      "zh": "传统的",
+      "ko": "전통적인",
+      "fil": "karaniwan"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kənˈvenʃənəl/"
+  },
+  {
+    "w": "converse",
+    "ipa": "/ˈkɑnˌvɝs/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "The opposite of a fact or statement.",
+    "gloss": {
+      "en": "converse",
+      "ja": "逆、正反対",
+      "zh": "对立面",
+      "ko": "반대",
+      "fil": "kabaligtaran"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkɒnˌvɜːs/"
+  }
+]

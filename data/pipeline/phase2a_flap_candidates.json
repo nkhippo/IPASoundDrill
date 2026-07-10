@@ -2878,5 +2878,95 @@
     "ipa": "/keɪˈɑtɪk/",
     "ipa_actual_ga": "/keɪˈɑɾɪk/",
     "rule": "R1"
+  },
+  {
+    "w": "citywide",
+    "ipa": "/ˈsɪtiˌwaɪd/",
+    "ipa_actual_ga": "/ˈsɪɾiˌwaɪd/",
+    "rule": "R1"
+  },
+  {
+    "w": "coincidence",
+    "ipa": "/koʊˈɪnsədəns/",
+    "ipa_actual_ga": "/koʊˈɪnsədn̩s/",
+    "rule": "R3"
+  },
+  {
+    "w": "comfortably",
+    "ipa": "/ˈkʌmfɚtəbli/",
+    "ipa_actual_ga": "/ˈkʌmfɚɾəbli/",
+    "rule": "R1"
+  },
+  {
+    "w": "communicative",
+    "ipa": "/kəˈmjunəˌkeɪtɪv/",
+    "ipa_actual_ga": "/kəˈmjunəˌkeɪɾɪv/",
+    "rule": "R1"
+  },
+  {
+    "w": "community",
+    "ipa": "/kəˈmjunəti/",
+    "ipa_actual_ga": "/kəˈmjunəɾi/",
+    "rule": "R1"
+  },
+  {
+    "w": "compatible",
+    "ipa": "/kəmˈpætəbəl/",
+    "ipa_actual_ga": "/kəmˈpæɾəbəl/",
+    "rule": "R1"
+  },
+  {
+    "w": "competence",
+    "ipa": "/ˈkɑmpətəns/",
+    "ipa_actual_ga": "/ˈkɑmpəʔn̩s/",
+    "rule": "R3"
+  },
+  {
+    "w": "competent",
+    "ipa": "/ˈkɑmpətənt/",
+    "ipa_actual_ga": "/ˈkɑmpəʔn̩t/",
+    "rule": "R3"
+  },
+  {
+    "w": "complexity",
+    "ipa": "/kəmˈplɛksəti/",
+    "ipa_actual_ga": "/kəmˈplɛksəɾi/",
+    "rule": "R1"
+  },
+  {
+    "w": "confidently",
+    "ipa": "/ˈkɑnfədəntli/",
+    "ipa_actual_ga": "/ˈkɑnfədn̩tli/",
+    "rule": "R3"
+  },
+  {
+    "w": "considerably",
+    "ipa": "/kənˈsɪdərəbli/",
+    "ipa_actual_ga": "/kənˈsɪɾərəbli/",
+    "rule": "R1"
+  },
+  {
+    "w": "considering",
+    "ipa": "/kənˈsɪdərɪŋ/",
+    "ipa_actual_ga": "/kənˈsɪɾərɪŋ/",
+    "rule": "R1"
+  },
+  {
+    "w": "consistent",
+    "ipa": "/kənˈsɪstənt/",
+    "ipa_actual_ga": "/kənˈsɪsʔn̩t/",
+    "rule": "R3"
+  },
+  {
+    "w": "constant",
+    "ipa": "/ˈkɑnstənt/",
+    "ipa_actual_ga": "/ˈkɑnsʔn̩t/",
+    "rule": "R3"
+  },
+  {
+    "w": "consultant",
+    "ipa": "/kənˈsʌltənt/",
+    "ipa_actual_ga": "/kənˈsʌlʔn̩t/",
+    "rule": "R3"
   }
 ]

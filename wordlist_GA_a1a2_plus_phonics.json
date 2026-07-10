@@ -4833,8 +4833,10 @@
     },
     "neighbors": [
       "camel",
+      "commerce",
       "camp",
       "campus",
+      "coma",
       "comma",
       "hammer"
     ],
@@ -5514,14 +5516,14 @@
       "fil": "katangian, tauhan"
     },
     "neighbors": [
+      "collector",
       "register",
       "strict",
       "charity",
       "chemist",
       "cherished",
-      "creator",
-      "cricket",
-      "printer"
+      "clerical",
+      "creator"
     ],
     "rp_ipa": "/ˈkærɪktə/",
     "def": "The qualities that make a person or thing distinctive; a person in a story.",
@@ -5800,10 +5802,10 @@
       "cousin",
       "reason",
       "woken",
+      "colon",
       "dozen",
       "notion",
-      "poison",
-      "season"
+      "poison"
     ],
     "rp_ipa": "/ˈtʃəʊzən/",
     "def": "Past participle of 'choose': selected as the best option.",
@@ -5885,14 +5887,14 @@
       "fil": "bilog"
     },
     "neighbors": [
+      "circuit",
       "circus",
       "cycle",
       "purple",
       "social",
       "uncle",
       "ankle",
-      "burgle",
-      "certain"
+      "burgle"
     ],
     "rp_ipa": "/ˈsɜːkəl/",
     "def": "A perfectly round flat shape with all points equally distant from the center.",
@@ -6081,11 +6083,11 @@
       "pleasure",
       "cleaner",
       "climber",
+      "closure",
       "flavor",
       "flavour",
       "forever",
-      "however",
-      "whoever"
+      "however"
     ],
     "rp_ipa": "/ˈklevə/",
     "def": "Quick to understand and learn; showing intelligence.",
@@ -6207,13 +6209,13 @@
     },
     "neighbors": [
       "clothes",
+      "closure",
       "pleased",
       "close",
       "cloud",
       "cold",
       "clause",
-      "clone",
-      "clothe"
+      "clone"
     ],
     "rp_ipa": "/kləʊzd/",
     "def": "Not open; shut.",
@@ -6272,9 +6274,11 @@
     "neighbors": [
       "clothe",
       "closed",
+      "closure",
       "close",
       "clause",
-      "clone"
+      "clone",
+      "clothing"
     ],
     "rp_ipa": "/kləʊðz/",
     "def": "Items worn on the body, such as shirts, trousers, and dresses.",
@@ -6590,6 +6594,7 @@
     "neighbors": [
       "connect",
       "select",
+      "collector",
       "correct",
       "affect",
       "cassette"
@@ -6623,8 +6628,8 @@
       "affection",
       "correction",
       "election",
-      "condition",
-      "infection"
+      "complexion",
+      "coalition"
     ],
     "rp_ipa": "/kəˈlekʃən/",
     "def": "A group of similar things gathered together.",
@@ -6650,13 +6655,13 @@
     },
     "neighbors": [
       "carriage",
+      "colleague",
       "column",
       "comic",
       "killing",
       "knowledge",
       "clear",
-      "click",
-      "cliff"
+      "click"
     ],
     "rp_ipa": "/ˈkɒlɪdʒ/",
     "def": "An educational institution providing higher education after high school.",
@@ -6713,6 +6718,8 @@
       "fil": "kompyuter"
     },
     "neighbors": [
+      "compute",
+      "commute",
       "competitor",
       "complete",
       "composer",
@@ -6742,6 +6749,7 @@
       "fil": "konsiyerto"
     },
     "neighbors": [
+      "conceit",
       "cancer",
       "concept",
       "cost"
@@ -6773,10 +6781,10 @@
       "context",
       "concept",
       "contact",
+      "conquest",
       "contrast",
-      "conduct",
-      "consist",
-      "dentist"
+      "concrete",
+      "conduct"
     ],
     "rp_ipa": "/ˈkɒntest/",
     "def": "A competition where people try to win by being best at something.",
@@ -6802,7 +6810,8 @@
     },
     "neighbors": [
       "confirmation",
-      "conservation"
+      "conservation",
+      "consolation"
     ],
     "rp_ipa": "/ˌkɒnvəˈseɪʃən/",
     "def": "A talk between two or more people.",
@@ -7182,10 +7191,10 @@
       "wouldn't",
       "didn't",
       "hadn't",
+      "client",
       "could've",
       "current",
-      "cushion",
-      "wooden"
+      "cushion"
     ],
     "rp_ipa": "/ˈkʊdənt/",
     "def": "Short form of 'could not'; was unable to.",
@@ -9115,8 +9124,8 @@
       "frank",
       "drum",
       "truck",
-      "drawing",
-      "drug"
+      "chunk",
+      "drawing"
     ],
     "rp_ipa": "/drʌŋk/",
     "def": "Past participle of 'drink': having swallowed alcohol; intoxicated.",
@@ -10429,11 +10438,11 @@
       "foreign",
       "gotten",
       "caution",
+      "colon",
       "column",
       "common",
       "cotton",
-      "fashion",
-      "fasten"
+      "fashion"
     ],
     "rp_ipa": "/ˈfɒlən/",
     "def": "Past participle of 'fall': dropped from a higher position.",
@@ -16740,7 +16749,7 @@
       "ticket",
       "ballot",
       "carrot",
-      "package"
+      "circuit"
     ],
     "rp_ipa": "/ˈdʒækɪt/",
     "def": "A short coat worn over other clothing for warmth.",
@@ -20240,6 +20249,7 @@
       "monday",
       "lucky",
       "money",
+      "chunk",
       "junk"
     ],
     "rp_ipa": "/ˈmʌŋki/",
@@ -23224,14 +23234,14 @@
       "fil": "litrato"
     },
     "neighbors": [
+      "cocoa",
       "fellow",
       "fighter",
       "float",
       "fold",
       "follow",
       "logo",
-      "motor",
-      "motto"
+      "motor"
     ],
     "rp_ipa": "/ˈfəʊˌtəʊ/",
     "def": "A photograph taken by a camera.",
@@ -23686,12 +23696,12 @@
     "neighbors": [
       "leisure",
       "clever",
+      "closure",
       "pressure",
       "treasure",
       "letter",
       "player",
-      "leather",
-      "measure"
+      "leather"
     ],
     "rp_ipa": "/ˈpleʒə/",
     "def": "A feeling of happiness and satisfaction.",
@@ -23719,11 +23729,11 @@
       "bucket",
       "jacket",
       "ticket",
+      "circuit",
       "comet",
       "package",
       "parrot",
-      "peanut",
-      "pilot"
+      "peanut"
     ],
     "rp_ipa": "/ˈpɒkɪt/",
     "def": "A small bag sewn into clothing for carrying small items.",
@@ -23817,9 +23827,9 @@
       "possession",
       "pollutant",
       "collision",
+      "commission",
       "magician",
-      "permission",
-      "relation"
+      "permission"
     ],
     "rp_ipa": "/pəˈluːʃən/",
     "def": "Harmful substances that contaminate the environment.",
@@ -24505,10 +24515,10 @@
       "carrot",
       "comet",
       "choir",
+      "client",
       "climate",
       "diet",
-      "quit",
-      "quote"
+      "quit"
     ],
     "rp_ipa": "/ˈkwaɪət/",
     "def": "Making little or no noise; calm and peaceful.",
@@ -26613,12 +26623,12 @@
     "neighbors": [
       "entrance",
       "central",
+      "conscience",
       "dentist",
       "distance",
       "instance",
       "mentally",
-      "sequence",
-      "mountain"
+      "sequence"
     ],
     "rp_ipa": "/ˈsentəns/",
     "def": "A set of words that forms a complete thought.",
@@ -28602,11 +28612,11 @@
       "soda",
       "sold",
       "cola",
+      "coma",
       "soft",
       "suffer",
       "yoga",
-      "social",
-      "surf"
+      "social"
     ],
     "rp_ipa": "/ˈsəʊfə/",
     "def": "A long comfortable upholstered seat for multiple people.",
@@ -31383,7 +31393,7 @@
       "thanks",
       "pink",
       "anchor",
-      "junk"
+      "chunk"
     ],
     "rp_ipa": "/θæŋk/",
     "def": "To express gratitude to someone.",
@@ -32342,7 +32352,7 @@
       "pocket",
       "taken",
       "toilet",
-      "limit"
+      "circuit"
     ],
     "rp_ipa": "/ˈtɪkət/",
     "def": "A piece of paper giving you the right to travel or enter an event.",
@@ -35867,7 +35877,7 @@
       "woman",
       "women",
       "bacon",
-      "local"
+      "colon"
     ],
     "rp_ipa": "/ˈwəʊkən/",
     "def": "Past participle of 'wake': been brought out of sleep.",
@@ -37441,8 +37451,8 @@
       "position",
       "admission",
       "adoption",
-      "magician",
-      "mission"
+      "commission",
+      "magician"
     ],
     "rp_ipa": "/əˈdɪʃən/",
     "def": "The process of adding; an extra thing.",
@@ -38254,9 +38264,9 @@
       "mission",
       "permission",
       "position",
+      "commission",
       "magician",
-      "addition",
-      "mention"
+      "addition"
     ],
     "rp_ipa": "/æmˈbɪʃən/",
     "def": "A strong desire to achieve something.",
@@ -39207,11 +39217,11 @@
       "assistance",
       "assessment",
       "distant",
+      "consistent",
       "accountant",
       "assignment",
-      "instant",
-      "adjustment",
-      "associate"
+      "constant",
+      "instant"
     ],
     "rp_ipa": "/əˈsɪstənt/",
     "def": "A person who helps another with their work.",
@@ -39377,7 +39387,8 @@
     },
     "neighbors": [
       "tempt",
-      "temper"
+      "temper",
+      "contempt"
     ],
     "rp_ipa": "/əˈtempt/",
     "def": "An effort to do something; to try to do something.",
@@ -41850,11 +41861,11 @@
       "passenger",
       "balanced",
       "cabinet",
+      "commander",
       "challenge",
       "talent",
       "balance",
-      "cleaner",
-      "ballad"
+      "cleaner"
     ],
     "rp_ipa": "/ˈkæləndə/",
     "def": "A chart showing the days, weeks, and months of a year.",
@@ -42290,11 +42301,11 @@
       "certainty",
       "suddenly",
       "certain",
+      "circuitry",
       "commonly",
       "currently",
       "heavenly",
-      "seventy",
-      "silently"
+      "seventy"
     ],
     "rp_ipa": "/ˈsɜːtənli/",
     "def": "Without any doubt; definitely.",
@@ -43107,10 +43118,10 @@
       "creature",
       "clever",
       "climber",
+      "closure",
       "corner",
       "clone",
-      "clown",
-      "learner"
+      "clown"
     ],
     "rp_ipa": "/ˈkliːnə/",
     "def": "A person who cleans; a substance used for cleaning.",
@@ -43263,6 +43274,7 @@
     "neighbors": [
       "blooming",
       "climate",
+      "clothing",
       "climber",
       "climb"
     ],
@@ -43450,13 +43462,13 @@
     },
     "neighbors": [
       "cold",
+      "coma",
       "coal",
+      "colon",
       "coast",
       "cooler",
       "killer",
-      "kilo",
-      "soda",
-      "bold"
+      "kilo"
     ],
     "rp_ipa": "/ˈkəʊlə/",
     "def": "A sweet dark carbonated soft drink.",
@@ -43485,10 +43497,10 @@
       "knowledge",
       "bottom",
       "caution",
+      "colleague",
       "college",
-      "comet",
-      "cotton",
-      "fallen"
+      "colon",
+      "comet"
     ],
     "rp_ipa": "/ˈkɒləm/",
     "def": "A vertical pillar supporting a structure; a vertical section of text.",
@@ -43545,7 +43557,9 @@
       "fil": "komportable"
     },
     "neighbors": [
-      "uncomfortable"
+      "comfortably",
+      "uncomfortable",
+      "compatible"
     ],
     "rp_ipa": "/ˈkʌmftəbəl/",
     "def": "Giving physical ease; not causing discomfort.",
@@ -43576,9 +43590,9 @@
       "calmly",
       "college",
       "comet",
+      "commerce",
       "commit",
-      "logic",
-      "topic"
+      "logic"
     ],
     "rp_ipa": "/ˈkɒmɪk/",
     "def": "A magazine with stories told in pictures; funny or amusing.",
@@ -43603,7 +43617,9 @@
       "fil": "pangako"
     },
     "neighbors": [
-      "amazement"
+      "component",
+      "amazement",
+      "commission"
     ],
     "rp_ipa": "/kəˈmɪtmənt/",
     "def": "A promise or obligation to do something.",
@@ -43686,6 +43702,8 @@
       "fil": "makipag-usap"
     },
     "neighbors": [
+      "communicative",
+      "community",
       "communication"
     ],
     "rp_ipa": "/kəˈmjuːnɪˌkeɪt/",
@@ -43711,6 +43729,7 @@
       "fil": "komunikasyon"
     },
     "neighbors": [
+      "communicative",
       "communicate"
     ],
     "rp_ipa": "/kəˌmjuːnɪˈkeɪʃən/",
@@ -43797,6 +43816,7 @@
     },
     "neighbors": [
       "compete",
+      "compile",
       "compose",
       "impair"
     ],
@@ -43825,6 +43845,9 @@
     "neighbors": [
       "composition",
       "combination",
+      "compensation",
+      "competence",
+      "competent",
       "politician",
       "opposition"
     ],
@@ -43856,9 +43879,9 @@
       "campaign",
       "composer",
       "explain",
-      "someplace",
-      "champagne",
-      "compare"
+      "commission",
+      "compute",
+      "someplace"
     ],
     "rp_ipa": "/kəmˈpleɪn/",
     "def": "To express unhappiness or dissatisfaction about something.",
@@ -43885,6 +43908,8 @@
     "neighbors": [
       "complain",
       "complete",
+      "component",
+      "compute",
       "campaign",
       "compete"
     ],
@@ -43913,12 +43938,12 @@
     "neighbors": [
       "compete",
       "complain",
+      "compute",
       "complaint",
       "completely",
       "composer",
       "campsite",
-      "committee",
-      "compare"
+      "committee"
     ],
     "rp_ipa": "/kəmˈpliːt/",
     "def": "Having all parts; finished; to finish something.",
@@ -43946,11 +43971,11 @@
       "compose",
       "complain",
       "complete",
+      "commander",
+      "compute",
       "compare",
       "compete",
-      "computer",
-      "suppose",
-      "oppose"
+      "compile"
     ],
     "rp_ipa": "/kəmˈpəʊzə/",
     "def": "A person who writes music.",
@@ -44002,9 +44027,13 @@
     },
     "neighbors": [
       "concerned",
+      "conceal",
+      "concede",
+      "conceit",
+      "conceive",
+      "confine",
       "confirm",
-      "consume",
-      "contain"
+      "console"
     ],
     "rp_ipa": "/kənˈsɜːn/",
     "def": "Worry or care about something; to be about something.",
@@ -44029,14 +44058,14 @@
       "fil": "kondisyon"
     },
     "neighbors": [
+      "concession",
+      "confession",
       "connection",
       "connexion",
+      "commission",
       "addition",
       "edition",
-      "tradition",
-      "collection",
-      "foundation",
-      "suspicion"
+      "tradition"
     ],
     "rp_ipa": "/kənˈdɪʃən/",
     "def": "The state of something; a requirement that must be met.",
@@ -44063,9 +44092,12 @@
     "neighbors": [
       "confidence",
       "continent",
+      "conference",
       "consonant",
-      "incident",
-      "conduct"
+      "confidently",
+      "competent",
+      "constant",
+      "incident"
     ],
     "rp_ipa": "/ˈkɒnfɪdənt/",
     "def": "Feeling sure of yourself and your abilities.",
@@ -44094,11 +44126,11 @@
       "confused",
       "refuse",
       "confusing",
+      "compute",
       "conclude",
-      "confirm",
-      "consume",
-      "accuse",
-      "amuse"
+      "commute",
+      "confess",
+      "confine"
     ],
     "rp_ipa": "/kənˈfjuːz/",
     "def": "To make someone uncertain or puzzled.",
@@ -44153,6 +44185,7 @@
       "fil": "kahihinatnan"
     },
     "neighbors": [
+      "conference",
       "confidence",
       "consonant",
       "consequently"
@@ -44182,12 +44215,12 @@
     "neighbors": [
       "consist",
       "consumer",
+      "concede",
       "container",
+      "coincide",
+      "commander",
       "concerned",
-      "convince",
-      "concern",
-      "consume",
-      "cancer"
+      "consent"
     ],
     "rp_ipa": "/kənˈsɪdə/",
     "def": "To think carefully about something.",
@@ -44214,13 +44247,13 @@
     },
     "neighbors": [
       "consider",
+      "consent",
+      "consult",
+      "conceit",
       "insist",
       "assist",
       "concept",
-      "concerned",
-      "consumer",
-      "contest",
-      "convince"
+      "concerned"
     ],
     "rp_ipa": "/kənˈsɪst/",
     "def": "To be made up or composed of.",
@@ -44245,14 +44278,14 @@
       "fil": "makipag-ugnayan, kontak"
     },
     "neighbors": [
+      "contract",
       "conduct",
       "content",
       "contest",
       "context",
       "contrast",
       "concept",
-      "interact",
-      "concert"
+      "concrete"
     ],
     "rp_ipa": "/ˈkɒnˌtækt/",
     "def": "Communication between people; to get in touch with someone.",
@@ -44281,10 +44314,10 @@
       "consider",
       "control",
       "concerned",
+      "consent",
       "consumer",
       "content",
-      "convince",
-      "concern"
+      "convince"
     ],
     "rp_ipa": "/kənˈteɪnə/",
     "def": "An object used to hold or store things.",
@@ -44313,10 +44346,10 @@
       "contrast",
       "contact",
       "content",
-      "concept",
-      "conduct",
-      "connect",
-      "next"
+      "conquest",
+      "contempt",
+      "contract",
+      "concept"
     ],
     "rp_ipa": "/ˈkɒntekst/",
     "def": "The circumstances surrounding an event that help explain it.",
@@ -44343,8 +44376,11 @@
     "neighbors": [
       "consonant",
       "confident",
+      "competent",
+      "conference",
       "confidence",
       "maintenance",
+      "constant",
       "content"
     ],
     "rp_ipa": "/ˈkɒntɪnənt/",
@@ -44401,12 +44437,14 @@
       "fil": "kaibahan, salungatan"
     },
     "neighbors": [
+      "contract",
       "context",
       "contact",
       "contest",
+      "conquest",
       "contrary",
       "interest",
-      "content"
+      "concrete"
     ],
     "rp_ipa": "/ˈkɒntrɑːst/",
     "def": "A noticeable difference between things.",
@@ -44431,14 +44469,14 @@
       "fil": "kontrolin, kontrol"
     },
     "neighbors": [
+      "console",
       "patrol",
       "container",
       "central",
       "country",
       "petrol",
-      "contain",
-      "canal",
-      "until"
+      "conceal",
+      "contain"
     ],
     "rp_ipa": "/kənˈtrəʊl/",
     "def": "The power to direct or influence something; to direct or manage.",
@@ -44464,6 +44502,7 @@
     },
     "neighbors": [
       "convenient",
+      "convention",
       "inconvenient"
     ],
     "rp_ipa": "/kənˈviːnjəns/",
@@ -44490,7 +44529,9 @@
     },
     "neighbors": [
       "convenience",
-      "inconvenient"
+      "inconvenient",
+      "convention",
+      "conveniently"
     ],
     "rp_ipa": "/kənˈviːnjənt/",
     "def": "Fitting well into daily life; easy to use or access.",
@@ -44554,7 +44595,7 @@
       "walking",
       "bookish",
       "caring",
-      "killing"
+      "coaching"
     ],
     "rp_ipa": "/ˈkʊkɪŋ/",
     "def": "The practice of preparing food by applying heat.",
@@ -47662,9 +47703,9 @@
       "animation",
       "isolation",
       "application",
+      "collocation",
       "location",
-      "meditation",
-      "vacation"
+      "meditation"
     ],
     "rp_ipa": "/ˌedʒəˈkeɪʃən/",
     "def": "The process of learning and teaching.",
@@ -48842,7 +48883,9 @@
     },
     "neighbors": [
       "acquisition",
-      "prohibition"
+      "prohibition",
+      "coalition",
+      "commission"
     ],
     "rp_ipa": "/ˌeksəˈbɪʃən/",
     "def": "A public display of art, products, or information.",
@@ -49013,7 +49056,8 @@
       "destination",
       "exhibition",
       "application",
-      "aspiration"
+      "aspiration",
+      "collocation"
     ],
     "rp_ipa": "/ˌekspləˈneɪʃən/",
     "def": "A statement that makes something clear.",
@@ -49075,9 +49119,9 @@
       "expect",
       "explain",
       "explore",
+      "compress",
       "excuse",
-      "expand",
-      "exposure"
+      "expand"
     ],
     "rp_ipa": "/ɪkˈspres/",
     "def": "To show or communicate a feeling or idea; fast and direct.",
@@ -49104,6 +49148,7 @@
     "neighbors": [
       "impression",
       "inspiration",
+      "compression",
       "explosion",
       "inspection",
       "depression",
@@ -51459,6 +51504,7 @@
     },
     "neighbors": [
       "garden",
+      "colon",
       "gallon",
       "gold"
     ],
@@ -53491,6 +53537,7 @@
     "neighbors": [
       "improve",
       "express",
+      "compress",
       "impair",
       "oppress",
       "impressive",
@@ -53940,10 +53987,10 @@
       "distant",
       "extent",
       "innocent",
+      "constant",
       "incident",
       "institute",
-      "interest",
-      "uncertain"
+      "interest"
     ],
     "rp_ipa": "/ˈɪnstənt/",
     "def": "Happening immediately; a very short period of time.",
@@ -54201,12 +54248,12 @@
     "neighbors": [
       "infection",
       "intention",
+      "convention",
       "attention",
       "election",
       "inspection",
       "invasion",
-      "invitation",
-      "invent"
+      "invitation"
     ],
     "rp_ipa": "/ˌɪnˈvenʃən/",
     "def": "Something new that has been created or designed.",
@@ -54511,14 +54558,14 @@
       "fil": "basura, junk"
     },
     "neighbors": [
+      "chunk",
       "monk",
       "sink",
       "bank",
       "jump",
       "just",
       "link",
-      "pink",
-      "rank"
+      "pink"
     ],
     "rp_ipa": "/dʒʌŋk/",
     "def": "Old or unwanted things; things of poor quality.",
@@ -55788,8 +55835,8 @@
       "bicycle",
       "vehicle",
       "classical",
-      "tropical",
-      "local"
+      "clerical",
+      "tropical"
     ],
     "rp_ipa": "/ˈlɒdʒɪkəl/",
     "def": "Based on clear reasoning; sensible.",
@@ -56759,10 +56806,10 @@
       "medal",
       "metal",
       "method",
+      "colon",
       "fallen",
       "gallon",
-      "heaven",
-      "jealous"
+      "heaven"
     ],
     "rp_ipa": "/ˈmelən/",
     "def": "A large round fruit with sweet juicy flesh.",
@@ -59706,12 +59753,12 @@
     "neighbors": [
       "position",
       "admission",
+      "commission",
       "mission",
       "ambition",
       "direction",
       "correction",
-      "magician",
-      "operation"
+      "magician"
     ],
     "rp_ipa": "/pəˈmɪʃən/",
     "def": "Authorization to do something.",
@@ -60673,6 +60720,7 @@
       "fil": "populasyon"
     },
     "neighbors": [
+      "consolation",
       "regulation",
       "reputation",
       "occupation"
@@ -60734,11 +60782,11 @@
       "possession",
       "opposition",
       "permission",
+      "commission",
       "magician",
       "pollution",
       "addition",
-      "edition",
-      "ambition"
+      "edition"
     ],
     "rp_ipa": "/pəˈzɪʃən/",
     "def": "A place where someone or something is located; a job.",
@@ -62483,6 +62531,7 @@
     "neighbors": [
       "receipt",
       "achieve",
+      "conceive",
       "proceed"
     ],
     "rp_ipa": "/rəˈsiːv/",
@@ -63182,8 +63231,8 @@
       "respect",
       "southwest",
       "except",
-      "invest",
-      "reject"
+      "conquest",
+      "invest"
     ],
     "rp_ipa": "/rɪˈkwest/",
     "def": "Politely asking for something.",
@@ -64882,6 +64931,7 @@
     "neighbors": [
       "sacred",
       "spirit",
+      "circuit",
       "secretly"
     ],
     "rp_ipa": "/ˈsiːkrət/",
@@ -64908,7 +64958,8 @@
     },
     "neighbors": [
       "cemetery",
-      "secretly"
+      "secretly",
+      "circuitry"
     ],
     "rp_ipa": "/ˈsekrətri/",
     "def": "A person who handles correspondence and administrative tasks.",
@@ -65032,6 +65083,7 @@
     "neighbors": [
       "suggest",
       "ancestor",
+      "collector",
       "supporter",
       "select",
       "stressed",
@@ -66737,11 +66789,11 @@
       "sofa",
       "cola",
       "cd",
+      "coma",
       "sold",
       "yoga",
       "load",
-      "road",
-      "seed"
+      "road"
     ],
     "rp_ipa": "/ˈsəʊdə/",
     "def": "A carbonated drink; water with carbon dioxide dissolved in it.",
@@ -66893,9 +66945,9 @@
       "selection",
       "position",
       "collision",
+      "commission",
       "magician",
-      "possession",
-      "relation"
+      "possession"
     ],
     "rp_ipa": "/səˈluːʃən/",
     "def": "A way of solving a problem; a liquid mixture.",
@@ -68195,7 +68247,8 @@
       "fil": "magtagumpay"
     },
     "neighbors": [
-      "success"
+      "success",
+      "concede"
     ],
     "rp_ipa": "/səkˈsiːd/",
     "def": "To achieve what you are trying to do.",
@@ -69356,6 +69409,7 @@
     "neighbors": [
       "terrified",
       "horrify",
+      "clarify",
       "sheriff"
     ],
     "rp_ipa": "/ˈterəˌfaɪ/",
@@ -70252,10 +70306,10 @@
       "traditional",
       "edition",
       "condition",
+      "coalition",
       "opposition",
       "profession",
-      "promotion",
-      "reduction"
+      "promotion"
     ],
     "rp_ipa": "/trəˈdɪʃən/",
     "def": "A custom or belief passed down through generations.",
@@ -70724,9 +70778,9 @@
       "instant",
       "instance",
       "concern",
+      "concession",
       "curtain",
-      "surgeon",
-      "assert"
+      "surgeon"
     ],
     "rp_ipa": "/ənˈsɜːtən/",
     "def": "Not completely sure; not known.",
@@ -70752,7 +70806,8 @@
       "fil": "hindi komportable"
     },
     "neighbors": [
-      "comfortable"
+      "comfortable",
+      "comfortably"
     ],
     "rp_ipa": "/ənˈkʌmftəbəl/",
     "def": "Causing or feeling discomfort.",
@@ -70859,6 +70914,7 @@
       "unfit",
       "unless",
       "aware",
+      "confess",
       "fare",
       "fair"
     ],
@@ -75095,14 +75151,14 @@
       "fil": "banggaan"
     },
     "neighbors": [
+      "commission",
+      "coalition",
       "bulletin",
       "division",
       "magician",
       "religion",
       "revision",
-      "decision",
-      "pollution",
-      "position"
+      "decision"
     ],
     "rp_ipa": "/kəˈlɪʒən/",
     "def": "An accident where two moving objects hit each other.",
@@ -95040,6 +95096,7 @@
     "neighbors": [
       "district",
       "restrict",
+      "contract",
       "attract",
       "strict"
     ],
@@ -95184,6 +95241,7 @@
       "except",
       "extent",
       "account",
+      "consent",
       "upset",
       "cent",
       "sent"
@@ -95431,10 +95489,10 @@
       "assignment",
       "assistant",
       "attainment",
+      "constant",
       "acquaintance",
       "announcement",
-      "content",
-      "appointment"
+      "content"
     ],
     "ipa_actual_ga": "/əˈkaʊnʔn̩t/",
     "respell_ga": "uh-KOWN-tuhnt",
@@ -95944,13 +96002,13 @@
     "def": "Permission to enter a place or organization, or the act of admitting something is true.",
     "neighbors": [
       "ambition",
+      "commission",
       "permission",
       "admiration",
       "edition",
       "addition",
       "audition",
-      "mission",
-      "ambitious"
+      "mission"
     ],
     "respell_ga": "ad-MI-shuhn",
     "respell_rp": "uhd-MI-shuhn",
@@ -97717,6 +97775,7 @@
     },
     "def": "A formal request, or the act of putting something into use.",
     "neighbors": [
+      "collocation",
       "allegation",
       "accusation",
       "aspiration",
@@ -98994,6 +99053,7 @@
     },
     "def": "Knowledge that something exists or understanding of a situation.",
     "neighbors": [
+      "clearness",
       "careless",
       "harness",
       "various",
@@ -101088,9 +101148,10 @@
       "calculate",
       "accusation",
       "regulation",
+      "consolation",
       "population",
-      "occupation",
-      "allegation"
+      "collocation",
+      "occupation"
     ],
     "respell_ga": "kal-kyuh-LAY-shuhn",
     "respell_rp": "kal-kyuu-LAY-shuhn",
@@ -101242,6 +101303,7 @@
       "harness",
       "campus",
       "comet",
+      "commerce",
       "common",
       "comma"
     ],
@@ -101302,12 +101364,12 @@
     "neighbors": [
       "cashpoint",
       "complete",
+      "compute",
       "capsule",
       "chemist",
       "compete",
       "campaign",
-      "camping",
-      "campus"
+      "camping"
     ],
     "respell_ga": "KAMP-syt",
     "respell_rp": "KAMP-syt",
@@ -101332,7 +101394,9 @@
     },
     "def": "A man-made waterway for boats or irrigation.",
     "neighbors": [
-      "convey"
+      "convey",
+      "conceal",
+      "console"
     ],
     "respell_ga": "kuh-NAL",
     "respell_rp": "kuh-NAL",
@@ -101362,9 +101426,9 @@
       "council",
       "castle",
       "sandal",
-      "handle",
-      "handsome",
-      "pencil"
+      "conceal",
+      "console",
+      "handle"
     ],
     "respell_ga": "KAN-suhl",
     "respell_rp": "KAN-suhl",
@@ -101730,6 +101794,7 @@
     },
     "def": "The quality of not being careful, leading to mistakes.",
     "neighbors": [
+      "consciousness",
       "carelessly",
       "careless"
     ],
@@ -102745,11 +102810,11 @@
       "service",
       "surface",
       "circle",
+      "circuit",
       "cycle",
       "surgeon",
       "certain",
-      "focus",
-      "nervous"
+      "focus"
     ],
     "respell_ga": "SUR-kuhs",
     "respell_rp": "SUR-kuhs",
@@ -102883,6 +102948,7 @@
     },
     "def": "Relating to ancient Greek or Roman culture, or traditional serious music.",
     "neighbors": [
+      "clerical",
       "classic",
       "critical",
       "magical",
@@ -102913,6 +102979,7 @@
     },
     "def": "To arrange things into groups based on shared features.",
     "neighbors": [
+      "clarify",
       "qualify",
       "classmate",
       "classroom",
@@ -102944,6 +103011,7 @@
     },
     "def": "The general weather conditions in a place over a long period.",
     "neighbors": [
+      "client",
       "climbing",
       "climber",
       "comet",
@@ -102977,11 +103045,11 @@
       "climb",
       "cleaner",
       "clever",
+      "closure",
       "choir",
       "climate",
       "lighter",
-      "claim",
-      "clam"
+      "claim"
     ],
     "respell_ga": "KLY-mer",
     "respell_rp": "KLY-muh",
@@ -103204,9 +103272,12 @@
     },
     "def": "A mixture of different things or people.",
     "neighbors": [
+      "compensation",
       "composition",
       "accommodation",
-      "competition"
+      "competition",
+      "consolation",
+      "collocation"
     ],
     "respell_ga": "kahm-buh-NAY-shuhn",
     "respell_rp": "kom-bi-NAY-shuhn",
@@ -103258,7 +103329,10 @@
     "def": "A person who entertains people by making them laugh.",
     "neighbors": [
       "cathedral",
+      "compassion",
       "immediate",
+      "commission",
+      "completion",
       "medium"
     ],
     "ipa_actual_ga": "/kəˈmiɾiən/",
@@ -103371,14 +103445,14 @@
     },
     "def": "A punctuation mark (,) used to separate parts of a sentence.",
     "neighbors": [
+      "coma",
       "calm",
       "comet",
       "common",
       "collar",
       "bomber",
       "camp",
-      "card",
-      "carve"
+      "card"
     ],
     "respell_ga": "KAH-muh",
     "respell_rp": "KO-muh",
@@ -103403,6 +103477,7 @@
     },
     "def": "To give an official order, or an instruction that must be obeyed.",
     "neighbors": [
+      "commander",
       "demand",
       "canned"
     ],
@@ -103457,7 +103532,10 @@
     },
     "def": "Relating to buying and selling, or an advertisement on TV or radio.",
     "neighbors": [
+      "commission",
       "chemical",
+      "compassion",
+      "compile",
       "official",
       "camel"
     ],
@@ -103548,6 +103626,10 @@
     },
     "def": "A person who spends time with you or travels with you.",
     "neighbors": [
+      "compassion",
+      "completion",
+      "component",
+      "compression",
       "opinion"
     ],
     "respell_ga": "kuhm-PA-nyuhn",
@@ -103573,7 +103655,8 @@
     },
     "def": "The act of examining how two things are similar or different.",
     "neighbors": [
-      "comparative"
+      "comparative",
+      "compression"
     ],
     "respell_ga": "kuhm-PEH-ruh-suhn",
     "respell_rp": "kuhm-PA-ri-suhn",
@@ -103600,8 +103683,12 @@
     "neighbors": [
       "complete",
       "compose",
+      "commute",
       "compare",
-      "commit"
+      "compile",
+      "conceit",
+      "commit",
+      "compute"
     ],
     "respell_ga": "kuhm-PEET",
     "respell_rp": "kuhm-PEET",
@@ -103682,8 +103769,10 @@
     "def": "To make something better by adding a good quality, or a thing that does this.",
     "neighbors": [
       "compliment",
+      "competent",
       "complicate",
-      "employment"
+      "employment",
+      "competence"
     ],
     "respell_ga": "KAHM-pluh-muhnt",
     "respell_rp": "KOM-pli-muhnt",
@@ -103709,6 +103798,7 @@
     "def": "In every way; totally.",
     "neighbors": [
       "complete",
+      "completion",
       "compete"
     ],
     "respell_ga": "kuhm-PLEET-lee",
@@ -103734,6 +103824,7 @@
     },
     "def": "Having many parts and difficult to understand.",
     "neighbors": [
+      "compress",
       "complicate"
     ],
     "respell_ga": "KAHM-plehks",
@@ -103760,6 +103851,7 @@
     "def": "To make something more difficult to understand or deal with.",
     "neighbors": [
       "complicated",
+      "compensate",
       "complement",
       "complex",
       "compliment"
@@ -103787,7 +103879,8 @@
     },
     "def": "Difficult to understand because of having many parts.",
     "neighbors": [
-      "complicate"
+      "complicate",
+      "collocation"
     ],
     "ipa_actual_ga": "/ˈkɑmpləˌkeɪɾəd/",
     "respell_ga": "KAHM-pluh-kay-duhd",
@@ -103814,7 +103907,8 @@
     "def": "A remark that expresses praise, or to praise someone.",
     "neighbors": [
       "complement",
-      "complicate"
+      "complicate",
+      "competent"
     ],
     "respell_ga": "KAHM-pluh-mehnt",
     "respell_rp": "KOM-pli-muhnt",
@@ -103842,6 +103936,7 @@
       "composer",
       "compete",
       "compare",
+      "compile",
       "suppose",
       "oppose"
     ],
@@ -103872,6 +103967,7 @@
       "opposition",
       "combination",
       "preposition",
+      "compensation",
       "position"
     ],
     "respell_ga": "kahm-puh-ZI-shuhn",
@@ -103898,6 +103994,7 @@
     "def": "A substance made of two or more elements, or made of several parts.",
     "neighbors": [
       "company",
+      "compress",
       "combine",
       "command",
       "comment",
@@ -103952,7 +104049,9 @@
     "def": "Close attention to one thing, or the amount of a substance in a mixture.",
     "neighbors": [
       "concentrate",
+      "consolation",
       "constitution",
+      "compensation",
       "combination",
       "conservation"
     ],
@@ -103980,13 +104079,13 @@
     "def": "An idea or basic principle.",
     "neighbors": [
       "content",
+      "consent",
       "contest",
       "concert",
       "conduct",
       "nonsense",
-      "consist",
-      "contact",
-      "comment"
+      "concrete",
+      "consist"
     ],
     "respell_ga": "KAHN-sehpt",
     "respell_rp": "KON-sehpt",
@@ -104012,13 +104111,13 @@
     "def": "Worried about something, or involved with something.",
     "neighbors": [
       "concern",
+      "consent",
+      "concede",
+      "concerning",
       "conclude",
       "consumer",
       "convince",
-      "consider",
-      "consist",
-      "container",
-      "command"
+      "coincide"
     ],
     "respell_ga": "kuhn-SURND",
     "respell_rp": "kuhn-SURND",
@@ -104048,9 +104147,9 @@
       "confuse",
       "consume",
       "unclear",
+      "concede",
       "confused",
-      "canal",
-      "conclusion"
+      "canal"
     ],
     "respell_ga": "kuhn-KLOOD",
     "respell_rp": "kuhn-KLOOD",
@@ -104078,11 +104177,11 @@
       "contact",
       "concept",
       "content",
+      "concrete",
+      "conscience",
       "contest",
       "indicate",
-      "product",
-      "candle",
-      "carpet"
+      "product"
     ],
     "ga_rp_same": false,
     "ga_rp_same_reason": "structural_other"
@@ -104105,10 +104204,14 @@
     },
     "def": "A feeling of trust in your own abilities, or trust in someone or something.",
     "neighbors": [
+      "conference",
       "confident",
       "consonant",
+      "competence",
       "continent",
-      "consequence"
+      "coincidence",
+      "consequence",
+      "conferencing"
     ],
     "ipa_actual_ga": "/ˈkɑnfədn̩s/",
     "respell_ga": "KAHN-fuh-duhns",
@@ -104135,7 +104238,10 @@
     "def": "To state that something is definitely true or will happen.",
     "neighbors": [
       "consume",
-      "concern"
+      "concern",
+      "condemn",
+      "confess",
+      "confine"
     ],
     "respell_ga": "kuhn-FURM",
     "respell_rp": "kuhn-FURM",
@@ -104162,7 +104268,8 @@
     "neighbors": [
       "conservation",
       "conversation",
-      "information"
+      "information",
+      "consolation"
     ],
     "respell_ga": "kahn-fer-MAY-shuhn",
     "respell_rp": "kon-fuh-MAY-shuhn",
@@ -104187,6 +104294,7 @@
     },
     "def": "A serious disagreement or fight.",
     "neighbors": [
+      "contract",
       "conduct",
       "contact"
     ],
@@ -104243,6 +104351,7 @@
     "neighbors": [
       "conclusion",
       "confusing",
+      "confession",
       "confused",
       "confuse"
     ],
@@ -104268,7 +104377,9 @@
       "fil": "batiin"
     },
     "def": "To tell someone you are happy about their success or achievement.",
-    "neighbors": [],
+    "neighbors": [
+      "contaminate"
+    ],
     "respell_ga": "kuhn-GRA-chuh-layt",
     "respell_rp": "kuhn-GRA-chuh-layt",
     "ga_rp_same": true,
@@ -104294,8 +104405,11 @@
     "neighbors": [
       "collect",
       "select",
+      "conceit",
       "affect",
       "cassette",
+      "collector",
+      "consent",
       "correct"
     ],
     "respell_ga": "kuh-NEHKT",
@@ -104323,12 +104437,12 @@
     "neighbors": [
       "collection",
       "selection",
+      "concession",
       "condition",
+      "confession",
       "affection",
       "correction",
-      "infection",
-      "objection",
-      "reduction"
+      "conception"
     ],
     "respell_ga": "kuh-NEHK-shuhn",
     "respell_rp": "kuh-NEHK-shuhn",
@@ -104355,12 +104469,12 @@
     "neighbors": [
       "collection",
       "selection",
+      "concession",
       "condition",
+      "confession",
       "affection",
       "correction",
-      "infection",
-      "objection",
-      "reduction"
+      "conception"
     ],
     "respell_ga": "kuh-NEHK-shuhn",
     "respell_rp": "kuh-NEHK-shuhn",
@@ -104414,7 +104528,9 @@
     },
     "def": "Awake and aware of what is happening around you.",
     "neighbors": [
+      "conscience",
       "calmness",
+      "converse",
       "caution",
       "cautious"
     ],
@@ -104441,6 +104557,7 @@
     },
     "def": "As a result; therefore.",
     "neighbors": [
+      "confidently",
       "constantly",
       "consequence",
       "consonant"
@@ -104469,6 +104586,7 @@
     "def": "The protection of nature, wildlife, or important resources.",
     "neighbors": [
       "confirmation",
+      "consolation",
       "conversation",
       "observation"
     ],
@@ -104520,6 +104638,9 @@
     "def": "Large in amount or size.",
     "neighbors": [
       "consideration",
+      "conceivable",
+      "considerably",
+      "considering",
       "consider"
     ],
     "ipa_actual_ga": "/kənˈsɪɾɚəbəl/",
@@ -104550,9 +104671,10 @@
       "construction",
       "conservation",
       "consumption",
+      "consolation",
+      "conception",
       "inspiration",
-      "condition",
-      "consider"
+      "concession"
     ],
     "ipa_actual_ga": "/kənˌsɪɾɚˈeɪʃən/",
     "respell_ga": "kuhn-si-der-AY-shuhn",
@@ -104580,10 +104702,12 @@
     "neighbors": [
       "continent",
       "confident",
+      "constant",
       "confidence",
+      "competent",
+      "conference",
       "incident",
-      "concentrate",
-      "consequence"
+      "concentrate"
     ],
     "respell_ga": "KAHN-suh-nuhnt",
     "respell_rp": "KON-suh-nuhnt",
@@ -104608,7 +104732,9 @@
     },
     "def": "All the time; repeatedly.",
     "neighbors": [
+      "constant",
       "constitute",
+      "confidently",
       "consequently"
     ],
     "ipa_actual_ga": "/ˈkɑnsʔn̩tli/",
@@ -104636,6 +104762,7 @@
     "def": "To form or make up something.",
     "neighbors": [
       "institute",
+      "constant",
       "substitute",
       "constantly",
       "constitution"
@@ -104664,6 +104791,7 @@
     },
     "def": "The basic laws of a country, or the way something is formed.",
     "neighbors": [
+      "consolation",
       "constitute",
       "construction",
       "concentration",
@@ -104695,7 +104823,10 @@
     "def": "To build something.",
     "neighbors": [
       "instructor",
-      "construction"
+      "confront",
+      "contract",
+      "construction",
+      "consult"
     ],
     "respell_ga": "kuhn-STRUHKT",
     "respell_rp": "KON-struhkt",
@@ -104726,8 +104857,8 @@
       "consideration",
       "constitution",
       "consumption",
-      "attraction",
-      "connection"
+      "conjunction",
+      "conception"
     ],
     "respell_ga": "kuhn-STRUHK-shuhn",
     "respell_rp": "kuhn-STRUHK-shuhn",
@@ -104754,8 +104885,12 @@
     "neighbors": [
       "consumer",
       "confirm",
+      "conceal",
+      "concede",
+      "conceit",
+      "conceive",
       "concern",
-      "assume"
+      "condemn"
     ],
     "respell_ga": "kuhn-SOOM",
     "respell_rp": "kuhn-SYOOM",
@@ -104783,11 +104918,11 @@
       "consume",
       "consider",
       "concerned",
+      "consent",
       "consist",
+      "consult",
       "container",
-      "confirm",
-      "concern",
-      "cancer"
+      "confirm"
     ],
     "respell_ga": "kuhn-SOO-mer",
     "respell_rp": "kuhn-SYOO-muh",
@@ -104812,7 +104947,10 @@
     },
     "def": "The act of using, eating, or drinking something.",
     "neighbors": [
-      "assumption"
+      "conception",
+      "assumption",
+      "conjunction",
+      "concession"
     ],
     "respell_ga": "kuhn-SUHMP-shuhn",
     "respell_rp": "kuhn-SUHM-shuhn",
@@ -104841,6 +104979,7 @@
       "canteen",
       "maintain",
       "concern",
+      "confine",
       "convey",
       "obtain",
       "attain"
@@ -104870,12 +105009,12 @@
     "neighbors": [
       "contest",
       "concept",
+      "consent",
       "contact",
       "comment",
+      "constant",
       "context",
-      "conduct",
-      "extent",
-      "nonsense"
+      "conduct"
     ],
     "ga_rp_same": false,
     "ga_rp_same_reason": "structural_other"
@@ -105010,6 +105149,7 @@
     },
     "def": "Opposite in nature or direction.",
     "neighbors": [
+      "contract",
       "contrast",
       "content",
       "contest",
@@ -105065,6 +105205,7 @@
     "def": "Something given as part of a larger effort.",
     "neighbors": [
       "distribution",
+      "contradiction",
       "constitution",
       "controversial"
     ],
@@ -105091,7 +105232,9 @@
     },
     "def": "Causing a lot of disagreement or argument.",
     "neighbors": [
-      "contribution"
+      "controversy",
+      "contribution",
+      "contradiction"
     ],
     "respell_ga": "kahn-truh-VUR-shuhl",
     "respell_rp": "kon-truh-VUR-shuhl",
@@ -105143,13 +105286,13 @@
     "def": "To make someone believe that something is true.",
     "neighbors": [
       "concerned",
+      "conscience",
+      "consent",
       "consider",
       "consist",
       "container",
       "advance",
-      "annoyance",
-      "contain",
-      "finance"
+      "annoyance"
     ],
     "respell_ga": "kuhn-VINS",
     "respell_rp": "kuhn-VINS",
@@ -105174,6 +105317,7 @@
     },
     "def": "The legal right to control the use of a creative work.",
     "neighbors": [
+      "concrete",
       "rewrite",
       "copy"
     ],
@@ -105300,10 +105444,11 @@
       "cancel",
       "candle",
       "capsule",
+      "conceal",
+      "console",
       "pencil",
       "castle",
-      "counseling",
-      "counselling"
+      "counseling"
     ],
     "respell_ga": "KOWN-suhl",
     "respell_rp": "KOWN-suhl",
@@ -105329,6 +105474,7 @@
     "def": "Professional advice given to help someone with personal problems.",
     "neighbors": [
       "council",
+      "concerning",
       "cancel"
     ],
     "respell_ga": "KOWN-suh-ling",
@@ -105355,6 +105501,7 @@
     "def": "Professional advice given to help someone with personal problems (British spelling of counseling).",
     "neighbors": [
       "council",
+      "concerning",
       "cancel"
     ],
     "respell_ga": "KOWN-suh-ling",
@@ -105670,9 +105817,9 @@
       "criminal",
       "tropical",
       "atypical",
+      "clerical",
       "article",
-      "physical",
-      "cricket"
+      "physical"
     ],
     "ipa_actual_ga": "/ˈkrɪɾɪkəl/",
     "respell_ga": "KRI-di-kuhl",
@@ -105882,6 +106029,7 @@
     "neighbors": [
       "curiously",
       "glorious",
+      "clearness",
       "careless",
       "serious",
       "various",
@@ -105972,6 +106120,10 @@
     "def": "The money used in a particular country.",
     "neighbors": [
       "agency",
+      "conceal",
+      "concede",
+      "conceit",
+      "conceive",
       "current",
       "currently"
     ],
@@ -106187,7 +106339,7 @@
       "civil",
       "settle",
       "ankle",
-      "final"
+      "circuit"
     ],
     "respell_ga": "SY-kuhl",
     "respell_rp": "SY-kuhl",
@@ -107592,8 +107744,8 @@
       "discussion",
       "depressed",
       "devotion",
-      "expression",
-      "precious"
+      "compression",
+      "expression"
     ],
     "respell_ga": "di-PREH-shuhn",
     "respell_rp": "di-PREH-shuhn",
@@ -110280,7 +110432,7 @@
       "magician",
       "mission",
       "adoption",
-      "position"
+      "commission"
     ],
     "respell_ga": "uh-DI-shuhn",
     "respell_rp": "i-DI-shuhn",
@@ -110488,7 +110640,8 @@
     "def": "Relating to or powered by electricity.",
     "neighbors": [
       "electric",
-      "electricity"
+      "electricity",
+      "clerical"
     ],
     "respell_ga": "i-LEHK-tri-kuhl",
     "respell_rp": "i-LEHK-tri-kuhl",
@@ -113872,6 +114025,7 @@
     },
     "def": "Able to speak or write a language easily and accurately.",
     "neighbors": [
+      "client",
       "fluently",
       "flute"
     ],
@@ -113934,7 +114088,7 @@
       "flock",
       "link",
       "monk",
-      "flood"
+      "chunk"
     ],
     "respell_ga": "FLUHNGK",
     "respell_rp": "FLUHNGK",
@@ -115603,11 +115757,11 @@
       "gorgeous",
       "glory",
       "curious",
+      "clearness",
       "enormous",
       "notorious",
       "serious",
-      "various",
-      "lorry"
+      "various"
     ],
     "respell_ga": "GLAW-ree-uhs",
     "respell_rp": "GLO-reers",
@@ -118550,12 +118704,12 @@
     "neighbors": [
       "depression",
       "oppression",
+      "compression",
       "expression",
       "impressive",
       "impatient",
       "immigration",
-      "emotion",
-      "precious"
+      "emotion"
     ],
     "respell_ga": "im-PREH-shuhn",
     "respell_rp": "im-PREH-shuhn",
@@ -120076,6 +120230,7 @@
     "neighbors": [
       "internationally",
       "international",
+      "conventional",
       "eventually",
       "emotionally",
       "intention",
@@ -120350,6 +120505,7 @@
     "def": "The act of presenting something for the first time, or an opening section of a text.",
     "neighbors": [
       "instruction",
+      "contradiction",
       "production",
       "reduction",
       "destruction",
@@ -120723,10 +120879,10 @@
       "animation",
       "selection",
       "allegation",
+      "coalition",
       "education",
       "relation",
-      "aspiration",
-      "pollution"
+      "aspiration"
     ],
     "respell_ga": "y-suh-LAY-shuhn",
     "respell_rp": "y-suh-LAY-shuhn",
@@ -121246,9 +121402,9 @@
       "kinda",
       "countless",
       "thunderous",
+      "clearness",
       "calmness",
-      "candle",
-      "conscious"
+      "candle"
     ],
     "respell_ga": "KYND-nuhs",
     "respell_rp": "KYND-nis",
@@ -122477,13 +122633,13 @@
     "def": "A symbol or design used to represent a company or organization.",
     "neighbors": [
       "yoga",
+      "cocoa",
       "photo",
       "league",
       "loaf",
       "log",
       "ago",
-      "leg",
-      "load"
+      "leg"
     ],
     "respell_ga": "LOH-goh",
     "respell_rp": "LOH-goh",
@@ -122710,14 +122866,14 @@
     },
     "def": "A person who performs magic tricks.",
     "neighbors": [
+      "commission",
       "position",
       "edition",
       "addition",
       "mission",
       "admission",
       "collision",
-      "magical",
-      "possession"
+      "magical"
     ],
     "respell_ga": "muh-JI-shuhn",
     "respell_rp": "muh-JI-shuhn",
@@ -124366,14 +124522,14 @@
     },
     "def": "A man who lives a religious life in a monastery.",
     "neighbors": [
+      "chunk",
       "junk",
       "monkey",
       "link",
       "rank",
       "tank",
       "among",
-      "bank",
-      "mark"
+      "bank"
     ],
     "respell_ga": "MUHNGK",
     "respell_rp": "MUHNGK",
@@ -125740,6 +125896,8 @@
     "neighbors": [
       "concept",
       "content",
+      "conscience",
+      "consent",
       "intense",
       "sense"
     ],
@@ -126868,11 +127026,11 @@
       "position",
       "possession",
       "composition",
+      "coalition",
       "musician",
       "tradition",
       "magician",
-      "operation",
-      "politician"
+      "operation"
     ],
     "respell_ga": "ah-puh-ZI-shuhn",
     "respell_rp": "o-puh-ZI-shuhn",
@@ -126932,11 +127090,11 @@
       "depression",
       "impression",
       "precious",
+      "compression",
       "affection",
       "apparent",
       "approval",
-      "freshman",
-      "operation"
+      "freshman"
     ],
     "respell_ga": "uh-PREH-shuhn",
     "respell_rp": "uh-PREH-shuhn",
@@ -129375,6 +129533,7 @@
     "def": "A person involved in politics, especially an elected official.",
     "neighbors": [
       "prohibition",
+      "collocation",
       "opposition",
       "politics",
       "competition",
@@ -129690,6 +129849,7 @@
     },
     "def": "A person who delivers mail (British English).",
     "neighbors": [
+      "coastline",
       "coastal",
       "salmon",
       "pasta",
@@ -130747,10 +130907,10 @@
       "possession",
       "protection",
       "professional",
+      "confession",
       "tradition",
       "affection",
-      "oppression",
-      "professor"
+      "oppression"
     ],
     "respell_ga": "pruh-FEH-shuhn",
     "respell_rp": "pruh-FEH-shuhn",
@@ -130902,6 +131062,7 @@
       "preposition",
       "profession",
       "promotion",
+      "coalition",
       "tradition",
       "position"
     ],
@@ -131637,6 +131798,7 @@
     "def": "To remove impurities from something.",
     "neighbors": [
       "beautify",
+      "clarify",
       "horrify",
       "unify",
       "plural",
@@ -131729,6 +131891,7 @@
       "quality",
       "classify",
       "amplify",
+      "clarify",
       "equality",
       "modify",
       "column"
@@ -132440,6 +132603,7 @@
       "discussion",
       "election",
       "reflection",
+      "conception",
       "section",
       "session",
       "receptionist"
@@ -133524,12 +133688,12 @@
     "neighbors": [
       "remain",
       "defender",
+      "commander",
       "remember",
       "demand",
       "refund",
       "remind",
-      "regain",
-      "retain"
+      "regain"
     ],
     "ga_rp_same": false,
     "ga_rp_same_reason": "rhoticity"
@@ -134536,6 +134700,7 @@
     },
     "def": "The act of bringing separated parts back together.",
     "neighbors": [
+      "classification",
       "certification"
     ],
     "respell_ga": "ree-oo-nuh-fuh-KAY-shuhn",
@@ -134796,8 +134961,8 @@
       "wrapping",
       "boiling",
       "ceiling",
-      "feeling",
-      "rating"
+      "coaching",
+      "feeling"
     ],
     "respell_ga": "ROH-ling",
     "respell_rp": "ROH-ling",
@@ -135828,6 +135993,7 @@
     "def": "In a way that is kept hidden from others.",
     "neighbors": [
       "secret",
+      "circuitry",
       "secretary",
       "equally"
     ],
@@ -135917,6 +136083,7 @@
       "suggest",
       "affect",
       "suspect",
+      "collector",
       "slept",
       "subject"
     ],
@@ -136026,11 +136193,11 @@
       "separation",
       "generation",
       "foundation",
+      "concession",
       "situation",
       "tension",
       "mention",
-      "section",
-      "station"
+      "section"
     ],
     "respell_ga": "sehn-SAY-shuhn",
     "respell_rp": "sehn-SAY-shuhn",
@@ -136220,7 +136387,7 @@
       "surgeon",
       "certain",
       "circle",
-      "purpose"
+      "circuit"
     ],
     "respell_ga": "SUR-vuhs",
     "respell_rp": "SUR-vis",
@@ -139099,10 +139266,10 @@
       "suspicion",
       "magician",
       "officially",
+      "commission",
       "position",
       "solution",
-      "edition",
-      "addition"
+      "edition"
     ],
     "respell_ga": "suh-FI-shuhnt",
     "respell_rp": "suh-FI-shuhnt",
@@ -139244,9 +139411,9 @@
       "salmon",
       "somehow",
       "bucket",
+      "circuit",
       "someday",
-      "sudden",
-      "summary"
+      "sudden"
     ],
     "respell_ga": "SUH-muht",
     "respell_rp": "SUH-mit",
@@ -139611,9 +139778,9 @@
       "surgeon",
       "certain",
       "circle",
+      "circuit",
       "nervous",
-      "purpose",
-      "surfing"
+      "purpose"
     ],
     "respell_ga": "SUR-fuhs",
     "respell_rp": "SUR-fis",
@@ -139877,12 +140044,12 @@
     "neighbors": [
       "selection",
       "sufficient",
+      "compassion",
       "condition",
       "magician",
+      "commission",
       "position",
-      "solution",
-      "edition",
-      "addition"
+      "solution"
     ],
     "respell_ga": "suh-SPI-shuhn",
     "respell_rp": "suh-SPI-shuhn",
@@ -139966,6 +140133,7 @@
     "neighbors": [
       "slogan",
       "spoken",
+      "colon",
       "woken"
     ],
     "respell_ga": "SWOH-luhn",
@@ -140402,8 +140570,8 @@
       "tiring",
       "turning",
       "ceiling",
-      "feeling",
-      "heating"
+      "coaching",
+      "feeling"
     ],
     "respell_ga": "TEE-ching",
     "respell_rp": "TEE-ching",
@@ -140818,9 +140986,9 @@
       "paralyse",
       "paralyze",
       "terribly",
+      "clarify",
       "telephone",
-      "terrible",
-      "horrify"
+      "terrible"
     ],
     "respell_ga": "TEH-ruh-fyd",
     "respell_rp": "TEH-ri-fyd",
@@ -143071,6 +143239,7 @@
     "def": "All of space and everything in it.",
     "neighbors": [
       "unify",
+      "converse",
       "unit",
       "university"
     ],
@@ -143103,8 +143272,8 @@
       "unlike",
       "bless",
       "assess",
-      "ness",
-      "less"
+      "confess",
+      "ness"
     ],
     "respell_ga": "uhn-LEHS",
     "respell_rp": "uhn-LEHS",
@@ -143626,8 +143795,10 @@
       "bakery",
       "currency",
       "patience",
-      "bacon",
-      "taken"
+      "conceal",
+      "concede",
+      "conceit",
+      "conceive"
     ],
     "respell_ga": "VAY-kuhn-see",
     "respell_rp": "VAY-kuhn-see",
@@ -145085,6 +145256,7 @@
     "def": "The state of being ready or willing to do something.",
     "neighbors": [
       "religious",
+      "clearness",
       "delicious",
       "witness",
       "illness"
@@ -145316,6 +145488,7 @@
     "neighbors": [
       "checkout",
       "working",
+      "circuit",
       "weren't",
       "without",
       "worker",
@@ -145513,6 +145686,7 @@
     "neighbors": [
       "logo",
       "cola",
+      "coma",
       "soda",
       "sofa"
     ],
@@ -145918,7 +146092,8 @@
     "group": null,
     "pattern": null,
     "neighbors": [
-      "combination"
+      "combination",
+      "collocation"
     ],
     "rp_ipa": "/əkˌɒmədˈeɪʃən/",
     "ga_rp_same": false,
@@ -146025,7 +146200,8 @@
     "neighbors": [
       "attainable",
       "adorable",
-      "available"
+      "available",
+      "conceivable"
     ],
     "respell_ga": "uh-CHEE-vuh-buhl",
     "respell_rp": "uh-CHEE-vuh-buhl",
@@ -146084,7 +146260,9 @@
     "neighbors": [
       "accusation",
       "exhibition",
+      "coalition",
       "opposition",
+      "commission",
       "position"
     ],
     "respell_ga": "a-kwuh-ZI-shuhn",
@@ -146172,9 +146350,9 @@
       "abuse",
       "amuse",
       "account",
+      "commute",
       "cube",
-      "Q",
-      "queue"
+      "Q"
     ],
     "respell_ga": "uh-KYOOT",
     "respell_rp": "uh-KYOOT",
@@ -147093,7 +147271,7 @@
       "isolation",
       "accusation",
       "aspiration",
-      "immigration"
+      "collocation"
     ],
     "respell_ga": "a-luh-GAY-shuhn",
     "respell_rp": "a-luh-GAY-shuhn",
@@ -147119,6 +147297,7 @@
     "pattern": null,
     "neighbors": [
       "allowance",
+      "client",
       "annoyance",
       "science",
       "lion"
@@ -147682,8 +147861,8 @@
       "abuse",
       "acute",
       "amaze",
-      "mule",
-      "refuse"
+      "commute",
+      "mule"
     ],
     "respell_ga": "uh-MYOOZ",
     "respell_rp": "uh-MYOOZ",
@@ -152071,12 +152250,12 @@
     "neighbors": [
       "cabin",
       "balanced",
+      "coconut",
       "calendar",
       "capital",
       "casual",
       "definite",
-      "fascinate",
-      "habitat"
+      "fascinate"
     ],
     "respell_ga": "KA-buh-nuht",
     "respell_rp": "KA-buh-nuht",
@@ -152134,13 +152313,13 @@
     "rp_ipa": "/ˈkɒmliː/",
     "neighbors": [
       "barley",
+      "colleague",
+      "commerce",
       "comet",
       "comic",
       "common",
       "firmly",
-      "timely",
-      "coffee",
-      "collar"
+      "timely"
     ],
     "respell_ga": "KAHM-lee",
     "respell_rp": "KOM-lee",
@@ -152249,12 +152428,12 @@
     "neighbors": [
       "cabin",
       "barren",
+      "colon",
       "cabbage",
       "camel",
       "cancer",
       "candy",
-      "carrot",
-      "castle"
+      "carrot"
     ],
     "respell_ga": "KA-nuhn",
     "respell_rp": "KA-nuhn",
@@ -152508,13 +152687,13 @@
     "rp_ipa": "/ˈkerɪŋ/",
     "neighbors": [
       "bearing",
+      "coaching",
       "boring",
       "carriage",
       "cherish",
       "cooking",
       "during",
-      "hearing",
-      "killing"
+      "hearing"
     ],
     "respell_ga": "KEH-ring",
     "respell_rp": "KEH-ring",
@@ -152937,7 +153116,8 @@
       "chemistry",
       "military",
       "necessary",
-      "temporary"
+      "temporary",
+      "circuitry"
     ],
     "ipa_actual_ga": "/ˈsɛməˌɾɛri/",
     "respell_ga": "SEH-muh-deh-ree",
@@ -153009,6 +153189,7 @@
     "neighbors": [
       "civilisation",
       "satisfaction",
+      "classification",
       "reunification",
       "certificate"
     ],
@@ -153382,5 +153563,2942 @@
     "respell_rp": "CHIM-nee",
     "ga_rp_same": true,
     "ga_rp_same_reason": "length_marking_only"
+  },
+  {
+    "w": "chunk",
+    "ipa": "/tʃʌŋk/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A thick, solid piece of something.",
+    "gloss": {
+      "en": "chunk",
+      "ja": "大きな塊",
+      "zh": "大块",
+      "ko": "덩어리",
+      "fil": "malaking piraso"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/tʃʌŋk/",
+    "neighbors": [
+      "junk",
+      "monk",
+      "bank",
+      "link",
+      "pink",
+      "rank",
+      "sink",
+      "tank"
+    ],
+    "respell_ga": "CHUHNGK",
+    "respell_rp": "CHUHNGK",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "w": "circuit",
+    "ipa": "/ˈsɝkət/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A closed path for electricity; a circular route or series of events.",
+    "gloss": {
+      "en": "circuit",
+      "ja": "回路、周回",
+      "zh": "电路、巡回",
+      "ko": "회로, 순회",
+      "fil": "sirkito"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈsɜːkət/",
+    "neighbors": [
+      "circle",
+      "circus",
+      "bucket",
+      "certain",
+      "cycle",
+      "jacket",
+      "pocket",
+      "service"
+    ],
+    "respell_ga": "SUR-kuht",
+    "respell_rp": "SUR-kuht",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "rhoticity"
+  },
+  {
+    "w": "circuitry",
+    "ipa": "/ˈsɝkətri/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A system of electrical circuits.",
+    "gloss": {
+      "en": "circuitry",
+      "ja": "回路網",
+      "zh": "电路系统",
+      "ko": "회로망",
+      "fil": "sistema ng sirkito"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈsɜːkətriː/",
+    "neighbors": [
+      "circuit",
+      "certainly",
+      "certainty",
+      "cemetery",
+      "bakery",
+      "poetry",
+      "secretly",
+      "sixty"
+    ],
+    "respell_ga": "SUR-kuh-tree",
+    "respell_rp": "SUR-kuh-tree",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "rhoticity"
+  },
+  {
+    "w": "circumstance",
+    "ipa": "/ˈsɝkəmˌstæns/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A fact or condition connected with an event.",
+    "gloss": {
+      "en": "circumstance",
+      "ja": "状況、事情",
+      "zh": "情况",
+      "ko": "상황",
+      "fil": "kalagayan"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈsɜːkəmˌstæns/",
+    "neighbors": [],
+    "respell_ga": "SUR-kuhm-stans",
+    "respell_rp": "SUR-kuhm-stans",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "rhoticity"
+  },
+  {
+    "w": "citywide",
+    "ipa": "/ˈsɪtiˌwaɪd/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Covering or affecting an entire city.",
+    "gloss": {
+      "en": "citywide",
+      "ja": "市全体の",
+      "zh": "全市的",
+      "ko": "시 전체의",
+      "fil": "buong lungsod"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈsɪtiːˌwaɪd/",
+    "neighbors": [
+      "stride",
+      "seaside",
+      "seaweed",
+      "city"
+    ],
+    "ipa_actual_ga": "/ˈsɪɾiˌwaɪd/",
+    "respell_ga": "SI-dee-wyd",
+    "respell_rp": "SI-tee-wyd",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "ga_allophony"
+  },
+  {
+    "w": "clarify",
+    "ipa": "/ˈklɛrəˌfaɪ/",
+    "cefr": "B2",
+    "pos": "動詞",
+    "def": "To make something clearer or easier to understand.",
+    "gloss": {
+      "en": "clarify",
+      "ja": "明確にする",
+      "zh": "澄清",
+      "ko": "명확히 하다",
+      "fil": "linawin"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈklerəˌfaɪ/",
+    "neighbors": [
+      "classify",
+      "terrify",
+      "purify",
+      "qualify",
+      "terrified",
+      "horrify",
+      "sheriff"
+    ],
+    "respell_ga": "KLEH-ruh-fy",
+    "respell_rp": "KLEH-ruh-fy",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "dress_notation_only"
+  },
+  {
+    "w": "classification",
+    "ipa": "/ˌklæsəfəˈkeɪʃən/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "The act of grouping things into categories.",
+    "gloss": {
+      "en": "classification",
+      "ja": "分類",
+      "zh": "分类",
+      "ko": "분류",
+      "fil": "pag-uuri"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˌklæsəfəˈkeɪʃən/",
+    "neighbors": [
+      "reunification",
+      "certification"
+    ],
+    "respell_ga": "kla-suh-fuh-KAY-shuhn",
+    "respell_rp": "kla-suh-fuh-KAY-shuhn",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "w": "clearness",
+    "ipa": "/ˈklɪrnəs/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "The quality of being easy to see, hear, or understand.",
+    "gloss": {
+      "en": "clearness",
+      "ja": "明瞭さ",
+      "zh": "清晰",
+      "ko": "명료함",
+      "fil": "kalinawan"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈklɪənəs/",
+    "neighbors": [
+      "awareness",
+      "curious",
+      "glorious",
+      "kindness",
+      "business",
+      "calmness",
+      "careless",
+      "clearly"
+    ],
+    "respell_ga": "KLEER-nuhs",
+    "respell_rp": "KLEER-nuhs",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "rhoticity"
+  },
+  {
+    "w": "clerical",
+    "ipa": "/ˈklɛrɪkəl/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Relating to office work; relating to the clergy.",
+    "gloss": {
+      "en": "clerical",
+      "ja": "事務の、聖職者の",
+      "zh": "文书的",
+      "ko": "사무의",
+      "fil": "klerikal"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈklerɪkəl/",
+    "neighbors": [
+      "classical",
+      "critical",
+      "character",
+      "chemical",
+      "logical",
+      "careful",
+      "cricket",
+      "electrical"
+    ],
+    "respell_ga": "KLEH-ri-kuhl",
+    "respell_rp": "KLEH-ri-kuhl",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "dress_notation_only"
+  },
+  {
+    "w": "client",
+    "ipa": "/ˈklaɪənt/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A person who uses the services of a professional or company.",
+    "gloss": {
+      "en": "client",
+      "ja": "顧客、依頼人",
+      "zh": "客户",
+      "ko": "고객",
+      "fil": "kliyente"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈklaɪənt/",
+    "neighbors": [
+      "alliance",
+      "climate",
+      "couldn't",
+      "fluent",
+      "current",
+      "giant",
+      "quiet",
+      "lion"
+    ],
+    "respell_ga": "KLY-uhnt",
+    "respell_rp": "KLY-uhnt",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "w": "closure",
+    "ipa": "/ˈkloʊʒɚ/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "The act of closing something; a sense of resolution.",
+    "gloss": {
+      "en": "closure",
+      "ja": "閉鎖、終結",
+      "zh": "关闭",
+      "ko": "폐쇄",
+      "fil": "pagsasara"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkləʊʒə/",
+    "neighbors": [
+      "cleaner",
+      "clever",
+      "climber",
+      "closed",
+      "clothes",
+      "pleasure",
+      "clone",
+      "close"
+    ],
+    "respell_ga": "KLOH-zher",
+    "respell_rp": "KLOH-zhuh",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "goat_vowel"
+  },
+  {
+    "w": "clothing",
+    "ipa": "/ˈkloʊðɪŋ/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "Clothes collectively.",
+    "gloss": {
+      "en": "clothing",
+      "ja": "衣類",
+      "zh": "衣物",
+      "ko": "의류",
+      "fil": "damit"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkləʊðɪŋ/",
+    "neighbors": [
+      "climbing",
+      "coaching",
+      "clothes",
+      "clothe"
+    ],
+    "respell_ga": "KLOH-thing",
+    "respell_rp": "KLOH-thing",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "goat_vowel"
+  },
+  {
+    "w": "clumsy",
+    "ipa": "/ˈklʌmzi/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Awkward in movement; lacking grace.",
+    "gloss": {
+      "en": "clumsy",
+      "ja": "不器用な",
+      "zh": "笨拙的",
+      "ko": "서투른",
+      "fil": "pabigla-bigla"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈklʌmziː/",
+    "neighbors": [],
+    "respell_ga": "KLUHM-zee",
+    "respell_rp": "KLUHM-zee",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "length_marking_only"
+  },
+  {
+    "w": "coaching",
+    "ipa": "/ˈkoʊtʃɪŋ/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "The activity of training or instructing someone.",
+    "gloss": {
+      "en": "coaching",
+      "ja": "コーチング、指導",
+      "zh": "教练指导",
+      "ko": "코칭",
+      "fil": "pagsasanay"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkəʊtʃɪŋ/",
+    "neighbors": [
+      "caring",
+      "cooking",
+      "killing",
+      "rolling",
+      "teaching",
+      "clothing",
+      "coach",
+      "king"
+    ],
+    "respell_ga": "KOH-ching",
+    "respell_rp": "KOH-ching",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "goat_vowel"
+  },
+  {
+    "w": "coalition",
+    "ipa": "/ˌkoʊəˈlɪʃən/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A temporary alliance of groups or parties.",
+    "gloss": {
+      "en": "coalition",
+      "ja": "連立、連合",
+      "zh": "联盟",
+      "ko": "연합",
+      "fil": "koalisyon"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˌkəʊəˈlɪʃən/",
+    "neighbors": [
+      "commission",
+      "collision",
+      "collection",
+      "condition",
+      "isolation",
+      "opposition",
+      "tradition",
+      "acquisition"
+    ],
+    "respell_ga": "koh-uh-LI-shuhn",
+    "respell_rp": "koh-uh-LI-shuhn",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "goat_vowel"
+  },
+  {
+    "w": "coastline",
+    "ipa": "/ˈkoʊstˌlaɪn/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "The line where the land meets the sea.",
+    "gloss": {
+      "en": "coastline",
+      "ja": "海岸線",
+      "zh": "海岸线",
+      "ko": "해안선",
+      "fil": "baybayin"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkəʊstˌlaɪn/",
+    "neighbors": [
+      "postman",
+      "coastal",
+      "mostly",
+      "colon",
+      "outline",
+      "coast"
+    ],
+    "respell_ga": "KOHST-lyn",
+    "respell_rp": "KOHST-lyn",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "goat_vowel"
+  },
+  {
+    "w": "cocktail",
+    "ipa": "/ˈkɑkˌteɪl/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A mixed alcoholic drink.",
+    "gloss": {
+      "en": "cocktail",
+      "ja": "カクテル",
+      "zh": "鸡尾酒",
+      "ko": "칵테일",
+      "fil": "kaktel"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkɒkˌteɪl/",
+    "neighbors": [],
+    "respell_ga": "KAHK-tayl",
+    "respell_rp": "KOK-tayl",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "lot_vowel"
+  },
+  {
+    "w": "cocoa",
+    "ipa": "/ˈkoʊkoʊ/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A powder made from cacao seeds; a drink made from it.",
+    "gloss": {
+      "en": "cocoa",
+      "ja": "ココア",
+      "zh": "可可",
+      "ko": "코코아",
+      "fil": "kakaw"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkəʊkəʊ/",
+    "neighbors": [
+      "coke",
+      "coma",
+      "coast",
+      "cola",
+      "cold",
+      "cooker",
+      "cookie",
+      "kilo"
+    ],
+    "respell_ga": "KOH-koh",
+    "respell_rp": "KOH-koh",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "goat_vowel"
+  },
+  {
+    "w": "coconut",
+    "ipa": "/ˈkoʊkəˌnʌt/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "The large fruit of the coconut palm.",
+    "gloss": {
+      "en": "coconut",
+      "ja": "ココナッツ",
+      "zh": "椰子",
+      "ko": "코코넛",
+      "fil": "niyog"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkəʊkəˌnʌt/",
+    "neighbors": [
+      "cabinet",
+      "client",
+      "couldn't",
+      "moment",
+      "colon",
+      "current",
+      "woken"
+    ],
+    "respell_ga": "KOH-kuh-nuht",
+    "respell_rp": "KOH-kuh-nuht",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "goat_vowel"
+  },
+  {
+    "w": "coherence",
+    "ipa": "/koʊˈhɪrəns/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "The quality of being logical and consistent.",
+    "gloss": {
+      "en": "coherence",
+      "ja": "一貫性",
+      "zh": "连贯性",
+      "ko": "일관성",
+      "fil": "pagkakaugnay"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kəʊˈhɪrəns/",
+    "neighbors": [
+      "coherent",
+      "appearance"
+    ],
+    "respell_ga": "koh-HI-ruhns",
+    "respell_rp": "koh-HI-ruhns",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "structural_other"
+  },
+  {
+    "w": "coherent",
+    "ipa": "/koʊˈhɪrənt/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Logical and consistent; easy to follow.",
+    "gloss": {
+      "en": "coherent",
+      "ja": "一貫した",
+      "zh": "连贯的",
+      "ko": "일관성 있는",
+      "fil": "magkaugnay"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kəʊˈhɪrənt/",
+    "neighbors": [
+      "coherence"
+    ],
+    "respell_ga": "koh-HI-ruhnt",
+    "respell_rp": "koh-HI-ruhnt",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "structural_other"
+  },
+  {
+    "w": "coincide",
+    "ipa": "/ˌkoʊənˈsaɪd/",
+    "cefr": "B2",
+    "pos": "動詞",
+    "def": "To happen at the same time; to correspond exactly.",
+    "gloss": {
+      "en": "coincide",
+      "ja": "同時に起こる、一致する",
+      "zh": "同时发生、一致",
+      "ko": "동시에 일어나다",
+      "fil": "magkataon"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˌkəʊənˈsaɪd/",
+    "neighbors": [
+      "concede",
+      "concerned",
+      "consider",
+      "conceal",
+      "conceit",
+      "conceive",
+      "confine",
+      "console"
+    ],
+    "respell_ga": "koh-uhn-SYD",
+    "respell_rp": "koh-uhn-SYD",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "goat_vowel"
+  },
+  {
+    "w": "coincidence",
+    "ipa": "/koʊˈɪnsədəns/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A chance occurrence of events at the same time.",
+    "gloss": {
+      "en": "coincidence",
+      "ja": "偶然の一致",
+      "zh": "巧合",
+      "ko": "우연의 일치",
+      "fil": "pagkakataon"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kəʊˈɪnsədəns/",
+    "neighbors": [
+      "confidence",
+      "incident"
+    ],
+    "ipa_actual_ga": "/koʊˈɪnsədn̩s/",
+    "respell_ga": "koh-IN-suh-duhns",
+    "respell_rp": "koh-IN-suh-duhns",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "ga_allophony"
+  },
+  {
+    "w": "colleague",
+    "ipa": "/ˈkɑliɡ/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A person one works with, especially in a profession.",
+    "gloss": {
+      "en": "colleague",
+      "ja": "同僚",
+      "zh": "同事",
+      "ko": "동료",
+      "fil": "kasamahan"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkɒliːɡ/",
+    "neighbors": [
+      "calmly",
+      "college",
+      "column",
+      "clog",
+      "clean",
+      "coffee",
+      "collar",
+      "copy"
+    ],
+    "respell_ga": "KAH-leeg",
+    "respell_rp": "KO-leeg",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "lot_vowel"
+  },
+  {
+    "w": "collector",
+    "ipa": "/kəˈlɛktɚ/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A person who collects things as a hobby or for a job.",
+    "gloss": {
+      "en": "collector",
+      "ja": "収集家",
+      "zh": "收藏家",
+      "ko": "수집가",
+      "fil": "kolektor"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kəˈlektə/",
+    "neighbors": [
+      "collect",
+      "connect",
+      "select",
+      "character",
+      "semester",
+      "conductor",
+      "collection",
+      "director"
+    ],
+    "respell_ga": "kuh-LEHK-ter",
+    "respell_rp": "kuh-LEHK-tuh",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "rhoticity"
+  },
+  {
+    "w": "collocation",
+    "ipa": "/ˌkɑləˈkeɪʃən/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A natural combination of words often used together.",
+    "gloss": {
+      "en": "collocation",
+      "ja": "連語",
+      "zh": "搭配",
+      "ko": "연어",
+      "fil": "kolokasyon"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˌkɒləˈkeɪʃən/",
+    "neighbors": [
+      "application",
+      "politician",
+      "accommodation",
+      "allegation",
+      "consolation",
+      "collection",
+      "combination",
+      "education"
+    ],
+    "respell_ga": "kah-luh-KAY-shuhn",
+    "respell_rp": "ko-luh-KAY-shuhn",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "lot_vowel"
+  },
+  {
+    "w": "colon",
+    "ipa": "/ˈkoʊlən/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A punctuation mark (:); part of the large intestine.",
+    "gloss": {
+      "en": "colon",
+      "ja": "コロン、結腸",
+      "zh": "冒号、结肠",
+      "ko": "콜론, 결장",
+      "fil": "kolon"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkəʊlən/",
+    "neighbors": [
+      "cola",
+      "canon",
+      "cabin",
+      "caution",
+      "chosen",
+      "column",
+      "common",
+      "cotton"
+    ],
+    "respell_ga": "KOH-luhn",
+    "respell_rp": "KOH-luhn",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "goat_vowel"
+  },
+  {
+    "w": "colonial",
+    "ipa": "/kəˈloʊniəl/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Relating to a colony or colonialism.",
+    "gloss": {
+      "en": "colonial",
+      "ja": "植民地の",
+      "zh": "殖民地的",
+      "ko": "식민지의",
+      "fil": "kolonyal"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kəˈləʊniːəl/",
+    "neighbors": [],
+    "respell_ga": "kuh-LOH-nee-uhl",
+    "respell_rp": "kuh-LOH-nee-uhl",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "goat_vowel"
+  },
+  {
+    "w": "coma",
+    "ipa": "/ˈkoʊmə/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A deep state of unconsciousness.",
+    "gloss": {
+      "en": "coma",
+      "ja": "昏睡状態",
+      "zh": "昏迷",
+      "ko": "혼수상태",
+      "fil": "koma"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkəʊmə/",
+    "neighbors": [
+      "cola",
+      "comma",
+      "comb",
+      "cocoa",
+      "camp",
+      "coast",
+      "cold",
+      "soda"
+    ],
+    "respell_ga": "KOH-muh",
+    "respell_rp": "KOH-muh",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "goat_vowel"
+  },
+  {
+    "w": "comfortably",
+    "ipa": "/ˈkʌmfɚtəbli/",
+    "cefr": "B2",
+    "pos": "副詞",
+    "def": "In a way that is physically relaxed or free from worry.",
+    "gloss": {
+      "en": "comfortably",
+      "ja": "快適に",
+      "zh": "舒适地",
+      "ko": "편안하게",
+      "fil": "komportable"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkʌmfətəbliː/",
+    "neighbors": [
+      "comfortable"
+    ],
+    "ipa_actual_ga": "/ˈkʌmfɚɾəbli/",
+    "respell_ga": "KUHM-fer-duh-blee",
+    "respell_rp": "KUHM-fuh-tuh-blee",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "ga_allophony"
+  },
+  {
+    "w": "commander",
+    "ipa": "/kəˈmændɚ/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A person in charge, especially in the military.",
+    "gloss": {
+      "en": "commander",
+      "ja": "指揮官",
+      "zh": "指挥官",
+      "ko": "지휘관",
+      "fil": "komandante"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kəˈmændə/",
+    "neighbors": [
+      "command",
+      "calendar",
+      "composer",
+      "consider",
+      "remainder",
+      "demand",
+      "cancer",
+      "candy"
+    ],
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "rhoticity"
+  },
+  {
+    "w": "commemorate",
+    "ipa": "/kəˈmɛməˌreɪt/",
+    "cefr": "B2",
+    "pos": "動詞",
+    "def": "To honor the memory of someone or something.",
+    "gloss": {
+      "en": "commemorate",
+      "ja": "記念する",
+      "zh": "纪念",
+      "ko": "기념하다",
+      "fil": "gunitain"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kəˈmeməˌreɪt/",
+    "neighbors": [],
+    "respell_ga": "kuh-MEH-muh-rayt",
+    "respell_rp": "kuh-MEH-muh-rayt",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "dress_notation_only"
+  },
+  {
+    "w": "commerce",
+    "ipa": "/ˈkɑmɚs/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "The activity of buying and selling goods.",
+    "gloss": {
+      "en": "commerce",
+      "ja": "商業",
+      "zh": "商业",
+      "ko": "상업",
+      "fil": "komersyo"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkɒməs/",
+    "neighbors": [
+      "calmly",
+      "camera",
+      "comet",
+      "comic",
+      "common",
+      "bomber",
+      "calmness",
+      "collar"
+    ],
+    "respell_ga": "KAH-mers",
+    "respell_rp": "KO-muhs",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "lot_vowel"
+  },
+  {
+    "w": "commission",
+    "ipa": "/kəˈmɪʃən/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A group given official authority; a fee for a service.",
+    "gloss": {
+      "en": "commission",
+      "ja": "委員会、手数料",
+      "zh": "委员会、佣金",
+      "ko": "위원회, 수수료",
+      "fil": "komisyon"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kəˈmɪʃən/",
+    "neighbors": [
+      "admission",
+      "collision",
+      "commercial",
+      "magician",
+      "permission",
+      "position",
+      "coalition",
+      "compassion"
+    ],
+    "respell_ga": "kuh-MI-shuhn",
+    "respell_rp": "kuh-MI-shuhn",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "w": "commonwealth",
+    "ipa": "/ˈkɑmənˌwɛlθ/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A group of independent countries associated together.",
+    "gloss": {
+      "en": "commonwealth",
+      "ja": "連邦、共同体",
+      "zh": "联邦",
+      "ko": "연방",
+      "fil": "komonwelt"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkɒmənˌwelθ/",
+    "neighbors": [
+      "commonly"
+    ],
+    "respell_ga": "KAH-muhn-wehlth",
+    "respell_rp": "KO-muhn-wehlth",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "lot_vowel"
+  },
+  {
+    "w": "communicative",
+    "ipa": "/kəˈmjunəˌkeɪtɪv/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Willing and able to share information; talkative.",
+    "gloss": {
+      "en": "communicative",
+      "ja": "話好きな、意思疎通のできる",
+      "zh": "善于交流的",
+      "ko": "의사소통을 잘하는",
+      "fil": "palakaibigan"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kəˈmjuːnəˌkeɪtɪv/",
+    "neighbors": [
+      "communicate",
+      "communication",
+      "community"
+    ],
+    "ipa_actual_ga": "/kəˈmjunəˌkeɪɾɪv/",
+    "respell_ga": "kuh-MYOO-nuh-kay-div",
+    "respell_rp": "kuh-MYOO-nuh-kay-tiv",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "ga_allophony"
+  },
+  {
+    "w": "community",
+    "ipa": "/kəˈmjunəti/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A group of people living in the same place or sharing interests.",
+    "gloss": {
+      "en": "community",
+      "ja": "地域社会、共同体",
+      "zh": "社区",
+      "ko": "공동체",
+      "fil": "komunidad"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kəˈmjuːnətiː/",
+    "neighbors": [
+      "communicate",
+      "commute"
+    ],
+    "ipa_actual_ga": "/kəˈmjunəɾi/",
+    "respell_ga": "kuh-MYOO-nuh-dee",
+    "respell_rp": "kuh-MYOO-nuh-tee",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "ga_allophony"
+  },
+  {
+    "w": "commute",
+    "ipa": "/kəˈmjut/",
+    "cefr": "B2",
+    "pos": "動詞",
+    "def": "To travel regularly between home and work.",
+    "gloss": {
+      "en": "commute",
+      "ja": "通勤する",
+      "zh": "通勤",
+      "ko": "통근하다",
+      "fil": "mag-commute"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kəˈmjuːt/",
+    "neighbors": [
+      "compute",
+      "compete",
+      "acute",
+      "amuse",
+      "commit",
+      "computer",
+      "cute"
+    ],
+    "respell_ga": "kuh-MYOOT",
+    "respell_rp": "kuh-MYOOT",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "length_marking_only"
+  },
+  {
+    "w": "compassion",
+    "ipa": "/kəmˈpæʃən/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "Sympathy and concern for the suffering of others.",
+    "gloss": {
+      "en": "compassion",
+      "ja": "思いやり、慈悲",
+      "zh": "同情",
+      "ko": "동정심",
+      "fil": "habag"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kəmˈpæʃən/",
+    "neighbors": [
+      "commission",
+      "completion",
+      "compression",
+      "companion",
+      "compassionate",
+      "concession",
+      "confession",
+      "collection"
+    ],
+    "respell_ga": "kuhm-PA-shuhn",
+    "respell_rp": "kuhm-PA-shuhn",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "w": "compassionate",
+    "ipa": "/kəmˈpæʃənət/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Feeling or showing sympathy for others.",
+    "gloss": {
+      "en": "compassionate",
+      "ja": "思いやりのある",
+      "zh": "有同情心的",
+      "ko": "동정심 많은",
+      "fil": "mahabagin"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kəmˈpæʃənət/",
+    "neighbors": [
+      "compassion",
+      "compatible",
+      "component"
+    ],
+    "respell_ga": "kuhm-PA-shuh-nuht",
+    "respell_rp": "kuhm-PA-shuh-nuht",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "w": "compatible",
+    "ipa": "/kəmˈpætəbəl/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Able to exist or work together without conflict.",
+    "gloss": {
+      "en": "compatible",
+      "ja": "互換性のある",
+      "zh": "兼容的",
+      "ko": "호환되는",
+      "fil": "tugma"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kəmˈpætəbəl/",
+    "neighbors": [
+      "compassionate",
+      "comfortable"
+    ],
+    "ipa_actual_ga": "/kəmˈpæɾəbəl/",
+    "respell_ga": "kuhm-PA-duh-buhl",
+    "respell_rp": "kuhm-PA-tuh-buhl",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "ga_allophony"
+  },
+  {
+    "w": "compensate",
+    "ipa": "/ˈkɑmpənˌseɪt/",
+    "cefr": "B2",
+    "pos": "動詞",
+    "def": "To give something to make up for loss or harm.",
+    "gloss": {
+      "en": "compensate",
+      "ja": "補償する",
+      "zh": "补偿",
+      "ko": "보상하다",
+      "fil": "bayaran"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkɒmpənˌseɪt/",
+    "neighbors": [
+      "competent",
+      "complicate",
+      "compensation"
+    ],
+    "respell_ga": "KAHM-puhn-sayt",
+    "respell_rp": "KOM-puhn-sayt",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "lot_vowel"
+  },
+  {
+    "w": "compensation",
+    "ipa": "/ˌkɑmpənˈseɪʃən/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "Something given to make up for loss, harm, or work.",
+    "gloss": {
+      "en": "compensation",
+      "ja": "補償、報酬",
+      "zh": "补偿",
+      "ko": "보상",
+      "fil": "kabayaran"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˌkɒmpənˈseɪʃən/",
+    "neighbors": [
+      "combination",
+      "competition",
+      "composition",
+      "compensate",
+      "accommodation",
+      "comprehension",
+      "consolation",
+      "concentration"
+    ],
+    "respell_ga": "kahm-puhn-SAY-shuhn",
+    "respell_rp": "kom-puhn-SAY-shuhn",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "lot_vowel"
+  },
+  {
+    "w": "competence",
+    "ipa": "/ˈkɑmpətəns/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "The ability to do something well.",
+    "gloss": {
+      "en": "competence",
+      "ja": "能力、適性",
+      "zh": "能力",
+      "ko": "능력",
+      "fil": "kakayahan"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkɒmpətəns/",
+    "neighbors": [
+      "competent",
+      "conference",
+      "confidence",
+      "competition",
+      "complement"
+    ],
+    "ipa_actual_ga": "/ˈkɑmpəʔn̩s/",
+    "respell_ga": "KAHM-puh-tuhns",
+    "respell_rp": "KOM-puh-tuhns",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "ga_allophony"
+  },
+  {
+    "w": "competent",
+    "ipa": "/ˈkɑmpətənt/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Having the necessary skill or knowledge to do something well.",
+    "gloss": {
+      "en": "competent",
+      "ja": "有能な",
+      "zh": "有能力的",
+      "ko": "유능한",
+      "fil": "may kakayahan"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkɒmpətənt/",
+    "neighbors": [
+      "competence",
+      "complement",
+      "compensate",
+      "component",
+      "confident",
+      "consonant",
+      "continent",
+      "constant"
+    ],
+    "ipa_actual_ga": "/ˈkɑmpəʔn̩t/",
+    "respell_ga": "KAHM-puh-tuhnt",
+    "respell_rp": "KOM-puh-tuhnt",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "ga_allophony"
+  },
+  {
+    "w": "compile",
+    "ipa": "/kəmˈpaɪl/",
+    "cefr": "B2",
+    "pos": "動詞",
+    "def": "To collect information and put it together.",
+    "gloss": {
+      "en": "compile",
+      "ja": "編集する、まとめる",
+      "zh": "编制",
+      "ko": "편집하다",
+      "fil": "tipunin"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kəmˈpaɪl/",
+    "neighbors": [
+      "compare",
+      "compete",
+      "compose"
+    ],
+    "respell_ga": "kuhm-PYL",
+    "respell_rp": "kuhm-PYL",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "w": "completion",
+    "ipa": "/kəmˈpliʃən/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "The act of finishing something.",
+    "gloss": {
+      "en": "completion",
+      "ja": "完了",
+      "zh": "完成",
+      "ko": "완료",
+      "fil": "pagkumpleto"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kəmˈpliːʃən/",
+    "neighbors": [
+      "compression",
+      "compassion",
+      "complexion",
+      "companion",
+      "completely",
+      "comedian",
+      "commission",
+      "complain"
+    ],
+    "respell_ga": "kuhm-PLEE-shuhn",
+    "respell_rp": "kuhm-PLEE-shuhn",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "length_marking_only"
+  },
+  {
+    "w": "complexion",
+    "ipa": "/kəmˈplɛkʃən/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "The natural color and texture of the skin, especially the face.",
+    "gloss": {
+      "en": "complexion",
+      "ja": "肌の色つや",
+      "zh": "肤色",
+      "ko": "안색",
+      "fil": "kutis"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kəmˈplekʃən/",
+    "neighbors": [
+      "completion",
+      "compression",
+      "collection",
+      "complexity",
+      "compassion",
+      "connection",
+      "connexion",
+      "selection"
+    ],
+    "respell_ga": "kuhm-PLEHK-shuhn",
+    "respell_rp": "kuhm-PLEHK-shuhn",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "dress_notation_only"
+  },
+  {
+    "w": "complexity",
+    "ipa": "/kəmˈplɛksəti/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "The state of being complicated.",
+    "gloss": {
+      "en": "complexity",
+      "ja": "複雑さ",
+      "zh": "复杂性",
+      "ko": "복잡성",
+      "fil": "kumplikado"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kəmˈpleksətiː/",
+    "neighbors": [
+      "complexion",
+      "compulsory",
+      "competitor",
+      "capacity",
+      "complex"
+    ],
+    "ipa_actual_ga": "/kəmˈplɛksəɾi/",
+    "respell_ga": "kuhm-PLEHK-suh-dee",
+    "respell_rp": "kuhm-PLEHK-suh-tee",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "ga_allophony"
+  },
+  {
+    "w": "component",
+    "ipa": "/kəmˈpoʊnənt/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A part of a larger whole, especially a machine or system.",
+    "gloss": {
+      "en": "component",
+      "ja": "構成要素",
+      "zh": "组成部分",
+      "ko": "구성 요소",
+      "fil": "sangkap"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kəmˈpəʊnənt/",
+    "neighbors": [
+      "competent",
+      "commitment",
+      "companion",
+      "compassion",
+      "compassionate",
+      "complaint"
+    ],
+    "respell_ga": "kuhm-POH-nuhnt",
+    "respell_rp": "kuhm-POH-nuhnt",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "goat_vowel"
+  },
+  {
+    "w": "comprehension",
+    "ipa": "/ˌkɑmprəˈhɛnʃən/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "The ability to understand something.",
+    "gloss": {
+      "en": "comprehension",
+      "ja": "理解力",
+      "zh": "理解力",
+      "ko": "이해력",
+      "fil": "pang-unawa"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˌkɒmprəˈhenʃən/",
+    "neighbors": [
+      "comprehensive",
+      "compensation",
+      "competition",
+      "composition",
+      "compression"
+    ],
+    "respell_ga": "kahm-pruh-HEHN-shuhn",
+    "respell_rp": "kom-pruh-HEHN-shuhn",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "lot_vowel"
+  },
+  {
+    "w": "comprehensive",
+    "ipa": "/ˌkɑmprəˈhɛnsɪv/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Complete and including everything necessary.",
+    "gloss": {
+      "en": "comprehensive",
+      "ja": "包括的な",
+      "zh": "全面的的",
+      "ko": "포괄적인",
+      "fil": "komprehensibo"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˌkɒmprəˈhensɪv/",
+    "neighbors": [
+      "comprehension"
+    ],
+    "respell_ga": "kahm-pruh-HEHN-siv",
+    "respell_rp": "kom-pruh-HEHN-siv",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "lot_vowel"
+  },
+  {
+    "w": "compress",
+    "ipa": "/ˈkɑmˌprɛs/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A cloth pressed onto a part of the body to relieve pain or swelling.",
+    "gloss": {
+      "en": "compress",
+      "ja": "湿布",
+      "zh": "敷布",
+      "ko": "찜질팩",
+      "fil": "compress"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkɒmˌpres/",
+    "neighbors": [
+      "complex",
+      "impress",
+      "compound",
+      "express",
+      "calmness",
+      "campus",
+      "compare",
+      "commerce"
+    ],
+    "respell_ga": "KAHM-prehs",
+    "respell_rp": "KOM-prehs",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "lot_vowel"
+  },
+  {
+    "w": "compression",
+    "ipa": "/kəmˈprɛʃən/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "The act of pressing something into a smaller space.",
+    "gloss": {
+      "en": "compression",
+      "ja": "圧縮",
+      "zh": "压缩",
+      "ko": "압축",
+      "fil": "compresyon"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kəmˈpreʃən/",
+    "neighbors": [
+      "completion",
+      "compassion",
+      "complexion",
+      "impression",
+      "oppression",
+      "companion",
+      "expression",
+      "concession"
+    ],
+    "respell_ga": "kuhm-PREH-shuhn",
+    "respell_rp": "kuhm-PREH-shuhn",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "dress_notation_only"
+  },
+  {
+    "w": "compulsory",
+    "ipa": "/kəmˈpʌlsəri/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Required by law or rule; mandatory.",
+    "gloss": {
+      "en": "compulsory",
+      "ja": "義務的な、必修の",
+      "zh": "强制性的",
+      "ko": "의무적인",
+      "fil": "sapilitan"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kəmˈpʌlsəriː/",
+    "neighbors": [],
+    "respell_ga": "kuhm-PUHL-suh-ree",
+    "respell_rp": "kuhm-PUHL-suh-ree",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "length_marking_only"
+  },
+  {
+    "w": "compute",
+    "ipa": "/kəmˈpjut/",
+    "cefr": "B2",
+    "pos": "動詞",
+    "def": "To calculate a number or amount.",
+    "gloss": {
+      "en": "compute",
+      "ja": "計算する",
+      "zh": "计算",
+      "ko": "계산하다",
+      "fil": "kalkulahin"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kəmˈpjuːt/",
+    "neighbors": [
+      "commute",
+      "computer",
+      "complete",
+      "compete",
+      "campsite",
+      "complain",
+      "composer",
+      "confuse"
+    ],
+    "respell_ga": "kuhm-PYOOT",
+    "respell_rp": "kuhm-PYOOT",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "length_marking_only"
+  },
+  {
+    "w": "conceal",
+    "ipa": "/kənˈsil/",
+    "cefr": "B2",
+    "pos": "動詞",
+    "def": "To hide something from view or knowledge.",
+    "gloss": {
+      "en": "conceal",
+      "ja": "隠す",
+      "zh": "隐藏",
+      "ko": "숨기다",
+      "fil": "itago"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kənˈsiːl/",
+    "neighbors": [
+      "concede",
+      "conceit",
+      "conceive",
+      "console",
+      "cancel",
+      "concern",
+      "consume",
+      "council"
+    ],
+    "respell_ga": "kuhn-SEEL",
+    "respell_rp": "kuhn-SEEL",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "length_marking_only"
+  },
+  {
+    "w": "concede",
+    "ipa": "/kənˈsid/",
+    "cefr": "B2",
+    "pos": "動詞",
+    "def": "To admit that something is true; to give up a position.",
+    "gloss": {
+      "en": "concede",
+      "ja": "認める、譲歩する",
+      "zh": "承认、让步",
+      "ko": "인정하다",
+      "fil": "aminin"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kənˈsiːd/",
+    "neighbors": [
+      "conceal",
+      "conceit",
+      "conceive",
+      "console",
+      "concern",
+      "consume",
+      "currency",
+      "succeed"
+    ],
+    "respell_ga": "kuhn-SEED",
+    "respell_rp": "kuhn-SEED",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "length_marking_only"
+  },
+  {
+    "w": "conceit",
+    "ipa": "/kənˈsit/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "Excessive pride in oneself.",
+    "gloss": {
+      "en": "conceit",
+      "ja": "うぬぼれ",
+      "zh": "自负",
+      "ko": "자만심",
+      "fil": "kayabangan"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kənˈsiːt/",
+    "neighbors": [
+      "conceal",
+      "concede",
+      "conceive",
+      "console",
+      "compete",
+      "concern",
+      "concert",
+      "connect"
+    ],
+    "respell_ga": "kuhn-SEET",
+    "respell_rp": "kuhn-SEET",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "length_marking_only"
+  },
+  {
+    "w": "conceivable",
+    "ipa": "/kənˈsivəbəl/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Capable of being imagined or believed.",
+    "gloss": {
+      "en": "conceivable",
+      "ja": "考えられる",
+      "zh": "可想象的",
+      "ko": "상상할 수 있는",
+      "fil": "maiisip"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kənˈsiːvəbəl/",
+    "neighbors": [
+      "considerable",
+      "achievable"
+    ],
+    "respell_ga": "kuhn-SEE-vuh-buhl",
+    "respell_rp": "kuhn-SEE-vuh-buhl",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "length_marking_only"
+  },
+  {
+    "w": "conceive",
+    "ipa": "/kənˈsiv/",
+    "cefr": "B2",
+    "pos": "動詞",
+    "def": "To form an idea in the mind; to become pregnant.",
+    "gloss": {
+      "en": "conceive",
+      "ja": "思いつく、妊娠する",
+      "zh": "构想、怀孕",
+      "ko": "생각해내다, 임신하다",
+      "fil": "isipin"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kənˈsiːv/",
+    "neighbors": [
+      "conceal",
+      "concede",
+      "conceit",
+      "console",
+      "concern",
+      "consume",
+      "currency",
+      "receive"
+    ],
+    "respell_ga": "kuhn-SEEV",
+    "respell_rp": "kuhn-SEEV",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "length_marking_only"
+  },
+  {
+    "w": "conception",
+    "ipa": "/kənˈsɛpʃən/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "The forming of an idea; the beginning of pregnancy.",
+    "gloss": {
+      "en": "conception",
+      "ja": "着想、受胎",
+      "zh": "构想、受孕",
+      "ko": "구상, 수태",
+      "fil": "paglilihi"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kənˈsepʃən/",
+    "neighbors": [
+      "concession",
+      "convention",
+      "confession",
+      "connection",
+      "connexion",
+      "consumption",
+      "consensus",
+      "collection"
+    ],
+    "respell_ga": "kuhn-SEHP-shuhn",
+    "respell_rp": "kuhn-SEHP-shuhn",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "dress_notation_only"
+  },
+  {
+    "w": "concerning",
+    "ipa": "/kənˈsɝnɪŋ/",
+    "cefr": "B2",
+    "pos": "前置詞",
+    "def": "About; regarding.",
+    "gloss": {
+      "en": "concerning",
+      "ja": "〜に関して",
+      "zh": "关于",
+      "ko": "~에 관하여",
+      "fil": "hinggil sa"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kənˈsɜːnɪŋ/",
+    "neighbors": [
+      "concerned",
+      "concern",
+      "counseling",
+      "counselling",
+      "consent"
+    ],
+    "respell_ga": "kuhn-SUR-ning",
+    "respell_rp": "kuhn-SUR-ning",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "rhoticity"
+  },
+  {
+    "w": "concession",
+    "ipa": "/kənˈsɛʃən/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "Something granted or given up, especially in an agreement.",
+    "gloss": {
+      "en": "concession",
+      "ja": "譲歩",
+      "zh": "让步",
+      "ko": "양보",
+      "fil": "konsesyon"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kənˈseʃən/",
+    "neighbors": [
+      "confession",
+      "conception",
+      "condition",
+      "connection",
+      "connexion",
+      "convention",
+      "compassion",
+      "collection"
+    ],
+    "respell_ga": "kuhn-SEH-shuhn",
+    "respell_rp": "kuhn-SEH-shuhn",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "dress_notation_only"
+  },
+  {
+    "w": "concrete",
+    "ipa": "/ˈkɑnˌkrit/",
+    "cefr": "B2",
+    "pos": "形容詞 / 名詞",
+    "def": "Specific and real, not abstract; a hard building material.",
+    "gloss": {
+      "en": "concrete",
+      "ja": "具体的な、コンクリート",
+      "zh": "具体的、混凝土",
+      "ko": "구체적인, 콘크리트",
+      "fil": "konkreto"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkɒnˌkriːt/",
+    "neighbors": [
+      "concept",
+      "conduct",
+      "contact",
+      "content",
+      "contest",
+      "copyright",
+      "conceit",
+      "conquest"
+    ],
+    "respell_ga": "KAHN-kreet",
+    "respell_rp": "KON-kreet",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "lot_vowel"
+  },
+  {
+    "w": "condemn",
+    "ipa": "/kənˈdɛm/",
+    "cefr": "B2",
+    "pos": "動詞",
+    "def": "To express strong disapproval of; to sentence to punishment.",
+    "gloss": {
+      "en": "condemn",
+      "ja": "非難する、有罪判決を下す",
+      "zh": "谴责、判刑",
+      "ko": "비난하다",
+      "fil": "sumbatan"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kənˈdem/",
+    "neighbors": [
+      "confess",
+      "confirm",
+      "consume"
+    ],
+    "respell_ga": "kuhn-DEHM",
+    "respell_rp": "kuhn-DEHM",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "dress_notation_only"
+  },
+  {
+    "w": "conductor",
+    "ipa": "/kənˈdʌktɚ/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A person who directs an orchestra; a substance that conducts electricity.",
+    "gloss": {
+      "en": "conductor",
+      "ja": "指揮者、導体",
+      "zh": "指挥、导体",
+      "ko": "지휘자, 도체",
+      "fil": "konduktor"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kənˈdʌktə/",
+    "neighbors": [
+      "collector",
+      "consult",
+      "conduct",
+      "connect"
+    ],
+    "respell_ga": "kuhn-DUHK-ter",
+    "respell_rp": "kuhn-DUHK-tuh",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "rhoticity"
+  },
+  {
+    "w": "conference",
+    "ipa": "/ˈkɑnfərəns/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A formal meeting for discussion.",
+    "gloss": {
+      "en": "conference",
+      "ja": "会議",
+      "zh": "会议",
+      "ko": "회의",
+      "fil": "kumperensya"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkɒnfərəns/",
+    "neighbors": [
+      "confidence",
+      "confident",
+      "conferencing",
+      "competence",
+      "consonant",
+      "continent",
+      "consequence",
+      "conscience"
+    ],
+    "respell_ga": "KAHN-fuh-ruhns",
+    "respell_rp": "KON-fuh-ruhns",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "lot_vowel"
+  },
+  {
+    "w": "conferencing",
+    "ipa": "/ˈkɑnfərənsɪŋ/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "The activity of holding a conference, especially remotely.",
+    "gloss": {
+      "en": "conferencing",
+      "ja": "会議（開催）",
+      "zh": "会议召开",
+      "ko": "회의 진행",
+      "fil": "pagkumperensya"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkɒnfərənsɪŋ/",
+    "neighbors": [
+      "conference",
+      "confidence",
+      "confidently",
+      "confident"
+    ],
+    "respell_ga": "KAHN-fuh-ruhn-sing",
+    "respell_rp": "KON-fuh-ruhn-sing",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "lot_vowel"
+  },
+  {
+    "w": "confess",
+    "ipa": "/kənˈfɛs/",
+    "cefr": "B2",
+    "pos": "動詞",
+    "def": "To admit to something, especially a fault or crime.",
+    "gloss": {
+      "en": "confess",
+      "ja": "告白する、自白する",
+      "zh": "承认、坦白",
+      "ko": "고백하다",
+      "fil": "aminin"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kənˈfes/",
+    "neighbors": [
+      "condemn",
+      "confine",
+      "confirm",
+      "unfair",
+      "unless"
+    ],
+    "respell_ga": "kuhn-FEHS",
+    "respell_rp": "kuhn-FEHS",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "dress_notation_only"
+  },
+  {
+    "w": "confession",
+    "ipa": "/kənˈfɛʃən/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A statement admitting guilt or a fact.",
+    "gloss": {
+      "en": "confession",
+      "ja": "告白、自白",
+      "zh": "坦白",
+      "ko": "고백",
+      "fil": "pag-amin"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kənˈfeʃən/",
+    "neighbors": [
+      "concession",
+      "condition",
+      "connection",
+      "connexion",
+      "conception",
+      "convention",
+      "compassion",
+      "collection"
+    ],
+    "respell_ga": "kuhn-FEH-shuhn",
+    "respell_rp": "kuhn-FEH-shuhn",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "dress_notation_only"
+  },
+  {
+    "w": "confidently",
+    "ipa": "/ˈkɑnfədəntli/",
+    "cefr": "B2",
+    "pos": "副詞",
+    "def": "In a way that shows self-assurance.",
+    "gloss": {
+      "en": "confidently",
+      "ja": "自信を持って",
+      "zh": "自信地",
+      "ko": "자신 있게",
+      "fil": "may kumpiyansa"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkɒnfədəntliː/",
+    "neighbors": [
+      "confident",
+      "consequently",
+      "constantly",
+      "confidence",
+      "conferencing",
+      "conference",
+      "consonant",
+      "continent"
+    ],
+    "ipa_actual_ga": "/ˈkɑnfədn̩tli/",
+    "respell_ga": "KAHN-fuh-duhnt-lee",
+    "respell_rp": "KON-fuh-duhnt-lee",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "ga_allophony"
+  },
+  {
+    "w": "confine",
+    "ipa": "/kənˈfaɪn/",
+    "cefr": "B2",
+    "pos": "動詞",
+    "def": "To keep within limits; to restrict to a place.",
+    "gloss": {
+      "en": "confine",
+      "ja": "制限する、閉じ込める",
+      "zh": "限制",
+      "ko": "제한하다",
+      "fil": "hangganan"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kənˈfaɪn/",
+    "neighbors": [
+      "confess",
+      "concern",
+      "confirm",
+      "contain"
+    ],
+    "respell_ga": "kuhn-FYN",
+    "respell_rp": "kuhn-FYN",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "w": "confront",
+    "ipa": "/kənˈfrʌnt/",
+    "cefr": "B2",
+    "pos": "動詞",
+    "def": "To face a difficult situation or person directly.",
+    "gloss": {
+      "en": "confront",
+      "ja": "立ち向かう、対決する",
+      "zh": "面对、对抗",
+      "ko": "직면하다",
+      "fil": "harapin"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kənˈfrʌnt/",
+    "neighbors": [
+      "consent",
+      "consult",
+      "construct",
+      "confine",
+      "front"
+    ],
+    "respell_ga": "kuhn-FRUHNT",
+    "respell_rp": "kuhn-FRUHNT",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "w": "conjunction",
+    "ipa": "/kənˈdʒʌŋkʃən/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A word that connects clauses or words; a combination of events.",
+    "gloss": {
+      "en": "conjunction",
+      "ja": "接続詞、結合",
+      "zh": "连词、结合",
+      "ko": "접속사, 결합",
+      "fil": "pang-ugnay"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kənˈdʒʌŋkʃən/",
+    "neighbors": [
+      "consumption",
+      "connection",
+      "connexion"
+    ],
+    "respell_ga": "kuhn-JUHNGK-shuhn",
+    "respell_rp": "kuhn-JUHNGK-shuhn",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "w": "conquest",
+    "ipa": "/ˈkɑnˌkwɛst/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "The act of conquering a place or people.",
+    "gloss": {
+      "en": "conquest",
+      "ja": "征服",
+      "zh": "征服",
+      "ko": "정복",
+      "fil": "pananakop"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkɒnˌkwest/",
+    "neighbors": [
+      "contest",
+      "context",
+      "contrast",
+      "concrete",
+      "concept",
+      "content",
+      "request"
+    ],
+    "respell_ga": "KAHN-kwehst",
+    "respell_rp": "KON-kwehst",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "lot_vowel"
+  },
+  {
+    "w": "conscience",
+    "ipa": "/ˈkɑnʃəns/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A person's sense of right and wrong.",
+    "gloss": {
+      "en": "conscience",
+      "ja": "良心",
+      "zh": "良心",
+      "ko": "양심",
+      "fil": "budhi"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkɒnʃəns/",
+    "neighbors": [
+      "conscious",
+      "consciousness",
+      "caution",
+      "conduct",
+      "content",
+      "convince",
+      "nonsense",
+      "sentence"
+    ],
+    "respell_ga": "KAHN-shuhns",
+    "respell_rp": "KON-shuhns",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "lot_vowel"
+  },
+  {
+    "w": "consciousness",
+    "ipa": "/ˈkɑnʃəsnəs/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "The state of being awake and aware; awareness of an issue.",
+    "gloss": {
+      "en": "consciousness",
+      "ja": "意識",
+      "zh": "意识",
+      "ko": "의식",
+      "fil": "kamalayan"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkɒnʃəsnəs/",
+    "neighbors": [
+      "conscience",
+      "carelessness",
+      "conscious"
+    ],
+    "respell_ga": "KAHN-shuh-snuhs",
+    "respell_rp": "KON-shuh-snuhs",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "lot_vowel"
+  },
+  {
+    "w": "consensus",
+    "ipa": "/kənˈsɛnsəs/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "General agreement among a group.",
+    "gloss": {
+      "en": "consensus",
+      "ja": "合意",
+      "zh": "共识",
+      "ko": "합의",
+      "fil": "pagkakaisa"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kənˈsensəs/",
+    "neighbors": [
+      "conception",
+      "convention",
+      "concession",
+      "consent"
+    ],
+    "respell_ga": "kuhn-SEHN-suhs",
+    "respell_rp": "kuhn-SEHN-suhs",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "dress_notation_only"
+  },
+  {
+    "w": "consent",
+    "ipa": "/kənˈsɛnt/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "Permission for something to happen.",
+    "gloss": {
+      "en": "consent",
+      "ja": "同意",
+      "zh": "同意",
+      "ko": "동의",
+      "fil": "pahintulot"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kənˈsent/",
+    "neighbors": [
+      "consult",
+      "concept",
+      "concerned",
+      "consist",
+      "content",
+      "conceit",
+      "accent",
+      "concern"
+    ],
+    "respell_ga": "kuhn-SEHNT",
+    "respell_rp": "kuhn-SEHNT",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "dress_notation_only"
+  },
+  {
+    "w": "considerably",
+    "ipa": "/kənˈsɪdərəbli/",
+    "cefr": "B2",
+    "pos": "副詞",
+    "def": "By a large amount; greatly.",
+    "gloss": {
+      "en": "considerably",
+      "ja": "かなり",
+      "zh": "相当地",
+      "ko": "상당히",
+      "fil": "malaki"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kənˈsɪdərəbliː/",
+    "neighbors": [
+      "considerable",
+      "considering"
+    ],
+    "ipa_actual_ga": "/kənˈsɪɾərəbli/",
+    "respell_ga": "kuhn-SI-duh-ruh-blee",
+    "respell_rp": "kuhn-SI-duh-ruh-blee",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "ga_allophony"
+  },
+  {
+    "w": "considering",
+    "ipa": "/kənˈsɪdərɪŋ/",
+    "cefr": "B2",
+    "pos": "接続詞 / 前置詞",
+    "def": "Taking into account; in view of.",
+    "gloss": {
+      "en": "considering",
+      "ja": "〜を考慮すると",
+      "zh": "考虑到",
+      "ko": "~을 고려하면",
+      "fil": "isaalang-alang"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kənˈsɪdərɪŋ/",
+    "neighbors": [],
+    "ipa_actual_ga": "/kənˈsɪɾərɪŋ/",
+    "respell_ga": "kuhn-SI-duh-ring",
+    "respell_rp": "kuhn-SI-duh-ring",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "ga_allophony"
+  },
+  {
+    "w": "consistent",
+    "ipa": "/kənˈsɪstənt/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Always acting or happening in the same way.",
+    "gloss": {
+      "en": "consistent",
+      "ja": "一貫した",
+      "zh": "一致的",
+      "ko": "일관된",
+      "fil": "pare-pareho"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kənˈsɪstənt/",
+    "neighbors": [
+      "consultant",
+      "assistant",
+      "constant",
+      "assistance",
+      "consist"
+    ],
+    "ipa_actual_ga": "/kənˈsɪsʔn̩t/",
+    "respell_ga": "kuhn-SIS-tuhnt",
+    "respell_rp": "kuhn-SI-stuhnt",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "ga_allophony"
+  },
+  {
+    "w": "consolation",
+    "ipa": "/ˌkɑnsəˈleɪʃən/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "Comfort given after a loss or disappointment.",
+    "gloss": {
+      "en": "consolation",
+      "ja": "慰め",
+      "zh": "安慰",
+      "ko": "위안",
+      "fil": "aliw"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˌkɒnsəˈleɪʃən/",
+    "neighbors": [
+      "conservation",
+      "combination",
+      "confirmation",
+      "conversation",
+      "population",
+      "collocation",
+      "constitution",
+      "concentration"
+    ],
+    "respell_ga": "kahn-suh-LAY-shuhn",
+    "respell_rp": "kon-suh-LAY-shuhn",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "lot_vowel"
+  },
+  {
+    "w": "console",
+    "ipa": "/kənˈsoʊl/",
+    "cefr": "B2",
+    "pos": "動詞",
+    "def": "To comfort someone in distress.",
+    "gloss": {
+      "en": "console",
+      "ja": "慰める",
+      "zh": "安慰",
+      "ko": "위로하다",
+      "fil": "aliwin"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kənˈsəʊl/",
+    "neighbors": [
+      "conceal",
+      "concede",
+      "conceit",
+      "conceive",
+      "cancel",
+      "concern",
+      "consume",
+      "council"
+    ],
+    "respell_ga": "kuhn-SOHL",
+    "respell_rp": "kuhn-SOHL",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "goat_vowel"
+  },
+  {
+    "w": "constant",
+    "ipa": "/ˈkɑnstənt/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Happening continuously; unchanging.",
+    "gloss": {
+      "en": "constant",
+      "ja": "絶え間ない、一定の",
+      "zh": "不断的、恒定的",
+      "ko": "끊임없는",
+      "fil": "walang tigil"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkɒnstənt/",
+    "neighbors": [
+      "consonant",
+      "constitute",
+      "content",
+      "instant",
+      "constantly",
+      "accountant",
+      "assistant",
+      "competent"
+    ],
+    "ipa_actual_ga": "/ˈkɑnsʔn̩t/",
+    "respell_ga": "KAHNS-tuhnt",
+    "respell_rp": "KON-stuhnt",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "ga_allophony"
+  },
+  {
+    "w": "consult",
+    "ipa": "/kənˈsʌlt/",
+    "cefr": "B2",
+    "pos": "動詞",
+    "def": "To seek information or advice from someone.",
+    "gloss": {
+      "en": "consult",
+      "ja": "相談する",
+      "zh": "咨询",
+      "ko": "상담하다",
+      "fil": "kumunsulta"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kənˈsʌlt/",
+    "neighbors": [
+      "consent",
+      "consist",
+      "conceal",
+      "conceit",
+      "console",
+      "concept",
+      "concerned",
+      "consider"
+    ],
+    "respell_ga": "kuhn-SUHLT",
+    "respell_rp": "kuhn-SUHLT",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "w": "consultant",
+    "ipa": "/kənˈsʌltənt/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A person who gives expert advice professionally.",
+    "gloss": {
+      "en": "consultant",
+      "ja": "コンサルタント",
+      "zh": "顾问",
+      "ko": "컨설턴트",
+      "fil": "konsultant"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kənˈsʌltənt/",
+    "neighbors": [
+      "consistent",
+      "constant",
+      "consult"
+    ],
+    "ipa_actual_ga": "/kənˈsʌlʔn̩t/",
+    "respell_ga": "kuhn-SUHL-tuhnt",
+    "respell_rp": "kuhn-SUHL-tuhnt",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "ga_allophony"
+  },
+  {
+    "w": "contaminate",
+    "ipa": "/kənˈtæməˌneɪt/",
+    "cefr": "B2",
+    "pos": "動詞",
+    "def": "To make something impure or harmful by adding a substance.",
+    "gloss": {
+      "en": "contaminate",
+      "ja": "汚染する",
+      "zh": "污染",
+      "ko": "오염시키다",
+      "fil": "kontaminahin"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kənˈtæməˌneɪt/",
+    "neighbors": [],
+    "respell_ga": "kuhn-TA-muh-nayt",
+    "respell_rp": "kuhn-TA-muh-nayt",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "w": "contemporary",
+    "ipa": "/kənˈtɛmpəˌrɛri/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Belonging to the present time; modern.",
+    "gloss": {
+      "en": "contemporary",
+      "ja": "現代の、同時代の",
+      "zh": "当代的",
+      "ko": "현대의",
+      "fil": "kontemporaryo"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kənˈtempəˌreriː/",
+    "neighbors": [],
+    "respell_ga": "kuhn-TEHM-puh-reh-ree",
+    "respell_rp": "kuhn-TEHM-puh-reh-ree",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "notation_composite"
+  },
+  {
+    "w": "contempt",
+    "ipa": "/kənˈtɛmpt/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A feeling that someone or something deserves no respect.",
+    "gloss": {
+      "en": "contempt",
+      "ja": "軽蔑",
+      "zh": "蔑视",
+      "ko": "경멸",
+      "fil": "paghamak"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kənˈtempt/",
+    "neighbors": [
+      "attempt",
+      "context",
+      "consent",
+      "concept",
+      "content",
+      "contest",
+      "condemn",
+      "connect"
+    ],
+    "respell_ga": "kuhn-TEHMPT",
+    "respell_rp": "kuhn-TEHMPT",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "dress_notation_only"
+  },
+  {
+    "w": "contract",
+    "ipa": "/ˈkɑnˌtrækt/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A written or spoken agreement intended to be enforceable.",
+    "gloss": {
+      "en": "contract",
+      "ja": "契約",
+      "zh": "合同",
+      "ko": "계약",
+      "fil": "kontrata"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkɒnˌtrækt/",
+    "neighbors": [
+      "contrast",
+      "contact",
+      "abstract",
+      "conflict",
+      "context",
+      "contrary",
+      "concrete",
+      "conduct"
+    ],
+    "respell_ga": "KAHN-trakt",
+    "respell_rp": "KON-trakt",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "lot_vowel"
+  },
+  {
+    "w": "contradict",
+    "ipa": "/ˌkɑntrəˈdɪkt/",
+    "cefr": "B2",
+    "pos": "動詞",
+    "def": "To state the opposite of something already said.",
+    "gloss": {
+      "en": "contradict",
+      "ja": "矛盾する",
+      "zh": "反驳",
+      "ko": "반박하다",
+      "fil": "sumalungat"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˌkɒntrəˈdɪkt/",
+    "neighbors": [
+      "contract",
+      "contradiction",
+      "contradictory"
+    ],
+    "respell_ga": "kahn-truh-DIKT",
+    "respell_rp": "kon-truh-DIKT",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "lot_vowel"
+  },
+  {
+    "w": "contradiction",
+    "ipa": "/ˌkɑntrəˈdɪkʃən/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A situation where two statements or ideas are opposed.",
+    "gloss": {
+      "en": "contradiction",
+      "ja": "矛盾",
+      "zh": "矛盾",
+      "ko": "모순",
+      "fil": "pagkakasalungat"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˌkɒntrəˈdɪkʃən/",
+    "neighbors": [
+      "contribution",
+      "contradictory",
+      "introduction",
+      "contradict",
+      "controversial",
+      "tradition"
+    ],
+    "respell_ga": "kahn-truh-DIK-shuhn",
+    "respell_rp": "kon-truh-DIK-shuhn",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "lot_vowel"
+  },
+  {
+    "w": "contradictory",
+    "ipa": "/ˌkɑntrəˈdɪktəri/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Opposed to or inconsistent with something else.",
+    "gloss": {
+      "en": "contradictory",
+      "ja": "矛盾した",
+      "zh": "矛盾的",
+      "ko": "모순되는",
+      "fil": "salungat"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˌkɒntrəˈdɪktəriː/",
+    "neighbors": [
+      "contradiction",
+      "contradict"
+    ],
+    "respell_ga": "kahn-truh-DIK-tuh-ree",
+    "respell_rp": "kon-truh-DIK-tuh-ree",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "lot_vowel"
+  },
+  {
+    "w": "controversy",
+    "ipa": "/ˈkɑntrəˌvɝsi/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "Public disagreement or debate over a matter.",
+    "gloss": {
+      "en": "controversy",
+      "ja": "論争",
+      "zh": "争议",
+      "ko": "논쟁",
+      "fil": "kontrobersya"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkɒntrəˌvɜːsiː/",
+    "neighbors": [
+      "controversial"
+    ],
+    "respell_ga": "KAHN-truh-vur-see",
+    "respell_rp": "KON-truh-vur-see",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "lot_vowel"
+  },
+  {
+    "w": "conveniently",
+    "ipa": "/kənˈviniəntli/",
+    "cefr": "B2",
+    "pos": "副詞",
+    "def": "In a way that suits one's needs easily.",
+    "gloss": {
+      "en": "conveniently",
+      "ja": "都合よく、便利に",
+      "zh": "方便地",
+      "ko": "편리하게",
+      "fil": "maginhawa"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kənˈviːniːəntliː/",
+    "neighbors": [
+      "convenient",
+      "conventional",
+      "convenience"
+    ],
+    "respell_ga": "kuhn-VEE-nee-uhnt-lee",
+    "respell_rp": "kuhn-VEE-nee-uhnt-lee",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "length_marking_only"
+  },
+  {
+    "w": "convention",
+    "ipa": "/kənˈvɛnʃən/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A large meeting; an accepted way of doing things.",
+    "gloss": {
+      "en": "convention",
+      "ja": "大会、慣習",
+      "zh": "大会、惯例",
+      "ko": "대회, 관습",
+      "fil": "kombensyon"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kənˈvenʃən/",
+    "neighbors": [
+      "conception",
+      "concession",
+      "confession",
+      "connection",
+      "connexion",
+      "invention",
+      "conventional",
+      "consensus"
+    ],
+    "respell_ga": "kuhn-VEHN-shuhn",
+    "respell_rp": "kuhn-VEHN-shuhn",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "dress_notation_only"
+  },
+  {
+    "w": "conventional",
+    "ipa": "/kənˈvɛnʃənəl/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Based on what is generally done or believed; traditional.",
+    "gloss": {
+      "en": "conventional",
+      "ja": "従来の、慣習的な",
+      "zh": "传统的",
+      "ko": "전통적인",
+      "fil": "karaniwan"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kənˈvenʃənəl/",
+    "neighbors": [
+      "convention",
+      "intentionally",
+      "conveniently",
+      "convenience",
+      "convenient",
+      "conception",
+      "concession",
+      "confession"
+    ],
+    "respell_ga": "kuhn-VEHN-shuh-nuhl",
+    "respell_rp": "kuhn-VEHN-shuh-nuhl",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "dress_notation_only"
+  },
+  {
+    "w": "converse",
+    "ipa": "/ˈkɑnˌvɝs/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "The opposite of a fact or statement.",
+    "gloss": {
+      "en": "converse",
+      "ja": "逆、正反対",
+      "zh": "对立面",
+      "ko": "반대",
+      "fil": "kabaligtaran"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkɒnˌvɜːs/",
+    "neighbors": [
+      "conscious"
+    ],
+    "respell_ga": "KAHN-vurs",
+    "respell_rp": "KON-vurs",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "lot_vowel"
   }
 ]
