@@ -25,6 +25,7 @@ AI エージェント向けの**作業指示・実装レポート・設計相談
 
 | テーマ | 指示書 | レポート |
 |--------|--------|----------|
+| **Phase B**（Phase 2 バッチ品質監査） | `instructions/cursor-instructions-phase-b-batch-audit.md` | `reports/cursor-implementation-report-phase-b-batch-audit.md` |
 | **Phase V**（語彙ブラウザのページ化 + UI 整備） | `instructions/cursor-instructions-phase-v-vocab-page.md` | `reports/cursor-implementation-report-phase-v.md` |
 | **Phase R**（RP パイプライン品質修正） | `instructions/cursor-instructions-phase-r-rp-pipeline-repair.md` | `reports/cursor-implementation-report-phase-r.md` |
 | **Phase T**（TTS 1問目遅延解消） | `instructions/cursor-instructions-phase-t-tts-latency.md` | `reports/cursor-implementation-report-phase-t.md` |

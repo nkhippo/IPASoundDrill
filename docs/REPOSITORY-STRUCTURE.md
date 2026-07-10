@@ -67,6 +67,7 @@ english-pronunciation-trainer/
 │   │   ├── wordlist_with_neighbors_slim.json
 │   │   ├── rp_progress.json, rp_complete.json
 │   ├── patches/               # 過去の一括パッチ（def, gloss-fil, hotfix 等）
+│   │   └── phase2_audit/      # Phase B 監査パッチ（wordlist / batch sync）
 │   └── archive/               # ローカル退避（gitignore）→ README.md 参照
 │
 ├── docs/
