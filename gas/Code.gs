@@ -7,6 +7,7 @@
  * Query: GET ?word=luck[&accent=ga|rp]
  *        GET ?phrase=check%20it[&phrase_ipa=/ˈtʃɛkɪt/][&accent=ga]  (connected; IPA input when phrase_ipa set)
  *        GET ?warm=1&words=luck,colour&accent=ga  (Drive warmup; no audio body)
+ *        GET ?urls=1&words=luck,colour&accent=ga  (Drive public URLs; generate if missing)
  *        GET ?weak=/kən/&ww=can&accent=ga|rp  (weak form; IPA input)
  */
 
@@ -93,6 +94,26 @@ function getAudioFromDrive_(input, accent, cacheVer) {
     if (legacyFiles.hasNext()) return legacyFiles.next().getBlob();
   }
   return null;
+}
+
+/** Same lookup as getAudioFromDrive_, but returns the Drive File (for public URL). */
+function getAudioFileFromDrive_(input, accent, cacheVer) {
+  const folder = getFolder_();
+  const acc = normalizeAccent_(accent);
+  const name = fileNameFor_(input, acc, cacheVer);
+  const files = folder.getFilesByName(name);
+  if (files.hasNext()) return files.next();
+  if (acc === 'ga' && !cacheVer) {
+    const legacy = legacyFileNameFor_(input);
+    const legacyFiles = folder.getFilesByName(legacy);
+    if (legacyFiles.hasNext()) return legacyFiles.next();
+  }
+  return null;
+}
+
+function getPublicUrl_(fileId) {
+  return 'https://drive.google.com/uc?export=download&id=' + fileId;
+  // Fallback if CORS fails: 'https://drive.usercontent.google.com/download?id=' + fileId + '&export=download';
 }
 
 function getAudioFromDriveByName_(name) {
@@ -211,7 +232,13 @@ function saveToDrive_(input, accent, blob, cacheVer) {
   const name = fileNameFor_(input, accent, cacheVer);
   const existing = folder.getFilesByName(name);
   while (existing.hasNext()) existing.next().setTrashed(true);
-  folder.createFile(blob.setName(name));
+  const file = folder.createFile(blob.setName(name));
+  try {
+    file.setSharing(DriveApp.Access.ANYONE_WITH_LINK, DriveApp.Permission.VIEW);
+  } catch (e) {
+    Logger.log('setSharing failed for ' + name + ': ' + e);
+  }
+  return file;
 }
 
 function saveToDriveByName_(name, blob) {
@@ -258,8 +285,60 @@ function handleWarm_(e) {
   return jsonResponse_({ ok: true, accent: accent, results: results });
 }
 
+function resolveUrlOne_(word, accent) {
+  if (!/^[a-zA-Z][a-zA-Z'-]*$/.test(word)) {
+    return { word: word, status: 'failed', error: 'invalid' };
+  }
+  let file = getAudioFileFromDrive_(word, accent);
+  if (file) {
+    try { file.setSharing(DriveApp.Access.ANYONE_WITH_LINK, DriveApp.Permission.VIEW); } catch (e) {}
+    return { word: word, status: 'cache', url: getPublicUrl_(file.getId()) };
+  }
+  try {
+    const instructions = instructionsFor_(accent, false);
+    const fresh = fetchFromOpenAIWithRetry_(word, { instructions: instructions });
+    if (!isAudioBlobTooShort_(fresh)) {
+      const saved = saveToDrive_(word, accent, fresh);
+      return { word: word, status: 'openai', url: getPublicUrl_(saved.getId()) };
+    }
+    return { word: word, status: 'failed', error: 'too_short' };
+  } catch (err) {
+    return { word: word, status: 'failed', error: String(err.message || err).slice(0, 120) };
+  }
+}
+
+function handleUrls_(e) {
+  const accent = normalizeAccent_(e && e.parameter && e.parameter.accent);
+  const raw = String((e && e.parameter && e.parameter.words) || '').trim();
+  if (!raw) return jsonResponse_({ ok: false, error: 'no words' });
+  const words = raw.split(',').map(function(s) { return s.trim(); }).filter(Boolean).slice(0, WARM_MAX);
+  const results = words.map(function(w) { return resolveUrlOne_(w, accent); });
+  return jsonResponse_({ ok: true, accent: accent, results: results });
+}
+
+/** One-shot: make all existing IPA-TTS-Audio files publicly readable. Run once from the editor. */
+function migratePublicSharing() {
+  const folder = getFolder_();
+  const files = folder.getFiles();
+  let n = 0, ok = 0, ng = 0;
+  while (files.hasNext()) {
+    n++;
+    const f = files.next();
+    try {
+      f.setSharing(DriveApp.Access.ANYONE_WITH_LINK, DriveApp.Permission.VIEW);
+      ok++;
+    } catch (e) {
+      ng++;
+      Logger.log('migrate failed for ' + f.getName() + ': ' + e);
+    }
+    if (n % 100 === 0) Logger.log('progress: ' + n + ' (' + ok + ' ok, ' + ng + ' failed)');
+  }
+  Logger.log('DONE: ' + n + ' files, ' + ok + ' public, ' + ng + ' failed');
+}
+
 function doGet(e) {
   try {
+    if (e && e.parameter && e.parameter.urls) return handleUrls_(e);
     if (e && e.parameter && e.parameter.warm) return handleWarm_(e);
 
     const weakIpa = String((e && e.parameter && e.parameter.weak) || '').trim();

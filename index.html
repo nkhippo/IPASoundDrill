@@ -1734,6 +1734,7 @@ function updatePool(){
     $("poolNote").classList.remove("hidden");
     $("poolNote").textContent=t("pool.count",{n:pool.length});
     if(dataReady())$("startBtn").disabled=pool.length===0;
+    schedulePoolPreread();
     return;
   }
   $("poolNote").classList.remove("hidden");
@@ -1742,11 +1743,61 @@ function updatePool(){
     const key=S.csFilter==="weak"?"pool.count_weak":"pool.count_phrases";
     $("poolNote").textContent=t(key,{n});
     if(dataReady())$("startBtn").disabled=n===0;
+    schedulePoolPreread();
     return;
   }
   const n=filteredPool().length;
   $("poolNote").textContent=t("pool.count",{n});
   if(dataReady())$("startBtn").disabled=n===0;
+  schedulePoolPreread();
+}
+
+/** Setup-screen idle preread: cache top-N pool words for current accent before Start. */
+function schedulePoolPreread() {
+  const setup = $("setup");
+  if (!setup || setup.classList.contains("hidden")) return;
+  if (S && S.queue && S.queue.length > 0) return;
+  if (!dataReady()) return;
+
+  prefetchToken++;
+  const token = prefetchToken;
+
+  scheduleIdle(() => {
+    if (token !== prefetchToken) return;
+    if (setup.classList.contains("hidden")) return;
+    if (S && S.queue && S.queue.length > 0) return;
+    let preview = [];
+    try {
+      preview = buildSessionPool(false, []);
+    } catch (e) {
+      return;
+    }
+    const N = SESSION_INITIAL;
+    // Plain words only (connected/weak stay on Start path)
+    const target = preview
+      .filter(c => c && c.w && !isConnectedItem(c) && !isWeakItem(c))
+      .slice(0, N)
+      .map(c => c.w);
+    if (!target.length) return;
+    const cur = currentAccent();
+    const uncached = [...new Set(target)].filter(w => !hasCachedAudioFor(w, cur));
+    if (!uncached.length) return;
+    (async () => {
+      try {
+        const urlMap = await fetchUrlsFromGas(uncached, cur);
+        for (const w of uncached) {
+          if (token !== prefetchToken) return;
+          const url = urlMap.get(w);
+          if (!url) continue;
+          const data = await fetchAudioFromDriveUrl(url);
+          if (token !== prefetchToken) return;
+          saveAudioToLSAccent(w, cur, data.mimeType, data.audio);
+          const blob = new Blob([bytesFromB64(data.audio)], { type: data.mimeType || "audio/mpeg" });
+          memAudioCache.set(memKeyAccent(w, cur), URL.createObjectURL(blob));
+        }
+      } catch (e) { /* preread failure is silent */ }
+    })();
+  }, 3000);
 }
 function recordHist(word,res){
   const h=loadHist();
@@ -2069,6 +2120,30 @@ async function fetchAudioFromGasAccent(word, accent) {
   return data;
 }
 
+async function fetchUrlsFromGas(words, accent) {
+  const chunk = words.slice(0, PREFETCH.warmChunk);
+  const q = "urls=1&accent=" + accent + "&words=" + encodeURIComponent(chunk.join(","));
+  const res = await fetch(GAS_TTS_URL + "?" + q);
+  if (!res.ok) throw new Error("GAS HTTP " + res.status);
+  const data = await res.json();
+  if (!data.ok) throw new Error(data.error || "GAS urls error");
+  const map = new Map();
+  for (const r of data.results || []) {
+    if (r.url) map.set(r.word, r.url);
+  }
+  return map;
+}
+
+async function fetchAudioFromDriveUrl(url) {
+  const res = await fetch(url);
+  if (!res.ok) throw new Error("Drive HTTP " + res.status);
+  const buf = await res.arrayBuffer();
+  const bytes = new Uint8Array(buf);
+  let bin = "";
+  for (let i = 0; i < bytes.length; i++) bin += String.fromCharCode(bytes[i]);
+  return { mimeType: "audio/mpeg", audio: btoa(bin) };
+}
+
 async function fetchAudioFromGas(text, opts) {
   const o = parseSpeakOpts(opts);
   let q;
@@ -2230,7 +2305,19 @@ async function fetchBodyToCache(word, accent, token) {
     return;
   }
   try {
-    const data = await fetchAudioFromGasAccent(word, accent);
+    // Prefer Drive public URL (bypass GAS base64 proxy); fall back to ?word= base64
+    let data = null;
+    try {
+      const urlMap = await fetchUrlsFromGas([word], accent);
+      if (token !== prefetchToken) return;
+      const url = urlMap.get(word);
+      if (url) data = await fetchAudioFromDriveUrl(url);
+    } catch (urlErr) {
+      data = null;
+    }
+    if (!data) {
+      data = await fetchAudioFromGasAccent(word, accent);
+    }
     if (token !== prefetchToken) return;
     saveAudioToLSAccent(word, accent, data.mimeType, data.audio);
     const blob = new Blob([bytesFromB64(data.audio)], { type: data.mimeType || "audio/mpeg" });
@@ -2250,6 +2337,14 @@ async function prefetchIdleBodies(words, accent, token) {
     if (token !== prefetchToken) return;
     if (hasCachedAudioFor(w, accent)) continue;
     await fetchBodyToCache(w, accent, token);
+  }
+}
+
+function scheduleIdle(fn, timeout) {
+  if (typeof requestIdleCallback === "function") {
+    requestIdleCallback(() => fn(), { timeout: timeout || 5000 });
+  } else {
+    setTimeout(fn, timeout || 5000);
   }
 }
 
@@ -2313,34 +2408,74 @@ function prefetchItemsAudio(items) {
   refreshAllSpeakers();
 
   (async () => {
-    if (words.length) {
-      await Promise.all([gasWarm(words, cur, token), gasWarm(words, other, token)]);
+    // FAST PATH: first word body fetch without waiting for warm
+    const firstWord = wordItems[0] && wordItems[0].w;
+    if (firstWord && !hasCachedAudioFor(firstWord, cur)) {
+      fetchBodyToCache(firstWord, cur, token);
+    } else if (firstWord) {
+      audioReady.set(audioReadyKey(firstWord, cur), "ready");
+      refreshSpeakerFor(firstWord, cur);
     }
-    if (token !== prefetchToken) return;
-    let wi = 0;
-    async function bodyWorker() {
-      while (wi < words.length) {
+
+    // Current-accent warm is fire-and-forget (does not gate body pipeline)
+    if (words.length) gasWarm(words, cur, token);
+
+    // Remaining words: batch URL fetch (6/chunk) then parallel Drive download
+    const remaining = firstWord ? words.filter(w => w !== firstWord) : words.slice();
+    async function bodyWorkerBatch() {
+      const chunks = [];
+      for (let k = 0; k < remaining.length; k += PREFETCH.warmChunk) {
+        chunks.push(remaining.slice(k, k + PREFETCH.warmChunk));
+      }
+      for (const chunk of chunks) {
         if (token !== prefetchToken) return;
-        const w = words[wi++];
-        await fetchBodyToCache(w, cur, token);
+        try {
+          const urlMap = await fetchUrlsFromGas(chunk, cur);
+          if (token !== prefetchToken) return;
+          await Promise.all(chunk.map(async (w) => {
+            if (token !== prefetchToken) return;
+            if (hasCachedAudioFor(w, cur)) {
+              audioReady.set(audioReadyKey(w, cur), "ready");
+              refreshSpeakerFor(w, cur);
+              return;
+            }
+            const url = urlMap.get(w);
+            if (!url) throw new Error("no url for " + w);
+            const data = await fetchAudioFromDriveUrl(url);
+            if (token !== prefetchToken) return;
+            saveAudioToLSAccent(w, cur, data.mimeType, data.audio);
+            const blob = new Blob([bytesFromB64(data.audio)], { type: data.mimeType || "audio/mpeg" });
+            memAudioCache.set(memKeyAccent(w, cur), URL.createObjectURL(blob));
+            audioReady.set(audioReadyKey(w, cur), "ready");
+            refreshSpeakerFor(w, cur);
+          }));
+        } catch (e) {
+          for (const w of chunk) {
+            if (token !== prefetchToken) return;
+            await fetchBodyToCache(w, cur, token);
+          }
+        }
       }
     }
-    await Promise.all(Array.from({ length: PREFETCH.bodyParallel }, bodyWorker));
+    if (remaining.length) await bodyWorkerBatch();
     if (token !== prefetchToken) return;
+
     for (const c of specialItems) {
       if (token !== prefetchToken) return;
       if (isConnectedItem(c)) await fetchBodyToCacheItem(c, "ga", token);
       else {
         await fetchBodyToCacheItem(c, cur, token);
-        if (token !== prefetchToken) return;
-        if (cur !== other) await fetchBodyToCacheItem(c, other, token);
+        // Opposite-accent weak body deferred with idle warm (not on Start critical path)
       }
     }
     if (token !== prefetchToken) return;
+
+    // Opposite accent: idle warm only (body fetch on accent switch via prefetchAccentBodies)
     if (words.length) {
-      const idleFn = () => prefetchIdleBodies(words, other, token);
-      if (typeof requestIdleCallback === "function") requestIdleCallback(idleFn, { timeout: 30000 });
-      else setTimeout(idleFn, 2000);
+      scheduleIdle(() => {
+        if (token !== prefetchToken) return;
+        gasWarm(words, other, token);
+      }, 8000);
     }
   })();
 }
