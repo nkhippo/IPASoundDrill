@@ -18,6 +18,7 @@ GitHub Pages: https://nkhippo.github.io/English-Pronunciation-Trainer/
 
 | ファイル | 説明 |
 |---------|------|
+| [`docs/README.md`](docs/README.md) | `docs/` 配下の索引（正本 vs タスク履歴の見分け） |
 | [`docs/REPOSITORY-STRUCTURE.md`](docs/REPOSITORY-STRUCTURE.md) | **フォルダ構成マップ（Claude 共有用・最初に読む）** |
 | [`docs/PURPOSE.md`](docs/PURPOSE.md) | 目的・モード構成の正本 |
 | [`docs/DESIGN.md`](docs/DESIGN.md) | 実装設計仕様 |

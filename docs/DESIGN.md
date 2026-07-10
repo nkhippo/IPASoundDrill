@@ -2,8 +2,9 @@
 
 > `PURPOSE.md` で確定した目的・2モード構成を、Cursorが実装に落とせる粒度まで具体化した仕様。
 > 本ドキュメントは「何を作るか（what / how）」の正本。目的の正本は `PURPOSE.md`。
+> 画面・JSON フィールド・localStorage の正本は **`SPECIFICATION.md`**。フォルダマップは **`REPOSITORY-STRUCTURE.md`**。
 >
-> **更新日:** 2026-07-10 ／ **ステータス:** Mode A・Mode B・GA/RP・連結句・弱形・語彙ブラウザ・進捗チェック・`ga_rp_same` 実装済み。語彙 **5,397語**（B2=899、Phase 2 M2 完了）。
+> **更新日:** 2026-07-10 ／ **ステータス:** Mode A・Mode B・GA/RP・連結句・弱形・語彙ブラウザ・進捗チェック・`ga_rp_same` 実装済み。語彙 **5,397語**（B2=899、Phase 2 M2 完了）。Phase R（RP パイプライン品質修正）完了。
 
 ---
 
@@ -91,7 +92,7 @@ reveal には必ず以下を表示する：
 
 - 出題語（headword）
 - 正解IPA（強勢核を琥珀色下線でハイライト）
-- **意味（gloss）を現在のUI言語で必ず添える** … gloss は en/ja/zh/ko/fil を保持。UI=fil なら `gloss.fil`（**3,059語完走**）。
+- **意味（gloss）を現在のUI言語で必ず添える** … gloss は en/ja/zh/ko/fil を保持。UI=fil なら `gloss.fil`（**5,397語**）。
 - 自分の解答との差分（Encodeはトークン色分け）
 - 音声再生（後述TTS）
 - 規則語なら綴り規則パターン（`ai → /eɪ/` 等）
@@ -134,9 +135,9 @@ aʊ: how /haʊ/, cow /kaʊ/, hour /ˈaʊɚ/
 |------|------|
 | 設定 | `localStorage.app_accent` = `ga` \| `rp`（既定 `ga`） |
 | 表示 IPA | `activeIpa(c)` — RP 時は `rp_ipa`、なければ GA `ipa` にフォールバック |
-| reveal 補足 | 選択外アクセントの phonemic IPA を表示（`altAccentLabel()` + `altAccentValue()`）。ラベルは `GA` / `RP` のみ。同一時は `/ipa/（同じ）` 形式（`formatSameAccentIpa()` + `reveal.alt_same`）。判定は **`ipa === rp_ipa` の文字列一致**（`ga_rp_same` フラグは未実装）。対象: `#rAltIpa`（Reveal）、`#dAltIpa`（Decode・単語のみ）、`#mbSAltIpa`（Mode B Study）、語彙ブラウザ RP 行 |
+| reveal 補足 | 選択外アクセントの phonemic IPA を表示（`altAccentLabel()` + `altAccentValue()`）。ラベルは `GA` / `RP` のみ。実質同一時は `/ipa/（同じ）` 形式（`formatSameAccentIpa()` + `reveal.alt_same`）。判定は **`ga_rp_same` フラグ**（未設定時は `ipa === rp_ipa` にフォールバック）。対象: `#rAltIpa`（Reveal）、`#dAltIpa`（Decode・単語のみ）、`#mbSAltIpa`（Mode B Study）、語彙ブラウザ RP 行 |
 | Encode キーボード | GA: ɑ ɔ ɝ ɚ 等 / RP: ɒ ɜː 長音ː・二重母音拡張 |
-| データ | 全 3,059 語 + 201 連結句に `rp_ipa` 付与 |
+| データ | 全 **5,397** 語 + 201 連結句に `rp_ipa` 付与 |
 
 ### 1.8 Connected Speech（連結句＋弱形・STEP6/弱形統合）
 
@@ -159,7 +160,7 @@ aʊ: how /haʊ/, cow /kaʊ/, hour /ˈaʊɚ/
 
 1キューで、語の履歴に応じて段階を自動選択。
 
-- **提示（Study／未習語）:** ▶音を自動再生 → IPA のみ表示 → 学習者が [意味を確認する] を押すと単語＋意味(gloss) をフェードイン開示。採点なし、[次へ]。英語 UI では `gloss.en === w` の自己参照を `modeBDisplayGloss()` が `def`（英語定義文・**3,059語完備**）または `(品詞)` で代替。
+- **提示（Study／未習語）:** ▶音を自動再生 → IPA のみ表示 → 学習者が [意味を確認する] を押すと単語＋意味(gloss) をフェードイン開示。採点なし、[次へ]。英語 UI では `gloss.en === w` の自己参照を `modeBDisplayGloss()` が `def`（英語定義文・**5,397語**）または `(品詞)` で代替。
 - **確認（Quiz／既習・復習期限）:** 客観2種を実施（採用＝両方）。
   - **(a) 意味認識MCQ:** ▶音 → 4択から意味を選ぶ。distractorは §2.2。順序シャッフル。
   - **(b) 音声ディクテーション:** ▶音 → 単語を入力。採点は Mode A Decode を流用（完全一致/Lev≤1/不一致）。
@@ -198,10 +199,10 @@ aʊ: how /haʊ/, cow /kaʊ/, hour /ˈaʊɚ/
 
 | タブ | 内容 |
 |------|------|
-| **Words** | wordlist 全 3,059 語。A→Z ソート・検索（debounce 120ms）・A–Z ジャンプ |
-| **Phrases** | `connected_speech.json` 201 句。cs_type × level 順。弱形は含まない |
+| **Words** | wordlist 全 **5,397** 語。A→Z ソート・検索（debounce 120ms）・A–Z ジャンプ・**進捗チェック（d/e/l）** |
+| **Phrases** | `connected_speech.json` 201 句。cs_type × level 順。**CEFR バッジ**付き。弱形は含まない |
 
-各行: 単語 / GA+RP IPA / 意味（`vocabDisplayGloss()`）/ 品詞 / TTS。RP 行は常時表示（同一時 `reveal.alt_same (IPA)`）。英語 UI で `gloss.en === w` の自己参照は `def`（英語定義文）または `(品詞)` で代替。モバイル（`<599px`）では検索欄を非表示。Escape で閉じる。
+各行: 単語 / GA+RP IPA / 意味（`vocabDisplayGloss()`）/ 品詞 / TTS / 進捗チェック。RP 行は常時表示（`ga_rp_same` 時は `reveal.alt_same` 形式）。英語 UI で `gloss.en === w` の自己参照は `def` または `(品詞)` で代替。モバイル（`<599px`）では検索欄を非表示。Escape で閉じる。
 
 ### 2c. Narrow IPA + Respelling（Phase 1）
 
@@ -236,7 +237,21 @@ aʊ: how /haʊ/, cow /kaʊ/, hour /ˈaʊɚ/
 - **最終:** `respell_ga` 3,059/3,059語、`ipa_actual_ga` 192語（narrow 差分がある語のみ）。
 - **v2 品質パッチ（2026-07-02）:** 音節主音 n/l + 追加コーダ子音パターン（`tnt` 等）18語の `respell_ga` を `uh` 補完表記に修正（`generate_respelling.py` v2、`data/pipeline/phase2b_respell_draft_v2.json`）。
 
-**現行（2026-07-09）:** ステージング JSON は `data/pipeline/`。語彙 4,828語、`ipa_actual_ga` 候補 ~434語、R4 pending ~110語。パス正本は `scripts/paths.py` / `docs/REPOSITORY-STRUCTURE.md`。
+### 2g. Phase R: RP パイプライン品質修正（2026-07-10）
+
+本番 `rp_ipa` は Claude バッチ同梱が正本。以下は分類・fallback・再発防止用。
+
+| コンポーネント | 役割 |
+|----------------|------|
+| `scripts/gen_ga_rp_same.py` | `ga_rp_same` / `ga_rp_same_reason` 付与。Phase R1 で `cot_caught`・`square_near_cure`・BATH+weak composite を活性化 |
+| `scripts/fix_happy_i.py` | word-final happY の `/iː/`・`/ɪ/` → `/i/` 一括是正（91語、Phase R2） |
+| `scripts/phonology_lexicon.py` | `BATH_WORDS_BASE`・`PALM_WORDS`・`YOD_CORONALS` を `ga_to_rp.py` と共有 |
+| `scripts/ga_to_rp.py` | offline fallback（PALM guard・yod・happY skip） |
+| `scripts/gen_rp_ipa.py` | 新規バッチ用 Claude API。SYSTEM_PROMPT に happY ルールあり |
+
+詳細: `docs/cursor/reports/cursor-implementation-report-phase-r.md`
+
+**現行（2026-07-10）:** ステージング JSON は `data/pipeline/`。語彙 **5,397語**、`ipa_actual_ga` 候補 ~529語、R4 pending **127語**。RP 品質: Phase R で `fix_happy_i.py`・`phonology_lexicon.py` 導入。パス正本は `scripts/paths.py` / `docs/REPOSITORY-STRUCTURE.md`。
 
 i18n: `vocab.*`（5 キー × 5 言語）。
 
@@ -309,7 +324,7 @@ Keep the delivery identical and consistent across all words.
 
 ### 3.4c GA バッチ warm（GAS 時間トリガー・2026-07 実装）
 
-全 3,059 語の GA 音声を Google Drive に事前ストックするオフラインジョブ。`gas/BatchWarm.gs` + `gas/BatchWords.gs`（`scripts/export_batch_words.py` で生成）。
+全 **5,397** 語の GA 音声を Google Drive に事前ストックするオフラインジョブ。`gas/BatchWarm.gs` + `gas/BatchWords.gs`（`scripts/export_batch_words.py` で生成）。
 
 | 定数 | 値 |
 |------|-----|
@@ -330,10 +345,10 @@ Keep the delivery identical and consistent across all words.
 | Tier | 内容 | fil 状態 |
 |------|------|----------|
 | Tier 1 | UI 文言 162 キー + 言語ピッカー（zh-Hant/zh-Hans 分離） | ✅ `i18n/fil.json` |
-| Tier 2 | 語義 gloss（3,059 語） | ✅ **3,059/3,059**（batch01–34） |
+| Tier 2 | 語義 gloss（5,397 語） | ✅ **5,397/5,397** |
 | Tier 3 | 音素解説 47 記号 + 学習ガイド | ✅ 全6言語（2026-07-07: zh→zh-Hant/zh-Hans 分離） |
 | Tier 4 | 連結句・弱形ルール文 `cs_rule` | ✅ 237/237（201+36） |
-| — | 英語定義 `def`（3,059 語） | ✅ batch01–08（`tools/merge_def.py`） |
+| — | 英語定義 `def`（5,397 語） | ✅ 全語彙 |
 
 検証: `python3 tools/validate_i18n.py`。拡張手順: `docs/reference/i18n-language-scaling.md`。
 
@@ -344,28 +359,29 @@ Keep the delivery identical and consistent across all words.
 | 優先 | 内容 | 状態 |
 |---|---|---|
 | 高 | 欠落必須語・屈折形パッチ | ✅ 主要語追加済み（`data/*_patch.json`） |
-| 高 | `neighbors` 全語事前計算 | ✅ 2,623/3,059語 |
+| 高 | `neighbors` 全語事前計算 | ✅ 5,397語（neighbors v2・0 近傍率 5%） |
 | 高 | `ex`（記号別例語） | ✅ phonemes JSON に実装 |
-| 高 | `rp_ipa` 全語付与 | ✅ 3,059語 + 201連結句 |
+| 高 | `rp_ipa` 全語付与 | ✅ **5,397語** + 201連結句 |
 | 高 | 弱形 36語 + `?weak=` TTS | ✅ |
-| 高 | UI fil（Tier 1+3） | ✅ 161キー + phonemes + guide |
-| 高 | 英語定義 `def` | ✅ 3,059/3,059（`tools/merge_def.py`） |
+| 高 | UI fil（Tier 1+3） | ✅ 167キー + phonemes + guide |
+| 高 | 英語定義 `def` | ✅ 5,397/5,397 |
 | 高 | TTS プリフェッチ（クライアント） | ✅ |
-| 高 | GA バッチ warm（GAS） | ✅ `BatchWarm.gs` |
-| 中 | 語彙ブラウザ | ✅ Words 3,059 / Phrases 201 |
-| 中 | 本物のB/C日常語彙 | ⬜ 継続（B1=25語、B2=0語。Phase 1/2 で拡充） |
+| 高 | GA バッチ warm（GAS） | ✅ `BatchWarm.gs`（5,397語） |
+| 高 | `ga_rp_same` フラグ | ✅ Phase R で分類器・happY rp_ipa 修正 |
+| 中 | 語彙ブラウザ | ✅ Words 5,397 / Phrases 201 / 進捗チェック / CEFR バッジ |
+| 中 | B1/B2 語彙拡充 | ✅ B1=2,116 / **B2=899**（Phase 2 M2 完了。M3+ 継続） |
 | 高 | CEFR 誤ラベル phonics 是正 | ✅ Phase 0-a（652語 `cefr` null 化） |
 | 中 | カジュアル表現 | ✅ 一部（`casual` src） |
 | 中 | 薄い記号の補強 | 部分 |
 | 中 | `neighbors_rp` | ⏸ 保留 |
 | ― | gloss品質点検 | 継続（多言語学習ガイドと連動可） |
-| ― | gloss.fil（Tier 2） | ✅ 3,059/3,059 |
+| ― | gloss.fil（Tier 2） | ✅ 5,397/5,397 |
 | ― | cs_rule.fil（Tier 4） | ✅ 237/237 |
 | ― | 連結句 RP TTS | ⬜ 別タスク |
 
 ---
 
-## 5. 実装状況（2026-07-06）
+## 5. 実装状況（2026-07-10）
 
 | 項目 | 状態 |
 |---|---|
@@ -373,25 +389,23 @@ Keep the delivery identical and consistent across all words.
 | GA/RP 切替（IPA・キーボード・RP TTS） | ✅ |
 | 連結句 201句（キャリア文） | ✅ |
 | 弱形 36語 + `?weak=` TTS | ✅ Connected Speech 内 Type=weak |
-| Mode B（Study/Quiz・vocab SRS・バンド解放） | ✅ |
+| Mode B（Study/Quiz・vocab SRS・バンド解放） | ✅ Study のみ（Quiz コード温存） |
 | 練習タブ統一（Connected ⊃ Weak） | ✅ |
-| 語彙ブラウザ（Words / Phrases） | ✅ |
+| 語彙ブラウザ（Words / Phrases / 進捗チェック / CEFR バッジ） | ✅ |
 | TTS プリフェッチ（ストリーミング先読み + 全モードスピーカー gating） | ✅ |
 | 無制限セッション（プール全件・6/5 先読み・離脱確認→サマリー） | ✅ |
 | CEFR 連動フィルタ（0 件ピル非活性） | ✅ |
-| Mode B Study のみ（Quiz コード温存） | ✅ |
-| GA バッチ warm（GAS 時間トリガー） | ✅ |
-| UI 6言語（en/ja/zh-Hans/zh-Hant/ko/fil） | ✅ Tier 1+3（162キー） |
-| 多言語学習ガイド（6言語） | ✅ フェーズ1 |
-| 英語定義 `def` | ✅ 3,059/3,059 |
-| narrow IPA + respelling（pilot 30語） | ✅ Phase 1 |
-| narrow IPA（GA）本マージ 186語上書き | ✅ Phase 2a |
-| respelling 本マージ 3,007語 | ✅ Phase 2b |
-| narrow IPA + respelling 全3,059語完了 | ✅ Phase 2 final |
-| gloss.fil / cs_rule.fil | ✅ **すべて完了**（3,059語 + 237件） |
+| GA バッチ warm（GAS 時間トリガー・5,397語） | ✅ |
+| UI 6言語（en/ja/zh-Hans/zh-Hant/ko/fil） | ✅ Tier 1+3（167キー） |
+| 多言語学習ガイド（6言語） | ✅ |
+| 英語定義 `def` | ✅ 5,397/5,397 |
+| narrow IPA + respelling | ✅ 全語彙 |
+| gloss.fil / cs_rule.fil | ✅ **すべて完了**（5,397語 + 237件） |
+| `ga_rp_same` フラグ + 分類器（Phase R） | ✅ same=2,674 / different=2,723 |
+| Phase R: happY rp_ipa 修正・`phonology_lexicon.py` | ✅ 2026-07-10 |
 | 連結句 RP TTS | ⬜ |
-| 反対アクセント全画面表示（Reveal / Decode words / Mode B Study / 語彙ブラウザ） | ✅ 2026-07-06 |
-| 学習モード名称（行為ベース: IPA読み書き / 聞いて覚える 等） | ✅ 2026-07-06 |
-| セットアップ詳細フィルタ折りたたみ・プレイ中パンくず | ✅ 2026-07-06 |
+| 反対アクセント全画面表示（Reveal / Decode words / Mode B Study / 語彙ブラウザ） | ✅ |
+| 学習モード名称（行為ベース: IPA読み書き / 聞いて覚える 等） | ✅ |
+| セットアップ詳細フィルタ折りたたみ・プレイ中パンくず | ✅ |
 
-**運用メモ:** Mode A/B の新規 UI 文字列は i18n キー経由。GAS は RP TTS + バッチ warm 対応版を再デプロイ済み（`index.html` `GAS_TTS_URL` 参照）。語彙リスト更新時は `python3 scripts/export_batch_words.py` で `BatchWords.gs` を再生成。
+**運用メモ:** Mode A/B の新規 UI 文字列は i18n キー経由。GAS は RP TTS + バッチ warm 対応版を再デプロイ済み（`index.html` `GAS_TTS_URL` 参照）。語彙リスト更新時は `python3 scripts/export_batch_words.py` で `BatchWords.gs` を再生成。`rp_ipa` 変更後は `fix_happy_i.py` → `gen_ga_rp_same.py` の順で実行推奨（Phase R 参照: `docs/cursor/reports/cursor-implementation-report-phase-r.md`）。

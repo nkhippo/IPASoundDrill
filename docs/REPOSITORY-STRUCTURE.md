@@ -1,9 +1,27 @@
 # Repository Structure
 
 > **Purpose:** Share this file with Claude (or other AI assistants) at the start of a task so it knows where data, scripts, and docs live.  
-> **Last updated:** 2026-07-10（Phase 2 M2 完了・進捗チェック・フォルダ README 整備・R4 リストを `data/pipeline/` へ移動）
+> **Last updated:** 2026-07-10（Phase R 完了・Phase 2 M2 完了・進捗チェック・フォルダ README 整備）
 
 ---
+
+## Canonical documentation — what to read when
+
+Claude に渡すときは **本ファイルを最初に**読ませ、目的に応じて下表の正本を追加する。
+
+| File | Role | Read when you need… |
+|------|------|---------------------|
+| **`REPOSITORY-STRUCTURE.md`**（本書） | フォルダマップ・パス・パイプライン手順 | どこに何があるか、コマンド、ランタイム契約 |
+| **`PURPOSE.md`** | 目的・2モード・評価方針の正本 | なぜそう作るか、本丸 vs サブテーマ、依存の実装状況 |
+| **`DESIGN.md`** | 実装設計（what/how） | SRS・出題・TTS・データ整備タスクの設計意図 |
+| **`SPECIFICATION.md`** | 画面・データフィールド・localStorage の正本 | UI 仕様、JSON スキーマ、`ga_rp_same` 定義 |
+| **`docs/cursor/README.md`** | Cursor タスク履歴の索引 | 過去の指示書・実装レポートの場所 |
+| **`docs/reference/README.md`** | 監査・運用ガイドの索引 | R4 レビュー、CEFR 監査、TTS 設計の詳細 |
+| **`data/README.md`** | `data/` 配下の役割分担 | runtime / batches / pipeline / derived の見分け |
+
+**衝突時の優先順位:** `PURPOSE.md` → `DESIGN.md` → `SPECIFICATION.md` → 本書の運用メモ。
+
+**履歴ドキュメント:** `docs/cursor/reports/` 内の古いレポートは当時の語数・パスを引用する場合あり。数値・パスの正本は上表。
 
 ## Quick orientation
 
@@ -15,7 +33,7 @@
 | **Batch imports** | `data/batches/` — Phase 1/2 merge sources（[`data/batches/README.md`](../data/batches/README.md)） |
 | **GAS TTS** | `gas/` — Google Apps Script proxy; not loaded by static site |
 | **Task history** | `docs/cursor/` — Cursor instruction + implementation reports（[`docs/cursor/README.md`](cursor/README.md)） |
-| **Canonical specs** | `docs/PURPOSE.md`, `docs/DESIGN.md`, `docs/SPECIFICATION.md` |
+| **Canonical specs** | `docs/PURPOSE.md`, `docs/DESIGN.md`, `docs/SPECIFICATION.md`（読み分けは上表） |
 
 **Path helper for Python:** `scripts/paths.py` defines canonical paths. Prefer importing it over hard-coded strings.
 
@@ -52,7 +70,8 @@ english-pronunciation-trainer/
 │   └── archive/               # ローカル退避（gitignore）→ README.md 参照
 │
 ├── docs/
-│   ├── REPOSITORY-STRUCTURE.md  # ★ this file
+│   ├── README.md                # ★ docs/ 索引（AI 向け・最初の案内）
+│   ├── REPOSITORY-STRUCTURE.md  # ★ フォルダマップ（Claude 共有用）
 │   ├── PURPOSE.md               # Goals, modes, dependency table（source of truth）
 │   ├── DESIGN.md                # Implementation design
 │   ├── SPECIFICATION.md         # Full spec（screens, data fields, localStorage）
@@ -64,7 +83,7 @@ english-pronunciation-trainer/
 │   ├── testing/                 # Manual test checklists
 │   └── archive/                 # 旧ドキュメント退避
 │
-├── scripts/                   # Python pipeline（paths.py がパス正本）
+├── scripts/                   # Python pipeline（paths.py がパス正本）→ 下表「Key scripts」
 ├── tools/                     # merge_def, validate_i18n, gen_audit_docs, …
 ├── gas/                       # Code.gs, BatchWarm.gs, BatchWords.gs, README
 ├── i18n/                      # UI strings + phonemes/（6 languages）
@@ -101,7 +120,7 @@ These paths are **hard-coded** in the app. Do not move without updating `index.h
 | CEFR B1 | 2,116 |
 | CEFR B2 | **899**（Phase 2 M2 完了: pilot 179 + M2 390） |
 | `rp_ipa` | 5,397（100%） |
-| `ga_rp_same` | 5,397（100%） |
+| `ga_rp_same` | 5,397（100% 付与）。**same=2,674 / different=2,723**（Phase R 後） |
 | `neighbors` 非空 | 5,113（94%） |
 | 全体 0 近傍率 | 5% |
 | `ipa_actual_ga`（flap 候補） | ~529 |
@@ -135,6 +154,9 @@ python3 scripts/merge_neighbors.py
 python3 scripts/gen_ga_rp_same.py --report data/pipeline/ga_rp_same_report.json
 python3 scripts/export_batch_words.py
 
+# After batch merge, if rp_ipa was generated with old happY rules:
+python3 scripts/fix_happy_i.py   # word-final /iː/ or /ɪ/ → /i/ (then re-run gen_ga_rp_same)
+
 # Regenerate audit markdown:
 python3 tools/gen_audit_docs.py
 python3 tools/validate_i18n.py
@@ -146,8 +168,11 @@ python3 tools/validate_i18n.py
 
 | Script | 役割 |
 |--------|------|
-| `scripts/phonology_lexicon.py` | 共有語彙リスト（BATH_WORDS, PALM_WORDS, YOD_CORONALS）— `ga_to_rp.py` と `gen_ga_rp_same.py` から import |
+| `scripts/phonology_lexicon.py` | 共有語彙リスト（`BATH_WORDS_BASE`, `PALM_WORDS`, `YOD_CORONALS`）— `ga_to_rp.py` と `gen_ga_rp_same.py` から import |
 | `scripts/fix_happy_i.py` | rp_ipa の happY 位置 `/iː/`/`/ɪ/` → `/i/` 是正（Phase R2 で1回実行済み。将来バッチ追加時にも実行推奨） |
+| `scripts/gen_ga_rp_same.py` | `ga_rp_same` / `ga_rp_same_reason` 一括付与（分類器。Phase R1 で dead-code 修正済み） |
+| `scripts/ga_to_rp.py` | GA→RP ルール変換（**offline fallback のみ**。本番 `rp_ipa` は Claude バッチ同梱） |
+| `scripts/gen_rp_ipa.py` | Claude API で RP IPA 生成（新規バッチ用。SYSTEM_PROMPT に happY ルールあり） |
 
 Staging outputs → `data/pipeline/`. Neighbors / RP progress → `data/derived/`. Merge scripts write `wordlist_GA_a1a2_plus_phonics.json`.
 
@@ -162,6 +187,8 @@ Staging outputs → `data/pipeline/`. Neighbors / RP progress → `data/derived/
 5. Add `docs/cursor/instructions/` + `docs/cursor/reports/`
 
 **Phase 2 M2 完了:** 569 語追加（B2 330→899）。残り B2 約 1,423 語は M3 以降。設計: `docs/reference/c1-expansion-scope-design.md`
+
+**Phase R 完了（2026-07-10）:** 分類器修正 + happY rp_ipa 91語是正 + `phonology_lexicon.py` 統合。詳細: `docs/cursor/reports/cursor-implementation-report-phase-r.md`
 
 ---
 

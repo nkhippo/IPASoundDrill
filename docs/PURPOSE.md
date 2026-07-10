@@ -1,9 +1,9 @@
-# English Pronunciation Trainer — 目的ステートメント（確定版 v3.0 / source of truth）
+# English Pronunciation Trainer — 目的ステートメント（確定版 / source of truth）
 
 > アプリの**本丸（measured outcome）**と**モード構成**を確定し、背景メモ・Cursor仕様書・実装コードの目的を一致させる正本。
 > 目的・評価方針に関する記述が衝突した場合は、本ドキュメントを正とする。
 >
-> **更新日:** 2026-07-10 ／ **ステータス:** 語彙 **5,397語**（Phase 2 M2 完了、B2=899）。GA/RP 切替・連結句・弱形・RP TTS・語彙ブラウザ・進捗チェック（3×3）・`ga_rp_same` フラグ・neighbors v2・TTS プリフェッチ・無制限セッション・離脱確認モーダル・UI 6言語対応済み。
+> **更新日:** 2026-07-10 ／ **ステータス:** 語彙 **5,397語**（Phase 2 M2 完了、B2=899）。Phase R（RP パイプライン品質修正）完了。GA/RP 切替・連結句・弱形・RP TTS・語彙ブラウザ・進捗チェック（3×3）・`ga_rp_same` フラグ・neighbors v2・TTS プリフェッチ・無制限セッション・離脱確認モーダル・UI 6言語対応済み。
 > 詳細な実装仕様は `docs/DESIGN.md`、画面・データの正本は `docs/SPECIFICATION.md` を参照。
 
 ---
@@ -31,13 +31,13 @@
 
 **Mode A の練習タブ:** **Words**（単語）と **Connected Speech**（連結句＋弱形・GA 音声前提）の2種。Connected Speech 内の Type フィルタで linking / assimilation / elision / **Weak forms** を選択。弱形36語は連結発音現象の一部として内包（独立タブなし）。
 
-**UI 言語:** en / ja / zh / ko / **fil**（タガログ語・**Tier 1–4 すべて完了**、UI 文言 **167 キー**）。語義 gloss.fil は **3,059/3,059語**（Tier 2 **完了**）。連結/弱形ルール文（cs_rule.fil）は **237/237件**（Tier 4 **完了**）。英語定義 `def` は **3,059/3,059語**（Mode B Study reveal・語彙ブラウザで利用）。
+**UI 言語:** en / ja / zh / ko / **fil**（タガログ語・**Tier 1–4 すべて完了**、UI 文言 **167 キー**）。語義 gloss.fil は **5,397/5,397語**。連結/弱形ルール文（cs_rule.fil）は **237/237件**（Tier 4 **完了**）。英語定義 `def` は **5,397/5,397語**（Mode B Study reveal・語彙ブラウザで利用）。
 
 **語彙ブラウザ:** トップバーから全語彙（5,397語）・連結句（201句）を参照閲覧。検索・A–Z ジャンプ・TTS・**進捗チェック（d/e/l 各3スロット）**付き。Phrases タブに CEFR バッジ表示。
 
 **CEFRの位置づけ:** 主軸としてMode Aには不適（頻度はIPA読み書き難易度の弱い代理であり、本アプリは既知語前提のため頻度の意味が薄い）。CEFRは破棄せず **Mode B の主軸へ移設**する。Mode Aではコールドスタート時の出題順にのみ残す。
 
-**アクセント（GA / RP）:** 設定で切替。IPA 表示・Encode キーボード・TTS（単語・弱形）が追従。連結句 TTS は GA 固定。反対アクセントの phonemic IPA は Reveal・Decode（単語）・Mode B Study・語彙ブラウザに表示（ラベルは `GA` / `RP` のみ）。**`ga_rp_same` / `ga_rp_same_reason` フラグ**で実質同一発音を判定（`scripts/gen_ga_rp_same.py`）。phonemic 完全一致時は `/ipa/（同じ）` 表示。Mode B の MCQ distractor は GA `neighbors` を RP でも流用（`neighbors_rp` 再計算は保留）。
+**アクセント（GA / RP）:** 設定で切替。IPA 表示・Encode キーボード・TTS（単語・弱形）が追従。連結句 TTS は GA 固定。反対アクセントの phonemic IPA は Reveal・Decode（単語）・Mode B Study・語彙ブラウザに表示（ラベルは `GA` / `RP` のみ）。**`ga_rp_same` / `ga_rp_same_reason` フラグ**で実質同一発音を判定（`scripts/gen_ga_rp_same.py`、Phase R で分類器・happY rp_ipa を修正）。phonemic 実質同一時は `/ipa/（同じ）` 表示。Mode B の MCQ distractor は GA `neighbors` を RP でも流用（`neighbors_rp` 再計算は保留）。
 
 ---
 
@@ -76,7 +76,7 @@
 | 弱形（36語）・連結句（201句） | **実装済み**（`cefr` + `ga_rp_same` 付与済み） |
 | 語彙ブラウザ | **実装済み**（Words 5,397 / Phrases 201 / 進捗チェック / Phrases CEFR バッジ） |
 | `neighbors` 事前計算 | **実装済み**（neighbors v2・全 5,397 語・0 近傍率 5%） |
-| `ga_rp_same` フラグ | **実装済み**（wordlist + connected + weak） |
+| `ga_rp_same` フラグ | **実装済み**（wordlist + connected + weak。same=2,674 / different=2,723） |
 | 進捗チェック（3×3） | **実装済み**（`ept_checks_v1`・頻度重み付け出題） |
 | GA/RP IPA・TTS・プリフェッチ | **実装済み** |
 | B1/B2 語彙の実データ | **B1: 2,116 / B2: 899**（Phase 2 M2 完了。CEFR-J B2 残り約 1,423 語は M3 以降） |
@@ -109,6 +109,19 @@ CEFR-J v1.5 B2 のうち **569 語**を pilot(179) + M2a–d(390) で追加。`r
 - R4 pending 累計: **127 語**（`data/pipeline/r4_pending_review_list.*`）
 
 次フェーズ: Phase 2 M3+（B2 残り）、Phase 3（C1）
+
+---
+
+## Phase R: RP パイプライン品質修正 — 完了 (2026-07-10)
+
+Opus レビューで判明した分類器 dead-code・happY rp_ipa 破損（91語）・`ga_to_rp.py` latent bug を修正。
+
+- **R1:** `gen_ga_rp_same.py` — `cot_caught` / `square_near_cure` / BATH+weak composite を活性化（フラグ数不変、reason 再分類）
+- **R2:** `gen_rp_ipa.py` happY ルール + `fix_happy_i.py` で rp_ipa 91語是正（82 過剰伸長 + 9 Jones `/ɪ/`）
+- **R3:** `phonology_lexicon.py` 新規、`ga_to_rp.py` PALM/happY/yod 修正
+- **R4:** neighbors 再生成、ドキュメント更新
+
+詳細: `docs/cursor/reports/cursor-implementation-report-phase-r.md`
 
 ---
 
