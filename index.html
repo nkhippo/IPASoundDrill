@@ -169,6 +169,13 @@
   #reveal.res-near .yourtry .try{color:var(--stress);font-weight:600;text-decoration:line-through;text-decoration-color:color-mix(in srgb,var(--stress) 55%,transparent)}
   #reveal.res-bad .yourtry .try{color:var(--bad);font-weight:600;text-decoration:line-through;text-decoration-color:color-mix(in srgb,var(--bad) 55%,transparent)}
   .alt-ipa{font-family:var(--ipa);font-size:13px;color:var(--faint);margin-top:2px;text-align:center;line-height:1.35}
+  .alt-ipa-row{display:flex;align-items:center;justify-content:center;gap:6px;flex-wrap:wrap}
+  .alt-ipa-row .alt-ipa-text{font-family:var(--ipa);font-size:13px;color:var(--faint);line-height:1.35}
+  .playicon.playicon-sm{width:28px;height:28px}
+  .playicon.playicon-sm svg{width:13px;height:13px}
+  .playicon.playicon-sm.loading::after{width:13px;height:13px}
+  .playicon.playicon-sm.inactive:disabled{opacity:.38;cursor:default}
+  .playicon.playicon-sm.inactive:disabled:hover{border-color:var(--hair);background:#fff}
   .dict-ipa{font-family:var(--ipa);font-size:clamp(13px,3.2vw,17px);color:var(--muted);letter-spacing:.5px;margin-top:4px;text-align:center}
   .yourtry .uipa{font-family:var(--ipa)}
   #reveal.res-ok .yourtry .uipa{color:var(--ok)}
@@ -219,6 +226,10 @@
   .vocab-play{border:1px solid var(--hair);background:#fff;border-radius:50%;width:32px;height:32px;padding:0;cursor:pointer;color:var(--signal);display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;transition:border-color .15s,background .15s;margin-top:1px}
   .vocab-play:hover{border-color:var(--signal);background:var(--signal-soft)}
   .vocab-play svg{width:14px;height:14px}
+  .vocab-alt-play{border:1px solid var(--hair);background:#fff;border-radius:50%;width:22px;height:22px;padding:0;cursor:pointer;color:var(--signal);display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;vertical-align:middle;margin-left:4px;transition:border-color .15s,background .15s,opacity .15s}
+  .vocab-alt-play:hover:not(:disabled){border-color:var(--signal);background:var(--signal-soft)}
+  .vocab-alt-play:disabled{opacity:.38;cursor:default}
+  .vocab-alt-play svg{width:11px;height:11px}
   .vocab-type-badge{font-family:var(--mono);font-size:9px;font-weight:700;padding:2px 6px;border-radius:6px;flex-shrink:0;letter-spacing:.04em;text-transform:uppercase}
   .vocab-cefr-badge{font-family:var(--mono);font-size:9px;font-weight:700;padding:2px 6px;border-radius:6px;flex-shrink:0;letter-spacing:.04em;color:var(--signal);background:var(--signal-soft)}
   .progress-checks{display:inline-flex;gap:8px;align-items:center;margin-left:4px;flex-shrink:0;padding-top:2px}
@@ -457,7 +468,7 @@
     <div class="card-top"><span class="cefr" id="mbSCefr" hidden></span><div class="card-top-right"><div class="qno" id="mbSNo"></div></div></div>
     <div class="readout"><button class="playicon" id="mbSPlay" type="button" aria-label="Listen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div>
     <div class="readout"><div class="ipa" id="mbSIpa"></div></div>
-    <div class="alt-ipa hidden" id="mbSAltIpa"></div>
+    <div class="alt-ipa alt-ipa-row hidden" id="mbSAltIpa"><span class="alt-ipa-text" id="mbSAltIpaText"></span><button class="playicon playicon-sm inactive hidden" id="mbSAltPlay" type="button" aria-label="Listen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg></button></div>
     <div class="info" id="mbSInfo"></div>
     <div class="mbs-meaning-slot">
       <div id="mbSMeaning" class="mbsMeaning hidden">
@@ -510,7 +521,7 @@
     <div class="readout"><div class="ipa" id="dIpa"></div>
       <button class="playicon" id="dPlay" type="button" aria-label="Listen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button>
     </div>
-    <div class="alt-ipa hidden" id="dAltIpa"></div>
+    <div class="alt-ipa alt-ipa-row hidden" id="dAltIpa"><span class="alt-ipa-text" id="dAltIpaText"></span><button class="playicon playicon-sm inactive hidden" id="dAltPlay" type="button" aria-label="Listen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg></button></div>
     <div class="info" id="dInfo"></div>
     <div class="answer">
       <input id="dInput" type="text" lang="en" inputmode="latin" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" pattern="[A-Za-z]*" placeholder="Type the word">
@@ -544,7 +555,7 @@
         <button class="playicon" id="rPlay" type="button" aria-label="Listen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button>
       </div>
       <div class="dict-ipa hidden" id="rDictIpa"></div>
-      <div class="alt-ipa hidden" id="rAltIpa"></div>
+      <div class="alt-ipa alt-ipa-row hidden" id="rAltIpa"><span class="alt-ipa-text" id="rAltIpaText"></span><button class="playicon playicon-sm inactive hidden" id="rAltPlay" type="button" aria-label="Listen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg></button></div>
       <div class="info" id="rInfo"></div>
       <div class="note" id="rNoteBlock">
         <div class="nh" id="tipsHead">Pronunciation tips</div>
@@ -655,6 +666,7 @@
 <script>
 const $=id=>document.getElementById(id);
 const show=(id,on)=>$(id).classList.toggle("hidden",!on);
+const SPEAKER_SVG = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>`;
 /* ---------- wordlist (table) ---------- */
 let PRESET = [];
 let WORD_BY_W = {};
@@ -917,8 +929,6 @@ function renderVocabWords(query = "") {
     return;
   }
 
-  const SPEAKER_SVG = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>`;
-
   let html = "";
   let curLetter = "";
 
@@ -937,18 +947,19 @@ function renderVocabWords(query = "") {
     const pos = posLabel(c.pos);
     const posStr = pos && pos !== "—" ? `<span class="vocab-pos">${escHtml(pos)}</span>` : "";
     const isSame = (c.ga_rp_same !== undefined) ? c.ga_rp_same : (rpIpa === gaIpa);
+    const altSpeaker = !isSame ? vocabAltSpeakerHtml(c.w) : "";
     const rpLine = rpIpa
       ? `<span class="vocab-ipa-rp"><span class="vocab-ipa-label">RP</span>${
           isSame
             ? escHtml(formatSameAccentIpa(rpIpa))
             : escHtml(rpIpa)
-        }</span>`
+        }${ACCENT === "ga" ? altSpeaker : ""}</span>`
       : "";
 
     html += `<div class="vocab-row">
       <span class="vocab-w">${escHtml(c.w)}</span>
       <span class="vocab-ipas">
-        <span class="vocab-ipa-ga"><span class="vocab-ipa-label">GA</span>${escHtml(gaIpa)}</span>
+        <span class="vocab-ipa-ga"><span class="vocab-ipa-label">GA</span>${escHtml(gaIpa)}${ACCENT === "rp" ? altSpeaker : ""}</span>
         ${rpLine}
       </span>
       <span class="vocab-gloss">${escHtml(gloss)}</span>
@@ -969,8 +980,6 @@ function renderVocabPhrases() {
     return (a.level || 0) - (b.level || 0);
   });
 
-  const SPEAKER_SVG = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>`;
-
   let html = "";
   sorted.forEach(c => {
     const gaIpa = c.ipa || "";
@@ -985,18 +994,19 @@ function renderVocabPhrases() {
       : "";
 
     const isSame = (c.ga_rp_same !== undefined) ? c.ga_rp_same : (rpIpa === gaIpa);
+    const altSpeaker = !isSame ? vocabAltSpeakerHtml(c.w) : "";
     const rpLine = rpIpa
       ? `<span class="vocab-ipa-rp"><span class="vocab-ipa-label">RP</span>${
           isSame
             ? escHtml(formatSameAccentIpa(rpIpa))
             : escHtml(rpIpa)
-        }</span>`
+        }${ACCENT === "ga" ? altSpeaker : ""}</span>`
       : "";
 
     html += `<div class="vocab-row">
       <span class="vocab-w" style="min-width:120px">${escHtml(c.w)}</span>
       <span class="vocab-ipas" style="min-width:130px">
-        <span class="vocab-ipa-ga"><span class="vocab-ipa-label">GA</span>${escHtml(gaIpa)}</span>
+        <span class="vocab-ipa-ga"><span class="vocab-ipa-label">GA</span>${escHtml(gaIpa)}${ACCENT === "rp" ? altSpeaker : ""}</span>
         ${rpLine}
       </span>
       <span class="vocab-gloss" title="${escAttr(rule)}">${escHtml(gloss)}${rule ? `<span style="color:var(--faint);font-size:11px;margin-left:5px">${escHtml(rule)}</span>` : ""}</span>
@@ -1080,6 +1090,56 @@ function altAccentValue(c) {
     return { value: formatSameAccentIpa(alt), isSame: true, hasAlt: true };
   }
   return { value: alt, isSame: false, hasAlt: true };
+}
+function otherAccent() {
+  return currentAccent() === "rp" ? "ga" : "rp";
+}
+function altAccentSpeakerState(c) {
+  if (!c || isConnectedItem(c) || isWeakItem(c)) return { visible: false, speaker: false };
+  const alt = altAccentValue(c);
+  if (!alt.hasAlt) return { visible: false, speaker: false };
+  if (alt.isSame) return { visible: true, speaker: false };
+  const accent = otherAccent();
+  const key = audioReadyKey(c.w, accent);
+  const st = audioReady.get(key);
+  const cached = hasCachedAudioFor(c.w, accent);
+  const enabled = cached || st === "ready";
+  const loading = !enabled && st === "pending";
+  return { visible: true, speaker: true, enabled, loading };
+}
+function renderAltAccentLine(c, textEl, playEl, rowEl) {
+  if (!rowEl) return;
+  const st = altAccentSpeakerState(c);
+  if (!st.visible) {
+    rowEl.classList.add("hidden");
+    return;
+  }
+  rowEl.classList.remove("hidden");
+  const alt = altAccentValue(c);
+  if (textEl) textEl.textContent = altAccentLabel() + ": " + alt.value;
+  if (!playEl) return;
+  if (st.speaker) {
+    playEl.classList.remove("hidden");
+    if (!speakBusy) setPlayiconState(playEl, { disabled: !st.enabled, loading: st.loading, inactive: !st.enabled && !st.loading });
+  } else {
+    playEl.classList.add("hidden");
+    if (!speakBusy) setPlayiconState(playEl, { disabled: true, loading: false, inactive: true });
+  }
+}
+function refreshAltAccentSpeakers() {
+  if (!S.cur) return;
+  const c = S.cur;
+  [
+    { text: $("dAltIpaText"), play: $("dAltPlay"), row: $("dAltIpa") },
+    { text: $("rAltIpaText"), play: $("rAltPlay"), row: $("rAltIpa") },
+    { text: $("mbSAltIpaText"), play: $("mbSAltPlay"), row: $("mbSAltIpa") },
+  ].forEach(slot => renderAltAccentLine(c, slot.text, slot.play, slot.row));
+}
+function vocabAltSpeakerHtml(word) {
+  const accent = otherAccent();
+  const enabled = hasCachedAudioFor(word, accent);
+  const disabled = enabled ? "" : " disabled";
+  return `<button class="vocab-alt-play" type="button" data-vw="${escAttr(word)}" data-vaccent="${accent}"${disabled} aria-label="${escAttr(t("listen"))}">${SPEAKER_SVG}</button>`;
 }
 /** GA neighbors for Mode B MCQ; RP-specific list deferred (see docs/rp-neighbors-priority-decision.md). */
 function activeNeighbors(c) {
@@ -1217,7 +1277,7 @@ function applyI18n() {
   $("exitConfirmBody").textContent = t("exit_confirm.body");
   $("exitConfirmNo").textContent = t("exit_confirm.no");
   $("exitConfirmYes").textContent = t("exit_confirm.yes");
-  ["dPlay", "ePlay", "rPlay"].forEach(id => { const b = $(id); if (b) b.setAttribute("aria-label", t("listen")); });
+  ["dPlay", "ePlay", "rPlay", "dAltPlay", "rAltPlay", "mbSAltPlay"].forEach(id => { const b = $(id); if (b) b.setAttribute("aria-label", t("listen")); });
   $("settingsBtn").setAttribute("aria-label", t("settings_btn"));
   $("settingsScrim").setAttribute("aria-label", t("settings_close"));
   $("settingsTitle").textContent = t("settings_title");
@@ -1295,6 +1355,7 @@ function setAccent(accent) {
   if (S.cur && S.revealed) refreshRevealIpa();
   else if (S.cur && !S.revealed) renderCard();
   if (document.body.classList.contains("in-play")) updatePlayCrumb();
+  if (!$("vocabModal").classList.contains("hidden")) renderVocabTab(vocabTabCurrent);
   prefetchAccentBodies(accent);
 }
 
@@ -1820,12 +1881,7 @@ function renderModeBStudy(c){
   hideModeBCards();show("cardModeBStudy",true);
   setCardCefr("mbSCefr",c,"mbSNo");
   renderIpaInto($("mbSIpa"),activeNarrowIpa(c),"mbSInfo",null);
-  const mbSAltEl=$("mbSAltIpa");
-  const mbSAlt=altAccentValue(c);
-  if(mbSAlt.hasAlt){
-    mbSAltEl.textContent=altAccentLabel()+": "+mbSAlt.value;
-    mbSAltEl.classList.remove("hidden");
-  }else mbSAltEl.classList.add("hidden");
+  renderAltAccentLine(c, $("mbSAltIpaText"), $("mbSAltPlay"), $("mbSAltIpa"));
   $("mbSMeaning").classList.add("hidden");
   $("mbSChecks").classList.add("hidden");
   $("mbSRevealBtn").classList.remove("hidden");
@@ -1899,6 +1955,7 @@ function ttsAccent(opts) {
   const o = parseSpeakOpts(opts);
   if (o.connected) return "ga";
   if (o.weak) return o.accent || currentAccent();
+  if (o.accent) return o.accent;
   return ACCENT === "rp" ? "rp" : "ga";
 }
 function ttsCacheSlug(text, opts) {
@@ -2046,11 +2103,19 @@ function speakerIdsForCurrentCard() {
   if (S.appMode === "b") return ["mbSPlay", "mbMPlay", "mbDPlay"];
   return ["dPlay", "ePlay", "rPlay"];
 }
+function altSpeakerIdsForCurrentCard() {
+  const ids = S.appMode === "b" ? ["mbSAltPlay"] : ["dAltPlay", "rAltPlay"];
+  return ids.filter(id => {
+    const btn = $(id);
+    return btn && !btn.classList.contains("hidden");
+  });
+}
 
-function setPlayiconState(btn, { disabled, loading }) {
+function setPlayiconState(btn, { disabled, loading, inactive }) {
   if (!btn) return;
   btn.disabled = !!disabled;
   btn.classList.toggle("loading", !!loading);
+  btn.classList.toggle("inactive", !!inactive);
   btn.setAttribute("aria-busy", loading ? "true" : "false");
 }
 
@@ -2087,6 +2152,7 @@ function refreshSpeakerForItem(c) {
 function refreshAllSpeakers() {
   if (speakBusy) return;
   if (S.cur) refreshSpeakerForItem(S.cur);
+  refreshAltAccentSpeakers();
 }
 
 async function gasWarm(words, accent, token) {
@@ -2105,6 +2171,14 @@ async function gasWarm(words, accent, token) {
       } catch (e) { /* warm failure; body fetch will retry */ }
     }));
   }
+}
+
+function refreshAltSpeakerFor(word, accent) {
+  const w = currentCardWord();
+  if (!w || w.toLowerCase() !== String(word).toLowerCase()) return;
+  if (accent !== otherAccent()) return;
+  if (S.cur && (isConnectedItem(S.cur) || isWeakItem(S.cur))) return;
+  refreshAltAccentSpeakers();
 }
 
 function refreshSpeakerFor(word, accent) {
@@ -2152,6 +2226,7 @@ async function fetchBodyToCache(word, accent, token) {
   if (hasCachedAudioFor(word, accent)) {
     audioReady.set(key, "ready");
     refreshSpeakerFor(word, accent);
+    refreshAltSpeakerFor(word, accent);
     return;
   }
   try {
@@ -2162,9 +2237,11 @@ async function fetchBodyToCache(word, accent, token) {
     memAudioCache.set(memKeyAccent(word, accent), URL.createObjectURL(blob));
     audioReady.set(key, "ready");
     refreshSpeakerFor(word, accent);
+    refreshAltSpeakerFor(word, accent);
   } catch (e) {
     audioReady.set(key, "failed");
     refreshSpeakerFor(word, accent);
+    refreshAltSpeakerFor(word, accent);
   }
 }
 
@@ -2280,6 +2357,10 @@ function setSpeakerBusy(busy) {
       const btn = $(id);
       if (btn) setPlayiconState(btn, { disabled: true, loading: true });
     });
+    altSpeakerIdsForCurrentCard().forEach(id => {
+      const btn = $(id);
+      if (btn) setPlayiconState(btn, { disabled: true, loading: false, inactive: btn.classList.contains("inactive") });
+    });
   } else {
     refreshAllSpeakers();
   }
@@ -2307,7 +2388,7 @@ async function speak(text, opts) {
       url = URL.createObjectURL(blob);
       memAudioCache.set(cacheKey, url);
       if (!o.connected && !o.weak) {
-        const acc = currentAccent();
+        const acc = o.accent || currentAccent();
         audioReady.set(audioReadyKey(text, acc), "ready");
       }
     }
@@ -2540,11 +2621,7 @@ function renderDecode(c){
   if(isConnectedItem(c)||isWeakItem(c)){
     dAltEl.classList.add("hidden");
   }else{
-    const alt=altAccentValue(c);
-    if(alt.hasAlt){
-      dAltEl.textContent=altAccentLabel()+": "+alt.value;
-      dAltEl.classList.remove("hidden");
-    }else dAltEl.classList.add("hidden");
+    renderAltAccentLine(c, $("dAltIpaText"), $("dAltPlay"), dAltEl);
   }
   const inp=$("dInput");inp.value="";
   inp.placeholder=(S.cur&&isConnectedItem(S.cur))?t("input_phrase"):t("input_ph");
@@ -2580,6 +2657,7 @@ $("dInput").addEventListener("input",e=>{
 });
 $("dInput").addEventListener("keydown",e=>{if(e.key==="Enter")decodeCheck();});
 $("dPlay").addEventListener("click",()=>{if(S.cur)speak(S.cur.w,speakOptsForItem(S.cur));});
+$("dAltPlay").addEventListener("click",()=>{if(S.cur&&!isConnectedItem(S.cur)&&!isWeakItem(S.cur))speak(S.cur.w,{accent:otherAccent()});});
 
 /* ENCODE + IPA keyboard */
 function keyGroups(){
@@ -2701,11 +2779,7 @@ function refreshRevealIpa(marker){
     dictEl.classList.remove("hidden");
   }else dictEl.classList.add("hidden");
   const altEl=$("rAltIpa");
-  const alt=altAccentValue(c);
-  if(alt.hasAlt){
-    altEl.textContent=altAccentLabel()+": "+alt.value;
-    altEl.classList.remove("hidden");
-  }else altEl.classList.add("hidden");
+  renderAltAccentLine(c, $("rAltIpaText"), $("rAltPlay"), altEl);
 }
 function reveal(res,ctx){
   const c=S.cur;S.revealed=true;
@@ -2778,6 +2852,7 @@ $("mbSRevealBtn").addEventListener("click",()=>{
 });
 $("mbSGotIt").addEventListener("click",nextCard);
 $("mbSPlay").addEventListener("click",()=>{if(S.cur)speak(S.cur.w);});
+$("mbSAltPlay").addEventListener("click",()=>{if(S.cur)speak(S.cur.w,{accent:otherAccent()});});
 $("mbMPlay").addEventListener("click",()=>{if(S.cur)speak(S.cur.w);});
 $("mbDPlay").addEventListener("click",()=>{if(S.cur)speak(S.cur.w);});
 $("mbDCheck").addEventListener("click",modeBDictCheck);
@@ -2793,6 +2868,7 @@ $("mbDInput").addEventListener("input",e=>{
   if(cleaned!==el.value){const pos=el.selectionStart;el.value=cleaned;el.setSelectionRange(Math.min(pos,cleaned.length),Math.min(pos,cleaned.length));}
 });
 $("rPlay").addEventListener("click",()=>{if(S.cur)speak(S.cur.w,speakOptsForItem(S.cur));});
+$("rAltPlay").addEventListener("click",()=>{if(S.cur&&!isConnectedItem(S.cur)&&!isWeakItem(S.cur))speak(S.cur.w,{accent:otherAccent()});});
 
 /* ---------- summary ---------- */
 function renderSummary(){
@@ -2856,11 +2932,17 @@ $("vocabBody").addEventListener("click",e=>{
     return;
   }
   const btn=e.target.closest(".vocab-play");
-  if(!btn)return;
-  if(btn.dataset.vconn){
-    speak(btn.dataset.vipa,{connected:true});
-  }else if(btn.dataset.vw){
-    speak(btn.dataset.vw);
+  if(btn){
+    if(btn.dataset.vconn){
+      speak(btn.dataset.vipa,{connected:true});
+    }else if(btn.dataset.vw){
+      speak(btn.dataset.vw);
+    }
+    return;
+  }
+  const altBtn=e.target.closest(".vocab-alt-play");
+  if(altBtn&&!altBtn.disabled){
+    speak(altBtn.dataset.vw,{accent:altBtn.dataset.vaccent});
   }
 });
 function bindRevealCheckClicks(wrapId,itemFn,modeFn){
