@@ -1421,7 +1421,7 @@
       "ja": "メインキャスター",
       "zh": "主播",
       "ko": "앵커",
-      "fil": "anchorperson"
+      "fil": "tagapagbalita"
     },
     "src": "cefr",
     "group": null,
@@ -1506,7 +1506,7 @@
       "ja": "抗菌の",
       "zh": "抗菌的",
       "ko": "항균의",
-      "fil": "antibacterial"
+      "fil": "antibakteryal"
     },
     "src": "cefr",
     "group": null,
@@ -2662,7 +2662,7 @@
       "ja": "気圧計、指標",
       "zh": "气压计",
       "ko": "기압계",
-      "fil": "barometer"
+      "fil": "barometro"
     },
     "src": "cefr",
     "group": null,

@@ -8,7 +8,7 @@
 | [`batches/`](batches/) | ❌ | 語彙マージの**入力**（Phase 1/2 の `*_with_gloss.json`） |
 | [`pipeline/`](pipeline/) | ❌ | narrow IPA / respelling の**ステージング**（スクリプトが再生成） |
 | [`derived/`](derived/) | ❌ | neighbors・RP IPA 進捗など**派生データ**（マージ元） |
-| [`patches/`](patches/) | ❌ | 過去の一括パッチ（def / gloss-fil / step4 等。履歴参照用） |
+| [`patches/`](patches/) | ❌ | 過去の一括パッチ（def / gloss-fil / step4 / `phase2_audit/` 等。履歴参照用） |
 | [`archive/`](archive/) | ❌ | ローカル退避スナップショット（git 対象外の `.pre-phase0a.json` 等） |
 
 **本番 wordlist** はリポジトリ**ルート**の `wordlist_GA_a1a2_plus_phonics.json`（`index.html` が fetch）。`data/` 内には置かない。

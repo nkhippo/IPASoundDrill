@@ -1,0 +1,28 @@
+{
+  "total_words_audited": 569,
+  "total_batch_fixes": 86,
+  "total_wordlist_fixes": 16,
+  "fix_types_by_batch": {
+    "gloss_fil_update": 13,
+    "rp_ipa_sync": 70,
+    "gloss_zh_typo": 2,
+    "pos_fix": 1
+  },
+  "batch_fixes": {
+    "pilot": 3,
+    "m2a": 29,
+    "m2b": 14,
+    "m2c": 22,
+    "m2d": 18
+  },
+  "wordlist_fixes": 16,
+  "categories": {
+    "ipa_rp_sync_dignify_dignity": 2,
+    "ipa_rp_sync_happy_i": 68,
+    "gloss_zh_typo": 2,
+    "pos_normalization": 1,
+    "fil_firm_changes": 8,
+    "fil_dual_form": 5,
+    "fil_verified_keep": 38
+  }
+}

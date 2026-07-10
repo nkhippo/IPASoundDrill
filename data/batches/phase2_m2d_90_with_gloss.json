@@ -100,7 +100,7 @@
       "ja": "限定詞",
       "zh": "限定词",
       "ko": "한정사",
-      "fil": "determiner"
+      "fil": "pantukoy"
     },
     "src": "cefr",
     "group": null,
@@ -231,7 +231,7 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/ˈdɡnəˌfaɪ/"
+    "rp_ipa": "/ˈdɪɡnəˌfaɪ/"
   },
   {
     "w": "dignity",
@@ -249,7 +249,7 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/ˈdɡnətiː/"
+    "rp_ipa": "/ˈdɪɡnəti/"
   },
   {
     "w": "dilemma",
@@ -262,7 +262,7 @@
       "ja": "ジレンマ",
       "zh": "困境",
       "ko": "딜레마",
-      "fil": "dilemma"
+      "fil": "dilema"
     },
     "src": "cefr",
     "group": null,
@@ -555,7 +555,7 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/dɪsˈɒnəstiː/"
+    "rp_ipa": "/dɪsˈɒnəsti/"
   },
   {
     "w": "disillusion",
@@ -627,7 +627,7 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/dɪsˈɔːdəliː/"
+    "rp_ipa": "/dɪsˈɔːdəli/"
   },
   {
     "w": "dispensable",
@@ -1113,7 +1113,7 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/ˈdɒŋkiː/"
+    "rp_ipa": "/ˈdɒŋki/"
   },
   {
     "w": "doorkeeper",
@@ -1167,7 +1167,7 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/ˈdɔːməˌtɔːriː/"
+    "rp_ipa": "/ˈdɔːməˌtɔːri/"
   },
   {
     "w": "doubly",
@@ -1185,7 +1185,7 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/ˈdʌbliː/"
+    "rp_ipa": "/ˈdʌbli/"
   },
   {
     "w": "doubtful",
@@ -1275,7 +1275,7 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/ˈdaʊriː/"
+    "rp_ipa": "/ˈdaʊri/"
   },
   {
     "w": "dramatically",
@@ -1293,7 +1293,7 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/drəˈmætɪkəliː/"
+    "rp_ipa": "/drəˈmætɪkəli/"
   },
   {
     "w": "drapery",
@@ -1311,7 +1311,7 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/ˈdreɪpəriː/"
+    "rp_ipa": "/ˈdreɪpəri/"
   },
   {
     "w": "dreadful",
@@ -1347,7 +1347,7 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/ˈdriːmiː/"
+    "rp_ipa": "/ˈdriːmi/"
   },
   {
     "w": "drinkable",
@@ -1378,7 +1378,7 @@
       "ja": "中退者",
       "zh": "辍学者",
       "ko": "중퇴자",
-      "fil": "dropout"
+      "fil": "tumigil sa pag-aaral"
     },
     "src": "cefr",
     "group": null,
@@ -1414,7 +1414,7 @@
       "ja": "複製",
       "zh": "复制品",
       "ko": "복제품",
-      "fil": "duplicate"
+      "fil": "duplikado"
     },
     "src": "cefr",
     "group": null,
@@ -1450,7 +1450,7 @@
       "ja": "活動的な、動的な",
       "zh": "动态的",
       "ko": "역동적인",
-      "fil": "dynamic"
+      "fil": "dinamiko"
     },
     "src": "cefr",
     "group": null,
@@ -1473,7 +1473,7 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/ˈiːɡəliː/"
+    "rp_ipa": "/ˈiːɡəli/"
   },
   {
     "w": "eagle",
@@ -1545,7 +1545,7 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "rp_ipa": "/ˌiːkəˈlɒdʒɪkəliː/"
+    "rp_ipa": "/ˌiːkəˈlɒdʒɪkəli/"
   },
   {
     "w": "ecologist",
