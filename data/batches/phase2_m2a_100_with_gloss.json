@@ -1,0 +1,1802 @@
+[
+  {
+    "w": "bio",
+    "ipa": "/ˈbaɪˌoʊ/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A short written account of someone's life (informal).",
+    "gloss": {
+      "en": "bio",
+      "ja": "略歴",
+      "zh": "简介",
+      "ko": "약력",
+      "fil": "maikling talambuhay"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈbaɪˌəʊ/"
+  },
+  {
+    "w": "biological",
+    "ipa": "/ˌbaɪəˈlɑdʒɪkəl/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Relating to biology or living things.",
+    "gloss": {
+      "en": "biological",
+      "ja": "生物学的な",
+      "zh": "生物的",
+      "ko": "생물학적인",
+      "fil": "biyolohikal"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˌbaɪəˈlɒdʒɪkəl/"
+  },
+  {
+    "w": "biotechnology",
+    "ipa": "/ˌbaɪoʊtɛkˈnɑlədʒi/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "The use of living organisms in technology and industry.",
+    "gloss": {
+      "en": "biotechnology",
+      "ja": "バイオテクノロジー",
+      "zh": "生物技术",
+      "ko": "생명공학",
+      "fil": "biyoteknolohiya"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˌbaɪəʊtekˈnɒlədʒiː/"
+  },
+  {
+    "w": "birdcage",
+    "ipa": "/ˈbɝdˌkeɪdʒ/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A cage for keeping birds.",
+    "gloss": {
+      "en": "birdcage",
+      "ja": "鳥かご",
+      "zh": "鸟笼",
+      "ko": "새장",
+      "fil": "hawla ng ibon"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈbɜːdˌkeɪdʒ/"
+  },
+  {
+    "w": "birthplace",
+    "ipa": "/ˈbɝθˌpleɪs/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "The place where someone was born.",
+    "gloss": {
+      "en": "birthplace",
+      "ja": "生まれ故郷",
+      "zh": "出生地",
+      "ko": "출생지",
+      "fil": "sinilangan"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈbɜːθˌpleɪs/"
+  },
+  {
+    "w": "bitterly",
+    "ipa": "/ˈbɪtɚli/",
+    "cefr": "B2",
+    "pos": "副詞",
+    "def": "In a way that shows strong resentment or great intensity.",
+    "gloss": {
+      "en": "bitterly",
+      "ja": "痛切に、ひどく",
+      "zh": "痛苦地",
+      "ko": "쓰라리게",
+      "fil": "may sama ng loob"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈbɪtəliː/"
+  },
+  {
+    "w": "bizarre",
+    "ipa": "/bɪˈzɑr/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Very strange or unusual.",
+    "gloss": {
+      "en": "bizarre",
+      "ja": "奇妙な",
+      "zh": "怪异的",
+      "ko": "기이한",
+      "fil": "kakatwa"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/bɪˈzɑː/"
+  },
+  {
+    "w": "blindly",
+    "ipa": "/ˈblaɪndli/",
+    "cefr": "B2",
+    "pos": "副詞",
+    "def": "Without seeing, thinking, or understanding; without question.",
+    "gloss": {
+      "en": "blindly",
+      "ja": "盲目的に",
+      "zh": "盲目地",
+      "ko": "맹목적으로",
+      "fil": "nang bulag"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈblaɪndliː/"
+  },
+  {
+    "w": "blindness",
+    "ipa": "/ˈblaɪndnəs/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "The state of being unable to see.",
+    "gloss": {
+      "en": "blindness",
+      "ja": "失明",
+      "zh": "失明",
+      "ko": "실명",
+      "fil": "kabulagan"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈblaɪndnəs/"
+  },
+  {
+    "w": "blink",
+    "ipa": "/blɪŋk/",
+    "cefr": "B2",
+    "pos": "動詞",
+    "def": "To shut and open the eyes quickly.",
+    "gloss": {
+      "en": "blink",
+      "ja": "まばたきする",
+      "zh": "眨眼",
+      "ko": "눈을 깜박이다",
+      "fil": "kumurap"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/blɪŋk/"
+  },
+  {
+    "w": "bloodstream",
+    "ipa": "/ˈblʌdˌstrim/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "The blood flowing through the body.",
+    "gloss": {
+      "en": "bloodstream",
+      "ja": "血流",
+      "zh": "血液循环",
+      "ko": "혈류",
+      "fil": "daluyan ng dugo"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈblʌdˌstriːm/"
+  },
+  {
+    "w": "bloody",
+    "ipa": "/ˈblʌdi/",
+    "cefr": "B2",
+    "pos": "形容詞 / 副詞",
+    "def": "Covered in or involving blood; used for emphasis (chiefly British, informal).",
+    "gloss": {
+      "en": "bloody",
+      "ja": "血まみれの、（英・俗）とても",
+      "zh": "血腥的",
+      "ko": "피투성이의",
+      "fil": "madugo"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈblʌdiː/"
+  },
+  {
+    "w": "blooming",
+    "ipa": "/ˈblumɪŋ/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Flowering; thriving.",
+    "gloss": {
+      "en": "blooming",
+      "ja": "開花している",
+      "zh": "盛开的",
+      "ko": "만개한",
+      "fil": "namumulaklak"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈbluːmɪŋ/"
+  },
+  {
+    "w": "blossom",
+    "ipa": "/ˈblɑsəm/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A flower, especially on a fruit tree.",
+    "gloss": {
+      "en": "blossom",
+      "ja": "花、開花",
+      "zh": "花",
+      "ko": "꽃",
+      "fil": "bulaklak"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈblɒsəm/"
+  },
+  {
+    "w": "boiling",
+    "ipa": "/ˈbɔɪlɪŋ/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Extremely hot; at the temperature of boiling water.",
+    "gloss": {
+      "en": "boiling",
+      "ja": "煮え立つ、猛暑の",
+      "zh": "沸腾的",
+      "ko": "펄펄 끓는",
+      "fil": "kumukulo"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈbɔɪlɪŋ/"
+  },
+  {
+    "w": "bombard",
+    "ipa": "/ˈbɑmˌbɑrd/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A large early cannon used to hurl stones or shot.",
+    "gloss": {
+      "en": "bombard",
+      "ja": "臼砲（初期の大砲）",
+      "zh": "投石炮",
+      "ko": "구식 대포",
+      "fil": "sinaunang kanyon"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈbɒmˌbɑːd/"
+  },
+  {
+    "w": "bomber",
+    "ipa": "/ˈbɑmɚ/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "An aircraft that drops bombs; a person who plants bombs.",
+    "gloss": {
+      "en": "bomber",
+      "ja": "爆撃機、爆弾犯",
+      "zh": "轰炸机",
+      "ko": "폭격기",
+      "fil": "bombero"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈbɒmə/"
+  },
+  {
+    "w": "bombing",
+    "ipa": "/ˈbɑmɪŋ/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "An attack using bombs.",
+    "gloss": {
+      "en": "bombing",
+      "ja": "爆撃",
+      "zh": "轰炸",
+      "ko": "폭격",
+      "fil": "pambobomba"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈbɒmɪŋ/"
+  },
+  {
+    "w": "bony",
+    "ipa": "/ˈboʊni/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Thin, with bones showing; full of bones.",
+    "gloss": {
+      "en": "bony",
+      "ja": "骨ばった",
+      "zh": "多骨的",
+      "ko": "뼈가 앙상한",
+      "fil": "matulis ang buto"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈbəʊniː/"
+  },
+  {
+    "w": "bookish",
+    "ipa": "/ˈbʊkɪʃ/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Fond of reading and studying; more academic than practical.",
+    "gloss": {
+      "en": "bookish",
+      "ja": "本好きの、学究的な",
+      "zh": "书生气的",
+      "ko": "책벌레 같은",
+      "fil": "mahilig sa aklat"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈbʊkɪʃ/"
+  },
+  {
+    "w": "booklet",
+    "ipa": "/ˈbʊklət/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A small thin book, usually with a paper cover.",
+    "gloss": {
+      "en": "booklet",
+      "ja": "小冊子",
+      "zh": "小册子",
+      "ko": "소책자",
+      "fil": "polyeto"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈbʊklət/"
+  },
+  {
+    "w": "bookmark",
+    "ipa": "/ˈbʊkˌmɑrk/",
+    "cefr": "B2",
+    "pos": "名詞 / 動詞",
+    "def": "A marker for a place in a book or webpage; to save such a marker.",
+    "gloss": {
+      "en": "bookmark",
+      "ja": "しおり、ブックマーク（する）",
+      "zh": "书签",
+      "ko": "책갈피",
+      "fil": "bookmark"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈbʊkˌmɑːk/"
+  },
+  {
+    "w": "bossy",
+    "ipa": "/ˈbɔsi/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Fond of giving orders; domineering.",
+    "gloss": {
+      "en": "bossy",
+      "ja": "威張った",
+      "zh": "专横的",
+      "ko": "간섭하는",
+      "fil": "mapangutos"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈbɔːsiː/"
+  },
+  {
+    "w": "botany",
+    "ipa": "/ˈbɑtəni/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "The scientific study of plants.",
+    "gloss": {
+      "en": "botany",
+      "ja": "植物学",
+      "zh": "植物学",
+      "ko": "식물학",
+      "fil": "botanika"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈbɒtəniː/"
+  },
+  {
+    "w": "bothered",
+    "ipa": "/ˈbɑðɚd/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Annoyed or worried.",
+    "gloss": {
+      "en": "bothered",
+      "ja": "困った、悩んだ",
+      "zh": "烦恼的",
+      "ko": "귀찮아하는",
+      "fil": "naiinis"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈbɒðəd/"
+  },
+  {
+    "w": "bothersome",
+    "ipa": "/ˈbɑðɚsəm/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Causing trouble or annoyance.",
+    "gloss": {
+      "en": "bothersome",
+      "ja": "厄介な",
+      "zh": "麻烦的",
+      "ko": "성가신",
+      "fil": "nakakaabala"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈbɒðəsəm/"
+  },
+  {
+    "w": "bourbon",
+    "ipa": "/ˈbɝbən/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A type of American whiskey.",
+    "gloss": {
+      "en": "bourbon",
+      "ja": "バーボン",
+      "zh": "波旁威士忌",
+      "ko": "버번위스키",
+      "fil": "bourbon"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈbɜːbən/"
+  },
+  {
+    "w": "boxer",
+    "ipa": "/ˈbɑksɚ/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A person who boxes as a sport; a breed of dog.",
+    "gloss": {
+      "en": "boxer",
+      "ja": "ボクサー",
+      "zh": "拳击手",
+      "ko": "복서",
+      "fil": "boksingero"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈbɒksə/"
+  },
+  {
+    "w": "bracket",
+    "ipa": "/ˈbrækət/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A mark used to enclose text; a category or range; a support fixture.",
+    "gloss": {
+      "en": "bracket",
+      "ja": "括弧、区分",
+      "zh": "括号",
+      "ko": "괄호",
+      "fil": "panaklong"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈbrækət/"
+  },
+  {
+    "w": "bravery",
+    "ipa": "/ˈbreɪvəri/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "Courage in the face of danger or difficulty.",
+    "gloss": {
+      "en": "bravery",
+      "ja": "勇敢さ",
+      "zh": "勇敢",
+      "ko": "용감함",
+      "fil": "katapangan"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈbreɪvəriː/"
+  },
+  {
+    "w": "breakable",
+    "ipa": "/ˈbreɪkəbəl/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Easily broken; fragile.",
+    "gloss": {
+      "en": "breakable",
+      "ja": "壊れやすい",
+      "zh": "易碎的",
+      "ko": "깨지기 쉬운",
+      "fil": "madaling mabasag"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈbreɪkəbəl/"
+  },
+  {
+    "w": "breakdown",
+    "ipa": "/ˈbreɪkˌdaʊn/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A failure to function; a detailed analysis; a mental collapse.",
+    "gloss": {
+      "en": "breakdown",
+      "ja": "故障、内訳、精神的破綻",
+      "zh": "故障、明细",
+      "ko": "고장, 세부내역",
+      "fil": "pagkasira"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈbreɪkˌdaʊn/"
+  },
+  {
+    "w": "breakup",
+    "ipa": "/ˈbreɪkˌʌp/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "The ending of a relationship or partnership.",
+    "gloss": {
+      "en": "breakup",
+      "ja": "破局、解体",
+      "zh": "分手",
+      "ko": "이별",
+      "fil": "paghihiwalay"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈbreɪkˌʌp/"
+  },
+  {
+    "w": "breathtaking",
+    "ipa": "/ˈbrɛθˌteɪkɪŋ/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Extremely impressive or beautiful.",
+    "gloss": {
+      "en": "breathtaking",
+      "ja": "息をのむような",
+      "zh": "令人惊叹的",
+      "ko": "숨막히는",
+      "fil": "kamangha-mangha"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈbreθˌteɪkɪŋ/"
+  },
+  {
+    "w": "breezy",
+    "ipa": "/ˈbrizi/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Pleasantly windy; casual and cheerful in manner.",
+    "gloss": {
+      "en": "breezy",
+      "ja": "そよ風の吹く、気軽な",
+      "zh": "微风阵阵的",
+      "ko": "산들바람이 부는",
+      "fil": "may amihan"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈbriːziː/"
+  },
+  {
+    "w": "brewery",
+    "ipa": "/ˈbruəri/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A place where beer is made.",
+    "gloss": {
+      "en": "brewery",
+      "ja": "醸造所",
+      "zh": "啤酒厂",
+      "ko": "양조장",
+      "fil": "gawaan ng beer"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈbruːəriː/"
+  },
+  {
+    "w": "brilliantly",
+    "ipa": "/ˈbrɪljəntli/",
+    "cefr": "B2",
+    "pos": "副詞",
+    "def": "In an extremely skillful or impressive way; very brightly.",
+    "gloss": {
+      "en": "brilliantly",
+      "ja": "見事に、明るく",
+      "zh": "出色地",
+      "ko": "훌륭하게",
+      "fil": "napakahusay"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈbrɪljəntliː/"
+  },
+  {
+    "w": "broadband",
+    "ipa": "/ˈbrɔdˌbænd/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "High-speed internet connection.",
+    "gloss": {
+      "en": "broadband",
+      "ja": "ブロードバンド",
+      "zh": "宽带",
+      "ko": "광대역통신망",
+      "fil": "broadband"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈbrɔːdˌbænd/"
+  },
+  {
+    "w": "broadcaster",
+    "ipa": "/ˈbrɔdˌkæstɚ/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A person or company that sends out radio or TV programs.",
+    "gloss": {
+      "en": "broadcaster",
+      "ja": "放送局、アナウンサー",
+      "zh": "广播员",
+      "ko": "방송인",
+      "fil": "broadcaster"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈbrɔːdˌkæstə/"
+  },
+  {
+    "w": "broaden",
+    "ipa": "/ˈbrɔdən/",
+    "cefr": "B2",
+    "pos": "動詞",
+    "def": "To make or become wider in range.",
+    "gloss": {
+      "en": "broaden",
+      "ja": "広げる",
+      "zh": "拓宽",
+      "ko": "넓히다",
+      "fil": "palawakin"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈbrɔːdən/"
+  },
+  {
+    "w": "broadly",
+    "ipa": "/ˈbrɔdli/",
+    "cefr": "B2",
+    "pos": "副詞",
+    "def": "In general terms; widely.",
+    "gloss": {
+      "en": "broadly",
+      "ja": "概して、広く",
+      "zh": "大体上",
+      "ko": "대체로",
+      "fil": "sa pangkalahatan"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈbrɔːdliː/"
+  },
+  {
+    "w": "brochure",
+    "ipa": "/broʊˈʃʊr/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A small booklet or pamphlet with information or advertising.",
+    "gloss": {
+      "en": "brochure",
+      "ja": "パンフレット",
+      "zh": "小册子",
+      "ko": "안내책자",
+      "fil": "polyeto"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/brəʊˈʃʊə/"
+  },
+  {
+    "w": "browser",
+    "ipa": "/ˈbraʊzɚ/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "Software used to access the internet.",
+    "gloss": {
+      "en": "browser",
+      "ja": "ブラウザ",
+      "zh": "浏览器",
+      "ko": "브라우저",
+      "fil": "browser"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈbraʊzə/"
+  },
+  {
+    "w": "bulimia",
+    "ipa": "/bjuˈlɪmiə/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "An eating disorder involving cycles of binge eating and purging.",
+    "gloss": {
+      "en": "bulimia",
+      "ja": "過食症",
+      "zh": "暴食症",
+      "ko": "폭식증",
+      "fil": "bulimia"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/bjuːˈlɪmiːə/"
+  },
+  {
+    "w": "bully",
+    "ipa": "/ˈbʊli/",
+    "cefr": "B2",
+    "pos": "動詞",
+    "def": "To use strength or power to intimidate someone.",
+    "gloss": {
+      "en": "bully",
+      "ja": "いじめる",
+      "zh": "欺负",
+      "ko": "괴롭히다",
+      "fil": "buwisitin"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈbʊliː/"
+  },
+  {
+    "w": "bumper",
+    "ipa": "/ˈbʌmpɚ/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A bar on a vehicle that absorbs impact.",
+    "gloss": {
+      "en": "bumper",
+      "ja": "バンパー",
+      "zh": "保险杠",
+      "ko": "범퍼",
+      "fil": "bumper"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈbʌmpə/"
+  },
+  {
+    "w": "burdensome",
+    "ipa": "/ˈbɝdənsəm/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Causing hardship or heavy demands.",
+    "gloss": {
+      "en": "burdensome",
+      "ja": "重荷になる",
+      "zh": "繁重的",
+      "ko": "부담스러운",
+      "fil": "mabigat na pasanin"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈbɜːdənsəm/"
+  },
+  {
+    "w": "bureaucracy",
+    "ipa": "/bjʊˈrɑkrəsi/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A system of government or administration with many rules and officials.",
+    "gloss": {
+      "en": "bureaucracy",
+      "ja": "官僚制度",
+      "zh": "官僚机构",
+      "ko": "관료제",
+      "fil": "burukrasya"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/bjʊˈrɒkrəsiː/"
+  },
+  {
+    "w": "burglary",
+    "ipa": "/ˈbɝɡləri/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "The crime of entering a building to steal.",
+    "gloss": {
+      "en": "burglary",
+      "ja": "強盗、窃盗",
+      "zh": "入室盗窃",
+      "ko": "절도",
+      "fil": "pagnanakaw"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈbɜːɡləriː/"
+  },
+  {
+    "w": "burgle",
+    "ipa": "/ˈbɝɡəl/",
+    "cefr": "B2",
+    "pos": "動詞",
+    "def": "To enter and steal from a building illegally (chiefly British).",
+    "gloss": {
+      "en": "burgle",
+      "ja": "（家に）押し入って盗む（英）",
+      "zh": "入室盗窃（英）",
+      "ko": "침입 절도하다(영)",
+      "fil": "magnakaw sa bahay"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈbɜːɡəl/"
+  },
+  {
+    "w": "burial",
+    "ipa": "/ˈbɛriəl/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "The act of burying a dead body.",
+    "gloss": {
+      "en": "burial",
+      "ja": "埋葬",
+      "zh": "埋葬",
+      "ko": "매장",
+      "fil": "libing"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈberiːəl/"
+  },
+  {
+    "w": "bustle",
+    "ipa": "/ˈbʌsəl/",
+    "cefr": "B2",
+    "pos": "動詞",
+    "def": "To move busily and energetically.",
+    "gloss": {
+      "en": "bustle",
+      "ja": "せわしなく動く",
+      "zh": "忙碌地走动",
+      "ko": "부산하게 움직이다",
+      "fil": "magmadali"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈbʌsəl/"
+  },
+  {
+    "w": "bustling",
+    "ipa": "/ˈbʌslɪŋ/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Full of busy, energetic activity.",
+    "gloss": {
+      "en": "bustling",
+      "ja": "活気に満ちた",
+      "zh": "熙熙攘攘的",
+      "ko": "부산한",
+      "fil": "abala"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈbʌslɪŋ/"
+  },
+  {
+    "w": "cabinet",
+    "ipa": "/ˈkæbənət/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A cupboard for storage; a government's senior ministers.",
+    "gloss": {
+      "en": "cabinet",
+      "ja": "戸棚、内閣",
+      "zh": "橱柜、内阁",
+      "ko": "캐비닛, 내각",
+      "fil": "kabinet"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkæbənət/"
+  },
+  {
+    "w": "cable",
+    "ipa": "/ˈkeɪbəl/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A thick wire or rope; a message sent by cable; cable TV.",
+    "gloss": {
+      "en": "cable",
+      "ja": "ケーブル",
+      "zh": "电缆",
+      "ko": "케이블",
+      "fil": "kable"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkeɪbəl/"
+  },
+  {
+    "w": "calmly",
+    "ipa": "/ˈkɑmli/",
+    "cefr": "B2",
+    "pos": "副詞",
+    "def": "In a peaceful, untroubled way.",
+    "gloss": {
+      "en": "calmly",
+      "ja": "冷静に",
+      "zh": "冷静地",
+      "ko": "차분하게",
+      "fil": "mahinahon"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkɒmliː/"
+  },
+  {
+    "w": "campaign",
+    "ipa": "/kæmˈpeɪn/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "An organized effort to achieve a goal, such as in politics or marketing.",
+    "gloss": {
+      "en": "campaign",
+      "ja": "キャンペーン、運動",
+      "zh": "运动",
+      "ko": "캠페인",
+      "fil": "kampanya"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kæmˈpeɪn/"
+  },
+  {
+    "w": "candidate",
+    "ipa": "/ˈkændəˌdeɪt/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A person applying for a job or running in an election.",
+    "gloss": {
+      "en": "candidate",
+      "ja": "候補者",
+      "zh": "候选人",
+      "ko": "후보자",
+      "fil": "kandidato"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkændəˌdeɪt/"
+  },
+  {
+    "w": "cannonball",
+    "ipa": "/ˈkænənˌbɔl/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A round metal projectile fired from a cannon.",
+    "gloss": {
+      "en": "cannonball",
+      "ja": "砲弾",
+      "zh": "炮弹",
+      "ko": "포탄",
+      "fil": "bala ng kanyon"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkænənˌbɔːl/"
+  },
+  {
+    "w": "canon",
+    "ipa": "/ˈkænən/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A collection of works accepted as genuine or authoritative; a church rule.",
+    "gloss": {
+      "en": "canon",
+      "ja": "正典、規範",
+      "zh": "经典",
+      "ko": "정전",
+      "fil": "kanon"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkænən/"
+  },
+  {
+    "w": "capability",
+    "ipa": "/ˌkeɪpəˈbɪləti/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "The ability to do something.",
+    "gloss": {
+      "en": "capability",
+      "ja": "能力",
+      "zh": "能力",
+      "ko": "능력",
+      "fil": "kakayahan"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˌkeɪpəˈbɪlətiː/"
+  },
+  {
+    "w": "caption",
+    "ipa": "/ˈkæpʃən/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A short piece of text describing an image or subtitle.",
+    "gloss": {
+      "en": "caption",
+      "ja": "キャプション、字幕",
+      "zh": "标题、字幕",
+      "ko": "자막",
+      "fil": "caption"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkæpʃən/"
+  },
+  {
+    "w": "captive",
+    "ipa": "/ˈkæptɪv/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A person or animal that is imprisoned or confined.",
+    "gloss": {
+      "en": "captive",
+      "ja": "捕虜",
+      "zh": "俘虏",
+      "ko": "포로",
+      "fil": "bihag"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkæptɪv/"
+  },
+  {
+    "w": "caravan",
+    "ipa": "/ˈkærəˌvæn/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A group traveling together; a towed vehicle used as a home (British).",
+    "gloss": {
+      "en": "caravan",
+      "ja": "隊商、キャンピングカー（英）",
+      "zh": "商队、房车（英）",
+      "ko": "대상, 이동식 주택(영)",
+      "fil": "karaban"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkærəˌvæn/"
+  },
+  {
+    "w": "carbon",
+    "ipa": "/ˈkɑrbən/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A chemical element found in all living things and fuels.",
+    "gloss": {
+      "en": "carbon",
+      "ja": "炭素",
+      "zh": "碳",
+      "ko": "탄소",
+      "fil": "karbon"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkɑːbən/"
+  },
+  {
+    "w": "cardboard",
+    "ipa": "/ˈkɑrdˌbɔrd/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "Thick, stiff paper used for boxes and packaging.",
+    "gloss": {
+      "en": "cardboard",
+      "ja": "厚紙、段ボール",
+      "zh": "纸板",
+      "ko": "판지",
+      "fil": "karton"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkɑːdˌbɔːd/"
+  },
+  {
+    "w": "cardigan",
+    "ipa": "/ˈkɑrdəɡən/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A knitted sweater that opens down the front.",
+    "gloss": {
+      "en": "cardigan",
+      "ja": "カーディガン",
+      "zh": "开衫",
+      "ko": "카디건",
+      "fil": "kardigan"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkɑːdəɡən/"
+  },
+  {
+    "w": "carefree",
+    "ipa": "/ˈkɛrˌfri/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Free from worry or responsibility.",
+    "gloss": {
+      "en": "carefree",
+      "ja": "気楽な",
+      "zh": "无忧无虑的",
+      "ko": "근심 없는",
+      "fil": "walang alalahanin"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkeəˌfriː/"
+  },
+  {
+    "w": "caring",
+    "ipa": "/ˈkɛrɪŋ/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Showing kindness and concern for others.",
+    "gloss": {
+      "en": "caring",
+      "ja": "思いやりのある",
+      "zh": "关心他人的",
+      "ko": "배려하는",
+      "fil": "maalalahanin"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkerɪŋ/"
+  },
+  {
+    "w": "carnival",
+    "ipa": "/ˈkɑrnəvəl/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A festival with music, dancing, and often rides.",
+    "gloss": {
+      "en": "carnival",
+      "ja": "カーニバル",
+      "zh": "狂欢节",
+      "ko": "카니발",
+      "fil": "karnabal"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkɑːnəvəl/"
+  },
+  {
+    "w": "carpool",
+    "ipa": "/ˈkɑrˌpul/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "An arrangement where people share car rides.",
+    "gloss": {
+      "en": "carpool",
+      "ja": "相乗り",
+      "zh": "拼车",
+      "ko": "카풀",
+      "fil": "carpool"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkɑːˌpuːl/"
+  },
+  {
+    "w": "cascade",
+    "ipa": "/kæˈskeɪd/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A small waterfall; a series of things happening one after another.",
+    "gloss": {
+      "en": "cascade",
+      "ja": "小さな滝、連続",
+      "zh": "小瀑布、连锁反应",
+      "ko": "작은 폭포, 연속",
+      "fil": "maliit na talon"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kæˈskeɪd/"
+  },
+  {
+    "w": "casually",
+    "ipa": "/ˈkæʒuəli/",
+    "cefr": "B2",
+    "pos": "副詞",
+    "def": "In a relaxed, informal manner.",
+    "gloss": {
+      "en": "casually",
+      "ja": "何気なく、カジュアルに",
+      "zh": "随便地",
+      "ko": "무심코",
+      "fil": "kaswal"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkæʒuːəliː/"
+  },
+  {
+    "w": "catalyst",
+    "ipa": "/ˈkætələst/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A substance that speeds up a reaction; something that causes change.",
+    "gloss": {
+      "en": "catalyst",
+      "ja": "触媒、きっかけ",
+      "zh": "催化剂",
+      "ko": "촉매",
+      "fil": "katalista"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkætələst/"
+  },
+  {
+    "w": "catastrophe",
+    "ipa": "/kəˈtæstrəfi/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A sudden great disaster.",
+    "gloss": {
+      "en": "catastrophe",
+      "ja": "大惨事",
+      "zh": "大灾难",
+      "ko": "대참사",
+      "fil": "kalamidad"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kəˈtæstrəfiː/"
+  },
+  {
+    "w": "catastrophic",
+    "ipa": "/ˌkætəˈstrɑfɪk/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Involving sudden great damage or suffering.",
+    "gloss": {
+      "en": "catastrophic",
+      "ja": "壊滅的な",
+      "zh": "灾难性的",
+      "ko": "재앙적인",
+      "fil": "malubhang sakuna"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˌkætəˈstrɒfɪk/"
+  },
+  {
+    "w": "catchy",
+    "ipa": "/ˈkætʃi/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Pleasant and easy to remember, especially a tune.",
+    "gloss": {
+      "en": "catchy",
+      "ja": "耳に残る、キャッチーな",
+      "zh": "朗朗上口的",
+      "ko": "기억하기 쉬운",
+      "fil": "madaling matandaan"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkætʃiː/"
+  },
+  {
+    "w": "catering",
+    "ipa": "/ˈkeɪtɚɪŋ/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "The business of providing food for events.",
+    "gloss": {
+      "en": "catering",
+      "ja": "ケータリング",
+      "zh": "餐饮服务",
+      "ko": "출장 요리",
+      "fil": "catering"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkeɪtəɪŋ/"
+  },
+  {
+    "w": "cathedral",
+    "ipa": "/kəˈθidrəl/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A large, important church, usually the seat of a bishop.",
+    "gloss": {
+      "en": "cathedral",
+      "ja": "大聖堂",
+      "zh": "大教堂",
+      "ko": "대성당",
+      "fil": "katedral"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kəˈθiːdrəl/"
+  },
+  {
+    "w": "ceiling",
+    "ipa": "/ˈsilɪŋ/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "The upper interior surface of a room; an upper limit.",
+    "gloss": {
+      "en": "ceiling",
+      "ja": "天井、上限",
+      "zh": "天花板、上限",
+      "ko": "천장, 상한선",
+      "fil": "kisame"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈsiːlɪŋ/"
+  },
+  {
+    "w": "cellar",
+    "ipa": "/ˈsɛlɚ/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "An underground room, often for storage.",
+    "gloss": {
+      "en": "cellar",
+      "ja": "地下室",
+      "zh": "地窖",
+      "ko": "지하실",
+      "fil": "silong"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈselə/"
+  },
+  {
+    "w": "cellist",
+    "ipa": "/ˈtʃɛləst/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A person who plays the cello.",
+    "gloss": {
+      "en": "cellist",
+      "ja": "チェロ奏者",
+      "zh": "大提琴手",
+      "ko": "첼로 연주자",
+      "fil": "tagatugtog ng cello"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈtʃeləst/"
+  },
+  {
+    "w": "cello",
+    "ipa": "/ˈtʃɛloʊ/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A large stringed instrument played with a bow.",
+    "gloss": {
+      "en": "cello",
+      "ja": "チェロ",
+      "zh": "大提琴",
+      "ko": "첼로",
+      "fil": "cello"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈtʃeləʊ/"
+  },
+  {
+    "w": "cemetery",
+    "ipa": "/ˈsɛməˌtɛri/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A place where the dead are buried.",
+    "gloss": {
+      "en": "cemetery",
+      "ja": "墓地",
+      "zh": "墓地",
+      "ko": "묘지",
+      "fil": "sementeryo"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈseməˌteriː/"
+  },
+  {
+    "w": "centigrade",
+    "ipa": "/ˈsɛntəˌɡreɪd/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A temperature scale where water freezes at 0° and boils at 100° (Celsius).",
+    "gloss": {
+      "en": "centigrade",
+      "ja": "摂氏",
+      "zh": "摄氏度",
+      "ko": "섭씨",
+      "fil": "sentigrado"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈsentəˌɡreɪd/"
+  },
+  {
+    "w": "certificate",
+    "ipa": "/sɚˈtɪfəkət/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "An official document confirming a fact or achievement.",
+    "gloss": {
+      "en": "certificate",
+      "ja": "証明書",
+      "zh": "证书",
+      "ko": "증명서",
+      "fil": "sertipiko"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/səˈtɪfəkət/"
+  },
+  {
+    "w": "certification",
+    "ipa": "/ˌsɚtəfəˈkeɪʃən/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "The act of certifying, or a document proving it.",
+    "gloss": {
+      "en": "certification",
+      "ja": "認証",
+      "zh": "认证",
+      "ko": "인증",
+      "fil": "sertipikasyon"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˌsətəfəˈkeɪʃən/"
+  },
+  {
+    "w": "certify",
+    "ipa": "/ˈsɝtəˌfaɪ/",
+    "cefr": "B2",
+    "pos": "動詞",
+    "def": "To officially confirm something as true or meeting a standard.",
+    "gloss": {
+      "en": "certify",
+      "ja": "証明する",
+      "zh": "证明",
+      "ko": "증명하다",
+      "fil": "patunayan"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈsɜːtəˌfaɪ/"
+  },
+  {
+    "w": "chancellor",
+    "ipa": "/ˈtʃænsəlɚ/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A senior government or university official.",
+    "gloss": {
+      "en": "chancellor",
+      "ja": "首相、学長",
+      "zh": "总理、校长",
+      "ko": "총리, 학장",
+      "fil": "tsanselor"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈtʃænsələ/"
+  },
+  {
+    "w": "chaotic",
+    "ipa": "/keɪˈɑtɪk/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "In a state of complete disorder.",
+    "gloss": {
+      "en": "chaotic",
+      "ja": "混沌とした",
+      "zh": "混乱的",
+      "ko": "혼란스러운",
+      "fil": "magulo"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/keɪˈɒtɪk/"
+  },
+  {
+    "w": "charming",
+    "ipa": "/ˈtʃɑrmɪŋ/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Pleasant and attractive.",
+    "gloss": {
+      "en": "charming",
+      "ja": "魅力的な",
+      "zh": "迷人的",
+      "ko": "매력적인",
+      "fil": "kaakit-akit"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈtʃɑːmɪŋ/"
+  },
+  {
+    "w": "checkpoint",
+    "ipa": "/ˈtʃɛkˌpɔɪnt/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A place where travelers or vehicles are inspected.",
+    "gloss": {
+      "en": "checkpoint",
+      "ja": "検問所",
+      "zh": "检查站",
+      "ko": "검문소",
+      "fil": "checkpoint"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈtʃekˌpɔɪnt/"
+  },
+  {
+    "w": "cheeky",
+    "ipa": "/ˈtʃiki/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Disrespectful in a playful or amusing way (chiefly British).",
+    "gloss": {
+      "en": "cheeky",
+      "ja": "生意気な（英）",
+      "zh": "厚脸皮的（英）",
+      "ko": "건방진(영)",
+      "fil": "pilyo"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈtʃiːkiː/"
+  },
+  {
+    "w": "cheerfully",
+    "ipa": "/ˈtʃɪrfəli/",
+    "cefr": "B2",
+    "pos": "副詞",
+    "def": "In a happy, positive way.",
+    "gloss": {
+      "en": "cheerfully",
+      "ja": "陽気に",
+      "zh": "愉快地",
+      "ko": "쾌활하게",
+      "fil": "masayahin"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈtʃɪəfəliː/"
+  },
+  {
+    "w": "cheerfulness",
+    "ipa": "/ˈtʃɪrfəlnəs/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "The quality of being happy and positive.",
+    "gloss": {
+      "en": "cheerfulness",
+      "ja": "陽気さ",
+      "zh": "愉快",
+      "ko": "쾌활함",
+      "fil": "kasayahan"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈtʃɪəfəlnəs/"
+  },
+  {
+    "w": "chemotherapy",
+    "ipa": "/ˌkimoʊˈθɛrəpi/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "Treatment of disease, especially cancer, using chemicals.",
+    "gloss": {
+      "en": "chemotherapy",
+      "ja": "化学療法",
+      "zh": "化疗",
+      "ko": "화학요법",
+      "fil": "chemotherapy"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˌkiːməʊˈθerəpiː/"
+  },
+  {
+    "w": "cherished",
+    "ipa": "/ˈtʃɛrɪʃt/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Held dear; treasured.",
+    "gloss": {
+      "en": "cherished",
+      "ja": "大切にされた",
+      "zh": "珍视的",
+      "ko": "소중히 여기는",
+      "fil": "minamahal"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈtʃerɪʃt/"
+  },
+  {
+    "w": "cherry",
+    "ipa": "/ˈtʃɛri/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A small, round, red fruit with a pit.",
+    "gloss": {
+      "en": "cherry",
+      "ja": "さくらんぼ",
+      "zh": "樱桃",
+      "ko": "체리",
+      "fil": "seresa"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈtʃeriː/"
+  },
+  {
+    "w": "childish",
+    "ipa": "/ˈtʃaɪldɪʃ/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Behaving in an immature way; typical of a child.",
+    "gloss": {
+      "en": "childish",
+      "ja": "子供っぽい",
+      "zh": "幼稚的",
+      "ko": "유치한",
+      "fil": "parang bata"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈtʃaɪldɪʃ/"
+  },
+  {
+    "w": "chimney",
+    "ipa": "/ˈtʃɪmni/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A vertical pipe that carries smoke away from a fire.",
+    "gloss": {
+      "en": "chimney",
+      "ja": "煙突",
+      "zh": "烟囱",
+      "ko": "굴뚝",
+      "fil": "tsimenea"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈtʃɪmniː/"
+  }
+]

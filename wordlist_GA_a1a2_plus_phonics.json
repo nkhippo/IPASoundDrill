@@ -2529,6 +2529,7 @@
     "neighbors": [
       "because",
       "belong",
+      "bizarre",
       "for",
       "four",
       "beer",
@@ -2967,9 +2968,9 @@
       "like",
       "bake",
       "beak",
+      "bio",
       "bite",
-      "buyer",
-      "hike"
+      "buyer"
     ],
     "rp_ipa": "/baɪk/",
     "def": "Informal for bicycle; a two-wheeled pedal-powered vehicle.",
@@ -3086,6 +3087,7 @@
     },
     "neighbors": [
       "basket",
+      "bracket",
       "bucket",
       "ticket"
     ],
@@ -3144,14 +3146,14 @@
       "fil": "blangko"
     },
     "neighbors": [
+      "blink",
       "bank",
       "black",
       "drank",
       "banker",
       "blast",
       "flunk",
-      "frank",
-      "block"
+      "frank"
     ],
     "rp_ipa": "/blæŋk/",
     "def": "Empty with nothing written or printed; a space to fill in.",
@@ -3210,12 +3212,12 @@
     "neighbors": [
       "blue",
       "slow",
+      "bio",
       "blur",
       "flow",
       "glow",
       "below",
-      "bellow",
-      "low"
+      "bellow"
     ],
     "rp_ipa": "/bləʊ/",
     "def": "To move air from your mouth; a hard hit or strike.",
@@ -3465,10 +3467,10 @@
       "bring",
       "spring",
       "bidding",
+      "boiling",
+      "bombing",
       "booking",
-      "border",
-      "burning",
-      "during"
+      "border"
     ],
     "rp_ipa": "/ˈbɔːrɪŋ/",
     "def": "Not interesting; dull and tedious.",
@@ -3690,12 +3692,12 @@
     "neighbors": [
       "fox",
       "boss",
+      "boxer",
       "ox",
       "block",
       "body",
       "borrow",
-      "six",
-      "soccer"
+      "six"
     ],
     "rp_ipa": "/bɒks/",
     "def": "A square or rectangular container with flat sides.",
@@ -3881,6 +3883,7 @@
     },
     "neighbors": [
       "breathless",
+      "bracket",
       "breast"
     ],
     "rp_ipa": "/ˈbrekfəst/",
@@ -4067,6 +4070,8 @@
     },
     "neighbors": [
       "spoken",
+      "bracket",
+      "broaden",
       "frozen",
       "woken",
       "bacon",
@@ -4096,13 +4101,13 @@
     },
     "neighbors": [
       "another",
+      "browser",
       "breathe",
       "brush",
       "butter",
       "mother",
       "bother",
-      "rather",
-      "rubber"
+      "rather"
     ],
     "rp_ipa": "/ˈbrʌðə/",
     "def": "A male sibling; a boy or man with the same parents.",
@@ -4290,6 +4295,7 @@
       "bidding",
       "breeding",
       "belong",
+      "boiling",
       "builder",
       "filling",
       "killing",
@@ -4541,6 +4547,7 @@
       "fil": "paruparo"
     },
     "neighbors": [
+      "bitterly",
       "butter"
     ],
     "rp_ipa": "/ˈbʌtəˌflaɪ/",
@@ -4956,8 +4963,8 @@
       "cloudy",
       "monday",
       "cancer",
-      "county",
-      "fancy"
+      "canon",
+      "county"
     ],
     "rp_ipa": "/ˈkændi/",
     "def": "A sweet food made with sugar, such as chocolate or hard sweets.",
@@ -5111,6 +5118,8 @@
     },
     "neighbors": [
       "carefully",
+      "burial",
+      "carefree",
       "careless",
       "cheerful",
       "cruel",
@@ -5140,13 +5149,13 @@
     },
     "neighbors": [
       "careful",
+      "cheerfully",
+      "carefree",
       "carelessly",
+      "casually",
       "formally",
       "generally",
-      "hopefully",
-      "mentally",
-      "normally",
-      "terribly"
+      "hopefully"
     ],
     "rp_ipa": "/ˈkeəfəli/",
     "def": "In a way that avoids mistakes or dangers; attentively.",
@@ -5171,14 +5180,14 @@
       "fil": "magdala, dalhin"
     },
     "neighbors": [
+      "catchy",
       "curry",
       "agree",
       "camp",
       "can't",
       "card",
       "coffee",
-      "cookie",
-      "copy"
+      "cookie"
     ],
     "rp_ipa": "/ˈkæri/",
     "def": "To hold something and take it from one place to another.",
@@ -5204,6 +5213,8 @@
     },
     "neighbors": [
       "carton",
+      "carbon",
+      "carpool",
       "cotton"
     ],
     "rp_ipa": "/kɑːˈtuːn/",
@@ -5507,10 +5518,10 @@
       "strict",
       "charity",
       "chemist",
+      "cherished",
       "creator",
       "cricket",
-      "printer",
-      "characterize"
+      "printer"
     ],
     "rp_ipa": "/ˈkærɪktə/",
     "def": "The qualities that make a person or thing distinctive; a person in a story.",
@@ -5695,6 +5706,7 @@
       "fil": "tsokolate"
     },
     "neighbors": [
+      "booklet",
       "wallet"
     ],
     "rp_ipa": "/ˈtʃɒklət/",
@@ -5879,8 +5891,8 @@
       "social",
       "uncle",
       "ankle",
-      "certain",
-      "chuckle"
+      "burgle",
+      "certain"
     ],
     "rp_ipa": "/ˈsɜːkəl/",
     "def": "A perfectly round flat shape with all points equally distant from the center.",
@@ -5973,12 +5985,12 @@
     "neighbors": [
       "classroom",
       "classify",
+      "cascade",
       "classic",
       "climate",
       "blast",
       "class",
-      "cast",
-      "clam"
+      "cast"
     ],
     "rp_ipa": "/ˈklɑːsˌmeɪt/",
     "def": "A person who is in the same class at school.",
@@ -6321,12 +6333,12 @@
     "neighbors": [
       "cloud",
       "candy",
+      "bloody",
       "loudly",
       "lady",
       "aloud",
       "clown",
-      "crowd",
-      "loud"
+      "crowd"
     ],
     "rp_ipa": "/ˈklaʊdi/",
     "def": "Covered with clouds; overcast sky.",
@@ -7237,8 +7249,8 @@
       "kitchen",
       "reason",
       "cabin",
-      "caution",
-      "common"
+      "canon",
+      "caution"
     ],
     "rp_ipa": "/ˈkʌzən/",
     "def": "The child of your aunt or uncle.",
@@ -8877,12 +8889,12 @@
     "neighbors": [
       "drank",
       "drunk",
+      "blink",
       "during",
       "frank",
       "bring",
       "doing",
-      "pink",
-      "think"
+      "pink"
     ],
     "rp_ipa": "/drɪŋk/",
     "def": "A liquid you swallow; to swallow a liquid.",
@@ -10386,10 +10398,10 @@
       "very",
       "berry",
       "bury",
+      "cherry",
       "marry",
       "vary",
-      "fair",
-      "free"
+      "fair"
     ],
     "rp_ipa": "/ˈfeərɪ/",
     "def": "A tiny imaginary being with wings that has magical powers.",
@@ -10814,14 +10826,14 @@
       "fil": "damdamin"
     },
     "neighbors": [
+      "ceiling",
       "filling",
       "healing",
       "fishing",
       "meeting",
       "reading",
-      "foolish",
-      "hearing",
-      "heating"
+      "boiling",
+      "foolish"
     ],
     "rp_ipa": "/ˈfiːlɪŋ/",
     "def": "An emotion or physical sensation experienced.",
@@ -12563,11 +12575,11 @@
       "pardon",
       "bargain",
       "barman",
+      "carbon",
       "carton",
       "golden",
       "gotten",
-      "garment",
-      "goddess"
+      "garment"
     ],
     "rp_ipa": "/ˈɡɑːdən/",
     "def": "A piece of land where plants, flowers, or vegetables are grown.",
@@ -13749,6 +13761,7 @@
       "fil": "gitara"
     },
     "neighbors": [
+      "bizarre",
       "retire",
       "star",
       "gear"
@@ -14175,11 +14188,11 @@
       "habit",
       "barren",
       "cabin",
+      "canon",
       "fashion",
       "fasten",
       "gallon",
-      "haven",
-      "heaven"
+      "haven"
     ],
     "rp_ipa": "/ˈhæpən/",
     "def": "To take place or occur, often by chance.",
@@ -14211,7 +14224,7 @@
       "hand",
       "heavy",
       "hobby",
-      "hammer"
+      "catchy"
     ],
     "rp_ipa": "/ˈhæpi/",
     "def": "Feeling or showing pleasure and contentment.",
@@ -19653,10 +19666,10 @@
       "meaning",
       "feeling",
       "reading",
+      "ceiling",
       "dating",
       "healing",
-      "hearing",
-      "leading"
+      "hearing"
     ],
     "rp_ipa": "/ˈmiːtɪŋ/",
     "def": "An occasion when people gather together to discuss something.",
@@ -19751,9 +19764,9 @@
       "very",
       "berry",
       "bury",
+      "cherry",
       "ferry",
-      "messy",
-      "vary"
+      "messy"
     ],
     "rp_ipa": "/ˈmeri/",
     "def": "Cheerful and full of joy.",
@@ -20072,10 +20085,10 @@
       "social",
       "table",
       "bubble",
+      "cable",
       "double",
       "local",
-      "maple",
-      "medal"
+      "maple"
     ],
     "rp_ipa": "/ˈməʊbaɪl/",
     "def": "Able to move or be moved easily; a mobile phone.",
@@ -21553,6 +21566,7 @@
       "fil": "numero"
     },
     "neighbors": [
+      "bumper",
       "jumper",
       "member",
       "summer",
@@ -21986,7 +22000,7 @@
       "ugly",
       "anti",
       "belly",
-      "curly"
+      "bony"
     ],
     "rp_ipa": "/ˈəʊnli/",
     "def": "No more than; just; sole or single.",
@@ -22710,6 +22724,7 @@
       "garden",
       "bargain",
       "barman",
+      "carbon",
       "carton",
       "parcel",
       "partial"
@@ -23085,10 +23100,10 @@
       "listen",
       "purple",
       "basin",
+      "bourbon",
       "burden",
       "certain",
-      "curtain",
-      "fasten"
+      "curtain"
     ],
     "rp_ipa": "/ˈpɜːsən/",
     "def": "A human being; an individual.",
@@ -24017,12 +24032,12 @@
     "neighbors": [
       "previous",
       "actress",
+      "bracket",
       "precious",
       "promise",
       "status",
       "palace",
-      "pants",
-      "axis"
+      "pants"
     ],
     "rp_ipa": "/ˈpræktɪs/",
     "def": "Repeated exercise to improve a skill; the work of a professional.",
@@ -24275,9 +24290,9 @@
       "circle",
       "person",
       "ample",
+      "burgle",
       "couple",
-      "journal",
-      "maple"
+      "journal"
     ],
     "rp_ipa": "/ˈpɜːpəl/",
     "def": "A color made by mixing red and blue.",
@@ -24842,9 +24857,9 @@
       "feeling",
       "meeting",
       "bidding",
+      "ceiling",
       "ending",
-      "healing",
-      "hearing"
+      "healing"
     ],
     "rp_ipa": "/ˈriːdɪŋ/",
     "def": "The activity of reading written text.",
@@ -25874,14 +25889,14 @@
       "fil": "marino"
     },
     "neighbors": [
+      "cellar",
       "sale",
       "sail",
       "dollar",
       "later",
       "paper",
       "ruler",
-      "self",
-      "singer"
+      "self"
     ],
     "rp_ipa": "/ˈseɪlə/",
     "def": "A person who works on a ship or sails boats.",
@@ -26501,13 +26516,13 @@
     },
     "neighbors": [
       "shelf",
+      "cellar",
       "sell",
       "cell",
       "felt",
       "health",
       "held",
-      "help",
-      "sailor"
+      "help"
     ],
     "rp_ipa": "/self/",
     "def": "A person's essential nature; one's own personality.",
@@ -27191,6 +27206,7 @@
     "neighbors": [
       "shocking",
       "topic",
+      "bombing",
       "jogging",
       "wrapping",
       "shopper",
@@ -28654,7 +28670,7 @@
       "sold",
       "sorry",
       "carve",
-      "collar"
+      "cellar"
     ],
     "rp_ipa": "/sɒlv/",
     "def": "To find a solution to a problem.",
@@ -29242,10 +29258,10 @@
       "boring",
       "strong",
       "bearing",
+      "caring",
+      "ceiling",
       "during",
-      "hearing",
-      "sailing",
-      "setting"
+      "hearing"
     ],
     "rp_ipa": "/sprɪŋ/",
     "def": "The season between winter and summer; a coiled metal device.",
@@ -29913,12 +29929,12 @@
     "neighbors": [
       "steady",
       "story",
+      "bloody",
       "sandy",
       "sticky",
       "stuffed",
       "cd",
-      "saturday",
-      "stood"
+      "saturday"
     ],
     "rp_ipa": "/ˈstʌdi/",
     "def": "To spend time learning about a subject; a room for working in.",
@@ -30675,14 +30691,14 @@
       "fil": "mesa (hapag)"
     },
     "neighbors": [
+      "cable",
       "able",
       "stable",
       "mobile",
       "taken",
       "bubble",
       "double",
-      "maple",
-      "racial"
+      "maple"
     ],
     "rp_ipa": "/ˈteɪbəl/",
     "def": "A flat horizontal surface supported by legs, used for eating or working.",
@@ -31027,7 +31043,8 @@
       "fil": "teknolohiya"
     },
     "neighbors": [
-      "ecology"
+      "ecology",
+      "biotechnology"
     ],
     "rp_ipa": "/tekˈnɒlədʒi/",
     "def": "The application of scientific knowledge for practical purposes.",
@@ -33182,7 +33199,9 @@
       "ko": "바지",
       "fil": "pantalon (BrE)"
     },
-    "neighbors": [],
+    "neighbors": [
+      "browser"
+    ],
     "rp_ipa": "/ˈtraʊzəz/",
     "def": "A garment covering the lower body with a leg for each leg.",
     "respell_ga": "TROW-zerz",
@@ -33367,7 +33386,7 @@
       "tv",
       "worker",
       "balky",
-      "curly"
+      "cheeky"
     ],
     "rp_ipa": "/ˈtɜːki/",
     "def": "A large bird kept for its meat, especially at Thanksgiving.",
@@ -33616,8 +33635,8 @@
       "only",
       "really",
       "belly",
-      "curly",
-      "daily"
+      "bully",
+      "curly"
     ],
     "rp_ipa": "/ˈʌɡli/",
     "def": "Unpleasant to look at; not attractive.",
@@ -34067,10 +34086,10 @@
       "merry",
       "berry",
       "bury",
+      "cherry",
       "ferry",
       "marry",
-      "agree",
-      "carry"
+      "agree"
     ],
     "rp_ipa": "/ˈveri/",
     "def": "Used to emphasize an adjective or adverb.",
@@ -36637,13 +36656,13 @@
     },
     "neighbors": [
       "bellow",
+      "cello",
       "fellow",
       "yell",
       "below",
       "felt",
       "health",
-      "held",
-      "hello"
+      "held"
     ],
     "rp_ipa": "/ˈjeləʊ/",
     "def": "The color of gold or sunflowers.",
@@ -37389,9 +37408,9 @@
       "angrily",
       "accuracy",
       "actively",
+      "casually",
       "naturally",
-      "accurately",
-      "annual"
+      "accurately"
     ],
     "rp_ipa": "/ˈæktʃuəli/",
     "def": "In fact; used to emphasize the truth.",
@@ -39967,9 +39986,9 @@
       "barley",
       "barrier",
       "border",
+      "boxer",
       "farmer",
-      "farther",
-      "bother"
+      "farther"
     ],
     "rp_ipa": "/ˈbɑːbə/",
     "def": "A person whose job is cutting men's hair.",
@@ -39996,12 +40015,12 @@
     "neighbors": [
       "barman",
       "target",
+      "carbon",
       "carton",
       "garden",
       "pardon",
       "barren",
-      "organ",
-      "barn"
+      "organ"
     ],
     "rp_ipa": "/ˈbɑːɡən/",
     "def": "Something bought at a low price; to negotiate a price.",
@@ -40120,6 +40139,7 @@
     },
     "neighbors": [
       "biscuit",
+      "bracket",
       "blanket",
       "ballot",
       "bucket",
@@ -40465,9 +40485,9 @@
       "jelly",
       "bellow",
       "berry",
+      "bully",
       "barely",
-      "bell",
-      "bench"
+      "bell"
     ],
     "rp_ipa": "/ˈbeli/",
     "def": "The abdomen or stomach.",
@@ -40497,9 +40517,9 @@
       "belief",
       "believe",
       "bidding",
+      "boiling",
       "builder",
-      "filling",
-      "killing"
+      "filling"
     ],
     "rp_ipa": "/bɪˈlɔŋ/",
     "def": "To be the property of; to be a member of.",
@@ -40748,8 +40768,8 @@
       "beat",
       "bet",
       "bike",
-      "boat",
-      "boot"
+      "bio",
+      "boat"
     ],
     "rp_ipa": "/baɪt/",
     "def": "To cut into something with the teeth.",
@@ -40832,13 +40852,13 @@
     },
     "neighbors": [
       "basket",
+      "bracket",
       "blank",
       "banking",
       "planet",
       "biscuit",
       "ankle",
-      "ballot",
-      "banker"
+      "ballot"
     ],
     "rp_ipa": "/ˈblæŋkət/",
     "def": "A warm covering for a bed or for keeping warm.",
@@ -40899,10 +40919,10 @@
       "blade",
       "bleed",
       "blush",
+      "bloody",
       "bud",
       "bend",
-      "blame",
-      "bloom"
+      "blame"
     ],
     "rp_ipa": "/blʌd/",
     "def": "The red liquid that circulates through the body.",
@@ -41029,8 +41049,8 @@
       "illness",
       "minus",
       "tennis",
-      "bounce",
-      "business"
+      "bony",
+      "bounce"
     ],
     "rp_ipa": "/ˈbəʊnəs/",
     "def": "An additional benefit or payment given as a reward.",
@@ -41193,14 +41213,14 @@
       "fil": "abalahin, magpakialam"
     },
     "neighbors": [
+      "bomber",
       "father",
+      "bothered",
       "feather",
       "further",
       "gather",
       "leather",
-      "neither",
-      "rather",
-      "whether"
+      "neither"
     ],
     "rp_ipa": "/ˈbɒðə/",
     "def": "To cause mild annoyance; to take the trouble to do something.",
@@ -41417,8 +41437,8 @@
       "brief",
       "browse",
       "bruise",
-      "area",
-      "brake"
+      "breezy",
+      "area"
     ],
     "rp_ipa": "/briːz/",
     "def": "A gentle wind.",
@@ -41476,6 +41496,7 @@
     },
     "neighbors": [
       "billion",
+      "brilliantly",
       "million"
     ],
     "rp_ipa": "/ˈbrɪljənt/",
@@ -41594,13 +41615,13 @@
     },
     "neighbors": [
       "ballot",
+      "booklet",
       "pilot",
       "wallet",
       "ballad",
       "bucket",
       "toilet",
-      "belt",
-      "blurt"
+      "belt"
     ],
     "rp_ipa": "/ˈbʊlət/",
     "def": "A small metal projectile fired from a gun.",
@@ -41659,12 +41680,12 @@
     "neighbors": [
       "belly",
       "marry",
+      "cherry",
       "fairy",
       "ferry",
       "merry",
       "vary",
-      "very",
-      "bare"
+      "very"
     ],
     "rp_ipa": "/ˈberi/",
     "def": "To place something underground; to cover deeply.",
@@ -41828,12 +41849,12 @@
     "neighbors": [
       "passenger",
       "balanced",
+      "cabinet",
       "challenge",
       "talent",
       "balance",
       "cleaner",
-      "ballad",
-      "cabin"
+      "ballad"
     ],
     "rp_ipa": "/ˈkæləndə/",
     "def": "A chart showing the days, weeks, and months of a year.",
@@ -41859,6 +41880,7 @@
     },
     "neighbors": [
       "campus",
+      "campaign",
       "wrapping",
       "camp"
     ],
@@ -41888,6 +41910,7 @@
       "camping",
       "sample",
       "calmness",
+      "campaign",
       "ample",
       "camel",
       "camera",
@@ -41923,7 +41946,7 @@
       "cattle",
       "chemical",
       "national",
-      "digital"
+      "cabinet"
     ],
     "rp_ipa": "/ˈkæpɪtəl/",
     "def": "The city that serves as a country's seat of government; money.",
@@ -41949,14 +41972,14 @@
       "fil": "kapitan"
     },
     "neighbors": [
+      "caption",
       "canteen",
       "capsule",
+      "captive",
       "carton",
       "capital",
       "cabin",
-      "cattle",
-      "cotton",
-      "curtain"
+      "canon"
     ],
     "rp_ipa": "/ˈkæptən/",
     "def": "The leader of a ship, aircraft, or sports team.",
@@ -41989,7 +42012,7 @@
       "cabbage",
       "cabin",
       "camel",
-      "carriage"
+      "canon"
     ],
     "rp_ipa": "/ˈkærət/",
     "def": "An orange root vegetable eaten raw or cooked.",
@@ -42203,10 +42226,10 @@
       "simple",
       "single",
       "symbol",
+      "burial",
       "cheerful",
       "period",
-      "signal",
-      "civil"
+      "signal"
     ],
     "rp_ipa": "/ˈsɪəriəl/",
     "def": "A plant crop such as wheat or rice; a breakfast food made from grain.",
@@ -42235,10 +42258,10 @@
       "surgeon",
       "sudden",
       "version",
+      "bourbon",
       "burden",
       "button",
-      "circle",
-      "circus"
+      "circle"
     ],
     "rp_ipa": "/ˈsɜːtən/",
     "def": "Known without doubt; sure to happen.",
@@ -42383,6 +42406,7 @@
       "fil": "champagne"
     },
     "neighbors": [
+      "campaign",
       "shampoo"
     ],
     "rp_ipa": "/ʃæmˈpeɪn/",
@@ -42816,6 +42840,7 @@
       "fil": "kabataan, pagkabata"
     },
     "neighbors": [
+      "childish",
       "child"
     ],
     "rp_ipa": "/ˈtʃaɪldˌhʊd/",
@@ -42840,7 +42865,9 @@
       "ko": "침팬지",
       "fil": "chimpanzee"
     },
-    "neighbors": [],
+    "neighbors": [
+      "chimney"
+    ],
     "rp_ipa": "/tʃɪmˈpænziː/",
     "def": "A great ape from central Africa, closely related to humans.",
     "respell_ga": "chim-PAN-zee",
@@ -43234,6 +43261,7 @@
       "fil": "pag-akyat"
     },
     "neighbors": [
+      "blooming",
       "climate",
       "climber",
       "climb"
@@ -43544,13 +43572,13 @@
     },
     "neighbors": [
       "common",
+      "bombing",
+      "calmly",
       "college",
       "comet",
       "commit",
       "logic",
-      "topic",
-      "click",
-      "quick"
+      "topic"
     ],
     "rp_ipa": "/ˈkɒmɪk/",
     "def": "A magazine with stories told in pictures; funny or amusing.",
@@ -43714,8 +43742,8 @@
       "compound",
       "sympathy",
       "campus",
-      "comedy",
-      "common"
+      "campaign",
+      "comedy"
     ],
     "rp_ipa": "/ˈkʌmpəni/",
     "def": "A business organization; the presence of other people.",
@@ -43825,12 +43853,12 @@
     "neighbors": [
       "complaint",
       "complete",
+      "campaign",
       "composer",
       "explain",
       "someplace",
       "champagne",
-      "compare",
-      "compete"
+      "compare"
     ],
     "rp_ipa": "/kəmˈpleɪn/",
     "def": "To express unhappiness or dissatisfaction about something.",
@@ -43857,6 +43885,7 @@
     "neighbors": [
       "complain",
       "complete",
+      "campaign",
       "compete"
     ],
     "rp_ipa": "/kəmˈpleɪnt/",
@@ -44523,9 +44552,9 @@
       "hiking",
       "pudding",
       "walking",
-      "killing",
-      "packing",
-      "shocking"
+      "bookish",
+      "caring",
+      "killing"
     ],
     "rp_ipa": "/ˈkʊkɪŋ/",
     "def": "The practice of preparing food by applying heat.",
@@ -44734,10 +44763,10 @@
       "double",
       "ample",
       "bubble",
+      "bustle",
+      "cable",
       "camel",
-      "cattle",
-      "chuckle",
-      "cousin"
+      "cattle"
     ],
     "rp_ipa": "/ˈkʌpəl/",
     "def": "Two people who are together romantically; a small number.",
@@ -44794,14 +44823,14 @@
       "fil": "loko, baliw"
     },
     "neighbors": [
+      "breezy",
       "gravy",
       "cruise",
       "daisy",
       "lazy",
       "phrase",
       "praise",
-      "rainy",
-      "razor"
+      "rainy"
     ],
     "rp_ipa": "/ˈkreɪzi/",
     "def": "Mentally unstable; very enthusiastic; foolish.",
@@ -44860,6 +44889,7 @@
     "neighbors": [
       "creator",
       "create",
+      "captive",
       "critic",
       "greeting",
       "native",
@@ -44976,6 +45006,7 @@
     },
     "neighbors": [
       "credit",
+      "bracket",
       "ticket"
     ],
     "rp_ipa": "/ˈkrɪkɪt/",
@@ -45317,7 +45348,7 @@
       "wooden",
       "action",
       "cabin",
-      "cautious"
+      "canon"
     ],
     "rp_ipa": "/ˈkʊʃən/",
     "def": "A soft pillow used for comfort when sitting.",
@@ -46965,12 +46996,12 @@
     "neighbors": [
       "bubble",
       "couple",
+      "bustle",
+      "cable",
       "chuckle",
       "dazzle",
       "dozen",
-      "mobile",
-      "muscle",
-      "puzzle"
+      "mobile"
     ],
     "rp_ipa": "/ˈdʌbəl/",
     "def": "Twice as much; having two identical parts.",
@@ -47358,8 +47389,8 @@
       "bearing",
       "booking",
       "boring",
-      "dating",
-      "diving"
+      "caring",
+      "dating"
     ],
     "rp_ipa": "/ˈdjʊərɪŋ/",
     "def": "Throughout a period of time.",
@@ -50904,14 +50935,14 @@
       "fil": "ganap na"
     },
     "neighbors": [
+      "bully",
       "flea",
       "flee",
       "full",
       "belly",
       "daily",
       "fault",
-      "film",
-      "follow"
+      "film"
     ],
     "rp_ipa": "/ˈfʊli/",
     "def": "Completely; to the fullest extent.",
@@ -51679,6 +51710,7 @@
       "fil": "unti-unti"
     },
     "neighbors": [
+      "casually",
       "tragedy"
     ],
     "rp_ipa": "/ˈɡrædʒuəli/",
@@ -51941,13 +51973,13 @@
     },
     "neighbors": [
       "granny",
+      "breezy",
       "freely",
       "friday",
       "gravy",
       "breed",
       "cd",
-      "grade",
-      "green"
+      "grade"
     ],
     "rp_ipa": "/ˈɡriːdi/",
     "def": "Having an excessive desire for food or wealth.",
@@ -52554,7 +52586,7 @@
       "meaning",
       "rating",
       "writing",
-      "dating"
+      "ceiling"
     ],
     "rp_ipa": "/ˈhiːtɪŋ/",
     "def": "A system for warming a building.",
@@ -52898,8 +52930,8 @@
       "balky",
       "body",
       "box",
-      "coffee",
-      "cookie"
+      "cheeky",
+      "coffee"
     ],
     "rp_ipa": "/ˈhɒki/",
     "def": "A sport played with curved sticks and a ball or puck.",
@@ -53664,7 +53696,7 @@
       "meditate",
       "insect",
       "animate",
-      "educate"
+      "candidate"
     ],
     "rp_ipa": "/ˈɪndəˌkeɪt/",
     "def": "To point to; to show or suggest something.",
@@ -54390,11 +54422,11 @@
       "honey",
       "jelly",
       "learner",
+      "bony",
       "curly",
       "dirty",
       "funny",
-      "jeans",
-      "joint"
+      "jeans"
     ],
     "rp_ipa": "/ˈdʒɜːni/",
     "def": "Travel from one place to another, especially over a distance.",
@@ -54611,6 +54643,7 @@
       "wildly",
       "kinda",
       "widely",
+      "blindly",
       "candy",
       "kind"
     ],
@@ -56319,11 +56352,11 @@
       "manager",
       "passage",
       "cabbage",
+      "canon",
       "channel",
       "damage",
       "message",
-      "minus",
-      "minute"
+      "minus"
     ],
     "rp_ipa": "/ˈmænɪdʒ/",
     "def": "To be in charge of; to succeed in doing something difficult.",
@@ -56504,12 +56537,12 @@
     "neighbors": [
       "bury",
       "berry",
+      "cherry",
       "fairy",
       "ferry",
       "many",
       "messy",
-      "vary",
-      "very"
+      "vary"
     ],
     "rp_ipa": "/ˈmæri/",
     "def": "To become joined in marriage to someone.",
@@ -56597,9 +56630,9 @@
       "missing",
       "running",
       "burning",
+      "ceiling",
       "evening",
-      "feeling",
-      "healing"
+      "feeling"
     ],
     "rp_ipa": "/ˈmiːnɪŋ/",
     "def": "What something signifies or represents.",
@@ -56991,7 +57024,9 @@
       "ko": "군대",
       "fil": "militar"
     },
-    "neighbors": [],
+    "neighbors": [
+      "cemetery"
+    ],
     "rp_ipa": "/ˈmɪləˌtri/",
     "def": "Relating to armed forces or warfare.",
     "ipa_actual_ga": "/ˈmɪləˌɾɛri/",
@@ -57614,11 +57649,11 @@
       "rational",
       "capital",
       "original",
+      "cabinet",
       "casual",
       "regional",
       "terminal",
-      "additional",
-      "natural"
+      "additional"
     ],
     "rp_ipa": "/ˈnæʃənəl/",
     "def": "Relating to a whole country.",
@@ -57762,6 +57797,7 @@
     },
     "neighbors": [
       "unnecessary",
+      "cemetery",
       "chemistry"
     ],
     "rp_ipa": "/ˈnesəˌseri/",
@@ -59328,8 +59364,8 @@
       "pity",
       "pursue",
       "beast",
-      "cd",
-      "cv"
+      "bossy",
+      "cd"
     ],
     "rp_ipa": "/ˌpiːˈsiː/",
     "def": "Short for personal computer.",
@@ -62075,8 +62111,8 @@
       "react",
       "wrapping",
       "fact",
-      "act",
-      "kit"
+      "bracket",
+      "act"
     ],
     "rp_ipa": "/ˈrækɪt/",
     "def": "A bat used in sports; a loud unpleasant noise.",
@@ -63543,10 +63579,10 @@
       "rotten",
       "common",
       "robbery",
+      "bourbon",
       "cabin",
       "caution",
-      "cotton",
-      "fallen"
+      "cotton"
     ],
     "rp_ipa": "/ˈrɒbɪn/",
     "def": "A small songbird with a red breast.",
@@ -64121,14 +64157,14 @@
       "fil": "paglalayag"
     },
     "neighbors": [
+      "ceiling",
       "rating",
       "singing",
       "skiing",
       "split",
       "string",
       "surfing",
-      "dating",
-      "feeling"
+      "boiling"
     ],
     "rp_ipa": "/ˈseɪlɪŋ/",
     "def": "The sport or activity of traveling on water using a sail.",
@@ -64282,6 +64318,7 @@
     },
     "neighbors": [
       "satisfied",
+      "certify",
       "satellite",
       "status"
     ],
@@ -64870,6 +64907,7 @@
       "fil": "kalihim"
     },
     "neighbors": [
+      "cemetery",
       "secretly"
     ],
     "rp_ipa": "/ˈsekrətri/",
@@ -65146,6 +65184,7 @@
       "serious",
       "carelessly",
       "obviously",
+      "cheerfully",
       "curiously"
     ],
     "rp_ipa": "/ˈsɪəriəsli/",
@@ -65837,8 +65876,8 @@
       "sister",
       "killer",
       "silly",
-      "deliver",
-      "liver"
+      "cellar",
+      "deliver"
     ],
     "rp_ipa": "/ˈsɪlvə/",
     "def": "A shiny white precious metal; the color of silver.",
@@ -65990,8 +66029,8 @@
       "string",
       "surfing",
       "bidding",
-      "filling",
-      "fishing"
+      "ceiling",
+      "filling"
     ],
     "rp_ipa": "/ˈsɪŋɪŋ/",
     "def": "Making musical sounds with the voice.",
@@ -66196,6 +66235,7 @@
       "fil": "pag-skate"
     },
     "neighbors": [
+      "catering",
       "rating",
       "sailing",
       "skiing",
@@ -66263,10 +66303,10 @@
       "singing",
       "string",
       "surfing",
+      "ceiling",
       "setting",
       "spring",
-      "being",
-      "skating"
+      "being"
     ],
     "rp_ipa": "/ˈskiːɪŋ/",
     "def": "The sport of moving over snow on skis.",
@@ -66820,6 +66860,7 @@
       "folder",
       "silver",
       "shoulder",
+      "cellar",
       "sailor",
       "sold",
       "soul"
@@ -67365,12 +67406,12 @@
     "neighbors": [
       "sailing",
       "splash",
+      "ceiling",
       "spent",
       "sport",
       "spring",
       "plate",
-      "salt",
-      "slim"
+      "salt"
     ],
     "rp_ipa": "/splɪt/",
     "def": "To divide into parts; to share something.",
@@ -68029,11 +68070,11 @@
       "strong",
       "strength",
       "steadily",
+      "broadly",
       "stormy",
       "strangely",
       "strawberry",
-      "string",
-      "truly"
+      "string"
     ],
     "rp_ipa": "/ˈstrɒŋli/",
     "def": "With great force or intensity.",
@@ -68641,9 +68682,9 @@
       "skiing",
       "string",
       "burning",
+      "ceiling",
       "setting",
-      "spring",
-      "surface"
+      "spring"
     ],
     "rp_ipa": "/ˈsɜːfɪŋ/",
     "def": "The sport of riding waves on a board.",
@@ -68854,7 +68895,7 @@
       "swimmer",
       "whether",
       "better",
-      "letter"
+      "cellar"
     ],
     "rp_ipa": "/ˈswetə/",
     "def": "A warm knitted garment for the upper body.",
@@ -68968,12 +69009,12 @@
     "neighbors": [
       "sympathy",
       "company",
+      "cheerfully",
       "similar",
       "simple",
       "simply",
       "symbol",
-      "salmon",
-      "women"
+      "chimney"
     ],
     "rp_ipa": "/ˈsɪmfəni/",
     "def": "A long musical composition for a full orchestra.",
@@ -69342,12 +69383,12 @@
     "neighbors": [
       "tourist",
       "chemist",
+      "cherished",
       "terrorism",
       "text",
       "trust",
       "twist",
-      "terror",
-      "test"
+      "terror"
     ],
     "rp_ipa": "/ˈterərɪst/",
     "def": "A person who uses violence to achieve political aims.",
@@ -69435,8 +69476,8 @@
       "bury",
       "marry",
       "berry",
-      "fairy",
-      "ferry"
+      "cherry",
+      "fairy"
     ],
     "rp_ipa": "/ðeəz/",
     "def": "Something belonging to them.",
@@ -70786,6 +70827,7 @@
       "fil": "hindi panatag"
     },
     "neighbors": [
+      "breezy",
       "noisy",
       "sneeze",
       "easy"
@@ -71387,8 +71429,8 @@
       "jelly",
       "silly",
       "ballet",
-      "carry",
-      "curly"
+      "bully",
+      "carry"
     ],
     "rp_ipa": "/ˈvæli/",
     "def": "A low area of land between hills or mountains.",
@@ -71474,6 +71516,7 @@
     "neighbors": [
       "vision",
       "certain",
+      "bourbon",
       "burden",
       "curtain",
       "person",
@@ -71988,9 +72031,9 @@
       "walking",
       "bearing",
       "bidding",
+      "caring",
       "leading",
-      "reading",
-      "setting"
+      "reading"
     ],
     "rp_ipa": "/ˈwedɪŋ/",
     "def": "A marriage ceremony and celebration.",
@@ -72049,10 +72092,10 @@
       "likely",
       "weekday",
       "widely",
+      "cheeky",
       "quickly",
       "weak",
-      "we'll",
-      "week"
+      "we'll"
     ],
     "rp_ipa": "/ˈwiːkli/",
     "def": "Happening once a week or every week.",
@@ -74417,9 +74460,9 @@
       "thump",
       "jump",
       "bum",
+      "bumper",
       "buddy",
-      "bunch",
-      "bust"
+      "bunch"
     ],
     "rp_ipa": "/bʌmp/",
     "def": "A protrusion on a surface; to hit something by accident.",
@@ -74544,10 +74587,10 @@
       "beaver",
       "bitter",
       "better",
+      "bomber",
       "bother",
-      "burger",
-      "butter",
-      "cooker"
+      "bully",
+      "burger"
     ],
     "rp_ipa": "/ˈbʊtʃə/",
     "def": "A person who cuts and sells meat.",
@@ -74609,9 +74652,9 @@
       "usual",
       "capable",
       "rational",
-      "chemical",
-      "national",
-      "cancel"
+      "cabinet",
+      "casually",
+      "chemical"
     ],
     "rp_ipa": "/ˈkæʒəwəl/",
     "def": "Relaxed and informal; happening by chance.",
@@ -77983,7 +78026,7 @@
       "vary",
       "agree",
       "berry",
-      "bury"
+      "bully"
     ],
     "rp_ipa": "/ˈdʒʊəri/",
     "def": "A group of people who decide a verdict in a court of law.",
@@ -84282,10 +84325,10 @@
       "borrow",
       "bar",
       "berry",
+      "bomber",
       "carve",
       "lark",
-      "beard",
-      "board"
+      "beard"
     ],
     "rp_ipa": "/bɑːn/",
     "def": "A large farm building for housing animals or grain.",
@@ -84730,10 +84773,10 @@
       "bruise",
       "breeze",
       "brown",
+      "browser",
       "blaze",
       "brag",
-      "drought",
-      "prose"
+      "drought"
     ],
     "rp_ipa": "/braʊz/",
     "def": "To look at things without a fixed purpose; to surf the internet.",
@@ -94448,13 +94491,13 @@
     },
     "neighbors": [
       "wool",
+      "bully",
       "fully",
       "golf",
       "self",
       "shelf",
       "wealth",
-      "wild",
-      "world"
+      "wild"
     ],
     "rp_ipa": "/wʊlf/",
     "def": "A wild carnivorous animal resembling a large dog.",
@@ -94738,14 +94781,14 @@
     },
     "def": "Having the power, skill, or means to do something.",
     "neighbors": [
+      "cable",
       "table",
       "dial",
       "idol",
       "jewel",
       "loyal",
       "oral",
-      "vowel",
-      "apple"
+      "vowel"
     ],
     "respell_ga": "AY-buhl",
     "respell_rp": "AY-buhl",
@@ -95733,6 +95776,7 @@
       "motive",
       "native",
       "actor",
+      "captive",
       "act",
       "actively",
       "adjective"
@@ -97058,8 +97102,8 @@
       "ample",
       "angry",
       "beagle",
-      "uncle",
-      "anger"
+      "burgle",
+      "uncle"
     ],
     "respell_ga": "ANG-guhl",
     "respell_rp": "ANG-guhl",
@@ -97296,9 +97340,9 @@
       "accuracy",
       "initially",
       "angrily",
+      "casually",
       "accurately",
-      "noisily",
-      "actual"
+      "noisily"
     ],
     "respell_ga": "A-nyoo-uh-lee",
     "respell_rp": "A-nyoor-lee",
@@ -98864,9 +98908,9 @@
       "occasional",
       "valuable",
       "achievable",
+      "breakable",
       "capable",
-      "visible",
-      "unable"
+      "visible"
     ],
     "respell_ga": "uh-VAY-luh-buhl",
     "respell_rp": "uh-VAY-luh-buhl",
@@ -99216,7 +99260,7 @@
       "haven",
       "naked",
       "barren",
-      "bucket"
+      "bourbon"
     ],
     "respell_ga": "BAY-kuhn",
     "respell_rp": "BAY-kuhn",
@@ -99303,7 +99347,9 @@
     },
     "def": "A shop or place where bread and cakes are made and sold.",
     "neighbors": [
-      "bacon"
+      "brewery",
+      "bacon",
+      "bravery"
     ],
     "respell_ga": "BAY-kuh-ree",
     "respell_rp": "BAY-kuh-ree",
@@ -99418,12 +99464,12 @@
     "neighbors": [
       "bargain",
       "carton",
+      "carbon",
       "chairman",
       "garden",
       "pardon",
       "garment",
-      "barren",
-      "common"
+      "barren"
     ],
     "respell_ga": "BAR-muhn",
     "respell_rp": "BAH-muhn",
@@ -99549,6 +99595,7 @@
       "axis",
       "basic",
       "bonus",
+      "bustle",
       "famous",
       "base"
     ],
@@ -99811,6 +99858,7 @@
     "neighbors": [
       "belief",
       "believe",
+      "bony",
       "busy",
       "bin",
       "been"
@@ -99945,9 +99993,9 @@
       "geology",
       "broccoli",
       "analogy",
+      "burglary",
       "quality",
-      "biography",
-      "policy"
+      "biography"
     ],
     "respell_ga": "by-AH-luh-jee",
     "respell_rp": "by-O-luh-jee",
@@ -100031,6 +100079,7 @@
     "def": "God's favor and protection, or something that brings happiness or good luck.",
     "neighbors": [
       "boxing",
+      "blooming",
       "bearing",
       "bless"
     ],
@@ -100086,6 +100135,7 @@
     "def": "In a confident and brave way, without fear.",
     "neighbors": [
       "wildly",
+      "broadly",
       "badly",
       "bold"
     ],
@@ -100112,14 +100162,14 @@
     },
     "def": "An arrangement to have a seat, room, or table reserved for you.",
     "neighbors": [
+      "bookish",
       "cooking",
       "burning",
       "packing",
       "shocking",
       "working",
       "bearing",
-      "bidding",
-      "boring"
+      "bidding"
     ],
     "respell_ga": "BUU-king",
     "respell_rp": "BUU-king",
@@ -100208,6 +100258,8 @@
       "blessing",
       "booking",
       "shocking",
+      "bombing",
+      "boxer",
       "box"
     ],
     "respell_ga": "BAHK-sing",
@@ -100239,8 +100291,8 @@
       "bravely",
       "basket",
       "biscuit",
-      "basin",
-      "basis"
+      "booklet",
+      "bracket"
     ],
     "respell_ga": "BRAY-sluht",
     "respell_rp": "BRAY-slit",
@@ -100324,8 +100376,10 @@
     "neighbors": [
       "briefly",
       "brightly",
+      "broadly",
       "greatly",
       "gravy",
+      "bravery",
       "brave"
     ],
     "respell_ga": "BRAYV-lee",
@@ -100351,7 +100405,10 @@
     },
     "def": "An important discovery or development, often after a difficult problem.",
     "neighbors": [
+      "bravery",
+      "breakdown",
       "bakery",
+      "breakup",
       "aircrew",
       "brake",
       "break"
@@ -100445,7 +100502,9 @@
     "neighbors": [
       "bravely",
       "brightly",
+      "broadly",
       "freely",
+      "breezy",
       "roughly",
       "brief"
     ],
@@ -100475,6 +100534,7 @@
       "bravely",
       "briefly",
       "slightly",
+      "broadly",
       "greatly",
       "lightly",
       "tightly",
@@ -100535,6 +100595,8 @@
     },
     "def": "To send out a program on television or radio, or the program itself.",
     "neighbors": [
+      "broadcaster",
+      "broadband",
       "forecast"
     ],
     "respell_ga": "BRAWD-kast",
@@ -100563,11 +100625,11 @@
       "biology",
       "properly",
       "balcony",
+      "bravery",
       "bakery",
       "bravely",
       "briefly",
-      "brightly",
-      "broken"
+      "brightly"
     ],
     "respell_ga": "BRAH-kuh-lee",
     "respell_rp": "BRO-klee",
@@ -100649,14 +100711,14 @@
     },
     "def": "A small round ball of air or gas inside a liquid.",
     "neighbors": [
+      "bustle",
       "double",
       "barrel",
       "battle",
       "chuckle",
       "muscle",
       "puzzle",
-      "beagle",
-      "bottle"
+      "beagle"
     ],
     "respell_ga": "BUH-buhl",
     "respell_rp": "BUH-buhl",
@@ -100682,13 +100744,13 @@
     "def": "A close friend.",
     "neighbors": [
       "body",
+      "bloody",
       "bud",
       "bump",
       "bunch",
       "bust",
       "puppy",
-      "baby",
-      "balky"
+      "baby"
     ],
     "ipa_actual_ga": "/ˈbʌɾi/",
     "respell_ga": "BUH-dee",
@@ -100779,14 +100841,14 @@
     },
     "def": "A heavy load, or a difficult responsibility.",
     "neighbors": [
+      "bourbon",
       "bacon",
       "basin",
       "curtain",
       "hidden",
       "surgeon",
       "barren",
-      "button",
-      "certain"
+      "burgle"
     ],
     "ipa_actual_ga": "/ˈbɝdn̩/",
     "respell_ga": "BUR-dn",
@@ -100842,7 +100904,8 @@
     },
     "def": "A person who breaks into a building to steal things.",
     "neighbors": [
-      "burger"
+      "burger",
+      "burgle"
     ],
     "respell_ga": "BUR-gler",
     "respell_rp": "BUR-gluh",
@@ -100874,7 +100937,7 @@
       "working",
       "bearing",
       "bidding",
-      "boring"
+      "boiling"
     ],
     "respell_ga": "BUR-ning",
     "respell_rp": "BUR-ning",
@@ -100904,9 +100967,9 @@
       "tire",
       "wire",
       "bike",
+      "bio",
       "bite",
-      "fire",
-      "buy"
+      "fire"
     ],
     "respell_ga": "BY-er",
     "respell_rp": "BY-uh",
@@ -100937,8 +101000,8 @@
       "cattle",
       "damage",
       "package",
-      "carrot",
-      "castle"
+      "cable",
+      "canon"
     ],
     "respell_ga": "KA-buhj",
     "respell_rp": "KA-bij",
@@ -100964,13 +101027,13 @@
     "def": "A small simple house, or a private room on a ship or plane.",
     "neighbors": [
       "cabbage",
+      "canon",
       "camel",
       "cattle",
       "caution",
       "cotton",
       "curtain",
-      "fasten",
-      "gallon"
+      "fasten"
     ],
     "respell_ga": "KA-buhn",
     "respell_rp": "KA-bin",
@@ -101242,9 +101305,9 @@
       "capsule",
       "chemist",
       "compete",
+      "campaign",
       "camping",
-      "campus",
-      "camp"
+      "campus"
     ],
     "respell_ga": "KAMP-syt",
     "respell_rp": "KAMP-syt",
@@ -101331,9 +101394,9 @@
       "capture",
       "counter",
       "candy",
+      "canon",
       "fancy",
-      "cancel",
-      "canned"
+      "cancel"
     ],
     "respell_ga": "KAN-ser",
     "respell_rp": "KAN-suh",
@@ -101429,8 +101492,8 @@
       "antique",
       "county",
       "candy",
-      "anti",
-      "can't"
+      "canon",
+      "anti"
     ],
     "respell_ga": "kan-TEEN",
     "respell_rp": "kan-TEEN",
@@ -101456,13 +101519,13 @@
     "def": "Having the ability or skill to do something.",
     "neighbors": [
       "capital",
+      "cable",
       "casual",
       "horrible",
       "typical",
       "visible",
       "chemical",
-      "possible",
-      "suitable"
+      "possible"
     ],
     "respell_ga": "KAY-puh-buhl",
     "respell_rp": "KAY-puh-buhl",
@@ -101516,9 +101579,9 @@
       "candle",
       "council",
       "captain",
+      "caption",
       "camel",
-      "cattle",
-      "capital"
+      "cattle"
     ],
     "respell_ga": "KAP-suhl",
     "respell_rp": "KAP-sool",
@@ -101547,6 +101610,7 @@
       "chapter",
       "creature",
       "culture",
+      "catchy",
       "cap",
       "catch"
     ],
@@ -101693,6 +101757,8 @@
     "def": "A thick fabric covering used on floors.",
     "neighbors": [
       "carton",
+      "carbon",
+      "carpool",
       "market",
       "target",
       "comet",
@@ -101724,11 +101790,11 @@
       "baggage",
       "cabbage",
       "marriage",
+      "caring",
       "carrot",
       "college",
       "bridge",
-      "carry",
-      "fridge"
+      "carry"
     ],
     "respell_ga": "KA-rij",
     "respell_rp": "KA-rij",
@@ -101753,14 +101819,14 @@
     },
     "def": "A container made of cardboard or plastic, used for holding liquids or food.",
     "neighbors": [
+      "carbon",
       "cartoon",
       "cotton",
       "barman",
       "carpet",
       "hearted",
       "bargain",
-      "captain",
-      "garden"
+      "captain"
     ],
     "ipa_actual_ga": "/ˈkɑrʔn̩/",
     "respell_ga": "KAR-tn",
@@ -101788,6 +101854,8 @@
     "neighbors": [
       "campsite",
       "viewpoint",
+      "checkpoint",
+      "campaign",
       "appoint",
       "can't",
       "point"
@@ -102151,13 +102219,13 @@
     "def": "A person who has won a competition or contest.",
     "neighbors": [
       "chariot",
+      "campaign",
       "campus",
       "captain",
+      "caption",
       "champagne",
       "sample",
-      "salmon",
-      "ample",
-      "happen"
+      "salmon"
     ],
     "respell_ga": "CHAM-pee-uhn",
     "respell_rp": "CHAM-peern",
@@ -102345,8 +102413,10 @@
     },
     "def": "An organization that helps people in need, or kindness in giving help.",
     "neighbors": [
+      "cherished",
       "cherish",
-      "pretty"
+      "pretty",
+      "cherry"
     ],
     "ipa_actual_ga": "/ˈtʃɛrɪɾi/",
     "respell_ga": "CHEH-ri-dee",
@@ -102402,6 +102472,7 @@
     },
     "def": "Happy and positive.",
     "neighbors": [
+      "cheerfully",
       "careful",
       "cereal"
     ],
@@ -102456,6 +102527,7 @@
     "neighbors": [
       "industry",
       "artistry",
+      "cemetery",
       "necessary",
       "chemist",
       "biochemistry"
@@ -102483,9 +102555,12 @@
     },
     "def": "To love and care for something or someone deeply.",
     "neighbors": [
+      "cherished",
       "marriage",
       "bearing",
+      "caring",
       "charity",
+      "cherry",
       "chair"
     ],
     "respell_ga": "CHEH-rish",
@@ -102577,7 +102652,8 @@
     "neighbors": [
       "technological",
       "psychological",
-      "ecological"
+      "ecological",
+      "biological"
     ],
     "respell_ga": "krah-nuh-LAH-ji-kuhl",
     "respell_rp": "kro-nuh-LO-ji-kuhl",
@@ -102609,7 +102685,7 @@
       "puzzle",
       "ankle",
       "bucket",
-      "chicken"
+      "bustle"
     ],
     "respell_ga": "CHUH-kuhl",
     "respell_rp": "CHUH-kuhl",
@@ -102755,7 +102831,8 @@
     "def": "A society with its own culture and way of life (British spelling of civilization).",
     "neighbors": [
       "civilization",
-      "organization"
+      "organization",
+      "certification"
     ],
     "respell_ga": "si-vuh-luh-ZAY-shuhn",
     "respell_rp": "si-vuh-ly-ZAY-shuhn",
@@ -103154,6 +103231,7 @@
     },
     "def": "To join two or more things together.",
     "neighbors": [
+      "carbon",
       "common"
     ],
     "respell_ga": "KAHM-byn",
@@ -103179,6 +103257,7 @@
     },
     "def": "A person who entertains people by making them laugh.",
     "neighbors": [
+      "cathedral",
       "immediate",
       "medium"
     ],
@@ -103209,6 +103288,7 @@
       "remedy",
       "comet",
       "commonly",
+      "calmly",
       "common",
       "comma"
     ],
@@ -103295,10 +103375,10 @@
       "comet",
       "common",
       "collar",
+      "bomber",
       "camp",
       "card",
-      "carve",
-      "coffee"
+      "carve"
     ],
     "respell_ga": "KAH-muh",
     "respell_rp": "KO-muh",
@@ -103437,13 +103517,13 @@
     "def": "Frequently, or in a way shared by many people.",
     "neighbors": [
       "comedy",
+      "calmly",
       "common",
       "currently",
       "heavenly",
       "suddenly",
       "certainly",
-      "company",
-      "harmony"
+      "company"
     ],
     "respell_ga": "KAH-muhn-lee",
     "respell_rp": "KO-muhn-lee",
@@ -103821,6 +103901,7 @@
       "combine",
       "command",
       "comment",
+      "campaign",
       "common",
       "pound"
     ],
@@ -105557,6 +105638,7 @@
     "neighbors": [
       "clinic",
       "arctic",
+      "chaotic",
       "critical"
     ],
     "ipa_actual_ga": "/ˈkrɪɾɪk/",
@@ -105668,10 +105750,10 @@
       "cattle",
       "fuel",
       "kettle",
+      "cable",
       "castle",
       "couple",
-      "jewel",
-      "oral"
+      "jewel"
     ],
     "respell_ga": "KROO-uhl",
     "respell_rp": "KROORL",
@@ -106071,9 +106153,9 @@
       "beaver",
       "server",
       "sleeve",
+      "cheeky",
       "city",
-      "envy",
-      "fever"
+      "envy"
     ],
     "respell_ga": "see-VEE",
     "respell_rp": "see-VEE",
@@ -106855,11 +106937,11 @@
       "delicate",
       "definitely",
       "dedicate",
+      "cabinet",
       "different",
       "didn't",
       "difficult",
-      "doesn't",
-      "parent"
+      "doesn't"
     ],
     "respell_ga": "DEH-fuh-nuht",
     "respell_rp": "DEH-fi-nit",
@@ -109991,6 +110073,7 @@
     },
     "def": "Relating to the environment and living things.",
     "neighbors": [
+      "biological",
       "psychological",
       "technological",
       "logical"
@@ -110344,10 +110427,10 @@
       "also",
       "although",
       "bellow",
+      "cello",
       "yellow",
       "flow",
-      "blow",
-      "else"
+      "blow"
     ],
     "respell_ga": "EHL-boh",
     "respell_rp": "EHL-boh",
@@ -110916,6 +110999,7 @@
       "initial",
       "stable",
       "disable",
+      "cable",
       "table",
       "able"
     ],
@@ -111607,6 +111691,7 @@
       "initially",
       "unlikely",
       "untidy",
+      "bitterly",
       "injury",
       "tightly",
       "timely"
@@ -113054,8 +113139,10 @@
     },
     "def": "The activity of growing crops or raising animals.",
     "neighbors": [
+      "charming",
       "parking",
       "following",
+      "bombing",
       "farmer",
       "farm"
     ],
@@ -113140,11 +113227,11 @@
       "fasten",
       "fascinating",
       "balanced",
+      "cabinet",
       "passenger",
       "absent",
       "fluent",
-      "animate",
-      "hadn't"
+      "animate"
     ],
     "respell_ga": "FA-suh-nayt",
     "respell_rp": "FA-si-nayt",
@@ -113283,13 +113370,13 @@
     "def": "A man or boy, or a person in the same group or situation.",
     "neighbors": [
       "bellow",
+      "cello",
       "felt",
       "follow",
       "yellow",
       "flow",
       "fell",
-      "elbow",
-      "ferry"
+      "elbow"
     ],
     "respell_ga": "FEH-loh",
     "respell_rp": "FEH-loh",
@@ -113317,11 +113404,11 @@
       "vary",
       "berry",
       "bury",
+      "cherry",
       "marry",
       "merry",
       "very",
-      "fair",
-      "fairly"
+      "fair"
     ],
     "respell_ga": "FEH-ree",
     "respell_rp": "FEH-ree",
@@ -113640,12 +113727,12 @@
     "neighbors": [
       "freely",
       "timely",
+      "calmly",
       "fairly",
       "curly",
       "family",
       "fully",
-      "firm",
-      "early"
+      "firm"
     ],
     "respell_ga": "FURM-lee",
     "respell_rp": "FURM-lee",
@@ -113841,13 +113928,13 @@
     "def": "To fail a test or course (informal).",
     "neighbors": [
       "blank",
+      "blink",
       "drunk",
       "frank",
       "flock",
       "link",
       "monk",
-      "flood",
-      "junk"
+      "flood"
     ],
     "respell_ga": "FLUHNGK",
     "respell_rp": "FLUHNGK",
@@ -114387,12 +114474,12 @@
     "neighbors": [
       "firmly",
       "freezer",
+      "breezy",
       "fairly",
       "friday",
       "greedy",
       "release",
-      "truly",
-      "briefly"
+      "truly"
     ],
     "respell_ga": "FREE-lee",
     "respell_rp": "FREE-lee",
@@ -114419,12 +114506,12 @@
     "neighbors": [
       "freeze",
       "freely",
+      "breezy",
+      "browser",
       "creature",
       "freezing",
       "phrase",
-      "razor",
-      "breeze",
-      "feature"
+      "razor"
     ],
     "respell_ga": "FREE-zer",
     "respell_rp": "FREE-zuh",
@@ -115397,8 +115484,8 @@
       "riddle",
       "whistle",
       "beagle",
-      "given",
-      "little"
+      "burgle",
+      "given"
     ],
     "respell_ga": "GI-guhl",
     "respell_rp": "GI-guhl",
@@ -116294,6 +116381,7 @@
     "neighbors": [
       "habit",
       "hesitate",
+      "cabinet",
       "appetite",
       "hadn't",
       "hasn't",
@@ -116380,10 +116468,10 @@
       "damp",
       "heater",
       "ladder",
+      "bomber",
       "camp",
       "gather",
-      "halves",
-      "hand"
+      "halves"
     ],
     "respell_ga": "HA-mer",
     "respell_rp": "HA-muh",
@@ -116440,8 +116528,8 @@
       "candle",
       "hand-held",
       "sandal",
-      "handy",
-      "hand"
+      "cannonball",
+      "handy"
     ],
     "respell_ga": "HAND-bawl",
     "respell_rp": "HAND-bawl",
@@ -116893,13 +116981,13 @@
     "def": "The process of becoming healthy again.",
     "neighbors": [
       "hearing",
+      "ceiling",
       "feeling",
       "heating",
       "filling",
       "hanging",
       "killing",
-      "leading",
-      "rolling"
+      "leading"
     ],
     "respell_ga": "HEE-ling",
     "respell_rp": "HEE-ling",
@@ -117277,7 +117365,7 @@
       "shiny",
       "tiny",
       "belly",
-      "child"
+      "bully"
     ],
     "respell_ga": "HY-lee",
     "respell_rp": "HY-lee",
@@ -117642,11 +117730,11 @@
       "hopeful",
       "happily",
       "carefully",
+      "cheerfully",
       "helpful",
       "hopeless",
       "socially",
-      "totally",
-      "heavily"
+      "totally"
     ],
     "respell_ga": "HOHP-fuh-lee",
     "respell_rp": "HOHP-fuh-lee",
@@ -120792,6 +120880,7 @@
     "def": "The activity of running slowly for exercise.",
     "neighbors": [
       "shocking",
+      "bombing",
       "shopping",
       "jog"
     ],
@@ -120820,12 +120909,12 @@
     "neighbors": [
       "channel",
       "turtle",
+      "burgle",
       "circle",
       "final",
       "purple",
       "eternal",
-      "general",
-      "jewel"
+      "general"
     ],
     "respell_ga": "JUR-nuhl",
     "respell_rp": "JUR-nuhl",
@@ -120852,6 +120941,7 @@
     "neighbors": [
       "analyst",
       "novelist",
+      "catalyst",
       "earnest",
       "journal"
     ],
@@ -120949,7 +121039,7 @@
       "messy",
       "newly",
       "boost",
-      "jelly"
+      "bossy"
     ],
     "respell_ga": "JOO-see",
     "respell_rp": "JOO-see",
@@ -120974,14 +121064,14 @@
     },
     "def": "A sweater (British English), or a person who jumps.",
     "neighbors": [
+      "bumper",
       "jump",
       "temper",
       "number",
       "bump",
       "dump",
       "pump",
-      "thump",
-      "summer"
+      "thump"
     ],
     "respell_ga": "JUHM-per",
     "respell_rp": "JUHM-puh",
@@ -121124,9 +121214,9 @@
       "rolling",
       "belong",
       "bidding",
-      "college",
-      "cooking",
-      "feeling"
+      "boiling",
+      "caring",
+      "ceiling"
     ],
     "respell_ga": "KI-ling",
     "respell_rp": "KI-ling",
@@ -121152,13 +121242,13 @@
     "def": "The quality of being kind and caring.",
     "neighbors": [
       "fondness",
+      "blindness",
       "kinda",
       "countless",
       "thunderous",
       "calmness",
       "candle",
-      "conscious",
-      "endless"
+      "conscious"
     ],
     "respell_ga": "KYND-nuhs",
     "respell_rp": "KYND-nis",
@@ -121536,9 +121626,9 @@
       "hearing",
       "teaching",
       "bidding",
+      "ceiling",
       "ending",
-      "feeling",
-      "heating"
+      "feeling"
     ],
     "ipa_actual_ga": "/ˈliɾɪŋ/",
     "respell_ga": "LEE-ding",
@@ -122154,10 +122244,10 @@
       "sink",
       "think",
       "ink",
+      "blink",
       "lick",
       "ling",
-      "disc",
-      "disk"
+      "disc"
     ],
     "respell_ga": "LINGK",
     "respell_rp": "LINGK",
@@ -122207,6 +122297,7 @@
     "neighbors": [
       "literature",
       "library",
+      "bitterly",
       "liberty",
       "lottery"
     ],
@@ -122834,9 +122925,9 @@
       "racial",
       "ample",
       "april",
+      "cable",
       "couple",
-      "medal",
-      "metal"
+      "medal"
     ],
     "respell_ga": "MAY-puhl",
     "respell_rp": "MAY-puhl",
@@ -122863,6 +122954,7 @@
     "neighbors": [
       "parcel",
       "partial",
+      "carbon",
       "market",
       "moral",
       "mobile",
@@ -122958,11 +123050,11 @@
       "carriage",
       "cherish",
       "bearing",
+      "caring",
       "married",
       "message",
       "bridge",
-      "fridge",
-      "marry"
+      "fridge"
     ],
     "respell_ga": "MEH-rij",
     "respell_rp": "MA-rij",
@@ -124773,14 +124865,14 @@
     },
     "def": "A body tissue that contracts to produce movement.",
     "neighbors": [
+      "bustle",
       "bubble",
       "chuckle",
       "maple",
       "moral",
       "puzzle",
       "vessel",
-      "whistle",
-      "castle"
+      "whistle"
     ],
     "respell_ga": "MUH-suhl",
     "respell_rp": "MUH-suhl",
@@ -124925,10 +125017,10 @@
       "positive",
       "relative",
       "talkative",
+      "captive",
       "active",
       "narrate",
-      "carrot",
-      "native"
+      "carrot"
     ],
     "ipa_actual_ga": "/ˈnærəɾɪv/",
     "respell_ga": "NA-ruh-div",
@@ -125049,6 +125141,7 @@
       "generally",
       "normally",
       "actually",
+      "casually",
       "noisily",
       "family",
       "happily"
@@ -125462,8 +125555,8 @@
       "holy",
       "juicy",
       "belly",
-      "cooler",
-      "daily"
+      "bully",
+      "cooler"
     ],
     "respell_ga": "NOO-lee",
     "respell_rp": "NYOO-lee",
@@ -125922,6 +126015,7 @@
     "def": "A person who writes novels.",
     "neighbors": [
       "journalist",
+      "catalyst",
       "analyst",
       "novel"
     ],
@@ -127848,7 +127942,7 @@
       "paralyse",
       "paralyze",
       "promote",
-      "produce"
+      "cherished"
     ],
     "respell_ga": "PEH-ruh-shoot",
     "respell_rp": "PA-ruh-shoot",
@@ -128033,6 +128127,7 @@
     "def": "The act of leaving a vehicle in a particular place.",
     "neighbors": [
       "farming",
+      "charming",
       "packing",
       "shocking",
       "park"
@@ -129544,6 +129639,7 @@
     "neighbors": [
       "probability",
       "disability",
+      "capability",
       "ability",
       "possibly"
     ],
@@ -130425,12 +130521,12 @@
     "neighbors": [
       "private",
       "previous",
+      "bravery",
       "crisis",
       "policy",
       "precious",
       "proceed",
-      "promise",
-      "piety"
+      "promise"
     ],
     "respell_ga": "PRY-vuh-see",
     "respell_rp": "PRY-vuh-see",
@@ -130458,6 +130554,7 @@
       "possibility",
       "probably",
       "availability",
+      "capability",
       "ability"
     ],
     "ipa_actual_ga": "/ˌprɑbəˈbɪləˌɾi/",
@@ -131319,6 +131416,7 @@
     "def": "Relating to the mind or mental processes.",
     "neighbors": [
       "ecological",
+      "biological",
       "technological",
       "chronological",
       "logical"
@@ -131575,8 +131673,8 @@
       "dozen",
       "muscle",
       "paddle",
-      "couple",
-      "cousin"
+      "bustle",
+      "couple"
     ],
     "respell_ga": "PUH-zuhl",
     "respell_rp": "PUH-zuhl",
@@ -131744,10 +131842,10 @@
       "ration",
       "riddle",
       "rural",
+      "cable",
       "nation",
       "social",
-      "table",
-      "able"
+      "table"
     ],
     "respell_ga": "RAY-shuhl",
     "respell_rp": "RAY-shuhl",
@@ -132090,9 +132188,9 @@
       "ration",
       "casual",
       "terminal",
+      "cabinet",
       "capital",
-      "original",
-      "criminal"
+      "original"
     ],
     "respell_ga": "RA-shuh-nuhl",
     "respell_rp": "RASH-nuhl",
@@ -134437,7 +134535,9 @@
       "fil": "muling pagsasama"
     },
     "def": "The act of bringing separated parts back together.",
-    "neighbors": [],
+    "neighbors": [
+      "certification"
+    ],
     "respell_ga": "ree-oo-nuh-fuh-KAY-shuhn",
     "respell_rp": "ree-yoo-ni-fi-KAY-shuhn",
     "ga_rp_same": false,
@@ -134694,10 +134794,10 @@
       "healing",
       "killing",
       "wrapping",
+      "boiling",
+      "ceiling",
       "feeling",
-      "rating",
-      "reading",
-      "running"
+      "rating"
     ],
     "respell_ga": "ROH-ling",
     "respell_rp": "ROH-ling",
@@ -135206,9 +135306,9 @@
       "analyze",
       "appetite",
       "satisfied",
-      "sunlight",
-      "battle",
-      "cattle"
+      "catalyst",
+      "certify",
+      "sunlight"
     ],
     "ipa_actual_ga": "/ˈsæɾəˌlaɪt/",
     "respell_ga": "SA-duh-lyt",
@@ -135233,7 +135333,9 @@
       "fil": "kasiyahan"
     },
     "def": "A feeling of pleasure from getting what you want or need.",
-    "neighbors": [],
+    "neighbors": [
+      "certification"
+    ],
     "ipa_actual_ga": "/ˌsæɾəˈsfækʃən/",
     "respell_ga": "sa-duh-SFAK-shuhn",
     "respell_rp": "sa-ti-SFAK-shuhn",
@@ -135260,7 +135362,8 @@
     "neighbors": [
       "satisfy",
       "satellite",
-      "suicide"
+      "suicide",
+      "certify"
     ],
     "ipa_actual_ga": "/ˈsæɾəˌsfaɪd/",
     "respell_ga": "SA-duh-sfyd",
@@ -135318,7 +135421,7 @@
       "suffer",
       "sword",
       "answer",
-      "daughter"
+      "bossy"
     ],
     "respell_ga": "SAW-ser",
     "respell_rp": "SAW-suh",
@@ -135440,14 +135543,14 @@
     },
     "def": "Having beautiful natural scenery.",
     "neighbors": [
+      "ceiling",
       "meaning",
       "panic",
       "scenery",
       "senior",
       "phoenix",
       "stick",
-      "snack",
-      "snake"
+      "snack"
     ],
     "respell_ga": "SEE-nik",
     "respell_rp": "SEE-nik",
@@ -135479,7 +135582,7 @@
       "scarf",
       "swallow",
       "caller",
-      "cooler"
+      "cellar"
     ],
     "respell_ga": "SKAH-ler",
     "respell_rp": "SKO-luh",
@@ -136178,10 +136281,10 @@
       "settle",
       "settler",
       "bearing",
+      "caring",
+      "ceiling",
       "heating",
-      "meeting",
-      "rating",
-      "sailing"
+      "meeting"
     ],
     "ipa_actual_ga": "/ˈsɛɾɪŋ/",
     "respell_ga": "SEH-ding",
@@ -136268,14 +136371,14 @@
     },
     "def": "A person who settles in a new place, especially a new country.",
     "neighbors": [
+      "cellar",
       "scholar",
       "setting",
       "settle",
       "sweater",
       "teller",
       "better",
-      "letter",
-      "sailor"
+      "letter"
     ],
     "respell_ga": "SEHT-ler",
     "respell_rp": "SEHT-luh",
@@ -136397,7 +136500,7 @@
       "ballet",
       "bellow",
       "below",
-      "follow"
+      "cello"
     ],
     "respell_ga": "SHA-loh",
     "respell_rp": "SHA-loh",
@@ -136516,8 +136619,8 @@
       "minor",
       "penny",
       "bind",
-      "diary",
-      "find"
+      "bony",
+      "diary"
     ],
     "respell_ga": "SHY-nee",
     "respell_rp": "SHY-nee",
@@ -136611,9 +136714,9 @@
       "jogging",
       "packing",
       "working",
+      "bombing",
       "cooking",
-      "hiking",
-      "walking"
+      "hiking"
     ],
     "respell_ga": "SHAH-king",
     "respell_rp": "SHO-king",
@@ -136644,8 +136747,8 @@
       "sharp",
       "shiver",
       "shocked",
-      "bother",
-      "copy"
+      "bomber",
+      "bother"
     ],
     "respell_ga": "SHAH-per",
     "respell_rp": "SHO-puh",
@@ -137345,13 +137448,13 @@
     "def": "Some unspecified place (American English).",
     "neighbors": [
       "workplace",
+      "birthplace",
       "complain",
       "sleepless",
       "replace",
       "simply",
       "someday",
-      "place",
-      "space"
+      "place"
     ],
     "respell_ga": "SUHM-plays",
     "respell_rp": "SUHM-plays",
@@ -137796,6 +137899,7 @@
     "def": "The way a word is written using letters in the correct order.",
     "neighbors": [
       "setting",
+      "ceiling",
       "sailing",
       "split",
       "spring",
@@ -138111,8 +138215,8 @@
       "station",
       "symbol",
       "stumble",
-      "suitable",
-      "able"
+      "cable",
+      "suitable"
     ],
     "respell_ga": "STAY-buhl",
     "respell_rp": "STAY-buhl",
@@ -138966,7 +139070,7 @@
       "saucer",
       "server",
       "butter",
-      "cover"
+      "cellar"
     ],
     "respell_ga": "SUH-fer",
     "respell_rp": "SUH-fuh",
@@ -140297,9 +140401,9 @@
       "leading",
       "tiring",
       "turning",
+      "ceiling",
       "feeling",
-      "heating",
-      "meaning"
+      "heating"
     ],
     "respell_ga": "TEE-ching",
     "respell_rp": "TEE-ching",
@@ -140397,7 +140501,8 @@
     "neighbors": [
       "chronological",
       "psychological",
-      "ecological"
+      "ecological",
+      "biological"
     ],
     "respell_ga": "tehk-nuh-LAH-ji-kuhl",
     "respell_rp": "tehk-nuh-LO-ji-kuhl",
@@ -140471,13 +140576,13 @@
     "def": "A person who tells something, or a bank employee who handles transactions.",
     "neighbors": [
       "terror",
+      "cellar",
       "tell",
       "caller",
       "collar",
       "dealer",
       "fellow",
-      "melt",
-      "tend"
+      "melt"
     ],
     "respell_ga": "TEH-ler",
     "respell_rp": "TEH-luh",
@@ -140506,10 +140611,10 @@
       "emperor",
       "empire",
       "jumper",
+      "bumper",
       "member",
       "teller",
-      "terror",
-      "attempt"
+      "terror"
     ],
     "respell_ga": "TEHM-per",
     "respell_rp": "TEHM-puh",
@@ -140534,6 +140639,7 @@
     },
     "def": "Lasting for a limited time; not permanent.",
     "neighbors": [
+      "cemetery",
       "temper"
     ],
     "respell_ga": "TEHM-per-eh-ree",
@@ -141109,11 +141215,11 @@
       "tightly",
       "firmly",
       "lightly",
+      "calmly",
       "likely",
       "lively",
       "truly",
-      "widely",
-      "highly"
+      "widely"
     ],
     "respell_ga": "TYM-lee",
     "respell_rp": "TYM-lee",
@@ -141208,8 +141314,8 @@
       "turning",
       "bearing",
       "boring",
-      "during",
-      "hiking"
+      "caring",
+      "during"
     ],
     "respell_ga": "TY-ring",
     "respell_rp": "TY-uh-ring",
@@ -141453,12 +141559,12 @@
     "neighbors": [
       "transfer",
       "attract",
+      "bracket",
       "racket",
       "taxi",
       "text",
       "trust",
-      "tax",
-      "track"
+      "tax"
     ],
     "respell_ga": "TRAK-soot",
     "respell_rp": "TRAK-soot",
@@ -142197,6 +142303,7 @@
     "neighbors": [
       "enable",
       "stable",
+      "cable",
       "table",
       "able"
     ],
@@ -143633,6 +143740,7 @@
     "neighbors": [
       "careless",
       "serious",
+      "burial",
       "virus",
       "vary",
       "area",
@@ -143664,11 +143772,11 @@
       "ferry",
       "berry",
       "bury",
+      "cherry",
       "fairy",
       "marry",
       "merry",
-      "jury",
-      "lorry"
+      "jury"
     ],
     "respell_ga": "VEH-ree",
     "respell_rp": "VAIR-ree",
@@ -143782,9 +143890,9 @@
       "muscle",
       "settle",
       "whistle",
+      "bustle",
       "castle",
-      "lesson",
-      "level"
+      "lesson"
     ],
     "respell_ga": "VEH-suhl",
     "respell_rp": "VEH-suhl",
@@ -143896,6 +144004,7 @@
     "def": "A person's opinion or way of looking at something.",
     "neighbors": [
       "cashpoint",
+      "checkpoint",
       "appoint",
       "point"
     ],
@@ -144836,8 +144945,8 @@
       "riddle",
       "vessel",
       "whisper",
-      "castle",
-      "listen"
+      "bustle",
+      "castle"
     ],
     "respell_ga": "WI-suhl",
     "respell_rp": "WI-suhl",
@@ -145236,6 +145345,7 @@
     },
     "def": "The place where a person works.",
     "neighbors": [
+      "birthplace",
       "someplace",
       "replace",
       "place"
@@ -145433,7 +145543,9 @@
     ],
     "rp_ipa": "/ˌdiːˌenˈeɪ/",
     "ga_rp_same": true,
-    "ga_rp_same_reason": "notation_composite"
+    "ga_rp_same_reason": "notation_composite",
+    "respell_ga": "dee-eh-NAY",
+    "respell_rp": "dee-eh-NAY"
   },
   {
     "w": "Olympia",
@@ -145460,7 +145572,9 @@
     ],
     "rp_ipa": "/əʊˈlɪmpiːə/",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "goat_vowel"
+    "ga_rp_same_reason": "goat_vowel",
+    "respell_ga": "oh-LIM-pee-uh",
+    "respell_rp": "oh-LIM-pee-uh"
   },
   {
     "w": "Olympiad",
@@ -145485,7 +145599,9 @@
     ],
     "rp_ipa": "/əʊˈlɪmpiːˌæd/",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "goat_vowel"
+    "ga_rp_same_reason": "goat_vowel",
+    "respell_ga": "oh-LIM-pee-ad",
+    "respell_rp": "oh-LIM-pee-ad"
   },
   {
     "w": "Shakespearean",
@@ -145533,7 +145649,9 @@
     ],
     "rp_ipa": "/sˈəʊvɪət/",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same_reason": "structural_other",
+    "respell_ga": "SOH-vee-uht",
+    "respell_rp": "SOH-veert"
   },
   {
     "w": "abandoned",
@@ -145587,7 +145705,7 @@
       "normal"
     ],
     "respell_ga": "ab-NOR-muh-lee",
-    "respell_rp": "ab-NAWR-muh-lee",
+    "respell_rp": "ab-NAW-muh-lee",
     "rp_ipa": "/æbˈnɔːməliː/",
     "ga_rp_same": false,
     "ga_rp_same_reason": "rhoticity"
@@ -145611,7 +145729,9 @@
     "neighbors": [],
     "rp_ipa": "/əbˈɒlɪʃ/",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same_reason": "structural_other",
+    "respell_ga": "uh-BAH-lish",
+    "respell_rp": "uh-BO-lish"
   },
   {
     "w": "aboriginal",
@@ -145633,7 +145753,7 @@
       "aborigine"
     ],
     "respell_ga": "a-buh-RI-juh-nuhl",
-    "respell_rp": "a-buh-RI-juh-nuhl",
+    "respell_rp": "a-buh-RI-ji-nuhl",
     "rp_ipa": "/ˌæbərˈɪdʒɪnəl/",
     "ga_rp_same": false,
     "ga_rp_same_reason": "structural_other"
@@ -145721,7 +145841,9 @@
     ],
     "rp_ipa": "/əbsˈɜːd/",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same_reason": "structural_other",
+    "respell_ga": "uhb-SURD",
+    "respell_rp": "uhb-SURD"
   },
   {
     "w": "abuse",
@@ -145746,7 +145868,7 @@
       "use"
     ],
     "respell_ga": "uh-BYOOS",
-    "respell_rp": "uh-BYOOS",
+    "respell_rp": "uh-BYOOZ",
     "rp_ipa": "/əbjˈuːz/",
     "ga_rp_same": false,
     "ga_rp_same_reason": "structural_other"
@@ -145768,13 +145890,16 @@
     "group": null,
     "pattern": null,
     "neighbors": [
+      "capability",
       "possibility",
       "accessible"
     ],
     "ipa_actual_ga": "/ækˌsɛsəˈbɪləɾi/",
     "rp_ipa": "/ˌæksesɪbˈɪlɪti/",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "ga_allophony"
+    "ga_rp_same_reason": "ga_allophony",
+    "respell_ga": "ak-seh-suh-BI-luh-dee",
+    "respell_rp": "ak-seh-si-BI-li-tee"
   },
   {
     "w": "accommodation",
@@ -145797,7 +145922,9 @@
     ],
     "rp_ipa": "/əkˌɒmədˈeɪʃən/",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same_reason": "structural_other",
+    "respell_ga": "uh-kah-muh-DAY-shuhn",
+    "respell_rp": "uh-ko-muh-DAY-shuhn"
   },
   {
     "w": "accordingly",
@@ -145820,7 +145947,7 @@
     ],
     "ipa_actual_ga": "/əˈkɔrɾɪŋli/",
     "respell_ga": "uh-KOR-ding-lee",
-    "respell_rp": "uh-KAWR-ding-lee",
+    "respell_rp": "uh-KAW-ding-lee",
     "rp_ipa": "/əkˈɔːdɪŋli/",
     "ga_rp_same": false,
     "ga_rp_same_reason": "ga_allophony"
@@ -145843,7 +145970,7 @@
     "pattern": null,
     "neighbors": [],
     "respell_ga": "uh-KYOO-myuh-layt",
-    "respell_rp": "uh-KYOO-myuh-layt",
+    "respell_rp": "uh-KYOO-myuu-layt",
     "rp_ipa": "/əkjˈuːmjʊlˌeɪt/",
     "ga_rp_same": false,
     "ga_rp_same_reason": "structural_other"
@@ -145874,7 +146001,7 @@
       "calculation"
     ],
     "respell_ga": "a-kyuh-ZAY-shuhn",
-    "respell_rp": "a-kyuh-ZAY-shuhn",
+    "respell_rp": "a-kyuu-ZAY-shuhn",
     "rp_ipa": "/ˌækjʊzˈeɪʃən/",
     "ga_rp_same": false,
     "ga_rp_same_reason": "structural_other"
@@ -145933,7 +146060,7 @@
       "castle"
     ],
     "respell_ga": "A-suhd",
-    "respell_rp": "A-suhd",
+    "respell_rp": "A-sid",
     "rp_ipa": "/ˈæsɪd/",
     "ga_rp_same": false,
     "ga_rp_same_reason": "weak_vowel"
@@ -145961,7 +146088,7 @@
       "position"
     ],
     "respell_ga": "a-kwuh-ZI-shuhn",
-    "respell_rp": "a-kwuh-ZI-shuhn",
+    "respell_rp": "a-kwi-ZI-shuhn",
     "rp_ipa": "/ˌækwɪzˈɪʃən/",
     "ga_rp_same": false,
     "ga_rp_same_reason": "structural_other"
@@ -146018,7 +146145,7 @@
       "cruel"
     ],
     "respell_ga": "AK-choo-uhl",
-    "respell_rp": "AK-choo-uhl",
+    "respell_rp": "AK-choorl",
     "rp_ipa": "/ˈæktʃʊəl/",
     "ga_rp_same": false,
     "ga_rp_same_reason": "structural_other"
@@ -146198,7 +146325,7 @@
       "edition"
     ],
     "respell_ga": "uh-DI-shuh-nuh-lee",
-    "respell_rp": "uh-DI-shuh-nuh-lee",
+    "respell_rp": "uh-DISH-nuh-lee",
     "rp_ipa": "/ədˈɪʃnəli/",
     "ga_rp_same": false,
     "ga_rp_same_reason": "structural_other"
@@ -146225,7 +146352,7 @@
     ],
     "ipa_actual_ga": "/ˈæɾəkwət/",
     "respell_ga": "A-duh-kwuht",
-    "respell_rp": "A-duh-kwuht",
+    "respell_rp": "A-di-kwit",
     "rp_ipa": "/ˈædɪkwɪt/",
     "ga_rp_same": false,
     "ga_rp_same_reason": "ga_allophony"
@@ -146251,7 +146378,7 @@
     ],
     "ipa_actual_ga": "/ˈæɾəkwətli/",
     "respell_ga": "A-duh-kwuht-lee",
-    "respell_rp": "A-duh-kwuht-lee",
+    "respell_rp": "A-di-kwuht-lee",
     "rp_ipa": "/ˈædɪkwətli/",
     "ga_rp_same": false,
     "ga_rp_same_reason": "ga_allophony"
@@ -146307,7 +146434,7 @@
     ],
     "ipa_actual_ga": "/ædˈmɪnəˌstreɪɾɪv/",
     "respell_ga": "ad-MI-nuh-stray-div",
-    "respell_rp": "ad-MI-nuh-stray-tiv",
+    "respell_rp": "uhd-MI-ni-struh-tiv",
     "rp_ipa": "/ədmˈɪnɪstrətɪv/",
     "ga_rp_same": false,
     "ga_rp_same_reason": "ga_allophony"
@@ -146379,7 +146506,7 @@
     "neighbors": [],
     "ipa_actual_ga": "/ædˈmɪɾədli/",
     "respell_ga": "ad-MI-duhd-lee",
-    "respell_rp": "ad-MI-tuhd-lee",
+    "respell_rp": "uhd-MI-tid-lee",
     "rp_ipa": "/ədmˈɪtɪdli/",
     "ga_rp_same": false,
     "ga_rp_same_reason": "ga_allophony"
@@ -146409,7 +146536,9 @@
     ],
     "rp_ipa": "/ədˈɒptɪd/",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same_reason": "structural_other",
+    "respell_ga": "uh-DAHP-tuhd",
+    "respell_rp": "uh-DOP-tid"
   },
   {
     "w": "adoption",
@@ -146439,7 +146568,9 @@
     ],
     "rp_ipa": "/ədˈɒpʃən/",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same_reason": "structural_other",
+    "respell_ga": "uh-DAHP-shuhn",
+    "respell_rp": "uh-DOP-shuhn"
   },
   {
     "w": "adore",
@@ -146468,7 +146599,7 @@
       "appear"
     ],
     "respell_ga": "uh-DOR",
-    "respell_rp": "uh-DAWR",
+    "respell_rp": "uh-DAW",
     "rp_ipa": "/ədˈɔː/",
     "ga_rp_same": false,
     "ga_rp_same_reason": "structural_other"
@@ -146500,7 +146631,7 @@
       "mourn"
     ],
     "respell_ga": "uh-DORN",
-    "respell_rp": "uh-DAWRN",
+    "respell_rp": "uh-DAWN",
     "rp_ipa": "/əˈdɔːn/",
     "ga_rp_same": false,
     "ga_rp_same_reason": "rhoticity"
@@ -146523,7 +146654,7 @@
     "pattern": null,
     "neighbors": [],
     "respell_ga": "ad-VAN-smuhnt",
-    "respell_rp": "ad-VAN-smuhnt",
+    "respell_rp": "uhd-VAHN-smuhnt",
     "rp_ipa": "/ədvˈɑːnsmənt/",
     "ga_rp_same": false,
     "ga_rp_same_reason": "structural_other"
@@ -146552,7 +146683,9 @@
     ],
     "rp_ipa": "/ˈædvent/",
     "ga_rp_same": true,
-    "ga_rp_same_reason": "notation_composite"
+    "ga_rp_same_reason": "notation_composite",
+    "respell_ga": "AD-vehnt",
+    "respell_rp": "AD-vehnt"
   },
   {
     "w": "adventurous",
@@ -146573,7 +146706,9 @@
     "neighbors": [],
     "rp_ipa": "/ədvˈentʃərəz/",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same_reason": "structural_other",
+    "respell_ga": "ad-VEHN-chuh-ruhs",
+    "respell_rp": "uhd-VEHN-chuh-ruhz"
   },
   {
     "w": "adverse",
@@ -146603,7 +146738,9 @@
     ],
     "rp_ipa": "/ˈædvɜːs/",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same_reason": "structural_other",
+    "respell_ga": "ad-VURS",
+    "respell_rp": "AD-vurs"
   },
   {
     "w": "adversely",
@@ -146631,7 +146768,9 @@
     ],
     "rp_ipa": "/ædˈvɜːsliː/",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "rhoticity",
+    "respell_ga": "ad-VUR-slee",
+    "respell_rp": "ad-VUR-slee"
   },
   {
     "w": "adversity",
@@ -146656,7 +146795,9 @@
     "ipa_actual_ga": "/ædˈvɝsəɾi/",
     "rp_ipa": "/ædˈvɜːsətiː/",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "ga_allophony"
+    "ga_rp_same_reason": "ga_allophony",
+    "respell_ga": "ad-VUR-suh-dee",
+    "respell_rp": "ad-VUR-suh-tee"
   },
   {
     "w": "affectionate",
@@ -146680,7 +146821,9 @@
     ],
     "rp_ipa": "/əˈfekʃənət/",
     "ga_rp_same": true,
-    "ga_rp_same_reason": "dress_notation_only"
+    "ga_rp_same_reason": "dress_notation_only",
+    "respell_ga": "uh-FEHK-shuh-nuht",
+    "respell_rp": "uh-FEHK-shuh-nuht"
   },
   {
     "w": "affectionately",
@@ -146709,7 +146852,9 @@
     ],
     "rp_ipa": "/əˈfekʃənətliː/",
     "ga_rp_same": true,
-    "ga_rp_same_reason": "notation_composite"
+    "ga_rp_same_reason": "notation_composite",
+    "respell_ga": "uh-FEHK-shuh-nuht-lee",
+    "respell_rp": "uh-FEHK-shuh-nuht-lee"
   },
   {
     "w": "affordable",
@@ -146733,7 +146878,7 @@
     ],
     "ipa_actual_ga": "/əˈfɔrɾəbəl/",
     "respell_ga": "uh-FOR-duh-buhl",
-    "respell_rp": "uh-FAWR-duh-buhl",
+    "respell_rp": "uh-FAW-duh-buhl",
     "rp_ipa": "/əfˈɔːdəbəl/",
     "ga_rp_same": false,
     "ga_rp_same_reason": "ga_allophony"
@@ -146785,7 +146930,9 @@
     ],
     "rp_ipa": "/əˈɡresɪvliː/",
     "ga_rp_same": true,
-    "ga_rp_same_reason": "notation_composite"
+    "ga_rp_same_reason": "notation_composite",
+    "respell_ga": "uh-GREH-siv-lee",
+    "respell_rp": "uh-GREH-siv-lee"
   },
   {
     "w": "agony",
@@ -146835,7 +146982,9 @@
     ],
     "rp_ipa": "/ˈeəkrˌɑːft/",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "trap_bath"
+    "ga_rp_same_reason": "trap_bath",
+    "respell_ga": "ER-kraft",
+    "respell_rp": "AIR-krahft"
   },
   {
     "w": "aircrew",
@@ -146859,7 +147008,9 @@
     ],
     "rp_ipa": "/ˈeəˌkruː/",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "rhoticity",
+    "respell_ga": "ER-kroo",
+    "respell_rp": "AIR-kroo"
   },
   {
     "w": "alcoholism",
@@ -146914,7 +147065,9 @@
     ],
     "rp_ipa": "/əlˈɜːt/",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same_reason": "structural_other",
+    "respell_ga": "uh-LURT",
+    "respell_rp": "uh-LURT"
   },
   {
     "w": "allegation",
@@ -147003,7 +147156,7 @@
       "act"
     ],
     "respell_ga": "A-ly",
-    "respell_rp": "A-ly",
+    "respell_rp": "uh-LY",
     "rp_ipa": "/əlˈaɪ/",
     "ga_rp_same": false,
     "ga_rp_same_reason": "structural_other"
@@ -147029,7 +147182,7 @@
       "aside"
     ],
     "respell_ga": "uh-LAWNG-syd",
-    "respell_rp": "uh-LAWNG-syd",
+    "respell_rp": "uh-LONG-syd",
     "rp_ipa": "/əlˈɒŋsˌaɪd/",
     "ga_rp_same": false,
     "ga_rp_same_reason": "structural_other"
@@ -147056,7 +147209,9 @@
     "ipa_actual_ga": "/ˌælfəˈbɛɾɪkəl/",
     "rp_ipa": "/ˌælfəbˈetɪkəl/",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "ga_allophony"
+    "ga_rp_same_reason": "ga_allophony",
+    "respell_ga": "al-fuh-BEH-di-kuhl",
+    "respell_rp": "al-fuh-BEH-ti-kuhl"
   },
   {
     "w": "altar",
@@ -147086,7 +147241,9 @@
     ],
     "rp_ipa": "/ˈɔːltə/",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "rhoticity",
+    "respell_ga": "AWL-ter",
+    "respell_rp": "AWL-tuh"
   },
   {
     "w": "alter",
@@ -147116,7 +147273,9 @@
     ],
     "rp_ipa": "/ˈɔːltə/",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "rhoticity",
+    "respell_ga": "AWL-ter",
+    "respell_rp": "AWL-tuh"
   },
   {
     "w": "alternate",
@@ -147140,7 +147299,9 @@
     ],
     "rp_ipa": "/ˈɔːltənˌeɪt/",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "rhoticity",
+    "respell_ga": "AWL-ter-nayt",
+    "respell_rp": "AWL-tuh-nayt"
   },
   {
     "w": "alternatively",
@@ -147165,7 +147326,9 @@
     "ipa_actual_ga": "/ɔlˈtɝnəɾɪvli/",
     "rp_ipa": "/ɔːltˈɜːnətɪvli/",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "ga_allophony"
+    "ga_rp_same_reason": "ga_allophony",
+    "respell_ga": "awl-TUR-nuh-div-lee",
+    "respell_rp": "awl-TUR-nuh-tiv-lee"
   },
   {
     "w": "altitude",
@@ -147189,7 +147352,7 @@
     ],
     "ipa_actual_ga": "/ˈæltəˌɾud/",
     "respell_ga": "AL-tuh-dood",
-    "respell_rp": "AL-tuh-tood",
+    "respell_rp": "AL-ti-tyood",
     "rp_ipa": "/ˈæltɪtjˌuːd/",
     "ga_rp_same": false,
     "ga_rp_same_reason": "ga_allophony"
@@ -147303,7 +147466,9 @@
     "ipa_actual_ga": "/æmˈbæsəɾɚ/",
     "rp_ipa": "/æmbˈæsədə/",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "ga_allophony"
+    "ga_rp_same_reason": "ga_allophony",
+    "respell_ga": "am-BA-suh-der",
+    "respell_rp": "am-BA-suh-duh"
   },
   {
     "w": "ambiguity",
@@ -147376,7 +147541,9 @@
     "neighbors": [],
     "rp_ipa": "/əˈməʊnjə/",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "goat_vowel"
+    "ga_rp_same_reason": "goat_vowel",
+    "respell_ga": "uh-MOH-nyuh",
+    "respell_rp": "uh-MOH-nyuh"
   },
   {
     "w": "amongst",
@@ -147459,7 +147626,9 @@
     ],
     "rp_ipa": "/ˈæmplɪfˌaɪə/",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same_reason": "structural_other",
+    "respell_ga": "AM-pluh-fy-er",
+    "respell_rp": "AM-pli-fy-uh"
   },
   {
     "w": "amplify",
@@ -147571,17 +147740,17 @@
     "group": null,
     "pattern": null,
     "neighbors": [
+      "catalyst",
       "journalist",
       "arrogant",
       "innocent",
       "interest",
       "violent",
       "animate",
-      "analyse",
-      "analyze"
+      "cellist"
     ],
     "respell_ga": "A-nuh-luhst",
-    "respell_rp": "A-nuh-luhst",
+    "respell_rp": "A-nuh-list",
     "rp_ipa": "/ˈænəlɪst/",
     "ga_rp_same": false,
     "ga_rp_same_reason": "structural_other"
@@ -147614,7 +147783,9 @@
     ],
     "rp_ipa": "/ˈæŋkə/",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "rhoticity",
+    "respell_ga": "ANG-ker",
+    "respell_rp": "ANG-kuh"
   },
   {
     "w": "anchorage",
@@ -147664,7 +147835,9 @@
     ],
     "rp_ipa": "/ˈæŋkəˌmæn/",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "rhoticity",
+    "respell_ga": "ANG-ker-man",
+    "respell_rp": "ANG-kuh-man"
   },
   {
     "w": "anchorperson",
@@ -147685,7 +147858,9 @@
     "neighbors": [],
     "rp_ipa": "/ˈæŋkəˌpɜːsən/",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "rhoticity",
+    "respell_ga": "ANG-ker-pur-suhn",
+    "respell_rp": "ANG-kuh-pur-suhn"
   },
   {
     "w": "anguish",
@@ -147757,7 +147932,9 @@
     ],
     "rp_ipa": "/ənˈɒnɪməs/",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same_reason": "structural_other",
+    "respell_ga": "uh-NAH-nuh-muhs",
+    "respell_rp": "uh-NO-ni-muhs"
   },
   {
     "w": "antiaircraft",
@@ -147845,7 +148022,7 @@
       "anticipation"
     ],
     "respell_ga": "an-TI-suh-payt",
-    "respell_rp": "an-TI-suh-payt",
+    "respell_rp": "an-TI-si-payt",
     "rp_ipa": "/æntˈɪsɪpˌeɪt/",
     "ga_rp_same": false,
     "ga_rp_same_reason": "structural_other"
@@ -147958,10 +148135,14 @@
     "src": "cefr",
     "group": null,
     "pattern": null,
-    "neighbors": [],
+    "neighbors": [
+      "catastrophe"
+    ],
     "rp_ipa": "/əpˈɒstrəfi/",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same_reason": "structural_other",
+    "respell_ga": "uh-PAH-struh-fee",
+    "respell_rp": "uh-PO-struh-fee"
   },
   {
     "w": "applicant",
@@ -147990,7 +148171,7 @@
       "pleasant"
     ],
     "respell_ga": "A-pluh-kuhnt",
-    "respell_rp": "A-pluh-kuhnt",
+    "respell_rp": "A-pli-kuhnt",
     "rp_ipa": "/ˈæplɪkənt/",
     "ga_rp_same": false,
     "ga_rp_same_reason": "structural_other"
@@ -148042,7 +148223,9 @@
     ],
     "rp_ipa": "/əprˈəʊprɪətli/",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same_reason": "structural_other",
+    "respell_ga": "uh-PROH-pree-uht-lee",
+    "respell_rp": "uh-PROH-preert-lee"
   },
   {
     "w": "approximate",
@@ -148065,7 +148248,9 @@
     ],
     "rp_ipa": "/əprˈɒksɪmˌeɪt/",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same_reason": "structural_other",
+    "respell_ga": "uh-PRAHK-suh-muht",
+    "respell_rp": "uh-PROK-si-mayt"
   },
   {
     "w": "arctic",
@@ -148088,7 +148273,9 @@
     ],
     "rp_ipa": "/ˈɑːktɪk/",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "rhoticity",
+    "respell_ga": "ARK-tik",
+    "respell_rp": "AHK-tik"
   },
   {
     "w": "arena",
@@ -148136,7 +148323,9 @@
     "neighbors": [],
     "rp_ipa": "/ˌærəˈstɒkrəsiː/",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "lot_vowel"
+    "ga_rp_same_reason": "lot_vowel",
+    "respell_ga": "a-ruh-STAH-kruh-see",
+    "respell_rp": "a-ruh-STO-kruh-see"
   },
   {
     "w": "armful",
@@ -148159,7 +148348,9 @@
     ],
     "rp_ipa": "/ˈɑːmˌfʊl/",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "rhoticity",
+    "respell_ga": "ARM-fuul",
+    "respell_rp": "AHM-fuul"
   },
   {
     "w": "arouse",
@@ -148242,13 +148433,16 @@
     "group": null,
     "pattern": null,
     "neighbors": [
+      "brewery",
       "artist",
       "artistry"
     ],
     "ipa_actual_ga": "/ˈɑrɾəri/",
     "rp_ipa": "/ˈɑːtəri/",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "ga_allophony"
+    "ga_rp_same_reason": "ga_allophony",
+    "respell_ga": "AR-duh-ree",
+    "respell_rp": "AH-tuh-ree"
   },
   {
     "w": "articulate",
@@ -148269,7 +148463,9 @@
     "neighbors": [],
     "rp_ipa": "/ɑːtˈɪkjʊlɪt/",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same_reason": "structural_other",
+    "respell_ga": "ar-TI-kyuh-layt",
+    "respell_rp": "ah-TI-kyuu-lit"
   },
   {
     "w": "artificially",
@@ -148294,7 +148490,9 @@
     "ipa_actual_ga": "/ˌɑrɾəˈfɪʃəli/",
     "rp_ipa": "/ˌɑːtəˈfɪʃəliː/",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "ga_allophony"
+    "ga_rp_same_reason": "ga_allophony",
+    "respell_ga": "ar-duh-FI-shuh-lee",
+    "respell_rp": "ah-tuh-FI-shuh-lee"
   },
   {
     "w": "artistry",
@@ -148325,7 +148523,9 @@
     "ipa_actual_ga": "/ˈɑrɾəstri/",
     "rp_ipa": "/ˈɑːtəstriː/",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "ga_allophony"
+    "ga_rp_same_reason": "ga_allophony",
+    "respell_ga": "AR-duh-stree",
+    "respell_rp": "AH-tuh-stree"
   },
   {
     "w": "aspiration",
@@ -148351,7 +148551,7 @@
       "isolation"
     ],
     "respell_ga": "a-spuh-RAY-shuhn",
-    "respell_rp": "a-spuh-RAY-shuhn",
+    "respell_rp": "a-spi-RAY-shuhn",
     "rp_ipa": "/ˌæspɪrˈeɪʃən/",
     "ga_rp_same": false,
     "ga_rp_same_reason": "structural_other"
@@ -148383,7 +148583,7 @@
       "spy"
     ],
     "respell_ga": "uh-SPYR",
-    "respell_rp": "uh-SPYR",
+    "respell_rp": "uh-SPY-uh",
     "rp_ipa": "/əspˈaɪə/",
     "ga_rp_same": false,
     "ga_rp_same_reason": "structural_other"
@@ -148446,7 +148646,9 @@
     ],
     "rp_ipa": "/əsˈembəl/",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "stress_placement"
+    "ga_rp_same_reason": "stress_placement",
+    "respell_ga": "uh-SEHM-buhl",
+    "respell_rp": "uh-SEHM-buhl"
   },
   {
     "w": "assembly",
@@ -148471,7 +148673,9 @@
     ],
     "rp_ipa": "/əsˈembli/",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "stress_placement"
+    "ga_rp_same_reason": "stress_placement",
+    "respell_ga": "uh-SEHM-blee",
+    "respell_rp": "uh-SEHM-blee"
   },
   {
     "w": "assert",
@@ -148501,7 +148705,9 @@
     ],
     "rp_ipa": "/əsˈɜːt/",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same_reason": "structural_other",
+    "respell_ga": "uh-SURT",
+    "respell_rp": "uh-SURT"
   },
   {
     "w": "assess",
@@ -148531,7 +148737,9 @@
     ],
     "rp_ipa": "/əsˈes/",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "stress_placement"
+    "ga_rp_same_reason": "stress_placement",
+    "respell_ga": "uh-SEHS",
+    "respell_rp": "uh-SEHS"
   },
   {
     "w": "assessment",
@@ -148561,7 +148769,9 @@
     ],
     "rp_ipa": "/əsˈesmənt/",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "stress_placement"
+    "ga_rp_same_reason": "stress_placement",
+    "respell_ga": "uh-SEH-smuhnt",
+    "respell_rp": "uh-SEH-smuhnt"
   },
   {
     "w": "assumption",
@@ -148617,7 +148827,7 @@
       "shouldn't"
     ],
     "respell_ga": "uh-SHUU-ruhns",
-    "respell_rp": "uh-SHUU-ruhns",
+    "respell_rp": "uh-SHOOR-ruhns",
     "rp_ipa": "/əʃˈʊərəns/",
     "ga_rp_same": false,
     "ga_rp_same_reason": "structural_other"
@@ -148649,7 +148859,7 @@
       "ensure"
     ],
     "respell_ga": "uh-SHUUR",
-    "respell_rp": "uh-SHUUR",
+    "respell_rp": "uh-SHOOR",
     "rp_ipa": "/əʃˈʊə/",
     "ga_rp_same": false,
     "ga_rp_same_reason": "structural_other"
@@ -148680,7 +148890,9 @@
     ],
     "rp_ipa": "/əˈstɒnɪʃ/",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "lot_vowel"
+    "ga_rp_same_reason": "lot_vowel",
+    "respell_ga": "uh-STAH-nish",
+    "respell_rp": "uh-STO-nish"
   },
   {
     "w": "astonished",
@@ -148705,7 +148917,9 @@
     ],
     "rp_ipa": "/əˈstɒnɪʃt/",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "lot_vowel"
+    "ga_rp_same_reason": "lot_vowel",
+    "respell_ga": "uh-STAH-nisht",
+    "respell_rp": "uh-STO-nisht"
   },
   {
     "w": "astonishing",
@@ -148729,7 +148943,9 @@
     ],
     "rp_ipa": "/əstˈɒnɪʃɪŋ/",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same_reason": "structural_other",
+    "respell_ga": "uh-STAH-ni-shing",
+    "respell_rp": "uh-STO-ni-shing"
   },
   {
     "w": "astonishment",
@@ -148758,7 +148974,9 @@
     ],
     "rp_ipa": "/əˈstɒnɪʃmənt/",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "lot_vowel"
+    "ga_rp_same_reason": "lot_vowel",
+    "respell_ga": "uh-STAH-nish-muhnt",
+    "respell_rp": "uh-STO-nish-muhnt"
   },
   {
     "w": "astronomy",
@@ -148781,7 +148999,9 @@
     ],
     "rp_ipa": "/əstrˈɒnəmi/",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same_reason": "structural_other",
+    "respell_ga": "uh-STRAH-nuh-mee",
+    "respell_rp": "uh-STRO-nuh-mee"
   },
   {
     "w": "athletics",
@@ -148807,7 +149027,9 @@
     "ipa_actual_ga": "/æθˈlɛɾɪks/",
     "rp_ipa": "/æθlˈetɪks/",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "ga_allophony"
+    "ga_rp_same_reason": "ga_allophony",
+    "respell_ga": "ath-LEH-diks",
+    "respell_rp": "ath-LEH-tiks"
   },
   {
     "w": "attached",
@@ -148857,12 +149079,12 @@
     "neighbors": [
       "available",
       "achievable",
+      "breakable",
       "adorable",
       "occasional",
       "capable",
       "terrible",
-      "stable",
-      "unable"
+      "stable"
     ],
     "respell_ga": "uh-TAY-nuh-buhl",
     "respell_rp": "uh-TAY-nuh-buhl",
@@ -148931,7 +149153,9 @@
     "ipa_actual_ga": "/əˈtɛndn̩s/",
     "rp_ipa": "/ətˈendəns/",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "ga_allophony"
+    "ga_rp_same_reason": "ga_allophony",
+    "respell_ga": "uh-TEHN-duhns",
+    "respell_rp": "uh-TEHN-duhns"
   },
   {
     "w": "attentive",
@@ -149029,7 +149253,7 @@
     "pattern": null,
     "neighbors": [],
     "respell_ga": "A-truh-byoot",
-    "respell_rp": "A-truh-byoot",
+    "respell_rp": "A-tri-byoot",
     "rp_ipa": "/ˈætrɪbjˌuːt/",
     "ga_rp_same": false,
     "ga_rp_same_reason": "weak_vowel"
@@ -149082,7 +149306,9 @@
     "neighbors": [],
     "rp_ipa": "/ˈəʊbədʒˌiːn/",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same_reason": "structural_other",
+    "respell_ga": "OH-ber-zheen",
+    "respell_rp": "OH-buh-jeen"
   },
   {
     "w": "audit",
@@ -149112,7 +149338,7 @@
     ],
     "ipa_actual_ga": "/ˈɔɾət/",
     "respell_ga": "AW-duht",
-    "respell_rp": "AW-duht",
+    "respell_rp": "AW-dit",
     "rp_ipa": "/ˈɔːdɪt/",
     "ga_rp_same": false,
     "ga_rp_same_reason": "ga_allophony"
@@ -149187,6 +149413,7 @@
     "group": null,
     "pattern": null,
     "neighbors": [
+      "capability",
       "probability",
       "possibility",
       "available",
@@ -149194,7 +149421,7 @@
     ],
     "ipa_actual_ga": "/əˌveɪləˈbɪləɾi/",
     "respell_ga": "uh-vay-luh-BI-luh-dee",
-    "respell_rp": "uh-vay-luh-BI-luh-tee",
+    "respell_rp": "uh-vay-luh-BI-li-tee",
     "rp_ipa": "/əvˌeɪləbˈɪlɪti/",
     "ga_rp_same": false,
     "ga_rp_same_reason": "ga_allophony"
@@ -149290,7 +149517,7 @@
       "anxious"
     ],
     "respell_ga": "AK-suhs",
-    "respell_rp": "AK-suhs",
+    "respell_rp": "AK-sis",
     "rp_ipa": "/ˈæksɪs/",
     "ga_rp_same": false,
     "ga_rp_same_reason": "weak_vowel"
@@ -149314,6 +149541,7 @@
     "neighbors": [
       "backache",
       "become",
+      "breakup",
       "back",
       "cup"
     ],
@@ -149340,13 +149568,17 @@
     "group": null,
     "pattern": null,
     "neighbors": [
+      "bombard",
+      "bookmark",
       "blackboard",
       "card",
       "yard"
     ],
     "rp_ipa": "/ˈbækˌjɑːd/",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "rhoticity",
+    "respell_ga": "BA-kyard",
+    "respell_rp": "BA-kyahd"
   },
   {
     "w": "balanced",
@@ -149368,11 +149600,11 @@
       "balance",
       "talent",
       "ballot",
+      "cabinet",
       "balcony",
       "calendar",
       "fascinate",
-      "challenge",
-      "hadn't"
+      "cellist"
     ],
     "respell_ga": "BA-luhnst",
     "respell_rp": "BA-luhnst",
@@ -149397,14 +149629,14 @@
     "group": null,
     "pattern": null,
     "neighbors": [
+      "bossy",
       "berry",
+      "bony",
+      "bully",
+      "cheeky",
       "baby",
       "baker",
-      "bald",
-      "belly",
-      "board",
-      "body",
-      "bored"
+      "bald"
     ],
     "respell_ga": "BAW-kee",
     "respell_rp": "BAW-kee",
@@ -149465,13 +149697,13 @@
       "blade",
       "blaze",
       "bolt",
+      "bully",
       "bald",
       "band",
-      "bank",
-      "belly"
+      "bank"
     ],
     "respell_ga": "ba-LAY",
-    "respell_rp": "ba-LAY",
+    "respell_rp": "BA-lay",
     "rp_ipa": "/bˈæleɪ/",
     "ga_rp_same": false,
     "ga_rp_same_reason": "stress_placement"
@@ -149536,7 +149768,9 @@
     ],
     "rp_ipa": "/bˈæŋkə/",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same_reason": "structural_other",
+    "respell_ga": "BANG-ker",
+    "respell_rp": "BANG-kuh"
   },
   {
     "w": "bankrupt",
@@ -149610,7 +149844,9 @@
     ],
     "rp_ipa": "/ˈbɑːbəˌʃɒp/",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same_reason": "structural_other",
+    "respell_ga": "BAR-ber-shahp",
+    "respell_rp": "BAH-buh-shop"
   },
   {
     "w": "barley",
@@ -149630,17 +149866,19 @@
     "pattern": null,
     "neighbors": [
       "barely",
+      "calmly",
       "badly",
       "barber",
       "fairly",
       "hearty",
       "merely",
-      "nearly",
-      "party"
+      "nearly"
     ],
     "rp_ipa": "/ˈbɑːliː/",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "rhoticity",
+    "respell_ga": "BAR-lee",
+    "respell_rp": "BAH-lee"
   },
   {
     "w": "barometer",
@@ -149662,7 +149900,9 @@
     "ipa_actual_ga": "/bəˈrɑməɾɚ/",
     "rp_ipa": "/bəˈrɒmətə/",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "ga_allophony"
+    "ga_rp_same_reason": "ga_allophony",
+    "respell_ga": "buh-RAH-muh-der",
+    "respell_rp": "buh-RO-muh-tuh"
   },
   {
     "w": "barren",
@@ -149685,10 +149925,10 @@
       "ballad",
       "ballot",
       "barrier",
+      "bourbon",
+      "canon",
       "apron",
-      "bacon",
-      "basin",
-      "battle"
+      "bacon"
     ],
     "respell_ga": "BA-ruhn",
     "respell_rp": "BA-ruhn",
@@ -149724,7 +149964,9 @@
     ],
     "rp_ipa": "/bˈærɪə/",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same_reason": "structural_other",
+    "respell_ga": "BA-ree-er",
+    "respell_rp": "BA-reer"
   },
   {
     "w": "bartender",
@@ -149814,14 +150056,14 @@
     "group": null,
     "pattern": null,
     "neighbors": [
+      "burgle",
       "legal",
+      "bustle",
       "angle",
       "barrel",
       "battle",
       "bottle",
-      "bubble",
-      "giggle",
-      "needle"
+      "bubble"
     ],
     "respell_ga": "BEE-guhl",
     "respell_rp": "BEE-guhl",
@@ -149846,18 +150088,20 @@
     "group": null,
     "pattern": null,
     "neighbors": [
+      "caring",
       "boring",
       "bring",
       "bidding",
+      "boiling",
+      "bombing",
       "barely",
-      "booking",
-      "burning",
-      "cherish",
-      "during"
+      "booking"
     ],
     "rp_ipa": "/bˈeərɪŋ/",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same_reason": "structural_other",
+    "respell_ga": "BEH-ring",
+    "respell_rp": "BAIR-ring"
   },
   {
     "w": "beautify",
@@ -149880,6 +150124,7 @@
       "beautifully",
       "unify",
       "purify",
+      "certify",
       "reunify",
       "beauty"
     ],
@@ -149907,18 +150152,20 @@
     "group": null,
     "pattern": null,
     "neighbors": [
+      "cello",
       "belly",
       "below",
       "belt",
       "fellow",
       "yellow",
       "bell",
-      "blow",
-      "ballet"
+      "blow"
     ],
     "rp_ipa": "/ˈbeləʊ/",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "goat_vowel"
+    "ga_rp_same_reason": "goat_vowel",
+    "respell_ga": "BEH-loh",
+    "respell_rp": "BEH-loh"
   },
   {
     "w": "belongings",
@@ -149969,7 +150216,9 @@
     ],
     "rp_ipa": "/bˌenɪfˈɪʃəl/",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "structural_other"
+    "ga_rp_same_reason": "structural_other",
+    "respell_ga": "beh-nuh-FI-shuhl",
+    "respell_rp": "beh-ni-FI-shuhl"
   },
   {
     "w": "benevolence",
@@ -149992,7 +150241,9 @@
     ],
     "rp_ipa": "/bəˈnevələns/",
     "ga_rp_same": true,
-    "ga_rp_same_reason": "dress_notation_only"
+    "ga_rp_same_reason": "dress_notation_only",
+    "respell_ga": "buh-NEH-vuh-luhns",
+    "respell_rp": "buh-NEH-vuh-luhns"
   },
   {
     "w": "benevolent",
@@ -150015,7 +150266,9 @@
     ],
     "rp_ipa": "/bəˈnevələnt/",
     "ga_rp_same": true,
-    "ga_rp_same_reason": "dress_notation_only"
+    "ga_rp_same_reason": "dress_notation_only",
+    "respell_ga": "buh-NEH-vuh-luhnt",
+    "respell_rp": "buh-NEH-vuh-luhnt"
   },
   {
     "w": "berry",
@@ -150034,18 +150287,20 @@
     "group": null,
     "pattern": null,
     "neighbors": [
+      "cherry",
       "belly",
       "fairy",
       "ferry",
       "marry",
       "merry",
       "vary",
-      "very",
-      "bare"
+      "very"
     ],
     "rp_ipa": "/bˈeri/",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "stress_placement"
+    "ga_rp_same_reason": "stress_placement",
+    "respell_ga": "BEH-ree",
+    "respell_rp": "BEH-ree"
   },
   {
     "w": "bestow",
@@ -150075,7 +150330,9 @@
     ],
     "rp_ipa": "/bɪˈstəʊ/",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "goat_vowel"
+    "ga_rp_same_reason": "goat_vowel",
+    "respell_ga": "bi-STOH",
+    "respell_rp": "bi-STOH"
   },
   {
     "w": "bestseller",
@@ -150096,7 +150353,9 @@
     "neighbors": [],
     "rp_ipa": "/ˌbestˈselə/",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "rhoticity",
+    "respell_ga": "behst-SEH-ler",
+    "respell_rp": "behst-SEH-luh"
   },
   {
     "w": "betray",
@@ -150150,7 +150409,9 @@
     ],
     "rp_ipa": "/bɪˈwɪldə/",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "rhoticity",
+    "respell_ga": "bi-WIL-der",
+    "respell_rp": "bi-WIL-duh"
   },
   {
     "w": "bewilderment",
@@ -150173,7 +150434,9 @@
     ],
     "rp_ipa": "/bɪˈwɪldəmənt/",
     "ga_rp_same": false,
-    "ga_rp_same_reason": "rhoticity"
+    "ga_rp_same_reason": "rhoticity",
+    "respell_ga": "bi-WIL-der-muhnt",
+    "respell_rp": "bi-WIL-duh-muhnt"
   },
   {
     "w": "bidding",
@@ -150194,12 +150457,12 @@
     "neighbors": [
       "building",
       "bearing",
+      "boiling",
+      "bombing",
       "begin",
       "belong",
       "booking",
-      "boring",
-      "burning",
-      "ending"
+      "boring"
     ],
     "ipa_actual_ga": "/ˈbɪɾɪŋ/",
     "respell_ga": "BI-ding",
@@ -150226,7 +150489,7 @@
     "pattern": null,
     "neighbors": [],
     "respell_ga": "buh-KEE-nee",
-    "respell_rp": "buh-KEE-nee",
+    "respell_rp": "bi-KEE-nee",
     "rp_ipa": "/bɪkˈiːni/",
     "ga_rp_same": false,
     "ga_rp_same_reason": "structural_other"
@@ -150256,5 +150519,2868 @@
     "rp_ipa": "/bˈɪljən/",
     "ga_rp_same": false,
     "ga_rp_same_reason": "stress_placement"
+  },
+  {
+    "w": "bio",
+    "ipa": "/ˈbaɪˌoʊ/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A short written account of someone's life (informal).",
+    "gloss": {
+      "en": "bio",
+      "ja": "略歴",
+      "zh": "简介",
+      "ko": "약력",
+      "fil": "maikling talambuhay"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈbaɪˌəʊ/",
+    "neighbors": [
+      "bike",
+      "bite",
+      "blow",
+      "buyer",
+      "buy",
+      "by",
+      "bye",
+      "badge"
+    ],
+    "respell_ga": "BY-oh",
+    "respell_rp": "BY-oh",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "goat_vowel"
+  },
+  {
+    "w": "biological",
+    "ipa": "/ˌbaɪəˈlɑdʒɪkəl/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Relating to biology or living things.",
+    "gloss": {
+      "en": "biological",
+      "ja": "生物学的な",
+      "zh": "生物的",
+      "ko": "생물학적인",
+      "fil": "biyolohikal"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˌbaɪəˈlɒdʒɪkəl/",
+    "neighbors": [
+      "ecological",
+      "psychological",
+      "logical"
+    ],
+    "respell_ga": "by-uh-LAH-ji-kuhl",
+    "respell_rp": "by-uh-LO-ji-kuhl",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "lot_vowel"
+  },
+  {
+    "w": "biotechnology",
+    "ipa": "/ˌbaɪoʊtɛkˈnɑlədʒi/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "The use of living organisms in technology and industry.",
+    "gloss": {
+      "en": "biotechnology",
+      "ja": "バイオテクノロジー",
+      "zh": "生物技术",
+      "ko": "생명공학",
+      "fil": "biyoteknolohiya"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˌbaɪəʊtekˈnɒlədʒiː/",
+    "neighbors": [
+      "technology"
+    ],
+    "ipa_actual_ga": "/ˌbaɪoʊɾɛkˈnɑlədʒi/",
+    "respell_ga": "by-oh-dehk-NAH-luh-jee",
+    "respell_rp": "by-oh-tehk-NO-luh-jee",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "ga_allophony"
+  },
+  {
+    "w": "birdcage",
+    "ipa": "/ˈbɝdˌkeɪdʒ/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A cage for keeping birds.",
+    "gloss": {
+      "en": "birdcage",
+      "ja": "鳥かご",
+      "zh": "鸟笼",
+      "ko": "새장",
+      "fil": "hawla ng ibon"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈbɜːdˌkeɪdʒ/",
+    "neighbors": [],
+    "respell_ga": "BURD-kayj",
+    "respell_rp": "BURD-kayj",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "rhoticity"
+  },
+  {
+    "w": "birthplace",
+    "ipa": "/ˈbɝθˌpleɪs/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "The place where someone was born.",
+    "gloss": {
+      "en": "birthplace",
+      "ja": "生まれ故郷",
+      "zh": "出生地",
+      "ko": "출생지",
+      "fil": "sinilangan"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈbɜːθˌpleɪs/",
+    "neighbors": [
+      "workplace",
+      "someplace",
+      "replace",
+      "birthday",
+      "place"
+    ],
+    "respell_ga": "BURTH-plays",
+    "respell_rp": "BURTH-plays",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "rhoticity"
+  },
+  {
+    "w": "bitterly",
+    "ipa": "/ˈbɪtɚli/",
+    "cefr": "B2",
+    "pos": "副詞",
+    "def": "In a way that shows strong resentment or great intensity.",
+    "gloss": {
+      "en": "bitterly",
+      "ja": "痛切に、ひどく",
+      "zh": "痛苦地",
+      "ko": "쓰라리게",
+      "fil": "may sama ng loob"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈbɪtəliː/",
+    "neighbors": [
+      "battery",
+      "bitter"
+    ],
+    "ipa_actual_ga": "/ˈbɪɾɚli/",
+    "respell_ga": "BI-der-lee",
+    "respell_rp": "BI-tuh-lee",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "ga_allophony"
+  },
+  {
+    "w": "bizarre",
+    "ipa": "/bɪˈzɑr/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Very strange or unusual.",
+    "gloss": {
+      "en": "bizarre",
+      "ja": "奇妙な",
+      "zh": "怪异的",
+      "ko": "기이한",
+      "fil": "kakatwa"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/bɪˈzɑː/",
+    "neighbors": [
+      "before",
+      "guitar",
+      "busy",
+      "bar",
+      "beer"
+    ],
+    "respell_ga": "bi-ZAR",
+    "respell_rp": "bi-ZAH",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "rhoticity"
+  },
+  {
+    "w": "blindly",
+    "ipa": "/ˈblaɪndli/",
+    "cefr": "B2",
+    "pos": "副詞",
+    "def": "Without seeing, thinking, or understanding; without question.",
+    "gloss": {
+      "en": "blindly",
+      "ja": "盲目的に",
+      "zh": "盲目地",
+      "ko": "맹목적으로",
+      "fil": "nang bulag"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈblaɪndliː/",
+    "neighbors": [
+      "kindly",
+      "blind",
+      "blindness",
+      "broadly",
+      "boldly",
+      "brightly",
+      "finally",
+      "slightly"
+    ],
+    "respell_ga": "BLYND-lee",
+    "respell_rp": "BLYND-lee",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "length_marking_only"
+  },
+  {
+    "w": "blindness",
+    "ipa": "/ˈblaɪndnəs/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "The state of being unable to see.",
+    "gloss": {
+      "en": "blindness",
+      "ja": "失明",
+      "zh": "失明",
+      "ko": "실명",
+      "fil": "kabulagan"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈblaɪndnəs/",
+    "neighbors": [
+      "kindness",
+      "blindly",
+      "fondness",
+      "likeness",
+      "blind"
+    ],
+    "respell_ga": "BLYND-nuhs",
+    "respell_rp": "BLYND-nuhs",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "w": "blink",
+    "ipa": "/blɪŋk/",
+    "cefr": "B2",
+    "pos": "動詞",
+    "def": "To shut and open the eyes quickly.",
+    "gloss": {
+      "en": "blink",
+      "ja": "まばたきする",
+      "zh": "眨眼",
+      "ko": "눈을 깜박이다",
+      "fil": "kumurap"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/blɪŋk/",
+    "neighbors": [
+      "blank",
+      "link",
+      "boiling",
+      "drink",
+      "flunk",
+      "bank",
+      "being",
+      "black"
+    ],
+    "respell_ga": "BLINGK",
+    "respell_rp": "BLINGK",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "w": "bloodstream",
+    "ipa": "/ˈblʌdˌstrim/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "The blood flowing through the body.",
+    "gloss": {
+      "en": "bloodstream",
+      "ja": "血流",
+      "zh": "血液循环",
+      "ko": "혈류",
+      "fil": "daluyan ng dugo"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈblʌdˌstriːm/",
+    "neighbors": [],
+    "respell_ga": "BLUHD-streem",
+    "respell_rp": "BLUHD-streem",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "length_marking_only"
+  },
+  {
+    "w": "bloody",
+    "ipa": "/ˈblʌdi/",
+    "cefr": "B2",
+    "pos": "形容詞 / 副詞",
+    "def": "Covered in or involving blood; used for emphasis (chiefly British, informal).",
+    "gloss": {
+      "en": "bloody",
+      "ja": "血まみれの、（英・俗）とても",
+      "zh": "血腥的",
+      "ko": "피투성이의",
+      "fil": "madugo"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈblʌdiː/",
+    "neighbors": [
+      "blood",
+      "buddy",
+      "cloudy",
+      "study",
+      "blade",
+      "bleed",
+      "blush",
+      "body"
+    ],
+    "ipa_actual_ga": "/ˈblʌɾi/",
+    "respell_ga": "BLUH-dee",
+    "respell_rp": "BLUH-dee",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "ga_allophony"
+  },
+  {
+    "w": "blooming",
+    "ipa": "/ˈblumɪŋ/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Flowering; thriving.",
+    "gloss": {
+      "en": "blooming",
+      "ja": "開花している",
+      "zh": "盛开的",
+      "ko": "만개한",
+      "fil": "namumulaklak"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈbluːmɪŋ/",
+    "neighbors": [
+      "blessing",
+      "climbing",
+      "bombing",
+      "bloom"
+    ],
+    "respell_ga": "BLOO-ming",
+    "respell_rp": "BLOO-ming",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "length_marking_only"
+  },
+  {
+    "w": "blossom",
+    "ipa": "/ˈblɑsəm/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A flower, especially on a fruit tree.",
+    "gloss": {
+      "en": "blossom",
+      "ja": "花、開花",
+      "zh": "花",
+      "ko": "꽃",
+      "fil": "bulaklak"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈblɒsəm/",
+    "neighbors": [
+      "bottom",
+      "awesome"
+    ],
+    "respell_ga": "BLAH-suhm",
+    "respell_rp": "BLO-suhm",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "lot_vowel"
+  },
+  {
+    "w": "boiling",
+    "ipa": "/ˈbɔɪlɪŋ/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Extremely hot; at the temperature of boiling water.",
+    "gloss": {
+      "en": "boiling",
+      "ja": "煮え立つ、猛暑の",
+      "zh": "沸腾的",
+      "ko": "펄펄 끓는",
+      "fil": "kumukulo"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈbɔɪlɪŋ/",
+    "neighbors": [
+      "bearing",
+      "bidding",
+      "blink",
+      "bombing",
+      "ceiling",
+      "belong",
+      "booking",
+      "boring"
+    ],
+    "respell_ga": "BOY-ling",
+    "respell_rp": "BOY-ling",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "w": "bombard",
+    "ipa": "/ˈbɑmˌbɑrd/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A large early cannon used to hurl stones or shot.",
+    "gloss": {
+      "en": "bombard",
+      "ja": "臼砲（初期の大砲）",
+      "zh": "投石炮",
+      "ko": "구식 대포",
+      "fil": "sinaunang kanyon"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈbɒmˌbɑːd/",
+    "neighbors": [
+      "backyard"
+    ],
+    "respell_ga": "BAHM-bard",
+    "respell_rp": "BOM-bahd",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "structural_other"
+  },
+  {
+    "w": "bomber",
+    "ipa": "/ˈbɑmɚ/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "An aircraft that drops bombs; a person who plants bombs.",
+    "gloss": {
+      "en": "bomber",
+      "ja": "爆撃機、爆弾犯",
+      "zh": "轰炸机",
+      "ko": "폭격기",
+      "fil": "bombero"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈbɒmə/",
+    "neighbors": [
+      "bother",
+      "bomb",
+      "barn",
+      "baker",
+      "bark",
+      "beaver",
+      "better",
+      "bitter"
+    ],
+    "respell_ga": "BAH-mer",
+    "respell_rp": "BO-muh",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "lot_vowel"
+  },
+  {
+    "w": "bombing",
+    "ipa": "/ˈbɑmɪŋ/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "An attack using bombs.",
+    "gloss": {
+      "en": "bombing",
+      "ja": "爆撃",
+      "zh": "轰炸",
+      "ko": "폭격",
+      "fil": "pambobomba"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈbɒmɪŋ/",
+    "neighbors": [
+      "bearing",
+      "bidding",
+      "boiling",
+      "booking",
+      "boring",
+      "burning",
+      "comic",
+      "jogging"
+    ],
+    "respell_ga": "BAH-ming",
+    "respell_rp": "BO-ming",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "lot_vowel"
+  },
+  {
+    "w": "bony",
+    "ipa": "/ˈboʊni/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Thin, with bones showing; full of bones.",
+    "gloss": {
+      "en": "bony",
+      "ja": "骨ばった",
+      "zh": "多骨的",
+      "ko": "뼈가 앙상한",
+      "fil": "matulis ang buto"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈbəʊniː/",
+    "neighbors": [
+      "bone",
+      "balky",
+      "berry",
+      "bind",
+      "bolt",
+      "bossy",
+      "bully",
+      "baby"
+    ],
+    "respell_ga": "BOH-nee",
+    "respell_rp": "BOH-nee",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "goat_vowel"
+  },
+  {
+    "w": "bookish",
+    "ipa": "/ˈbʊkɪʃ/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Fond of reading and studying; more academic than practical.",
+    "gloss": {
+      "en": "bookish",
+      "ja": "本好きの、学究的な",
+      "zh": "书生气的",
+      "ko": "책벌레 같은",
+      "fil": "mahilig sa aklat"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈbʊkɪʃ/",
+    "neighbors": [
+      "booking",
+      "cooking",
+      "book",
+      "bush"
+    ],
+    "respell_ga": "BUU-kish",
+    "respell_rp": "BUU-kish",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "w": "booklet",
+    "ipa": "/ˈbʊklət/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A small thin book, usually with a paper cover.",
+    "gloss": {
+      "en": "booklet",
+      "ja": "小冊子",
+      "zh": "小册子",
+      "ko": "소책자",
+      "fil": "polyeto"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈbʊklət/",
+    "neighbors": [
+      "bullet",
+      "chocolate",
+      "ballot",
+      "bucket"
+    ],
+    "respell_ga": "BUU-kluht",
+    "respell_rp": "BUU-kluht",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "w": "bookmark",
+    "ipa": "/ˈbʊkˌmɑrk/",
+    "cefr": "B2",
+    "pos": "名詞 / 動詞",
+    "def": "A marker for a place in a book or webpage; to save such a marker.",
+    "gloss": {
+      "en": "bookmark",
+      "ja": "しおり、ブックマーク（する）",
+      "zh": "书签",
+      "ko": "책갈피",
+      "fil": "bookmark"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈbʊkˌmɑːk/",
+    "neighbors": [
+      "backyard",
+      "bookshop",
+      "remark",
+      "bark",
+      "mark"
+    ],
+    "respell_ga": "BUUK-mark",
+    "respell_rp": "BUUK-mahk",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "rhoticity"
+  },
+  {
+    "w": "bossy",
+    "ipa": "/ˈbɔsi/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Fond of giving orders; domineering.",
+    "gloss": {
+      "en": "bossy",
+      "ja": "威張った",
+      "zh": "专横的",
+      "ko": "간섭하는",
+      "fil": "mapangutos"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈbɔːsiː/",
+    "neighbors": [
+      "balky",
+      "berry",
+      "bony",
+      "boost",
+      "bully",
+      "baby",
+      "bald",
+      "beast"
+    ],
+    "respell_ga": "BAW-see",
+    "respell_rp": "BAW-see",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "length_marking_only"
+  },
+  {
+    "w": "botany",
+    "ipa": "/ˈbɑtəni/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "The scientific study of plants.",
+    "gloss": {
+      "en": "botany",
+      "ja": "植物学",
+      "zh": "植物学",
+      "ko": "식물학",
+      "fil": "botanika"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈbɒtəniː/",
+    "neighbors": [
+      "bottle",
+      "bottom",
+      "button",
+      "cotton",
+      "gotten",
+      "rotten"
+    ],
+    "ipa_actual_ga": "/ˈbɑɾəni/",
+    "respell_ga": "BAH-duh-nee",
+    "respell_rp": "BO-tuh-nee",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "ga_allophony"
+  },
+  {
+    "w": "bothered",
+    "ipa": "/ˈbɑðɚd/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Annoyed or worried.",
+    "gloss": {
+      "en": "bothered",
+      "ja": "困った、悩んだ",
+      "zh": "烦恼的",
+      "ko": "귀찮아하는",
+      "fil": "naiinis"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈbɒðəd/",
+    "neighbors": [
+      "bother",
+      "bomber",
+      "bond",
+      "father"
+    ],
+    "respell_ga": "BAH-therd",
+    "respell_rp": "BO-thuhd",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "lot_vowel"
+  },
+  {
+    "w": "bothersome",
+    "ipa": "/ˈbɑðɚsəm/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Causing trouble or annoyance.",
+    "gloss": {
+      "en": "bothersome",
+      "ja": "厄介な",
+      "zh": "麻烦的",
+      "ko": "성가신",
+      "fil": "nakakaabala"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈbɒðəsəm/",
+    "neighbors": [
+      "blossom",
+      "bothered",
+      "bottom",
+      "awesome",
+      "bother"
+    ],
+    "respell_ga": "BAH-ther-suhm",
+    "respell_rp": "BO-thuh-suhm",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "lot_vowel"
+  },
+  {
+    "w": "bourbon",
+    "ipa": "/ˈbɝbən/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A type of American whiskey.",
+    "gloss": {
+      "en": "bourbon",
+      "ja": "バーボン",
+      "zh": "波旁威士忌",
+      "ko": "버번위스키",
+      "fil": "bourbon"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈbɜːbən/",
+    "neighbors": [
+      "burden",
+      "barren",
+      "burgle",
+      "bacon",
+      "basin",
+      "bubble",
+      "button",
+      "cabin"
+    ],
+    "respell_ga": "BUR-buhn",
+    "respell_rp": "BUR-buhn",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "rhoticity"
+  },
+  {
+    "w": "boxer",
+    "ipa": "/ˈbɑksɚ/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A person who boxes as a sport; a breed of dog.",
+    "gloss": {
+      "en": "boxer",
+      "ja": "ボクサー",
+      "zh": "拳击手",
+      "ko": "복서",
+      "fil": "boksingero"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈbɒksə/",
+    "neighbors": [
+      "box",
+      "barber",
+      "bomber",
+      "fox",
+      "baker",
+      "bother",
+      "boxing",
+      "soccer"
+    ],
+    "respell_ga": "BAHK-ser",
+    "respell_rp": "BOK-suh",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "lot_vowel"
+  },
+  {
+    "w": "bracket",
+    "ipa": "/ˈbrækət/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A mark used to enclose text; a category or range; a support fixture.",
+    "gloss": {
+      "en": "bracket",
+      "ja": "括弧、区分",
+      "zh": "括号",
+      "ko": "괄호",
+      "fil": "panaklong"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈbrækət/",
+    "neighbors": [
+      "basket",
+      "biscuit",
+      "broken",
+      "cricket",
+      "ballot",
+      "blanket",
+      "bucket",
+      "jacket"
+    ],
+    "respell_ga": "BRA-kuht",
+    "respell_rp": "BRA-kuht",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "w": "bravery",
+    "ipa": "/ˈbreɪvəri/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "Courage in the face of danger or difficulty.",
+    "gloss": {
+      "en": "bravery",
+      "ja": "勇敢さ",
+      "zh": "勇敢",
+      "ko": "용감함",
+      "fil": "katapangan"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈbreɪvəriː/",
+    "neighbors": [
+      "brewery",
+      "bakery",
+      "bravely",
+      "burglary",
+      "breakthrough",
+      "broccoli",
+      "privacy",
+      "artery"
+    ],
+    "respell_ga": "BRAY-vuh-ree",
+    "respell_rp": "BRAY-vuh-ree",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "length_marking_only"
+  },
+  {
+    "w": "breakable",
+    "ipa": "/ˈbreɪkəbəl/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Easily broken; fragile.",
+    "gloss": {
+      "en": "breakable",
+      "ja": "壊れやすい",
+      "zh": "易碎的",
+      "ko": "깨지기 쉬운",
+      "fil": "madaling mabasag"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈbreɪkəbəl/",
+    "neighbors": [
+      "attainable",
+      "available",
+      "capable"
+    ],
+    "respell_ga": "BRAY-kuh-buhl",
+    "respell_rp": "BRAY-kuh-buhl",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "w": "breakdown",
+    "ipa": "/ˈbreɪkˌdaʊn/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A failure to function; a detailed analysis; a mental collapse.",
+    "gloss": {
+      "en": "breakdown",
+      "ja": "故障、内訳、精神的破綻",
+      "zh": "故障、明细",
+      "ko": "고장, 세부내역",
+      "fil": "pagkasira"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈbreɪkˌdaʊn/",
+    "neighbors": [
+      "breakthrough",
+      "breakup",
+      "broaden",
+      "broken",
+      "bacon",
+      "brain",
+      "brake",
+      "break"
+    ],
+    "respell_ga": "BRAYK-down",
+    "respell_rp": "BRAYK-down",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "w": "breakup",
+    "ipa": "/ˈbreɪkˌʌp/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "The ending of a relationship or partnership.",
+    "gloss": {
+      "en": "breakup",
+      "ja": "破局、解体",
+      "zh": "分手",
+      "ko": "이별",
+      "fil": "paghihiwalay"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈbreɪkˌʌp/",
+    "neighbors": [
+      "backup",
+      "brake",
+      "break"
+    ],
+    "respell_ga": "BRAY-kuhp",
+    "respell_rp": "BRAY-kuhp",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "w": "breathtaking",
+    "ipa": "/ˈbrɛθˌteɪkɪŋ/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Extremely impressive or beautiful.",
+    "gloss": {
+      "en": "breathtaking",
+      "ja": "息をのむような",
+      "zh": "令人惊叹的",
+      "ko": "숨막히는",
+      "fil": "kamangha-mangha"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈbreθˌteɪkɪŋ/",
+    "neighbors": [],
+    "respell_ga": "BREHTH-tay-king",
+    "respell_rp": "BREHTH-tay-king",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "dress_notation_only"
+  },
+  {
+    "w": "breezy",
+    "ipa": "/ˈbrizi/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Pleasantly windy; casual and cheerful in manner.",
+    "gloss": {
+      "en": "breezy",
+      "ja": "そよ風の吹く、気軽な",
+      "zh": "微风阵阵的",
+      "ko": "산들바람이 부는",
+      "fil": "may amihan"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈbriːziː/",
+    "neighbors": [
+      "breeze",
+      "browser",
+      "crazy",
+      "freely",
+      "freezer",
+      "greedy",
+      "uneasy",
+      "browse"
+    ],
+    "respell_ga": "BREE-zee",
+    "respell_rp": "BREE-zee",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "length_marking_only"
+  },
+  {
+    "w": "brewery",
+    "ipa": "/ˈbruəri/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A place where beer is made.",
+    "gloss": {
+      "en": "brewery",
+      "ja": "醸造所",
+      "zh": "啤酒厂",
+      "ko": "양조장",
+      "fil": "gawaan ng beer"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈbruːəriː/",
+    "neighbors": [
+      "artery",
+      "bakery",
+      "bravery"
+    ],
+    "respell_ga": "BROO-uh-ree",
+    "respell_rp": "BROO-uh-ree",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "length_marking_only"
+  },
+  {
+    "w": "brilliantly",
+    "ipa": "/ˈbrɪljəntli/",
+    "cefr": "B2",
+    "pos": "副詞",
+    "def": "In an extremely skillful or impressive way; very brightly.",
+    "gloss": {
+      "en": "brilliantly",
+      "ja": "見事に、明るく",
+      "zh": "出色地",
+      "ko": "훌륭하게",
+      "fil": "napakahusay"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈbrɪljəntliː/",
+    "neighbors": [
+      "brilliant"
+    ],
+    "respell_ga": "BRI-lyuhnt-lee",
+    "respell_rp": "BRI-lyuhnt-lee",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "length_marking_only"
+  },
+  {
+    "w": "broadband",
+    "ipa": "/ˈbrɔdˌbænd/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "High-speed internet connection.",
+    "gloss": {
+      "en": "broadband",
+      "ja": "ブロードバンド",
+      "zh": "宽带",
+      "ko": "광대역통신망",
+      "fil": "broadband"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈbrɔːdˌbænd/",
+    "neighbors": [
+      "broadcast",
+      "broaden",
+      "brand"
+    ],
+    "respell_ga": "BRAWD-band",
+    "respell_rp": "BRAWD-band",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "length_marking_only"
+  },
+  {
+    "w": "broadcaster",
+    "ipa": "/ˈbrɔdˌkæstɚ/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A person or company that sends out radio or TV programs.",
+    "gloss": {
+      "en": "broadcaster",
+      "ja": "放送局、アナウンサー",
+      "zh": "广播员",
+      "ko": "방송인",
+      "fil": "broadcaster"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈbrɔːdˌkæstə/",
+    "neighbors": [
+      "broadcast"
+    ],
+    "respell_ga": "BRAWD-ka-ster",
+    "respell_rp": "BRAWD-ka-stuh",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "rhoticity"
+  },
+  {
+    "w": "broaden",
+    "ipa": "/ˈbrɔdən/",
+    "cefr": "B2",
+    "pos": "動詞",
+    "def": "To make or become wider in range.",
+    "gloss": {
+      "en": "broaden",
+      "ja": "広げる",
+      "zh": "拓宽",
+      "ko": "넓히다",
+      "fil": "palawakin"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈbrɔːdən/",
+    "neighbors": [
+      "broadly",
+      "broken",
+      "burden",
+      "ridden",
+      "broad"
+    ],
+    "ipa_actual_ga": "/ˈbrɔdn̩/",
+    "respell_ga": "BRAW-dn",
+    "respell_rp": "BRAW-duhn",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "ga_allophony"
+  },
+  {
+    "w": "broadly",
+    "ipa": "/ˈbrɔdli/",
+    "cefr": "B2",
+    "pos": "副詞",
+    "def": "In general terms; widely.",
+    "gloss": {
+      "en": "broadly",
+      "ja": "概して、広く",
+      "zh": "大体上",
+      "ko": "대체로",
+      "fil": "sa pangkalahatan"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈbrɔːdliː/",
+    "neighbors": [
+      "broaden",
+      "boldly",
+      "bravely",
+      "briefly",
+      "brightly",
+      "badly",
+      "rudely",
+      "broad"
+    ],
+    "respell_ga": "BRAWD-lee",
+    "respell_rp": "BRAWD-lee",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "length_marking_only"
+  },
+  {
+    "w": "brochure",
+    "ipa": "/broʊˈʃʊr/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A small booklet or pamphlet with information or advertising.",
+    "gloss": {
+      "en": "brochure",
+      "ja": "パンフレット",
+      "zh": "小册子",
+      "ko": "안내책자",
+      "fil": "polyeto"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/brəʊˈʃʊə/",
+    "neighbors": [],
+    "respell_ga": "broh-SHUUR",
+    "respell_rp": "broh-SHOOR",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "goat_vowel"
+  },
+  {
+    "w": "browser",
+    "ipa": "/ˈbraʊzɚ/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "Software used to access the internet.",
+    "gloss": {
+      "en": "browser",
+      "ja": "ブラウザ",
+      "zh": "浏览器",
+      "ko": "브라우저",
+      "fil": "browser"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈbraʊzə/",
+    "neighbors": [
+      "browse",
+      "breezy",
+      "brother",
+      "freezer",
+      "arouse",
+      "bruise",
+      "breeze",
+      "brown"
+    ],
+    "respell_ga": "BROW-zer",
+    "respell_rp": "BROW-zuh",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "rhoticity"
+  },
+  {
+    "w": "bulimia",
+    "ipa": "/bjuˈlɪmiə/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "An eating disorder involving cycles of binge eating and purging.",
+    "gloss": {
+      "en": "bulimia",
+      "ja": "過食症",
+      "zh": "暴食症",
+      "ko": "폭식증",
+      "fil": "bulimia"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/bjuːˈlɪmiːə/",
+    "neighbors": [],
+    "respell_ga": "byoo-LI-mee-uh",
+    "respell_rp": "byoo-LI-mee-uh",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "length_marking_only"
+  },
+  {
+    "w": "bully",
+    "ipa": "/ˈbʊli/",
+    "cefr": "B2",
+    "pos": "動詞",
+    "def": "To use strength or power to intimidate someone.",
+    "gloss": {
+      "en": "bully",
+      "ja": "いじめる",
+      "zh": "欺负",
+      "ko": "괴롭히다",
+      "fil": "buwisitin"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈbʊliː/",
+    "neighbors": [
+      "belly",
+      "fully",
+      "bull",
+      "balky",
+      "ballet",
+      "bellow",
+      "berry",
+      "bolt"
+    ],
+    "respell_ga": "BUU-lee",
+    "respell_rp": "BUU-lee",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "length_marking_only"
+  },
+  {
+    "w": "bumper",
+    "ipa": "/ˈbʌmpɚ/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A bar on a vehicle that absorbs impact.",
+    "gloss": {
+      "en": "bumper",
+      "ja": "バンパー",
+      "zh": "保险杠",
+      "ko": "범퍼",
+      "fil": "bumper"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈbʌmpə/",
+    "neighbors": [
+      "jumper",
+      "bump",
+      "number",
+      "temper",
+      "bomber",
+      "butter",
+      "dump",
+      "jump"
+    ],
+    "respell_ga": "BUHM-per",
+    "respell_rp": "BUHM-puh",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "rhoticity"
+  },
+  {
+    "w": "burdensome",
+    "ipa": "/ˈbɝdənsəm/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Causing hardship or heavy demands.",
+    "gloss": {
+      "en": "burdensome",
+      "ja": "重荷になる",
+      "zh": "繁重的",
+      "ko": "부담스러운",
+      "fil": "mabigat na pasanin"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈbɜːdənsəm/",
+    "neighbors": [
+      "burden"
+    ],
+    "ipa_actual_ga": "/ˈbɝdn̩səm/",
+    "respell_ga": "BUR-dn-suhm",
+    "respell_rp": "BUR-duhn-suhm",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "ga_allophony"
+  },
+  {
+    "w": "bureaucracy",
+    "ipa": "/bjʊˈrɑkrəsi/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A system of government or administration with many rules and officials.",
+    "gloss": {
+      "en": "bureaucracy",
+      "ja": "官僚制度",
+      "zh": "官僚机构",
+      "ko": "관료제",
+      "fil": "burukrasya"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/bjʊˈrɒkrəsiː/",
+    "neighbors": [],
+    "respell_ga": "byuu-RAH-kruh-see",
+    "respell_rp": "byuu-RO-kruh-see",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "lot_vowel"
+  },
+  {
+    "w": "burglary",
+    "ipa": "/ˈbɝɡləri/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "The crime of entering a building to steal.",
+    "gloss": {
+      "en": "burglary",
+      "ja": "強盗、窃盗",
+      "zh": "入室盗窃",
+      "ko": "절도",
+      "fil": "pagnanakaw"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈbɜːɡləriː/",
+    "neighbors": [
+      "bravery",
+      "biology",
+      "brewery",
+      "bakery",
+      "burgle",
+      "burglar",
+      "glory"
+    ],
+    "respell_ga": "BUR-gluh-ree",
+    "respell_rp": "BUR-gluh-ree",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "rhoticity"
+  },
+  {
+    "w": "burgle",
+    "ipa": "/ˈbɝɡəl/",
+    "cefr": "B2",
+    "pos": "動詞",
+    "def": "To enter and steal from a building illegally (chiefly British).",
+    "gloss": {
+      "en": "burgle",
+      "ja": "（家に）押し入って盗む（英）",
+      "zh": "入室盗窃（英）",
+      "ko": "침입 절도하다(영)",
+      "fil": "magnakaw sa bahay"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈbɜːɡəl/",
+    "neighbors": [
+      "beagle",
+      "bourbon",
+      "bustle",
+      "angle",
+      "barrel",
+      "battle",
+      "bottle",
+      "bubble"
+    ],
+    "respell_ga": "BUR-guhl",
+    "respell_rp": "BUR-guhl",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "rhoticity"
+  },
+  {
+    "w": "burial",
+    "ipa": "/ˈbɛriəl/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "The act of burying a dead body.",
+    "gloss": {
+      "en": "burial",
+      "ja": "埋葬",
+      "zh": "埋葬",
+      "ko": "매장",
+      "fil": "libing"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈberiːəl/",
+    "neighbors": [
+      "careful",
+      "cereal",
+      "various",
+      "barrel",
+      "berry",
+      "area",
+      "bury"
+    ],
+    "respell_ga": "BEH-ree-uhl",
+    "respell_rp": "BEH-ree-uhl",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "notation_composite"
+  },
+  {
+    "w": "bustle",
+    "ipa": "/ˈbʌsəl/",
+    "cefr": "B2",
+    "pos": "動詞",
+    "def": "To move busily and energetically.",
+    "gloss": {
+      "en": "bustle",
+      "ja": "せわしなく動く",
+      "zh": "忙碌地走动",
+      "ko": "부산하게 움직이다",
+      "fil": "magmadali"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈbʌsəl/",
+    "neighbors": [
+      "bubble",
+      "muscle",
+      "beagle",
+      "burgle",
+      "barrel",
+      "basin",
+      "basis",
+      "battle"
+    ],
+    "respell_ga": "BUH-suhl",
+    "respell_rp": "BUH-suhl",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "w": "bustling",
+    "ipa": "/ˈbʌslɪŋ/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Full of busy, energetic activity.",
+    "gloss": {
+      "en": "bustling",
+      "ja": "活気に満ちた",
+      "zh": "熙熙攘攘的",
+      "ko": "부산한",
+      "fil": "abala"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈbʌslɪŋ/",
+    "neighbors": [
+      "boiling"
+    ],
+    "respell_ga": "BUH-sling",
+    "respell_rp": "BUH-sling",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "w": "cabinet",
+    "ipa": "/ˈkæbənət/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A cupboard for storage; a government's senior ministers.",
+    "gloss": {
+      "en": "cabinet",
+      "ja": "戸棚、内閣",
+      "zh": "橱柜、内阁",
+      "ko": "캐비닛, 내각",
+      "fil": "kabinet"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkæbənət/",
+    "neighbors": [
+      "cabin",
+      "balanced",
+      "calendar",
+      "capital",
+      "casual",
+      "definite",
+      "fascinate",
+      "habitat"
+    ],
+    "respell_ga": "KA-buh-nuht",
+    "respell_rp": "KA-buh-nuht",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "w": "cable",
+    "ipa": "/ˈkeɪbəl/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A thick wire or rope; a message sent by cable; cable TV.",
+    "gloss": {
+      "en": "cable",
+      "ja": "ケーブル",
+      "zh": "电缆",
+      "ko": "케이블",
+      "fil": "kable"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkeɪbəl/",
+    "neighbors": [
+      "table",
+      "able",
+      "bubble",
+      "cabbage",
+      "cabin",
+      "camel",
+      "castle",
+      "cattle"
+    ],
+    "respell_ga": "KAY-buhl",
+    "respell_rp": "KAY-buhl",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "w": "calmly",
+    "ipa": "/ˈkɑmli/",
+    "cefr": "B2",
+    "pos": "副詞",
+    "def": "In a peaceful, untroubled way.",
+    "gloss": {
+      "en": "calmly",
+      "ja": "冷静に",
+      "zh": "冷静地",
+      "ko": "차분하게",
+      "fil": "mahinahon"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkɒmliː/",
+    "neighbors": [
+      "barley",
+      "comet",
+      "comic",
+      "common",
+      "firmly",
+      "timely",
+      "coffee",
+      "collar"
+    ],
+    "respell_ga": "KAHM-lee",
+    "respell_rp": "KOM-lee",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "lot_vowel"
+  },
+  {
+    "w": "campaign",
+    "ipa": "/kæmˈpeɪn/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "An organized effort to achieve a goal, such as in politics or marketing.",
+    "gloss": {
+      "en": "campaign",
+      "ja": "キャンペーン、運動",
+      "zh": "运动",
+      "ko": "캠페인",
+      "fil": "kampanya"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kæmˈpeɪn/",
+    "neighbors": [
+      "champagne",
+      "camping",
+      "campus",
+      "complain",
+      "camp"
+    ],
+    "respell_ga": "kam-PAYN",
+    "respell_rp": "kam-PAYN",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "w": "candidate",
+    "ipa": "/ˈkændəˌdeɪt/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A person applying for a job or running in an election.",
+    "gloss": {
+      "en": "candidate",
+      "ja": "候補者",
+      "zh": "候选人",
+      "ko": "후보자",
+      "fil": "kandidato"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkændəˌdeɪt/",
+    "neighbors": [
+      "conduct",
+      "indicate",
+      "animate",
+      "candle"
+    ],
+    "ipa_actual_ga": "/ˈkændəˌɾeɪt/",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "ga_allophony"
+  },
+  {
+    "w": "cannonball",
+    "ipa": "/ˈkænənˌbɔl/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A round metal projectile fired from a cannon.",
+    "gloss": {
+      "en": "cannonball",
+      "ja": "砲弾",
+      "zh": "炮弹",
+      "ko": "포탄",
+      "fil": "bala ng kanyon"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkænənˌbɔːl/",
+    "neighbors": [
+      "handball",
+      "canon"
+    ],
+    "respell_ga": "KA-nuhn-bawl",
+    "respell_rp": "KA-nuhn-bawl",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "length_marking_only"
+  },
+  {
+    "w": "canon",
+    "ipa": "/ˈkænən/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A collection of works accepted as genuine or authoritative; a church rule.",
+    "gloss": {
+      "en": "canon",
+      "ja": "正典、規範",
+      "zh": "经典",
+      "ko": "정전",
+      "fil": "kanon"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkænən/",
+    "neighbors": [
+      "cabin",
+      "barren",
+      "cabbage",
+      "camel",
+      "cancer",
+      "candy",
+      "carrot",
+      "castle"
+    ],
+    "respell_ga": "KA-nuhn",
+    "respell_rp": "KA-nuhn",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "w": "capability",
+    "ipa": "/ˌkeɪpəˈbɪləti/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "The ability to do something.",
+    "gloss": {
+      "en": "capability",
+      "ja": "能力",
+      "zh": "能力",
+      "ko": "능력",
+      "fil": "kakayahan"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˌkeɪpəˈbɪlətiː/",
+    "neighbors": [
+      "possibility",
+      "availability",
+      "ability"
+    ],
+    "ipa_actual_ga": "/ˌkeɪpəˈbɪləɾi/",
+    "respell_ga": "kay-puh-BI-luh-dee",
+    "respell_rp": "kay-puh-BI-luh-tee",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "ga_allophony"
+  },
+  {
+    "w": "caption",
+    "ipa": "/ˈkæpʃən/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A short piece of text describing an image or subtitle.",
+    "gloss": {
+      "en": "caption",
+      "ja": "キャプション、字幕",
+      "zh": "标题、字幕",
+      "ko": "자막",
+      "fil": "caption"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkæpʃən/",
+    "neighbors": [
+      "captain",
+      "capsule",
+      "canon",
+      "action",
+      "cabin",
+      "caution",
+      "cushion",
+      "fashion"
+    ],
+    "respell_ga": "KAP-shuhn",
+    "respell_rp": "KAP-shuhn",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "w": "captive",
+    "ipa": "/ˈkæptɪv/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A person or animal that is imprisoned or confined.",
+    "gloss": {
+      "en": "captive",
+      "ja": "捕虜",
+      "zh": "俘虏",
+      "ko": "포로",
+      "fil": "bihag"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkæptɪv/",
+    "neighbors": [
+      "captain",
+      "active"
+    ],
+    "respell_ga": "KAP-tiv",
+    "respell_rp": "KAP-tiv",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "w": "caravan",
+    "ipa": "/ˈkærəˌvæn/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A group traveling together; a towed vehicle used as a home (British).",
+    "gloss": {
+      "en": "caravan",
+      "ja": "隊商、キャンピングカー（英）",
+      "zh": "商队、房车（英）",
+      "ko": "대상, 이동식 주택(영)",
+      "fil": "karaban"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkærəˌvæn/",
+    "neighbors": [
+      "barren",
+      "canon",
+      "cabin",
+      "carrot"
+    ],
+    "respell_ga": "KA-ruh-van",
+    "respell_rp": "KA-ruh-van",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "w": "carbon",
+    "ipa": "/ˈkɑrbən/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A chemical element found in all living things and fuels.",
+    "gloss": {
+      "en": "carbon",
+      "ja": "炭素",
+      "zh": "碳",
+      "ko": "탄소",
+      "fil": "karbon"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkɑːbən/",
+    "neighbors": [
+      "carton",
+      "bargain",
+      "barman",
+      "carpet",
+      "cartoon",
+      "combine",
+      "garden",
+      "marble"
+    ],
+    "respell_ga": "KAR-buhn",
+    "respell_rp": "KAH-buhn",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "rhoticity"
+  },
+  {
+    "w": "cardboard",
+    "ipa": "/ˈkɑrdˌbɔrd/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "Thick, stiff paper used for boxes and packaging.",
+    "gloss": {
+      "en": "cardboard",
+      "ja": "厚紙、段ボール",
+      "zh": "纸板",
+      "ko": "판지",
+      "fil": "karton"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkɑːdˌbɔːd/",
+    "neighbors": [
+      "keyboard"
+    ],
+    "respell_ga": "KARD-bord",
+    "respell_rp": "KAHD-bawd",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "rhoticity"
+  },
+  {
+    "w": "cardigan",
+    "ipa": "/ˈkɑrdəɡən/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A knitted sweater that opens down the front.",
+    "gloss": {
+      "en": "cardigan",
+      "ja": "カーディガン",
+      "zh": "开衫",
+      "ko": "카디건",
+      "fil": "kardigan"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkɑːdəɡən/",
+    "neighbors": [
+      "carnival",
+      "carbon",
+      "bargain",
+      "carton",
+      "garden",
+      "pardon"
+    ],
+    "ipa_actual_ga": "/ˈkɑrɾəɡən/",
+    "respell_ga": "KAR-duh-guhn",
+    "respell_rp": "KAH-duh-guhn",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "ga_allophony"
+  },
+  {
+    "w": "carefree",
+    "ipa": "/ˈkɛrˌfri/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Free from worry or responsibility.",
+    "gloss": {
+      "en": "carefree",
+      "ja": "気楽な",
+      "zh": "无忧无虑的",
+      "ko": "근심 없는",
+      "fil": "walang alalahanin"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkeəˌfriː/",
+    "neighbors": [
+      "careful",
+      "carefully"
+    ],
+    "respell_ga": "KER-free",
+    "respell_rp": "KAIR-free",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "rhoticity"
+  },
+  {
+    "w": "caring",
+    "ipa": "/ˈkɛrɪŋ/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Showing kindness and concern for others.",
+    "gloss": {
+      "en": "caring",
+      "ja": "思いやりのある",
+      "zh": "关心他人的",
+      "ko": "배려하는",
+      "fil": "maalalahanin"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkerɪŋ/",
+    "neighbors": [
+      "bearing",
+      "boring",
+      "carriage",
+      "cherish",
+      "cooking",
+      "during",
+      "hearing",
+      "killing"
+    ],
+    "respell_ga": "KEH-ring",
+    "respell_rp": "KEH-ring",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "dress_notation_only"
+  },
+  {
+    "w": "carnival",
+    "ipa": "/ˈkɑrnəvəl/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A festival with music, dancing, and often rides.",
+    "gloss": {
+      "en": "carnival",
+      "ja": "カーニバル",
+      "zh": "狂欢节",
+      "ko": "카니발",
+      "fil": "karnabal"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkɑːnəvəl/",
+    "neighbors": [
+      "cardigan",
+      "article"
+    ],
+    "respell_ga": "KAR-nuh-vuhl",
+    "respell_rp": "KAH-nuh-vuhl",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "rhoticity"
+  },
+  {
+    "w": "carpool",
+    "ipa": "/ˈkɑrˌpul/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "An arrangement where people share car rides.",
+    "gloss": {
+      "en": "carpool",
+      "ja": "相乗り",
+      "zh": "拼车",
+      "ko": "카풀",
+      "fil": "carpool"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkɑːˌpuːl/",
+    "neighbors": [
+      "carpet",
+      "cartoon"
+    ],
+    "respell_ga": "KAR-pool",
+    "respell_rp": "KAH-pool",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "rhoticity"
+  },
+  {
+    "w": "cascade",
+    "ipa": "/kæˈskeɪd/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A small waterfall; a series of things happening one after another.",
+    "gloss": {
+      "en": "cascade",
+      "ja": "小さな滝、連続",
+      "zh": "小瀑布、连锁反应",
+      "ko": "작은 폭포, 연속",
+      "fil": "maliit na talon"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kæˈskeɪd/",
+    "neighbors": [],
+    "respell_ga": "ka-SKAYD",
+    "respell_rp": "ka-SKAYD",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "w": "casually",
+    "ipa": "/ˈkæʒuəli/",
+    "cefr": "B2",
+    "pos": "副詞",
+    "def": "In a relaxed, informal manner.",
+    "gloss": {
+      "en": "casually",
+      "ja": "何気なく、カジュアルに",
+      "zh": "随便地",
+      "ko": "무심코",
+      "fil": "kaswal"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkæʒuːəliː/",
+    "neighbors": [
+      "actually",
+      "annually",
+      "carefully",
+      "casual",
+      "naturally",
+      "cancel",
+      "candle",
+      "capsule"
+    ],
+    "respell_ga": "KA-zhoo-uh-lee",
+    "respell_rp": "KA-zhoo-uh-lee",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "length_marking_only"
+  },
+  {
+    "w": "catalyst",
+    "ipa": "/ˈkætələst/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A substance that speeds up a reaction; something that causes change.",
+    "gloss": {
+      "en": "catalyst",
+      "ja": "触媒、きっかけ",
+      "zh": "催化剂",
+      "ko": "촉매",
+      "fil": "katalista"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkætələst/",
+    "neighbors": [
+      "analyst",
+      "journalist",
+      "novelist",
+      "cabinet",
+      "satellite",
+      "cattle"
+    ],
+    "ipa_actual_ga": "/ˈkæɾələst/",
+    "respell_ga": "KA-duh-luhst",
+    "respell_rp": "KA-tuh-luhst",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "ga_allophony"
+  },
+  {
+    "w": "catastrophe",
+    "ipa": "/kəˈtæstrəfi/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A sudden great disaster.",
+    "gloss": {
+      "en": "catastrophe",
+      "ja": "大惨事",
+      "zh": "大灾难",
+      "ko": "대참사",
+      "fil": "kalamidad"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kəˈtæstrəfiː/",
+    "neighbors": [
+      "apostrophe"
+    ],
+    "respell_ga": "kuh-TA-struh-fee",
+    "respell_rp": "kuh-TA-struh-fee",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "length_marking_only"
+  },
+  {
+    "w": "catastrophic",
+    "ipa": "/ˌkætəˈstrɑfɪk/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Involving sudden great damage or suffering.",
+    "gloss": {
+      "en": "catastrophic",
+      "ja": "壊滅的な",
+      "zh": "灾难性的",
+      "ko": "재앙적인",
+      "fil": "malubhang sakuna"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˌkætəˈstrɒfɪk/",
+    "neighbors": [],
+    "ipa_actual_ga": "/ˌkæɾəˈstrɑfɪk/",
+    "respell_ga": "ka-duh-STRAH-fik",
+    "respell_rp": "ka-tuh-STRO-fik",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "ga_allophony"
+  },
+  {
+    "w": "catchy",
+    "ipa": "/ˈkætʃi/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Pleasant and easy to remember, especially a tune.",
+    "gloss": {
+      "en": "catchy",
+      "ja": "耳に残る、キャッチーな",
+      "zh": "朗朗上口的",
+      "ko": "기억하기 쉬운",
+      "fil": "madaling matandaan"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkætʃiː/",
+    "neighbors": [
+      "carry",
+      "catch",
+      "cast",
+      "camp",
+      "can't",
+      "canned",
+      "coffee",
+      "cookie"
+    ],
+    "respell_ga": "KA-chee",
+    "respell_rp": "KA-chee",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "length_marking_only"
+  },
+  {
+    "w": "catering",
+    "ipa": "/ˈkeɪtɚɪŋ/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "The business of providing food for events.",
+    "gloss": {
+      "en": "catering",
+      "ja": "ケータリング",
+      "zh": "餐饮服务",
+      "ko": "출장 요리",
+      "fil": "catering"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈkeɪtəɪŋ/",
+    "neighbors": [
+      "skating",
+      "dating",
+      "rating"
+    ],
+    "ipa_actual_ga": "/ˈkeɪɾɚɪŋ/",
+    "respell_ga": "KAY-der-ing",
+    "respell_rp": "KAY-tuh-ing",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "ga_allophony"
+  },
+  {
+    "w": "cathedral",
+    "ipa": "/kəˈθidrəl/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A large, important church, usually the seat of a bishop.",
+    "gloss": {
+      "en": "cathedral",
+      "ja": "大聖堂",
+      "zh": "大教堂",
+      "ko": "대성당",
+      "fil": "katedral"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/kəˈθiːdrəl/",
+    "neighbors": [
+      "comedian"
+    ],
+    "respell_ga": "kuh-THEE-druhl",
+    "respell_rp": "kuh-THEE-druhl",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "length_marking_only"
+  },
+  {
+    "w": "ceiling",
+    "ipa": "/ˈsilɪŋ/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "The upper interior surface of a room; an upper limit.",
+    "gloss": {
+      "en": "ceiling",
+      "ja": "天井、上限",
+      "zh": "天花板、上限",
+      "ko": "천장, 상한선",
+      "fil": "kisame"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈsiːlɪŋ/",
+    "neighbors": [
+      "feeling",
+      "healing",
+      "sailing",
+      "boiling",
+      "filling",
+      "hearing",
+      "heating",
+      "killing"
+    ],
+    "respell_ga": "SEE-ling",
+    "respell_rp": "SEE-ling",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "length_marking_only"
+  },
+  {
+    "w": "cellar",
+    "ipa": "/ˈsɛlɚ/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "An underground room, often for storage.",
+    "gloss": {
+      "en": "cellar",
+      "ja": "地下室",
+      "zh": "地窖",
+      "ko": "지하실",
+      "fil": "silong"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈselə/",
+    "neighbors": [
+      "sailor",
+      "self",
+      "teller",
+      "cell",
+      "sell",
+      "settler",
+      "bellow",
+      "cello"
+    ],
+    "respell_ga": "SEH-ler",
+    "respell_rp": "SEH-luh",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "rhoticity"
+  },
+  {
+    "w": "cellist",
+    "ipa": "/ˈtʃɛləst/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A person who plays the cello.",
+    "gloss": {
+      "en": "cellist",
+      "ja": "チェロ奏者",
+      "zh": "大提琴手",
+      "ko": "첼로 연주자",
+      "fil": "tagatugtog ng cello"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈtʃeləst/",
+    "neighbors": [
+      "jealous",
+      "chest"
+    ],
+    "respell_ga": "CHEH-luhst",
+    "respell_rp": "CHEH-luhst",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "dress_notation_only"
+  },
+  {
+    "w": "cello",
+    "ipa": "/ˈtʃɛloʊ/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A large stringed instrument played with a bow.",
+    "gloss": {
+      "en": "cello",
+      "ja": "チェロ",
+      "zh": "大提琴",
+      "ko": "첼로",
+      "fil": "cello"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈtʃeləʊ/",
+    "neighbors": [
+      "bellow",
+      "fellow",
+      "yellow",
+      "cellar",
+      "cherry",
+      "belly",
+      "below",
+      "belt"
+    ],
+    "respell_ga": "CHEH-loh",
+    "respell_rp": "CHEH-loh",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "goat_vowel"
+  },
+  {
+    "w": "cemetery",
+    "ipa": "/ˈsɛməˌtɛri/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A place where the dead are buried.",
+    "gloss": {
+      "en": "cemetery",
+      "ja": "墓地",
+      "zh": "墓地",
+      "ko": "묘지",
+      "fil": "sementeryo"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈseməˌteriː/",
+    "neighbors": [
+      "secretary",
+      "chemistry",
+      "military",
+      "necessary",
+      "temporary"
+    ],
+    "ipa_actual_ga": "/ˈsɛməˌɾɛri/",
+    "respell_ga": "SEH-muh-deh-ree",
+    "respell_rp": "SEH-muh-teh-ree",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "ga_allophony"
+  },
+  {
+    "w": "centigrade",
+    "ipa": "/ˈsɛntəˌɡreɪd/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A temperature scale where water freezes at 0° and boils at 100° (Celsius).",
+    "gloss": {
+      "en": "centigrade",
+      "ja": "摂氏",
+      "zh": "摄氏度",
+      "ko": "섭씨",
+      "fil": "sentigrado"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈsentəˌɡreɪd/",
+    "neighbors": [],
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "dress_notation_only"
+  },
+  {
+    "w": "certificate",
+    "ipa": "/sɚˈtɪfəkət/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "An official document confirming a fact or achievement.",
+    "gloss": {
+      "en": "certificate",
+      "ja": "証明書",
+      "zh": "证书",
+      "ko": "증명서",
+      "fil": "sertipiko"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/səˈtɪfəkət/",
+    "neighbors": [],
+    "respell_ga": "ser-TI-fuh-kuht",
+    "respell_rp": "suh-TI-fuh-kuht",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "rhoticity"
+  },
+  {
+    "w": "certification",
+    "ipa": "/ˌsɚtəfəˈkeɪʃən/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "The act of certifying, or a document proving it.",
+    "gloss": {
+      "en": "certification",
+      "ja": "認証",
+      "zh": "认证",
+      "ko": "인증",
+      "fil": "sertipikasyon"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˌsətəfəˈkeɪʃən/",
+    "neighbors": [
+      "civilisation",
+      "satisfaction",
+      "reunification",
+      "certificate"
+    ],
+    "ipa_actual_ga": "/ˌsɚɾəfəˈkeɪʃən/",
+    "respell_ga": "ser-duh-fuh-KAY-shuhn",
+    "respell_rp": "suh-tuh-fuh-KAY-shuhn",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "ga_allophony"
+  },
+  {
+    "w": "certify",
+    "ipa": "/ˈsɝtəˌfaɪ/",
+    "cefr": "B2",
+    "pos": "動詞",
+    "def": "To officially confirm something as true or meeting a standard.",
+    "gloss": {
+      "en": "certify",
+      "ja": "証明する",
+      "zh": "证明",
+      "ko": "증명하다",
+      "fil": "patunayan"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈsɜːtəˌfaɪ/",
+    "neighbors": [
+      "certain",
+      "satisfy"
+    ],
+    "ipa_actual_ga": "/ˈsɝɾəˌfaɪ/",
+    "respell_ga": "SUR-duh-fy",
+    "respell_rp": "SUR-tuh-fy",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "ga_allophony"
+  },
+  {
+    "w": "chancellor",
+    "ipa": "/ˈtʃænsəlɚ/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A senior government or university official.",
+    "gloss": {
+      "en": "chancellor",
+      "ja": "首相、学長",
+      "zh": "总理、校长",
+      "ko": "총리, 학장",
+      "fil": "tsanselor"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈtʃænsələ/",
+    "neighbors": [
+      "cancel",
+      "channel",
+      "candle",
+      "capsule",
+      "council",
+      "handle",
+      "handsome",
+      "manager"
+    ],
+    "respell_ga": "CHAN-suh-ler",
+    "respell_rp": "CHAN-suh-luh",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "rhoticity"
+  },
+  {
+    "w": "chaotic",
+    "ipa": "/keɪˈɑtɪk/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "In a state of complete disorder.",
+    "gloss": {
+      "en": "chaotic",
+      "ja": "混沌とした",
+      "zh": "混乱的",
+      "ko": "혼란스러운",
+      "fil": "magulo"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/keɪˈɒtɪk/",
+    "neighbors": [
+      "critic",
+      "comic"
+    ],
+    "ipa_actual_ga": "/keɪˈɑɾɪk/",
+    "respell_ga": "kay-AH-dik",
+    "respell_rp": "kay-O-tik",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "ga_allophony"
+  },
+  {
+    "w": "charming",
+    "ipa": "/ˈtʃɑrmɪŋ/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Pleasant and attractive.",
+    "gloss": {
+      "en": "charming",
+      "ja": "魅力的な",
+      "zh": "迷人的",
+      "ko": "매력적인",
+      "fil": "kaakit-akit"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈtʃɑːmɪŋ/",
+    "neighbors": [
+      "farming",
+      "parking",
+      "bombing",
+      "charm"
+    ],
+    "respell_ga": "CHAR-ming",
+    "respell_rp": "CHAH-ming",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "rhoticity"
+  },
+  {
+    "w": "checkpoint",
+    "ipa": "/ˈtʃɛkˌpɔɪnt/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A place where travelers or vehicles are inspected.",
+    "gloss": {
+      "en": "checkpoint",
+      "ja": "検問所",
+      "zh": "检查站",
+      "ko": "검문소",
+      "fil": "checkpoint"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈtʃekˌpɔɪnt/",
+    "neighbors": [
+      "cashpoint",
+      "viewpoint",
+      "appoint",
+      "checkout",
+      "point"
+    ],
+    "respell_ga": "CHEHK-poynt",
+    "respell_rp": "CHEHK-poynt",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "dress_notation_only"
+  },
+  {
+    "w": "cheeky",
+    "ipa": "/ˈtʃiki/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Disrespectful in a playful or amusing way (chiefly British).",
+    "gloss": {
+      "en": "cheeky",
+      "ja": "生意気な（英）",
+      "zh": "厚脸皮的（英）",
+      "ko": "건방진(영)",
+      "fil": "pilyo"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈtʃiːkiː/",
+    "neighbors": [
+      "cheek",
+      "balky",
+      "cherry",
+      "cd",
+      "cookie",
+      "cv",
+      "hockey",
+      "lucky"
+    ],
+    "respell_ga": "CHEE-kee",
+    "respell_rp": "CHEE-kee",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "length_marking_only"
+  },
+  {
+    "w": "cheerfully",
+    "ipa": "/ˈtʃɪrfəli/",
+    "cefr": "B2",
+    "pos": "副詞",
+    "def": "In a happy, positive way.",
+    "gloss": {
+      "en": "cheerfully",
+      "ja": "陽気に",
+      "zh": "愉快地",
+      "ko": "쾌활하게",
+      "fil": "masayahin"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈtʃɪəfəliː/",
+    "neighbors": [
+      "cheerful",
+      "carefully",
+      "formally",
+      "hopefully",
+      "normally",
+      "symphony",
+      "careful",
+      "cereal"
+    ],
+    "respell_ga": "CHEER-fuh-lee",
+    "respell_rp": "CHEER-fuh-lee",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "rhoticity"
+  },
+  {
+    "w": "cheerfulness",
+    "ipa": "/ˈtʃɪrfəlnəs/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "The quality of being happy and positive.",
+    "gloss": {
+      "en": "cheerfulness",
+      "ja": "陽気さ",
+      "zh": "愉快",
+      "ko": "쾌활함",
+      "fil": "kasayahan"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈtʃɪəfəlnəs/",
+    "neighbors": [
+      "cheerfully",
+      "cheerful"
+    ],
+    "respell_ga": "CHEER-fuhl-nuhs",
+    "respell_rp": "CHEER-fuhl-nuhs",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "rhoticity"
+  },
+  {
+    "w": "chemotherapy",
+    "ipa": "/ˌkimoʊˈθɛrəpi/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "Treatment of disease, especially cancer, using chemicals.",
+    "gloss": {
+      "en": "chemotherapy",
+      "ja": "化学療法",
+      "zh": "化疗",
+      "ko": "화학요법",
+      "fil": "chemotherapy"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˌkiːməʊˈθerəpiː/",
+    "neighbors": [],
+    "respell_ga": "kee-moh-THEH-ruh-pee",
+    "respell_rp": "kee-moh-THEH-ruh-pee",
+    "ga_rp_same": false,
+    "ga_rp_same_reason": "structural_other"
+  },
+  {
+    "w": "cherished",
+    "ipa": "/ˈtʃɛrɪʃt/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Held dear; treasured.",
+    "gloss": {
+      "en": "cherished",
+      "ja": "大切にされた",
+      "zh": "珍视的",
+      "ko": "소중히 여기는",
+      "fil": "minamahal"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈtʃerɪʃt/",
+    "neighbors": [
+      "cherish",
+      "charity"
+    ],
+    "respell_ga": "CHEH-risht",
+    "respell_rp": "CHEH-risht",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "dress_notation_only"
+  },
+  {
+    "w": "cherry",
+    "ipa": "/ˈtʃɛri/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A small, round, red fruit with a pit.",
+    "gloss": {
+      "en": "cherry",
+      "ja": "さくらんぼ",
+      "zh": "樱桃",
+      "ko": "체리",
+      "fil": "seresa"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈtʃeriː/",
+    "neighbors": [
+      "berry",
+      "bury",
+      "fairy",
+      "ferry",
+      "marry",
+      "merry",
+      "vary",
+      "very"
+    ],
+    "respell_ga": "CHEH-ree",
+    "respell_rp": "CHEH-ree",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "notation_composite"
+  },
+  {
+    "w": "childish",
+    "ipa": "/ˈtʃaɪldɪʃ/",
+    "cefr": "B2",
+    "pos": "形容詞",
+    "def": "Behaving in an immature way; typical of a child.",
+    "gloss": {
+      "en": "childish",
+      "ja": "子供っぽい",
+      "zh": "幼稚的",
+      "ko": "유치한",
+      "fil": "parang bata"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈtʃaɪldɪʃ/",
+    "neighbors": [
+      "child"
+    ],
+    "respell_ga": "CHYL-dish",
+    "respell_rp": "CHYL-dish",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "identical"
+  },
+  {
+    "w": "chimney",
+    "ipa": "/ˈtʃɪmni/",
+    "cefr": "B2",
+    "pos": "名詞",
+    "def": "A vertical pipe that carries smoke away from a fire.",
+    "gloss": {
+      "en": "chimney",
+      "ja": "煙突",
+      "zh": "烟囱",
+      "ko": "굴뚝",
+      "fil": "tsimenea"
+    },
+    "src": "cefr",
+    "group": null,
+    "pattern": null,
+    "rp_ipa": "/ˈtʃɪmniː/",
+    "neighbors": [
+      "gimme",
+      "chin"
+    ],
+    "respell_ga": "CHIM-nee",
+    "respell_rp": "CHIM-nee",
+    "ga_rp_same": true,
+    "ga_rp_same_reason": "length_marking_only"
   }
 ]

@@ -839,5 +839,19 @@
     "flags": [
       "R4-VntV-excluded"
     ]
+  },
+  {
+    "w": "candidate",
+    "ipa": "/ˈkændəˌdeɪt/",
+    "flags": [
+      "R4-VntV-excluded"
+    ]
+  },
+  {
+    "w": "centigrade",
+    "ipa": "/ˈsɛntəˌɡreɪd/",
+    "flags": [
+      "R4-VntV-excluded"
+    ]
   }
 ]

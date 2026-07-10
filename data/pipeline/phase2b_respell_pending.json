@@ -660,15 +660,27 @@
     "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see data/pipeline/phase2a_review_needed.json)"
   },
   {
+    "w": "antiaircraft",
+    "respell_ga": "an-tee-ER-kraft",
+    "respell_rp": "an-tee-AIR-kraft",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see data/pipeline/phase2a_review_needed.json)"
+  },
+  {
     "w": "antibacterial",
     "respell_ga": "an-tee-bak-TI-ree-uhl",
     "respell_rp": "an-tee-bak-TI-ree-uhl",
     "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see data/pipeline/phase2a_review_needed.json)"
   },
   {
+    "w": "anticancer",
+    "respell_ga": "an-tee-KAN-ser",
+    "respell_rp": "an-tee-KAN-suh",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see data/pipeline/phase2a_review_needed.json)"
+  },
+  {
     "w": "anticipation",
     "respell_ga": "an-ti-suh-PAY-shuhn",
-    "respell_rp": "an-ti-suh-PAY-shuhn",
+    "respell_rp": "an-ti-si-PAY-shuhn",
     "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see data/pipeline/phase2a_review_needed.json)"
   },
   {
@@ -686,7 +698,37 @@
   {
     "w": "antivirus",
     "respell_ga": "an-tee-VY-ruhs",
-    "respell_rp": "an-tee-VY-ruhs",
+    "respell_rp": "an-ti-VY-ruhs",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see data/pipeline/phase2a_review_needed.json)"
+  },
+  {
+    "w": "attentive",
+    "respell_ga": "uh-TEHN-tiv",
+    "respell_rp": "uh-TEHN-tiv",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see data/pipeline/phase2a_review_needed.json)"
+  },
+  {
+    "w": "attentively",
+    "respell_ga": "uh-TEHN-tiv-lee",
+    "respell_rp": "uh-TEHN-tiv-lee",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see data/pipeline/phase2a_review_needed.json)"
+  },
+  {
+    "w": "bartender",
+    "respell_ga": "BAR-dehn-der",
+    "respell_rp": "BAH-tehn-duh",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see data/pipeline/phase2a_review_needed.json)"
+  },
+  {
+    "w": "candidate",
+    "respell_ga": "KAN-duh-dayt",
+    "respell_rp": "KAN-duh-dayt",
+    "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see data/pipeline/phase2a_review_needed.json)"
+  },
+  {
+    "w": "centigrade",
+    "respell_ga": "SEHN-tuh-grayd",
+    "respell_rp": "SEHN-tuh-grayd",
     "note": "tentative — GA narrow IPA not yet confirmed by TTS review (see data/pipeline/phase2a_review_needed.json)"
   }
 ]

@@ -2782,5 +2782,101 @@
     "ipa": "/ˈbɪdɪŋ/",
     "ipa_actual_ga": "/ˈbɪɾɪŋ/",
     "rule": "R1"
+  },
+  {
+    "w": "biotechnology",
+    "ipa": "/ˌbaɪoʊtɛkˈnɑlədʒi/",
+    "ipa_actual_ga": "/ˌbaɪoʊɾɛkˈnɑlədʒi/",
+    "rule": "R1"
+  },
+  {
+    "w": "bitterly",
+    "ipa": "/ˈbɪtɚli/",
+    "ipa_actual_ga": "/ˈbɪɾɚli/",
+    "rule": "R1"
+  },
+  {
+    "w": "bloody",
+    "ipa": "/ˈblʌdi/",
+    "ipa_actual_ga": "/ˈblʌɾi/",
+    "rule": "R1"
+  },
+  {
+    "w": "botany",
+    "ipa": "/ˈbɑtəni/",
+    "ipa_actual_ga": "/ˈbɑɾəni/",
+    "rule": "R1"
+  },
+  {
+    "w": "broaden",
+    "ipa": "/ˈbrɔdən/",
+    "ipa_actual_ga": "/ˈbrɔdn̩/",
+    "rule": "R3"
+  },
+  {
+    "w": "burdensome",
+    "ipa": "/ˈbɝdənsəm/",
+    "ipa_actual_ga": "/ˈbɝdn̩səm/",
+    "rule": "R3"
+  },
+  {
+    "w": "candidate",
+    "ipa": "/ˈkændəˌdeɪt/",
+    "ipa_actual_ga": "/ˈkændəˌɾeɪt/",
+    "rule": "R1"
+  },
+  {
+    "w": "capability",
+    "ipa": "/ˌkeɪpəˈbɪləti/",
+    "ipa_actual_ga": "/ˌkeɪpəˈbɪləɾi/",
+    "rule": "R1"
+  },
+  {
+    "w": "cardigan",
+    "ipa": "/ˈkɑrdəɡən/",
+    "ipa_actual_ga": "/ˈkɑrɾəɡən/",
+    "rule": "R1"
+  },
+  {
+    "w": "catalyst",
+    "ipa": "/ˈkætələst/",
+    "ipa_actual_ga": "/ˈkæɾələst/",
+    "rule": "R1"
+  },
+  {
+    "w": "catastrophic",
+    "ipa": "/ˌkætəˈstrɑfɪk/",
+    "ipa_actual_ga": "/ˌkæɾəˈstrɑfɪk/",
+    "rule": "R1"
+  },
+  {
+    "w": "catering",
+    "ipa": "/ˈkeɪtɚɪŋ/",
+    "ipa_actual_ga": "/ˈkeɪɾɚɪŋ/",
+    "rule": "R1"
+  },
+  {
+    "w": "cemetery",
+    "ipa": "/ˈsɛməˌtɛri/",
+    "ipa_actual_ga": "/ˈsɛməˌɾɛri/",
+    "rule": "R1"
+  },
+  {
+    "w": "certification",
+    "ipa": "/ˌsɚtəfəˈkeɪʃən/",
+    "ipa_actual_ga": "/ˌsɚɾəfəˈkeɪʃən/",
+    "rule": "R1"
+  },
+  {
+    "w": "certify",
+    "ipa": "/ˈsɝtəˌfaɪ/",
+    "ipa_actual_ga": "/ˈsɝɾəˌfaɪ/",
+    "rule": "R1"
+  },
+  {
+    "w": "chaotic",
+    "ipa": "/keɪˈɑtɪk/",
+    "ipa_actual_ga": "/keɪˈɑɾɪk/",
+    "rule": "R1"
   }
 ]
