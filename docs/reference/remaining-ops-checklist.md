@@ -14,7 +14,7 @@ GitHub Pages（静的）: https://nkhippo.github.io/IPASoundDrill/
 | # | 作業 | 手順の正本 | 完了条件 |
 |---|------|------------|----------|
 | A1 | GAS エディタに最新 `gas/Code.gs` を反映し、**ウェブアプリを新しいバージョンとして再デプロイ** | [`gas/README.md`](../../gas/README.md)、[`cursor/reports/cursor-implementation-report-phase-t.md`](../cursor/reports/cursor-implementation-report-phase-t.md) §5 | `?urls=1` が Drive 公開 URL を返す |
-| A2 | エディタで **`migratePublicSharing()` を実行**（既存 Drive MP3 を `ANYONE_WITH_LINK` 化）。**複数回実行が必要** — 約 5.5 分で PAUSED したら再実行し、ログが DONE になるまで続ける。やり直しは `resetMigratePublicSharing()` | 同上 / `gas/Code.gs` | 既存キャッシュ語もクライアント直 fetch 可能 |
+| A2 | エディタで **`migratePublicSharing()`**（既存 Drive MP3 を `ANYONE_WITH_LINK` 化）。GAS 6 分上限のため複数チャンク必要。**推奨:** `installMigratePublicTrigger(5)` を 1 回実行して放置（DONE で自動解除）。手動なら PAUSED のたびに再実行。やり直しは `resetMigratePublicSharing()` | 同上 / `gas/Code.gs` | ログが DONE |
 | A3 | `index.html` の `GAS_TTS_URL` は**原則変更不要**（再デプロイで同一 `/exec` を維持する運用）。**今回のデプロイ URL は `index.html` に反映済み**（変わった場合のみ再更新） | Phase T レポート §5 / `index.html` | Pages 上のアプリが新デプロイを叩く |
 
 **注意:** リポジトリ上の `Code.gs` は Phase T 済みでも、**Apps Script 側に未反映なら `?urls=1` は効かない**（従来の base64 経路にフォールバック）。

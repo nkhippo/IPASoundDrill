@@ -318,8 +318,10 @@ function handleUrls_(e) {
 
 /**
  * Resumable: make IPA-TTS-Audio files publicly readable.
- * Stops after ~5.5 min and saves a Drive continuation token in Script Properties.
- * Re-run until logs show DONE. Use resetMigratePublicSharing() to start over.
+ * Drive setSharing is slow (~50–80 files/min) and GAS hard-caps at 6 min, so one run
+ * cannot finish a large folder. Options:
+ *   A) Re-run migratePublicSharing() manually until DONE
+ *   B) installMigratePublicTrigger(5) — auto-continues every N minutes (recommended)
  *
  * Props: MIGRATE_PUBLIC_CONT_TOKEN, MIGRATE_PUBLIC_DONE, MIGRATE_PUBLIC_STATS
  */
@@ -328,10 +330,11 @@ function migratePublicSharing() {
   if (props.getProperty('MIGRATE_PUBLIC_DONE') === '1') {
     const prev = props.getProperty('MIGRATE_PUBLIC_STATS') || '';
     Logger.log('DONE (already finished). Stats: ' + prev + '. Call resetMigratePublicSharing() to re-run.');
+    uninstallMigratePublicTrigger_();
     return;
   }
 
-  const MAX_MS = 5.5 * 60 * 1000;
+  const MAX_MS = 5.75 * 60 * 1000;
   const started = Date.now();
   const folder = getFolder_();
 
@@ -358,7 +361,7 @@ function migratePublicSharing() {
         ' ok=' + stats.ok +
         ' skipped=' + stats.skipped +
         ' ng=' + stats.ng +
-        '. Re-run migratePublicSharing() to continue.'
+        '. Re-run migratePublicSharing() OR wait for installMigratePublicTrigger.'
       );
       return;
     }
@@ -384,18 +387,20 @@ function migratePublicSharing() {
         ', skipped=' + stats.skipped +
         ', ng=' + stats.ng + ')'
       );
+      props.setProperty('MIGRATE_PUBLIC_STATS', JSON.stringify(stats));
     }
   }
 
   props.deleteProperty('MIGRATE_PUBLIC_CONT_TOKEN');
   props.setProperty('MIGRATE_PUBLIC_DONE', '1');
   props.setProperty('MIGRATE_PUBLIC_STATS', JSON.stringify(stats));
+  uninstallMigratePublicTrigger_();
   Logger.log(
     'DONE: ' + stats.n +
     ' files, ' + stats.ok +
     ' public, ' + stats.skipped +
     ' skipped, ' + stats.ng +
-    ' failed'
+    ' failed. Trigger auto-removed if present.'
   );
 }
 
@@ -406,6 +411,42 @@ function resetMigratePublicSharing() {
   props.deleteProperty('MIGRATE_PUBLIC_DONE');
   props.deleteProperty('MIGRATE_PUBLIC_STATS');
   Logger.log('Migrate public sharing state reset. Run migratePublicSharing() to start fresh.');
+}
+
+/**
+ * Auto-continue migrate every N minutes (1/5/10/15/30). Recommended: 5.
+ * You can leave the editor; check Executions later for DONE.
+ */
+function installMigratePublicTrigger(everyMinutes) {
+  const allowed = [1, 5, 10, 15, 30];
+  let minutes = parseInt(everyMinutes, 10) || 5;
+  if (allowed.indexOf(minutes) === -1) {
+    minutes = allowed.reduce(function(best, n) {
+      return Math.abs(n - minutes) < Math.abs(best - minutes) ? n : best;
+    }, 5);
+  }
+  uninstallMigratePublicTrigger_();
+  ScriptApp.newTrigger('migratePublicSharing')
+    .timeBased()
+    .everyMinutes(minutes)
+    .create();
+  Logger.log('installMigratePublicTrigger: every ' + minutes +
+    ' min. Leave it running until DONE; it uninstalls itself.');
+}
+
+/** Stop auto-continue (also called automatically on DONE). */
+function uninstallMigratePublicTrigger() {
+  uninstallMigratePublicTrigger_();
+  Logger.log('uninstallMigratePublicTrigger: done');
+}
+
+function uninstallMigratePublicTrigger_() {
+  const triggers = ScriptApp.getProjectTriggers();
+  for (let i = 0; i < triggers.length; i++) {
+    if (triggers[i].getHandlerFunction() === 'migratePublicSharing') {
+      ScriptApp.deleteTrigger(triggers[i]);
+    }
+  }
 }
 
 function doGet(e) {
