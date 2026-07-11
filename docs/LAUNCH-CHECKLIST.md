@@ -2,7 +2,7 @@
 
 - **ターゲット公開日**: 2026-07-20（海の日）
 - **公開 URL**: https://ipasounddrill.app
-- **リポジトリ**: https://github.com/nkhippo/ipasounddrill
+- **リポジトリ**: https://github.com/nkhippo/IPASoundDrill
 
 このファイルはローンチまでの日次タスク管理。各タスクは Issue として起票し、URL を右端に記録する。全ての作業は Track A 範囲内。Track B のスコープはローンチ後に別 CHECKLIST を作成する。
 
@@ -30,7 +30,7 @@
 - [ ] PR #1 マージ後、Branch Protection on `main` 設定（PR 経由必須、force push 禁止）
 - [ ] GitHub Secrets 登録: `CURSOR_AUTOMATION_WEBHOOK_URL` / `CURSOR_AUTOMATION_WEBHOOK_TOKEN`
 - [ ] Issue #2 起票: `chore: Vercel + rename + custom domain migration` — Vercel 移管 Issue 草稿を Claude が MCP 経由で起票
-- [ ] リポリネーム実施: `English-Pronunciation-Trainer` → `ipasounddrill`
+- [x] リポ名は `IPASoundDrill` で確定（`ipasounddrill` へのリネームは実施しない）
 - [ ] ローカル環境の remote 更新（Naoya + Cursor 側）
 - [ ] Vercel プロジェクト作成、リポ接続
 - [ ] Vercel カスタムドメイン設定（`ipasounddrill.app`）、DNS 設定

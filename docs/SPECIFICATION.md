@@ -185,7 +185,7 @@
 
 ### 3.3 デプロイ
 
-- **本番 URL:** https://nkhippo.github.io/IPASoundDrill/
+- **本番 URL:** https://ipasounddrill.app/
 - **ローカル:** `python3 -m http.server 8080`（`file://` 不可）
 - **GAS:** `gas/README.md` 参照。`index.html` の `GAS_TTS_URL` に Web App URL を設定。Phase T（`?urls=1` / `migratePublicSharing`）の手動手順は `docs/reference/remaining-ops-checklist.md`
 
