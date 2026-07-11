@@ -227,4 +227,7 @@ Repository Settings > Secrets and variables > Actions:
 - **Tally**: （Day 5 実装後に記入）
 - **Hostinger**: https://hpanel.hostinger.com/
 - **GAS**: https://script.google.com/ （Naoya アカウント）
-- **Railway (MCP)**: https://railway.app/project/xxx （Day 3 実装後に記入）
+- **Railway (MCP service)**: https://ipasounddrill-production.up.railway.app
+- **Railway (MCP endpoint)**: https://ipasounddrill-production.up.railway.app/mcp
+- **MCP コードリポ**: https://github.com/nkhippo/ipasounddrill-mcp
+- **claude.ai コネクタ名**: `IPASoundDrill GitHub`
