@@ -729,6 +729,8 @@ function normalizeWord(row) {
   if (row.def) w.def = row.def;
   if (row.neighbors) w.neighbors = row.neighbors;
   if (row.neighbors_rp) w.neighbors_rp = row.neighbors_rp;
+  if (row.ga_rp_same != null) w.ga_rp_same = row.ga_rp_same;
+  if (row.ga_rp_same_reason) w.ga_rp_same_reason = row.ga_rp_same_reason;
   return w;
 }
 
@@ -757,6 +759,8 @@ function normalizeConnected(row) {
   if (row.cefr) c.cefr = row.cefr;
   if (row.rp_ipa) c.rp_ipa = row.rp_ipa;
   if (row.carriers) c.carriers = row.carriers;
+  if (row.ga_rp_same != null) c.ga_rp_same = row.ga_rp_same;
+  if (row.ga_rp_same_reason) c.ga_rp_same_reason = row.ga_rp_same_reason;
   return c;
 }
 
@@ -790,6 +794,8 @@ function normalizeWeak(row) {
   if (row.cefr) c.cefr = row.cefr;
   if (row.rp_ipa) c.rp_ipa = row.rp_ipa;
   if (row.rp_ipa_strong) c.rp_ipa_strong = row.rp_ipa_strong;
+  if (row.ga_rp_same != null) c.ga_rp_same = row.ga_rp_same;
+  if (row.ga_rp_same_reason) c.ga_rp_same_reason = row.ga_rp_same_reason;
   return c;
 }
 
