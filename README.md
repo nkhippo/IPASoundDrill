@@ -4,7 +4,11 @@ CEFR 向けの IPA 音写トレーナー（General American / Received Pronuncia
 
 ## デモ
 
-GitHub Pages: https://ipasounddrill.app/
+- **Live**: https://ipasounddrill.app
+- **Docs**: [docs/README.md](docs/README.md)
+- **Purpose**: [docs/PURPOSE.md](docs/PURPOSE.md)
+
+本番は Vercel + カスタムドメイン。リポジトリ名の正は `IPASoundDrill`。
 
 ## 機能
 
@@ -41,9 +45,11 @@ GitHub Pages: https://ipasounddrill.app/
 | `scripts/paths.py` | パイプライン用パス正本 |
 | `gas/` | TTS プロキシ（`gas/README.md`） |
 
-## ローカル確認
+## 開発 / ローカル確認
 
 ```bash
+git clone git@github.com:nkhippo/IPASoundDrill.git
+cd IPASoundDrill
 python3 -m http.server 8080
 # http://localhost:8080
 ```
