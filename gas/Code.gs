@@ -316,24 +316,96 @@ function handleUrls_(e) {
   return jsonResponse_({ ok: true, accent: accent, results: results });
 }
 
-/** One-shot: make all existing IPA-TTS-Audio files publicly readable. Run once from the editor. */
+/**
+ * Resumable: make IPA-TTS-Audio files publicly readable.
+ * Stops after ~5.5 min and saves a Drive continuation token in Script Properties.
+ * Re-run until logs show DONE. Use resetMigratePublicSharing() to start over.
+ *
+ * Props: MIGRATE_PUBLIC_CONT_TOKEN, MIGRATE_PUBLIC_DONE, MIGRATE_PUBLIC_STATS
+ */
 function migratePublicSharing() {
+  const props = PropertiesService.getScriptProperties();
+  if (props.getProperty('MIGRATE_PUBLIC_DONE') === '1') {
+    const prev = props.getProperty('MIGRATE_PUBLIC_STATS') || '';
+    Logger.log('DONE (already finished). Stats: ' + prev + '. Call resetMigratePublicSharing() to re-run.');
+    return;
+  }
+
+  const MAX_MS = 5.5 * 60 * 1000;
+  const started = Date.now();
   const folder = getFolder_();
-  const files = folder.getFiles();
-  let n = 0, ok = 0, ng = 0;
+
+  let files;
+  const token = props.getProperty('MIGRATE_PUBLIC_CONT_TOKEN');
+  if (token) {
+    files = DriveApp.continueFileIterator(token);
+  } else {
+    files = folder.getFiles();
+  }
+
+  let stats = { n: 0, ok: 0, ng: 0, skipped: 0 };
+  try {
+    const raw = props.getProperty('MIGRATE_PUBLIC_STATS');
+    if (raw) stats = JSON.parse(raw);
+  } catch (e) {}
+
   while (files.hasNext()) {
-    n++;
+    if (Date.now() - started > MAX_MS) {
+      props.setProperty('MIGRATE_PUBLIC_CONT_TOKEN', files.getContinuationToken());
+      props.setProperty('MIGRATE_PUBLIC_STATS', JSON.stringify(stats));
+      Logger.log(
+        'PAUSED: n=' + stats.n +
+        ' ok=' + stats.ok +
+        ' skipped=' + stats.skipped +
+        ' ng=' + stats.ng +
+        '. Re-run migratePublicSharing() to continue.'
+      );
+      return;
+    }
+
     const f = files.next();
+    stats.n++;
     try {
-      f.setSharing(DriveApp.Access.ANYONE_WITH_LINK, DriveApp.Permission.VIEW);
-      ok++;
+      const access = f.getSharingAccess();
+      if (access === DriveApp.Access.ANYONE || access === DriveApp.Access.ANYONE_WITH_LINK) {
+        stats.skipped++;
+      } else {
+        f.setSharing(DriveApp.Access.ANYONE_WITH_LINK, DriveApp.Permission.VIEW);
+        stats.ok++;
+      }
     } catch (e) {
-      ng++;
+      stats.ng++;
       Logger.log('migrate failed for ' + f.getName() + ': ' + e);
     }
-    if (n % 100 === 0) Logger.log('progress: ' + n + ' (' + ok + ' ok, ' + ng + ' failed)');
+    if (stats.n % 100 === 0) {
+      Logger.log(
+        'progress: ' + stats.n +
+        ' (ok=' + stats.ok +
+        ', skipped=' + stats.skipped +
+        ', ng=' + stats.ng + ')'
+      );
+    }
   }
-  Logger.log('DONE: ' + n + ' files, ' + ok + ' public, ' + ng + ' failed');
+
+  props.deleteProperty('MIGRATE_PUBLIC_CONT_TOKEN');
+  props.setProperty('MIGRATE_PUBLIC_DONE', '1');
+  props.setProperty('MIGRATE_PUBLIC_STATS', JSON.stringify(stats));
+  Logger.log(
+    'DONE: ' + stats.n +
+    ' files, ' + stats.ok +
+    ' public, ' + stats.skipped +
+    ' skipped, ' + stats.ng +
+    ' failed'
+  );
+}
+
+/** Clear migrate continuation state so migratePublicSharing() starts from scratch. */
+function resetMigratePublicSharing() {
+  const props = PropertiesService.getScriptProperties();
+  props.deleteProperty('MIGRATE_PUBLIC_CONT_TOKEN');
+  props.deleteProperty('MIGRATE_PUBLIC_DONE');
+  props.deleteProperty('MIGRATE_PUBLIC_STATS');
+  Logger.log('Migrate public sharing state reset. Run migratePublicSharing() to start fresh.');
 }
 
 function doGet(e) {
