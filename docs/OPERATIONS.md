@@ -229,4 +229,7 @@ Repository Settings > Secrets and variables > Actions:
 - **Tally**: （Day 5 実装後に記入）
 - **Namecheap**: https://ap.www.namecheap.com/domains/list/
 - **GAS**: https://script.google.com/（Naoya アカウント）
-- **Railway (MCP)**: （Issue D / MCP Railway 実装後に記入）
+- **Railway (MCP service)**: https://ipasounddrill-production.up.railway.app
+- **Railway (MCP endpoint)**: https://ipasounddrill-production.up.railway.app/mcp
+- **MCP コードリポ**: https://github.com/nkhippo/ipasounddrill-mcp
+- **claude.ai コネクタ名**: `IPASoundDrill GitHub`
