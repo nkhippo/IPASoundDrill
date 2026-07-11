@@ -2,7 +2,7 @@
 
 ## 関連 Issue / PR
 - Issue: #12
-- PR: #(作成後)
+- PR: #14（マージ済み）
 - MCP リポ: https://github.com/nkhippo/ipasounddrill-mcp
 
 ## 実装内容
@@ -29,6 +29,7 @@
 - `MCP_API_BASE_URL=https://ipasounddrill-production.up.railway.app`
 - `GITHUB_CLIENT_ID` / `GITHUB_CLIENT_SECRET`（専用 OAuth App）
 
-## 残課題・申し送り
+## 残課題・申し送り（2026-07-12 更新）
 - 試験 Issue #13 を Close（任意）
-- OPERATIONS の Hostinger / Vercel 小文字 URL は Issue #10 / PR #11 側で別途統一中
+- OPERATIONS の Namecheap / Vercel URL 統一: Issue #10 / PR #11 で完了
+- Branch Protection / Cursor Secrets: **完了**（Automation webhook 疎通は Cloud 枠 `resource_exhausted` のためエージェント起動は見送り・現状 OK）
