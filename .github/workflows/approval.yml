@@ -1,0 +1,79 @@
+name: PR Approval Handler
+
+on:
+  issue_comment:
+    types: [created]
+
+permissions:
+  pull-requests: write
+  contents: write
+
+jobs:
+  handle-comment:
+    if: github.event.issue.pull_request != null
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check authorized user
+        if: github.event.comment.user.login != 'nkhippo'
+        run: |
+          echo "Unauthorized user. Skipping."
+          exit 0
+
+      - name: Detect comment intent
+        id: intent
+        run: |
+          BODY=$(printf '%s' '${{ github.event.comment.body }}' | tr -d '\r')
+          BODY_LOWER=$(echo "$BODY" | tr '[:upper:]' '[:lower:]' | xargs)
+
+          if echo "$BODY_LOWER" | grep -qE "^(approve|ok|lgtm)$" || \
+             echo "$BODY" | grep -qE "^(👍|✅)$"; then
+            echo "action=approve" >> "$GITHUB_OUTPUT"
+          elif echo "$BODY_LOWER" | grep -qE "^(修正依頼:|要修正:|change request:)"; then
+            echo "action=revision" >> "$GITHUB_OUTPUT"
+          else
+            echo "action=none" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Remove needs-review on approve
+        if: |
+          github.event.comment.user.login == 'nkhippo' &&
+          steps.intent.outputs.action == 'approve'
+        run: |
+          PR_NUMBER=$(jq -r '.issue.number' "$GITHUB_EVENT_PATH")
+          gh pr edit "$PR_NUMBER" \
+            --remove-label "needs-review" \
+            --remove-label "waiting-for-review" \
+            --repo ${{ github.repository }} 2>/dev/null || true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Merge on approve
+        if: |
+          github.event.comment.user.login == 'nkhippo' &&
+          steps.intent.outputs.action == 'approve'
+        run: |
+          PR_NUMBER=$(jq -r '.issue.number' "$GITHUB_EVENT_PATH")
+          gh pr merge "$PR_NUMBER" \
+            --squash \
+            --delete-branch \
+            --repo ${{ github.repository }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Handle revision request
+        if: |
+          github.event.comment.user.login == 'nkhippo' &&
+          steps.intent.outputs.action == 'revision'
+        run: |
+          PR_NUMBER=$(jq -r '.issue.number' "$GITHUB_EVENT_PATH")
+          gh pr edit "$PR_NUMBER" \
+            --add-label "revision-requested" \
+            --remove-label "waiting-for-review" \
+            --remove-label "needs-review" \
+            --repo ${{ github.repository }}
+          gh pr comment "$PR_NUMBER" \
+            --body "🔄 修正依頼を受け付けました。Cursor が対応します。" \
+            --repo ${{ github.repository }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

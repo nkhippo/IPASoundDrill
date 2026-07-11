@@ -1,0 +1,66 @@
+name: Label PR needs-review
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize, closed]
+
+permissions:
+  pull-requests: write
+  issues: write
+
+jobs:
+  add-needs-review:
+    if: >-
+      github.event.action != 'closed' &&
+      github.event.pull_request.user.login != 'nkhippo'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ensure needs-review label exists
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh label create "needs-review" \
+            --description "Awaiting Naoya review (Cursor PR)" \
+            --color "BFD4F2" \
+            --repo "${{ github.repository }}" 2>/dev/null || true
+
+      - name: Add needs-review for bot or automation PRs
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          AUTHOR="${{ github.event.pull_request.user.login }}"
+          AUTHOR_TYPE="${{ github.event.pull_request.user.type }}"
+
+          is_bot=false
+          if [ "$AUTHOR_TYPE" = "Bot" ]; then
+            is_bot=true
+          fi
+          if [ "$AUTHOR" = "github-actions[bot]" ]; then
+            is_bot=true
+          fi
+          case "$AUTHOR" in
+            cursor[bot]|Cursor[bot]|cursor-agent[bot]) is_bot=true ;;
+          esac
+
+          if [ "$is_bot" != "true" ]; then
+            echo "Author ${AUTHOR} is not a bot/automation user. Skipping needs-review."
+            exit 0
+          fi
+
+          gh pr edit "${{ github.event.pull_request.number }}" \
+            --add-label "needs-review" \
+            --repo "${{ github.repository }}"
+
+  remove-needs-review-on-merge:
+    if: >-
+      github.event.action == 'closed' &&
+      github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+      - name: Remove needs-review after merge
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh pr edit "${{ github.event.pull_request.number }}" \
+            --remove-label "needs-review" \
+            --repo "${{ github.repository }}" 2>/dev/null || true

@@ -1,0 +1,415 @@
+---
+description: ipasounddrill の開発フロー・実装ルール
+globs: ["**/*.html", "**/*.js", "**/*.css", "**/*.json", "**/*.py", "gas/**/*.gs"]
+alwaysApply: true
+---
+
+## このファイルの位置づけ
+
+このルールは **`CLAUDE.md` の開発フロー Step 2〜3（設計懸念点検〜実装）を Cursor 視点で詳述した**ものです。
+
+- 全体フロー・分割判断・タイプ判定は `CLAUDE.md` を参照
+- ドキュメント編集・仕様書の品質基準は `CLAUDE.md` の「## 品質基準」セクションを参照
+- Bug 対応の根本原因記録は `docs/bug-knowledge.md` を参照
+- Bug Issue テンプレは `.github/ISSUE_TEMPLATE/bug.md` を参照
+- ランタイム契約・データ整合性は `CLAUDE.md` の「## 品質基準」§3-4 と `docs/REPOSITORY-STRUCTURE.md` を参照
+
+> 矛盾を見つけた場合は **`CLAUDE.md` が正**。Issue Comment で Naoya に報告すること。
+
+---
+
+# Cursor 開発フロールール — ipasounddrill
+
+## あなたの役割
+
+ソースコードの実装、データ整備、および `docs/cursor/` 配下の履歴ドキュメント整備を担当します。
+Naoya（PM）が GitHub Issue URL を渡します（仕様の正本は Issue 本文）。
+タイプ B の一部でのみ `docs/cursor/instructions/` の指示書を追加参照します。
+「設計懸念点検 → 実装 → PR 作成 → 実装レポート追加」の順で作業します。
+
+---
+
+## 実装前に必ずやること（この順番で）
+
+### 事前確認 1: GitHub Issue を確認（正本・最重要）
+
+Issue 本文に実装仕様・完了定義・チェックリストがすべて記載されている。
+
+- Issue URL を開く、または `gh issue view <番号> --repo nkhippo/ipasounddrill` で最新本文を取得する
+- 実装範囲・完了定義・チェックリスト・非対象範囲を把握する
+- Issue 内の `docs/cursor/instructions/` リンクの有無でタイプを判断する
+- Issue のラベルを確認する：
+  - `launch-blocker` → Track A、7/20 までに必須
+  - `track-b` → Track B、ローンチ後
+  - `feature` / `bug` / `docs` / `chore` → 変更種別
+
+### 事前確認 2: タイプに応じた追加参照
+
+| タイプ | 参照先 |
+|--------|--------|
+| A（軽微） | Issue 本文のみ |
+| B（標準・指示書なし） | Issue 本文 + 関連する `docs/PURPOSE.md` / `DESIGN.md` / `SPECIFICATION.md` の該当セクション |
+| B（標準・指示書あり） | 上記 + `docs/cursor/instructions/cursor-instructions-<topic>.md` |
+
+`docs/cursor/reports/` の過去実装レポートは、類似作業がある場合に強く推奨。同じミスを繰り返さないため。
+
+### 事前確認 3: 既存コード・データを確認
+
+- 関連する `index.html` のセクション（Decode / Encode / Mode B / vocab browser / progress checks 等）
+- 関連する `data/*.json` / `wordlist_GA_a1a2_plus_phonics.json` の構造
+- 関連する `scripts/*.py`（データ生成パイプライン）
+
+### 事前確認 4: ランタイム契約への影響確認
+
+以下のファイルに触る場合、必ず影響範囲を Issue Comment に報告してから実装する:
+
+- `wordlist_GA_a1a2_plus_phonics.json`（ルート）
+- `data/{connected_speech,weak_forms,guide}.json`
+- `i18n/*.json` / `i18n/phonemes/*.json`
+- `fonts/DoulosSIL-Regular.woff2`
+- `index.html` 内の `GAS_TTS_URL`
+
+---
+
+## 実装中に Issue が更新されたとき
+
+Naoya が実装中に Issue 本文を更新した場合、**最初に読んだ内容だけを正としない**。
+
+1. Issue を再取得する（`gh issue view <番号> --repo nkhippo/ipasounddrill`）
+2. 追記・変更された完了定義・実装範囲・チェックリストを確認する
+3. すでに実装済みの内容と矛盾する場合は、実装を止めて Issue Comment で Naoya に確認する
+4. Naoya が Chat で「Issue を更新した」と伝えた場合も、上記 1〜3 を必ず行う
+
+PR 作成前に、Issue 本文のチェックリストと実装内容が一致していることを確認する。
+
+---
+
+## 設計懸念点検フェーズ（Step 2）
+
+> Issue のラベルに `launch-blocker` があるか、影響ファイルが複数ある場合、実装より前に必ずこのフェーズを完了させる。
+> タイプ A の単純なタスク（1ファイルの typo 修正など）はこのフェーズを省略してよい。
+
+### 点検の観点
+
+Issue 本文の記述が曖昧で、Cursor が異なる実装をしうる箇所、または UX・運用・データ整合性が現状と変わる可能性がある箇所を列挙する。
+
+#### 点検カテゴリ A: 解釈が複数生まれる箇所
+
+| # | 対象ファイル・箇所 | 解釈A | 解釈B | Cursor の採用案 |
+|---|-----------------|-------|-------|---------------|
+| 1 | Issue「音の距離が近い場合」 | `neighborDistance < 2` | `neighborDistance <= 2` | `< 2` |
+
+> 採用案は「Cursor が選んだ解釈」を明示する。Naoya が判断するための材料として提示する。
+
+#### 点検カテゴリ B: UX・運用・データ整合性が変わりうる懸念
+
+| # | 懸念内容 | 現状の動作・運用 | 変更後の動作・運用 | 影響度 |
+|---|---------|--------------|-----------------|--------|
+| 1 | Decode モードの正解判定の閾値変更 | 3文字以上一致 | 完全一致 | 大 |
+
+影響度の基準:
+
+- **大**: ユーザー体験フローが変わる / 既存の運用手順が変わる / ランタイム契約に影響 / データ整合性が変わる
+- **中**: 見た目・文言が変わる / 任意の操作手順が変わる
+- **小**: 内部実装のみ（ユーザーには見えない）
+
+> ⚠️ 影響度の判断に迷ったら「大」とする（持ち帰り側に倒す）。
+
+### 点検結果の出力
+
+以下の形式で Issue Comment に投稿する:
+
+```markdown
+🛠️ **Cursor より**
+
+## 設計懸念点検結果（Step 2）
+
+### カテゴリ A: 解釈確定が必要な箇所
+（該当があれば表を貼る、なければ「なし」）
+
+### カテゴリ B: UX・運用・データ整合性の懸念
+（該当があれば表を貼る、なければ「なし」）
+
+### 判定
+- カテゴリ A 該当件数: X
+- カテゴリ B 影響度「大」該当件数: Y
+- 判定: [持ち帰り / 実装続行]
+
+---
+_Cursor による自動投稿_
+```
+
+### 持ち帰り判定
+
+以下のいずれかに該当する場合、**実装を開始せず** Naoya に持ち帰る:
+
+- カテゴリ A に 1 件以上ある
+- カテゴリ B に影響度「大」が 1 件以上ある
+
+該当しない場合は Step 3（実装）に直行してよい。
+
+---
+
+## 実装フェーズ（Step 3）
+
+### ファイル操作
+
+```
+✅ やること
+- 新機能は既存の index.html 内の新規セクション、または新規 JSON ファイルで実装
+  - UI: index.html の対応セクション（Decode / Encode / Mode B / vocab browser 等）
+  - データ: data/ 配下に新規 JSON ファイル
+  - 生成スクリプト: scripts/ 配下に新規 Python ファイル
+- data/pipeline/ / data/derived/ は生成物置き場、直接編集しない
+- 実装レポートは PR 作成時に必ず docs/cursor/reports/ に追加する
+
+❌ やらないこと
+- data/archive/ 配下を編集する（履歴退避）
+- docs/archive/ 配下を編集する（旧ドキュメント退避）
+- REPOSITORY-STRUCTURE.md の Runtime data contract に列挙されたパスを、Issue で明示されていないのに変更する
+- 既存の scripts/paths.py のパス定義を変更する（拡張のみ可）
+```
+
+### コード品質
+
+```
+✅ 必須
+- JavaScript の新規関数には JSDoc コメント（引数・戻り値の型）
+- Python スクリプトには docstring
+- エラーハンドリング（try/catch / try except）
+- fetch は async/await、エラー時はユーザーに通知
+
+❌ 禁止
+- console.log をコードに残す（デバッグ用は必ず削除）
+- 未使用の変数・関数を残す
+- ハードコードされた URL（GAS_TTS_URL 以外）
+- インライン color/font/size 値の新規追加（既存の CSS 変数を使う。ない場合は Naoya に確認）
+```
+
+### データ整合性チェック（実装完了前に必ず実行）
+
+`wordlist_GA_a1a2_plus_phonics.json` に触る変更を行った場合:
+
+```bash
+# 総語数と CEFR 別内訳
+python3 -c "import json; w=json.load(open('wordlist_GA_a1a2_plus_phonics.json')); from collections import Counter; print('Total:', len(w)); print(Counter([x.get('cefr') for x in w]))"
+
+# rp_ipa 付与率
+python3 -c "import json; w=json.load(open('wordlist_GA_a1a2_plus_phonics.json')); print('rp_ipa:', sum(1 for x in w if x.get('rp_ipa')))"
+
+# ga_rp_same 再生成（触ったなら必ず実行）
+python3 scripts/gen_ga_rp_same.py --report data/pipeline/ga_rp_same_report.json
+```
+
+`i18n/*.json` に触った場合:
+
+```bash
+python3 tools/validate_i18n.py
+```
+
+`gas/BatchWords.gs` を触る場合、または wordlist を触った場合:
+
+```bash
+python3 scripts/export_batch_words.py
+```
+
+### 実装中の懸念報告
+
+実装中に Step 2 で列挙した以外の懸念が発生した場合、実装を一時停止して Issue Comment に報告する:
+
+```markdown
+🛠️ **Cursor より**
+
+## 実装中に発覚した懸念
+
+| # | 懸念内容 | 現状 | 実装後 | 影響度 |
+|---|---------|------|--------|--------|
+| 1 | ... | ... | ... | 大/中/小 |
+
+### 判断
+- 影響度「大」 → 実装を止めて Naoya に判断を仰ぐ
+- 影響度「中/小」 → 実装を続行し、PR Comment に記録
+
+---
+_Cursor による自動投稿_
+```
+
+---
+
+## PR 作成のルール
+
+### PR タイトル形式
+
+```
+feat: <機能名>（#XXX）
+fix: <バグ内容>（#XXX）
+chore: <作業内容>（#XXX）
+docs: <作業内容>（#XXX）
+```
+
+### PR Description（必ずこの形式で）
+
+```markdown
+## 概要
+（1〜2 行で「何をしたか・なぜしたか」を要約）
+
+## 変更内容
+- （具体的な変更点を箇条書き）
+
+## 変更理由
+- （対応する Issue の背景を踏まえて、なぜこの変更が必要だったか）
+
+## データ整合性チェック結果（wordlist / data / i18n に触った場合のみ）
+- 総語数: X（変更前: Y）
+- rp_ipa 付与率: X%（変更前: Y%）
+- ga_rp_same: same=X / different=Y（変更前: same=A / different=B）
+- i18n 検証: 6 言語すべての key 網羅性 OK
+
+## 確認済み事項
+- [ ] lint / 既存機能に影響なし
+- [ ] 該当機能を動作確認済み（ブラウザで手動確認）
+- [ ] TTS が絡む場合、キャッシュクリア後の動作確認
+- [ ] 多言語対応：ja / en での UI 確認（Track A 期間中）
+
+## 未確認・懸念点
+- （あれば記載。なければ「なし」）
+
+## Obsidian メモ（該当する場合のみ）
+- Naoya さん向け: `/Users/naoya.k/Documents/Obsidian/ipasounddrill/decisions/` への保存が必要な場合は明記
+
+## 関連 Issue
+Closes #XXX  ← Track A は main-first のため記載してよい
+```
+
+### Track A / Track B の base ブランチ
+
+| ラベル | Track A（〜2026-07-20） | Track B（2026-07-21〜） |
+|---|---|---|
+| feature | main | develop |
+| bug | main | develop |
+| docs | main | develop |
+| chore | main | develop |
+
+> Track B に切り替わる時点で、この表と `CLAUDE.md` の Branch 戦略セクションを更新する。
+
+---
+
+## 実装レポートの作成（PR 作成と同時）
+
+PR 作成と**同じ commit**で `docs/cursor/reports/cursor-implementation-report-<topic>.md` を追加する。テンプレート:
+
+```markdown
+# <Issue タイトル> — 実装レポート
+
+## 関連 Issue / PR
+- Issue: #XXX
+- PR: #YYY
+
+## 実装内容
+（変更点を箇条書きで、機能単位に整理）
+
+## 変更ファイル
+（`git diff --name-only main...HEAD` の出力を貼る）
+
+## 動作確認
+- ブラウザ手動確認: [Chrome / Firefox / Safari]
+- モバイル確認: [iOS Safari / Android Chrome]（該当する場合）
+- TTS 動作確認: [初回タップ / 連続再生 / GA↔RP 切替]（該当する場合）
+- データ整合性: [wordlist 総語数 / rp_ipa 付与率 / i18n 検証]（該当する場合）
+
+## 残課題・申し送り
+- （Issue Comment に書いた懸念があれば転記）
+
+## 今後の派生 Issue 候補
+- （実装中に気づいた別 Issue 化すべき事項があれば）
+```
+
+**このレポートを追加していない PR はマージ拒否対象**（Track A / B 共通ルール）。
+
+---
+
+## PR 作成後、必ず Naoya に伝えること
+
+```
+✅ PR を作成しました。（PR #YYY）
+
+📋 Naoya さんの次のアクション:
+1. 【GitHub】PR をテスト
+   テスト項目: Issue 本文の「テスト方法」または完了定義を参照
+2. 問題なければ【GitHub】ok コメントを投稿 → 自動マージ
+
+🔗 関連:
+- Issue: #XXXX
+- 実装レポート: docs/cursor/reports/cursor-implementation-report-<topic>.md
+```
+
+### Bug Issue の場合の追加対応
+
+ラベルに `bug` が含まれる Issue を完了させる場合、PR マージ後に以下を必ず実施する:
+
+1. Issue 本文の「## 根本原因記録」テーブルを記入する
+   - 直接原因 / 根本原因 / 根本原因カテゴリ / 再発防止策
+2. `docs/bug-knowledge.md` の末尾に同内容を追記する
+3. 1〜2 を含めた追加コミットを同一 PR ブランチにプッシュする（マージ前）、または新規 docs PR を作成する（マージ後）
+
+> 根本原因が PR マージ時点で不明な場合は「調査中」と記載して別 Issue を立てる。
+
+---
+
+## PR Comments の監視と応答
+
+### 監視対象
+- 自分（Cursor）が作成した PR の Comments
+- 投稿者: nkhippo
+
+### 応答ルール
+
+#### 質問への返答
+
+Naoya からの質問（「〜？」「〜を確認してください」など）に対しては、同じ PR の Comments に返答を投稿する。
+
+```
+🛠️ **Cursor より**
+
+@nkhippo 確認しました。
+
+（回答内容）
+
+---
+_Cursor による自動投稿_
+```
+
+#### 修正依頼への対応
+
+「修正依頼:」「要修正:」「change request:」で始まるコメントを受けた場合:
+1. 内容を解析して修正作業を実施
+2. 同 PR に追加コミットをプッシュ
+3. 修正完了後に PR Comments に報告
+
+#### 返答しないケース
+- 承認トリガーワード（`approve` / `ok` / `lgtm` / `👍` / `✅`）のみのコメント
+- CI ボットのコメント
+
+---
+
+## バグ・問題が起きたとき
+
+| 状況 | 対応 |
+|------|------|
+| Issue に書いていない仕様判断が必要 | 実装を止めて Issue Comment で Naoya に確認 |
+| 実装中に Issue が更新された | Issue を再取得し、差分を確認してから続行 |
+| 既存コードと仕様書（PURPOSE/DESIGN/SPECIFICATION）が矛盾する | Naoya に報告して判断を仰ぐ |
+| 実装範囲外のバグを発見 | PR Comment に記録し、別 Issue を Naoya に提案 |
+| GAS の再デプロイが必要 | PR Comment に「GAS の再デプロイが必要です」と明記して Naoya に伝える |
+| Vercel デプロイが失敗する | `docs/OPERATIONS.md` の rollback 手順を参照、PR Comment に状況報告 |
+
+---
+
+## Wiki / 索引の更新（Track B から本格導入）
+
+Track A 期間中は Wiki 更新は不要。Track B 開始時に以下を導入する:
+
+- `docs/ai-context/FILE_MAP.md`（AI 向けドキュメント索引）
+- GitHub Wiki（人間向けの詳細解説）
+
+Track A では `docs/README.md` と `docs/REPOSITORY-STRUCTURE.md` を索引として運用する。
