@@ -12,7 +12,7 @@
 
 ## Day 1: 7/10（木）— 基盤確定 ✅
 
-- [x] ドメイン取得 `ipasounddrill.app`（Hostinger、Order #207945639）
+- [x] ドメイン取得 `ipasounddrill.app`（Namecheap / BasicDNS）
 - [x] Track A/B 分離方針決定
 - [x] 開発フロー・Issue タイプ・AI 履歴戦略・ブランド方針の壁打ち完了
 - [x] `CLAUDE.md` / `.cursor/rules/dev-flow.mdc` / Issue Template 3種の作成（Claude 側）
@@ -26,27 +26,31 @@
 
 ### タスク
 
-- [ ] Cursor に「Setup 指示書」を渡してリポに全ファイル配置（PR #1: `chore: setup ipasounddrill governance`）
-- [ ] PR #1 マージ後、Branch Protection on `main` 設定（PR 経由必須、force push 禁止）
-- [ ] GitHub Secrets 登録: `CURSOR_AUTOMATION_WEBHOOK_URL` / `CURSOR_AUTOMATION_WEBHOOK_TOKEN`
-- [ ] Issue #2 起票: `chore: Vercel + rename + custom domain migration` — Vercel 移管 Issue 草稿を Claude が MCP 経由で起票
+- [x] Cursor に「Setup 指示書」を渡してリポに全ファイル配置（PR #2 / Issue #1 で完了）
+- [ ] Branch Protection on `main` 設定（PR 経由必須、force push 禁止）— **未設定（API 確認 2026-07-11。長期安定のため要設定）**
+- [ ] GitHub Secrets 登録: `CURSOR_AUTOMATION_WEBHOOK_URL` / `CURSOR_AUTOMATION_WEBHOOK_TOKEN` — **未登録（要設定）**
+- [x] labels seed（Issue #3 で完了）
+- [x] Vercel + custom domain migration（Issue #4 / PR #5 で完了）
 - [x] リポ名は `IPASoundDrill` で確定（`ipasounddrill` へのリネームは実施しない）
-- [ ] ローカル環境の remote 更新（Naoya + Cursor 側）
-- [ ] Vercel プロジェクト作成、リポ接続
-- [ ] Vercel カスタムドメイン設定（`ipasounddrill.app`）、DNS 設定
-- [ ] TLS 証明書自動発行の確認
-- [ ] GitHub Pages 停止（Vercel 動作確認後）
+- [x] ローカル環境の remote 更新（`nkhippo/IPASoundDrill` のまま維持）
+- [x] Vercel プロジェクト作成、リポ接続（`ipa-sound-drill`）
+- [x] Vercel カスタムドメイン設定（`ipasounddrill.app`）、DNS 設定（Namecheap）
+- [x] TLS 証明書自動発行の確認
+- [x] GitHub Pages 停止（Issue #7 / PR #8、Settings > Pages = None）
 
 ### 関連 Issue
 
-- Issue #1: chore: setup ipasounddrill governance — <!-- URL -->
-- Issue #2: chore: Vercel + rename + custom domain migration — <!-- URL -->
+- Issue #1: chore: setup ipasounddrill governance — https://github.com/nkhippo/IPASoundDrill/issues/1
+- Issue #3: labels seed — https://github.com/nkhippo/IPASoundDrill/issues/3
+- Issue #4: Vercel + rename + custom domain migration — https://github.com/nkhippo/IPASoundDrill/issues/4
+- Issue #7: remove GitHub Pages workflow — https://github.com/nkhippo/IPASoundDrill/issues/7
+- Issue #10: repo name unification + OPERATIONS Namecheap — https://github.com/nkhippo/IPASoundDrill/issues/10
 
 ### 完了定義
 
-- [ ] `https://ipasounddrill.app` にアクセスして現行 UI が表示される
-- [ ] HTTPS が有効（`.app` ドメインは強制 HTTPS）
-- [ ] TTS が動作する（GAS 経由）
+- [x] `https://ipasounddrill.app` にアクセスして現行 UI が表示される
+- [x] HTTPS が有効（`.app` ドメインは強制 HTTPS）
+- [ ] TTS が動作する（GAS 経由）— ローンチ前に再確認
 
 ---
 

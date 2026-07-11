@@ -57,11 +57,13 @@ Cursor 実装（Phase C / C-2）とは別枠。Naoya が実施し、本番到達
 - ドメイン登録先は Namecheap（OPERATIONS.md 記載の Hostinger とは異なる。Phase G でマニュアル更新推奨）
 
 ## 残課題・申し送り
-- GitHub Pages workflow（`.github/workflows/static.yml`）削除は Vercel 動作 24 時間確認後の別 Issue
-- OPERATIONS.md: レジストラを Namecheap に、実 DNS / ダッシュボード URL を Phase G で反映
-- Namecheap AUTO-RENEW が OFF の場合は ON 推奨（失効防止）
-- 過去レポート内の Pages URL は意図的に未更新
+- GitHub Pages workflow 削除: Issue #7 / PR #8 で完了
+- OPERATIONS.md の Namecheap / 実 DNS / ダッシュボード URL: Issue #10 で反映
+- Vercel Dashboard の正: `https://vercel.com/nkhippo/ipa-sound-drill`（プロジェクト名はハイフン区切り）
+- Branch Protection / Cursor Automation Secrets: 2026-07-11 時点で未設定（要対応）
+- 過去レポート内の Pages URL は意図的に未更新（歴史として保持）
 
 ## 今後の派生 Issue 候補
-- chore: remove GitHub Pages workflow after Vercel stable
-- docs: update OPERATIONS with Namecheap DNS and actual dashboard URLs
+- chore: enable branch protection + Cursor automation secrets on main
+- （完了）chore: remove GitHub Pages workflow
+- （完了）docs: update OPERATIONS with Namecheap DNS（Issue #10）
