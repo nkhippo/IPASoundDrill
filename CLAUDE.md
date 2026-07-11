@@ -8,7 +8,7 @@
 ## プロジェクト概要
 
 - **プロダクト名**: IPA Sound Drill（旧 IPA Drill / English Pronunciation Trainer）
-- **リポジトリ**: https://github.com/nkhippo/ipasounddrill
+- **リポジトリ**: https://github.com/nkhippo/IPASoundDrill
 - **公開 URL**: https://ipasounddrill.app （Vercel + カスタムドメイン、Track A で移管予定）
 - **内容**: IPA（国際音声記号）を軸に、音から英語の正しい発音を再構築するトレーニングツール
 - **ローンチ目標**: 2026-07-20（海の日）
