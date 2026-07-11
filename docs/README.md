@@ -32,7 +32,7 @@
 - Phase V（語彙ページ化）— [`cursor/reports/cursor-implementation-report-phase-v.md`](cursor/reports/cursor-implementation-report-phase-v.md)
 - Phase B（Phase 2 バッチ品質監査）— [`cursor/reports/cursor-implementation-report-phase-b-batch-audit.md`](cursor/reports/cursor-implementation-report-phase-b-batch-audit.md)
 - **手動残作業（GAS 再デプロイ等）:** [`reference/remaining-ops-checklist.md`](reference/remaining-ops-checklist.md)
-- GitHub Pages: https://nkhippo.github.io/IPASoundDrill/
+- GitHub Pages: https://ipasounddrill.app/
 
 ## 人間向け概要
 

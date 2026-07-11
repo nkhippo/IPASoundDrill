@@ -221,7 +221,7 @@ Repository Settings > Secrets and variables > Actions:
 
 ## 10. 主要ダッシュボード URL 一覧
 
-- **GitHub**: https://github.com/nkhippo/ipasounddrill
+- **GitHub**: https://github.com/nkhippo/IPASoundDrill
 - **Vercel**: https://vercel.com/nkhippo/ipasounddrill
 - **Plausible**: https://plausible.io/ipasounddrill.app
 - **Tally**: （Day 5 実装後に記入）
