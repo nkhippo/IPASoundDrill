@@ -312,7 +312,7 @@ Track B で `@vercel/analytics` パッケージを導入した際は、既存の
 
 ### 6.1 Tally form
 
-- Form URL: `https://tally.so/r/xxxxxx`（Day 5 実装後に確定）
+- Form URL: https://tally.so/r/xX1axk
 - 通知先: Naoya のメール
 - 保管: Tally ダッシュボード
 
@@ -384,7 +384,7 @@ Repository Settings > Secrets and variables > Actions:
 - **Vercel Dashboard**: https://vercel.com/nkhippo/ipa-sound-drill
 - **Vercel Preview（Production）**: https://ipa-sound-drill.vercel.app
 - **Vercel Web Analytics**: https://vercel.com/nkhippo/ipa-sound-drill/analytics
-- **Tally**: （Day 5 実装後に記入）
+- **Tally**: https://tally.so/r/xX1axk
 - **Namecheap**: https://ap.www.namecheap.com/domains/list/
 - **GAS**: https://script.google.com/（Naoya アカウント）
 - **Railway (MCP service)**: https://ipasounddrill-production.up.railway.app
