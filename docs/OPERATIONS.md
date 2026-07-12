@@ -10,8 +10,8 @@
 
 `main` に PR がマージされると Vercel が自動でデプロイする。所要時間: 30〜60秒。
 
-- ビルドコマンド: なし（静的サイト）
-- 出力ディレクトリ: リポジトリルート
+- ビルドコマンド: `node scripts/build-i18n-html.js`（F2 で導入）
+- 出力ディレクトリ: リポジトリルート（`/en/`〜`/fil/` を含む、生成物）
 - Vercel ダッシュボード: https://vercel.com/nkhippo/ipa-sound-drill
 
 ### 1.2 Preview デプロイ
