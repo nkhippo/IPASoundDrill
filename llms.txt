@@ -1,0 +1,51 @@
+# IPA Sound Drill
+
+> Drill your English sounds with IPA. A free, open, browser-based tool for learning English pronunciation using the International Phonetic Alphabet.
+
+IPA Sound Drill helps learners understand sound-to-spelling relationships and rebuild their pronunciation from the sound level. Built on the principle "you can't hear what you can't say," the app is designed for non-native English speakers who want to systematically improve their pronunciation using IPA notation.
+
+## Modes
+
+- **Decode**: See IPA notation (e.g., /kætəˌpɪlər/), type the English word (caterpillar)
+- **Encode**: See the English word, transcribe to IPA using an on-screen IPA keyboard
+- **Sound → Vocabulary (Mode B)**: Listen to audio and identify the correct word from context, then check meaning and IPA
+- **Connected Speech**: Practice linking, weak forms (36 function words), and 201 phrase-level pronunciation patterns
+- **Vocabulary Browser**: Search 5,397 CEFR-graded words with GA/RP IPA, respelling, and audio
+
+## Languages
+
+Interface available in 6 languages:
+
+- English (`/en/`)
+- Japanese (`/ja/`)
+- Korean (`/ko/`)
+- Simplified Chinese (`/zh-Hans/`)
+- Traditional Chinese (`/zh-Hant/`)
+- Filipino (`/fil/`)
+
+## URLs
+
+- Home (auto-detects language): https://ipasounddrill.app/
+- English: https://ipasounddrill.app/en/
+- Japanese: https://ipasounddrill.app/ja/
+- Korean: https://ipasounddrill.app/ko/
+- Simplified Chinese: https://ipasounddrill.app/zh-Hans/
+- Traditional Chinese: https://ipasounddrill.app/zh-Hant/
+- Filipino: https://ipasounddrill.app/fil/
+- Sitemap: https://ipasounddrill.app/sitemap.xml
+
+## Data
+
+- Wordlist: 5,397 CEFR-graded English words with both General American (GA) and Received Pronunciation (RP) IPA
+- Connected speech phrases: 201 (with CEFR badges)
+- Weak forms: 36 function words
+- Multilingual phoneme explanations: 6 languages
+
+## Technology
+
+Static HTML + vanilla JS + JSON data + Google Apps Script (TTS proxy). Hosted on Vercel.
+
+## Source
+
+GitHub: https://github.com/nkhippo/IPASoundDrill
+License: See repository (Track A period, TBD for public license)
