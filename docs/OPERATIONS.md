@@ -358,12 +358,20 @@ Repository Settings > Secrets and variables > Actions:
 - [ ] Tally form の未対応フィードバック確認
 - [ ] Bug Issue の残数確認
 - [ ] Vercel の帯域使用量確認（Hobby 上限 100GB/月）
+- [ ] Google Search Console「検索パフォーマンス」レポート確認（表示回数・クリック数・平均順位の推移）
+- [ ] Google Search Console「ページ」レポートでインデックス状況確認（登録済み / 未登録の件数変化）
+- [ ] Google Search Console「サイトマップ」ステータス確認（`sitemap.xml` が「成功」を維持）
+- [ ] 主要キーワード「IPA Sound Drill」「IPA drill」「English pronunciation IPA」等の順位変動チェック
+- [ ] 新規追加 URL があれば URL 検査 → インデックス登録リクエスト（月次でも可）
 
 ### 8.2 月次チェック（Track B 開始後）
 
 - [ ] `docs/bug-knowledge.md` を Opus に投げてパターン分析
 - [ ] Track B スコープの進捗レビュー
 - [ ] ドメイン更新期限確認
+- [ ] Google Search Console 累積データレビュー（3 ヶ月推移、上位キーワード分析、CTR 改善余地の特定）
+- [ ] Vercel Web Analytics 累積データレビュー（言語別分布、デバイス比率、リファラー傾向）
+- [ ] 任意改善候補の再評価（LAUNCH-CHECKLIST Track B「SEO 運用強化」参照）
 
 ---
 
