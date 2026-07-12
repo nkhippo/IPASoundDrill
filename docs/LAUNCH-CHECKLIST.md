@@ -103,7 +103,7 @@
 
 ---
 
-## Phase 5: SEO 基本セット 🔄 進行中（Issue F2 #39 / F3）
+## Phase 5: SEO 基本セット ✅ 完了（2026-07-12〜13）
 
 ### 方針: サブディレクトリ + ビルド時プリレンダリング
 
@@ -136,14 +136,14 @@ Issue F1（i18n meta 追加、#25）でデータ側は既に整備済み。Issue
   - JSON-LD 構造化データ（WebApplication schema）
 - [x] JS 側の `applyI18n()` で `document.title` を `t("meta.title")` に切替（既存）+ URL グラウンドトゥルース（Issue #39）
 - [x] 言語は `/{lang}/` URL 自体で決定（`?lang=` は不使用）（Issue #39）
-- [ ] sitemap.xml 新規（6 言語 URL × hreflang alternates）（Issue F3）
-- [ ] robots.txt 新規（Sitemap 参照）（Issue F3）
-- [ ] llms.txt 新規（英語 + 6 言語版、AI クローラー向けサマリ）（Issue F3）
+- [x] sitemap.xml 新規（6 言語 URL × hreflang alternates）（Issue #41）
+- [x] robots.txt 新規（Sitemap 参照）（Issue #41）
+- [x] llms.txt 新規（英語版、AI クローラー向けサマリ。各言語版は Track B）（Issue #41）
 
 ### 関連 Issue
 
 - Issue F2: [feat: SEO subdirectory prerendering + full multi-language head meta](https://github.com/nkhippo/IPASoundDrill/issues/39)
-- Issue F3: feat: sitemap.xml + robots.txt + llms.txt — <!-- URL 起票後記入 -->
+- Issue F3: [feat: sitemap.xml + robots.txt + llms.txt](https://github.com/nkhippo/IPASoundDrill/issues/41)
 - Issue（先行 1）: [docs: add hardening pattern C to DEV-GUARDRAILS](https://github.com/nkhippo/IPASoundDrill/issues/35)
 - Issue（先行 2）: [docs: add Vercel Build failure rollback procedure to OPERATIONS](https://github.com/nkhippo/IPASoundDrill/issues/37)
 
@@ -154,9 +154,9 @@ Issue F1（i18n meta 追加、#25）でデータ側は既に整備済み。Issue
 - [x] 各言語版 HTML の View Source（JS 実行前）で meta description / OGP / hreflang / canonical / html lang が正しく設定される
 - [ ] Twitter Card Validator / Facebook Sharing Debugger で 6 言語すべての OGP プレビューが正しく表示される（Preview URL で Naoya 目視）
 - [ ] Google Rich Results Test で JSON-LD が Valid 判定（6 言語すべて）（Preview URL で Naoya 目視）
-- [ ] `https://ipasounddrill.app/sitemap.xml` にアクセス可能、6 言語 × hreflang alternates が含まれる（F3）
-- [ ] `https://ipasounddrill.app/robots.txt` にアクセス可能（F3）
-- [ ] `https://ipasounddrill.app/llms.txt` にアクセス可能（英語 + 各言語版もアクセス可能）（F3）
+- [x] `https://ipasounddrill.app/sitemap.xml` にアクセス可能、6 言語 × hreflang alternates が含まれる（Issue #41）
+- [x] `https://ipasounddrill.app/robots.txt` にアクセス可能（Issue #41）
+- [x] `https://ipasounddrill.app/llms.txt` にアクセス可能（英語版のみ、各言語版は Track B）（Issue #41）
 
 ---
 
