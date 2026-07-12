@@ -3284,6 +3284,20 @@ $("langOpts").querySelectorAll(".langopt").forEach(b=>b.addEventListener("click"
 $("accentOpts").querySelectorAll(".langopt").forEach(b=>b.addEventListener("click",()=>setAccent(b.dataset.accent)));
 initApp();
 </script>
+<script>
+(function() {
+  var params = new URLSearchParams(location.search);
+  if (params.get('va-disable') === '1') {
+    localStorage.setItem('va-disable', '1');
+  }
+  if (params.get('va-enable') === '1') {
+    localStorage.removeItem('va-disable');
+  }
+  if (localStorage.getItem('va-disable') === '1') {
+    window.va = function() {};
+  }
+})();
+</script>
 <script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>
