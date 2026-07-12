@@ -1,277 +1,331 @@
 # LAUNCH-CHECKLIST — IPA Sound Drill 世界公開ローンチ
 
-- **ターゲット公開日**: 2026-07-20（海の日）
+- **プロダクト名**: IPA Sound Drill
 - **公開 URL**: https://ipasounddrill.app
 - **リポジトリ**: https://github.com/nkhippo/IPASoundDrill
+- **ローンチ目標**: 2026-07-12〜13（早期ローンチ、Product Hunt は事前予約なしで直接投稿）
+- **管理方針**: Phase = トピック単位。**日付は目安のみ**、実際は依存関係と作業スピードで動的に前後する
 
-このファイルはローンチまでの日次タスク管理。各タスクは Issue として起票し、URL を右端に記録する。全ての作業は Track A 範囲内。Track B のスコープはローンチ後に別 CHECKLIST を作成する。
+このファイルはローンチまでの Phase 別タスク管理。各タスクは Issue として起票し、URL を右端に記録する。全ての作業は Track A 範囲内。Track B のスコープはローンチ後に別 CHECKLIST を作成する。
 
 進捗記号: `[ ]` 未着手 / `[/]` 進行中 / `[x]` 完了
 
 ---
 
-## Day 1: 7/10（木）— 基盤確定 ✅
+## Phase 0: 基盤確定 ✅ 完了（2026-07-10）
 
-- [x] ドメイン取得 `ipasounddrill.app`（Namecheap / BasicDNS）
+- [x] ドメイン取得 `ipasounddrill.app`（Namecheap / BasicDNS、AUTO-RENEW ON、次回更新 2027-07-11）
 - [x] Track A/B 分離方針決定
 - [x] 開発フロー・Issue タイプ・AI 履歴戦略・ブランド方針の壁打ち完了
-- [x] `CLAUDE.md` / `.cursor/rules/dev-flow.mdc` / Issue Template 3種の作成（Claude 側）
-- [x] GitHub Actions workflow 3種の準備（Claude 側）
-- [x] `docs/LAUNCH-CHECKLIST.md` / `OPERATIONS.md` / `bug-knowledge.md` 骨格作成（Claude 側）
-- [x] Cursor セットアップ指示書 + Vercel 移管 Issue 草稿（Claude 側）
 
 ---
 
-## Day 2: 7/11（金）— 運用体系配置 + 技術移管
+## Phase 1: 運用体系 ✅ 完了（2026-07-11 〜 2026-07-12）
 
-### タスク
+- [x] CLAUDE.md、.cursor/rules/dev-flow.mdc、Issue Template 3 種、Workflow 3 種の作成（Issue #1 / PR #2）
+- [x] docs/LAUNCH-CHECKLIST.md（旧版）、OPERATIONS.md、bug-knowledge.md 骨格作成
+- [x] Labels seed（Issue #3）
+- [x] Branch Protection on main（GitHub Rulesets、PR 必須 + force push 禁止）
+- [x] GitHub Secrets 登録（`CURSOR_AUTOMATION_WEBHOOK_URL` / `CURSOR_AUTOMATION_WEBHOOK_TOKEN`）
+- [x] Cursor Automation `IPASoundDrill ready-for-cursor` 作成、webhook 疎通確認済み（Cloud Agent 起動は `resource_exhausted` のため見送り、追加コストなしで現状 OK）
 
-- [x] Cursor に「Setup 指示書」を渡してリポに全ファイル配置（PR #2 / Issue #1 で完了）
-- [x] Branch Protection on `main` 設定（PR 経由必須、force push 禁止）— **2026-07-12 Rulesets で完了**
-- [x] GitHub Secrets 登録: `CURSOR_AUTOMATION_WEBHOOK_URL` / `CURSOR_AUTOMATION_WEBHOOK_TOKEN` — **2026-07-12 登録完了**（Automation `IPASoundDrill ready-for-cursor`。エージェント起動は Cloud 枠 `resource_exhausted` のため見送り・設定自体は OK）
-- [x] labels seed（Issue #3 で完了）
-- [x] Vercel + custom domain migration（Issue #4 / PR #5 で完了）
-- [x] リポ名は `IPASoundDrill` で確定（`ipasounddrill` へのリネームは実施しない）
-- [x] ローカル環境の remote 更新（`nkhippo/IPASoundDrill` のまま維持）
-- [x] Vercel プロジェクト作成、リポ接続（`ipa-sound-drill`）
-- [x] Vercel カスタムドメイン設定（`ipasounddrill.app`）、DNS 設定（Namecheap）
-- [x] TLS 証明書自動発行の確認
+---
+
+## Phase 2: 技術移管 ✅ 完了（2026-07-11 〜 2026-07-12）
+
+- [x] Vercel プロジェクト作成、`IPASoundDrill` リポ接続（プロジェクト名: `ipa-sound-drill`）
+- [x] カスタムドメイン `ipasounddrill.app` / `www.ipasounddrill.app` 設定
+- [x] DNS 設定（Namecheap Advanced DNS）: A `216.198.79.1` / CNAME `52646c530fa600df.vercel-dns-017.com.`
+- [x] TLS 証明書自動発行確認（Let's Encrypt、90 日ごと自動更新、`.app` 強制 HTTPS）
+- [x] `https://ipasounddrill.app` で現行 UI 表示確認
 - [x] GitHub Pages 停止（Issue #7 / PR #8、Settings > Pages = None）
+- [x] リポ名 `IPASoundDrill` で確定（`ipasounddrill` へのリネームは実施しない）
+- [x] docs/OPERATIONS.md を Namecheap + 実 DNS 値に更新（Issue #10 / PR #11）
+- [x] docs/LAUNCH-CHECKLIST.md（旧版）Day 1/2 進捗反映（Issue #10 で対応）
 
 ### 関連 Issue
 
-- Issue #1: chore: setup ipasounddrill governance — https://github.com/nkhippo/IPASoundDrill/issues/1
-- Issue #3: labels seed — https://github.com/nkhippo/IPASoundDrill/issues/3
-- Issue #4: Vercel + rename + custom domain migration — https://github.com/nkhippo/IPASoundDrill/issues/4
-- Issue #7: remove GitHub Pages workflow — https://github.com/nkhippo/IPASoundDrill/issues/7
-- Issue #10: repo name unification + OPERATIONS Namecheap — https://github.com/nkhippo/IPASoundDrill/issues/10
-
-### 完了定義
-
-- [x] `https://ipasounddrill.app` にアクセスして現行 UI が表示される
-- [x] HTTPS が有効（`.app` ドメインは強制 HTTPS）
-- [ ] TTS が動作する（GAS 経由）— ローンチ前に再確認
+- Issue #4 / PR #5: Vercel + custom domain migration
+- Issue #7 / PR #8: remove GitHub Pages workflow
+- Issue #10 / PR #11: repo name unification + OPERATIONS Namecheap 反映
 
 ---
 
-## Day 3: 7/12（土）— 専用 MCP サーバー + データ整合性検証
+## Phase 3: 専用 MCP サーバー ✅ 完了（2026-07-12）
 
-### タスク
-
-- [ ] 独自ドメインで48時間安定稼働の確認
-- [x] Issue #12: `chore: setup dedicated MCP server on Railway`（完了 / PR #14）
-- [x] ThinkGrindAi の MCP を IPA Sound Drill 用にスリム化して専用リポへ（`nkhippo/ipasounddrill-mcp`）
-- [x] 環境変数設定（`GITHUB_REPO=IPASoundDrill` 等）
-- [x] Railway で新プロジェクト作成、デプロイ（`ipasounddrill-production.up.railway.app`）
-- [x] claude.ai に新 MCP コネクタ `IPASoundDrill GitHub` を登録
-- [x] `create_issue` 動作確認（試験 Issue #13）
-- [ ] Vercel デプロイパイプラインのテスト（`docs/README.md` の軽微修正 PR で確認）
+- [x] ThinkGrindAi `backend` から MCP / OAuth / GitHub ツールのみ抽出、`nkhippo/ipasounddrill-mcp` に配置
+- [x] Railway プロジェクト `IPASoundDrill` にデプロイ（ThinkGrindAi とは別プロジェクト）
+- [x] IPASoundDrill 専用 GitHub OAuth App + claude.ai コネクタ `IPASoundDrill GitHub` 登録
+- [x] MCP エンドポイント: `https://ipasounddrill-production.up.railway.app/mcp`
+- [x] `get_file_content` / `list_directory` / `create_issue` / `add_issue_comment` / `get_pull_request` の動作確認（Issue #13 で試験成功）
+- [x] docs/OPERATIONS.md / CLAUDE.md に MCP URL・コネクタ名反映（Issue #12 / PR #14）
+- [ ] Issue #13（試験 Issue）を Close（任意、機能上は影響なし）
 
 ### 関連 Issue
 
-- Issue #12: dedicated MCP on Railway — https://github.com/nkhippo/IPASoundDrill/issues/12
-
-### 完了定義
-
-- [x] Claude が MCP 経由で Issue を起票できる（Issue #13）
-- [ ] Claude が MCP 経由で `IPASoundDrill` リポの `CLAUDE.md` を取得できる（任意の再確認）
-- [ ] Vercel の Preview URL が PR ごとに自動生成される
+- Issue #12 / PR #14: setup dedicated MCP server on Railway
 
 ---
 
-## Day 4: 7/13（日）— 法務ドキュメント
+## Phase 4: 計測 + フィードバック導線 🔄 進行中（Issue E1 / E2）
 
 ### タスク
 
-- [ ] Issue #4 起票: `docs: add Terms of Service and Privacy Policy`
+- [ ] Vercel Web Analytics 有効化（Vercel Dashboard > Analytics タブ）— **Naoya 手動**
+- [ ] `index.html` に Vercel Analytics script タグ追加
+- [ ] カスタムイベント実装（JS 経由で `window.va?.track()` 呼び出し）
+  - `mode_start`（props: mode="decode"/"encode"/"modeb"/"vocab_browser"）
+  - `answer_correct`（props: mode, cefr）
+  - `answer_wrong`（props: mode, cefr）
+  - `language_switch`（props: to）
+  - `accent_switch`（props: to="ga"/"rp"）
+  - `tts_play`（props: context="word"/"phrase"/"weak"）
+- [ ] Tally form 作成（Naoya 手動）→ URL 確定
+- [ ] footer に「Feedback」リンク追加（Tally form の埋め込み方式は Issue E2 で確定）
+- [ ] X DM リンク追加（アカウント URL 確定次第）
+- [ ] docs/OPERATIONS.md § 5「計測タグ管理」を Plausible → Vercel Analytics に書き換え
+
+### 関連 Issue
+
+- Issue E1: feat: Vercel Web Analytics integration — <!-- URL 起票後記入 -->
+- Issue E2: feat: Tally feedback + X DM footer link — <!-- URL 起票後記入 -->
+
+### 完了定義
+
+- [ ] Vercel Dashboard > Analytics タブに本番トラフィックが表示される
+- [ ] カスタムイベント 6 種が全て記録される
+- [ ] Tally form 送信で Naoya のメールに通知が届く
+- [ ] footer から Tally form / X DM リンクが動作する
+- [ ] docs/OPERATIONS.md § 5 が Vercel Analytics 記述に更新されている
+
+---
+
+## Phase 5: SEO 基本セット 📋 準備中（Issue F1 / F2 / F3）
+
+### タスク
+
+- [ ] `<title>` を現在言語ベースの動的更新に変更（現状: `IPA Sound Drill` 固定）
+- [ ] `<meta name="description">` を 6 言語分作成、動的更新
+- [ ] `<html lang="xx">` を現在言語で動的更新（現状: `en` 固定）
+- [ ] hreflang（URL パラメータ方式 `?lang=xx`、6 言語分）
+- [ ] canonical タグ
+- [ ] OGP meta（og:title / og:description / og:image / og:url、動的更新）
+- [ ] Twitter Card meta（twitter:card / twitter:title / twitter:description / twitter:image）
+- [ ] JSON-LD 構造化データ（WebApplication schema）
+- [ ] `i18n/*.json` に `meta` オブジェクト追加（`brand` 直後、6 言語分）
+  - `title` / `description` / `ogTitle` / `ogDescription` / `keywords`
+- [ ] sitemap.xml（6 言語 × トップページ、hreflang 相互リンク付き）
+- [ ] robots.txt（`Allow: /`、`Sitemap:` 参照付き）
+
+### 関連 Issue
+
+- Issue F1: chore: add i18n meta objects (6 languages) — <!-- URL 起票後記入 -->
+- Issue F2: feat: SEO meta tags + hreflang + OGP/Twitter Card + JSON-LD + dynamic html lang — <!-- URL 起票後記入 -->
+- Issue F3: feat: sitemap.xml + robots.txt — <!-- URL 起票後記入 -->
+
+### 完了定義
+
+- [ ] `/?lang=ja` などで各言語の meta が正しく設定される
+- [ ] View Source で hreflang タグが 6 言語分確認できる
+- [ ] Twitter / X の URL 展開で OGP プレビューが正しく表示される
+- [ ] Google Rich Results Test で JSON-LD が Valid 判定
+- [ ] `https://ipasounddrill.app/sitemap.xml` にアクセス可能
+- [ ] `https://ipasounddrill.app/robots.txt` にアクセス可能
+
+---
+
+## Phase 6: 法務ドキュメント 📋 未着手（Issue G1 / G2）
+
+### タスク
+
 - [ ] Terms of Service（英・日）作成
   - サービスの目的、無保証、利用制限、免責、準拠法
 - [ ] Privacy Policy（英・日）作成
   - 収集する情報（localStorage のみ、個人情報なし）
   - Cookie の不使用（クッキーレス設計）
-  - GDPR 対応（EEA ユーザー向けの明示）
-  - お問い合わせ先
+  - Vercel Web Analytics の記述（Cookie 未使用の明示、GDPR 対応）
+  - 問い合わせ先（X DM or Tally）
 - [ ] `docs/legal/terms-en.md` / `terms-ja.md` / `privacy-en.md` / `privacy-ja.md` として配置
-- [ ] `index.html` の footer にリンク追加
+- [ ] `index.html` の footer にリンク追加（現在言語で切替）
+- [ ] i18n に「Terms of Service」「Privacy Policy」の翻訳キー追加（6 言語分、他言語は英語 fallback 可）
 
 ### 関連 Issue
 
-- Issue #4: docs: add Terms of Service and Privacy Policy — <!-- URL -->
+- Issue G1: docs: add Terms of Service and Privacy Policy files — <!-- URL 起票後記入 -->
+- Issue G2: feat: add footer links to legal pages — <!-- URL 起票後記入 -->
 
 ### 完了定義
 
-- [ ] footer からリンクが動作
+- [ ] footer から Terms / Privacy へのリンクが動作
 - [ ] 英・日切替に対応
+- [ ] Vercel Analytics 利用の記述が Privacy に含まれる
 
 ---
 
-## Day 5: 7/14（月）— 計測タグ + フィードバック導線
+## Phase 7: ブランド素材メタタグ 📋 未着手（Issue H）
+
+メタタグ実装のみ。画像素材本体は Phase 10a で Naoya さんが準備。
 
 ### タスク
 
-- [ ] Plausible or Simple Analytics アカウント作成、`ipasounddrill.app` 登録
-- [ ] Issue #5 起票: `feat: add Plausible analytics tag`
-- [ ] `index.html` にスクリプトタグ追加（クッキーレス、privacy-friendly）
-- [ ] カスタムイベント設計（モード開始 / 正解 / 誤答 / 言語切替 / GA↔RP 切替）
-- [ ] Issue #6 起票: `feat: add feedback form (Tally)`
-- [ ] Tally form 作成、footer にリンク追加
-- [ ] お問い合わせ用メールアドレス（`hello@ipasounddrill.app` 等）検討・設定
-- [ ] X (旧 Twitter) 公式アカウント検討・作成（日英別 or 共通）
+- [ ] `<link rel="icon">` / `<link rel="apple-touch-icon">` を head に追加
+- [ ] OGP 画像 URL を og:image / twitter:image に反映
+- [ ] Web App Manifest（`manifest.json`）作成、`<link rel="manifest">` を head に追加
+  - name / short_name / icons / start_url / display / theme_color / background_color
+- [ ] favicon 各サイズ（32x32、192x192、512x512）の参照設定
+- [ ] apple-touch-icon（180x180）の参照設定
 
 ### 関連 Issue
 
-- Issue #5: feat: add Plausible analytics tag — <!-- URL -->
-- Issue #6: feat: add feedback form (Tally) — <!-- URL -->
+- Issue H: feat: add branding meta tags (favicon, OGP, manifest) — <!-- URL 起票後記入 -->
 
 ### 完了定義
 
-- [ ] Plausible の dashboard に本番トラフィックが表示される
-- [ ] Tally form 送信でメール通知が届く
+- [ ] ブラウザタブに favicon が表示される
+- [ ] iOS Safari で「ホーム画面に追加」時に apple-touch-icon が表示される
+- [ ] Web App Manifest が Chrome DevTools > Application で Valid 表示
+- [ ] Twitter / X で URL 展開時に OGP プレビューが表示される
+
+### 依存
+
+- Phase 10a（画像素材制作）の完了が実装完了の前提
 
 ---
 
-## Day 6: 7/15（火）— ブランド素材 + 公開向け UI
+## Phase 8: UI polish 📋 未着手（Issue I1 / I2）
 
 ### タスク
 
-- [ ] Issue #7 起票: `feat: add branding assets (OGP, favicon)`
-- [ ] favicon 作成（`.ico` + `.png` 32x32, 192x192, 512x512）
-- [ ] apple-touch-icon（180x180）
-- [ ] OGP 画像作成（1200x630、`ipasounddrill.app` のブランドカラー + IPA 記号のモチーフ）
-- [ ] `<meta>` タグ整備（og:title / og:description / og:image / twitter:card）
-- [ ] Issue #8 起票: `chore: launch-ready UI polish`
 - [ ] トップページの初期表示メッセージを英語ローンチ向けに最適化
-- [ ] 「Get started」CTA の視認性向上
-- [ ] TTS 初回タップ促しの UI 確認
-- [ ] モバイル表示の最終チェック
+- [ ] 「Get started」/「はじめる」CTA の視認性向上
+- [ ] TTS 初回タップ促し UI の確認・改善
+- [ ] モバイル表示の最終チェック（iOS Safari / Android Chrome）
+- [ ] Vercel Web Analytics の実装確認（Phase 4 完了後）
 
 ### 関連 Issue
 
-- Issue #7: feat: add branding assets — <!-- URL -->
-- Issue #8: chore: launch-ready UI polish — <!-- URL -->
+- Issue I1: chore: launch-ready English copy update — <!-- URL 起票後記入 -->
+- Issue I2: chore: launch-ready CTA visibility + mobile fixes — <!-- URL 起票後記入 -->
 
 ### 完了定義
 
-- [ ] Twitter / X 上で URL を貼ると OGP プレビューが表示される
-- [ ] iOS Safari で "ホーム画面に追加" 時に apple-touch-icon が表示される
+- [ ] トップページで初回訪問者が迷わず CTA に到達できる
+- [ ] モバイル 2 機種以上で崩れなし
+- [ ] Product Hunt からの流入で最適な着地体験
 
 ---
 
-## Day 7: 7/16（水）— 英語 LP または既存トップの英語化強化
-
-> このフェーズは **新 Chat に切り出し推奨**（デザイン議論はコンテキストが重い）。
+## Phase 9: 英語 LP or 既存トップ強化 📋 未着手（Issue J）
 
 ### タスク
 
 - [ ] 判断: 専用 LP を分ける vs 既存トップの英語化で乗り切る
-- [ ] 判断が「専用 LP」なら Issue #9 起票: `feat: create English landing page`
-- [ ] 判断が「既存トップ強化」なら Issue #9 起票: `chore: enhance existing top for English audience`
+- [ ] 判断が「専用 LP」なら Issue 起票: `feat: create English landing page`
+- [ ] 判断が「既存トップ強化」なら Issue 起票: `chore: enhance existing top for English audience`
 - [ ] 実装
-- [ ] Product Hunt / Show HN の訪問者導線の動作確認
 
 ### 関連 Issue
 
-- Issue #9: <!-- 判断次第 -->
+- Issue J: <!-- 判断次第 -->
 
 ### 完了定義
 
-- [ ] Product Hunt からのアクセスで最適な着地体験
+- [ ] Product Hunt / Show HN からのアクセスで最適な着地体験
+- [ ] IPA の説明が英語で明確
 
 ---
 
-## Day 8: 7/17（木）— デモ素材制作
+## Phase 10: 素材制作（Naoya 手作業） 📋 未着手
 
-### タスク
+Cursor / Claude では作れない、Naoya さんの手作業スコープ。
 
-- [ ] Issue #10 起票: `chore: prepare launch media assets`
-- [ ] デモ動画（30秒〜1分）収録: Decode → Encode → Mode B → Vocab browser
-- [ ] Kap / CleanShot X で GIF 作成
-- [ ] スクリーンショット 3〜5 枚（各モードの特徴的な画面）
-- [ ] タグライン最終確定
-  - 英: 候補から選択
-  - 日: 候補から選択
-- [ ] `README.md` を英語ローンチ向けに全面更新（デモ GIF 埋め込み、機能紹介、ロゴ）
+### 10a: 画像素材
 
-### 関連 Issue
+- [ ] favicon 元画像デザイン（`.ico` + `.png` 32x32, 192x192, 512x512）
+- [ ] apple-touch-icon（180x180）
+- [ ] OGP 画像(1200x630、ブランドカラー `#0C7C7E` + IPA 記号のモチーフ)
+- [ ] 画像ファイルをリポにコミット（Issue H で参照される）
 
-- Issue #10: chore: prepare launch media assets — <!-- URL -->
+### 10b: デモ素材
 
-### 完了定義
+- [ ] デモ動画収録（30-60 秒、Decode → Encode → Mode B → Vocab browser）
+- [ ] Kap / CleanShot X で GIF 作成（ファイルサイズ 5MB 以内）
+- [ ] スクリーンショット 3-5 枚（各モードの特徴的な画面）
 
-- [ ] GIF はファイルサイズ 5MB 以内、GitHub / Product Hunt で埋め込み可能
-- [ ] タグライン英・日確定
+### 10c: タグライン最終確定
 
----
+英候補:
+- `Drill your English sounds with IPA.`（現行仮）
+- `Master English pronunciation, sound by sound.`
+- `The IPA-driven pronunciation drill.`
+- `Unlearn your accent. Rebuild from sound.`
 
-## Day 9: 7/18（金）— 英語コピー + 告知素材
+日候補:
+- `IPA で、英語の音をドリルする。`（現行仮）
+- `音でドリル、IPA で解剖。`
+- `発音を、音から練り直す。`
+- `IPA ベースの発音ドリル。`
 
-> このフェーズも **新 Chat に切り出し推奨**（英語コピーライティングは別スキルセット）。
+### 10d: 告知コピー
 
-### タスク
-
-- [ ] Product Hunt 用素材
-  - Tagline（60文字以内）
-  - Description（260文字以内）
-  - Maker Comment（launch 日に投稿する開発者コメント）
-  - Gallery（動画1 + スクリーンショット3〜5）
+- [ ] Product Hunt 素材（Tagline 60 字以内、Description 260 字以内、Maker Comment、Gallery）
 - [ ] Show HN 投稿文
-- [ ] Reddit 投稿文
-  - r/languagelearning
-  - r/EnglishLearning
-  - r/phonetics
+- [ ] Reddit 投稿文（r/languagelearning / r/EnglishLearning / r/phonetics）
 - [ ] X 告知スレッド（日本語版）
 - [ ] X 告知スレッド（英語版）
 - [ ] Indie Hackers 投稿文
-- [ ] Product Hunt の launch 日を予約（推奨: 7/20 現地時間 00:01 PST）
+- [ ] README.md を英語ローンチ向けに全面更新（デモ GIF 埋め込み、機能紹介）
 
-### 関連 Issue
+### 10e: アカウント準備
 
-- Issue #11: chore: launch copy drafts — <!-- URL -->
-
-### 完了定義
-
-- [ ] 全プラットフォーム分の投稿文が確定
-- [ ] 予約が完了
+- [ ] X 公式アカウント検討・作成（日英共通 or 別）
+- [ ] お問い合わせ用メール検討（例: `hello@ipasounddrill.app`）
+- [ ] Product Hunt アカウント確認
 
 ---
 
-## Day 10: 7/19-20 — 最終リハーサル + ローンチ
+## Phase 11: 最終リハーサル 📋 未着手
 
-### 7/19（土）タスク
+Phase 4-10 完了後、ローンチ直前に実施。
 
 - [ ] 全動線チェック（Chrome / Firefox / Safari）
 - [ ] モバイル動作確認（iOS Safari / Android Chrome）
 - [ ] TTS 初回タップ、連続再生、GA↔RP 切替
-- [ ] 6言語切替チェック
-- [ ] 計測タグ動作確認（Plausible にリアルタイムで表示されるか）
-- [ ] フィードバック導線動作確認（Tally form 送信テスト）
+- [ ] 6 言語切替チェック（ja / en / ko / zh-Hans / zh-Hant / fil）
+- [ ] Vercel Web Analytics 動作確認（リアルタイム表示、カスタムイベント記録）
+- [ ] Tally form 送信テスト
 - [ ] 法務リンク動作確認
-- [ ] OGP プレビュー最終確認
-- [ ] メンタルリセット、7/20 の投稿タイミングを最終確認
-
-### 7/20（日・海の日）タスク
-
-- [ ] Product Hunt 公開（00:01 PST）
-- [ ] Show HN 投稿
-- [ ] Reddit 3板に投稿
-- [ ] X（日本語アカウント）で告知スレッド
-- [ ] X（英語アカウント）で告知スレッド
-- [ ] Indie Hackers 投稿
-- [ ] 初期フィードバック監視（Plausible / Tally / X mentions / PR コメント）
-- [ ] Critical バグ発生時は Hotfix フロー起動
-
-### ローンチ日の緊急対応
-
-Hotfix フローは `CLAUDE.md` を参照。以下の条件を満たすもののみ Hotfix として扱う:
-- 影響ファイルが 3 つ以下
-- 既存仕様への復帰のみ
-- UX 変更を伴わない
-
-該当しないバグは `track-b` ラベルで Issue 起票、ローンチ後の Track B で対応。
+- [ ] OGP プレビュー最終確認（Twitter Card Validator、Facebook Sharing Debugger）
+- [ ] Google Rich Results Test で JSON-LD Valid 判定
+- [ ] hreflang / sitemap / robots.txt 最終確認
+- [ ] メンタルリセット、投稿タイミング最終確認
 
 ---
 
-## Track B（2026-07-21〜）— スコープメモ
+## Phase 12: ローンチ実行 📋 未着手
+
+### 実行タスク
+
+- [ ] Product Hunt 投稿（事前予約なしで直接投稿）
+- [ ] Show HN 投稿
+- [ ] Reddit 3 板に投稿
+- [ ] X（日本語アカウント）で告知スレッド
+- [ ] X（英語アカウント）で告知スレッド
+- [ ] Indie Hackers 投稿
+- [ ] 初期フィードバック監視（Vercel Analytics / Tally / X mentions / GitHub Issue）
+
+### 緊急対応
+
+Hotfix フローは `CLAUDE.md` を参照。以下 3 条件をすべて満たすときのみ Hotfix として扱う:
+1. 影響ファイルが 3 つ以下
+2. 既存仕様への復帰のみ
+3. UX 変更を伴わない
+
+該当しないバグは `track-b` ラベルで Issue 起票、Track B で対応。
+
+---
+
+## Track B（ローンチ後）— スコープメモ
 
 以下はローンチ後に着手する Track B のスコープ。今回の CHECKLIST の対象外。
 
@@ -292,7 +346,7 @@ Hotfix フローは `CLAUDE.md` を参照。以下の条件を満たすものの
 - Product Hunt: Upvotes 目標、コメント数
 - Show HN: Points、コメント数
 - Reddit: Upvotes、コメント数
-- サイトアクセス: 初日 UU、7日 UU
+- サイトアクセス: 初日 UU、7 日 UU（Vercel Analytics）
 - Tally form フィードバック件数
 - X mentions 数
 
