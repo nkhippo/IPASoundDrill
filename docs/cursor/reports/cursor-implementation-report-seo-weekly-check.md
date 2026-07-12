@@ -3,7 +3,7 @@
 ## 関連 Issue / PR
 
 - Issue: #52
-- PR: #TBD（open 後に GitHub PR で確認）
+- PR: #53（open）
 
 ## Issue 背景（Issue 本文から要約）
 
