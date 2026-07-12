@@ -632,6 +632,8 @@ Issue のスコープ判定は `docs/CURSOR-INSTRUCTION-GUIDE.md` § 1 の抽象
 
 新規ドキュメント作成の可能性がある議論では、`docs/DOCUMENT-MAP.md` § 3 の「新規ドキュメント作成判定フロー」を実施し、Category (A-E) 判定と DOCUMENT-MAP.md 更新を Issue 本文に含める。
 
+**Phase 番号の記述**: Issue 本文で作業手順を Phase 番号で列挙する場合、「Phase 0, Phase 1, Phase 2, ...」の連番で明確に記述する。「Phase 0-B7」のような曖昧な範囲表記は使用しない。Phase 総数を末尾に明記する（例: 「Phase 0-8 の 9 段階で実施」）。
+
 ---
 
 ## Issue 対応時のルール（Cursor 指示書作成時）
