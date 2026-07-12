@@ -74,9 +74,9 @@
 
 ### タスク
 
-- [ ] Vercel Web Analytics 有効化（Vercel Dashboard > Analytics タブ）— **Naoya 手動**
-- [ ] `index.html` に Vercel Analytics script タグ追加
-- [ ] カスタムイベント実装（JS 経由で `window.va?.track()` 呼び出し）
+- [x] Vercel Web Analytics 有効化（Vercel Dashboard > Analytics タブ）— **Naoya 手動**（Issue #19）
+- [x] `src/index.template.html` に Vercel Analytics script タグ追加（Issue #43）
+- [ ] カスタムイベント実装（JS 経由で `window.va?.track()` 呼び出し）— Track B
   - `mode_start`（props: mode="decode"/"encode"/"modeb"/"vocab_browser"）
   - `answer_correct`（props: mode, cefr）
   - `answer_wrong`（props: mode, cefr）
@@ -86,20 +86,20 @@
 - [ ] Tally form 作成（Naoya 手動）→ URL 確定
 - [ ] footer に「Feedback」リンク追加（Tally form の埋め込み方式は Issue E2 で確定）
 - [ ] X DM リンク追加（アカウント URL 確定次第）
-- [ ] docs/OPERATIONS.md § 5「計測タグ管理」を Plausible → Vercel Analytics に書き換え
+- [x] docs/OPERATIONS.md § 5「計測タグ管理」を Plausible → Vercel Analytics に書き換え（Issue #43）
 
 ### 関連 Issue
 
-- Issue E1: feat: Vercel Web Analytics integration — <!-- URL 起票後記入 -->
+- Issue E1: [feat: integrate Vercel Web Analytics tracking tag](https://github.com/nkhippo/IPASoundDrill/issues/43)
 - Issue E2: feat: Tally feedback + X DM footer link — <!-- URL 起票後記入 -->
 
 ### 完了定義
 
-- [ ] Vercel Dashboard > Analytics タブに本番トラフィックが表示される
-- [ ] カスタムイベント 6 種が全て記録される
-- [ ] Tally form 送信で Naoya のメールに通知が届く
-- [ ] footer から Tally form / X DM リンクが動作する
-- [ ] docs/OPERATIONS.md § 5 が Vercel Analytics 記述に更新されている
+- [ ] Vercel Dashboard > Analytics タブに本番トラフィックが表示される（マージ後確認）
+- [ ] カスタムイベント 6 種が全て記録される（Track B）
+- [ ] Tally form 送信で Naoya のメールに通知が届く（Issue E2）
+- [ ] footer から Tally form / X DM リンクが動作する（Issue E2）
+- [x] docs/OPERATIONS.md § 5 が Vercel Analytics 記述に更新されている（Issue #43）
 
 ---
 
