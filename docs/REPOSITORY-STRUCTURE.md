@@ -1,7 +1,7 @@
 # Repository Structure
 
 > **Purpose:** Share this file with Claude (or other AI assistants) at the start of a task so it knows where data, scripts, and docs live.  
-> **Last updated:** 2026-07-10（Phase R / T / V / B 完了・Phase 2 M2 完了・進捗チェック・フォルダ README 整備）
+> **Last updated:** 2026-07-12（Phase 3.5 完了・Track A/B 分離明記・Runtime infrastructure / i18n schema / JS map 追加）
 
 ---
 
@@ -94,6 +94,47 @@ ipasounddrill/
 
 ---
 
+---
+
+## Runtime infrastructure
+
+| Layer | Service | Detail |
+|---|---|---|
+| Hosting | Vercel | Project: `ipa-sound-drill`, Dashboard: `https://vercel.com/nkhippo/ipa-sound-drill` |
+| Custom domain | Namecheap (BasicDNS) | `ipasounddrill.app`, AUTO-RENEW ON, next: 2027-07-11 |
+| DNS | Namecheap Advanced DNS | A `@` → `216.198.79.1`, CNAME `www` → `52646c530fa600df.vercel-dns-017.com.` |
+| TLS | Vercel + Let's Encrypt | 90-day auto-renewal, `.app` = HSTS preload (forced HTTPS) |
+| TTS proxy | Google Apps Script | `gas/Code.gs` deployment, `GAS_TTS_URL` in `index.html` |
+| MCP server | Railway | Repo: `nkhippo/ipasounddrill-mcp`, Endpoint: `https://ipasounddrill-production.up.railway.app/mcp`, Health: `/health`, Connector: `IPASoundDrill GitHub` |
+| GitHub Automation | GitHub Actions | Workflows: `trigger-cursor-on-ready.yml`, `approval.yml`, `label-pr-needs-review.yml` |
+| Cursor Automation | Cursor Cloud | Webhook: active, Cloud Agent: 見送り中（`resource_exhausted`） |
+| Secrets | GitHub repo | `CURSOR_AUTOMATION_WEBHOOK_URL`, `CURSOR_AUTOMATION_WEBHOOK_TOKEN` |
+| Branch Protection | GitHub Rulesets | `main`: PR 必須 + force push 禁止 |
+| Analytics | Vercel Web Analytics | Dashboard > Analytics タブ（Issue #19 で有効化予定） |
+| Feedback | Tally form | URL: TBD（Issue E2 で確定） |
+
+---
+
+## Track A / B スコープ
+
+**Track A（〜2026-07-12〜13 ローンチ）**: 現行の単一 HTML + GAS TTS 構成を維持
+- 対象: 単一 `index.html`（inline CSS/JS）、6 言語対応、Vercel カスタムドメイン運用
+- 実装可能: SEO、meta、i18n meta、hreflang、Analytics 統合、Tally、法務、favicon、OGP、UI polish、英語 LP
+- 実装不可: React 化、TypeScript、ビルドプロセス導入、状態管理ライブラリ
+
+**Track B（2026-07-14〜、ローンチ後）**: React 化、BYOK、BE 移管、Sentry、Playwright 等
+- 主要スコープ:
+  - React + Vite 化（既存単一 HTML → コンポーネント分割）
+  - BE の Railway 化（GAS TTS からの脱却）
+  - BYOK（ユーザー自身の API キー入力）
+  - Sentry 導入
+  - Playwright + Visual Regression Test
+  - develop-first ブランチ運用への切替
+  - Storybook 導入
+  - REPOSITORY-STRUCTURE.md の動的セクション自動生成（Issue K2）
+
+Track A 期間中に Track B スコープの提案が出たら、`track-b` ラベルで別 Issue 化する。
+
 ## Runtime data contract (`index.html`)
 
 These paths are **hard-coded** in the app. Do not move without updating `index.html`.
@@ -108,6 +149,205 @@ These paths are **hard-coded** in the app. Do not move without updating `index.h
 | Phoneme help | `i18n/phonemes/{lang}.json` |
 | IPA font | `fonts/DoulosSIL-Regular.woff2` |
 | TTS | External `GAS_TTS_URL` in `index.html` → `gas/Code.gs` deployment |
+
+---
+
+---
+
+## i18n schema
+
+**Files**: `i18n/{en,ja,ko,zh-Hans,zh-Hant,fil}.json`（6 言語）
+
+**Top-level keys**（`en.json` を基準、他言語も同一構造）:
+
+| Key | Type | 役割 |
+|---|---|---|
+| `brand` | object | ブランド名（`name`, `home`） |
+| `lead_html` | string | トップの導入テキスト |
+| `lead_connected_html` | string | Connected speech モードの導入 |
+| `lead_weak_html` | string | Weak forms モードの導入 |
+| `tab` | object | 練習モードタブ（`label`, `words`, `connected`, `weak`） |
+| `mode` | object | 学習モードラベル |
+| `modeb` | object | Mode B（Listen & learn）関連 |
+| `cs` | object | Connected speech フィルタ |
+| `weak` | object | Weak forms ラベル |
+| `focus` | object | 音素フォーカスフィルタ |
+| `reg` | object | 綴りパターンフィルタ |
+| `pool` | object | 対象語数表示 |
+| `setup` | object | 設定パネル |
+| `dir` | object | 方向（decode / encode） |
+| `set` | object | 出題セット（daily / phonics） |
+| `lvl` | object | CEFR レベル |
+| `grp` | object | 綴り規則グループ |
+| `accent` | object | GA / RP ラベル |
+| `guide` | object | サイトガイドモーダル |
+| `vocab` | object | 語彙ブラウザ |
+| `reveal` | object | Reveal 画面（GA / RP 表記） |
+| `lang_opts` | object | 言語切替 dropdown（6 言語） |
+| `reflect`, `exit_confirm`, `hint`, `note`, `patterns`, `summary`, `info`, `kbd`, `pos`, `cefr`, `checks` | object | 各機能セクション |
+| `start`, `loading`, `load_fail`, `wordlist_fail`, `back_top`, `settings_*`, `listen`, `meter_done`, `input_ph`, `input_phrase`, `check`, `clear`, `next`, `build_ph`, `tips_head`, `you`, `see_answer`, `syl`, `syl_pl` | string | 各種 UI 文字列 |
+
+**予定追加キー**（Phase 5 / Issue F1）:
+- `meta`（object）: `title` / `description` / `ogTitle` / `ogDescription` / `keywords`
+- 挿入位置: `brand` の直後（`brand` と `lead_html` の間）
+
+**関連 files**:
+- `i18n/phonemes/{lang}.json`: 音素解説（各言語別）
+
+**Notes**:
+- 総 keys 数: 約 177（`vocab.back` / 複合 POS `形容詞 / 副詞 / 間投詞` 含む、2026-07-10 時点）
+- HTML 埋め込みキーは `_html` サフィックス
+- 動的置換プレースホルダ: `{n}`, `{band}`, `{pct}`, `{m}`, `{t}`, `{c}`, `{list}`, `{p}`, `{sy}`, `{s}`, `{a}`
+
+_Last synced with code: 2026-07-12_
+
+---
+
+## index.html JS map
+
+**File**: `index.html`（約 3,259 行、単一ファイル構成）
+
+Cursor が該当関数を行番号レベルで特定できるよう、主要関数のマップを提供する。
+
+### 初期化
+
+| 関数名 | 行番号 | 概要 |
+|---|---|---|
+| `initApp` | L1514 | エントリポイント。データ読込・i18n・hash ルート初期化 |
+| `loadWordlist` | L737 | 本番 wordlist JSON を fetch して正規化 |
+| `loadConnected` | L767 | connected_speech.json を読込 |
+| `loadWeak` | L775 | weak_forms.json を読込 |
+| `loadGuide` | L802 | guide.json を読込 |
+| `dataReady` | L1103 | 必須データ揃い判定 |
+| `parseHash` | L1439 | location.hash をパース |
+| `navigate` | L1444 | hash ベース遷移 |
+| `onRouteChange` | L1450 | ルート変更時の画面切替 |
+| `show` | L700 | 要素の hidden トグル（UI 表示制御） |
+
+### モード制御
+
+| 関数名 | 行番号 | 概要 |
+|---|---|---|
+| `startSession` | L2769 | ドリルセッション開始・キュー初期化 |
+| `initSessionQueue` | L2760 | 出題キュー構築 |
+| `sessionFinished` | L2757 | セッション終了判定 |
+| `goToTop` | L1650 | トップ／セットアップへ戻る |
+| `showSetupOrPractice` | L1456 | セットアップと練習画面の切替 |
+| `showReflection` | L2785 | 振り返り（サマリ）表示 |
+| `openExitConfirm` | L2797 | セッション中断確認モーダル |
+| `updateSetupFields` | L1730 | セットアップ UI の表示更新 |
+| `setSetupVisible` | L1618 | セットアップ領域の表示制御 |
+
+### 判定・解答処理
+
+| 関数名 | 行番号 | 概要 |
+|---|---|---|
+| `decodeCheck` | L2921 | Decode（IPA→綴り）解答判定 |
+| `encodeCheck` | L2998 | Encode（綴り→IPA）解答判定 |
+| `spellCheck` | L2917 | 綴り正規化＋レーベンシュタイン判定 |
+| `reveal` | L3069 | 正誤後の Reveal 画面描画 |
+| `nextCard` | L3120 | 次カードへ進む |
+| `renderCard` | L2865 | 現在カードの描画ディスパッチ |
+| `renderDecode` | L2896 | Decode カード UI |
+| `renderEncode` | L2982 | Encode カード UI |
+| `renderSummary` | L3159 | セッション振り返りサマリ |
+| `modeBMcqPick` | L2105 | Mode B MCQ 選択処理 |
+| `modeBDictCheck` | L2131 | Mode B 綴り入力判定 |
+| `buildMcqChoices` | L2024 | Mode B 誤答選択肢生成 |
+
+### TTS
+
+| 関数名 | 行番号 | 概要 |
+|---|---|---|
+| `speak` | L2654 | TTS 再生エントリ（キャッシュ／GAS） |
+| `fetchAudioFromGas` | L2297 | GAS 経由で音声取得 |
+| `fetchAudioFromGasAccent` | L2265 | アクセント指定で GAS 取得 |
+| `fetchUrlsFromGas` | L2273 | `?urls=1` Drive URL 一括取得 |
+| `prefetchSessionAudio` | L2634 | セッションキューの先行取得 |
+| `prefetchItemsAudio` | L2534 | アイテム単位の prefetch 起動 |
+| `gasWarm` | L2383 | GAS warm エンドポイント呼び出し |
+| `hasCachedAudioFor` | L2205 | localStorage／メモリキャッシュ有無 |
+| `refreshAllSpeakers` | L2377 | 再生ボタン状態の一括更新 |
+| `ttsAccent` | L2155 | opts から TTS アクセント決定 |
+
+### i18n / 言語切替
+
+| 関数名 | 行番号 | 概要 |
+|---|---|---|
+| `setLang` | L1372 | UI 言語切替・locale 再読込 |
+| `applyI18n` | L1266 | UI 文字列を DOM に適用 |
+| `loadLocale` | L1222 | i18n/{lang}.json を読込 |
+| `t` | L1215 | ネストキー参照＋プレースホルダ置換 |
+| `wordGloss` | L1238 | 現在言語の gloss 取得 |
+| `applyI18nVocab` | L855 | 語彙ブラウザ向け i18n 適用 |
+
+### アクセント切替
+
+| 関数名 | 行番号 | 概要 |
+|---|---|---|
+| `setAccent` | L1412 | GA / RP 切替 |
+| `activeIpa` | L1118 | 現在アクセントの IPA |
+| `altIpa` | L1122 | 反対アクセントの IPA |
+| `otherAccent` | L1158 | 反対アクセントコード |
+| `renderAltAccentLine` | L1174 | 代替アクセント行の描画 |
+| `refreshAltAccentSpeakers` | L1193 | 代替アクセント再生ボタン更新 |
+| `formatSameAccentIpa` | L1140 | ga_rp_same 時の表示整形 |
+
+### 語彙ブラウザ
+
+| 関数名 | 行番号 | 概要 |
+|---|---|---|
+| `openVocab` | L1509 | 語彙ページへ遷移 |
+| `closeVocab` | L1510 | 語彙ページを閉じる |
+| `showVocabView` | L1486 | Words / Phrases 表示 |
+| `renderVocabWords` | L945 | 単語一覧描画・検索 |
+| `renderVocabPhrases` | L1012 | フレーズ一覧描画 |
+| `renderVocabTab` | L1084 | タブ切替描画 |
+| `buildVocabLetterBar` | L872 | 頭文字フィルタバー |
+| `vocabDisplayGloss` | L886 | 語彙 gloss 表示文字列 |
+
+### Reveal
+
+| 関数名 | 行番号 | 概要 |
+|---|---|---|
+| `reveal` | L3069 | Reveal 画面本体 |
+| `renderWordPronDetails` | L3037 | 発音詳細（IPA／respell） |
+| `refreshRevealIpa` | L3057 | Reveal 内 IPA 再描画 |
+| `bindRevealCheckClicks` | L3236 | 進捗チェックスロットクリック |
+| `refreshRevealChecksPanel` | L931 | Reveal 進捗パネル更新 |
+| `renderInfo` | L2807 | 音素情報ボックス描画 |
+| `bindIpaSegments` | L2836 | IPA セグメントクリック紐付け |
+
+### 進捗管理
+
+| 関数名 | 行番号 | 概要 |
+|---|---|---|
+| `loadChecks` | L1751 | ept_checks_v1 読込 |
+| `saveChecks` | L1755 | ept_checks_v1 保存 |
+| `getCheckCount` | L1762 | モード別チェック数取得 |
+| `setCheckCount` | L1768 | モード別チェック数設定 |
+| `toggleCheckSlot` | L1779 | スロット 1–3 トグル |
+| `frequencyWeight` | L1785 | 出題頻度ウェイト |
+| `weightedShuffle` | L1788 | ウェイト付きシャッフル |
+| `progressChecksHtml` | L894 | 語彙ブラウザ用チェック HTML |
+| `refreshChecksInDom` | L921 | DOM 上チェック表示更新 |
+
+### その他
+
+| 関数名 | 行番号 | 概要 |
+|---|---|---|
+| `openGuide` | L840 | サイトガイドモーダル表示 |
+| `closeGuide` | L851 | サイトガイドを閉じる |
+| `renderGuide` | L824 | ガイド本文描画 |
+| `openSettings` | L1426 | 設定モーダルを開く |
+| `closeSettings` | L1427 | 設定モーダルを閉じる |
+| `buildKeyboard` | L2965 | Encode 用 IPA キーボード構築 |
+| `renderConnectedPrompt` | L2849 | Connected speech プロンプト |
+| `modeBPool` | L1982 | Mode B 出題プール |
+| `buildModeBQueue` | L2043 | Mode B キュー構築 |
+| `renderModeBStudy` | L2081 | Mode B Study 画面 |
+
+_Last synced with code: 2026-07-12_
 
 ---
 
