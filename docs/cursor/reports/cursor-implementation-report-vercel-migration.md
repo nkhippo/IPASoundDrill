@@ -60,10 +60,11 @@ Cursor 実装（Phase C / C-2）とは別枠。Naoya が実施し、本番到達
 - GitHub Pages workflow 削除: Issue #7 / PR #8 で完了
 - OPERATIONS.md の Namecheap / 実 DNS / ダッシュボード URL: Issue #10 で反映
 - Vercel Dashboard の正: `https://vercel.com/nkhippo/ipa-sound-drill`（プロジェクト名はハイフン区切り）
-- Branch Protection / Cursor Automation Secrets: 2026-07-11 時点で未設定（要対応）
+- Branch Protection / Cursor Automation Secrets: **2026-07-12 完了**（Rulesets + Repository secrets。Automation webhook 疎通は `resource_exhausted` のためエージェント起動は見送り・現状 OK）
 - 過去レポート内の Pages URL は意図的に未更新（歴史として保持）
 
 ## 今後の派生 Issue 候補
-- chore: enable branch protection + Cursor automation secrets on main
+- （任意）Cloud Agent 枠に余裕が出たら `ready-for-cursor` end-to-end 再テスト
 - （完了）chore: remove GitHub Pages workflow
 - （完了）docs: update OPERATIONS with Namecheap DNS（Issue #10）
+- （完了）chore: enable branch protection + Cursor automation secrets on main

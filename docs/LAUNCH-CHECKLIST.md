@@ -27,8 +27,8 @@
 ### タスク
 
 - [x] Cursor に「Setup 指示書」を渡してリポに全ファイル配置（PR #2 / Issue #1 で完了）
-- [ ] Branch Protection on `main` 設定（PR 経由必須、force push 禁止）— **未設定（API 確認 2026-07-11。長期安定のため要設定）**
-- [ ] GitHub Secrets 登録: `CURSOR_AUTOMATION_WEBHOOK_URL` / `CURSOR_AUTOMATION_WEBHOOK_TOKEN` — **未登録（要設定）**
+- [x] Branch Protection on `main` 設定（PR 経由必須、force push 禁止）— **2026-07-12 Rulesets で完了**
+- [x] GitHub Secrets 登録: `CURSOR_AUTOMATION_WEBHOOK_URL` / `CURSOR_AUTOMATION_WEBHOOK_TOKEN` — **2026-07-12 登録完了**（Automation `IPASoundDrill ready-for-cursor`。エージェント起動は Cloud 枠 `resource_exhausted` のため見送り・設定自体は OK）
 - [x] labels seed（Issue #3 で完了）
 - [x] Vercel + custom domain migration（Issue #4 / PR #5 で完了）
 - [x] リポ名は `IPASoundDrill` で確定（`ipasounddrill` へのリネームは実施しない）
@@ -59,22 +59,22 @@
 ### タスク
 
 - [ ] 独自ドメインで48時間安定稼働の確認
-- [ ] Issue #3 起票: `chore: setup dedicated MCP server on Railway`
-- [ ] ThinkGrindAi の MCP サーバーコードを IPA Sound Drill 用にフォーク
-- [ ] 環境変数変更（`REPO_NAME=ipasounddrill`）
-- [ ] Railway で新プロジェクト作成、デプロイ
-- [ ] Claude Desktop / claude.ai に新 MCP コネクタを登録
-- [ ] `get_file_content` / `list_directory` / `create_issue` / `add_issue_comment` / `get_pull_request` の動作確認
+- [x] Issue #12: `chore: setup dedicated MCP server on Railway`（完了 / PR #14）
+- [x] ThinkGrindAi の MCP を IPA Sound Drill 用にスリム化して専用リポへ（`nkhippo/ipasounddrill-mcp`）
+- [x] 環境変数設定（`GITHUB_REPO=IPASoundDrill` 等）
+- [x] Railway で新プロジェクト作成、デプロイ（`ipasounddrill-production.up.railway.app`）
+- [x] claude.ai に新 MCP コネクタ `IPASoundDrill GitHub` を登録
+- [x] `create_issue` 動作確認（試験 Issue #13）
 - [ ] Vercel デプロイパイプラインのテスト（`docs/README.md` の軽微修正 PR で確認）
 
 ### 関連 Issue
 
-- Issue #3: chore: setup dedicated MCP server on Railway — <!-- URL -->
+- Issue #12: dedicated MCP on Railway — https://github.com/nkhippo/IPASoundDrill/issues/12
 
 ### 完了定義
 
-- [ ] Claude が MCP 経由で `ipasounddrill` リポの `CLAUDE.md` を取得できる
-- [ ] Claude が MCP 経由で Issue を起票できる
+- [x] Claude が MCP 経由で Issue を起票できる（Issue #13）
+- [ ] Claude が MCP 経由で `IPASoundDrill` リポの `CLAUDE.md` を取得できる（任意の再確認）
 - [ ] Vercel の Preview URL が PR ごとに自動生成される
 
 ---

@@ -40,11 +40,13 @@ docs/cursor/reports/cursor-implementation-report-setup-governance.md
 - 既存機能への影響: なし（`index.html` / `data/` / `scripts/` / `gas/` / `i18n/` / `fonts/` 未変更）
 - データ整合性: 対象外（wordlist 未変更）
 
-## 残課題・申し送り
-- Secrets 登録（Naoya 実施）: `CURSOR_AUTOMATION_WEBHOOK_URL` / `CURSOR_AUTOMATION_WEBHOOK_TOKEN`
-- Branch Protection on main（Naoya 実施）
-- ラベル整備（Naoya 実施）: `launch-blocker`, `track-b`, `revision-requested`
+## 残課題・申し送り（2026-07-12 更新）
+- Secrets 登録: **完了**（`CURSOR_AUTOMATION_WEBHOOK_URL` / `CURSOR_AUTOMATION_WEBHOOK_TOKEN`）
+- Branch Protection on main: **完了**（Rulesets）
+- ラベル整備: **完了**（Issue #3）
+- Cursor Automation webhook: 疎通確認済み。Cloud Agent 起動は `resource_exhausted` のため見送り（追加コストなしで現状 OK）
 
 ## 今後の派生 Issue 候補
-- Issue #2: chore: Vercel + rename + custom domain migration
-- Issue #3: chore: setup dedicated MCP server on Railway
+- （完了）Issue #4: Vercel + custom domain docs
+- （完了）Issue #12: dedicated MCP server on Railway
+- （任意）Cloud Agent 枠に余裕が出たら `ready-for-cursor` end-to-end 再テスト
