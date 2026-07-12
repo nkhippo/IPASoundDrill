@@ -256,6 +256,56 @@ Track A ではページビュー等の自動記録のみ、カスタムイベン
 
 Vercel Web Analytics のデータ保持期間は Hobby プランで直近 30 日、Pro プランで直近 12 ヶ月。ローンチ後は月次で Dashboard を確認、必要に応じて Pro プランへのアップグレードを検討。
 
+### 5.6 開発者除外（Naoya 自身のアクセスを除外）
+
+Vercel Web Analytics には公式のオプトアウト UI がなく（DNT 非対応、Cookie 不使用）、Track A の script タグ直接埋め込み方式では `@vercel/analytics` パッケージの `beforeSend` フックも使えない。そのため `src/index.template.html` に localStorage ベースの除外機構を実装している（Issue #46）。
+
+**除外の有効化**:
+
+各デバイス（MacBook A、Windows PC B、iPhone C）で以下 URL に 1 回アクセス:
+
+```
+https://ipasounddrill.app/?va-disable=1
+```
+
+各言語版でも動作:
+- `https://ipasounddrill.app/en/?va-disable=1`
+- `https://ipasounddrill.app/ja/?va-disable=1`
+- `https://ipasounddrill.app/ko/?va-disable=1`
+- `https://ipasounddrill.app/zh-Hans/?va-disable=1`
+- `https://ipasounddrill.app/zh-Hant/?va-disable=1`
+- `https://ipasounddrill.app/fil/?va-disable=1`
+
+アクセス時に localStorage の `va-disable` キーが `1` に設定され、`window.va` 関数が no-op 化される。以降そのデバイスは Analytics 送信を停止する。
+
+**除外の解除**（トラッキング再開）:
+
+```
+https://ipasounddrill.app/?va-enable=1
+```
+
+**動作原理**:
+
+- 各ページ読み込み時に URL パラメータをチェック、`?va-disable=1` / `?va-enable=1` で localStorage を制御
+- localStorage に `va-disable=1` が保存されていると、Vercel Analytics スクリプト（`/_vercel/insights/script.js`）読み込み前に `window.va` を no-op 関数に設定
+- Vercel Analytics スクリプトは `window.va` を経由してデータ送信するため、no-op 化により実質的に無効化される
+
+**確認方法**:
+
+1. Chrome DevTools > Application > Local Storage > `https://ipasounddrill.app` で `va-disable` キーが `1` になっているか確認
+2. Chrome DevTools > Network タブで、`_vercel/insights/*` へのリクエストが発生しないか、または発生しても Response が空か確認
+
+**注意点**:
+
+- localStorage をクリア（ブラウザデータ削除、ブラウザプロファイル変更等）すると再設定が必要
+- ブラウザ拡張（uBlock Origin 等）で `/_vercel/insights/*` をブロックする方法と併用推奨（複数レイヤー防御）
+- Naoya さんが所有する全デバイス（MacBook A、Windows PC B、iPhone C）で 1 回ずつ設定する
+- Preview URL（`ipa-sound-drill.vercel.app` 等）でも同様の JS が動作するため、Preview 環境での動作確認時も設定が有効
+
+**Track B での拡張**:
+
+Track B で `@vercel/analytics` パッケージを導入した際は、既存の `window.va` no-op 化ロジックがそのまま有効。追加実装は不要。
+
 ---
 
 ## 6. フィードバック導線（Tally）
