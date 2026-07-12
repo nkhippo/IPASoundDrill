@@ -2,7 +2,7 @@
 
 ## 関連 Issue / PR
 - Issue: #17
-- PR: #(作成後)
+- PR: #18
 
 ## 実装内容
 - `docs/LAUNCH-CHECKLIST.md` を Day 単位から Phase 単位（トピック単位）構成へ全上書き
