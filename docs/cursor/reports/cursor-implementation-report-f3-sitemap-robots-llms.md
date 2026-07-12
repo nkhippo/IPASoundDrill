@@ -3,7 +3,7 @@
 ## 関連 Issue / PR
 
 - Issue: #41
-- PR: #(作成後)
+- PR: #42
 
 ## Issue 背景（Issue 本文から要約）
 
