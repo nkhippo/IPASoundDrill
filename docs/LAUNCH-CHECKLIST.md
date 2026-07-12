@@ -30,6 +30,7 @@
 - [x] Cursor Automation `IPASoundDrill ready-for-cursor` 作成、webhook 疎通確認済み（Cloud Agent 起動は `resource_exhausted` のため見送り、追加コストなしで現状 OK）
 - [x] docs/CHANGE-CLASSIFICATION.md 導入（Issue #33 / PR #34）
 - [x] docs/DEV-GUARDRAILS.md § 3-alt パターン C + § 10 セルフチェックリスト追加（Issue #35 / PR #36）
+- [x] docs/OPERATIONS.md § 2.4-2.5 Vercel Build 失敗時 rollback + 事前チェックリスト追加（Issue #37 / PR #38）
 
 ---
 
@@ -144,7 +145,7 @@ Issue F1（i18n meta 追加、#25）でデータ側は既に整備済み。Issue
 - Issue F2: feat: SEO subdirectory prerendering + full multi-language head meta — <!-- URL 起票後記入 -->
 - Issue F3: feat: sitemap.xml + robots.txt + llms.txt — <!-- URL 起票後記入 -->
 - Issue（先行 1）: [docs: add hardening pattern C to DEV-GUARDRAILS](https://github.com/nkhippo/IPASoundDrill/issues/35)
-- Issue（先行 2）: docs: add Vercel Build rollback to OPERATIONS — <!-- URL 起票後記入 -->
+- Issue（先行 2）: [docs: add Vercel Build failure rollback procedure to OPERATIONS](https://github.com/nkhippo/IPASoundDrill/issues/37)
 
 ### 完了定義
 

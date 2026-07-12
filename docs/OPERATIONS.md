@@ -55,6 +55,85 @@ git push origin main
 
 Vercel dashboard > Settings > Production Branch → 空文字列に設定し保存。数秒でサービス停止。復旧時は `main` に戻す。
 
+### 2.4 Vercel Build 失敗時の対応
+
+**Vercel Build 失敗の性質**
+
+Vercel Build の失敗は、既存 § 1.3「デプロイ失敗時の対応」の静的サイト前提の失敗（JSON 構文エラー、ファイル参照誤り等）とは異なる性質を持つ:
+
+- Build Command 実行時のエラー（例: `npm run build` の非 0 終了、スクリプトのバグ、環境変数不足）
+- 依存関係インストールエラー（`npm install` 失敗、lockfile 不整合、レジストリアクセス不能）
+- Node.js バージョン不整合（`.nvmrc` / `package.json` の `engines` フィールドと Vercel 環境の差異）
+- Output Directory 誤設定（生成物が指定ディレクトリに存在しない、Vercel が空を配信）
+- Build Command のタイムアウト（デフォルト 45 分）
+- 生成物の致命的欠陥（Build は成功したが HTML が空、meta タグ欠落、JS エラー等）
+
+**失敗検知手順**
+
+1. Vercel Dashboard > Deployments タブでステータス「Failed」または「Ready」だが異常を確認
+2. 該当 Deployment の「View Build Logs」でエラー行を特定
+3. エラーの分類（上記 6 パターンのどれか）を判定
+4. GitHub Actions タブで Cursor Automation の webhook 発火状況も併せて確認
+
+**Build 失敗と本番影響の関係**
+
+Vercel は Build 失敗時に自動 Rollback しない仕様。したがって以下の 2 パターンに分岐する:
+
+**パターン α: Build 失敗のみ（本番影響なし）**
+
+- 既存 Production Deployment が維持される
+- 本番サイトは正常配信を継続
+- 緊急 Rollback は不要
+- 対処: Build Log を確認、原因を Cursor 実装 Issue の Comment に報告、Cursor が修正 → 再デプロイ
+
+**パターン β: Build 成功 + 生成物欠陥（本番影響あり）**
+
+- Vercel Dashboard で「Ready」ステータスになるが、実際は空の HTML や欠陥のある生成物を配信
+- 本番サイトが 500 エラー、空白表示、機能不全等の異常状態
+- 即時 Rollback が必要
+- 対処: § 2.1「Vercel ダッシュボードでの Rollback」で直前成功 Deployment に Promote、または § 2.2「Git 経由の Rollback」で `git revert`
+
+**判断フロー**
+
+Build 失敗を検知したら、以下の順で判定:
+
+1. **本番サイトの動作確認**: `https://ipasounddrill.app` にアクセス、主要機能（トップページ表示、モード切替、TTS、6 言語切替）を目視確認
+2. **正常動作** → パターン α、Build Log を Cursor 実装 Issue に報告、緊急対応不要
+3. **異常動作** → パターン β、即時 Rollback（§ 2.1 or § 2.2）を実施、その後原因調査
+
+**原因調査を別 Issue に切り出す判断基準**
+
+Build 失敗の原因が以下に該当する場合、Cursor 実装 Issue とは別に調査 Issue を起票:
+
+- 環境要因（Vercel の一時的な障害、npm レジストリのアクセス不能等）→ 別 Issue 不要、時間経過で解決する可能性
+- 依存関係の脆弱性やバージョン固定問題 → 別 Issue（`chore: pin dependency versions`）で扱う
+- Vercel の仕様変更（Node.js バージョンサポート終了等）→ 別 Issue（`chore: update Node.js runtime`）で扱う
+- Cursor 実装のロジックバグ → 現行 Issue で修正、別 Issue 不要
+
+### 2.5 Build Command / Output Directory 変更時の事前チェックリスト
+
+F2 のように Vercel Build を新規導入する Issue や、Build 設定を変更する Issue で、Vercel Dashboard 側の設定を変更する際の事前確認事項:
+
+1. **変更前の設定を記録**: Vercel Dashboard > Settings > Build & Development Settings の現在値をスクリーンショット、Issue Comment に添付
+2. **変更前の Deployment ID を記録**: 「Promote to Production」で戻す先の Deployment ID（Vercel Dashboard の Deployments タブで確認可能）を Issue Comment に記載
+3. **変更予定内容を Issue 本文に明記**: 新しい Build Command、Install Command、Output Directory、Node.js Version をすべて明記
+4. **段階的変更**: 一度に複数設定を変更しない。以下の順序で 1 つずつ変更 → 動作確認 → 次の変更:
+   - Step 1: Install Command 追加 → Preview デプロイで動作確認
+   - Step 2: Build Command 追加 → Preview デプロイで動作確認
+   - Step 3: Output Directory 変更 → Preview デプロイで動作確認
+   - Step 4: Node.js Version 変更（必要な場合）→ Preview デプロイで動作確認
+5. **Preview デプロイで先行検証**: main への push 前に、feature branch で Preview デプロイを確認。Preview URL は PR コメントに自動投稿される
+6. **変更後の初回 Build を目視**: Vercel Dashboard で Build Log を最後まで確認、Warning / Error がないか、生成物が期待通りに Output Directory に配置されているか
+7. **本番動作確認**: 変更後の Production Deployment で以下を目視確認:
+   - トップページ表示（`https://ipasounddrill.app`）
+   - モード切替（Decode / Encode / Mode B / vocab browser）
+   - TTS 動作（初回タップ + 連続再生）
+   - 6 言語切替（ja / en / ko / zh-Hans / zh-Hant / fil）
+8. **問題発生時の即時 rollback 判断基準**:
+   - トップページが 500 エラー / 空白 → 即時 § 2.1 で Promote to Production（30 秒以内）
+   - 一部機能が動作しない（例: TTS のみ不動作） → 30 分以内に原因特定 or § 2.1 で Rollback
+   - 表示崩れのみで機能は動作 → 次営業日までに修正 Issue 起票、Rollback は状況判断
+
 ---
 
 ## 3. GAS TTS 障害対応
