@@ -5,27 +5,27 @@
   },
   "meta": {
     "title": "IPA Sound Drill — Master English Pronunciation with IPA",
-    "description": "Drill your English pronunciation using IPA notation. Free tool for GA and RP accents, built for language learners worldwide.",
+    "description": "Drill English sounds with IPA. Free browser practice for GA and RP — decode, encode, and rebuild pronunciation from the sound level.",
     "ogTitle": "IPA Sound Drill — Drill English Sounds with IPA",
-    "ogDescription": "A free, IPA-based pronunciation trainer. Decode, encode, and listen your way to clearer English — GA and RP accents supported.",
-    "keywords": "IPA, pronunciation, English pronunciation, phonetics, phonemic drill, GA RP accent, language learning"
+    "ogDescription": "A free, open IPA pronunciation trainer. Decode, encode, and listen your way to clearer English — GA and RP accents supported.",
+    "keywords": "IPA, English pronunciation, phonetics, phonemic drill, GA RP accent, connected speech, language learning"
   },
-  "lead_html": "Drill <b>IPA reading and writing</b> for words you already know&mdash;sound by sound. Target <b>trap phonemes</b> (θ, ð, æ, ʒ, ɝ) or your <b>weak spots</b> from practice history. Objective scoring only; build symbol coverage, not vocabulary lists.",
+  "lead_html": "Drill <b>IPA reading and writing</b> for words you already know&mdash;sound by sound. Target <b>trap sounds</b> (θ, ð, æ, ʒ, ɝ) or your <b>weak spots</b> from practice history. Scored by accuracy only&mdash;build IPA coverage, not longer word lists.",
   "lead_connected_html": "Hear <b>connected speech</b> in GA&mdash;linking, assimilation, and elision. Read the connected IPA and recover the original phrase.",
   "lead_weak_html": "Hear the <b>weak forms</b> of function words in connected speech. Read the IPA and recover the word.",
   "tab": {
     "label": "Practice mode",
     "words": "One word",
-    "connected": "Linking",
-    "weak": "Weak Forms"
+    "connected": "Connected",
+    "weak": "Weak forms"
   },
   "mode": {
     "label": "Learning mode",
-    "a": "IPA read & write"
+    "a": "Read & write IPA"
   },
   "modeb": {
     "title": "Listen & learn",
-    "lead_html": "Learn <b>new words from sound</b>&mdash;hear the word, then match meaning and spelling. CEFR band progression with spaced review.",
+    "lead_html": "Learn <b>new words from sound</b>&mdash;hear the word, then match meaning and spelling. Progress by CEFR band with spaced review.",
     "study": {
       "got_it": "Next",
       "reveal_meaning": "Reveal meaning"
@@ -67,7 +67,7 @@
     "traps": "Trap sounds",
     "traps_d": "θ ð æ ʒ ɝ",
     "weak": "Weak spots",
-    "weak_d": "From practice history",
+    "weak_d": "Based on your practice history",
     "letters": "Alphabet",
     "contractions": "Contractions",
     "irregular": "Irregular forms",
@@ -77,7 +77,7 @@
     "label": "Spelling pattern",
     "all": "All",
     "regular": "Regular",
-    "regular_d": "Phonics and spelling–sound rules",
+    "regular_d": "Phonics and regular spelling–sound rules",
     "irregular": "Irregular",
     "irregular_d": "Common words with irregular spelling"
   },
@@ -95,7 +95,7 @@
     "decode_t": "IPA &rarr; word",
     "decode_d": "Read the IPA and type the word",
     "encode_t": "word &rarr; IPA",
-    "encode_d": "Build the IPA from the spelling"
+    "encode_d": "Build the IPA from the written word"
   },
   "set": {
     "label": "Question set",
@@ -123,8 +123,8 @@
   },
   "start": "Start",
   "loading": "Loading…",
-  "load_fail": "Load failed",
-  "wordlist_fail": "Failed to load word list",
+  "load_fail": "Couldn't load. Please try again.",
+  "wordlist_fail": "Couldn't load the word list. Refresh and try again.",
   "back_top": "Menu",
   "settings_btn": "Language",
   "settings_title": "Settings",
@@ -169,11 +169,11 @@
   },
   "exit_confirm": {
     "title": "End session?",
-    "body": "Do you want to end this session?",
+    "body": "End this practice session?",
     "yes": "Yes",
     "no": "No"
   },
-  "meter_done": "done",
+  "meter_done": "Done",
   "hint": {
     "syl": "Syllables",
     "first": "First letter",
@@ -184,12 +184,12 @@
   "check": "Check",
   "clear": "Clear",
   "next": "Next",
-  "build_ph": "Tap the IPA keys below to build the pronunciation",
+  "build_ph": "Tap the IPA keys below to build the IPA",
   "tips_head": "Pronunciation tips",
   "note": {
     "pattern": "Spelling pattern: {p}",
-    "stress": "Stress syllable {n} ({sy} syllables)",
-    "schwa": "Schwa (ə/ɚ): stay weak and vague, not led by spelling",
+    "stress": "Stress on syllable {n} ({sy} syllables)",
+    "schwa": "Schwa (ə/ɚ): keep it weak and vague—don't let spelling lead you",
     "tricky": "Tricky sounds: {s}"
   },
   "patterns": {
@@ -202,11 +202,11 @@
   "summary": {
     "line": "{c} / {t} correct · {m} to review",
     "weak_head": "Sounds to practice next",
-    "weak_none_t": "No weak sounds detected",
-    "weak_none_d": "No missed sounds. Try a higher level.",
+    "weak_none_t": "No weak spots found",
+    "weak_none_d": "You didn't miss any sounds. Try a higher level.",
     "review": "Review list: {list}",
-    "again": "Play again",
-    "weak_btn": "Review misses only"
+    "again": "Practice again",
+    "weak_btn": "Review misses"
   },
   "info": {
     "mouth": "Mouth",
@@ -243,7 +243,7 @@
   },
   "cefr": {
     "pending": "CEFR?",
-    "pending_hint": "CEFR not assigned yet"
+    "pending_hint": "CEFR level not assigned yet"
   },
   "checks": {
     "progress": "Progress",

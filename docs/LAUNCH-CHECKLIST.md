@@ -218,11 +218,11 @@ Issue F1（i18n meta 追加、#25）でデータ側は既に整備済み。Issue
 
 ---
 
-## Phase 8: UI polish 📋 未着手（Issue I1 / I2）
+## Phase 8: UI polish 🔄 進行中（Issue I1 / I2）
 
 ### タスク
 
-- [ ] トップページの初期表示メッセージを英語ローンチ向けに最適化
+- [x] トップページの初期表示メッセージを英語ローンチ向けに最適化（Issue #50）
 - [ ] 「Get started」/「はじめる」CTA の視認性向上
 - [ ] TTS 初回タップ促し UI の確認・改善
 - [ ] モバイル表示の最終チェック（iOS Safari / Android Chrome）
@@ -230,7 +230,7 @@ Issue F1（i18n meta 追加、#25）でデータ側は既に整備済み。Issue
 
 ### 関連 Issue
 
-- Issue I1: chore: launch-ready English copy update — <!-- URL 起票後記入 -->
+- Issue I1: [chore: launch-ready English copy update](https://github.com/nkhippo/IPASoundDrill/issues/50)
 - Issue I2: chore: launch-ready CTA visibility + mobile fixes — <!-- URL 起票後記入 -->
 
 ### 完了定義
