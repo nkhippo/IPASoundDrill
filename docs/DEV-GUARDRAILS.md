@@ -57,6 +57,120 @@
 - Rule 1（機械）と Rule 2/3/4（意図的）は**別コミット**にする
 - コミットメッセージに Rule 番号を明記（例: `docs: replace GitHub Pages with Vercel (Rule 1)`）
 
+## 3-alt. 堅固化パターン C: 大規模改修（ファイル移動 + ビルドシステム導入）
+
+**適用条件**（次の 3 条件のうち **2 つ以上** を満たす Issue）:
+
+1. 既存ファイルを別ディレクトリに物理的に移動する（例: `index.html` → `src/index.template.html`）
+2. ビルドシステムを新規導入する（単一入力 → 複数出力、例: 6 言語版 HTML の自動生成）
+3. Complexity Level が L3 かつ Change Pattern に C3（Structure / URL / artifact layout）を含む
+
+パターン A/B との使い分け:
+
+- パターン A: 新規追加のみ、既存ファイル完全不変
+- パターン B: 既存ファイル編集、単一入力 → 単一出力
+- パターン C: 上記 3 条件のうち 2 つ以上、単一入力 → 複数出力 + 物理移動
+
+**Phase 構成**（Phase 0-6 の 7 段階。各 Phase 別コミット、各 Phase 完了時に Issue Comment に自己検証結果を投稿）:
+
+### Phase 0: 事前スナップショット + 独立保護
+
+```bash
+mkdir -p /tmp/issue-<N>
+# 全ファイル md5
+find . -type f ! -path './.git/*' -exec md5sum {} \; | sort > /tmp/issue-<N>/before-all.md5
+# 移動対象ファイルの独立コピー
+cp <移動元パス> /tmp/issue-<N>/before-<移動元ファイル名>
+# Runtime data contract 8 パスの md5 独立記録
+for path in \
+  wordlist_GA_a1a2_plus_phonics.json \
+  data/connected_speech.json \
+  data/weak_forms.json \
+  data/guide.json \
+  i18n/en.json i18n/ja.json i18n/ko.json i18n/zh-Hans.json i18n/zh-Hant.json i18n/fil.json \
+  i18n/phonemes/en.json i18n/phonemes/ja.json i18n/phonemes/ko.json i18n/phonemes/zh-Hans.json i18n/phonemes/zh-Hant.json i18n/phonemes/fil.json \
+  fonts/DoulosSIL-Regular.woff2; do
+  md5sum "$path" >> /tmp/issue-<N>/before-runtime-contract.md5
+done
+```
+
+### Phase 1: 純粋な `git mv` 相当の移動を単独コミット
+
+```bash
+git mv <移動元パス> <移動先パス>
+# 移動先の md5 = 移動元の md5 を検証（Phase 0 の独立コピーと比較）
+md5sum <移動先パス> > /tmp/issue-<N>/after-phase1.md5
+md5sum /tmp/issue-<N>/before-<移動元ファイル名>
+# 完全一致でない場合、実装を中断して Issue Comment で報告
+git commit -m "refactor: move <移動元> to <移動先> (Phase 1, pure move)"
+```
+
+コミットメッセージに `Phase 1, pure move` を明記。内容変更 0 行が git log で確認できる状態にする。
+
+### Phase 2: 移動先での最小差分編集を別コミット
+
+移動先ファイルにテンプレート化のためのプレースホルダ挿入等、最小限の差分を加える。この Phase では「移動」と「編集」を分離することが目的。
+
+```bash
+git diff HEAD~1 HEAD -- <移動先パス>
+# 差分が想定範囲内であることを確認
+git commit -m "refactor: template placeholders in <移動先> (Phase 2, minimal edit)"
+```
+
+### Phase 3: ビルドスクリプト・設定追加を別コミット
+
+ビルドスクリプト（例: `scripts/build-i18n-html.js`）、設定ファイル（例: `vercel.json`、`package.json`）、`.gitignore` 更新を追加。
+
+```bash
+git add scripts/build-i18n-html.js vercel.json package.json .gitignore
+git commit -m "chore: add build infrastructure (Phase 3, build setup)"
+# ビルドが成功することを確認
+npm run build
+```
+
+### Phase 4: 生成物検証（入力テンプレートと生成物の body/script 領域の md5 一致）
+
+```bash
+# 各生成物と入力テンプレートの body/script 部の抽出と md5 比較
+for lang in en ja ko zh-Hans zh-Hant fil; do
+  # body 部の抽出（<body> から </html> まで）
+  sed -n '/<body>/,/<\/html>/p' <生成物ディレクトリ>/${lang}/index.html > /tmp/issue-<N>/body-${lang}.txt
+  md5sum /tmp/issue-<N>/body-${lang}.txt >> /tmp/issue-<N>/generated-body.md5
+done
+# 全言語の body md5 が完全一致することを検証
+awk '{print $1}' /tmp/issue-<N>/generated-body.md5 | sort -u | wc -l
+# 出力が 1 であること（全 6 言語で同一 body）
+```
+
+body / script 部が全言語で完全一致することが、パターン C の中核的な検証項目。
+
+### Phase 5: 統合テスト（各生成物の View Source を機械抽出して head 要素の期待値と照合）
+
+```bash
+# head 内の主要 meta タグを grep で抽出、期待値と照合
+for lang in en ja ko zh-Hans zh-Hant fil; do
+  echo "=== ${lang} ==="
+  grep -c '<title>' <生成物ディレクトリ>/${lang}/index.html
+  grep -c 'meta name="description"' <生成物ディレクトリ>/${lang}/index.html
+  grep -c 'link rel="alternate" hreflang=' <生成物ディレクトリ>/${lang}/index.html
+  grep -c 'meta property="og:' <生成物ディレクトリ>/${lang}/index.html
+  grep -c 'link rel="canonical"' <生成物ディレクトリ>/${lang}/index.html
+  grep -c 'application/ld+json' <生成物ディレクトリ>/${lang}/index.html
+done
+# 各 grep の出力が期待値と一致することを確認
+```
+
+期待値との不一致が 1 件でもある場合、実装を中断して Issue Comment で報告。
+
+### Phase 6: Naoya diff 目視承認 + Claude Rv（L3 適用時は必須）+ PR 作成
+
+- Naoya が diff 全体を目視、ホワイトリスト範囲内であることを確認
+- L3 適用時は Naoya が Claude Rv を Chat で依頼、Claude が MCP で PR diff を取得して以下を検証:
+  - Phase 0-5 の各 Issue Comment 報告が Issue に投稿されているか
+  - § 10 セルフチェックリスト 6 カテゴリのすべての項目が実装レポートに記録されているか
+  - Complexity Retrospective が総合判定「事前分類妥当」となっているか
+- Claude Rv 合格後（L3）、または Naoya 目視承認後（非 L3 でパターン C のみ適用時）、Naoya が承認コメント → 自動マージ
+
 ## 4. md5 スナップショット方式
 
 ```bash
@@ -239,3 +353,60 @@ Phase 6（既存編集を伴う場合）で Naoya さんが確認する項目:
 - Rule 2 コミットが機械置換を含まない
 - 実装レポートが Issue 背景を反映している
 - 「実装過程での気づき」「後続への影響」セクションが具体的に書かれている（テンプレートのままではない）
+
+## 10. 大規模改修用セルフチェックリスト
+
+パターン C 適用時、Cursor は各 Phase 完了時に Issue Comment に以下のセルフチェックリストを貼り、各項目の結果を記入する。全項目 OK でない場合、次 Phase に進まず中断報告する。
+
+```markdown
+🛠️ **Cursor より（Phase X セルフチェックリスト）**
+
+## Runtime data contract 保護
+
+- [ ] `wordlist_GA_a1a2_plus_phonics.json` の md5: [Phase 0 と一致 / 一致せず]
+- [ ] `data/connected_speech.json` の md5: [Phase 0 と一致 / 一致せず]
+- [ ] `data/weak_forms.json` の md5: [Phase 0 と一致 / 一致せず]
+- [ ] `data/guide.json` の md5: [Phase 0 と一致 / 一致せず]
+- [ ] `i18n/{en,ja,ko,zh-Hans,zh-Hant,fil}.json` の md5: [Phase 0 と一致 / 一致せず]
+- [ ] `i18n/phonemes/{en,ja,ko,zh-Hans,zh-Hant,fil}.json` の md5: [Phase 0 と一致 / 一致せず]
+- [ ] `fonts/DoulosSIL-Regular.woff2` の md5: [Phase 0 と一致 / 一致せず]
+- [ ] `GAS_TTS_URL` 変数値: [変更なし / 変更あり]
+
+## JS map 主要関数の網羅性
+
+- [ ] REPOSITORY-STRUCTURE.md § JS map の主要関数が全て grep で存在確認: [全存在 / 欠落あり: 詳細]
+- [ ] 関数の引数シグネチャが変更されていない: [変更なし / 変更あり: 詳細]
+
+## 生成物の言語間一致（パターン C のみ）
+
+- [ ] 6 言語版 HTML の body 部の md5 完全一致: [一致 / 一致せず: 詳細]
+- [ ] 6 言語版 HTML の script 部の md5 完全一致: [一致 / 一致せず: 詳細]
+
+## head 要素の数と種類（パターン C のみ）
+
+- [ ] `<title>` タグ: 各言語 1 個: [OK / 期待値不一致: 詳細]
+- [ ] `meta name="description"`: 各言語 1 個: [OK / 期待値不一致]
+- [ ] `link rel="alternate" hreflang=`: 各言語 7 個（6 言語 + x-default）: [OK / 期待値不一致]
+- [ ] `meta property="og:*"`: 各言語で仕様通り: [OK / 期待値不一致]
+- [ ] `meta name="twitter:*"`: 各言語で仕様通り: [OK / 期待値不一致]
+- [ ] `link rel="canonical"`: 各言語 1 個、自己参照: [OK / 期待値不一致]
+- [ ] JSON-LD（`application/ld+json`）: 各言語 1 個、WebApplication schema: [OK / 期待値不一致]
+
+## 「ついで作業」ゼロ検証
+
+- [ ] DEV-GUARDRAILS § 5 の 13 項目に該当する変更 0 件: [ゼロ / 検知: 詳細]
+- [ ] ホワイトリスト外のファイルへの変更 0 件（md5 diff で検証）: [ゼロ / 検知: 詳細]
+
+## Category A ドキュメント整合
+
+- [ ] Issue 本文で列挙された Category A 更新対象ファイルすべてが実際に更新: [OK / 欠落: 詳細]
+- [ ] Issue 本文で「更新不要」と宣言されたファイルが実際に不変（md5 一致）: [OK / 検知: 詳細]
+
+## 総合判定（Phase X）
+
+- [ ] 全項目 OK → 次 Phase に進む
+- [ ] 1 項目以上に問題 → 実装を中断、詳細を上記に記入、Naoya さん判断を待つ
+
+---
+_Cursor による自動投稿_
+```
