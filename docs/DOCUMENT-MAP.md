@@ -29,6 +29,7 @@
 | `docs/README.md` | docs/ 配下のファイル追加・削除 | 該当変更 Issue で同時更新 |
 | `data/README.md` | data/ 配下の役割変更 | 該当変更 Issue で同時更新 |
 | `docs/DOCUMENT-MAP.md`（本ファイル） | 新規ドキュメント追加、Category 割当変更 | 新規ドキュメント作成時に Issue で更新 |
+| `docs/CHANGE-CLASSIFICATION.md` | 分類軸変更、Pattern 追加、運用ルール調整 | Claude が Issue で提案 → Naoya 承認 |
 
 ### Category B: Chat 起動時に必ず取得
 
@@ -122,6 +123,7 @@ Issue 起票時、Claude が Naoya さんに以下を提示:
 
 | Issue タイプ | 必須参照 (Category C) |
 |---|---|
+| すべて | CHANGE-CLASSIFICATION.md（分類ブロック構築のため） |
 | `feature` (機能追加) | PURPOSE, DESIGN, SPECIFICATION, REPOSITORY-STRUCTURE |
 | `feature` (Runtime infra) | OPERATIONS, REPOSITORY-STRUCTURE |
 | `bug` | bug-knowledge, SPECIFICATION |
@@ -133,7 +135,7 @@ Issue 対応時（Cursor 実装時）、Cursor に以下を明示的に読ませ
 
 | Issue タイプ | 必須参照 (Category D) |
 |---|---|
-| すべて | REPOSITORY-STRUCTURE, DEV-GUARDRAILS, .cursor/rules/dev-flow.mdc |
+| すべて | REPOSITORY-STRUCTURE, DEV-GUARDRAILS, .cursor/rules/dev-flow.mdc, CHANGE-CLASSIFICATION.md（分類ブロック確認・Retrospective 実施のため） |
 | `docs` | 加えて DOC-SYNC-PLAYBOOK, CURSOR-INSTRUCTION-GUIDE |
 | `feature` (機能追加) | 加えて DESIGN, SPECIFICATION |
 

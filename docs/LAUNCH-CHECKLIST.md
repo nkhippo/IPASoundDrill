@@ -28,6 +28,7 @@
 - [x] Branch Protection on main（GitHub Rulesets、PR 必須 + force push 禁止）
 - [x] GitHub Secrets 登録（`CURSOR_AUTOMATION_WEBHOOK_URL` / `CURSOR_AUTOMATION_WEBHOOK_TOKEN`）
 - [x] Cursor Automation `IPASoundDrill ready-for-cursor` 作成、webhook 疎通確認済み（Cloud Agent 起動は `resource_exhausted` のため見送り、追加コストなしで現状 OK）
+- [x] docs/CHANGE-CLASSIFICATION.md 導入（Issue #33 / PR #YY）
 
 ---
 
@@ -141,6 +142,8 @@ Issue F1（i18n meta 追加、#25）でデータ側は既に整備済み。Issue
 
 - Issue F2: feat: SEO subdirectory prerendering + full multi-language head meta — <!-- URL 起票後記入 -->
 - Issue F3: feat: sitemap.xml + robots.txt + llms.txt — <!-- URL 起票後記入 -->
+- Issue（先行 1）: docs: add hardening pattern C to DEV-GUARDRAILS — <!-- URL 起票後記入 -->
+- Issue（先行 2）: docs: add Vercel Build rollback to OPERATIONS — <!-- URL 起票後記入 -->
 
 ### 完了定義
 

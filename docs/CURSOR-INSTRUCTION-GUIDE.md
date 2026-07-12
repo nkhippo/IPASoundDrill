@@ -14,6 +14,8 @@
 | **100-500 行、3-5 ファイル** | 低（行番号 + データ構造レベル） | 対象行番号、対象データ構造、差分パッチ例を含む | i18n 6 言語 meta 追加、hreflang 実装 |
 | **500+ 行、5+ ファイル** | 極低（Issue 分割推奨） | 単独では扱わない | React 化（Track B）、大規模リファクタリング |
 
+> **本節の抽象度マトリックスは、`docs/CHANGE-CLASSIFICATION.md` § 2 の Complexity Level (L1-L3) に統合された。今後は Complexity Level を主判定軸として使用し、本節は歴史的経緯として保持する。抽象度と Complexity Level の対応: 高 → L1、中 → L2、低 → L3、極低 → L3（Phase 分割 + パターン C 適用）。**
+
 ## 2. 例外条項: Docs Infrastructure Issue
 
 ドキュメント編集のみで相互参照が強い場合、複数ファイルでも単一 Issue で扱ってよい。ただし以下を厳守:

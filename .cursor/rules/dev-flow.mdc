@@ -31,6 +31,14 @@ Naoya（PM）が GitHub Issue URL を渡します（仕様の正本は Issue 本
 
 ## 実装前に必ずやること（この順番で）
 
+### 事前確認 0: 改修分類ブロックを確認（最優先・新設）
+
+Issue 本文の「改修分類」ブロックを確認する（仕様: `docs/CHANGE-CLASSIFICATION.md` § 7）。
+
+- ブロック自体が存在しない、または Complexity Level / Change Pattern / 判定根拠が空・`未定義`・`TBD`・`不明` の場合、**実装を開始せず** Issue Comment で中断報告する
+- Complexity Level と Change Pattern の組み合わせが `docs/CHANGE-CLASSIFICATION.md` § 5–6 のルール表で解釈できない場合も同様に中断する
+- 確認できたら Level / Pattern をメモし、以降の参照ドキュメント・堅固化・Recon・レビュー要件に従う
+
 ### 事前確認 1: GitHub Issue を確認（正本・最重要）
 
 Issue 本文に実装仕様・完了定義・チェックリストがすべて記載されている。
@@ -146,11 +154,11 @@ _Cursor による自動投稿_
 - カテゴリ A に 1 件以上ある
 - カテゴリ B に影響度「大」が 1 件以上ある
 
-該当しない場合は Step 3（実装）に直行してよい。
+該当しない場合は Step 3a（実装）に直行してよい。
 
 ---
 
-## 実装フェーズ（Step 3）
+## 実装フェーズ（Step 3a: 実装）
 
 ### ファイル操作
 
@@ -236,7 +244,23 @@ _Cursor による自動投稿_
 
 ---
 
-## PR 作成のルール
+## 実装フェーズ（Step 3b: Complexity Retrospective）
+
+実装完了後、**PR 作成の前に必ず実施する**（`docs/CHANGE-CLASSIFICATION.md` § 8）。
+
+1. 実装レポートに Complexity Retrospective セクションを記載する（テンプレート: `docs/DEV-GUARDRAILS.md` § 7）
+2. 総合判定を出す（事前分類妥当 / 昇格提案 / Pattern 追加提案。降格提案は記録可）
+3. **昇格提案または Pattern 追加提案**がある場合、PR を作成せず Issue Comment で中断報告する
+4. 総合判定が「事前分類妥当」（または降格のみ）なら Step 4（PR 作成）へ進む
+
+Step 3b 未実施のまま PR を作成してはならない。
+
+---
+
+## PR 作成のルール（Step 4）
+
+Step 4 の前提条件: Step 3b（Complexity Retrospective）完了。
+
 
 ### PR タイトル形式
 
@@ -277,9 +301,17 @@ docs: <作業内容>（#XXX）
 ## Obsidian メモ（該当する場合のみ）
 - Naoya さん向け: `/Users/naoya.k/Documents/Obsidian/ipasounddrill/decisions/` への保存が必要な場合は明記
 
+## Complexity Retrospective 実施確認
+- [ ] 実装レポートに Retrospective セクションを記載済み
+- [ ] 総合判定: [事前分類妥当 / 昇格提案 / 降格提案]
+- [ ] 昇格・追加提案があった場合、Issue Comment で報告済み
+
 ## 関連 Issue
 Closes #XXX  ← Track A は main-first のため記載してよい
 ```
+
+> 上記 Retrospective チェックが 1 つでも空の PR はマージ拒否対象。
+
 
 ### Track A / Track B の base ブランチ
 
