@@ -1,3 +1,5 @@
+> Last updated: 2026-07-12（Phase 3.5 完了、DOCUMENT-MAP.md / DEV-GUARDRAILS.md / DOC-SYNC-PLAYBOOK.md / CURSOR-INSTRUCTION-GUIDE.md 追加）
+
 # `docs/` — ドキュメント索引（AI / 開発者向け）
 
 アプリの**正本仕様**と**タスク履歴**を分離して格納する。ブラウザからは fetch されない。
@@ -12,6 +14,24 @@
 | 4 | [`SPECIFICATION.md`](SPECIFICATION.md) | 画面・JSON フィールド・localStorage の正本 |
 
 **衝突時:** `PURPOSE.md` → `DESIGN.md` → `SPECIFICATION.md`
+
+## 運用ルール
+
+以下のドキュメントは AI 協業と運用継続のための必読ガイド:
+
+| ファイル | 何が書いてあるか |
+|---|---|
+| [`DOCUMENT-MAP.md`](DOCUMENT-MAP.md) | 全ドキュメントの分類（Category A-E）と参照タイミング |
+| [`DEV-GUARDRAILS.md`](DEV-GUARDRAILS.md) | 堅固化パターン A/B、Cursor 自己判断禁止事項、実装レポートテンプレート |
+| [`DOC-SYNC-PLAYBOOK.md`](DOC-SYNC-PLAYBOOK.md) | ソース ⇔ ドキュメント同期の 3 分岐マトリックス |
+| [`CURSOR-INSTRUCTION-GUIDE.md`](CURSOR-INSTRUCTION-GUIDE.md) | Cursor 指示の抽象度マトリックス、Pre-Issue Recon 運用 |
+
+**Chat 起動時、Claude は Category B の以下を必ず取得**:
+1. `HANDOFF-*.md`（Project Knowledge）
+2. `CLAUDE.md`（リポルート）
+3. `REPOSITORY-STRUCTURE.md`
+4. `LAUNCH-CHECKLIST.md`
+5. `DOCUMENT-MAP.md`
 
 ## サブフォルダ
 
@@ -32,7 +52,7 @@
 - Phase V（語彙ページ化）— [`cursor/reports/cursor-implementation-report-phase-v.md`](cursor/reports/cursor-implementation-report-phase-v.md)
 - Phase B（Phase 2 バッチ品質監査）— [`cursor/reports/cursor-implementation-report-phase-b-batch-audit.md`](cursor/reports/cursor-implementation-report-phase-b-batch-audit.md)
 - **手動残作業（GAS 再デプロイ等）:** [`reference/remaining-ops-checklist.md`](reference/remaining-ops-checklist.md)
-- GitHub Pages: https://ipasounddrill.app/
+- 本番: https://ipasounddrill.app/（Vercel + カスタムドメイン、詳細は [`OPERATIONS.md`](OPERATIONS.md) § 1）
 
 ## 人間向け概要
 
