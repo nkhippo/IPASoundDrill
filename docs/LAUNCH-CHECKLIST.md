@@ -100,37 +100,58 @@
 
 ---
 
-## Phase 5: SEO 基本セット 📋 準備中（Issue F1 / F2 / F3）
+## Phase 5: SEO 基本セット 📋 準備中（Issue F2 / F3）
+
+### 方針: サブディレクトリ + ビルド時プリレンダリング
+
+Track A で「単一 HTML + JS 動的更新」ではなく、以下の構成を採用する。多言語 SEO / AI クローラー対応のベストプラクティスに準拠。
+
+- 言語別サブディレクトリ（`/en/`, `/ja/`, `/ko/`, `/zh-Hans/`, `/zh-Hant/`, `/fil/`）
+- 各言語別に静的 HTML をビルド時生成（`scripts/build-i18n-html.js`）
+- 各言語 HTML の `<head>` に静的な meta / OGP / Twitter Card / canonical / hreflang / og:locale
+- Vercel の rewrites/redirects で URL 制御
+- Edge Middleware（任意）で Accept-Language 自動判定 → 302 リダイレクト
+- 単一 sitemap.xml で全言語の hreflang alternates 宣言
+- 各言語版の llms.txt
+
+Issue F1（i18n meta 追加、#25）でデータ側は既に整備済み。Issue F2 で本体実装。
 
 ### タスク
 
-- [ ] `<title>` を現在言語ベースの動的更新に変更（現状: `IPA Sound Drill` 固定）
-- [ ] `<meta name="description">` を 6 言語分作成、動的更新
-- [ ] `<html lang="xx">` を現在言語で動的更新（現状: `en` 固定）
-- [ ] hreflang（URL パラメータ方式 `?lang=xx`、6 言語分）
-- [ ] canonical タグ
-- [ ] OGP meta（og:title / og:description / og:image / og:url、動的更新）
-- [ ] Twitter Card meta（twitter:card / twitter:title / twitter:description / twitter:image）
-- [ ] JSON-LD 構造化データ（WebApplication schema）
-- [ ] `i18n/*.json` に `meta` オブジェクト追加（`brand` 直後、6 言語分）
-  - `title` / `description` / `ogTitle` / `ogDescription` / `keywords`
-- [ ] sitemap.xml（6 言語 × トップページ、hreflang 相互リンク付き）
-- [ ] robots.txt（`Allow: /`、`Sitemap:` 参照付き）
+- [ ] `scripts/build-i18n-html.js` 新規追加（i18n/*.json の meta を index.html テンプレートに埋め込み、6 言語版 HTML 生成）
+- [ ] `src/index.template.html` 新規追加（既存 index.html から meta 部分をテンプレート化）
+- [ ] `vercel.json` に rewrites/redirects 設定追加
+- [ ] `middleware.ts`（任意、Accept-Language 判定）
+- [ ] 各言語版 HTML の head に以下を静的埋め込み:
+  - `<title>`（i18n の `meta.title`）
+  - `<meta name="description">`（i18n の `meta.description`）
+  - `<meta property="og:*">`（title / description / image / url / locale / locale:alternate）
+  - `<meta name="twitter:*">`（card / title / description / image）
+  - `<link rel="canonical">`（自己参照、例: `https://ipasounddrill.app/en/`）
+  - `<link rel="alternate" hreflang="xx">` × 6 言語 + `x-default`
+  - `<html lang="xx">`（静的埋め込み）
+  - JSON-LD 構造化データ（WebApplication schema）
+- [ ] JS 側の `applyI18n()` で `document.title` を `t("meta.title")` に切替
+- [ ] `?lang=xx` URL パラメータの読み取り実装（Vercel サブディレクトリ経由なので新規パラメータ不要、`/en/` 等の URL 自体で言語決定）
+- [ ] sitemap.xml 新規（6 言語 URL × hreflang alternates）
+- [ ] robots.txt 新規（Sitemap 参照）
+- [ ] llms.txt 新規（英語 + 6 言語版、AI クローラー向けサマリ）
 
 ### 関連 Issue
 
-- Issue F1: chore: add i18n meta objects (6 languages) — <!-- URL 起票後記入 -->
-- Issue F2: feat: SEO meta tags + hreflang + OGP/Twitter Card + JSON-LD + dynamic html lang — <!-- URL 起票後記入 -->
-- Issue F3: feat: sitemap.xml + robots.txt — <!-- URL 起票後記入 -->
+- Issue F2: feat: SEO subdirectory prerendering + full multi-language head meta — <!-- URL 起票後記入 -->
+- Issue F3: feat: sitemap.xml + robots.txt + llms.txt — <!-- URL 起票後記入 -->
 
 ### 完了定義
 
-- [ ] `/?lang=ja` などで各言語の meta が正しく設定される
-- [ ] View Source で hreflang タグが 6 言語分確認できる
-- [ ] Twitter / X の URL 展開で OGP プレビューが正しく表示される
-- [ ] Google Rich Results Test で JSON-LD が Valid 判定
-- [ ] `https://ipasounddrill.app/sitemap.xml` にアクセス可能
+- [ ] `https://ipasounddrill.app/en/` `https://ipasounddrill.app/ja/` 等 6 URL がすべて 200 で返る
+- [ ] `https://ipasounddrill.app/` にアクセスすると Accept-Language に応じて言語別 URL に 302 リダイレクト
+- [ ] 各言語版 HTML の View Source（JS 実行前）で meta description / OGP / hreflang / canonical / html lang が正しく設定される
+- [ ] Twitter Card Validator / Facebook Sharing Debugger で 6 言語すべての OGP プレビューが正しく表示される
+- [ ] Google Rich Results Test で JSON-LD が Valid 判定（6 言語すべて）
+- [ ] `https://ipasounddrill.app/sitemap.xml` にアクセス可能、6 言語 × hreflang alternates が含まれる
 - [ ] `https://ipasounddrill.app/robots.txt` にアクセス可能
+- [ ] `https://ipasounddrill.app/llms.txt` にアクセス可能（英語 + 各言語版もアクセス可能）
 
 ---
 
@@ -325,6 +346,33 @@ Hotfix フローは `CLAUDE.md` を参照。以下 3 条件をすべて満たす
 
 ---
 
+## 運用ルール: Pre-Issue Recon（Issue #26 実証済み）
+
+### 適用条件
+
+以下のいずれかに該当する Issue は、起票前に Pre-Issue Recon を実施することを推奨:
+
+- 影響ファイル 3 個以上、かつ変更行数の推定が 100 行を超える
+- Claude が既存コード構造を正確に把握できていない
+- `index.html`（3,259 行）の JS 関数構造への変更を含む
+- 複数の設計選択肢があり、事実確認で選定が明確化する場合
+
+### 実施フロー
+
+1. Claude が Issue Comment で Recon 依頼を投稿（`docs/CURSOR-INSTRUCTION-GUIDE.md` § 4.2 テンプレート）
+2. Cursor が調査を実施、`docs/cursor/recon/pre-issue-recon-YYYYMMDD-<topic>.md` に結果を出力
+3. Recon PR がマージされた後、Claude が結果を MCP で取得
+4. Claude が Recon 結果を反映した Issue 本文を作成 → Naoya さん承認
+5. 本 Issue（実装 Issue）を MCP 起票、Cursor 実装
+
+### 効果（Issue #26 の実績）
+
+- Claude のトークン消費削減（index.html 全 3,259 行を取得せずに設計可能）
+- Issue 本文の設計精度向上（例: `?lang=` パラメータが未実装であることが Recon で判明、当初設計を修正）
+- Cursor の実装成功率向上（現状把握が正確なため中断リスク低下）
+
+---
+
 ## Track B（ローンチ後）— スコープメモ
 
 以下はローンチ後に着手する Track B のスコープ。今回の CHECKLIST の対象外。
@@ -337,6 +385,24 @@ Hotfix フローは `CLAUDE.md` を参照。以下 3 条件をすべて満たす
 - develop-first ブランチ運用への切り替え
 - Storybook 導入
 - ADR ディレクトリの本格運用
+
+### Phase B-Lang: 追加言語対応（一括）
+
+Track A の 6 言語（ja / en / ko / zh-Hans / zh-Hant / fil）に加え、以下 7 言語を一括対応する。優先度は英語学習市場規模 + IPA 学習親和性で決定:
+
+| 優先 | 言語コード | 言語名 | 主要市場 | 特記事項 |
+|:---:|:---:|---|---|---|
+| 1 | `es` | スペイン語 | 中南米 + スペイン | 表音性が高く IPA 親和性最高 |
+| 2 | `pt-BR` | ブラジルポルトガル語 | ブラジル | 英語学習需要が最大級 |
+| 3 | `vi` | ベトナム語 | ベトナム | 声調言語、若年層の英語学習需要が急伸 |
+| 4 | `id` | インドネシア語 | インドネシア | 東南アジア最大市場、fil と補完的 |
+| 5 | `th` | タイ語 | タイ | 声調言語、発音学習の潜在需要が高い |
+| 6 | `hi` | ヒンディー語 | インド | 母語干渉学習需要 |
+| 7 | `ar` | アラビア語 | 中東・北アフリカ | 母音構造が英語と大きく異なる、IPA 価値高 |
+
+各言語追加の Issue には、i18n JSON 追加、`lang_opts` 追加、`meta` オブジェクト追加、音素解説（`i18n/phonemes/{lang}.json`）追加、ネイティブレビュー、が含まれる。
+
+Phase 5 の SEO 基本セット（サブディレクトリ + プリレンダリング）が Track A で完成しているため、Phase B-Lang では上記 7 言語のサブディレクトリ・sitemap・hreflang エントリを追加するのみでよい。設計変更は不要。
 
 ---
 
