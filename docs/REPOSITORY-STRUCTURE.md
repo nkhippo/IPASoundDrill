@@ -110,7 +110,7 @@ ipasounddrill/
 | Cursor Automation | Cursor Cloud | Webhook: active, Cloud Agent: 見送り中（`resource_exhausted`） |
 | Secrets | GitHub repo | `CURSOR_AUTOMATION_WEBHOOK_URL`, `CURSOR_AUTOMATION_WEBHOOK_TOKEN` |
 | Branch Protection | GitHub Rulesets | `main`: PR 必須 + force push 禁止 |
-| Analytics | Vercel Web Analytics | Dashboard > Analytics タブ（Issue #19 で有効化予定） |
+| Analytics | Vercel Web Analytics | Dashboard > Analytics タブ（有効化済み、Issue #19 完了） |
 | Feedback | Tally form | URL: TBD（Issue E2 で確定） |
 
 ---
