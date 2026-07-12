@@ -3,7 +3,7 @@
 ## 関連 Issue / PR
 
 - Issue: #56
-- PR: 作成後に自動化ツールで紐づけ
+- PR: #57（open）
 
 ## Issue 背景（Issue 本文から要約）
 
