@@ -3,3 +3,11 @@
 .env.*
 *.pre-phase0a.json
 scripts/*.log
+node_modules/
+/en/
+/ja/
+/ko/
+/zh-Hans/
+/zh-Hant/
+/fil/
+.vercel/

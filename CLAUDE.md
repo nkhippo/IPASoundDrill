@@ -73,7 +73,7 @@
 
 ## 技術スタック（Track A）
 
-- **フロントエンド**: 単一 `index.html` + 純粋 JS + JSON データ
+- **フロントエンド**: `src/index.template.html` + ビルドスクリプト（`scripts/build-i18n-html.js`）で 6 言語版 HTML を生成 + 純粋 JS + JSON データ
 - **ホスティング**: Vercel（静的サイト、Track A 移管後）
 - **TTS**: Google Apps Script（`gas/Code.gs`、Track A 期間中は現行維持）
 - **データ生成パイプライン**: Python（`scripts/*.py`、ローカル実行）
@@ -88,7 +88,9 @@
 ```
 ipasounddrill/
 ├── CLAUDE.md                        ← このファイル（共通ルール）
-├── index.html                       ← SPA 本体（Decode/Encode, Mode B, Connected Speech, vocab browser, progress checks）
+├── src/index.template.html          ← SPA テンプレート（Decode/Encode, Mode B, Connected Speech, vocab browser, progress checks）
+├── en/ … fil/                       ← 生成物（Vercel Build / `npm run build`、`.gitignore`）
+├── middleware.ts / package.json / vercel.json
 ├── README.md                        ← 人間向け概要（デモ URL・ローカル起動）
 ├── wordlist_GA_a1a2_plus_phonics.json    ← ★ PRODUCTION wordlist（runtime fetch）
 │

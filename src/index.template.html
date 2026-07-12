@@ -1,9 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<!-- BUILD:HTML_LANG -->">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>IPA Sound Drill</title>
+<base href="/">
+<title><!-- BUILD:META_TITLE --></title>
+<meta name="description" content="<!-- BUILD:META_DESCRIPTION -->">
+<link rel="canonical" href="<!-- BUILD:CANONICAL -->">
+<!-- BUILD:HREFLANG_ALTERNATES -->
+<meta property="og:title" content="<!-- BUILD:OG_TITLE -->">
+<meta property="og:description" content="<!-- BUILD:OG_DESCRIPTION -->">
+<meta property="og:url" content="<!-- BUILD:OG_URL -->">
+<meta property="og:locale" content="<!-- BUILD:OG_LOCALE -->">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="IPA Sound Drill">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="<!-- BUILD:OG_TITLE -->">
+<meta name="twitter:description" content="<!-- BUILD:OG_DESCRIPTION -->">
+<script type="application/ld+json"><!-- BUILD:JSON_LD --></script>
 <link rel="preload" href="fonts/DoulosSIL-Regular.woff2" as="font" type="font/woff2" crossorigin>
 <style>
   /* Self-hosted IPA font: system stacks often lack RP glyphs like ɒ (U+0252). */
@@ -1105,12 +1119,21 @@ function dataReady() {
 }
 
 /* ---------- i18n ---------- */
-let LANG = localStorage.getItem("app_lang") || "en";
+const SUPPORTED_LANGS = ["en", "ja", "ko", "zh-Hans", "zh-Hant", "fil"];
+function langFromPath() {
+  const seg = (location.pathname || "/").split("/").filter(Boolean)[0] || "";
+  return SUPPORTED_LANGS.indexOf(seg) >= 0 ? seg : null;
+}
+function persistAppLang(lang) {
+  try { localStorage.setItem("app_lang", lang); } catch (e) {}
+  try { document.cookie = "app_lang=" + encodeURIComponent(lang) + ";path=/;max-age=31536000;SameSite=Lax"; } catch (e) {}
+}
+let LANG = langFromPath() || localStorage.getItem("app_lang") || "en";
 // Migrate legacy "zh" (single Chinese) to zh-Hans (Simplified default).
 if (LANG === "zh") {
   LANG = "zh-Hans";
-  localStorage.setItem("app_lang", "zh-Hans");
 }
+persistAppLang(LANG);
 let ACCENT = localStorage.getItem("app_accent") || "ga";
 let UI = {};
 let PH = {};
@@ -1370,8 +1393,15 @@ function applyI18n() {
 }
 
 async function setLang(lang) {
+  if (SUPPORTED_LANGS.indexOf(lang) < 0) return;
+  persistAppLang(lang);
+  const hash = location.hash || "";
+  // URL is ground truth (F2): navigate to language subdirectory, then reload applies i18n.
+  if (langFromPath() !== lang) {
+    location.href = "/" + lang + "/" + hash;
+    return;
+  }
   LANG = lang;
-  localStorage.setItem("app_lang", lang);
   await loadLocale(lang);
   applyI18n();
   buildKeyboard();

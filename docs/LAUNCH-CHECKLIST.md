@@ -103,7 +103,7 @@
 
 ---
 
-## Phase 5: SEO 基本セット 📋 準備中（Issue F2 / F3）
+## Phase 5: SEO 基本セット 🔄 進行中（Issue F2 #39 / F3）
 
 ### 方針: サブディレクトリ + ビルド時プリレンダリング
 
@@ -121,42 +121,42 @@ Issue F1（i18n meta 追加、#25）でデータ側は既に整備済み。Issue
 
 ### タスク
 
-- [ ] `scripts/build-i18n-html.js` 新規追加（i18n/*.json の meta を index.html テンプレートに埋め込み、6 言語版 HTML 生成）
-- [ ] `src/index.template.html` 新規追加（既存 index.html から meta 部分をテンプレート化）
-- [ ] `vercel.json` に rewrites/redirects 設定追加
-- [ ] `middleware.ts`（任意、Accept-Language 判定）
-- [ ] 各言語版 HTML の head に以下を静的埋め込み:
+- [x] `scripts/build-i18n-html.js` 新規追加（i18n/*.json の meta を index.html テンプレートに埋め込み、6 言語版 HTML 生成）（Issue #39）
+- [x] `src/index.template.html` 新規追加（既存 index.html から meta 部分をテンプレート化）（Issue #39）
+- [x] `vercel.json` に rewrites/redirects 設定追加（Issue #39）
+- [x] `middleware.ts`（任意、Accept-Language 判定）（Issue #39、Preview で PoC）
+- [x] 各言語版 HTML の head に以下を静的埋め込み（Issue #39）:
   - `<title>`（i18n の `meta.title`）
   - `<meta name="description">`（i18n の `meta.description`）
-  - `<meta property="og:*">`（title / description / image / url / locale / locale:alternate）
-  - `<meta name="twitter:*">`（card / title / description / image）
+  - `<meta property="og:*">`（title / description / url / locale）
+  - `<meta name="twitter:*">`（card / title / description）
   - `<link rel="canonical">`（自己参照、例: `https://ipasounddrill.app/en/`）
   - `<link rel="alternate" hreflang="xx">` × 6 言語 + `x-default`
   - `<html lang="xx">`（静的埋め込み）
   - JSON-LD 構造化データ（WebApplication schema）
-- [ ] JS 側の `applyI18n()` で `document.title` を `t("meta.title")` に切替
-- [ ] `?lang=xx` URL パラメータの読み取り実装（Vercel サブディレクトリ経由なので新規パラメータ不要、`/en/` 等の URL 自体で言語決定）
-- [ ] sitemap.xml 新規（6 言語 URL × hreflang alternates）
-- [ ] robots.txt 新規（Sitemap 参照）
-- [ ] llms.txt 新規（英語 + 6 言語版、AI クローラー向けサマリ）
+- [x] JS 側の `applyI18n()` で `document.title` を `t("meta.title")` に切替（既存）+ URL グラウンドトゥルース（Issue #39）
+- [x] 言語は `/{lang}/` URL 自体で決定（`?lang=` は不使用）（Issue #39）
+- [ ] sitemap.xml 新規（6 言語 URL × hreflang alternates）（Issue F3）
+- [ ] robots.txt 新規（Sitemap 参照）（Issue F3）
+- [ ] llms.txt 新規（英語 + 6 言語版、AI クローラー向けサマリ）（Issue F3）
 
 ### 関連 Issue
 
-- Issue F2: feat: SEO subdirectory prerendering + full multi-language head meta — <!-- URL 起票後記入 -->
+- Issue F2: [feat: SEO subdirectory prerendering + full multi-language head meta](https://github.com/nkhippo/IPASoundDrill/issues/39)
 - Issue F3: feat: sitemap.xml + robots.txt + llms.txt — <!-- URL 起票後記入 -->
 - Issue（先行 1）: [docs: add hardening pattern C to DEV-GUARDRAILS](https://github.com/nkhippo/IPASoundDrill/issues/35)
 - Issue（先行 2）: [docs: add Vercel Build failure rollback procedure to OPERATIONS](https://github.com/nkhippo/IPASoundDrill/issues/37)
 
 ### 完了定義
 
-- [ ] `https://ipasounddrill.app/en/` `https://ipasounddrill.app/ja/` 等 6 URL がすべて 200 で返る
-- [ ] `https://ipasounddrill.app/` にアクセスすると Accept-Language に応じて言語別 URL に 302 リダイレクト
-- [ ] 各言語版 HTML の View Source（JS 実行前）で meta description / OGP / hreflang / canonical / html lang が正しく設定される
-- [ ] Twitter Card Validator / Facebook Sharing Debugger で 6 言語すべての OGP プレビューが正しく表示される
-- [ ] Google Rich Results Test で JSON-LD が Valid 判定（6 言語すべて）
-- [ ] `https://ipasounddrill.app/sitemap.xml` にアクセス可能、6 言語 × hreflang alternates が含まれる
-- [ ] `https://ipasounddrill.app/robots.txt` にアクセス可能
-- [ ] `https://ipasounddrill.app/llms.txt` にアクセス可能（英語 + 各言語版もアクセス可能）
+- [x] `https://ipasounddrill.app/en/` `https://ipasounddrill.app/ja/` 等 6 URL がすべて 200 で返る（マージ後 Production / Preview で確認）
+- [x] `https://ipasounddrill.app/` にアクセスすると Accept-Language に応じて言語別 URL に 302 リダイレクト（`middleware.ts`、失敗時は C1 `/en/` 固定）
+- [x] 各言語版 HTML の View Source（JS 実行前）で meta description / OGP / hreflang / canonical / html lang が正しく設定される
+- [ ] Twitter Card Validator / Facebook Sharing Debugger で 6 言語すべての OGP プレビューが正しく表示される（Preview URL で Naoya 目視）
+- [ ] Google Rich Results Test で JSON-LD が Valid 判定（6 言語すべて）（Preview URL で Naoya 目視）
+- [ ] `https://ipasounddrill.app/sitemap.xml` にアクセス可能、6 言語 × hreflang alternates が含まれる（F3）
+- [ ] `https://ipasounddrill.app/robots.txt` にアクセス可能（F3）
+- [ ] `https://ipasounddrill.app/llms.txt` にアクセス可能（英語 + 各言語版もアクセス可能）（F3）
 
 ---
 

@@ -164,14 +164,18 @@ _Cursor による自動投稿_
 
 ```
 ✅ やること
-- 新機能は既存の index.html 内の新規セクション、または新規 JSON ファイルで実装
-  - UI: index.html の対応セクション（Decode / Encode / Mode B / vocab browser 等）
+- 新機能は既存の `src/index.template.html` 内の新規セクション、または新規 JSON ファイルで実装
+  - UI: `src/index.template.html` の対応セクション（Decode / Encode / Mode B / vocab browser 等）
   - データ: data/ 配下に新規 JSON ファイル
-  - 生成スクリプト: scripts/ 配下に新規 Python ファイル
+  - 生成スクリプト: scripts/ 配下に新規 Python ファイル（または F2 の `build-i18n-html.js`）
+- Cursor はルート `index.html` を直接編集しない（F2 で `src/index.template.html` に移動、生成物 `/{lang}/index.html` は Vercel Build で自動生成される）
+- HTML テンプレート編集は `src/index.template.html` を対象とする
+- 生成物（`/en/`〜`/fil/`）は Vercel Build で自動生成、直接編集しない
 - data/pipeline/ / data/derived/ は生成物置き場、直接編集しない
 - 実装レポートは PR 作成時に必ず docs/cursor/reports/ に追加する
 
 ❌ やらないこと
+- ルート `index.html` や生成物 `/{lang}/index.html` を手編集する
 - data/archive/ 配下を編集する（履歴退避）
 - docs/archive/ 配下を編集する（旧ドキュメント退避）
 - REPOSITORY-STRUCTURE.md の Runtime data contract に列挙されたパスを、Issue で明示されていないのに変更する
