@@ -9,6 +9,13 @@
     "name": "IPA Sound Drill",
     "home": "Bumalik sa itaas"
   },
+  "meta": {
+    "title": "IPA Sound Drill — Pagsasanay sa Pagbigkas ng Ingles gamit ang IPA",
+    "description": "Libreng tool para mag-drill ng tamang pagbigkas ng Ingles gamit ang International Phonetic Alphabet (IPA). May GA (American) at RP (British) accents.",
+    "ogTitle": "Pagbutihin ang Bigkas mo sa Ingles — IPA Sound Drill",
+    "ogDescription": "Marinig, basahin, at isulat ang tamang pagbigkas gamit ang IPA. Libre at pwede mo nang subukan ngayon.",
+    "keywords": "IPA, pagbigkas, English pronunciation, tamang bigkas, phonics, American accent, British accent"
+  },
   "build_ph": "I-tap ang mga IPA key sa ibaba para buuin ang pagbigkas",
   "check": "Suriin",
   "clear": "Burahin",

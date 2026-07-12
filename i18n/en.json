@@ -3,6 +3,13 @@
     "name": "IPA Sound Drill",
     "home": "Back to top"
   },
+  "meta": {
+    "title": "IPA Sound Drill — Master English Pronunciation with IPA",
+    "description": "Drill your English pronunciation using IPA notation. Free tool for GA and RP accents, built for language learners worldwide.",
+    "ogTitle": "IPA Sound Drill — Drill English Sounds with IPA",
+    "ogDescription": "A free, IPA-based pronunciation trainer. Decode, encode, and listen your way to clearer English — GA and RP accents supported.",
+    "keywords": "IPA, pronunciation, English pronunciation, phonetics, phonemic drill, GA RP accent, language learning"
+  },
   "lead_html": "Drill <b>IPA reading and writing</b> for words you already know&mdash;sound by sound. Target <b>trap phonemes</b> (θ, ð, æ, ʒ, ɝ) or your <b>weak spots</b> from practice history. Objective scoring only; build symbol coverage, not vocabulary lists.",
   "lead_connected_html": "Hear <b>connected speech</b> in GA&mdash;linking, assimilation, and elision. Read the connected IPA and recover the original phrase.",
   "lead_weak_html": "Hear the <b>weak forms</b> of function words in connected speech. Read the IPA and recover the word.",
