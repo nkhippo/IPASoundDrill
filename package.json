@@ -1,0 +1,11 @@
+{
+  "name": "ipasounddrill",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/build-i18n-html.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
