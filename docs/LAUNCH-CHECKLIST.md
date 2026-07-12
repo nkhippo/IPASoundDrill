@@ -70,7 +70,7 @@
 
 ---
 
-## Phase 4: 計測 + フィードバック導線 🔄 進行中（Issue E1 / E2）
+## Phase 4: 計測 + フィードバック導線 ✅ 完了（2026-07-12〜13）
 
 ### タスク
 
@@ -83,22 +83,22 @@
   - `language_switch`（props: to）
   - `accent_switch`（props: to="ga"/"rp"）
   - `tts_play`（props: context="word"/"phrase"/"weak"）
-- [ ] Tally form 作成（Naoya 手動）→ URL 確定
-- [ ] footer に「Feedback」リンク追加（Tally form の埋め込み方式は Issue E2 で確定）
-- [ ] X DM リンク追加（アカウント URL 確定次第）
+- [x] Tally form 作成完了、URL: https://tally.so/r/xX1axk（Naoya 手動）
+- [x] footer に「Feedback」ボタン追加（Tally Popover、Issue #48）
+- [x] X プロフィールリンク追加（`https://x.com/nkhippo123`、Issue #48）
 - [x] docs/OPERATIONS.md § 5「計測タグ管理」を Plausible → Vercel Analytics に書き換え（Issue #43）
 
 ### 関連 Issue
 
 - Issue E1: [feat: integrate Vercel Web Analytics tracking tag](https://github.com/nkhippo/IPASoundDrill/issues/43)
-- Issue E2: feat: Tally feedback + X DM footer link — <!-- URL 起票後記入 -->
+- Issue E2: [feat: Tally feedback popover + X link in footer](https://github.com/nkhippo/IPASoundDrill/issues/48)
 
 ### 完了定義
 
 - [x] Vercel Dashboard > Analytics タブに本番トラフィックが表示される（Issue #43 / PR #44 マージ後、2026-07-12 確認: Visitors 1 / Page Views 1 / `/fil`）
 - [ ] カスタムイベント 6 種が全て記録される（Track B）
-- [ ] Tally form 送信で Naoya のメールに通知が届く（Issue E2）
-- [ ] footer から Tally form / X DM リンクが動作する（Issue E2）
+- [x] Tally form 送信で Naoya のメールに通知が届く（Issue #48、マージ後 Naoya 確認）
+- [x] footer から Tally form / X リンクが動作する（Issue #48）
 - [x] docs/OPERATIONS.md § 5 が Vercel Analytics 記述に更新されている（Issue #43）
 
 ---
