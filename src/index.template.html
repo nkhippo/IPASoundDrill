@@ -372,7 +372,7 @@
     .key{min-width:42px;height:44px;font-size:18px}
     .answer .go,.kbtns button,.sumbtns button,.mcqopt{min-height:44px}
     .site-footer{flex-wrap:wrap;gap:10px;padding:8px 14px 32px}
-    .site-footer .feedback-btn,.site-footer .x-link{min-height:44px;padding:10px 16px;font-size:12px;display:inline-flex;align-items:center}
+    .site-footer .feedback-btn,.site-footer .x-link,.site-footer .legal-link{min-height:44px;padding:10px 16px;font-size:12px;display:inline-flex;align-items:center}
   }
   @media (max-width:520px){
     .brand .mark{font-size:17px}
@@ -398,9 +398,9 @@
   @media (prefers-reduced-motion:no-preference){.panel{animation:rise .26s ease}@keyframes rise{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}}
   @media (prefers-reduced-motion:reduce){.playicon.needs-tap{animation:none}}
   .site-footer{max-width:600px;margin:8px auto 0;padding:4px 18px 28px;display:flex;justify-content:center;align-items:center;gap:16px}
-  .site-footer .feedback-btn,.site-footer .x-link{font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.04em;color:var(--muted);text-decoration:none;border:1px solid var(--hair);background:#fff;border-radius:999px;padding:7px 14px;cursor:pointer;line-height:1.2}
-  .site-footer .feedback-btn:hover,.site-footer .x-link:hover{color:var(--ink);border-color:var(--faint)}
-  .site-footer .feedback-btn:focus-visible,.site-footer .x-link:focus-visible{outline:2px solid var(--signal);outline-offset:2px}
+  .site-footer .feedback-btn,.site-footer .x-link,.site-footer .legal-link{font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.04em;color:var(--muted);text-decoration:none;border:1px solid var(--hair);background:#fff;border-radius:999px;padding:7px 14px;cursor:pointer;line-height:1.2}
+  .site-footer .feedback-btn:hover,.site-footer .x-link:hover,.site-footer .legal-link:hover{color:var(--ink);border-color:var(--faint)}
+  .site-footer .feedback-btn:focus-visible,.site-footer .x-link:focus-visible,.site-footer .legal-link:focus-visible{outline:2px solid var(--signal);outline-offset:2px}
   body.in-play .site-footer{display:none}
 </style>
 </head>
@@ -664,6 +664,16 @@
       class="feedback-btn"
       aria-label="Send feedback"
     >Feedback</button>
+    <a
+      href="/terms.html"
+      class="legal-link"
+      aria-label="Terms of Service"
+    >Terms</a>
+    <a
+      href="/privacy.html"
+      class="legal-link"
+      aria-label="Privacy Policy"
+    >Privacy</a>
     <a
       href="https://x.com/nkhippo123"
       target="_blank"

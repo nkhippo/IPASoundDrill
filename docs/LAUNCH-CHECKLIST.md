@@ -160,7 +160,7 @@ Issue F1（i18n meta 追加、#25）でデータ側は既に整備済み。Issue
 
 ---
 
-## Phase 6: 法務ドキュメント 📋 未着手（Issue G1 / G2）
+## Phase 6: 法務ドキュメント ✅ 完了（2026-07-12〜13）
 
 ### タスク
 
@@ -171,20 +171,20 @@ Issue F1（i18n meta 追加、#25）でデータ側は既に整備済み。Issue
   - Cookie の不使用（クッキーレス設計）
   - Vercel Web Analytics の記述（Cookie 未使用の明示、GDPR 対応）
   - 問い合わせ先（X DM or Tally）
-- [ ] `docs/legal/terms-en.md` / `terms-ja.md` / `privacy-en.md` / `privacy-ja.md` として配置
-- [ ] `index.html` の footer にリンク追加（現在言語で切替）
-- [ ] i18n に「Terms of Service」「Privacy Policy」の翻訳キー追加（6 言語分、他言語は英語 fallback 可）
+- [x] footer に「Terms」「Privacy」リンクを追加（Issue #59）
+- [ ] `docs/legal/` Markdown 配置 — Track A では root HTML（G1）に変更済み、対象外
+- [ ] i18n に「Terms of Service」「Privacy Policy」の翻訳キー追加 — Track B Phase B-Lang
 
 ### 関連 Issue
 
 - Issue G1: [feat: add Terms of Service + Privacy Policy](https://github.com/nkhippo/IPASoundDrill/issues/56)
-- Issue G2: feat: add footer links to legal pages — <!-- URL 起票後記入 -->
+- Issue G2: [feat: add legal footer links](https://github.com/nkhippo/IPASoundDrill/issues/59)
 
 ### 完了定義
 
-- [ ] footer から Terms / Privacy へのリンクが動作
-- [ ] 英・日切替に対応
-- [ ] Vercel Analytics 利用の記述が Privacy に含まれる
+- [x] footer から Terms / Privacy へのリンクが動作（Issue #59）
+- [ ] 英・日切替に対応 — Track B Phase B-Lang（Track A は英語版のみ）
+- [x] Vercel Analytics 利用の記述が Privacy に含まれる（Issue #56）
 
 ---
 
