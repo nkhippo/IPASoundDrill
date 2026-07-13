@@ -164,9 +164,9 @@ Issue F1（i18n meta 追加、#25）でデータ側は既に整備済み。Issue
 
 ### タスク
 
-- [ ] Terms of Service（英・日）作成
+- [x] Terms of Service（英語）作成（Issue #56）
   - サービスの目的、無保証、利用制限、免責、準拠法
-- [ ] Privacy Policy（英・日）作成
+- [x] Privacy Policy（英語）作成（Issue #56）
   - 収集する情報（localStorage のみ、個人情報なし）
   - Cookie の不使用（クッキーレス設計）
   - Vercel Web Analytics の記述（Cookie 未使用の明示、GDPR 対応）
@@ -177,7 +177,7 @@ Issue F1（i18n meta 追加、#25）でデータ側は既に整備済み。Issue
 
 ### 関連 Issue
 
-- Issue G1: docs: add Terms of Service and Privacy Policy files — <!-- URL 起票後記入 -->
+- Issue G1: [feat: add Terms of Service + Privacy Policy](https://github.com/nkhippo/IPASoundDrill/issues/56)
 - Issue G2: feat: add footer links to legal pages — <!-- URL 起票後記入 -->
 
 ### 完了定義
