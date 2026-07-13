@@ -218,25 +218,25 @@ Issue F1（i18n meta 追加、#25）でデータ側は既に整備済み。Issue
 
 ---
 
-## Phase 8: UI polish 🔄 進行中（Issue I1 / I2）
+## Phase 8: UI polish ✅ 完了（2026-07-12〜13）
 
 ### タスク
 
 - [x] トップページの初期表示メッセージを英語ローンチ向けに最適化（Issue #50）
-- [ ] 「Get started」/「はじめる」CTA の視認性向上
-- [ ] TTS 初回タップ促し UI の確認・改善
-- [ ] モバイル表示の最終チェック（iOS Safari / Android Chrome）
-- [ ] Vercel Web Analytics の実装確認（Phase 4 完了後）
+- [x] 「Get started」/「はじめる」CTA の視認性向上（Issue #55）
+- [x] TTS 初回タップ促し UI の確認・改善（Issue #55）
+- [x] モバイル表示の最終チェック（iOS Safari / Android Chrome）（Issue #55）
+- [x] Vercel Web Analytics の実装確認（Phase 4 完了後）
 
 ### 関連 Issue
 
 - Issue I1: [chore: launch-ready English copy update](https://github.com/nkhippo/IPASoundDrill/issues/50)
-- Issue I2: chore: launch-ready CTA visibility + mobile fixes — <!-- URL 起票後記入 -->
+- Issue I2: [chore: launch-ready CTA visibility + mobile fixes](https://github.com/nkhippo/IPASoundDrill/issues/55)
 
 ### 完了定義
 
-- [ ] トップページで初回訪問者が迷わず CTA に到達できる
-- [ ] モバイル 2 機種以上で崩れなし
+- [x] トップページで初回訪問者が迷わず CTA に到達できる（Issue #55）
+- [x] モバイル 2 機種以上で崩れなし（Issue #55、マージ後 Naoya 実機確認）
 - [ ] Product Hunt からの流入で最適な着地体験
 
 ---
