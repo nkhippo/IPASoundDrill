@@ -75,6 +75,7 @@ Cursor 指示書内で明示的に参照させるドキュメント:
 | `docs/bug-knowledge.md` | 月次（ローンチ後） | Naoya + Opus 分析 |
 | `docs/PURPOSE.md` | 四半期 or 大きな方針変更時 | Naoya |
 | `docs/cursor/reports/` 群 | 月次（Cursor 品質分析用） | Naoya + Claude |
+| `docs/cursor/recon/` 群 | UI/UX・インフラ調査時（Pre-Issue Recon）。段階 2 突合の入力。長期は Track B React 化の対応マップ | Naoya + Claude |
 | `docs/CURSOR-INSTRUCTION-GUIDE.md` の抽象度マトリックス | 月次（見積もり精度レビュー） | Naoya + Claude |
 
 ## 3. 新規ドキュメント作成判定フロー

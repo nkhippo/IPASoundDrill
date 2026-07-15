@@ -9,6 +9,7 @@ AI エージェント向けの**作業指示・実装レポート・設計相談
 | [`instructions/`](instructions/) | `cursor-instructions-*.md` | **これから実装する**タスクの手順・検証条件 |
 | [`reports/`](reports/) | `cursor-implementation-report-*.md` | **完了した**タスクの結果報告（Claude への引き継ぎ用） |
 | [`briefs/`](briefs/) | `cursor-*.md` | 実装**前**の設計相談・意思決定メモ |
+| [`recon/`](recon/) | `pre-issue-recon-*.md` | **読み取り専用調査**の機械抽出（DOM / 関数 / i18n）。Phase 0 UI 監査や Pre-Issue Recon |
 
 **正本ドキュメント（目的・仕様・フォルダマップ）**は `docs/` 直下。タスク履歴と混同しないこと。
 
