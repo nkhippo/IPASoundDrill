@@ -4,8 +4,8 @@
 > 機能追加や仕様相談の前提資料として利用してください。  
 > 目的の正本は `docs/PURPOSE.md`、実装設計は `docs/DESIGN.md`（衝突時は PURPOSE → DESIGN → 本書の順で参照）。
 
-**最終更新:** 2026-07-10（Phase V 語彙ページ化・Phase T TTS・Phase B バッチ監査・語彙 5,397）  
-**対象コード:** `index.html`、`wordlist_GA_a1a2_plus_phonics.json`（**5,397 語**）、`data/connected_speech.json`、`data/weak_forms.json`、`data/guide.json`、`i18n/`、`gas/`  
+**最終更新:** 2026-07-16（Phase 0 段階 2: SPEC/DESIGN ↔ 実装突合・i18n orphan 整理）  
+**対象コード:** `src/index.template.html`（正本。ビルド生成物 `/{lang}/index.html`）、`wordlist_GA_a1a2_plus_phonics.json`（**5,397 語**）、`data/connected_speech.json`、`data/weak_forms.json`、`data/guide.json`、`i18n/`、`gas/`  
 **リポジトリ構成:** `docs/REPOSITORY-STRUCTURE.md`（フォルダマップ・AI向け）
 
 ---
@@ -69,6 +69,8 @@
 - **音素フォーカス（主）:** All / Trap sounds / Weak spots / Alphabet / Contractions / Irregular forms / Casual speech
 - **綴りタイプ（従）:** All / Regular patterns / Irregular
 - **規則グループ（Regular 時）:** Short / Long·silent e / Vowel teams / R-colored vowels
+- **Trap sounds 詳細:** `TRAPSET = ['θ', 'ð', 'æ', 'ʒ', 'ɝ']` の 5 音素を含む語彙にフィルタ（`hasTrapPhoneme`）
+- **Weak spots 詳細:** `ept_hist_v1` の履歴と `ept_sym_v1` に基づく弱点音素を含む語彙（`filteredPool()` の重み付け・`buildSessionQueue` の Symbolic バケット）
 - **適応出題:** セッション開始時に `ept_hist_v1`・`ept_sym_v1`・**`ept_checks_v1`** に基づき全プール分の出題順を決定（Leitner + 弱点記号 + **進捗重み付けシャッフル**。詳細は `DESIGN.md` §1.4）
 
 ### 2.3b セッション共通 — 先読み・終了
@@ -77,10 +79,11 @@
 |------|------|
 | **先読み（問題）** | 開始時に現問＋先読み5＝**6 問**をキューへ。ストック（現問を除く先読み数）が **&lt; 5** になるたびに **5 問**追加 |
 | **先読み（音声）** | キュー追加と同時に GA+RP 両方 warm → 現アクセント body 優先 → 反対アクセントはアイドル時。Connected / 弱形も対象 |
+| **プリフェッチ定数** | `warmChunk = 6`（`SESSION_INITIAL` と同期）、`warmParallel = 2`（先読み並列 fetch）、`bodyParallel = 3`（本体音声並列 fetch）。`SESSION_REFILL = 5` はセッション中の追加補充数（プリフェッチ数とは別次元） |
 | **スピーカー** | キャッシュ準備完了まで無効化（全モード共通） |
-| **離脱確認** | Decode / Encode / Mode B Study / Reveal から Menu またはブランドタップ時に Yes/No モーダル。Yes → サマリー（再開なし）。Summary・セットアップではモーダルなし |
+| **離脱確認** | Decode / Encode / Mode B Study / Reveal から Menu またはブランドタップ時に Yes/No モーダル。**Yes → setup 画面に復帰**（`goToTop(true)`。再開なし）。Summary・セットアップではモーダルなし |
 | **終了** | プール全問消化で自動サマリー。Menu（確認なしの対象外画面）でセットアップへ戻ると途中統計は破棄 |
-| **メーター** | `現在番号 / プール総数`（総数はセッション開始時に固定） |
+| **進捗表示** | 各カード内 `#dNo` / `#eNo` / `#mbSNo` 等（`現在番号 / プール総数`）。トップバーに meter ノードは無し。`setCardCefr()` が担当 |
 
 ### 2.4 Mode A — 学習方向
 
@@ -99,7 +102,12 @@
 
 **出題:** フィルタ後プールの全語を Study として重複なしで消化（§2.3b の先読み・離脱確認と同じ）。
 
-**バンド進行:** `letter`・`contraction` は Mode B プールから除外。バンド内 60% 以上が box 4+ に到達すると次バンドへ自動解放。セットアップにマスタリー率を表示。
+**バンド進行:** `letter`・`contraction` は Mode B プールから除外。バンド内 60% 以上が box 4+ に到達すると次バンドへ自動解放（`MODEB_BAND_UNLOCK_RATIO = 0.6`）。**現状 `refreshVocabBandUnlock()` は呼び出し 0 のため実質未使用**（Q-2 Phase 1 判断待ち）。
+
+**Mode B セッション定数:**
+
+- `MODEB_SESSION = {newCount: 10, reviewCount: 10}` — セッションあたりの新規語彙数と復習数（Quiz 有効時）
+- `MODEB_BAND_UNLOCK_RATIO = 0.6` — バンド解放閾値（上記どおり現状未接続）
 
 ### 2.6 採点ロジック
 
@@ -141,7 +149,7 @@
 ```
 ┌─────────────────────────────────────────────────────────────┐
 │  クライアント（ブラウザ）                                       │
-│  index.html（SPA）                                           │
+│  src/index.template.html → /{lang}/index.html（SPA・ビルド生成） │
 │  + wordlist_GA_a1a2_plus_phonics.json（5,397語）             │
 │  + data/connected_speech.json（201句）                        │
 │  + data/weak_forms.json（36語）                               │
@@ -171,8 +179,8 @@
 
 | レイヤ | 技術 | 役割 |
 |--------|------|------|
-| フロントエンド | 単一 `index.html`（Vanilla JS） | UI・ゲームロジック・採点・SRS |
-| ホスティング | GitHub Pages + `.github/workflows/static.yml` | 静的配信 |
+| フロントエンド | `src/index.template.html`（Vanilla JS）→ `/{lang}/index.html` | UI・ゲームロジック・採点・SRS |
+| ホスティング | Vercel（`npm run build` → 6 言語 HTML） | 静的配信 |
 | 音声 API | GAS Web App → OpenAI `gpt-4o-mini-tts` | API キー非露出。`?warm=1` で Drive 先読み。`?urls=1` で公開 URL（クライアント直 fetch）。未反映時は base64 フォールバック |
 | GA バッチ warm | `gas/BatchWarm.gs`（時間トリガー） | 全 **5,397** 語の GA 音声を Drive に事前ストック（500語/回・20並列） |
 | サーバーキャッシュ | Google Drive `IPA-TTS-Audio/` | `{slug}__ga_v2.mp3` / `{slug}__rp_v2.mp3` |
@@ -187,7 +195,7 @@
 
 - **本番 URL:** https://ipasounddrill.app/
 - **ローカル:** `python3 -m http.server 8080`（`file://` 不可）
-- **GAS:** `gas/README.md` 参照。`index.html` の `GAS_TTS_URL` に Web App URL を設定。Phase T（`?urls=1` / `migratePublicSharing`）の手動手順は `docs/reference/remaining-ops-checklist.md`
+- **GAS:** `gas/README.md` 参照。`src/index.template.html` の `GAS_TTS_URL` に Web App URL を設定。Phase T（`?urls=1` / `migratePublicSharing`）の手動手順は `docs/reference/remaining-ops-checklist.md`
 
 ---
 
@@ -195,18 +203,36 @@
 
 画面切替は主に `<section>` の `hidden` で表示制御。**語彙ブラウザのみ** hash routing（`#/vocab` / `#/vocab/phrases`）を用いる（`navigate` / `hashchange`）。その他の練習画面はルーターなし。
 
-### 4.0 全画面共通 — トップバー
+### 4.0 全画面共通 — トップバー・シェル
 
 | 要素 | 内容 |
 |------|------|
-| ブランド | `/iː/` + アプリ名 + サブタイトル |
+| ブランド | `#brandBtn` + `#brandName`（`/iː/` マーク + アプリ名。サブタイトル DOM 無し） |
 | 語彙 | `#vocabBtn` — **常時表示**（プレイ中も利用可） |
 | ガイド | `#guideBtn` — セットアップ時のみ表示 |
 | 設定 | `#settingsBtn` — セットアップ時のみ表示 |
-| Menu | `#backTopBtn` — プレイ中のみ。離脱確認対象画面ではサマリーへ、それ以外はセットアップへ |
-| メーター | `現在番号 / プール総数`（総数はセッション開始時に固定） |
-| 離脱確認 | `#exitConfirmModal` — Decode / Encode / Mode B Study / Reveal のみ（`exit_confirm.*` i18n） |
-| プレイ中パンくず | `#playCrumb` — 学習モード > 練習モード (GA\|RP)。例: `IPA読み書き > 一単語 (GA)` |
+| Menu | `#backTopBtn` — プレイ中のみ。離脱確認対象画面では Yes で setup 復帰 |
+| プレイ中パンくず | `#playCrumb` — 学習モード > 練習モード (GA\|RP) |
+| TTS ヒント | `#audioHint` — `role="status"`。`audioHintText()` で再生準備完了時に促す（i18n キー `audio_tap_hint` は未登録・英語フォールバック） |
+| 離脱確認 | `#exitConfirmModal` — Decode / Encode / Mode B Study / Reveal のみ |
+| 進捗表示 | 各カード内 `#*No`（トップバー meter 無し。§2.3b 参照） |
+
+#### §4.0.1 Footer
+
+`#siteFooter` は shell 最下部に配置。Feedback / Terms / Privacy / X へのリンクを提供。
+
+- 表示条件: `body.in-play`（学習セッション中）では非表示
+- 学習フローに干渉しない控えめな配置（Product Principles 原則 5: 1 画面 1 主軸）
+
+#### §4.0.2 Modals
+
+| モーダル | Backdrop | Escape | Outside click |
+|----------|----------|--------|---------------|
+| `#exitConfirmModal` | `#exitConfirmScrim` | **未対応**（Issue X-4 予定） | scrim → No 相当 |
+| `#settingsModal` | `#settingsScrim` | **未対応** | scrim → close |
+| `#guideModal` | `#guideScrim` | **未対応** | scrim / Close → close |
+
+`body.scroll-locked` は Decode / Mode B Dict 入力 focus 時のみ（`lockInputScroll`）。語彙ページでは未使用。
 
 ### 4.1 セットアップ（`#setup`）
 
@@ -219,6 +245,8 @@
 | Phoneme focus | 7 ピル（Words のみ・**詳しい設定**内）。CEFR 選択で 0 件になるピルは `disabled` | （非表示） |
 | Spelling type / pattern group | あり（Words のみ・**詳しい設定**内）。同上 | （非表示） |
 | Connected filters | Level L1–L3、Type（**詳しい設定**内） | （非表示） |
+
+**Connected phrase フィルタ（Q-5-B 確定）:** 連結句 201 句のフィルタは **level**（L1–L3）と **type**（linking / assimilation / elision / weak）の 2 軸のみ。データの `cefr` フィールド（A1–B2）は付与済みだが **UI フィルタでは使用しない**。CEFR は Words（Mode A/B）の `#cefrPills` で機能する。
 | Band | — | 現在 CEFR バンド表示 |
 | プール件数 + 開始 | あり | あり |
 
@@ -234,9 +262,14 @@ IPA（タップ可）・TTS・綴り入力・Check。連結句・弱形時は cs
 
 TTS・IPA・反対アクセント行（`#mbSAltIpa`、同一時は `reveal.alt_same`）・[意味を確認する] → 単語＋gloss フェードイン・発音ポイント（空なら非表示）・[次へ]。英語 UI では `modeBDisplayGloss()` が自己参照 gloss を `(品詞)` または `def` で代替。
 
-### 4.5 Mode B — Quiz（`#cardModeBQuiz`）
+### 4.5 Mode B — Quiz（`MODEB_QUIZ_ENABLED=false` で凍結）
 
-MCQ（4 択意味）またはディクテーション（綴り入力）。
+| カード | 内容 |
+|--------|------|
+| `#cardModeBMcq` | Multiple Choice（意味 4 択） |
+| `#cardModeBDict` | Dictation（綴り入力） |
+
+旧記述の `#cardModeBQuiz` は存在しない（上記 2 カードに分割）。
 
 ### 4.6 解答（`#reveal`）
 
@@ -414,7 +447,13 @@ python3 scripts/fix_happy_i.py   # その後 gen_ga_rp_same を再実行
 
 ### 5.2 連結句 — `data/connected_speech.json`
 
-**201 句。** フィールド: `id`, `w`, `ipa`, `rp_ipa`, `cs_type`, `level` (1–3), **`cefr`** (A1–B2、2026-07-09 付与), `cs_rule` (en/ja/**fil**), `gloss`, `carrier`（キャリア文テンプレート）。
+**201 句。** フィールド: `id`, `w`, `ipa`, `rp_ipa`, `cs_type`, `level` (1–3), **`cefr`** (A1–B2、2026-07-09 付与), `cs_rule` (en/ja/**fil**), `gloss`, `carriers`（キャリア文テンプレート配列）。
+
+#### Connected phrase TTS（Track A・Q-6-B 確定）
+
+- SPA からの API 呼び出しは **`phrase=&accent=ga` 固定**
+- `BatchWarm.gs` の暖機ループも GA 固定
+- RP 連結 TTS は Track B（React 化以降）で対応予定
 
 ### 5.2b 弱形 — `data/weak_forms.json`
 
@@ -436,18 +475,41 @@ UI i18n とは独立。各言語キー（`en`, `ja`, `ko`, `zh-Hans`, `zh-Hant`,
 | `ept_vocab_v1` | Mode B 語彙 SRS |
 | `ept_vocab_band` | Mode B 現在バンド |
 | `ept_checks_v1` | 手動進捗（モード `d`/`e`/`l` 各 0–3）。語彙ブラウザ・Reveal・Mode B Study で更新 |
-| `ipa_tts_v2:{accent}:{slug}` | TTS MP3（旧キーは GA として移行） |
+| `va-disable` | Vercel Analytics オプトアウト。文字列 `"true"` で計測イベントを送信しない |
+
+#### TTS キャッシュキー
+
+- Prefix: `ipa_tts_v2:`（定数 `LS_TTS_PREFIX`）
+- キー形式: `ipa_tts_v2:{ga|rp}:{slug}`（単語）、`ipa_tts_v2:{ga|rp}:p4_{slug}`（連結）、`ipa_tts_v2:{ga|rp}:weak_{slug}`（弱形）
+- Legacy 形式（`ipa_tts_v1:*`）は読取時に v2 へマイグレーション
 
 ### 5.4 セッション状態（メモリ `S`）
 
-`appMode`, `tab`（`words` / `connected`）, `dir`, `focus`, `reg`, `grp`, `csFilter`, `csLevel`, `sessionPool`, `sessionNext`, `poolTotal`, `queue`, `idx`, `answered`, `correct`, `weak`, `missed`, `cur`, `mbPhase`, `curCarrier`（連結/弱形のキャリア文）, `revealed`, `built`（Encode IPA バッファ）, `mbQuiz`（Mode B クイズ状態）。キューアイテムに `mbKind`（`study` / `quiz`）。定数: `SESSION_INITIAL=6`, `SESSION_REFILL=5`, `MODEB_QUIZ_ENABLED=false`。モジュールレベル: `vocabTabCurrent`, `vocabBuilt`, `prefetchToken`, `memAudioCache`, `audioReady`, `speakBusy`, `guideLang`。リロードで消える。
+`appMode`, `tab`（`words` / `connected`）, `dir`, `focus`, `reg`, `grp`, **`cefrLevels`**（`Set<string>`。Mode A/B 共通 CEFR フィルタ）, `csFilter`, `csLevel`, `sessionPool`, `sessionNext`, `poolTotal`, `queue`, `idx`, `answered`, `correct`, `weak`, `missed`, `cur`, `mbPhase`（Mode B Study フェーズ: `"mcq"` 等）, `curCarrier`（連結/弱形のキャリア文）, `revealed`, `built`（Encode IPA バッファ）, `mbQuiz`（Mode B クイズ状態）。キューアイテムに `mbKind`（`study` / `quiz`）。
+
+定数: `SESSION_INITIAL=6`, `SESSION_REFILL=5`, `MODEB_QUIZ_ENABLED=false`, `MODEB_SESSION={newCount:10, reviewCount:10}`, `MODEB_BAND_UNLOCK_RATIO=0.6`, `PREFETCH={warmChunk:6, warmParallel:2, bodyParallel:3}`。
+
+モジュールレベル: `vocabTabCurrent`, `vocabBuilt`, `prefetchToken`, `memAudioCache`, `audioReady`, `speakBusy`, `guideLang`。リロードで消える。
+
+#### `S.cefrLevels`
+
+Mode A / Mode B 共通の CEFR フィルタ状態。初期値は Setup ピル選択（既定 `{"A1","A2"}`）。`filteredWordPoolWith` / `modeBPool` が参照。
+
+#### `S.mbPhase`
+
+Mode B Study の内部フェーズ。DOM 表示と `renderModeBStudy` の遷移に使用（Quiz 凍結時は Study のみ）。
 
 ### 5.5 i18n
 
 | データ | パス |
 |--------|------|
-| UI 文言 | `i18n/{en,ja,zh,ko,fil}.json`（**177 キー**。`vocab.back`・複合 POS `形容詞 / 副詞 / 間投詞` 含む） |
-| 音素解説 | `i18n/phonemes/{en,ja,zh,ko,fil}.json`（43 記号） |
+| UI 文言 | `i18n/{en,ja,ko,zh-Hans,zh-Hant,fil}.json`（**169 leaf**。`vocab.back`・複合 POS 含む） |
+| 音素解説 | `i18n/phonemes/{en,ja,ko,zh-Hans,zh-Hant,fil}.json`（47 記号） |
+
+**leaf 内訳（2026-07-16 実測）:**
+
+- Runtime 参照: **165 leaf**（UI 表示・`t()` 動的参照）
+- Build-only: `meta.title`, `meta.description`, `meta.ogTitle`, `meta.ogDescription` の **4 leaf**（`scripts/build-i18n-html.js` のみ）
 
 検証: `python3 tools/validate_i18n.py`。監査ドキュメント再生成: `python3 tools/gen_audit_docs.py`。
 
@@ -457,7 +519,7 @@ UI i18n とは独立。各言語キー（`en`, `ja`, `ko`, `zh-Hans`, `zh-Hant`,
 
 | 項目 | 内容 |
 |------|------|
-| アーキテクチャ | 単一 HTML。フレームワーク・認証なし |
+| アーキテクチャ | `src/index.template.html` → `/{lang}/index.html`（単一 SPA テンプレート）。フレームワーク・認証なし |
 | 進捗 | localStorage のみ（端末・ブラウザ単位） |
 | 連結句 TTS | GA 固定。RP 連結音声は未対応 |
 | 弱形 TTS | GA/RP 対応（`?weak=`）。キャリア文内の弱形 IPA を指示文で指定 |
@@ -477,6 +539,7 @@ UI i18n とは独立。各言語キー（`en`, `ja`, `ko`, `zh-Hans`, `zh-Hant`,
 
 | 日付 | 内容 |
 |------|------|
+| 2026-07-16 | Phase 0 段階 2: 実装突合（正本 `src/index.template.html`、Exit→setup、footer/audioHint、SRS 重み、Connected CEFR/TTS 判断、Mode B DOM 名、i18n 169 leaf・orphan 13 削除） |
 | 2026-07-10 | Phase B: Phase 2 バッチ監査反映（gloss.zh 的的・damn POS・Fil 13・バッチ 86 同期・複合 POS i18n）。UI キー 177 |
 | 2026-07-10 | Phase T: TTS 1問目遅延対策（body-first、`?urls=1`、setup preread）。GAS 再デプロイは残作業 |
 | 2026-07-10 | Phase V: 語彙ブラウザを `#vocabPage` に移設。hash routing (`#/vocab`, `#/vocab/phrases`)、2段組行・CEFR バッジ両タブ・`vocab.back` |

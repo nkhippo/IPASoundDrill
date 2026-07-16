@@ -13,8 +13,7 @@
     "title": "IPA Sound Drill — Pagsasanay sa Pagbigkas ng Ingles gamit ang IPA",
     "description": "Libreng tool para mag-drill ng tamang pagbigkas ng Ingles gamit ang International Phonetic Alphabet (IPA). May GA (American) at RP (British) accents.",
     "ogTitle": "Pagbutihin ang Bigkas mo sa Ingles — IPA Sound Drill",
-    "ogDescription": "Marinig, basahin, at isulat ang tamang pagbigkas gamit ang IPA. Libre at pwede mo nang subukan ngayon.",
-    "keywords": "IPA, pagbigkas, English pronunciation, tamang bigkas, phonics, American accent, British accent"
+    "ogDescription": "Marinig, basahin, at isulat ang tamang pagbigkas gamit ang IPA. Libre at pwede mo nang subukan ngayon."
   },
   "build_ph": "I-tap ang mga IPA key sa ibaba para buuin ang pagbigkas",
   "check": "Suriin",
@@ -74,11 +73,6 @@
     "no_results": "Walang resulta",
     "back": "Bumalik"
   },
-  "hint": {
-    "first": "Unang titik",
-    "pos": "Bahagi ng pananalita",
-    "syl": "Mga pantig"
-  },
   "info": {
     "examples": "Mga halimbawa",
     "mouth": "Bibig",
@@ -116,7 +110,6 @@
     "c1": "C1",
     "pool": "Pool: {n} salita"
   },
-  "meter_done": "tapos na",
   "reflect": {
     "btn": "Pagbalik-tanaw"
   },
@@ -205,20 +198,12 @@
     "alt_same": "pareho"
   },
   "see_answer": "Tingnan ang sagot",
-  "set": {
-    "daily_d": "Karaniwang salita (kasama ang di-regular na baybay)",
-    "daily_t": "Pang-araw-araw na salita · CEFR A1–A2",
-    "label": "Set ng tanong",
-    "phonics_d": "Mga salitang may regular na tugma ng baybay&ndash;tunog",
-    "phonics_t": "Mga padron ng phonics · baybay &harr; tunog"
-  },
   "settings_btn": "Wika",
   "settings_close": "Isara",
   "settings_lang": "Wika",
   "settings_title": "Mga Setting",
   "start": "Simulan",
   "summary": {
-    "again": "Maglaro muli",
     "line": "{c} / {t} tama · {m} babalikan",
     "review": "Listahan ng babalikan: {list}",
     "weak_btn": "Balikan ang mga mali lamang",
@@ -226,8 +211,6 @@
     "weak_none_d": "Walang naling tunog. Subukan ang mas mataas na antas.",
     "weak_none_t": "Walang natukoy na mahinang tunog"
   },
-  "syl": "{n} pantig",
-  "syl_pl": "{n} pantig",
   "tab": {
     "connected": "Linking",
     "label": "Mode ng pagsasanay",

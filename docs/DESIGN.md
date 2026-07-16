@@ -4,7 +4,7 @@
 > 本ドキュメントは「何を作るか（what / how）」の正本。目的の正本は `PURPOSE.md`。
 > 画面・JSON フィールド・localStorage の正本は **`SPECIFICATION.md`**。フォルダマップは **`REPOSITORY-STRUCTURE.md`**。
 >
-> **更新日:** 2026-07-10 ／ **ステータス:** Mode A・Mode B・GA/RP・連結句・弱形・語彙ページ（`#vocabPage`）・進捗チェック・`ga_rp_same` 実装済み。語彙 **5,397語**（B2=899、Phase 2 M2 完了）。Phase R（RP）/ T（TTS 遅延）/ V（語彙ページ）/ B（バッチ監査）完了。UI **177 キー**。GAS 手動残作業は `docs/reference/remaining-ops-checklist.md`。
+> **更新日:** 2026-07-16 ／ **ステータス:** Mode A・Mode B・GA/RP・連結句・弱形・語彙ページ（`#vocabPage`）・進捗チェック・`ga_rp_same` 実装済み。語彙 **5,397語**（B2=899、Phase 2 M2 完了）。Phase R（RP）/ T（TTS 遅延）/ V（語彙ページ）/ B（バッチ監査）完了。UI **169 leaf**。GAS 手動残作業は `docs/reference/remaining-ops-checklist.md`。
 
 ---
 
@@ -77,13 +77,24 @@
 
 セッション開始時にフィルタ後プールの**全件**について出題順を決定（`buildSessionQueue(pool, pool.length)`）。先読みキュー（§3.4b）で順次供給。
 
-重み付け抽出（比率は調整可・定数化）：
-1. **復習期限到来** 約40% … `box` と経過(`ts`)から due な語。
-2. **弱点記号ターゲット** 約40% … `ept_sym` の errRate 上位記号を含み、直近未出題の語。
-3. **新規カバレッジ** 約20% … 未出題語。音節数 昇順でスキャフォールド。
-4. **最終シャッフル:** 上記で組んだキューに **`weightedShuffle`（`ept_checks_v1` の現在モード重み）** を適用。チェック 0/3 の語ほど前方に来やすい。
+重み付け抽出（`buildSessionQueue`。hist キー数 ≥ 3 のとき）：
+
+| バケット | 通常 | `focus === "weak"` |
+|----------|------|---------------------|
+| Due（SRS 再登場） | **40%** | 25% |
+| Symbolic（弱点記号） | **40%** | 55% |
+| New（新規） | 余り ≈20% | 余り |
+
+1. **復習期限到来** … `box` と経過(`ts`)から due な語（Due バケット）。
+2. **弱点記号ターゲット** … `ept_sym` の errRate 上位記号を含む語（Symbolic バケット）。
+3. **新規カバレッジ** … 未出題語（New バケット）。音節数昇順でスキャフォールド。
+4. **最終シャッフル:** 上記キューに **`weightedShuffle`（`ept_checks_v1` の現在モード重み）** を適用。チェック 0/3 の語ほど前方に来やすい。
+
+**コールドスタート（hist エントリ &lt; 3）:** 40/40/20 をスキップ。CEFR A1 を音節数順ソート → shuffle → slice で初期プール構築。
+
+**`frequencyWeight` モード:** Mode B → `"l"` / Encode → `"e"` / その他 Decode → `"d"`。重み `max(1, (CHECK_MAX+1) - getCheckCount)`（0→4, 3→1）。
+
 - セッション内重複なし。選択中の音素フォーカスでフィルタ。
-- **コールドスタート（履歴ゼロ）:** 「CEFR A1・短い語」から開始（CEFRはここだけ残し役立てる）。
 - **Connected Speech / Mode B:** 同様に `weightedShuffle`（連結は `d`/`e`、Mode B は `l`）。
 
 ### 1.5 答え合わせ画面（reveal）の要件 ★要件①
@@ -189,7 +200,11 @@ aʊ: how /haʊ/, cow /kaʊ/, hour /ˈaʊɚ/
 現バンドの全語を Study として重複なしで出題（`MODEB_QUIZ_ENABLED=false` の間は Quiz UI 非表示。`buildModeBQueue` / MCQ / ディクテーションのコードは温存）。
 
 - **プール除外:** `src` が `letter`（アルファベット）または `contraction`（短縮形）の語は Mode B 対象外。
-- **バンド解放:** 現バンド内の語の 60% 以上が box 4+ に到達すると次バンドへ自動解放（`MODEB_BAND_UNLOCK_RATIO = 0.6`）。セットアップ画面にマスタリー率を表示。
+- **バンド解放:** 現バンド内の語の 60% 以上が box 4+ に到達すると次バンドへ自動解放（`MODEB_BAND_UNLOCK_RATIO = 0.6`）。**現状 `refreshVocabBandUnlock()` は呼び出し 0 のため実質未使用**（Q-2 Phase 1 判断待ち）。
+
+### Note (2026-07-16)
+
+Mode B の情報階層設計（Band UI vs CEFR 流用）は Phase 1（Claude Design プロトタイプ探索）で決定される。現状の記述は Track A 現行実装の意思決定として維持するが、Phase 1 で見直し候補。詳細: Vault `30_projects/IPASoundDrill/open-questions.md` § Q-2 参照。
 
 ---
 
@@ -324,7 +339,7 @@ Keep the delivery identical and consistent across all words.
 6. setup 表示中はプール先頭を preread（フィルタ変更でキャンセル）
 7. スピーカーボタンはキャッシュ準備完了まで `disabled`（**全モード共通**）
 8. `prefetchToken` で古いジョブをキャンセル
-9. 離脱確認（`#exitConfirmModal`）— Decode / Encode / Mode B Study / Reveal から Menu またはブランドタップ時に Yes/No。Yes でサマリー（再開なし）。Summary・セットアップではモーダルなし
+9. 離脱確認（`#exitConfirmModal`）— Decode / Encode / Mode B Study / Reveal から Menu またはブランドタップ時に Yes/No。**Yes → setup 復帰**（`goToTop(true)`。再開なし）。Summary・セットアップではモーダルなし
 
 GAS 側の `?urls=1` / `migratePublicSharing` 反映は `docs/reference/remaining-ops-checklist.md`。
 
@@ -350,7 +365,7 @@ GAS 側の `?urls=1` / `migratePublicSharing` 反映は `docs/reference/remainin
 
 | Tier | 内容 | fil 状態 |
 |------|------|----------|
-| Tier 1 | UI 文言 **177** キー + 言語ピッカー（zh-Hant/zh-Hans 分離） | ✅ `i18n/fil.json` |
+| Tier 1 | UI 文言 **169** leaf + 言語ピッカー（zh-Hant/zh-Hans 分離） | ✅ `i18n/fil.json` |
 | Tier 2 | 語義 gloss（5,397 語） | ✅ **5,397/5,397** |
 | Tier 3 | 音素解説 47 記号 + 学習ガイド | ✅ 全6言語（2026-07-07: zh→zh-Hant/zh-Hans 分離） |
 | Tier 4 | 連結句・弱形ルール文 `cs_rule` | ✅ 237/237（201+36） |
@@ -369,7 +384,7 @@ GAS 側の `?urls=1` / `migratePublicSharing` 反映は `docs/reference/remainin
 | 高 | `ex`（記号別例語） | ✅ phonemes JSON に実装 |
 | 高 | `rp_ipa` 全語付与 | ✅ **5,397語** + 201連結句 |
 | 高 | 弱形 36語 + `?weak=` TTS | ✅ |
-| 高 | UI fil（Tier 1+3） | ✅ **177**キー + phonemes + guide |
+| 高 | UI fil（Tier 1+3） | ✅ **169** leaf + phonemes + guide |
 | 高 | 英語定義 `def` | ✅ 5,397/5,397 |
 | 高 | TTS プリフェッチ（クライアント） | ✅ Phase T（body-first / `?urls=1` / preread） |
 | 高 | GA バッチ warm（GAS） | ✅ `BatchWarm.gs`（5,397語。Drive 進捗は残作業チェックリスト） |
@@ -402,7 +417,7 @@ GAS 側の `?urls=1` / `migratePublicSharing` 反映は `docs/reference/remainin
 | 無制限セッション（プール全件・6/5 先読み・離脱確認→サマリー） | ✅ |
 | CEFR 連動フィルタ（0 件ピル非活性） | ✅ |
 | GA バッチ warm（GAS 時間トリガー・5,397語） | ✅（Drive 全件完走は運用確認） |
-| UI 6言語（en/ja/zh-Hans/zh-Hant/ko/fil） | ✅ Tier 1+3（**177**キー） |
+| UI 6言語（en/ja/zh-Hans/zh-Hant/ko/fil） | ✅ Tier 1+3（**169** leaf） |
 | 多言語学習ガイド（6言語） | ✅ |
 | 英語定義 `def` | ✅ 5,397/5,397 |
 | narrow IPA + respelling | ✅ 全語彙 |
