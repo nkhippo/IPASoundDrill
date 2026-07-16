@@ -1,3 +1,11 @@
+---
+id: pj-2026-07-15-f281
+aliases:
+- pj-2026-07-15-f281
+title: 'Pre-Issue Recon: i18n / CSS / localStorage + SPEC・DESIGN 差分（UI/UX Phase 0）'
+created: '2026-07-15'
+---
+
 # Pre-Issue Recon: i18n / CSS / localStorage + SPEC・DESIGN 差分（UI/UX Phase 0）
 
 | 項目 | 値 |
@@ -133,4 +141,4 @@
 - Mode B Band vs CEFR を文書か実装どちらかに寄せる  
 - leaf 182 vs 文書「177」同期  
 - SPEC §5.3 に `va-disable`、§4 に footer / audioHint の要否  
-- **データはあるが出題・表示に乗らない穴**（B2 ピル無し、respell 未表示、Connected `cefr` 未フィルタ等）→ [`data-ui-gas-halfbaked`](pre-issue-recon-20260716-data-ui-gas-halfbaked.md)
+- **データはあるが出題・表示に乗らない穴**（B2 ピル無し、respell 未表示、Connected `cefr` 未フィルタ等）→ [[pj-2026-07-15-2d16|`data-ui-gas-halfbaked`]]

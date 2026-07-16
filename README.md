@@ -1,3 +1,11 @@
+---
+id: pj-2026-06-24-2cd9
+aliases:
+- pj-2026-06-24-2cd9
+title: IPA Sound Drill
+created: '2026-06-24'
+---
+
 # IPA Sound Drill
 
 CEFR 向けの IPA 音写トレーナー（General American / Received Pronunciation）。
@@ -5,8 +13,8 @@ CEFR 向けの IPA 音写トレーナー（General American / Received Pronuncia
 ## デモ
 
 - **Live**: https://ipasounddrill.app
-- **Docs**: [docs/README.md](docs/README.md)
-- **Purpose**: [docs/PURPOSE.md](docs/PURPOSE.md)
+- **Docs**: [[pj-2026-07-10-d270|docs/README.md]]
+- **Purpose**: [[pj-2026-06-24-933a|docs/PURPOSE.md]]
 
 本番は Vercel + カスタムドメイン。リポジトリ名の正は `IPASoundDrill`。
 
@@ -17,19 +25,19 @@ CEFR 向けの IPA 音写トレーナー（General American / Received Pronuncia
 - **連結音・弱形** — 201 句 + 36 弱形（Connected Speech タブ）
 - 語彙 **5,397 語**（gloss 5 言語、B2=899）、進捗チェック（3 スロット × 3 モード）
 - 語彙ブラウザ（`#/vocab` / `#/vocab/phrases`）— 検索・A–Z・CEFR バッジ・TTS
-- TTS は GAS プロキシ + Drive/localStorage キャッシュ（Drive 直リンク `?urls=1` 対応。運用手順は [`gas/README.md`](gas/README.md) / [`docs/reference/remaining-ops-checklist.md`](docs/reference/remaining-ops-checklist.md)）
+- TTS は GAS プロキシ + Drive/localStorage キャッシュ（Drive 直リンク `?urls=1` 対応。運用手順は [[pj-2026-06-24-551c|`gas/README.md`]] / [[pj-2026-07-10-dd2c|`docs/reference/remaining-ops-checklist.md`]]）
 
 ## ドキュメント（AI / 開発者向け）
 
 | ファイル | 説明 |
 |---------|------|
-| [`docs/README.md`](docs/README.md) | `docs/` 配下の索引（正本 vs タスク履歴の見分け） |
-| [`docs/REPOSITORY-STRUCTURE.md`](docs/REPOSITORY-STRUCTURE.md) | **フォルダ構成マップ（Claude 共有用・最初に読む）** |
-| [`docs/PURPOSE.md`](docs/PURPOSE.md) | 目的・モード構成の正本 |
-| [`docs/DESIGN.md`](docs/DESIGN.md) | 実装設計仕様 |
-| [`docs/SPECIFICATION.md`](docs/SPECIFICATION.md) | 画面・データ・localStorage の正本 |
-| [`docs/reference/README.md`](docs/reference/README.md) | 監査・運用ガイドの索引 |
-| [`data/README.md`](data/README.md) | `data/` 配下（runtime / batches / pipeline / derived）の見分け方 |
+| [[pj-2026-07-10-d270|`docs/README.md`]] | `docs/` 配下の索引（正本 vs タスク履歴の見分け） |
+| [[pj-2026-07-09-80be|`docs/REPOSITORY-STRUCTURE.md`]] | **フォルダ構成マップ（Claude 共有用・最初に読む）** |
+| [[pj-2026-06-24-933a|`docs/PURPOSE.md`]] | 目的・モード構成の正本 |
+| [[pj-2026-06-24-1983|`docs/DESIGN.md`]] | 実装設計仕様 |
+| [[pj-2026-06-24-1519|`docs/SPECIFICATION.md`]] | 画面・データ・localStorage の正本 |
+| [[pj-2026-07-09-77a4|`docs/reference/README.md`]] | 監査・運用ガイドの索引 |
+| [[pj-2026-07-10-359a|`data/README.md`]] | `data/` 配下（runtime / batches / pipeline / derived）の見分け方 |
 
 ## 主要パス
 

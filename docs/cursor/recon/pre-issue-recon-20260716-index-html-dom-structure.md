@@ -1,3 +1,11 @@
+---
+id: pj-2026-07-15-8e4c
+aliases:
+- pj-2026-07-15-8e4c
+title: 'Pre-Issue Recon: SPA DOM Structure（UI/UX Phase 0）'
+created: '2026-07-15'
+---
+
 # Pre-Issue Recon: SPA DOM Structure（UI/UX Phase 0）
 
 | 項目 | 値 |
@@ -9,7 +17,7 @@
 | 目的 | UI/UX 抜本見直し Phase 0 — 画面 DOM / トップバー / Setup vs SPEC / モーダル |
 
 参照: `docs/SPECIFICATION.md` §4.0–4.8b  
-追補（データ↔UI↔GAS の中途半端棚卸し）: [`pre-issue-recon-20260716-data-ui-gas-halfbaked.md`](pre-issue-recon-20260716-data-ui-gas-halfbaked.md)
+追補（データ↔UI↔GAS の中途半端棚卸し）: [[pj-2026-07-15-2d16|`pre-issue-recon-20260716-data-ui-gas-halfbaked.md`]]
 
 ---
 

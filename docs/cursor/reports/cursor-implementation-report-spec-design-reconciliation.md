@@ -1,3 +1,11 @@
+---
+id: pj-2026-07-16-126f
+aliases:
+- pj-2026-07-16-126f
+title: SPEC/DESIGN reconciliation（Phase 0 段階 2）— 実装レポート
+created: '2026-07-16'
+---
+
 # SPEC/DESIGN reconciliation（Phase 0 段階 2）— 実装レポート
 
 ## 関連 Issue / PR

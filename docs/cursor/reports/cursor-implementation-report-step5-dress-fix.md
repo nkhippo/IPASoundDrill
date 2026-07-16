@@ -1,3 +1,11 @@
+---
+id: pj-2026-06-25-f98d
+aliases:
+- pj-2026-06-25-f98d
+title: 'Cursor 実装レポート — STEP5 追補: DRESS 母音（ɛ→e）修正'
+created: '2026-06-25'
+---
+
 # Cursor 実装レポート — STEP5 追補: DRESS 母音（ɛ→e）修正
 
 > 作成日: 2026-06-25  

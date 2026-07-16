@@ -1,3 +1,11 @@
+---
+id: pj-2026-07-10-a25d
+aliases:
+- pj-2026-07-10-a25d
+title: '`docs/cursor/` — Cursor / Claude タスク履歴'
+created: '2026-07-10'
+---
+
 # `docs/cursor/` — Cursor / Claude タスク履歴
 
 AI エージェント向けの**作業指示・実装レポート・設計相談**を格納。アプリ runtime（`index.html`）からは参照されない。
@@ -15,12 +23,12 @@ AI エージェント向けの**作業指示・実装レポート・設計相談
 
 | 正本 | 内容 |
 |------|------|
-| [`../REPOSITORY-STRUCTURE.md`](../REPOSITORY-STRUCTURE.md) | **最初に読む** — フォルダマップ・パイプライン・ランタイム契約 |
-| [`../PURPOSE.md`](../PURPOSE.md) | 目的・2モード・評価方針 |
-| [`../DESIGN.md`](../DESIGN.md) | 実装設計（SRS・TTS・データ整備） |
-| [`../SPECIFICATION.md`](../SPECIFICATION.md) | 画面・JSON フィールド・localStorage |
+| [[pj-2026-07-09-80be|`../REPOSITORY-STRUCTURE.md`]] | **最初に読む** — フォルダマップ・パイプライン・ランタイム契約 |
+| [[pj-2026-06-24-933a|`../PURPOSE.md`]] | 目的・2モード・評価方針 |
+| [[pj-2026-06-24-1983|`../DESIGN.md`]] | 実装設計（SRS・TTS・データ整備） |
+| [[pj-2026-06-24-1519|`../SPECIFICATION.md`]] | 画面・JSON フィールド・localStorage |
 
-**注意:** 古いレポート内のパス・語数は当時のスナップショット。現行の数値・パスは [`../REPOSITORY-STRUCTURE.md`](../REPOSITORY-STRUCTURE.md) を正とする。
+**注意:** 古いレポート内のパス・語数は当時のスナップショット。現行の数値・パスは [[pj-2026-07-09-80be|`../REPOSITORY-STRUCTURE.md`]] を正とする。
 
 ## 直近の主要タスク（2026-07-10）
 
@@ -29,7 +37,7 @@ AI エージェント向けの**作業指示・実装レポート・設計相談
 | **Phase B**（Phase 2 バッチ品質監査） | `instructions/cursor-instructions-phase-b-batch-audit.md` | `reports/cursor-implementation-report-phase-b-batch-audit.md` |
 | **Phase V**（語彙ブラウザのページ化 + UI 整備） | `instructions/cursor-instructions-phase-v-vocab-page.md` | `reports/cursor-implementation-report-phase-v.md` |
 | **Phase R**（RP パイプライン品質修正） | `instructions/cursor-instructions-phase-r-rp-pipeline-repair.md` | `reports/cursor-implementation-report-phase-r.md` |
-| **Phase T**（TTS 1問目遅延解消） | `instructions/cursor-instructions-phase-t-tts-latency.md` | `reports/cursor-implementation-report-phase-t.md`（**GAS 再デプロイは残作業** → [`../reference/remaining-ops-checklist.md`](../reference/remaining-ops-checklist.md)） |
+| **Phase T**（TTS 1問目遅延解消） | `instructions/cursor-instructions-phase-t-tts-latency.md` | `reports/cursor-implementation-report-phase-t.md`（**GAS 再デプロイは残作業** → [[pj-2026-07-10-dd2c|`../reference/remaining-ops-checklist.md`]]） |
 | リポジトリ構成見直し（AI 向け README） | — | `reports/cursor-implementation-report-repo-structure-review.md` |
 | Phase 2 M2 完了（B2 +569） | `instructions/cursor-instructions-phase2-m2*.md` | `reports/cursor-implementation-report-phase2-m2*.md` |
 | 進捗チェック UI | `instructions/cursor-instructions-progress-checks.md` | `reports/cursor-implementation-report-progress-checks.md` |

@@ -1,3 +1,11 @@
+---
+id: pj-2026-06-24-276e
+aliases:
+- pj-2026-06-24-276e
+title: i18n 監査レポート
+created: '2026-06-24'
+---
+
 # i18n 監査レポート
 
 > 生成日: 2026-07-09 ／ 対象: `i18n/{en,ja,zh-Hans,zh-Hant,ko,fil}.json`、`i18n/phonemes/*.json`、`index.html`

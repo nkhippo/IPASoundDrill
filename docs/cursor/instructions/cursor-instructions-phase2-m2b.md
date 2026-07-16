@@ -1,3 +1,11 @@
+---
+id: pj-2026-07-10-5c12
+aliases:
+- pj-2026-07-10-5c12
+title: Cursor 指示書 — Phase 2 M2b（B2 拡充 101-200 語）
+created: '2026-07-10'
+---
+
 # Cursor 指示書 — Phase 2 M2b（B2 拡充 101-200 語）
 
 - 対象リポジトリ: `nkhippo/IPASoundDrill`

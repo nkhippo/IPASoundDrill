@@ -1,3 +1,11 @@
+---
+id: pj-2026-07-10-359a
+aliases:
+- pj-2026-07-10-359a
+title: '`data/` — アプリデータとパイプライン資産'
+created: '2026-07-10'
+---
+
 # `data/` — アプリデータとパイプライン資産
 
 ブラウザが読む JSON と、オフライン生成用の中間ファイルを分けて格納する。
@@ -14,4 +22,4 @@
 **本番 wordlist** はリポジトリ**ルート**の `wordlist_GA_a1a2_plus_phonics.json`（`index.html` が fetch）。`data/` 内には置かない。
 
 パス正本: [`scripts/paths.py`](../scripts/paths.py)  
-フォルダ全体の地図: [`docs/REPOSITORY-STRUCTURE.md`](../docs/REPOSITORY-STRUCTURE.md)
+フォルダ全体の地図: [[pj-2026-07-09-80be|`docs/REPOSITORY-STRUCTURE.md`]]

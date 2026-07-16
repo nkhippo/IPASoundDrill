@@ -1,3 +1,11 @@
+---
+id: pj-2026-07-07-89e5
+aliases:
+- pj-2026-07-07-89e5
+title: Cursor Implementation Report — Chinese UI Split (zh-Hant / zh-Hans)
+created: '2026-07-07'
+---
+
 # Cursor Implementation Report — Chinese UI Split (zh-Hant / zh-Hans)
 
 - Date: 2026-07-07

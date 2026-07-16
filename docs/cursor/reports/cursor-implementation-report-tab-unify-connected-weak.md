@@ -1,3 +1,11 @@
+---
+id: pj-2026-06-28-f394
+aliases:
+- pj-2026-06-28-f394
+title: 'Cursor 実装レポート — 練習タブ統一: Connected Speech ⊃ Weak Forms'
+created: '2026-06-28'
+---
+
 # Cursor 実装レポート — 練習タブ統一: Connected Speech ⊃ Weak Forms
 
 > 作成日: 2026-06-28  

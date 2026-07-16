@@ -1,0 +1,2 @@
+source_file,line_number,referenced_path,reason,pattern_type
+docs/cursor/reports/cursor-implementation-report-cefr-phase0a.md,72,wordlist-cefr-audit.md,target_not_found,markdown_link

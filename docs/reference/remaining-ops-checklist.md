@@ -1,3 +1,11 @@
+---
+id: pj-2026-07-10-dd2c
+aliases:
+- pj-2026-07-10-dd2c
+title: 残作業チェックリスト（運用・手動）
+created: '2026-07-10'
+---
+
 # 残作業チェックリスト（運用・手動）
 
 > **更新日:** 2026-07-11  
@@ -13,7 +21,7 @@ GitHub Pages（静的）: https://nkhippo.github.io/IPASoundDrill/
 
 | # | 作業 | 手順の正本 | 完了条件 |
 |---|------|------------|----------|
-| A1 | GAS エディタに最新 `gas/Code.gs` を反映し、**ウェブアプリを新しいバージョンとして再デプロイ** | [`gas/README.md`](../../gas/README.md)、[`cursor/reports/cursor-implementation-report-phase-t.md`](../cursor/reports/cursor-implementation-report-phase-t.md) §5 | `?urls=1` が Drive 公開 URL を返す |
+| A1 | GAS エディタに最新 `gas/Code.gs` を反映し、**ウェブアプリを新しいバージョンとして再デプロイ** | [[pj-2026-06-24-551c|`gas/README.md`]]、[[pj-2026-07-10-0b3f|`cursor/reports/cursor-implementation-report-phase-t.md`]] §5 | `?urls=1` が Drive 公開 URL を返す |
 | A2 | エディタで **`migratePublicSharing()`**（既存 Drive MP3 を `ANYONE_WITH_LINK` 化）。GAS 6 分上限のため複数チャンク必要。**推奨:** `installMigratePublicTrigger(5)` を 1 回実行して放置（DONE で自動解除）。手動なら PAUSED のたびに再実行。やり直しは `resetMigratePublicSharing()` | 同上 / `gas/Code.gs` | ログが DONE |
 | A3 | `index.html` の `GAS_TTS_URL` は**原則変更不要**（再デプロイで同一 `/exec` を維持する運用）。**今回のデプロイ URL は `index.html` に反映済み**（変わった場合のみ再更新） | Phase T レポート §5 / `index.html` | Pages 上のアプリが新デプロイを叩く |
 
@@ -25,7 +33,7 @@ GitHub Pages（静的）: https://nkhippo.github.io/IPASoundDrill/
 
 | # | 作業 | 手順の正本 | 完了条件 |
 |---|------|------------|----------|
-| B1 | リポジトリの `gas/BatchWords.gs`（**5,397 語**）を GAS プロジェクトへ貼り付け | `python3 scripts/export_batch_words.py` → [`gas/README.md`](../../gas/README.md) | GAS 側リスト件数 = 5,397 |
+| B1 | リポジトリの `gas/BatchWords.gs`（**5,397 語**）を GAS プロジェクトへ貼り付け | `python3 scripts/export_batch_words.py` → [[pj-2026-06-24-551c|`gas/README.md`]] | GAS 側リスト件数 = 5,397 |
 | B2 | GA BatchWarm の進捗確認。旧 3,059 時代のままなら `getBatchStatusGA` で確認し、必要ならトリガー継続（または `resetBatchGA` 後に再走） | `gas/BatchWarm.gs` / `gas/README.md` | `done: true` かつ全語 GA が Drive に存在 |
 | B3 | （任意）RP 用 BatchWarm スケジューラ — **未実装・スコープ外** | Phase T レポート §7 | — |
 

@@ -1,3 +1,11 @@
+---
+id: pj-2026-06-25-fe01
+aliases:
+- pj-2026-06-25-fe01
+title: 'Cursor 実装レポート — STEP5: GA/RP 対応'
+created: '2026-06-25'
+---
+
 # Cursor 実装レポート — STEP5: GA/RP 対応
 
 > 作成日: 2026-06-23  

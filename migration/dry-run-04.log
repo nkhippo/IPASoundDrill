@@ -1,0 +1,586 @@
+rewrite CLAUDE.md (md=0 wiki=0 fm=0)
+rewrite README.md (md=11 wiki=0 fm=0)
+rewrite data/README.md (md=1 wiki=0 fm=0)
+rewrite data/archive/README.md (md=0 wiki=0 fm=0)
+rewrite data/batches/README.md (md=1 wiki=0 fm=0)
+rewrite data/derived/README.md (md=0 wiki=0 fm=0)
+rewrite data/pipeline/README.md (md=1 wiki=0 fm=0)
+rewrite docs/CHANGE-CLASSIFICATION.md (md=0 wiki=0 fm=0)
+rewrite docs/CURSOR-INSTRUCTION-GUIDE.md (md=0 wiki=0 fm=0)
+rewrite docs/DESIGN.md (md=0 wiki=0 fm=0)
+rewrite docs/DEV-GUARDRAILS.md (md=0 wiki=0 fm=0)
+rewrite docs/DOC-SYNC-PLAYBOOK.md (md=0 wiki=0 fm=0)
+rewrite docs/DOCUMENT-MAP.md (md=0 wiki=0 fm=0)
+rewrite docs/LAUNCH-CHECKLIST.md (md=0 wiki=0 fm=0)
+rewrite docs/OPERATIONS.md (md=0 wiki=0 fm=0)
+rewrite docs/PURPOSE.md (md=0 wiki=0 fm=0)
+rewrite docs/README.md (md=17 wiki=0 fm=0)
+rewrite docs/REPOSITORY-STRUCTURE.md (md=4 wiki=0 fm=0)
+rewrite docs/SPECIFICATION.md (md=0 wiki=0 fm=0)
+rewrite docs/archive/phonemes-allophone-i18n.md (md=0 wiki=0 fm=0)
+rewrite docs/bug-knowledge.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/README.md (md=6 wiki=0 fm=0)
+rewrite docs/cursor/briefs/cursor-alt-accent-display-brief.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/briefs/cursor-connected-carriers.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/briefs/cursor-connected-speech-tts-consultation.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/briefs/cursor-def-merge.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/briefs/cursor-ga-rp-same-flag-consultation.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/briefs/cursor-guide-philosophy-solves.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/briefs/cursor-guide-welcome-v2.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/briefs/cursor-modeb-study-reveal-ux.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/briefs/cursor-multilingual-guide.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/briefs/cursor-phase2-final-merge.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/briefs/cursor-phase2a-flap-merge.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/briefs/cursor-phase2b-respell-merge.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/briefs/cursor-phoneme-i18n-rewrite.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/briefs/cursor-tab-unify-connected-weak.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/briefs/cursor-tagalog-tier1-v2.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/briefs/cursor-tier2-gloss-fil-merge.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/briefs/cursor-tier4-cs-rule-fil-merge.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/briefs/cursor-tts-first-question-latency-consultation.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/briefs/cursor-tts-prefetch-warmup.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/briefs/cursor-vocab-browser-ui-fix.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/briefs/cursor-vocab-browser.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/briefs/cursor-vocab-page-migration.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/briefs/cursor-weak-forms-tab.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/instructions/README.md (md=6 wiki=0 fm=0)
+rewrite docs/cursor/instructions/cursor-instructions-cefr-phase0a-revert.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/instructions/cursor-instructions-cefr-phase0a.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/instructions/cursor-instructions-cefr-phase0b.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/instructions/cursor-instructions-connected-weak-cefr-badges.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/instructions/cursor-instructions-dignify-hotfix.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/instructions/cursor-instructions-fix-friendliness-ipa.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/instructions/cursor-instructions-fix-merge-respelling.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/instructions/cursor-instructions-merge-cefr-connected-weak.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/instructions/cursor-instructions-phase-b-batch-audit.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/instructions/cursor-instructions-phase-r-rp-pipeline-repair.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/instructions/cursor-instructions-phase-t-tts-latency.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/instructions/cursor-instructions-phase-v-vocab-page.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/instructions/cursor-instructions-phase1-m1-gloss-apply.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/instructions/cursor-instructions-phase1-m2.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/instructions/cursor-instructions-phase1-m3.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/instructions/cursor-instructions-phase1-m4.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/instructions/cursor-instructions-phase1-m5.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/instructions/cursor-instructions-phase2-m2a.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/instructions/cursor-instructions-phase2-m2b.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/instructions/cursor-instructions-phase2-m2c.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/instructions/cursor-instructions-phase2-m2d.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/instructions/cursor-instructions-phase2-pilot.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/instructions/cursor-instructions-progress-checks.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/instructions/cursor-instructions-rp-ipa-bugfix.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/instructions/cursor-instructions-tts-ab-experiment.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/instructions/cursor-instructions-zh-split.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/recon/pre-issue-recon-20260712-f2-build-infrastructure.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/recon/pre-issue-recon-20260712-seo-meta-architecture.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/recon/pre-issue-recon-20260716-data-ui-gas-halfbaked.md (md=3 wiki=0 fm=0)
+rewrite docs/cursor/recon/pre-issue-recon-20260716-index-html-dom-structure.md (md=1 wiki=0 fm=0)
+rewrite docs/cursor/recon/pre-issue-recon-20260716-index-html-functions.md (md=1 wiki=0 fm=0)
+rewrite docs/cursor/recon/pre-issue-recon-20260716-index-html-i18n-css-storage.md (md=1 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-cefr-phase0a-revert.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-cefr-phase0a.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-cefr-phase0b.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-change-classification.md (md=0 wiki=0 fm=0)
+=== CLAUDE.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== README.md ===
+changes: md_link=11 wikilink=0 frontmatter=0
+=== data/README.md ===
+changes: md_link=1 wikilink=0 frontmatter=0
+=== data/archive/README.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== data/batches/README.md ===
+changes: md_link=1 wikilink=0 frontmatter=0
+=== data/derived/README.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== data/pipeline/README.md ===
+changes: md_link=1 wikilink=0 frontmatter=0
+=== docs/CHANGE-CLASSIFICATION.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/CURSOR-INSTRUCTION-GUIDE.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/DESIGN.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/DEV-GUARDRAILS.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/DOC-SYNC-PLAYBOOK.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/DOCUMENT-MAP.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/LAUNCH-CHECKLIST.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/OPERATIONS.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/PURPOSE.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/README.md ===
+changes: md_link=17 wikilink=0 frontmatter=0
+=== docs/REPOSITORY-STRUCTURE.md ===
+changes: md_link=4 wikilink=0 frontmatter=0
+=== docs/SPECIFICATION.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/archive/phonemes-allophone-i18n.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/bug-knowledge.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/README.md ===
+changes: md_link=6 wikilink=0 frontmatter=0
+=== docs/cursor/briefs/cursor-alt-accent-display-brief.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/briefs/cursor-connected-carriers.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/briefs/cursor-connected-speech-tts-consultation.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/briefs/cursor-def-merge.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/briefs/cursor-ga-rp-same-flag-consultation.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/briefs/cursor-guide-philosophy-solves.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/briefs/cursor-guide-welcome-v2.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/briefs/cursor-modeb-study-reveal-ux.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/briefs/cursor-multilingual-guide.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/briefs/cursor-phase2-final-merge.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/briefs/cursor-phase2a-flap-merge.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/briefs/cursor-phase2b-respell-merge.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/briefs/cursor-phoneme-i18n-rewrite.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/briefs/cursor-tab-unify-connected-weak.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/briefs/cursor-tagalog-tier1-v2.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/briefs/cursor-tier2-gloss-fil-merge.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/briefs/cursor-tier4-cs-rule-fil-merge.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/briefs/cursor-tts-first-question-latency-consultation.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/briefs/cursor-tts-prefetch-warmup.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/briefs/cursor-vocab-browser-ui-fix.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/briefs/cursor-vocab-browser.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/briefs/cursor-vocab-page-migration.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/briefs/cursor-weak-forms-tab.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/instructions/README.md ===
+changes: md_link=6 wikilink=0 frontmatter=0
+=== docs/cursor/instructions/cursor-instructions-cefr-phase0a-revert.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/instructions/cursor-instructions-cefr-phase0a.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/instructions/cursor-instructions-cefr-phase0b.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/instructions/cursor-instructions-connected-weak-cefr-badges.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/instructions/cursor-instructions-dignify-hotfix.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/instructions/cursor-instructions-fix-friendliness-ipa.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/instructions/cursor-instructions-fix-merge-respelling.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/instructions/cursor-instructions-merge-cefr-connected-weak.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/instructions/cursor-instructions-phase-b-batch-audit.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/instructions/cursor-instructions-phase-r-rp-pipeline-repair.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/instructions/cursor-instructions-phase-t-tts-latency.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/instructions/cursor-instructions-phase-v-vocab-page.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/instructions/cursor-instructions-phase1-m1-gloss-apply.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/instructions/cursor-instructions-phase1-m2.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/instructions/cursor-instructions-phase1-m3.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/instructions/cursor-instructions-phase1-m4.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/instructions/cursor-instructions-phase1-m5.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/instructions/cursor-instructions-phase2-m2a.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/instructions/cursor-instructions-phase2-m2b.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/instructions/cursor-instructions-phase2-m2c.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/instructions/cursor-instructions-phase2-m2d.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/instructions/cursor-instructions-phase2-pilot.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/instructions/cursor-instructions-progress-checks.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/instructions/cursor-instructions-rp-ipa-bugfix.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/instructions/cursor-instructions-tts-ab-experiment.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/instructions/cursor-instructions-zh-split.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/recon/pre-issue-recon-20260712-f2-build-infrastructure.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/recon/pre-issue-recon-20260712-seo-meta-architecture.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/recon/pre-issue-recon-20260716-data-ui-gas-halfbaked.md ===
+changes: md_link=3 wikilink=0 frontmatter=0
+=== docs/cursor/recon/pre-issue-recon-20260716-index-html-dom-structure.md ===
+changes: md_link=1 wikilink=0 frontmatter=0
+=== docs/cursor/recon/pre-issue-recon-20260716-index-html-functions.md ===
+changes: md_link=1 wikilink=0 frontmatter=0
+=== docs/cursor/recon/pre-issue-recon-20260716-index-html-i18n-css-storage.md ===
+changes: md_link=1 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-cefr-phase0a-revert.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-cefr-phase0a.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-cefr-phase0b.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-change-classification.md ===rewrite docs/cursor/reports/cursor-implementation-report-connected-carriers.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-connected-weak-cefr-badges.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-cs-rule-3-languages.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-def-merge.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-dignify-hotfix.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-docs-infrastructure-overhaul.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-e1-vercel-analytics.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-e2-tally-x-footer.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-f2-seo-subdirectory.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-f3-sitemap-robots-llms.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-fix-friendliness-ipa.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-fix-merge-respelling.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-g1-legal-docs.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-g2-legal-footer.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-ga-rp-same-flag.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-guide-full-replace.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-guide-philosophy-solves.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-guide-welcome-v2.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-hardening-pattern-c.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-i1-english-copy.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-i18n-meta.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-i2-cta-mobile.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-index-html-ui-audit-recon.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-launch-checklist-phase5-update.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-launch-checklist-refresh.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-launch-date-sync.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-mcp-railway.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-merge-cefr-connected-weak.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-modal-escape-support.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-modeb-reveal-tier4-cs-rule-fil.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-multilingual-guide.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-neighbors-v2.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-personas-and-tagline-candidates.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-phase-b-batch-audit.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-phase-r.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-phase-t.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-phase-v.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-phase1-m1-gloss-apply.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-phase1-m1-pilot.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-phase1-m2.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-phase1-m3.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-phase1-m4.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-phase1-m5.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-phase1-narrow-ipa-respell.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-phase2-final-merge.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-phase2-m2a.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-phase2-m2b.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-phase2-m2c.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-phase2-m2d.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-phase2-pilot.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-phase2a-flap-merge.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-phase2b-respell-merge.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-phoneme-i18n-rewrite.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-progress-checks.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-remove-github-pages.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-repo-name-unification.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-repo-structure-review.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-respell-v2-patch.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-rp-ipa-bugfix.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-rp-neighbors-decision.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-rp-tts.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-seo-weekly-check.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-setup-governance.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-spec-design-reconciliation.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-step4a.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-step4b.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-step4c.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-step4d.md (md=0 wiki=0 fm=0)
+
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-connected-carriers.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-connected-weak-cefr-badges.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-cs-rule-3-languages.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-def-merge.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-dignify-hotfix.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-docs-infrastructure-overhaul.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-e1-vercel-analytics.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-e2-tally-x-footer.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-f2-seo-subdirectory.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-f3-sitemap-robots-llms.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-fix-friendliness-ipa.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-fix-merge-respelling.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-g1-legal-docs.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-g2-legal-footer.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-ga-rp-same-flag.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-guide-full-replace.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-guide-philosophy-solves.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-guide-welcome-v2.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-hardening-pattern-c.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-i1-english-copy.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-i18n-meta.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-i2-cta-mobile.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-index-html-ui-audit-recon.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-launch-checklist-phase5-update.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-launch-checklist-refresh.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-launch-date-sync.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-mcp-railway.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-merge-cefr-connected-weak.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-modal-escape-support.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-modeb-reveal-tier4-cs-rule-fil.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-multilingual-guide.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-neighbors-v2.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-personas-and-tagline-candidates.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-phase-b-batch-audit.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-phase-r.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-phase-t.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-phase-v.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-phase1-m1-gloss-apply.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-phase1-m1-pilot.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-phase1-m2.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-phase1-m3.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-phase1-m4.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-phase1-m5.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-phase1-narrow-ipa-respell.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-phase2-final-merge.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-phase2-m2a.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-phase2-m2b.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-phase2-m2c.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-phase2-m2d.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-phase2-pilot.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-phase2a-flap-merge.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-phase2b-respell-merge.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-phoneme-i18n-rewrite.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-progress-checks.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-remove-github-pages.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-repo-name-unification.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-repo-structure-review.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-respell-v2-patch.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-rp-ipa-bugfix.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-rp-neighbors-decision.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-rp-tts.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-seo-weekly-check.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-setup-governance.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-spec-design-reconciliation.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-step4a.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-step4b.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-step4c.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-step4d.md ===rewrite docs/cursor/reports/cursor-implementation-report-step4e.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-step5-dress-fix.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-step5.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-step6.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-step7.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-tab-unify-connected-weak.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-tagalog-tier1.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-tier2-gloss-fil-batches03-08.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-tier2-gloss-fil-batches09-12.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-tier2-gloss-fil-batches13-16.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-tier2-gloss-fil-batches17-20.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-tier2-gloss-fil-complete.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-tier2-gloss-fil.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-tts-ab-experiment.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-tts-prefetch.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-va-opt-out.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-vercel-build-rollback.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-vercel-migration.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-vocab-browser-ui-fix.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-vocab-browser.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-weak-forms.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report-zh-split.md (md=0 wiki=0 fm=0)
+rewrite docs/cursor/reports/cursor-implementation-report.md (md=0 wiki=0 fm=0)
+rewrite docs/design/tagline-candidates.md (md=0 wiki=0 fm=0)
+rewrite docs/reference/README.md (md=18 wiki=0 fm=0)
+rewrite docs/reference/c1-expansion-scope-design.md (md=0 wiki=0 fm=0)
+rewrite docs/reference/cefr-connected-weak-proposal-report.md (md=0 wiki=0 fm=0)
+rewrite docs/reference/combined-instructions-phase1-pilot-and-misc.md (md=0 wiki=0 fm=0)
+rewrite docs/reference/consultation-cefr-connected-weak.md (md=0 wiki=0 fm=0)
+rewrite docs/reference/final-status-report.md (md=0 wiki=0 fm=0)
+rewrite docs/reference/gloss-flags.md (md=0 wiki=0 fm=0)
+rewrite docs/reference/i18n-audit.md (md=0 wiki=0 fm=0)
+rewrite docs/reference/i18n-language-scaling.md (md=0 wiki=0 fm=0)
+rewrite docs/reference/neighbors_report.md (md=0 wiki=0 fm=0)
+rewrite docs/reference/phase2-m2-completion-summary.md (md=0 wiki=0 fm=0)
+rewrite docs/reference/r4-pending-review-guide.md (md=0 wiki=0 fm=0)
+rewrite docs/reference/remaining-ops-checklist.md (md=3 wiki=0 fm=0)
+rewrite docs/reference/report-alt-accent-display.md (md=0 wiki=0 fm=0)
+rewrite docs/reference/rp-neighbors-priority-decision.md (md=0 wiki=0 fm=0)
+rewrite docs/reference/rp-tts-design-and-priority.md (md=0 wiki=0 fm=0)
+rewrite docs/reference/wordlist-cefr-audit.md (md=0 wiki=0 fm=0)
+rewrite docs/testing/phase2a-manual-test-checklist.md (md=0 wiki=0 fm=0)
+rewrite gas/README.md (md=1 wiki=0 fm=0)
+rewrite tests/README.md (md=0 wiki=0 fm=0)
+rewrite tools/archive/README.md (md=0 wiki=0 fm=0)
+dry-run totals: {'markdown_link': 75, 'wikilink': 0, 'frontmatter': 0}; broken=1
+
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-step4e.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-step5-dress-fix.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-step5.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-step6.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-step7.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-tab-unify-connected-weak.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-tagalog-tier1.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-tier2-gloss-fil-batches03-08.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-tier2-gloss-fil-batches09-12.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-tier2-gloss-fil-batches13-16.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-tier2-gloss-fil-batches17-20.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-tier2-gloss-fil-complete.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-tier2-gloss-fil.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-tts-ab-experiment.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-tts-prefetch.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-va-opt-out.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-vercel-build-rollback.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-vercel-migration.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-vocab-browser-ui-fix.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-vocab-browser.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-weak-forms.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report-zh-split.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/cursor/reports/cursor-implementation-report.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/design/tagline-candidates.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/reference/README.md ===
+changes: md_link=18 wikilink=0 frontmatter=0
+=== docs/reference/c1-expansion-scope-design.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/reference/cefr-connected-weak-proposal-report.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/reference/combined-instructions-phase1-pilot-and-misc.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/reference/consultation-cefr-connected-weak.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/reference/final-status-report.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/reference/gloss-flags.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/reference/i18n-audit.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/reference/i18n-language-scaling.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/reference/neighbors_report.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/reference/phase2-m2-completion-summary.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/reference/r4-pending-review-guide.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/reference/remaining-ops-checklist.md ===
+changes: md_link=3 wikilink=0 frontmatter=0
+=== docs/reference/report-alt-accent-display.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/reference/rp-neighbors-priority-decision.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/reference/rp-tts-design-and-priority.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/reference/wordlist-cefr-audit.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== docs/testing/phase2a-manual-test-checklist.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== gas/README.md ===
+changes: md_link=1 wikilink=0 frontmatter=0
+=== tests/README.md ===
+changes: md_link=0 wikilink=0 frontmatter=0
+=== tools/archive/README.md ===
+changes: md_link=0 wikilink=0 frontmatter=0

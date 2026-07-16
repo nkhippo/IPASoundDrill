@@ -1,3 +1,11 @@
+---
+id: pj-2026-07-07-1f69
+aliases:
+- pj-2026-07-07-1f69
+title: CEFR Phase 0-a Revert 実装レポート
+created: '2026-07-07'
+---
+
 # CEFR Phase 0-a Revert 実装レポート
 
 - 実施日: 2026-07-07

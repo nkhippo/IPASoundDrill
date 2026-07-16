@@ -1,3 +1,11 @@
+---
+id: pj-2026-07-12-09f1
+aliases:
+- pj-2026-07-12-09f1
+title: Vercel Build rollback — 実装レポート
+created: '2026-07-12'
+---
+
 # Vercel Build rollback — 実装レポート
 
 ## 関連 Issue / PR

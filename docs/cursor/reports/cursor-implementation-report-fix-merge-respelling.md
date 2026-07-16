@@ -1,3 +1,11 @@
+---
+id: pj-2026-07-09-36c7
+aliases:
+- pj-2026-07-09-36c7
+title: '`merge_respelling.py` pending クリア問題 — 恒久修正レポート'
+created: '2026-07-09'
+---
+
 # `merge_respelling.py` pending クリア問題 — 恒久修正レポート
 
 - 実施日: 2026-07-09

@@ -1,3 +1,11 @@
+---
+id: pj-2026-06-29-94dc
+aliases:
+- pj-2026-06-29-94dc
+title: Cursor 指示書 — 学習ガイド `philosophy` / `solves` 章の強化（全6言語）
+created: '2026-06-29'
+---
+
 # Cursor 指示書 — 学習ガイド `philosophy` / `solves` 章の強化（全6言語）
 
 > 作成日: 2026-06-28

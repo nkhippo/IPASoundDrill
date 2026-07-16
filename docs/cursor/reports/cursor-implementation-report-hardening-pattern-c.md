@@ -1,3 +1,11 @@
+---
+id: pj-2026-07-12-4f38
+aliases:
+- pj-2026-07-12-4f38
+title: Hardening pattern C — 実装レポート
+created: '2026-07-12'
+---
+
 # Hardening pattern C — 実装レポート
 
 ## 関連 Issue / PR

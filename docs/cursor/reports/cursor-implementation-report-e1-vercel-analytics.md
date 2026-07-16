@@ -1,3 +1,11 @@
+---
+id: pj-2026-07-12-16ed
+aliases:
+- pj-2026-07-12-16ed
+title: E1 Vercel Web Analytics — 実装レポート
+created: '2026-07-12'
+---
+
 # E1 Vercel Web Analytics — 実装レポート
 
 ## 関連 Issue / PR

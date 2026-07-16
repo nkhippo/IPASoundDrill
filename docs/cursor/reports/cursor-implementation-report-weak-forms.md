@@ -1,3 +1,11 @@
+---
+id: pj-2026-06-26-2ae0
+aliases:
+- pj-2026-06-26-2ae0
+title: Cursor 実装レポート — 弱形（Weak Forms）タブ
+created: '2026-06-26'
+---
+
 # Cursor 実装レポート — 弱形（Weak Forms）タブ
 
 > 作成日: 2026-06-26  

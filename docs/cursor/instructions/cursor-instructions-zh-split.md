@@ -1,3 +1,11 @@
+---
+id: pj-2026-07-07-2694
+aliases:
+- pj-2026-07-07-2694
+title: Cursor 指示書 — 中文 UI 分離（`zh` → `zh-Hant` + `zh-Hans`）
+created: '2026-07-07'
+---
+
 # Cursor 指示書 — 中文 UI 分離（`zh` → `zh-Hant` + `zh-Hans`）
 
 > 作成日: 2026-07-07

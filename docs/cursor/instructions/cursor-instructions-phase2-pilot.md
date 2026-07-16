@@ -1,3 +1,11 @@
+---
+id: pj-2026-07-10-86a5
+aliases:
+- pj-2026-07-10-86a5
+title: Cursor 指示書 — Phase 2 pilot (B2 拡充・パイロット 180)
+created: '2026-07-10'
+---
+
 # Cursor 指示書 — Phase 2 pilot (B2 拡充・パイロット 180)
 
 - 対象リポジトリ: `nkhippo/IPASoundDrill`

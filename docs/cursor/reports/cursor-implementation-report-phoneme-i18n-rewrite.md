@@ -1,3 +1,11 @@
+---
+id: pj-2026-07-06-cc89
+aliases:
+- pj-2026-07-06-cc89
+title: Cursor Implementation Report — Phoneme Guide i18n Rewrite (ja / ko / zh)
+created: '2026-07-06'
+---
+
 # Cursor Implementation Report — Phoneme Guide i18n Rewrite (ja / ko / zh)
 
 - Date: 2026-07-06

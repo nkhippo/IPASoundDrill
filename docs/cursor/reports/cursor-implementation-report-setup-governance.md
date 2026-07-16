@@ -1,3 +1,11 @@
+---
+id: pj-2026-07-11-acf6
+aliases:
+- pj-2026-07-11-acf6
+title: Setup governance — 実装レポート
+created: '2026-07-11'
+---
+
 # Setup governance — 実装レポート
 
 ## 関連 Issue / PR

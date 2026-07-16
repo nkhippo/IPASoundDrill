@@ -1,3 +1,11 @@
+---
+id: pj-2026-07-02-c002
+aliases:
+- pj-2026-07-02-c002
+title: Phoneme Allophone i18n Review (Phase 1)
+created: '2026-07-02'
+---
+
 # Phoneme Allophone i18n Review (Phase 1)
 
 Naoya review request for new allophone symbols added in `i18n/phonemes/*.json`.

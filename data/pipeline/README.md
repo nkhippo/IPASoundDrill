@@ -1,3 +1,11 @@
+---
+id: pj-2026-07-10-7d3b
+aliases:
+- pj-2026-07-10-7d3b
+title: '`data/pipeline/` — IPA / respelling ステージング'
+created: '2026-07-10'
+---
+
 # `data/pipeline/` — IPA / respelling ステージング
 
 `scripts/generate_flap_ipa.py` 等が読み書きする**中間 JSON**。ブラウザからは読み込まない。
@@ -12,6 +20,6 @@
 | `ga_rp_same_report.json` | `gen_ga_rp_same.py` の集計レポート |
 | `r4_pending_review_list.json` / `.csv` | R4 レビュー作業用リスト（`phase2a_review_needed` 拡張版） |
 
-レビュー手順: [`docs/reference/r4-pending-review-guide.md`](../../docs/reference/r4-pending-review-guide.md)
+レビュー手順: [[pj-2026-07-10-977f|`docs/reference/r4-pending-review-guide.md`]]
 
 パス正本: `scripts/paths.py`

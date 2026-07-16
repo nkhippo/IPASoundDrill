@@ -1,3 +1,11 @@
+---
+id: pj-2026-07-10-b794
+aliases:
+- pj-2026-07-10-b794
+title: Cursor 指示書 — 連結音・弱形 CEFR バッジ UI 配線
+created: '2026-07-10'
+---
+
 # Cursor 指示書 — 連結音・弱形 CEFR バッジ UI 配線
 
 - 対象リポジトリ: `nkhippo/IPASoundDrill`

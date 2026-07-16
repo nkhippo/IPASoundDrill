@@ -1,3 +1,11 @@
+---
+id: pj-2026-07-10-43ee
+aliases:
+- pj-2026-07-10-43ee
+title: Cursor 指示書 — `dignify` / `dignity` RP IPA ホットフィックス
+created: '2026-07-10'
+---
+
 # Cursor 指示書 — `dignify` / `dignity` RP IPA ホットフィックス
 
 - 対象リポジトリ: `nkhippo/IPASoundDrill`

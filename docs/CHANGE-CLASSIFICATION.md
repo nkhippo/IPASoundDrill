@@ -1,3 +1,11 @@
+---
+id: pj-2026-07-12-a6a9
+aliases:
+- pj-2026-07-12-a6a9
+title: CHANGE-CLASSIFICATION — 改修分類の正本
+created: '2026-07-12'
+---
+
 # CHANGE-CLASSIFICATION — 改修分類の正本
 
 > **Last updated**: 2026-07-12（Issue #33 導入）

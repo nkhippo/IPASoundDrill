@@ -1,3 +1,11 @@
+---
+id: pj-2026-07-10-977f
+aliases:
+- pj-2026-07-10-977f
+title: R4 Pending — TTS レビュー ガイド
+created: '2026-07-10'
+---
+
 # R4 Pending — TTS レビュー ガイド
 
 - 作成日: 2026-07-10

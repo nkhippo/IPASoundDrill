@@ -1,3 +1,11 @@
+---
+id: pj-2026-07-02-b22d
+aliases:
+- pj-2026-07-02-b22d
+title: Cursor 実装レポート — Phase 1 Narrow IPA + Respelling
+created: '2026-07-02'
+---
+
 # Cursor 実装レポート — Phase 1 Narrow IPA + Respelling
 
 > 作成日: 2026-07-02  

@@ -1,3 +1,11 @@
+---
+id: pj-2026-07-13-c29d
+aliases:
+- pj-2026-07-13-c29d
+title: SEO weekly check + Track B SEO scope — 実装レポート
+created: '2026-07-13'
+---
+
 # SEO weekly check + Track B SEO scope — 実装レポート
 
 ## 関連 Issue / PR

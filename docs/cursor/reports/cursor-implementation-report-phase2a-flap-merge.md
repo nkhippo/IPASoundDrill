@@ -1,3 +1,11 @@
+---
+id: pj-2026-07-02-be2a
+aliases:
+- pj-2026-07-02-be2a
+title: Cursor Implementation Report — Phase 2a Flap Merge
+created: '2026-07-02'
+---
+
 # Cursor Implementation Report — Phase 2a Flap Merge
 
 - Date: 2026-07-02
