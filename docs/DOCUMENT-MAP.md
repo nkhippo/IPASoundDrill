@@ -1,6 +1,6 @@
 # DOCUMENT-MAP — IPA Sound Drill ドキュメント運用マップ
 
-> **Last updated**: 2026-07-12
+> **Last updated**: 2026-07-16
 > **Purpose**: プロジェクト内の全ドキュメントを Category A-E に分類し、更新義務・参照タイミング・レビュー頻度を一枚で見られるようにする。
 
 ---
@@ -50,6 +50,7 @@ Issue の性質に応じて Naoya + Claude が確認:
 | 該当ケース | 参照ドキュメント |
 |---|---|
 | 機能追加・変更 | `docs/PURPOSE.md`, `docs/DESIGN.md`, `docs/SPECIFICATION.md`, `docs/REPOSITORY-STRUCTURE.md` |
+| Phase 1 デザイン・LP・タグライン | `docs/design/tagline-candidates.md`, `docs/PURPOSE.md`（Personas & Learning Journey） |
 | 運用系変更 | `docs/OPERATIONS.md`, `docs/REPOSITORY-STRUCTURE.md` |
 | バグ修正 | `docs/bug-knowledge.md`, `docs/SPECIFICATION.md` |
 | ドキュメント整備 | `docs/DOCUMENT-MAP.md`, `docs/DEV-GUARDRAILS.md`（本 Issue のような場合） |
@@ -67,6 +68,7 @@ Cursor 指示書内で明示的に参照させるドキュメント:
 | `docs/DOC-SYNC-PLAYBOOK.md` | ドキュメント同期作業時の 3 分岐マトリックス |
 | `docs/CURSOR-INSTRUCTION-GUIDE.md` | Cursor 実装レポートテンプレート、抽象度ガイド |
 | 該当機能の `DESIGN.md` / `SPECIFICATION.md` | 実装意図の確認 |
+| `docs/design/` | Phase 1 デザイン入力（タグライン・ペルソナ要約の公開版） |
 
 ### Category E: 定期レビュー
 
