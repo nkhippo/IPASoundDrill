@@ -133,6 +133,46 @@ Opus レビューで判明した分類器 dead-code・happY rp_ipa 破損（91�
 
 ---
 
+## Personas & Learning Journey
+
+IPA Sound Drill is designed for adult English learners who want to develop pronunciation accuracy through IPA-based, sound-first training. The following personas guide our design decisions.
+
+### Primary Personas
+
+**P-1: The Working Professional (Japanese, 34)**
+
+A Japanese SIer project manager (TOEIC 730) who wants to deepen his engagement with foreign culture through English. His frustration: "I can't hear sounds I can't produce" — the phonological gap between his Japanized English and native English is too large. His motivation: to have deep, meaningful conversations in English. Success: being told "your pronunciation is beautiful and easy to understand".
+
+**P-2: The Strategist (Korean, 28)**
+
+A senior strategist at a Korean multinational advertising agency (TOEIC 950). Her Korean L1 phonological filter (missing /f/, /v/, /z/) creates residual accent that she wants to refine. She values professional polish; her ideal is when clients say "your English is very clear".
+
+**P-3: The CS Agent (Filipino, 22)**
+
+A remote CS agent for a US fintech company (TOEIC 850). Filipino English is her first language, but she wants to reduce Filipino-English-specific traits (/f/-/p/, /v/-/b/, Full vowels vs schwa) that customers find harder to understand. Her goal: promotion to Team Lead.
+
+**P-4: The Graduate School Aspirant (Chinese, 19)**
+
+A Shanghai university student preparing for US graduate school (TOEFL 92, Speaking 20). Her Mandarin L1 phonological filter (retroflex /ʐ/ vs English /r/, missing /v/, complex final consonant clusters) blocks her TOEFL Speaking score. She wants to reach Speaking 26+.
+
+**P-5: The Music-Driven Learner (Japanese, 16, Track B focus)**
+
+A high school student in Kyoto whose English interest started with indie music (Billie Eilish, Boygenius). She wants to sing English songs beautifully — not to sound "native" but to develop her own beautiful voice in English. Instagram/TikTok-native aesthetic sensibility.
+
+### Learning Journey Arc
+
+1. **First 3 seconds**: Learner recognizes IPA Sound Drill as "for me" through purpose-first UI (Cluster 1 goal). Not "generic language learning app".
+2. **First session (~1 minute)**: Complete first ~6 items, encounter Reveal screen with layered information hierarchy (Cluster 3). The IPA feels like a tool, not a barrier (Principle 1).
+3. **First week**: SRS begins to build a personal weakness map. Vocab starts to feel like a personal asset, not a monitored score (Principle 7).
+4. **First 3 months**: Learner notices actual improvement in listening comprehension (thanks to Production-Perception loop, Principle 2). Their L1 phonological filter starts to relax for target phonemes.
+5. **Long-term**: The success moment — others tell the learner their English pronunciation is clear or beautiful. The aesthetic evaluation (not just "intelligible") is the true differentiator.
+
+### Design Decision Reference
+
+For more detailed persona profiles, product principles, and cluster-specific design considerations, see the private working documents (Vault, project management side). Public design documents in this repository (`docs/design/`) contain distilled versions suitable for external contributors and design AI tools.
+
+---
+
 ## 変更履歴
 
 | 日付 | 版 | 内容 |
