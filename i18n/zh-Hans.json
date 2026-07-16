@@ -7,8 +7,7 @@
     "title": "国际音标 (IPA) 英语发音训练 | IPA Sound Drill",
     "description": "通过国际音标 (IPA) 系统练习英语发音，免费工具支持美式 (GA) 与英式 (RP) 两种口音，帮助你摆脱「中式英语」发音习惯。",
     "ogTitle": "从声音开始，重新学英语发音 — IPA Sound Drill",
-    "ogDescription": "用国际音标练习听、读、写，轻松掌握地道英语发音。现在就免费开始。",
-    "keywords": "国际音标, IPA, 英语发音, 英语发音训练, 美式英语, 英式英语, 语音教学"
+    "ogDescription": "用国际音标练习听、读、写，轻松掌握地道英语发音。现在就免费开始。"
   },
   "lead_html": "针对<b>已知单词</b>逐音素训练<b>IPA读写</b>。专攻<b>陷阱音</b>（θ, ð, æ, ʒ, ɝ）或练习记录中的<b>薄弱音</b>。仅客观评分；提升音标覆盖，而非词汇量。",
   "lead_connected_html": "听辨 GA 的<b>连读现象</b>（连读、同化、脱落）。根据连读后的 IPA 还原原短语。",
@@ -97,13 +96,6 @@
     "encode_t": "单词 &rarr; IPA",
     "encode_d": "根据拼写组装发音符号（IPA）"
   },
-  "set": {
-    "label": "题库",
-    "daily_t": "日常词 · CEFR A1–A2",
-    "daily_d": "常用词（含不规则拼写）",
-    "phonics_t": "拼读规则 · 拼写 &harr; 音",
-    "phonics_d": "拼写与读音规则对应的词"
-  },
   "lvl": {
     "label": "CEFR 级别",
     "a1": "A1",
@@ -173,12 +165,6 @@
     "yes": "Yes",
     "no": "No"
   },
-  "meter_done": "完成",
-  "hint": {
-    "syl": "音节数",
-    "first": "首字母",
-    "pos": "词性"
-  },
   "input_ph": "输入单词",
   "input_phrase": "输入短语",
   "check": "核对",
@@ -197,15 +183,12 @@
   },
   "you": "你的答案: {a}",
   "see_answer": "查看答案",
-  "syl": "{n}个音节",
-  "syl_pl": "{n}个音节",
   "summary": {
     "line": "{c} / {t} 正确 · 复习 {m} 词",
     "weak_head": "建议练习的音",
     "weak_none_t": "未检测到薄弱音",
     "weak_none_d": "没有错过的音。可尝试更高难度。",
     "review": "复习列表: {list}",
-    "again": "再来一轮",
     "weak_btn": "只复习错题"
   },
   "info": {
