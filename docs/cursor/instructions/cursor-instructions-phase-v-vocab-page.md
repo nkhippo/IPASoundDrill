@@ -1,3 +1,10 @@
+---
+id: pj-2026-07-10-d57a
+aliases:
+- pj-2026-07-10-d57a
+title: Cursor 指示書 — 語彙ブラウザのページ化 + UI 整備 (Phase V)
+created: '2026-07-10'
+---
 # Cursor 指示書 — 語彙ブラウザのページ化 + UI 整備 (Phase V)
 
 - 対象リポジトリ: `nkhippo/IPASoundDrill`

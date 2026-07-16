@@ -1,8 +1,12 @@
 ---
 name: 📝 Docs / Chore
 about: ドキュメントのみの更新、リポジトリ整備、CI/CD 設定
-title: "【Docs】"
-labels: ["docs"]
+title: 【Docs】
+labels:
+- docs
+id: pj-2026-07-11-c88c
+aliases:
+- pj-2026-07-11-c88c
 ---
 
 ## 背景・目的

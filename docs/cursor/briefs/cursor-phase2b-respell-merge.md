@@ -1,3 +1,10 @@
+---
+id: pj-2026-07-02-8792
+aliases:
+- pj-2026-07-02-8792
+title: 'Cursor 作業指示書 — Phase 2b: Respelling 本データマージ（3,007語）'
+created: '2026-07-02'
+---
 # Cursor 作業指示書 — Phase 2b: Respelling 本データマージ（3,007語）
 
 **作成日:** 2026-07-02

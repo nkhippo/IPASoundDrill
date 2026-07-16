@@ -1,3 +1,10 @@
+---
+id: pj-2026-06-24-551c
+aliases:
+- pj-2026-06-24-551c
+title: GAS TTS Proxy
+created: '2026-06-24'
+---
 # GAS TTS Proxy
 
 OpenAI `gpt-4o-mini-tts` を Google Apps Script 経由で呼び出し、生成した音声を Google Drive にキャッシュします。

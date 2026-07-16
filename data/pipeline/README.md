@@ -1,3 +1,10 @@
+---
+id: pj-2026-07-10-7d3b
+aliases:
+- pj-2026-07-10-7d3b
+title: '`data/pipeline/` — IPA / respelling ステージング'
+created: '2026-07-10'
+---
 # `data/pipeline/` — IPA / respelling ステージング
 
 `scripts/generate_flap_ipa.py` 等が読み書きする**中間 JSON**。ブラウザからは読み込まない。

@@ -1,3 +1,10 @@
+---
+id: pj-2026-06-28-204a
+aliases:
+- pj-2026-06-28-204a
+title: 'Cursor 指示書 — 練習タブ統一: Connected Speech ⊃ Weak Forms（再発行版）'
+created: '2026-06-28'
+---
 # Cursor 指示書 — 練習タブ統一: Connected Speech ⊃ Weak Forms（再発行版）
 
 > 作成日: 2026-06-28（再発行）

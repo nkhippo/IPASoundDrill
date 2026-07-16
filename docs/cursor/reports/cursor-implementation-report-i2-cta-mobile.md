@@ -1,3 +1,10 @@
+---
+id: pj-2026-07-13-0c8e
+aliases:
+- pj-2026-07-13-0c8e
+title: I2 CTA + TTS + mobile — 実装レポート
+created: '2026-07-13'
+---
 # I2 CTA + TTS + mobile — 実装レポート
 
 ## 関連 Issue / PR

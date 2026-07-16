@@ -1,3 +1,10 @@
+---
+id: pj-2026-07-12-c704
+aliases:
+- pj-2026-07-12-c704
+title: Docs infrastructure overhaul — 実装レポート
+created: '2026-07-12'
+---
 # Docs infrastructure overhaul — 実装レポート
 
 ## 関連 Issue / PR

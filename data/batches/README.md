@@ -1,3 +1,10 @@
+---
+id: pj-2026-07-10-2e6a
+aliases:
+- pj-2026-07-10-2e6a
+title: '`data/batches/` — 語彙マージ用ソース JSON'
+created: '2026-07-10'
+---
 # `data/batches/` — 語彙マージ用ソース JSON
 
 Cursor / Claude が生成し、マージスクリプト（またはインライン Python）で `wordlist_GA_a1a2_plus_phonics.json` に取り込むバッチ。**ブラウザからは読み込まない。**

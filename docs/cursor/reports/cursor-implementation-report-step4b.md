@@ -1,3 +1,10 @@
+---
+id: pj-2026-06-24-9d64
+aliases:
+- pj-2026-06-24-9d64
+title: 'Cursor 実装レポート — STEP4-b: 音素近傍（neighbors）'
+created: '2026-06-24'
+---
 # Cursor 実装レポート — STEP4-b: 音素近傍（neighbors）
 
 > 作成日: 2026-06-23  

@@ -1,3 +1,10 @@
+---
+id: pj-2026-07-10-ec52
+aliases:
+- pj-2026-07-10-ec52
+title: '`docs/cursor/instructions/` — Cursor 実装指示書'
+created: '2026-07-10'
+---
 # `docs/cursor/instructions/` — Cursor 実装指示書
 
 これから実装するタスクの手順・検証条件を置く。完了後は対応するレポートを [`../reports/`](../reports/) に残す。

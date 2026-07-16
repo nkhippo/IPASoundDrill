@@ -1,3 +1,10 @@
+---
+id: pj-2026-06-28-6eea
+aliases:
+- pj-2026-06-28-6eea
+title: 'Cursor 実装レポート — Tier 2: `gloss.fil` batch04 更新 + batch17–20 追加'
+created: '2026-06-28'
+---
 # Cursor 実装レポート — Tier 2: `gloss.fil` batch04 更新 + batch17–20 追加
 
 > 作成日: 2026-06-27  

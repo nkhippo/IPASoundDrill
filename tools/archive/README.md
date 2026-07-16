@@ -1,3 +1,10 @@
+---
+id: pj-2026-07-02-0525
+aliases:
+- pj-2026-07-02-0525
+title: Archived internal tools
+created: '2026-07-02'
+---
 # Archived internal tools
 
 ## `review-vntv.html` + `phase2a_review_needed.json`

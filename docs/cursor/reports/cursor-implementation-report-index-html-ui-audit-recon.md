@@ -1,3 +1,10 @@
+---
+id: pj-2026-07-15-b4c8
+aliases:
+- pj-2026-07-15-b4c8
+title: index.html UI/UX audit Recon — 実装レポート
+created: '2026-07-15'
+---
 # index.html UI/UX audit Recon — 実装レポート
 
 ## 関連 Issue / PR

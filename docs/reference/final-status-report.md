@@ -1,3 +1,10 @@
+---
+id: pj-2026-07-02-acfc
+aliases:
+- pj-2026-07-02-acfc
+title: IPA Sound Drill — narrow IPA / respelling プロジェクト最終ステータス
+created: '2026-07-02'
+---
 # IPA Sound Drill — narrow IPA / respelling プロジェクト最終ステータス
 
 **作成日:** 2026-07-02

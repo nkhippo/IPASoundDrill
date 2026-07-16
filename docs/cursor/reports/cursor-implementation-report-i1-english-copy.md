@@ -1,3 +1,10 @@
+---
+id: pj-2026-07-13-889b
+aliases:
+- pj-2026-07-13-889b
+title: I1 English copy — 実装レポート
+created: '2026-07-13'
+---
 # I1 English copy — 実装レポート
 
 ## 関連 Issue / PR

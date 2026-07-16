@@ -1,3 +1,10 @@
+---
+id: pj-2026-07-10-a25d
+aliases:
+- pj-2026-07-10-a25d
+title: '`docs/cursor/` — Cursor / Claude タスク履歴'
+created: '2026-07-10'
+---
 # `docs/cursor/` — Cursor / Claude タスク履歴
 
 AI エージェント向けの**作業指示・実装レポート・設計相談**を格納。アプリ runtime（`index.html`）からは参照されない。

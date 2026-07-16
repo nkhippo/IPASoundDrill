@@ -1,3 +1,10 @@
+---
+id: pj-2026-07-09-80be
+aliases:
+- pj-2026-07-09-80be
+title: Repository Structure
+created: '2026-07-09'
+---
 # Repository Structure
 
 > **Purpose:** Share this file with Claude (or other AI assistants) at the start of a task so it knows where data, scripts, and docs live.  

@@ -1,3 +1,10 @@
+---
+id: pj-2026-07-11-d09d
+aliases:
+- pj-2026-07-11-d09d
+title: Dedicated MCP on Railway — 実装レポート
+created: '2026-07-11'
+---
 # Dedicated MCP on Railway — 実装レポート
 
 ## 関連 Issue / PR

@@ -1,3 +1,10 @@
+---
+id: pj-2026-07-12-5966
+aliases:
+- pj-2026-07-12-5966
+title: Change classification governance — 実装レポート
+created: '2026-07-12'
+---
 # Change classification governance — 実装レポート
 
 ## 関連 Issue / PR

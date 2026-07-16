@@ -1,3 +1,10 @@
+---
+id: pj-2026-07-11-efca
+aliases:
+- pj-2026-07-11-efca
+title: LAUNCH-CHECKLIST — IPA Sound Drill 世界公開ローンチ
+created: '2026-07-11'
+---
 # LAUNCH-CHECKLIST — IPA Sound Drill 世界公開ローンチ
 
 - **プロダクト名**: IPA Sound Drill

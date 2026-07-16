@@ -1,3 +1,10 @@
+---
+id: pj-2026-07-02-846a
+aliases:
+- pj-2026-07-02-846a
+title: Cursor Implementation Report — Respelling v2 Quality Patch
+created: '2026-07-02'
+---
 # Cursor Implementation Report — Respelling v2 Quality Patch
 
 - Date: 2026-07-02

@@ -1,3 +1,10 @@
+---
+id: pj-2026-07-07-4cb2
+aliases:
+- pj-2026-07-07-4cb2
+title: TTS A/B Experiment 実装レポート
+created: '2026-07-07'
+---
 # TTS A/B Experiment 実装レポート
 
 - 日付: 2026-07-07

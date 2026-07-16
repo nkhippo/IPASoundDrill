@@ -1,3 +1,10 @@
+---
+id: pj-2026-07-02-fa7d
+aliases:
+- pj-2026-07-02-fa7d
+title: Cursor Implementation Report — Phase 2 Final Merge
+created: '2026-07-02'
+---
 # Cursor Implementation Report — Phase 2 Final Merge
 
 - Date: 2026-07-02

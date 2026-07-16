@@ -1,3 +1,10 @@
+---
+id: pj-2026-07-11-85ac
+aliases:
+- pj-2026-07-11-85ac
+title: bug-knowledge — バグ根本原因ナレッジ
+created: '2026-07-11'
+---
 # bug-knowledge — バグ根本原因ナレッジ
 
 このファイルは PR マージ済み Bug Issue の**根本原因**と**再発防止策**を集積するナレッジベースです。

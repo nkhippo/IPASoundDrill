@@ -1,3 +1,10 @@
+---
+id: pj-2026-07-13-1924
+aliases:
+- pj-2026-07-13-1924
+title: G1 Legal Documents — 実装レポート
+created: '2026-07-13'
+---
 # G1 Legal Documents — 実装レポート
 
 ## 関連 Issue / PR

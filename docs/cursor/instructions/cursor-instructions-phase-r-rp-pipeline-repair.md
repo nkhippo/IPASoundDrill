@@ -1,3 +1,10 @@
+---
+id: pj-2026-07-10-a648
+aliases:
+- pj-2026-07-10-a648
+title: 'Cursor 指示書 — Phase R (Repair): RP パイプライン品質修正'
+created: '2026-07-10'
+---
 # Cursor 指示書 — Phase R (Repair): RP パイプライン品質修正
 
 - 対象リポジトリ: `nkhippo/IPASoundDrill`

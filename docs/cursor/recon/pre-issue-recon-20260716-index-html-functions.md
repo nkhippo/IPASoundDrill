@@ -1,3 +1,10 @@
+---
+id: pj-2026-07-15-1b2a
+aliases:
+- pj-2026-07-15-1b2a
+title: 'Pre-Issue Recon: SPA 関数・状態・適応出題（UI/UX Phase 0）'
+created: '2026-07-15'
+---
 # Pre-Issue Recon: SPA 関数・状態・適応出題（UI/UX Phase 0）
 
 | 項目 | 値 |

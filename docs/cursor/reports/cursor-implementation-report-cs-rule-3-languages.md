@@ -1,3 +1,10 @@
+---
+id: pj-2026-07-16-d691
+aliases:
+- pj-2026-07-16-d691
+title: Connected cs_rule 3 言語追加 — 実装レポート
+created: '2026-07-16'
+---
 # Connected cs_rule 3 言語追加 — 実装レポート
 
 ## 関連 Issue / PR

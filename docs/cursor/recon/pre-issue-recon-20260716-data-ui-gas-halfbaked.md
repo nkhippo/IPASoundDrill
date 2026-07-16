@@ -1,3 +1,10 @@
+---
+id: pj-2026-07-15-2d16
+aliases:
+- pj-2026-07-15-2d16
+title: 'Pre-Issue Recon: データ ↔ UI ↔ GAS の「中途半端」棚卸し'
+created: '2026-07-15'
+---
 # Pre-Issue Recon: データ ↔ UI ↔ GAS の「中途半端」棚卸し
 
 | 項目 | 値 |

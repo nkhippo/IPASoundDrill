@@ -1,3 +1,10 @@
+---
+id: pj-2026-06-28-90af
+aliases:
+- pj-2026-06-28-90af
+title: 'Cursor 指示書 — Tier 4: `cs_rule.fil` マージ（連結句201 + 弱形36）'
+created: '2026-06-28'
+---
 # Cursor 指示書 — Tier 4: `cs_rule.fil` マージ（連結句201 + 弱形36）
 
 > 作成日: 2026-06-28

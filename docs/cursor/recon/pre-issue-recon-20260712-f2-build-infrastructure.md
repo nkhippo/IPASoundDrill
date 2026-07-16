@@ -1,3 +1,10 @@
+---
+id: pj-2026-07-12-b4c6
+aliases:
+- pj-2026-07-12-b4c6
+title: Pre-Issue Recon — F2 build infrastructure
+created: '2026-07-12'
+---
 # Pre-Issue Recon — F2 build infrastructure
 
 ## 対象 Issue

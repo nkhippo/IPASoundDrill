@@ -1,3 +1,10 @@
+---
+id: pj-2026-07-07-bd43
+aliases:
+- pj-2026-07-07-bd43
+title: 'Cursor 指示書 — CEFR Phase 0-b: Mode A への CEFR フィルタ UI 配線 + Mode B 空バンド対応'
+created: '2026-07-07'
+---
 # Cursor 指示書 — CEFR Phase 0-b: Mode A への CEFR フィルタ UI 配線 + Mode B 空バンド対応
 
 > 作成日: 2026-07-07

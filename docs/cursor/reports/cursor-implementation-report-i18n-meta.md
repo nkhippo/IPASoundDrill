@@ -1,3 +1,10 @@
+---
+id: pj-2026-07-12-7479
+aliases:
+- pj-2026-07-12-7479
+title: i18n meta objects — 実装レポート
+created: '2026-07-12'
+---
 # i18n meta objects — 実装レポート
 
 ## 関連 Issue / PR

@@ -1,3 +1,10 @@
+---
+id: pj-2026-06-24-9d0d
+aliases:
+- pj-2026-06-24-9d0d
+title: neighbors 生成レポート (STEP4-b, v2 — adaptive)
+created: '2026-06-24'
+---
 # neighbors 生成レポート (STEP4-b, v2 — adaptive)
 
 - 総語数: **5397**

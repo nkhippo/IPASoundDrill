@@ -1,3 +1,10 @@
+---
+id: pj-2026-07-10-b17a
+aliases:
+- pj-2026-07-10-b17a
+title: Cursor 指示書 — RP IPA バグ修正（`ga_to_rp.py` r 脱落バグ）
+created: '2026-07-10'
+---
 # Cursor 指示書 — RP IPA バグ修正（`ga_to_rp.py` r 脱落バグ）
 
 - 対象リポジトリ: `nkhippo/IPASoundDrill`

@@ -1,3 +1,10 @@
+---
+id: pj-2026-06-24-2cd9
+aliases:
+- pj-2026-06-24-2cd9
+title: IPA Sound Drill
+created: '2026-06-24'
+---
 # IPA Sound Drill
 
 CEFR 向けの IPA 音写トレーナー（General American / Received Pronunciation）。

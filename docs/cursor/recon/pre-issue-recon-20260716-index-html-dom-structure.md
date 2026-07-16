@@ -1,3 +1,10 @@
+---
+id: pj-2026-07-15-8e4c
+aliases:
+- pj-2026-07-15-8e4c
+title: 'Pre-Issue Recon: SPA DOM Structure（UI/UX Phase 0）'
+created: '2026-07-15'
+---
 # Pre-Issue Recon: SPA DOM Structure（UI/UX Phase 0）
 
 | 項目 | 値 |

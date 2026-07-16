@@ -1,3 +1,10 @@
+---
+id: pj-2026-07-11-32f3
+aliases:
+- pj-2026-07-11-32f3
+title: Remove GitHub Pages workflow — 実装レポート
+created: '2026-07-11'
+---
 # Remove GitHub Pages workflow — 実装レポート
 
 ## 関連 Issue / PR

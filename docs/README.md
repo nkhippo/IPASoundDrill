@@ -1,3 +1,10 @@
+---
+id: pj-2026-07-10-d270
+aliases:
+- pj-2026-07-10-d270
+title: '`docs/` — ドキュメント索引（AI / 開発者向け）'
+created: '2026-07-10'
+---
 > Last updated: 2026-07-12（Phase 3.5 完了、DOCUMENT-MAP.md / DEV-GUARDRAILS.md / DOC-SYNC-PLAYBOOK.md / CURSOR-INSTRUCTION-GUIDE.md 追加）
 
 # `docs/` — ドキュメント索引（AI / 開発者向け）

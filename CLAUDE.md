@@ -1,3 +1,10 @@
+---
+id: pj-2026-07-11-0d30
+aliases:
+- pj-2026-07-11-0d30
+title: CLAUDE.md — ipasounddrill プロジェクト共通ルール
+created: '2026-07-11'
+---
 # CLAUDE.md — ipasounddrill プロジェクト共通ルール
 
 このファイルは Claude・Cursor の両者が参照するプロジェクトの共通ルールです。

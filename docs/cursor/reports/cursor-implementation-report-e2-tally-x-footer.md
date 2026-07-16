@@ -1,3 +1,10 @@
+---
+id: pj-2026-07-13-a4d2
+aliases:
+- pj-2026-07-13-a4d2
+title: E2 Tally + X footer — 実装レポート
+created: '2026-07-13'
+---
 # E2 Tally + X footer — 実装レポート
 
 ## 関連 Issue / PR

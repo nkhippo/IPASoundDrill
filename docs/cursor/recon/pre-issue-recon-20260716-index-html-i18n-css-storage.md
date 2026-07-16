@@ -1,3 +1,10 @@
+---
+id: pj-2026-07-15-f281
+aliases:
+- pj-2026-07-15-f281
+title: 'Pre-Issue Recon: i18n / CSS / localStorage + SPEC・DESIGN 差分（UI/UX Phase 0）'
+created: '2026-07-15'
+---
 # Pre-Issue Recon: i18n / CSS / localStorage + SPEC・DESIGN 差分（UI/UX Phase 0）
 
 | 項目 | 値 |

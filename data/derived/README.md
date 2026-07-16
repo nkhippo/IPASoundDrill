@@ -1,3 +1,10 @@
+---
+id: pj-2026-07-10-c977
+aliases:
+- pj-2026-07-10-c977
+title: '`data/derived/` — 派生データ（非 runtime）'
+created: '2026-07-10'
+---
 # `data/derived/` — 派生データ（非 runtime）
 
 `gen_neighbors.py` / `gen_rp_ipa.py` 等が生成する**中間 JSON**。`merge_neighbors.py` が本番 wordlist へ反映する。ブラウザからは読み込まない。

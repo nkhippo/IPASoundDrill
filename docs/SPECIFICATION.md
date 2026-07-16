@@ -1,3 +1,10 @@
+---
+id: pj-2026-06-24-1519
+aliases:
+- pj-2026-06-24-1519
+title: IPA Sound Drill — 仕様書
+created: '2026-06-24'
+---
 # IPA Sound Drill — 仕様書
 
 > 本ドキュメントは、アプリの目的・設計・データ管理の正本（source of truth）です。  

@@ -1,3 +1,10 @@
+---
+id: pj-2026-07-10-0b3f
+aliases:
+- pj-2026-07-10-0b3f
+title: Cursor 実装レポート — Phase T (TTS 1問目遅延解消)
+created: '2026-07-10'
+---
 # Cursor 実装レポート — Phase T (TTS 1問目遅延解消)
 
 - 実施日: 2026-07-10

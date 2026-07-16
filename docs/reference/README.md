@@ -1,3 +1,10 @@
+---
+id: pj-2026-07-09-77a4
+aliases:
+- pj-2026-07-09-77a4
+title: Reference documents — index for AI consultation
+created: '2026-07-09'
+---
 # Reference documents — index for AI consultation
 
 > **Purpose:** Quick map of stable reference material in `docs/reference/`.  

@@ -1,3 +1,10 @@
+---
+id: pj-2026-06-26-a303
+aliases:
+- pj-2026-06-26-a303
+title: Cursor 実装レポート — RP TTS 対応
+created: '2026-06-26'
+---
 # Cursor 実装レポート — RP TTS 対応
 
 > 作成日: 2026-06-26  

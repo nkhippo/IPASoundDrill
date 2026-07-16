@@ -1,3 +1,10 @@
+---
+id: pj-2026-06-24-b2cc
+aliases:
+- pj-2026-06-24-b2cc
+title: gloss 機械フラグ
+created: '2026-06-24'
+---
 # gloss 機械フラグ
 
 > 生成日: 2026-07-09 ／ 対象: `wordlist_GA_a1a2_plus_phonics.json`

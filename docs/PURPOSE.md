@@ -1,3 +1,10 @@
+---
+id: pj-2026-06-24-933a
+aliases:
+- pj-2026-06-24-933a
+title: IPA Sound Drill — 目的ステートメント（確定版 / source of truth）
+created: '2026-06-24'
+---
 # IPA Sound Drill — 目的ステートメント（確定版 / source of truth）
 
 > アプリの**本丸（measured outcome）**と**モード構成**を確定し、背景メモ・Cursor仕様書・実装コードの目的を一致させる正本。

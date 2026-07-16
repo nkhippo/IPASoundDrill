@@ -1,8 +1,12 @@
 ---
 name: ✨ Feature
 about: 新機能・大型の仕様変更
-title: "【Feature】"
-labels: ["feature"]
+title: 【Feature】
+labels:
+- feature
+id: pj-2026-07-11-2334
+aliases:
+- pj-2026-07-11-2334
 ---
 
 ## 背景・目的
