@@ -3310,6 +3310,27 @@ function renderSummary(){
   $("weakBtn").disabled=S.missed.length===0;
 }
 
+/**
+ * Close the topmost open modal on Escape (priority: Exit > Settings > Guide).
+ * Exit Confirm maps to No (continue practice); Settings/Guide simply close.
+ * @param {KeyboardEvent} e
+ * @returns {void}
+ */
+function onModalEscapeKey(e){
+  if(e.key!=="Escape")return;
+  if(!$("exitConfirmModal").classList.contains("hidden")){
+    closeExitConfirm();
+    e.preventDefault();
+  }else if(!$("settingsModal").classList.contains("hidden")){
+    closeSettings();
+    e.preventDefault();
+  }else if(!$("guideModal").classList.contains("hidden")){
+    closeGuide();
+    e.preventDefault();
+  }
+}
+document.addEventListener("keydown",onModalEscapeKey);
+
 $("settingsBtn").addEventListener("click",openSettings);
 $("settingsScrim").addEventListener("click",closeSettings);
 $("guideBtn").addEventListener("click",openGuide);
