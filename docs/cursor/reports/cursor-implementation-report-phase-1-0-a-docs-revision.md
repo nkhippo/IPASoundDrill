@@ -3,7 +3,7 @@
 ## 関連 Issue / PR
 
 - Issue: #75
-- PR: pending（PR 作成後に追記）
+- PR: #76（open）
 
 ## Issue 背景（Issue 本文から要約）
 
