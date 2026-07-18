@@ -4,146 +4,174 @@ aliases:
 - pj-2026-06-24-933a
 title: IPA Sound Drill — 目的ステートメント（確定版 / source of truth）
 created: '2026-06-24'
+updated: '2026-07-18'
 ---
 
 # IPA Sound Drill — 目的ステートメント（確定版 / source of truth）
 
-> アプリの**本丸（measured outcome）**と**モード構成**を確定し、背景メモ・Cursor仕様書・実装コードの目的を一致させる正本。
+> アプリの目的、学習成果、Phase 1 UI/UX の思想を確定する正本。  
 > 目的・評価方針に関する記述が衝突した場合は、本ドキュメントを正とする。
 >
-> **更新日:** 2026-07-10 ／ **ステータス:** 語彙 **5,397語**（Phase 2 M2 完了、B2=899）。Phase R / T / V / B 完了（RP 修正・TTS 遅延対策・語彙ページ化・バッチ品質監査）。GA/RP 切替・連結句・弱形・RP TTS・語彙ページ（hash routing）・進捗チェック（3×3）・`ga_rp_same` フラグ・neighbors v2・TTS プリフェッチ（`?urls=1`）・無制限セッション・離脱確認モーダル・UI 6言語対応済み。GAS 再デプロイ等の手動残作業は `docs/reference/remaining-ops-checklist.md`。
-> 詳細な実装仕様は `docs/DESIGN.md`、画面・データの正本は `docs/SPECIFICATION.md` を参照。
+> **版:** v4.0 ／ **更新日:** 2026-07-18  
+> **ステータス:** Phase 1 UI/UX 実装前の仕様先行改訂。語彙 **5,397語**、GA/RP IPA、連結句、弱形、語彙ブラウザ、進捗チェック、TTS プリフェッチ、6 言語 UI は現行実装として維持する。  
+> 詳細な実装設計は `docs/DESIGN.md`、画面・データ・localStorage の正本は `docs/SPECIFICATION.md` を参照。
 
 ---
 
 ## 0. 一行サマリ
 
-**既知語のIPA読み書き（本丸）**を音素カバー軸＋客観採点＋localStorage適応出題で鍛え、**未知語の語彙獲得（サブテーマ）**を音先行の別モードとして併設する。発音体系は **GA を基準**とし、**RP（Received Pronunciation）** を設定で切替可能。
+**音を、美しく。**  
+IPA を情報源として使い、英語の音を「聞く・読む・書く・単語に結びつける」ための目的別ドリルを提供する。Phase 1 では旧 Mode A/B の二分法を廃止し、学習者が自分の目的を 3 秒で選べる **4 目的カード構成**へ再編する。
+
+- 日本語タグライン: **音を、美しく。**
+- English tagline: **Retune your English. From sound up.**
+- Korean tagline: **소리를, 아름답게.**
+
+本アプリの価値は、発音を「ネイティブらしさ」ではなく、IPA によって観察可能な音の再調整として扱う点にある。
 
 ---
 
-## 1. 2モード構成
+## 1. 目的 4 カード構成
 
-本アプリは目的の異なる2モードを持つ。学習者の状態（意味を知っているか）で分岐する。
+Phase 1 UI/UX では、学習者に内部実装名を見せず、目的をそのまま入口にする。
 
-| | **Mode A：IPA読み書き（本丸）** | **Mode B：聞いて覚える（サブテーマ）** |
-|---|---|---|
-| UI ラベル（ja） | `mode.a` = IPA読み書き | `modeb.title` = 聞いて覚える |
-| 学習者の状態 | 意味を知っている | 意味を知らない |
-| 直す対象 | 音 ↔ IPA記号の対応 | 単語＋意味の獲得 |
-| 入口 | IPA / 単語 | 音（TTS） |
-| ループ | Decode（IPA→単語）/ Encode（単語→IPA） | Study（提示のみ。Quiz はコード温存・UI 非表示） |
-| 主軸 | **音素カバー** | **CEFR/頻度バンド** |
-| 採点 | 客観（ok/near/bad）のみ | 客観のみ |
-| 進捗記録 | `ept_hist_v1`（per-word SRS）＋ `ept_sym_v1`（per-symbol）＋ **`ept_checks_v1`（手動進捗 0–3 × 3モード）** | `ept_vocab_v1` / `ept_vocab_band`（別名前空間） |
+| 目的カード | 旧実装上の対応 | 学習者が得るもの | 入口 | 主な確認 |
+|---|---|---|---|---|
+| **音の発音を確かめる** | Decode 相当 | IPA を見て既知語の音を想起する力 | IPA / 音声 | 英単語の完全一致 |
+| **発音から書いてみる** | Encode 相当 | 綴りから IPA を組み立てる力 | 英単語 / 音声 | IPA の完全一致 |
+| **音から単語を覚える** | 旧 Listen & learn Study 相当 | 音を先に聞き、語義・綴りを結びつける力 | TTS / IPA | 手動チェックのみ |
+| **連結する音に慣れる** | Connected Speech / Weak forms 相当 | 辞書形と実際の連結・弱形の差を読む力 | 連結 IPA / キャリア文 | 元フレーズまたは機能語の完全一致 |
 
-**Mode A の練習タブ:** **Words**（単語）と **Connected Speech**（連結句＋弱形・GA 音声前提）の2種。Connected Speech 内の Type フィルタで linking / assimilation / elision / **Weak forms** を選択。弱形36語は連結発音現象の一部として内包（独立タブなし）。
+この再構造化により、「Mode A は本丸、Mode B はサブテーマ」という開発者向けの分岐はユーザー体験から外す。内部実装が当面旧関数名を保持しても、仕様上の正本は目的カードである。
 
-**UI 言語:** en / ja / zh / ko / **fil**（タガログ語・**Tier 1–4 すべて完了**、UI 文言 **177 キー**）。語義 gloss.fil は **5,397/5,397語**。連結/弱形ルール文（cs_rule.fil）は **237/237件**（Tier 4 **完了**）。英語定義 `def` は **5,397/5,397語**（Mode B Study reveal・語彙ブラウザで利用）。
+### 1.1 目的カード共通の学習原則
 
-**語彙ブラウザ:** 独立ページ（`#vocabPage`、hash `#/vocab` / `#/vocab/phrases`）。トップバーから全語彙（5,397語）・連結句（201句）を参照閲覧。検索・A–Z ジャンプ・TTS・**進捗チェック（d/e/l 各3スロット）**・Words/Phrases 双方に CEFR バッジ。Back は Menu（`#backTopBtn`）と独立。
-
-**CEFRの位置づけ:** 主軸としてMode Aには不適（頻度はIPA読み書き難易度の弱い代理であり、本アプリは既知語前提のため頻度の意味が薄い）。CEFRは破棄せず **Mode B の主軸へ移設**する。Mode Aではコールドスタート時の出題順にのみ残す。
-
-**アクセント（GA / RP）:** 設定で切替。IPA 表示・Encode キーボード・TTS（単語・弱形）が追従。連結句 TTS は GA 固定。反対アクセントの phonemic IPA は Reveal・Decode（単語）・Mode B Study・語彙ブラウザに表示（ラベルは `GA` / `RP` のみ）。**`ga_rp_same` / `ga_rp_same_reason` フラグ**で実質同一発音を判定（`scripts/gen_ga_rp_same.py`、Phase R で分類器・happY rp_ipa を修正）。phonemic 実質同一時は `/ipa/（同じ）` 表示。Mode B の MCQ distractor は GA `neighbors` を RP でも流用（`neighbors_rp` 再計算は保留）。
+1. **音を先に置く。** IPA・TTS・綴りの順序は目的ごとに異なるが、どのカードでも音の観察を中心に置く。
+2. **AI 判定を入れない。** スペルや IPA の正誤は完全一致のみで扱い、惜しさ・部分正解・AI による発音評価は表示しない。
+3. **手動チェックで卒業を表す。** システムは学習者を自動評価せず、学習者が「できた」と判断した回数を 0–3 で記録する。
+4. **プロフィールでセッションを固定する。** アクセント、CEFR、目的別プリセット、詳細条件は開始前のプロフィール画面で確認し、学習中は静かなインラインチップで状態を示す。
 
 ---
 
-## 2. Mode A（本丸）の確定方針
+## 2. 4 目的ごとの方針
 
-- **本丸 = IPA記号を読み・書きできる力。** 評価は回答の客観的正否のみ。発音の自己評価は導入しない（ラグ・運用負荷／記号習得後は不要化する性質のため）。
-- **主軸 = 音素カバー。** 41記号は有限・列挙可能でMECE。各語は記号集合に決定的に分解でき、本丸と適応出題に直結する。
-- **対象語に機能語・不規則屈折形・カジュアル表現を含める**（were/those/through/does/one、gonna 等）。フォーカスピル（トラップ音・弱点・アルファベット・短縮形・不規則形・カジュアル）で集中ドリル可能。
-- **適応出題:** localStorage の履歴（`ept_hist_v1`）と**手動進捗チェック**（`ept_checks_v1`）をもとに、チェックが少ない語を優先する軽量 SRS + 頻度重み付けシャッフル。
-- **連結句（201句）:** linking / assimilation / elision を L1–L3 で段階化。Decode のみ（連結 IPA → 元フレーズ）。キャリア文に IPA 埋め込み。TTS は自然な連結音声（GA）。
-- **弱形（36語）:** 高頻度機能語（to, can, of …）の弱形を L1–L3 で段階化。Decode のみ（弱形 IPA → 機能語 `w`）。連結句と同じキャリア文＋IPA 埋め込み。TTS は `?weak=`＋弱形 IPA（GA/RP）。
-- 発音産出・流暢性の総合訓練は姉妹アプリ English Listening Trainer と対面レッスンが担当。本アプリは**単語・短フレーズ単位**に特化。
+### 2.1 音の発音を確かめる
+
+- 旧 Decode に相当する目的カード。
+- 学習者は IPA と音声を手がかりに英単語を入力する。
+- 正解は **綴り完全一致**のみ。Levenshtein による near 判定は Phase 1 正本では採用しない。
+- 語ごとの CEFR タグは難度ではなく語彙レベルの情報として表示する。
+- 手動チェックはこの目的専用に保存し、他目的の卒業判定へ流用しない。
+
+### 2.2 発音から書いてみる
+
+- 旧 Encode に相当する目的カード。
+- 学習者は英単語を見て IPA キーボードで発音を組み立てる。
+- 正解は **IPA（強勢を含む）完全一致**のみ。強勢を除いた一致による部分正解は Phase 1 正本では表示しない。
+- IPA 各記号の解説・例語・TTS は、IPA を情報源として引ける体験を支えるために維持する。
+
+### 2.3 音から単語を覚える
+
+- 旧 Mode B Study に相当する目的カード。
+- 学習者は最初に音声と IPA を受け取り、自分で意味を確認するタイミングを選ぶ。
+- システムは意味理解を自動採点しない。手動チェック 0–3 によって「まだ見る / もう少し / ほぼ大丈夫 / 卒業」を表す。
+- CEFR はこの目的だけの進行軸ではなく、全目的を横断する word-level タグとして扱う。
+- MCQ やディクテーションの旧コードが残る場合も、Phase 1 のユーザー向け正本は Study + 手動チェックである。
+
+### 2.4 連結する音に慣れる
+
+- Connected Speech と Weak forms を含む目的カード。
+- 学習者は連結 IPA または弱形 IPA を見て、元フレーズまたは機能語を入力する。
+- 連結句 TTS は Track A では GA 固定、弱形 TTS は GA/RP に対応する。
+- Type / Level の絞り込みはドリル内の静かなインラインチップとして扱い、独立した絞り込み画面は設けない。
 
 ---
 
-## 3. Mode B（サブテーマ）の確定方針
+## 3. 横断仕様
 
-- **目的 = 音から単語の意味（と綴り）を覚える。** 入口は必ず音（sound-first）。
-- **ループ = Study 提示**（`MODEB_QUIZ_ENABLED=false` の間は Quiz 非表示。MCQ・ディクテーションのコードは将来復活用に温存）。Study 提示は **2段階 reveal**（IPA＋音声 → 学習者が「意味を確認する」→ 単語＋語義を開示）。[次へ] で次の問題へ。
-- **セッション:** フィルタ後プールの全件を重複なしで消化。先読みキュー（6 問初期 / ストック&lt;5 で 5 問追加）。Decode / Encode / Mode B Study / Reveal から離脱する際は Yes/No 確認モーダル → Yes でサマリー表示（`docs/SPECIFICATION.md` §2.3b）。
-- **確認は客観2種（採用：両方）:**
-  1. 意味認識MCQ（音→意味）。**distractorは音素近傍語**を中心に毎回抽選＋順序シャッフル。
-  2. 音声ディクテーション（音→綴り、Decode採点を流用）。
-- **音素近傍distractorの意義:** 選択肢暗記（セット記憶）と消去法を同時に潰し、MCQを実質ミニマルペアの知覚テストに変える。本丸の思想「発音できない音は聞き取れない」をサブテーマでも訓練する。
-- **主軸 = CEFR/頻度バンド。** 段階配列でA1→A2→B1…と進む（現データは主に A1/A2 + phonics 語彙）。アルファベット（`letter`）・短縮形（`contraction`）は Mode B プールから除外。バンド内 60% 以上が box 4+ に到達すると次バンドへ自動解放。
-- **TTS プリフェッチ:** 全モードでキュー追加時に音声を先読み（Phase T: 1問目 body-first、現アクセント warm を非ブロック、反対アクセント warm は idle 延期、Drive 直リンク `?urls=1`、setup 画面 preread。連結句・弱形も対象）。再生ボタンはキャッシュ準備完了まで無効化。GAS 側の `?urls=1` / パブリック共有は `docs/reference/remaining-ops-checklist.md` 参照。
+### 3.1 CEFR の位置づけ
+
+CEFR は旧「語彙モードの進行軸」ではなく、Phase 1 では **全目的を横断する word-level タグ**である。
+
+- プロフィール画面で A1 / A2 / B1 / B2 などを複数選択する。
+- 各カードの STEP 行右上に「語彙 A2」のようなタグを表示する。
+- 出題対象は選択 CEFR と目的別条件の積集合で決まる。
+- CEFR が未設定の語を出題に含めるかは Phase 1-0-b Recon で確定する。正本方針としては、未タグ語を黙って別レベルへ割り当てない。
+
+### 3.2 GA / RP の位置づけ
+
+GA / RP は学習プロフィールで選択し、**セッション中は固定**する。収録音声、IPA、キーボード、反対アクセント表示が異なるため、学習中の即時切替はしない。
+
+- プロフィール画面で GA / RP を選ぶ。
+- ドリル画面ヘッダーには固定バッジを表示する。
+- 反対アクセントの IPA は必要な画面で補足表示する。
+- `ga_rp_same` / `ga_rp_same_reason` は現行どおり、学習者にとって実質同じ発音かを表す派生情報として保持する。
+
+### 3.3 マーキング仕様
+
+マーキングはユーザーの手動操作だけで更新する。
+
+| 項目 | 方針 |
+|---|---|
+| 回数 | 0–3。3 回でその目的では卒業扱い |
+| 単位 | 目的カードごとに独立 |
+| 保存 | Local Storage。Track A ではバックエンド管理しない |
+| 自動更新 | しない。正誤判定による自動昇格・降格はしない |
+| 表示 | 語彙ブラウザ、Reveal、Study などで同じ意味のチェックとして見せる |
+
+### 3.4 プロフィール一元通過型 UX
+
+Phase 1 では、学習開始前に必ずプロフィール画面 `8z` を通過する。
+
+1. トップの目的カードを選ぶ。
+2. `8z` でアクセント、CEFR、目的別プリセット、詳細条件を確認する。
+3. Local Storage に保存された前回値を初期値として表示する。
+4. ユーザーはそのまま **はじめる**、または変更してから開始する。
+5. セッション中の絞り込みはドリル画面内のインラインチップに限定し、主導線を分断しない。
+
+### 3.5 オンボーディング
+
+初回訪問時は 4 スライドのガイド `8e` を表示する。スキップも完了扱いにし、以後は Local Storage の `onboarding_completed_v1` で自動表示を抑止する。ヘッダーのガイドアイコンから任意に再表示できる。
+
+### 3.6 AI クローラビリティ
+
+重要な思想、目的カード、ヘルプ導線、フッターの「このアプリについて」は、JS 実行後にしか存在しない情報にしない。クローラーや支援技術が DOM 上で読める形を優先する。これは Phase 1 時点では原則候補だが、LP・トップページ・footer の設計判断で参照する。
+
+### 3.7 視覚言語トークン化
+
+色、タイポグラフィ、スペーシング、角丸、シャドウ、コンポーネント状態は Phase 1-A でトークン化する。PURPOSE では値を固定せず、目的ファースト UI を支える一貫した視覚言語を持つことだけを正本方針とする。
 
 ---
 
 ## 4. 依存と実装状況
 
-| 前提 | 状態 |
-|------|------|
-| gloss 品質（多言語UI） | en/ja/zh/ko/fil **実装済み**（全 **5,397語**） |
-| UI 言語（6言語 + 音素解説） | **実装済み** |
-| 弱形（36語）・連結句（201句） | **実装済み**（`cefr` + `ga_rp_same` 付与済み） |
-| 語彙ブラウザ | **実装済み**（独立ページ `#vocabPage`・hash routing・Words 5,397 / Phrases 201 / 進捗チェック / CEFR バッジ両タブ） |
-| `neighbors` 事前計算 | **実装済み**（neighbors v2・全 5,397 語・0 近傍率 5%） |
-| `ga_rp_same` フラグ | **実装済み**（wordlist + connected + weak。same=2,674 / different=2,723） |
-| 進捗チェック（3×3） | **実装済み**（`ept_checks_v1`・頻度重み付け出題） |
-| GA/RP IPA・TTS・プリフェッチ | **実装済み**（Phase T: body-first / `?urls=1` / setup preread。GAS 再デプロイは残作業チェックリスト） |
-| B1/B2 語彙の実データ | **B1: 2,116 / B2: 899**（Phase 2 M2 完了。CEFR-J B2 残り約 1,423 語は M3 以降） |
-| narrow IPA | **完了**（`ipa_actual_ga` ~529。**R4 pending 127 語**は TTS レビュー待ち） |
-| `neighbors_rp` | **保留**（GA neighbors 流用） |
-| 連結句 RP TTS | 未着手 |
-
----
-
-## Phase 1: B1語彙拡充 — 完了 (2026-07-09)
-
-CEFR-J Wordlist v1.5 のB1語彙(単一語2,332語)のうち、既存app未収録だった1,769語を
-M1(180)+M2(400)+M3(400)+M4(400)+M5(389)の5バッチに分けて拡充完了。
-
-最終結果:
-- app内 B1語数: 2,116語（オリジナル347語 + Phase1拡充1,769語）
-- gloss(en/ja/zh/ko/fil) 5言語完成: 全4,828語
-- narrow IPA・respelling: 既存パイプラインで生成済み（R4 pending分は別途TTSレビュー予定）
-
-次フェーズ（当時）: `neighbors`再計算、B2語彙拡充 → **いずれも完了**（2026-07-10）
-
----
-
-## Phase 2: B2語彙拡充 M2 — 完了 (2026-07-10)
-
-CEFR-J v1.5 B2 のうち **569 語**を pilot(179) + M2a–d(390) で追加。`rp_ipa` は Claude バッチ同梱方式。
-
-- 総語数: **5,397**（B2=**899**）
-- サマリ: `docs/reference/phase2-m2-completion-summary.md`
-- R4 pending 累計: **127 語**（`data/pipeline/r4_pending_review_list.*`）
-
-次フェーズ: Phase 2 M3+（B2 残り）、Phase 3（C1）
-
----
-
-## Phase R: RP パイプライン品質修正 — 完了 (2026-07-10)
-
-Opus レビューで判明した分類器 dead-code・happY rp_ipa 破損（91語）・`ga_to_rp.py` latent bug を修正。
-
-- **R1:** `gen_ga_rp_same.py` — `cot_caught` / `square_near_cure` / BATH+weak composite を活性化（フラグ数不変、reason 再分類）
-- **R2:** `gen_rp_ipa.py` happY ルール + `fix_happy_i.py` で rp_ipa 91語是正（82 過剰伸長 + 9 Jones `/ɪ/`）
-- **R3:** `phonology_lexicon.py` 新規、`ga_to_rp.py` PALM/happY/yod 修正
-- **R4:** neighbors 再生成、ドキュメント更新
-
-詳細: `docs/cursor/reports/cursor-implementation-report-phase-r.md`
+| 前提 | 現状 | Phase 1 での扱い |
+|---|---|---|
+| 語彙 5,397 語 | 実装済み | CEFR word-level タグとして全目的で利用 |
+| UI 6 言語 | 実装済み | Phase 1-G で新 UI 文言を多言語化 |
+| GA/RP IPA・TTS | 実装済み | プロフィール固定に再配置 |
+| 連結句 201 / 弱形 36 | 実装済み | 目的カード「連結する音に慣れる」へ統合 |
+| 語彙ブラウザ | 実装済み | 支援画面として Phase 1-E で再配置 |
+| 進捗チェック | 実装済み | 目的ごと独立のマーキング仕様へ整理 |
+| TTS プリフェッチ | 実装済み | 全目的共通の体験品質として維持 |
+| 旧 Mode A/B UI | 実装済み | Phase 1 実装で目的カード UI へ置換 |
 
 ---
 
 ## 5. 本ステートメントが上書きするもの
 
-- 引き継ぎメモ §2-4 の「本丸＝音が出せたか」「自己評価⑥」「自己申告による苦手音追跡⑦」は**取り下げ**（背景資料としては保持）。
-- ステップ1の旧PURPOSE（v1）は「語彙はスコープ外」としていたが、本v2で**Mode Bとして限定的に取り込む**形に更新。
-- Cursor仕様書 §1.2 は本ステートメントで補強（姉妹アプリ境界・2モード構成・localStorage方針）。
+- v2〜v3.24 の「Mode A（本丸） / Mode B（サブテーマ）」というユーザー向け 2 モード構成は、Phase 1 UI/UX 見直しにより廃止する。旧概念は実装移行中の内部名・履歴としてのみ扱う。
+- 旧「Mode B の主軸 = CEFR/頻度による段階進行」は廃止し、CEFR は全目的横断の word-level タグへ移す。
+- 旧「学習中に GA/RP を設定で切替可能」は、Phase 1 ではプロフィールで固定選択し、セッション中は不変とする。
+- 旧 Decode / Encode の near 表示は、Phase 1 正本では表示しない。採点は完全一致のみ。
+- 引き継ぎメモ §2-4 の「発音できたかの自己評価」や自動評価案は採用しない。手動チェックはユーザーの自己管理であり、発音採点ではない。
+- Cursor 仕様書 §1.2 の「2 モード構成」は、本 v4.0 の目的カード構成で上書きする。
 
 ---
 
 ## Personas & Learning Journey
 
-IPA Sound Drill is designed for adult English learners who want to develop pronunciation accuracy through IPA-based, sound-first training. The following personas guide our design decisions.
+IPA Sound Drill is designed for adult English learners who want to develop pronunciation accuracy through IPA-based, sound-first training. The following personas guide Phase 1 design decisions.
 
 ### Primary Personas
 
@@ -153,68 +181,45 @@ A Japanese SIer project manager (TOEIC 730) who wants to deepen his engagement w
 
 **P-2: The Strategist (Korean, 28)**
 
-A senior strategist at a Korean multinational advertising agency (TOEIC 950). Her Korean L1 phonological filter (missing /f/, /v/, /z/) creates residual accent that she wants to refine. She values professional polish; her ideal is when clients say "your English is very clear".
+A senior strategist at a Korean multinational advertising agency (TOEIC 950). Her Korean L1 phonological filter creates residual accent that she wants to refine. She values professional polish; her ideal is when clients say "your English is very clear".
 
 **P-3: The CS Agent (Filipino, 22)**
 
-A remote CS agent for a US fintech company (TOEIC 850). Filipino English is her first language, but she wants to reduce Filipino-English-specific traits (/f/-/p/, /v/-/b/, Full vowels vs schwa) that customers find harder to understand. Her goal: promotion to Team Lead.
+A remote CS agent for a US fintech company (TOEIC 850). Filipino English is her first language, but she wants to reduce Filipino-English-specific traits that customers find harder to understand. Her goal is promotion to Team Lead.
 
 **P-4: The Graduate School Aspirant (Chinese, 19)**
 
-A Shanghai university student preparing for US graduate school (TOEFL 92, Speaking 20). Her Mandarin L1 phonological filter (retroflex /ʐ/ vs English /r/, missing /v/, complex final consonant clusters) blocks her TOEFL Speaking score. She wants to reach Speaking 26+.
+A Shanghai university student preparing for US graduate school (TOEFL 92, Speaking 20). Her Mandarin L1 phonological filter blocks her TOEFL Speaking score. She wants to reach Speaking 26+.
 
 **P-5: The Music-Driven Learner (Japanese, 16, Track B focus)**
 
-A high school student in Kyoto whose English interest started with indie music (Billie Eilish, Boygenius). She wants to sing English songs beautifully — not to sound "native" but to develop her own beautiful voice in English. Instagram/TikTok-native aesthetic sensibility.
+A high school student in Kyoto whose English interest started with indie music. She wants to sing English songs beautifully — not to sound native, but to develop her own beautiful voice in English.
 
 ### Learning Journey Arc
 
-1. **First 3 seconds**: Learner recognizes IPA Sound Drill as "for me" through purpose-first UI (Cluster 1 goal). Not "generic language learning app".
-2. **First session (~1 minute)**: Complete first ~6 items, encounter Reveal screen with layered information hierarchy (Cluster 3). The IPA feels like a tool, not a barrier (Principle 1).
-3. **First week**: SRS begins to build a personal weakness map. Vocab starts to feel like a personal asset, not a monitored score (Principle 7).
-4. **First 3 months**: Learner notices actual improvement in listening comprehension (thanks to Production-Perception loop, Principle 2). Their L1 phonological filter starts to relax for target phonemes.
-5. **Long-term**: The success moment — others tell the learner their English pronunciation is clear or beautiful. The aesthetic evaluation (not just "intelligible") is the true differentiator.
+1. **First 3 seconds:** Learner recognizes a purpose card as "for me".
+2. **First session:** Learner passes through profile, completes several items, and sees Reveal as layered learning support rather than a score report.
+3. **First week:** Manual marking begins to build a personal map of words and sounds.
+4. **First 3 months:** Learner notices listening and pronunciation perception improving together.
+5. **Long-term:** The success moment is aesthetic and social: others describe the learner's English as clear, beautiful, or easy to understand.
 
 ### Design Decision Reference
 
-For more detailed persona profiles, product principles, and cluster-specific design considerations, see the private working documents (Vault, project management side). Public design documents in this repository (`docs/design/`) contain distilled versions suitable for external contributors and design AI tools.
+Detailed design discussions live in Naoya's private Vault. Public design documents in this repository (`docs/design/`) contain distilled versions suitable for external contributors and design AI tools.
 
 ---
 
 ## 変更履歴
 
 | 日付 | 版 | 内容 |
-|------|----|------|
-| 2026-07-10 | v3.24 | パッケージ B (Phase 2 バッチ品質監査): 全 569 語独立 Opus 監査完了。wordlist 波及 typo 2件 (`comprehensive`/`corporal` gloss.zh 的的)、POS 正規化 1件 (`damn` 感嘆詞→間投詞)、Fil 翻訳更新 13件 (Opus 提案)。バッチファイル 86件をwordlistと同期 (dignify/dignity + happy-i 68語 + typo/POS/Fil)。i18n 複合 POS キー追加。 |
-| 2026-07-10 | v3.23 | Phase V: 語彙ブラウザをモーダルから独立ページ (`#vocabPage`) に移設。Hash routing (`#/vocab`, `#/vocab/phrases`) 対応。UI 整備 (2段組行・sticky header・CEFR バッジ全タブ表示・A-Z 横スクロール・空/ローディング状態)。i18n `vocab.back` 追加。Menu ボタンと独立。 |
-| 2026-07-10 | v3.22 | Phase T: TTS 1問目遅延解消。fast-path body-first、warm de-gating、Start時RP warm skip、Drive 直リンク URL API (`?urls=1`)、setup 画面 preread。cold-start 20s→5s / warm-start 20s→500ms。 |
-| 2026-07-10 | v3.21 | Phase R (Repair): 分類器 dead-code 3件活性化（`cot_caught`, `square_near_cure`, BATH+weak composite）、`gen_rp_ipa.py` SYSTEM_PROMPT の happY ルール追加、rp_ipa 91語（happY 過剰伸長 82 + `/ɪ/` 表記ゆれ 9）を一括是正、`scripts/phonology_lexicon.py` に BATH_WORDS/PALM_WORDS を統合、`ga_to_rp.py` fallback の PALM/happY/yod latent bug 修正。 |
-| 2026-07-10 | v3.20 | Phase 2 M2 完了（B2 +569、総 5,397）。進捗チェック（`ept_checks_v1`）、Phrases CEFR バッジ、`dignify` RP ホットフィックス。リポジトリ README 整備（`data/README.md` 等）。 |
-| 2026-07-09 | v3.14 | Phase 1 M5（最終）: B1 拡充 389語（`restrict`〜`yoga`）をマージ。総語数 4,828、B1=2,116。**Phase 1 B1 拡充完了。** |
-| 2026-07-09 | v3.13 | 反対アクセント同一表示を `/ipa/（同じ）` 形式に変更。GA/RP ラベルを `GA`/`RP` のみに簡素化。振り返りフローティングボタンを廃止し、離脱時（Menu/ブランド）に Yes/No 確認→サマリーへ。CEFR 選択に連動して 0 件の詳細フィルタピルを非活性化。 |
-| 2026-07-09 | v3.12 | セッションをプール全件の重複なし消化に変更（6 問初期 / ストック&lt;5 で 5 問先読み）。全モード TTS 先読み。振り返りボタン・サマリー TOP へ。Mode B は Study のみ（Quiz UI 非表示・コード温存）。 |
-| 2026-07-09 | v3.11 | リポジトリ構成を整理（`data/batches`・`data/pipeline`・`data/patches`・`docs/cursor` 等）。`docs/REPOSITORY-STRUCTURE.md` 追加。`scripts/paths.py` でパス正本化。 |
-| 2026-07-09 | v3.10 | Phase 1 M4: B1 拡充 400語（`marked`〜`restore`）を IPA/pos/def/gloss5言語付きでマージ。総語数 4,439、B1=1,727。 |
-| 2026-07-09 | v3.9 | 連結句 201句・弱形 36語に `cefr` フィールドを付与（Claude 提案を算出結果どおり採用）。UI バッジ表示は別途。 |
-| 2026-07-09 | v3.8.1 | `friendliness` の GA IPA 誤記（RP 用 `ː` 混入）を訂正。respelling 例外を解消（`FREHND-lee-nuhs`）。 |
-| 2026-07-09 | v3.8 | Phase 1 M3: B1 拡充 400語（`entertain`〜`marine`）を IPA/pos/def/gloss5言語付きでマージ。総語数 4,039、B1=1,327。`merge_respelling.py` の pending クリア問題を恒久修正。 |
-| 2026-07-08 | v3.7 | Phase 1 M2: B1 拡充 400語（`biography`〜`enrich`）を IPA/pos/def/gloss5言語付きでマージ。総語数 3,639、B1=927。 |
-| 2026-07-07 | v3.6 | Phase 1 M1: パイロット180語の gloss 5言語（ja/zh/ko/fil）翻訳を追加。Claude によるスタイル準拠翻訳、同義語ペアの整合性確認済み。 |
-| 2026-07-07 | v3.5 | Phase 1 M1 パイロット: CEFR-J B1 拡充対象の先頭 180 語を wordlist に追加（3,239語）。gloss ja/zh/ko/fil は未着手。 |
-| 2026-07-07 | v3.4 | Phase 0-b: Mode A に CEFR 複数選択フィルタを追加（A1/A2/B1、デフォルト A1+A2）。Mode B の空バンド解放防止。C1 は UI 非表示（キー残置）。 |
-| 2026-07-07 | v3.3.1 | Phase 0-a の訂正: phonics 652語の cefr null化を復元。CEFR-J 一次データとの照合で 652語全てが正当な B1/B2 語彙と判明したため。詳細は `docs/reference/wordlist-cefr-audit.md` 訂正セクション参照。 |
-| 2026-07-07 | v3.3 | Phase 0-a: 誤った前提に基づく変更として phonics 652語の cefr を null 化（後日 v3.3.1 で訂正）。 |
-| 2026-07-06 | v3.2 | 学習モード名称を行為ベースに刷新（IPA読み書き / 聞いて覚える 等）。反対アクセント全画面表示。respelling は UI 非表示（データは保持）。 |
-| 2026-07-02 | v3.1.1 | respelling v2 品質パッチ（18語の `respell_ga` 可読性修正）。 |
-| 2026-07-02 | v3.1 | narrow IPA + respelling を全3,059語で完了。VntV 52語は TTS 実音判定（nasal=kept, consonant=plain）で確定。 |
-| 2026-07-02 | v3.0 | 語彙ブラウザ・TTS プリフェッチ・GA バッチ warm・`def` 完走・i18n 156 キーを反映。 |
-| 2026-06-29 | v2.10 | 語彙ブラウザ・学習ガイド全章置換・`def` batch01–08 マージ。 |
-| 2026-06-23 | v1 | 本丸をIPAリテラシーに確定（単一モード前提）。 |
-| 2026-06-24 | v2 | 2モード構成に拡張。Mode A＝音素カバー軸の本丸、Mode B＝CEFR軸の語彙サブテーマ。 |
-| 2026-06-26 | v2.1 | Mode A/B・GA/RP・連結句・RP TTS の実装完了を反映。依存表を実装状況に更新。 |
-| 2026-06-28 | v2.9 | 練習タブ統一: Connected Speech ⊃ Weak Forms（2タブ化）。 |
-| 2026-06-27 | v2.7 | gloss.fil batch04 更新 + batch17–20 追加（1,600/3,059語）。 |
-| 2026-06-27 | v2.6 | gloss.fil batch02/06–08 更新 + batch13–16 追加（1,280/3,059語）。 |
-| 2026-06-27 | v2.5 | gloss.fil batch02–05 更新 + batch09–12 追加（960/3,059語）。 |
-| 2026-06-27 | v2.4 | gloss.fil batch03–08 追加マージ（640/3,059語）。 |
-| 2026-06-26 | v2.3 | gloss.fil batch01–02 マージ（160/3,059語）・`merge_gloss_fil.py` 追加。 |
+|---|---|---|
+| 2026-07-18 | v4.0 | Phase 1 UI/UX 実装前の仕様先行改訂。旧 Mode A/B 構成を目的 4 カード構成へ再編し、タグライン、GA/RP セッション固定、CEFR 全目的横断、マーキング、完全一致判定、プロフィール一元通過型 UX、オンボーディング、AI クローラビリティ、視覚言語トークン化の方針を反映。 |
+| 2026-07-10 | v3.24 | パッケージ B (Phase 2 バッチ品質監査): 全 569 語独立 Opus 監査完了。wordlist 波及 typo 2件、POS 正規化 1件、Fil 翻訳更新 13件。 |
+| 2026-07-10 | v3.23 | Phase V: 語彙ブラウザをモーダルから独立ページ (`#vocabPage`) に移設。 |
+| 2026-07-10 | v3.22 | Phase T: TTS 1問目遅延解消。fast-path body-first、warm de-gating、Drive 直リンク URL API。 |
+| 2026-07-10 | v3.21 | Phase R: RP 分類器・happY ルール・fallback 修正。 |
+| 2026-07-10 | v3.20 | Phase 2 M2 完了（B2 +569、総 5,397）。進捗チェック、Phrases CEFR バッジ、`dignify` RP ホットフィックス。 |
+| 2026-07-09 | v3.14 | Phase 1 M5（最終）: B1 拡充 389語。 |
+| 2026-07-06 | v3.2 | 学習モード名称を行為ベースに刷新。反対アクセント全画面表示。 |
+| 2026-06-24 | v2 | 2モード構成に拡張。Mode A＝音素カバー軸、Mode B＝CEFR軸の語彙サブテーマ。 |
+| 2026-06-23 | v1 | 本丸を IPA リテラシーに確定（単一モード前提）。 |
