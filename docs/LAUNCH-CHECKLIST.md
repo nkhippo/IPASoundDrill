@@ -20,6 +20,68 @@ created: '2026-07-11'
 
 ---
 
+
+## Phase 1 UI/UX 実装ロードマップ 📋 進行中（2026-07-18 追加）
+
+Phase 1 UI/UX は、既存ローンチ準備 Phase とは別の製品 UI 改訂トラックとして管理する。目的ファースト UI、学習プロフィール、4 ドリル、支援画面、多言語、PC 版を段階実装する。
+
+### Phase 1-0-a: 上位仕様先行改訂（Issue #75）
+
+- [/] `docs/PURPOSE.md` / `docs/SPECIFICATION.md` / `docs/DESIGN.md` を Phase 1 確定事項に合わせて改訂
+- [/] `docs/LAUNCH-CHECKLIST.md` に Phase 1-0-a〜1-H の見出しを追加
+- [ ] Claude PR Rv（L3 のため必須）
+
+### Phase 1-0-b: 画面 × データマッピング Recon
+
+- [ ] 14 frame と既存 DOM / state / localStorage / data の対応表を作成
+- [ ] 12 パラメータの棚卸しとプロフィール `8z` への配置を確定
+- [ ] 旧 LS キーから Phase 1 キーへの移行方針を確定
+
+### Phase 1-A: 視覚言語トークン基盤
+
+- [ ] color / typography / spacing / radius / shadow / component tokens を定義
+- [ ] 既存 CSS 変数との対応を整理
+
+### Phase 1-B: トップページ
+
+- [ ] タグライン「音を、美しく。」と 4 目的カードを実装
+- [ ] JS 介在なしで読める思想説明・About 導線を配置
+
+### Phase 1-C: 学習プロフィール
+
+- [ ] `8z` プロフィール画面を実装
+- [ ] GA/RP セッション固定、CEFR 複数選択、前回設定プリセットを実装
+
+### Phase 1-D: ドリル本体（2 PR 分割）
+
+- [ ] Pronounce / Write の目的カード実装
+- [ ] Vocab / Connected の目的カード実装
+- [ ] 完全一致判定と目的別マーキングを実装
+
+### Phase 1-E: 支援画面（4 分割）
+
+- [ ] Reveal / Summary の情報階層を再設計
+- [ ] 語彙ブラウザを目的カード構成に合わせて再配置
+- [ ] Guide / About / footer 導線を整理
+- [ ] Legal / Feedback / X 導線の視覚調整
+
+### Phase 1-F: オンボーディング
+
+- [ ] 初回 4 スライドガイド `8e` を実装
+- [ ] `onboarding_completed_v1` によるスキップ・完了管理を実装
+
+### Phase 1-G: 多言語
+
+- [ ] ja / en / ko / zh-Hans / zh-Hant / fil の新 UI 文言を追加
+- [ ] `tools/validate_i18n.py` で 6 言語 key 網羅性を確認
+
+### Phase 1-H: PC 版
+
+- [ ] 広幅レイアウトのカード配置・余白・支援導線を調整
+- [ ] モバイル中心 UI と情報階層が矛盾しないことを確認
+
+---
+
 ## Phase 0: 基盤確定 ✅ 完了（2026-07-10）
 
 - [x] ドメイン取得 `ipasounddrill.app`（Namecheap / BasicDNS、AUTO-RENEW ON、次回更新 2027-07-11）
