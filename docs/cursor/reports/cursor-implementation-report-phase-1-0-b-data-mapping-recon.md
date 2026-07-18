@@ -47,11 +47,11 @@ Phase 1-0-a（#75）で PURPOSE/SPEC/DESIGN が目的 4 カード前提に確定
 - Front Matter YAML: OK
 - CEFR 集計再現: wordlist 未タグ 0、A1=1187 / A2=1195 / B1=2116 / B2=899
 - IPA 検索 latency: Node mean 0.15 ms / max 1.62 ms（目標 100ms 以内）
-- 12 パラメータ: Setup 論理 9 + Accent/Language = 11（トグルはシェル）を表で明記
+- Setup 11 項目: 論理 9 + Accent/Language = 11（トグルはシェル）を表で明記
 
 ## 実装過程での気づき
 
-- 「12 パラメータ」は DOM ID 76 個ではなく論理フィールド 9+設定 2
+- 旧称「12 パラメータ」は DOM ID 76 個ではなく論理フィールド 9+設定 2（→ **Setup 11 項目** に確定）
 - CEFR / rp_ipa は既に 100% — Q-17/Q-18 のブロッカーは音声 BatchWarm 運用側
 - vocab 検索は綴りのみ。IPA 検索は新設でも全走査で十分速い
 - marks の物理キーは `ept_marks_v1` オブジェクト推奨（LS キー爆発回避）
