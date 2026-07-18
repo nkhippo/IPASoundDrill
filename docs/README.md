@@ -46,6 +46,7 @@ created: '2026-07-10'
 | フォルダ | 役割 | README |
 |----------|------|--------|
 | [`cursor/`](cursor/) | Cursor / Claude の指示書・実装レポート・設計ブリーフ | [[pj-2026-07-10-a25d|`cursor/README.md`]] |
+| [`design/`](design/) | Phase 1 デザイン入力・画面×データマッピング（例: `phase-1/screen-data-mapping.md`） | — |
 | [`reference/`](reference/) | 監査・運用ガイド・意思決定メモ（人間＋AI 参照） | [[pj-2026-07-09-77a4|`reference/README.md`]] |
 | [`testing/`](testing/) | 手動テストチェックリスト | — |
 | [`archive/`](archive/) | 旧ドキュメント退避 | — |

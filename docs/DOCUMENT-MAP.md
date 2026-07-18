@@ -38,6 +38,7 @@ created: '2026-07-12'
 | `data/README.md` | data/ 配下の役割変更 | 該当変更 Issue で同時更新 |
 | `docs/DOCUMENT-MAP.md`（本ファイル） | 新規ドキュメント追加、Category 割当変更 | 新規ドキュメント作成時に Issue で更新 |
 | `docs/CHANGE-CLASSIFICATION.md` | 分類軸変更、Pattern 追加、運用ルール調整 | Claude が Issue で提案 → Naoya 承認 |
+| `docs/design/phase-1/screen-data-mapping.md` | Setup/プロフィール項目・LS キー・CEFR/IPA カバレッジ・`3c` 検索の変更 | Phase 1-C / 1-D / 1-E 等の該当 Issue で Cursor が更新 |
 
 ### Category B: Chat 起動時に必ず取得
 
@@ -59,6 +60,7 @@ Issue の性質に応じて Naoya + Claude が確認:
 |---|---|
 | 機能追加・変更 | `docs/PURPOSE.md`, `docs/DESIGN.md`, `docs/SPECIFICATION.md`, `docs/REPOSITORY-STRUCTURE.md` |
 | Phase 1 デザイン・LP・タグライン | `docs/design/tagline-candidates.md`, `docs/PURPOSE.md`（Personas & Learning Journey） |
+| Phase 1 UI 実装（プロフィール / ドリル / 語彙・IPA ピッカー） | `docs/design/phase-1/screen-data-mapping.md`, `docs/PURPOSE.md` v4.0, `docs/DESIGN.md`, `docs/SPECIFICATION.md` |
 | 運用系変更 | `docs/OPERATIONS.md`, `docs/REPOSITORY-STRUCTURE.md` |
 | バグ修正 | `docs/bug-knowledge.md`, `docs/SPECIFICATION.md` |
 | ドキュメント整備 | `docs/DOCUMENT-MAP.md`, `docs/DEV-GUARDRAILS.md`（本 Issue のような場合） |
@@ -76,7 +78,7 @@ Cursor 指示書内で明示的に参照させるドキュメント:
 | `docs/DOC-SYNC-PLAYBOOK.md` | ドキュメント同期作業時の 3 分岐マトリックス |
 | `docs/CURSOR-INSTRUCTION-GUIDE.md` | Cursor 実装レポートテンプレート、抽象度ガイド |
 | 該当機能の `DESIGN.md` / `SPECIFICATION.md` | 実装意図の確認 |
-| `docs/design/` | Phase 1 デザイン入力（タグライン・ペルソナ要約の公開版） |
+| `docs/design/` | Phase 1 デザイン入力（タグライン・ペルソナ要約の公開版）、`phase-1/screen-data-mapping.md`（画面×データ Recon） |
 
 ### Category E: 定期レビュー
 
