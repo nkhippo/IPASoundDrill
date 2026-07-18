@@ -177,17 +177,14 @@
 
   .reveal{text-align:center}
   #reveal.res-ok{border-color:var(--ok);background:linear-gradient(180deg,var(--ok-soft) 0%,var(--panel) 28%)}
-  #reveal.res-near{border-color:var(--stress);background:linear-gradient(180deg,var(--stress-soft) 0%,var(--panel) 28%)}
   #reveal.res-bad{border-color:var(--bad);background:linear-gradient(180deg,var(--bad-soft) 0%,var(--panel) 28%)}
   .word{font-size:38px;font-weight:700;letter-spacing:-.01em;margin:2px 0 4px}
   .word-gloss{font-size:15px;color:var(--muted);margin:0 0 10px;font-weight:500}
   .word-gloss.hidden{display:none}
   #reveal.res-ok .word{color:var(--ok)}
-  #reveal.res-near .word{color:var(--stress)}
   #reveal.res-bad .word{color:var(--bad)}
   .yourtry{font-size:12px;color:var(--muted);margin-bottom:14px}
   #reveal.res-ok .yourtry .try{color:var(--ok);font-weight:600}
-  #reveal.res-near .yourtry .try{color:var(--stress);font-weight:600;text-decoration:line-through;text-decoration-color:color-mix(in srgb,var(--stress) 55%,transparent)}
   #reveal.res-bad .yourtry .try{color:var(--bad);font-weight:600;text-decoration:line-through;text-decoration-color:color-mix(in srgb,var(--bad) 55%,transparent)}
   .alt-ipa{font-family:var(--ipa);font-size:13px;color:var(--faint);margin-top:2px;text-align:center;line-height:1.35}
   .alt-ipa-row{display:flex;align-items:center;justify-content:center;gap:6px;flex-wrap:wrap}
@@ -200,7 +197,6 @@
   .dict-ipa{font-family:var(--ipa);font-size:clamp(13px,3.2vw,17px);color:var(--muted);letter-spacing:.5px;margin-top:4px;text-align:center}
   .yourtry .uipa{font-family:var(--ipa)}
   #reveal.res-ok .yourtry .uipa{color:var(--ok)}
-  #reveal.res-near .yourtry .uipa{color:var(--stress)}
   #reveal.res-bad .yourtry .uipa{color:var(--bad)}
   .note{text-align:left;border-top:1px solid var(--hair);padding-top:14px;margin-top:4px}
   .note .nh{font-family:var(--mono);font-size:10px;color:var(--faint);text-transform:uppercase;letter-spacing:.14em;margin-bottom:6px}
@@ -2159,11 +2155,11 @@ function recordModeBQuiz(c,mcqRes,spellRes){
   const v=loadVocab(),e=v[c.w]||{box:1,seen:1,okMean:0,ngMean:0,okSpell:0,ngSpell:0,ts:0};
   e.seen=1;e.ts=Date.now();
   if(mcqRes==="ok")e.okMean++;else e.ngMean++;
-  if(spellRes==="ok"||spellRes==="near")e.okSpell++;else e.ngSpell++;
-  const passed=mcqRes==="ok"&&(spellRes==="ok"||spellRes==="near");
+  if(spellRes==="ok")e.okSpell++;else e.ngSpell++;
+  const passed=mcqRes==="ok"&&spellRes==="ok";
   e.box=passed?Math.min(e.box+1,5):1;
   v[c.w]=e;saveVocab(v);
-  return passed?"ok":(spellRes==="near"?"near":"bad");
+  return passed?"ok":"bad";
 }
 function hideModeBCards(){show("cardModeBStudy",false);show("cardModeBMcq",false);show("cardModeBDict",false);}
 const MB_S_PRON_IDS={noteId:"mbSNote",tipsHeadId:"mbSTipsHead",trapsId:"mbSTraps",infoId:"mbSInfo",noteBlockId:"mbSNoteBlock"};
@@ -3047,10 +3043,9 @@ function renderDecode(c){
   if(!COARSE)inp.focus({preventScroll:true});
 }
 function norm(s){return s.toLowerCase().replace(/[^a-z]/g,"");}
-function lev(a,b){const m=a.length,n=b.length,d=Array.from({length:m+1},(_,i)=>[i,...Array(n).fill(0)]);for(let j=0;j<=n;j++)d[0][j]=j;for(let i=1;i<=m;i++)for(let j=1;j<=n;j++)d[i][j]=Math.min(d[i-1][j]+1,d[i][j-1]+1,d[i-1][j-1]+(a[i-1]===b[j-1]?0:1));return d[m][n];}
 function spellCheck(text,word){
   const a=norm(text),g=norm(word);
-  return a===g?"ok":(a.length>2&&lev(a,g)<=1?"near":"bad");
+  return a===g?"ok":"bad";
 }
 function decodeCheck(){
   if(S.revealed)return;const c=S.cur;const t=$("dInput").value.trim();
@@ -3132,11 +3127,8 @@ function lcsMark(target,user){ // returns Set of target indices matched (segment
 function encodeCheck(){
   if(S.revealed)return;const c=S.cur;
   const tgt=tokenize(activeIpa(c)),usr=S.built.slice();
-  const tgtSeg=stripStress(tgt),usrSeg=stripStress(usr);
-  const segEqual=tgtSeg.join("")===usrSeg.join("");
   const stressEqual=tgt.join("")===usr.join("");
-  let res;if(stressEqual)res="ok";else if(segEqual)res="near";else res="bad";
-  reveal(res,{type:"encode",usr:usr});
+  reveal(stressEqual?"ok":"bad",{type:"encode",usr:usr});
 }
 $("eCheck").addEventListener("click",encodeCheck);
 
@@ -3211,7 +3203,7 @@ function reveal(res,ctx){
   show("cardDecode",false);show("cardEncode",false);hideModeBCards();show("reveal",true);
   setCardCefr("rCefr",c,"rNo");
   const panel=$("reveal");
-  panel.classList.remove("res-ok","res-near","res-bad");
+  panel.classList.remove("res-ok","res-bad");
   panel.classList.add("res-"+res);
   $("rWord").textContent=c.w;
   $("rGloss").textContent=wordGloss(c);

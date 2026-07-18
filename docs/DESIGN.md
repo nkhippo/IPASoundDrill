@@ -4,215 +4,185 @@ aliases:
 - pj-2026-06-24-1983
 title: IPA Sound Drill — 実装設計仕様（DESIGN.md）
 created: '2026-06-24'
+updated: '2026-07-18'
 ---
 
 # IPA Sound Drill — 実装設計仕様（DESIGN.md）
 
-> `PURPOSE.md` で確定した目的・2モード構成を、Cursorが実装に落とせる粒度まで具体化した仕様。
+> `PURPOSE.md` v4.0 で確定した目的 4 カード構成を、Cursor が実装に落とせる粒度まで具体化した仕様。
 > 本ドキュメントは「何を作るか（what / how）」の正本。目的の正本は `PURPOSE.md`。
 > 画面・JSON フィールド・localStorage の正本は **`SPECIFICATION.md`**。フォルダマップは **`REPOSITORY-STRUCTURE.md`**。
 >
-> **更新日:** 2026-07-16 ／ **ステータス:** Mode A・Mode B・GA/RP・連結句・弱形・語彙ページ（`#vocabPage`）・進捗チェック・`ga_rp_same` 実装済み。語彙 **5,397語**（B2=899、Phase 2 M2 完了）。Phase R（RP）/ T（TTS 遅延）/ V（語彙ページ）/ B（バッチ監査）完了。UI **169 leaf**。GAS 手動残作業は `docs/reference/remaining-ops-checklist.md`。
+> **更新日:** 2026-07-18 ／ **ステータス:** Phase 1 UI/UX 確定事項を情報設計に反映（Issue #75）。near 採点は実装削除済み。目的 4 カード UI・プロフィール一元通過等の DOM 実装は Phase 1-A 以降。語彙 **5,397語**。UI **169 leaf**。
 
 ---
 
 ## 0. 用語
 
-| 略語 | 意味 |
+| 略語 / ID | 意味 |
 |---|---|
-| Decode | IPA → 単語（読み）。テキスト入力 |
-| Encode | 単語 → IPA（書き）。IPAキーボードでタップ組み立て |
+| Decode | IPA → 単語（読み）。テキスト入力（目的 `2a` / `2d`） |
+| Encode | 単語 → IPA（書き）。IPAキーボードでタップ組み立て（目的 `2b`） |
+| Study | 音先行の提示ループ（目的 `2c`） |
 | Leitner | 正答で間隔を伸ばし誤答で短縮するSRS方式 |
-| 音素近傍 | IPAトークン列のLevenshtein距離が小さい語（confusable distractor） |
+| 音素近傍 | IPAトークン列の編集距離が小さい語（MCQ distractor 用。採点の near とは別） |
+| Frame ID | 画面概念 ID（1 概念 = 1 ID）。言語・デバイスは variant suffix |
 
 ---
 
-## 1. Mode A：IPA読み書き（本丸）
+## 0.1 Frame ID 再採番（Phase 1 正本）
 
-### 1.1 出題軸の張り替え
+命名規則: **概念のみ**を ID とし、言語は `-ja` / `-en` / `-ko` / `-zh-hans` / `-zh-hant` / `-fil`、デバイスは `-pc`（Phase 1-H。base はモバイル 375px）。組み合わせ例: `1a-pc-ja`。
 
-旧UIのCEFRレベル（A1+A2 / B1 / B2 / C1）を廃し、**音素フォーカス**を主セレクタにする。
-
-| 軸 | 役割 | UI |
-|---|---|---|
-| 音素フォーカス（主） | 全部 / トラップ音(θ ð æ ʒ ɝ 等) / 規則グループ / **履歴ベースの弱点** | セットアップの主選択 |
-| 規則性（従・任意） | 規則語(phonics) ↔ 不規則語 のフィルタ | 補助トグル |
-| 音節数 | 短→長の難易度スキャフォールド | 内部スケール（新規語の出題順） |
-
-**付随する是正（データ）:** C1（0語）はUIから撤去。Phase 0-a の `cefr: null` 化は後に誤りと判明し、652語は CEFR-J 一次データ照合により正当な B1/B2 として復元済み。UI 配線は Phase 0-b で実装済み。
-
-### Mode A の CEFR フィルタ（Phase 0-b 実装）
-
-- 状態: `S.cefrLevels` (Set<string>)、初期値 `{"A1","A2"}`
-- UI: `cefrField` (3 pills: A1, A2, B1)、複数選択トグル
-- localStorage 保存なし（既存 `S.reg` / `S.focus` と同じセッション単位）
-- `filteredPool()` で `w.cefr && S.cefrLevels.has(w.cefr)` を適用
-- `filteredPool()` で `w.cefr && S.cefrLevels.has(w.cefr)` を適用（`reg` の値によらず常に適用）
-- 全 CEFR 解除時は空プール（`S.cefrLevels.size === 0` → `p = []`）
-- Mode A の CEFR ピルは **A1 / A2 / B1** のみ露出（B2/C1 の i18n キーは残置）。B2 語彙データ自体は本番 wordlist に含まれ、**Mode B の CEFR バンド**で利用する（Mode A ピルへの B2 露出は別タスク）
-
-### 1.2 採点（客観のみ・現行踏襲）
-
-| モード | ok | near | bad |
+| 系統 | 新 ID | frame 名 | Claude Design 元 ID |
 |---|---|---|---|
-| Decode | 綴り完全一致 | Levenshtein距離 ≤ 1（入力3文字以上のとき） | それ以外 |
-| Encode | IPA（強勢含む）完全一致 | 強勢を除く音素列が一致 | 音素列が不一致 |
+| Top (1 系) | `1a` | トップページ | `4a` (=`1a-ja`) / `4c` (=`1a-en`) / `4d` (=`1a-ko`) |
+| Drill (2 系) | `2a` | 音の発音を確かめる | `7a` |
+| | `2b` | 発音から書いてみる | `7b` |
+| | `2c` | 音から単語を覚える | `7c` |
+| | `2d` | 連結する音に慣れる | `7d` |
+| Support (3 系) | `3a` | 学習プロフィール | `8z` |
+| | `3b` | 語彙リスト | `8a` |
+| | `3c` | IPA 記号ピッカー | `8a→`（独立 concept に昇格） |
+| | `3d` | 学習状況 | `8b` |
+| | `3e` | IPA って何？ | `8c` |
+| | `3f` | 言語設定 | `8d` |
+| | `3g` | オンボーディング 4 スライド | `8e` |
+| | `3h` | このアプリについて | `8f` |
 
-自己評価ボタンは設けない。
+計 **13 concept**。PC 版の詳細レイアウトは Phase 1-H で追記（本 Issue では `-pc` の存在のみ言及可、`Pt`/`Pd` 等は書かない）。
 
-### 1.3 localStorage スキーマ
+---
+
+## 1. UI 情報設計（Phase 1）
+
+### 1.0 セッションフロー（Q-20-δ）
+
+```
+[初回のみ 3g オンボーディング]
+        ↓
+       1a トップ（目的 4 カード + タグライン）
+        ↓ 目的選択
+       3a 学習プロフィール（毎セッション必須・LS プリセット）
+        ↓ 「はじめる」
+   2a / 2b / 2c / 2d ドリル
+        ↓
+     Reveal → 次へ / Summary
+```
+
+セッション内絞り込みは各ドリル内の **インライン静かなチップ** のみ。独立の絞り込み bottom sheet frame は設けない（Claude Design の旧 `3b` 誤記は採用しない。語彙リストが `3b`）。
+
+### `1a` トップページ
+
+- **役割:** エントリーポイント。目的 4 カードで即開始
+- **言語 variant:** `1a-ja` / `1a-en` / `1a-ko`（Phase 1-B は JA、他は Phase 1-G）
+- **デバイス variant:** モバイル 375px (base) / `1a-pc` は Phase 1-H
+- **情報階層:** ヘッダー（言語切替 + ガイドアイコン） / タグライン「音を、美しく。」 / 目的 4 カード / フッター 3 リンク（`3h` 含む）
+
+### `3a` 学習プロフィール
+
+- アクセント（GA/RP）固定選択、CEFR 複数選択、目的別プリセット、旧「詳しい設定」相当を一元集約
+- 毎セッション通過。前回値を LocalStorage からプリセット（キー詳細は Phase 1-0-b）
+- 学習中のアクセント切替 UI は持たない。ヘッダーに固定バッジ
+
+### `2a`–`2d` ドリル
+
+| ID | 情報階層（概要） |
+|----|------------------|
+| `2a` | STEP + CEFR タグ / IPA / 入力 / Check / TTS |
+| `2b` | STEP + CEFR タグ / 単語 / IPA ビルド + キーボード / Check |
+| `2c` | STEP + CEFR タグ / 音 → IPA → 意味確認 → 単語＋gloss |
+| `2d` | STEP + CEFR タグ（表示のみ） / 連結または弱形 IPA / 句・語入力。フィルタは level・type のみ |
+
+### 支援画面
+
+| ID | 役割 |
+|----|------|
+| `3b` | 語彙リスト（現行 `#vocabPage`） |
+| `3c` | IPA 記号ピッカー（`3b` の絞り込みから開く） |
+| `3d` | 学習状況 |
+| `3e` | IPA って何？ |
+| `3f` | 言語設定 |
+| `3g` | オンボーディング 4 スライド（`onboarding_completed_v1`） |
+| `3h` | このアプリについて（DOM 常時・クローラビリティ） |
+
+### 視覚言語（原則のみ）
+
+カラー / タイポ / スペーシング / 角丸 / シャドウ / コンポーネントをトークン化。**具体値は Phase 1-A**。
+
+---
+
+## 2. ドリル実装方針（現行コード橋渡し）
+
+> 以下は Track A 現行 `src/index.template.html` の実装を、目的 ID に読み替えた設計メモ。DOM 再配置は Phase 1-A 以降。
+
+### 2.1 出題軸（`2a` / `2b`）
+
+音素フォーカスを主セレクタ、規則性を従。CEFR はプロフィール複数選択（word-level タグ）。旧 Mode A ピル UI は `3a` / インラインへ移行予定。
+
+### 2.2 採点（客観・完全一致のみ）
+
+| 目的 | ok | bad |
+|---|---|---|
+| Decode（`2a`/`2d`） | 綴り完全一致 | それ以外 |
+| Encode（`2b`） | IPA（強勢含む）完全一致 | それ以外 |
+
+- **near 廃止（Phase 1-0-a）:** Levenshtein near、強勢以外一致 near、`res-near` CSS、Mode B Quiz の near 扱いを削除済み
+- 自己評価ボタンは設けない
+- Encode の LCS トークン色分けはフィードバック用（判定は 2 値）
+
+### 2.3 localStorage（現行 + Phase 1 追加）
 
 ```jsonc
-// 単語単位（復習スケジュール / Leitner）。Decode・Encode 両方で更新。
-"ept_hist_v1": {
-  "<word>": { "box": 1, "seen": 0, "ok": 0, "ng": 0, "ts": 0 }
-}
-// 記号単位（弱点ターゲティング）。Encode のみで更新（PURPOSE §4：Decode誤答は綴りミスが混入し不純）。
-"ept_sym_v1": {
-  "<symbol>": { "att": 0, "err": 0 }   // errRate = err/att
-}
-// 手動進捗チェック（ユーザー操作のみ）。モード別 0–3。
-"ept_checks_v1": {
-  "<wordKey>": { "d": 2, "e": 1, "l": 0 }   // d=IPA→word, e=word→IPA, l=Listen
-}
+"ept_hist_v1": { "<word>": { "box": 1, "seen": 0, "ok": 0, "ng": 0, "ts": 0 } }
+"ept_sym_v1": { "<symbol>": { "att": 0, "err": 0 } }
+"ept_checks_v1": { "<wordKey>": { "d": 2, "e": 1, "l": 0 } }  // 移行元
+// Phase 1 正:
+// "mark:{drill_id}:{word_id}": 0..3
+// "onboarding_completed_v1": true
+// "prev_settings_v1": { ... }  // 詳細は 1-0-b
+"ept_vocab_v1": { "<word>": { "box": 1, "seen": 0, "okMean": 0, "ngMean": 0, "okSpell": 0, "ngSpell": 0, "ts": 0 } }
+// "ept_vocab_band" — 廃止予定（実装削除は 1-A〜1-H）
 ```
 
-- 誤答(bad) → `box=1`（次セッションで再出題）。正答(ok) → `box+1`（最大5、間隔延長）。near は box 据え置き。
-- **`ept_checks_v1`:** 語彙ブラウザ・Reveal・Mode B Study でユーザーが付与。0 のときキー削除。セッション pool 構築時に `frequencyWeight`（0→4, 3→1）で優先度調整。
-- 音声キャッシュ（`ipa_tts_v2:*` 等）とは別キー。
+- 誤答(bad) → `box=1`。正答(ok) → `box+1`（最大5）
+- マーキングはユーザー手動のみ。システムは正誤で自動評価しない
 
-### 1.4 適応出題（プール全件・重複なし）
+### 2.4 適応出題（プール全件・重複なし）
 
-セッション開始時にフィルタ後プールの**全件**について出題順を決定（`buildSessionQueue(pool, pool.length)`）。先読みキュー（§3.4b）で順次供給。
+セッション開始時にフィルタ後プール全件の出題順を決定（`buildSessionQueue`）。先読みは §3.4b。
 
-重み付け抽出（`buildSessionQueue`。hist キー数 ≥ 3 のとき）：
+重み付け（hist キー数 ≥ 3）: Due 40% / Symbolic 40% / New 余り。最終にマーキング重みシャッフル。
 
-| バケット | 通常 | `focus === "weak"` |
-|----------|------|---------------------|
-| Due（SRS 再登場） | **40%** | 25% |
-| Symbolic（弱点記号） | **40%** | 55% |
-| New（新規） | 余り ≈20% | 余り |
+コールドスタート（hist &lt; 3）: CEFR 選択に沿った音節数スキャフォールド。
 
-1. **復習期限到来** … `box` と経過(`ts`)から due な語（Due バケット）。
-2. **弱点記号ターゲット** … `ept_sym` の errRate 上位記号を含む語（Symbolic バケット）。
-3. **新規カバレッジ** … 未出題語（New バケット）。音節数昇順でスキャフォールド。
-4. **最終シャッフル:** 上記キューに **`weightedShuffle`（`ept_checks_v1` の現在モード重み）** を適用。チェック 0/3 の語ほど前方に来やすい。
+### 2.5 Reveal
 
-**コールドスタート（hist エントリ &lt; 3）:** 40/40/20 をスキップ。CEFR A1 を音節数順ソート → shuffle → slice で初期プール構築。
+- 出題語、正解 IPA、gloss、自分の解答差分、TTS、記号タップ解説
+- OK/bad の 2 値スタイルのみ
 
-**`frequencyWeight` モード:** Mode B → `"l"` / Encode → `"e"` / その他 Decode → `"d"`。重み `max(1, (CHECK_MAX+1) - getCheckCount)`（0→4, 3→1）。
-
-- セッション内重複なし。選択中の音素フォーカスでフィルタ。
-- **Connected Speech / Mode B:** 同様に `weightedShuffle`（連結は `d`/`e`、Mode B は `l`）。
-
-### 1.5 答え合わせ画面（reveal）の要件 ★要件①
-
-reveal には必ず以下を表示する：
-
-- 出題語（headword）
-- 正解IPA（強勢核を琥珀色下線でハイライト）
-- **意味（gloss）を現在のUI言語で必ず添える** … gloss は en/ja/zh/ko/fil を保持。UI=fil なら `gloss.fil`（**5,397語**）。
-- 自分の解答との差分（Encodeはトークン色分け）
-- 音声再生（後述TTS）
-- 規則語なら綴り規則パターン（`ai → /eɪ/` 等）
-- IPA各記号タップで記号解説（後述 §3）
-
-### 1.6 記号タップ解説に例語を添える ★要件②
-
-各IPA記号の解説（口の形・コツ・日本人の注意点）に、**その記号を使う例語を2〜3添える**。初学時にサンプルが無いと音をイメージできないため。例語には個別の再生ボタンを付け、記号が語の中でどう響くかを聴けるようにする。
-
-実装：phonemeデータ `PH[symbol]` に `ex` フィールド（`[{w, ipa}]`）を追加。生成規則は「短い語・A1優先・規則的な綴り」を上位2〜3。下表をシード値として埋め込み、語彙拡張時に再生成する。
-
-```
-# シード例語（実データ生成 / w ipa）
-p: pay /peɪ/, up /ʌp/, pea /pi/        b: be /bi/, boy /bɔɪ/, bad /bæd/
-t: at /æt/, eat /it/, eight /eɪt/       d: add /æd/, day /deɪ/, do /du/
-k: key /ki/, cow /kaʊ/, oak /oʊk/       ɡ: egg /ɛɡ/, go /ɡoʊ/, guy /ɡaɪ/
-f: if /ɪf/, off /ɔf/, fee /fi/          v: of /ʌv/, vow /vaʊ/, arrive /ɚˈaɪv/
-θ: thigh /θaɪ/, earth /ɝθ/, oath /oʊθ/  ð: the /ðə/, they /ðeɪ/, though /ðoʊ/
-s: say /seɪ/, saw /sɔ/, ice /aɪs/       z: zoo /zu/, is /ɪz/, as /æz/
-ʃ: she /ʃi/, shoe /ʃu/, show /ʃoʊ/      ʒ: garage /ɡɚˈɑʒ/, leisure /ˈlɛʒɚ/, pleasure /ˈplɛʒɚ/
-tʃ: chew /tʃu/, each /itʃ/, itch /ɪtʃ/  dʒ: joy /dʒɔɪ/, age /eɪdʒ/, edge /ɛdʒ/
-m: me /mi/, may /meɪ/, am /æm/          n: in /ɪn/, an /æn/, knee /ni/
-ŋ: king /kɪŋ/, ring /rɪŋ/, long /lɔŋ/   l: ill /ɪl/, all /ɔl/, low /loʊ/
-r: are /ɑr/, ear /ir/, or /ɔr/          w: we /wi/, way /weɪ/, were /wɝ/
-j: you /ju/, use /jus/, yeah /jæ/       h: he /hi/, hi /haɪ/, her /hɝ/
-i: be /bi/, each /itʃ/, see /si/        ɪ: if /ɪf/, in /ɪn/, is /ɪz/
-ɛ: egg /ɛɡ/, air /ɛr/, edge /ɛdʒ/       æ: add /æd/, am /æm/, an /æn/
-ə: a /ə/, the /ðə/, ago /əˈɡoʊ/         ʌ: up /ʌp/, us /ʌs/, of /ʌv/
-ɑ: are /ɑr/, on /ɑn/, raw /rɑ/          ɔ: all /ɔl/, off /ɔf/, or /ɔr/
-ʊ: book /bʊk/, cook /kʊk/, could /kʊd/  u: do /du/, new /nu/, zoo /zu/
-ɝ: her /hɝ/, sir /sɝ/, were /wɝ/        ɚ: hour /ˈaʊɚ/, arrive /ɚˈaɪv/, water /ˈwɔtɚ/
-eɪ: day /deɪ/, age /eɪdʒ/, eight /eɪt/  aɪ: eye /aɪ/, buy /baɪ/, my /maɪ/
-ɔɪ: boy /bɔɪ/, toy /tɔɪ/, joy /dʒɔɪ/    oʊ: go /ɡoʊ/, owe /oʊ/, show /ʃoʊ/
-aʊ: how /haʊ/, cow /kaʊ/, hour /ˈaʊɚ/
-```
-
-### 1.7 GA / RP アクセント切替（STEP5・実装済み）
+### 2.6 GA / RP（セッション固定）
 
 | 項目 | 仕様 |
 |------|------|
-| 設定 | `localStorage.app_accent` = `ga` \| `rp`（既定 `ga`） |
-| 表示 IPA | `activeIpa(c)` — RP 時は `rp_ipa`、なければ GA `ipa` にフォールバック |
-| reveal 補足 | 選択外アクセントの phonemic IPA を表示（`altAccentLabel()` + `altAccentValue()`）。ラベルは `GA` / `RP` のみ。実質同一時は `/ipa/（同じ）` 形式（`formatSameAccentIpa()` + `reveal.alt_same`）。判定は **`ga_rp_same` フラグ**（未設定時は `ipa === rp_ipa` にフォールバック）。対象: `#rAltIpa`（Reveal）、`#dAltIpa`（Decode・単語のみ）、`#mbSAltIpa`（Mode B Study）、語彙ブラウザ RP 行 |
-| Encode キーボード | GA: ɑ ɔ ɝ ɚ 等 / RP: ɒ ɜː 長音ː・二重母音拡張 |
-| データ | 全 **5,397** 語 + 201 連結句に `rp_ipa` 付与 |
+| 選択 | `3a` プロフィールのみ。学習中不変 |
+| 表示 IPA | `activeIpa(c)` |
+| reveal 補足 | 反対アクセント行（`ga_rp_same` 時は `/ipa/（同じ）`） |
+| Encode キーボード | 固定アクセントの記号セット |
+| 連結句 TTS | GA 固定 |
 
-### 1.8 Connected Speech（連結句＋弱形・STEP6/弱形統合）
+### 2.7 Connected Speech（`2d`）
 
-- **データ:** `data/connected_speech.json`（201 句）+ `data/weak_forms.json`（36 語）。ランタイムで `filteredCsPool()` が合算。
-- **練習タブ:** Words / **Connected Speech** の2種。弱形は独立タブではなく Type ピル `weak` で選択。
-- **Type:** All / linking / assimilation / elision / **weak**（`tab.weak` ラベル流用）。
-- **Level:** 1–3（連結・弱形共通）。
-- **練習:** Decode のみ。連結は IPA → 元フレーズ `w`（句入力）。弱形は IPA → 機能語 `w`（単語入力）。キャリア文＋IPA 埋め込みは共通。
-- **TTS:** 連結句 GA 固定（`?phrase=`）。弱形 `?weak=` + 弱形 IPA（GA/RP）。
-- **reveal:** 連結は cs_type + cs_rule。弱形は強形↔弱形対比 + cs_rule。
-- **件数:** All = 237（201+36）。weak 選択時 `pool.count_weak`、それ以外 `pool.count_phrases`。
+- データ: `connected_speech.json` 201 + `weak_forms.json` 36
+- Type / Level フィルタ。**CEFR はタグ表示のみ・UI フィルタなし**
+- Decode のみ
 
----
+### 2.8 音から単語を覚える（`2c`）
 
-## 2. Mode B：聞いて覚える（サブテーマ）
-
-> **実装済み**（STEP7）。A1/A2 + phonics 語彙で運用。上級日常語の追加は継続タスク。
-
-### 2.1 ループ
-
-1キューで、語の履歴に応じて段階を自動選択。
-
-- **提示（Study／未習語）:** ▶音を自動再生 → IPA のみ表示 → 学習者が [意味を確認する] を押すと単語＋意味(gloss) をフェードイン開示。採点なし、[次へ]。英語 UI では `gloss.en === w` の自己参照を `modeBDisplayGloss()` が `def`（英語定義文・**5,397語**）または `(品詞)` で代替。
-- **確認（Quiz／既習・復習期限）:** 客観2種を実施（採用＝両方）。
-  - **(a) 意味認識MCQ:** ▶音 → 4択から意味を選ぶ。distractorは §2.2。順序シャッフル。
-  - **(b) 音声ディクテーション:** ▶音 → 単語を入力。採点は Mode A Decode を流用（完全一致/Lev≤1/不一致）。
-- 両方通過で `box+1`（Leitner）。
-
-### 2.2 distractor生成（AIなし・ラグなし）★
-
-- **オフライン事前計算:** 各語に音素近傍トップK（K=8目安）を `neighbors` フィールドとして付与（IPAトークンのLevenshtein距離。同バンド優先）。実行時計算ゼロ。
-- **実行時:** `neighbors` から **2語抽選 ＋ 同バンドのランダム1語**を混ぜ、選択肢にはその語の `gloss[UI言語]` を表示。順序シャッフル。近傍が不足する語はランダムで補填。
-- **RPアクセント（2026-06-26 確定）:** `neighbors_rp` の再計算は**保留**。GA `neighbors` を RP Mode B でも流用（検証: 近傍ペアの約95%が RP でも距離≤2。詳細は `docs/reference/rp-neighbors-priority-decision.md`）。再計算トリガーが発生したら `gen_neighbors.py` を `rp_ipa` 入力で実行し `neighbors_rp` フィールドを追加。
-- **効果:** セット暗記（毎回違う）と消去法（音を聞かないと選べない）を同時に潰し、MCQを実質ミニマルペア知覚テストにする。
-  - 例：three /θri/ の選択肢に free /fri/（θvs f）、those /ðoʊz/ に doze /doʊz/（ð vs d）、ship /ʃɪp/ に chip /tʃɪp/（ʃ vs tʃ）。
-- 難度調整：純近傍だけだと難しすぎるため既定は「近傍2＋ランダム1」。定数で切替可。
-
-### 2.3 localStorage スキーマ
-
-```jsonc
-"ept_vocab_v1": {
-  "<word>": { "box": 1, "seen": 0, "okMean": 0, "ngMean": 0, "okSpell": 0, "ngSpell": 0, "ts": 0 }
-},
-"ept_vocab_band": "A1"   // 現在のフォーカスバンド
-```
-
-### 2.4 選定
-
-現バンドの全語を Study として重複なしで出題（`MODEB_QUIZ_ENABLED=false` の間は Quiz UI 非表示。`buildModeBQueue` / MCQ / ディクテーションのコードは温存）。
-
-- **プール除外:** `src` が `letter`（アルファベット）または `contraction`（短縮形）の語は Mode B 対象外。
-- **バンド解放:** 現バンド内の語の 60% 以上が box 4+ に到達すると次バンドへ自動解放（`MODEB_BAND_UNLOCK_RATIO = 0.6`）。**現状 `refreshVocabBandUnlock()` は呼び出し 0 のため実質未使用**（Q-2 Phase 1 判断待ち）。
-
-### Note (2026-07-16)
-
-Mode B の情報階層設計（Band UI vs CEFR 流用）は Phase 1（Claude Design プロトタイプ探索）で決定される。現状の記述は Track A 現行実装の意思決定として維持するが、Phase 1 で見直し候補。詳細: Vault `30_projects/IPASoundDrill/open-questions.md` § Q-2 参照。
+- Study: 音 → IPA → 意味確認 → 単語＋gloss。採点なし
+- Quiz: 凍結（`MODEB_QUIZ_ENABLED=false`）。復活時の distractor は `neighbors`（近傍2＋同 CEFR ランダム1）
+- **Band 廃止（Q-2-B）:** 旧 §2.4 バンド解放・`MODEB_BAND_UNLOCK_RATIO`・`ept_vocab_band` は仕様削除。実装シンボル削除は Phase 1-A〜1-H
+- プール除外: `letter` / `contraction`
 
 ---
 
@@ -308,7 +278,7 @@ Keep the delivery identical and consistent across all words.
 
 - **citation（辞書）形を強制** … 表示するIPA（例 to `/tu/`、of `/ʌv/`、the `/ðə/`）と音を一致させる。連結時の弱形が出ると学習ループが壊れるため。
 - **General American** … データがGA/CMU基準。
-- **やや遅く・精緻な調音** … 知覚訓練が本丸。Mode Bのミニマルペア弁別（θ/f, ð/d, ʃ/tʃ 等）が成立するには各対立が明瞭に区別される必要がある。
+- **やや遅く・精緻な調音** … 知覚訓練が本丸。音から覚える目的でのミニマルペア弁別（θ/f, ð/d, ʃ/tʃ 等）が成立するには各対立が明瞭に区別される必要がある。
 - **誇張しない** … 過剰強調は歪んだ音素を教えてしまう。自然な範囲で明瞭に。
 - **一定・無感情・1回** … 毎回同じ参照音を作り、学習者が安定したターゲットを内在化できる。再生の繰り返しはアプリ側の再生ボタンで対応。
 
@@ -326,7 +296,7 @@ Keep the delivery identical and consistent across all words.
 
 ### 3.4b クライアント TTS プリフェッチ（2026-06-29 実装、2026-07 拡張）
 
-全モードでキュー追加時に音声を先読みし、初回再生の待ち時間を削減する。
+全目的でキュー追加時に音声を先読みし、初回再生の待ち時間を削減する。
 
 | 定数 | 値 | 役割 |
 |------|-----|------|
@@ -347,7 +317,7 @@ Keep the delivery identical and consistent across all words.
 6. setup 表示中はプール先頭を preread（フィルタ変更でキャンセル）
 7. スピーカーボタンはキャッシュ準備完了まで `disabled`（**全モード共通**）
 8. `prefetchToken` で古いジョブをキャンセル
-9. 離脱確認（`#exitConfirmModal`）— Decode / Encode / Mode B Study / Reveal から Menu またはブランドタップ時に Yes/No。**Yes → setup 復帰**（`goToTop(true)`。再開なし）。Summary・セットアップではモーダルなし
+9. 離脱確認（`#exitConfirmModal`）— Decode / Encode / Mode B Study / Reveal から Menu またはブランドタップ時に Yes/No。**Yes → トップ（`1a`）復帰**（`goToTop(true)`。再開なし）。Summary・プロフィールではモーダルなし
 
 GAS 側の `?urls=1` / `migratePublicSharing` 反映は `docs/reference/remaining-ops-checklist.md`。
 
@@ -410,15 +380,15 @@ GAS 側の `?urls=1` / `migratePublicSharing` 反映は `docs/reference/remainin
 
 ---
 
-## 5. 実装状況（2026-07-10）
+## 5. 実装状況（2026-07-18）
 
 | 項目 | 状態 |
 |---|---|
-| Mode A（音素軸UI・SRS・reveal・例語・TTS v2） | ✅ |
-| GA/RP 切替（IPA・キーボード・RP TTS） | ✅ |
+| 目的 `2a`/`2b`（音素軸・SRS・reveal・例語・TTS v2） | ✅（UI 再配置は Phase 1-D） |
+| GA/RP（プロフィール固定予定・IPA・キーボード・RP TTS） | ✅（セッション固定 UI は Phase 1-C） |
 | 連結句 201句（キャリア文） | ✅ |
 | 弱形 36語 + `?weak=` TTS | ✅ Connected Speech 内 Type=weak |
-| Mode B（Study/Quiz・vocab SRS・バンド解放） | ✅ Study のみ（Quiz コード温存） |
+| 目的 `2c`（Study/Quiz・vocab SRS） | ✅ Study のみ。**Band 廃止**（シンボル削除は後続） |
 | 練習タブ統一（Connected ⊃ Weak） | ✅ |
 | 語彙ブラウザ（`#vocabPage` / hash / 進捗チェック / CEFR バッジ両タブ） | ✅ Phase V |
 | TTS プリフェッチ（body-first + `?urls=1` + setup preread + スピーカー gating） | ✅ Phase T（GAS 反映は残作業） |
@@ -435,7 +405,14 @@ GAS 側の `?urls=1` / `migratePublicSharing` 反映は `docs/reference/remainin
 | Phase B: バッチ品質監査（gloss.zh / Fil / バッチ同期） | ✅ 2026-07-10 |
 | 連結句 RP TTS | ⬜ |
 | 反対アクセント全画面表示（Reveal / Decode words / Mode B Study / 語彙ブラウザ） | ✅ |
-| 学習モード名称（行為ベース: IPA読み書き / 聞いて覚える 等） | ✅ |
+| 目的 4 カード名称（Q-12） | 📋 仕様確定・UI は Phase 1-B |
 | セットアップ詳細フィルタ折りたたみ・プレイ中パンくず | ✅ |
 
 **運用メモ:** Mode A/B の新規 UI 文字列は i18n キー経由。GAS は RP TTS + バッチ warm 対応版を過去にデプロイ済み。**Phase T の `?urls=1` / パブリック共有は Apps Script への再デプロイと `migratePublicSharing` が別途必要**（`docs/reference/remaining-ops-checklist.md`、`index.html` `GAS_TTS_URL` 参照）。語彙リスト更新時は `python3 scripts/export_batch_words.py` で `BatchWords.gs` を再生成し GAS に貼り付け。`rp_ipa` 変更後は `fix_happy_i.py` → `gen_ga_rp_same.py` の順で実行推奨（Phase R 参照: `docs/cursor/reports/cursor-implementation-report-phase-r.md`）。
+
+### Phase 1-0-a（2026-07-18）
+
+- PURPOSE/SPEC/DESIGN を目的 4 カード前提に先行改訂（Issue #75）
+- near 採点をテンプレートから削除
+- Mode B Band UI/仕様を削除（実装シンボル削除は Phase 1-A〜1-H）
+- frame ID を 13 concept + variant suffix に再採番
