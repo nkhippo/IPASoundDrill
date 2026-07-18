@@ -11,7 +11,7 @@ created: '2026-07-18'
 ## 関連 Issue / PR
 
 - Issue: #78
-- PR: automation-created PR for this branch
+- PR: #79（open）
 
 ## Issue 背景（Issue 本文から要約）
 
