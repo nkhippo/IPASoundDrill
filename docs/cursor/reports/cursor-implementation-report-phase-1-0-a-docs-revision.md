@@ -11,7 +11,7 @@ created: '2026-07-18'
 ## 関連 Issue / PR
 
 - Issue: #75
-- PR: （作成時に追記）
+- PR: #77（open）
 
 ## Issue 背景（Issue 本文から要約）
 
