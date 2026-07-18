@@ -9,10 +9,10 @@ updated: '2026-07-18'
 
 # IPA Sound Drill — 仕様書
 
-> 本ドキュメントは、Phase 1 UI/UX の画面・データ・Local Storage 仕様の正本です。  
+> 本ドキュメントは、Phase 1 UI/UX の画面・データ・Local Storage 仕様の正本です。
 > 目的の正本は `docs/PURPOSE.md`、実装設計は `docs/DESIGN.md`（衝突時は PURPOSE → DESIGN → SPECIFICATION の順で参照）。
 
-**最終更新:** 2026-07-18（Issue #75: Phase 1 UI/UX 確定事項の先行仕様改訂）  
+**最終更新:** 2026-07-18（Issue #75: Phase 1 UI/UX 確定事項の先行仕様改訂）
 **対象コード:** `src/index.template.html`（正本。ビルド生成物 `/{lang}/index.html`）、`wordlist_GA_a1a2_plus_phonics.json`（**5,397 語**）、`data/connected_speech.json`、`data/weak_forms.json`、`data/guide.json`、`i18n/`、`gas/`  
 **リポジトリ構成:** `docs/REPOSITORY-STRUCTURE.md`（フォルダマップ・Runtime data contract）
 

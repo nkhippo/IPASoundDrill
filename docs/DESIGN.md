@@ -9,7 +9,7 @@ updated: '2026-07-18'
 
 # IPA Sound Drill — 実装設計仕様（DESIGN.md）
 
-> `PURPOSE.md` で確定した Phase 1 UI/UX 方針を、Cursor が実装 Issue に分解できる粒度まで具体化する設計仕様。  
+> `PURPOSE.md` で確定した Phase 1 UI/UX 方針を、Cursor が実装 Issue に分解できる粒度まで具体化する設計仕様。
 > 画面・JSON フィールド・Local Storage の正本は **`SPECIFICATION.md`**。フォルダマップは **`REPOSITORY-STRUCTURE.md`**。
 >
 > **更新日:** 2026-07-18 ／ **ステータス:** Issue #75 による仕様先行改訂。コード実装は Phase 1-A 以降。
