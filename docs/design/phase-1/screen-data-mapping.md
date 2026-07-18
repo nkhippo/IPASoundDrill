@@ -15,9 +15,21 @@ updated: '2026-07-18'
 
 ---
 
-## §1: 12 パラメータ完全リスト
+## §1: Setup 11 項目（確定ラベル）
 
-現行 `#setup` から抽出した **論理パラメータは 9**（学習構成 3 + CEFR 1 + Words 詳細 3 + Connected 詳細 2）。加えて設定モーダルの **Accent / Language** をプロフィール一元化対象に含めると **11**。Issue 想定の「12」に近い実態は以下（「詳しい設定」トグル自体はパラメータではなく UI 折りたたみ）。
+> **Naoya 裁定（PR #80 Claude Rv）:** パラメータ数ラベルは **「11」に統一**。旧称「12 パラメータ」は廃止。PURPOSE / DESIGN の残表記は Phase 1-C 起票時に「Setup 11 項目（Accent 含む）+ Onboarding」等へ書き替え。
+
+**公式カウント:** 現行 `#setup` 論理 **9**（学習構成 3 + CEFR 1 + Words 詳細 3 + Connected 詳細 2）+ **Accent** + **Language** = **11**。
+
+| 区分 | 扱い |
+|---|---|
+| #1–#9 | Setup 由来（うち #1–#3 は目的カード化で **廃止予定**） |
+| #10 Accent | プロフィール `3a` 必須・学習中固定 |
+| #11 Language | **カウントは 11 に含める**。UI 配置は `3f` またはヘッダー（プロフィール必須表示から外してよい） |
+| Onboarding | 11 の外（`3g` / `onboarding_completed_v1`） |
+| フィルタトグル 2 種 | 11 に含めない（UI シェル） |
+
+下表は実態列挙（「詳しい設定」トグル自体はパラメータではない）。
 
 | # | パラメータ | i18n（主） | 現行 DOM | 現行 LS | Phase 1 振り分け | Q-20-δ 扱い | 備考 |
 |---|---|---|---|---|---|---|---|
@@ -31,7 +43,7 @@ updated: '2026-07-18'
 | 8 | Connected level | `cs.level` | `#csLevelPills` | なし（`S.csLevel`） | **プロフィール**（`2d` 選択時） | 折りたたみ | all/1/2/3 |
 | 9 | Connected type | `cs.*` | `#csPills` | なし（`S.csFilter`） | **プロフィール**（`2d` 選択時） | 折りたたみ | all/linking/assimilation/elision/weak |
 | 10 | Accent | settings | `#accentOpts` | `app_accent` | **プロフィール `3a`** | 毎セッション表示・学習中固定 | GA/RP |
-| 11 | Language | settings | `#langOpts` | `app_lang` | **`3f` 言語設定**（プロフィール外可） | トップ/設定 | Q-20 の「12」外でも可。トップヘッダー切替維持案 |
+| 11 | Language | settings | `#langOpts` | `app_lang` | **`3f` 言語設定**（またはヘッダー） | トップ/設定 | **11 カウントに含む**。プロフィール必須表示からは外してよい |
 
 **UI シェル（パラメータではない）**
 
@@ -43,7 +55,7 @@ updated: '2026-07-18'
 
 **廃止理由（1–3）:** Phase 1 目的 4 カードが入口を平坦化するため。`app_mode` は削除予定（SPEC §5.3）。
 
-**Cursor 推奨（Naoya 確認用）:** プロフィール必須表示 = Accent + CEFR。詳細フィルタ（5–9）は同一画面の折りたたみ。Language は `3f` またはヘッダー。これで「実質 12 相当」を満たしつつ DOM を増やさない。
+**Cursor 推奨（裁定反映済み）:** プロフィール必須表示 = Accent + CEFR。詳細フィルタ（5–9）は同一画面の折りたたみ。Language は `3f`/ヘッダー。ラベルは常に **「Setup 11 項目」**。
 
 ---
 

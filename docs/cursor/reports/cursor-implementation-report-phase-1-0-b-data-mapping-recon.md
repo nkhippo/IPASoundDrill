@@ -64,7 +64,7 @@ Phase 1-0-a（#75）で PURPOSE/SPEC/DESIGN が目的 4 カード前提に確定
 
 ## 残課題・申し送り
 
-- Accent/Language を「12」に含めるかの最終ラベルは Naoya 確認可（表では 11 論理）
+- Accent/Language を含む公式ラベルは **Setup 11 項目**（Naoya 裁定・PR #80）。PURPOSE/DESIGN の旧「12」表記は Phase 1-C で書き替え
 - RP BatchWarm・連結 RP TTS は Track B
 - 実機 Safari での latency は 1-E で任意確認
 
