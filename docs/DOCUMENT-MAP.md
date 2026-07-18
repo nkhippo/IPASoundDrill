@@ -8,7 +8,7 @@ created: '2026-07-12'
 
 # DOCUMENT-MAP — IPA Sound Drill ドキュメント運用マップ
 
-> **Last updated**: 2026-07-16
+> **Last updated**: 2026-07-18
 > **Purpose**: プロジェクト内の全ドキュメントを Category A-E に分類し、更新義務・参照タイミング・レビュー頻度を一枚で見られるようにする。
 
 ---
@@ -38,6 +38,7 @@ created: '2026-07-12'
 | `data/README.md` | data/ 配下の役割変更 | 該当変更 Issue で同時更新 |
 | `docs/DOCUMENT-MAP.md`（本ファイル） | 新規ドキュメント追加、Category 割当変更 | 新規ドキュメント作成時に Issue で更新 |
 | `docs/CHANGE-CLASSIFICATION.md` | 分類軸変更、Pattern 追加、運用ルール調整 | Claude が Issue で提案 → Naoya 承認 |
+| `docs/design/phase-1/screen-data-mapping.md` | Phase 1 の画面×データ対応（プロフィール、LS、runtime data、frame data source）変更 | Phase 1 関連変更 Issue の Cursor 実装内で更新 |
 
 ### Category B: Chat 起動時に必ず取得
 

@@ -6,7 +6,7 @@ title: '`docs/` — ドキュメント索引（AI / 開発者向け）'
 created: '2026-07-10'
 ---
 
-> Last updated: 2026-07-12（Phase 3.5 完了、DOCUMENT-MAP.md / DEV-GUARDRAILS.md / DOC-SYNC-PLAYBOOK.md / CURSOR-INSTRUCTION-GUIDE.md 追加）
+> Last updated: 2026-07-18（Phase 1 screen-data mapping 追加）
 
 # `docs/` — ドキュメント索引（AI / 開発者向け）
 
@@ -46,6 +46,7 @@ created: '2026-07-10'
 | フォルダ | 役割 | README |
 |----------|------|--------|
 | [`cursor/`](cursor/) | Cursor / Claude の指示書・実装レポート・設計ブリーフ | [[pj-2026-07-10-a25d|`cursor/README.md`]] |
+| [`design/`](design/) | Phase 1+ のデザイン入力・画面×データマッピング | — |
 | [`reference/`](reference/) | 監査・運用ガイド・意思決定メモ（人間＋AI 参照） | [[pj-2026-07-09-77a4|`reference/README.md`]] |
 | [`testing/`](testing/) | 手動テストチェックリスト | — |
 | [`archive/`](archive/) | 旧ドキュメント退避 | — |
