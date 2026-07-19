@@ -100,10 +100,28 @@ updated: '2026-07-18'
 
 | ID | 情報階層（概要） |
 |----|------------------|
-| `2a` | STEP + CEFR タグ / IPA / 入力 / Check / TTS |
-| `2b` | STEP + CEFR タグ / 単語 / IPA ビルド + キーボード / Check |
-| `2c` | STEP + CEFR タグ / 音 → IPA → 意味確認 → 単語＋gloss |
-| `2d` | STEP + CEFR タグ（表示のみ） / 連結または弱形 IPA / 句・語入力。フィルタは level・type のみ |
+| `2a` | `.qno` + Progress meter（問題中のみ）+ CEFR タグ（`.pill-cefr` 風）/ IPA（`--font-ipa` + 音象徴）/ 入力 / Check / TTS |
+| `2b` | `.qno` + Progress meter + CEFR タグ / 単語 / IPA ビルド（`.build` Mood B）+ キーボード / Check |
+| `2c` | STEP + CEFR タグ / 音 → IPA → 意味確認 → 単語＋gloss（Phase 1-D-PR2） |
+| `2d` | STEP + CEFR タグ（表示のみ） / 連結または弱形 IPA / 句・語入力。フィルタは level・type のみ（Phase 1-D-PR2） |
+
+#### Progress meter（Phase 1-D-PR1）
+
+- 配置: `#cardDecode` / `#cardEncode` の `.qno` 下（`#dProgress` / `#eProgress`）
+- 割合: `(S.idx+1) / S.poolTotal`（`.qno` の `n / total` と一致）
+- Reveal / Summary: 親カード非表示に伴い非表示
+- CSS: `.progress-meter` / `__fill` / `__label`（`visual-tokens.md` §4.5 / §5d）
+
+#### 音象徴視覚化（Phase 1-D-PR1）
+
+- `ˈ` / `ˌ`: `var(--signal)`（`.seg.mark`）
+- 要注意: `.seg.nucleus`（強勢後の第 1 母音）を `var(--stress)` 下線へ Mood B 化
+- 音節境界 `‧`(U+2027): wordlist 0 件のため本 Phase 対象外（将来データ整備後に自動適用）
+
+#### マーキング UI（Phase 1-D-PR1）
+
+- `#revealChecks`（`2a`/`2b` Reveal）を Mood B リスタイル。3 スロット `.pc-slot` + `toggleCheckSlot` 維持
+- `#mbSChecks`（`2c`）は Phase 1-D-PR2
 
 ### 支援画面
 

@@ -200,23 +200,7 @@
   .playicon.loading::after{content:"";position:absolute;width:18px;height:18px;border:2px solid var(--legacy-signal-soft);border-top-color:var(--legacy-signal);border-radius:50%;animation:playicon-spin .7s linear infinite}
   @keyframes playicon-spin{to{transform:rotate(360deg)}}
 
-  /* IPA keyboard (encode mode) */
-  .build{border:1.5px solid var(--legacy-hair);border-radius:11px;background:#fff;min-height:58px;display:flex;align-items:center;justify-content:center;padding:10px 14px;margin:4px 0 12px}
-  .build .ipa{font-family:var(--legacy-ipa);font-size:30px;letter-spacing:1px;min-height:36px}
-  .build .ph{color:var(--legacy-faint);font-size:14px;font-family:var(--legacy-ui)}
-  .kbd{display:flex;flex-direction:column;gap:10px}
-  .krow{}
-  .kglabel{font-family:var(--legacy-mono);font-size:9.5px;color:var(--legacy-faint);text-transform:uppercase;letter-spacing:.12em;margin-bottom:5px}
-  .keys{display:flex;flex-wrap:wrap;gap:6px}
-  .key{font-family:var(--legacy-ipa);font-size:19px;border:1px solid var(--legacy-hair);background:#fff;border-radius:8px;min-width:38px;height:42px;padding:0 6px;cursor:pointer;color:var(--legacy-ink);display:flex;align-items:center;justify-content:center;transition:background .1s,border-color .1s}
-  .key:hover{border-color:var(--legacy-signal);background:var(--legacy-signal-soft)}
-  .key:active{transform:translateY(1px)}
-  .key.fn{font-family:var(--legacy-ui);font-size:12px;font-weight:600;color:var(--legacy-muted);min-width:54px}
-  .key.stress{font-family:var(--legacy-ipa);color:var(--legacy-stress);font-weight:700}
-  .kbtns{display:flex;gap:8px;margin-top:6px}
-  .kbtns button{flex:1;border-radius:10px;padding:13px;font-weight:700;font-size:14px;cursor:pointer;font-family:var(--legacy-ui)}
-  .kbtns .check{border:none;background:var(--legacy-signal);color:#fff}
-  .kbtns .clear{border:1px solid var(--legacy-hair);background:#fff;color:var(--legacy-muted)}
+  /* IPA keyboard (encode mode): Mood B tokens moved to Phase 1-D-PR1 block below */
 
   .reveal{text-align:center}
   #reveal.res-ok{border-color:var(--legacy-ok);background:linear-gradient(180deg,var(--legacy-ok-soft) 0%,var(--legacy-panel) 28%)}
@@ -437,7 +421,69 @@
   .site-footer .feedback-btn:focus-visible,.site-footer .x-link:focus-visible,.site-footer .legal-link:focus-visible{outline:2px solid var(--legacy-signal);outline-offset:2px}
   body.in-play .site-footer,body.in-play .about-block{display:none}
 
-  /* Phase 1-C/B: Mood B components (visual-tokens §4; Progress meter deferred to 1-D) */
+  /* Phase 1-D-PR1: Progress meter + 2a/2b Mood B (Issue #87) */
+  .progress-meter{height:6px;background:var(--hair);border-radius:var(--radius-pill);overflow:hidden}
+  .progress-meter__fill{height:100%;background:var(--signal);width:0%;transition:width .2s ease}
+  .progress-meter__label{font-size:11px;color:var(--muted);margin-top:6px;font-family:var(--font-mono)}
+  .drill-progress{margin:-6px 0 14px}
+  #cardDecode.panel,#cardEncode.panel,#reveal.panel{background:var(--panel);border-color:var(--hair);border-radius:var(--radius-card);color:var(--ink)}
+  #cardDecode .qno,#cardEncode .qno,#reveal .qno{font-family:var(--font-mono);color:var(--muted)}
+  #cardDecode .qno b,#cardEncode .qno b,#reveal .qno b{color:var(--ink)}
+  #cardDecode .card-top .cefr,#cardEncode .card-top .cefr,#reveal .card-top .cefr{
+    font-family:var(--font-mono);font-size:11px;font-weight:700;letter-spacing:.06em;
+    color:var(--signal);background:var(--signal-soft);border:1px solid var(--signal);
+    border-radius:var(--radius-pill);padding:4px 10px;line-height:1.2;white-space:nowrap
+  }
+  #cardDecode .card-top .cefr.is-unknown,#cardEncode .card-top .cefr.is-unknown,#reveal .card-top .cefr.is-unknown{
+    color:var(--faint);background:transparent;border:1px dashed var(--hair);font-weight:600
+  }
+  #cardDecode .readout .ipa,#reveal .readout .ipa{font-family:var(--font-ipa);font-size:clamp(30px,7.5vw,40px);line-height:1.45}
+  #cardEncode .readout .wordbig{font-family:var(--font-ui);color:var(--ink)}
+  #cardDecode .seg.mark,#reveal .seg.mark,#cardEncode .build .seg.mark{color:var(--signal);font-size:.62em;vertical-align:.35em}
+  #cardDecode .seg.nucleus,#reveal .seg.nucleus,#cardEncode .build .seg.nucleus{
+    background:linear-gradient(transparent 62%,rgba(217,145,27,.22) 62%);
+    border:none;box-shadow:none;padding:0 1px;
+    text-decoration:underline;text-decoration-color:var(--stress);
+    text-decoration-thickness:max(3px,.14em);text-underline-offset:.08em;
+    -webkit-text-decoration-skip-ink:none;text-decoration-skip-ink:none
+  }
+  #cardDecode .seg:hover,#reveal .seg:hover{background:var(--signal-soft)}
+  #cardDecode .seg.sel,#reveal .seg.sel{background:var(--signal-soft);color:var(--signal)}
+  #cardDecode .slash,#reveal .slash,#cardEncode .build .slash{color:var(--signal)}
+  #cardDecode .answer input{
+    border:1.5px solid var(--hair);border-radius:var(--radius-button);font-family:var(--font-ui);
+    color:var(--ink);background:var(--panel)
+  }
+  #cardDecode .answer input:focus{border-color:var(--signal)}
+  #cardDecode .answer .go{
+    background:var(--signal);border-radius:var(--radius-button);font-family:var(--font-ui);font-weight:700
+  }
+  /* .build / .kbd Mood B token roll-up (layout unchanged; radius-button per ruling #7) */
+  .build{border:1.5px solid var(--hair);border-radius:var(--radius-button);background:var(--panel);min-height:58px;display:flex;align-items:center;justify-content:center;padding:10px 14px;margin:4px 0 12px}
+  .build .ipa{font-family:var(--font-ipa);font-size:30px;letter-spacing:1px;min-height:36px}
+  .build .ph{color:var(--faint);font-size:14px;font-family:var(--font-ui)}
+  .kbd{display:flex;flex-direction:column;gap:10px}
+  .krow{}
+  .kglabel{font-family:var(--font-mono);font-size:9.5px;color:var(--faint);text-transform:uppercase;letter-spacing:.12em;margin-bottom:5px}
+  .keys{display:flex;flex-wrap:wrap;gap:6px}
+  .key{font-family:var(--font-ipa);font-size:19px;border:1px solid var(--hair);background:var(--panel);border-radius:8px;min-width:38px;height:42px;padding:0 6px;cursor:pointer;color:var(--ink);display:flex;align-items:center;justify-content:center;transition:background .1s,border-color .1s}
+  .key:hover{border-color:var(--signal);background:var(--signal-soft)}
+  .key:active{transform:translateY(1px)}
+  .key.fn{font-family:var(--font-ui);font-size:12px;font-weight:600;color:var(--muted);min-width:54px}
+  .key.stress{font-family:var(--font-ipa);color:var(--stress);font-weight:700}
+  .kbtns{display:flex;gap:8px;margin-top:6px}
+  .kbtns button{flex:1;border-radius:var(--radius-button);padding:13px;font-weight:700;font-size:14px;cursor:pointer;font-family:var(--font-ui)}
+  .kbtns .check{border:none;background:var(--signal);color:#fff}
+  .kbtns .clear{border:1px solid var(--hair);background:var(--panel);color:var(--muted)}
+  /* Marking UI Mood B (#revealChecks only; #mbSChecks stays legacy for PR2) */
+  #revealChecks.reveal-checks{border-top:1px solid var(--hair)}
+  #revealChecks .rc-label{font-family:var(--font-mono);font-size:10px;color:var(--faint);text-transform:uppercase;letter-spacing:.12em;margin-bottom:8px}
+  #revealChecks .pc-slot{width:14px;height:14px;border:1px solid var(--hair);border-radius:4px;background:var(--panel);cursor:pointer;padding:0}
+  #revealChecks .pc-slot[data-filled="1"]{border-color:var(--signal);background:var(--signal-soft)}
+  #revealChecks .pc-mode[data-graduated="1"] .pc-slot[data-filled="1"]{background:var(--signal);border-color:var(--signal)}
+  #revealChecks .pc-slot:hover{border-color:var(--signal)}
+
+  /* Phase 1-C/B: Mood B components (visual-tokens §4) */
   .btn-primary{background:var(--signal);color:#fff;border:none;border-radius:var(--radius-button);padding:12px 24px;font-size:14px;font-weight:700;cursor:pointer;font-family:var(--font-ui)}
   .btn-primary:disabled{opacity:.45;cursor:not-allowed}
   .btn-secondary{background:var(--panel);color:var(--ink);border:1px solid var(--hair);border-radius:var(--radius-button);padding:11px 22px;font-size:14px;font-weight:600;cursor:pointer;font-family:var(--font-ui)}
@@ -711,8 +757,12 @@
   </section>
 
   <!-- DECODE CARD -->
-  <section id="cardDecode" class="panel hidden">
+  <section id="cardDecode" class="panel hidden" data-frame="2a">
     <div class="card-top"><span class="cefr" id="dCefr" hidden></span><div class="card-top-right"><div class="qno" id="dNo"></div></div></div>
+    <div class="drill-progress" id="dProgress" role="status" aria-live="polite">
+      <div class="progress-meter" aria-hidden="true"><div class="progress-meter__fill" id="dProgressFill" style="width:0%"></div></div>
+      <div class="progress-meter__label" id="dProgressLabel"></div>
+    </div>
     <div class="readout"><div class="ipa" id="dIpa"></div>
       <button class="playicon" id="dPlay" type="button" aria-label="Listen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button>
     </div>
@@ -725,8 +775,12 @@
   </section>
 
   <!-- ENCODE CARD -->
-  <section id="cardEncode" class="panel hidden">
+  <section id="cardEncode" class="panel hidden" data-frame="2b">
     <div class="card-top"><span class="cefr" id="eCefr" hidden></span><div class="card-top-right"><div class="qno" id="eNo"></div></div></div>
+    <div class="drill-progress" id="eProgress" role="status" aria-live="polite">
+      <div class="progress-meter" aria-hidden="true"><div class="progress-meter__fill" id="eProgressFill" style="width:0%"></div></div>
+      <div class="progress-meter__label" id="eProgressLabel"></div>
+    </div>
     <div class="readout"><div class="wordbig" id="eWord"></div>
       <button class="playicon" id="ePlay" type="button" aria-label="Listen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button>
     </div>
@@ -739,7 +793,7 @@
   </section>
 
   <!-- REVEAL -->
-  <section id="reveal" class="panel hidden">
+  <section id="reveal" class="panel hidden" data-frame="reveal">
     <div class="card-top"><span class="cefr" id="rCefr" hidden></span><div class="card-top-right"><div class="qno" id="rNo"></div></div></div>
     <div class="reveal">
       <div class="word" id="rWord"></div>
@@ -1112,9 +1166,13 @@ function refreshRevealChecksPanel(wrapId, item, mode) {
   rcMode.dataset.word = sessionItemKey(item);
   rcMode.dataset.mode = mode;
   const count = getCheckCount(item, mode);
+  rcMode.setAttribute("data-graduated", count >= 3 ? "1" : "0");
+  rcMode.setAttribute("aria-label", t("mark.aria.step_" + Math.min(3, Math.max(0, count))));
   rcMode.querySelectorAll(".pc-slot").forEach(btn => {
     const s = parseInt(btn.dataset.slot, 10);
-    btn.setAttribute("data-filled", s <= count ? "1" : "0");
+    const filled = s <= count;
+    btn.setAttribute("data-filled", filled ? "1" : "0");
+    btn.setAttribute("aria-label", t("mark.aria.step_" + (filled ? s : 0)));
   });
 }
 
@@ -1978,19 +2036,46 @@ function setCardCefr(elId,c,qnoId){
     el.textContent=label;
     el.classList.remove("is-unknown");
     el.hidden=false;
-    el.title="CEFR "+label;
+    const aria=t("cefr.tag."+label.toLowerCase());
+    el.title=aria!==("cefr.tag."+label.toLowerCase())?aria:("CEFR "+label);
+    el.setAttribute("aria-label",el.title);
   }else if(c&&(isConnectedItem(c)||isWeakItem(c))){
     el.textContent=t("cefr.pending");
     el.classList.add("is-unknown");
     el.hidden=false;
     el.title=t("cefr.pending_hint");
+    el.setAttribute("aria-label",t("cefr.pending"));
   }else{
     el.textContent="";
     el.classList.remove("is-unknown");
     el.hidden=true;
     el.removeAttribute("title");
+    el.removeAttribute("aria-label");
   }
   if(qnoId)$(qnoId).innerHTML="<b>"+(S.idx+1)+"</b> / "+S.poolTotal;
+}
+
+/**
+ * Update 2a/2b progress meters from S.idx / S.poolTotal.
+ * Ratio: (S.idx+1) / S.poolTotal (ruling #8). Hidden with parent cards on Reveal/Summary.
+ * @returns {void}
+ */
+function updateProgressMeter(){
+  const total=S.poolTotal||0;
+  const cur=total?Math.min(total,S.idx+1):0;
+  const pct=total?Math.min(100,Math.round((cur/total)*100)):0;
+  const labelText=total?t("progress.meter_label",{pct:String(pct),cur:String(cur),total:String(total)}):"";
+  const aria=total?t("progress.meter_aria",{pct:String(pct),cur:String(cur),total:String(total)}):"";
+  ["d","e"].forEach(prefix=>{
+    const wrap=$(prefix+"Progress");
+    const fill=$(prefix+"ProgressFill");
+    const lab=$(prefix+"ProgressLabel");
+    if(!wrap||!fill||!lab)return;
+    fill.style.width=pct+"%";
+    lab.textContent=labelText;
+    if(aria)wrap.setAttribute("aria-label",aria);
+    else wrap.removeAttribute("aria-label");
+  });
 }
 
 /* ---------- setup ---------- */
@@ -3370,6 +3455,7 @@ function unlockInputScroll(){
 function renderDecode(c){
   show("cardEncode",false);show("cardDecode",true);
   setCardCefr("dCefr",c,"dNo");
+  updateProgressMeter();
   $("dInfo").classList.remove("on");
   if((isConnectedItem(c)||isWeakItem(c))&&S.curCarrier){
     renderConnectedPrompt(c);
@@ -3450,11 +3536,13 @@ function buildKeyboard(){
 function renderBuild(){
   const el=$("eBuild");
   if(!S.built.length){el.innerHTML='<span class="ph">'+t("build_ph")+'</span>';return;}
-  el.innerHTML='<span class="ipa"><span class="slash">/</span>'+S.built.map(t=>t==="ˈ"||t==="ˌ"?'<span class="mark" style="color:var(--legacy-faint);font-size:.62em;vertical-align:.35em">'+t+'</span>':t).join("")+'<span class="slash">/</span></span>';
+  // Sound symbolism via buildIpaHtml (stress → signal, nucleus → stress underline).
+  el.innerHTML=buildIpaHtml(S.built.join(""));
 }
 function renderEncode(c){
   show("cardDecode",false);show("cardEncode",true);
   setCardCefr("eCefr",c,"eNo");
+  updateProgressMeter();
   $("eWord").textContent=c.w;S.built=[];renderBuild();
 }
 $("ePlay").addEventListener("click",()=>{unlockAudioFromGesture();speak(S.cur.w);});
