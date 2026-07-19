@@ -39,6 +39,7 @@ created: '2026-07-12'
 | `docs/DOCUMENT-MAP.md`（本ファイル） | 新規ドキュメント追加、Category 割当変更 | 新規ドキュメント作成時に Issue で更新 |
 | `docs/CHANGE-CLASSIFICATION.md` | 分類軸変更、Pattern 追加、運用ルール調整 | Claude が Issue で提案 → Naoya 承認 |
 | `docs/design/phase-1/screen-data-mapping.md` | Setup/プロフィール項目・LS キー・CEFR/IPA カバレッジ・`3c` 検索の変更 | Phase 1-C / 1-D / 1-E 等の該当 Issue で Cursor が更新 |
+| `docs/CSS-CONVENTIONS.md` | CSS 変数命名・`--legacy-*` 運用・Track A CSS 技術制約の変更 | 該当 CSS / Phase 1 UI Issue で Cursor が更新 |
 
 ### Category B: Chat 起動時に必ず取得
 
