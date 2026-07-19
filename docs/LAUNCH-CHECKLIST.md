@@ -397,7 +397,7 @@ Hotfix フローは `CLAUDE.md` を参照。以下 3 条件をすべて満たす
 | **1-A** | 視覚言語トークン基盤 | [x] 完了 | [#81](https://github.com/nkhippo/IPASoundDrill/issues/81) / [PR #82](https://github.com/nkhippo/IPASoundDrill/pull/82) |
 | **1-B** | トップページ（`1a`） | [x] 完了 | [#85](https://github.com/nkhippo/IPASoundDrill/issues/85) / [PR #86](https://github.com/nkhippo/IPASoundDrill/pull/86) |
 | **1-C** | 学習プロフィール（`3a`） | [x] 完了 | [#83](https://github.com/nkhippo/IPASoundDrill/issues/83) / [PR #84](https://github.com/nkhippo/IPASoundDrill/pull/84) |
-| **1-D** | ドリル本体（`2a`–`2d`、2 PR 分割） | [~] PR1 (`2a`/`2b`) 完了・PR2 未 | #87 / #88 |
+| **1-D** | ドリル本体（`2a`–`2d`、2 PR 分割） | [x] 完了 | #87/#88（PR1）+ #89 / PR TBD（PR2） |
 | **1-E** | 支援画面（`3b`–`3f`/`3h`、4 分割） | [ ] 未着手 | — |
 | **1-F** | オンボーディング（`3g`） | [ ] 未着手 | — |
 | **1-G** | 多言語（variant `-en` 等） | [ ] 未着手 | — |
