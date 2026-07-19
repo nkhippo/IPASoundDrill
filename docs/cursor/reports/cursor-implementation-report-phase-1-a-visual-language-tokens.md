@@ -11,7 +11,7 @@ created: '2026-07-19'
 ## 関連 Issue / PR
 
 - Issue: #81
-- PR: （作成時に追記）
+- PR: #82
 
 ## Issue 背景（Issue 本文から要約）
 
