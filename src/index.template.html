@@ -190,14 +190,14 @@
   .answer input{flex:1;border:1.5px solid var(--legacy-hair);border-radius:10px;padding:13px 14px;font-size:17px;font-family:var(--legacy-ui);color:var(--legacy-ink);background:#fff}
   .answer input:focus{outline:none;border-color:var(--legacy-signal)}
   .answer .go{border:none;background:var(--legacy-signal);color:#fff;border-radius:10px;padding:0 18px;font-weight:700;cursor:pointer;font-size:14px}
-  .playicon{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border:1px solid var(--legacy-hair);background:#fff;border-radius:50%;color:var(--legacy-signal);cursor:pointer;margin-top:0;flex-shrink:0;transition:border-color .15s,background .15s,transform .08s;position:relative}
+  .playicon{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border:1px solid var(--hair);background:var(--panel);border-radius:50%;color:var(--signal);cursor:pointer;margin-top:0;flex-shrink:0;transition:border-color .15s,background .15s,transform .08s;position:relative}
   .playicon svg{width:18px;height:18px;transition:opacity .15s}
-  .playicon:hover{border-color:var(--legacy-signal);background:var(--legacy-signal-soft)}
+  .playicon:hover{border-color:var(--signal);background:var(--signal-soft)}
   .playicon:active{transform:scale(.96)}
   .playicon:disabled{opacity:.55;cursor:wait}
   .playicon.loading{opacity:1;cursor:wait}
   .playicon.loading svg{opacity:0}
-  .playicon.loading::after{content:"";position:absolute;width:18px;height:18px;border:2px solid var(--legacy-signal-soft);border-top-color:var(--legacy-signal);border-radius:50%;animation:playicon-spin .7s linear infinite}
+  .playicon.loading::after{content:"";position:absolute;width:18px;height:18px;border:2px solid var(--signal-soft);border-top-color:var(--signal);border-radius:50%;animation:playicon-spin .7s linear infinite}
   @keyframes playicon-spin{to{transform:rotate(360deg)}}
 
   /* IPA keyboard (encode mode): Mood B tokens moved to Phase 1-D-PR1 block below */
@@ -206,21 +206,21 @@
   #reveal.res-ok{border-color:var(--legacy-ok);background:linear-gradient(180deg,var(--legacy-ok-soft) 0%,var(--legacy-panel) 28%)}
   #reveal.res-bad{border-color:var(--legacy-bad);background:linear-gradient(180deg,var(--legacy-bad-soft) 0%,var(--legacy-panel) 28%)}
   .word{font-size:38px;font-weight:700;letter-spacing:-.01em;margin:2px 0 4px}
-  .word-gloss{font-size:15px;color:var(--legacy-muted);margin:0 0 10px;font-weight:500}
+  .word-gloss{font-size:15px;font-family:var(--font-ui);color:var(--muted);margin:0 0 10px;font-weight:500}
   .word-gloss.hidden{display:none}
   #reveal.res-ok .word{color:var(--legacy-ok)}
   #reveal.res-bad .word{color:var(--legacy-bad)}
   .yourtry{font-size:12px;color:var(--legacy-muted);margin-bottom:14px}
   #reveal.res-ok .yourtry .try{color:var(--legacy-ok);font-weight:600}
   #reveal.res-bad .yourtry .try{color:var(--legacy-bad);font-weight:600;text-decoration:line-through;text-decoration-color:color-mix(in srgb,var(--legacy-bad) 55%,transparent)}
-  .alt-ipa{font-family:var(--legacy-ipa);font-size:13px;color:var(--legacy-faint);margin-top:2px;text-align:center;line-height:1.35}
+  .alt-ipa{font-family:var(--font-ipa);font-size:13px;color:var(--muted);margin-top:2px;text-align:center;line-height:1.35}
   .alt-ipa-row{display:flex;align-items:center;justify-content:center;gap:6px;flex-wrap:wrap}
-  .alt-ipa-row .alt-ipa-text{font-family:var(--legacy-ipa);font-size:13px;color:var(--legacy-faint);line-height:1.35}
+  .alt-ipa-row .alt-ipa-text{font-family:var(--font-ipa);font-size:13px;color:var(--muted);line-height:1.35}
   .playicon.playicon-sm{width:28px;height:28px}
   .playicon.playicon-sm svg{width:13px;height:13px}
   .playicon.playicon-sm.loading::after{width:13px;height:13px}
   .playicon.playicon-sm.inactive:disabled{opacity:.38;cursor:default}
-  .playicon.playicon-sm.inactive:disabled:hover{border-color:var(--legacy-hair);background:#fff}
+  .playicon.playicon-sm.inactive:disabled:hover{border-color:var(--hair);background:var(--panel)}
   .dict-ipa{font-family:var(--legacy-ipa);font-size:clamp(13px,3.2vw,17px);color:var(--legacy-muted);letter-spacing:.5px;margin-top:4px;text-align:center}
   .yourtry .uipa{font-family:var(--legacy-ipa)}
   #reveal.res-ok .yourtry .uipa{color:var(--legacy-ok)}
@@ -475,13 +475,41 @@
   .kbtns button{flex:1;border-radius:var(--radius-button);padding:13px;font-weight:700;font-size:14px;cursor:pointer;font-family:var(--font-ui)}
   .kbtns .check{border:none;background:var(--signal);color:#fff}
   .kbtns .clear{border:1px solid var(--hair);background:var(--panel);color:var(--muted)}
-  /* Marking UI Mood B (#revealChecks only; #mbSChecks stays legacy for PR2) */
-  #revealChecks.reveal-checks{border-top:1px solid var(--hair)}
-  #revealChecks .rc-label{font-family:var(--font-mono);font-size:10px;color:var(--faint);text-transform:uppercase;letter-spacing:.12em;margin-bottom:8px}
-  #revealChecks .pc-slot{width:14px;height:14px;border:1px solid var(--hair);border-radius:4px;background:var(--panel);cursor:pointer;padding:0}
-  #revealChecks .pc-slot[data-filled="1"]{border-color:var(--signal);background:var(--signal-soft)}
-  #revealChecks .pc-mode[data-graduated="1"] .pc-slot[data-filled="1"]{background:var(--signal);border-color:var(--signal)}
-  #revealChecks .pc-slot:hover{border-color:var(--signal)}
+  /* Marking UI Mood B (#revealChecks + #mbSChecks) */
+  #revealChecks.reveal-checks,#mbSChecks.reveal-checks{border-top:1px solid var(--hair)}
+  #revealChecks .rc-label,#mbSChecks .rc-label{font-family:var(--font-mono);font-size:10px;color:var(--faint);text-transform:uppercase;letter-spacing:.12em;margin-bottom:8px}
+  #revealChecks .pc-slot,#mbSChecks .pc-slot{width:14px;height:14px;border:1px solid var(--hair);border-radius:4px;background:var(--panel);cursor:pointer;padding:0}
+  #revealChecks .pc-slot[data-filled="1"],#mbSChecks .pc-slot[data-filled="1"]{border-color:var(--signal);background:var(--signal-soft)}
+  #revealChecks .pc-mode[data-graduated="1"] .pc-slot[data-filled="1"],#mbSChecks .pc-mode[data-graduated="1"] .pc-slot[data-filled="1"]{background:var(--signal);border-color:var(--signal)}
+  #revealChecks .pc-slot:hover,#mbSChecks .pc-slot:hover{border-color:var(--signal)}
+
+  /* Phase 1-D-PR2: Mode B (2c) Mood B */
+  #cardModeBStudy.panel,#cardModeBMcq.panel,#cardModeBDict.panel{background:var(--panel);border-color:var(--hair);border-radius:var(--radius-card);color:var(--ink)}
+  #cardModeBStudy .qno,#cardModeBMcq .qno,#cardModeBDict .qno{font-family:var(--font-mono);color:var(--muted)}
+  #cardModeBStudy .qno b,#cardModeBMcq .qno b,#cardModeBDict .qno b{color:var(--ink)}
+  #cardModeBStudy .card-top .cefr,#cardModeBMcq .card-top .cefr,#cardModeBDict .card-top .cefr{
+    font-family:var(--font-mono);font-size:11px;font-weight:700;letter-spacing:.06em;
+    color:var(--signal);background:var(--signal-soft);border:1px solid var(--signal);
+    border-radius:var(--radius-pill);padding:4px 10px;line-height:1.2;white-space:nowrap
+  }
+  #cardModeBStudy .card-top .cefr.is-unknown,#cardModeBMcq .card-top .cefr.is-unknown,#cardModeBDict .card-top .cefr.is-unknown{
+    color:var(--faint);background:transparent;border:1px dashed var(--hair);font-weight:600
+  }
+  #cardModeBStudy .readout .ipa{font-family:var(--font-ipa);font-size:clamp(30px,7.5vw,40px);line-height:1.45}
+  #cardModeBStudy .seg.mark{color:var(--signal);font-size:.62em;vertical-align:.35em}
+  #cardModeBStudy .seg.nucleus{
+    background:linear-gradient(transparent 62%,rgba(217,145,27,.22) 62%);
+    border:none;box-shadow:none;padding:0 1px;
+    text-decoration:underline;text-decoration-color:var(--stress);
+    text-decoration-thickness:max(3px,.14em);text-underline-offset:.08em;
+    -webkit-text-decoration-skip-ink:none;text-decoration-skip-ink:none
+  }
+  #cardModeBStudy .seg:hover{background:var(--signal-soft)}
+  #cardModeBStudy .seg.sel{background:var(--signal-soft);color:var(--signal)}
+  #cardModeBStudy .slash{color:var(--signal)}
+  #cardModeBStudy .wordbig{font-family:var(--font-ui);color:var(--ink)}
+  #cardModeBStudy .btn-reveal{border-color:var(--signal);color:var(--signal);font-family:var(--font-ui);border-radius:var(--radius-button)}
+  #cardModeBStudy .reveal-next{background:var(--ink);font-family:var(--font-ui);border-radius:var(--radius-button)}
 
   /* Phase 1-C/B: Mood B components (visual-tokens §4) */
   .btn-primary{background:var(--signal);color:#fff;border:none;border-radius:var(--radius-button);padding:12px 24px;font-size:14px;font-weight:700;cursor:pointer;font-family:var(--font-ui)}
@@ -705,8 +733,12 @@
   </section>
 
   <!-- MODE B STUDY -->
-  <section id="cardModeBStudy" class="panel hidden">
+  <section id="cardModeBStudy" class="panel hidden" data-frame="2c">
     <div class="card-top"><span class="cefr" id="mbSCefr" hidden></span><div class="card-top-right"><div class="qno" id="mbSNo"></div></div></div>
+    <div class="drill-progress" id="mbSProgress" role="status" aria-live="polite">
+      <div class="progress-meter" aria-hidden="true"><div class="progress-meter__fill" id="mbSProgressFill" style="width:0%"></div></div>
+      <div class="progress-meter__label" id="mbSProgressLabel"></div>
+    </div>
     <div class="readout"><button class="playicon" id="mbSPlay" type="button" aria-label="Listen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div>
     <div class="readout"><div class="ipa" id="mbSIpa"></div></div>
     <div class="alt-ipa alt-ipa-row hidden" id="mbSAltIpa"><span class="alt-ipa-text" id="mbSAltIpaText"></span><button class="playicon playicon-sm inactive hidden" id="mbSAltPlay" type="button" aria-label="Listen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg></button></div>
@@ -737,7 +769,7 @@
   </section>
 
   <!-- MODE B QUIZ MCQ -->
-  <section id="cardModeBMcq" class="panel hidden">
+  <section id="cardModeBMcq" class="panel hidden" data-frame="2c-quiz">
     <div class="card-top"><span class="cefr" id="mbMCefr" hidden></span><div class="card-top-right"><div class="qno" id="mbMNo"></div></div></div>
     <div class="flabel" style="text-align:center;margin-bottom:4px" id="mbMHead">Choose the meaning</div>
     <div class="readout"><button class="playicon" id="mbMPlay" type="button" aria-label="Listen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div>
@@ -746,7 +778,7 @@
   </section>
 
   <!-- MODE B QUIZ DICTATION -->
-  <section id="cardModeBDict" class="panel hidden">
+  <section id="cardModeBDict" class="panel hidden" data-frame="2c-dict">
     <div class="card-top"><span class="cefr" id="mbDCefr" hidden></span><div class="card-top-right"><div class="qno" id="mbDNo"></div></div></div>
     <div class="flabel" style="text-align:center;margin-bottom:4px" id="mbDHead">Type the word</div>
     <div class="readout"><button class="playicon" id="mbDPlay" type="button" aria-label="Listen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div>
@@ -1854,12 +1886,10 @@ const LS_MARKS_MIGRATED_KEY = "ept_marks_migrated_v1";
 const LS_PREV_SETTINGS_KEY = "prev_settings_v1";
 const CHECK_MAX = 3;
 const LS_VOCAB_KEY = "ept_vocab_v1";
-const LS_VOCAB_BAND_KEY = "ept_vocab_band";
-const MODEB_BANDS = ["A1", "A2", "B1", "B2"];
+const MODEB_BANDS = ["A1", "A2", "B1", "B2"]; // CEFR allowlist (Band unlock removed Phase 1-D-PR2)
 const MODEB_EXCLUDED_SRC = new Set(["letter", "contraction"]);
 const MODEB_DISTRACTOR = { fromNeighbors: 2, fromBand: 1 };
 const MODEB_SESSION = { newCount: 10, reviewCount: 10 };
-const MODEB_BAND_UNLOCK_RATIO = 0.6;
 const BOX_INTERVAL_MS = [0, 3600000, 86400000, 259200000, 604800000, 2592000000];
 let S={appMode:localStorage.getItem("app_mode")||"a",lastDrill:"2a",tab:"words",csFilter:"all",csLevel:"all",dir:"decode",focus:"all",reg:"all",grp:"all",cefrLevels:new Set(["A1","A2"]),sessionPool:[],sessionNext:0,poolTotal:0,queue:[],idx:0,answered:0,correct:0,weak:{},missed:[],cur:null,curCarrier:null,revealed:false,built:[],mbPhase:"mcq",mbQuiz:null};
 
@@ -2056,7 +2086,7 @@ function setCardCefr(elId,c,qnoId){
 }
 
 /**
- * Update 2a/2b progress meters from S.idx / S.poolTotal.
+ * Update 2a/2b/2c progress meters from S.idx / S.poolTotal.
  * Ratio: (S.idx+1) / S.poolTotal (ruling #8). Hidden with parent cards on Reveal/Summary.
  * @returns {void}
  */
@@ -2066,7 +2096,7 @@ function updateProgressMeter(){
   const pct=total?Math.min(100,Math.round((cur/total)*100)):0;
   const labelText=total?t("progress.meter_label",{pct:String(pct),cur:String(cur),total:String(total)}):"";
   const aria=total?t("progress.meter_aria",{pct:String(pct),cur:String(cur),total:String(total)}):"";
-  ["d","e"].forEach(prefix=>{
+  ["d","e","mbS"].forEach(prefix=>{
     const wrap=$(prefix+"Progress");
     const fill=$(prefix+"ProgressFill");
     const lab=$(prefix+"ProgressLabel");
@@ -2471,34 +2501,12 @@ function recordSymEncode(c,usr){
 /* ---------- Mode B (sound → vocabulary) ---------- */
 function loadVocab(){try{return JSON.parse(localStorage.getItem(LS_VOCAB_KEY)||"{}")||{};}catch(e){return {};}}
 function saveVocab(v){try{localStorage.setItem(LS_VOCAB_KEY,JSON.stringify(v));}catch(e){}}
-function getVocabBand(){return localStorage.getItem(LS_VOCAB_BAND_KEY)||"A1";}
-function setVocabBand(b){try{localStorage.setItem(LS_VOCAB_BAND_KEY,b);}catch(e){}}
 function vocabEntry(w){return loadVocab()[w]||null;}
 function modeBEligible(w){return!!(w&&w.gloss&&w.cefr&&MODEB_BANDS.includes(w.cefr)&&!MODEB_EXCLUDED_SRC.has(w.src));}
 function modeBBandPool(band){return PRESET.filter(w=>modeBEligible(w)&&w.cefr===band);}
 function modeBPool(){
   if(S.cefrLevels.size===0)return [];
   return PRESET.filter(w=>modeBEligible(w)&&S.cefrLevels.has(w.cefr));
-}
-function bandProgress(band){
-  const pool=modeBBandPool(band),vocab=loadVocab();
-  let mastered=0;
-  pool.forEach(w=>{const e=vocab[w.w];if(e&&e.box>=4)mastered++;});
-  return {total:pool.length,mastered,ratio:pool.length?mastered/pool.length:0};
-}
-function refreshVocabBandUnlock(){
-  let idx=MODEB_BANDS.indexOf(getVocabBand());if(idx<0)idx=0;
-  while(idx>0&&modeBBandPool(MODEB_BANDS[idx]).length===0){
-    idx--;
-    setVocabBand(MODEB_BANDS[idx]);
-  }
-  while(idx<MODEB_BANDS.length-1){
-    if(bandProgress(MODEB_BANDS[idx]).ratio<MODEB_BAND_UNLOCK_RATIO)break;
-    const nextBand=MODEB_BANDS[idx+1];
-    if(modeBBandPool(nextBand).length===0)break;
-    idx++;
-    setVocabBand(nextBand);
-  }
 }
 function modeBGloss(w){return wordGloss(w);}
 
@@ -2578,6 +2586,7 @@ function refreshModeBStudyContent(c){
 function renderModeBStudy(c){
   hideModeBCards();show("cardModeBStudy",true);
   setCardCefr("mbSCefr",c,"mbSNo");
+  updateProgressMeter();
   renderIpaInto($("mbSIpa"),activeNarrowIpa(c),"mbSInfo",null);
   renderAltAccentLine(c, $("mbSAltIpaText"), $("mbSAltPlay"), $("mbSAltIpa"));
   $("mbSMeaning").classList.add("hidden");

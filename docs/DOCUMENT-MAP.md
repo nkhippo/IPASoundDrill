@@ -61,7 +61,7 @@ Issue の性質に応じて Naoya + Claude が確認:
 |---|---|
 | 機能追加・変更 | `docs/PURPOSE.md`, `docs/DESIGN.md`, `docs/SPECIFICATION.md`, `docs/REPOSITORY-STRUCTURE.md` |
 | Phase 1 デザイン・LP・タグライン | `docs/design/tagline-candidates.md`, `docs/PURPOSE.md`（Personas & Learning Journey） |
-| Phase 1 UI 実装（プロフィール / ドリル / 語彙・IPA ピッカー） | `docs/design/phase-1/screen-data-mapping.md`, `docs/PURPOSE.md` v4.0, `docs/DESIGN.md`, `docs/SPECIFICATION.md` |
+| Phase 1 UI 実装（プロフィール / ドリル / 語彙・IPA ピッカー） | `docs/design/phase-1/screen-data-mapping.md`, `docs/design/phase-1/visual-tokens.md`, `docs/PURPOSE.md` v4.0, `docs/DESIGN.md`, `docs/SPECIFICATION.md` |
 | 運用系変更 | `docs/OPERATIONS.md`, `docs/REPOSITORY-STRUCTURE.md` |
 | バグ修正 | `docs/bug-knowledge.md`, `docs/SPECIFICATION.md` |
 | ドキュメント整備 | `docs/DOCUMENT-MAP.md`, `docs/DEV-GUARDRAILS.md`（本 Issue のような場合） |
