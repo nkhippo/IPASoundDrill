@@ -110,6 +110,14 @@ updated: '2026-07-18'
 
 カラー / タイポ / スペーシング / 角丸 / シャドウ / コンポーネントをトークン化。**具体値は Phase 1-A**。
 
+### 視覚言語トークン（概要と正本）
+
+Phase 1 UI（Mood B / Warm Contemporary）の視覚トークンは `:root` に定義し、既存画面は `--legacy-*` 経由で見た目を維持する。トークンの具体値・コンポーネント CSS・`:root` コピペ用ブロックは本節に書かず、以下を正とする。
+
+1. 実装用 snapshot: [`docs/design/phase-1/visual-tokens.md`](design/phase-1/visual-tokens.md)
+2. CSS 命名・legacy 運用（Category A）: [`docs/CSS-CONVENTIONS.md`](CSS-CONVENTIONS.md)
+3. 意匠判断の背景（Vault source of truth）: `30_projects/IPASoundDrill/design/phase-1/design-tokens.md`
+
 ---
 
 ## 2. ドリル実装方針（現行コード橋渡し）
