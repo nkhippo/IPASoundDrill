@@ -71,7 +71,12 @@
     "tab_phrases": "Mga Parirala",
     "search": "Maghanap…",
     "no_results": "Walang resulta",
-    "back": "Bumalik"
+    "back": "Bumalik",
+    "filter": {
+      "spelling": "Baybay",
+      "ipa": "IPA",
+      "all": "Lahat"
+    }
   },
   "info": {
     "examples": "Mga halimbawa",
@@ -262,5 +267,77 @@
   "progress": {
     "meter_label": "{pct}%（{cur} / {total}）",
     "meter_aria": "進捗 {pct}%、{cur} 問目 / 全 {total} 問"
+  },
+  "symbol": {
+    "picker": {
+      "title": "Maghanap sa IPA",
+      "clear": "I-clear lahat",
+      "empty": "I-tap ang simbolo",
+      "remove_chip": "Alisin"
+    },
+    "group": {
+      "frontVowels": {
+        "en": "Front Vowels",
+        "sub": ""
+      },
+      "centralVowels": {
+        "en": "Central Vowels",
+        "sub": ""
+      },
+      "backVowels": {
+        "en": "Back Vowels",
+        "sub": ""
+      },
+      "diphthongs": {
+        "en": "Diphthongs",
+        "sub": ""
+      },
+      "plosives": {
+        "en": "Plosives",
+        "sub": ""
+      },
+      "fricatives": {
+        "en": "Fricatives",
+        "sub": ""
+      },
+      "nasals": {
+        "en": "Nasals",
+        "sub": ""
+      },
+      "approximants": {
+        "en": "Approximants",
+        "sub": ""
+      },
+      "laterals": {
+        "en": "Laterals",
+        "sub": ""
+      },
+      "affricates": {
+        "en": "Affricates",
+        "sub": ""
+      },
+      "stress": {
+        "en": "Stress",
+        "sub": ""
+      }
+    },
+    "height": {
+      "close": {
+        "en": "Close",
+        "sub": ""
+      },
+      "closeMid": {
+        "en": "Close-Mid",
+        "sub": ""
+      },
+      "openMid": {
+        "en": "Open-Mid",
+        "sub": ""
+      },
+      "open": {
+        "en": "Open",
+        "sub": ""
+      }
+    }
   }
 }

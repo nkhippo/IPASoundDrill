@@ -246,27 +246,60 @@
   .btn-reveal.hidden{display:none}
 
   /* ---- Phase V: Vocabulary page ---- */
-  .vocab-page{padding:0;min-height:calc(100vh - 120px);background:var(--legacy-bg)}
-  .vocab-page-inner{max-width:820px;margin:0 auto;padding:0}
-  .vocab-header{position:sticky;top:0;z-index:10;background:var(--legacy-bg);padding:16px 16px 8px;border-bottom:1px solid var(--legacy-hair);display:flex;flex-direction:column;gap:12px}
-  .vocab-header-top{display:flex;align-items:center;gap:12px}
-  .vocab-back{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border-radius:8px;background:transparent;color:var(--legacy-ink);border:1px solid var(--legacy-hair);cursor:pointer;font-size:14px;font-family:var(--legacy-ui);flex-shrink:0}
-  .vocab-back:hover{background:#f6f6f6}
-  .vocab-title{flex:1;margin:0;font-size:18px;font-weight:600;color:var(--legacy-ink);text-align:center;font-family:var(--legacy-ui)}
+  /* Phase 1-E: exclusive viewport (A2) — hide wrap chrome on 3b/3c */
+  body.vocab-page .wrap,
+  body.symbol-picker-page .wrap{display:none!important}
+  body.vocab-page,body.symbol-picker-page{background:var(--paper);color:var(--ink)}
+  .vocab-page,.symbol-picker-page{padding:0;position:fixed;inset:0;z-index:40;display:none;flex-direction:column;background:var(--paper);overflow:hidden}
+  .vocab-page:not(.hidden),.symbol-picker-page:not(.hidden){display:flex}
+  .vocab-page-inner,.symbol-picker-inner{max-width:820px;width:100%;margin:0 auto;padding:0;flex:1;min-height:0;display:flex;flex-direction:column}
+  .vocab-header,.symbol-picker-header{flex-shrink:0;z-index:10;background:var(--paper);padding:16px 16px 8px;border-bottom:1px solid var(--hair);display:flex;flex-direction:column;gap:12px}
+  .filter-bar-sticky{display:flex;flex-direction:column;gap:10px}
+  .vocab-header-top,.symbol-picker-header-top{display:flex;align-items:center;gap:12px}
+  .vocab-back,.symbol-back{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border-radius:var(--radius-button);background:transparent;color:var(--ink);border:1px solid var(--hair);cursor:pointer;font-size:14px;font-family:var(--font-ui);flex-shrink:0}
+  .vocab-back:hover,.symbol-back:hover{background:var(--signal-soft);border-color:var(--signal);color:var(--signal)}
+  .vocab-title,.symbol-picker-title{flex:1;margin:0;font-size:18px;font-weight:600;color:var(--ink);text-align:center;font-family:var(--font-ui)}
   .vocab-header-spacer{width:60px;flex-shrink:0}
-  .vocab-tabs{display:flex;gap:0;border-radius:10px;background:#efefef;padding:3px}
-  .vocab-tab{flex:1;padding:8px 12px;border:none;background:transparent;border-radius:8px;cursor:pointer;font-size:14px;color:var(--legacy-ink);font-weight:500;font-family:var(--legacy-ui)}
-  .vocab-tab.active{background:var(--legacy-bg);box-shadow:0 1px 3px rgba(0,0,0,.08)}
-  .vocab-search-row{display:flex;gap:8px;align-items:center}
-  .vocab-search{flex:1;padding:10px 14px;border-radius:10px;border:1px solid var(--legacy-hair);font-size:15px;font-family:var(--legacy-ui);background:var(--legacy-bg);color:var(--legacy-ink)}
-  .vocab-search:focus{outline:none;border-color:var(--legacy-signal);box-shadow:0 0 0 3px rgba(74,124,214,.15)}
-  .vocab-filters{display:none}
-  .vocab-letters{display:flex;flex-wrap:nowrap;gap:2px;justify-content:flex-start;font-family:var(--legacy-mono);font-size:12px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;padding:2px 0}
+  .vocab-tabs{display:flex;gap:0;border-radius:10px;background:var(--paper);border:1px solid var(--hair);padding:3px}
+  .vocab-tab{flex:1;padding:8px 12px;border:none;background:transparent;border-radius:8px;cursor:pointer;font-size:14px;color:var(--ink);font-weight:500;font-family:var(--font-ui)}
+  .vocab-tab.active{background:var(--panel);box-shadow:var(--shadow-toggle-active);color:var(--signal);font-weight:700}
+  .vocab-search-row{display:flex;flex-direction:column;gap:8px}
+  .vocab-search-mode{display:flex;gap:0;border-radius:var(--radius-toggle);background:var(--paper);border:1px solid var(--hair);padding:3px}
+  .vocab-search-mode-btn{flex:1;padding:8px 10px;border:none;background:transparent;border-radius:var(--radius-toggle-active);cursor:pointer;font-size:13px;font-weight:600;color:var(--muted);font-family:var(--font-ui)}
+  .vocab-search-mode-btn[aria-pressed="true"]{background:var(--panel);color:var(--signal);box-shadow:var(--shadow-toggle-active)}
+  .vocab-search{width:100%;padding:10px 14px;border-radius:10px;border:1px solid var(--hair);font-size:15px;font-family:var(--font-ui);background:var(--panel);color:var(--ink)}
+  .vocab-search:focus{outline:none;border-color:var(--signal);box-shadow:0 0 0 3px var(--signal-soft)}
+  .vocab-filters{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+  .vocab-filters .pill-cefr{border:1px solid var(--hair);background:var(--panel);border-radius:var(--radius-pill);padding:6px 12px;cursor:pointer;font-size:12px;font-weight:600;color:var(--ink);font-family:var(--font-mono)}
+  .vocab-filters .pill-cefr[aria-pressed="true"]{border-color:var(--signal);background:var(--signal-soft);color:var(--signal);font-weight:700}
+  .vocab-letters{display:flex;flex-wrap:nowrap;gap:2px;justify-content:flex-start;font-family:var(--font-mono);font-size:12px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;padding:2px 0}
   .vocab-letters::-webkit-scrollbar{display:none}
-  .vocab-letters button,.vocab-letter-btn{min-width:26px;height:26px;padding:4px 6px;border:1px solid transparent;background:transparent;color:var(--legacy-muted);cursor:pointer;border-radius:4px;font-family:var(--legacy-mono);font-size:12px;font-weight:700;flex-shrink:0}
-  .vocab-letters button:hover,.vocab-letter-btn:hover{background:#f0f0f0;color:var(--legacy-ink)}
-  .vocab-letters button.active,.vocab-letter-btn.active{color:var(--legacy-signal);font-weight:700}
-  .vocab-body{padding:8px 16px 40px}
+  .vocab-letters button,.vocab-letter-btn{min-width:26px;height:26px;padding:4px 6px;border:1px solid transparent;background:transparent;color:var(--muted);cursor:pointer;border-radius:4px;font-family:var(--font-mono);font-size:12px;font-weight:700;flex-shrink:0}
+  .vocab-letters button:hover,.vocab-letter-btn:hover{background:var(--signal-soft);color:var(--ink)}
+  .vocab-letters button.active,.vocab-letter-btn.active{color:var(--signal);font-weight:700}
+  .vocab-body,.symbol-results{flex:1;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:8px 16px 40px;position:relative}
+  .vocab-virt-spacer{position:relative;width:100%}
+  .vocab-virt-window{position:absolute;left:0;right:0;top:0;will-change:transform}
+  .vocab-skeleton{display:flex;flex-direction:column;gap:10px;padding:8px 0}
+  .vocab-skel-row{height:72px;border-radius:10px;background:linear-gradient(90deg,var(--paper) 0%,var(--signal-soft) 50%,var(--paper) 100%);background-size:200% 100%;animation:vocabSkel 1.2s ease-in-out infinite}
+  @keyframes vocabSkel{0%{background-position:100% 0}100%{background-position:-100% 0}}
+  .query-chip-bar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;min-height:40px}
+  .query-chip-list{display:flex;flex-wrap:wrap;gap:6px;flex:1;min-width:0}
+  .query-chip{display:inline-flex;align-items:center;gap:4px;padding:4px 8px;border-radius:var(--radius-pill);border:1px solid var(--signal);background:var(--signal-soft);color:var(--signal);font-family:var(--font-ipa);font-size:16px;cursor:pointer}
+  .query-chip-empty{font-size:12px;color:var(--muted);font-family:var(--font-ui)}
+  .query-chip-clear{border:1px solid var(--hair);background:var(--panel);border-radius:50%;width:28px;height:28px;cursor:pointer;color:var(--muted);font-size:16px;line-height:1;flex-shrink:0}
+  .query-chip-clear:hover{border-color:var(--signal);color:var(--signal)}
+  .symbol-picker-split{flex:1;min-height:0;display:flex;flex-direction:column}
+  .symbol-palette{flex:0 0 40%;min-height:140px;overflow-y:auto;padding:8px 16px 12px;border-bottom:1px solid var(--hair);-webkit-overflow-scrolling:touch}
+  .symbol-results{flex:1;min-height:0}
+  .symbol-group{margin-bottom:12px}
+  .symbol-group-heading{margin:0 0 6px;font-family:var(--font-ui);font-size:13px;font-weight:700;color:var(--ink)}
+  .symbol-group-sub{display:block;font-size:11px;font-weight:500;color:var(--muted);margin-top:2px}
+  .symbol-height-label{font-family:var(--font-mono);font-size:10px;color:var(--faint);letter-spacing:.06em;margin:6px 0 4px;text-transform:uppercase}
+  .symbol-grid{display:flex;flex-wrap:wrap;gap:6px}
+  .symbol-cell{min-width:40px;height:40px;padding:0 8px;border:1px solid var(--hair);border-radius:8px;background:var(--panel);color:var(--ink);font-family:var(--font-ipa);font-size:18px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center}
+  .symbol-cell:hover,.symbol-cell:focus-visible{border-color:var(--signal);background:var(--signal-soft);color:var(--signal);outline:none}
+  .ipa-match{color:var(--signal);font-weight:700}
   .vocab-group-head{font-family:var(--legacy-mono);font-size:10.5px;color:var(--legacy-faint);text-transform:uppercase;letter-spacing:.14em;padding:12px 2px 5px;border-bottom:1px solid var(--legacy-hair);margin-bottom:2px;position:sticky;top:0;background:var(--legacy-bg);z-index:1}
   .vocab-row{display:grid;grid-template-columns:1fr auto;gap:8px;padding:14px 8px;border-bottom:1px solid var(--legacy-hair);align-items:center;transition:background .1s ease}
   .vocab-row:hover{background:#fafafa}
@@ -310,9 +343,9 @@
   .vocab-no-results,.vocab-empty,.vocab-loading{text-align:center;padding:60px 20px;color:var(--legacy-faint);font-size:14px}
   .vocab-empty svg{width:48px;height:48px;opacity:.3;margin-bottom:12px}
   @media (max-width:599px){
-    .vocab-header{padding:12px 12px 6px;gap:10px}
-    .vocab-title{font-size:16px}
-    .vocab-body{padding:4px 12px 40px}
+    .vocab-header,.symbol-picker-header{padding:12px 12px 6px;gap:10px}
+    .vocab-title,.symbol-picker-title{font-size:16px}
+    .vocab-body,.symbol-results,.symbol-palette{padding-left:12px;padding-right:12px}
     .vocab-row{padding:12px 4px;gap:6px}
     .vocab-row-w,.vocab-w{font-size:16px}
     .vocab-row-ipas,.vocab-ipas{font-size:12px}
@@ -320,7 +353,8 @@
     .vocab-row-actions{gap:8px}
     .vocab-play{width:32px;height:32px}
     .pc-slot{width:7px;height:7px}
-    .vocab-search{display:block}
+    .symbol-palette{flex-basis:42%}
+    .symbol-cell{min-width:36px;height:36px;font-size:16px}
   }
 
   .sumhead{text-align:center;margin-bottom:6px}
@@ -920,29 +954,63 @@
   </div>
 </div>
 
-<!-- Vocabulary browser (Phase V page) -->
-<section id="vocabPage" class="panel vocab-page hidden" aria-labelledby="vocabTitle">
+<!-- Vocabulary browser 3b (Phase 1-E: exclusive full-page + sticky filter) -->
+<section id="vocabPage" class="vocab-page hidden" aria-labelledby="vocabTitle">
   <div class="vocab-page-inner">
-    <div class="vocab-header">
+    <div class="vocab-header filter-bar-sticky">
       <div class="vocab-header-top">
         <button type="button" class="vocab-back" id="vocabBackBtn" aria-label="Back">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
           <span id="vocabBackLabel" data-i18n="vocab.back">Back</span>
         </button>
         <h1 class="vocab-title" id="vocabTitle" data-i18n="vocab.title">Vocabulary</h1>
-        <span class="vocab-header-spacer"></span>
+        <span class="vocab-header-spacer" aria-hidden="true"></span>
       </div>
       <div class="vocab-tabs" role="tablist" id="vocabTabBar">
         <button type="button" class="vocab-tab active" role="tab" data-tab="words" id="vocabTabWords" data-i18n="vocab.tab_words">Words</button>
         <button type="button" class="vocab-tab" role="tab" data-tab="phrases" id="vocabTabPhrases" data-i18n="vocab.tab_phrases">Phrases</button>
       </div>
       <div class="vocab-search-row" id="vocabWordsCtrl">
+        <div class="vocab-search-mode" role="tablist" aria-label="Search mode" id="vocabSearchMode">
+          <button type="button" class="vocab-search-mode-btn" id="vocabModeSpelling" data-mode="spelling" aria-pressed="true" data-i18n="vocab.filter.spelling">Spelling</button>
+          <button type="button" class="vocab-search-mode-btn" id="vocabModeIpa" data-mode="ipa" aria-pressed="false" data-i18n="vocab.filter.ipa">IPA</button>
+        </div>
         <input type="search" id="vocabSearchInput" class="vocab-search" placeholder="Search…" data-i18n-placeholder="vocab.search" autocomplete="off" autocorrect="off" spellcheck="false"/>
-        <div class="vocab-filters" id="vocabFilters" aria-hidden="true"></div>
+        <div class="vocab-filters" id="vocabFilters" role="group" aria-label="CEFR">
+          <button type="button" class="pill-cefr" data-cefr="A1" aria-pressed="true" id="vocabCefrA1">A1</button>
+          <button type="button" class="pill-cefr" data-cefr="A2" aria-pressed="true" id="vocabCefrA2">A2</button>
+          <button type="button" class="pill-cefr" data-cefr="B1" aria-pressed="true" id="vocabCefrB1">B1</button>
+          <button type="button" class="pill-cefr" data-cefr="B2" aria-pressed="true" id="vocabCefrB2">B2</button>
+          <button type="button" class="pill-cefr" data-cefr="all" aria-pressed="true" id="vocabCefrAll" data-i18n="vocab.filter.all">All</button>
+        </div>
       </div>
       <div class="vocab-letters" id="vocabLetters" role="navigation" aria-label="A-Z jump"></div>
     </div>
     <div class="vocab-body" id="vocabBody" role="tabpanel"></div>
+  </div>
+</section>
+
+<!-- IPA symbol picker 3c (Phase 1-E) -->
+<section id="symbolPickerPage" class="symbol-picker-page hidden" aria-labelledby="symbolPickerTitle">
+  <div class="symbol-picker-inner">
+    <div class="symbol-picker-header filter-bar-sticky">
+      <div class="symbol-picker-header-top">
+        <button type="button" class="symbol-back" id="symbolBackBtn" aria-label="Back">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+          <span id="symbolBackLabel" data-i18n="vocab.back">Back</span>
+        </button>
+        <h1 class="symbol-picker-title" id="symbolPickerTitle" data-i18n="symbol.picker.title">Search by IPA</h1>
+        <span class="vocab-header-spacer" aria-hidden="true"></span>
+      </div>
+      <div class="query-chip-bar" id="symbolQueryBar">
+        <div class="query-chip-list" id="symbolQueryChips" aria-live="polite"></div>
+        <button type="button" class="query-chip-clear" id="symbolQueryClear" aria-label="Clear" title="Clear">&times;</button>
+      </div>
+    </div>
+    <div class="symbol-picker-split">
+      <div class="symbol-palette" id="symbolPalette"></div>
+      <div class="symbol-results" id="symbolResults" role="list"></div>
+    </div>
   </div>
 </section>
 
@@ -977,6 +1045,19 @@ const GUIDE_ORDER = ["welcome", "philosophy", "solves", "modes", "decode_encode"
 let vocabTabCurrent = "words";
 let vocabBuilt = false;
 let vocabSearchTimer = null;
+/** @type {Set<string>} CEFR filter for 3b (explore: default all selected; not linked to prev_settings) */
+let vocabCefrSelected = new Set(["A1", "A2", "B1", "B2"]);
+const VOCAB_CEFR_LEVELS = ["A1", "A2", "B1", "B2"];
+const VOCAB_ROW_H_GLOSS = 96;
+const VOCAB_ROW_H_PLAIN = 72;
+const VOCAB_HEAD_H = 32;
+const VOCAB_VIRT_BUFFER = 6;
+/** @type {{slots:Array,cum:number[],totalH:number,_start:number,_end:number,bound:boolean}} */
+let vocabVirtState = { slots: [], cum: [], totalH: 0, _start: -1, _end: -1, bound: false };
+/** @type {string[]} ordered IPA query chips for 3c */
+let symbolQuery = [];
+/** @type {{slots:Array,cum:number[],totalH:number,_start:number,_end:number,bound:boolean}} */
+let symbolVirtState = { slots: [], cum: [], totalH: 0, _start: -1, _end: -1, bound: false };
 
 function normalizeWord(row) {
   const w = { w: row.w, ipa: row.ipa, cefr: row.cefr, pos: row.pos };
@@ -1006,6 +1087,12 @@ async function loadWordlist() {
   PRESET.forEach(w => { WORD_BY_W[w.w] = w; });
   wordlistReady = true;
   updatePool();
+  if ($("vocabPage") && !$("vocabPage").classList.contains("hidden") && vocabTabCurrent === "words") {
+    renderVocabWords($("vocabSearchInput") ? $("vocabSearchInput").value : "");
+  }
+  if ($("symbolPickerPage") && !$("symbolPickerPage").classList.contains("hidden")) {
+    renderSymbolPicker();
+  }
 }
 
 function normalizeConnected(row) {
@@ -1119,6 +1206,12 @@ function applyI18nVocab() {
   $("vocabTabWords").textContent = t("vocab.tab_words");
   $("vocabTabPhrases").textContent = t("vocab.tab_phrases");
   $("vocabSearchInput").placeholder = t("vocab.search");
+  const spellingBtn = $("vocabModeSpelling");
+  const ipaBtn = $("vocabModeIpa");
+  if (spellingBtn) spellingBtn.textContent = t("vocab.filter.spelling");
+  if (ipaBtn) ipaBtn.textContent = t("vocab.filter.ipa");
+  const allBtn = $("vocabCefrAll");
+  if (allBtn) allBtn.textContent = t("vocab.filter.all");
   const backLabel = $("vocabBackLabel");
   if (backLabel) {
     const backTxt = t("vocab.back");
@@ -1126,8 +1219,20 @@ function applyI18nVocab() {
   }
   $("vocabBackBtn").setAttribute("aria-label", t("vocab.back") !== "vocab.back" ? t("vocab.back") : "Back");
   $("vocabBtn").setAttribute("aria-label", t("vocab.title"));
+  const symTitle = $("symbolPickerTitle");
+  if (symTitle) symTitle.textContent = t("symbol.picker.title");
+  const symBack = $("symbolBackLabel");
+  if (symBack) {
+    const backTxt = t("vocab.back");
+    if (backTxt !== "vocab.back") symBack.textContent = backTxt;
+  }
+  const symClear = $("symbolQueryClear");
+  if (symClear) symClear.setAttribute("aria-label", t("symbol.picker.clear"));
   if (!$("vocabPage").classList.contains("hidden") && vocabBuilt) {
     renderVocabTab(vocabTabCurrent);
+  }
+  if ($("symbolPickerPage") && !$("symbolPickerPage").classList.contains("hidden")) {
+    renderSymbolPicker();
   }
 }
 
@@ -1136,6 +1241,229 @@ function buildVocabLetterBar() {
   $("vocabLetters").innerHTML = letters.map(l =>
     `<button class="vocab-letter-btn" data-letter="${l}" type="button">${l}</button>`
   ).join("");
+}
+
+/**
+ * @param {object} c wordlist entry
+ * @returns {number}
+ */
+function vocabRowHeight(c) {
+  const g = vocabDisplayGloss(c);
+  return (g && String(g).trim()) ? VOCAB_ROW_H_GLOSS : VOCAB_ROW_H_PLAIN;
+}
+
+/**
+ * Sync CEFR pill aria-pressed from vocabCefrSelected.
+ * @returns {void}
+ */
+function syncVocabCefrPills() {
+  const allOn = VOCAB_CEFR_LEVELS.every(lv => vocabCefrSelected.has(lv));
+  $("vocabFilters").querySelectorAll(".pill-cefr").forEach(btn => {
+    const lv = btn.dataset.cefr;
+    if (lv === "all") btn.setAttribute("aria-pressed", allOn ? "true" : "false");
+    else btn.setAttribute("aria-pressed", vocabCefrSelected.has(lv) ? "true" : "false");
+  });
+}
+
+/**
+ * @param {string} cefr
+ * @returns {void}
+ */
+function toggleVocabCefr(cefr) {
+  if (cefr === "all") {
+    if (VOCAB_CEFR_LEVELS.every(lv => vocabCefrSelected.has(lv))) vocabCefrSelected.clear();
+    else vocabCefrSelected = new Set(VOCAB_CEFR_LEVELS);
+  } else {
+    if (vocabCefrSelected.has(cefr)) vocabCefrSelected.delete(cefr);
+    else vocabCefrSelected.add(cefr);
+  }
+  syncVocabCefrPills();
+  renderVocabWords($("vocabSearchInput").value);
+}
+
+/**
+ * @param {"vocab"|"symbol"|null} mode
+ * @returns {void}
+ */
+function setExclusivePage(mode) {
+  document.body.classList.toggle("vocab-page", mode === "vocab");
+  document.body.classList.toggle("symbol-picker-page", mode === "symbol");
+  if (mode === "vocab" || mode === "symbol") document.body.classList.remove("top-home");
+}
+
+/**
+ * @returns {string}
+ */
+function vocabSkeletonHtml() {
+  return `<div class="vocab-skeleton" aria-busy="true">${Array.from({ length: 8 }, () =>
+    `<div class="vocab-skel-row"></div>`).join("")}</div>`;
+}
+
+/**
+ * @param {object} c
+ * @param {string} [highlightQ]
+ * @returns {string}
+ */
+function vocabWordRowHtml(c, highlightQ) {
+  const gaIpa = c.ipa || "";
+  const rpIpa = c.rp_ipa || "";
+  const gloss = vocabDisplayGloss(c);
+  const pos = posLabel(c.pos);
+  const posStr = pos && pos !== "—" ? `<span class="vocab-pos-badge">${escHtml(pos)}</span>` : "";
+  const cefrLabel = itemCefrLabel(c);
+  const cefrBadge = cefrLabel
+    ? `<span class="vocab-cefr-badge vocab-cefr-${escAttr(cefrLabel)}">${escHtml(cefrLabel)}</span>`
+    : "";
+  const isSame = (c.ga_rp_same !== undefined) ? c.ga_rp_same : (rpIpa === gaIpa);
+  const altSpeaker = !isSame ? vocabAltSpeakerHtml(c.w) : "";
+  const gaShow = highlightQ ? highlightIpaMatch(gaIpa, highlightQ) : escHtml(gaIpa);
+  const rpRaw = isSame ? formatSameAccentIpa(rpIpa) : rpIpa;
+  const rpShow = rpIpa
+    ? (highlightQ ? highlightIpaMatch(rpRaw, highlightQ) : escHtml(rpRaw))
+    : "";
+  const rpLine = rpIpa
+    ? `<span class="vocab-ipa-rp"><span class="vocab-ipa-label">RP</span>${rpShow}${ACCENT === "ga" ? altSpeaker : ""}</span>`
+    : "";
+  return `<div class="vocab-row">
+      <div class="vocab-row-main">
+        <div class="vocab-row-top">
+          <span class="vocab-row-w">${escHtml(c.w)}</span>
+          <div class="vocab-row-meta">${cefrBadge}${posStr}</div>
+        </div>
+        <div class="vocab-row-ipas">
+          <span class="vocab-ipa-ga"><span class="vocab-ipa-label">GA</span>${gaShow}${ACCENT === "rp" ? altSpeaker : ""}</span>
+          ${rpLine}
+        </div>
+        <div class="vocab-row-gloss">${escHtml(gloss)}</div>
+      </div>
+      <div class="vocab-row-actions">
+        ${progressChecksHtml(c)}
+        <button class="vocab-play" type="button" data-vw="${escAttr(c.w)}" aria-label="${escAttr(t("listen"))}">${SPEAKER_SVG}</button>
+      </div>
+    </div>`;
+}
+
+/**
+ * @param {string} ipa
+ * @param {string} q
+ * @returns {string}
+ */
+function highlightIpaMatch(ipa, q) {
+  if (!q || !ipa) return escHtml(ipa || "");
+  const i = ipa.indexOf(q);
+  if (i < 0) return escHtml(ipa);
+  return escHtml(ipa.slice(0, i)) + `<span class="ipa-match">${escHtml(q)}</span>` + escHtml(ipa.slice(i + q.length));
+}
+
+/**
+ * @param {Array<object>} items
+ * @param {boolean} withHeads
+ * @param {{slots:Array,cum:number[],totalH:number,_start:number,_end:number}} state
+ * @returns {void}
+ */
+function rebuildVirtSlots(items, withHeads, state) {
+  const slots = [];
+  let cur = "";
+  items.forEach(c => {
+    if (withHeads) {
+      const first = c.w[0].toUpperCase();
+      const letter = /[A-Z]/.test(first) ? first : "#";
+      if (letter !== cur) {
+        cur = letter;
+        slots.push({ kind: "head", letter, h: VOCAB_HEAD_H });
+      }
+    }
+    slots.push({ kind: "row", item: c, h: vocabRowHeight(c) });
+  });
+  const cum = [];
+  let total = 0;
+  slots.forEach(s => { cum.push(total); total += s.h; });
+  state.slots = slots;
+  state.cum = cum;
+  state.totalH = total;
+  state._start = -1;
+  state._end = -1;
+}
+
+/**
+ * @param {HTMLElement} body
+ * @param {{slots:Array,cum:number[],totalH:number,_start:number,_end:number}} state
+ * @param {string} [highlightQ]
+ * @returns {void}
+ */
+function paintVirtWindow(body, state, highlightQ) {
+  const slots = state.slots;
+  if (!slots.length) {
+    body.innerHTML = `<div class="vocab-empty">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+      <div>${escHtml(t("vocab.no_results"))}</div>
+    </div>`;
+    state._start = -1;
+    state._end = -1;
+    return;
+  }
+  const scrollTop = body.scrollTop;
+  const viewH = body.clientHeight || 400;
+  let lo = 0, hi = slots.length - 1, start = 0;
+  while (lo <= hi) {
+    const mid = (lo + hi) >> 1;
+    const top = state.cum[mid];
+    const bot = top + slots[mid].h;
+    if (bot < scrollTop) lo = mid + 1;
+    else { start = mid; hi = mid - 1; }
+  }
+  start = Math.max(0, start - VOCAB_VIRT_BUFFER);
+  let end = start;
+  const limit = scrollTop + viewH;
+  while (end < slots.length && state.cum[end] < limit + 240) end++;
+  end = Math.min(slots.length, end + VOCAB_VIRT_BUFFER);
+  if (state._start === start && state._end === end && body.querySelector(".vocab-virt-spacer")) {
+    const win = body.querySelector(".vocab-virt-window");
+    if (win) win.style.transform = `translateY(${state.cum[start]}px)`;
+    return;
+  }
+  state._start = start;
+  state._end = end;
+  let html = `<div class="vocab-virt-spacer" style="height:${state.totalH}px"><div class="vocab-virt-window" style="transform:translateY(${state.cum[start]}px)">`;
+  for (let i = start; i < end; i++) {
+    const s = slots[i];
+    if (s.kind === "head") {
+      html += `<div class="vocab-group-head" data-group="${s.letter}" id="vocab-group-${s.letter}" style="height:${s.h}px;box-sizing:border-box">${s.letter}</div>`;
+    } else {
+      html += `<div class="vocab-virt-row" style="height:${s.h}px;box-sizing:border-box;overflow:hidden">${vocabWordRowHtml(s.item, highlightQ)}</div>`;
+    }
+  }
+  html += `</div></div>`;
+  body.innerHTML = html;
+}
+
+/**
+ * @param {HTMLElement} body
+ * @param {{bound:boolean,_raf?:number}} state
+ * @param {Function} paintFn
+ * @returns {void}
+ */
+function bindVirtScroll(body, state, paintFn) {
+  if (state.bound) return;
+  state.bound = true;
+  body.addEventListener("scroll", () => {
+    if (state._raf) return;
+    state._raf = requestAnimationFrame(() => {
+      state._raf = 0;
+      paintFn();
+    });
+  }, { passive: true });
+}
+
+/**
+ * Jump A–Z rail under virtualization (scroll offset from cumulative heights).
+ * @param {string} letter
+ * @returns {void}
+ */
+function jumpVocabLetter(letter) {
+  const idx = vocabVirtState.slots.findIndex(s => s.kind === "head" && s.letter === letter);
+  if (idx < 0) return;
+  $("vocabBody").scrollTo({ top: vocabVirtState.cum[idx], behavior: "smooth" });
 }
 
 function escHtml(s) {
@@ -1209,70 +1537,24 @@ function refreshRevealChecksPanel(wrapId, item, mode) {
 }
 
 function renderVocabWords(query = "") {
-  const q = query.trim().toLowerCase();
-  const sorted = [...PRESET].sort((a, b) => a.w.toLowerCase().localeCompare(b.w.toLowerCase()));
-  const filtered = q ? sorted.filter(c => c.w.toLowerCase().includes(q)) : sorted;
   const body = $("vocabBody");
-
-  if (!filtered.length) {
-    body.innerHTML = `<div class="vocab-empty">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
-      <div>${escHtml(t("vocab.no_results"))}</div>
-    </div>`;
+  if (!wordlistReady || !PRESET.length) {
+    body.innerHTML = vocabSkeletonHtml();
     return;
   }
-
-  let html = "";
-  let curLetter = "";
-
-  filtered.forEach(c => {
-    const firstLetter = c.w[0].toUpperCase();
-    const letter = /[A-Z]/.test(firstLetter) ? firstLetter : "#";
-
-    if (!q && letter !== curLetter) {
-      curLetter = letter;
-      html += `<div class="vocab-group-head" data-group="${letter}" id="vocab-group-${letter}">${letter}</div>`;
-    }
-
-    const gaIpa = c.ipa || "";
-    const rpIpa = c.rp_ipa || "";
-    const gloss = vocabDisplayGloss(c);
-    const pos = posLabel(c.pos);
-    const posStr = pos && pos !== "—" ? `<span class="vocab-pos-badge">${escHtml(pos)}</span>` : "";
-    const cefrLabel = itemCefrLabel(c);
-    const cefrBadge = cefrLabel
-      ? `<span class="vocab-cefr-badge vocab-cefr-${escAttr(cefrLabel)}">${escHtml(cefrLabel)}</span>`
-      : "";
-    const isSame = (c.ga_rp_same !== undefined) ? c.ga_rp_same : (rpIpa === gaIpa);
-    const altSpeaker = !isSame ? vocabAltSpeakerHtml(c.w) : "";
-    const rpLine = rpIpa
-      ? `<span class="vocab-ipa-rp"><span class="vocab-ipa-label">RP</span>${
-          isSame
-            ? escHtml(formatSameAccentIpa(rpIpa))
-            : escHtml(rpIpa)
-        }${ACCENT === "ga" ? altSpeaker : ""}</span>`
-      : "";
-
-    html += `<div class="vocab-row">
-      <div class="vocab-row-main">
-        <div class="vocab-row-top">
-          <span class="vocab-row-w">${escHtml(c.w)}</span>
-          <div class="vocab-row-meta">${cefrBadge}${posStr}</div>
-        </div>
-        <div class="vocab-row-ipas">
-          <span class="vocab-ipa-ga"><span class="vocab-ipa-label">GA</span>${escHtml(gaIpa)}${ACCENT === "rp" ? altSpeaker : ""}</span>
-          ${rpLine}
-        </div>
-        <div class="vocab-row-gloss">${escHtml(gloss)}</div>
-      </div>
-      <div class="vocab-row-actions">
-        ${progressChecksHtml(c)}
-        <button class="vocab-play" type="button" data-vw="${escAttr(c.w)}" aria-label="${escAttr(t("listen"))}">${SPEAKER_SVG}</button>
-      </div>
-    </div>`;
-  });
-
-  body.innerHTML = html;
+  const q = query.trim().toLowerCase();
+  const cefrOk = vocabCefrSelected.size
+    ? (c) => {
+        const lv = itemCefrLabel(c);
+        return lv && vocabCefrSelected.has(lv);
+      }
+    : () => false;
+  const sorted = [...PRESET].sort((a, b) => a.w.toLowerCase().localeCompare(b.w.toLowerCase()));
+  const filtered = sorted.filter(c => cefrOk(c) && (!q || c.w.toLowerCase().includes(q)));
+  rebuildVirtSlots(filtered, !q, vocabVirtState);
+  bindVirtScroll(body, vocabVirtState, () => paintVirtWindow(body, vocabVirtState));
+  body.scrollTop = 0;
+  paintVirtWindow(body, vocabVirtState);
 }
 
 function renderVocabPhrases() {
@@ -1352,18 +1634,26 @@ function renderVocabTab(tab) {
   updateVocabTabActive(tab);
   show("vocabWordsCtrl", tab === "words");
   show("vocabLetters", tab === "words");
+  const modeSpell = $("vocabModeSpelling");
+  const modeIpa = $("vocabModeIpa");
+  if (modeSpell) modeSpell.setAttribute("aria-pressed", "true");
+  if (modeIpa) modeIpa.setAttribute("aria-pressed", "false");
+  syncVocabCefrPills();
   const body = $("vocabBody");
   if (!body) return;
-  body.innerHTML = `<div class="vocab-loading">${escHtml(t("loading") !== "loading" ? t("loading") : "…")}</div>`;
-  requestAnimationFrame(() => {
-    if (tab === "words") {
-      $("vocabSearchInput").value = "";
-      renderVocabWords();
-    } else {
+  if (tab === "words" && !wordlistReady) {
+    body.innerHTML = vocabSkeletonHtml();
+    return;
+  }
+  if (tab === "words") {
+    renderVocabWords($("vocabSearchInput").value || "");
+  } else {
+    body.innerHTML = `<div class="vocab-loading">${escHtml(t("loading") !== "loading" ? t("loading") : "…")}</div>`;
+    requestAnimationFrame(() => {
       renderVocabPhrases();
-    }
-    window.scrollTo(0, 0);
-  });
+      body.scrollTop = 0;
+    });
+  }
 }
 
 function dataReady() {
@@ -1706,6 +1996,7 @@ function setAccent(accent) {
   if (S.cur && S.revealed) refreshRevealIpa();
   else if (S.cur && !S.revealed) renderCard();
   if (!$("vocabPage").classList.contains("hidden")) renderVocabTab(vocabTabCurrent);
+  if ($("symbolPickerPage") && !$("symbolPickerPage").classList.contains("hidden")) renderSymbolPicker();
   prefetchAccentBodies(accent);
   savePrevSettings();
 }
@@ -1756,6 +2047,7 @@ const ROUTES = {
   "": { onEnter: () => showSetupOrPractice() },
   "vocab": { onEnter: () => showVocabView("words") },
   "vocab/phrases": { onEnter: () => showVocabView("phrases") },
+  "vocab/ipa": { onEnter: () => showSymbolPickerView() },
 };
 
 function parseHash() {
@@ -1777,6 +2069,8 @@ function onRouteChange() {
 
 function showSetupOrPractice() {
   show("vocabPage", false);
+  show("symbolPickerPage", false);
+  setExclusivePage(null);
   if (vocabReturnViews && vocabReturnViews.length) {
     vocabReturnViews.forEach(id => show(id, true));
     if (document.body.classList.contains("in-play")) show("playLine", true);
@@ -1807,16 +2101,20 @@ function showSetupOrPractice() {
 
 function showVocabView(tab) {
   closeGuide();
+  show("symbolPickerPage", false);
   // Remember visible practice/setup views so Back can restore without re-render
   if (!$("vocabPage") || $("vocabPage").classList.contains("hidden")) {
-    vocabReturnViews = VOCAB_VIEW_IDS.filter(id => {
-      const el = $(id);
-      return el && !el.classList.contains("hidden");
-    });
+    if ($("symbolPickerPage").classList.contains("hidden")) {
+      vocabReturnViews = VOCAB_VIEW_IDS.filter(id => {
+        const el = $(id);
+        return el && !el.classList.contains("hidden");
+      });
+    }
   }
   VOCAB_VIEW_IDS.forEach(id => show(id, false));
   show("playLine", false);
   show("vocabPage", true);
+  setExclusivePage("vocab");
   vocabTabCurrent = tab || "words";
   if (!vocabBuilt) {
     buildVocabLetterBar();
@@ -1824,11 +2122,231 @@ function showVocabView(tab) {
   }
   renderVocabTab(vocabTabCurrent);
   applyI18nVocab();
-  window.scrollTo(0, 0);
+}
+
+/**
+ * 3c IPA symbol picker full-page route (#/vocab/ipa).
+ * @returns {void}
+ */
+function showSymbolPickerView() {
+  closeGuide();
+  if ($("vocabPage").classList.contains("hidden") && $("symbolPickerPage").classList.contains("hidden")) {
+    vocabReturnViews = VOCAB_VIEW_IDS.filter(id => {
+      const el = $(id);
+      return el && !el.classList.contains("hidden");
+    });
+  }
+  VOCAB_VIEW_IDS.forEach(id => show(id, false));
+  show("playLine", false);
+  show("vocabPage", false);
+  show("symbolPickerPage", true);
+  setExclusivePage("symbol");
+  applyI18nVocab();
+  renderSymbolPicker();
 }
 
 function openVocab() { navigate("vocab"); }
 function closeVocab() { navigate(""); }
+
+/**
+ * IPA Chart Standard Grouping for 3c palette (GA / RP).
+ * @returns {Array<{id:string,symbols?:string[],heights?:Array<{id:string,symbols:string[]}>}>}
+ */
+function symbolChartGroups() {
+  const consonants = [
+    { id: "plosives", symbols: ["p", "b", "t", "d", "k", "ɡ"] },
+    { id: "fricatives", symbols: ["f", "v", "θ", "ð", "s", "z", "ʃ", "ʒ", "h"] },
+    { id: "nasals", symbols: ["m", "n", "ŋ"] },
+    { id: "approximants", symbols: ["r", "w", "j"] },
+    { id: "laterals", symbols: ["l"] },
+    { id: "affricates", symbols: ["tʃ", "dʒ"] }
+  ];
+  const stress = { id: "stress", symbols: ["ˈ", "ˌ"] };
+  if (ACCENT === "rp") {
+    return [
+      { id: "frontVowels", heights: [
+        { id: "close", symbols: ["iː", "ɪ"] },
+        { id: "closeMid", symbols: ["e"] },
+        { id: "open", symbols: ["æ"] }
+      ]},
+      { id: "centralVowels", heights: [
+        { id: "closeMid", symbols: ["ə"] },
+        { id: "openMid", symbols: ["ɜː", "ʌ"] }
+      ]},
+      { id: "backVowels", heights: [
+        { id: "close", symbols: ["uː", "ʊ"] },
+        { id: "openMid", symbols: ["ɔː"] },
+        { id: "open", symbols: ["ɑː", "ɒ"] }
+      ]},
+      { id: "diphthongs", symbols: ["eɪ", "aɪ", "ɔɪ", "əʊ", "aʊ", "ɪə", "eə", "ʊə"] },
+      ...consonants,
+      stress
+    ];
+  }
+  return [
+    { id: "frontVowels", heights: [
+      { id: "close", symbols: ["i", "ɪ"] },
+      { id: "openMid", symbols: ["ɛ"] },
+      { id: "open", symbols: ["æ"] }
+    ]},
+    { id: "centralVowels", heights: [
+      { id: "closeMid", symbols: ["ə", "ɝ", "ɚ"] },
+      { id: "openMid", symbols: ["ʌ"] }
+    ]},
+    { id: "backVowels", heights: [
+      { id: "close", symbols: ["u", "ʊ"] },
+      { id: "openMid", symbols: ["ɔ"] },
+      { id: "open", symbols: ["ɑ"] }
+    ]},
+    { id: "diphthongs", symbols: ["eɪ", "aɪ", "ɔɪ", "oʊ", "aʊ"] },
+    ...consonants,
+    stress
+  ];
+}
+
+/**
+ * @param {string} groupId
+ * @returns {string} HTML for section heading (EN primary + optional L1 sub)
+ */
+function symbolGroupHeadingHtml(groupId) {
+  const en = t("symbol.group." + groupId + ".en");
+  const sub = t("symbol.group." + groupId + ".sub");
+  const subHtml = (sub && sub !== "symbol.group." + groupId + ".sub" && sub !== en)
+    ? `<span class="symbol-group-sub">${escHtml(sub)}</span>` : "";
+  return `<h2 class="symbol-group-heading">${escHtml(en)}${subHtml}</h2>`;
+}
+
+/**
+ * @param {string} heightId
+ * @returns {string}
+ */
+function symbolHeightLabelHtml(heightId) {
+  const en = t("symbol.height." + heightId + ".en");
+  const sub = t("symbol.height." + heightId + ".sub");
+  const label = (sub && sub !== "symbol.height." + heightId + ".sub" && sub !== en)
+    ? `${en} · ${sub}` : en;
+  return `<div class="symbol-height-label">${escHtml(label)}</div>`;
+}
+
+/**
+ * @param {string[]} symbols
+ * @returns {string}
+ */
+function symbolCellsHtml(symbols) {
+  return `<div class="symbol-grid">${symbols.map(s =>
+    `<button type="button" class="symbol-cell" data-symbol="${escAttr(s)}" aria-label="${escAttr(s)}">${escHtml(s)}</button>`
+  ).join("")}</div>`;
+}
+
+/**
+ * @returns {void}
+ */
+function renderSymbolPalette() {
+  const el = $("symbolPalette");
+  if (!el) return;
+  let html = "";
+  symbolChartGroups().forEach(g => {
+    html += `<section class="symbol-group" data-group="${escAttr(g.id)}">`;
+    html += symbolGroupHeadingHtml(g.id);
+    if (g.heights) {
+      g.heights.forEach(h => {
+        html += symbolHeightLabelHtml(h.id);
+        html += symbolCellsHtml(h.symbols);
+      });
+    } else {
+      html += symbolCellsHtml(g.symbols || []);
+    }
+    html += `</section>`;
+  });
+  el.innerHTML = html;
+}
+
+/**
+ * @returns {void}
+ */
+function renderSymbolQueryChips() {
+  const el = $("symbolQueryChips");
+  if (!el) return;
+  if (!symbolQuery.length) {
+    el.innerHTML = `<span class="query-chip-empty">${escHtml(t("symbol.picker.empty"))}</span>`;
+    return;
+  }
+  el.innerHTML = symbolQuery.map((s, i) =>
+    `<button type="button" class="query-chip" data-chip-idx="${i}" title="${escAttr(t("symbol.picker.remove_chip"))}">${escHtml(s)}</button>`
+  ).join("");
+}
+
+/**
+ * Active accent IPA string for a word.
+ * @param {object} c
+ * @returns {string}
+ */
+function wordIpaForSearch(c) {
+  if (ACCENT === "rp") return c.rp_ipa || c.ipa || "";
+  return c.ipa || "";
+}
+
+/**
+ * @returns {void}
+ */
+function renderSymbolResults() {
+  const body = $("symbolResults");
+  if (!body) return;
+  if (!wordlistReady || !PRESET.length) {
+    body.innerHTML = vocabSkeletonHtml();
+    return;
+  }
+  const q = symbolQuery.join("");
+  const sorted = [...PRESET].sort((a, b) => a.w.toLowerCase().localeCompare(b.w.toLowerCase()));
+  const filtered = q
+    ? sorted.filter(c => wordIpaForSearch(c).includes(q))
+    : sorted.slice(0, 80);
+  rebuildVirtSlots(filtered, false, symbolVirtState);
+  bindVirtScroll(body, symbolVirtState, () => paintVirtWindow(body, symbolVirtState, q));
+  body.scrollTop = 0;
+  paintVirtWindow(body, symbolVirtState, q);
+}
+
+/**
+ * Full 3c paint: chips + palette + results.
+ * @returns {void}
+ */
+function renderSymbolPicker() {
+  renderSymbolQueryChips();
+  renderSymbolPalette();
+  renderSymbolResults();
+}
+
+/**
+ * @param {string} sym
+ * @returns {void}
+ */
+function symbolQueryPush(sym) {
+  if (!sym) return;
+  symbolQuery.push(sym);
+  renderSymbolQueryChips();
+  renderSymbolResults();
+}
+
+/**
+ * @param {number} idx
+ * @returns {void}
+ */
+function symbolQueryRemoveAt(idx) {
+  if (idx < 0 || idx >= symbolQuery.length) return;
+  symbolQuery.splice(idx, 1);
+  renderSymbolQueryChips();
+  renderSymbolResults();
+}
+
+/**
+ * @returns {void}
+ */
+function symbolQueryClearAll() {
+  symbolQuery = [];
+  renderSymbolQueryChips();
+  renderSymbolResults();
+}
 
 window.addEventListener("hashchange", onRouteChange);
 
@@ -3744,9 +4262,7 @@ function renderSummary(){
 }
 
 /**
- * Close the topmost open modal on Escape (priority: Exit > Guide).
- * Exit Confirm maps to No (continue practice); Guide simply closes.
- * Also closes the language dropdown if open.
+ * Escape: Exit Confirm > Guide > Symbol picker back > Vocab back > lang menu.
  * @param {KeyboardEvent} e
  * @returns {void}
  */
@@ -3757,6 +4273,12 @@ function onModalEscapeKey(e){
     e.preventDefault();
   }else if(!$("guideModal").classList.contains("hidden")){
     closeGuide();
+    e.preventDefault();
+  }else if($("symbolPickerPage") && !$("symbolPickerPage").classList.contains("hidden")){
+    navigate("vocab");
+    e.preventDefault();
+  }else if(!$("vocabPage").classList.contains("hidden")){
+    navigate("");
     e.preventDefault();
   }else{
     toggleLangMenu(false);
@@ -3770,6 +4292,31 @@ $("guideCloseBtn").addEventListener("click",closeGuide);
 $("guideLangPills").querySelectorAll(".pill").forEach(b=>b.addEventListener("click",()=>renderGuide(b.dataset.guideLang)));
 $("vocabBtn").addEventListener("click",e=>{e.preventDefault();navigate("vocab");});
 $("vocabBackBtn").addEventListener("click",e=>{e.preventDefault();navigate("");});
+$("symbolBackBtn").addEventListener("click",e=>{e.preventDefault();navigate("vocab");});
+$("symbolQueryClear").addEventListener("click",()=>symbolQueryClearAll());
+$("vocabModeSpelling").addEventListener("click",()=>{
+  $("vocabModeSpelling").setAttribute("aria-pressed","true");
+  $("vocabModeIpa").setAttribute("aria-pressed","false");
+  $("vocabSearchInput").focus();
+});
+$("vocabModeIpa").addEventListener("click",()=>{
+  navigate("vocab/ipa");
+});
+$("vocabFilters").addEventListener("click",e=>{
+  const btn=e.target.closest(".pill-cefr");
+  if(!btn)return;
+  toggleVocabCefr(btn.dataset.cefr);
+});
+$("symbolPalette").addEventListener("click",e=>{
+  const cell=e.target.closest(".symbol-cell");
+  if(!cell)return;
+  symbolQueryPush(cell.dataset.symbol);
+});
+$("symbolQueryChips").addEventListener("click",e=>{
+  const chip=e.target.closest(".query-chip");
+  if(!chip)return;
+  symbolQueryRemoveAt(parseInt(chip.dataset.chipIdx,10));
+});
 ["exitConfirmScrim","exitConfirmNo"].forEach(id=>$(id).addEventListener("click",closeExitConfirm));
 $("exitConfirmYes").addEventListener("click",()=>{
   const fn=exitConfirmOnYes;
@@ -3790,10 +4337,9 @@ $("vocabSearchInput").addEventListener("input",e=>{
 $("vocabLetters").addEventListener("click",e=>{
   const btn=e.target.closest(".vocab-letter-btn");
   if(!btn)return;
-  const target=document.getElementById("vocab-group-"+btn.dataset.letter);
-  if(target)target.scrollIntoView({behavior:"smooth",block:"start"});
+  jumpVocabLetter(btn.dataset.letter);
 });
-$("vocabBody").addEventListener("click",e=>{
+function onVocabListClick(e){
   const pcBtn=e.target.closest(".pc-slot");
   if(pcBtn){
     const modeEl=pcBtn.closest(".pc-mode");
@@ -3818,7 +4364,9 @@ $("vocabBody").addEventListener("click",e=>{
   if(altBtn&&!altBtn.disabled){
     speak(altBtn.dataset.vw,{accent:altBtn.dataset.vaccent});
   }
-});
+}
+$("vocabBody").addEventListener("click",onVocabListClick);
+$("symbolResults").addEventListener("click",onVocabListClick);
 function bindRevealCheckClicks(wrapId,itemFn,modeFn){
   const wrap=$(wrapId);
   if(!wrap||wrap._checksBound)return;

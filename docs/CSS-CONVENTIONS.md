@@ -75,3 +75,10 @@ created: '2026-07-19'
 | 日付 | 内容 |
 |------|------|
 | 2026-07-19 | Phase 1-A: 既存 17 変数を `--legacy-*` 化。未定義 `--bg` 参照を `--legacy-bg` 化。Mood B 11 color + spacing/radius/shadow を `:root` 追加。Google Fonts（Charis SIL / Noto Sans JP·KR / Noto Serif JP）を `<head>` 追加 |
+
+### `var(--legacy-*)` 参照数の進捗
+
+| 時点 | 参照数 | 備考 |
+|------|-------:|------|
+| Phase 1-D-PR2 後 | 249 | ドリル `2c`/`2d` + Reveal 共通 Mood B |
+| Phase 1-E PR-1 後 | **228** | `#vocabPage` / `#symbolPickerPage` Mood B 化（249→228） |

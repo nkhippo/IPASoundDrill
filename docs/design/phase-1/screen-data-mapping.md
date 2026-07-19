@@ -223,11 +223,18 @@ python3 -c "import json;from collections import Counter;w=json.load(open('wordli
 
 ## §5: IPA 部分一致検索 latency（Q-19）
 
-### 現行 `#vocabPage`（`3b`）
+### `#vocabPage`（`3b`）— Phase 1-E PR-1 実装済
 
-- 検索: `#vocabSearchInput` → `renderVocabWords` は **綴り部分一致のみ**（`c.w.includes(q)`）
-- A–Z ジャンプあり
-- **IPA 検索 UI は未実装**（Phase 1-E の `3c` で新設）
+- 検索: sticky filter の「綴り」モード → `#vocabSearchInput`（綴り部分一致）
+- Segmented「IPA」→ `#/vocab/ipa`（`3c`）
+- A–Z ジャンプあり（仮想リスト）
+- Words 仮想化（~20–30 行）。Phrases 非仮想化
+
+### `3c` IPA 部分一致検索 — **実装済（Phase 1-E PR-1）**
+
+- アルゴリズム: Recon §5 の正規化 IPA `includes` 全走査（index / Worker なし）
+- UI: query chips（`symbolQuery`）+ live 結果 + `--signal` highlight
+- latency 目標 ≤100ms は Recon 実測でクリア済み（下記）
 
 ### 計測方法
 
@@ -320,17 +327,19 @@ Python 交差検証: mean ≈ 0.33 ms、max ≈ 0.72 ms。
 | 動的項目 | データソース | Phase 1 変更 |
 |---|---|---|
 | 行データ | wordlist / connected | 変更なし |
-| 綴り検索 | `w` | 変更なし |
-| CEFR バッジ | `cefr` | 変更なし |
-| 進捗 | marks（旧 checks） | 移行 |
-| IPA 検索入口 | → `3c` | **新規導線** |
+| 綴り検索 | `w` | sticky filter「綴り」（実装済） |
+| CEFR フィルタ | pills（初期全選択） | **新規**（PR-1） |
+| 進捗 | marks（旧 checks） | 移行予定 |
+| IPA 検索入口 | Segmented → `3c` | **実装済（PR-1）** |
+| 仮想化 | Words only | **実装済（PR-1）** |
 
 ### `3c` IPA 記号ピッカー
 
 | 動的項目 | データソース | Phase 1 変更 |
 |---|---|---|
-| 記号パレット | phonemes / キーボード記号 | **新規** |
-| 部分一致結果 | wordlist IPA 走査 | **新規**（§5 より最適化不要） |
+| 記号パレット | `symbolChartGroups`（IPA chart 分類） | **実装済（PR-1）** |
+| Query chips | `symbolQuery` array | **実装済（PR-1）** |
+| 部分一致結果 | wordlist IPA 走査（§5 アルゴリズム） | **実装済（PR-1）** |
 
 ### `3d` 学習状況
 
@@ -391,3 +400,5 @@ Python 交差検証: mean ≈ 0.33 ms、max ≈ 0.72 ms。
 | 未発見の用途不明 LS キー | なし |
 | CEFR 未タグ率 | 0%（5% 超の中断条件に非該当） |
 | IPA 検索 max | 1.62 ms（500ms 超の中断条件に非該当） |
+
+> **Phase 1-E PR-1（#91）:** `3c` は本 §5 アルゴリズム（正規化 IPA `includes` 全走査）を採用して実装完了。index / Worker は未導入。

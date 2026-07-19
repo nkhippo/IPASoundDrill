@@ -134,7 +134,12 @@
     "tab_phrases": "Phrases",
     "search": "Search…",
     "no_results": "No results",
-    "back": "Back"
+    "back": "Back",
+    "filter": {
+      "spelling": "Spelling",
+      "ipa": "IPA",
+      "all": "All"
+    }
   },
   "reveal": {
     "rp_note": "RP",
@@ -262,5 +267,77 @@
   "progress": {
     "meter_label": "{pct}% ({cur} / {total})",
     "meter_aria": "Progress {pct} percent, question {cur} of {total}"
+  },
+  "symbol": {
+    "picker": {
+      "title": "Search by IPA",
+      "clear": "Clear all",
+      "empty": "Tap symbols below",
+      "remove_chip": "Remove"
+    },
+    "group": {
+      "frontVowels": {
+        "en": "Front Vowels",
+        "sub": "Front Vowels"
+      },
+      "centralVowels": {
+        "en": "Central Vowels",
+        "sub": "Central Vowels"
+      },
+      "backVowels": {
+        "en": "Back Vowels",
+        "sub": "Back Vowels"
+      },
+      "diphthongs": {
+        "en": "Diphthongs",
+        "sub": "Diphthongs"
+      },
+      "plosives": {
+        "en": "Plosives",
+        "sub": "Plosives"
+      },
+      "fricatives": {
+        "en": "Fricatives",
+        "sub": "Fricatives"
+      },
+      "nasals": {
+        "en": "Nasals",
+        "sub": "Nasals"
+      },
+      "approximants": {
+        "en": "Approximants",
+        "sub": "Approximants"
+      },
+      "laterals": {
+        "en": "Laterals",
+        "sub": "Laterals"
+      },
+      "affricates": {
+        "en": "Affricates",
+        "sub": "Affricates"
+      },
+      "stress": {
+        "en": "Stress",
+        "sub": "Stress"
+      }
+    },
+    "height": {
+      "close": {
+        "en": "Close",
+        "sub": "Close"
+      },
+      "closeMid": {
+        "en": "Close-Mid",
+        "sub": "Close-Mid"
+      },
+      "openMid": {
+        "en": "Open-Mid",
+        "sub": "Open-Mid"
+      },
+      "open": {
+        "en": "Open",
+        "sub": "Open"
+      }
+    }
   }
 }

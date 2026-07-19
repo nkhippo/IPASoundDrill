@@ -134,7 +134,12 @@
     "tab_phrases": "フレーズ",
     "search": "検索…",
     "no_results": "見つかりません",
-    "back": "戻る"
+    "back": "戻る",
+    "filter": {
+      "spelling": "綴り",
+      "ipa": "IPA",
+      "all": "全て"
+    }
   },
   "reveal": {
     "rp_note": "RP",
@@ -262,5 +267,77 @@
   "progress": {
     "meter_label": "{pct}%（{cur} / {total}）",
     "meter_aria": "進捗 {pct}%、{cur} 問目 / 全 {total} 問"
+  },
+  "symbol": {
+    "picker": {
+      "title": "IPA 記号で検索",
+      "clear": "全消去",
+      "empty": "下の記号をタップ",
+      "remove_chip": "削除"
+    },
+    "group": {
+      "frontVowels": {
+        "en": "Front Vowels",
+        "sub": "前舌母音"
+      },
+      "centralVowels": {
+        "en": "Central Vowels",
+        "sub": "中舌母音"
+      },
+      "backVowels": {
+        "en": "Back Vowels",
+        "sub": "後舌母音"
+      },
+      "diphthongs": {
+        "en": "Diphthongs",
+        "sub": "二重母音"
+      },
+      "plosives": {
+        "en": "Plosives",
+        "sub": "破裂音"
+      },
+      "fricatives": {
+        "en": "Fricatives",
+        "sub": "摩擦音"
+      },
+      "nasals": {
+        "en": "Nasals",
+        "sub": "鼻音"
+      },
+      "approximants": {
+        "en": "Approximants",
+        "sub": "接近音"
+      },
+      "laterals": {
+        "en": "Laterals",
+        "sub": "側音"
+      },
+      "affricates": {
+        "en": "Affricates",
+        "sub": "破擦音"
+      },
+      "stress": {
+        "en": "Stress",
+        "sub": "強勢"
+      }
+    },
+    "height": {
+      "close": {
+        "en": "Close",
+        "sub": "高"
+      },
+      "closeMid": {
+        "en": "Close-Mid",
+        "sub": "中"
+      },
+      "openMid": {
+        "en": "Open-Mid",
+        "sub": "中低"
+      },
+      "open": {
+        "en": "Open",
+        "sub": "低"
+      }
+    }
   }
 }

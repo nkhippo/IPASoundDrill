@@ -134,7 +134,12 @@
     "tab_phrases": "片語",
     "search": "搜尋…",
     "no_results": "無結果",
-    "back": "返回"
+    "back": "返回",
+    "filter": {
+      "spelling": "拼字",
+      "ipa": "IPA",
+      "all": "全部"
+    }
   },
   "reveal": {
     "rp_note": "RP",
@@ -262,5 +267,77 @@
   "progress": {
     "meter_label": "{pct}%（{cur} / {total}）",
     "meter_aria": "進捗 {pct}%、{cur} 問目 / 全 {total} 問"
+  },
+  "symbol": {
+    "picker": {
+      "title": "以 IPA 符號搜尋",
+      "clear": "全部清除",
+      "empty": "點下方符號",
+      "remove_chip": "刪除"
+    },
+    "group": {
+      "frontVowels": {
+        "en": "Front Vowels",
+        "sub": ""
+      },
+      "centralVowels": {
+        "en": "Central Vowels",
+        "sub": ""
+      },
+      "backVowels": {
+        "en": "Back Vowels",
+        "sub": ""
+      },
+      "diphthongs": {
+        "en": "Diphthongs",
+        "sub": ""
+      },
+      "plosives": {
+        "en": "Plosives",
+        "sub": ""
+      },
+      "fricatives": {
+        "en": "Fricatives",
+        "sub": ""
+      },
+      "nasals": {
+        "en": "Nasals",
+        "sub": ""
+      },
+      "approximants": {
+        "en": "Approximants",
+        "sub": ""
+      },
+      "laterals": {
+        "en": "Laterals",
+        "sub": ""
+      },
+      "affricates": {
+        "en": "Affricates",
+        "sub": ""
+      },
+      "stress": {
+        "en": "Stress",
+        "sub": ""
+      }
+    },
+    "height": {
+      "close": {
+        "en": "Close",
+        "sub": ""
+      },
+      "closeMid": {
+        "en": "Close-Mid",
+        "sub": ""
+      },
+      "openMid": {
+        "en": "Open-Mid",
+        "sub": ""
+      },
+      "open": {
+        "en": "Open",
+        "sub": ""
+      }
+    }
   }
 }

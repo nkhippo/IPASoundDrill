@@ -221,7 +221,7 @@ created: '2026-06-24'
 
 > Phase 1 の画面 frame ID（`1a` / `2a`–`2d` / `3a`–`3h`）の情報階層は `DESIGN.md` を正とする。本節は現行 DOM との対応と、Phase 1 へ移行する仕様の橋渡しを記述する。PC 版 variant（`-pc`）は Phase 1-H で追記（本 Issue では言及しない）。
 
-画面切替は主に `<section>` の `hidden` で表示制御。**語彙リスト（将来 `3b`）のみ** hash routing（`#/vocab` / `#/vocab/phrases`）を用いる。その他の練習画面はルーターなし。
+画面切替は主に `<section>` の `hidden` で表示制御。**語彙系統（`3b` / `3c`）** のみ hash routing（`#/vocab` / `#/vocab/phrases` / `#/vocab/ipa`）を用いる。その他の練習画面はルーターなし。
 
 ### 4.0 全画面共通 — トップバー・シェル
 
@@ -290,27 +290,40 @@ OK/bad 色分けのみ（`res-near` 削除）。単語・gloss・自分の回答
 
 現行 `#settingsModal` の Language。Accent は Phase 1 で `3a` へ移し学習中不変。ガイドは `#guideModal` / 将来 `3g` 再表示。
 
-### 4.8b 語彙リスト（`3b`・現行 `#vocabPage`）
+### 4.8b 語彙リスト（`3b`・`#vocabPage`）— Phase 1-E PR-1
 
 - hash `#/vocab` / `#/vocab/phrases`
+- **Exclusive full-page:** `body.vocab-page`（`setExclusivePage("vocab")`）。shell `.wrap` 非表示
 - Words **5,397** / Phrases 201、CEFR バッジ、進捗チェック（マーキング移行予定）
-- IPA 記号ピッカー（`3c`）は `3b` の絞り込み操作から開く独立 concept（DESIGN 参照）
+- IPA 記号ピッカー（`3c`）へは sticky filter の Segmented「IPA」から `#/vocab/ipa`
 
-**Header (sticky):**
-- Back ボタン / タイトル
-- タブバー（Words / Phrases）
-- 検索欄（**常時表示** — モバイル含む）
-- A–Z ジャンプ（横スクロール可能）
-- フィルタプレースホルダー（`#vocabFilters`、現状非表示）
+**Sticky filter bar（`.filter-bar-sticky`）:**
+- Back / タイトル
+- タブ（Words / Phrases）
+- Segmented 検索モード: 綴り（`#vocabSearchInput`） / IPA（→ `3c`）
+- CEFR pills（複数選択。**初期は全 CEFR 選択** — `prev_settings` 非連動、裁定 A5=B）
+- A–Z ジャンプ（Words。仮想リストへ `jumpVocabLetter`）
 
-**行（2段組）:**
-- 上段: 単語 + POS/CEFR/タイプバッジ
-- 下段: GA+RP IPA + 意味（`vocabDisplayGloss`）
-- 右端: 進捗チェック（d/e/l 各 0–3）+ play ボタン
-- `ga_rp_same` 時は `/ipa/（同じ）` 形式。英語 UI では `gloss.en === w` の自己参照を `def` または `(品詞)` で代替
-- CEFR バッジ配色: A1 緑 / A2 青 / B1 橙 / B2 紅
+**Words リスト（仮想化）:**
+- `rebuildVirtSlots` / `paintVirtWindow` — 常時 ~20–30 DOM 行、固定行高 + scroll（裁定 A3=A）。Time-slicing なし・Skeleton 維持（A4=B）
+- 行: 上段 単語+バッジ / 下段 GA+RP IPA + gloss / 右端 進捗チェック + TTS
+- Phrases は **非仮想化**（裁定 A8=A）
 
-i18n: `vocab.*`（**6キー** × 6言語、`vocab.back` 含む）。`body.scroll-locked` は語彙ページでは使わない。
+i18n: `vocab.*` + `vocab.filter.*`。`body.scroll-locked` は語彙ページでは使わない。
+
+> **Phase 1-E PR-1 note:** UI i18n leaf は実装上 **219**（182→219、+37）。§5.5 の集約数値更新は PR-3。
+
+### 4.8c IPA 記号ピッカー（`3c`・`#symbolPickerPage`）— Phase 1-E PR-1
+
+- hash `#/vocab/ipa`（裁定 A1=A / A7=A）
+- **Exclusive full-page:** `body.symbol-picker-page`
+- **Split view:** 上段パレット固定 / 下段結果スクロール（仮想化）
+- Query chips（`symbolQuery` 配列）: 記号タップで蓄積・順序保持・個別削除 / Clear
+- IPA chart 標準分類（`symbolChartGroups`）: 見出し EN primary + L1 sub（ja 充填、他言語空可 — 裁定 A6=A）
+- Live IPA substring 検索（Recon §5 の単純 `includes` 全走査）。一致箇所は `--signal` highlight
+- CSS: `.query-chip` / `.symbol-cell` / `.symbol-group-heading` / `.vocab-virt-*`
+
+i18n: `symbol.picker.*` / `symbol.group.*.{en,sub}` / `symbol.height.*.{en,sub}`。
 
 ---
 
@@ -514,6 +527,8 @@ Study（`2c`）の内部フェーズ。Quiz 凍結時は Study のみ。
 
 検証: `python3 tools/validate_i18n.py`。監査ドキュメント再生成: `python3 tools/gen_audit_docs.py`。
 
+> Phase 1-E PR-1 時点の実測 leaf は **219**（182→219）。本節の 169 表記の集約更新は PR-3。
+
 ---
 
 ## 6. 補足・制約
@@ -540,6 +555,7 @@ Study（`2c`）の内部フェーズ。Quiz 凍結時は Study のみ。
 
 | 日付 | 内容 |
 |------|------|
+| 2026-07-20 | Phase 1-E PR-1（#91）: `3b` exclusive full-page + 仮想化、`3c` `#/vocab/ipa` 記号ピッカー。i18n 219 leaf（§5.5 集約は PR-3）。`var(--legacy-*)` 249→228 |
 | 2026-07-18 | Phase 1-0-a（#75）: 目的 4 カード前提へ骨格改訂。Mode B Band 記述削除、near 採点廃止、CEFR 全目的横断・Connected はタグ表示のみ、プロフィール一元通過 / マーキング / オンボーディングの LS 要件を明示 |
 | 2026-07-16 | Q-7-A: Connected `cs_rule` に ko / zh-Hans / zh-Hant 追加（201 句 × 3。既存 en/ja/fil 不変） |
 | 2026-07-16 | Q-9-A: 3 モーダルに Escape キー対応（Exit=No 相当、Settings/Guide=閉じる） |
