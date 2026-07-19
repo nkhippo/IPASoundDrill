@@ -128,3 +128,38 @@ Phase 0 記録と一致（PURPOSE / SPEC / CLAUDE / REPOSITORY-STRUCTURE / CHANG
 
 ### 昇格・追加提案がある場合の詳細
 なし
+
+---
+
+## 追加修正（Rv Comment #5015555964 / 指示 #5015572883）
+
+Naoya 裁定により改善候補 3 件を本 PR 内で消化。
+
+### Phase 0'
+
+| 項目 | 結果 |
+|------|------|
+| `#accentOpts` | settings modal 内のみ 1 箇所。`3a` は `#profileAccentToggle`（id 衝突なし） |
+| `#langOpts` | DOM + `applyI18n` + click。alias 不要 → `#langSwitcher` / `#langMenu` に置換 |
+| `closeSettings` 呼び出し | `openGuide` / `showVocabView` / Escape からも削除 |
+| settings Escape | `onModalEscapeKey` から除去（言語メニュー閉じは同ハンドラへ統合） |
+
+### Phase 1'〜3'
+
+1. `.build .ph` の `font-family` を `var(--legacy-ui)` に戻す（Encode `2b` は Phase 1-D 巻き取り範囲）
+2. `#settingsBtn` / `#settingsModal` / `openSettings`/`closeSettings` 全撤去。i18n `settings_*` 4 key × 6 言語削除 → **leaf 172**（176−4）
+3. ヘッダー言語を brief §6 準拠のドロップダウン（`#langSwitcher` + `#langMenu`、自言語表記 hard-code）へ変更
+
+### Phase 4' 検証
+
+| 項目 | 結果 |
+|------|------|
+| `node --check` | OK |
+| `npm run build` | OK |
+| `validate-cefr-tags.py` | OK |
+| i18n leaf | 172（6 言語一致） |
+| script md5 before（本追記前） | `0fe0ee54d0e06fb9f6dc9881eb2cb27b` |
+| script md5 after | `b14677a5e4c08f83010f9e16a57e2daf`（6 言語共通） |
+| ブラックリスト 12 ファイル md5 | HEAD と一致（不変） |
+
+docs: `DESIGN.md` §`1a` / `visual-tokens.md` §5b・§5c を `#langSwitcher` 記述に更新。

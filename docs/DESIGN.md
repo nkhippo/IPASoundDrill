@@ -78,7 +78,7 @@ updated: '2026-07-18'
 - **言語 variant:** `1a-ja` / `1a-en` / `1a-ko` 等（Phase 1-B で全 6 言語 fallback。本翻訳は Phase 1-G）
 - **デバイス variant:** モバイル 375px (base) / `1a-pc` は Phase 1-H
 - **情報階層（Phase 1-B 実装）:**
-  - ヘッダー: 言語切替（`#langOpts` ヘッダー右）+ ガイドアイコン（現行 guide 暫定、Phase 1-F で `3g` 差し替え）+ 語彙ボタン
+  - ヘッダー: 言語切替（`#langSwitcher` / `#langMenu` ドロップダウン、現在言語コード + ▾）+ ガイドアイコン（現行 guide 暫定、Phase 1-F で `3g` 差し替え）+ 語彙ボタン
   - Hero: タグラインのみ（`top.tagline` / `--font-serif`）。サブコピー・独立 CTA なし
   - 目的 4 カード（Mood B `.purpose-card`、`drill.title.2a`–`2d`）→ `applyDrillId` → `3a`
   - フッター: Feedback / Terms / Privacy / X + `3h`「このアプリについて」DOM 常時（`about.placeholder`）
@@ -90,11 +90,11 @@ updated: '2026-07-18'
 - レイアウト（Phase 1-C）:
   - 必須表示: Accent（GA/RP トグル、セッション固定）+ CEFR 複数選択（**A1 / A2 / B1 / B2**）
   - 折りたたみ: focus / reg / grp（Words 系）または csLevel / csFilter（`2d`）
-  - Language は `3f` / ヘッダー（`#langOpts`）。`3a` 必須 UI からは外す
+  - Language は `3f` / ヘッダー（`#langSwitcher`）。`3a` 必須 UI からは外す
   - CTA: 「はじめる」（`#startBtn`）
 - `#setup` を `data-frame="3a"` / `.profile-3a` としてリブランド。#1–#3（mode/tab/dir）は目的カード stub で内部マッピングし非表示
 - LS: `prev_settings_v1` プリセット、`ept_marks_v1`（`ept_checks_v1` から lazy migration）
-- 学習中のアクセント切替 UI は持たない（settings の Accent も非表示）。ヘッダー固定バッジは後続 Phase で強化可
+- 学習中のアクセント切替 UI は持たない。ヘッダー固定バッジは後続 Phase で強化可
 
 ### `2a`–`2d` ドリル
 
