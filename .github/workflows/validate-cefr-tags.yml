@@ -1,0 +1,34 @@
+name: validate-cefr-tags
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    paths:
+      - 'wordlist_GA_a1a2_plus_phonics.json'
+      - 'data/connected_speech.json'
+      - 'data/weak_forms.json'
+      - 'scripts/validate-cefr-tags.py'
+      - '.github/workflows/validate-cefr-tags.yml'
+  push:
+    branches: [main, master]
+    paths:
+      - 'wordlist_GA_a1a2_plus_phonics.json'
+      - 'data/connected_speech.json'
+      - 'data/weak_forms.json'
+      - 'scripts/validate-cefr-tags.py'
+      - '.github/workflows/validate-cefr-tags.yml'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Validate CEFR tags
+        run: python3 scripts/validate-cefr-tags.py
