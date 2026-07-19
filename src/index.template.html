@@ -361,9 +361,6 @@
   .modal-card{position:relative;width:min(100%,400px);padding:18px 16px}
   .modal-head{margin-bottom:12px}
   .modal-title{margin:0;font-size:14px;font-weight:700;letter-spacing:.02em}
-  .langopts{display:flex;flex-direction:column;gap:8px}
-  .settings-section{margin-top:16px}
-  .settings-section:first-of-type{margin-top:0}
   .modal-sub{font-family:var(--legacy-mono);font-size:10px;color:var(--legacy-faint);text-transform:uppercase;letter-spacing:.14em;margin:0 0 8px}
   .confirm-body{font-size:14px;color:var(--legacy-ink);line-height:1.6;margin-top:2px}
   .confirm-actions{display:flex;gap:10px;justify-content:flex-end;margin-top:14px}
@@ -371,8 +368,6 @@
   .confirm-actions .btn:hover{border-color:var(--legacy-signal);color:var(--legacy-signal)}
   .confirm-actions .btn-primary{background:var(--legacy-ink);color:#fff;border-color:var(--legacy-ink)}
   .confirm-actions .btn-primary:hover{background:#2a2f36;color:#fff;border-color:#2a2f36}
-  .langopt{border:1px solid var(--legacy-hair);background:#fff;border-radius:10px;padding:12px 14px;cursor:pointer;font-family:var(--legacy-ui);font-size:14px;font-weight:600;color:var(--legacy-ink);text-align:left}
-  .langopt[aria-pressed="true"]{border-color:var(--legacy-signal);background:var(--legacy-signal-soft);color:var(--legacy-signal)}
   .modal-card.guide-card{width:min(100%,560px);max-height:min(88vh,720px);display:flex;flex-direction:column;padding:18px 16px 14px}
   .guide-head{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:10px}
   .guide-close{border:1px solid var(--legacy-hair);background:#fff;border-radius:999px;padding:6px 12px;cursor:pointer;font-family:var(--legacy-mono);font-size:10px;font-weight:600;color:var(--legacy-muted);letter-spacing:.04em;text-transform:uppercase;flex-shrink:0}
@@ -458,10 +453,15 @@
   body.top-home .brand .mark{color:var(--signal);font-family:var(--font-ipa)}
   body.top-home .topbtn{border-color:var(--hair);color:var(--muted);background:var(--panel)}
   body.top-home .topbtn:hover{border-color:var(--signal);color:var(--signal)}
-  .header-lang{display:flex;flex-wrap:wrap;justify-content:flex-end;max-width:min(100%,280px)}
-  .header-lang .langopts{display:flex;flex-wrap:wrap;gap:4px;justify-content:flex-end}
-  .header-lang .langopt{border:1px solid var(--hair);background:var(--panel);border-radius:6px;padding:3px 7px;font-family:var(--font-mono);font-size:9px;font-weight:700;cursor:pointer;color:var(--muted)}
-  .header-lang .langopt[aria-pressed="true"]{border-color:var(--signal);color:var(--signal);background:var(--signal-soft)}
+  .header-lang{position:relative;display:flex;flex-wrap:wrap;justify-content:flex-end;max-width:min(100%,280px)}
+  .lang-switcher{display:inline-flex;align-items:center;gap:4px;border:1px solid var(--hair);background:var(--panel);border-radius:6px;padding:4px 8px;font-family:var(--font-mono);font-size:10px;font-weight:700;color:var(--muted);cursor:pointer}
+  .lang-switcher:hover{border-color:var(--signal);color:var(--signal)}
+  .lang-switcher[aria-expanded="true"]{border-color:var(--signal);color:var(--signal);background:var(--signal-soft)}
+  .lang-menu{position:absolute;top:calc(100% + 4px);right:0;background:var(--panel);border:1px solid var(--hair);border-radius:var(--radius-card);box-shadow:var(--shadow-card);padding:4px;min-width:140px;z-index:100;display:flex;flex-direction:column;gap:2px}
+  .lang-menu.hidden{display:none}
+  .lang-menu-item{border:none;background:transparent;padding:8px 12px;font-family:var(--font-ui);font-size:13px;color:var(--ink);text-align:left;border-radius:6px;cursor:pointer}
+  .lang-menu-item:hover{background:var(--signal-soft);color:var(--signal)}
+  .lang-menu-item[aria-selected="true"]{background:var(--signal-soft);color:var(--signal);font-weight:700}
   #purposeStub.panel{background:var(--panel);border:1px solid var(--hair);border-radius:var(--radius-card);box-shadow:var(--shadow-card);padding:var(--space-4)}
   .top-tagline{font-family:var(--font-serif);font-size:clamp(22px,5.5vw,28px);font-weight:700;color:var(--ink);letter-spacing:.02em;line-height:1.35;margin:0 0 var(--space-4);text-align:center}
   .about-block{margin-top:18px;padding-top:14px;border-top:1px solid var(--hair);text-align:center;max-width:600px;margin-left:auto;margin-right:auto}
@@ -496,13 +496,21 @@
     </button>
     <div class="topbar-actions">
       <div class="header-lang" id="headerLang">
-        <div class="langopts" id="langOpts" role="group" aria-label="Language">
-          <button class="langopt" type="button" data-lang="en" aria-pressed="true">EN</button>
-          <button class="langopt" type="button" data-lang="ja" aria-pressed="false">JA</button>
-          <button class="langopt" type="button" data-lang="zh-Hant" aria-pressed="false">繁</button>
-          <button class="langopt" type="button" data-lang="zh-Hans" aria-pressed="false">简</button>
-          <button class="langopt" type="button" data-lang="ko" aria-pressed="false">KO</button>
-          <button class="langopt" type="button" data-lang="fil" aria-pressed="false">FIL</button>
+        <button class="lang-switcher" id="langSwitcher" type="button"
+                aria-haspopup="listbox" aria-expanded="false" aria-label="Language">
+          <span class="lang-switcher-current" id="langSwitcherCurrent">EN</span>
+          <svg viewBox="0 0 12 12" width="10" height="10" aria-hidden="true">
+            <path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"
+                  stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="lang-menu hidden" id="langMenu" role="listbox" hidden>
+          <button class="lang-menu-item" role="option" type="button" data-lang="ja" aria-selected="false">日本語</button>
+          <button class="lang-menu-item" role="option" type="button" data-lang="en" aria-selected="true">English</button>
+          <button class="lang-menu-item" role="option" type="button" data-lang="ko" aria-selected="false">한국어</button>
+          <button class="lang-menu-item" role="option" type="button" data-lang="zh-Hans" aria-selected="false">简体中文</button>
+          <button class="lang-menu-item" role="option" type="button" data-lang="zh-Hant" aria-selected="false">繁體中文</button>
+          <button class="lang-menu-item" role="option" type="button" data-lang="fil" aria-selected="false">Filipino</button>
         </div>
       </div>
       <div class="topbar-btns">
@@ -515,7 +523,6 @@
           </svg>
         </button>
         <button class="topbtn guide" id="guideBtn" type="button" aria-label="Guide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/><path d="M8 8h2"/><path d="M8 12h2"/><path d="M8 16h2"/></svg></button>
-        <button class="topbtn settings hidden" id="settingsBtn" type="button" aria-label="Settings" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></button>
       </div>
       <button class="backtop hidden" id="backTopBtn" type="button">Menu</button>
     </div>
@@ -806,20 +813,6 @@
   <button class="reflect-btn" id="reflectDockBtn" type="button"></button>
 </div>
 
-<div class="modal hidden" id="settingsModal" role="dialog" aria-modal="true" aria-labelledby="settingsTitle">
-  <button class="modal-scrim" id="settingsScrim" type="button" aria-label="Close"></button>
-  <div class="modal-card panel">
-    <div class="modal-head"><h2 class="modal-title" id="settingsTitle">Settings</h2></div>
-    <div class="settings-section hidden" id="settingsAccentSection" hidden>
-      <div class="modal-sub" id="settingsAccentLabel">Accent</div>
-      <div class="langopts" id="accentOpts">
-        <button class="langopt" type="button" data-accent="ga" aria-pressed="true">American (GA)</button>
-        <button class="langopt" type="button" data-accent="rp" aria-pressed="false">British (RP)</button>
-      </div>
-    </div>
-  </div>
-</div>
-
 <div class="modal hidden" id="guideModal" role="dialog" aria-modal="true" aria-labelledby="guideTitle">
   <button class="modal-scrim" id="guideScrim" type="button" aria-label="Close"></button>
   <div class="modal-card panel guide-card">
@@ -1022,7 +1015,6 @@ function renderGuide(lang) {
 }
 
 async function openGuide() {
-  closeSettings();
   closeVocab();
   if (!guideReady) {
     try { await loadGuide(); } catch (e) { console.error(e); return; }
@@ -1546,24 +1538,12 @@ function applyI18n() {
   $("exitConfirmNo").textContent = t("exit_confirm.no");
   $("exitConfirmYes").textContent = t("exit_confirm.yes");
   ["dPlay", "ePlay", "rPlay", "dAltPlay", "rAltPlay", "mbSAltPlay"].forEach(id => { const b = $(id); if (b) b.setAttribute("aria-label", t("listen")); });
-  $("settingsBtn").setAttribute("aria-label", t("settings_btn"));
-  $("settingsScrim").setAttribute("aria-label", t("settings_close"));
-  $("settingsTitle").textContent = t("settings_title");
-  if ($("settingsLangLabel")) $("settingsLangLabel").textContent = t("settings_lang");
-  $("settingsAccentLabel").textContent = t("accent.label");
   $("guideBtn").setAttribute("aria-label", t("guide.open"));
   $("guideTitle").textContent = t("guide.title");
   $("guideCloseBtn").textContent = t("guide.close");
   $("guideScrim").setAttribute("aria-label", t("guide.close"));
   $("backTopBtn").textContent = t("back_top");
-  $("langOpts").querySelectorAll(".langopt").forEach(b => {
-    b.textContent = t("lang_opts." + b.dataset.lang);
-    b.setAttribute("aria-pressed", b.dataset.lang === LANG ? "true" : "false");
-  });
-  $("accentOpts").querySelectorAll(".langopt").forEach(b => {
-    b.textContent = t("accent." + b.dataset.accent);
-    b.setAttribute("aria-pressed", b.dataset.accent === ACCENT ? "true" : "false");
-  });
+  updateLangSwitcherCurrent();
   $("modeOpts").querySelectorAll(".opt").forEach(b => {
     b.setAttribute("aria-pressed", b.dataset.mode === S.appMode ? "true" : "false");
   });
@@ -1626,11 +1606,6 @@ function syncProfileAccentUI(){
   box.querySelectorAll("button").forEach(b=>{
     b.setAttribute("aria-pressed",b.dataset.accent===ACCENT?"true":"false");
   });
-  if($("accentOpts")){
-    $("accentOpts").querySelectorAll(".langopt").forEach(b=>{
-      b.setAttribute("aria-pressed",b.dataset.accent===ACCENT?"true":"false");
-    });
-  }
 }
 function setAccent(accent) {
   if(document.body.classList.contains("in-play"))return; // session-fixed (Q-20)
@@ -1645,8 +1620,43 @@ function setAccent(accent) {
   savePrevSettings();
 }
 
-function openSettings(){show("settingsModal",true);}
-function closeSettings(){show("settingsModal",false);}
+/** Short codes shown on the language switcher chip (brief §6). */
+const LANG_CODE_MAP = {ja:"JA", en:"EN", ko:"KO", "zh-Hans":"簡", "zh-Hant":"繁", fil:"FIL"};
+
+/**
+ * Sync switcher chip label and menu aria-selected with LANG.
+ * @returns {void}
+ */
+function updateLangSwitcherCurrent(){
+  const cur = LANG_CODE_MAP[LANG] || "EN";
+  if ($("langSwitcherCurrent")) $("langSwitcherCurrent").textContent = cur;
+  const menu = $("langMenu");
+  if (!menu) return;
+  menu.querySelectorAll(".lang-menu-item").forEach(el => {
+    el.setAttribute("aria-selected", el.dataset.lang === LANG ? "true" : "false");
+  });
+}
+
+/**
+ * Open/close the language dropdown.
+ * @param {boolean} [open]
+ * @returns {void}
+ */
+function toggleLangMenu(open){
+  const menu = $("langMenu");
+  const btn = $("langSwitcher");
+  if (!menu || !btn) return;
+  const willOpen = typeof open === "boolean" ? open : menu.classList.contains("hidden");
+  if (willOpen) {
+    menu.classList.remove("hidden");
+    menu.removeAttribute("hidden");
+    btn.setAttribute("aria-expanded", "true");
+  } else {
+    menu.classList.add("hidden");
+    menu.setAttribute("hidden", "");
+    btn.setAttribute("aria-expanded", "false");
+  }
+}
 
 /* ---------- Phase V2: Hash routing ---------- */
 const VOCAB_VIEW_IDS = ["purposeStub","setup","cardDecode","cardEncode","reveal","summary","cardModeBStudy","cardModeBMcq","cardModeBDict"];
@@ -1706,7 +1716,6 @@ function showSetupOrPractice() {
 }
 
 function showVocabView(tab) {
-  closeSettings();
   closeGuide();
   // Remember visible practice/setup views so Back can restore without re-render
   if (!$("vocabPage") || $("vocabPage").classList.contains("hidden")) {
@@ -1882,7 +1891,6 @@ function showPurposeHome(){
   show("purposeStub",true);
   show("setup",false);
   $("backTopBtn").classList.add("hidden");
-  $("settingsBtn").classList.add("hidden"); // language moved to header (Phase 1-B)
   $("guideBtn").classList.remove("hidden");
   $("headerLang")&&$("headerLang").classList.remove("hidden");
   $("playLine").classList.add("hidden");
@@ -1900,7 +1908,6 @@ function showProfile3a(){
   show("purposeStub",false);
   show("setup",true);
   $("backTopBtn").classList.remove("hidden");
-  $("settingsBtn").classList.add("hidden");
   $("guideBtn").classList.remove("hidden");
   $("headerLang")&&$("headerLang").classList.remove("hidden");
   $("playLine").classList.add("hidden");
@@ -1923,7 +1930,6 @@ function setSetupVisible(on){
     show("setup",false);
     hidePracticePanels();
     $("backTopBtn").classList.remove("hidden");
-    $("settingsBtn").classList.add("hidden");
     $("guideBtn").classList.add("hidden");
     $("headerLang")&&$("headerLang").classList.add("hidden");
     $("playLine").classList.remove("hidden");
@@ -3641,8 +3647,9 @@ function renderSummary(){
 }
 
 /**
- * Close the topmost open modal on Escape (priority: Exit > Settings > Guide).
- * Exit Confirm maps to No (continue practice); Settings/Guide simply close.
+ * Close the topmost open modal on Escape (priority: Exit > Guide).
+ * Exit Confirm maps to No (continue practice); Guide simply closes.
+ * Also closes the language dropdown if open.
  * @param {KeyboardEvent} e
  * @returns {void}
  */
@@ -3651,18 +3658,15 @@ function onModalEscapeKey(e){
   if(!$("exitConfirmModal").classList.contains("hidden")){
     closeExitConfirm();
     e.preventDefault();
-  }else if(!$("settingsModal").classList.contains("hidden")){
-    closeSettings();
-    e.preventDefault();
   }else if(!$("guideModal").classList.contains("hidden")){
     closeGuide();
     e.preventDefault();
+  }else{
+    toggleLangMenu(false);
   }
 }
 document.addEventListener("keydown",onModalEscapeKey);
 
-$("settingsBtn").addEventListener("click",openSettings);
-$("settingsScrim").addEventListener("click",closeSettings);
 $("guideBtn").addEventListener("click",openGuide);
 $("guideScrim").addEventListener("click",closeGuide);
 $("guideCloseBtn").addEventListener("click",closeGuide);
@@ -3735,8 +3739,21 @@ function bindRevealCheckClicks(wrapId,itemFn,modeFn){
 }
 bindRevealCheckClicks("revealChecks",()=>S.cur,()=>currentCheckMode());
 bindRevealCheckClicks("mbSChecks",()=>S.cur,()=>"l");
-$("langOpts").querySelectorAll(".langopt").forEach(b=>b.addEventListener("click",()=>{setLang(b.dataset.lang);}));
-$("accentOpts").querySelectorAll(".langopt").forEach(b=>b.addEventListener("click",()=>setAccent(b.dataset.accent)));
+$("langSwitcher").addEventListener("click",(e)=>{
+  e.stopPropagation();
+  toggleLangMenu();
+});
+$("langMenu").querySelectorAll(".lang-menu-item").forEach(b=>{
+  b.addEventListener("click",(e)=>{
+    e.stopPropagation();
+    setLang(b.dataset.lang);
+    updateLangSwitcherCurrent();
+    toggleLangMenu(false);
+  });
+});
+document.addEventListener("click",(e)=>{
+  if($("headerLang") && !$("headerLang").contains(e.target)) toggleLangMenu(false);
+});
 initApp();
 </script>
 <script>

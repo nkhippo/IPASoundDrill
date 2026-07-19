@@ -118,10 +118,6 @@
   "load_fail": "読み込み失敗",
   "wordlist_fail": "単語リストの読み込みに失敗しました",
   "back_top": "TOPへ",
-  "settings_btn": "言語",
-  "settings_title": "設定",
-  "settings_lang": "言語",
-  "settings_close": "閉じる",
   "accent": {
     "label": "発音",
     "ga": "アメリカ英語",

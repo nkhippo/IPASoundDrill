@@ -118,10 +118,6 @@
   "load_fail": "Couldn't load. Please try again.",
   "wordlist_fail": "Couldn't load the word list. Refresh and try again.",
   "back_top": "Menu",
-  "settings_btn": "Language",
-  "settings_title": "Settings",
-  "settings_lang": "Language",
-  "settings_close": "Close",
   "accent": {
     "label": "Accent",
     "ga": "American (GA)",

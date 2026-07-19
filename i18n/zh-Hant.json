@@ -118,10 +118,6 @@
   "load_fail": "載入失敗",
   "wordlist_fail": "單字表載入失敗",
   "back_top": "首頁",
-  "settings_btn": "語言",
-  "settings_title": "設定",
-  "settings_lang": "語言",
-  "settings_close": "關閉",
   "accent": {
     "label": "口音",
     "ga": "美式",

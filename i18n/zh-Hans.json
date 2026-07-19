@@ -118,10 +118,6 @@
   "load_fail": "加载失败",
   "wordlist_fail": "词表加载失败",
   "back_top": "首页",
-  "settings_btn": "语言",
-  "settings_title": "设置",
-  "settings_lang": "语言",
-  "settings_close": "关闭",
   "accent": {
     "label": "口音",
     "ga": "美式",
