@@ -17,7 +17,7 @@ created: '2026-07-19'
 
 Phase 1-D-PR1 完了後、`2c`/`2d` Mood B + Reveal 共通要素一括 Mood B + Band Unlock 削除。
 
-**Issue 起草時と実態の乖離（Comment `5015928600` で裁定、全て A）:**
+**Issue 起草時と実態の乖離（Comment `5015927912` で裁定、全て A）:**
 
 | Issue 記述 | 実態 / 裁定後 |
 |------------|---------------|
@@ -87,7 +87,7 @@ docs/cursor/reports/cursor-implementation-report-phase-1-d-pr2-drill-2c-2d.md
 
 ## 実装過程での気づき
 
-Phase 1-D-PR2 の Issue 起草時に、Recon `screen-data-mapping.md` §6 と Phase 1-C 実装状態の乖離が 9 件検出された。特に (a) `2d` は `#cardDecode` 再利用が Track A 初期実装の設計であり、Phase 1-D-PR1 で `#cardDecode` を Mood B 化した際に `2d` の主要な変更が自動適用済みだった、(b) `mark:2d:*` UI は Phase 1-C `resolveDrillId` + Phase 1-D-PR1 の `#revealChecks` Mood B 化で自動的に UI 露出済み、(c) Study モードは Quiz 凍結下では Study-only フロー(Dict は Quiz 経路のみ)、(d) `MODEB_BANDS` は Band 名だが実態は CEFR allowlist で削除不可 — これらは Phase 1-C 実装や Track A 初期設計に関する「実装名レベルの実態」であり、Recon 概念記述だけでは把握できなかった。Cursor Phase 0 設計懸念点検フローで全 9 件を検出、Naoya 裁定 Comment `5015928600` で解釈確定、実装再開。Phase 1-C / 1-D-PR1 / 1-D-PR2 で計 26 件(8+9+9)の Phase 0 乖離検出、フローの確固たる再現性を実証した第 3 事例。
+Phase 1-D-PR2 の Issue 起草時に、Recon `screen-data-mapping.md` §6 と Phase 1-C 実装状態の乖離が 9 件検出された。特に (a) `2d` は `#cardDecode` 再利用が Track A 初期実装の設計であり、Phase 1-D-PR1 で `#cardDecode` を Mood B 化した際に `2d` の主要な変更が自動適用済みだった、(b) `mark:2d:*` UI は Phase 1-C `resolveDrillId` + Phase 1-D-PR1 の `#revealChecks` Mood B 化で自動的に UI 露出済み、(c) Study モードは Quiz 凍結下では Study-only フロー(Dict は Quiz 経路のみ)、(d) `MODEB_BANDS` は Band 名だが実態は CEFR allowlist で削除不可 — これらは Phase 1-C 実装や Track A 初期設計に関する「実装名レベルの実態」であり、Recon 概念記述だけでは把握できなかった。Cursor Phase 0 設計懸念点検フローで全 9 件を検出、Naoya 裁定 Comment `5015927912` で解釈確定、実装再開。Phase 1-C / 1-D-PR1 / 1-D-PR2 で計 26 件(8+9+9)の Phase 0 乖離検出、フローの確固たる再現性を実証した第 3 事例。
 
 ## 後続への影響
 
