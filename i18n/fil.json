@@ -222,7 +222,13 @@
   "you": "Ikaw: {a}",
   "cefr": {
     "pending": "CEFR?",
-    "pending_hint": "Wala pang CEFR"
+    "pending_hint": "Wala pang CEFR",
+    "tag": {
+      "a1": "CEFR A1",
+      "a2": "CEFR A2",
+      "b1": "CEFR B1",
+      "b2": "CEFR B2"
+    }
   },
   "checks": {
     "progress": "Progreso",
@@ -244,5 +250,17 @@
   "about": {
     "title": "このアプリについて",
     "placeholder": "英語の発音を IPA（発音記号）で確かめ、音から練り直す学習ツール。"
+  },
+  "mark": {
+    "aria": {
+      "step_0": "未マーク",
+      "step_1": "マーク 1/3",
+      "step_2": "マーク 2/3",
+      "step_3": "卒業（3/3）"
+    }
+  },
+  "progress": {
+    "meter_label": "{pct}%（{cur} / {total}）",
+    "meter_aria": "進捗 {pct}%、{cur} 問目 / 全 {total} 問"
   }
 }

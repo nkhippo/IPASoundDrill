@@ -222,7 +222,13 @@
   },
   "cefr": {
     "pending": "CEFR?",
-    "pending_hint": "CEFR level not assigned yet"
+    "pending_hint": "CEFR level not assigned yet",
+    "tag": {
+      "a1": "CEFR A1",
+      "a2": "CEFR A2",
+      "b1": "CEFR B1",
+      "b2": "CEFR B2"
+    }
   },
   "checks": {
     "progress": "Progress",
@@ -244,5 +250,17 @@
   "about": {
     "title": "About this app",
     "placeholder": "A learning tool to verify English pronunciation with IPA and rebuild it from sound."
+  },
+  "mark": {
+    "aria": {
+      "step_0": "Not marked",
+      "step_1": "Marked 1 of 3",
+      "step_2": "Marked 2 of 3",
+      "step_3": "Graduated (3 of 3)"
+    }
+  },
+  "progress": {
+    "meter_label": "{pct}% ({cur} / {total})",
+    "meter_aria": "Progress {pct} percent, question {cur} of {total}"
   }
 }
