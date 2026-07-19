@@ -11,7 +11,7 @@ created: '2026-07-20'
 ## 関連 Issue / PR
 
 - Issue: #91
-- PR: （作成時に記入）
+- PR: #92
 
 ## Issue 背景（Issue 本文から要約 + Phase 0 裁定）
 
