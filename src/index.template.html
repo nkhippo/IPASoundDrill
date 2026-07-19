@@ -72,6 +72,12 @@
     /* Shadow (2) */
     --shadow-card: 0 14px 44px rgba(0, 0, 0, .10);
     --shadow-toggle-active: 0 1px 2px rgba(0, 0, 0, .06);
+
+    /* Font family (Phase 1-B / Rv #5015013634) */
+    --font-ui: "Noto Sans JP", "Noto Sans KR", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --font-serif: "Noto Serif JP", "Charis SIL", serif;
+    --font-ipa: "Charis SIL", "Doulos SIL", "Gentium Plus", serif;
+    --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
   }
 
   *{box-sizing:border-box}
@@ -197,7 +203,7 @@
   /* IPA keyboard (encode mode) */
   .build{border:1.5px solid var(--legacy-hair);border-radius:11px;background:#fff;min-height:58px;display:flex;align-items:center;justify-content:center;padding:10px 14px;margin:4px 0 12px}
   .build .ipa{font-family:var(--legacy-ipa);font-size:30px;letter-spacing:1px;min-height:36px}
-  .build .ph{color:var(--legacy-faint);font-size:14px;font-family:var(--legacy-ui)}
+  .build .ph{color:var(--legacy-faint);font-size:14px;font-family:var(--font-ui)}
   .kbd{display:flex;flex-direction:column;gap:10px}
   .krow{}
   .kglabel{font-family:var(--legacy-mono);font-size:9.5px;color:var(--legacy-faint);text-transform:uppercase;letter-spacing:.12em;margin-bottom:5px}
@@ -434,20 +440,35 @@
   .site-footer .feedback-btn,.site-footer .x-link,.site-footer .legal-link{font-family:var(--legacy-mono);font-size:11px;font-weight:600;letter-spacing:.04em;color:var(--legacy-muted);text-decoration:none;border:1px solid var(--legacy-hair);background:#fff;border-radius:999px;padding:7px 14px;cursor:pointer;line-height:1.2}
   .site-footer .feedback-btn:hover,.site-footer .x-link:hover,.site-footer .legal-link:hover{color:var(--legacy-ink);border-color:var(--legacy-faint)}
   .site-footer .feedback-btn:focus-visible,.site-footer .x-link:focus-visible,.site-footer .legal-link:focus-visible{outline:2px solid var(--legacy-signal);outline-offset:2px}
-  body.in-play .site-footer{display:none}
+  body.in-play .site-footer,body.in-play .about-block{display:none}
 
-  /* Phase 1-C: Mood B components (visual-tokens §4; Progress meter deferred to 1-D) */
-  .btn-primary{background:var(--signal);color:#fff;border:none;border-radius:var(--radius-button);padding:12px 24px;font-size:14px;font-weight:700;cursor:pointer;font-family:var(--legacy-ui)}
+  /* Phase 1-C/B: Mood B components (visual-tokens §4; Progress meter deferred to 1-D) */
+  .btn-primary{background:var(--signal);color:#fff;border:none;border-radius:var(--radius-button);padding:12px 24px;font-size:14px;font-weight:700;cursor:pointer;font-family:var(--font-ui)}
   .btn-primary:disabled{opacity:.45;cursor:not-allowed}
-  .btn-secondary{background:var(--panel);color:var(--ink);border:1px solid var(--hair);border-radius:var(--radius-button);padding:11px 22px;font-size:14px;font-weight:600;cursor:pointer;font-family:var(--legacy-ui)}
-  .btn-accent-link{background:transparent;color:var(--accent);border:none;padding:8px 10px;font-size:14px;font-weight:600;cursor:pointer;font-family:var(--legacy-ui)}
-  .purpose-card{border:1px solid var(--hair);background:var(--panel);border-radius:var(--radius-card);padding:12px 14px;font-size:13px;color:var(--muted);text-align:left;cursor:pointer;font-family:var(--legacy-ui);width:100%}
-  .purpose-card .purpose-id{font-family:var(--legacy-mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--faint);margin-bottom:4px}
-  .purpose-card .purpose-title{font-weight:600;color:var(--ink);font-size:14px}
+  .btn-secondary{background:var(--panel);color:var(--ink);border:1px solid var(--hair);border-radius:var(--radius-button);padding:11px 22px;font-size:14px;font-weight:600;cursor:pointer;font-family:var(--font-ui)}
+  .btn-accent-link{background:transparent;color:var(--accent);border:none;padding:8px 10px;font-size:14px;font-weight:600;cursor:pointer;font-family:var(--font-ui)}
+  .purpose-card{border:1px solid var(--hair);background:var(--panel);border-radius:var(--radius-card);padding:12px 14px;font-size:13px;color:var(--muted);text-align:left;cursor:pointer;font-family:var(--font-ui);width:100%}
+  .purpose-card .purpose-id{font-family:var(--font-mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--faint);margin-bottom:4px}
+  .purpose-card .purpose-title{font-weight:600;color:var(--ink);font-size:13px;line-height:1.35}
   .purpose-card[aria-pressed="true"],.purpose-card--selected{border:1px solid var(--signal);background:var(--signal-soft);color:var(--ink);font-weight:600}
-  .purpose-grid{display:grid;gap:10px;margin:0 0 8px}
-  .purpose-stub-lead{font-family:var(--legacy-mono);font-size:11px;color:var(--muted);letter-spacing:.04em;margin:0 0 14px}
-  /* Phase 1-B will replace #purposeStub — do not treat as final top page */
+  .purpose-grid{display:grid;gap:10px;margin:0}
+  /* Phase 1-B top page (1a) */
+  body.top-home{background:var(--paper);color:var(--ink)}
+  body.top-home .brand .name{color:var(--ink)}
+  body.top-home .brand .mark{color:var(--signal);font-family:var(--font-ipa)}
+  body.top-home .topbtn{border-color:var(--hair);color:var(--muted);background:var(--panel)}
+  body.top-home .topbtn:hover{border-color:var(--signal);color:var(--signal)}
+  .header-lang{display:flex;flex-wrap:wrap;justify-content:flex-end;max-width:min(100%,280px)}
+  .header-lang .langopts{display:flex;flex-wrap:wrap;gap:4px;justify-content:flex-end}
+  .header-lang .langopt{border:1px solid var(--hair);background:var(--panel);border-radius:6px;padding:3px 7px;font-family:var(--font-mono);font-size:9px;font-weight:700;cursor:pointer;color:var(--muted)}
+  .header-lang .langopt[aria-pressed="true"]{border-color:var(--signal);color:var(--signal);background:var(--signal-soft)}
+  #purposeStub.panel{background:var(--panel);border:1px solid var(--hair);border-radius:var(--radius-card);box-shadow:var(--shadow-card);padding:var(--space-4)}
+  .top-tagline{font-family:var(--font-serif);font-size:clamp(22px,5.5vw,28px);font-weight:700;color:var(--ink);letter-spacing:.02em;line-height:1.35;margin:0 0 var(--space-4);text-align:center}
+  .about-block{margin-top:18px;padding-top:14px;border-top:1px solid var(--hair);text-align:center;max-width:600px;margin-left:auto;margin-right:auto}
+  .about-block h2{font-family:var(--font-serif);font-size:13px;font-weight:700;color:var(--ink);margin:0 0 6px}
+  .about-block p{font-family:var(--font-ui);font-size:12px;color:var(--muted);margin:0;line-height:1.5}
+  body.top-home .site-footer .feedback-btn,body.top-home .site-footer .x-link,body.top-home .site-footer .legal-link{font-family:var(--font-mono);color:var(--muted);border-color:var(--hair);background:var(--panel)}
+  body.top-home .site-footer .feedback-btn:hover,body.top-home .site-footer .x-link:hover,body.top-home .site-footer .legal-link:hover{color:var(--ink);border-color:var(--faint)}
   #setup.profile-3a{background:var(--panel);border-color:var(--hair);color:var(--ink)}
   #setup.profile-3a .flabel{color:var(--faint)}
   #setup.profile-3a .opt{background:var(--panel);border-color:var(--hair);color:var(--ink)}
@@ -457,8 +478,8 @@
   #setup.profile-3a .setup-adv-toggle{border-color:var(--hair);background:var(--paper);color:var(--muted)}
   #setup.profile-3a .setup-adv-toggle:hover{border-color:var(--signal);background:var(--signal-soft);color:var(--signal)}
   #setup.profile-3a .countnote{color:var(--muted)}
-  #setup.profile-3a .start,#setup.profile-3a .btn-primary.start{background:var(--signal);color:#fff;border:none;border-radius:var(--radius-button);padding:12px 24px;font-size:14px;font-weight:700;width:100%;margin-top:8px;cursor:pointer}
-  #setup.profile-3a .start:disabled{opacity:.45;cursor:not-allowed}
+  #setup.profile-3a .btn-primary.start{width:100%;margin-top:8px;min-height:48px;padding:12px 24px;font-size:14px;box-shadow:none}
+  #setup.profile-3a .btn-primary.start:disabled{opacity:.45;cursor:not-allowed}
   #setup.profile-3a .toggle-ga-rp{display:inline-flex;border:1px solid var(--hair);background:var(--paper);border-radius:var(--radius-toggle);padding:3px;gap:0}
   #setup.profile-3a .toggle-ga-rp button{border:none;background:transparent;color:var(--muted);padding:6px 14px;font-size:13px;font-weight:600;cursor:pointer;border-radius:var(--radius-toggle-active);font-family:var(--legacy-ui)}
   #setup.profile-3a .toggle-ga-rp button[aria-pressed="true"]{background:var(--panel);color:var(--signal);font-weight:700;box-shadow:var(--shadow-toggle-active)}
@@ -466,7 +487,7 @@
 
 </style>
 </head>
-<body>
+<body class="top-home">
 <div class="wrap">
   <div class="topbar">
     <button class="brand" id="brandBtn" type="button" aria-label="Back to top">
@@ -474,6 +495,16 @@
       <div class="name" id="brandName">IPA Sound Drill</div>
     </button>
     <div class="topbar-actions">
+      <div class="header-lang" id="headerLang">
+        <div class="langopts" id="langOpts" role="group" aria-label="Language">
+          <button class="langopt" type="button" data-lang="en" aria-pressed="true">EN</button>
+          <button class="langopt" type="button" data-lang="ja" aria-pressed="false">JA</button>
+          <button class="langopt" type="button" data-lang="zh-Hant" aria-pressed="false">繁</button>
+          <button class="langopt" type="button" data-lang="zh-Hans" aria-pressed="false">简</button>
+          <button class="langopt" type="button" data-lang="ko" aria-pressed="false">KO</button>
+          <button class="langopt" type="button" data-lang="fil" aria-pressed="false">FIL</button>
+        </div>
+      </div>
       <div class="topbar-btns">
         <button class="topbtn vocab" id="vocabBtn" type="button" aria-label="Vocabulary">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -484,7 +515,7 @@
           </svg>
         </button>
         <button class="topbtn guide" id="guideBtn" type="button" aria-label="Guide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/><path d="M8 8h2"/><path d="M8 12h2"/><path d="M8 16h2"/></svg></button>
-        <button class="topbtn settings" id="settingsBtn" type="button" aria-label="Settings"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></button>
+        <button class="topbtn settings hidden" id="settingsBtn" type="button" aria-label="Settings" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></button>
       </div>
       <button class="backtop hidden" id="backTopBtn" type="button">Menu</button>
     </div>
@@ -494,14 +525,14 @@
   </div>
   <p class="audio-hint" id="audioHint" role="status" aria-live="polite">Tap Listen to enable sound</p>
 
-  <!-- PURPOSE STUB (Phase 1-C minimal; replace in Phase 1-B top page) -->
-  <section id="purposeStub" class="panel" data-frame="1a-stub">
-    <p class="purpose-stub-lead" id="purposeStubLead">Choose a drill, then set your profile</p>
+  <!-- TOP PAGE 1a (Phase 1-B) — was #purposeStub in Phase 1-C -->
+  <section id="purposeStub" class="panel" data-frame="1a">
+    <h1 class="top-tagline" id="topTagline">音を、美しく。</h1>
     <div class="purpose-grid" id="purposeGrid" role="group" aria-label="Purpose cards">
-      <button type="button" class="purpose-card" data-drill="2a" aria-pressed="false" id="purpose2a"><div class="purpose-id">2a</div><div class="purpose-title" id="purpose2aT">Check the sound (IPA → word)</div></button>
-      <button type="button" class="purpose-card" data-drill="2b" aria-pressed="false" id="purpose2b"><div class="purpose-id">2b</div><div class="purpose-title" id="purpose2bT">Write from spelling (word → IPA)</div></button>
-      <button type="button" class="purpose-card" data-drill="2c" aria-pressed="false" id="purpose2c"><div class="purpose-id">2c</div><div class="purpose-title" id="purpose2cT">Learn words from sound</div></button>
-      <button type="button" class="purpose-card" data-drill="2d" aria-pressed="false" id="purpose2d"><div class="purpose-id">2d</div><div class="purpose-title" id="purpose2dT">Connected speech &amp; weak forms</div></button>
+      <button type="button" class="purpose-card" data-drill="2a" aria-pressed="false" id="purpose2a"><div class="purpose-id">2a</div><div class="purpose-title" id="purpose2aT">音の発音を確かめる</div></button>
+      <button type="button" class="purpose-card" data-drill="2b" aria-pressed="false" id="purpose2b"><div class="purpose-id">2b</div><div class="purpose-title" id="purpose2bT">発音から書いてみる</div></button>
+      <button type="button" class="purpose-card" data-drill="2c" aria-pressed="false" id="purpose2c"><div class="purpose-id">2c</div><div class="purpose-title" id="purpose2cT">音から単語を覚える</div></button>
+      <button type="button" class="purpose-card" data-drill="2d" aria-pressed="false" id="purpose2d"><div class="purpose-id">2d</div><div class="purpose-title" id="purpose2dT">連結する音に慣れる</div></button>
     </div>
   </section>
 
@@ -765,6 +796,11 @@
       aria-label="Follow on X"
     >X</a>
   </footer>
+  <!-- 3h About (DOM always-on for crawlability; Phase 1-E expands copy) -->
+  <aside class="about-block" id="aboutBlock" data-frame="3h">
+    <h2 id="aboutTitle">このアプリについて</h2>
+    <p id="aboutPlaceholder">英語の発音を IPA（発音記号）で確かめ、音から練り直す学習ツール。</p>
+  </aside>
 </div>
 <div class="reflect-dock hidden" id="reflectDock">
   <button class="reflect-btn" id="reflectDockBtn" type="button"></button>
@@ -774,17 +810,6 @@
   <button class="modal-scrim" id="settingsScrim" type="button" aria-label="Close"></button>
   <div class="modal-card panel">
     <div class="modal-head"><h2 class="modal-title" id="settingsTitle">Settings</h2></div>
-    <div class="settings-section">
-      <div class="modal-sub" id="settingsLangLabel">Language</div>
-      <div class="langopts" id="langOpts">
-        <button class="langopt" type="button" data-lang="en" aria-pressed="true">English</button>
-        <button class="langopt" type="button" data-lang="ja" aria-pressed="false">日本語</button>
-        <button class="langopt" type="button" data-lang="zh-Hant" aria-pressed="false">繁體</button>
-        <button class="langopt" type="button" data-lang="zh-Hans" aria-pressed="false">简体</button>
-        <button class="langopt" type="button" data-lang="ko" aria-pressed="false">한국어</button>
-        <button class="langopt" type="button" data-lang="fil" aria-pressed="false">Filipino</button>
-      </div>
-    </div>
     <div class="settings-section hidden" id="settingsAccentSection" hidden>
       <div class="modal-sub" id="settingsAccentLabel">Accent</div>
       <div class="langopts" id="accentOpts">
@@ -1464,6 +1489,13 @@ function applyI18n() {
   $("dirDecodeD").textContent = t("dir.decode_d");
   $("dirEncodeT").innerHTML = t("dir.encode_t");
   $("dirEncodeD").textContent = t("dir.encode_d");
+  if ($("topTagline")) $("topTagline").textContent = t("top.tagline");
+  ["2a","2b","2c","2d"].forEach(id=>{
+    const el=$("purpose"+id+"T");
+    if(el) el.textContent = t("drill.title."+id);
+  });
+  if ($("aboutTitle")) $("aboutTitle").textContent = t("about.title");
+  if ($("aboutPlaceholder")) $("aboutPlaceholder").textContent = t("about.placeholder");
   $("flabelCefr").textContent = t("lvl.label");
   if ($("flabelAccent")) $("flabelAccent").textContent = t("accent.label");
   if ($("profileAccentGa")) $("profileAccentGa").textContent = t("accent.ga");
@@ -1517,7 +1549,7 @@ function applyI18n() {
   $("settingsBtn").setAttribute("aria-label", t("settings_btn"));
   $("settingsScrim").setAttribute("aria-label", t("settings_close"));
   $("settingsTitle").textContent = t("settings_title");
-  $("settingsLangLabel").textContent = t("settings_lang");
+  if ($("settingsLangLabel")) $("settingsLangLabel").textContent = t("settings_lang");
   $("settingsAccentLabel").textContent = t("accent.label");
   $("guideBtn").setAttribute("aria-label", t("guide.open"));
   $("guideTitle").textContent = t("guide.title");
@@ -1850,11 +1882,13 @@ function showPurposeHome(){
   show("purposeStub",true);
   show("setup",false);
   $("backTopBtn").classList.add("hidden");
-  $("settingsBtn").classList.remove("hidden");
+  $("settingsBtn").classList.add("hidden"); // language moved to header (Phase 1-B)
   $("guideBtn").classList.remove("hidden");
+  $("headerLang")&&$("headerLang").classList.remove("hidden");
   $("playLine").classList.add("hidden");
   $("reflectDock").classList.add("hidden");
   document.body.classList.remove("in-play");
+  document.body.classList.add("top-home");
   if(currentAudio){currentAudio.pause();currentAudio=null;}
   clearAudioTapPrompt();
   unlockInputScroll();
@@ -1866,11 +1900,13 @@ function showProfile3a(){
   show("purposeStub",false);
   show("setup",true);
   $("backTopBtn").classList.remove("hidden");
-  $("settingsBtn").classList.remove("hidden");
+  $("settingsBtn").classList.add("hidden");
   $("guideBtn").classList.remove("hidden");
+  $("headerLang")&&$("headerLang").classList.remove("hidden");
   $("playLine").classList.add("hidden");
   $("reflectDock").classList.add("hidden");
   document.body.classList.remove("in-play");
+  document.body.classList.remove("top-home");
   if(currentAudio){currentAudio.pause();currentAudio=null;}
   clearAudioTapPrompt();
   unlockInputScroll();
@@ -1889,9 +1925,11 @@ function setSetupVisible(on){
     $("backTopBtn").classList.remove("hidden");
     $("settingsBtn").classList.add("hidden");
     $("guideBtn").classList.add("hidden");
+    $("headerLang")&&$("headerLang").classList.add("hidden");
     $("playLine").classList.remove("hidden");
     $("reflectDock").classList.add("hidden");
     document.body.classList.add("in-play");
+    document.body.classList.remove("top-home");
     updatePlayCrumb();
   }
 }
@@ -2088,7 +2126,9 @@ function savePrevSettings(){
   };
   try{localStorage.setItem(LS_PREV_SETTINGS_KEY,JSON.stringify(payload));}catch(e){}
 }
-function applyPrevSettings(ps){
+/** @param {object|null} ps @param {{preserveDrill?:boolean}=} opts */
+function applyPrevSettings(ps, opts){
+  opts=opts||{};
   if(!ps||typeof ps!=="object")return;
   if(ps.accent==="ga"||ps.accent==="rp"){
     ACCENT=ps.accent;
@@ -2102,7 +2142,7 @@ function applyPrevSettings(ps){
   if(typeof ps.grp==="string")S.grp=ps.grp;
   if(typeof ps.csLevel==="string")S.csLevel=ps.csLevel;
   if(typeof ps.csFilter==="string")S.csFilter=ps.csFilter;
-  if(typeof ps.lastDrill==="string")S.lastDrill=ps.lastDrill;
+  if(!opts.preserveDrill && typeof ps.lastDrill==="string")S.lastDrill=ps.lastDrill;
   setSinglePill("focusPills","focus",S.focus);
   setSinglePill("regOpts","reg",S.reg);
   setSinglePill("grpPills","grp",S.grp);
@@ -3210,8 +3250,7 @@ function openExitConfirm(onYes){
 $("purposeGrid").querySelectorAll(".purpose-card").forEach(btn=>{
   btn.addEventListener("click",()=>{
     applyDrillId(btn.dataset.drill);
-    applyPrevSettings(loadPrevSettings()); // restore filters; keep chosen drill
-    applyDrillId(btn.dataset.drill); // re-assert drill after preset
+    applyPrevSettings(loadPrevSettings(), {preserveDrill: true});
     savePrevSettings();
     showProfile3a();
   });
@@ -3696,7 +3735,7 @@ function bindRevealCheckClicks(wrapId,itemFn,modeFn){
 }
 bindRevealCheckClicks("revealChecks",()=>S.cur,()=>currentCheckMode());
 bindRevealCheckClicks("mbSChecks",()=>S.cur,()=>"l");
-$("langOpts").querySelectorAll(".langopt").forEach(b=>b.addEventListener("click",()=>{setLang(b.dataset.lang);closeSettings();}));
+$("langOpts").querySelectorAll(".langopt").forEach(b=>b.addEventListener("click",()=>{setLang(b.dataset.lang);}));
 $("accentOpts").querySelectorAll(".langopt").forEach(b=>b.addEventListener("click",()=>setAccent(b.dataset.accent)));
 initApp();
 </script>

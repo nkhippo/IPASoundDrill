@@ -75,9 +75,14 @@ updated: '2026-07-18'
 ### `1a` トップページ
 
 - **役割:** エントリーポイント。目的 4 カードで即開始
-- **言語 variant:** `1a-ja` / `1a-en` / `1a-ko`（Phase 1-B は JA、他は Phase 1-G）
+- **言語 variant:** `1a-ja` / `1a-en` / `1a-ko` 等（Phase 1-B で全 6 言語 fallback。本翻訳は Phase 1-G）
 - **デバイス variant:** モバイル 375px (base) / `1a-pc` は Phase 1-H
-- **情報階層:** ヘッダー（言語切替 + ガイドアイコン） / タグライン「音を、美しく。」 / 目的 4 カード / フッター 3 リンク（`3h` 含む）
+- **情報階層（Phase 1-B 実装）:**
+  - ヘッダー: 言語切替（`#langOpts` ヘッダー右）+ ガイドアイコン（現行 guide 暫定、Phase 1-F で `3g` 差し替え）+ 語彙ボタン
+  - Hero: タグラインのみ（`top.tagline` / `--font-serif`）。サブコピー・独立 CTA なし
+  - 目的 4 カード（Mood B `.purpose-card`、`drill.title.2a`–`2d`）→ `applyDrillId` → `3a`
+  - フッター: Feedback / Terms / Privacy / X + `3h`「このアプリについて」DOM 常時（`about.placeholder`）
+- Font family トークン: `--font-ui` / `--font-serif` / `--font-ipa` / `--font-mono`（詳細は `visual-tokens.md`）
 
 ### `3a` 学習プロフィール
 
@@ -120,7 +125,7 @@ updated: '2026-07-18'
 
 Phase 1 UI（Mood B / Warm Contemporary）の視覚トークンは `:root` に定義し、既存画面は `--legacy-*` 経由で見た目を維持する。トークンの具体値・コンポーネント CSS・`:root` コピペ用ブロックは本節に書かず、以下を正とする。
 
-1. 実装用 snapshot: [`docs/design/phase-1/visual-tokens.md`](design/phase-1/visual-tokens.md)
+1. 実装用 snapshot: [`docs/design/phase-1/visual-tokens.md`](design/phase-1/visual-tokens.md)（色・space・radius・shadow + **Font family** + コンポーネント）
 2. CSS 命名・legacy 運用（Category A）: [`docs/CSS-CONVENTIONS.md`](CSS-CONVENTIONS.md)
 3. 意匠判断の背景（Vault source of truth）: `30_projects/IPASoundDrill/design/phase-1/design-tokens.md`
 

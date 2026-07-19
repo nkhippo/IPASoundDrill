@@ -233,5 +233,20 @@
     "mode_d": "IPA → word",
     "mode_e": "word → IPA",
     "mode_l": "Listen"
+  },
+  "top": {
+    "tagline": "Retune your English. From sound up."
+  },
+  "drill": {
+    "title": {
+      "2a": "Check the sound",
+      "2b": "Write from pronunciation",
+      "2c": "Learn words from sound",
+      "2d": "Get used to connected sounds"
+    }
+  },
+  "about": {
+    "title": "About this app",
+    "placeholder": "A learning tool to verify English pronunciation with IPA and rebuild it from sound."
   }
 }
