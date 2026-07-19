@@ -256,7 +256,7 @@ Escape 判断は Q-9-A 確定（2026-07-16）。
 
 **Phase 1 仕様（Q-20-δ）:** 目的カード選択後に **毎セッション必ず `3a` を通過**。LocalStorage で前回設定をプリセット（`prev_settings_v1` 相当。詳細は Phase 1-0-b）。ユーザーは「そのまま『はじめる』」または変更後開始。
 
-集約するパラメータ（12 パラメータの最終リストは Phase 1-0-b）: アクセント、CEFR 複数選択、目的別プリセット、旧「詳しい設定」相当。
+集約するパラメータ（Setup 11 項目（Recon `screen-data-mapping.md` § 1 に確定）+ Onboarding）: アクセント、CEFR 複数選択（A1–B2）、目的別プリセット、旧「詳しい設定」相当。
 
 **現行 DOM（移行前）:** `#setup` に Learning mode / Practice / CEFR ピル / 詳しい設定が同居。
 
