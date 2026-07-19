@@ -198,10 +198,6 @@
     "alt_same": "pareho"
   },
   "see_answer": "Tingnan ang sagot",
-  "settings_btn": "Wika",
-  "settings_close": "Isara",
-  "settings_lang": "Wika",
-  "settings_title": "Mga Setting",
   "start": "Simulan",
   "summary": {
     "line": "{c} / {t} tama · {m} babalikan",
@@ -233,5 +229,20 @@
     "mode_d": "IPA → salita",
     "mode_e": "salita → IPA",
     "mode_l": "Makinig"
+  },
+  "top": {
+    "tagline": "音を、美しく。"
+  },
+  "drill": {
+    "title": {
+      "2a": "音の発音を確かめる",
+      "2b": "発音から書いてみる",
+      "2c": "音から単語を覚える",
+      "2d": "連結する音に慣れる"
+    }
+  },
+  "about": {
+    "title": "このアプリについて",
+    "placeholder": "英語の発音を IPA（発音記号）で確かめ、音から練り直す学習ツール。"
   }
 }

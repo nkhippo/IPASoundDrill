@@ -118,10 +118,6 @@
   "load_fail": "加载失败",
   "wordlist_fail": "词表加载失败",
   "back_top": "首页",
-  "settings_btn": "语言",
-  "settings_title": "设置",
-  "settings_lang": "语言",
-  "settings_close": "关闭",
   "accent": {
     "label": "口音",
     "ga": "美式",
@@ -233,5 +229,20 @@
     "mode_d": "IPA → 单词",
     "mode_e": "单词 → IPA",
     "mode_l": "听力"
+  },
+  "top": {
+    "tagline": "音を、美しく。"
+  },
+  "drill": {
+    "title": {
+      "2a": "音の発音を確かめる",
+      "2b": "発音から書いてみる",
+      "2c": "音から単語を覚える",
+      "2d": "連結する音に慣れる"
+    }
+  },
+  "about": {
+    "title": "このアプリについて",
+    "placeholder": "英語の発音を IPA（発音記号）で確かめ、音から練り直す学習ツール。"
   }
 }
