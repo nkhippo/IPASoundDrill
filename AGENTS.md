@@ -128,7 +128,9 @@ Codex の内蔵 GitHub App で PR 作成 API が `Resource not accessible by int
 ### Codex
 
 - ChatGPT Plus / Pro の使用枠は 5 時間ウィンドウで管理 (`/status` で残枠確認)
-- MCP: 利用可能なら Vault MCP や IPASoundDrill GitHub MCP を活用し、過去の意思決定・handoff を参照してよい
+- **GitHub 操作は Codex 提供のネイティブ GitHub コネクタ (`mcp__codex_apps__github`) を使う**。主なツール: Issue = `_create_issue` / `_update_issue` / `_add_issue_labels` / `_remove_issue_label` / `_add_comment_to_issue`、PR = `_create_pull_request` / `_get_pr_info` / `_get_pr_diff` / `_list_pr_changed_filenames` / `_merge_pull_request` / `_add_review_to_pr`、ファイル = `_fetch_file`（読み取り。`get_file_content` は無い）/ `_create_file` / `_update_file` / `_delete_file` / `_create_branch`。ツールは遅延公開方式のため、必要に応じて追加ツールが見つかる
+- **自前の GitHubApp-MCP や旧 Railway コネクタ `IPASoundDrill GitHub` は Codex では使わない**（`IPASoundDrill GitHub` は Claude 用・deprecated。Phase F で削除予定）
+- 過去の意思決定・handoff（`nkhippo/Vault`）を参照する場合も、**Codex ネイティブコネクタの `_fetch_file` で Vault の md を直読する（Vault MCP は使わない）**
 - クラウドサンドボックスの隔離環境で作業するため、ローカル環境依存の副作用を残さない
 
 ### Cursor
