@@ -225,7 +225,7 @@ diff /tmp/issue-<N>/before-all.md5 /tmp/issue-<N>/after-all.md5
 - 新規ファイル追加（ディレクトリツリー、Runtime data contract の該当セクション）
 - ファイル削除・リネーム
 - ディレクトリ構造変更
-- Runtime infrastructure 変更（Vercel、Namecheap、Railway MCP、GitHub Automation 等）
+- Runtime infrastructure 変更（Vercel、Namecheap、GitHub MCP（Cloudflare Workers）、GitHub Automation 等）
 - i18n の新規キー追加（i18n schema セクション）
 - index.html の新規主要関数追加（JS map セクション）
 

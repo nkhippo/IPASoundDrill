@@ -20,14 +20,14 @@ created: '2026-07-11'
 - **公開 URL**: https://ipasounddrill.app （Vercel + カスタムドメイン）
 - **内容**: IPA（国際音声記号）を軸に、音から英語の正しい発音を再構築するトレーニングツール
 - **ローンチ方針**: 日付を固定せず、Phase 単位で進行する（`docs/LAUNCH-CHECKLIST.md` 参照）。作業完了が早ければ、その分早くローンチする。
-- **claude.ai MCP コネクタ**: `IPASoundDrill GitHub`（URL: `https://ipasounddrill-production.up.railway.app/mcp`、コード: `nkhippo/ipasounddrill-mcp`。ThinkGrindAi 用コネクタとは別）
+- **claude.ai MCP コネクタ**: `GitHubApp MCP`（unified、URL: `https://githubapp-mcp.nkhippo.workers.dev/sse`）。shared PAT で全個人アプリのリポに到達するため、本プロジェクト相談中は対象リポ `nkhippo/IPASoundDrill` のみを操作する。旧 per-app コネクタ `IPASoundDrill GitHub`（Railway、`https://ipasounddrill-production.up.railway.app/mcp`、コード: `nkhippo/ipasounddrill-mcp`）は Phase F まで存置するが **deprecated**
 
 ---
 
 ## 起動時の必須動作
 
 1. Project Knowledge に添付されている `HANDOFF-*.md`（管制 or 該当 Chat 用）を確認
-2. MCP コネクタ `IPASoundDrill GitHub` 経由で `CLAUDE.md` を取得
+2. MCP コネクタ `GitHubApp MCP` 経由で `CLAUDE.md` を取得（対象リポ `nkhippo/IPASoundDrill`）
 3. MCP コネクタ経由で `docs/REPOSITORY-STRUCTURE.md` を取得
 4. MCP コネクタ経由で `docs/LAUNCH-CHECKLIST.md` を取得
 5. MCP コネクタ経由で `docs/DOCUMENT-MAP.md` を取得
