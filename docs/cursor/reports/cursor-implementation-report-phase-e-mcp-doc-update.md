@@ -3,7 +3,7 @@
 ## 関連 Issue / PR
 
 - Issue: #104
-- PR: （作成後に追記）
+- PR: #105（draft）
 
 ## Issue 背景（Issue 本文から要約）
 
