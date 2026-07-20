@@ -403,7 +403,7 @@ Repository Settings > Secrets and variables > Actions:
 - **Tally**: https://tally.so/r/xX1axk
 - **Namecheap**: https://ap.www.namecheap.com/domains/list/
 - **GAS**: https://script.google.com/（Naoya アカウント）
-- **Railway (MCP service)**: https://ipasounddrill-production.up.railway.app
-- **Railway (MCP endpoint)**: https://ipasounddrill-production.up.railway.app/mcp
-- **MCP コードリポ**: https://github.com/nkhippo/ipasounddrill-mcp
-- **claude.ai コネクタ名**: `IPASoundDrill GitHub`
+- **MCP (Cloudflare Workers)**: https://githubapp-mcp.nkhippo.workers.dev （SSE: `/sse`, MCP: `/mcp`）
+- **MCP Worker リポ**: https://github.com/nkhippo/GitHubApp-MCP
+- **claude.ai コネクタ名**: `GitHubApp MCP`（unified、shared PAT で全個人アプリ到達。本リポは対象リポの一つ）
+- **旧 Railway（deprecated, Phase F まで存置）**: service `https://ipasounddrill-production.up.railway.app` / endpoint `/mcp` / コード `nkhippo/ipasounddrill-mcp` / コネクタ `IPASoundDrill GitHub`

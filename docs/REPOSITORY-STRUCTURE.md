@@ -134,7 +134,7 @@ ipasounddrill/
 | Build system | Node.js | `scripts/build-i18n-html.js`（6 言語 HTML 生成） |
 | Middleware | Vercel Routing Middleware | `middleware.ts`（Accept-Language 判定、C1 fallback 時は不使用） |
 | Vercel Build Command | `node scripts/build-i18n-html.js` | `vercel.json` / Dashboard Build & Development Settings |
-| MCP server | Railway | Repo: `nkhippo/ipasounddrill-mcp`, Endpoint: `https://ipasounddrill-production.up.railway.app/mcp`, Health: `/health`, Connector: `IPASoundDrill GitHub` |
+| MCP server | Cloudflare Workers | Worker: `githubapp-mcp`（unified）, Endpoint: `https://githubapp-mcp.nkhippo.workers.dev/sse`, Connector: `GitHubApp MCP`（shared PAT で全個人アプリ到達、本リポは対象リポの一つ）。旧: Railway `nkhippo/ipasounddrill-mcp`（`https://ipasounddrill-production.up.railway.app/mcp`, Connector `IPASoundDrill GitHub`）は Phase F まで存置=deprecated |
 | GitHub Automation | GitHub Actions | Workflows: `trigger-cursor-on-ready.yml`, `approval.yml`, `label-pr-needs-review.yml` |
 | Cursor Automation | Cursor Cloud | Webhook: active, Cloud Agent: 見送り中（`resource_exhausted`） |
 | Secrets | GitHub repo | `CURSOR_AUTOMATION_WEBHOOK_URL`, `CURSOR_AUTOMATION_WEBHOOK_TOKEN` |
