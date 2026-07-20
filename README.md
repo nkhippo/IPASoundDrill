@@ -63,3 +63,5 @@ python3 -m http.server 8080
 ```
 
 `file://` では JSON の読み込みがブロックされるため、ローカルサーバーが必要です。
+
+Codex integration test.
