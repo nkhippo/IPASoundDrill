@@ -1,3 +1,11 @@
+---
+id: pj-2026-07-20-e104
+aliases:
+- pj-2026-07-20-e104
+title: MCP コネクタ記述を unified GitHubApp MCP に更新（Phase E） — 実装レポート
+created: '2026-07-20'
+---
+
 # MCP コネクタ記述を unified GitHubApp MCP に更新（Phase E） — 実装レポート
 
 ## 関連 Issue / PR
