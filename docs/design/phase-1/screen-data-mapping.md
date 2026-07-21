@@ -1,6 +1,7 @@
 ---
-id: pj-2026-07-18-sdmap
+id: pj-2026-07-18-5d4a
 aliases:
+- pj-2026-07-18-5d4a
 - screen-data-mapping
 title: Phase 1 — 画面 × データマッピング（Recon）
 created: '2026-07-18'
