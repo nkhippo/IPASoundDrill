@@ -8,6 +8,8 @@ created: '2026-07-21'
 
 # MOVED
 
+> **削除予定: 2026-10-21**（Issue #114 リネームから 90 日後。実削除は別 Issue / follow-up）
+
 このドキュメントは **Issue #114** (2026-07-21) で agent-agnostic 化のためリネームされました。
 
 **正本:** [[pj-2026-07-12-3141|`agent-instruction-guide.md`]]
