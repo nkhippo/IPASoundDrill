@@ -1,3 +1,11 @@
+---
+id: pj-2026-07-21-a114
+aliases:
+- pj-2026-07-21-a114
+title: GitHub Pull Request Template
+created: '2026-07-21'
+---
+
 ## 概要
 
 (1-3 行で PR の目的)

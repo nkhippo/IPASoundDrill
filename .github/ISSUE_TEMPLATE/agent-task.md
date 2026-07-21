@@ -2,6 +2,9 @@
 name: 🤖 Agent Task
 about: Codex / Cursor / Claude Code など AI エージェントに依頼する実装・ドキュメント整備
 title: "【Agent Task】"
+id: pj-2026-07-21-b114
+aliases:
+- pj-2026-07-21-b114
 ---
 
 ## 改修分類
