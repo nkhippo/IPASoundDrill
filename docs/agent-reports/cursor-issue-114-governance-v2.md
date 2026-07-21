@@ -11,7 +11,7 @@ created: '2026-07-21'
 ## 関連 Issue / PR
 
 - Issue: #114
-- PR: （draft・作成時に番号追記）
+- PR: #116（draft）
 - Agent: cursor
 
 ## Issue 背景（Issue 本文から要約）
