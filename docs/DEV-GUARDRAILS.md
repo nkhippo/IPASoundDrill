@@ -9,13 +9,13 @@ created: '2026-07-12'
 # DEV-GUARDRAILS — 開発デグレ防止ガードレール
 
 > **Last updated**: 2026-07-12
-> **Purpose**: Cursor 実装時のデグレゼロ保証と、Cursor 自己判断による予期せぬ変更を防ぐガイダンス。すべての Cursor 指示書がこのファイルへの参照を含める。
+> **Purpose**: AI エージェント実装時のデグレゼロ保証と、自己判断による予期せぬ変更を防ぐガイダンス。すべてのエージェント実装 Issue がこのファイルへの参照を含める。
 
 ---
 
 ## 1. 大原則
 
-- **迷ったら中断**: Cursor は自己判断で追加変更しない。判断に迷った時点で Issue Comment に質問を書き、実装を中断する
+- **迷ったら中断**: 実装エージェントは自己判断で追加変更しない。判断に迷った時点で Issue Comment に質問を書き、実装を中断する
 - **中断は失敗ではなく、正しい判断**
 - **明示的な指示のみを実行**: Issue 本文に明示的に書かれていない変更は「ついで作業」として禁止
 - **ホワイトリスト方式**: 変更してよいファイルを Issue 本文で明示、それ以外は完全不変
@@ -183,13 +183,13 @@ done
 
 ```bash
 # 事前
-find . -type f ! -path './.git/*' -exec md5sum {} \; | sort > /tmp/issue-<N>/before-all.md5
+git ls-files -z | xargs -0 md5sum | sort > /tmp/issue-<N>/before-tracked.md5
 
 # 事後
-find . -type f ! -path './.git/*' -exec md5sum {} \; | sort > /tmp/issue-<N>/after-all.md5
+git ls-files -z | xargs -0 md5sum | sort > /tmp/issue-<N>/after-tracked.md5
 
 # 差分
-diff /tmp/issue-<N>/before-all.md5 /tmp/issue-<N>/after-all.md5
+diff /tmp/issue-<N>/before-tracked.md5 /tmp/issue-<N>/after-tracked.md5
 ```
 
 期待される diff:
@@ -198,9 +198,20 @@ diff /tmp/issue-<N>/before-all.md5 /tmp/issue-<N>/after-all.md5
 - 削除: 明示的に指示されたファイル
 - **上記以外の差分がある場合、実装を中断して Issue Comment で報告**
 
-## 5. Cursor 自己判断禁止事項（全リスト）
+### 4.1 パターン A の既存編集ゼロ保証
 
-以下は Cursor が Issue 本文の明示的指示なしに行ってはならない:
+堅固化パターン A (新規追加のみ) を宣言した改修では、既存 tracked files の md5 が Phase 0 と Phase 完了時で全一致することを確認する。
+
+1. Phase 0: `origin/main` から隔離された作業ブランチで `before-tracked.md5` を取得
+2. 新規ファイル追加後: `after-tracked.md5` を取得
+3. `diff` では新規追加ファイルの行だけが現れることを確認
+4. 実装レポートに「Phase 0 md5 baseline 取得」「Phase 完了時 md5 全一致確認（既存 tracked files）」を明記
+
+既存ファイルに差分が出た場合はパターン A ではなくパターン B として扱い、Issue 本文の分類・ホワイトリストと矛盾しないかを確認する。
+
+## 5. AI エージェント自己判断禁止事項（全リスト）
+
+以下は実装エージェントが Issue 本文の明示的指示なしに行ってはならない:
 
 - lint 修正
 - typo 修正（元の文言を保持）
@@ -216,7 +227,7 @@ diff /tmp/issue-<N>/before-all.md5 /tmp/issue-<N>/after-all.md5
 - ドキュメントリンク先の変更
 - 依存ライブラリのバージョン変更
 
-これらのいずれかが必要と判断された場合、Cursor は実装を中断し、Issue Comment で「〇〇の変更が必要と判断したが、Issue 本文に明示的指示なし」と報告する。
+これらのいずれかが必要と判断された場合、実装エージェントは実装を中断し、Issue Comment で「〇〇の変更が必要と判断したが、Issue 本文に明示的指示なし」と報告する。
 
 ## 6. `docs/REPOSITORY-STRUCTURE.md` の更新義務
 
@@ -229,11 +240,11 @@ diff /tmp/issue-<N>/before-all.md5 /tmp/issue-<N>/after-all.md5
 - i18n の新規キー追加（i18n schema セクション）
 - index.html の新規主要関数追加（JS map セクション）
 
-Cursor は Issue 本文で明示的に指示されない場合でも、上記変更を検知したら Issue Comment で「REPOSITORY-STRUCTURE.md の更新が必要と判断」と報告し、実装を中断する（Naoya + Claude が Issue 本文を追記して再開）。
+実装エージェントは Issue 本文で明示的に指示されない場合でも、上記変更を検知したら Issue Comment で「REPOSITORY-STRUCTURE.md の更新が必要と判断」と報告し、実装を中断する（Naoya + Claude が Issue 本文を追記して再開）。
 
-## 7. Cursor 実装レポートテンプレート
+## 7. AI エージェント実装レポートテンプレート
 
-`docs/cursor/reports/cursor-implementation-report-<topic>.md` に以下のテンプレートで作成:
+新規レポートは `docs/agent-reports/<agent>-issue-<N>-<slug>.md` に作成する。`docs/agent-reports/TEMPLATE.md` を正本とし、必要に応じて以下の項目を満たす:
 
 ```markdown
 # <Topic> — 実装レポート
@@ -242,6 +253,7 @@ Cursor は Issue 本文で明示的に指示されない場合でも、上記変
 
 - Issue: #<番号>
 - PR: #<番号>（マージ済み / draft / open）
+- Agent: <codex / cursor / claude-code>
 
 ## Issue 背景（Issue 本文から要約）
 
@@ -323,10 +335,10 @@ Issue 本文の「背景・目的」5 サブセクション（トリガー、文
 
 ## 8. 中断時の Issue Comment テンプレート
 
-Cursor が実装を中断する場合、Issue の Comments に以下を投稿:
+実装エージェントが実装を中断する場合、Issue の Comments に以下を投稿:
 
 ```markdown
-🛠️ **Cursor より（中断報告）**
+🛠️ **<agent> より（中断報告）**
 
 ## 中断理由
 
@@ -348,7 +360,7 @@ Cursor が実装を中断する場合、Issue の Comments に以下を投稿:
 - <質問 2>
 
 ---
-_Cursor による自動投稿_
+_<agent> による自動投稿_
 ```
 
 ## 9. Naoya 目視承認のポイント
@@ -364,10 +376,10 @@ Phase 6（既存編集を伴う場合）で Naoya さんが確認する項目:
 
 ## 10. 大規模改修用セルフチェックリスト
 
-パターン C 適用時、Cursor は各 Phase 完了時に Issue Comment に以下のセルフチェックリストを貼り、各項目の結果を記入する。全項目 OK でない場合、次 Phase に進まず中断報告する。
+パターン C 適用時、実装エージェントは各 Phase 完了時に Issue Comment に以下のセルフチェックリストを貼り、各項目の結果を記入する。全項目 OK でない場合、次 Phase に進まず中断報告する。
 
 ```markdown
-🛠️ **Cursor より（Phase X セルフチェックリスト）**
+🛠️ **<agent> より（Phase X セルフチェックリスト）**
 
 ## Runtime data contract 保護
 
@@ -416,5 +428,5 @@ Phase 6（既存編集を伴う場合）で Naoya さんが確認する項目:
 - [ ] 1 項目以上に問題 → 実装を中断、詳細を上記に記入、Naoya さん判断を待つ
 
 ---
-_Cursor による自動投稿_
+_<agent> による自動投稿_
 ```

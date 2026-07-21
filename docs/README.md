@@ -6,7 +6,7 @@ title: '`docs/` — ドキュメント索引（AI / 開発者向け）'
 created: '2026-07-10'
 ---
 
-> Last updated: 2026-07-12（Phase 3.5 完了、DOCUMENT-MAP.md / DEV-GUARDRAILS.md / DOC-SYNC-PLAYBOOK.md / CURSOR-INSTRUCTION-GUIDE.md 追加）
+> Last updated: 2026-07-21（Issue #114: governance v2 / agent-reports・agent-instruction-guide 反映）
 
 # `docs/` — ドキュメント索引（AI / 開発者向け）
 
@@ -30,9 +30,9 @@ created: '2026-07-10'
 | ファイル | 何が書いてあるか |
 |---|---|
 | [[pj-2026-07-12-4049|`DOCUMENT-MAP.md`]] | 全ドキュメントの分類（Category A-E）と参照タイミング |
-| [[pj-2026-07-12-fae7|`DEV-GUARDRAILS.md`]] | 堅固化パターン A/B、Cursor 自己判断禁止事項、実装レポートテンプレート |
+| [[pj-2026-07-12-fae7|`DEV-GUARDRAILS.md`]] | 堅固化パターン A/B、AI エージェント自己判断禁止事項、実装レポートテンプレート |
 | [[pj-2026-07-12-c324|`DOC-SYNC-PLAYBOOK.md`]] | ソース ⇔ ドキュメント同期の 3 分岐マトリックス |
-| [[pj-2026-07-12-3141|`CURSOR-INSTRUCTION-GUIDE.md`]] | Cursor 指示の抽象度マトリックス、Pre-Issue Recon 運用 |
+| [[pj-2026-07-12-3141|`agent-instruction-guide.md`]] | AI エージェント指示の抽象度マトリックス、Pre-Issue Recon 運用 |
 
 **Chat 起動時、Claude は Category B の以下を必ず取得**:
 1. `HANDOFF-*.md`（Project Knowledge）
@@ -45,7 +45,8 @@ created: '2026-07-10'
 
 | フォルダ | 役割 | README |
 |----------|------|--------|
-| [`cursor/`](cursor/) | Cursor / Claude の指示書・実装レポート・設計ブリーフ | [[pj-2026-07-10-a25d|`cursor/README.md`]] |
+| [`agent-reports/`](agent-reports/) | Codex / Cursor / Claude Code 等の新規実装レポート統合先 | [`agent-reports/README.md`](agent-reports/README.md) |
+| [`cursor/`](cursor/) | Cursor / Claude の指示書・設計ブリーフ・Recon、および 2026-07-20 以前の historical reports | [[pj-2026-07-10-a25d|`cursor/README.md`]] |
 | [`design/`](design/) | Phase 1 デザイン入力・画面×データマッピング（例: `phase-1/screen-data-mapping.md`） | — |
 | [`reference/`](reference/) | 監査・運用ガイド・意思決定メモ（人間＋AI 参照） | [[pj-2026-07-09-77a4|`reference/README.md`]] |
 | [`testing/`](testing/) | 手動テストチェックリスト | — |
