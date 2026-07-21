@@ -1,6 +1,7 @@
 ---
-id: pj-2026-07-19-cssconv
+id: pj-2026-07-19-c55c
 aliases:
+- pj-2026-07-19-c55c
 - CSS-CONVENTIONS
 title: CSS-CONVENTIONS — Track A CSS 命名・legacy 運用
 created: '2026-07-19'
