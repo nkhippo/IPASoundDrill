@@ -266,7 +266,18 @@
   },
   "progress": {
     "meter_label": "{pct}%（{cur} / {total}）",
-    "meter_aria": "進捗 {pct}%、{cur} 問目 / 全 {total} 問"
+    "meter_aria": "進捗 {pct}%、{cur} 問目 / 全 {total} 問",
+    "title": "學習進度",
+    "back": "返回",
+    "card_title": "查看學習進度",
+    "card_subtitle": "查看進度和複習計畫",
+    "filter_all": "全部",
+    "overall_title": "整體進度",
+    "drills_title": "各練習進度",
+    "graduated_summary": "已完成 {n} / {m} 項",
+    "drill_summary": "已完成 {n} / {m}",
+    "slots": {"0": "未開始", "1": "1 個標記", "2": "2 個標記", "3": "已完成"},
+    "review_queue": {"title": "需要複習的單字", "count": "{n} 個單字", "empty": "目前沒有需要複習的單字。", "due_today": "今天到期", "overdue_days": "逾期 {n} 天"}
   },
   "symbol": {
     "picker": {

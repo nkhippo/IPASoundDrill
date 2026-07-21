@@ -266,7 +266,18 @@
   },
   "progress": {
     "meter_label": "{pct}% ({cur} / {total})",
-    "meter_aria": "Progress {pct} percent, question {cur} of {total}"
+    "meter_aria": "Progress {pct} percent, question {cur} of {total}",
+    "title": "Learning status",
+    "back": "Back",
+    "card_title": "View learning status",
+    "card_subtitle": "Check your progress and reviews",
+    "filter_all": "All",
+    "overall_title": "Overall progress",
+    "drills_title": "Drill progress",
+    "graduated_summary": "{n} / {m} items graduated",
+    "drill_summary": "{n} / {m} graduated",
+    "slots": {"0": "Not started", "1": "1 mark", "2": "2 marks", "3": "Graduated"},
+    "review_queue": {"title": "Words to review", "count": "{n} words", "empty": "No words need review.", "due_today": "Due today", "overdue_days": "{n}d overdue"}
   },
   "symbol": {
     "picker": {

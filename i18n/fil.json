@@ -266,7 +266,18 @@
   },
   "progress": {
     "meter_label": "{pct}%（{cur} / {total}）",
-    "meter_aria": "進捗 {pct}%、{cur} 問目 / 全 {total} 問"
+    "meter_aria": "進捗 {pct}%、{cur} 問目 / 全 {total} 問",
+    "title": "Kalagayan ng pag-aaral",
+    "back": "Bumalik",
+    "card_title": "Tingnan ang progreso",
+    "card_subtitle": "Suriin ang progreso at iskedyul ng pagrepaso",
+    "filter_all": "Lahat",
+    "overall_title": "Kabuuang progreso",
+    "drills_title": "Progreso bawat drill",
+    "graduated_summary": "{n} / {m} item ang natapos",
+    "drill_summary": "{n} / {m} natapos",
+    "slots": {"0": "Hindi pa nasimulan", "1": "1 marka", "2": "2 marka", "3": "Natapos"},
+    "review_queue": {"title": "Mga salitang rerepasuhin", "count": "{n} salita", "empty": "Walang salitang kailangang repasuhin.", "due_today": "Takda ngayon", "overdue_days": "Huli ng {n} araw"}
   },
   "symbol": {
     "picker": {

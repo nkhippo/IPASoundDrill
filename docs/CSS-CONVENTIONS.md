@@ -82,3 +82,4 @@ created: '2026-07-19'
 |------|-------:|------|
 | Phase 1-D-PR2 後 | 249 | ドリル `2c`/`2d` + Reveal 共通 Mood B |
 | Phase 1-E PR-1 後 | **228** | `#vocabPage` / `#symbolPickerPage` Mood B 化（249→228） |
+| Phase 1-E PR-2 後 | **228** | `#learningStatusPage` は新トークンのみで追加。既存 legacy 参照は不変 |

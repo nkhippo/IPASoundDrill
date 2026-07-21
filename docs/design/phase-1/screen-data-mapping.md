@@ -345,7 +345,13 @@ Python 交差検証: mean ≈ 0.33 ms、max ≈ 0.72 ms。
 
 | 動的項目 | データソース | Phase 1 変更 |
 |---|---|---|
-| SRS / marks 集計 | `ept_hist_v1` / marks | **新規画面** |
+| CEFR 初期値 | `prev_settings_v1.cefrLevels` | **実装済（PR-2、fallback A1+A2）** |
+| 卒業率 / 0–3内訳 | `ept_marks_v1` + wordlist / connected / weak | **実装済（PR-2）** |
+| SRS queue | `ept_hist_v1` + `ept_vocab_v1` | **実装済（PR-2、word dedupe + earliest dueAt）** |
+| 100件超の表示 | progress 専用 fixed-row virtualization | **実装済（PR-2）** |
+| queue 行遷移 | `WORD_BY_W` → single-item `2c` Study | **実装済（PR-2）** |
+
+dueAt は `ts + BOX_INTERVAL_MS[box]`。`dueAt <= now` を期限切れ、`now < dueAt <= ローカル当日末` を今日期限とする。`2a`–`2c` の母集団は wordlist、`2d` は connected + weak。mark key は `drillId + ":" + sessionItemKey(item)`。
 
 ### `3e` IPA って何？
 
