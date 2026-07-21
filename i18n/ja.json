@@ -266,7 +266,18 @@
   },
   "progress": {
     "meter_label": "{pct}%（{cur} / {total}）",
-    "meter_aria": "進捗 {pct}%、{cur} 問目 / 全 {total} 問"
+    "meter_aria": "進捗 {pct}%、{cur} 問目 / 全 {total} 問",
+    "title": "学習状況",
+    "back": "戻る",
+    "card_title": "学習状況を見る",
+    "card_subtitle": "進捗と復習予定を確認",
+    "filter_all": "すべて",
+    "overall_title": "全体の進捗",
+    "drills_title": "ドリル別の進捗",
+    "graduated_summary": "{n} / {m} 項目を卒業",
+    "drill_summary": "{n} / {m} 卒業",
+    "slots": {"0": "未着手", "1": "1スロット", "2": "2スロット", "3": "卒業"},
+    "review_queue": {"title": "復習が必要な単語", "count": "{n} 語", "empty": "復習が必要な単語はありません。", "due_today": "今日期限", "overdue_days": "{n}日超過"}
   },
   "symbol": {
     "picker": {

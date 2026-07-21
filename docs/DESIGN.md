@@ -141,7 +141,7 @@ updated: '2026-07-18'
 |----|------|
 | `3b` | 語彙リスト（`#vocabPage` exclusive full-page、`#/vocab` / `#/vocab/phrases`） |
 | `3c` | IPA 記号ピッカー（`#symbolPickerPage`、`#/vocab/ipa`。`3b` Segmented「IPA」から） |
-| `3d` | 学習状況（Phase 1-E PR-2） |
+| `3d` | 学習状況（`#learningStatusPage`、`#/progress`。Phase 1-E PR-2） |
 | `3e` | IPA って何？ |
 | `3f` | ~~言語設定~~（廃止。ヘッダー言語スイッチャーへ。docs 集約は PR-3） |
 | `3g` | オンボーディング 4 スライド（`onboarding_completed_v1`） |
@@ -156,6 +156,15 @@ updated: '2026-07-18'
 - **Query builder:** 記号タップ蓄積（順序保持）+ chip 個別削除。学習効果付き Compositional Interaction
 - トークン: Mood B（`--paper` / `--signal` / `--font-ipa` 等）。詳細クラスは `visual-tokens.md` §5j
 
+#### `3d` Learning status UX（Phase 1-E PR-2）
+
+- **Feature Card:** `1a` の目的4カード下に「学習状況を見る」を追加し、`#/progress` へ遷移
+- **Contextual Defaults:** CEFR は `prev_settings_v1.cefrLevels`、不在・空値時は A1+A2
+- **Progress Card Stack:** `ept_marks_v1` を 0/1/2/3 スロットで集計。`2a`–`2c` は wordlist、`2d` は connected + weak の実プールを母集団にする
+- **SRS queue:** `ept_hist_v1` / `ept_vocab_v1` を word 単位で統合し、早い dueAt を採用。当日末までを全件表示し、100件超は progress 専用 virtualization
+- **Direct review:** queue 行から該当語1件の `2c` Study を開始。通常の目的カード導線は不変
+- トークン: Mood B。詳細クラスは `visual-tokens.md` §5k
+
 ### 視覚言語（原則のみ）
 
 カラー / タイポ / スペーシング / 角丸 / シャドウ / コンポーネントをトークン化。**具体値は Phase 1-A**。
@@ -164,8 +173,8 @@ updated: '2026-07-18'
 
 Phase 1 UI（Mood B / Warm Contemporary）の視覚トークンは `:root` に定義し、既存画面は `--legacy-*` 経由で見た目を維持する。トークンの具体値・コンポーネント CSS・`:root` コピペ用ブロックは本節に書かず、以下を正とする。
 
-1. 実装用 snapshot: [`docs/design/phase-1/visual-tokens.md`](design/phase-1/visual-tokens.md)（色・space・radius・shadow + **Font family** + コンポーネント）
-2. CSS 命名・legacy 運用（Category A）: [`docs/CSS-CONVENTIONS.md`](CSS-CONVENTIONS.md)
+1. 実装用 snapshot: [[pj-2026-07-19-a17e|docs/design/phase-1/visual-tokens.md]]（色・space・radius・shadow + **Font family** + コンポーネント）
+2. CSS 命名・legacy 運用（Category A）: [[pj-2026-07-19-c55c|docs/CSS-CONVENTIONS.md]]
 3. 意匠判断の背景（Vault source of truth）: `30_projects/IPASoundDrill/design/phase-1/design-tokens.md`
 
 ---
