@@ -8,7 +8,7 @@ created: '2026-07-12'
 
 # DEV-GUARDRAILS — 開発デグレ防止ガードレール
 
-> **Last updated**: 2026-07-12
+> **Last updated**: 2026-07-20（Issue #114: md5 baseline を AGENTS.md と整合）
 > **Purpose**: Cursor 実装時のデグレゼロ保証と、Cursor 自己判断による予期せぬ変更を防ぐガイダンス。すべての Cursor 指示書がこのファイルへの参照を含める。
 
 ---
@@ -41,6 +41,8 @@ created: '2026-07-12'
 - **Phase 3**: コミット + 実装レポート
 - **Phase 4**: 最終自己検証チェックリスト
 - **Phase 5**: PR 作成
+
+**md5 baseline（AGENTS.md 参照）:** パターン A を Issue で宣言した場合、Phase 0 のスナップショット取得と Phase 完了時の全既存ファイル md5 一致検証を必須とする。実装レポートに両方の実施を明記すること。worktree は `origin/main` から隔離して取得する。
 
 ## 3. 堅固化パターン B: 既存編集を伴う
 

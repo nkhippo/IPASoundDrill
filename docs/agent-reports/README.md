@@ -1,4 +1,7 @@
 ---
+id: pj-2026-07-20-e7a1
+aliases:
+- pj-2026-07-20-e7a1
 title: 'docs/agent-reports/ — AI エージェント実装レポート統合ディレクトリ'
 created: '2026-07-20'
 ---

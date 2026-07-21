@@ -372,7 +372,7 @@ Hotfix フローは `CLAUDE.md` を参照。以下 3 条件をすべて満たす
 
 ### 実施フロー
 
-1. Claude が Issue Comment で Recon 依頼を投稿（`docs/CURSOR-INSTRUCTION-GUIDE.md` § 4.2 テンプレート）
+1. Claude が Issue Comment で Recon 依頼を投稿（`docs/agent-instruction-guide.md` § 4.2 テンプレート）
 2. Cursor が調査を実施、`docs/cursor/recon/pre-issue-recon-YYYYMMDD-<topic>.md` に結果を出力
 3. Recon PR がマージされた後、Claude が結果を MCP で取得
 4. Claude が Recon 結果を反映した Issue 本文を作成 → Naoya さん承認
