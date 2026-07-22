@@ -398,7 +398,7 @@ Hotfix フローは `CLAUDE.md` を参照。以下 3 条件をすべて満たす
 | **1-B** | トップページ（`1a`） | [x] 完了 | [#85](https://github.com/nkhippo/IPASoundDrill/issues/85) / [PR #86](https://github.com/nkhippo/IPASoundDrill/pull/86) |
 | **1-C** | 学習プロフィール（`3a`） | [x] 完了 | [#83](https://github.com/nkhippo/IPASoundDrill/issues/83) / [PR #84](https://github.com/nkhippo/IPASoundDrill/pull/84) |
 | **1-D** | ドリル本体（`2a`–`2d`、2 PR 分割） | [x] 完了 | #87 / #88 (PR1) + #89 / #90 (PR2) |
-| **1-E** | 支援画面（`3b`/`3c`/`3d`/`3h`、3 PR 分割。`3f` 廃止） | [/] PR-1 完了（`3b` full-page + `3c` IPA picker）。PR-2 完了（`3d` progress + SRS queue）。PR-3（`3h`・docs 集約）残 | [#91](https://github.com/nkhippo/IPASoundDrill/issues/91) / [#120](https://github.com/nkhippo/IPASoundDrill/issues/120) |
+| **1-E** | 支援画面（`3b`/`3c`/`3d`/`3h`、3 PR 分割。`3f` 廃止） | [x] 完了（3/3 PR。`3b` full-page + `3c` IPA picker + `3d` progress + SRS queue + `3h` About 拡張 + `3f` 廃止） | [#91](https://github.com/nkhippo/IPASoundDrill/issues/91) / [#120](https://github.com/nkhippo/IPASoundDrill/issues/120) / [#122](https://github.com/nkhippo/IPASoundDrill/issues/122) |
 | **1-F** | オンボーディング（`3g`） | [ ] 未着手 | — |
 | **1-G** | 多言語（variant `-en` 等） | [ ] 未着手 | — |
 | **1-H** | PC 版（`-pc`） | [ ] 未着手 | — |
