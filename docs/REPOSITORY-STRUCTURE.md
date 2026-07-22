@@ -221,6 +221,7 @@ These paths are **hard-coded** in the app（`<base href="/">` により言語サ
 | `grp` | object | 綴り規則グループ |
 | `accent` | object | GA / RP ラベル |
 | `guide` | object | サイトガイドモーダル |
+| `about` | object | About（`lead`, `why_ipa_html`, `features.*`, `contact_html`。既存 `title` / `placeholder` は維持） |
 | `vocab` | object | 語彙ブラウザ（`vocab.filter.*` 含む） |
 | `symbol` | object | IPA 記号ピッカー（`symbol.picker.*` / `symbol.group.*.{en,sub}` / `symbol.height.*.{en,sub}`） |
 | `reveal` | object | Reveal 画面（GA / RP 表記） |
@@ -236,13 +237,14 @@ These paths are **hard-coded** in the app（`<base href="/">` により言語サ
 - `i18n/phonemes/{lang}.json`: 音素解説（各言語別）
 
 **Notes**:
-- 総 leaf 数: **237**（Phase 1-E PR-2 後。219→237、+18。SPEC §5.5 の集約更新は PR-3）
+- 総 leaf 数: **246**（Phase 1-E PR-3。237→246、新規 `about.*` +9）
 - 新規キー群（PR-1）: `vocab.filter.*`、`symbol.picker.*`、`symbol.group.*.{en,sub}`、`symbol.height.*.{en,sub}`
 - 新規キー群（PR-2）: `progress.title` / `back` / `card_*` / `filter_all` / `overall_title` / `drills_title` / `graduated_summary` / `drill_summary` / `slots.*` / `review_queue.*`
+- 新規キー群（PR-3）: `about.lead` / `why_ipa_html` / `features.title` / `features.item_1_html`〜`item_5_html` / `contact_html`
 - HTML 埋め込みキーは `_html` サフィックス
 - 動的置換プレースホルダ: `{n}`, `{band}`, `{pct}`, `{m}`, `{t}`, `{c}`, `{list}`, `{p}`, `{sy}`, `{s}`, `{a}`
 
-_Last synced with code: 2026-07-21（Phase 1-E PR-2）_
+_Last synced with code: 2026-07-22（Phase 1-E PR-3）_
 
 ---
 

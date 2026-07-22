@@ -501,6 +501,20 @@
   .site-footer .feedback-btn:focus-visible,.site-footer .x-link:focus-visible,.site-footer .legal-link:focus-visible{outline:2px solid var(--legacy-signal);outline-offset:2px}
   body.in-play .site-footer,body.in-play .about-block{display:none}
 
+  /* Phase 1-E PR-3: expanded About copy (Issue #122) */
+  .about-block{max-width:760px;margin:24px auto 0;padding:28px 24px;background:var(--panel);border:1px solid var(--hair);border-radius:var(--radius-card);color:var(--ink);font-family:var(--font-ui)}
+  .about-block h2{margin:0 0 12px;font-family:var(--font-display);font-size:clamp(24px,5vw,34px);line-height:1.25}
+  .about-lead{margin:0 0 24px;color:var(--muted);font-size:15px;line-height:1.8}
+  .about-why-ipa p{margin:0 0 14px;line-height:1.85}
+  .about-features-title{margin:28px 0 12px;font-size:20px}
+  .about-features{display:grid;gap:12px;margin:0;padding:0;list-style:none}
+  .about-features li{padding:14px 16px;border:1px solid var(--hair);border-radius:var(--radius-button);background:var(--paper);line-height:1.7}
+  .about-block code{font-family:var(--font-ipa);font-size:1.05em;color:var(--signal)}
+  .about-contact{margin-top:24px;padding-top:18px;border-top:1px solid var(--hair);color:var(--muted)}
+  .about-contact p{margin:0}
+  .about-contact a{color:var(--signal);font-weight:700}
+  @media(max-width:600px){.about-block{margin-top:16px;padding:22px 18px}.about-features li{padding:12px 14px}}
+
   /* Phase 1-D-PR1: Progress meter + 2a/2b Mood B (Issue #87) */
   .progress-meter{height:6px;background:var(--hair);border-radius:var(--radius-pill);overflow:hidden}
   .progress-meter__fill{height:100%;background:var(--signal);width:0%;transition:width .2s ease}
@@ -975,7 +989,17 @@
   <!-- 3h About (DOM always-on for crawlability; Phase 1-E expands copy) -->
   <aside class="about-block" id="aboutBlock" data-frame="3h">
     <h2 id="aboutTitle">このアプリについて</h2>
-    <p id="aboutPlaceholder">英語の発音を IPA（発音記号）で確かめ、音から練り直す学習ツール。</p>
+    <p class="about-lead" id="aboutLead"></p>
+    <div class="about-why-ipa" id="aboutWhyIpa"></div>
+    <h3 class="about-features-title" id="aboutFeaturesTitle"></h3>
+    <ul class="about-features">
+      <li id="aboutFeature1"></li>
+      <li id="aboutFeature2"></li>
+      <li id="aboutFeature3"></li>
+      <li id="aboutFeature4"></li>
+      <li id="aboutFeature5"></li>
+    </ul>
+    <div class="about-contact" id="aboutContact"></div>
   </aside>
 </div>
 <div class="reflect-dock hidden" id="reflectDock">
@@ -2145,7 +2169,14 @@ function applyI18n() {
     if(el) el.textContent = t("drill.title."+id);
   });
   if ($("aboutTitle")) $("aboutTitle").textContent = t("about.title");
-  if ($("aboutPlaceholder")) $("aboutPlaceholder").textContent = t("about.placeholder");
+  if ($("aboutLead")) $("aboutLead").textContent = t("about.lead");
+  if ($("aboutWhyIpa")) $("aboutWhyIpa").innerHTML = t("about.why_ipa_html");
+  if ($("aboutFeaturesTitle")) $("aboutFeaturesTitle").textContent = t("about.features.title");
+  ["1","2","3","4","5"].forEach(id=>{
+    const el=$("aboutFeature"+id);
+    if(el) el.innerHTML = t("about.features.item_"+id+"_html");
+  });
+  if ($("aboutContact")) $("aboutContact").innerHTML = t("about.contact_html");
   $("flabelCefr").textContent = t("lvl.label");
   if ($("flabelAccent")) $("flabelAccent").textContent = t("accent.label");
   if ($("profileAccentGa")) $("profileAccentGa").textContent = t("accent.ga");

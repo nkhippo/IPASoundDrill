@@ -102,6 +102,17 @@ Runtime UI やインタラクション (event handler, form 送信, DOM 変更, 
 - 本文冒頭で `Closes #N` キーワードで対応 Issue を自動クローズさせる
 - Complexity Retrospective 実施確認セクションを必ず含める
 
+### PR コメント対応の完了条件
+
+PR コメントを受けてコード・データ・文書を修正した場合、修正 commit / push だけで完了としてはならない。
+
+1. 同じ PR の Conversation に修正結果をコメントする
+2. コメントに「対応した指摘」「変更内容」「検証結果」「未解決事項（なければなし）」を記載する
+3. Ready for review 化・再レビュー依頼は、結果コメントの投稿後に行う
+4. 修正不要と判断した指摘も、理由と根拠を同じ PR に返信する
+
+**結果コメントの投稿までが PR コメント対応の Definition of Done。** CI bot の通知と承認語だけのコメントには返信不要。
+
 ### PR description template
 
 GitHub が新規 PR 作成時に自動挿入する **`.github/PULL_REQUEST_TEMPLATE.md`** を使用する。テンプレ更新時の single source of truth は当該ファイル。

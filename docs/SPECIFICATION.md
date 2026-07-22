@@ -230,7 +230,7 @@ created: '2026-06-24'
 | ブランド | `#brandBtn` + `#brandName` |
 | 語彙 | `#vocabBtn` — 常時表示（Phase 1 で `3b` 導線へ） |
 | ガイド | `#guideBtn` — オンボーディング再表示（`3g`）にも利用予定 |
-| 設定 / 言語 | 現行 `#settingsBtn`。Phase 1 で `3f` / プロフィール `3a` へ再配置 |
+| 言語 | ヘッダー `#langSwitcher` / `#langMenu` に集約。独立 `3f` は廃止 |
 | Menu | `#backTopBtn` — プレイ中。離脱確認対象では Yes で `1a` 復帰 |
 | アクセントバッジ | Phase 1: ヘッダーに GA/RP **固定**表示（学習中切替なし） |
 | 離脱確認 | `#exitConfirmModal` — Decode / Encode / Study / Reveal |
@@ -286,9 +286,9 @@ OK/bad 色分けのみ（`res-near` 削除）。単語・gloss・自分の回答
 
 正答率（`ok` のみ）・苦手音素・復習リスト・TOP へ / Review misses。
 
-### 4.8 言語設定（`3f`）・学習ガイド
+### 4.8 ~~言語設定（`3f`）~~（廃止）・学習ガイド
 
-現行 `#settingsModal` の Language。Accent は Phase 1 で `3a` へ移し学習中不変。ガイドは `#guideModal` / 将来 `3g` 再表示。
+`3f` 独立画面は Phase 1-E PR-3 で完全撤去。言語切替はヘッダーの `#langSwitcher` / `#langMenu` に集約し、`app_lang` を維持する。Accent は `3a` へ移し学習中不変。ガイドは `#guideModal` / 将来 `3g` 再表示。
 
 ### 4.8b 語彙リスト（`3b`・`#vocabPage`）— Phase 1-E PR-1
 
@@ -334,6 +334,14 @@ i18n: `symbol.picker.*` / `symbol.group.*.{en,sub}` / `symbol.height.*.{en,sub}`
 - SRS queue は `ept_hist_v1` / `ept_vocab_v1` の `ts + BOX_INTERVAL_MS[box]` を dueAt とし、期限切れ + ローカル当日末までを word 単位で統合表示
 - queue は全件表示。100件超では `.srs-virt-*` により可視行のみ描画し、行 tap で該当語1件の `2c` Study を開始
 - i18n は既存 `progress` object を拡張（6言語同一 schema、18 leaf 追加。実測 237 leaf）
+
+### 4.8h このアプリについて（`3h`・`#aboutBlock`）— Phase 1-E PR-3
+
+- トップページ末尾に DOM 常時配置し、JS 無効時も見出しを保持する
+- リード、「なぜ IPA を学ぶか」、特徴 5 項目、フィードバック導線で構成する
+- `about.lead` は text、`about.why_ipa_html` / `about.features.item_1_html`〜`item_5_html` / `about.contact_html` は HTML として適用する
+- IPA 表記は `--font-ipa`、その他は Mood B token を使用する
+- 6 言語同一 schema。既存 `about.title` / `about.placeholder` の value は維持し、新規 `about.*` 9 leaf のみ追加する
 
 ---
 
@@ -486,7 +494,7 @@ UI i18n とは独立。各言語キー（`en`, `ja`, `ko`, `zh-Hans`, `zh-Hant`,
 
 | キー | 内容 | Phase 1 扱い |
 |------|------|----------------|
-| `app_lang` | UI 言語 | 維持（`3f`） |
+| `app_lang` | UI 言語 | 維持（ヘッダー言語スイッチャー） |
 | `app_accent` | `ga` / `rp` | プロフィール固定へ（キー統合は 1-0-b / 1-C） |
 | `app_mode` | 旧 `a` / `b` | 目的 4 カード化で廃止予定 |
 | `ept_hist_v1` | 単語 SRS（Leitner） | 維持（目的横断の扱い整理は後続） |
@@ -527,17 +535,21 @@ Study（`2c`）の内部フェーズ。Quiz 凍結時は Study のみ。
 
 | データ | パス |
 |--------|------|
-| UI 文言 | `i18n/{en,ja,ko,zh-Hans,zh-Hant,fil}.json`（**169 leaf**。`vocab.back`・複合 POS 含む） |
+| UI 文言 | `i18n/{en,ja,ko,zh-Hans,zh-Hant,fil}.json`（**246 leaf**。6 言語同一 schema） |
 | 音素解説 | `i18n/phonemes/{en,ja,ko,zh-Hans,zh-Hant,fil}.json`（47 記号） |
 
-**leaf 内訳（2026-07-16 実測）:**
+**leaf 変遷（各言語の実測）:**
 
-- Runtime 参照: **165 leaf**（UI 表示・`t()` 動的参照）
-- Build-only: `meta.title`, `meta.description`, `meta.ogTitle`, `meta.ogDescription` の **4 leaf**（`scripts/build-i18n-html.js` のみ）
+| Phase | leaf |
+|---|---:|
+| Phase 1-D | 182 |
+| Phase 1-E PR-1 | 219 |
+| Phase 1-E PR-2 | 237 |
+| Phase 1-E PR-3 | **246** |
 
-検証: `python3 tools/validate_i18n.py`。監査ドキュメント再生成: `python3 tools/gen_audit_docs.py`。
+PR-3 の schema 増分は新規 `about.*` 9 leaf。既存 key value は原則不変だが、Issue #122 comment で明示承認されたスコープ B に限り、ko / zh-Hans / zh-Hant / fil の未翻訳値を修正する。Build-only の `meta.*` 4 leaf を含む。
 
-> Phase 1-E PR-1 時点の実測 leaf は **219**（182→219）。本節の 169 表記の集約更新は PR-3。
+検証: `python3 tools/validate_i18n.py`。監査ドキュメント再生成: `python3 tools/gen_audit_docs.py`.
 
 ---
 
@@ -565,6 +577,7 @@ Study（`2c`）の内部フェーズ。Quiz 凍結時は Study のみ。
 
 | 日付 | 内容 |
 |------|------|
+| 2026-07-22 | Phase 1-E PR-3（#122）: `3h` About を6言語・246 leafへ拡張。`3f` 独立画面廃止を docs に集約 |
 | 2026-07-20 | Phase 1-E PR-1（#91）: `3b` exclusive full-page + 仮想化、`3c` `#/vocab/ipa` 記号ピッカー。i18n 219 leaf（§5.5 集約は PR-3）。`var(--legacy-*)` 249→228 |
 | 2026-07-18 | Phase 1-0-a（#75）: 目的 4 カード前提へ骨格改訂。Mode B Band 記述削除、near 採点廃止、CEFR 全目的横断・Connected はタグ表示のみ、プロフィール一元通過 / マーキング / オンボーディングの LS 要件を明示 |
 | 2026-07-16 | Q-7-A: Connected `cs_rule` に ko / zh-Hans / zh-Hant 追加（201 句 × 3。既存 en/ja/fil 不変） |

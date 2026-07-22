@@ -242,31 +242,42 @@
     "mode_l": "Makinig"
   },
   "top": {
-    "tagline": "音を、美しく。"
+    "tagline": "Ang tunog, gawing maganda."
   },
   "drill": {
     "title": {
-      "2a": "音の発音を確かめる",
-      "2b": "発音から書いてみる",
-      "2c": "音から単語を覚える",
-      "2d": "連結する音に慣れる"
+      "2a": "Suriin ang tunog",
+      "2b": "Isulat mula sa bigkas",
+      "2c": "Matuto ng salita mula sa tunog",
+      "2d": "Masanay sa konektadong tunog"
     }
   },
   "about": {
     "title": "このアプリについて",
-    "placeholder": "英語の発音を IPA（発音記号）で確かめ、音から練り直す学習ツール。"
+    "placeholder": "英語の発音を IPA（発音記号）で確かめ、音から練り直す学習ツール。",
+    "lead": "Ang IPA Sound Drill ay isang training tool para patalasin ang mga tunog ng Ingles sa pamamagitan ng phonetic alphabet (IPA). Ginawa ito para sa mga adult na mag-aaral na gustong itaas ang resolusyon ng kanilang pakikinig at pagbigkas — may suporta sa GA (American) at RP (British) na mga accent.",
+    "why_ipa_html": "<p>Para sa mga adult na mag-aaral, magkabuklod ang pakikinig at pagbigkas. <b>Ang tunog na hindi mo kayang bigkasin nang tama ay tunog ding hindi mo matukoy nang tama sa pakikinig</b> — at ang tunog na hindi mo matukoy ay hindi mo rin maibabalik nang tumpak. Dalawang mukha ito ng iisang kakayahan: ang pakiramdam sa tunog bilang tunog.</p><p>Halimbawa, ang totoong bigkas ng <i>turtle</i> ay <code>/ˈtɝːtəl/</code> — dalawang pantig na binuo sa isang r-colored na patinig at isang schwa, malayo sa hinihimok ng baybay nito. Ang agwat sa pagitan ng anyo ng salita at ng tunay nitong tunog ang pinagmumulan ng problema sa pagbigkas.</p><p>Para tunay na maangkin ang Ingles, kailangan mong hawakan ang tunog sa <b>resolusyong antas-IPA</b>: hindi lang \"ah\" laban sa \"ee,\" kundi <code>/æ/</code>, <code>/ʌ/</code>, <code>/ɑ/</code>, at <code>/ə/</code> bilang magkakaibang tunog na kaya mong pagkaibahin sa pakikinig at sa pagbigkas.</p><p>May ilang paraan para makamit ang resolusyong ito: manirahan sa isang kapaligirang Ingles, gawin ang karamihan ng pag-aaral sa audio na Ingles, at <b>sadyang pag-aralan ang IPA (International Phonetic Alphabet)</b>. Para sa mga adult na mag-aaral kung saan hindi praktikal ang unang dalawa, ang pag-aaral ng IPA ang pinakamabisa sa oras.</p><p>Sinasanay ng IPA Sound Drill ang \"resolusyon ng tunog\" na ito nang paisa-isang ponema, lalo na ang mga trap sound na pinakamahirap sa mga mag-aaral (<code>θ</code> / <code>ð</code> / <code>æ</code> / <code>ʒ</code> / <code>ɝ</code>), na bumubuo ng pundasyon para sa susunod pang pag-aaral ng Ingles.</p>",
+    "features": {
+      "title": "Ano ang inaalok ng app",
+      "item_1_html": "<b>Apat na learning drill</b>. Nahahati sa apat na drill ang pagsasanay: \"Suriin ang tunog\" (IPA → salita), \"Isulat mula sa bigkas\" (salita → IPA), \"Matuto ng salita mula sa tunog\" (SRS na bokabularyo), at \"Masanay sa konektadong tunog\" (connected speech / weak forms) — bawat isa'y may sariling layunin.",
+      "item_2_html": "<b>5,397 salitang may CEFR tag</b>. May CEFR tag ang bawat salita (A1 / A2 / B1 / B2), kaya puwede mong i-filter ang mga salitang bagay sa antas mo.",
+      "item_3_html": "<b>Nakatuong pagsasanay sa trap sound</b>. Tinutumbok ng mga drill ang trap sound na pinakamahirap (<code>θ</code> / <code>ð</code> / <code>æ</code> / <code>ʒ</code> / <code>ɝ</code>), at awtomatikong inilalabas ang iyong mga kahinaan mula sa kasaysayan ng pagsasanay — mabisang pinapalago ang saklaw ng simbolo.",
+      "item_4_html": "<b>Maghanap ng salita gamit ang IPA</b>. Bumuo ng string ng mga IPA symbol mula sa palette para maghanap ng salita. I-type ang <code>æk</code>, halimbawa, at lilitaw ang lahat ng salitang may ganitong tunog — \"back,\" \"pack,\" \"lack.\" Nakaayos ayon sa phonetic category (10 grupo ng patinig at katinig), ang palette ay reference din sa phonetics.",
+      "item_5_html": "<b>Tingnan ang iyong progreso</b>. Ipinapakita ng progress meter kung gaano ka na kalayo sa bawat isa sa apat na drill, na may three-mark system (tatlong graduation check bawat salita) para subaybayan ang mastery. Ang SRS review queue ang naglilinaw kung ano ang kailangang balikan ngayon."
+    },
+    "contact_html": "<p>Para sa feedback at bug report, gamitin ang <a href=\"https://tally.so/r/xX1axk\" target=\"_blank\" rel=\"noopener\">feedback form</a>.</p>"
   },
   "mark": {
     "aria": {
-      "step_0": "未マーク",
-      "step_1": "マーク 1/3",
-      "step_2": "マーク 2/3",
-      "step_3": "卒業（3/3）"
+      "step_0": "Walang marka",
+      "step_1": "Marka 1/3",
+      "step_2": "Marka 2/3",
+      "step_3": "Nakatapos (3/3)"
     }
   },
   "progress": {
-    "meter_label": "{pct}%（{cur} / {total}）",
-    "meter_aria": "進捗 {pct}%、{cur} 問目 / 全 {total} 問",
+    "meter_label": "{pct}% ({cur} / {total})",
+    "meter_aria": "Progreso {pct}%, tanong {cur} sa {total}",
     "title": "Kalagayan ng pag-aaral",
     "back": "Bumalik",
     "card_title": "Tingnan ang progreso",
