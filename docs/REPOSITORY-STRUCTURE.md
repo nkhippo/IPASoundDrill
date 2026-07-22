@@ -146,6 +146,7 @@ ipasounddrill/
 | Build system | Node.js | `scripts/build-i18n-html.js`（6 言語 HTML 生成） |
 | Middleware | Vercel Routing Middleware | `middleware.ts`（Accept-Language 判定、C1 fallback 時は不使用） |
 | Vercel Build Command | `node scripts/build-i18n-html.js` | `vercel.json` / Dashboard Build & Development Settings |
+| i18n parity CI | GitHub Actions `validate-i18n` | `python3 tools/validate_i18n.py` で UI key parity / residual CJK kana / placeholders / JSON format / `_html` validity を検証 |
 | MCP server | Cloudflare Workers | Worker: `githubapp-mcp`（unified）, Endpoint: `https://githubapp-mcp.nkhippo.workers.dev/sse`, Connector: `GitHubApp MCP`（shared PAT で全個人アプリ到達、本リポは対象リポの一つ）。旧: Railway `nkhippo/ipasounddrill-mcp`（`https://ipasounddrill-production.up.railway.app/mcp`, Connector `IPASoundDrill GitHub`）は Phase F まで存置=deprecated |
 | GitHub Automation | GitHub Actions | Workflows: `trigger-cursor-on-ready.yml`, `approval.yml`, `label-pr-needs-review.yml` |
 | Cursor Automation | Cursor Cloud | Webhook: active, Cloud Agent: 見送り中（`resource_exhausted`） |
@@ -196,6 +197,10 @@ These paths are **hard-coded** in the app（`<base href="/">` により言語サ
 ---
 
 ## i18n schema
+
+### i18n validation guard
+
+`tools/validate_i18n.py` is the local and CI guard for UI i18n files. Run `python3 tools/validate_i18n.py` after editing `i18n/*.json` or i18n references in `src/index.template.html`; CI runs the same command in `.github/workflows/validate-i18n.yml`.
 
 **Files**: `i18n/{en,ja,ko,zh-Hans,zh-Hant,fil}.json`（6 言語）
 

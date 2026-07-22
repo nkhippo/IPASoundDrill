@@ -420,3 +420,20 @@ Phase 6（既存編集を伴う場合）で Naoya さんが確認する項目:
 ---
 _Cursor による自動投稿_
 ```
+## 8. i18n CI 検証ガード（Issue #124）
+
+`i18n/*.json` または `src/index.template.html` の i18n 参照を変更する場合は、PR 作成前に必ず以下を実行する。
+
+```bash
+python3 tools/validate_i18n.py
+```
+
+このチェックは GitHub Actions の `validate-i18n` でも実行され、以下を hard-fail として扱う。
+
+- ja 以外の UI JSON に残った CJK かな（ひらがな・カタカナ）
+- 6 言語 UI JSON の leaf key 不一致
+- 同一 key の `{n}` / `{band}` / `{pct}` 等プレースホルダ集合不一致
+- BOM、末尾改行欠落、2 スペースインデント崩れを含む JSON フォーマット異常
+- `_html` サフィックス key の未閉じタグ、不正ネスト、未許可タグ
+
+翻訳品質そのもの（自然さ、語調、zh-Hans / zh-Hant の字体妥当性）は機械判定の対象外とし、Preview URL での目視確認に委ねる。

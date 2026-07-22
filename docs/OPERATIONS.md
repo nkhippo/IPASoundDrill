@@ -407,3 +407,14 @@ Repository Settings > Secrets and variables > Actions:
 - **MCP Worker リポ**: https://github.com/nkhippo/GitHubApp-MCP
 - **claude.ai コネクタ名**: `GitHubApp MCP`（unified、shared PAT で全個人アプリ到達。本リポは対象リポの一つ）
 - **旧 Railway（deprecated, Phase F まで存置）**: service `https://ipasounddrill-production.up.railway.app` / endpoint `/mcp` / コード `nkhippo/ipasounddrill-mcp` / コネクタ `IPASoundDrill GitHub`
+## 9. i18n 検証のローカル実行
+
+UI 翻訳 JSON や `src/index.template.html` の i18n 参照を変更した場合は、Preview / Production デプロイ前にリポジトリ直下で以下を実行する。
+
+```bash
+python3 tools/validate_i18n.py
+```
+
+このコマンドは JSON パース、UI key parity、phoneme key parity、未翻訳疑い、HTML 参照 key、TODO 痕跡、ja 以外の CJK かな残留、プレースホルダ整合、JSON フォーマット、`_html` key の HTML 妥当性を検査する。エラーが 1 件でも出た場合は PR / deploy を止め、該当 `i18n/*.json` または参照元を修正してから再実行する。
+
+GitHub Actions の `validate-i18n` workflow も同じコマンドを PR / push 時に実行する。
