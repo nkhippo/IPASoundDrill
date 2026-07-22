@@ -58,6 +58,7 @@ Issue comment 5041128786 explicitly approved a narrow blacklist exception for pr
 - Added Scope B translations verbatim from the approved Issue comment.
 - Added this implementation report.
 - Updated the specification and launch checklist to record the narrow exception.
+- Added the repository-wide rule that PR comment remediation is complete only after a same-PR result comment, synchronized across `AGENTS.md`, `.cursor/rules/dev-flow.mdc`, and `CLAUDE.md`.
 
 ## Validation
 
