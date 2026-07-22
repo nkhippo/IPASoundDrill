@@ -230,7 +230,7 @@ created: '2026-06-24'
 | ブランド | `#brandBtn` + `#brandName` |
 | 語彙 | `#vocabBtn` — 常時表示（Phase 1 で `3b` 導線へ） |
 | ガイド | `#guideBtn` — オンボーディング再表示（`3g`）にも利用予定 |
-| 設定 / 言語 | 現行 `#settingsBtn`。Phase 1 で `3f` / プロフィール `3a` へ再配置 |
+| 言語 | ヘッダー `#langSwitcher` / `#langMenu` に集約。独立 `3f` は廃止 |
 | Menu | `#backTopBtn` — プレイ中。離脱確認対象では Yes で `1a` 復帰 |
 | アクセントバッジ | Phase 1: ヘッダーに GA/RP **固定**表示（学習中切替なし） |
 | 離脱確認 | `#exitConfirmModal` — Decode / Encode / Study / Reveal |
@@ -494,7 +494,7 @@ UI i18n とは独立。各言語キー（`en`, `ja`, `ko`, `zh-Hans`, `zh-Hant`,
 
 | キー | 内容 | Phase 1 扱い |
 |------|------|----------------|
-| `app_lang` | UI 言語 | 維持（`3f`） |
+| `app_lang` | UI 言語 | 維持（ヘッダー言語スイッチャー） |
 | `app_accent` | `ga` / `rp` | プロフィール固定へ（キー統合は 1-0-b / 1-C） |
 | `app_mode` | 旧 `a` / `b` | 目的 4 カード化で廃止予定 |
 | `ept_hist_v1` | 単語 SRS（Leitner） | 維持（目的横断の扱い整理は後続） |
