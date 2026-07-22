@@ -13,7 +13,7 @@ updated: '2026-07-18'
 > 本ドキュメントは「何を作るか（what / how）」の正本。目的の正本は `PURPOSE.md`。
 > 画面・JSON フィールド・localStorage の正本は **`SPECIFICATION.md`**。フォルダマップは **`REPOSITORY-STRUCTURE.md`**。
 >
-> **更新日:** 2026-07-18 ／ **ステータス:** Phase 1 UI/UX 確定事項を情報設計に反映（Issue #75）。near 採点は実装削除済み。目的 4 カード UI・プロフィール一元通過等の DOM 実装は Phase 1-A 以降。語彙 **5,397語**。UI **169 leaf**。
+> **更新日:** 2026-07-22 ／ **ステータス:** Phase 1 UI/UX 確定事項を情報設計に反映（Issue #75）。near 採点は実装削除済み。目的 4 カード UI・プロフィール一元通過等の DOM 実装は Phase 1-A 以降。語彙 **5,397語**。UI **246 leaf**。
 
 ---
 
@@ -46,7 +46,7 @@ updated: '2026-07-18'
 | | `3c` | IPA 記号ピッカー | `8a→`（独立 concept に昇格） |
 | | `3d` | 学習状況 | `8b` |
 | | `3e` | IPA って何？ | `8c` |
-| | `3f` | 言語設定 | `8d` |
+| | `3f` | ~~言語設定~~（廃止・ヘッダーへ集約） | `8d` |
 | | `3g` | オンボーディング 4 スライド | `8e` |
 | | `3h` | このアプリについて | `8f` |
 
@@ -81,7 +81,7 @@ updated: '2026-07-18'
   - ヘッダー: 言語切替（`#langSwitcher` / `#langMenu` ドロップダウン、現在言語コード + ▾）+ ガイドアイコン（現行 guide 暫定、Phase 1-F で `3g` 差し替え）+ 語彙ボタン
   - Hero: タグラインのみ（`top.tagline` / `--font-serif`）。サブコピー・独立 CTA なし
   - 目的 4 カード（Mood B `.purpose-card`、`drill.title.2a`–`2d`）→ `applyDrillId` → `3a`
-  - フッター: Feedback / Terms / Privacy / X + `3h`「このアプリについて」DOM 常時（`about.placeholder`）
+  - フッター: Feedback / Terms / Privacy / X + `3h`「このアプリについて」DOM 常時（`about.*` 9 leaf 追加）
 - Font family トークン: `--font-ui` / `--font-serif` / `--font-ipa` / `--font-mono`（詳細は `visual-tokens.md`）
 
 ### `3a` 学習プロフィール
@@ -90,7 +90,7 @@ updated: '2026-07-18'
 - レイアウト（Phase 1-C）:
   - 必須表示: Accent（GA/RP トグル、セッション固定）+ CEFR 複数選択（**A1 / A2 / B1 / B2**）
   - 折りたたみ: focus / reg / grp（Words 系）または csLevel / csFilter（`2d`）
-  - Language は `3f` / ヘッダー（`#langSwitcher`）。`3a` 必須 UI からは外す
+  - Language はヘッダー（`#langSwitcher` / `#langMenu`）に集約。独立 `3f` は廃止し、`3a` 必須 UI からは外す
   - CTA: 「はじめる」（`#startBtn`）
 - `#setup` を `data-frame="3a"` / `.profile-3a` としてリブランド。#1–#3（mode/tab/dir）は目的カード stub で内部マッピングし非表示
 - LS: `prev_settings_v1` プリセット、`ept_marks_v1`（`ept_checks_v1` から lazy migration）
@@ -143,9 +143,9 @@ updated: '2026-07-18'
 | `3c` | IPA 記号ピッカー（`#symbolPickerPage`、`#/vocab/ipa`。`3b` Segmented「IPA」から） |
 | `3d` | 学習状況（`#learningStatusPage`、`#/progress`。Phase 1-E PR-2） |
 | `3e` | IPA って何？ |
-| `3f` | ~~言語設定~~（廃止。ヘッダー言語スイッチャーへ。docs 集約は PR-3） |
+| `3f` | ~~言語設定~~（廃止。Phase 1-E PR-3 でヘッダー言語スイッチャーへ完全集約） |
 | `3g` | オンボーディング 4 スライド（`onboarding_completed_v1`） |
-| `3h` | このアプリについて（DOM 常時・クローラビリティ。本格拡張は PR-3） |
+| `3h` | このアプリについて（DOM 常時・クローラビリティ。Phase 1-E PR-3 で本格拡張） |
 
 #### `3b` / `3c` Mood B UX（Phase 1-E PR-1）
 
@@ -164,6 +164,12 @@ updated: '2026-07-18'
 - **SRS queue:** `ept_hist_v1` / `ept_vocab_v1` を word 単位で統合し、早い dueAt を採用。当日末までを全件表示し、100件超は progress 専用 virtualization
 - **Direct review:** queue 行から該当語1件の `2c` Study を開始。通常の目的カード導線は不変
 - トークン: Mood B。詳細クラスは `visual-tokens.md` §5k
+
+#### `3h` About UX（Phase 1-E PR-3）
+
+- リード / IPA 学習の理由 / 特徴 5 項目 / フィードバック導線を、常時 DOM の `#aboutBlock` 内に配置
+- `about.*` 新規 9 leaf を6言語で揃え、HTML 文言は `_html` サフィックス経由で適用
+- IPA 記号は `--font-ipa`、カードと本文は Mood B token を使用
 
 ### 視覚言語（原則のみ）
 
@@ -414,7 +420,7 @@ GAS 側の `?urls=1` / `migratePublicSharing` 反映は `docs/reference/remainin
 
 | Tier | 内容 | fil 状態 |
 |------|------|----------|
-| Tier 1 | UI 文言 **169** leaf + 言語ピッカー（zh-Hant/zh-Hans 分離） | ✅ `i18n/fil.json` |
+| Tier 1 | UI 文言 **246** leaf + 言語ピッカー（zh-Hant/zh-Hans 分離） | ✅ `i18n/fil.json` |
 | Tier 2 | 語義 gloss（5,397 語） | ✅ **5,397/5,397** |
 | Tier 3 | 音素解説 47 記号 + 学習ガイド | ✅ 全6言語（2026-07-07: zh→zh-Hant/zh-Hans 分離） |
 | Tier 4 | 連結句・弱形ルール文 `cs_rule` | ✅ 237/237（201+36） |
@@ -433,7 +439,7 @@ GAS 側の `?urls=1` / `migratePublicSharing` 反映は `docs/reference/remainin
 | 高 | `ex`（記号別例語） | ✅ phonemes JSON に実装 |
 | 高 | `rp_ipa` 全語付与 | ✅ **5,397語** + 201連結句 |
 | 高 | 弱形 36語 + `?weak=` TTS | ✅ |
-| 高 | UI fil（Tier 1+3） | ✅ **169** leaf + phonemes + guide |
+| 高 | UI fil（Tier 1+3） | ✅ **246** leaf + phonemes + guide |
 | 高 | 英語定義 `def` | ✅ 5,397/5,397 |
 | 高 | TTS プリフェッチ（クライアント） | ✅ Phase T（body-first / `?urls=1` / preread） |
 | 高 | GA バッチ warm（GAS） | ✅ `BatchWarm.gs`（5,397語。Drive 進捗は残作業チェックリスト） |
@@ -466,7 +472,7 @@ GAS 側の `?urls=1` / `migratePublicSharing` 反映は `docs/reference/remainin
 | 無制限セッション（プール全件・6/5 先読み・離脱確認→サマリー） | ✅ |
 | CEFR 連動フィルタ（0 件ピル非活性） | ✅ |
 | GA バッチ warm（GAS 時間トリガー・5,397語） | ✅（Drive 全件完走は運用確認） |
-| UI 6言語（en/ja/zh-Hans/zh-Hant/ko/fil） | ✅ Tier 1+3（**169** leaf） |
+| UI 6言語（en/ja/zh-Hans/zh-Hant/ko/fil） | ✅ Tier 1+3（**246** leaf） |
 | 多言語学習ガイド（6言語） | ✅ |
 | 英語定義 `def` | ✅ 5,397/5,397 |
 | narrow IPA + respelling | ✅ 全語彙 |
