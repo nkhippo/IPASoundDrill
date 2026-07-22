@@ -26,7 +26,7 @@ updated: '2026-07-18'
 |---|---|
 | #1–#9 | Setup 由来（うち #1–#3 は目的カード化で **廃止予定**） |
 | #10 Accent | プロフィール `3a` 必須・学習中固定 |
-| #11 Language | **カウントは 11 に含める**。UI 配置は `3f` またはヘッダー（プロフィール必須表示から外してよい） |
+| #11 Language | **カウントは 11 に含める**。UI 配置はヘッダー（独立 `3f` は廃止）（プロフィール必須表示から外してよい） |
 | Onboarding | 11 の外（`3g` / `onboarding_completed_v1`） |
 | フィルタトグル 2 種 | 11 に含めない（UI シェル） |
 
@@ -44,7 +44,7 @@ updated: '2026-07-18'
 | 8 | Connected level | `cs.level` | `#csLevelPills` | なし（`S.csLevel`） | **プロフィール**（`2d` 選択時） | 折りたたみ | all/1/2/3 |
 | 9 | Connected type | `cs.*` | `#csPills` | なし（`S.csFilter`） | **プロフィール**（`2d` 選択時） | 折りたたみ | all/linking/assimilation/elision/weak |
 | 10 | Accent | settings | `#accentOpts` | `app_accent` | **プロフィール `3a`** | 毎セッション表示・学習中固定 | GA/RP |
-| 11 | Language | settings | `#langOpts` | `app_lang` | **`3f` 言語設定**（またはヘッダー） | トップ/設定 | **11 カウントに含む**。プロフィール必須表示からは外してよい |
+| 11 | Language | settings | `#langOpts` | `app_lang` | **ヘッダー言語スイッチャー**（独立 `3f` は廃止） | トップ/設定 | **11 カウントに含む**。プロフィール必須表示からは外してよい |
 
 **UI シェル（パラメータではない）**
 
@@ -56,7 +56,7 @@ updated: '2026-07-18'
 
 **廃止理由（1–3）:** Phase 1 目的 4 カードが入口を平坦化するため。`app_mode` は削除予定（SPEC §5.3）。
 
-**Cursor 推奨（裁定反映済み）:** プロフィール必須表示 = Accent + CEFR。詳細フィルタ（5–9）は同一画面の折りたたみ。Language は `3f`/ヘッダー。ラベルは常に **「Setup 11 項目」**。
+**Cursor 推奨（裁定反映済み）:** プロフィール必須表示 = Accent + CEFR。詳細フィルタ（5–9）は同一画面の折りたたみ。Language はヘッダーに集約（独立 `3f` は廃止）。ラベルは常に **「Setup 11 項目」**。
 
 ---
 
@@ -66,7 +66,7 @@ updated: '2026-07-18'
 
 | キー | 用途 | Phase 1 扱い |
 |---|---|---|
-| `app_lang` | UI 言語 | **維持**（`3f`） |
+| `app_lang` | UI 言語 | **維持**（ヘッダー言語スイッチャー） |
 | `app_accent` | GA/RP | **維持**→プロフィール固定（キー統合は任意） |
 | `app_mode` | 旧 Mode A/B | **廃止** |
 | `ept_hist_v1` | 単語 Leitner SRS | **維持** |
@@ -360,11 +360,9 @@ dueAt は `ts + BOX_INTERVAL_MS[box]`。`dueAt <= now` を期限切れ、`now < 
 |---|---|---|
 | 説明文 | `guide.json` / 新規 i18n | 再配置 |
 
-### `3f` 言語設定
+### ~~`3f` 言語設定~~（廃止）
 
-| 動的項目 | データソース | Phase 1 変更 |
-|---|---|---|
-| 言語ピル | `app_lang` | settings から分離可 |
+Phase 1-E PR-3 で独立画面を廃止し、`app_lang` と言語切替 UI はヘッダーの `#langSwitcher` / `#langMenu` に完全集約。
 
 ### `3g` オンボーディング
 
@@ -377,7 +375,10 @@ dueAt は `ts + BOX_INTERVAL_MS[box]`。`dueAt <= now` を期限切れ、`now < 
 
 | 動的項目 | データソース | Phase 1 変更 |
 |---|---|---|
-| 静的説明 | DOM 常時（クローラビリティ） | **新規** |
+| リード / IPA 学習の理由 | `about.lead` / `about.why_ipa_html` | **実装済（PR-3）** |
+| 特徴 5 項目 | `about.features.*` | **実装済（PR-3）** |
+| フィードバック導線 | `about.contact_html` | **実装済（PR-3）** |
+| DOM | `#aboutBlock` 常時（クローラビリティ） | **本格拡張済（PR-3）** |
 
 ---
 
