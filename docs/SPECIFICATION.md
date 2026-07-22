@@ -547,7 +547,7 @@ Study（`2c`）の内部フェーズ。Quiz 凍結時は Study のみ。
 | Phase 1-E PR-2 | 237 |
 | Phase 1-E PR-3 | **246** |
 
-PR-3 の増分は新規 `about.*` 9 leaf。既存 key の value は変更しない。Build-only の `meta.*` 4 leaf を含む。
+PR-3 の schema 増分は新規 `about.*` 9 leaf。既存 key value は原則不変だが、Issue #122 comment で明示承認されたスコープ B に限り、ko / zh-Hans / zh-Hant / fil の未翻訳値を修正する。Build-only の `meta.*` 4 leaf を含む。
 
 検証: `python3 tools/validate_i18n.py`。監査ドキュメント再生成: `python3 tools/gen_audit_docs.py`.
 
