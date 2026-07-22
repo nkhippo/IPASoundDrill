@@ -86,6 +86,36 @@ def flatten(d, prefix=""):
 def langs_in(dirpath):
     return sorted(os.path.splitext(os.path.basename(p))[0] for p in glob.glob(os.path.join(dirpath, "*.json")))
 
+def line_depth_after_scan(line, depth):
+    in_string = False
+    escape = False
+    for ch in line:
+        if in_string:
+            if escape:
+                escape = False
+            elif ch == "\\":
+                escape = True
+            elif ch == '"':
+                in_string = False
+        else:
+            if ch == '"':
+                in_string = True
+            elif ch in "[{":
+                depth += 1
+            elif ch in "]}":
+                depth = max(depth - 1, 0)
+    return depth
+
+def expected_indent_depths(text):
+    depths = []
+    depth = 0
+    for line in text.splitlines():
+        stripped = line.lstrip(" ")
+        expected = max(depth - 1, 0) if stripped.startswith(("}", "]")) else depth
+        depths.append(expected)
+        depth = line_depth_after_scan(stripped, depth)
+    return depths
+
 def validate_json_format(paths):
     errors = []
     for path in paths:
@@ -96,21 +126,18 @@ def validate_json_format(paths):
         text = raw.decode("utf-8")
         if not text.endswith("\n"):
             errors.append(f"[H] {rel(path)}: 末尾改行がありません")
-        lines = text.splitlines()
-        depth = 0
-        for lineno, line in enumerate(lines, start=1):
+        json.loads(text)
+        expected_depths = expected_indent_depths(text)
+        for lineno, line in enumerate(text.splitlines(), start=1):
             if not line:
                 continue
             leading = len(line) - len(line.lstrip(" "))
-            stripped = line.lstrip(" ")
             if "\t" in line[:leading]:
                 errors.append(f"[H] {rel(path)}:{lineno}: タブインデントが含まれています")
                 continue
-            expected_depth = depth - 1 if stripped.startswith(("}", "]")) else depth
-            if leading != max(expected_depth, 0) * 2:
-                errors.append(f"[H] {rel(path)}:{lineno}: 2 スペースインデント不一致（expected {max(expected_depth, 0) * 2}, got {leading}）")
-            depth += stripped.count("{") + stripped.count("[") - stripped.count("}") - stripped.count("]")
-        json.loads(text)
+            expected = expected_depths[lineno - 1] * 2
+            if leading != expected:
+                errors.append(f"[H] {rel(path)}:{lineno}: 2 スペースインデント不一致（expected {expected}, got {leading}）")
     return errors
 
 def rel(path):
@@ -203,7 +230,7 @@ def main(strict=False):
             (errors if strict else warns).append(f"[C] {l}.json: en と同一値 {len(sus)}件 -> {sorted(sus)}")
 
     html = open(HTML, encoding="utf-8").read()
-    refs = set(re.findall(r"""(?<![A-Za-z0-9_$])t\(\s*["']([a-zA-Z0-9_.]+)["']\s*\)""", html))
+    refs = set(re.findall(r"""(?<![A-Za-z0-9_$])t\(\s*["']([a-zA-Z0-9_.]+)["']\s*(?=[,)])""", html))
     dyn_prefixes = set(re.findall(r"""(?<![A-Za-z0-9_$])t\(\s*["']([a-zA-Z0-9_.]+)["']\s*\+""", html))
     dyn_prefixes = {r if r.endswith(".") else r + "." for r in dyn_prefixes}
     for r in sorted(refs):
