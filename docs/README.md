@@ -29,7 +29,7 @@ created: '2026-07-10'
 
 | ファイル | 何が書いてあるか |
 |---|---|
-| [[pj-2026-07-12-4049|`DOCUMENT-MAP.md`]] | 全ドキュメントの分類（Category A-E）と参照タイミング |
+| [[pj-2026-07-12-4049|`DOCUMENT-MAP.md`]] | 全ドキュメントの分類（Category A-F）と参照タイミング |
 | [[pj-2026-07-12-fae7|`DEV-GUARDRAILS.md`]] | 堅固化パターン A/B、エージェント自己判断禁止事項 |
 | [[pj-2026-07-12-c324|`DOC-SYNC-PLAYBOOK.md`]] | ソース ⇔ ドキュメント同期の 3 分岐マトリックス |
 | [[pj-2026-07-12-3141|`agent-instruction-guide.md`]] | 指示の抽象度マトリックス、Pre-Issue Recon 運用 |
