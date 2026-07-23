@@ -538,6 +538,16 @@ UI 改修 Issue 起票時、Claude は改修内容と CD (`docs/claude-design/`)
 
 判定基準と対応フローの詳細は `docs/DOCUMENT-MAP.md` の Category F、`docs/claude-design/UPDATE-GUIDE.md`(配置後)を参照。
 
+### UI 改修 PR のスクショ必須（Issue #145）
+
+Change Pattern に **C6** を含む UI 改修 PR では次を守る:
+
+1. Issue 本文の **スクショ対象画面リスト** 全画面のスクショを PR Comment に添付する（Cursor / Codex）
+2. 添付不可の場合は PR Comment に明記し、Naoya 実機検証を Claude Rv の前提とする
+3. Claude Rv はスクショ（または上記代替）が無い UI 改修 PR を **FAIL** とする（構造検証 PASS でも）
+4. Naoya 実機は Claude Rv の後工程専用にせず、**並行実施**してよい
+5. 詳細正本: `docs/dev_project_common.md` § 4
+
 ### 作業の進め方
 
 検証が完了したら、確認なしに以下まで一気に進めること：
