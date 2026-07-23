@@ -8,8 +8,8 @@ created: '2026-07-12'
 
 # DOCUMENT-MAP — IPA Sound Drill ドキュメント運用マップ
 
-> **Last updated**: 2026-07-23（Issue #126: `docs/claude-design/` を Category D に追加）
-> **Purpose**: プロジェクト内の全ドキュメントを Category A-E に分類し、更新義務・参照タイミング・レビュー頻度を一枚で見られるようにする。
+> **Last updated**: 2026-07-23（Issue #130: Category F — CD 修正判定を追加）
+> **Purpose**: プロジェクト内の全ドキュメントを Category A-F に分類し、更新義務・参照タイミング・レビュー頻度を一枚で見られるようにする。
 >
 > **§ 4 縮約（2026-07-20, Issue #114）:** Category C/D 分離と Issue タイプ別の細分化テーブルを廃止し、全 Issue 共通の必須参照に統合。エージェント混在時代には起票時・実装時で同一 docs を読むケースが大半であり、トークン効率と判断コスト削減を優先した。
 
@@ -24,6 +24,7 @@ created: '2026-07-12'
 | **C** | Issue 起票時に参照 | Naoya + Claude で Issue 本文作成時 | 参照義務 |
 | **D** | Issue 対応時に参照 | 実装エージェントが実装開始時 | 必読 |
 | **E** | 定期レビュー | 月次 or ローンチ後 | Naoya さんが定期実施 |
+| **F** | CD（Claude Design）修正判定 | UI 改修 Issue 起票時 | 改修分類ブロックへの記載義務 |
 
 > **Note:** Category C と D は Issue #114 以降、§ 4 の「全 Issue 共通必須参照」に実質統合。Category 定義は履歴上の分類として § 2 に残す。
 
@@ -95,6 +96,20 @@ Issue の性質に応じて Naoya + Claude が確認:
 | `docs/cursor/reports/` 群 | historical archive（2026-07-20 以前）。月次レビュー時は必要に応じ参照 | Naoya + Claude |
 | `docs/cursor/recon/` 群 | UI/UX・インフラ調査時（Pre-Issue Recon）。段階 2 突合の入力。長期は Track B React 化の対応マップ | Naoya + Claude |
 | `docs/agent-instruction-guide.md` の抽象度マトリックス | 月次（見積もり精度レビュー） | Naoya + Claude |
+
+### Category F: CD（Claude Design）修正判定
+
+UI 改修 Issue 起票時、Claude は必ず以下 3 分類のいずれに該当するかを判定し、Issue 本文の「改修分類」ブロックに **CD 修正判定** として明示する。
+
+| 分類 | 状況 | 対応 |
+|---|---|---|
+| **A. CD 修正必須** | 実装が CD 準拠を目指すべきだが、CD が古い/不足 | CD 更新指示書作成 → CD 更新 PR → UI 改修 Issue の順 |
+| **B. CD 意図的乖離** | 実装が CD と意図的に異なる（Phase 一時措置等） | UI 改修 Issue 内に「CD 意図的乖離」セクションで明記 |
+| **C. CD 修正不要** | CD が最新と一致 | UI 改修 Issue のみ起票 |
+
+CD 更新指示書の作成ルール、多言語対応方針、セッション運用ルールは `docs/claude-design/UPDATE-GUIDE.md` を参照（配置後）。
+
+CD 修正判定は、Docs 改修（C1）や Bug 修正（C2）など UI に影響しない Issue では「該当なし」と記載する。
 
 ## 3. 新規ドキュメント作成判定フロー
 

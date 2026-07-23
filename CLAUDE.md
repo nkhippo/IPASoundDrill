@@ -530,6 +530,14 @@ UI 改修 Issue では `docs/claude-design/` を必ず参照すること。
 2. **「CD と同じ UI で」指示時、Issue に記載のない差分を発見したら Phase 0 Comment でレポートし、Claude/Naoya の判断待ち**
 3. 参照パス例: `docs/claude-design/sp.dc.html#1a-ja`（セクション ID で画面特定）
 
+### CD 修正判定（Category F）
+
+UI 改修 Issue 起票時、Claude は改修内容と CD（`docs/claude-design/`）の状態を照合し、以下 3 分類のいずれかを Issue 本文の「改修分類」ブロックに **CD 修正判定** として記載する。
+
+- A. CD 修正必須 / B. CD 意図的乖離 / C. CD 修正不要
+
+判定基準と対応フローの詳細は `docs/DOCUMENT-MAP.md` の Category F、`docs/claude-design/UPDATE-GUIDE.md`（配置後）を参照。
+
 ### 作業の進め方
 
 検証が完了したら、確認なしに以下まで一気に進めること：
