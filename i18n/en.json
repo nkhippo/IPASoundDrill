@@ -24,7 +24,7 @@
   },
   "modeb": {
     "title": "Listen & learn",
-    "lead_html": "Learn <b>new words from sound</b>&mdash;hear the word, then match meaning and spelling. Progress by CEFR band with spaced review.",
+    "lead_html": "Learn <b>new words from sound</b>&mdash;hear the word, then match meaning and spelling. Progress by CEFR band.",
     "study": {
       "got_it": "Next",
       "reveal_meaning": "Reveal meaning"
@@ -130,7 +130,6 @@
     "no_results": "No results",
     "back": "Back",
     "filter": {
-      "spelling": "Spelling",
       "ipa": "IPA",
       "all": "All"
     }
@@ -249,15 +248,15 @@
   "about": {
     "title": "About this app",
     "placeholder": "A learning tool to verify English pronunciation with IPA and rebuild it from sound.",
-    "lead": "IPA Sound Drill is a training tool for sharpening English sounds through the phonetic alphabet (IPA). It's built for adult learners who want to raise the resolution of both their listening and their speech — with GA (American) and RP (British) accents supported.",
+    "lead": "IPA Sound Drill is a training tool for sharpening English sounds through the phonetic alphabet. Rebuild pronunciation from sound—hear the word, then match meaning and spelling—progressing by CEFR band.",
     "why_ipa_html": "<p>For adult learners, listening and pronunciation are inseparable. <b>A sound you can't produce accurately is a sound you can't reliably distinguish by ear</b> — and a sound you can't distinguish is one you can't reproduce. Both are two sides of the same ability: perceiving sound as sound.</p><p>Take the word <i>turtle</i>. Its actual English pronunciation is <code>/ˈtɝːtəl/</code> — two syllables built on an r-colored vowel and a schwa, quite unlike how the spelling suggests it should sound. The gap between how a word looks and how it truly sounds is where pronunciation breaks down.</p><p>To make English your own, you need to handle sound at <b>IPA-level resolution</b>: not just \"ah\" versus \"ee,\" but <code>/æ/</code>, <code>/ʌ/</code>, <code>/ɑ/</code>, and <code>/ə/</code> as distinct sounds you can both hear apart and pronounce apart.</p><p>There are a few ways to reach that resolution: living in an English-speaking environment, doing most of your learning through English audio, or <b>studying IPA deliberately</b>. For adult learners where the first two aren't realistic, IPA study is by far the most time-efficient path.</p><p>IPA Sound Drill trains this \"sound resolution\" phoneme by phoneme. It focuses on the trap sounds learners struggle with most — <code>θ</code>, <code>ð</code>, <code>æ</code>, <code>ʒ</code>, <code>ɝ</code> — building the foundation for everything that comes next in your English.</p>",
     "features": {
       "title": "What this app offers",
-      "item_1_html": "<b>Four learning drills</b>. Practice is split into four drills: \"Check the sound\" (IPA → word), \"Write from pronunciation\" (word → IPA), \"Learn words from sound\" (SRS vocabulary), and \"Get used to connected sounds\" (connected speech / weak forms) — each targeting a different goal.",
+      "item_1_html": "<b>Four learning drills</b>. Practice is split into four drills: \"Check the sound\" (IPA → word), \"Write from pronunciation\" (word → IPA), \"Learn words from sound\" (sound→vocabulary), and \"Get used to connected sounds\" (connected speech / weak forms) — each targeting a different goal.",
       "item_2_html": "<b>5,397 CEFR-tagged words</b>. Every word carries a CEFR tag (A1 / A2 / B1 / B2), so you can filter down to just the words that match your level.",
       "item_3_html": "<b>Focused trap-sound practice</b>. Drills target the trap sounds learners find hardest (<code>θ</code> / <code>ð</code> / <code>æ</code> / <code>ʒ</code> / <code>ɝ</code>), and automatically surface your weak spots from practice history — growing symbol coverage efficiently.",
       "item_4_html": "<b>Search words by IPA symbol</b>. Build a string of IPA symbols from the palette to search for words. Type <code>æk</code>, for example, and every word containing that sound — \"back,\" \"pack,\" \"lack\" — appears. Arranged by phonetic category (10 groups of vowels and consonants), the palette doubles as a phonetics reference.",
-      "item_5_html": "<b>See your progress</b>. A progress meter shows how far you've come in each of the four drills, with a three-mark system (three graduation checks per word) tracking mastery. An SRS review queue makes it clear at a glance what needs reviewing now."
+      "item_5_html": "<b>See your progress</b>. A progress meter shows how far you've come in each of the four drills, with a three-mark system (three graduation checks per word) tracking mastery."
     },
     "contact_html": "<p>For feedback and bug reports, please use the <a href=\"https://tally.so/r/xX1axk\" target=\"_blank\" rel=\"noopener\">feedback form</a>.</p>"
   },

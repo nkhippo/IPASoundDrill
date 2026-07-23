@@ -661,6 +661,69 @@
   #setup.profile-3a .pill.cefr-all{border-style:dashed;background:transparent;color:var(--muted);font-size:12.5px}
   .profile-info-panel{font-size:11.5px;color:var(--signal);background:var(--signal-soft);border-radius:10px;padding:10px 12px;margin-top:14px;line-height:1.6}
 
+
+  /* ===== Issue #147: PC CD layout (min-width:1024px) ===== */
+  .header-nav{display:none;align-items:center;gap:14px;margin-right:8px}
+  .header-link{border:none;background:transparent;padding:0;font-family:var(--font-ui);font-size:13.5px;color:var(--muted);cursor:pointer}
+  .header-link:hover{color:var(--ink)}
+  .header-link-accent{color:var(--accent)!important;font-weight:600}
+  .top-sidebar{display:none}
+  .top-pc-layout{display:block}
+  .top-purpose-label{display:none}
+  .top-purpose-hint{display:none}
+  .task-header{display:none}
+  @media (min-width:1024px){
+    body.top-home:not(.in-play) .wrap{max-width:1200px;padding:24px 48px 56px}
+    body.top-home:not(.in-play) .topbar{padding-bottom:16px;margin-bottom:28px;border-bottom:1px solid var(--hair)}
+    body.top-home:not(.in-play) .brand .mark{font-size:26px}
+    body.top-home:not(.in-play) .brand .name{font-size:16px}
+    body.top-home:not(.in-play) .header-nav{display:inline-flex}
+    body.top-home:not(.in-play) .topbar-actions{flex-direction:row;align-items:center;gap:14px}
+    body.top-home:not(.in-play) .header-lang{max-width:none}
+    body.top-home:not(.in-play) #purposeStub.panel{background:transparent;border:none;padding:0}
+    body.top-home:not(.in-play) .top-pc-layout{display:grid;grid-template-columns:7fr 3fr;gap:48px;align-items:start}
+    body.top-home:not(.in-play) .top-tagline{font-size:clamp(40px,5vw,60px);line-height:1.32}
+    body.top-home:not(.in-play) .top-subcopy{font-size:17px;max-width:620px}
+    body.top-home:not(.in-play) .top-purpose-label{display:block;font-family:var(--font-serif);font-size:13px;font-weight:600;letter-spacing:.08em;color:var(--ink);margin:52px 0 4px}
+    body.top-home:not(.in-play) .top-purpose-hint{display:block;font-size:13px;color:var(--muted);margin:0 0 20px}
+    body.top-home:not(.in-play) .purpose-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+    body.top-home:not(.in-play) .purpose-card{flex-direction:column;gap:12px;padding:22px 20px;align-items:flex-start}
+    body.top-home:not(.in-play) .purpose-card .purpose-chevron{display:none}
+    body.top-home:not(.in-play) .purpose-card .purpose-title{font-size:16px}
+    body.top-home:not(.in-play) .purpose-card .purpose-subtitle{font-size:13px;margin-top:6px;line-height:1.55}
+    body.top-home:not(.in-play) .top-sidebar{display:block;background:var(--panel);border:1px solid var(--hair);border-radius:18px;padding:26px 24px;position:sticky;top:24px}
+    body.top-home:not(.in-play) .top-sidebar-title{font-family:var(--font-serif);font-size:12px;font-weight:600;letter-spacing:.1em;color:var(--ink);margin:0 0 12px}
+    body.top-home:not(.in-play) .top-sidebar-body{font-size:13px;line-height:1.85;color:var(--muted);margin:0}
+    body.top-home:not(.in-play) .top-sidebar-body + .top-sidebar-body{margin-top:12px}
+    body.top-home:not(.in-play) .top-sidebar-link{display:inline-flex;align-items:center;gap:5px;margin-top:14px;font-size:12.5px;font-weight:600;color:var(--accent);background:none;border:none;padding:0;cursor:pointer;font-family:var(--font-ui)}
+    body.top-home:not(.in-play) .purpose-card-progress{width:420px;max-width:100%}
+    body.top-home:not(.in-play) #setup.profile-3a{max-width:720px;margin-left:auto;margin-right:auto;padding:40px 48px 44px}
+    body.in-play .wrap{max-width:1024px}
+    body.in-play .task-header{display:flex;align-items:center;gap:16px;padding:12px 0 16px;margin-bottom:8px;border-bottom:1px solid var(--hair)}
+    body.in-play .task-header-back{border:1px solid var(--hair);background:var(--panel);border-radius:999px;width:38px;height:38px;display:inline-flex;align-items:center;justify-content:center;color:var(--muted);cursor:pointer;flex:none;padding:0}
+    body.in-play .task-header-main{flex:1;min-width:0}
+    body.in-play .task-header-title{font-weight:600;font-size:15px;color:var(--ink)}
+    body.in-play .task-header-meter{height:6px;background:var(--hair);border-radius:999px;margin-top:7px;max-width:420px;overflow:hidden}
+    body.in-play .task-header-meter > span{display:block;height:100%;background:var(--signal);width:0%}
+    body.in-play.drill-two-pane .wrap{display:grid;grid-template-columns:1fr 1fr;gap:0;align-items:stretch}
+    body.in-play.drill-two-pane .topbar,
+    body.in-play.drill-two-pane .play-line,
+    body.in-play.drill-two-pane .task-header,
+    body.in-play.drill-two-pane .audio-hint,
+    body.in-play.drill-two-pane .site-footer,
+    body.in-play.drill-two-pane .reflect-dock,
+    body.in-play.drill-two-pane #exitConfirmModal{grid-column:1 / -1}
+    body.in-play.drill-two-pane .drill-pane{border-radius:0;margin:0}
+    body.in-play.drill-two-pane .drill-pane-prompt{border-right:1px solid var(--hair);background:var(--paper)}
+    body.in-play.drill-two-pane .drill-pane-answer{background:var(--panel)}
+    body.in-play.drill-two-pane #cardDecode.panel,
+    body.in-play.drill-two-pane #cardEncode.panel,
+    body.in-play.drill-two-pane #cardModeBStudy.panel,
+    body.in-play.drill-two-pane #cardModeBMcq.panel,
+    body.in-play.drill-two-pane #cardModeBDict.panel,
+    body.in-play.drill-two-pane #reveal.panel{box-shadow:none;border-left:none;border-right:none}
+  }
+
 </style>
 </head>
 <body class="top-home">
@@ -670,6 +733,10 @@
       <span class="mark">/iː/</span>
       <div class="name" id="brandName">IPA Sound Drill</div>
     </button>
+    <nav class="header-nav" id="headerNav" aria-label="Primary">
+      <button type="button" class="header-link" id="headerProgressLink">Your progress</button>
+      <button type="button" class="header-link header-link-accent" id="headerIpaLink">What is IPA?</button>
+    </nav>
     <div class="topbar-actions">
       <div class="header-lang" id="headerLang">
         <button class="lang-switcher" id="langSwitcher" type="button"
@@ -705,19 +772,40 @@
   <div class="play-line hidden" id="playLine">
     <div class="play-crumb" id="playCrumb" aria-live="polite"></div>
   </div>
+  <div class="task-header" id="taskHeader" hidden>
+    <button type="button" class="task-header-back" id="taskHeaderBack" aria-label="Back">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+    </button>
+    <div class="task-header-main">
+      <div class="task-header-title" id="taskHeaderTitle"></div>
+      <div class="task-header-meter" aria-hidden="true"><span id="taskHeaderMeterFill"></span></div>
+    </div>
+  </div>
   <p class="audio-hint" id="audioHint" role="status" aria-live="polite">Tap Listen to enable sound</p>
 
   <!-- TOP PAGE 1a (Phase 1-B) — was #purposeStub in Phase 1-C -->
   <section id="purposeStub" class="panel" data-frame="1a">
-    <span class="top-swash" aria-hidden="true"></span>
-    <h1 class="top-tagline" id="topTagline">音を、美しく。</h1>
-    <p class="top-subcopy" id="topSubcopy"></p>
-    <div class="top-attrs" id="topAttrs" aria-label="App attributes"></div>
-    <div class="purpose-grid" id="purposeGrid" role="group" aria-label="Purpose cards">
-      <button type="button" class="purpose-card" data-drill="2a" aria-pressed="false" id="purpose2a"><span class="purpose-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><line x1="4" y1="10" x2="4" y2="14"/><line x1="8.5" y1="6" x2="8.5" y2="18"/><line x1="13" y1="9" x2="13" y2="15"/><line x1="17.5" y1="4" x2="17.5" y2="20"/><line x1="21" y1="10.5" x2="21" y2="13.5"/></svg></span><span class="purpose-copy"><span class="purpose-title" id="purpose2aT">音の発音を確かめる</span><span class="purpose-subtitle" id="purpose2aD"></span></span><span class="purpose-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg></span></button>
-      <button type="button" class="purpose-card" data-drill="2b" aria-pressed="false" id="purpose2b"><span class="purpose-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.4 3.6a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></span><span class="purpose-copy"><span class="purpose-title" id="purpose2bT">発音から書いてみる</span><span class="purpose-subtitle" id="purpose2bD"></span></span><span class="purpose-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg></span></button>
-      <button type="button" class="purpose-card" data-drill="2c" aria-pressed="false" id="purpose2c"><span class="purpose-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8.5a6 6 0 0 1 12 0c0 3-2 4.2-3 5.6-.9 1.4-.7 3.4-3 3.4a2.6 2.6 0 0 1-2.6-2.6"/><path d="M9.2 8.6A3 3 0 0 1 14 11"/></svg></span><span class="purpose-copy"><span class="purpose-title" id="purpose2cT">音から単語を覚える</span><span class="purpose-subtitle" id="purpose2cD"></span></span><span class="purpose-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg></span></button>
-      <button type="button" class="purpose-card" data-drill="2d" aria-pressed="false" id="purpose2d"><span class="purpose-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg></span><span class="purpose-copy"><span class="purpose-title" id="purpose2dT">連結する音に慣れる</span><span class="purpose-subtitle" id="purpose2dD"></span></span><span class="purpose-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg></span></button>
+    <div class="top-pc-layout">
+      <div class="top-pc-main">
+        <span class="top-swash" aria-hidden="true"></span>
+        <h1 class="top-tagline" id="topTagline">音を、美しく。</h1>
+        <p class="top-subcopy" id="topSubcopy"></p>
+        <div class="top-attrs" id="topAttrs" aria-label="App attributes"></div>
+        <div class="top-purpose-label" id="topPurposeLabel">Choose your focus</div>
+        <div class="top-purpose-hint" id="topPurposeHint">Pick one purpose — your session begins right away.</div>
+        <div class="purpose-grid" id="purposeGrid" role="group" aria-label="Purpose cards">
+          <button type="button" class="purpose-card" data-drill="2a" aria-pressed="false" id="purpose2a"><span class="purpose-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><line x1="4" y1="10" x2="4" y2="14"/><line x1="8.5" y1="6" x2="8.5" y2="18"/><line x1="13" y1="9" x2="13" y2="15"/><line x1="17.5" y1="4" x2="17.5" y2="20"/><line x1="21" y1="10.5" x2="21" y2="13.5"/></svg></span><span class="purpose-copy"><span class="purpose-title" id="purpose2aT">音の発音を確かめる</span><span class="purpose-subtitle" id="purpose2aD"></span></span><span class="purpose-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg></span></button>
+          <button type="button" class="purpose-card" data-drill="2b" aria-pressed="false" id="purpose2b"><span class="purpose-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.4 3.6a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></span><span class="purpose-copy"><span class="purpose-title" id="purpose2bT">発音から書いてみる</span><span class="purpose-subtitle" id="purpose2bD"></span></span><span class="purpose-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg></span></button>
+          <button type="button" class="purpose-card" data-drill="2c" aria-pressed="false" id="purpose2c"><span class="purpose-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8.5a6 6 0 0 1 12 0c0 3-2 4.2-3 5.6-.9 1.4-.7 3.4-3 3.4a2.6 2.6 0 0 1-2.6-2.6"/><path d="M9.2 8.6A3 3 0 0 1 14 11"/></svg></span><span class="purpose-copy"><span class="purpose-title" id="purpose2cT">音から単語を覚える</span><span class="purpose-subtitle" id="purpose2cD"></span></span><span class="purpose-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg></span></button>
+          <button type="button" class="purpose-card" data-drill="2d" aria-pressed="false" id="purpose2d"><span class="purpose-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg></span><span class="purpose-copy"><span class="purpose-title" id="purpose2dT">連結する音に慣れる</span><span class="purpose-subtitle" id="purpose2dD"></span></span><span class="purpose-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg></span></button>
+        </div>
+      </div>
+      <aside class="top-sidebar" id="topSidebar" aria-label="About sidebar">
+        <div class="top-sidebar-title" id="topSidebarTitle">About this app</div>
+        <p class="top-sidebar-body" id="topSidebarP1"></p>
+        <p class="top-sidebar-body" id="topSidebarP2"></p>
+        <button type="button" class="top-sidebar-link" id="topSidebarLink">Read the philosophy</button>
+      </aside>
     </div>
     <div class="top-section-sep" aria-hidden="true"></div>
     <div class="top-review-title" id="topReviewTitle"></div>
@@ -729,7 +817,7 @@
     <button type="button" class="btn-accent-link profile-back" id="profileBackBtn">← Change purpose</button>
     <div class="profile-intro">
       <span class="top-swash" aria-hidden="true"></span>
-      <h2 class="profile-title" id="profileTitle"></h2>
+      <h3 class="profile-title" id="profileTitle"></h3>
       <p class="profile-subcopy" id="profileSubcopy"></p>
     </div>
     <div class="field field-tabs hidden" id="modeField" hidden>
@@ -744,6 +832,24 @@
       <div class="tabbar" id="tabOpts" role="tablist">
         <button class="opt" role="tab" data-tab="words" aria-pressed="true" id="tabWords"><span class="ot" id="tabWordsT">One word</span></button>
         <button class="opt" role="tab" data-tab="connected" aria-pressed="false" id="tabConnected"><span class="ot" id="tabConnectedT">Linking</span></button>
+      </div>
+    </div>
+
+    <div class="field" id="accentField">
+      <div class="flabel" id="flabelAccent">Accent</div>
+      <div class="accent-card-grid" id="profileAccentToggle" role="group" aria-label="Accent">
+        <button type="button" class="accent-card" data-accent="ga" aria-pressed="true" id="profileAccentGa">
+          <span class="accent-card-check" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg></span>
+          <span class="accent-card-code">GA</span>
+          <span class="accent-card-name" id="accentGaName">American English</span>
+          <span class="accent-card-ipa ipa">ˈdʒækət · ɝ ɚ</span>
+        </button>
+        <button type="button" class="accent-card" data-accent="rp" aria-pressed="false" id="profileAccentRp">
+          <span class="accent-card-check" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg></span>
+          <span class="accent-card-code">RP</span>
+          <span class="accent-card-name" id="accentRpName">British English</span>
+          <span class="accent-card-ipa ipa">ˈdʒækɪt · ɜː ɪə</span>
+        </button>
       </div>
     </div>
 
@@ -834,30 +940,13 @@
     </div>
 
 
-    <div class="field" id="accentField">
-      <div class="flabel" id="flabelAccent">Accent</div>
-      <div class="accent-card-grid" id="profileAccentToggle" role="group" aria-label="Accent">
-        <button type="button" class="accent-card" data-accent="ga" aria-pressed="true" id="profileAccentGa">
-          <span class="accent-card-check" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg></span>
-          <span class="accent-card-code">GA</span>
-          <span class="accent-card-name" id="accentGaName">American English</span>
-          <span class="accent-card-ipa ipa">ˈdʒækət · ɝ ɚ</span>
-        </button>
-        <button type="button" class="accent-card" data-accent="rp" aria-pressed="false" id="profileAccentRp">
-          <span class="accent-card-check" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg></span>
-          <span class="accent-card-code">RP</span>
-          <span class="accent-card-name" id="accentRpName">British English</span>
-          <span class="accent-card-ipa ipa">ˈdʒækɪt · ɜː ɪə</span>
-        </button>
-      </div>
-    </div>
     <div class="countnote" id="poolNote"></div>
 
     <button class="start btn-primary" id="startBtn" disabled>Loading…</button>
   </section>
 
   <!-- MODE B STUDY -->
-  <section id="cardModeBStudy" class="panel hidden" data-frame="2c">
+  <section id="cardModeBStudy" class="panel hidden drill-pane drill-pane-prompt" data-frame="2c">
     <div class="card-top"><span class="cefr" id="mbSCefr" hidden></span><div class="card-top-right"><div class="qno" id="mbSNo"></div></div></div>
     <div class="drill-progress" id="mbSProgress" role="status" aria-live="polite">
       <div class="progress-meter" aria-hidden="true"><div class="progress-meter__fill" id="mbSProgressFill" style="width:0%"></div></div>
@@ -893,7 +982,7 @@
   </section>
 
   <!-- MODE B QUIZ MCQ -->
-  <section id="cardModeBMcq" class="panel hidden" data-frame="2c-quiz">
+  <section id="cardModeBMcq" class="panel hidden drill-pane drill-pane-prompt" data-frame="2c-quiz">
     <div class="card-top"><span class="cefr" id="mbMCefr" hidden></span><div class="card-top-right"><div class="qno" id="mbMNo"></div></div></div>
     <div class="flabel" style="text-align:center;margin-bottom:4px" id="mbMHead">Choose the meaning</div>
     <div class="readout"><button class="playicon" id="mbMPlay" type="button" aria-label="Listen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div>
@@ -902,7 +991,7 @@
   </section>
 
   <!-- MODE B QUIZ DICTATION -->
-  <section id="cardModeBDict" class="panel hidden" data-frame="2c-dict">
+  <section id="cardModeBDict" class="panel hidden drill-pane drill-pane-prompt" data-frame="2c-dict">
     <div class="card-top"><span class="cefr" id="mbDCefr" hidden></span><div class="card-top-right"><div class="qno" id="mbDNo"></div></div></div>
     <div class="flabel" style="text-align:center;margin-bottom:4px" id="mbDHead">Type the word</div>
     <div class="readout"><button class="playicon" id="mbDPlay" type="button" aria-label="Listen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div>
@@ -913,7 +1002,7 @@
   </section>
 
   <!-- DECODE CARD -->
-  <section id="cardDecode" class="panel hidden" data-frame="2a">
+  <section id="cardDecode" class="panel hidden drill-pane drill-pane-prompt" data-frame="2a">
     <div class="card-top"><span class="cefr" id="dCefr" hidden></span><div class="card-top-right"><div class="qno" id="dNo"></div></div></div>
     <div class="drill-progress" id="dProgress" role="status" aria-live="polite">
       <div class="progress-meter" aria-hidden="true"><div class="progress-meter__fill" id="dProgressFill" style="width:0%"></div></div>
@@ -931,7 +1020,7 @@
   </section>
 
   <!-- ENCODE CARD -->
-  <section id="cardEncode" class="panel hidden" data-frame="2b">
+  <section id="cardEncode" class="panel hidden drill-pane drill-pane-prompt" data-frame="2b">
     <div class="card-top"><span class="cefr" id="eCefr" hidden></span><div class="card-top-right"><div class="qno" id="eNo"></div></div></div>
     <div class="drill-progress" id="eProgress" role="status" aria-live="polite">
       <div class="progress-meter" aria-hidden="true"><div class="progress-meter__fill" id="eProgressFill" style="width:0%"></div></div>
@@ -949,7 +1038,7 @@
   </section>
 
   <!-- REVEAL -->
-  <section id="reveal" class="panel hidden" data-frame="reveal">
+  <section id="reveal" class="panel hidden drill-pane drill-pane-answer" data-frame="reveal">
     <div class="card-top"><span class="cefr" id="rCefr" hidden></span><div class="card-top-right"><div class="qno" id="rNo"></div></div></div>
     <div class="reveal">
       <div class="word" id="rWord"></div>
@@ -2040,9 +2129,17 @@ const HOME_COPY = {
     subcopy: "発音記号（IPA）で、英語の音をていねいに練り直す。読める音は、やがて聞き取れる音になります。",
     attrs: ["6言語対応", "無料", "登録不要"],
     review: "振り返る",
-    profileTitle: "学習プロフィールを決める",
+    purposeLabel: "目的から選ぶ",
+    purposeHint: "目的をひとつ選ぶと、その場ではじまります。",
+    headerProgress: "学習状況",
+    headerIpa: "IPA って何？",
+    sidebarTitle: "このアプリについて",
+    sidebarP1: "語彙を増やすためではなく、発音を鍛え直すためのトレーナー。すでに意味を知っている単語の「音」を学び直し、発音記号（IPA）を読めるだけでなく書けるようにします。",
+    sidebarP2: "正しく発音できない音は、正しく聞き取れない。知覚と産出は一つの技能の表と裏です。",
+    sidebarLink: "思想を読む",
+    profileTitle: "学習プロフィール",
     profileSubcopy: "毎セッション必ずここを通ります。前回の設定が初期値としてプリセットされ、そのまま「この設定で始める」を押せば即開始。以降のすべての出題・音声・発音記号がこの設定に沿い、学習中は切り替わりません。",
-    profileInfo: "既定は GA＋A1・A2（初級）。まずここから始めるのがおすすめです。難しすぎる語は出ません。",
+    profileInfo: "選んだレベルの語だけを出題します（既定 A1＋A2）。",
     drillSub: {
       "2a": "発音記号を読んで、単語の音をつかむ",
       "2b": "綴りから発音記号を組み立てる",
@@ -2055,9 +2152,17 @@ const HOME_COPY = {
     subcopy: "Use IPA to rebuild English sounds carefully. Sounds you can read become sounds you can hear.",
     attrs: ["6 languages", "Free", "No signup"],
     review: "Review",
-    profileTitle: "Choose your learning profile",
+    purposeLabel: "Choose your focus",
+    purposeHint: "Pick one purpose — your session begins right away.",
+    headerProgress: "Your progress",
+    headerIpa: "What is IPA?",
+    sidebarTitle: "About this app",
+    sidebarP1: "Not for growing vocabulary but for retraining pronunciation. Relearn the sound of words you already know, and learn to not just read IPA but write it.",
+    sidebarP2: "A sound you cannot produce, you cannot hear. Perception and production are two sides of one skill.",
+    sidebarLink: "Read the philosophy",
+    profileTitle: "Learning profile",
     profileSubcopy: "Every session passes through this profile. Your previous settings are prefilled, so you can start immediately, and all questions, audio, and IPA stay aligned during practice.",
-    profileInfo: "Default is GA + A1/A2. Start here first; words that are too hard stay out of the pool.",
+    profileInfo: "Only words from the selected levels appear (default A1 + A2).",
     drillSub: {
       "2a": "Read IPA and catch the word sound",
       "2b": "Build IPA from the written word",
@@ -2070,9 +2175,17 @@ const HOME_COPY = {
     subcopy: "IPA로 영어 소리를 차근차근 다시 다듬습니다. 읽을 수 있는 소리는 곧 들을 수 있는 소리가 됩니다.",
     attrs: ["6개 언어", "무료", "가입 불필요"],
     review: "돌아보기",
-    profileTitle: "학습 프로필 정하기",
+    purposeLabel: "목적 선택",
+    purposeHint: "목적을 하나 고르면 바로 시작합니다.",
+    headerProgress: "학습 기록",
+    headerIpa: "IPA란?",
+    sidebarTitle: "앱 소개",
+    sidebarP1: "어휘를 늘리기 위해서가 아니라 발음을 다시 다듬기 위한 트레이너. 이미 뜻을 아는 단어의 소리를 다시 익히고, 발음 기호(IPA)를 읽을 뿐 아니라 쓸 수 있게 합니다.",
+    sidebarP2: "정확히 발음하지 못하는 소리는 정확히 들리지 않습니다. 지각과 산출은 하나의 기능의 양면입니다.",
+    sidebarLink: "철학 읽기",
+    profileTitle: "학습 프로필",
     profileSubcopy: "매 세션은 이 설정을 거칩니다. 이전 설정이 기본값으로 들어가며, 그대로 시작하면 모든 문제·음성·IPA가 같은 설정으로 유지됩니다.",
-    profileInfo: "기본값은 GA + A1/A2입니다. 먼저 여기서 시작하면 너무 어려운 단어는 나오지 않습니다.",
+    profileInfo: "선택한 레벨의 단어만 출제합니다(기본 A1+A2).",
     drillSub: {
       "2a": "IPA를 읽고 단어의 소리를 잡기",
       "2b": "철자에서 IPA를 조립하기",
@@ -2085,9 +2198,17 @@ const HOME_COPY = {
     subcopy: "用 IPA 重新打磨英语声音。能读出的声音，最终会变成能听出的声音。",
     attrs: ["6 种语言", "免费", "无需注册"],
     review: "回顾",
-    profileTitle: "设定学习档案",
+    purposeLabel: "选择目的",
+    purposeHint: "选一个目的，马上开始。",
+    headerProgress: "学习进度",
+    headerIpa: "什么是 IPA？",
+    sidebarTitle: "关于本应用",
+    sidebarP1: "不是为了增加词汇量，而是为了重新打磨发音。重新学习已知单词的声音，不仅能读 IPA，还能写出来。",
+    sidebarP2: "发不准的音，也听不准。感知与产出是同一技能的两面。",
+    sidebarLink: "阅读理念",
+    profileTitle: "学习档案",
     profileSubcopy: "每次练习都会经过这里。上次设置会自动带入，直接开始后，题目、音频和 IPA 都会沿用同一设置。",
-    profileInfo: "默认是 GA + A1/A2。建议先从这里开始，过难的词不会进入题库。",
+    profileInfo: "只出题所选级别的词（默认 A1+A2）。",
     drillSub: {
       "2a": "读 IPA，抓住单词声音",
       "2b": "从拼写组装 IPA",
@@ -2100,9 +2221,17 @@ const HOME_COPY = {
     subcopy: "用 IPA 重新打磨英語聲音。能讀出的聲音，最後會變成能聽出的聲音。",
     attrs: ["6 種語言", "免費", "免註冊"],
     review: "回顧",
-    profileTitle: "設定學習檔案",
+    purposeLabel: "選擇目的",
+    purposeHint: "選一個目的，馬上開始。",
+    headerProgress: "學習進度",
+    headerIpa: "什麼是 IPA？",
+    sidebarTitle: "關於本應用",
+    sidebarP1: "不是為了增加詞彙量，而是為了重新打磨發音。重新學習已知單字的聲音，不僅能讀 IPA，還能寫出來。",
+    sidebarP2: "發不準的音，也聽不準。感知與產出是同一技能的兩面。",
+    sidebarLink: "閱讀理念",
+    profileTitle: "學習檔案",
     profileSubcopy: "每次練習都會經過這裡。上次設定會自動帶入，直接開始後，題目、音訊和 IPA 都會沿用同一設定。",
-    profileInfo: "預設是 GA + A1/A2。建議先從這裡開始，過難的詞不會進入題庫。",
+    profileInfo: "只出題所選級別的詞（預設 A1+A2）。",
     drillSub: {
       "2a": "讀 IPA，抓住單字聲音",
       "2b": "從拼字組裝 IPA",
@@ -2115,9 +2244,17 @@ const HOME_COPY = {
     subcopy: "Gamitin ang IPA para ayusin muli ang tunog ng English. Ang tunog na nababasa mo ay magiging tunog na naririnig mo.",
     attrs: ["6 na wika", "Libre", "Walang signup"],
     review: "Balikan",
-    profileTitle: "Piliin ang learning profile",
+    purposeLabel: "Pumili ng layunin",
+    purposeHint: "Pumili ng isa — agad magsisimula ang session.",
+    headerProgress: "Progreso",
+    headerIpa: "Ano ang IPA?",
+    sidebarTitle: "Tungkol sa app",
+    sidebarP1: "Hindi para dagdagan ang bokabularyo kundi para i-retrain ang bigkas. Matutong basahin at isulat ang IPA ng mga salitang alam mo na.",
+    sidebarP2: "Ang tunog na hindi mo maibigkas ay hindi mo rin marinig nang tama. Magkabilang mukha ng isang skill ang perception at production.",
+    sidebarLink: "Basahin ang pilosopiya",
+    profileTitle: "Learning profile",
     profileSubcopy: "Dadaan dito ang bawat session. Naka-preset ang huling settings, kaya puwede kang magsimula agad at mananatiling tugma ang tanong, audio, at IPA habang nagpa-practice.",
-    profileInfo: "Default ang GA + A1/A2. Magandang magsimula rito; hindi isasama ang masyadong mahirap na salita.",
+    profileInfo: "Mga salita lang mula sa napiling level ang lalabas (default A1 + A2).",
     drillSub: {
       "2a": "Basahin ang IPA at hulihin ang tunog",
       "2b": "Buuin ang IPA mula sa spelling",
@@ -2193,6 +2330,14 @@ function applyI18n() {
     (idx ? '<span aria-hidden="true">·</span>' : '') + '<span>' + escHtml(label) + '</span>'
   ).join("");
   if ($("topReviewTitle")) $("topReviewTitle").textContent = home.review;
+  if ($("topPurposeLabel")) $("topPurposeLabel").textContent = home.purposeLabel || "";
+  if ($("topPurposeHint")) $("topPurposeHint").textContent = home.purposeHint || "";
+  if ($("headerProgressLink")) $("headerProgressLink").textContent = home.headerProgress || "";
+  if ($("headerIpaLink")) $("headerIpaLink").textContent = home.headerIpa || "";
+  if ($("topSidebarTitle")) $("topSidebarTitle").textContent = home.sidebarTitle || "";
+  if ($("topSidebarP1")) $("topSidebarP1").textContent = home.sidebarP1 || "";
+  if ($("topSidebarP2")) $("topSidebarP2").textContent = home.sidebarP2 || "";
+  if ($("topSidebarLink")) $("topSidebarLink").textContent = home.sidebarLink || "";
   ["2a","2b","2c","2d"].forEach(id=>{
     const el=$("purpose"+id+"T");
     if(el) el.textContent = t("drill.title."+id);
@@ -2213,8 +2358,8 @@ function applyI18n() {
   if ($("aboutContact")) $("aboutContact").innerHTML = t("about.contact_html");
   $("flabelCefr").textContent = t("lvl.label");
   if ($("flabelAccent")) $("flabelAccent").textContent = t("accent.label");
-  if ($("profileAccentGa")) $("profileAccentGa").textContent = t("accent.ga");
-  if ($("profileAccentRp")) $("profileAccentRp").textContent = t("accent.rp");
+  if ($("accentGaName")) $("accentGaName").textContent = t("accent.ga");
+  if ($("accentRpName")) $("accentRpName").textContent = t("accent.rp");
   if ($("profileBackBtn")) $("profileBackBtn").textContent = "← " + (t("back_top") || "Menu");
   ["A1","A2","B1","B2"].forEach(level => {
     const sub = $("cefr" + level + "Sub");
@@ -2843,6 +2988,9 @@ function hidePracticePanels(){
 
 /** Purpose stub home (Phase 1-C). */
 function showPurposeHome(){
+  document.body.classList.remove("drill-two-pane");
+  if($("taskHeader")) $("taskHeader").hidden = true;
+
   hidePracticePanels();
   show("purposeStub",true);
   show("setup",false);
@@ -4200,6 +4348,7 @@ function startSession(weakOnly){
     return;
   }
   renderCard();
+  updateTaskHeader();
 }
 function showReflection(){renderSummary();}
 let exitConfirmOnYes=null;
@@ -4233,6 +4382,15 @@ function openDrillProfile(drillId) {
 }
 
 /* ---------- Phase 1-C: purpose stub → 3a ---------- */
+
+if ($("headerProgressLink")) $("headerProgressLink").addEventListener("click", () => navigate("progress"));
+if ($("headerIpaLink")) $("headerIpaLink").addEventListener("click", scrollToAboutWhyIpa);
+if ($("topSidebarLink")) $("topSidebarLink").addEventListener("click", scrollToAboutWhyIpa);
+if ($("taskHeaderBack")) $("taskHeaderBack").addEventListener("click", () => {
+  if (shouldConfirmSessionExit()) openExitConfirm(() => goToTop(true));
+  else goToTop(true);
+});
+
 document.querySelectorAll(".purpose-card").forEach(btn=>{
   btn.addEventListener("click",()=>{
     if (btn.id === "progressCard") navigate("progress");
@@ -4517,6 +4675,35 @@ function refreshRevealIpa(marker){
   const altEl=$("rAltIpa");
   renderAltAccentLine(c, $("rAltIpaText"), $("rAltPlay"), altEl);
 }
+
+/** @returns {boolean} */
+function isPcLayout(){ return window.matchMedia("(min-width:1024px)").matches; }
+
+/** Sync PC task header with current drill title + progress. */
+function updateTaskHeader(){
+  const th = $("taskHeader");
+  if (!th) return;
+  const inPlay = document.body.classList.contains("in-play");
+  const showTh = inPlay && isPcLayout();
+  th.hidden = !showTh;
+  if (!showTh) return;
+  const drillId = (S && S.lastDrill) ? S.lastDrill : (S && S.appMode === "b" ? "2c" : (S && S.dir === "encode" ? "2b" : "2a"));
+  const title = t("drill.title." + drillId) || "";
+  if ($("taskHeaderTitle")) $("taskHeaderTitle").textContent = title;
+  const fill = $("taskHeaderMeterFill");
+  if (fill) {
+    const total = Math.max(1, (S && S.poolTotal) || 1);
+    const answered = (S && S.answered) || 0;
+    fill.style.width = Math.min(100, Math.round((answered / total) * 100)) + "%";
+  }
+}
+
+function scrollToAboutWhyIpa(){
+  showPurposeHome();
+  const el = $("aboutWhyIpa") || $("aboutBlock");
+  if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
 function reveal(res,ctx){
   const c=S.cur;S.revealed=true;
   if(S.appMode!=="b")recordHist(c.w,res);
@@ -4525,7 +4712,18 @@ function reveal(res,ctx){
   if(scored)S.answered++;
   if(res==="ok")S.correct++;
   if(res==="bad"&&!S.missed.includes(c.w))S.missed.push(c.w);
-  show("cardDecode",false);show("cardEncode",false);hideModeBCards();show("reveal",true);
+  const pcTwoPane = window.matchMedia("(min-width:1024px)").matches;
+  hideModeBCards();
+  if (pcTwoPane && (ctx.type === "decode" || ctx.type === "encode" || ctx.type === "modeb-quiz")) {
+    document.body.classList.add("drill-two-pane");
+    if (ctx.type === "encode") { show("cardEncode", true); show("cardDecode", false); }
+    else { show("cardDecode", true); show("cardEncode", false); }
+    show("reveal", true);
+  } else {
+    document.body.classList.remove("drill-two-pane");
+    show("cardDecode", false); show("cardEncode", false); show("reveal", true);
+  }
+  updateTaskHeader();
   setCardCefr("rCefr",c,"rNo");
   const panel=$("reveal");
   panel.classList.remove("res-ok","res-bad");

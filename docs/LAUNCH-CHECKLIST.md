@@ -400,9 +400,9 @@ Hotfix フローは `CLAUDE.md` を参照。以下 3 条件をすべて満たす
 | **1-D** | ドリル本体（`2a`–`2d`、2 PR 分割） | [x] 完了 | #87 / #88 (PR1) + #89 / #90 (PR2) |
 | **1-E** | 支援画面（`3b`/`3c`/`3d`/`3h`、3 PR 分割。`3f` 廃止） | [x] 完了（3/3 PR。`3b` full-page + `3c` IPA picker + `3d` progress + SRS queue + `3h` About 拡張 + `3f` 廃止 + ko/zh-Hans/zh-Hant/fil の既存未翻訳 UI 修正） | [#91](https://github.com/nkhippo/IPASoundDrill/issues/91) / [#120](https://github.com/nkhippo/IPASoundDrill/issues/120) / [#122](https://github.com/nkhippo/IPASoundDrill/issues/122) |
 | **1-E-CD** | SP 全画面の Claude Design 収束（13 項目、ガイドモーダル廃止、復習キュー削除） | [x] 実装完了 | [#128](https://github.com/nkhippo/IPASoundDrill/issues/128) |
-| **1-F** | オンボーディング（`3g`） | [ ] 未着手 | — |
+| **1-H** | PC 版 CD 準拠（1a 4×1+sidebar、2系 2ペイン、3a、ヘッダー）+ About SRS 散文掃討 | [x] 実装完了 | [#147](https://github.com/nkhippo/IPASoundDrill/issues/147) |
+| **1-F** | オンボーディング（`3g`）+ SP guide `?` 再導入 | [ ] 未着手 | — |
 | **1-G** | 多言語（variant `-en` 等） | [ ] 未着手 | — |
-| **1-H** | PC 版（`-pc`） | [ ] 未着手 | — |
 
 - Phase 1-I は設けない（Q-13: 旧絞り込み frame 誤記の解消により廃止）
 - Band 実装シンボル削除・目的カード DOM 実装は 1-A 以降

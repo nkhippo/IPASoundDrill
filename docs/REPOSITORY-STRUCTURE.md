@@ -237,7 +237,7 @@ These paths are **hard-coded** in the app（`<base href="/">` により言語サ
 | `accent` | object | GA / RP ラベル |
 | `guide` | object | サイトガイドモーダル |
 | `about` | object | About（`lead`, `why_ipa_html`, `features.*`, `contact_html`。既存 `title` / `placeholder` は維持） |
-| `vocab` | object | 語彙ブラウザ（`vocab.filter.*` 含む） |
+| `vocab` | object | 語彙ブラウザ（`vocab.filter.ipa` / `vocab.filter.all`。未使用だった `vocab.filter.spelling` は #147 で削除） |
 | `symbol` | object | IPA 記号ピッカー（`symbol.picker.*` / `symbol.group.*.{en,sub}` / `symbol.height.*.{en,sub}`） |
 | `reveal` | object | Reveal 画面（GA / RP 表記） |
 | `lang_opts` | object | 言語切替 dropdown（6 言語） |
@@ -253,13 +253,13 @@ These paths are **hard-coded** in the app（`<base href="/">` により言語サ
 
 **Notes**:
 - 総 leaf 数: **246**（Phase 1-E PR-3。237→246、新規 `about.*` +9）
-- 新規キー群（PR-1）: `vocab.filter.*`、`symbol.picker.*`、`symbol.group.*.{en,sub}`、`symbol.height.*.{en,sub}`
-- 新規キー群（PR-2）: `progress.title` / `back` / `card_*` / `filter_all` / `overall_title` / `drills_title` / `graduated_summary` / `drill_summary` / `slots.*` / `review_queue.*`
+- 新規キー群（PR-1）: `vocab.filter.ipa` / `vocab.filter.all`、`symbol.picker.*`、`symbol.group.*.{en,sub}`、`symbol.height.*.{en,sub}`（`vocab.filter.spelling` は #147 で削除）
+- 新規キー群（PR-2）: `progress.title` / `back` / `card_*` / `filter_all` / `overall_title` / `drills_title` / `graduated_summary` / `drill_summary` / `slots.*`（`review_queue.*` は #128 で削除）
 - 新規キー群（PR-3）: `about.lead` / `why_ipa_html` / `features.title` / `features.item_1_html`〜`item_5_html` / `contact_html`
 - HTML 埋め込みキーは `_html` サフィックス
 - 動的置換プレースホルダ: `{n}`, `{band}`, `{pct}`, `{m}`, `{t}`, `{c}`, `{list}`, `{p}`, `{sy}`, `{s}`, `{a}`
 
-_Last synced with code: 2026-07-22（Phase 1-E PR-3）_
+_Last synced with code: 2026-07-23（Issue #147 PC CD + About SRS 散文掃討）_
 
 ---
 
