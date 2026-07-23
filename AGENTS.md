@@ -108,6 +108,15 @@ Runtime UI やインタラクション (event handler, form 送信, DOM 変更, 
 - 本文冒頭で `Closes #N` キーワードで対応 Issue を自動クローズさせる
 - Complexity Retrospective 実施確認セクションを必ず含める
 
+### UI 改修 PR のスクショ必須 (C6)
+
+Change Pattern に **C6** を含む UI 改修では:
+
+1. Issue 本文の **スクショ対象画面リスト** 全画面のスクショを PR Comment に添付する
+2. 技術制約で添付できない場合は PR Comment に明記し、Naoya 実機を Claude Rv の前提とする
+3. Claude Rv はスクショ（または上記代替）無しの UI 改修 PR を **FAIL** とする
+4. 詳細: `docs/dev_project_common.md` § 4
+
 ### PR コメント対応の完了条件
 
 PR コメントを受けてコード・データ・文書を修正した場合、修正 commit / push だけで完了としてはならない。
