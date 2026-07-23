@@ -78,6 +78,7 @@ ipasounddrill/
 ├── middleware.ts              # `/` の Accept-Language / Cookie / Bot 振り分け（C1 fallback 時は不使用）
 ├── package.json               # `npm run build` → `scripts/build-i18n-html.js`
 ├── vercel.json                # Build Command / rewrites
+├── favicon.svg                # Production favicon（CD 正典のコピー、`/favicon.svg` でルート配信）
 ├── README.md                  # 人間向け概要（デモ URL・ローカル起動）
 ├── wordlist_GA_a1a2_plus_phonics.json   # ★ PRODUCTION wordlist（runtime fetch・ルート固定）
 ├── wordlist_GA_a1a2_plus_phonics.csv    # CSV export（pipeline / i18n tooling）
