@@ -24,7 +24,7 @@ created: '2026-07-12'
 | `docs/DEV-GUARDRAILS.md` | 堅固化パターン A/B（将来 C）の適用条件を Level / Pattern から決定 |
 | `docs/agent-instruction-guide.md` | § 1 抽象度マトリックスは本 § 2 に統合（歴史節として保持） |
 | `docs/DOC-SYNC-PLAYBOOK.md` | Pattern が docs 同期を含む場合の 3 分岐に接続 |
-| `docs/DOCUMENT-MAP.md` | Category A–E の更新義務・参照タイミングに接続 |
+| `docs/DOCUMENT-MAP.md` | Category A–F の更新義務・参照タイミングに接続 |
 | `.cursor/rules/dev-flow.mdc` | Step 3b（Complexity Retrospective）と PR Description 必須フィールドに接続 |
 | `CLAUDE.md` | Issue 起票時の分類ブロック必須に接続 |
 

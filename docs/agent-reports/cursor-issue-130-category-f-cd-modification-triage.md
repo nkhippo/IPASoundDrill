@@ -55,7 +55,7 @@ Issue #128 の Phase 0 で CD と実装の乖離が見つかり、UI 改修 Issu
 
 - `AGENTS_CODEX.md` は存在しなかったため更新対象外。
 - Automation Tools には Issue Comment 投稿ツールがなく、開始宣言・PR URL 報告は PR body / final response 側で補足する運用になる。
-- `docs/README.md` と `docs/CHANGE-CLASSIFICATION.md` に Category A-E 表記が残るが、Issue のブラックリスト対象のため本 PR では未変更。
+- `docs/README.md` と `docs/CHANGE-CLASSIFICATION.md` に Category A から E までの旧表記が残るが、Issue のブラックリスト対象のため本 PR では未変更。
 
 ## 後続への影響
 
@@ -64,7 +64,7 @@ Issue #128 の Phase 0 で CD と実装の乖離が見つかり、UI 改修 Issu
 
 ## 残課題・申し送り
 
-- `docs/README.md` と `docs/CHANGE-CLASSIFICATION.md` の Category A-E 表記は、別 Issue で整合更新するか Naoya さん判断が必要。
+- `docs/README.md` と `docs/CHANGE-CLASSIFICATION.md` の Category A から E までの旧表記は、別 Issue で整合更新するか Naoya さん判断が必要。
 - `docs/claude-design/UPDATE-GUIDE.md` の配置は Issue #130 の非対象範囲。
 
 ## Complexity Retrospective (完了時点検)
