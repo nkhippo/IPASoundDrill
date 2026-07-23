@@ -54,6 +54,7 @@
     --accent: #B0604A;
     --accent-soft: #F1E3DC;
     --stress: #D9911B;
+    --review-panel: #F7F1EA;
 
     /* Spacing (5) */
     --space-1: 4px;
@@ -187,7 +188,7 @@
   .hints{display:none}
 
   .answer{display:flex;gap:8px;margin-top:10px}
-  .answer input{flex:1;border:1.5px solid var(--legacy-hair);border-radius:10px;padding:13px 14px;font-size:17px;font-family:var(--legacy-ui);color:var(--legacy-ink);background:#fff}
+  .answer input{flex:1;min-width:0;border:1.5px solid var(--legacy-hair);border-radius:10px;padding:13px 14px;font-size:17px;font-family:var(--legacy-ui);color:var(--legacy-ink);background:#fff}
   .answer input:focus{outline:none;border-color:var(--legacy-signal)}
   .answer .go{border:none;background:var(--legacy-signal);color:#fff;border-radius:10px;padding:0 18px;font-weight:700;cursor:pointer;font-size:14px}
   .playicon{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border:1px solid var(--hair);background:var(--panel);border-radius:50%;color:var(--signal);cursor:pointer;margin-top:0;flex-shrink:0;transition:border-color .15s,background .15s,transform .08s;position:relative}
@@ -273,7 +274,7 @@
   .vocab-filters{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
   .vocab-filters .pill-cefr{border:1px solid var(--hair);background:var(--panel);border-radius:var(--radius-pill);padding:6px 12px;cursor:pointer;font-size:12px;font-weight:600;color:var(--ink);font-family:var(--font-mono)}
   .vocab-filters .pill-cefr[aria-pressed="true"]{border-color:var(--signal);background:var(--signal-soft);color:var(--signal);font-weight:700}
-  .progress-header{flex-shrink:0;z-index:10;background:var(--paper);padding:16px 16px 10px;border-bottom:1px solid var(--hair);display:flex;flex-direction:column;gap:12px}
+  .progress-header{flex-shrink:0;z-index:10;background:var(--paper);padding:16px 18px 10px;border-bottom:1px solid var(--hair);display:flex;flex-direction:column;gap:12px}
   .progress-header-top{display:flex;align-items:center;gap:12px}
   .progress-back{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border-radius:var(--radius-button);background:transparent;color:var(--ink);border:1px solid var(--hair);cursor:pointer;font-size:14px;font-family:var(--font-ui);flex-shrink:0}
   .progress-back:hover{background:var(--signal-soft);border-color:var(--signal);color:var(--signal)}
@@ -281,14 +282,14 @@
   .progress-filters{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
   .progress-filters .pill-cefr{border:1px solid var(--hair);background:var(--panel);border-radius:var(--radius-pill);padding:6px 12px;cursor:pointer;font-size:12px;font-weight:600;color:var(--ink);font-family:var(--font-mono)}
   .progress-filters .pill-cefr[aria-pressed="true"]{border-color:var(--signal);background:var(--signal-soft);color:var(--signal);font-weight:700}
-  .progress-body{flex:1;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:18px 16px 48px;position:relative}
+  .progress-body{flex:1;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:18px 20px 48px;position:relative}
   .progress-overall,.drill-progress-card{background:var(--panel);border:1px solid var(--hair);border-radius:var(--radius-card);box-shadow:var(--shadow-card);padding:var(--space-4)}
   .progress-overall{margin-bottom:var(--space-4)}
   .progress-kicker,.progress-section-title{font-family:var(--font-mono);font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--faint);margin:0 0 8px}
   .progress-big{font-family:var(--font-ui);font-size:42px;font-weight:800;color:var(--ink);line-height:1;margin-bottom:12px}
   .progress-big small{font-size:18px;color:var(--muted)}
   .progress-summary{display:block;font-family:var(--font-mono);font-size:11px;color:var(--muted);margin-top:7px}
-  .drill-progress-stack{display:flex;flex-direction:column;gap:10px;margin-bottom:var(--space-5)}
+  .drill-progress-stack{display:flex;flex-direction:column;gap:12px;margin-bottom:var(--space-5)}
   .drill-progress-card{width:100%;text-align:left;cursor:pointer;font-family:var(--font-ui);color:var(--ink)}
   .drill-progress-card:hover,.drill-progress-card:focus-visible{border-color:var(--signal);outline:none}
   .drill-progress-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:10px}
@@ -299,25 +300,12 @@
   .mark-slot-count{background:var(--paper);border-radius:8px;padding:7px 5px;text-align:center}
   .mark-slot-count b{display:block;font-family:var(--font-mono);font-size:13px;color:var(--ink)}
   .mark-slot-count span{display:block;font-family:var(--font-ui);font-size:10px;color:var(--muted);margin-top:2px}
-  .srs-queue-section{margin-top:var(--space-4)}
-  .srs-queue-title{font-family:var(--font-ui);font-size:16px;color:var(--ink);margin:0 0 4px}
-  .srs-queue-count{font-family:var(--font-mono);font-size:11px;color:var(--muted);margin-bottom:10px}
-  .srs-queue-list{position:relative;min-height:0}
-  .srs-queue-list.is-virtualized{height:min(70vh,680px);overflow-y:auto;-webkit-overflow-scrolling:touch;border-top:1px solid var(--hair);border-bottom:1px solid var(--hair)}
-  .srs-virt-spacer{position:relative;width:100%}
-  .srs-virt-window{position:absolute;left:0;right:0;top:0;will-change:transform}
-  .srs-queue-item{width:100%;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;align-items:center;padding:12px 10px;border:0;border-bottom:1px solid var(--hair);background:transparent;text-align:left;cursor:pointer;color:var(--ink)}
-  .srs-queue-item:hover,.srs-queue-item:focus-visible{background:var(--signal-soft);outline:none}
-  .srs-word{font-family:var(--font-ui);font-size:15px;font-weight:700}
-  .srs-ipa{display:block;font-family:var(--font-ipa);font-size:13px;color:var(--muted);margin-top:3px}
-  .srs-due{font-family:var(--font-mono);font-size:10px;color:var(--accent);white-space:nowrap;border:1px solid var(--hair);border-radius:var(--radius-pill);padding:4px 8px;background:var(--panel)}
-  .srs-empty{padding:28px 12px;text-align:center;color:var(--muted);font-family:var(--font-ui);font-size:13px}
   .vocab-letters{display:flex;flex-wrap:nowrap;gap:2px;justify-content:flex-start;font-family:var(--font-mono);font-size:12px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;padding:2px 0}
   .vocab-letters::-webkit-scrollbar{display:none}
   .vocab-letters button,.vocab-letter-btn{min-width:26px;height:26px;padding:4px 6px;border:1px solid transparent;background:transparent;color:var(--muted);cursor:pointer;border-radius:4px;font-family:var(--font-mono);font-size:12px;font-weight:700;flex-shrink:0}
   .vocab-letters button:hover,.vocab-letter-btn:hover{background:var(--signal-soft);color:var(--ink)}
   .vocab-letters button.active,.vocab-letter-btn.active{color:var(--signal);font-weight:700}
-  .vocab-body,.symbol-results{flex:1;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:8px 16px 40px;position:relative}
+  .vocab-body,.symbol-results{flex:1;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:12px 18px 40px;position:relative}
   .vocab-virt-spacer{position:relative;width:100%}
   .vocab-virt-window{position:absolute;left:0;right:0;top:0;will-change:transform}
   .vocab-skeleton{display:flex;flex-direction:column;gap:10px;padding:8px 0}
@@ -330,32 +318,33 @@
   .query-chip-clear{border:1px solid var(--hair);background:var(--panel);border-radius:50%;width:28px;height:28px;cursor:pointer;color:var(--muted);font-size:16px;line-height:1;flex-shrink:0}
   .query-chip-clear:hover{border-color:var(--signal);color:var(--signal)}
   .symbol-picker-split{flex:1;min-height:0;display:flex;flex-direction:column}
-  .symbol-palette{flex:0 0 40%;min-height:140px;overflow-y:auto;padding:8px 16px 12px;border-bottom:1px solid var(--hair);-webkit-overflow-scrolling:touch}
+  .symbol-palette{flex:0 0 40%;min-height:140px;overflow-y:auto;padding:14px 18px 12px;border-bottom:2px solid var(--hair);-webkit-overflow-scrolling:touch;background:var(--paper)}
   .symbol-results{flex:1;min-height:0}
   .symbol-group{margin-bottom:12px}
-  .symbol-group-heading{margin:0 0 6px;font-family:var(--font-ui);font-size:13px;font-weight:700;color:var(--ink)}
+  .symbol-group-heading{margin:0 0 6px;font-family:var(--font-ui);font-size:13px;font-weight:800;color:var(--ink)}
   .symbol-group-sub{display:block;font-size:11px;font-weight:500;color:var(--muted);margin-top:2px}
   .symbol-height-label{font-family:var(--font-mono);font-size:10px;color:var(--faint);letter-spacing:.06em;margin:6px 0 4px;text-transform:uppercase}
   .symbol-grid{display:flex;flex-wrap:wrap;gap:6px}
   .symbol-cell{min-width:40px;height:40px;padding:0 8px;border:1px solid var(--hair);border-radius:8px;background:var(--panel);color:var(--ink);font-family:var(--font-ipa);font-size:18px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center}
+  .symbol-cell.is-in-query{border-color:var(--signal);background:var(--signal-soft);color:var(--signal);font-weight:700}
   .symbol-cell:hover,.symbol-cell:focus-visible{border-color:var(--signal);background:var(--signal-soft);color:var(--signal);outline:none}
   .ipa-match{color:var(--signal);font-weight:700}
-  .vocab-group-head{font-family:var(--legacy-mono);font-size:10.5px;color:var(--legacy-faint);text-transform:uppercase;letter-spacing:.14em;padding:12px 2px 5px;border-bottom:1px solid var(--legacy-hair);margin-bottom:2px;position:sticky;top:0;background:var(--legacy-bg);z-index:1}
-  .vocab-row{display:grid;grid-template-columns:1fr auto;gap:8px;padding:14px 8px;border-bottom:1px solid var(--legacy-hair);align-items:center;transition:background .1s ease}
-  .vocab-row:hover{background:#fafafa}
+  .vocab-group-head{font-family:var(--font-mono);font-size:10.5px;color:var(--faint);text-transform:uppercase;letter-spacing:.14em;padding:12px 2px 5px;border-bottom:1px solid var(--hair);margin-bottom:2px;position:sticky;top:0;background:var(--paper);z-index:1}
+  .vocab-row{display:grid;grid-template-columns:1fr auto;gap:8px;padding:12px 15px;border:1px solid var(--hair);border-radius:14px;background:var(--panel);align-items:center;transition:background .1s ease,border-color .1s ease;margin-bottom:8px}
+  .vocab-row:hover{background:var(--panel);border-color:var(--signal)}
   .vocab-row-main{display:flex;flex-direction:column;gap:4px;min-width:0}
   .vocab-row-top{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
-  .vocab-row-w,.vocab-w{font-weight:600;font-size:17px;color:var(--legacy-ink);letter-spacing:-.01em}
-  .vocab-row-ipas,.vocab-ipas{font-family:var(--legacy-ipa);font-size:13px;color:var(--legacy-muted);display:flex;flex-direction:column;gap:2px}
-  .vocab-ipa-ga{font-family:var(--legacy-ipa);font-size:13px;color:var(--legacy-signal);line-height:1.3}
-  .vocab-ipa-rp{font-family:var(--legacy-ipa);font-size:12px;color:var(--legacy-faint);line-height:1.3}
-  .vocab-ipa-label{font-family:var(--legacy-mono);font-size:9px;color:var(--legacy-faint);letter-spacing:.06em;margin-right:3px}
-  .vocab-row-gloss,.vocab-gloss{font-size:13px;color:#222;line-height:1.4;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;text-overflow:ellipsis;white-space:normal}
+  .vocab-row-w,.vocab-w{font-family:var(--font-serif);font-weight:600;font-size:17px;color:var(--ink);letter-spacing:-.01em}
+  .vocab-row-ipas,.vocab-ipas{font-family:var(--font-ipa);font-size:13.5px;color:var(--muted);display:flex;flex-direction:column;gap:0;margin-top:4px}
+  .vocab-ipa-ga,.vocab-ipa-rp{display:grid;grid-template-columns:34px 1fr;align-items:center;gap:8px;font-family:var(--font-ipa);font-size:14px;color:var(--ink);line-height:1.35;padding:4px 0}
+  .vocab-ipa-rp{border-top:1px solid var(--hair)}
+  .vocab-ipa-label{font-family:var(--font-mono);font-size:10px;color:var(--muted);letter-spacing:.04em;font-weight:800;margin-right:0}
+  .vocab-row-gloss,.vocab-gloss{font-size:12px;color:var(--ink);line-height:1.4;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;text-overflow:ellipsis;white-space:normal}
   .vocab-row-meta{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
   .vocab-row-actions{display:flex;gap:12px;align-items:center;flex-shrink:0}
   .vocab-pos,.vocab-pos-badge,.vocab-type-badge{display:inline-block;font-family:var(--legacy-mono);font-size:10px;padding:2px 7px;border-radius:5px;background:#eee;color:#555;font-weight:500;letter-spacing:.02em}
-  .vocab-play{width:36px;height:36px;border-radius:50%;border:1px solid var(--legacy-hair);background:var(--legacy-bg);color:var(--legacy-ink);cursor:pointer;display:inline-flex;align-items:center;justify-content:center;padding:0;flex-shrink:0}
-  .vocab-play:hover{background:#f2f2f2;border-color:var(--legacy-ink)}
+  .vocab-play{width:34px;height:34px;border-radius:50%;border:1px solid var(--signal);background:var(--panel);color:var(--signal);cursor:pointer;display:inline-flex;align-items:center;justify-content:center;padding:0;flex-shrink:0}
+  .vocab-play:hover{background:var(--signal-soft);border-color:var(--signal)}
   .vocab-play:disabled{opacity:.4;cursor:wait}
   .vocab-play svg{width:14px;height:14px}
   .vocab-alt-play{border:1px solid var(--legacy-hair);background:#fff;border-radius:50%;width:22px;height:22px;padding:0;cursor:pointer;color:var(--legacy-signal);display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;vertical-align:middle;margin-left:4px}
@@ -372,10 +361,12 @@
   .pc-slot{width:8px;height:8px;border:1px solid var(--legacy-hair);border-radius:2px;background:transparent;cursor:pointer;padding:0}
   .pc-slot[data-filled="1"]{background:var(--legacy-ink);border-color:var(--legacy-ink)}
   .pc-slot:hover{border-color:var(--legacy-ink)}
-  .reveal-checks{margin-top:14px;padding-top:12px;border-top:1px solid var(--legacy-hair)}
-  .reveal-checks .rc-label{font-family:var(--legacy-mono);font-size:10px;color:var(--legacy-faint);text-transform:uppercase;letter-spacing:.12em;margin-bottom:8px}
-  .reveal-checks .pc-mode{flex-direction:row;gap:4px}
-  .reveal-checks .pc-slot{width:14px;height:14px;border-radius:3px;background:#fff}
+  .reveal-checks{margin-top:14px;padding:12px;border:1px solid var(--hair);border-radius:14px;background:var(--panel)}
+  .reveal-checks .rc-label{font-family:var(--font-mono);font-size:10.5px;color:var(--muted);text-transform:none;letter-spacing:.03em;margin-bottom:9px;display:flex;justify-content:space-between;align-items:center}
+  .reveal-checks .rc-label strong{font-size:12px;color:var(--signal);font-weight:800}
+  .reveal-checks .pc-mode{display:flex;flex-direction:row;gap:8px;justify-content:center;width:100%}
+  .reveal-checks .pc-slot{width:20px;height:20px;border-radius:4px;background:var(--panel);position:relative}
+  .reveal-checks .pc-slot[data-filled="1"]::after{content:"";position:absolute;left:5px;top:2px;width:7px;height:12px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}
   .vocab-type-linking{background:#ddf4ff;color:#0550ae}
   .vocab-type-assimilation{background:#fff3cd;color:#9a5700}
   .vocab-type-elision{background:#fde8e8;color:#cf222e}
@@ -432,19 +423,6 @@
   .confirm-actions .btn:hover{border-color:var(--legacy-signal);color:var(--legacy-signal)}
   .confirm-actions .btn-primary{background:var(--legacy-ink);color:#fff;border-color:var(--legacy-ink)}
   .confirm-actions .btn-primary:hover{background:#2a2f36;color:#fff;border-color:#2a2f36}
-  .modal-card.guide-card{width:min(100%,560px);max-height:min(88vh,720px);display:flex;flex-direction:column;padding:18px 16px 14px}
-  .guide-head{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:10px}
-  .guide-close{border:1px solid var(--legacy-hair);background:#fff;border-radius:999px;padding:6px 12px;cursor:pointer;font-family:var(--legacy-mono);font-size:10px;font-weight:600;color:var(--legacy-muted);letter-spacing:.04em;text-transform:uppercase;flex-shrink:0}
-  .guide-close:hover{border-color:var(--legacy-signal);color:var(--legacy-signal)}
-  .guide-lang{margin-bottom:12px}
-  .guide-lang .pills{gap:6px}
-  .guide-lang .pill{padding:6px 12px;font-size:12px}
-  .guide-body{overflow-y:auto;flex:1;min-height:0;font-size:13.5px;color:var(--legacy-muted);line-height:1.65;padding-right:4px}
-  .guide-body h3{font-size:14px;font-weight:700;color:var(--legacy-ink);margin:20px 0 8px;letter-spacing:.01em}
-  .guide-body h3:first-child{margin-top:0}
-  .guide-body p{margin:0 0 10px}
-  .guide-body strong{color:var(--legacy-ink);font-weight:600}
-  .guide-body em{font-style:italic}
   .mcqopts{display:flex;flex-direction:column;gap:8px;margin-top:14px}
   .mcqopt{border:1px solid var(--legacy-hair);background:#fff;border-radius:10px;padding:13px 14px;cursor:pointer;font-size:15px;font-weight:600;text-align:left;color:var(--legacy-ink);transition:border-color .12s,background .12s}
   .mcqopt:hover:not(:disabled){border-color:var(--legacy-signal);background:var(--legacy-signal-soft)}
@@ -490,6 +468,10 @@
   @media (max-width:480px){
     html,body{overflow-x:hidden}
     .wrap{max-width:100vw;padding:14px 12px 56px}
+    .topbar{gap:8px}
+    .topbar-actions{gap:4px}
+    .answer{min-width:0}
+    .answer .go{flex-shrink:0;padding:0 14px}
     .flabel{font-size:10px}
     .langpick button{min-height:32px;padding:6px 8px;font-size:10px}
   }
@@ -513,7 +495,7 @@
   .about-contact{margin-top:24px;padding-top:18px;border-top:1px solid var(--hair);color:var(--muted)}
   .about-contact p{margin:0}
   .about-contact a{color:var(--signal);font-weight:700}
-  @media(max-width:600px){.about-block{margin-top:16px;padding:22px 18px}.about-features li{padding:12px 14px}}
+  @media(max-width:767px){.about-block{display:none!important}.about-features li{padding:12px 14px}}
 
   /* Phase 1-D-PR1: Progress meter + 2a/2b Mood B (Issue #87) */
   .progress-meter{height:6px;background:var(--hair);border-radius:var(--radius-pill);overflow:hidden}
@@ -570,10 +552,10 @@
   .kbtns .check{border:none;background:var(--signal);color:#fff}
   .kbtns .clear{border:1px solid var(--hair);background:var(--panel);color:var(--muted)}
   /* Marking UI Mood B (#revealChecks + #mbSChecks) */
-  #revealChecks.reveal-checks,#mbSChecks.reveal-checks{border-top:1px solid var(--hair)}
-  #revealChecks .rc-label,#mbSChecks .rc-label{font-family:var(--font-mono);font-size:10px;color:var(--faint);text-transform:uppercase;letter-spacing:.12em;margin-bottom:8px}
-  #revealChecks .pc-slot,#mbSChecks .pc-slot{width:14px;height:14px;border:1px solid var(--hair);border-radius:4px;background:var(--panel);cursor:pointer;padding:0}
-  #revealChecks .pc-slot[data-filled="1"],#mbSChecks .pc-slot[data-filled="1"]{border-color:var(--signal);background:var(--signal-soft)}
+  #revealChecks.reveal-checks,#mbSChecks.reveal-checks{border:1px solid var(--hair)}
+  #revealChecks .rc-label,#mbSChecks .rc-label{font-family:var(--font-mono);font-size:10.5px;color:var(--muted);text-transform:none;letter-spacing:.03em;margin-bottom:9px}
+  #revealChecks .pc-slot,#mbSChecks .pc-slot{width:20px;height:20px;border:2px solid var(--hair);border-radius:5px;background:var(--paper);cursor:pointer;padding:0;position:relative}
+  #revealChecks .pc-slot[data-filled="1"],#mbSChecks .pc-slot[data-filled="1"]{border:2px solid var(--signal);background:var(--signal)}
   #revealChecks .pc-mode[data-graduated="1"] .pc-slot[data-filled="1"],#mbSChecks .pc-mode[data-graduated="1"] .pc-slot[data-filled="1"]{background:var(--signal);border-color:var(--signal)}
   #revealChecks .pc-slot:hover,#mbSChecks .pc-slot:hover{border-color:var(--signal)}
 
@@ -610,13 +592,23 @@
   .btn-primary:disabled{opacity:.45;cursor:not-allowed}
   .btn-secondary{background:var(--panel);color:var(--ink);border:1px solid var(--hair);border-radius:var(--radius-button);padding:11px 22px;font-size:14px;font-weight:600;cursor:pointer;font-family:var(--font-ui)}
   .btn-accent-link{background:transparent;color:var(--accent);border:none;padding:8px 10px;font-size:14px;font-weight:600;cursor:pointer;font-family:var(--font-ui)}
-  .purpose-card{border:1px solid var(--hair);background:var(--panel);border-radius:var(--radius-card);padding:12px 14px;font-size:13px;color:var(--muted);text-align:left;cursor:pointer;font-family:var(--font-ui);width:100%}
-  .purpose-card .purpose-id{font-family:var(--font-mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--faint);margin-bottom:4px}
-  .purpose-card .purpose-title{font-weight:600;color:var(--ink);font-size:13px;line-height:1.35}
-  .purpose-card .purpose-subtitle{font-size:11px;color:var(--muted);line-height:1.4;margin-top:4px}
-  .purpose-card-progress{margin-top:4px}
+  .purpose-card{display:flex;gap:14px;align-items:flex-start;border:1px solid var(--hair);background:var(--panel);border-radius:var(--radius-card);padding:15px;font-size:13px;color:var(--muted);text-align:left;cursor:pointer;font-family:var(--font-ui);width:100%;transition:border-color .15s,background .15s}
+  .purpose-card-icon{flex-shrink:0;color:var(--signal);margin-top:1px}
+  .purpose-card-icon svg{width:22px;height:22px}
+  .purpose-copy{min-width:0;flex:1}
+  .purpose-card .purpose-id{display:none}
+  .purpose-card .purpose-title{display:block;font-weight:600;color:var(--ink);font-size:14.5px;line-height:1.35}
+  .purpose-card .purpose-subtitle{display:block;font-size:12px;color:var(--muted);line-height:1.5;margin-top:3px}
+  .purpose-chevron{color:var(--faint);flex-shrink:0;margin-top:2px}
+  .purpose-chevron svg{width:18px;height:18px}
+  .purpose-card-progress{margin-top:0;background:var(--review-panel);border-radius:16px;align-items:center}
+  .purpose-card-progress .purpose-card-icon{width:42px;height:42px;border-radius:12px;background:var(--signal-soft);display:inline-flex;align-items:center;justify-content:center;margin-top:0}
   .purpose-card[aria-pressed="true"],.purpose-card--selected{border:1px solid var(--signal);background:var(--signal-soft);color:var(--ink);font-weight:600}
   .purpose-grid{display:grid;gap:10px;margin:0}
+  .top-subcopy{font-size:13.5px;line-height:1.9;color:var(--muted);margin:18px 0 0;text-wrap:pretty}
+  .top-attrs{display:flex;flex-wrap:wrap;gap:6px 12px;margin:18px 0 var(--space-4);font-size:11.5px;color:var(--faint)}
+  .top-section-sep{height:1px;background:var(--hair);margin:24px 2px}
+  .top-review-title{font-family:var(--font-serif);font-size:12.5px;font-weight:600;letter-spacing:.1em;color:var(--ink);margin:0 2px 10px}
   /* Phase 1-B top page (1a) */
   body.top-home{background:var(--paper);color:var(--ink)}
   body.top-home .brand .name{color:var(--ink)}
@@ -633,7 +625,8 @@
   .lang-menu-item:hover{background:var(--signal-soft);color:var(--signal)}
   .lang-menu-item[aria-selected="true"]{background:var(--signal-soft);color:var(--signal);font-weight:700}
   #purposeStub.panel{background:var(--panel);border:1px solid var(--hair);border-radius:var(--radius-card);box-shadow:var(--shadow-card);padding:var(--space-4)}
-  .top-tagline{font-family:var(--font-serif);font-size:clamp(22px,5.5vw,28px);font-weight:700;color:var(--ink);letter-spacing:.02em;line-height:1.35;margin:0 0 var(--space-4);text-align:center}
+  .top-tagline{font-family:var(--font-serif);font-size:clamp(32px,10vw,38px);font-weight:600;color:var(--ink);letter-spacing:.03em;line-height:1.34;margin:0;text-wrap:pretty}
+  .top-swash{display:inline-block;width:30px;height:2px;background:var(--accent);border-radius:2px;margin-bottom:18px}
   .about-block{margin-top:18px;padding-top:14px;border-top:1px solid var(--hair);text-align:center;max-width:600px;margin-left:auto;margin-right:auto}
   .about-block h2{font-family:var(--font-serif);font-size:13px;font-weight:700;color:var(--ink);margin:0 0 6px}
   .about-block p{font-family:var(--font-ui);font-size:12px;color:var(--muted);margin:0;line-height:1.5}
@@ -654,6 +647,17 @@
   #setup.profile-3a .toggle-ga-rp button{border:none;background:transparent;color:var(--muted);padding:6px 14px;font-size:13px;font-weight:600;cursor:pointer;border-radius:var(--radius-toggle-active);font-family:var(--legacy-ui)}
   #setup.profile-3a .toggle-ga-rp button[aria-pressed="true"]{background:var(--panel);color:var(--signal);font-weight:700;box-shadow:var(--shadow-toggle-active)}
   #setup.profile-3a .profile-back{margin-bottom:12px}
+  .profile-intro{margin:22px 2px 18px}
+  .profile-intro .top-swash{width:28px;margin-bottom:14px}
+  .profile-title{font-family:var(--font-serif);font-size:23px;font-weight:600;line-height:1.5;margin:0;color:var(--ink)}
+  .profile-subcopy{font-size:12.5px;color:var(--muted);margin:8px 0 0;line-height:1.7}
+  .cefr-card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}
+  #setup.profile-3a .pill.cefr-card{border-radius:12px;padding:12px 10px;min-height:64px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;position:relative}
+  #setup.profile-3a .pill.cefr-card .cefr-main{font-family:var(--font-mono);font-size:17px;font-weight:800}
+  #setup.profile-3a .pill.cefr-card .cefr-sub{font-size:10px;color:var(--faint);font-weight:600}
+  #setup.profile-3a .pill.cefr-card[aria-pressed="true"] .cefr-sub{color:var(--signal)}
+  #setup.profile-3a .pill.cefr-all{border-style:dashed;background:transparent;color:var(--muted);font-size:12.5px}
+  .profile-info-panel{font-size:11.5px;color:var(--signal);background:var(--signal-soft);border-radius:10px;padding:10px 12px;margin-top:14px;line-height:1.6}
 
 </style>
 </head>
@@ -692,7 +696,6 @@
             <line x1="3" y1="18" x2="3.01" y2="18"/>
           </svg>
         </button>
-        <button class="topbtn guide" id="guideBtn" type="button" aria-label="Guide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/><path d="M8 8h2"/><path d="M8 12h2"/><path d="M8 16h2"/></svg></button>
       </div>
       <button class="backtop hidden" id="backTopBtn" type="button">Menu</button>
     </div>
@@ -704,19 +707,29 @@
 
   <!-- TOP PAGE 1a (Phase 1-B) — was #purposeStub in Phase 1-C -->
   <section id="purposeStub" class="panel" data-frame="1a">
+    <span class="top-swash" aria-hidden="true"></span>
     <h1 class="top-tagline" id="topTagline">音を、美しく。</h1>
+    <p class="top-subcopy" id="topSubcopy"></p>
+    <div class="top-attrs" id="topAttrs" aria-label="App attributes"></div>
     <div class="purpose-grid" id="purposeGrid" role="group" aria-label="Purpose cards">
-      <button type="button" class="purpose-card" data-drill="2a" aria-pressed="false" id="purpose2a"><div class="purpose-id">2a</div><div class="purpose-title" id="purpose2aT">音の発音を確かめる</div></button>
-      <button type="button" class="purpose-card" data-drill="2b" aria-pressed="false" id="purpose2b"><div class="purpose-id">2b</div><div class="purpose-title" id="purpose2bT">発音から書いてみる</div></button>
-      <button type="button" class="purpose-card" data-drill="2c" aria-pressed="false" id="purpose2c"><div class="purpose-id">2c</div><div class="purpose-title" id="purpose2cT">音から単語を覚える</div></button>
-      <button type="button" class="purpose-card" data-drill="2d" aria-pressed="false" id="purpose2d"><div class="purpose-id">2d</div><div class="purpose-title" id="purpose2dT">連結する音に慣れる</div></button>
-      <button type="button" class="purpose-card purpose-card-progress" id="progressCard"><div class="purpose-id" id="progressCardEyebrow">3d</div><div class="purpose-title" id="progressCardTitle">学習状況を見る</div><div class="purpose-subtitle" id="progressCardSubtitle">あなたの進捗を確認</div></button>
+      <button type="button" class="purpose-card" data-drill="2a" aria-pressed="false" id="purpose2a"><span class="purpose-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><line x1="4" y1="10" x2="4" y2="14"/><line x1="8.5" y1="6" x2="8.5" y2="18"/><line x1="13" y1="9" x2="13" y2="15"/><line x1="17.5" y1="4" x2="17.5" y2="20"/><line x1="21" y1="10.5" x2="21" y2="13.5"/></svg></span><span class="purpose-copy"><span class="purpose-title" id="purpose2aT">音の発音を確かめる</span><span class="purpose-subtitle" id="purpose2aD"></span></span><span class="purpose-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg></span></button>
+      <button type="button" class="purpose-card" data-drill="2b" aria-pressed="false" id="purpose2b"><span class="purpose-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.4 3.6a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></span><span class="purpose-copy"><span class="purpose-title" id="purpose2bT">発音から書いてみる</span><span class="purpose-subtitle" id="purpose2bD"></span></span><span class="purpose-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg></span></button>
+      <button type="button" class="purpose-card" data-drill="2c" aria-pressed="false" id="purpose2c"><span class="purpose-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8.5a6 6 0 0 1 12 0c0 3-2 4.2-3 5.6-.9 1.4-.7 3.4-3 3.4a2.6 2.6 0 0 1-2.6-2.6"/><path d="M9.2 8.6A3 3 0 0 1 14 11"/></svg></span><span class="purpose-copy"><span class="purpose-title" id="purpose2cT">音から単語を覚える</span><span class="purpose-subtitle" id="purpose2cD"></span></span><span class="purpose-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg></span></button>
+      <button type="button" class="purpose-card" data-drill="2d" aria-pressed="false" id="purpose2d"><span class="purpose-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg></span><span class="purpose-copy"><span class="purpose-title" id="purpose2dT">連結する音に慣れる</span><span class="purpose-subtitle" id="purpose2dD"></span></span><span class="purpose-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg></span></button>
     </div>
+    <div class="top-section-sep" aria-hidden="true"></div>
+    <div class="top-review-title" id="topReviewTitle"></div>
+    <button type="button" class="purpose-card purpose-card-progress" id="progressCard"><span class="purpose-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 7-7"/><path d="M17 8h4v4"/></svg></span><span class="purpose-copy"><span class="purpose-title" id="progressCardTitle">学習状況を見る</span><span class="purpose-subtitle" id="progressCardSubtitle">あなたの進捗を確認</span></span><span class="purpose-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg></span></button>
   </section>
 
   <!-- SETUP / learning profile 3a (Phase 1-C rebrand of #setup) -->
   <section id="setup" class="panel profile-3a hidden" data-frame="3a">
     <button type="button" class="btn-accent-link profile-back" id="profileBackBtn">← Change purpose</button>
+    <div class="profile-intro">
+      <span class="top-swash" aria-hidden="true"></span>
+      <h2 class="profile-title" id="profileTitle"></h2>
+      <p class="profile-subcopy" id="profileSubcopy"></p>
+    </div>
     <div class="field field-tabs hidden" id="modeField" hidden>
       <div class="flabel" id="flabelMode">Learning mode</div>
       <div class="tabbar" id="modeOpts" role="tablist">
@@ -734,13 +747,15 @@
 
     <div class="field" id="cefrField">
       <div class="flabel" id="flabelCefr">CEFR level</div>
-      <div class="pills" id="cefrPills">
-        <button class="pill" data-cefr="A1" aria-pressed="true" id="cefrA1">A1</button>
-        <button class="pill" data-cefr="A2" aria-pressed="true" id="cefrA2">A2</button>
-        <button class="pill" data-cefr="B1" aria-pressed="false" id="cefrB1">B1</button>
-        <button class="pill" data-cefr="B2" aria-pressed="false" id="cefrB2">B2</button>
+      <div class="pills cefr-card-grid" id="cefrPills">
+        <button class="pill cefr-card" data-cefr="A1" aria-pressed="true" id="cefrA1"><span class="cefr-main">A1</span><span class="cefr-sub" id="cefrA1Sub"></span></button>
+        <button class="pill cefr-card" data-cefr="A2" aria-pressed="true" id="cefrA2"><span class="cefr-main">A2</span><span class="cefr-sub" id="cefrA2Sub"></span></button>
+        <button class="pill cefr-card" data-cefr="B1" aria-pressed="false" id="cefrB1"><span class="cefr-main">B1</span><span class="cefr-sub" id="cefrB1Sub"></span></button>
+        <button class="pill cefr-card" data-cefr="B2" aria-pressed="false" id="cefrB2"><span class="cefr-main">B2</span><span class="cefr-sub" id="cefrB2Sub"></span></button>
+        <button class="pill cefr-card cefr-all" data-cefr="all" aria-pressed="false" id="cefrAll"><span id="cefrAllLabel">All</span></button>
       </div>
       <div class="countnote" id="cefrNote"></div>
+      <div class="profile-info-panel" id="profileInfoPanel"></div>
     </div>
 
     <div id="wordsSetup">
@@ -819,12 +834,23 @@
 
     <div class="field" id="accentField">
       <div class="flabel" id="flabelAccent">Accent</div>
-      <div class="toggle-ga-rp" id="profileAccentToggle" role="group" aria-label="Accent">
-        <button type="button" data-accent="ga" aria-pressed="true" id="profileAccentGa">American (GA)</button>
-        <button type="button" data-accent="rp" aria-pressed="false" id="profileAccentRp">British (RP)</button>
+      <div class="accent-card-grid" id="profileAccentToggle" role="group" aria-label="Accent">
+        <button type="button" class="accent-card" data-accent="ga" aria-pressed="true" id="profileAccentGa">
+          <span class="accent-card-check" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg></span>
+          <span class="accent-card-code">GA</span>
+          <span class="accent-card-name" id="accentGaName">American English</span>
+          <span class="accent-card-ipa ipa">ˈdʒækət · ɝ ɚ</span>
+        </button>
+        <button type="button" class="accent-card" data-accent="rp" aria-pressed="false" id="profileAccentRp">
+          <span class="accent-card-check" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg></span>
+          <span class="accent-card-code">RP</span>
+          <span class="accent-card-name" id="accentRpName">British English</span>
+          <span class="accent-card-ipa ipa">ˈdʒækɪt · ɜː ɪə</span>
+        </button>
       </div>
     </div>
     <div class="countnote" id="poolNote"></div>
+    <div id="profileWordCount" aria-live="polite"></div>
 
     <button class="start btn-primary" id="startBtn" disabled>Loading…</button>
   </section>
@@ -850,7 +876,7 @@
           <div class="trapchips" id="mbSTraps"></div>
         </div>
         <div class="reveal-checks hidden" id="mbSChecks">
-          <div class="rc-label" id="mbSChecksLabel">Progress</div>
+          <div class="rc-label"><span id="mbSChecksLabel">Progress</span><strong id="mbSChecksCount">0/3</strong></div>
           <div class="pc-mode" data-mode="l" data-word="">
             <button type="button" class="pc-slot" data-slot="1" aria-label="1/3"></button>
             <button type="button" class="pc-slot" data-slot="2" aria-label="2/3"></button>
@@ -941,7 +967,7 @@
         <div class="trapchips" id="rTraps"></div>
       </div>
       <div class="reveal-checks" id="revealChecks">
-        <div class="rc-label" id="revealChecksLabel">Progress</div>
+        <div class="rc-label"><span id="revealChecksLabel">Progress</span><strong id="revealChecksCount">0/3</strong></div>
         <div class="pc-mode" data-mode="" data-word="">
           <button type="button" class="pc-slot" data-slot="1" aria-label="1/3"></button>
           <button type="button" class="pc-slot" data-slot="2" aria-label="2/3"></button>
@@ -1006,27 +1032,6 @@
   <button class="reflect-btn" id="reflectDockBtn" type="button"></button>
 </div>
 
-<div class="modal hidden" id="guideModal" role="dialog" aria-modal="true" aria-labelledby="guideTitle">
-  <button class="modal-scrim" id="guideScrim" type="button" aria-label="Close"></button>
-  <div class="modal-card panel guide-card">
-    <div class="guide-head">
-      <h2 class="modal-title" id="guideTitle">How to use this app</h2>
-      <button class="guide-close" id="guideCloseBtn" type="button">Close</button>
-    </div>
-    <div class="guide-lang">
-      <div class="pills" id="guideLangPills">
-        <button class="pill" type="button" data-guide-lang="en" aria-pressed="true">English</button>
-        <button class="pill" type="button" data-guide-lang="ja" aria-pressed="false">日本語</button>
-        <button class="pill" type="button" data-guide-lang="ko" aria-pressed="false">한국어</button>
-        <button class="pill" type="button" data-guide-lang="zh-Hant" aria-pressed="false">繁體</button>
-        <button class="pill" type="button" data-guide-lang="zh-Hans" aria-pressed="false">简体</button>
-        <button class="pill" type="button" data-guide-lang="fil" aria-pressed="false">Filipino</button>
-      </div>
-    </div>
-    <div class="guide-body" id="guideBody"></div>
-  </div>
-</div>
-
 <!-- Vocabulary browser 3b (Phase 1-E: exclusive full-page + sticky filter) -->
 <section id="vocabPage" class="vocab-page hidden" aria-labelledby="vocabTitle">
   <div class="vocab-page-inner">
@@ -1044,11 +1049,14 @@
         <button type="button" class="vocab-tab" role="tab" data-tab="phrases" id="vocabTabPhrases" data-i18n="vocab.tab_phrases">Phrases</button>
       </div>
       <div class="vocab-search-row" id="vocabWordsCtrl">
-        <div class="vocab-search-mode" role="tablist" aria-label="Search mode" id="vocabSearchMode">
-          <button type="button" class="vocab-search-mode-btn" id="vocabModeSpelling" data-mode="spelling" aria-pressed="true" data-i18n="vocab.filter.spelling">Spelling</button>
-          <button type="button" class="vocab-search-mode-btn" id="vocabModeIpa" data-mode="ipa" aria-pressed="false" data-i18n="vocab.filter.ipa">IPA</button>
+        <div class="vocab-ipa-filter" id="vocabIpaFilterBar">
+          <div class="vocab-ipa-filter-head">
+            <span class="vocab-ipa-filter-label" id="vocabIpaFilterLabel" data-i18n="vocab.filter.ipa">IPA</span>
+            <button type="button" class="vocab-ipa-filter-clear" id="vocabIpaClear" data-i18n="symbol.picker.clear">Clear</button>
+          </div>
+          <div class="vocab-ipa-chips" id="vocabIpaChips"></div>
+          <div class="vocab-ipa-keyboard" id="vocabIpaKeyboard"></div>
         </div>
-        <input type="search" id="vocabSearchInput" class="vocab-search" placeholder="Search…" data-i18n-placeholder="vocab.search" autocomplete="off" autocorrect="off" spellcheck="false"/>
         <div class="vocab-filters" id="vocabFilters" role="group" aria-label="CEFR">
           <button type="button" class="pill-cefr" data-cefr="A1" aria-pressed="true" id="vocabCefrA1">A1</button>
           <button type="button" class="pill-cefr" data-cefr="A2" aria-pressed="true" id="vocabCefrA2">A2</button>
@@ -1093,11 +1101,6 @@
       <section aria-labelledby="progressDrillsTitle">
         <h2 class="progress-section-title" id="progressDrillsTitle">Drills</h2>
         <div class="drill-progress-stack" id="drillProgressStack"></div>
-      </section>
-      <section class="srs-queue-section" aria-labelledby="srsQueueTitle">
-        <h2 class="srs-queue-title" id="srsQueueTitle">Words to review</h2>
-        <div class="srs-queue-count" id="srsQueueCount"></div>
-        <div class="srs-queue-list" id="srsQueueList"></div>
       </section>
     </div>
   </div>
@@ -1151,13 +1154,9 @@ let CONNECTED = [];
 let connectedReady = false;
 let WEAK = [];
 let weakReady = false;
-let GUIDE = {};
-let guideReady = false;
-let guideLang = "en";
-const GUIDE_ORDER = ["welcome", "philosophy", "solves", "modes", "decode_encode", "connected", "accents", "how_to_use"];
 let vocabTabCurrent = "words";
 let vocabBuilt = false;
-let vocabSearchTimer = null;
+let vocabIpaQuery = [];
 /** @type {Set<string>} CEFR filter for 3b (explore: default all selected; not linked to prev_settings) */
 let vocabCefrSelected = new Set(["A1", "A2", "B1", "B2"]);
 const VOCAB_CEFR_LEVELS = ["A1", "A2", "B1", "B2"];
@@ -1173,10 +1172,6 @@ let symbolQuery = [];
 let symbolVirtState = { slots: [], cum: [], totalH: 0, _start: -1, _end: -1, bound: false };
 /** @type {Set<string>} CEFR filter for 3d (personal: defaults from prev_settings_v1). */
 let progressCefrSelected = new Set(["A1", "A2"]);
-let progressSrsRows = [];
-const PROGRESS_SRS_VIRT_THRESHOLD = 100;
-const PROGRESS_SRS_ROW_H = 68;
-const progressSrsVirtState = { totalH: 0, _start: -1, _end: -1, bound: false, _raf: 0 };
 
 function normalizeWord(row) {
   const w = { w: row.w, ipa: row.ipa, cefr: row.cefr, pos: row.pos };
@@ -1207,7 +1202,7 @@ async function loadWordlist() {
   wordlistReady = true;
   updatePool();
   if ($("vocabPage") && !$("vocabPage").classList.contains("hidden") && vocabTabCurrent === "words") {
-    renderVocabWords($("vocabSearchInput") ? $("vocabSearchInput").value : "");
+    renderVocabWords();
   }
   if ($("symbolPickerPage") && !$("symbolPickerPage").classList.contains("hidden")) {
     renderSymbolPicker();
@@ -1268,67 +1263,21 @@ function normalizeWeak(row) {
   return c;
 }
 
-async function loadGuide() {
-  const res = await fetch("data/guide.json");
-  if (!res.ok) throw new Error("guide load failed: " + res.status);
-  GUIDE = await res.json();
-  guideReady = true;
-}
-
-function mapAppLangToGuide(appLang) {
-  if (appLang === "zh") return "zh-Hans";
-  return appLang;
-}
-
 function escapeHtml(s) {
   return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
-}
-
-function escapeAndBold(s) {
-  return escapeHtml(s)
-    .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>")
-    .replace(/\*([^*]+)\*/g, "<em>$1</em>");
-}
-
-function renderGuide(lang) {
-  guideLang = lang;
-  const data = GUIDE[lang] || GUIDE.en;
-  if (!data) return;
-  const html = GUIDE_ORDER.map(key => {
-    const sec = data[key];
-    if (!sec) return "";
-    const paras = (sec.body || []).map(p => "<p>" + escapeAndBold(p) + "</p>").join("");
-    return "<h3>" + escapeHtml(sec.title) + "</h3>" + paras;
-  }).join("");
-  $("guideBody").innerHTML = html;
-  $("guideLangPills").querySelectorAll(".pill").forEach(b => {
-    b.setAttribute("aria-pressed", b.dataset.guideLang === lang ? "true" : "false");
-  });
-}
-
-async function openGuide() {
-  closeVocab();
-  if (!guideReady) {
-    try { await loadGuide(); } catch (e) { console.error(e); return; }
-  }
-  guideLang = mapAppLangToGuide(LANG);
-  renderGuide(guideLang);
-  show("guideModal", true);
-}
-
-function closeGuide() {
-  show("guideModal", false);
 }
 
 function applyI18nVocab() {
   $("vocabTitle").textContent = t("vocab.title");
   $("vocabTabWords").textContent = t("vocab.tab_words");
   $("vocabTabPhrases").textContent = t("vocab.tab_phrases");
-  $("vocabSearchInput").placeholder = t("vocab.search");
-  const spellingBtn = $("vocabModeSpelling");
-  const ipaBtn = $("vocabModeIpa");
-  if (spellingBtn) spellingBtn.textContent = t("vocab.filter.spelling");
-  if (ipaBtn) ipaBtn.textContent = t("vocab.filter.ipa");
+  const ipaFilterLabel = $("vocabIpaFilterLabel");
+  if (ipaFilterLabel) ipaFilterLabel.textContent = t("vocab.filter.ipa");
+  const ipaFilterClear = $("vocabIpaClear");
+  if (ipaFilterClear) ipaFilterClear.textContent = t("symbol.picker.clear");
+  if ($("accentGaName")) $("accentGaName").textContent = t("accent.ga");
+  if ($("accentRpName")) $("accentRpName").textContent = t("accent.rp");
+  renderVocabIpaFilterBar();
   const allBtn = $("vocabCefrAll");
   if (allBtn) allBtn.textContent = t("vocab.filter.all");
   const backLabel = $("vocabBackLabel");
@@ -1365,7 +1314,6 @@ function applyI18nProgress() {
   $('progressCefrAll').textContent = t('progress.filter_all');
   $('progressOverallTitle').textContent = t('progress.overall_title');
   $('progressDrillsTitle').textContent = t('progress.drills_title');
-  $('srsQueueTitle').textContent = t('progress.review_queue.title');
   if (!$('learningStatusPage').classList.contains('hidden')) renderProgressPage();
 }
 
@@ -1411,7 +1359,7 @@ function toggleVocabCefr(cefr) {
     else vocabCefrSelected.add(cefr);
   }
   syncVocabCefrPills();
-  renderVocabWords($("vocabSearchInput").value);
+  renderVocabWords();
 }
 
 /**
@@ -1477,84 +1425,6 @@ function computeDrillProgress(drillId, marks) {
   return { drillId, counts, total, graduated, pct: total ? Math.round(graduated / total * 100) : 0 };
 }
 
-function validSrsDueAt(entry) {
-  if (!entry || typeof entry !== "object") return null;
-  const box = Number(entry.box);
-  const ts = Number(entry.ts);
-  if (!Number.isInteger(box) || box < 1 || box >= BOX_INTERVAL_MS.length || !Number.isFinite(ts) || ts <= 0) return null;
-  return ts + BOX_INTERVAL_MS[box];
-}
-
-function computeSrsQueue(now, sourcePairs) {
-  const endOfToday = new Date(now);
-  endOfToday.setHours(23, 59, 59, 999);
-  const merged = new Map();
-  (sourcePairs || [["hist", loadHist()], ["vocab", loadVocab()]]).forEach(([source, rows]) => {
-    Object.entries(rows).forEach(([word, entry]) => {
-      const dueAt = validSrsDueAt(entry);
-      if (dueAt == null || dueAt > endOfToday.getTime()) return;
-      const item = WORD_BY_W[word];
-      if (!item) return;
-      const prev = merged.get(word);
-      if (!prev) merged.set(word, { word, item, dueAt, sources: new Set([source]) });
-      else {
-        prev.dueAt = Math.min(prev.dueAt, dueAt);
-        prev.sources.add(source);
-      }
-    });
-  });
-  return [...merged.values()].sort((a, b) => a.dueAt - b.dueAt || a.word.localeCompare(b.word, "en"));
-}
-
-function srsDueLabel(row, now) {
-  if (row.dueAt > now) return t("progress.review_queue.due_today");
-  const days = Math.max(1, Math.ceil((now - row.dueAt) / 86400000));
-  return t("progress.review_queue.overdue_days", { n: days });
-}
-
-function srsQueueRowHtml(row, now) {
-  return `<button type="button" class="srs-queue-item" data-review-word="${escAttr(row.word)}">
-    <span><span class="srs-word">${escHtml(row.word)}</span><span class="srs-ipa">/${escHtml(activeIpa(row.item))}/</span></span>
-    <span class="srs-due">${escHtml(srsDueLabel(row, now))}</span>
-  </button>`;
-}
-
-function paintProgressSrsWindow() {
-  const list = $("srsQueueList");
-  const rows = progressSrsRows;
-  if (rows.length <= PROGRESS_SRS_VIRT_THRESHOLD) return;
-  const scrollTop = list.scrollTop;
-  const viewH = list.clientHeight || 480;
-  const start = Math.max(0, Math.floor(scrollTop / PROGRESS_SRS_ROW_H) - 5);
-  const end = Math.min(rows.length, Math.ceil((scrollTop + viewH) / PROGRESS_SRS_ROW_H) + 5);
-  if (progressSrsVirtState._start === start && progressSrsVirtState._end === end && list.querySelector(".srs-virt-spacer")) return;
-  progressSrsVirtState._start = start;
-  progressSrsVirtState._end = end;
-  const now = Date.now();
-  const html = rows.slice(start, end).map(row => srsQueueRowHtml(row, now)).join("");
-  list.innerHTML = `<div class="srs-virt-spacer" style="height:${rows.length * PROGRESS_SRS_ROW_H}px"><div class="srs-virt-window" style="transform:translateY(${start * PROGRESS_SRS_ROW_H}px)">${html}</div></div>`;
-}
-
-function renderProgressSrsQueue(rows) {
-  const list = $("srsQueueList");
-  progressSrsRows = rows;
-  $("srsQueueCount").textContent = t("progress.review_queue.count", { n: rows.length });
-  list.classList.toggle("is-virtualized", rows.length > PROGRESS_SRS_VIRT_THRESHOLD);
-  if (!rows.length) {
-    list.innerHTML = `<div class="srs-empty">${escHtml(t("progress.review_queue.empty"))}</div>`;
-    return;
-  }
-  if (rows.length <= PROGRESS_SRS_VIRT_THRESHOLD) {
-    const now = Date.now();
-    list.innerHTML = rows.map(row => srsQueueRowHtml(row, now)).join("");
-    return;
-  }
-  list.scrollTop = 0;
-  progressSrsVirtState._start = -1;
-  progressSrsVirtState._end = -1;
-  paintProgressSrsWindow();
-}
-
 function drillProgressCardHtml(result) {
   const slots = result.counts.map((count, slot) => `<span class="mark-slot-count"><b>${count}</b><span>${escHtml(t("progress.slots." + slot))}</span></span>`).join("");
   return `<button type="button" class="drill-progress-card" data-progress-drill="${result.drillId}">
@@ -1577,12 +1447,10 @@ function renderProgressPage() {
   $("progressOverallFill").style.width = pct + "%";
   $("progressOverallSummary").textContent = t("progress.graduated_summary", { n: graduated, m: total });
   $("drillProgressStack").innerHTML = results.map(drillProgressCardHtml).join("");
-  renderProgressSrsQueue(computeSrsQueue(Date.now()));
   $("learningStatusPage").dataset.aggregateMs = (performance.now() - started).toFixed(2);
 }
 
 function showProgressPage() {
-  closeGuide();
   ["vocabPage", "symbolPickerPage"].forEach(id => show(id, false));
   VOCAB_VIEW_IDS.forEach(id => show(id, false));
   show("playLine", false);
@@ -1828,6 +1696,13 @@ function refreshRevealChecksPanel(wrapId, item, mode) {
   rcMode.dataset.word = sessionItemKey(item);
   rcMode.dataset.mode = mode;
   const count = getCheckCount(item, mode);
+  const countEl = $(wrapId === "mbSChecks" ? "mbSChecksCount" : "revealChecksCount");
+  if (countEl) countEl.textContent = count + "/" + CHECK_MAX;
+  const labelEl = $(wrapId === "mbSChecks" ? "mbSChecksLabel" : "revealChecksLabel");
+  if (labelEl) {
+    if (LANG === "ja") labelEl.textContent = "覚えた " + count + "/" + CHECK_MAX + " · 覚えたらタップ";
+    else labelEl.textContent = "Marked " + count + "/" + CHECK_MAX + " · tap when learned";
+  }
   rcMode.setAttribute("data-graduated", count >= 3 ? "1" : "0");
   rcMode.setAttribute("aria-label", t("mark.aria.step_" + Math.min(3, Math.max(0, count))));
   rcMode.querySelectorAll(".pc-slot").forEach(btn => {
@@ -1838,13 +1713,63 @@ function refreshRevealChecksPanel(wrapId, item, mode) {
   });
 }
 
-function renderVocabWords(query = "") {
+
+/**
+ * Flattened GA/RP-aware IPA symbol list for the 3b inline keyboard row (CD #3b).
+ * @returns {string[]}
+ */
+function vocabIpaKeyboardSymbols() {
+  const out = [];
+  if (typeof symbolChartGroups === "function") {
+    symbolChartGroups().forEach(g => {
+      if (g.id === "stress") return;
+      if (g.heights) g.heights.forEach(h => h.symbols.forEach(s => { if (!out.includes(s)) out.push(s); }));
+      else (g.symbols || []).forEach(s => { if (!out.includes(s)) out.push(s); });
+    });
+  }
+  return out;
+}
+/** @param {string} sym @returns {void} */
+function vocabIpaQueryPush(sym) {
+  if (!sym || vocabIpaQuery.length >= 3) return;
+  vocabIpaQuery.push(sym);
+  renderVocabIpaFilterBar();
+  renderVocabWords();
+}
+/** @param {number} idx @returns {void} */
+function vocabIpaQueryRemoveAt(idx) {
+  vocabIpaQuery.splice(idx, 1);
+  renderVocabIpaFilterBar();
+  renderVocabWords();
+}
+/** @returns {void} */
+function vocabIpaQueryClear() {
+  if (!vocabIpaQuery.length) return;
+  vocabIpaQuery = [];
+  renderVocabIpaFilterBar();
+  renderVocabWords();
+}
+/** @returns {void} */
+function renderVocabIpaFilterBar() {
+  const chipsEl = $("vocabIpaChips");
+  const kbEl = $("vocabIpaKeyboard");
+  if (!chipsEl || !kbEl) return;
+  chipsEl.innerHTML = vocabIpaQuery.length
+    ? vocabIpaQuery.map((s, i) => `<button type="button" class="query-chip" data-chip-idx="${i}">${escHtml(s)}</button>`).join("")
+    : "";
+  kbEl.innerHTML = vocabIpaKeyboardSymbols().map(s =>
+    `<span class="symbol-cell vocab-ipa-key${vocabIpaQuery.includes(s) ? " is-active" : ""}" data-symbol="${escAttr(s)}">${escHtml(s)}</span>`
+  ).join("");
+}
+
+
+function renderVocabWords() {
   const body = $("vocabBody");
   if (!wordlistReady || !PRESET.length) {
     body.innerHTML = vocabSkeletonHtml();
     return;
   }
-  const q = query.trim().toLowerCase();
+  const q = vocabIpaQuery.join("");
   const cefrOk = vocabCefrSelected.size
     ? (c) => {
         const lv = itemCefrLabel(c);
@@ -1852,11 +1777,11 @@ function renderVocabWords(query = "") {
       }
     : () => false;
   const sorted = [...PRESET].sort((a, b) => a.w.toLowerCase().localeCompare(b.w.toLowerCase()));
-  const filtered = sorted.filter(c => cefrOk(c) && (!q || c.w.toLowerCase().includes(q)));
+  const filtered = sorted.filter(c => cefrOk(c) && (!q || wordIpaForSearch(c).includes(q)));
   rebuildVirtSlots(filtered, !q, vocabVirtState);
-  bindVirtScroll(body, vocabVirtState, () => paintVirtWindow(body, vocabVirtState));
+  bindVirtScroll(body, vocabVirtState, () => paintVirtWindow(body, vocabVirtState, q));
   body.scrollTop = 0;
-  paintVirtWindow(body, vocabVirtState);
+  paintVirtWindow(body, vocabVirtState, q);
 }
 
 function renderVocabPhrases() {
@@ -1936,10 +1861,7 @@ function renderVocabTab(tab) {
   updateVocabTabActive(tab);
   show("vocabWordsCtrl", tab === "words");
   show("vocabLetters", tab === "words");
-  const modeSpell = $("vocabModeSpelling");
-  const modeIpa = $("vocabModeIpa");
-  if (modeSpell) modeSpell.setAttribute("aria-pressed", "true");
-  if (modeIpa) modeIpa.setAttribute("aria-pressed", "false");
+  if (tab === "words") renderVocabIpaFilterBar();
   syncVocabCefrPills();
   const body = $("vocabBody");
   if (!body) return;
@@ -1948,7 +1870,7 @@ function renderVocabTab(tab) {
     return;
   }
   if (tab === "words") {
-    renderVocabWords($("vocabSearchInput").value || "");
+    renderVocabWords();
   } else {
     body.innerHTML = `<div class="vocab-loading">${escHtml(t("loading") !== "loading" ? t("loading") : "…")}</div>`;
     requestAnimationFrame(() => {
@@ -2112,6 +2034,106 @@ function wordGloss(c) {
 
 function posLabel(pos) { return (UI.pos && UI.pos[pos]) || pos || "—"; }
 
+const HOME_COPY = {
+  ja: {
+    subcopy: "発音記号（IPA）で、英語の音をていねいに練り直す。読める音は、やがて聞き取れる音になります。",
+    attrs: ["6言語対応", "無料", "登録不要"],
+    review: "振り返る",
+    profileTitle: "学習プロフィールを決める",
+    profileSubcopy: "毎セッション必ずここを通ります。前回の設定が初期値としてプリセットされ、そのまま「この設定で始める」を押せば即開始。以降のすべての出題・音声・発音記号がこの設定に沿い、学習中は切り替わりません。",
+    profileInfo: "既定は GA＋A1・A2（初級）。まずここから始めるのがおすすめです。難しすぎる語は出ません。",
+    drillSub: {
+      "2a": "発音記号を読んで、単語の音をつかむ",
+      "2b": "綴りから発音記号を組み立てる",
+      "2c": "音を手がかりに、語彙を増やす",
+      "2d": "語と語がつながる音を聞き取る"
+    },
+    cefr: { A1: "入門", A2: "初級", B1: "中級", B2: "中上級", all: "すべて" }
+  },
+  en: {
+    subcopy: "Use IPA to rebuild English sounds carefully. Sounds you can read become sounds you can hear.",
+    attrs: ["6 languages", "Free", "No signup"],
+    review: "Review",
+    profileTitle: "Choose your learning profile",
+    profileSubcopy: "Every session passes through this profile. Your previous settings are prefilled, so you can start immediately, and all questions, audio, and IPA stay aligned during practice.",
+    profileInfo: "Default is GA + A1/A2. Start here first; words that are too hard stay out of the pool.",
+    drillSub: {
+      "2a": "Read IPA and catch the word sound",
+      "2b": "Build IPA from the written word",
+      "2c": "Grow vocabulary from sound cues",
+      "2d": "Hear how words connect in speech"
+    },
+    cefr: { A1: "Starter", A2: "Elementary", B1: "Intermediate", B2: "Upper", all: "All" }
+  },
+  ko: {
+    subcopy: "IPA로 영어 소리를 차근차근 다시 다듬습니다. 읽을 수 있는 소리는 곧 들을 수 있는 소리가 됩니다.",
+    attrs: ["6개 언어", "무료", "가입 불필요"],
+    review: "돌아보기",
+    profileTitle: "학습 프로필 정하기",
+    profileSubcopy: "매 세션은 이 설정을 거칩니다. 이전 설정이 기본값으로 들어가며, 그대로 시작하면 모든 문제·음성·IPA가 같은 설정으로 유지됩니다.",
+    profileInfo: "기본값은 GA + A1/A2입니다. 먼저 여기서 시작하면 너무 어려운 단어는 나오지 않습니다.",
+    drillSub: {
+      "2a": "IPA를 읽고 단어의 소리를 잡기",
+      "2b": "철자에서 IPA를 조립하기",
+      "2c": "소리를 단서로 어휘 늘리기",
+      "2d": "이어지는 말소리에 익숙해지기"
+    },
+    cefr: { A1: "입문", A2: "초급", B1: "중급", B2: "중상급", all: "전체" }
+  },
+  "zh-Hans": {
+    subcopy: "用 IPA 重新打磨英语声音。能读出的声音，最终会变成能听出的声音。",
+    attrs: ["6 种语言", "免费", "无需注册"],
+    review: "回顾",
+    profileTitle: "设定学习档案",
+    profileSubcopy: "每次练习都会经过这里。上次设置会自动带入，直接开始后，题目、音频和 IPA 都会沿用同一设置。",
+    profileInfo: "默认是 GA + A1/A2。建议先从这里开始，过难的词不会进入题库。",
+    drillSub: {
+      "2a": "读 IPA，抓住单词声音",
+      "2b": "从拼写组装 IPA",
+      "2c": "用声音线索积累词汇",
+      "2d": "熟悉词与词连读的声音"
+    },
+    cefr: { A1: "入门", A2: "初级", B1: "中级", B2: "中高级", all: "全部" }
+  },
+  "zh-Hant": {
+    subcopy: "用 IPA 重新打磨英語聲音。能讀出的聲音，最後會變成能聽出的聲音。",
+    attrs: ["6 種語言", "免費", "免註冊"],
+    review: "回顧",
+    profileTitle: "設定學習檔案",
+    profileSubcopy: "每次練習都會經過這裡。上次設定會自動帶入，直接開始後，題目、音訊和 IPA 都會沿用同一設定。",
+    profileInfo: "預設是 GA + A1/A2。建議先從這裡開始，過難的詞不會進入題庫。",
+    drillSub: {
+      "2a": "讀 IPA，抓住單字聲音",
+      "2b": "從拼字組裝 IPA",
+      "2c": "用聲音線索累積詞彙",
+      "2d": "熟悉詞與詞連接的聲音"
+    },
+    cefr: { A1: "入門", A2: "初級", B1: "中級", B2: "中高級", all: "全部" }
+  },
+  fil: {
+    subcopy: "Gamitin ang IPA para ayusin muli ang tunog ng English. Ang tunog na nababasa mo ay magiging tunog na naririnig mo.",
+    attrs: ["6 na wika", "Libre", "Walang signup"],
+    review: "Balikan",
+    profileTitle: "Piliin ang learning profile",
+    profileSubcopy: "Dadaan dito ang bawat session. Naka-preset ang huling settings, kaya puwede kang magsimula agad at mananatiling tugma ang tanong, audio, at IPA habang nagpa-practice.",
+    profileInfo: "Default ang GA + A1/A2. Magandang magsimula rito; hindi isasama ang masyadong mahirap na salita.",
+    drillSub: {
+      "2a": "Basahin ang IPA at hulihin ang tunog",
+      "2b": "Buuin ang IPA mula sa spelling",
+      "2c": "Palawakin ang bokabularyo mula sa tunog",
+      "2d": "Sanayin ang konektadong tunog"
+    },
+    cefr: { A1: "Starter", A2: "Basic", B1: "Intermediate", B2: "Upper", all: "Lahat" }
+  }
+};
+
+/**
+ * @returns {typeof HOME_COPY.en}
+ */
+function homeCopy() {
+  return HOME_COPY[LANG] || HOME_COPY.en;
+}
+
 function isConnectedItem(c) { return !!(c && c.cs_type); }
 function isWeakItem(c) { return !!(c && c.src === "weak_form"); }
 function activeStrongIpa(c) {
@@ -2164,10 +2186,21 @@ function applyI18n() {
   $("dirEncodeT").innerHTML = t("dir.encode_t");
   $("dirEncodeD").textContent = t("dir.encode_d");
   if ($("topTagline")) $("topTagline").textContent = t("top.tagline");
+  const home = homeCopy();
+  if ($("topSubcopy")) $("topSubcopy").textContent = home.subcopy;
+  if ($("topAttrs")) $("topAttrs").innerHTML = home.attrs.map((label, idx) =>
+    (idx ? '<span aria-hidden="true">·</span>' : '') + '<span>' + escHtml(label) + '</span>'
+  ).join("");
+  if ($("topReviewTitle")) $("topReviewTitle").textContent = home.review;
   ["2a","2b","2c","2d"].forEach(id=>{
     const el=$("purpose"+id+"T");
     if(el) el.textContent = t("drill.title."+id);
+    const sub=$("purpose"+id+"D");
+    if(sub) sub.textContent = home.drillSub[id] || "";
   });
+  if ($("profileTitle")) $("profileTitle").textContent = home.profileTitle;
+  if ($("profileSubcopy")) $("profileSubcopy").textContent = home.profileSubcopy;
+  if ($("profileInfoPanel")) $("profileInfoPanel").textContent = home.profileInfo;
   if ($("aboutTitle")) $("aboutTitle").textContent = t("about.title");
   if ($("aboutLead")) $("aboutLead").textContent = t("about.lead");
   if ($("aboutWhyIpa")) $("aboutWhyIpa").innerHTML = t("about.why_ipa_html");
@@ -2182,9 +2215,19 @@ function applyI18n() {
   if ($("profileAccentGa")) $("profileAccentGa").textContent = t("accent.ga");
   if ($("profileAccentRp")) $("profileAccentRp").textContent = t("accent.rp");
   if ($("profileBackBtn")) $("profileBackBtn").textContent = "← " + (t("back_top") || "Menu");
+  ["A1","A2","B1","B2"].forEach(level => {
+    const sub = $("cefr" + level + "Sub");
+    if (sub) sub.textContent = home.cefr[level] || "";
+  });
+  if ($("cefrAllLabel")) $("cefrAllLabel").textContent = home.cefr.all;
   $("cefrPills").querySelectorAll(".pill").forEach(b => {
-    b.textContent = t("lvl." + b.dataset.cefr.toLowerCase());
-    b.setAttribute("aria-pressed", S.cefrLevels.has(b.dataset.cefr) ? "true" : "false");
+    const level = b.dataset.cefr;
+    if (level !== "all") {
+      const main = b.querySelector(".cefr-main");
+      if (main) main.textContent = t("lvl." + level.toLowerCase());
+    }
+    const allOn = ["A1","A2","B1","B2"].every(level => S.cefrLevels.has(level));
+    b.setAttribute("aria-pressed", level === "all" ? (allOn ? "true" : "false") : (S.cefrLevels.has(level) ? "true" : "false"));
   });
   $("flabelFocus").textContent = t("focus.label");
   $("focusAll").textContent = t("focus.all");
@@ -2199,8 +2242,8 @@ function applyI18n() {
   $("regAll").textContent = t("reg.all");
   $("regRegular").textContent = t("reg.regular");
   $("regIrregular").textContent = t("reg.irregular");
-  $("wordsFilterToggle").textContent = $("wordsFilterAdvanced").classList.contains("hidden") ? t("setup.show_filters") : t("setup.hide_filters");
-  $("connectedFilterToggle").textContent = $("connectedFilterAdvanced").classList.contains("hidden") ? t("setup.show_filters") : t("setup.hide_filters");
+  $("wordsFilterToggle").innerHTML = ($("wordsFilterAdvanced").classList.contains("hidden") ? t("setup.show_filters") : t("setup.hide_filters")) + '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>';
+  $("connectedFilterToggle").innerHTML = ($("connectedFilterAdvanced").classList.contains("hidden") ? t("setup.show_filters") : t("setup.hide_filters")) + '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>';
   $("flabelGrp").textContent = t("grp.label");
   $("grpAll").textContent = t("grp.all");
   $("grpShort").textContent = t("grp.short");
@@ -2227,10 +2270,6 @@ function applyI18n() {
   $("exitConfirmNo").textContent = t("exit_confirm.no");
   $("exitConfirmYes").textContent = t("exit_confirm.yes");
   ["dPlay", "ePlay", "rPlay", "dAltPlay", "rAltPlay", "mbSAltPlay"].forEach(id => { const b = $(id); if (b) b.setAttribute("aria-label", t("listen")); });
-  $("guideBtn").setAttribute("aria-label", t("guide.open"));
-  $("guideTitle").textContent = t("guide.title");
-  $("guideCloseBtn").textContent = t("guide.close");
-  $("guideScrim").setAttribute("aria-label", t("guide.close"));
   $("backTopBtn").textContent = t("back_top");
   updateLangSwitcherCurrent();
   $("modeOpts").querySelectorAll(".opt").forEach(b => {
@@ -2280,7 +2319,6 @@ async function setLang(lang) {
     refreshModeBStudyContent(S.cur);
   }
   if (!$("summary").classList.contains("hidden")) renderSummary();
-  if (!$("guideModal").classList.contains("hidden")) renderGuide(mapAppLangToGuide(LANG));
   if (!$("vocabPage").classList.contains("hidden")) {
     vocabBuilt = false;
     buildVocabLetterBar();
@@ -2412,7 +2450,6 @@ function showSetupOrPractice() {
 }
 
 function showVocabView(tab) {
-  closeGuide();
   show("symbolPickerPage", false);
   show("learningStatusPage", false);
   // Remember visible practice/setup views so Back can restore without re-render
@@ -2442,7 +2479,6 @@ function showVocabView(tab) {
  * @returns {void}
  */
 function showSymbolPickerView() {
-  closeGuide();
   show("learningStatusPage", false);
   if ($("vocabPage").classList.contains("hidden") && $("symbolPickerPage").classList.contains("hidden")) {
     vocabReturnViews = VOCAB_VIEW_IDS.filter(id => {
@@ -2548,7 +2584,7 @@ function symbolHeightLabelHtml(heightId) {
  */
 function symbolCellsHtml(symbols) {
   return `<div class="symbol-grid">${symbols.map(s =>
-    `<button type="button" class="symbol-cell" data-symbol="${escAttr(s)}" aria-label="${escAttr(s)}">${escHtml(s)}</button>`
+    `<button type="button" class="symbol-cell${symbolQuery.includes(s) ? " is-in-query" : ""}" data-symbol="${escAttr(s)}" aria-label="${escAttr(s)}">${escHtml(s)}</button>`
   ).join("")}</div>`;
 }
 
@@ -2636,7 +2672,7 @@ function renderSymbolPicker() {
  * @returns {void}
  */
 function symbolQueryPush(sym) {
-  if (!sym) return;
+  if (!sym || symbolQuery.length >= 3) return;
   symbolQuery.push(sym);
   renderSymbolQueryChips();
   renderSymbolResults();
@@ -2675,8 +2711,7 @@ async function initApp() {
   Promise.all([
     loadWordlist().catch(err => { console.error(err); $("poolNote").textContent = t("wordlist_fail"); }),
     loadConnected().catch(err => { console.error(err); if (S.tab === "connected") $("poolNote").textContent = t("load_fail"); }),
-    loadWeak().catch(err => { console.error(err); if (S.tab === "connected") $("poolNote").textContent = t("load_fail"); }),
-    loadGuide().catch(err => console.error("guide load failed", err))
+    loadWeak().catch(err => { console.error(err); if (S.tab === "connected") $("poolNote").textContent = t("load_fail"); })
   ]).then(() => {
     if (dataReady()) {
       $("startBtn").disabled = false;
@@ -2811,7 +2846,6 @@ function showPurposeHome(){
   show("purposeStub",true);
   show("setup",false);
   $("backTopBtn").classList.add("hidden");
-  $("guideBtn").classList.remove("hidden");
   $("headerLang")&&$("headerLang").classList.remove("hidden");
   $("playLine").classList.add("hidden");
   $("reflectDock").classList.add("hidden");
@@ -2828,7 +2862,6 @@ function showProfile3a(){
   show("purposeStub",false);
   show("setup",true);
   $("backTopBtn").classList.remove("hidden");
-  $("guideBtn").classList.remove("hidden");
   $("headerLang")&&$("headerLang").classList.remove("hidden");
   $("playLine").classList.add("hidden");
   $("reflectDock").classList.add("hidden");
@@ -2850,7 +2883,6 @@ function setSetupVisible(on){
     show("setup",false);
     hidePracticePanels();
     $("backTopBtn").classList.remove("hidden");
-    $("guideBtn").classList.add("hidden");
     $("headerLang")&&$("headerLang").classList.add("hidden");
     $("playLine").classList.remove("hidden");
     $("reflectDock").classList.add("hidden");
@@ -2960,9 +2992,16 @@ bindPills("csPills","csFilter",b=>b.dataset.cs);
 bindPills("csLevelPills","csLevel",b=>b.dataset.csLevel);
 $("cefrPills").querySelectorAll(".pill").forEach(b=>b.addEventListener("click",()=>{
   const lvl=b.dataset.cefr;
-  if(S.cefrLevels.has(lvl))S.cefrLevels.delete(lvl);
+  if(lvl==="all"){
+    const allOn=VOCAB_CEFR_LEVELS.every(level=>S.cefrLevels.has(level));
+    S.cefrLevels=allOn?new Set():new Set(VOCAB_CEFR_LEVELS);
+  }else if(S.cefrLevels.has(lvl))S.cefrLevels.delete(lvl);
   else S.cefrLevels.add(lvl);
-  b.setAttribute("aria-pressed",S.cefrLevels.has(lvl)?"true":"false");
+  const allOn=VOCAB_CEFR_LEVELS.every(level=>S.cefrLevels.has(level));
+  $("cefrPills").querySelectorAll(".pill").forEach(btn=>{
+    const level=btn.dataset.cefr;
+    btn.setAttribute("aria-pressed",level==="all"?(allOn?"true":"false"):(S.cefrLevels.has(level)?"true":"false"));
+  });
   updatePool();
   savePrevSettings();
 }));
@@ -2972,13 +3011,13 @@ function setWordsFilterAdvanced(open){
   const show=!!open;
   $("wordsFilterAdvanced").classList.toggle("hidden",!show);
   $("wordsFilterToggle").setAttribute("aria-expanded",show?"true":"false");
-  $("wordsFilterToggle").textContent=t(show?"setup.hide_filters":"setup.show_filters");
+  $("wordsFilterToggle").innerHTML=t(show?"setup.hide_filters":"setup.show_filters")+'<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>';
 }
 function setConnectedFilterAdvanced(open){
   const show=!!open;
   $("connectedFilterAdvanced").classList.toggle("hidden",!show);
   $("connectedFilterToggle").setAttribute("aria-expanded",show?"true":"false");
-  $("connectedFilterToggle").textContent=t(show?"setup.hide_filters":"setup.show_filters");
+  $("connectedFilterToggle").innerHTML=t(show?"setup.hide_filters":"setup.show_filters")+'<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>';
 }
 function updateSetupFields(){
   const modeB=S.appMode==="b";
@@ -3257,6 +3296,7 @@ function updatePool(){
   }
   const n=filteredPool().length;
   $("poolNote").textContent=t("pool.count",{n});
+  if($("profileWordCount"))$("profileWordCount").textContent=t("pool.count",{n});
   if(dataReady())$("startBtn").disabled=n===0;
   schedulePoolPreread();
 }
@@ -4192,19 +4232,6 @@ function openDrillProfile(drillId) {
   showProfile3a();
 }
 
-function startDirectStudy(word) {
-  const item = WORD_BY_W[word];
-  if (!item) return;
-  leaveExclusiveRoute();
-  applyDrillId("2c");
-  S.queue=[];S.idx=0;S.answered=0;S.correct=0;S.weak={};S.missed=[];S.mbPhase="study";S.mbQuiz=null;
-  S.sessionPool=[{...item,mbKind:"study"}];
-  S.poolTotal=1;S.sessionNext=1;S.queue=S.sessionPool.slice();
-  prefetchItemsAudio(S.queue);
-  setSetupVisible(false);
-  renderCard();
-}
-
 /* ---------- Phase 1-C: purpose stub → 3a ---------- */
 $("purposeGrid").querySelectorAll(".purpose-card").forEach(btn=>{
   btn.addEventListener("click",()=>{
@@ -4610,9 +4637,6 @@ function onModalEscapeKey(e){
   if(!$("exitConfirmModal").classList.contains("hidden")){
     closeExitConfirm();
     e.preventDefault();
-  }else if(!$("guideModal").classList.contains("hidden")){
-    closeGuide();
-    e.preventDefault();
   }else if($("symbolPickerPage") && !$("symbolPickerPage").classList.contains("hidden")){
     navigate("vocab");
     e.preventDefault();
@@ -4628,10 +4652,6 @@ function onModalEscapeKey(e){
 }
 document.addEventListener("keydown",onModalEscapeKey);
 
-$("guideBtn").addEventListener("click",openGuide);
-$("guideScrim").addEventListener("click",closeGuide);
-$("guideCloseBtn").addEventListener("click",closeGuide);
-$("guideLangPills").querySelectorAll(".pill").forEach(b=>b.addEventListener("click",()=>renderGuide(b.dataset.guideLang)));
 $("vocabBtn").addEventListener("click",e=>{e.preventDefault();navigate("vocab");});
 $("vocabBackBtn").addEventListener("click",e=>{e.preventDefault();navigate("");});
 $("symbolBackBtn").addEventListener("click",e=>{e.preventDefault();navigate("vocab");});
@@ -4644,26 +4664,7 @@ $("drillProgressStack").addEventListener("click",e=>{
   const card=e.target.closest("[data-progress-drill]");
   if(card)openDrillProfile(card.dataset.progressDrill);
 });
-$("srsQueueList").addEventListener("click",e=>{
-  const row=e.target.closest("[data-review-word]");
-  if(row)startDirectStudy(row.dataset.reviewWord);
-});
-$("srsQueueList").addEventListener("scroll",()=>{
-  if(progressSrsRows.length<=PROGRESS_SRS_VIRT_THRESHOLD||progressSrsVirtState._raf)return;
-  progressSrsVirtState._raf=requestAnimationFrame(()=>{
-    progressSrsVirtState._raf=0;
-    paintProgressSrsWindow();
-  });
-},{passive:true});
 $("symbolQueryClear").addEventListener("click",()=>symbolQueryClearAll());
-$("vocabModeSpelling").addEventListener("click",()=>{
-  $("vocabModeSpelling").setAttribute("aria-pressed","true");
-  $("vocabModeIpa").setAttribute("aria-pressed","false");
-  $("vocabSearchInput").focus();
-});
-$("vocabModeIpa").addEventListener("click",()=>{
-  navigate("vocab/ipa");
-});
 $("vocabFilters").addEventListener("click",e=>{
   const btn=e.target.closest(".pill-cefr");
   if(!btn)return;
@@ -4692,10 +4693,17 @@ document.querySelectorAll("#vocabTabBar .vocab-tab").forEach(b=>{
     navigate(tab==="phrases"?"vocab/phrases":"vocab");
   });
 });
-$("vocabSearchInput").addEventListener("input",e=>{
-  clearTimeout(vocabSearchTimer);
-  vocabSearchTimer=setTimeout(()=>renderVocabWords(e.target.value),120);
+$("vocabIpaKeyboard").addEventListener("click",e=>{
+  const cell=e.target.closest(".vocab-ipa-key");
+  if(!cell) return;
+  vocabIpaQueryPush(cell.dataset.symbol);
 });
+$("vocabIpaChips").addEventListener("click",e=>{
+  const chip=e.target.closest("[data-chip-idx]");
+  if(!chip) return;
+  vocabIpaQueryRemoveAt(parseInt(chip.dataset.chipIdx,10));
+});
+$("vocabIpaClear").addEventListener("click",()=>vocabIpaQueryClear());
 $("vocabLetters").addEventListener("click",e=>{
   const btn=e.target.closest(".vocab-letter-btn");
   if(!btn)return;
