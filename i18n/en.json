@@ -102,7 +102,6 @@
     "a2": "A2",
     "b1": "B1",
     "b2": "B2",
-    "c1": "C1",
     "pool": "Pool: {n} words"
   },
   "grp": {
@@ -122,11 +121,6 @@
     "label": "Accent",
     "ga": "American (GA)",
     "rp": "British (RP)"
-  },
-  "guide": {
-    "open": "Site guide",
-    "title": "How to use this app",
-    "close": "Close"
   },
   "vocab": {
     "title": "Vocabulary",
@@ -287,8 +281,7 @@
     "drills_title": "Drill progress",
     "graduated_summary": "{n} / {m} items graduated",
     "drill_summary": "{n} / {m} graduated",
-    "slots": {"0": "Not started", "1": "1 mark", "2": "2 marks", "3": "Graduated"},
-    "review_queue": {"title": "Words to review", "count": "{n} words", "empty": "No words need review.", "due_today": "Due today", "overdue_days": "{n}d overdue"}
+    "slots": {"0": "Not started", "1": "1 mark", "2": "2 marks", "3": "Graduated"}
   },
   "symbol": {
     "picker": {

@@ -60,11 +60,6 @@
     "short": "Maiikling patinig",
     "team": "Mga pangkat ng patinig"
   },
-  "guide": {
-    "close": "Isara",
-    "open": "Gabay sa site",
-    "title": "Paano gamitin ang app na ito"
-  },
   "vocab": {
     "title": "Talaan ng Bokabularyo",
     "tab_words": "Mga Salita",
@@ -112,7 +107,6 @@
     "a2": "A2",
     "b1": "B1",
     "b2": "B2",
-    "c1": "C1",
     "pool": "Pool: {n} salita"
   },
   "reflect": {
@@ -287,8 +281,7 @@
     "drills_title": "Progreso bawat drill",
     "graduated_summary": "{n} / {m} item ang natapos",
     "drill_summary": "{n} / {m} natapos",
-    "slots": {"0": "Hindi pa nasimulan", "1": "1 marka", "2": "2 marka", "3": "Natapos"},
-    "review_queue": {"title": "Mga salitang rerepasuhin", "count": "{n} salita", "empty": "Walang salitang kailangang repasuhin.", "due_today": "Takda ngayon", "overdue_days": "Huli ng {n} araw"}
+    "slots": {"0": "Hindi pa nasimulan", "1": "1 marka", "2": "2 marka", "3": "Natapos"}
   },
   "symbol": {
     "picker": {
