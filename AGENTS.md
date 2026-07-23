@@ -19,6 +19,7 @@ created: '2026-07-20'
 5. **UI 改修では `docs/claude-design/` を必ず参照する**（視覚仕様の正典）
 6. **CD ファイルが添付（配置）されていない UI 改修 Issue は着手禁止**
 7. **「CD と同じ UI で」指示時、Issue に記載のない差分を発見したら Phase 0 Comment でレポートし、Claude/Naoya の判断待ち**
+8. **UI 改修 Issue 起票時、Category F(CD 修正判定)を Issue 本文の改修分類ブロックに必ず記載する**(A. CD 修正必須 / B. CD 意図的乖離 / C. CD 修正不要 のいずれか)
 
 ## Before any implementation (実装前に必読)
 
@@ -28,9 +29,10 @@ created: '2026-07-20'
 2. `docs/DEV-GUARDRAILS.md` — 堅固化パターン A/B/C の適用条件
 3. `docs/OPERATIONS.md` — 運用手順とロールバック
 4. `docs/REPOSITORY-STRUCTURE.md` — Runtime contract と directory tree
-5. `docs/DOCUMENT-MAP.md` — Category A-E ドキュメントの更新義務と参照タイミング
+5. `docs/DOCUMENT-MAP.md` — Category A-F ドキュメント・判定の更新義務と参照タイミング
 6. Issue 本文 (改修分類ブロックがあればそれに従う)
 7. **UI 改修の場合** `docs/claude-design/`（`sp.dc.html` / `pc.dc.html` / `design-system.dc.html`。セクション ID で画面特定）
+8. **CD 修正判定が必要な場合** `docs/DOCUMENT-MAP.md` の Category F、`docs/claude-design/UPDATE-GUIDE.md`(存在する場合)
 
 ## Change classification (改修分類の判定 — 必須)
 
