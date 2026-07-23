@@ -86,7 +86,7 @@
     "count_weak": "대상 {n}개 약형"
   },
   "setup": {
-    "show_filters": "상세 설정",
+    "show_filters": "자세한 설정",
     "hide_filters": "설정 닫기"
   },
   "dir": {
@@ -102,7 +102,6 @@
     "a2": "A2",
     "b1": "B1",
     "b2": "B2",
-    "c1": "C1",
     "pool": "대상 {n}개 단어"
   },
   "grp": {
@@ -122,11 +121,6 @@
     "label": "발음",
     "ga": "미국식",
     "rp": "영국식"
-  },
-  "guide": {
-    "open": "사용 가이드",
-    "title": "앱 사용 방법",
-    "close": "닫기"
   },
   "vocab": {
     "title": "단어 목록",
@@ -281,14 +275,18 @@
     "title": "학습 현황",
     "back": "뒤로",
     "card_title": "학습 현황 보기",
-    "card_subtitle": "진행 상황과 복습 일정 확인",
+    "card_subtitle": "진도 확인",
     "filter_all": "전체",
     "overall_title": "전체 진행률",
     "drills_title": "드릴별 진행률",
     "graduated_summary": "{n} / {m} 항목 졸업",
     "drill_summary": "{n} / {m} 졸업",
-    "slots": {"0": "미시작", "1": "표시 1개", "2": "표시 2개", "3": "졸업"},
-    "review_queue": {"title": "복습할 단어", "count": "{n}개 단어", "empty": "복습할 단어가 없습니다.", "due_today": "오늘 마감", "overdue_days": "{n}일 지남"}
+    "slots": {
+      "0": "미시작",
+      "1": "표시 1개",
+      "2": "표시 2개",
+      "3": "졸업"
+    }
   },
   "symbol": {
     "picker": {

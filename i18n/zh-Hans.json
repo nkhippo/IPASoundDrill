@@ -102,7 +102,6 @@
     "a2": "A2",
     "b1": "B1",
     "b2": "B2",
-    "c1": "C1",
     "pool": "词库 {n} 词"
   },
   "grp": {
@@ -122,11 +121,6 @@
     "label": "口音",
     "ga": "美式",
     "rp": "英式"
-  },
-  "guide": {
-    "open": "使用指南",
-    "title": "如何使用本应用",
-    "close": "关闭"
   },
   "vocab": {
     "title": "词汇表",
@@ -281,14 +275,18 @@
     "title": "学习进度",
     "back": "返回",
     "card_title": "查看学习进度",
-    "card_subtitle": "查看进度和复习计划",
+    "card_subtitle": "查看进度",
     "filter_all": "全部",
     "overall_title": "总体进度",
     "drills_title": "各练习进度",
     "graduated_summary": "已完成 {n} / {m} 项",
     "drill_summary": "已完成 {n} / {m}",
-    "slots": {"0": "未开始", "1": "1 个标记", "2": "2 个标记", "3": "已完成"},
-    "review_queue": {"title": "需要复习的单词", "count": "{n} 个单词", "empty": "目前没有需要复习的单词。", "due_today": "今天到期", "overdue_days": "逾期 {n} 天"}
+    "slots": {
+      "0": "未开始",
+      "1": "1 个标记",
+      "2": "2 个标记",
+      "3": "已完成"
+    }
   },
   "symbol": {
     "picker": {
