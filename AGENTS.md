@@ -16,6 +16,9 @@ created: '2026-07-20'
 2. `main` への直接 push 禁止。すべての変更は draft PR 経由
 3. AGENTS.md や参照ドキュメントに書かれていないことを推測で埋めない。判断に迷ったら Issue Comment で Naoya に確認する
 4. このリポジトリの統治原則: **"AI is faithful to what's documented, guesses at what isn't"**
+5. **UI 改修では `docs/claude-design/` を必ず参照する**（視覚仕様の正典）
+6. **CD ファイルが添付（配置）されていない UI 改修 Issue は着手禁止**
+7. **「CD と同じ UI で」指示時、Issue に記載のない差分を発見したら Phase 0 Comment でレポートし、Claude/Naoya の判断待ち**
 
 ## Before any implementation (実装前に必読)
 
@@ -27,6 +30,7 @@ created: '2026-07-20'
 4. `docs/REPOSITORY-STRUCTURE.md` — Runtime contract と directory tree
 5. `docs/DOCUMENT-MAP.md` — Category A-E ドキュメントの更新義務と参照タイミング
 6. Issue 本文 (改修分類ブロックがあればそれに従う)
+7. **UI 改修の場合** `docs/claude-design/`（`sp.dc.html` / `pc.dc.html` / `design-system.dc.html`。セクション ID で画面特定）
 
 ## Change classification (改修分類の判定 — 必須)
 

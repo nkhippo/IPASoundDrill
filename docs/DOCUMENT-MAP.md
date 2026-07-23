@@ -8,7 +8,7 @@ created: '2026-07-12'
 
 # DOCUMENT-MAP — IPA Sound Drill ドキュメント運用マップ
 
-> **Last updated**: 2026-07-20（Issue #114: § 4 縮約、`docs/agent-reports/` 整合、agent-agnostic 化）
+> **Last updated**: 2026-07-23（Issue #126: `docs/claude-design/` を Category D に追加）
 > **Purpose**: プロジェクト内の全ドキュメントを Category A-E に分類し、更新義務・参照タイミング・レビュー頻度を一枚で見られるようにする。
 >
 > **§ 4 縮約（2026-07-20, Issue #114）:** Category C/D 分離と Issue タイプ別の細分化テーブルを廃止し、全 Issue 共通の必須参照に統合。エージェント混在時代には起票時・実装時で同一 docs を読むケースが大半であり、トークン効率と判断コスト削減を優先した。
@@ -80,6 +80,10 @@ Issue の性質に応じて Naoya + Claude が確認:
 ### Category D: Issue 対応時に参照
 
 § 4「全 Issue 共通の必須参照」に統合（Issue #114）。個別ケースの追加参照は § 4 付録。
+
+| ファイル | 参照タイミング | 備考 |
+|---|---|---|
+| `docs/claude-design/`（`README.md`, `design-system.dc.html`, `sp.dc.html`, `pc.dc.html`, `favicon.svg`, `support.js`, `update-log.md`） | UI 改修 Issue の実装開始時（必須） | UI/UX の正典。セクション ID（例: `#1a-ja`, `#3a`）で画面特定。CD 未配置の UI Issue は着手禁止（`CLAUDE.md` / `AGENTS.md`） |
 
 ### Category E: 定期レビュー
 
@@ -158,6 +162,7 @@ Issue 起票時・実装時を問わず、**すべての Issue** で以下を参
 | `chore`（運用） | `docs/OPERATIONS.md` |
 | `chore`（手動タスク） | `docs/LAUNCH-CHECKLIST.md` |
 | Phase 1 UI / デザイン | `docs/design/` 配下の該当ファイル |
+| UI 改修（視覚仕様・CD 準拠） | `docs/claude-design/`（正典）。`docs/design/` はブリーフ・マッピング補助 |
 | Cursor 実装 | `.cursor/rules/dev-flow.mdc`（Cursor 固有。他 agent は不要） |
 
 ## 5. 運用の継続性

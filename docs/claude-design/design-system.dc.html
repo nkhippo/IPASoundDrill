@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Charis+SIL:wght@400;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+JP:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{background:#EAE8E1;color:#1D1F22;font-family:'Noto Sans JP',system-ui,sans-serif;-webkit-font-smoothing:antialiased;line-height:1.5}
+  a{color:#0C7C7E;text-decoration:none}
+  a:hover{color:#0A6B6D}
+  .ipa{font-family:'Charis SIL','Doulos SIL',serif;overflow-wrap:anywhere;word-break:normal}
+</style>
+</helmet>
+
+<!-- ======= INTRO ======= -->
+<section style="padding:56px 56px 20px;font-family:'Noto Sans JP',sans-serif;color:#2A2420">
+  <div style="max-width:1040px">
+    <div style="font-family:'Charis SIL',serif;font-size:15px;color:#0C7C7E;letter-spacing:.06em">/aɪ pʰiː eɪ/</div>
+    <h1 style="font-family:'Noto Serif JP',serif;font-size:32px;font-weight:700;letter-spacing:.02em;margin:6px 0 10px;color:#2A2420">IPA Sound Drill — Design System</h1>
+    <p style="font-size:14.5px;line-height:1.85;color:#6E685C;margin:0;max-width:840px;text-wrap:pretty">SP・PC 両版が参照する単一の真実。トークン／タイポ／コンポーネント、ファビコン、設計判断の根拠を集約します。</p>
+  </div>
+</section>
+
+<!-- ======= FAVICON / APP MARK ======= -->
+<section style="padding:44px 56px 40px;font-family:'Noto Sans JP',sans-serif;color:#2A2420">
+  <div style="display:flex;align-items:baseline;gap:14px;border-bottom:2px solid #2A2420;padding-bottom:12px;margin-bottom:22px">
+    <h2 style="font-family:'Noto Serif JP',serif;font-size:22px;font-weight:700;letter-spacing:.04em;color:#2A2420;margin:0">アプリマーク / ファビコン</h2>
+    <span style="font-size:12.5px;color:#AC9F94">favicon.svg · Mood B · 単独出力可</span>
+  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:22px;align-items:flex-start">
+    <div style="background:#FFFFFF;border:1px solid #E7DCCF;border-radius:16px;padding:26px;display:flex;gap:26px;align-items:center">
+      <div style="width:120px;height:120px;border-radius:28px;overflow:hidden;box-shadow:0 8px 24px rgba(0,0,0,.10)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" role="img" aria-label="IPA Sound Drill" style="display:block">
+  <rect width="512" height="512" rx="120" fill="#F3EDE6"></rect>
+  <rect x="18" y="18" width="476" height="476" rx="104" fill="none" stroke="#0C7C7E" stroke-width="2.5" opacity="0.5"></rect>
+  <path d="M158 148 L120 364" stroke="#0C7C7E" stroke-width="9" stroke-linecap="round" opacity="0.4"></path>
+  <path d="M392 148 L354 364" stroke="#0C7C7E" stroke-width="9" stroke-linecap="round" opacity="0.4"></path>
+  <circle cx="216" cy="180" r="18" fill="#0C7C7E"></circle>
+  <path d="M216 226 L216 360" stroke="#0C7C7E" stroke-width="22" stroke-linecap="butt"></path>
+  <path d="M190 226 H242" stroke="#0C7C7E" stroke-width="9" stroke-linecap="round"></path>
+  <path d="M186 360 H246" stroke="#0C7C7E" stroke-width="9" stroke-linecap="round"></path>
+  <path d="M290 250 L322 250 L306 282 Z" fill="#B0604A"></path>
+  <path d="M306 318 L322 350 L290 350 Z" fill="#B0604A"></path>
+</svg></div>
+      <div style="display:flex;gap:16px;align-items:flex-end">
+        <div style="width:64px;height:64px;border-radius:15px;overflow:hidden;box-shadow:0 4px 12px rgba(0,0,0,.10)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" role="img" aria-label="IPA Sound Drill" style="display:block">
+  <rect width="512" height="512" rx="120" fill="#F3EDE6"></rect>
+  <rect x="18" y="18" width="476" height="476" rx="104" fill="none" stroke="#0C7C7E" stroke-width="2.5" opacity="0.5"></rect>
+  <path d="M158 148 L120 364" stroke="#0C7C7E" stroke-width="9" stroke-linecap="round" opacity="0.4"></path>
+  <path d="M392 148 L354 364" stroke="#0C7C7E" stroke-width="9" stroke-linecap="round" opacity="0.4"></path>
+  <circle cx="216" cy="180" r="18" fill="#0C7C7E"></circle>
+  <path d="M216 226 L216 360" stroke="#0C7C7E" stroke-width="22" stroke-linecap="butt"></path>
+  <path d="M190 226 H242" stroke="#0C7C7E" stroke-width="9" stroke-linecap="round"></path>
+  <path d="M186 360 H246" stroke="#0C7C7E" stroke-width="9" stroke-linecap="round"></path>
+  <path d="M290 250 L322 250 L306 282 Z" fill="#B0604A"></path>
+  <path d="M306 318 L322 350 L290 350 Z" fill="#B0604A"></path>
+</svg></div>
+        <div style="width:32px;height:32px;border-radius:8px;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,.10)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" role="img" aria-label="IPA Sound Drill" style="display:block">
+  <rect width="512" height="512" rx="120" fill="#F3EDE6"></rect>
+  <rect x="18" y="18" width="476" height="476" rx="104" fill="none" stroke="#0C7C7E" stroke-width="2.5" opacity="0.5"></rect>
+  <path d="M158 148 L120 364" stroke="#0C7C7E" stroke-width="9" stroke-linecap="round" opacity="0.4"></path>
+  <path d="M392 148 L354 364" stroke="#0C7C7E" stroke-width="9" stroke-linecap="round" opacity="0.4"></path>
+  <circle cx="216" cy="180" r="18" fill="#0C7C7E"></circle>
+  <path d="M216 226 L216 360" stroke="#0C7C7E" stroke-width="22" stroke-linecap="butt"></path>
+  <path d="M190 226 H242" stroke="#0C7C7E" stroke-width="9" stroke-linecap="round"></path>
+  <path d="M186 360 H246" stroke="#0C7C7E" stroke-width="9" stroke-linecap="round"></path>
+  <path d="M290 250 L322 250 L306 282 Z" fill="#B0604A"></path>
+  <path d="M306 318 L322 350 L290 350 Z" fill="#B0604A"></path>
+</svg></div>
+        <div style="width:16px;height:16px;border-radius:4px;overflow:hidden"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" role="img" aria-label="IPA Sound Drill" style="display:block">
+  <rect width="512" height="512" rx="120" fill="#F3EDE6"></rect>
+  <rect x="18" y="18" width="476" height="476" rx="104" fill="none" stroke="#0C7C7E" stroke-width="2.5" opacity="0.5"></rect>
+  <path d="M158 148 L120 364" stroke="#0C7C7E" stroke-width="9" stroke-linecap="round" opacity="0.4"></path>
+  <path d="M392 148 L354 364" stroke="#0C7C7E" stroke-width="9" stroke-linecap="round" opacity="0.4"></path>
+  <circle cx="216" cy="180" r="18" fill="#0C7C7E"></circle>
+  <path d="M216 226 L216 360" stroke="#0C7C7E" stroke-width="22" stroke-linecap="butt"></path>
+  <path d="M190 226 H242" stroke="#0C7C7E" stroke-width="9" stroke-linecap="round"></path>
+  <path d="M186 360 H246" stroke="#0C7C7E" stroke-width="9" stroke-linecap="round"></path>
+  <path d="M290 250 L322 250 L306 282 Z" fill="#B0604A"></path>
+  <path d="M306 318 L322 350 L290 350 Z" fill="#B0604A"></path>
+</svg></div>
+      </div>
+    </div>
+    <div style="flex:1;min-width:280px;background:#FFFFFF;border:1px solid #E7DCCF;border-radius:16px;padding:22px 24px">
+      <div style="font-family:'Noto Serif JP',serif;font-size:16px;font-weight:700;margin-bottom:10px">意匠</div>
+      <p style="font-size:13px;line-height:1.8;color:#6E685C;margin:0;text-wrap:pretty">暖かい紙色のタイルに hairline のキーライン、細身で高コントラストのセリフ体「i」（スラブ足＋細い点）、抑えた teal のスラッシュ、terracotta の長音記号 ː。明朝見出しと調和する上品な佇まい。16〜120px で判読可能。</p>
+      <div style="font-size:11.5px;color:#AC9F94;margin-top:14px">ファイル：<code style="font-family:monospace;background:#EFE7DE;padding:1px 5px;border-radius:4px">favicon.svg</code></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= TURN 5 : DESIGN GUIDELINE (Phase 1 確定) ======= -->
+<section style="padding:56px 56px 24px;font-family:'Noto Sans JP',sans-serif;color:#2A2420">
+  <div style="display:flex;align-items:baseline;gap:14px;border-bottom:2px solid #2A2420;padding-bottom:12px;margin-bottom:8px">
+    <h2 style="font-family:'Noto Serif JP',serif;font-size:22px;font-weight:700;letter-spacing:.04em;color:#2A2420;margin:0">Phase 1 デザインガイドライン</h2>
+    <span style="font-size:12.5px;color:#AC9F94">確定仕様 · ハンドオフ用</span>
+  </div>
+  <p style="font-size:13px;line-height:1.8;color:#7C7269;max-width:860px;margin:0 0 26px">Variation B「音を、美しく。」/ Mood B パレット ＋ 明朝見出し / 絞り込みは各ドリル内インライン（独立画面なし）/ 入場は毎セッション プロフィール（3a）通過。以下を <code style="font-family:monospace;background:#EFE7DE;padding:1px 5px;border-radius:4px">index.template.html</code> の実装トークンへ反映します。</p>
+
+  <div style="display:flex;flex-wrap:wrap;gap:22px;align-items:flex-start">
+
+    <!-- Decisions -->
+    <div style="flex:1;min-width:300px;background:#F3EDE6;border:1px solid #E7DCCF;border-radius:16px;padding:24px 26px">
+      <div style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#AC9F94;margin-bottom:14px">確定事項</div>
+      <div style="display:flex;flex-direction:column;gap:12px;font-size:13.5px;line-height:1.6">
+        <div style="display:flex;gap:10px"><span style="color:#0C7C7E;flex-shrink:0">◆</span><span><b>コンセプト</b> — Variation B「音を、美しく。」（J-5）。意味は既知、音を練り直す。</span></div>
+        <div style="display:flex;gap:10px"><span style="color:#0C7C7E;flex-shrink:0">◆</span><span><b>配色</b> — Mood B / Warm Contemporary。暖かい紙色＋teal signal＋terracotta 副アクセント。</span></div>
+        <div style="display:flex;gap:10px"><span style="color:#0C7C7E;flex-shrink:0">◆</span><span><b>タイポ</b> — 見出しのみ明朝（Noto Serif JP/KR）、本文ゴシック（Noto Sans）、IPA は Charis SIL。</span></div>
+        <div style="display:flex;gap:10px"><span style="color:#0C7C7E;flex-shrink:0">◆</span><span><b>構造</b> — 目的ファースト4カード。1タップで即開始。「詳しい設定」top から撤去。</span></div>
+        <div style="display:flex;gap:10px"><span style="color:#0C7C7E;flex-shrink:0">◆</span><span><b>絞り込み</b> — 各ドリル画面（2a–2d）内のインラインチップとして実装。独立画面は設けず、苦手音・レベルはプロフィール（3a）に集約。</span></div>
+        <div style="display:flex;gap:10px"><span style="color:#0C7C7E;flex-shrink:0">◆</span><span><b>言語</b> — 6言語、自言語表記・国旗なし。KO は 합니다体。</span></div>
+      </div>
+    </div>
+
+    <!-- Color tokens -->
+    <div style="flex:1;min-width:300px;background:#FFFFFF;border:1px solid #E7DCCF;border-radius:16px;padding:24px 26px">
+      <div style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#AC9F94;margin-bottom:16px">カラートークン</div>
+      <div style="display:flex;flex-direction:column;gap:10px;font-size:12.5px">
+        <div style="display:flex;align-items:center;gap:12px"><span style="width:34px;height:26px;border-radius:6px;background:#F3EDE6;border:1px solid #E7DCCF;flex-shrink:0"></span><code style="font-family:monospace;color:#2A2420">--paper</code><span style="color:#AC9F94;margin-left:auto">#F3EDE6</span></div>
+        <div style="display:flex;align-items:center;gap:12px"><span style="width:34px;height:26px;border-radius:6px;background:#FDFBF7;border:1px solid #E7DCCF;flex-shrink:0"></span><code style="font-family:monospace;color:#2A2420">--panel</code><span style="color:#AC9F94;margin-left:auto">#FDFBF7</span></div>
+        <div style="display:flex;align-items:center;gap:12px"><span style="width:34px;height:26px;border-radius:6px;background:#2A2420;flex-shrink:0"></span><code style="font-family:monospace;color:#2A2420">--ink</code><span style="color:#AC9F94;margin-left:auto">#2A2420</span></div>
+        <div style="display:flex;align-items:center;gap:12px"><span style="width:34px;height:26px;border-radius:6px;background:#7C7269;flex-shrink:0"></span><code style="font-family:monospace;color:#2A2420">--muted</code><span style="color:#AC9F94;margin-left:auto">#7C7269</span></div>
+        <div style="display:flex;align-items:center;gap:12px"><span style="width:34px;height:26px;border-radius:6px;background:#AC9F94;flex-shrink:0"></span><code style="font-family:monospace;color:#2A2420">--faint</code><span style="color:#AC9F94;margin-left:auto">#AC9F94</span></div>
+        <div style="display:flex;align-items:center;gap:12px"><span style="width:34px;height:26px;border-radius:6px;background:#E7DCCF;flex-shrink:0"></span><code style="font-family:monospace;color:#2A2420">--hair</code><span style="color:#AC9F94;margin-left:auto">#E7DCCF</span></div>
+        <div style="display:flex;align-items:center;gap:12px"><span style="width:34px;height:26px;border-radius:6px;background:#0C7C7E;flex-shrink:0"></span><code style="font-family:monospace;color:#2A2420">--signal</code><span style="color:#AC9F94;margin-left:auto">#0C7C7E</span></div>
+        <div style="display:flex;align-items:center;gap:12px"><span style="width:34px;height:26px;border-radius:6px;background:#E1EFEE;border:1px solid #E7DCCF;flex-shrink:0"></span><code style="font-family:monospace;color:#2A2420">--signal-soft</code><span style="color:#AC9F94;margin-left:auto">#E1EFEE</span></div>
+        <div style="display:flex;align-items:center;gap:12px"><span style="width:34px;height:26px;border-radius:6px;background:#B0604A;flex-shrink:0"></span><code style="font-family:monospace;color:#2A2420">--accent</code><span style="color:#AC9F94;margin-left:auto">#B0604A</span></div>
+        <div style="display:flex;align-items:center;gap:12px"><span style="width:34px;height:26px;border-radius:6px;background:#D9911B;flex-shrink:0"></span><code style="font-family:monospace;color:#2A2420">--stress</code><span style="color:#AC9F94;margin-left:auto">#D9911B</span></div>
+      </div>
+    </div>
+
+    <!-- Type + tokens -->
+    <div style="flex:1;min-width:300px;background:#FFFFFF;border:1px solid #E7DCCF;border-radius:16px;padding:24px 26px">
+      <div style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#AC9F94;margin-bottom:16px">タイポ & スケール</div>
+      <div style="border-bottom:1px solid #F0EAE1;padding-bottom:14px;margin-bottom:14px">
+        <div style="font-family:'Noto Serif JP',serif;font-size:30px;font-weight:600;line-height:1.2">見出し 明朝</div>
+        <div style="font-size:11.5px;color:#AC9F94;margin-top:4px">Noto Serif JP/KR · 600 · hero 34–38px / sec 22px</div>
+      </div>
+      <div style="border-bottom:1px solid #F0EAE1;padding-bottom:14px;margin-bottom:14px">
+        <div style="font-size:15px;font-weight:400;line-height:1.5">本文ゴシック 通常400・強調600</div>
+        <div style="font-size:11.5px;color:#AC9F94;margin-top:4px">Noto Sans JP/KR/Latin · body 13.5px / caption 11.5px</div>
+      </div>
+      <div style="margin-bottom:16px">
+        <div class="ipa" style="font-size:30px;color:#2A2420"><span style="color:#0C7C7E">ˈ</span>dʒæ<span style="color:#7C7269">‧</span>kət</div>
+        <div style="font-size:11.5px;color:#AC9F94;margin-top:4px">Charis SIL · 強勢 signal · 音節境界 ‧ · 要注意音 stress 下線</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:8px;font-size:12.5px;border-top:1px solid #F0EAE1;padding-top:14px">
+        <div style="display:flex;justify-content:space-between"><code style="font-family:monospace">--radius-card</code><span style="color:#AC9F94">14px</span></div>
+        <div style="display:flex;justify-content:space-between"><code style="font-family:monospace">--radius-pill</code><span style="color:#AC9F94">999px</span></div>
+        <div style="display:flex;justify-content:space-between"><code style="font-family:monospace">--space</code><span style="color:#AC9F94">4 / 8 / 14 / 20 / 26px</span></div>
+        <div style="display:flex;justify-content:space-between"><code style="font-family:monospace">--shadow-card</code><span style="color:#AC9F94">0 14px 44px rgba(0,0,0,.10)</span></div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- component quickref -->
+  <div style="background:#FFFFFF;border:1px solid #E7DCCF;border-radius:16px;padding:24px 26px;margin-top:22px">
+    <div style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#AC9F94;margin-bottom:18px">コンポーネント（Mood B 確定トークン）</div>
+    <div style="display:flex;flex-wrap:wrap;gap:36px;align-items:flex-start">
+      <div>
+        <div style="font-size:11px;color:#AC9F94;margin-bottom:10px">Button</div>
+        <div style="display:flex;flex-direction:column;gap:10px;align-items:flex-start">
+          <button style="background:#0C7C7E;color:#fff;border:none;border-radius:12px;padding:12px 24px;font-size:14px;font-weight:700;font-family:inherit;cursor:pointer">primary</button>
+          <button style="background:#FDFBF7;color:#2A2420;border:1px solid #E7DCCF;border-radius:12px;padding:11px 22px;font-size:14px;font-weight:600;font-family:inherit;cursor:pointer">secondary</button>
+          <button style="background:transparent;color:#B0604A;border:none;padding:8px 10px;font-size:14px;font-weight:600;font-family:inherit;cursor:pointer">accent link →</button>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:11px;color:#AC9F94;margin-bottom:10px">目的カード（選択 / 非選択）</div>
+        <div style="display:flex;flex-direction:column;gap:8px;width:220px">
+          <div style="border:1px solid #0C7C7E;background:#E1EFEE;border-radius:14px;padding:12px 14px;font-size:13px;font-weight:600">選択（signal 枠 + soft）</div>
+          <div style="border:1px solid #E7DCCF;background:#FDFBF7;border-radius:14px;padding:12px 14px;font-size:13px;color:#7C7269">非選択（hair 枠 + panel）</div>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:11px;color:#AC9F94;margin-bottom:10px">Pill · Toggle</div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;max-width:220px">
+          <span style="border:1px solid #0C7C7E;background:#E1EFEE;color:#0C7C7E;border-radius:999px;padding:6px 14px;font-size:13px;font-weight:700">A1</span>
+          <span class="ipa" style="border:1px solid #E7DCCF;background:#FDFBF7;color:#2A2420;border-radius:999px;padding:6px 14px;font-size:14px">θ / ð</span>
+          <div style="display:inline-flex;border:1px solid #E7DCCF;background:#F3EDE6;border-radius:9px;padding:3px"><span style="background:#FDFBF7;color:#0C7C7E;border-radius:6px;padding:6px 14px;font-size:13px;font-weight:700;box-shadow:0 1px 2px rgba(0,0,0,.06)">GA</span><span style="color:#7C7269;padding:6px 14px;font-size:13px;font-weight:600">RP</span></div>
+        </div>
+      </div>
+      <div style="min-width:180px">
+        <div style="font-size:11px;color:#AC9F94;margin-bottom:10px">Progress meter</div>
+        <div style="height:6px;background:#E7DCCF;border-radius:999px;overflow:hidden;margin-bottom:6px"><div style="width:62%;height:100%;background:#0C7C7E"></div></div>
+        <div style="font-size:11px;color:#7C7269">進捗 · 62%</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= 設計判断まとめ ======= -->
+<section style="padding:44px 56px 40px;font-family:'Noto Sans JP',sans-serif;color:#2A2420">
+  <div style="display:flex;align-items:baseline;gap:14px;border-bottom:2px solid #2A2420;padding-bottom:12px;margin-bottom:8px">
+    <h2 style="font-family:'Noto Serif JP',serif;font-size:22px;font-weight:700;letter-spacing:.04em;color:#2A2420;margin:0">設計判断まとめ</h2>
+    <span style="font-size:12.5px;color:#AC9F94">対話で確定した仕様と、その理由</span>
+  </div>
+  <p style="font-size:13px;line-height:1.8;color:#6E685C;max-width:880px;margin:0 0 24px">各画面 UI の背景にある意思決定を集約。実装・引き継ぎ時の判断根拠として参照してください。</p>
+  <div style="display:flex;flex-wrap:wrap;gap:20px;align-items:flex-start">
+    <div style="flex:1;min-width:300px;background:#FFFFFF;border:1px solid #E7DCCF;border-radius:16px;padding:22px 24px"><div style="font-family:'Noto Serif JP',serif;font-size:16px;font-weight:700;color:#2A2420;margin-bottom:12px">マーキング（覚えた）</div><div style="display:flex;flex-direction:column;gap:11px;font-size:13px;line-height:1.65;color:#6E685C"><div style="display:flex;gap:9px"><span style="color:#0C7C7E;flex-shrink:0">◆</span><span><b style="color:#2A2420">ユーザーが手動でチェック</b> — システムは正誤で自動評価しない。正解に辿り着く道のりが長く、毎回スペル/IPA を丁寧に入力するとは限らないため、習得の主観判断はユーザーに委ねる。</span></div><div style="display:flex;gap:9px"><span style="color:#0C7C7E;flex-shrink:0">◆</span><span><b style="color:#2A2420">最大3回で卒業</b> — 3つ塗ったらその単語は卒業。チェックの少ない語から優先出題し、弱点に集中できる。</span></div><div style="display:flex;gap:9px"><span style="color:#0C7C7E;flex-shrink:0">◆</span><span><b style="color:#2A2420">目的ごとに独立</b> — 「音の発音を確かめる」で think にチェックしても、「音から単語を覚える」の think には反映しない。4目的で別管理。</span></div><div style="display:flex;gap:9px"><span style="color:#0C7C7E;flex-shrink:0">◆</span><span><b style="color:#2A2420">Local Storage 管理</b> — アカウント登録不要（BE 管理を避ける）。端末内に保存。</span></div><div style="display:flex;gap:9px"><span style="color:#0C7C7E;flex-shrink:0">◆</span><span><b style="color:#2A2420">狙い</b> — 5,000語×4モードは学習記録には不向き。多くの語に軽く触れ、サクサク進める体験を優先。</span></div></div></div>
+    <div style="flex:1;min-width:300px;background:#FFFFFF;border:1px solid #E7DCCF;border-radius:16px;padding:22px 24px"><div style="font-family:'Noto Serif JP',serif;font-size:16px;font-weight:700;color:#2A2420;margin-bottom:12px">判定・アクセント</div><div style="display:flex;flex-direction:column;gap:11px;font-size:13px;line-height:1.65;color:#6E685C"><div style="display:flex;gap:9px"><span style="color:#0C7C7E;flex-shrink:0">◆</span><span><b style="color:#2A2420">完全一致判定（AI不介在）</b> — 正解のスペル/IPA と完全一致のみ正解。空欄でも1文字違いでも同じ「不正解」。惜しさ・部分正解は示さない。</span></div><div style="display:flex;gap:9px"><span style="color:#0C7C7E;flex-shrink:0">◆</span><span><b style="color:#2A2420">GA / RP はセッション共通</b> — アクセントは全問通して固定。収録音声も IPA も異なるため、学習中は切り替え不可。</span></div><div style="display:flex;gap:9px"><span style="color:#0C7C7E;flex-shrink:0">◆</span><span><b style="color:#2A2420">プロフィールで設定</b> — 学習プロフィール（3a）でアクセントを選択。各画面はヘッダーに固定バッジで表示。</span></div><div style="display:flex;gap:9px"><span style="color:#0C7C7E;flex-shrink:0">◆</span><span><b style="color:#2A2420">語彙リストは両表記</b> — 辞書（3b）は GA/RP 双方を個別スピーカーで即参照でき、外部サイトへの離脱を防ぐ。</span></div></div></div>
+    <div style="flex:1;min-width:300px;background:#FFFFFF;border:1px solid #E7DCCF;border-radius:16px;padding:22px 24px"><div style="font-family:'Noto Serif JP',serif;font-size:16px;font-weight:700;color:#2A2420;margin-bottom:12px">レベル・構造</div><div style="display:flex;flex-direction:column;gap:11px;font-size:13px;line-height:1.65;color:#6E685C"><div style="display:flex;gap:9px"><span style="color:#0C7C7E;flex-shrink:0">◆</span><span><b style="color:#2A2420">CEFR は単語ごと</b> — レベルは語によって変わる概念。プロフィールで複数レベルを選択し、出題は A1→B1 と混ざる。各カードに「語彙」タグで表示（アクセントとは別概念）。連結する音に慣れる（2d）を含む全4ドリルでタグを表示。ただし 2d にフィルタ UI は追加しない。</span></div><div style="display:flex;gap:9px"><span style="color:#0C7C7E;flex-shrink:0">◆</span><span><b style="color:#2A2420">既定 A1＋A2</b> — 初級を既定に。難しすぎる語で離脱しないよう、選んだレベルのみ出題。</span></div><div style="display:flex;gap:9px"><span style="color:#0C7C7E;flex-shrink:0">◆</span><span><b style="color:#2A2420">目的ファースト</b> — 12パラメータの一括提示を廃止し、目的4カードで1タップ開始。「詳しい設定」は top から撤去。</span></div><div style="display:flex;gap:9px"><span style="color:#0C7C7E;flex-shrink:0">◆</span><span><b style="color:#2A2420">絞り込みはインライン</b> — セッション内絞り込みは各ドリル画面（2a–2d）内の静かなチップとして実装。独立画面は設けない。<br><b style="color:#2A2420">入場は毎セッション</b> — 目的カード → 学習プロフィール（3a・毎セッション通過／LS プリセット）→ ドリル。「そのままでいいか」の1判断のみ。</span></div></div></div>
+    <div style="flex:1;min-width:300px;background:#FFFFFF;border:1px solid #E7DCCF;border-radius:16px;padding:22px 24px"><div style="font-family:'Noto Serif JP',serif;font-size:16px;font-weight:700;color:#2A2420;margin-bottom:12px">入場・オンボーディング</div><div style="display:flex;flex-direction:column;gap:11px;font-size:13px;line-height:1.65;color:#6E685C"><div style="display:flex;gap:9px"><span style="color:#0C7C7E;flex-shrink:0">◆</span><span><b style="color:#2A2420">プロフィール一元通過</b> — すべての設定は 3a プロフィールに集約。毎セッション必ず 3a を通過し、旧「詳しい設定」12パラメータもここに集約。分散配置はしない。</span></div><div style="display:flex;gap:9px"><span style="color:#0C7C7E;flex-shrink:0">◆</span><span><b style="color:#2A2420">LS プリセット</b> — 前回設定を LocalStorage で記憶し初期値に。判断負荷は「そのままでいいか」の1つのみ。</span></div><div style="display:flex;gap:9px"><span style="color:#0C7C7E;flex-shrink:0">◆</span><span><b style="color:#2A2420">初回オンボーディング</b> — 初回訪問時のみ 4スライドを自動発火。スキップも完了扱い（LS onboarding_completed_v1）。以降は直接トップ（1a）から開始。</span></div><div style="display:flex;gap:9px"><span style="color:#0C7C7E;flex-shrink:0">◆</span><span><b style="color:#2A2420">任意再表示</b> — ヘッダーのガイドアイコンからいつでも再表示できる。</span></div></div></div><div style="flex:1;min-width:300px;background:#FFFFFF;border:1px solid #E7DCCF;border-radius:16px;padding:22px 24px"><div style="font-family:'Noto Serif JP',serif;font-size:16px;font-weight:700;color:#2A2420;margin-bottom:12px">各ドリルの要点</div><div style="display:flex;flex-direction:column;gap:11px;font-size:13px;line-height:1.65;color:#6E685C"><div style="display:flex;gap:9px"><span style="color:#0C7C7E;flex-shrink:0">◆</span><span><b style="color:#2A2420">音から単語を書く</b> — 音＋IPA記号から単語を想起しスペル入力。音→単語の想起訓練。</span></div><div style="display:flex;gap:9px"><span style="color:#0C7C7E;flex-shrink:0">◆</span><span><b style="color:#2A2420">発音から書いてみる</b> — 綴りから IPA を GA/RP のキーボードで組み立てる産出タスク。</span></div><div style="display:flex;gap:9px"><span style="color:#0C7C7E;flex-shrink:0">◆</span><span><b style="color:#2A2420">音から単語を覚える</b> — 音声（＋IPAヒント）から単語を思い出す。近い語がない単語も多いため選択肢は出さない。</span></div><div style="display:flex;gap:9px"><span style="color:#0C7C7E;flex-shrink:0">◆</span><span><b style="color:#2A2420">連結する音に慣れる</b> — 文章中に埋め込んだフレーズを確認。リンキングは速く読む中で生じるため文脈提示。音声はフレーズのみ再生（データ制約）。</span></div></div></div>
+  </div>
+</section>
+
+</x-dc>
+</body>
+</html>
