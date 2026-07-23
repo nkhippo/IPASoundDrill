@@ -641,6 +641,7 @@
   #setup.profile-3a .setup-adv-toggle{border-color:var(--hair);background:var(--paper);color:var(--muted)}
   #setup.profile-3a .setup-adv-toggle:hover{border-color:var(--signal);background:var(--signal-soft);color:var(--signal)}
   #setup.profile-3a .countnote{color:var(--muted)}
+  #setup.profile-3a #poolNote{font-size:11.5px;color:var(--muted);letter-spacing:.04em}
   #setup.profile-3a .btn-primary.start{width:100%;margin-top:8px;min-height:48px;padding:12px 24px;font-size:14px;box-shadow:none}
   #setup.profile-3a .btn-primary.start:disabled{opacity:.45;cursor:not-allowed}
   #setup.profile-3a .toggle-ga-rp{display:inline-flex;border:1px solid var(--hair);background:var(--paper);border-radius:var(--radius-toggle);padding:3px;gap:0}
@@ -719,7 +720,7 @@
     </div>
     <div class="top-section-sep" aria-hidden="true"></div>
     <div class="top-review-title" id="topReviewTitle"></div>
-    <button type="button" class="purpose-card purpose-card-progress" id="progressCard"><span class="purpose-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 7-7"/><path d="M17 8h4v4"/></svg></span><span class="purpose-copy"><span class="purpose-title" id="progressCardTitle">学習状況を見る</span><span class="purpose-subtitle" id="progressCardSubtitle">あなたの進捗を確認</span></span><span class="purpose-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg></span></button>
+    <button type="button" class="purpose-card purpose-card-progress" id="progressCard"><span class="purpose-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 7-7"/><path d="M17 8h4v4"/></svg></span><span class="purpose-copy"><span class="purpose-title" id="progressCardTitle">学習状況を見る</span><span class="purpose-subtitle" id="progressCardSubtitle">進捗を確認</span></span><span class="purpose-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg></span></button>
   </section>
 
   <!-- SETUP / learning profile 3a (Phase 1-C rebrand of #setup) -->
@@ -850,7 +851,6 @@
       </div>
     </div>
     <div class="countnote" id="poolNote"></div>
-    <div id="profileWordCount" aria-live="polite"></div>
 
     <button class="start btn-primary" id="startBtn" disabled>Loading…</button>
   </section>
@@ -3296,7 +3296,6 @@ function updatePool(){
   }
   const n=filteredPool().length;
   $("poolNote").textContent=t("pool.count",{n});
-  if($("profileWordCount"))$("profileWordCount").textContent=t("pool.count",{n});
   if(dataReady())$("startBtn").disabled=n===0;
   schedulePoolPreread();
 }
@@ -4233,7 +4232,7 @@ function openDrillProfile(drillId) {
 }
 
 /* ---------- Phase 1-C: purpose stub → 3a ---------- */
-$("purposeGrid").querySelectorAll(".purpose-card").forEach(btn=>{
+document.querySelectorAll(".purpose-card").forEach(btn=>{
   btn.addEventListener("click",()=>{
     if (btn.id === "progressCard") navigate("progress");
     else openDrillProfile(btn.dataset.drill);
