@@ -561,7 +561,7 @@
   #revealChecks .pc-slot:hover,#mbSChecks .pc-slot:hover{border-color:var(--signal)}
 
   /* Phase 1-D-PR2: Mode B (2c) Mood B */
-  #cardModeBStudy.panel,#cardModeBMcq.panel,#cardModeBDict.panel{background:var(--panel);border-color:var(--hair);border-radius:var(--radius-card);color:var(--ink)}
+  #cardModeBStudy.panel,#cardModeBStudyAnswer.panel,#cardModeBMcq.panel,#cardModeBDict.panel{background:var(--panel);border-color:var(--hair);border-radius:var(--radius-card);color:var(--ink)}
   #cardModeBStudy .qno,#cardModeBMcq .qno,#cardModeBDict .qno{font-family:var(--font-mono);color:var(--muted)}
   #cardModeBStudy .qno b,#cardModeBMcq .qno b,#cardModeBDict .qno b{color:var(--ink)}
   #cardModeBStudy .card-top .cefr,#cardModeBMcq .card-top .cefr,#cardModeBDict .card-top .cefr{
@@ -584,9 +584,9 @@
   #cardModeBStudy .seg:hover{background:var(--signal-soft)}
   #cardModeBStudy .seg.sel{background:var(--signal-soft);color:var(--signal)}
   #cardModeBStudy .slash{color:var(--signal)}
-  #cardModeBStudy .wordbig{font-family:var(--font-ui);color:var(--ink)}
+  #cardModeBStudyAnswer .wordbig{font-family:var(--font-ui);color:var(--ink)}
   #cardModeBStudy .btn-reveal{border-color:var(--signal);color:var(--signal);font-family:var(--font-ui);border-radius:var(--radius-button)}
-  #cardModeBStudy .reveal-next{background:var(--ink);font-family:var(--font-ui);border-radius:var(--radius-button)}
+  #cardModeBStudyAnswer .reveal-next{background:var(--ink);font-family:var(--font-ui);border-radius:var(--radius-button)}
 
   /* Phase 1-C/B: Mood B components (visual-tokens §4) */
   .btn-primary{background:var(--signal);color:#fff;border:none;border-radius:var(--radius-button);padding:12px 24px;font-size:14px;font-weight:700;cursor:pointer;font-family:var(--font-ui)}
@@ -662,7 +662,7 @@
   .profile-info-panel{font-size:11.5px;color:var(--signal);background:var(--signal-soft);border-radius:10px;padding:10px 12px;margin-top:14px;line-height:1.6}
 
 
-  /* ===== Issue #147: PC CD layout (min-width:1024px) ===== */
+  /* ===== Issue #147 + #150: PC CD layout (1a-pc / 2a-pc..2d-pc / 3a-pc..3g-pc) ===== */
   .header-nav{display:none;align-items:center;gap:14px;margin-right:8px}
   .header-link{border:none;background:transparent;padding:0;font-family:var(--font-ui);font-size:13.5px;color:var(--muted);cursor:pointer}
   .header-link:hover{color:var(--ink)}
@@ -672,7 +672,16 @@
   .top-purpose-label{display:none}
   .top-purpose-hint{display:none}
   .task-header{display:none}
+  .task-header-vocab,.task-header-accent,.task-header-counter{display:none}
+  .modal-chrome{display:none;height:44px;border-bottom:1px solid var(--hair);align-items:center;gap:8px;padding:0 18px;margin:0 0 8px}
+  .modal-chrome .modal-dots{display:inline-flex;align-items:center;gap:8px}
+  .modal-chrome .modal-dot{width:11px;height:11px;border-radius:999px;background:#E7DCCF}
+  .drill-step-label{display:none;font-family:var(--font-mono);font-size:11px;font-weight:700;letter-spacing:.08em;color:var(--faint);margin:0 0 12px}
   @media (min-width:1024px){
+    /* Scope 3: SP-only TOPへ (#backTopBtn) */
+    #backTopBtn{display:none!important}
+
+    /* 1a-pc site header */
     body.top-home:not(.in-play) .wrap{max-width:1200px;padding:24px 48px 56px}
     body.top-home:not(.in-play) .topbar{padding-bottom:16px;margin-bottom:28px;border-bottom:1px solid var(--hair)}
     body.top-home:not(.in-play) .brand .mark{font-size:26px}
@@ -698,30 +707,74 @@
     body.top-home:not(.in-play) .top-sidebar-link{display:inline-flex;align-items:center;gap:5px;margin-top:14px;font-size:12.5px;font-weight:600;color:var(--accent);background:none;border:none;padding:0;cursor:pointer;font-family:var(--font-ui)}
     body.top-home:not(.in-play) .purpose-card-progress{width:420px;max-width:100%}
     body.top-home:not(.in-play) #setup.profile-3a{max-width:720px;margin-left:auto;margin-right:auto;padding:40px 48px 44px}
-    body.in-play .wrap{max-width:1024px}
-    body.in-play .task-header{display:flex;align-items:center;gap:16px;padding:12px 0 16px;margin-bottom:8px;border-bottom:1px solid var(--hair)}
+
+    /* Scope 5: /iː/ logo only on 1a-pc */
+    body.in-play .brand,
+    body.vocab-page .brand,
+    body.progress-page .brand,
+    body.symbol-picker-page .brand,
+    body.pc-support .brand{display:none!important}
+
+    /* 2a-pc / 2b-pc / 2c-pc / 2d-pc: hide site topbar; drill-header owns chrome */
+    body.in-play .topbar{display:none!important}
+    body.in-play .play-line{display:none!important}
+    body.in-play .header-nav{display:none!important}
+    body.in-play .wrap{max-width:1024px;padding-top:8px}
+    body.in-play .task-header,
+    body.in-play .drill-header{
+      display:flex;align-items:center;gap:16px;padding:12px 0 16px;margin-bottom:8px;border-bottom:1px solid var(--hair)
+    }
     body.in-play .task-header-back{border:1px solid var(--hair);background:var(--panel);border-radius:999px;width:38px;height:38px;display:inline-flex;align-items:center;justify-content:center;color:var(--muted);cursor:pointer;flex:none;padding:0}
     body.in-play .task-header-main{flex:1;min-width:0}
     body.in-play .task-header-title{font-weight:600;font-size:15px;color:var(--ink)}
     body.in-play .task-header-meter{height:6px;background:var(--hair);border-radius:999px;margin-top:7px;max-width:420px;overflow:hidden}
     body.in-play .task-header-meter > span{display:block;height:100%;background:var(--signal);width:0%}
+    body.in-play .task-header-vocab{
+      display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:999px;
+      border:1px solid var(--hair);background:var(--panel);color:var(--muted);cursor:pointer;flex:none;padding:0
+    }
+    body.in-play .task-header-vocab svg{width:18px;height:18px}
+    body.in-play .task-header-accent{
+      display:inline-flex;align-items:center;gap:4px;font-size:12.5px;color:var(--muted);white-space:nowrap;flex:none
+    }
+    body.in-play .task-header-accent b{color:var(--ink);font-weight:700}
+    body.in-play .task-header-counter{
+      display:inline-block;font-family:var(--font-mono);font-size:13px;color:var(--muted);white-space:nowrap;flex:none
+    }
+
+    /* 3a-pc … 3g-pc modal chrome */
+    body.pc-support .modal-chrome,
+    body.vocab-page .modal-chrome,
+    body.progress-page .modal-chrome,
+    body.symbol-picker-page .modal-chrome{display:flex}
+    body.pc-support .topbar{display:none!important}
+    body.pc-support .wrap{max-width:880px;padding-top:24px}
+    #vocabPage > .modal-chrome,
+    #learningStatusPage > .modal-chrome,
+    #symbolPickerPage > .modal-chrome{margin:0 0 12px}
+
     body.in-play.drill-two-pane .wrap{display:grid;grid-template-columns:1fr 1fr;gap:0;align-items:stretch}
     body.in-play.drill-two-pane .topbar,
     body.in-play.drill-two-pane .play-line,
     body.in-play.drill-two-pane .task-header,
+    body.in-play.drill-two-pane .drill-header,
     body.in-play.drill-two-pane .audio-hint,
     body.in-play.drill-two-pane .site-footer,
     body.in-play.drill-two-pane .reflect-dock,
-    body.in-play.drill-two-pane #exitConfirmModal{grid-column:1 / -1}
+    body.in-play.drill-two-pane #exitConfirmModal,
+    body.in-play.drill-two-pane #onboardingModal{grid-column:1 / -1}
     body.in-play.drill-two-pane .drill-pane{border-radius:0;margin:0}
     body.in-play.drill-two-pane .drill-pane-prompt{border-right:1px solid var(--hair);background:var(--paper)}
     body.in-play.drill-two-pane .drill-pane-answer{background:var(--panel)}
     body.in-play.drill-two-pane #cardDecode.panel,
     body.in-play.drill-two-pane #cardEncode.panel,
     body.in-play.drill-two-pane #cardModeBStudy.panel,
+    body.in-play.drill-two-pane #cardModeBStudyAnswer.panel,
     body.in-play.drill-two-pane #cardModeBMcq.panel,
     body.in-play.drill-two-pane #cardModeBDict.panel,
     body.in-play.drill-two-pane #reveal.panel{box-shadow:none;border-left:none;border-right:none}
+    /* modeb-study + drill-two-pane: STEP labels */
+    body.in-play.drill-two-pane .drill-step-label{display:block}
   }
 
 
@@ -837,13 +890,28 @@
   <div class="play-line hidden" id="playLine">
     <div class="play-crumb" id="playCrumb" aria-live="polite"></div>
   </div>
-  <div class="task-header" id="taskHeader" hidden>
-    <button type="button" class="task-header-back" id="taskHeaderBack" aria-label="Back">
+  <div class="task-header drill-header" id="taskHeader" hidden>
+    <button type="button" class="task-header-back" id="taskHeaderBack" aria-label="戻る">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
     </button>
     <div class="task-header-main">
       <div class="task-header-title" id="taskHeaderTitle"></div>
       <div class="task-header-meter" aria-hidden="true"><span id="taskHeaderMeterFill"></span></div>
+    </div>
+    <button type="button" class="task-header-vocab" id="taskHeaderVocab" aria-label="語彙リスト">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/>
+        <line x1="8" y1="18" x2="21" y2="18"/>
+        <line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/>
+        <line x1="3" y1="18" x2="3.01" y2="18"/>
+      </svg>
+    </button>
+    <span class="task-header-accent" id="taskHeaderAccent" aria-live="polite"></span>
+    <span class="task-header-counter" id="taskHeaderCounter" aria-live="polite"></span>
+  </div>
+  <div class="modal-chrome" id="pcModalChrome" hidden aria-hidden="true">
+    <div class="modal-dots" aria-hidden="true">
+      <span class="modal-dot"></span><span class="modal-dot"></span><span class="modal-dot"></span>
     </div>
   </div>
   <p class="audio-hint" id="audioHint" role="status" aria-live="polite">Tap Listen to enable sound</p>
@@ -1010,8 +1078,9 @@
     <button class="start btn-primary" id="startBtn" disabled>Loading…</button>
   </section>
 
-  <!-- MODE B STUDY -->
+  <!-- MODE B STUDY (2c) — prompt pane; answer pane is #cardModeBStudyAnswer -->
   <section id="cardModeBStudy" class="panel hidden drill-pane drill-pane-prompt" data-frame="2c">
+    <div class="drill-step-label" id="mbSStep1Label">STEP 1</div>
     <div class="card-top"><span class="cefr" id="mbSCefr" hidden></span><div class="card-top-right"><div class="qno" id="mbSNo"></div></div></div>
     <div class="drill-progress" id="mbSProgress" role="status" aria-live="polite">
       <div class="progress-meter" aria-hidden="true"><div class="progress-meter__fill" id="mbSProgressFill" style="width:0%"></div></div>
@@ -1021,27 +1090,31 @@
     <div class="readout"><div class="ipa" id="mbSIpa"></div></div>
     <div class="alt-ipa alt-ipa-row hidden" id="mbSAltIpa"><span class="alt-ipa-text" id="mbSAltIpaText"></span><button class="playicon playicon-sm inactive hidden" id="mbSAltPlay" type="button" aria-label="Listen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg></button></div>
     <div class="info" id="mbSInfo"></div>
-    <div class="mbs-meaning-slot">
-      <div id="mbSMeaning" class="mbsMeaning hidden">
-        <div class="readout"><div class="wordbig" id="mbSWord"></div></div>
-        <div class="word-gloss" id="mbSGloss"></div>
-        <div class="note" id="mbSNoteBlock">
-          <div class="nh" id="mbSTipsHead">Pronunciation tips</div>
-          <p id="mbSNote"></p>
-          <div class="trapchips" id="mbSTraps"></div>
-        </div>
-        <div class="reveal-checks hidden" id="mbSChecks">
-          <div class="rc-label"><span id="mbSChecksLabel">Progress</span><strong id="mbSChecksCount">0/3</strong></div>
-          <div class="pc-mode" data-mode="l" data-word="">
-            <button type="button" class="pc-slot" data-slot="1" aria-label="1/3"></button>
-            <button type="button" class="pc-slot" data-slot="2" aria-label="2/3"></button>
-            <button type="button" class="pc-slot" data-slot="3" aria-label="3/3"></button>
-          </div>
+    <div class="mbs-actions">
+      <button class="btn-reveal" id="mbSRevealBtn" type="button">Reveal meaning</button>
+    </div>
+  </section>
+
+  <section id="cardModeBStudyAnswer" class="panel hidden drill-pane drill-pane-answer" data-frame="2c">
+    <div class="drill-step-label" id="mbSStep2Label">STEP 2</div>
+    <div id="mbSMeaning" class="mbsMeaning hidden">
+      <div class="readout"><div class="wordbig" id="mbSWord"></div></div>
+      <div class="word-gloss" id="mbSGloss"></div>
+      <div class="note" id="mbSNoteBlock">
+        <div class="nh" id="mbSTipsHead">Pronunciation tips</div>
+        <p id="mbSNote"></p>
+        <div class="trapchips" id="mbSTraps"></div>
+      </div>
+      <div class="reveal-checks hidden" id="mbSChecks">
+        <div class="rc-label"><span id="mbSChecksLabel">Progress</span><strong id="mbSChecksCount">0/3</strong></div>
+        <div class="pc-mode" data-mode="l" data-word="">
+          <button type="button" class="pc-slot" data-slot="1" aria-label="1/3"></button>
+          <button type="button" class="pc-slot" data-slot="2" aria-label="2/3"></button>
+          <button type="button" class="pc-slot" data-slot="3" aria-label="3/3"></button>
         </div>
       </div>
     </div>
     <div class="mbs-actions">
-      <button class="btn-reveal" id="mbSRevealBtn" type="button">Reveal meaning</button>
       <button class="reveal-next hidden" id="mbSGotIt" type="button">Next</button>
     </div>
   </section>
@@ -1189,6 +1262,7 @@
 
 <!-- Vocabulary browser 3b (Phase 1-E: exclusive full-page + sticky filter) -->
 <section id="vocabPage" class="vocab-page hidden" aria-labelledby="vocabTitle">
+  <div class="modal-chrome" aria-hidden="true"><div class="modal-dots"><span class="modal-dot"></span><span class="modal-dot"></span><span class="modal-dot"></span></div></div>
   <div class="vocab-page-inner">
     <div class="vocab-header filter-bar-sticky">
       <div class="vocab-header-top">
@@ -1228,6 +1302,7 @@
 
 <!-- Learning status 3d (Phase 1-E PR-2) -->
 <section id="learningStatusPage" class="progress-page hidden" aria-labelledby="progressTitle">
+  <div class="modal-chrome" aria-hidden="true"><div class="modal-dots"><span class="modal-dot"></span><span class="modal-dot"></span><span class="modal-dot"></span></div></div>
   <div class="progress-page-inner">
     <div class="progress-header filter-bar-sticky">
       <div class="progress-header-top">
@@ -1263,6 +1338,7 @@
 
 <!-- IPA symbol picker 3c (Phase 1-E) -->
 <section id="symbolPickerPage" class="symbol-picker-page hidden" aria-labelledby="symbolPickerTitle">
+  <div class="modal-chrome" aria-hidden="true"><div class="modal-dots"><span class="modal-dot"></span><span class="modal-dot"></span><span class="modal-dot"></span></div></div>
   <div class="symbol-picker-inner">
     <div class="symbol-picker-header filter-bar-sticky">
       <div class="symbol-picker-header-top">
@@ -1599,6 +1675,7 @@ function setExclusivePage(mode) {
   document.body.classList.toggle("symbol-picker-page", mode === "symbol");
   document.body.classList.toggle("progress-page", mode === "progress");
   if (mode === "vocab" || mode === "symbol" || mode === "progress") document.body.classList.remove("top-home");
+  syncPcSupportChrome();
 }
 
 function progressDefaultCefrLevels() {
@@ -2672,7 +2749,7 @@ function toggleLangMenu(open){
 }
 
 /* ---------- Phase V2: Hash routing ---------- */
-const VOCAB_VIEW_IDS = ["purposeStub","setup","cardDecode","cardEncode","reveal","summary","cardModeBStudy","cardModeBMcq","cardModeBDict"];
+const VOCAB_VIEW_IDS = ["purposeStub","setup","cardDecode","cardEncode","reveal","summary","cardModeBStudy","cardModeBStudyAnswer","cardModeBMcq","cardModeBDict"];
 let vocabReturnViews = null;
 
 const ROUTES = {
@@ -2721,7 +2798,11 @@ function showSetupOrPractice() {
     } else if (S.appMode === "b") {
       if (S.mbPhase === "mcq") show("cardModeBMcq", true);
       else if (S.mbPhase === "dict") show("cardModeBDict", true);
-      else show("cardModeBStudy", true);
+      else {
+        show("cardModeBStudy", true);
+        const revealed = $("mbSMeaning") && !$("mbSMeaning").classList.contains("hidden");
+        applyModeBStudyTwoPane({type:"modeb-study", revealed:!!revealed});
+      }
     } else if (S.tab === "connected" || S.dir === "decode") {
       show("cardDecode", true);
     } else {
@@ -3121,6 +3202,7 @@ function hidePracticePanels(){
   show("cardDecode",false);
   show("cardEncode",false);
   show("cardModeBStudy",false);
+  show("cardModeBStudyAnswer",false);
   show("cardModeBMcq",false);
   show("cardModeBDict",false);
   show("reveal",false);
@@ -3133,6 +3215,10 @@ function showPurposeHome(){
   if($("taskHeader")) $("taskHeader").hidden = true;
 
   hidePracticePanels();
+  show("vocabPage", false);
+  show("symbolPickerPage", false);
+  show("learningStatusPage", false);
+  setExclusivePage(null);
   show("purposeStub",true);
   show("setup",false);
   $("backTopBtn").classList.add("hidden");
@@ -3141,6 +3227,7 @@ function showPurposeHome(){
   $("reflectDock").classList.add("hidden");
   document.body.classList.remove("in-play");
   document.body.classList.add("top-home");
+  syncPcSupportChrome();
   if(currentAudio){currentAudio.pause();currentAudio=null;}
   clearAudioTapPrompt();
   unlockInputScroll();
@@ -3157,6 +3244,7 @@ function showProfile3a(){
   $("reflectDock").classList.add("hidden");
   document.body.classList.remove("in-play");
   document.body.classList.remove("top-home");
+  syncPcSupportChrome();
   if(currentAudio){currentAudio.pause();currentAudio=null;}
   clearAudioTapPrompt();
   unlockInputScroll();
@@ -3179,6 +3267,8 @@ function setSetupVisible(on){
     document.body.classList.add("in-play");
     document.body.classList.remove("top-home");
     updatePlayCrumb();
+    updateTaskHeader();
+    syncPcSupportChrome();
   }
 }
 function playCrumbPracticeLabel(){
@@ -3738,14 +3828,20 @@ function recordModeBQuiz(c,mcqRes,spellRes){
   v[c.w]=e;saveVocab(v);
   return passed?"ok":"bad";
 }
-function hideModeBCards(){show("cardModeBStudy",false);show("cardModeBMcq",false);show("cardModeBDict",false);}
+function hideModeBCards(){
+  show("cardModeBStudy",false);
+  show("cardModeBStudyAnswer",false);
+  show("cardModeBMcq",false);
+  show("cardModeBDict",false);
+}
 const MB_S_PRON_IDS={noteId:"mbSNote",tipsHeadId:"mbSTipsHead",trapsId:"mbSTraps",infoId:"mbSInfo",noteBlockId:"mbSNoteBlock"};
 function refreshModeBStudyContent(c){
   $("mbSGloss").textContent=modeBDisplayGloss(c);
   renderWordPronDetails(c,MB_S_PRON_IDS);
 }
 function renderModeBStudy(c){
-  hideModeBCards();show("cardModeBStudy",true);
+  hideModeBCards();
+  show("cardModeBStudy",true);
   setCardCefr("mbSCefr",c,"mbSNo");
   updateProgressMeter();
   renderIpaInto($("mbSIpa"),activeNarrowIpa(c),"mbSInfo",null);
@@ -3756,10 +3852,32 @@ function renderModeBStudy(c){
   $("mbSGotIt").classList.add("hidden");
   $("mbSWord").textContent=c.w;
   refreshModeBStudyContent(c);
+  applyModeBStudyTwoPane({type:"modeb-study", revealed:false});
+  updateTaskHeader();
   setTimeout(()=>speak(c.w),250);
 }
+
+/**
+ * PC Mode B Study 2-pane (Issue #150 scope 4).
+ * @param {{type:string, revealed?:boolean}} ctx
+ * @returns {void}
+ */
+function applyModeBStudyTwoPane(ctx){
+  const pc = isPcLayout();
+  const studyOn = $("cardModeBStudy") && !$("cardModeBStudy").classList.contains("hidden");
+  if (pc && studyOn && ctx && ctx.type === "modeb-study") {
+    document.body.classList.add("drill-two-pane");
+    show("cardModeBStudyAnswer", true);
+    return;
+  }
+  if (!pc) {
+    document.body.classList.remove("drill-two-pane");
+    if (ctx && ctx.revealed) show("cardModeBStudyAnswer", true);
+    else show("cardModeBStudyAnswer", false);
+  }
+}
 function renderModeBMcq(c){
-  hideModeBCards();show("cardModeBMcq",true);S.mbPhase="mcq";S.mbQuiz={mcq:null,spell:null};
+  hideModeBCards();document.body.classList.remove("drill-two-pane");show("cardModeBMcq",true);S.mbPhase="mcq";S.mbQuiz={mcq:null,spell:null};
   setCardCefr("mbMCefr",c,"mbMNo");
   $("mbMFb").classList.add("hidden");
   const choices=buildMcqChoices(c);
@@ -3785,7 +3903,7 @@ function modeBMcqPick(c,btn,choices){
   setTimeout(()=>renderModeBDict(c),700);
 }
 function renderModeBDict(c){
-  hideModeBCards();show("cardModeBDict",true);S.mbPhase="dict";
+  hideModeBCards();document.body.classList.remove("drill-two-pane");show("cardModeBDict",true);S.mbPhase="dict";
   if(!S.mbQuiz)S.mbQuiz={mcq:"ok",spell:null};
   setCardCefr("mbDCefr",c,"mbDNo");
   const inp=$("mbDInput");inp.value="";if(!COARSE)inp.focus({preventScroll:true});
@@ -4494,7 +4612,7 @@ function startSession(weakOnly){
 function showReflection(){renderSummary();}
 let exitConfirmOnYes=null;
 function isReflectAvailableScreen(){
-  return ["cardDecode","cardEncode","cardModeBStudy","cardModeBMcq","cardModeBDict","reveal"].some(id=>!$(id).classList.contains("hidden"));
+  return ["cardDecode","cardEncode","cardModeBStudy","cardModeBStudyAnswer","cardModeBMcq","cardModeBDict","reveal"].some(id=>!$(id).classList.contains("hidden"));
 }
 function shouldConfirmSessionExit(){
   return document.body.classList.contains("in-play")&&isReflectAvailableScreen();
@@ -4914,13 +5032,35 @@ function refreshRevealIpa(marker){
 /** @returns {boolean} */
 function isPcLayout(){ return window.matchMedia("(min-width:1024px)").matches; }
 
-/** Sync PC task header with current drill title + progress. */
+/**
+ * Toggle PC modal chrome for support screens (3a–3d; 3g uses onboarding chrome).
+ * @returns {void}
+ */
+function syncPcSupportChrome(){
+  const setupOn = $("setup") && !$("setup").classList.contains("hidden");
+  const exclusive = document.body.classList.contains("vocab-page")
+    || document.body.classList.contains("progress-page")
+    || document.body.classList.contains("symbol-picker-page");
+  const support = !document.body.classList.contains("in-play")
+    && !document.body.classList.contains("top-home")
+    && (setupOn || exclusive);
+  document.body.classList.toggle("pc-support", support);
+  const chrome = $("pcModalChrome");
+  if (chrome) {
+    const showChrome = isPcLayout() && (support || exclusive);
+    chrome.hidden = !showChrome;
+    chrome.setAttribute("aria-hidden", showChrome ? "false" : "true");
+  }
+}
+
+/** Sync PC task header with current drill title + progress + accent + counter. */
 function updateTaskHeader(){
   const th = $("taskHeader");
   if (!th) return;
   const inPlay = document.body.classList.contains("in-play");
   const showTh = inPlay && isPcLayout();
   th.hidden = !showTh;
+  syncPcSupportChrome();
   if (!showTh) return;
   const drillId = (S && S.lastDrill) ? S.lastDrill : (S && S.appMode === "b" ? "2c" : (S && S.dir === "encode" ? "2b" : "2a"));
   const title = t("drill.title." + drillId) || "";
@@ -4928,8 +5068,17 @@ function updateTaskHeader(){
   const fill = $("taskHeaderMeterFill");
   if (fill) {
     const total = Math.max(1, (S && S.poolTotal) || 1);
-    const answered = (S && S.answered) || 0;
-    fill.style.width = Math.min(100, Math.round((answered / total) * 100)) + "%";
+    const cur = Math.min(total, ((S && S.idx) || 0) + 1);
+    fill.style.width = Math.min(100, Math.round((cur / total) * 100)) + "%";
+  }
+  if ($("taskHeaderAccent")) {
+    const isRp = ACCENT === "rp";
+    $("taskHeaderAccent").innerHTML = isRp ? "RP · <b>英</b>" : "GA · <b>米</b>";
+  }
+  if ($("taskHeaderCounter")) {
+    const total = (S && S.poolTotal) || 0;
+    const cur = total ? Math.min(total, ((S && S.idx) || 0) + 1) : 0;
+    $("taskHeaderCounter").textContent = cur + " / " + total;
   }
 }
 
@@ -5014,6 +5163,7 @@ $("mbSRevealBtn").addEventListener("click",()=>{
   $("mbSMeaning").classList.remove("hidden");
   $("mbSRevealBtn").classList.add("hidden");
   $("mbSGotIt").classList.remove("hidden");
+  applyModeBStudyTwoPane({type:"modeb-study", revealed:true});
   if(S.cur){
     $("mbSChecks").classList.remove("hidden");
     refreshRevealChecksPanel("mbSChecks",S.cur,"l");
@@ -5086,6 +5236,15 @@ function onModalEscapeKey(e){
 document.addEventListener("keydown",onModalEscapeKey);
 
 $("vocabBtn").addEventListener("click",e=>{e.preventDefault();navigate("vocab");});
+if($("taskHeaderVocab")) $("taskHeaderVocab").addEventListener("click",e=>{e.preventDefault();navigate("vocab");});
+window.addEventListener("resize",()=>{
+  updateTaskHeader();
+  syncPcSupportChrome();
+  if($("cardModeBStudy") && !$("cardModeBStudy").classList.contains("hidden")){
+    const revealed = $("mbSMeaning") && !$("mbSMeaning").classList.contains("hidden");
+    applyModeBStudyTwoPane({type:"modeb-study", revealed:!!revealed});
+  }
+});
 $("vocabBackBtn").addEventListener("click",e=>{e.preventDefault();navigate("");});
 $("symbolBackBtn").addEventListener("click",e=>{e.preventDefault();navigate("vocab");});
 $("progressBackBtn").addEventListener("click",e=>{e.preventDefault();navigate("");});
