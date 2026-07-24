@@ -11,7 +11,7 @@ created: '2026-07-24'
 ## 関連 Issue / PR
 
 - Issue: #157
-- PR: （draft・本 PR）
+- PR: #158（draft）
 - Agent: cursor（Issue は ready-for-codex だが Naoya 依頼により Cursor が実施。レポートパスは AGENTS.md に従い `cursor-issue-157-*`）
 
 ## Issue 背景（Issue 本文から要約）
