@@ -403,7 +403,7 @@ Hotfix フローは `CLAUDE.md` を参照。以下 3 条件をすべて満たす
 | **1-H** | PC 版 CD 準拠（1a 4×1+sidebar、2系 2ペイン、3a、ヘッダー）+ About SRS 散文掃討 | [x] 実装完了 | [#147](https://github.com/nkhippo/IPASoundDrill/issues/147) |
 | **1-H 補完** | PC 画面別ヘッダー 3 パターン + Mode B Study 2-pane + SP-only TOPへ | [x] 実装完了 | [#150](https://github.com/nkhippo/IPASoundDrill/issues/150) |
 | **1-F** | オンボーディング（`3g`）+ SP guide `?` 再導入 | [x] 実装完了 | [#149](https://github.com/nkhippo/IPASoundDrill/issues/149) |
-| **1-G** | 多言語（variant `-en` 等） | [ ] 未着手 | — |
+| **1-G** | 多言語（variant `-en` 等） | [x] 完了 | #155（5言語×9画面×PC/SP CDP QA、DIVERGENCE記録） |
 
 - Phase 1-I は設けない（Q-13: 旧絞り込み frame 誤記の解消により廃止）
 - Band 実装シンボル削除・目的カード DOM 実装は 1-A 以降
