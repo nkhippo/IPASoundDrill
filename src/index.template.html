@@ -367,15 +367,15 @@
   .vocab-cefr-A2{color:#0f6ca8;background:#e6f2fa}
   .vocab-cefr-B1{color:#b06400;background:#fbf1e0}
   .vocab-cefr-B2{color:#a1252b;background:#faeaec}
-  .progress-checks{display:flex;align-items:center;justify-content:space-between;gap:12px;border:1px solid var(--hair);background:var(--paper);border-radius:12px;padding:10px 14px;margin-top:12px}
+  .progress-checks{display:inline-flex;gap:6px;align-items:center;flex-shrink:0}
+  .progress-checks-label,.progress-slots{display:none}
+  .progress-modes-sp{display:inline-flex;gap:6px;align-items:center}
   .progress-checks-label{font-family:var(--font-ui);font-size:12px;color:var(--muted);white-space:nowrap}
   .progress-checks-label strong{color:var(--ink);font-weight:700}
-  .progress-slots{display:flex;gap:6px;align-items:center;flex-shrink:0}
   .pc-mode{display:inline-flex;flex-direction:column;gap:2px;align-items:center}
-  .pc-slot{width:20px;height:20px;border:2px solid var(--hair);border-radius:5px;background:var(--paper);cursor:pointer;padding:0;position:relative}
-  .pc-slot[data-filled="1"]{background:var(--signal);border-color:var(--signal)}
-  .pc-slot[data-filled="1"]::after{content:"";position:absolute;left:5px;top:2px;width:6px;height:10px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}
-  .pc-slot:hover{border-color:var(--signal)}
+  .pc-slot{width:8px;height:8px;border:1px solid var(--legacy-hair);border-radius:2px;background:transparent;cursor:pointer;padding:0}
+  .pc-slot[data-filled="1"]{background:var(--legacy-ink);border-color:var(--legacy-ink)}
+  .pc-slot:hover{border-color:var(--legacy-ink)}
   .reveal-checks{margin-top:14px;padding:12px;border:1px solid var(--hair);border-radius:14px;background:var(--panel)}
   .reveal-checks .rc-label{font-family:var(--font-mono);font-size:10.5px;color:var(--muted);text-transform:none;letter-spacing:.03em;margin-bottom:9px;display:flex;justify-content:space-between;align-items:center}
   .reveal-checks .rc-label strong{font-size:12px;color:var(--signal);font-weight:800}
@@ -398,7 +398,7 @@
     .vocab-row-gloss,.vocab-gloss{font-size:12px}
     .vocab-row-actions{gap:8px}
     .vocab-play{width:32px;height:32px}
-    .progress-checks{padding:9px 12px}
+    .pc-slot{width:7px;height:7px}
     .symbol-palette{flex-basis:42%}
     .symbol-cell{min-width:36px;height:36px;font-size:16px}
     .progress-header{padding:12px 12px 8px}
@@ -781,7 +781,24 @@
     body.vocab-page .vocab-ipa-keyboard{display:none}
     body.vocab-page .vocab-row{padding:16px 18px;align-items:stretch}
     body.vocab-page .vocab-row-actions{flex-direction:column;justify-content:space-between;align-items:flex-end}
-    body.vocab-page .progress-checks{grid-column:1 / -1;width:100%;box-sizing:border-box}
+    body.vocab-page .progress-checks{
+      display:flex;align-items:center;justify-content:space-between;gap:12px;grid-column:1 / -1;
+      width:100%;box-sizing:border-box;border:1px solid var(--hair);background:var(--paper);
+      border-radius:12px;padding:10px 14px;margin-top:12px
+    }
+    body.vocab-page .progress-checks-label{display:inline;font-family:var(--font-ui);font-size:12px;color:var(--muted);white-space:nowrap}
+    body.vocab-page .progress-slots{display:flex;gap:6px;align-items:center;flex-shrink:0}
+    body.vocab-page .progress-modes-sp{display:none}
+    body.vocab-page .progress-slots .pc-slot{
+      width:20px;height:20px;border:2px solid var(--hair);border-radius:5px;background:var(--paper);
+      cursor:pointer;padding:0;position:relative
+    }
+    body.vocab-page .progress-slots .pc-slot[data-filled="1"]{background:var(--signal);border-color:var(--signal)}
+    body.vocab-page .progress-slots .pc-slot[data-filled="1"]::after{
+      content:"";position:absolute;left:5px;top:2px;width:6px;height:10px;border:solid #fff;
+      border-width:0 2px 2px 0;transform:rotate(45deg)
+    }
+    body.vocab-page .progress-slots .pc-slot:hover{border-color:var(--signal)}
 
     /* 3a-pc … 3g-pc modal chrome */
     body.pc-support .modal-chrome,
@@ -814,6 +831,7 @@
     body.in-play.drill-two-pane #cardModeBMcq.panel,
     body.in-play.drill-two-pane #cardModeBDict.panel,
     body.in-play.drill-two-pane #reveal.panel{box-shadow:none;border-left:none;border-right:none}
+    body.in-play.drill-two-pane .drill-pane-prompt{border-right:1px solid var(--hair)!important}
     /* modeb-study + drill-two-pane: STEP labels */
     body.in-play.drill-two-pane .drill-step-label{display:block}
   }
@@ -2013,6 +2031,20 @@ function progressChecksHtml(item) {
     const filled = slot <= count ? "1" : "0";
     html += `<button type="button" class="pc-slot" data-slot="${slot}" data-filled="${filled}" aria-label="${escAttr(t("mark.aria.step_" + (filled === "1" ? slot : 0)))}"></button>`;
   }
+  html += `</span><span class="progress-modes-sp">`;
+  [
+    { mode: "d", titleKey: "checks.mode_d" },
+    { mode: "e", titleKey: "checks.mode_e" },
+    { mode: "l", titleKey: "checks.mode_l" }
+  ].forEach(({ mode: spMode, titleKey }) => {
+    const spCount = getCheckCount(item, spMode);
+    html += `<span class="pc-mode" data-mode="${spMode}" title="${escAttr(t(titleKey))}">`;
+    for (let slot = 1; slot <= CHECK_MAX; slot++) {
+      const filled = slot <= spCount ? "1" : "0";
+      html += `<button type="button" class="pc-slot" data-slot="${slot}" data-filled="${filled}" aria-label="${slot}/${CHECK_MAX}"></button>`;
+    }
+    html += `</span>`;
+  });
   html += `</span></span>`;
   return html;
 }
@@ -2025,16 +2057,24 @@ function findItemByKey(wordKey) {
 
 function refreshChecksInDom(wrap, item) {
   const slots = wrap.querySelector(".progress-slots");
-  if (!slots) return;
-  const mode = slots.dataset.mode;
-  const count = getCheckCount(item, mode);
-  const label = wrap.querySelector(".progress-checks-label strong");
-  if (label) label.textContent = count + "/" + CHECK_MAX;
-  slots.querySelectorAll(".pc-slot").forEach(btn => {
-    const slot = parseInt(btn.dataset.slot, 10);
-    const filled = slot <= count;
-    btn.setAttribute("data-filled", filled ? "1" : "0");
-    btn.setAttribute("aria-label", t("mark.aria.step_" + (filled ? slot : 0)));
+  if (slots) {
+    const mode = slots.dataset.mode;
+    const count = getCheckCount(item, mode);
+    const label = wrap.querySelector(".progress-checks-label strong");
+    if (label) label.textContent = count + "/" + CHECK_MAX;
+    slots.querySelectorAll(".pc-slot").forEach(btn => {
+      const slot = parseInt(btn.dataset.slot, 10);
+      const filled = slot <= count;
+      btn.setAttribute("data-filled", filled ? "1" : "0");
+      btn.setAttribute("aria-label", t("mark.aria.step_" + (filled ? slot : 0)));
+    });
+  }
+  wrap.querySelectorAll(".pc-mode").forEach(modeEl => {
+    const count = getCheckCount(item, modeEl.dataset.mode);
+    modeEl.querySelectorAll(".pc-slot").forEach(btn => {
+      const slot = parseInt(btn.dataset.slot, 10);
+      btn.setAttribute("data-filled", slot <= count ? "1" : "0");
+    });
   });
 }
 
@@ -5371,7 +5411,7 @@ $("vocabLetters").addEventListener("click",e=>{
 function onVocabListClick(e){
   const pcBtn=e.target.closest(".pc-slot");
   if(pcBtn){
-    const modeEl=pcBtn.closest(".progress-slots");
+    const modeEl=pcBtn.closest(".progress-slots, .pc-mode");
     const wrap=pcBtn.closest(".progress-checks");
     if(!modeEl||!wrap)return;
     const item=findItemByKey(wrap.dataset.word);
