@@ -272,6 +272,16 @@
   .vocab-search-mode-btn[aria-pressed="true"]{background:var(--panel);color:var(--signal);box-shadow:var(--shadow-toggle-active)}
   .vocab-search{width:100%;padding:10px 14px;border-radius:10px;border:1px solid var(--hair);font-size:15px;font-family:var(--font-ui);background:var(--panel);color:var(--ink)}
   .vocab-search:focus{outline:none;border-color:var(--signal);box-shadow:0 0 0 3px var(--signal-soft)}
+  .vocab-ipa-filter{border:1px solid var(--hair);background:var(--panel);border-radius:14px;padding:12px 16px}
+  .vocab-ipa-filter-head{display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .vocab-ipa-filter-label{font-size:12px;font-weight:700;color:var(--faint)}
+  .vocab-ipa-filter-actions{display:flex;align-items:center;gap:8px}
+  .vocab-ipa-filter-clear,.vocab-ipa-picker-open{border-radius:var(--radius-pill);padding:7px 16px;font-size:13px;font-weight:600;font-family:var(--font-ui);cursor:pointer}
+  .vocab-ipa-filter-clear{border:1px solid var(--hair);background:var(--panel);color:var(--muted)}
+  .vocab-ipa-filter-clear:disabled{color:var(--faint);cursor:not-allowed;opacity:.5}
+  .vocab-ipa-picker-open{display:none;border:1px solid var(--signal);background:var(--signal-soft);color:var(--signal);font-weight:700}
+  .vocab-ipa-chips:not(:empty){display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+  .vocab-ipa-keyboard{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
   .vocab-filters{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
   .vocab-filters .pill-cefr{border:1px solid var(--hair);background:var(--panel);border-radius:var(--radius-pill);padding:6px 12px;cursor:pointer;font-size:12px;font-weight:600;color:var(--ink);font-family:var(--font-mono)}
   .vocab-filters .pill-cefr[aria-pressed="true"]{border-color:var(--signal);background:var(--signal-soft);color:var(--signal);font-weight:700}
@@ -357,11 +367,15 @@
   .vocab-cefr-A2{color:#0f6ca8;background:#e6f2fa}
   .vocab-cefr-B1{color:#b06400;background:#fbf1e0}
   .vocab-cefr-B2{color:#a1252b;background:#faeaec}
-  .progress-checks{display:inline-flex;gap:6px;align-items:center;flex-shrink:0}
+  .progress-checks{display:flex;align-items:center;justify-content:space-between;gap:12px;border:1px solid var(--hair);background:var(--paper);border-radius:12px;padding:10px 14px;margin-top:12px}
+  .progress-checks-label{font-family:var(--font-ui);font-size:12px;color:var(--muted);white-space:nowrap}
+  .progress-checks-label strong{color:var(--ink);font-weight:700}
+  .progress-slots{display:flex;gap:6px;align-items:center;flex-shrink:0}
   .pc-mode{display:inline-flex;flex-direction:column;gap:2px;align-items:center}
-  .pc-slot{width:8px;height:8px;border:1px solid var(--legacy-hair);border-radius:2px;background:transparent;cursor:pointer;padding:0}
-  .pc-slot[data-filled="1"]{background:var(--legacy-ink);border-color:var(--legacy-ink)}
-  .pc-slot:hover{border-color:var(--legacy-ink)}
+  .pc-slot{width:20px;height:20px;border:2px solid var(--hair);border-radius:5px;background:var(--paper);cursor:pointer;padding:0;position:relative}
+  .pc-slot[data-filled="1"]{background:var(--signal);border-color:var(--signal)}
+  .pc-slot[data-filled="1"]::after{content:"";position:absolute;left:5px;top:2px;width:6px;height:10px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}
+  .pc-slot:hover{border-color:var(--signal)}
   .reveal-checks{margin-top:14px;padding:12px;border:1px solid var(--hair);border-radius:14px;background:var(--panel)}
   .reveal-checks .rc-label{font-family:var(--font-mono);font-size:10.5px;color:var(--muted);text-transform:none;letter-spacing:.03em;margin-bottom:9px;display:flex;justify-content:space-between;align-items:center}
   .reveal-checks .rc-label strong{font-size:12px;color:var(--signal);font-weight:800}
@@ -384,7 +398,7 @@
     .vocab-row-gloss,.vocab-gloss{font-size:12px}
     .vocab-row-actions{gap:8px}
     .vocab-play{width:32px;height:32px}
-    .pc-slot{width:7px;height:7px}
+    .progress-checks{padding:9px 12px}
     .symbol-palette{flex-basis:42%}
     .symbol-cell{min-width:36px;height:36px;font-size:16px}
     .progress-header{padding:12px 12px 8px}
@@ -743,7 +757,7 @@
     body.in-play .task-header-main{flex:1;min-width:0}
     body.in-play .task-header-title{font-weight:600;font-size:15px;color:var(--ink)}
     body.in-play .task-header-meter{height:6px;background:var(--hair);border-radius:999px;margin-top:7px;max-width:420px;overflow:hidden}
-    body.in-play .task-header-meter > span{display:block;height:100%;background:var(--signal);width:0%}
+    body.in-play .task-header-meter > span{display:block;height:100%;min-width:2px;background:var(--signal);width:0%;transition:width .2s ease}
     body.in-play .task-header-vocab{
       display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:999px;
       border:1px solid var(--hair);background:var(--panel);color:var(--muted);cursor:pointer;flex:none;padding:0
@@ -756,6 +770,18 @@
     body.in-play .task-header-counter{
       display:inline-block;font-family:var(--font-mono);font-size:13px;color:var(--muted);white-space:nowrap;flex:none
     }
+    body.in-play .drill-pane > .card-top,
+    body.in-play .drill-pane > .drill-progress{display:none!important}
+    body.in-play .drill-pane-prompt{border-right:1px solid var(--hair)}
+    body.in-play #nextBtn,
+    body.in-play #cardModeBStudyAnswer .reveal-next{background:var(--signal)}
+
+    /* 3b-pc: CD-aligned filter controls and one 3-slot progress control per card. */
+    body.vocab-page .vocab-ipa-picker-open{display:inline-flex}
+    body.vocab-page .vocab-ipa-keyboard{display:none}
+    body.vocab-page .vocab-row{padding:16px 18px;align-items:stretch}
+    body.vocab-page .vocab-row-actions{flex-direction:column;justify-content:space-between;align-items:flex-end}
+    body.vocab-page .progress-checks{grid-column:1 / -1;width:100%;box-sizing:border-box}
 
     /* 3a-pc … 3g-pc modal chrome */
     body.pc-support .modal-chrome,
@@ -1298,7 +1324,10 @@
         <div class="vocab-ipa-filter" id="vocabIpaFilterBar">
           <div class="vocab-ipa-filter-head">
             <span class="vocab-ipa-filter-label" id="vocabIpaFilterLabel" data-i18n="vocab.filter.ipa">IPA</span>
-            <button type="button" class="vocab-ipa-filter-clear" id="vocabIpaClear" data-i18n="symbol.picker.clear">Clear</button>
+            <div class="vocab-ipa-filter-actions">
+              <button type="button" class="vocab-ipa-filter-clear" id="vocabIpaClear" data-i18n="symbol.picker.clear" disabled>Clear</button>
+              <button type="button" class="vocab-ipa-picker-open" id="vocabIpaPickerOpen" data-i18n="symbol.picker.title">Search by IPA</button>
+            </div>
           </div>
           <div class="vocab-ipa-chips" id="vocabIpaChips"></div>
           <div class="vocab-ipa-keyboard" id="vocabIpaKeyboard"></div>
@@ -1651,7 +1680,7 @@ function buildVocabLetterBar() {
  */
 function vocabRowHeight(c) {
   const g = vocabDisplayGloss(c);
-  return (g && String(g).trim()) ? VOCAB_ROW_H_GLOSS : VOCAB_ROW_H_PLAIN;
+  return (g && String(g).trim()) ? VOCAB_ROW_H_GLOSS + 52 : VOCAB_ROW_H_PLAIN + 52;
 }
 
 /**
@@ -1829,9 +1858,9 @@ function vocabWordRowHtml(c, highlightQ) {
         <div class="vocab-row-gloss">${escHtml(gloss)}</div>
       </div>
       <div class="vocab-row-actions">
-        ${progressChecksHtml(c)}
         <button class="vocab-play" type="button" data-vw="${escAttr(c.w)}" aria-label="${escAttr(t("listen"))}">${SPEAKER_SVG}</button>
       </div>
+      ${progressChecksHtml(c)}
     </div>`;
 }
 
@@ -1975,22 +2004,16 @@ function vocabDisplayGloss(c) {
 
 function progressChecksHtml(item) {
   const key = escAttr(sessionItemKey(item));
-  const modes = [
-    { mode: "d", titleKey: "checks.mode_d" },
-    { mode: "e", titleKey: "checks.mode_e" },
-    { mode: "l", titleKey: "checks.mode_l" }
-  ];
+  const mode = currentCheckMode();
+  const count = getCheckCount(item, mode);
   let html = `<span class="progress-checks" data-word="${key}">`;
-  modes.forEach(({ mode, titleKey }) => {
-    const count = getCheckCount(item, mode);
-    html += `<span class="pc-mode" data-mode="${mode}" title="${escAttr(t(titleKey))}">`;
-    for (let slot = 1; slot <= CHECK_MAX; slot++) {
-      const filled = slot <= count ? "1" : "0";
-      html += `<button type="button" class="pc-slot" data-slot="${slot}" data-filled="${filled}" aria-label="${slot}/${CHECK_MAX}"></button>`;
-    }
-    html += `</span>`;
-  });
-  html += `</span>`;
+  html += `<span class="progress-checks-label">${escHtml(t("checks.progress"))} <strong>${count}/${CHECK_MAX}</strong></span>`;
+  html += `<span class="progress-slots" data-mode="${mode}" title="${escAttr(t("checks.mode_" + mode))}">`;
+  for (let slot = 1; slot <= CHECK_MAX; slot++) {
+    const filled = slot <= count ? "1" : "0";
+    html += `<button type="button" class="pc-slot" data-slot="${slot}" data-filled="${filled}" aria-label="${escAttr(t("mark.aria.step_" + (filled === "1" ? slot : 0)))}"></button>`;
+  }
+  html += `</span></span>`;
   return html;
 }
 
@@ -2001,12 +2024,17 @@ function findItemByKey(wordKey) {
 }
 
 function refreshChecksInDom(wrap, item) {
-  ["d", "e", "l"].forEach(mode => {
-    const count = getCheckCount(item, mode);
-    wrap.querySelectorAll(`.pc-mode[data-mode="${mode}"] .pc-slot`).forEach(btn => {
-      const slot = parseInt(btn.dataset.slot, 10);
-      btn.setAttribute("data-filled", slot <= count ? "1" : "0");
-    });
+  const slots = wrap.querySelector(".progress-slots");
+  if (!slots) return;
+  const mode = slots.dataset.mode;
+  const count = getCheckCount(item, mode);
+  const label = wrap.querySelector(".progress-checks-label strong");
+  if (label) label.textContent = count + "/" + CHECK_MAX;
+  slots.querySelectorAll(".pc-slot").forEach(btn => {
+    const slot = parseInt(btn.dataset.slot, 10);
+    const filled = slot <= count;
+    btn.setAttribute("data-filled", filled ? "1" : "0");
+    btn.setAttribute("aria-label", t("mark.aria.step_" + (filled ? slot : 0)));
   });
 }
 
@@ -2076,6 +2104,8 @@ function renderVocabIpaFilterBar() {
   const chipsEl = $("vocabIpaChips");
   const kbEl = $("vocabIpaKeyboard");
   if (!chipsEl || !kbEl) return;
+  const clearBtn = $("vocabIpaClear");
+  if (clearBtn) clearBtn.disabled = vocabIpaQuery.length === 0;
   chipsEl.innerHTML = vocabIpaQuery.length
     ? vocabIpaQuery.map((s, i) => `<button type="button" class="query-chip" data-chip-idx="${i}">${escHtml(s)}</button>`).join("")
     : "";
@@ -2163,9 +2193,9 @@ function renderVocabPhrases() {
         <div class="vocab-row-gloss" title="${escAttr(rule)}">${escHtml(gloss)}${rule ? ` · ${escHtml(rule)}` : ""}</div>
       </div>
       <div class="vocab-row-actions">
-        ${progressChecksHtml(c)}
         <button class="vocab-play" type="button" data-vipa="${escAttr(gaIpa)}" data-vconn="1" aria-label="${escAttr(t("listen"))}">${SPEAKER_SVG}</button>
       </div>
+      ${progressChecksHtml(c)}
     </div>`;
   });
 
@@ -4848,6 +4878,7 @@ function renderCard(){
   ensureQueueStock();
   if(S.idx>=S.queue.length)return renderSummary();
   const c=S.queue[S.idx];S.cur=c;S.revealed=false;S.built=[];S.mbQuiz=null;
+  updateTaskHeader();
   S.curCarrier=(isConnectedItem(c)||isWeakItem(c))?pickCarrier(c):null;
   show("reveal",false);hideModeBCards();
   $("reflectDock").classList.add("hidden");
@@ -5264,7 +5295,11 @@ window.addEventListener("resize",()=>{
   }
 });
 $("vocabBackBtn").addEventListener("click",e=>{e.preventDefault();navigate("");});
-$("symbolBackBtn").addEventListener("click",e=>{e.preventDefault();navigate("vocab");});
+$("symbolBackBtn").addEventListener("click",e=>{
+  e.preventDefault();
+  vocabIpaQuery = symbolQuery.slice(0, 3);
+  navigate("vocab");
+});
 $("progressBackBtn").addEventListener("click",e=>{e.preventDefault();navigate("");});
 $("progressFilters").addEventListener("click",e=>{
   const btn=e.target.closest(".pill-cefr");
@@ -5324,6 +5359,10 @@ $("vocabIpaChips").addEventListener("click",e=>{
   vocabIpaQueryRemoveAt(parseInt(chip.dataset.chipIdx,10));
 });
 $("vocabIpaClear").addEventListener("click",()=>vocabIpaQueryClear());
+$("vocabIpaPickerOpen").addEventListener("click",()=>{
+  symbolQuery = vocabIpaQuery.slice(0, 3);
+  navigate("vocab/ipa");
+});
 $("vocabLetters").addEventListener("click",e=>{
   const btn=e.target.closest(".vocab-letter-btn");
   if(!btn)return;
@@ -5332,7 +5371,7 @@ $("vocabLetters").addEventListener("click",e=>{
 function onVocabListClick(e){
   const pcBtn=e.target.closest(".pc-slot");
   if(pcBtn){
-    const modeEl=pcBtn.closest(".pc-mode");
+    const modeEl=pcBtn.closest(".progress-slots");
     const wrap=pcBtn.closest(".progress-checks");
     if(!modeEl||!wrap)return;
     const item=findItemByKey(wrap.dataset.word);

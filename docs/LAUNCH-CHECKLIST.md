@@ -405,6 +405,7 @@ Hotfix フローは `CLAUDE.md` を参照。以下 3 条件をすべて満たす
 | **1-F** | オンボーディング（`3g`）+ SP guide `?` 再導入 | [x] 実装完了 | [#149](https://github.com/nkhippo/IPASoundDrill/issues/149) |
 | **1-G** | 多言語（variant `-en` 等） | [x] 完了 | #155（5言語×9画面×PC/SP CDP QA、DIVERGENCE記録） |
 | **1-H 品質補完** | PCトップ `1a-pc` / 学習プロフィール `3a-pc` のCD準拠補完 | [x] 完了（About単一表示、header actions順序、プロフィールchrome統合、PC戻る導線/✓ prefix除去、PC/SP visibility QA） | [#161](https://github.com/nkhippo/IPASoundDrill/issues/161) |
+| **1-H 品質補完 Phase 2** | PCドリル `2a-pc`〜`2d-pc` / 語彙リスト `3b-pc` のCD準拠補完 | [x] 完了（STEP 1 badge/重複進捗非表示、signal next、task-header meter、単一3-slot、全消去control、PC/SP visibility QA） | [#163](https://github.com/nkhippo/IPASoundDrill/issues/163) |
 
 - Phase 1-I は設けない（Q-13: 旧絞り込み frame 誤記の解消により廃止）
 - Band 実装シンボル削除・目的カード DOM 実装は 1-A 以降
