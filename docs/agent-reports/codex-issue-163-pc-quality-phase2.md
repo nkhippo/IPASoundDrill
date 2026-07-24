@@ -11,7 +11,7 @@ created: '2026-07-24'
 ## 関連 Issue / PR
 
 - Issue: #163
-- PR: 未作成（ローカル対応）
+- PR: #164（draft）
 - Agent: codex
 
 ## Issue 背景（Issue 本文から要約）
