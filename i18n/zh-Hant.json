@@ -358,5 +358,33 @@
         "sub": ""
       }
     }
+  },
+  "onboarding": {
+    "title": "新手引導",
+    "pc_lead": "僅在首次造訪時自動出現。略過也視為完成。可隨時從頁首指南再次開啟。",
+    "guide_aria": "指南",
+    "guide_label": "指南",
+    "ipa_hint": "重音 <span class=\"ipa\" style=\"color:var(--signal)\">ˈ</span> · 音節 <span class=\"ipa\">‧</span>",
+    "stat_days": "連續天數",
+    "stat_words": "接觸過的詞",
+    "next": "下一步",
+    "skip": "略過",
+    "start": "開始",
+    "slide_1": {
+      "title": "從目的開始。",
+      "body": "只要選一個想練的目的。不必複雜設定，立刻進入操練。"
+    },
+    "slide_2": {
+      "title": "聽聲音，用符號確認。",
+      "body": "IPA 是聲音的地圖。把聽到的音與符號對應起來，並對照 GA / RP 差異。"
+    },
+    "slide_3": {
+      "title": "會了就自己打勾。",
+      "body": "覺得記住了就塗一個□。湊滿 <b>3</b> 個即可畢業該字。勾選少的字會優先出現。"
+    },
+    "slide_4": {
+      "title": "照自己的節奏。",
+      "body": "進度保存在本機，無需註冊。隨時可中斷、繼續。"
+    }
   }
 }

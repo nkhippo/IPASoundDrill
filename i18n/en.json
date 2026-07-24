@@ -358,5 +358,33 @@
         "sub": "Open"
       }
     }
+  },
+  "onboarding": {
+    "title": "Onboarding",
+    "pc_lead": "Shown automatically on first visit. Skipping also counts as complete. Reopen anytime from the header guide.",
+    "guide_aria": "Guide",
+    "guide_label": "Guide",
+    "ipa_hint": "Stress <span class=\"ipa\" style=\"color:var(--signal)\">ˈ</span> · syllable <span class=\"ipa\">‧</span>",
+    "stat_days": "day streak",
+    "stat_words": "words touched",
+    "next": "Next",
+    "skip": "Skip",
+    "start": "Start",
+    "slide_1": {
+      "title": "Start from a purpose.",
+      "body": "Pick one goal. No deep setup—your drill begins right away."
+    },
+    "slide_2": {
+      "title": "Hear the sound, check the symbols.",
+      "body": "IPA is a map of sound. Link what you hear to the symbols. GA and RP differences are shown side by side."
+    },
+    "slide_3": {
+      "title": "Mark it when you know it.",
+      "body": "Tap one box when it feels learned. Fill <b>three</b> to graduate that word. Words with fewer checks appear first—you do not need a perfect streak."
+    },
+    "slide_4": {
+      "title": "At your own pace.",
+      "body": "Progress stays on this device. No account. Pause and resume anytime—start with one word."
+    }
   }
 }

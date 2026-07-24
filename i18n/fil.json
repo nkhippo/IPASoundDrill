@@ -358,5 +358,33 @@
         "sub": ""
       }
     }
+  },
+  "onboarding": {
+    "title": "Onboarding",
+    "pc_lead": "Awtomatikong lalabas sa unang bisita. Ang skip ay counted as complete. Puwedeng buksan ulit mula sa header guide.",
+    "guide_aria": "Gabay",
+    "guide_label": "Gabay",
+    "ipa_hint": "Stress <span class=\"ipa\" style=\"color:var(--signal)\">ˈ</span> · syllable <span class=\"ipa\">‧</span>",
+    "stat_days": "araw na streak",
+    "stat_words": "salitang nahawakan",
+    "next": "Susunod",
+    "skip": "Laktawan",
+    "start": "Magsimula",
+    "slide_1": {
+      "title": "Magsimula sa layunin.",
+      "body": "Pumili ng isang layunin. Walang komplikadong setup—agad magsisimula ang drill."
+    },
+    "slide_2": {
+      "title": "Pakinggan ang tunog, suriin ang simbolo.",
+      "body": "Ang IPA ay mapa ng tunog. Iugnay ang narinig sa simbolo. Ipinapakita rin ang pagkakaiba ng GA at RP."
+    },
+    "slide_3": {
+      "title": "I-check kapag natutunan mo na.",
+      "body": "Lagyan ng isang □ kapag feeling mo ay natutunan mo na. Kapag <b>tatlo</b>, graduate ang salita. Mas unang lalabas ang may konting check."
+    },
+    "slide_4": {
+      "title": "Sa sarili mong bilis.",
+      "body": "Naka-save sa device ang progress. Walang account. Puwedeng i-pause at ipagpatuloy anytime."
+    }
   }
 }

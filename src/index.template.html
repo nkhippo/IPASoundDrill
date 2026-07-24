@@ -724,6 +724,68 @@
     body.in-play.drill-two-pane #reveal.panel{box-shadow:none;border-left:none;border-right:none}
   }
 
+
+  /* ===== Issue #149: onboarding 3g + guide ? btn ===== */
+  #guideBtn{display:inline-flex}
+  @media (min-width:1024px){
+    #guideBtn{display:none!important}
+  }
+  .onboarding-modal .modal-card{width:min(100%,400px);max-height:min(92vh,720px);overflow:auto;padding:0;border-radius:20px}
+  .onboarding-chrome{display:none;height:44px;border-bottom:1px solid var(--hair);align-items:center;gap:8px;padding:0 18px}
+  .onboarding-chrome span{width:11px;height:11px;border-radius:999px;background:#E7DCCF}
+  .onboarding-body{padding:16px 20px 24px}
+  .onboarding-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+  .onboarding-progress{font-size:12px;color:var(--faint);font-weight:600}
+  .onboarding-skip{border:none;background:transparent;color:var(--muted);font-size:13px;font-family:var(--font-ui);cursor:pointer;padding:4px 0}
+  .onboarding-slide{display:none}
+  .onboarding-slide.is-active{display:block}
+  .onboarding-visual{text-align:center;margin-top:18px;min-height:120px;display:flex;align-items:center;justify-content:center}
+  .onboarding-mock-list{display:inline-flex;flex-direction:column;gap:9px;width:210px;max-width:100%}
+  .onboarding-mock-row{display:flex;align-items:center;gap:10px;border:1px solid var(--hair);background:var(--panel);border-radius:12px;padding:11px 13px;text-align:left;font-size:13px;font-weight:600;color:var(--muted)}
+  .onboarding-mock-row.is-on{border-color:var(--signal);background:var(--signal-soft);color:var(--signal)}
+  .onboarding-mock-dot{width:8px;height:8px;border-radius:999px;background:var(--hair);flex:none}
+  .onboarding-mock-row.is-on .onboarding-mock-dot{background:var(--signal)}
+  .onboarding-play{width:72px;height:72px;border-radius:999px;background:var(--signal);color:#fff;border:none;display:inline-flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(12,124,126,.3)}
+  .onboarding-ipa{font-family:var(--font-ipa);font-size:30px;color:var(--ink);margin-top:16px}
+  .onboarding-ipa-hint{font-size:11.5px;color:var(--faint);margin-top:4px}
+  .onboarding-slots{display:inline-flex;flex-direction:column;gap:6px;padding:20px;background:var(--panel);border:1px solid var(--hair);border-radius:18px}
+  .onboarding-slot{width:30px;height:30px;border:2px solid var(--hair);background:var(--paper);border-radius:6px}
+  .onboarding-slot.is-on{border-color:var(--signal);background:var(--signal);color:#fff;display:flex;align-items:center;justify-content:center}
+  .onboarding-stats{display:inline-flex;align-items:center;gap:14px;padding:20px 22px;background:var(--panel);border:1px solid var(--hair);border-radius:18px}
+  .onboarding-stat-n{font-size:30px;font-weight:700;line-height:1}
+  .onboarding-stat-n.signal{color:var(--signal)}
+  .onboarding-stat-l{font-size:10.5px;color:var(--muted)}
+  .onboarding-stat-div{width:1px;height:34px;background:var(--hair)}
+  .onboarding-copy{margin:22px 4px 0;text-align:center}
+  .onboarding-copy h3{font-family:var(--font-serif);font-size:23px;font-weight:600;line-height:1.5;margin:0;color:var(--ink)}
+  .onboarding-copy p{font-size:13.5px;line-height:1.9;color:var(--muted);margin:14px 0 0}
+  .onboarding-dots{display:flex;justify-content:center;gap:6px;margin-top:24px}
+  .onboarding-dot{width:7px;height:7px;border-radius:999px;background:var(--hair);border:none;padding:0}
+  .onboarding-dot.is-on{width:20px;background:var(--signal)}
+  .onboarding-next{margin-top:22px;width:100%;background:var(--signal);color:#fff;border:none;border-radius:14px;padding:14px;font-size:15px;font-weight:700;font-family:var(--font-ui);cursor:pointer}
+  .onboarding-pc-grid{display:none}
+  .onboarding-pc-intro{display:none}
+  @media (min-width:1024px){
+    .onboarding-modal .modal-card{width:min(100%,880px);padding:0}
+    .onboarding-chrome{display:flex}
+    .onboarding-body{padding:40px 48px 44px}
+    .onboarding-top,.onboarding-slide,.onboarding-dots{display:none!important}
+    .onboarding-pc-intro{display:block;margin:0 0 24px}
+    .onboarding-pc-intro h2{font-family:var(--font-serif);font-size:26px;font-weight:700;margin:0 0 8px}
+    .onboarding-pc-intro p{font-size:14px;color:var(--muted);line-height:1.8;margin:0;max-width:640px}
+    .onboarding-pc-grid{display:flex;gap:14px;flex-wrap:wrap}
+    .onboarding-card{flex:1;min-width:200px;border:1px solid var(--hair);background:var(--panel);border-radius:16px;padding:22px 20px}
+    .onboarding-card-n{font-size:11px;color:var(--faint)}
+    .onboarding-card h3{font-family:var(--font-serif);font-size:18px;font-weight:600;margin:10px 0 8px;color:var(--ink)}
+    .onboarding-card p{font-size:12.5px;color:var(--muted);line-height:1.8;margin:0}
+    .onboarding-pc-actions{display:flex;justify-content:flex-end;gap:12px;margin-top:28px}
+    .onboarding-pc-actions .onboarding-skip{border:1px solid var(--hair);background:var(--panel);border-radius:12px;padding:10px 16px}
+    .onboarding-pc-actions .onboarding-next{margin:0;width:auto;min-width:140px}
+  }
+  @media (max-width:1023px){
+    .onboarding-pc-actions{display:none}
+  }
+
 </style>
 </head>
 <body class="top-home">
@@ -764,6 +826,9 @@
             <line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/>
             <line x1="3" y1="18" x2="3.01" y2="18"/>
           </svg>
+        </button>
+        <button class="topbtn guide-btn" id="guideBtn" type="button" aria-label="ガイド">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M9.2 9a3 3 0 0 1 5.6 1c0 2-2.8 2.3-2.8 4"/><path d="M12 17h.01"/></svg>
         </button>
       </div>
       <button class="backtop hidden" id="backTopBtn" type="button">Menu</button>
@@ -1232,6 +1297,78 @@
   </div>
 </div>
 
+<div class="modal onboarding-modal hidden" id="onboardingModal" role="dialog" aria-modal="true" aria-labelledby="onboardingPcTitle" data-frame="3g">
+  <button class="modal-scrim" id="onboardingScrim" type="button" aria-label="Close"></button>
+  <div class="modal-card panel">
+    <div class="onboarding-chrome" aria-hidden="true"><span></span><span></span><span></span></div>
+    <div class="onboarding-body">
+      <div class="onboarding-pc-intro">
+        <h2 id="onboardingPcTitle">Onboarding</h2>
+        <p id="onboardingPcLead"></p>
+      </div>
+      <div class="onboarding-pc-grid" id="onboardingCardGrid">
+        <div class="onboarding-card"><div class="onboarding-card-n">1 / 4</div><h3 id="onboardingCard1Title"></h3><p id="onboardingCard1Body"></p></div>
+        <div class="onboarding-card"><div class="onboarding-card-n">2 / 4</div><h3 id="onboardingCard2Title"></h3><p id="onboardingCard2Body"></p></div>
+        <div class="onboarding-card"><div class="onboarding-card-n">3 / 4</div><h3 id="onboardingCard3Title"></h3><p id="onboardingCard3Body"></p></div>
+        <div class="onboarding-card"><div class="onboarding-card-n">4 / 4</div><h3 id="onboardingCard4Title"></h3><p id="onboardingCard4Body"></p></div>
+      </div>
+      <div class="onboarding-top">
+        <span class="onboarding-progress" id="onboardingProgress">1 / 4</span>
+        <button type="button" class="onboarding-skip" id="onboardingSkip">Skip</button>
+      </div>
+      <div class="onboarding-slide is-active" id="onboardingSlide1" data-slide="1">
+        <div class="onboarding-visual">
+          <div class="onboarding-mock-list" aria-hidden="true">
+            <div class="onboarding-mock-row is-on"><span class="onboarding-mock-dot"></span><span id="onboardingMock1a">Check the sound</span></div>
+            <div class="onboarding-mock-row"><span class="onboarding-mock-dot"></span><span id="onboardingMock1b">Write from sound</span></div>
+            <div class="onboarding-mock-row"><span class="onboarding-mock-dot"></span><span id="onboardingMock1c">Learn by ear</span></div>
+          </div>
+        </div>
+        <div class="onboarding-copy"><h3 id="onboardingSlide1Title"></h3><p id="onboardingSlide1Body"></p></div>
+      </div>
+      <div class="onboarding-slide" id="onboardingSlide2" data-slide="2">
+        <div class="onboarding-visual" style="flex-direction:column">
+          <button type="button" class="onboarding-play" tabindex="-1" aria-hidden="true"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4V5z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M19 5a9 9 0 0 1 0 14"/></svg></button>
+          <div class="onboarding-ipa ipa"><span style="color:var(--signal)">ˈ</span>dʒæ<span style="color:var(--muted)">‧</span>kət</div>
+          <div class="onboarding-ipa-hint" id="onboardingIpaHint"></div>
+        </div>
+        <div class="onboarding-copy"><h3 id="onboardingSlide2Title"></h3><p id="onboardingSlide2Body"></p></div>
+      </div>
+      <div class="onboarding-slide" id="onboardingSlide3" data-slide="3">
+        <div class="onboarding-visual">
+          <div class="onboarding-slots" aria-hidden="true">
+            <span class="onboarding-slot is-on"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg></span>
+            <span class="onboarding-slot is-on"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg></span>
+            <span class="onboarding-slot"></span>
+          </div>
+        </div>
+        <div class="onboarding-copy"><h3 id="onboardingSlide3Title"></h3><p id="onboardingSlide3Body"></p></div>
+      </div>
+      <div class="onboarding-slide" id="onboardingSlide4" data-slide="4">
+        <div class="onboarding-visual">
+          <div class="onboarding-stats" aria-hidden="true">
+            <div style="text-align:center"><div class="onboarding-stat-n signal">7</div><div class="onboarding-stat-l" id="onboardingStatDays"></div></div>
+            <div class="onboarding-stat-div"></div>
+            <div style="text-align:center"><div class="onboarding-stat-n">312</div><div class="onboarding-stat-l" id="onboardingStatWords"></div></div>
+          </div>
+        </div>
+        <div class="onboarding-copy"><h3 id="onboardingSlide4Title"></h3><p id="onboardingSlide4Body"></p></div>
+      </div>
+      <div class="onboarding-dots" id="onboardingDots" role="tablist" aria-label="Slides">
+        <button type="button" class="onboarding-dot is-on" data-dot="1" aria-label="1"></button>
+        <button type="button" class="onboarding-dot" data-dot="2" aria-label="2"></button>
+        <button type="button" class="onboarding-dot" data-dot="3" aria-label="3"></button>
+        <button type="button" class="onboarding-dot" data-dot="4" aria-label="4"></button>
+      </div>
+      <button type="button" class="onboarding-next" id="onboardingNext">Next</button>
+      <div class="onboarding-pc-actions">
+        <button type="button" class="onboarding-skip" id="onboardingPcSkip">Skip</button>
+        <button type="button" class="onboarding-next" id="onboardingPcStart">Start</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script>
 const $=id=>document.getElementById(id);
 const show=(id,on)=>$(id).classList.toggle("hidden",!on);
@@ -1377,6 +1514,7 @@ function applyI18nVocab() {
   }
   $("vocabBackBtn").setAttribute("aria-label", t("vocab.back") !== "vocab.back" ? t("vocab.back") : "Back");
   $("vocabBtn").setAttribute("aria-label", t("vocab.title"));
+  if ($("guideBtn")) $("guideBtn").setAttribute("aria-label", t("onboarding.guide_aria") || "ガイド");
   const symTitle = $("symbolPickerTitle");
   if (symTitle) symTitle.textContent = t("symbol.picker.title");
   const symBack = $("symbolBackLabel");
@@ -2853,7 +2991,9 @@ async function initApp() {
   syncProfileAccentUI();
   await loadLocale(LANG);
   applyI18n();
+  applyOnboardingI18n();
   buildKeyboard();
+  maybeShowOnboarding();
   Promise.all([
     loadWordlist().catch(err => { console.error(err); $("poolNote").textContent = t("wordlist_fail"); }),
     loadConnected().catch(err => { console.error(err); if (S.tab === "connected") $("poolNote").textContent = t("load_fail"); }),
@@ -2899,6 +3039,7 @@ const LS_MARKS_MIGRATED_KEY = "ept_marks_migrated_v1";
 const LS_PREV_SETTINGS_KEY = "prev_settings_v1";
 const CHECK_MAX = 3;
 const LS_VOCAB_KEY = "ept_vocab_v1";
+const LS_ONBOARDING_KEY = "onboarding_completed_v1";
 const MODEB_BANDS = ["A1", "A2", "B1", "B2"]; // CEFR allowlist (Band unlock removed Phase 1-D-PR2)
 const MODEB_EXCLUDED_SRC = new Set(["letter", "contraction"]);
 const MODEB_DISTRACTOR = { fromNeighbors: 2, fromBand: 1 };
@@ -4381,6 +4522,100 @@ function openDrillProfile(drillId) {
   showProfile3a();
 }
 
+
+/* ---------- Phase 1-F: onboarding 3g ---------- */
+let onboardingSlide = 1;
+let onboardingMarkCompleteOnClose = true;
+
+/** @returns {boolean} */
+function isOnboardingCompleted(){
+  try{ return localStorage.getItem(LS_ONBOARDING_KEY) === "true" || localStorage.getItem("onboarding_completed_v1") === "true"; }
+  catch(e){ return false; }
+}
+
+/** @param {boolean} [mark=true] */
+function completeOnboarding(mark){
+  if(mark!==false){
+    try{ localStorage.setItem(LS_ONBOARDING_KEY, "true"); localStorage.setItem("onboarding_completed_v1", "true"); }
+    catch(e){}
+  }
+}
+
+function applyOnboardingI18n(){
+  for(let i=1;i<=4;i++){
+    const title=t("onboarding.slide_"+i+".title");
+    const body=t("onboarding.slide_"+i+".body");
+    if($("onboardingSlide"+i+"Title")) $("onboardingSlide"+i+"Title").textContent=title;
+    if($("onboardingSlide"+i+"Body")) $("onboardingSlide"+i+"Body").innerHTML=body;
+    if($("onboardingCard"+i+"Title")) $("onboardingCard"+i+"Title").textContent=title;
+    if($("onboardingCard"+i+"Body")) $("onboardingCard"+i+"Body").innerHTML=body;
+  }
+  if($("onboardingSkip")) $("onboardingSkip").textContent=t("onboarding.skip");
+  if($("onboardingPcSkip")) $("onboardingPcSkip").textContent=t("onboarding.skip");
+  if($("onboardingPcTitle")) $("onboardingPcTitle").textContent=t("onboarding.title")||"Onboarding";
+  if($("onboardingPcLead")) $("onboardingPcLead").textContent=t("onboarding.pc_lead")||"";
+  if($("onboardingIpaHint")) $("onboardingIpaHint").innerHTML=t("onboarding.ipa_hint")||"";
+  if($("onboardingStatDays")) $("onboardingStatDays").textContent=t("onboarding.stat_days")||"";
+  if($("onboardingStatWords")) $("onboardingStatWords").textContent=t("onboarding.stat_words")||"";
+  if($("onboardingMock1a")) $("onboardingMock1a").textContent=t("drill.title.2a");
+  if($("onboardingMock1b")) $("onboardingMock1b").textContent=t("drill.title.2b");
+  if($("onboardingMock1c")) $("onboardingMock1c").textContent=t("drill.title.2c");
+  renderOnboardingSlide();
+}
+
+function renderOnboardingSlide(){
+  for(let i=1;i<=4;i++){
+    const el=$("onboardingSlide"+i);
+    if(el) el.classList.toggle("is-active", i===onboardingSlide);
+  }
+  document.querySelectorAll("#onboardingDots .onboarding-dot").forEach(d=>{
+    d.classList.toggle("is-on", parseInt(d.dataset.dot,10)===onboardingSlide);
+  });
+  if($("onboardingProgress")) $("onboardingProgress").textContent=(t("onboarding.guide_label")||"Guide")+" "+onboardingSlide+" / 4";
+  const last=onboardingSlide>=4;
+  if($("onboardingNext")) $("onboardingNext").textContent=last?t("onboarding.start"):t("onboarding.next");
+  if($("onboardingPcStart")) $("onboardingPcStart").textContent=t("onboarding.start");
+}
+
+/**
+ * Show onboarding modal.
+ * @param {{markComplete?:boolean, slide?:number}} [opts]
+ */
+function showOnboarding(opts){
+  opts=opts||{};
+  onboardingMarkCompleteOnClose = opts.markComplete!==false;
+  onboardingSlide = opts.slide||1;
+  applyOnboardingI18n();
+  show("onboardingModal", true);
+  document.body.classList.add("scroll-locked");
+}
+
+/** Reopen from guide ? without rewriting LS. */
+function reopenOnboarding(){
+  showOnboarding({ markComplete:false, slide:1 });
+}
+
+function hideOnboarding(mark){
+  show("onboardingModal", false);
+  document.body.classList.remove("scroll-locked");
+  if(mark && onboardingMarkCompleteOnClose) completeOnboarding(true);
+}
+
+function maybeShowOnboarding(){
+  if(isOnboardingCompleted()) return;
+  // defer slightly so first paint of home is ready
+  setTimeout(()=>showOnboarding({ markComplete:true, slide:1 }), 120);
+}
+
+function onboardingNextStep(){
+  if(onboardingSlide<4){
+    onboardingSlide+=1;
+    renderOnboardingSlide();
+    return;
+  }
+  hideOnboarding(true);
+}
+
 /* ---------- Phase 1-C: purpose stub → 3a ---------- */
 
 if ($("headerProgressLink")) $("headerProgressLink").addEventListener("click", () => navigate("progress"));
@@ -4877,6 +5112,16 @@ $("symbolQueryChips").addEventListener("click",e=>{
   const chip=e.target.closest(".query-chip");
   if(!chip)return;
   symbolQueryRemoveAt(parseInt(chip.dataset.chipIdx,10));
+});
+
+if($("guideBtn")) $("guideBtn").addEventListener("click", ()=>reopenOnboarding());
+if($("onboardingSkip")) $("onboardingSkip").addEventListener("click", ()=>hideOnboarding(true));
+if($("onboardingPcSkip")) $("onboardingPcSkip").addEventListener("click", ()=>hideOnboarding(true));
+if($("onboardingNext")) $("onboardingNext").addEventListener("click", onboardingNextStep);
+if($("onboardingPcStart")) $("onboardingPcStart").addEventListener("click", ()=>hideOnboarding(true));
+if($("onboardingScrim")) $("onboardingScrim").addEventListener("click", ()=>hideOnboarding(true));
+document.querySelectorAll("#onboardingDots .onboarding-dot").forEach(d=>{
+  d.addEventListener("click", ()=>{ onboardingSlide=parseInt(d.dataset.dot,10)||1; renderOnboardingSlide(); });
 });
 ["exitConfirmScrim","exitConfirmNo"].forEach(id=>$(id).addEventListener("click",closeExitConfirm));
 $("exitConfirmYes").addEventListener("click",()=>{
