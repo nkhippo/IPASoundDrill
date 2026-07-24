@@ -688,6 +688,8 @@
     body.top-home:not(.in-play) .brand .name{font-size:16px}
     body.top-home:not(.in-play) .header-nav{display:inline-flex}
     body.top-home:not(.in-play) .topbar-actions{flex-direction:row;align-items:center;gap:14px}
+    body.top-home:not(.in-play) .topbar-btns{order:1}
+    body.top-home:not(.in-play) .header-lang{order:2}
     body.top-home:not(.in-play) .header-lang{max-width:none}
     body.top-home:not(.in-play) #purposeStub.panel{background:transparent;border:none;padding:0}
     body.top-home:not(.in-play) .top-pc-layout{display:grid;grid-template-columns:7fr 3fr;gap:48px;align-items:start}
@@ -705,8 +707,21 @@
     body.top-home:not(.in-play) .top-sidebar-body{font-size:13px;line-height:1.85;color:var(--muted);margin:0}
     body.top-home:not(.in-play) .top-sidebar-body + .top-sidebar-body{margin-top:12px}
     body.top-home:not(.in-play) .top-sidebar-link{display:inline-flex;align-items:center;gap:5px;margin-top:14px;font-size:12.5px;font-weight:600;color:var(--accent);background:none;border:none;padding:0;cursor:pointer;font-family:var(--font-ui)}
+    body.top-home:not(.in-play) #aboutBlock{display:none!important}
     body.top-home:not(.in-play) .purpose-card-progress{width:420px;max-width:100%}
-    body.top-home:not(.in-play) #setup.profile-3a{max-width:720px;margin-left:auto;margin-right:auto;padding:40px 48px 44px}
+    body.pc-support #setup.profile-3a{max-width:720px;margin-left:auto;margin-right:auto;padding:0;overflow:hidden}
+    body.pc-support #setup.profile-3a > .modal-chrome{margin:0}
+    body.pc-support #setup.profile-3a > .profile-body{padding:40px 48px 44px}
+    body.pc-support #setup.profile-3a .profile-back{display:none!important}
+    body.pc-support #setup.profile-3a .accent-card-grid{display:flex;gap:12px}
+    body.pc-support #setup.profile-3a .accent-card{
+      display:inline-flex;align-items:center;border:1px solid var(--hair);background:var(--panel);color:var(--ink);
+      border-radius:12px;padding:12px 22px;font-family:var(--font-ui);font-size:15px;font-weight:600;cursor:pointer
+    }
+    body.pc-support #setup.profile-3a .accent-card[aria-pressed="true"]{border-color:var(--signal);background:var(--signal-soft);color:var(--signal);font-weight:700}
+    body.pc-support #setup.profile-3a .accent-card-check,
+    body.pc-support #setup.profile-3a .accent-card-ipa{display:none}
+    body.pc-support #setup.profile-3a .accent-card-code::after{content:" ·\00a0"}
 
     /* Scope 5: /iː/ logo only on 1a-pc */
     body.in-play .brand,
@@ -909,11 +924,6 @@
     <span class="task-header-accent" id="taskHeaderAccent" aria-live="polite"></span>
     <span class="task-header-counter" id="taskHeaderCounter" aria-live="polite"></span>
   </div>
-  <div class="modal-chrome" id="pcModalChrome" hidden aria-hidden="true">
-    <div class="modal-dots" aria-hidden="true">
-      <span class="modal-dot"></span><span class="modal-dot"></span><span class="modal-dot"></span>
-    </div>
-  </div>
   <p class="audio-hint" id="audioHint" role="status" aria-live="polite">Tap Listen to enable sound</p>
 
   <!-- TOP PAGE 1a (Phase 1-B) — was #purposeStub in Phase 1-C -->
@@ -947,6 +957,12 @@
 
   <!-- SETUP / learning profile 3a (Phase 1-C rebrand of #setup) -->
   <section id="setup" class="panel profile-3a hidden" data-frame="3a">
+    <div class="modal-chrome" id="pcModalChrome" hidden aria-hidden="true">
+      <div class="modal-dots" aria-hidden="true">
+        <span class="modal-dot"></span><span class="modal-dot"></span><span class="modal-dot"></span>
+      </div>
+    </div>
+    <div class="profile-body">
     <button type="button" class="btn-accent-link profile-back" id="profileBackBtn">← Change purpose</button>
     <div class="profile-intro">
       <span class="top-swash" aria-hidden="true"></span>
@@ -1076,6 +1092,7 @@
     <div class="countnote" id="poolNote"></div>
 
     <button class="start btn-primary" id="startBtn" disabled>Loading…</button>
+    </div>
   </section>
 
   <!-- MODE B STUDY (2c) — prompt pane; answer pane is #cardModeBStudyAnswer -->
@@ -3235,6 +3252,7 @@ function showPurposeHome(){
 
 /** Learning profile 3a. */
 function showProfile3a(){
+  window.scrollTo(0,0);
   hidePracticePanels();
   show("purposeStub",false);
   show("setup",true);
