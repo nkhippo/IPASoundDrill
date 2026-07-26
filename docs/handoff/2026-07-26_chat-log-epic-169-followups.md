@@ -34,7 +34,7 @@
 ### 2.3 #184 と RULE#5 の一幕
 - Naoya の指示で #184（本来 Cursor/Codex 向け dev-zone）も issue-handler で対応。
 - PR #188: validator の実体ロジックは `scripts/lib/verify_core.py`（`scripts/validate/validate-markdown-refs.py` が import）。V1 = front-matter が在る時のみ id 検査（無し＝正常）、V4/V5 = `docs/handoff/` 等 legacy prefix を除外（廃止せず将来の検査能力を保持）、V7 = 無変更で現役。+ `docs/claude-design/README.md` の V7 修正、`data/**` の `REPOSITORY-STRUCTURE` → `docs/repo-map.md` 付替。
-- **pr-reviewer 初回 FAIL**: issue-handler 自身の実装レポート（`docs/agent-reports/claude-code-issue-184-validator-align.md` L31）が `[x](./UPDATE-GUIDE.md)` をインラインバックティック内に書き、V7 が自己検出（`split_fenced_regions` は fenced code block のみ除外・inline backtick は非除外）。EPIC の E で起きたのと同型の自己混入。
+- **pr-reviewer 初回 FAIL**: issue-handler 自身の実装レポート（`docs/agent-reports/claude-code-issue-184-validator-align.md` L31）が `./UPDATE-GUIDE.md` への markdown-link 記法（角括弧＋丸括弧のリンク構文）をインラインバックティック内に書き、V7 が自己検出（`split_fenced_regions` は fenced code block のみ除外・inline backtick は非除外）。EPIC の E で起きたのと同型の自己混入。
 - **RULE#5**: 新規 issue-handler に既存 PR ブランチ（`gh pr view 188 --json headRefName` = `chore/issue-184-validator-align`）を fetch/checkout させ、レポートを prose 化（bare `[x](y)` 全除去）して追記コミット（`364b0d3`）→ push。
 - pr-reviewer **再レビュー PASS**、`validate` CI **緑**（EPIC 関連で初の validate 緑＝validator 本体が直ったため）。#188 は L2、Naoya マージ待ち。
 
