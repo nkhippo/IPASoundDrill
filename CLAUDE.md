@@ -13,7 +13,7 @@
 
 - **名称**: IPA Sound Drill(旧 IPA Drill / English Pronunciation Trainer)
 - **repo**: https://github.com/nkhippo/IPASoundDrill / **公開 URL**: https://ipasounddrill.app
-- 目的・ポジショニング・タグライン → `docs/product.md`(Issue E で作成)。技術スタック・ファイル構成 → `docs/repo-map.md`(Issue D で作成)。
+- 目的・ポジショニング・タグライン → `docs/product.md`(Issue E で作成)。技術スタック・ファイル構成 → `docs/repo-map.md`。
 
 ---
 
@@ -85,12 +85,12 @@ Issue はタイプ A(軽微)/B(標準)、**必須 5 項目**（背景・目的/�
 
 ## ランタイム契約ガードレール（触れたら検証必須・L3 扱い）
 
-以下 8 パスに触れる変更は Issue でフラグを立て、対応する検証を完了定義に含める:
-`wordlist_GA_a1a2_plus_phonics.json` / `data/connected_speech.json` / `data/weak_forms.json` / `data/guide.json` / `i18n/{en,ja,ko,zh-Hans,zh-Hant,fil}.json` / `i18n/phonemes/{lang}.json` / `fonts/DoulosSIL-Regular.woff2` / `src/index.template.html` 内 `GAS_TTS_URL`。
+ランタイム契約 8 パス（wordlist / connected_speech / weak_forms / guide / UI i18n / phoneme i18n / IPA font / `GAS_TTS_URL`）に
+触れる変更は Issue でフラグを立て、対応する検証を完了定義に含める。**8 パスの一覧・JSON スキーマ・i18n leaf 数・データ整合性
+チェック義務表の正本は `docs/data-contract.md`**（重複させない）。
 
-- i18n を触ったら `python3 tools/validate_i18n.py`（現行 UI i18n leaf = 169）。
-- wordlist / `rp_ipa` / `neighbors` / connected_speech / weak_forms を触ったら該当の再カウント・`scripts/gen_*.py` 再実行。
-- 詳細スキーマ・フィールド辞書 → `docs/data-contract.md`（Issue D で作成）。
+- i18n を触ったら `python3 tools/validate_i18n.py` を実行。
+- wordlist / `rp_ipa` / `neighbors` / connected_speech / weak_forms を触ったら該当の再カウント・`scripts/gen_*.py` 再実行（コマンドは `docs/pipeline.md`）。
 
 ---
 

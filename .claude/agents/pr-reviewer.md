@@ -40,8 +40,7 @@ Naoya さんはエンジニアではなく、課題が無ければ PR を**盲�
    **完了定義・テスト観点・非対象範囲・ホワイトリスト・改修分類（Complexity Level）の正本**。
 4. **レビュー観点の正本を読む**: `docs/guardrails.md` の「Rv 実施時の 12 観点」節。
    **これが Rv 観点の唯一の管理元**。ここに定義が無い観点を勝手に足さない（散らばり防止）。
-5. 契約定義: `data-contract.md`（無ければ `SPECIFICATION.md` / `REPOSITORY-STRUCTURE.md` の
-   「Runtime data contract」）、`impact-ledger.json`（存在すれば）。
+5. 契約定義: `docs/data-contract.md`（ランタイム 8 パス・JSON スキーマの正本）、`impact-ledger.json`（存在すれば）。
 
 ## 検証（Complexity Level でスケーリング）
 Issue の改修分類の **Complexity Level** で検証の深さを変える。上記「12 観点」を機械検証可能な形に落とし込んで実施する。

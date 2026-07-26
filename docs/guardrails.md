@@ -116,7 +116,7 @@ python3 tools/validate_i18n.py
 
 GitHub Actions `validate-i18n` でも実行され、以下を hard-fail として扱う: ja 以外の UI JSON に残った CJK かな / 6 言語 UI JSON の leaf key 不一致 / 同一 key のプレースホルダ集合不一致 / BOM・末尾改行欠落・インデント崩れ / `_html` サフィックス key の不正タグ・ネスト。翻訳品質そのもの（自然さ・字体妥当性）は機械判定対象外、Preview URL での目視確認に委ねる。
 
-ランタイム契約 8 パスの一覧・wordlist 系再カウントコマンドは `CLAUDE.md`「ランタイム契約ガードレール」節（詳細スキーマは `docs/data-contract.md`、作成後）を参照。
+ランタイム契約 8 パスの一覧・JSON スキーマ・wordlist 系再カウントコマンドの正本は `docs/data-contract.md`。パイプラインコマンドは `docs/pipeline.md`。
 
 ---
 

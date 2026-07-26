@@ -1,6 +1,6 @@
 # OPERATIONS — ipasounddrill 運用マニュアル
 
-このドキュメントは本番運用中のトラブル対応と定常オペレーション手順。CLAUDE.md の Track A/B 分離方針、`REPOSITORY-STRUCTURE.md` のランタイム契約を前提とする。
+このドキュメントは本番運用中のトラブル対応と定常オペレーション手順。CLAUDE.md の Track A/B 分離方針、`docs/data-contract.md` のランタイム契約を前提とする。
 
 ---
 

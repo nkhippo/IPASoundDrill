@@ -8,7 +8,7 @@
 
 | 優先 | ファイル | 何が書いてあるか |
 |:---:|----------|------------------|
-| 1 | `REPOSITORY-STRUCTURE.md` | フォルダマップ・パイプライン手順・ランタイム契約（**Claude 共有用の入口**） |
+| 1 | `repo-map.md` | フォルダマップ・インフラ（**Claude 共有用の入口**）。パイプライン手順は `pipeline.md`、ランタイム契約は `data-contract.md` |
 | 2 | `PURPOSE.md` | 目的・2モード・評価方針の正本 |
 | 3 | `DESIGN.md` | 実装設計（SRS・TTS・データ整備タスク） |
 | 4 | `SPECIFICATION.md` | 画面・JSON フィールド・localStorage の正本 |
@@ -28,7 +28,7 @@
 
 **Chat 起動時、Claude は以下を必ず取得**（`CLAUDE.md` タスク種別対応表に従いオンデマンド追加取得）:
 1. `CLAUDE.md`（リポルート・router）
-2. `REPOSITORY-STRUCTURE.md`
+2. `repo-map.md`
 3. `LAUNCH-CHECKLIST.md`
 4. `doc-map.md`
 

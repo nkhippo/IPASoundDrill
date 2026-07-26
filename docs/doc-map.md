@@ -19,10 +19,10 @@ Issue B は既存ファイルを削除しない。CLAUDE.md からは router に
 | 開発体制 / 開発フロー 4-step / Issue タイプ・分割 / Issue 起票ルール（署名・ラベル・参照明示）/ Branch 戦略詳細 / AI 履歴置き場 / Bug 対応ループ / Claude への指示（返答末尾テンプレ等）/ Cursor への指示 / Issue 背景セクションの書き方 / ルール変更セルフチェック手順 | `docs/workflow.md` | exists |
 | 品質基準 1（仕様書品質）/ 2（Cursor 指示書品質） | `docs/guardrails.md` | exists |
 | 改修分類ブロック仕様（Level×Pattern） | `docs/change-classification.md` | exists |
-| 技術スタック / ファイル構成ツリー | `docs/repo-map.md` | planned(D) |
-| 品質基準 3（データ整合性）/ 4（ランタイム契約 8 パス）/ 5（多言語 UI） | `docs/data-contract.md` | planned(D) |
+| 技術スタック / ファイル構成ツリー | `docs/repo-map.md` | exists |
+| 品質基準 3（データ整合性）/ 4（ランタイム契約 8 パス）/ 5（多言語 UI） | `docs/data-contract.md` | exists |
 
-> ※ Issue C 完了により `workflow.md` / `guardrails.md` / `change-classification.md` が正本化。`CLAUDE.md` router 側は「Issue 起票要点 / レビュー・merge / ランタイム契約 8 パス」の要点＋ポインタのみを残す（詳細は各ホーム参照）。D で `data-contract.md` / `repo-map.md` が出来るまで、ランタイム契約 8 パスと技術スタック/ファイル構成の詳細は router に暫定残置する。
+> ※ Issue C 完了により `workflow.md` / `guardrails.md` / `change-classification.md` が正本化。Issue D 完了により `data-contract.md` / `tts-design.md` / `pipeline.md` / `repo-map.md` / `history.md` が正本化。`CLAUDE.md` router 側は「Issue 起票要点 / レビュー・merge / ランタイム契約 8 パス（要点のみ）」の要点＋ポインタのみを残す（詳細は各ホーム参照）。
 
 ---
 
@@ -38,17 +38,17 @@ Issue B は既存ファイルを削除しない。CLAUDE.md からは router に
 | feature ID 索引 | `docs/features/README.md` | planned(E) | ID 追加時 |
 | ソースシンボル → feature_ids → scope → caller_areas | `docs/impact-ledger.json` | planned(F) | ソース共通シンボル変更時 |
 | impact-ledger 運用プロトコル | `docs/impact-ledger.md` | planned(F) | 横展開ルール変更時 |
-| ランタイム 8 パス + JSON スキーマ + フィールド辞書 | `docs/data-contract.md` | planned(D) | パス増減・スキーマ変更時 |
+| ランタイム 8 パス + JSON スキーマ + フィールド辞書 | `docs/data-contract.md` | exists | パス増減・スキーマ変更時 |
 | 採点ロジック定数 | `docs/features/2a.md`(+2c) | planned(E) | 定数変更時 |
-| 多言語 UI i18n キー網羅 / leaf 数 | `docs/data-contract.md`(+ 該当 features) | planned(D) | i18n キー増減時 |
-| TTS プロンプト設計 | `docs/tts-design.md` | planned(D) | TTS 改修時 |
-| Python パイプラインコマンド | `docs/pipeline.md` | planned(D) | パイプライン変更時 |
-| ディレクトリツリー + インフラ | `docs/repo-map.md` | planned(D) | ディレクトリ・インフラ変更時 |
+| 多言語 UI i18n キー網羅 / leaf 数 | `docs/data-contract.md`(+ 該当 features) | exists | i18n キー増減時 |
+| TTS プロンプト設計 | `docs/tts-design.md` | exists | TTS 改修時 |
+| Python パイプラインコマンド | `docs/pipeline.md` | exists | パイプライン変更時 |
+| ディレクトリツリー + インフラ | `docs/repo-map.md` | exists | ディレクトリ・インフラ変更時 |
 | executor 対応フロー / Issue 起票ルール / レビュー・auto-merge / 返答末尾テンプレ | `docs/workflow.md` | exists | 運用フロー変更時 |
 | Level×Pattern 分類体系 | `docs/change-classification.md` | exists | 分類体系変更時 |
 | md5 検証(L3)/ 自己判断禁止 / doc-sync / impact-analysis halt / 仕様・指示書品質基準 | `docs/guardrails.md` | exists | ガードレール変更時 |
 | CD(Claude Design)修正判定 | `docs/guardrails.md`(判定) + `docs/claude-design/` | exists | UI 改修運用変更時 |
-| 日付ログ（Phase 完了等の dated 記録） | `docs/history.md` | planned(D) | 各 Phase 完了時 |
+| 日付ログ（Phase 完了等の dated 記録） | `docs/history.md` | exists | 各 Phase 完了時 |
 | ローンチ Phase 進捗 | `docs/LAUNCH-CHECKLIST.md` | exists | Phase 進捗・Issue 起票/完了時 |
 | 運用手順（Vercel/GAS/DNS/Analytics） | `docs/OPERATIONS.md` | exists | 運用手順変更時 |
 | バグ根本原因記録 | `docs/bug-knowledge.md` | exists | Bug PR マージ時 |
@@ -62,5 +62,5 @@ Issue B は既存ファイルを削除しない。CLAUDE.md からは router に
 以下は C/D/E で fold/delete される。retire の度に旧ファイル名への参照を全リポ grep し、新ホームへの参照のみ残す（EPIC 共通完了条件）。
 
 - **Issue C は retire 完了**: `docs/dev-common.md` / `docs/claude-collaboration.md` / `docs/agent-instruction-guide.md` / `docs/DEV-GUARDRAILS.md` / `docs/DOC-SYNC-PLAYBOOK.md` / `docs/DOCUMENT-MAP.md` / `docs/CHANGE-CLASSIFICATION.md`（→ `docs/change-classification.md` に統合継承）を削除。`AGENTS.md` / `.cursor/rules/dev-flow.mdc` は薄い参照スタブに縮小（削除ではない、Codex/Cursor 自動読込のため存置）
-- Issue D が retire: `docs/REPOSITORY-STRUCTURE.md`
-- Issue E が retire: `docs/PURPOSE.md` / `docs/DESIGN.md` / `docs/SPECIFICATION.md`
+- **Issue D は retire 完了**: `docs/REPOSITORY-STRUCTURE.md` を削除。内容は `docs/data-contract.md`（ランタイム契約・i18n schema）/ `docs/tts-design.md`（GAS/audio・R4 pending）/ `docs/pipeline.md`（Common pipeline commands・Phase 2 workflow）/ `docs/repo-map.md`（Quick orientation・Directory tree・Runtime infrastructure・JS map）/ `docs/history.md`（Wordlist/UI behaviour snapshot）へ分割移設。`docs/PURPOSE.md` の Phase 1/2/R 完了ログ・変更履歴も `docs/history.md` へ移設（ファイル自体は D では削除しない）。
+- Issue E が retire: `docs/PURPOSE.md` / `docs/DESIGN.md` / `docs/SPECIFICATION.md`（DESIGN §3 TTS・§4 データ整備タスク、SPEC §5 データスキーマは D で内容移設済み・E では残りの日付ログ移設 + ファイル削除）
