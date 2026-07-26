@@ -1,11 +1,3 @@
----
-id: pj-2026-07-23-130f
-aliases:
-- pj-2026-07-23-130f
-title: 'Add Category F (CD modification triage) to DOCUMENT-MAP.md and enforce in CLAUDE.md / AGENTS.md (#130) — 実装レポート'
-created: '2026-07-23'
----
-
 # Add Category F (CD modification triage) to DOCUMENT-MAP.md and enforce in CLAUDE.md / AGENTS.md (#130) — 実装レポート
 
 ## 関連 Issue / PR

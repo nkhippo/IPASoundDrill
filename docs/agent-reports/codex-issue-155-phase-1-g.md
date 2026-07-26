@@ -1,11 +1,3 @@
----
-id: pj-2026-07-24-issue155
-aliases:
-- pj-2026-07-24-issue155
-title: 'Phase 1-G 多言語 CDP visibility QA (#155) — 実装レポート'
-created: '2026-07-24'
----
-
 # Phase 1-G 多言語 CDP visibility QA (#155) — 実装レポート
 
 ## 関連 Issue / PR

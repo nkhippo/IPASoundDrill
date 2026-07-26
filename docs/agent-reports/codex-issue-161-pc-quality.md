@@ -1,11 +1,3 @@
----
-id: pj-2026-07-24-issue161
-aliases:
-- pj-2026-07-24-issue161
-title: 'PC UI品質補完 Scope 1/2 (#161) — 実装レポート'
-created: '2026-07-24'
----
-
 # PC UI品質補完 Scope 1/2 (#161) — 実装レポート
 
 ## 関連 Issue / PR

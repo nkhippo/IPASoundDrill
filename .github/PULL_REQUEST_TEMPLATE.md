@@ -1,11 +1,3 @@
----
-id: pj-2026-07-21-b116
-aliases:
-- pj-2026-07-21-b116
-title: Pull Request Template
-created: '2026-07-21'
----
-
 ## 概要
 
 (1-3 行で PR の目的)

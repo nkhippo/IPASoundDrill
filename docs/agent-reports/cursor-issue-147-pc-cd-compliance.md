@@ -1,11 +1,3 @@
----
-id: pj-2026-07-23-29e3
-aliases:
-- pj-2026-07-23-29e3
-title: 'PC UI CD compliance + About SRS removal (#147) — 実装レポート'
-created: '2026-07-23'
----
-
 # PC UI CD compliance + About SRS removal (#147) — 実装レポート
 
 ## 関連 Issue / PR

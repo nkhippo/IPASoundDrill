@@ -1,11 +1,3 @@
----
-id: pj-2026-07-20-107a
-aliases:
-- pj-2026-07-20-107a
-title: 'AGENTS.md の Codex 節を Codex ネイティブ GitHub コネクタ前提に補正 (#107) — 実装レポート'
-created: '2026-07-20'
----
-
 # AGENTS.md の Codex 節を Codex ネイティブ GitHub コネクタ前提に補正 (#107) — 実装レポート
 
 ## 関連 Issue / PR

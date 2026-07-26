@@ -1,12 +1,3 @@
----
-id: pj-2026-06-24-1983
-aliases:
-- pj-2026-06-24-1983
-title: IPA Sound Drill — 実装設計仕様（DESIGN.md）
-created: '2026-06-24'
-updated: '2026-07-18'
----
-
 # IPA Sound Drill — 実装設計仕様（DESIGN.md）
 
 > `PURPOSE.md` v4.0 で確定した目的 4 カード構成を、Cursor が実装に落とせる粒度まで具体化した仕様。
@@ -179,8 +170,8 @@ updated: '2026-07-18'
 
 Phase 1 UI（Mood B / Warm Contemporary）の視覚トークンは `:root` に定義し、既存画面は `--legacy-*` 経由で見た目を維持する。トークンの具体値・コンポーネント CSS・`:root` コピペ用ブロックは本節に書かず、以下を正とする。
 
-1. 実装用 snapshot: [[pj-2026-07-19-a17e|docs/design/phase-1/visual-tokens.md]]（色・space・radius・shadow + **Font family** + コンポーネント）
-2. CSS 命名・legacy 運用（Category A）: [[pj-2026-07-19-c55c|docs/CSS-CONVENTIONS.md]]
+1. 実装用 snapshot: docs/design/phase-1/visual-tokens.md（色・space・radius・shadow + **Font family** + コンポーネント）
+2. CSS 命名・legacy 運用（Category A）: docs/CSS-CONVENTIONS.md
 3. 意匠判断の背景（Vault source of truth）: `30_projects/IPASoundDrill/design/phase-1/design-tokens.md`
 
 ---

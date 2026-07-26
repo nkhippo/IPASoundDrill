@@ -1,11 +1,3 @@
----
-id: pj-2026-07-15-2d16
-aliases:
-- pj-2026-07-15-2d16
-title: 'Pre-Issue Recon: データ ↔ UI ↔ GAS の「中途半端」棚卸し'
-created: '2026-07-15'
----
-
 # Pre-Issue Recon: データ ↔ UI ↔ GAS の「中途半端」棚卸し
 
 | 項目 | 値 |
@@ -18,7 +10,7 @@ created: '2026-07-15'
 | 連結／弱形 | `data/connected_speech.json`（201）/ `data/weak_forms.json`（36） |
 | GAS | `gas/Code.gs` + `BatchWarm.gs` + `BatchWords.gs` |
 
-関連: [[pj-2026-07-15-8e4c|DOM]] · [[pj-2026-07-15-1b2a|functions]] · [[pj-2026-07-15-f281|i18n-css-storage]]
+関連: DOM · functions · i18n-css-storage
 
 **判定ラベル**
 

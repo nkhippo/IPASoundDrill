@@ -1,11 +1,3 @@
----
-id: pj-2026-07-19-1b-report
-aliases:
-- cursor-implementation-report-phase-1-b-top-page
-title: Phase 1-B Top page 1a — 実装レポート
-created: '2026-07-19'
----
-
 # Phase 1-B Top page (`1a`) — 実装レポート
 
 ## 関連 Issue / PR

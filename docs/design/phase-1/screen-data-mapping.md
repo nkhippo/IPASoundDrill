@@ -1,13 +1,3 @@
----
-id: pj-2026-07-18-5d4a
-aliases:
-- pj-2026-07-18-5d4a
-- screen-data-mapping
-title: Phase 1 — 画面 × データマッピング（Recon）
-created: '2026-07-18'
-updated: '2026-07-18'
----
-
 # Phase 1 — 画面 × データマッピング（Recon）
 
 > **正本（Category A）:** Phase 1-C / 1-D / 1-E 起票・実装時の判断材料。  

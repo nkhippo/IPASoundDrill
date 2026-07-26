@@ -1,11 +1,3 @@
----
-id: pj-2026-07-15-1b2a
-aliases:
-- pj-2026-07-15-1b2a
-title: 'Pre-Issue Recon: SPA 関数・状態・適応出題（UI/UX Phase 0）'
-created: '2026-07-15'
----
-
 # Pre-Issue Recon: SPA 関数・状態・適応出題（UI/UX Phase 0）
 
 | 項目 | 値 |
@@ -153,4 +145,4 @@ Connected / Mode B Study（quiz off）も checks 重み shuffle。Mode B quiz �
 - 編集正本は常に `src/index.template.html`
 - SPEC に `cefrLevels` 追記推奨
 - Quiz 経路はデッドに近い（フラグ false + Study-only pool）
-- **`refreshVocabBandUnlock()` は定義のみ・呼び出し 0**（Band 解放が死コード）。詳細は [[pj-2026-07-15-2d16|`data-ui-gas-halfbaked`]]
+- **`refreshVocabBandUnlock()` は定義のみ・呼び出し 0**（Band 解放が死コード）。詳細は `data-ui-gas-halfbaked`

@@ -1,11 +1,3 @@
----
-id: pj-2026-07-12-fae7
-aliases:
-- pj-2026-07-12-fae7
-title: DEV-GUARDRAILS — 開発デグレ防止ガードレール
-created: '2026-07-12'
----
-
 # DEV-GUARDRAILS — 開発デグレ防止ガードレール
 
 > **Last updated**: 2026-07-20（Issue #114: md5 baseline を AGENTS.md と整合）

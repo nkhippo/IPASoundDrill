@@ -1,11 +1,3 @@
----
-id: pj-2026-07-19-1d-pr2-report
-aliases:
-- cursor-implementation-report-phase-1-d-pr2-drill-2c-2d
-title: Phase 1-D-PR2 Drill 2c/2d — 実装レポート
-created: '2026-07-19'
----
-
 # Phase 1-D-PR2 (`2c` Study + `2d` Connected/Weak) — 実装レポート
 
 ## 関連 Issue / PR

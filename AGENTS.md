@@ -1,11 +1,3 @@
----
-id: pj-2026-07-20-107b
-aliases:
-- pj-2026-07-20-107b
-title: IPASoundDrill Agent Guide
-created: '2026-07-20'
----
-
 # IPASoundDrill Agent Guide
 
 このリポジトリで作業するすべての AI エージェント (Codex / Cursor / Claude Code / その他) が守るべき運用規約。実装前に必ず読み、遵守すること。

@@ -1,11 +1,3 @@
----
-id: pj-2026-07-23-b558
-aliases:
-- pj-2026-07-23-b558
-title: 'Place docs/claude-design/UPDATE-GUIDE.md (#138) — 実装レポート'
-created: '2026-07-23'
----
-
 # Place docs/claude-design/UPDATE-GUIDE.md (#138) — 実装レポート
 
 ## 関連 Issue / PR

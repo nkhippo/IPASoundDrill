@@ -1,11 +1,3 @@
----
-id: pj-2026-07-19-1d-pr1-report
-aliases:
-- cursor-implementation-report-phase-1-d-pr1-drill-2a-2b
-title: Phase 1-D-PR1 Drill 2a/2b — 実装レポート
-created: '2026-07-19'
----
-
 # Phase 1-D-PR1 (`2a` Decode + `2b` Encode) — 実装レポート
 
 ## 関連 Issue / PR

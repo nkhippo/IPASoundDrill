@@ -1,11 +1,3 @@
----
-id: pj-2026-07-12-4049
-aliases:
-- pj-2026-07-12-4049
-title: DOCUMENT-MAP — IPA Sound Drill ドキュメント運用マップ
-created: '2026-07-12'
----
-
 # DOCUMENT-MAP — IPA Sound Drill ドキュメント運用マップ
 
 > **Last updated**: 2026-07-23（Issue #130: Category F（CD 修正判定）を追加）

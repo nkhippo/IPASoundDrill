@@ -1,11 +1,3 @@
----
-id: pj-2026-07-23-56f4
-aliases:
-- pj-2026-07-23-56f4
-title: 'Update Category A-E → A-F notation (#133) — 実装レポート'
-created: '2026-07-23'
----
-
 # Update Category A-E → A-F notation (#133) — 実装レポート
 
 ## 関連 Issue / PR

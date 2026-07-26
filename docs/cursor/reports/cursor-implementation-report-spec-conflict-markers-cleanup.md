@@ -1,11 +1,3 @@
----
-id: pj-2026-07-17-71cf
-aliases:
-- pj-2026-07-17-71cf
-title: SPEC 変更履歴 conflict markers cleanup — 実装レポート
-created: '2026-07-17'
----
-
 # SPEC 変更履歴 conflict markers cleanup — 実装レポート
 
 ## 関連 Issue / PR

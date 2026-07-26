@@ -1,11 +1,3 @@
----
-id: pj-2026-07-18-phase10a
-aliases:
-- cursor-implementation-report-phase-1-0-a-docs-revision
-title: Phase 1-0-a PURPOSE/SPEC/DESIGN 先行改訂 — 実装レポート
-created: '2026-07-18'
----
-
 # Phase 1-0-a PURPOSE/SPEC/DESIGN 先行改訂 — 実装レポート
 
 ## 関連 Issue / PR

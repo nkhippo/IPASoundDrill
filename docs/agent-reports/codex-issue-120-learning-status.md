@@ -1,11 +1,3 @@
----
-id: pj-2026-07-21-c120
-aliases:
-- pj-2026-07-21-c120
-title: 'Phase 1-E PR-2: Learning status 3d (#120) — 実装レポート'
-created: '2026-07-21'
----
-
 # Phase 1-E PR-2: Learning status `3d` (#120) — 実装レポート
 
 ## 関連 Issue / PR

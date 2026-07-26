@@ -1,11 +1,3 @@
----
-id: pj-2026-07-24-b9c2
-aliases:
-- pj-2026-07-24-b9c2
-title: 'docs: font metrics PASS criteria in dev_project_common (#157) — 実装レポート'
-created: '2026-07-24'
----
-
 # docs: font metrics PASS criteria in dev_project_common (#157) — 実装レポート
 
 ## 関連 Issue / PR

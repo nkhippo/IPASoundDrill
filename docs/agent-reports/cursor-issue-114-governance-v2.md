@@ -1,11 +1,3 @@
----
-id: pj-2026-07-21-a114
-aliases:
-- pj-2026-07-21-a114
-title: 'governance v2: AGENTS.md 拡張・DOCUMENT-MAP § 4 縮約 (#114) — 実装レポート'
-created: '2026-07-21'
----
-
 # governance v2: AGENTS.md 拡張・DOCUMENT-MAP § 4 縮約 (#114) — 実装レポート
 
 ## 関連 Issue / PR

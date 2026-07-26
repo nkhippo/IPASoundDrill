@@ -1,11 +1,3 @@
----
-id: pj-2026-07-23-54ba
-aliases:
-- pj-2026-07-23-54ba
-title: 'Align all SP screens with Claude Design (#128) — 実装レポート'
-created: '2026-07-23'
----
-
 # Align all SP screens with Claude Design (#128) — 実装レポート
 
 ## 関連 Issue / PR

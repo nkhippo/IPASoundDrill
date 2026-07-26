@@ -1,13 +1,3 @@
----
-id: pj-2026-07-19-a17e
-aliases:
-- pj-2026-07-19-a17e
-- visual-tokens
-title: Phase 1 — 視覚言語トークン（実装用 snapshot）
-created: '2026-07-19'
-updated: '2026-07-19'
----
-
 # Phase 1 — 視覚言語トークン（実装用 snapshot）
 
 ## Source of Truth Notice

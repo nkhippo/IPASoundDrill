@@ -1,11 +1,3 @@
----
-id: pj-2026-07-20-1e-pr1-report
-aliases:
-- cursor-implementation-report-phase-1-e-pr1-vocab-symbol
-title: Phase 1-E PR-1 Vocab / 3c — 実装レポート
-created: '2026-07-20'
----
-
 # Phase 1-E PR-1（`3b` Vocab full-page + `3c` IPA symbol picker）— 実装レポート
 
 ## 関連 Issue / PR

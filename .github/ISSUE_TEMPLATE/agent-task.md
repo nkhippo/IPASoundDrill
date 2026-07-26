@@ -4,9 +4,6 @@ about: AI エージェント実装タスク（Codex / Cursor / Claude Code 等�
 title: ''
 labels:
 - ready-for-cursor
-id: pj-2026-07-21-c116
-aliases:
-- pj-2026-07-21-c116
 ---
 
 ## 改修分類

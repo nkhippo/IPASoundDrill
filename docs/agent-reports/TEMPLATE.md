@@ -1,11 +1,3 @@
----
-id: pj-YYYY-MM-DD-XXXX
-aliases:
-- pj-YYYY-MM-DD-XXXX
-title: '<Issue タイトル> (#<N>) — 実装レポート'
-created: 'YYYY-MM-DD'
----
-
 # <Issue タイトル> (#<N>) — 実装レポート
 
 ## 関連 Issue / PR

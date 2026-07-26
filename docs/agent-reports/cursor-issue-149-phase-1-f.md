@@ -1,11 +1,3 @@
----
-id: pj-2026-07-24-cdfe
-aliases:
-- pj-2026-07-24-cdfe
-title: 'Phase 1-F — 3g onboarding + SP guide ? (#149) — 実装レポート'
-created: '2026-07-24'
----
-
 # Phase 1-F — 3g onboarding + SP guide ? (#149) — 実装レポート
 
 ## 関連 Issue / PR
