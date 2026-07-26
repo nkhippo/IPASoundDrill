@@ -14,4 +14,4 @@
 **本番 wordlist** はリポジトリ**ルート**の `wordlist_GA_a1a2_plus_phonics.json`（`index.html` が fetch）。`data/` 内には置かない。
 
 パス正本: [`scripts/paths.py`](../scripts/paths.py)  
-フォルダ全体の地図: `docs/REPOSITORY-STRUCTURE.md`
+フォルダ全体の地図: `docs/repo-map.md`

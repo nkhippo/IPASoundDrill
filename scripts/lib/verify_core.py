@@ -1,4 +1,5 @@
 # Source: Vault-Framework/scripts/lib/verify_core.py @ 04ab894
+# IPASoundDrill adaptation: V1 relaxed (no-front-matter = normal); V4/V5 exclude docs/handoff/
 """Shared verification checks V1–V8 for migration and CI validate scripts."""
 
 from __future__ import annotations
@@ -120,20 +121,46 @@ def _read_fm(abs_path: Path) -> dict[str, Any] | None:
 
 
 def check_v1(ctx: VerifyContext, scope_files: list[Path]) -> CheckResult:
-    """V1: all markdown have valid id."""
+    """V1: markdown files that declare an id field must have a well-formed one.
+
+    IPASoundDrill uses AI-first docs with front-matter prohibited for new
+    content (docs/_conventions.md).  Many files therefore have no front-matter
+    at all, and others have functional front-matter (GitHub templates, Claude
+    agent configs) that intentionally omits the Vault id field.
+
+    Skipped silently:
+    - Files with no front-matter (normal, convention-compliant).
+    - Files with front-matter that contains no ``id`` key (functional FM for
+      other tooling — not a Vault document).
+    - Files in legacy Vault-originated directories (_LEGACY_PREFIXES) whose
+      IDs predate the canonical hex-suffix scheme.
+
+    Flagged:
+    - Files with front-matter that *declares* an ``id`` key whose value does
+      not match the canonical ID regex (genuine authoring error).
+    """
     failures: list[dict[str, Any]] = []
     total = 0
     for abs_path in scope_files:
         rel = rel_posix(ctx.repo_root, abs_path)
-        total += 1
+        if any(rel.startswith(p) for p in _LEGACY_PREFIXES):
+            continue
         fm = _read_fm(abs_path)
-        doc_id = fm.get("id") if fm else None
-        if not doc_id or not ID_RE.match(str(doc_id)):
+        if fm is None:
+            # No front-matter: normal for this repo — skip
+            continue
+        doc_id = fm.get("id")
+        if doc_id is None:
+            # Front-matter present but no id key: functional FM (templates,
+            # agent configs, design briefs) — not a Vault doc, skip
+            continue
+        total += 1
+        if not ID_RE.match(str(doc_id)):
             failures.append(
                 {
                     "file": rel,
                     "line": 1,
-                    "detail": f"missing or invalid id: {doc_id!r}",
+                    "detail": f"invalid id: {doc_id!r}",
                 }
             )
     return CheckResult(
@@ -192,12 +219,29 @@ def check_v3(ctx: VerifyContext) -> CheckResult:
     return CheckResult("V3", "PASS" if not failures else "FAIL", total, failures)
 
 
+# Directories containing legacy Vault-originated docs that predate the
+# IPASoundDrill ID scheme / convention rules.  Excluded from checks that
+# validate Vault metadata fields (V1, V4, V5).
+_LEGACY_PREFIXES: tuple[str, ...] = (
+    "docs/handoff/",
+    "docs/design/",
+    "docs/logs/",
+    "docs/vault-history/",
+)
+
+
 def check_v4(ctx: VerifyContext, scope_files: list[Path]) -> CheckResult:
-    """V4: *_id / *_ids values match ID regex."""
+    """V4: *_id / *_ids values match ID regex.
+
+    Files in _LEGACY_PREFIXES are excluded: they contain legacy Vault-style
+    metadata fields (e.g. source_chat_log_id) that predate the ID scheme.
+    """
     failures: list[dict[str, Any]] = []
     total = 0
     for abs_path in scope_files:
         rel = rel_posix(ctx.repo_root, abs_path)
+        if any(rel.startswith(p) for p in _LEGACY_PREFIXES):
+            continue
         fm = _read_fm(abs_path)
         if not fm:
             continue
@@ -223,12 +267,18 @@ def check_v4(ctx: VerifyContext, scope_files: list[Path]) -> CheckResult:
 
 
 def check_v5(ctx: VerifyContext) -> CheckResult:
-    """V5: *_id / *_ids references exist in index (full repo)."""
+    """V5: *_id / *_ids references exist in index (full repo).
+
+    Files in _LEGACY_PREFIXES are excluded: they contain legacy Vault-style
+    metadata fields (e.g. source_chat_log_id) that predate the ID scheme.
+    """
     known = set(ctx.index.values())
     failures: list[dict[str, Any]] = []
     total = 0
     for abs_path in iter_markdown_files(ctx.repo_root):
         rel = rel_posix(ctx.repo_root, abs_path)
+        if any(rel.startswith(p) for p in _LEGACY_PREFIXES):
+            continue
         fm = _read_fm(abs_path)
         if not fm:
             continue

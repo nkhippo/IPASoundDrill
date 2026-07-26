@@ -23,8 +23,8 @@ Issue 本文で `docs/claude-design/sp.dc.html` のように指定し、セク�
 
 ## 関連ドキュメント
 
-- **CD 更新指示書の作成ガイド**: [`UPDATE-GUIDE.md`](./UPDATE-GUIDE.md) — CD 更新が必要になった時の指示書作成ルール、Claude Design セッション運用ルール、多言語対応方針を定義
-- **意図的乖離の記録**: [`DIVERGENCE.md`](./DIVERGENCE.md) — Category F「B. 意図的乖離」および CD 準拠スコープ外の一覧。解消時は行削除
+- **CD 更新指示書の作成ガイド**: `docs/claude-design/UPDATE-GUIDE.md` — CD 更新が必要になった時の指示書作成ルール、Claude Design セッション運用ルール、多言語対応方針を定義
+- **意図的乖離の記録**: `docs/claude-design/DIVERGENCE.md` — Category F「B. 意図的乖離」および CD 準拠スコープ外の一覧。解消時は行削除
 
 ## 運用ルール
 
