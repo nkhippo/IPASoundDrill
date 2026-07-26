@@ -31,6 +31,6 @@ ID 横断の共通シェル（トップバー・Footer・Modals）・セッシ�
 - プロダクトの目的・ポジショニング（WHY）は `docs/product.md`
 - データスキーマ・ランタイム契約（JSON フィールド・localStorage・i18n）は `docs/data-contract.md`
 - TTS 設計は `docs/tts-design.md`、パイプラインコマンドは `docs/pipeline.md`
-- ソースシンボルとの対応（impact-ledger）は Issue F 完了後に `docs/impact-ledger.json` へ
+- ソースシンボルとの対応（impact-ledger）は `docs/impact-ledger.json`（EPIC #169 完了済み）
 
 **衝突時の優先順位**: `docs/product.md` → `docs/features/<id>.md` → `docs/data-contract.md`。

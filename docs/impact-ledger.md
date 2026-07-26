@@ -28,15 +28,15 @@ Issue F（#174, EPIC #169）で確立。旧 `docs/repo-map.md`「src/index.templ
 | `caller_areas` | string[] | この関数を呼び出しているコードが属するエリア一覧（`infra` を含む 13 エリア語彙。§3） |
 | `depends_on` | string[] | この関数の本体内で呼び出している**他の台帳登録シンボル**（ベストエフォートの前方依存。コールバック参照渡し等は捕捉できない場合がある） |
 
-例（`docs/impact-ledger.json` より）:
+例（`docs/impact-ledger.json` より — `scope=shared`、`caller_areas` 2 エリアの典型例）:
 
 ```json
 {
-  "symbol": "activeIpa",
-  "line": 2229,
-  "feature_ids": ["2a", "2b", "2c", "2d", "reveal"],
+  "symbol": "vocabSkeletonHtml",
+  "line": 1789,
+  "feature_ids": ["3b", "3c"],
   "scope": "shared",
-  "caller_areas": ["decode", "encode", "study", "connected", "reveal"],
+  "caller_areas": ["vocab", "picker"],
   "depends_on": []
 }
 ```

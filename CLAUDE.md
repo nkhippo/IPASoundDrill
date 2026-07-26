@@ -35,7 +35,7 @@
 | 実装 | 原則 Codex/Cursor が非同期(PR)。**情報伝達漏れが起きやすい大規模ドキュメント/デザイン反映は ClaudeCode 同一セッション** | Issue を読んで実装・PR |
 | PM・最終 merge | Naoya | 壁打ち + halt 質問への回答 + 最終 merge のみ |
 
-エージェント委譲・レビュー・auto-merge の詳細は `docs/workflow.md`(Issue C で作成)。
+エージェント委譲・レビュー・auto-merge の詳細は `docs/workflow.md`。
 
 ## halt プロトコル
 
@@ -63,7 +63,7 @@ halt 経路: 同一セッション ClaudeCode → その場で Naoya に質問 /
 | ドキュメント整備 | `docs/doc-map.md`、`docs/_conventions.md`、`docs/guardrails.md`(doc-sync) |
 | リポ構造 / インフラ変更 | `docs/repo-map.md` |
 
-> 上表のホームの一部は AI-first 再編(EPIC #169)で順次作成中。各概念の現ホームと status は `docs/doc-map.md` を参照。
+> 上表の各ホームは AI-first 再編（EPIC #169）で確立済み。各概念の現ホームと status は `docs/doc-map.md` を参照。
 
 ---
 
