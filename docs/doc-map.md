@@ -16,13 +16,13 @@ Issue B は既存ファイルを削除しない。CLAUDE.md からは router に
 | 旧 CLAUDE.md ブロック | 移設先ホーム | status |
 |---|---|---|
 | ポジショニング / タグライン | `docs/product.md` | planned(E) |
-| 開発体制 / 開発フロー 4-step / Issue タイプ・分割 / Issue 起票ルール（署名・ラベル・参照明示）/ Branch 戦略詳細 / AI 履歴置き場 / Bug 対応ループ / Claude への指示（返答末尾テンプレ等）/ Cursor への指示 / Issue 背景セクションの書き方 / ルール変更セルフチェック手順 | `docs/workflow.md` | planned(C) |
-| 品質基準 1（仕様書品質）/ 2（Cursor 指示書品質） | `docs/guardrails.md` | planned(C) |
-| 改修分類ブロック仕様（Level×Pattern） | `docs/change-classification.md` | planned(C) |
+| 開発体制 / 開発フロー 4-step / Issue タイプ・分割 / Issue 起票ルール（署名・ラベル・参照明示）/ Branch 戦略詳細 / AI 履歴置き場 / Bug 対応ループ / Claude への指示（返答末尾テンプレ等）/ Cursor への指示 / Issue 背景セクションの書き方 / ルール変更セルフチェック手順 | `docs/workflow.md` | exists |
+| 品質基準 1（仕様書品質）/ 2（Cursor 指示書品質） | `docs/guardrails.md` | exists |
+| 改修分類ブロック仕様（Level×Pattern） | `docs/change-classification.md` | exists |
 | 技術スタック / ファイル構成ツリー | `docs/repo-map.md` | planned(D) |
 | 品質基準 3（データ整合性）/ 4（ランタイム契約 8 パス）/ 5（多言語 UI） | `docs/data-contract.md` | planned(D) |
 
-> ※ ホーム作成まで、`CLAUDE.md` router には上記のうち **Issue 起票要点 / ラベル / レビュー・merge / ランタイム契約 8 パス**の**要点のみ**残置し、これを運用の正本とする。C/D で詳細を各ホームへ移設後、router 側は要点＋ポインタに縮小する。
+> ※ Issue C 完了により `workflow.md` / `guardrails.md` / `change-classification.md` が正本化。`CLAUDE.md` router 側は「Issue 起票要点 / レビュー・merge / ランタイム契約 8 パス」の要点＋ポインタのみを残す（詳細は各ホーム参照）。D で `data-contract.md` / `repo-map.md` が出来るまで、ランタイム契約 8 パスと技術スタック/ファイル構成の詳細は router に暫定残置する。
 
 ---
 
@@ -44,10 +44,10 @@ Issue B は既存ファイルを削除しない。CLAUDE.md からは router に
 | TTS プロンプト設計 | `docs/tts-design.md` | planned(D) | TTS 改修時 |
 | Python パイプラインコマンド | `docs/pipeline.md` | planned(D) | パイプライン変更時 |
 | ディレクトリツリー + インフラ | `docs/repo-map.md` | planned(D) | ディレクトリ・インフラ変更時 |
-| executor 対応フロー / Issue 起票ルール / レビュー・auto-merge / 返答末尾テンプレ | `docs/workflow.md` | planned(C) | 運用フロー変更時 |
-| Level×Pattern 分類体系 | `docs/change-classification.md` | planned(C) | 分類体系変更時 |
-| md5 検証(L3)/ 自己判断禁止 / doc-sync / impact-analysis halt / 仕様・指示書品質基準 | `docs/guardrails.md` | planned(C) | ガードレール変更時 |
-| CD(Claude Design)修正判定 | `docs/guardrails.md`(判定) + `docs/claude-design/` | planned(C) | UI 改修運用変更時 |
+| executor 対応フロー / Issue 起票ルール / レビュー・auto-merge / 返答末尾テンプレ | `docs/workflow.md` | exists | 運用フロー変更時 |
+| Level×Pattern 分類体系 | `docs/change-classification.md` | exists | 分類体系変更時 |
+| md5 検証(L3)/ 自己判断禁止 / doc-sync / impact-analysis halt / 仕様・指示書品質基準 | `docs/guardrails.md` | exists | ガードレール変更時 |
+| CD(Claude Design)修正判定 | `docs/guardrails.md`(判定) + `docs/claude-design/` | exists | UI 改修運用変更時 |
 | 日付ログ（Phase 完了等の dated 記録） | `docs/history.md` | planned(D) | 各 Phase 完了時 |
 | ローンチ Phase 進捗 | `docs/LAUNCH-CHECKLIST.md` | exists | Phase 進捗・Issue 起票/完了時 |
 | 運用手順（Vercel/GAS/DNS/Analytics） | `docs/OPERATIONS.md` | exists | 運用手順変更時 |
@@ -61,6 +61,6 @@ Issue B は既存ファイルを削除しない。CLAUDE.md からは router に
 
 以下は C/D/E で fold/delete される。retire の度に旧ファイル名への参照を全リポ grep し、新ホームへの参照のみ残す（EPIC 共通完了条件）。
 
-- Issue C が retire: `AGENTS.md` / `.cursor/rules/dev-flow.mdc` / `docs/dev-common.md` / `docs/claude-collaboration.md` / `docs/agent-instruction-guide.md` / `docs/DEV-GUARDRAILS.md` / `docs/DOC-SYNC-PLAYBOOK.md` / `docs/DOCUMENT-MAP.md` / `docs/CHANGE-CLASSIFICATION.md`
+- **Issue C は retire 完了**: `docs/dev-common.md` / `docs/claude-collaboration.md` / `docs/agent-instruction-guide.md` / `docs/DEV-GUARDRAILS.md` / `docs/DOC-SYNC-PLAYBOOK.md` / `docs/DOCUMENT-MAP.md` / `docs/CHANGE-CLASSIFICATION.md`（→ `docs/change-classification.md` に統合継承）を削除。`AGENTS.md` / `.cursor/rules/dev-flow.mdc` は薄い参照スタブに縮小（削除ではない、Codex/Cursor 自動読込のため存置）
 - Issue D が retire: `docs/REPOSITORY-STRUCTURE.md`
 - Issue E が retire: `docs/PURPOSE.md` / `docs/DESIGN.md` / `docs/SPECIFICATION.md`

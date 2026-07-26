@@ -160,7 +160,7 @@ Claude は CD 更新指示書作成前に、以下を実施:
 
 ## 8. Issue 起票ルールとの連携
 
-このガイドと連動する Issue 起票ルール(`docs/DOCUMENT-MAP.md` の Category F)により、**UI 改修 Issue 起票の前段で必ず CD 状態が判定される**運用が確立している。Category F の詳細は `docs/DOCUMENT-MAP.md` を参照。
+このガイドと連動する Issue 起票ルール(`docs/guardrails.md` § CD 修正判定)により、**UI 改修 Issue 起票の前段で必ず CD 状態が判定される**運用が確立している。判定基準の詳細は `docs/guardrails.md` を参照。
 
 ---
 
@@ -169,5 +169,5 @@ Claude は CD 更新指示書作成前に、以下を実施:
 - CD ファイル本体: `docs/claude-design/{sp,pc,design-system}.dc.html`
 - Repo 配置ルール: `docs/claude-design/README.md`
 - 更新履歴: `docs/claude-design/update-log.md`
-- Issue 起票ルール: `docs/DOCUMENT-MAP.md`(Category F)
+- Issue 起票ルール: `docs/guardrails.md`(CD 修正判定)
 - CD 参照運用ルール: `CLAUDE.md` / `AGENTS.md`

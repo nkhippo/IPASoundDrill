@@ -28,11 +28,10 @@ tools: Bash, Read, Grep, Glob, TodoWrite
 - 編集・コミット・push・マージをしない。URL を推測で生成しない。
 
 ## ブートストラップ（毎回・最新を読む）
-1. `CLAUDE.md`（router）+ `doc-map.md`（ドキュメント地図。無ければ `docs/DOCUMENT-MAP.md`）。
+1. `CLAUDE.md`（router）+ `docs/doc-map.md`（ドキュメント地図）。
 2. 設計トレースチェーン: `product.md` → `docs/features/<id>.md` → `DESIGN.md` / `SPECIFICATION.md`
    → source（`src/index.template.html`）→ `impact-ledger.json`（それぞれ現存するもの）。
-3. governance 群: `workflow.md` / `guardrails.md` / `change-classification.md`
-   （再編前は `dev-common.md` / `DEV-GUARDRAILS.md` / `CHANGE-CLASSIFICATION.md` / `AGENTS.md`）。
+3. governance 群: `docs/workflow.md` / `docs/guardrails.md` / `docs/change-classification.md`（`AGENTS.md` は薄い参照スタブ）。
 
 ## 監査観点
 1. **設計トレース整合**: product / features/<id> ↔ DESIGN / SPEC ↔ source ↔ impact-ledger が
