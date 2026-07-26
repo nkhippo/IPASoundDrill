@@ -90,6 +90,19 @@
 - `data/README.md`（1 箇所）・`data/batches/README.md`（1 箇所）の `docs/REPOSITORY-STRUCTURE.md` 参照が未更新のまま残存（開発ゾーン制約により本 PR では対応せず）。実害は軽微（人間/AI 向けドキュメントの pointer が旧ファイル名を指すのみ、404 リンクではなく単なる古い記述）だが、次回 data/** touch 時に修正推奨。
 - i18n leaf 数の実データとの乖離（246 表記 vs 実測 254）は本 Issue の非対象範囲として未修正。将来の doc-sync/データ監査 Issue での解消を推奨。
 
+## pr-reviewer レビュー対応（追記・PR #180）
+
+pr-reviewer の契約検証（総合判定 PASS、観点d に軽微な不足の注記あり）を受け、以下 4 件の運用メモを `docs/repo-map.md` に復元した（`git show main~1:docs/REPOSITORY-STRUCTURE.md` の削除前版から該当行を確認のうえ移設）:
+
+1. Middleware 行に「C1 fallback 時は不使用」を復元（`docs/repo-map.md` §Runtime infrastructure）
+2. MCP server 行に旧 Railway 構成（`nkhippo/ipasounddrill-mcp`、Phase F まで存置=deprecated）の記述を復元（同上）
+3. Cursor Automation 行に「Cloud Agent: 見送り中（`resource_exhausted`）」を復元（同上）
+4. Track B スコープに「本ファイルの動的セクション自動生成（Issue K2）」バックログ項目を復元（同上 §Track A / B スコープ）。ただし原文の `REPOSITORY-STRUCTURE.md` という固有ファイル名は本 Issue で当該ファイルを retire 済みのため、参照先を `docs/repo-map.md`（後継ファイル）に更新し、Issue #172 での retire に伴う参照更新である旨を注記した（内容の骨子＝「インフラ索引ドキュメントの動的セクション自動生成」は変更していない）
+
+**one-home 確認**: (1)(3) は他ファイルに同内容の記載なし。(2)(4) は `docs/OPERATIONS.md`（Railway 詳細）・`docs/LAUNCH-CHECKLIST.md`（`resource_exhausted` 詳細）に、より詳細な記述が既存する（旧 `docs/REPOSITORY-STRUCTURE.md` の時点から存在した索引サマリ行 + 専門ドキュメントでの詳細、という元々の構成であり、本修正が新たに重複を生んだものではないことを `git show main~1` で確認済み）。
+
+対応コミット・push 後、PR #180 に結果コメントを投稿。
+
 ## Complexity Retrospective (完了時点検)
 
 ### 事前分類 vs 実際

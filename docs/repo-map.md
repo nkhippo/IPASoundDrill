@@ -122,12 +122,12 @@ ipasounddrill/
 | TLS | Vercel + Let's Encrypt | 90-day auto-renewal, `.app` = HSTS preload (forced HTTPS) |
 | TTS proxy | Google Apps Script | `gas/Code.gs` deployment, `GAS_TTS_URL` in `src/index.template.html` |
 | Build system | Node.js | `scripts/build-i18n-html.js`（6 言語 HTML 生成） |
-| Middleware | Vercel Routing Middleware | `middleware.ts`（Accept-Language 判定） |
+| Middleware | Vercel Routing Middleware | `middleware.ts`（Accept-Language 判定、C1 fallback 時は不使用） |
 | Vercel Build Command | `node scripts/build-i18n-html.js` | `vercel.json` / Dashboard Build & Development Settings |
 | i18n parity CI | GitHub Actions `validate-i18n` | `python3 tools/validate_i18n.py` で UI key parity / residual CJK kana / placeholders / JSON format / `_html` validity を検証 |
-| MCP server | Cloudflare Workers | Worker: `githubapp-mcp`（unified）, Endpoint: `https://githubapp-mcp.nkhippo.workers.dev/sse`, Connector: `GitHubApp MCP`（shared PAT で全個人アプリ到達、本リポは対象リポの一つ） |
+| MCP server | Cloudflare Workers | Worker: `githubapp-mcp`（unified）, Endpoint: `https://githubapp-mcp.nkhippo.workers.dev/sse`, Connector: `GitHubApp MCP`（shared PAT で全個人アプリ到達、本リポは対象リポの一つ）。旧: Railway `nkhippo/ipasounddrill-mcp`（`https://ipasounddrill-production.up.railway.app/mcp`, Connector `IPASoundDrill GitHub`）は Phase F まで存置=deprecated |
 | GitHub Automation | GitHub Actions | Workflows: `trigger-cursor-on-ready.yml`, `approval.yml`, `label-pr-needs-review.yml` |
-| Cursor Automation | Cursor Cloud | Webhook: active |
+| Cursor Automation | Cursor Cloud | Webhook: active, Cloud Agent: 見送り中（`resource_exhausted`） |
 | Secrets | GitHub repo | `CURSOR_AUTOMATION_WEBHOOK_URL`, `CURSOR_AUTOMATION_WEBHOOK_TOKEN` |
 | Branch Protection | GitHub Rulesets | `main`: PR 必須 + force push 禁止 |
 | Analytics | Vercel Web Analytics | Dashboard > Analytics タブ（有効化済み） |
@@ -151,6 +151,7 @@ ipasounddrill/
   - Playwright + Visual Regression Test
   - develop-first ブランチ運用への切替
   - Storybook 導入
+  - 本ファイル（`docs/repo-map.md`）の動的セクション自動生成（Issue K2。旧 `docs/REPOSITORY-STRUCTURE.md` 時代からのバックログ項目、Issue #172 でファイル retire に伴い参照先を更新）
 
 Track A 期間中に Track B スコープの提案が出たら、`track-b` ラベルで別 Issue 化する。
 
