@@ -7,7 +7,7 @@
 
 1. **front-matter 禁止・`[[wikilink]]` 禁止**。リンクはプレーンな相対パス（`docs/features/2a.md#採点` 形式）のみ。
 2. **機械優先**: 散文より表・key-value を使う。**one fact, one home**（1 事実は 1 ファイルにのみ書く。他所からはリンクし、コピーしない）。
-3. **evergreen と dated を分離**: 仕様ドキュメント内に「Phase X 完了」等の日付ログを置かない → `docs/history.md` へ（history.md は Issue D で作成予定。それまでは各ファイル末尾の変更履歴に暫定記載）。
+3. **evergreen と dated を分離**: 仕様ドキュメント内に「Phase X 完了」等の日付ログを置かない → `docs/history.md`（EPIC #169 完了済み）へ。
 4. **全仕様を安定 feature ID に紐づける**（下記レジストリ）。
 5. **1 ドキュメントのソフト行数上限**（目安: 仕様系 ~250L、ガバナンス系 ~200L、router ~150L）。超過は分割の C7 トリガー（月次レビューで強制）。
 6. **言語**: 散文は日本語、ID・シンボル・パスは ASCII。見出しは安定アンカーとして機能させ `file.md#見出し` で参照する。
@@ -31,4 +31,4 @@
 | `reveal` | 解答 | reveal | `#reveal` |
 | `summary` | サマリー | summary | `#summary` |
 
-> 各 ID の詳細仕様は `docs/features/<id>.md`（Issue E で作成）に置く。レジストリ索引は `docs/features/README.md`。
+> 各 ID の詳細仕様は `docs/features/<id>.md`（EPIC #169 完了済み）に置く。レジストリ索引は `docs/features/README.md`。

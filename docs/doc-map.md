@@ -1,9 +1,9 @@
 # doc-map.md — 概念 → ホーム レジストリ（single-source 索引）
 
 「どの概念がどのファイルに属すか」の唯一の索引。1 事実 1 ホーム（`docs/_conventions.md` 規約 2）を強制する。
-AI-first 再編（EPIC #169）進行中のため、未作成ホームは `status=planned(Issue)` で前方参照を追跡する。
+AI-first 再編（EPIC #169）は完了済み。全ホームが `status=exists` で確立されている。
 
-status 凡例: `exists` = 現存 / `planned(X)` = Issue X で作成予定（それまで詳細は git 履歴＋当該 Issue の対応表を正本とする）。
+status 凡例: `exists` = 現存。
 
 **衝突時の優先順位（正本）**: `docs/product.md`（WHY）→ `docs/features/<id>.md`（WHAT）→ `docs/data-contract.md`（データスキーマ）。
 旧「PURPOSE → DESIGN → SPEC → REPO」の優先順位ルールは Issue E（#173）で本ルールに置換された（旧 3 文書は削除済み）。
@@ -58,12 +58,13 @@ Issue B は既存ファイルを削除しない。CLAUDE.md からは router に
 | バグ根本原因記録 | `docs/bug-knowledge.md` | exists | Bug PR マージ時 |
 | data/ 配下の役割分担 | `data/README.md` | exists | data/ 役割変更時 |
 | エージェント定義（issue-handler / pr-reviewer / consistency-auditor） | `.claude/agents/*.md` | exists | エージェント仕様変更時 |
+| CSS 変数命名・`--legacy-*` 運用・Track A CSS 技術制約（開発ゾーン） | `docs/CSS-CONVENTIONS.md` | exists | CSS 規約変更時 |
 
 ---
 
-## 3. 旧ドキュメントの retire 予定（後続 Issue が実行）
+## 3. 旧ドキュメントの retire 完了記録（EPIC #169 全 Issue 実行済み）
 
-以下は C/D/E で fold/delete される。retire の度に旧ファイル名への参照を全リポ grep し、新ホームへの参照のみ残す（EPIC 共通完了条件）。
+以下は C/D/E で fold/delete された。retire の度に旧ファイル名への参照を全リポ grep し、新ホームへの参照のみ残した（EPIC 共通完了条件）。
 
 - **Issue C は retire 完了**: `docs/dev-common.md` / `docs/claude-collaboration.md` / `docs/agent-instruction-guide.md` / `docs/DEV-GUARDRAILS.md` / `docs/DOC-SYNC-PLAYBOOK.md` / `docs/DOCUMENT-MAP.md` / `docs/CHANGE-CLASSIFICATION.md`（→ `docs/change-classification.md` に統合継承）を削除。`AGENTS.md` / `.cursor/rules/dev-flow.mdc` は薄い参照スタブに縮小（削除ではない、Codex/Cursor 自動読込のため存置）
 - **Issue D は retire 完了**: `docs/REPOSITORY-STRUCTURE.md` を削除。内容は `docs/data-contract.md`（ランタイム契約・i18n schema）/ `docs/tts-design.md`（GAS/audio・R4 pending）/ `docs/pipeline.md`（Common pipeline commands・Phase 2 workflow）/ `docs/repo-map.md`（Quick orientation・Directory tree・Runtime infrastructure・JS map）/ `docs/history.md`（Wordlist/UI behaviour snapshot）へ分割移設。`docs/PURPOSE.md` の Phase 1/2/R 完了ログ・変更履歴も `docs/history.md` へ移設（ファイル自体は D では削除しない）。
