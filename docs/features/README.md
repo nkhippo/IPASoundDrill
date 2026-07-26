@@ -9,20 +9,20 @@
 
 | ID | ファイル | 名称 | 主 DOM |
 |----|----------|------|--------|
-| `1a` | [`1a.md`](1a.md) | トップページ | (top) |
-| `2a` | [`2a.md`](2a.md) | 音の発音を確かめる | `#cardDecode` |
-| `2b` | [`2b.md`](2b.md) | 発音から書いてみる | `#cardEncode` |
-| `2c` | [`2c.md`](2c.md) | 音から単語を覚える | `#cardModeBStudy` |
-| `2d` | [`2d.md`](2d.md) | 連結する音に慣れる | `#cardDecode`（`tab=connected`） |
-| `3a` | [`3a.md`](3a.md) | 学習プロフィール | `#setup` |
-| `3b` | [`3b.md`](3b.md) | 語彙ブラウザ | `#vocabPage` |
-| `3c` | [`3c.md`](3c.md) | IPA 記号ピッカー | `#symbolPickerPage` |
-| `3d` | [`3d.md`](3d.md) | 学習状況 | `#learningStatusPage` |
-| `3h` | [`3h.md`](3h.md) | このアプリについて | `#aboutBlock` |
-| `reveal` | [`reveal.md`](reveal.md) | 解答 | `#reveal` |
-| `summary` | [`summary.md`](summary.md) | サマリー | `#summary` |
+| `1a` | `docs/features/1a.md` | トップページ | (top) |
+| `2a` | `docs/features/2a.md` | 音の発音を確かめる | `#cardDecode` |
+| `2b` | `docs/features/2b.md` | 発音から書いてみる | `#cardEncode` |
+| `2c` | `docs/features/2c.md` | 音から単語を覚える | `#cardModeBStudy` |
+| `2d` | `docs/features/2d.md` | 連結する音に慣れる | `#cardDecode`（`tab=connected`） |
+| `3a` | `docs/features/3a.md` | 学習プロフィール | `#setup` |
+| `3b` | `docs/features/3b.md` | 語彙ブラウザ | `#vocabPage` |
+| `3c` | `docs/features/3c.md` | IPA 記号ピッカー | `#symbolPickerPage` |
+| `3d` | `docs/features/3d.md` | 学習状況 | `#learningStatusPage` |
+| `3h` | `docs/features/3h.md` | このアプリについて | `#aboutBlock` |
+| `reveal` | `docs/features/reveal.md` | 解答 | `#reveal` |
+| `summary` | `docs/features/summary.md` | サマリー | `#summary` |
 
-ID 横断の共通シェル（トップバー・Footer・Modals）・セッションフロー・適応出題・視覚言語トークンは [`_common.md`](_common.md)。
+ID 横断の共通シェル（トップバー・Footer・Modals）・セッションフロー・適応出題・視覚言語トークンは `docs/features/_common.md`。
 
 ---
 

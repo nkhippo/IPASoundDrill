@@ -201,6 +201,15 @@ PURPOSE.md / DESIGN.md / SPECIFICATION.md の全 § を移設先ごとに整理�
 - SPEC §6 の「`phonemes/*.json` の `t:1` フラグ」記述（軽微な技術的事実）が新ドキュメント体系のどこにも明記されていない。次に `i18n/phonemes/*.json` を触る Issue で `docs/data-contract.md` §5 への追記を推奨する。
 - `docs/history.md` の行数超過（291L、目安 250L 超）を認識した上で、成長し続ける日付ログの性質上、本 Issue では分割せず据え置いた。月次レビューで肥大化が問題化した場合、年次アーカイブ分割を検討。
 
+## pr-reviewer レビュー対応（追記・PR #181）
+
+pr-reviewer の契約検証（総合判定 PASS）で「要修正推奨」として指摘された CI `validate-markdown-refs` の V7 チェック新規 FAIL 13 件（`docs/features/README.md:12–25`）に対応した。
+
+- **原因**: `docs/features/README.md` の ID 索引テーブルと `_common.md` への導線で `[1a.md](1a.md)` 形式の Markdown ハイパーリンク構文を使用していた。`scripts/lib/verify_core.py` の V7 チェック（`check_v7`）は `[text](*.md)` 形式のリンクを、パスの正しさに関わらず「unrewritten path ref」として一律 FAIL 扱いする（旧 Vault-Framework の wikilink 移行チェックの名残）。`docs/_conventions.md` 規約1 は元々 `[[wikilink]]` を禁止し「リンクはプレーンな相対パス（`docs/features/2a.md#見出し` 形式）のみ」を求めており、本 Issue の他の新規ファイル（`product.md`・`_common.md`・各 `features/<id>.md` 本文）はすべてこの規約どおりバッククォート付きプレーンパス表記（例: `` `docs/data-contract.md` §2 ``）を使っていたが、`features/README.md` の索引テーブルのみ誤って Markdown リンク構文を使っていた。
+- **修正**: `docs/features/README.md` の ID 索引テーブル 12 行 + `_common.md` への導線 1 箇所、計 13 箇所を `[1a.md](1a.md)` → `` `docs/features/1a.md` ``（バッククォート付きリポジトリルート相対パス、ハイパーリンク構文なし）に書き換えた。アンカー（`#見出し`）は、各行が指す対象が「ファイル全体」であり特定見出しへの参照ではないため付与していない（他の新規ファイルでの参照スタイルと統一）。
+- **検証**: `python3 scripts/validate/validate-markdown-refs.py --full-scan --broken-refs migration/broken-refs.csv` を実行し、V7 の FAIL が 15 件 → 2 件（`docs/claude-design/README.md:26–27`、本 PR で一切変更していない既存ファイル。`git log -1 -- docs/claude-design/README.md` で本 PR 由来でないことを確認済み）に減少したことを確認。さらに実際の CI と同条件の PR モード（`--changed-files <このブランチの変更 .md 一覧> --broken-refs migration/broken-refs.csv`）でも `V7: PASS (total=0, failures=0)` を確認した。V1（frontmatter id 欠落、Issue A のフロントマター全廃止に起因する repo 全体の pre-existing FAIL）・V5（`docs/handoff/` 配下、本 PR の変更ファイルに含まれない full-repo チェック）は変更前と変わらず残存するが、いずれも本 PR 由来ではなく、pr-reviewer の指摘どおり別件として対応不要と判断した。
+- **スコープ**: `docs/features/README.md` のみ変更。他の features 本体・開発ゾーンには触れていない。
+
 ## Complexity Retrospective (完了時点検)
 
 ### 事前分類 vs 実際
