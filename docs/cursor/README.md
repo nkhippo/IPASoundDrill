@@ -15,12 +15,12 @@ AI エージェント向けの**作業指示・実装レポート・設計相談
 
 | 正本 | 内容 |
 |------|------|
-| `../REPOSITORY-STRUCTURE.md` | **最初に読む** — フォルダマップ・パイプライン・ランタイム契約 |
+| `../repo-map.md` | **最初に読む** — フォルダマップ。パイプラインは `../pipeline.md`、ランタイム契約は `../data-contract.md` |
 | `../PURPOSE.md` | 目的・2モード・評価方針 |
 | `../DESIGN.md` | 実装設計（SRS・TTS・データ整備） |
 | `../SPECIFICATION.md` | 画面・JSON フィールド・localStorage |
 
-**注意:** 古いレポート内のパス・語数は当時のスナップショット。現行の数値・パスは `../REPOSITORY-STRUCTURE.md` を正とする。
+**注意:** 古いレポート内のパス・語数は当時のスナップショット。現行の数値・パスは `../repo-map.md` / `../data-contract.md` / `../history.md` を正とする。
 
 ## 直近の主要タスク（2026-07-10）
 
@@ -38,7 +38,7 @@ AI エージェント向けの**作業指示・実装レポート・設計相談
 
 ## Claude への推奨読み順
 
-1. `docs/REPOSITORY-STRUCTURE.md` — どこに何があるか
+1. `docs/repo-map.md` — どこに何があるか
 2. `docs/PURPOSE.md` — なぜそう作るか（本丸 vs サブテーマ）
 3. タスクに応じて `DESIGN.md` または `SPECIFICATION.md`
 4. 類似の過去タスクがあれば `instructions/` + `reports/` の該当ペア

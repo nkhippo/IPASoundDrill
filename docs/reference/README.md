@@ -3,7 +3,7 @@
 > **Purpose:** Quick map of stable reference material in `docs/reference/`.  
 > **Last updated:** 2026-07-10
 
-Use this folder when sharing context with Claude **in addition to** `../REPOSITORY-STRUCTURE.md` and the consultation brief you are working on.
+Use this folder when sharing context with Claude **in addition to** `../repo-map.md` and the consultation brief you are working on.
 
 **このフォルダに置くもの:** 監査レポート・意思決定記録・運用ガイド（人間が読む説明文書）  
 **置かないもの:** パイプライン中間 JSON → [`../../data/pipeline/`](../../data/pipeline/)（例: R4 作業リスト）
@@ -17,7 +17,7 @@ Use this folder when sharing context with Claude **in addition to** `../REPOSITO
 | `../PURPOSE.md` | Why the app exists; Mode A/B; dependency status |
 | `../DESIGN.md` | Implementation design; session flow; TTS; GA/RP |
 | `../SPECIFICATION.md` | Screens, data fields, scoring, localStorage |
-| `../REPOSITORY-STRUCTURE.md` | Folder map; runtime paths; pipeline commands |
+| `../repo-map.md` | Folder map (runtime paths: `../data-contract.md`; pipeline commands: `../pipeline.md`) |
 
 ---
 
@@ -64,7 +64,7 @@ Use this folder when sharing context with Claude **in addition to** `../REPOSITO
 
 Ongoing task briefs and reports: `../cursor/README.md`
 
-Older reports may cite paths from before the 2026-07-09 reorg; trust `REPOSITORY-STRUCTURE.md` for current paths.
+Older reports may cite paths from before the 2026-07-09 reorg; trust `../repo-map.md` for current paths.
 
 ---
 

@@ -2,7 +2,7 @@
 
 > `PURPOSE.md` v4.0 で確定した目的 4 カード構成を、Cursor が実装に落とせる粒度まで具体化した仕様。
 > 本ドキュメントは「何を作るか（what / how）」の正本。目的の正本は `PURPOSE.md`。
-> 画面・JSON フィールド・localStorage の正本は **`SPECIFICATION.md`**。フォルダマップは **`REPOSITORY-STRUCTURE.md`**。
+> 画面・JSON フィールド・localStorage の正本は **`SPECIFICATION.md`**。フォルダマップは **`docs/repo-map.md`**。
 >
 > **更新日:** 2026-07-22 ／ **ステータス:** Phase 1 UI/UX 確定事項を情報設計に反映（Issue #75）。near 採点は実装削除済み。目的 4 カード UI・プロフィール一元通過等の DOM 実装は Phase 1-A 以降。語彙 **5,397語**。UI **246 leaf**。
 
@@ -314,7 +314,7 @@ Phase 1 UI（Mood B / Warm Contemporary）の視覚トークンは `:root` に�
 
 詳細: `docs/cursor/reports/cursor-implementation-report-phase-r.md`
 
-**現行（2026-07-10）:** ステージング JSON は `data/pipeline/`。語彙 **5,397語**、`ipa_actual_ga` 候補 ~529語、R4 pending **127語**。RP 品質: Phase R で `fix_happy_i.py`・`phonology_lexicon.py` 導入。パス正本は `scripts/paths.py` / `docs/REPOSITORY-STRUCTURE.md`。
+**現行スナップショット:** `docs/history.md` §2 参照。ステージング JSON は `data/pipeline/`。パイプラインコマンドは `docs/pipeline.md`。パス正本は `scripts/paths.py` / `docs/repo-map.md`。
 
 i18n: `vocab.*` / `vocab.filter.*` / `symbol.*`（Phase 1-E PR-1。leaf 集約は PR-3）。
 
@@ -322,90 +322,8 @@ i18n: `vocab.*` / `vocab.filter.*` / `symbol.*`（Phase 1-E PR-1。leaf 集約�
 
 ## 3. 音声（TTS）プロンプト設計 ★要件③
 
-OpenAI `gpt-4o-mini-tts` を GASプロキシ経由で呼ぶ。**1語でも学習効果を最大化する**ため、`instructions` を固定文で厳密に指定する。
-
-### 3.1 入力
-
-- `input` = 対象語そのもの（綴り）。
-- `instructions`（全リクエスト共通の固定文）:
-
-```
-Pronounce the single English word in a clear General American accent.
-Use the citation (dictionary) form: full, unreduced vowels and the correct
-lexical stress — do not use the weak or reduced connected-speech form, even
-for function words. Say the word once, at a calm pace slightly slower than
-conversational, with neutral falling intonation. Articulate consonants
-precisely and keep contrasts distinct — especially /θ/–/f/, /ð/–/d/,
-/l/–/r/, /s/–/ʃ/, /b/–/v/, and word-final consonants — but stay natural and
-never exaggerate them into distortion. Do not spell the word, do not add any
-other words, do not pause, and do not use emotional or expressive delivery.
-Keep the delivery identical and consistent across all words.
-```
-
-### 3.2 設計意図（なぜこの指示か）
-
-- **citation（辞書）形を強制** … 表示するIPA（例 to `/tu/`、of `/ʌv/`、the `/ðə/`）と音を一致させる。連結時の弱形が出ると学習ループが壊れるため。
-- **General American** … データがGA/CMU基準。
-- **やや遅く・精緻な調音** … 知覚訓練が本丸。音から覚える目的でのミニマルペア弁別（θ/f, ð/d, ʃ/tʃ 等）が成立するには各対立が明瞭に区別される必要がある。
-- **誇張しない** … 過剰強調は歪んだ音素を教えてしまう。自然な範囲で明瞭に。
-- **一定・無感情・1回** … 毎回同じ参照音を作り、学習者が安定したターゲットを内在化できる。再生の繰り返しはアプリ側の再生ボタンで対応。
-
-### 3.3 既知の限界（低優先・将来）
-
-- 同綴異音語（read, live, wind, lead 等）はTTSが意図と違う読みを返し得る。必要なら語に読み分けヒントを添える運用を将来検討（現データ規模では低優先）。
-
-### 3.4 RP TTS（2026-06-26 実装）
-
-- **単語:** `GET ?word=...&accent=ga|rp`（既定 `ga`）。`instructions` を GA/RP で分岐。voice は `alloy` 据え置き。
-- **キャッシュキー:** Drive `{slug}__{accent}_v2.mp3`、localStorage `ipa_tts_v2:{accent}:{slug}`。旧 `{slug}_v2.mp3` / 無 accent キーは GA として後方互換。
-- **連結句:** GA 固定（`?phrase=` + `accent=ga`）。RP 連結音声は別タスク。
-- **弱形:** `GET ?weak=/IPA/&ww=word&accent=ga|rp`。`instructions` は弱形（連結内の reduced form）を強制。`input` はキャリア文内の機能語綴り。GA/RP で `TTS_WEAK_INSTRUCTIONS_*` を分岐。
-- 詳細: `docs/reference/rp-tts-design-and-priority.md`、`docs/cursor/reports/cursor-implementation-report-weak-forms.md`
-
-### 3.4b クライアント TTS プリフェッチ（2026-06-29 実装、2026-07 拡張）
-
-全目的でキュー追加時に音声を先読みし、初回再生の待ち時間を削減する。
-
-| 定数 | 値 | 役割 |
-|------|-----|------|
-| `SESSION_INITIAL` | 6 | セッション開始時のキュー投入数（現問＋先読み5） |
-| `SESSION_REFILL` | 5 | ストック（現問を除く先読み数）が &lt; 5 のとき追加する問数 |
-| `warmChunk` | 6 | `?warm=1` 1 リクエストあたりの語数 |
-| `warmParallel` | 2 | warm リクエストの並列数 |
-| `bodyParallel` | 3 | 音声 body 取得の並列数 |
-
-**ストック:** `queue.length - idx - 1`（現問を除く先読み数）。初期ロード直後は 5 のためリフィルなし。2 問目以降で &lt; 5 になるたびに 5 問追加。
-
-**フロー（Phase T 以降）:**
-1. `prefetchItemsAudio(batch)` — キューへ追加した分を先読み
-2. 単語: **1問目 body を warm 完了前に開始**（body-first）。現アクセント `gasWarm` は非ブロック。反対アクセント warm は idle 延期
-3. body 取得は Drive 公開 URL（`?urls=1`）優先、失敗時は従来 base64（`?word=` 等）
-4. 連結句: `?phrase=` body を GA で先読み
-5. 弱形: `?weak=` body を GA/RP 両方で先読み
-6. setup 表示中はプール先頭を preread（フィルタ変更でキャンセル）
-7. スピーカーボタンはキャッシュ準備完了まで `disabled`（**全モード共通**）
-8. `prefetchToken` で古いジョブをキャンセル
-9. 離脱確認（`#exitConfirmModal`）— Decode / Encode / Mode B Study / Reveal から Menu またはブランドタップ時に Yes/No。**Yes → トップ（`1a`）復帰**（`goToTop(true)`。再開なし）。Summary・プロフィールではモーダルなし
-
-GAS 側の `?urls=1` / `migratePublicSharing` 反映は `docs/reference/remaining-ops-checklist.md`。
-
-### 3.4c GA バッチ warm（GAS 時間トリガー・2026-07 実装）
-
-全 **5,397** 語の GA 音声を Google Drive に事前ストックするオフラインジョブ。`gas/BatchWarm.gs` + `gas/BatchWords.gs`（`scripts/export_batch_words.py` で生成）。
-
-| 定数 | 値 |
-|------|-----|
-| `BATCH_MAX_WORDS_PER_RUN` | 500 |
-| `BATCH_MAX_MS` | 5.75 分 |
-| `BATCH_OPENAI_PARALLEL` | 20（`UrlFetchApp.fetchAll`） |
-
-- 時間トリガー `batchWarmGA()` が 5 分間隔で実行（`installBatchTriggerGA(5)`）
-- 既存 Drive キャッシュは `cached` でスキップ（OpenAI 課金なし）
-- 短すぎる blob は `isAudioBlobTooShort_()` で検出・再生成
-- 進捗: `getBatchStatusGA()` / スクリプトプロパティ `BATCH_INDEX_GA`
-- 任意: スプレッドシート `BATCH_SPREADSHEET_ID` で語彙リストを上書き
-
-詳細: `gas/README.md` §GA 一括バッチ
+TTS プロンプト設計（入力・設計意図・既知の限界・RP TTS・クライアントプリフェッチ・GA バッチ warm）は
+`docs/tts-design.md` へ移設（Issue #172）。
 
 ### 3.5 多言語 UI（fil 含む）
 
@@ -423,28 +341,7 @@ GAS 側の `?urls=1` / `migratePublicSharing` 反映は `docs/reference/remainin
 
 ## 4. データ整備タスク
 
-| 優先 | 内容 | 状態 |
-|---|---|---|
-| 高 | 欠落必須語・屈折形パッチ | ✅ 主要語追加済み（`data/*_patch.json`） |
-| 高 | `neighbors` 全語事前計算 | ✅ 5,397語（neighbors v2・0 近傍率 5%） |
-| 高 | `ex`（記号別例語） | ✅ phonemes JSON に実装 |
-| 高 | `rp_ipa` 全語付与 | ✅ **5,397語** + 201連結句 |
-| 高 | 弱形 36語 + `?weak=` TTS | ✅ |
-| 高 | UI fil（Tier 1+3） | ✅ **246** leaf + phonemes + guide |
-| 高 | 英語定義 `def` | ✅ 5,397/5,397 |
-| 高 | TTS プリフェッチ（クライアント） | ✅ Phase T（body-first / `?urls=1` / preread） |
-| 高 | GA バッチ warm（GAS） | ✅ `BatchWarm.gs`（5,397語。Drive 進捗は残作業チェックリスト） |
-| 高 | `ga_rp_same` フラグ | ✅ Phase R で分類器・happY rp_ipa 修正 |
-| 中 | 語彙ブラウザ（`3b`/`3c`） | ✅ Phase 1-E PR-1: exclusive full-page + 仮想化 + `#/vocab/ipa` 記号ピッカー |
-| 中 | B1/B2 語彙拡充 | ✅ B1=2,116 / **B2=899**（Phase 2 M2 完了。M3+ 継続） |
-| 高 | CEFR 誤ラベル phonics 是正 | ✅ Phase 0-a（652語 `cefr` null 化） |
-| 中 | カジュアル表現 | ✅ 一部（`casual` src） |
-| 中 | 薄い記号の補強 | 部分 |
-| 中 | `neighbors_rp` | ⏸ 保留 |
-| ― | gloss品質点検 | 継続（多言語学習ガイドと連動可） |
-| ― | gloss.fil（Tier 2） | ✅ 5,397/5,397 |
-| ― | cs_rule.fil（Tier 4） | ✅ 237/237 |
-| ― | 連結句 RP TTS | ⬜ 別タスク |
+優先度別のデータ整備タスク一覧は `docs/pipeline.md` §3 へ移設（Issue #172）。
 
 ---
 
