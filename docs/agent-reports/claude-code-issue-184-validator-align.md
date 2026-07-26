@@ -27,9 +27,9 @@ pre-existing FAIL を抱えたままマージされていた。目的は validat
   Vault 由来の歴史ファイル（非 hex サフィックスの ID、`source_chat_log_id` 等）を含む。
 - `scripts/lib/verify_core.py` V4 修正: `_LEGACY_PREFIXES` に該当するファイルをスキップ。
 - `scripts/lib/verify_core.py` V5 修正: `_LEGACY_PREFIXES` に該当するファイルをスキップ。
-- `docs/claude-design/README.md`: V7 FAIL だった markdown リンク
-  `[text](./UPDATE-GUIDE.md)` / `[text](./DIVERGENCE.md)` を規約準拠の
-  backtick 相対パス形式（`docs/claude-design/UPDATE-GUIDE.md` 等）に書き換え。
+- `docs/claude-design/README.md`: V7 FAIL だった markdown リンク記法（UPDATE-GUIDE.md
+  および DIVERGENCE.md への相対リンク）を規約準拠の backtick 相対パス形式
+  （`docs/claude-design/UPDATE-GUIDE.md` 等）に書き換え。
 - `data/README.md`: 退役参照 `docs/REPOSITORY-STRUCTURE.md` を `docs/repo-map.md` に更新。
 - `data/batches/README.md`: 退役参照 `docs/REPOSITORY-STRUCTURE.md` を
   `docs/pipeline.md` に更新（pipeline section が移動先）。
