@@ -82,9 +82,9 @@ lint 修正 / typo 修正（元の文言を保持）/ Markdown 整形 / import �
 | 3 | 実装されていない | 記載あり + 削除履歴あり（`docs/agent-reports/` / クローズ済み Issue で確認） | ドキュメントを更新（該当セクション削除） |
 | 4 | 実装されていない | 記載あり + 削除履歴なし | **halt**（曖昧な場合は必ずこちらを選ぶ） |
 
-## 7. impact-analysis halt ルール（プレースホルダ・実配線は Issue F）
+## 7. impact-analysis halt ルール
 
-共通シンボル（`t()` / `activeIpa()` / `setExclusivePage` / `navigate` / `loadWordlist` 等）を編集する Issue では、`docs/impact-ledger.json`（作成後）の `caller_areas` を引き、実際の影響範囲が Issue 宣言 scope と異なる場合は **halt** する（`CLAUDE.md` halt トリガー (c)）。台帳自体の生成・運用プロトコルは Issue F（`docs/impact-ledger.md`）で完成させる。それまでは実装エージェントが手動で `grep` による呼び出し元調査を行い、想定 scope 超過があれば halt する。
+共通シンボル（`scope=shared` または `scope=library`。例: `t()` / `activeIpa()` / `setExclusivePage` / `navigate` / `loadWordlist` 等）を編集する Issue・実装エージェントは、`docs/impact-ledger.json`（`scripts/gen_impact_ledger.py` 生成）の `caller_areas` を引き、実際の影響範囲が Issue 宣言 scope と異なる場合は **halt** する（`CLAUDE.md` halt トリガー (c)）。4 ステップの手順・スキーマ・scope 閾値・編集エージェントの更新義務は `docs/impact-ledger.md#impact-analysis-halt` が正本（重複させない）。
 
 ## 8. Category-A 自動検出（簡素化 4）
 
