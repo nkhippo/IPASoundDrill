@@ -1,0 +1,4420 @@
+[
+  {
+    "symbol": "$",
+    "line": 1466,
+    "feature_ids": [
+      "2a",
+      "2b",
+      "2c",
+      "2d",
+      "3a",
+      "3b",
+      "3c",
+      "3d",
+      "3h",
+      "reveal",
+      "summary",
+      "1a"
+    ],
+    "scope": "library",
+    "caller_areas": [
+      "decode",
+      "encode",
+      "study",
+      "connected",
+      "profile",
+      "vocab",
+      "picker",
+      "progress",
+      "about",
+      "reveal",
+      "summary",
+      "top",
+      "infra"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "activeIpa",
+    "line": 2229,
+    "feature_ids": [
+      "2a",
+      "2b",
+      "2c",
+      "2d",
+      "reveal"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "decode",
+      "encode",
+      "study",
+      "connected",
+      "reveal"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "activeNarrowIpa",
+    "line": 2237,
+    "feature_ids": [
+      "2a",
+      "2c",
+      "2d",
+      "reveal"
+    ],
+    "scope": "library",
+    "caller_areas": [
+      "decode",
+      "study",
+      "connected",
+      "reveal",
+      "infra"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "activeNeighbors",
+    "line": 2320,
+    "feature_ids": [
+      "2c"
+    ],
+    "scope": "primary",
+    "caller_areas": [
+      "study"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "activeStrongIpa",
+    "line": 2509,
+    "feature_ids": [
+      "reveal"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "reveal",
+      "infra"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "altAccentLabel",
+    "line": 2248,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "t"
+    ]
+  },
+  {
+    "symbol": "altAccentSpeakerState",
+    "line": 2272,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "altAccentValue",
+      "audioReadyKey",
+      "hasCachedAudioFor",
+      "isConnectedItem",
+      "isWeakItem",
+      "otherAccent"
+    ]
+  },
+  {
+    "symbol": "altAccentValue",
+    "line": 2257,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "activeIpa",
+      "altIpa",
+      "formatSameAccentIpa"
+    ]
+  },
+  {
+    "symbol": "altIpa",
+    "line": 2233,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "altSpeakerIdsForCurrentCard",
+    "line": 4134,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "$"
+    ]
+  },
+  {
+    "symbol": "appendSessionBatch",
+    "line": 4588,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "applyDrillId",
+    "line": 3197,
+    "feature_ids": [
+      "3d"
+    ],
+    "scope": "primary",
+    "caller_areas": [
+      "progress"
+    ],
+    "depends_on": [
+      "$",
+      "setSinglePill"
+    ]
+  },
+  {
+    "symbol": "applyI18n",
+    "line": 2525,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "$",
+      "applyI18nProgress",
+      "applyI18nVocab",
+      "dataReady",
+      "escHtml",
+      "homeCopy",
+      "renderBuild",
+      "t",
+      "updateLangSwitcherCurrent",
+      "updatePool",
+      "updateSetupFields"
+    ]
+  },
+  {
+    "symbol": "applyI18nProgress",
+    "line": 1628,
+    "feature_ids": [
+      "3d"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "progress",
+      "infra"
+    ],
+    "depends_on": [
+      "$",
+      "renderProgressPage",
+      "t"
+    ]
+  },
+  {
+    "symbol": "applyI18nVocab",
+    "line": 1590,
+    "feature_ids": [
+      "3b",
+      "3c"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "vocab",
+      "picker",
+      "infra"
+    ],
+    "depends_on": [
+      "$",
+      "renderSymbolPicker",
+      "renderVocabIpaFilterBar",
+      "renderVocabTab",
+      "t"
+    ]
+  },
+  {
+    "symbol": "applyModeBStudyTwoPane",
+    "line": 3883,
+    "feature_ids": [
+      "2c"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "study",
+      "infra"
+    ],
+    "depends_on": [
+      "$",
+      "isPcLayout",
+      "show"
+    ]
+  },
+  {
+    "symbol": "applyOnboardingI18n",
+    "line": 4680,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "$",
+      "renderOnboardingSlide",
+      "t"
+    ]
+  },
+  {
+    "symbol": "applyPrevSettings",
+    "line": 3520,
+    "feature_ids": [
+      "3d"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "progress",
+      "infra"
+    ],
+    "depends_on": [
+      "$",
+      "setSinglePill",
+      "syncProfileAccentUI"
+    ]
+  },
+  {
+    "symbol": "audioHintText",
+    "line": 4514,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "t"
+    ]
+  },
+  {
+    "symbol": "audioReadyKey",
+    "line": 3994,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "autoNote",
+    "line": 4990,
+    "feature_ids": [
+      "reveal"
+    ],
+    "scope": "primary",
+    "caller_areas": [
+      "reveal"
+    ],
+    "depends_on": [
+      "activeIpa",
+      "csRuleText",
+      "csTypeLabel",
+      "isConnectedItem",
+      "isWeakItem",
+      "localizePattern",
+      "stressSyllable",
+      "syllableCount",
+      "t",
+      "tokenize"
+    ]
+  },
+  {
+    "symbol": "bindIpaSegments",
+    "line": 4817,
+    "feature_ids": [
+      "2d"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "connected",
+      "infra"
+    ],
+    "depends_on": [
+      "renderInfo"
+    ]
+  },
+  {
+    "symbol": "bindPills",
+    "line": 3374,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "$",
+      "savePrevSettings",
+      "updatePool",
+      "updateSetupFields"
+    ]
+  },
+  {
+    "symbol": "bindRevealCheckClicks",
+    "line": 5360,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "$",
+      "refreshRevealChecksPanel",
+      "toggleCheckSlot"
+    ]
+  },
+  {
+    "symbol": "bindVirtScroll",
+    "line": 1938,
+    "feature_ids": [
+      "3b",
+      "3c"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "vocab",
+      "picker"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "bodyWorkerBatch",
+    "line": 4378,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "buildIpaHtml",
+    "line": 4806,
+    "feature_ids": [
+      "2d"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "connected",
+      "infra"
+    ],
+    "depends_on": [
+      "nucleusIndex",
+      "tokenize"
+    ]
+  },
+  {
+    "symbol": "buildKeyboard",
+    "line": 4946,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "$",
+      "keyGroups",
+      "renderBuild"
+    ]
+  },
+  {
+    "symbol": "buildMcqChoices",
+    "line": 3798,
+    "feature_ids": [
+      "2c"
+    ],
+    "scope": "primary",
+    "caller_areas": [
+      "study"
+    ],
+    "depends_on": [
+      "activeNeighbors",
+      "isValidDistractor",
+      "modeBBandPool",
+      "modeBEligible",
+      "modeBGloss",
+      "shuffle"
+    ]
+  },
+  {
+    "symbol": "buildModeBQueue",
+    "line": 3817,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "isDue",
+      "loadVocab",
+      "modeBPool",
+      "shuffle"
+    ]
+  },
+  {
+    "symbol": "buildSessionPool",
+    "line": 4568,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "buildModeBQueue",
+      "buildSessionQueue",
+      "currentCheckMode",
+      "filteredCsPool",
+      "filteredPool",
+      "frequencyWeight",
+      "modeBPool",
+      "shuffle",
+      "weightedShuffle"
+    ]
+  },
+  {
+    "symbol": "buildSessionQueue",
+    "line": 4538,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "currentCheckMode",
+      "frequencyWeight",
+      "histEntry",
+      "isDue",
+      "loadHist",
+      "phonemesOf",
+      "shuffle",
+      "syllableCount",
+      "topWeakSymbols",
+      "weightedShuffle"
+    ]
+  },
+  {
+    "symbol": "buildVocabLetterBar",
+    "line": 1641,
+    "feature_ids": [
+      "3b"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "vocab",
+      "infra"
+    ],
+    "depends_on": [
+      "$"
+    ]
+  },
+  {
+    "symbol": "bytesFromB64",
+    "line": 4001,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "capCarrierBefore",
+    "line": 4826,
+    "feature_ids": [
+      "2d"
+    ],
+    "scope": "primary",
+    "caller_areas": [
+      "connected"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "clearAudioTapPrompt",
+    "line": 4529,
+    "feature_ids": [
+      "3a",
+      "1a"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "profile",
+      "top",
+      "infra"
+    ],
+    "depends_on": [
+      "$"
+    ]
+  },
+  {
+    "symbol": "closeExitConfirm",
+    "line": 4638,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "show"
+    ]
+  },
+  {
+    "symbol": "closeVocab",
+    "line": 2881,
+    "feature_ids": [
+      "3b"
+    ],
+    "scope": "primary",
+    "caller_areas": [
+      "vocab"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "completeOnboarding",
+    "line": 4673,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "computeDrillProgress",
+    "line": 1737,
+    "feature_ids": [
+      "3d"
+    ],
+    "scope": "primary",
+    "caller_areas": [
+      "progress"
+    ],
+    "depends_on": [
+      "progressPoolForDrill",
+      "sessionItemKey"
+    ]
+  },
+  {
+    "symbol": "csRuleText",
+    "line": 2520,
+    "feature_ids": [
+      "3b",
+      "reveal"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "vocab",
+      "reveal",
+      "infra"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "csTypeLabel",
+    "line": 2514,
+    "feature_ids": [
+      "reveal"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "reveal",
+      "infra"
+    ],
+    "depends_on": [
+      "t"
+    ]
+  },
+  {
+    "symbol": "currentAccent",
+    "line": 3997,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "currentCardWord",
+    "line": 4126,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "currentCheckMode",
+    "line": 3547,
+    "feature_ids": [
+      "reveal"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "reveal",
+      "infra"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "dataReady",
+    "line": 2205,
+    "feature_ids": [
+      "3d"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "progress",
+      "infra"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "decodeCheck",
+    "line": 4902,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "$",
+      "reveal",
+      "spellCheck"
+    ]
+  },
+  {
+    "symbol": "drillProgressCardHtml",
+    "line": 1750,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "escHtml",
+      "t"
+    ]
+  },
+  {
+    "symbol": "encodeCheck",
+    "line": 4981,
+    "feature_ids": [
+      "2b"
+    ],
+    "scope": "primary",
+    "caller_areas": [
+      "encode"
+    ],
+    "depends_on": [
+      "activeIpa",
+      "reveal",
+      "tokenize"
+    ]
+  },
+  {
+    "symbol": "ensureEnabledSelection",
+    "line": 3637,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "$",
+      "setSinglePill"
+    ]
+  },
+  {
+    "symbol": "ensureQueueStock",
+    "line": 4595,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "appendSessionBatch",
+      "prefetchItemsAudio",
+      "queueStock"
+    ]
+  },
+  {
+    "symbol": "escAttr",
+    "line": 1964,
+    "feature_ids": [
+      "3b",
+      "3c",
+      "3d"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "vocab",
+      "picker",
+      "progress"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "escHtml",
+    "line": 1961,
+    "feature_ids": [
+      "3b",
+      "3c"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "vocab",
+      "picker",
+      "infra"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "escapeHtml",
+    "line": 1586,
+    "feature_ids": [
+      "2d"
+    ],
+    "scope": "primary",
+    "caller_areas": [
+      "connected"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "fetchAudioFromDriveUrl",
+    "line": 4090,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "fetchAudioFromGas",
+    "line": 4100,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "currentAccent",
+      "parseSpeakOpts",
+      "ttsAccent"
+    ]
+  },
+  {
+    "symbol": "fetchAudioFromGasAccent",
+    "line": 4068,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "fetchBodyToCache",
+    "line": 4251,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "audioReadyKey",
+      "bytesFromB64",
+      "fetchAudioFromDriveUrl",
+      "fetchAudioFromGasAccent",
+      "fetchUrlsFromGas",
+      "hasCachedAudioFor",
+      "memKeyAccent",
+      "refreshAltSpeakerFor",
+      "refreshSpeakerFor",
+      "saveAudioToLSAccent"
+    ]
+  },
+  {
+    "symbol": "fetchBodyToCacheItem",
+    "line": 4226,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "bytesFromB64",
+      "fetchAudioFromGas",
+      "hasCachedAudioForItem",
+      "isWeakItem",
+      "itemAudioReadyKey",
+      "memCacheKey",
+      "refreshSpeakerForItem",
+      "saveAudioToLS",
+      "speakOptsForItem"
+    ]
+  },
+  {
+    "symbol": "fetchUrlsFromGas",
+    "line": 4076,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "filteredCsPool",
+    "line": 3669,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "filteredPool",
+    "line": 3628,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "filteredWordPoolWith"
+    ]
+  },
+  {
+    "symbol": "filteredWordPoolWith",
+    "line": 3608,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "findItemByKey",
+    "line": 1997,
+    "feature_ids": [
+      "3b"
+    ],
+    "scope": "primary",
+    "caller_areas": [
+      "vocab"
+    ],
+    "depends_on": [
+      "sessionItemKey"
+    ]
+  },
+  {
+    "symbol": "formatSameAccentIpa",
+    "line": 2251,
+    "feature_ids": [
+      "3b"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "vocab",
+      "infra"
+    ],
+    "depends_on": [
+      "t"
+    ]
+  },
+  {
+    "symbol": "frequencyWeight",
+    "line": 3581,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "getCheckCount"
+    ]
+  },
+  {
+    "symbol": "gasWarm",
+    "line": 4186,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "getCheckCount",
+    "line": 3551,
+    "feature_ids": [
+      "3d",
+      "reveal"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "progress",
+      "reveal"
+    ],
+    "depends_on": [
+      "getMark",
+      "loadChecks",
+      "marksMigrated",
+      "resolveDrillId",
+      "sessionItemKey"
+    ]
+  },
+  {
+    "symbol": "getMark",
+    "line": 3460,
+    "feature_ids": [
+      "3d"
+    ],
+    "scope": "primary",
+    "caller_areas": [
+      "progress"
+    ],
+    "depends_on": [
+      "loadMarks"
+    ]
+  },
+  {
+    "symbol": "goToTop",
+    "line": 3304,
+    "feature_ids": [
+      "1a"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "top",
+      "infra"
+    ],
+    "depends_on": [
+      "openExitConfirm",
+      "setSetupVisible",
+      "shouldConfirmSessionExit"
+    ]
+  },
+  {
+    "symbol": "hasCachedAudioFor",
+    "line": 4008,
+    "feature_ids": [
+      "3b"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "vocab",
+      "infra"
+    ],
+    "depends_on": [
+      "lsKeyAccent",
+      "memKeyAccent"
+    ]
+  },
+  {
+    "symbol": "hasCachedAudioForItem",
+    "line": 4156,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "hasCachedAudioFor",
+      "isWeakItem",
+      "loadAudioFromLS",
+      "memCacheKey",
+      "speakOptsForItem"
+    ]
+  },
+  {
+    "symbol": "hasNarrowDifference",
+    "line": 2242,
+    "feature_ids": [
+      "reveal"
+    ],
+    "scope": "primary",
+    "caller_areas": [
+      "reveal"
+    ],
+    "depends_on": [
+      "activeIpa",
+      "activeNarrowIpa"
+    ]
+  },
+  {
+    "symbol": "hasTrapPhoneme",
+    "line": 3439,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "phonemesOf"
+    ]
+  },
+  {
+    "symbol": "hideModeBCards",
+    "line": 3849,
+    "feature_ids": [
+      "2c",
+      "reveal",
+      "summary"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "study",
+      "reveal",
+      "summary",
+      "infra"
+    ],
+    "depends_on": [
+      "show"
+    ]
+  },
+  {
+    "symbol": "hideOnboarding",
+    "line": 4734,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "completeOnboarding",
+      "show"
+    ]
+  },
+  {
+    "symbol": "hidePracticePanels",
+    "line": 3218,
+    "feature_ids": [
+      "3a",
+      "1a"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "profile",
+      "top"
+    ],
+    "depends_on": [
+      "show"
+    ]
+  },
+  {
+    "symbol": "highlightIpaMatch",
+    "line": 1843,
+    "feature_ids": [
+      "3b"
+    ],
+    "scope": "primary",
+    "caller_areas": [
+      "vocab"
+    ],
+    "depends_on": [
+      "escHtml"
+    ]
+  },
+  {
+    "symbol": "histEntry",
+    "line": 3592,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "homeCopy",
+    "line": 2503,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "initApp",
+    "line": 3085,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "$",
+      "applyI18n",
+      "applyOnboardingI18n",
+      "applyPrevSettings",
+      "buildKeyboard",
+      "dataReady",
+      "loadConnected",
+      "loadLocale",
+      "loadPrevSettings",
+      "loadWeak",
+      "loadWordlist",
+      "maybeShowOnboarding",
+      "migrateChecksToMarksIfNeeded",
+      "onRouteChange",
+      "syncProfileAccentUI",
+      "t",
+      "updatePool"
+    ]
+  },
+  {
+    "symbol": "initSessionQueue",
+    "line": 4604,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "appendSessionBatch",
+      "buildSessionPool",
+      "prefetchItemsAudio"
+    ]
+  },
+  {
+    "symbol": "isConnectedItem",
+    "line": 2507,
+    "feature_ids": [
+      "2a",
+      "reveal"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "decode",
+      "reveal",
+      "infra"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "isCurrentItem",
+    "line": 4566,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "isDue",
+    "line": 3593,
+    "feature_ids": [
+      "2c"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "study",
+      "infra"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "isOnboardingCompleted",
+    "line": 4667,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "isPcLayout",
+    "line": 5051,
+    "feature_ids": [
+      "2c"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "study",
+      "infra"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "isReflectAvailableScreen",
+    "line": 4632,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "$"
+    ]
+  },
+  {
+    "symbol": "isValidDistractor",
+    "line": 3791,
+    "feature_ids": [
+      "2c"
+    ],
+    "scope": "primary",
+    "caller_areas": [
+      "study"
+    ],
+    "depends_on": [
+      "modeBGloss"
+    ]
+  },
+  {
+    "symbol": "isWeakItem",
+    "line": 2508,
+    "feature_ids": [
+      "2a",
+      "reveal"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "decode",
+      "reveal",
+      "infra"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "itemAudioReadyKey",
+    "line": 4150,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "activeIpa",
+      "audioReadyKey",
+      "isConnectedItem",
+      "isWeakItem"
+    ]
+  },
+  {
+    "symbol": "itemCefrLabel",
+    "line": 3317,
+    "feature_ids": [
+      "3b",
+      "3d"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "vocab",
+      "progress",
+      "infra"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "jumpVocabLetter",
+    "line": 1955,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "$"
+    ]
+  },
+  {
+    "symbol": "keyGroups",
+    "line": 4929,
+    "feature_ids": [
+      "2b"
+    ],
+    "scope": "primary",
+    "caller_areas": [
+      "encode"
+    ],
+    "depends_on": [
+      "t"
+    ]
+  },
+  {
+    "symbol": "langFromPath",
+    "line": 2211,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "lcsMark",
+    "line": 4973,
+    "feature_ids": [
+      "2b",
+      "reveal"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "encode",
+      "reveal"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "leaveExclusiveRoute",
+    "line": 4647,
+    "feature_ids": [
+      "3d"
+    ],
+    "scope": "primary",
+    "caller_areas": [
+      "progress"
+    ],
+    "depends_on": [
+      "setExclusivePage",
+      "show"
+    ]
+  },
+  {
+    "symbol": "legacyLsKey",
+    "line": 3977,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "loadAudioFromLS",
+    "line": 4032,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "bytesFromB64",
+      "legacyLsKey",
+      "lsKey",
+      "parseSpeakOpts",
+      "ttsAccent"
+    ]
+  },
+  {
+    "symbol": "loadAudioFromLSAccent",
+    "line": 4013,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "bytesFromB64",
+      "legacyLsKey",
+      "lsKeyAccent"
+    ]
+  },
+  {
+    "symbol": "loadChecks",
+    "line": 3444,
+    "feature_ids": [
+      "3d"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "progress",
+      "infra"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "loadConnected",
+    "line": 1551,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "updatePool"
+    ]
+  },
+  {
+    "symbol": "loadHist",
+    "line": 3442,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "loadLocale",
+    "line": 2333,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "loadMarks",
+    "line": 3452,
+    "feature_ids": [
+      "3d"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "progress",
+      "infra"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "loadPrevSettings",
+    "line": 3500,
+    "feature_ids": [
+      "3d"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "progress",
+      "infra"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "loadSym",
+    "line": 3590,
+    "feature_ids": [
+      "2b",
+      "3c"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "encode",
+      "picker"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "loadVocab",
+    "line": 3771,
+    "feature_ids": [
+      "2c",
+      "3b"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "study",
+      "vocab"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "loadWeak",
+    "line": 1559,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "updatePool"
+    ]
+  },
+  {
+    "symbol": "loadWordlist",
+    "line": 1515,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "$",
+      "renderSymbolPicker",
+      "renderVocabWords",
+      "updatePool"
+    ]
+  },
+  {
+    "symbol": "localizePattern",
+    "line": 2343,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "t"
+    ]
+  },
+  {
+    "symbol": "lockInputScroll",
+    "line": 4866,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "lsKey",
+    "line": 3971,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "ttsAccent",
+      "ttsCacheSlug"
+    ]
+  },
+  {
+    "symbol": "lsKeyAccent",
+    "line": 3974,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "ttsCacheSlug"
+    ]
+  },
+  {
+    "symbol": "marksMigrated",
+    "line": 3476,
+    "feature_ids": [
+      "3d"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "progress",
+      "infra"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "matchesWeakFocus",
+    "line": 3602,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "phonemesOf",
+      "topWeakSymbols"
+    ]
+  },
+  {
+    "symbol": "maybeShowOnboarding",
+    "line": 4740,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "isOnboardingCompleted",
+      "showOnboarding"
+    ]
+  },
+  {
+    "symbol": "memCacheKey",
+    "line": 3983,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "currentAccent",
+      "parseSpeakOpts",
+      "ttsAccent"
+    ]
+  },
+  {
+    "symbol": "memKeyAccent",
+    "line": 3991,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "migrateChecksToMarksIfNeeded",
+    "line": 3480,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "loadChecks",
+      "loadMarks",
+      "marksMigrated",
+      "saveMarks"
+    ]
+  },
+  {
+    "symbol": "modeBBandPool",
+    "line": 3775,
+    "feature_ids": [
+      "2c"
+    ],
+    "scope": "primary",
+    "caller_areas": [
+      "study"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "modeBDictCheck",
+    "line": 3934,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "$",
+      "recordModeBQuiz",
+      "reveal",
+      "spellCheck"
+    ]
+  },
+  {
+    "symbol": "modeBDisplayGloss",
+    "line": 3782,
+    "feature_ids": [
+      "2c"
+    ],
+    "scope": "primary",
+    "caller_areas": [
+      "study"
+    ],
+    "depends_on": [
+      "posLabel",
+      "wordGloss"
+    ]
+  },
+  {
+    "symbol": "modeBEligible",
+    "line": 3774,
+    "feature_ids": [
+      "2c"
+    ],
+    "scope": "primary",
+    "caller_areas": [
+      "study"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "modeBGloss",
+    "line": 3780,
+    "feature_ids": [
+      "2c"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "study",
+      "infra"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "modeBMcqPick",
+    "line": 3908,
+    "feature_ids": [
+      "2c"
+    ],
+    "scope": "primary",
+    "caller_areas": [
+      "study"
+    ],
+    "depends_on": [
+      "$",
+      "renderModeBDict",
+      "t"
+    ]
+  },
+  {
+    "symbol": "modeBPool",
+    "line": 3776,
+    "feature_ids": [
+      "2c"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "study",
+      "infra"
+    ],
+    "depends_on": [
+      "modeBEligible"
+    ]
+  },
+  {
+    "symbol": "multiList",
+    "line": 3113,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "navigate",
+    "line": 2785,
+    "feature_ids": [
+      "3b"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "vocab",
+      "infra"
+    ],
+    "depends_on": [
+      "onRouteChange"
+    ]
+  },
+  {
+    "symbol": "nextCard",
+    "line": 5171,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "activeIpa",
+      "ensureQueueStock",
+      "phonemesOf",
+      "recordModeBStudy",
+      "renderCard"
+    ]
+  },
+  {
+    "symbol": "norm",
+    "line": 4897,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "normalizeConnected",
+    "line": 1532,
+    "feature_ids": [
+      "2d"
+    ],
+    "scope": "primary",
+    "caller_areas": [
+      "connected"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "normalizeWeak",
+    "line": 1567,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "normalizeWord",
+    "line": 1496,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "nucleusIndex",
+    "line": 3122,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "onModalEscapeKey",
+    "line": 5236,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "$",
+      "closeExitConfirm",
+      "navigate",
+      "toggleLangMenu"
+    ]
+  },
+  {
+    "symbol": "onRouteChange",
+    "line": 2791,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "parseHash"
+    ]
+  },
+  {
+    "symbol": "onVocabListClick",
+    "line": 5332,
+    "feature_ids": [
+      "3b"
+    ],
+    "scope": "primary",
+    "caller_areas": [
+      "vocab"
+    ],
+    "depends_on": [
+      "findItemByKey",
+      "refreshChecksInDom",
+      "speak",
+      "toggleCheckSlot"
+    ]
+  },
+  {
+    "symbol": "onboardingNextStep",
+    "line": 4746,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "hideOnboarding",
+      "renderOnboardingSlide"
+    ]
+  },
+  {
+    "symbol": "openDrillProfile",
+    "line": 4653,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "$",
+      "applyDrillId",
+      "applyPrevSettings",
+      "leaveExclusiveRoute",
+      "loadPrevSettings",
+      "savePrevSettings",
+      "showProfile3a"
+    ]
+  },
+  {
+    "symbol": "openExitConfirm",
+    "line": 4642,
+    "feature_ids": [
+      "1a"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "top",
+      "infra"
+    ],
+    "depends_on": [
+      "show"
+    ]
+  },
+  {
+    "symbol": "openVocab",
+    "line": 2880,
+    "feature_ids": [
+      "3b"
+    ],
+    "scope": "primary",
+    "caller_areas": [
+      "vocab"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "otherAccent",
+    "line": 2269,
+    "feature_ids": [
+      "3b"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "vocab",
+      "infra"
+    ],
+    "depends_on": [
+      "currentAccent"
+    ]
+  },
+  {
+    "symbol": "paintVirtWindow",
+    "line": 1886,
+    "feature_ids": [
+      "3b",
+      "3c"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "vocab",
+      "picker"
+    ],
+    "depends_on": [
+      "escHtml",
+      "t",
+      "vocabWordRowHtml"
+    ]
+  },
+  {
+    "symbol": "parseHash",
+    "line": 2780,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "parseSpeakOpts",
+    "line": 3954,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "persistAppLang",
+    "line": 2215,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "phonemesOf",
+    "line": 3123,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "pickCarrier",
+    "line": 4822,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "playCrumbLearningLabel",
+    "line": 3297,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "t"
+    ]
+  },
+  {
+    "symbol": "playCrumbPracticeLabel",
+    "line": 3292,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "t"
+    ]
+  },
+  {
+    "symbol": "posLabel",
+    "line": 2357,
+    "feature_ids": [
+      "2c",
+      "3b"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "study",
+      "vocab"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "prefetchAccentBodies",
+    "line": 4304,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "audioReadyKey",
+      "fetchBodyToCache",
+      "fetchBodyToCacheItem",
+      "hasCachedAudioFor",
+      "hasCachedAudioForItem",
+      "isConnectedItem",
+      "isWeakItem",
+      "itemAudioReadyKey",
+      "refreshAllSpeakers",
+      "wordWorker"
+    ]
+  },
+  {
+    "symbol": "prefetchIdleBodies",
+    "line": 4288,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "fetchBodyToCache",
+      "hasCachedAudioFor"
+    ]
+  },
+  {
+    "symbol": "prefetchItemsAudio",
+    "line": 4337,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "audioReadyKey",
+      "bodyWorkerBatch",
+      "bytesFromB64",
+      "currentAccent",
+      "fetchAudioFromDriveUrl",
+      "fetchBodyToCache",
+      "fetchBodyToCacheItem",
+      "fetchUrlsFromGas",
+      "gasWarm",
+      "hasCachedAudioFor",
+      "hasCachedAudioForItem",
+      "isConnectedItem",
+      "isWeakItem",
+      "itemAudioReadyKey",
+      "memKeyAccent",
+      "refreshAllSpeakers",
+      "refreshSpeakerFor",
+      "saveAudioToLSAccent",
+      "scheduleIdle"
+    ]
+  },
+  {
+    "symbol": "prefetchSessionAudio",
+    "line": 4437,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "prefetchItemsAudio"
+    ]
+  },
+  {
+    "symbol": "progressChecksHtml",
+    "line": 1976,
+    "feature_ids": [
+      "3b"
+    ],
+    "scope": "primary",
+    "caller_areas": [
+      "vocab"
+    ],
+    "depends_on": [
+      "escAttr",
+      "getCheckCount",
+      "sessionItemKey",
+      "t"
+    ]
+  },
+  {
+    "symbol": "progressDefaultCefrLevels",
+    "line": 1698,
+    "feature_ids": [
+      "3d"
+    ],
+    "scope": "primary",
+    "caller_areas": [
+      "progress"
+    ],
+    "depends_on": [
+      "loadPrevSettings"
+    ]
+  },
+  {
+    "symbol": "progressPoolForDrill",
+    "line": 1729,
+    "feature_ids": [
+      "3d"
+    ],
+    "scope": "primary",
+    "caller_areas": [
+      "progress"
+    ],
+    "depends_on": [
+      "itemCefrLabel"
+    ]
+  },
+  {
+    "symbol": "queueStock",
+    "line": 4567,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "rebuildVirtSlots",
+    "line": 1856,
+    "feature_ids": [
+      "3b",
+      "3c"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "vocab",
+      "picker"
+    ],
+    "depends_on": [
+      "vocabRowHeight"
+    ]
+  },
+  {
+    "symbol": "recordHist",
+    "line": 3748,
+    "feature_ids": [
+      "reveal"
+    ],
+    "scope": "primary",
+    "caller_areas": [
+      "reveal"
+    ],
+    "depends_on": [
+      "loadHist",
+      "saveHist"
+    ]
+  },
+  {
+    "symbol": "recordModeBQuiz",
+    "line": 3839,
+    "feature_ids": [
+      "2c"
+    ],
+    "scope": "primary",
+    "caller_areas": [
+      "study"
+    ],
+    "depends_on": [
+      "loadVocab",
+      "saveVocab"
+    ]
+  },
+  {
+    "symbol": "recordModeBStudy",
+    "line": 3835,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "loadVocab",
+      "saveVocab"
+    ]
+  },
+  {
+    "symbol": "recordSymEncode",
+    "line": 3756,
+    "feature_ids": [
+      "reveal"
+    ],
+    "scope": "primary",
+    "caller_areas": [
+      "reveal"
+    ],
+    "depends_on": [
+      "activeIpa",
+      "lcsMark",
+      "loadSym",
+      "saveSym",
+      "stripStress",
+      "tokenize"
+    ]
+  },
+  {
+    "symbol": "refreshAllSpeakers",
+    "line": 4180,
+    "feature_ids": [
+      "reveal"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "reveal",
+      "infra"
+    ],
+    "depends_on": [
+      "refreshAltAccentSpeakers",
+      "refreshSpeakerForItem"
+    ]
+  },
+  {
+    "symbol": "refreshAltAccentSpeakers",
+    "line": 2304,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "$",
+      "renderAltAccentLine"
+    ]
+  },
+  {
+    "symbol": "refreshAltSpeakerFor",
+    "line": 4204,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "currentCardWord",
+      "isConnectedItem",
+      "isWeakItem",
+      "otherAccent",
+      "refreshAltAccentSpeakers"
+    ]
+  },
+  {
+    "symbol": "refreshChecksInDom",
+    "line": 2003,
+    "feature_ids": [
+      "3b"
+    ],
+    "scope": "primary",
+    "caller_areas": [
+      "vocab"
+    ],
+    "depends_on": [
+      "getCheckCount"
+    ]
+  },
+  {
+    "symbol": "refreshModeBStudyContent",
+    "line": 3856,
+    "feature_ids": [
+      "2c"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "study",
+      "infra"
+    ],
+    "depends_on": [
+      "$",
+      "modeBDisplayGloss",
+      "renderWordPronDetails"
+    ]
+  },
+  {
+    "symbol": "refreshRevealChecksPanel",
+    "line": 2013,
+    "feature_ids": [
+      "reveal"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "reveal",
+      "infra"
+    ],
+    "depends_on": [
+      "$",
+      "getCheckCount",
+      "sessionItemKey",
+      "t"
+    ]
+  },
+  {
+    "symbol": "refreshRevealIpa",
+    "line": 5037,
+    "feature_ids": [
+      "reveal"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "reveal",
+      "infra"
+    ],
+    "depends_on": [
+      "$",
+      "activeIpa",
+      "activeNarrowIpa",
+      "hasNarrowDifference",
+      "renderAltAccentLine",
+      "renderIpaInto",
+      "t"
+    ]
+  },
+  {
+    "symbol": "refreshSpeakerFor",
+    "line": 4212,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "$",
+      "audioReadyKey",
+      "currentAccent",
+      "currentCardWord",
+      "hasCachedAudioFor",
+      "isConnectedItem",
+      "isWeakItem",
+      "setPlayiconState",
+      "speakerIdsForCurrentCard"
+    ]
+  },
+  {
+    "symbol": "refreshSpeakerForItem",
+    "line": 4165,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "$",
+      "currentAccent",
+      "hasCachedAudioForItem",
+      "isConnectedItem",
+      "isCurrentItem",
+      "isWeakItem",
+      "itemAudioReadyKey",
+      "refreshSpeakerFor",
+      "setPlayiconState",
+      "speakerIdsForCurrentCard"
+    ]
+  },
+  {
+    "symbol": "renderAltAccentLine",
+    "line": 2285,
+    "feature_ids": [
+      "2a",
+      "2c",
+      "reveal"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "decode",
+      "study",
+      "reveal",
+      "infra"
+    ],
+    "depends_on": [
+      "altAccentLabel",
+      "altAccentSpeakerState",
+      "altAccentValue",
+      "setPlayiconState"
+    ]
+  },
+  {
+    "symbol": "renderBuild",
+    "line": 4958,
+    "feature_ids": [
+      "2b"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "encode",
+      "infra"
+    ],
+    "depends_on": [
+      "$",
+      "buildIpaHtml",
+      "t"
+    ]
+  },
+  {
+    "symbol": "renderCard",
+    "line": 4846,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "$",
+      "ensureQueueStock",
+      "hideModeBCards",
+      "isConnectedItem",
+      "isWeakItem",
+      "pickCarrier",
+      "refreshAllSpeakers",
+      "renderDecode",
+      "renderEncode",
+      "renderModeBQuizSpell",
+      "renderModeBStudy",
+      "renderSummary",
+      "sessionFinished",
+      "show"
+    ]
+  },
+  {
+    "symbol": "renderConnectedPrompt",
+    "line": 4830,
+    "feature_ids": [
+      "2a"
+    ],
+    "scope": "primary",
+    "caller_areas": [
+      "decode"
+    ],
+    "depends_on": [
+      "$",
+      "activeNarrowIpa",
+      "bindIpaSegments",
+      "buildIpaHtml",
+      "capCarrierBefore",
+      "escapeHtml"
+    ]
+  },
+  {
+    "symbol": "renderDecode",
+    "line": 4877,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "$",
+      "activeNarrowIpa",
+      "isConnectedItem",
+      "isWeakItem",
+      "renderAltAccentLine",
+      "renderConnectedPrompt",
+      "renderIpaInto",
+      "setCardCefr",
+      "show",
+      "t",
+      "updateProgressMeter"
+    ]
+  },
+  {
+    "symbol": "renderEncode",
+    "line": 4964,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "$",
+      "renderBuild",
+      "setCardCefr",
+      "show",
+      "updateProgressMeter"
+    ]
+  },
+  {
+    "symbol": "renderInfo",
+    "line": 4788,
+    "feature_ids": [
+      "reveal"
+    ],
+    "scope": "primary",
+    "caller_areas": [
+      "reveal"
+    ],
+    "depends_on": [
+      "$",
+      "speak",
+      "t"
+    ]
+  },
+  {
+    "symbol": "renderIpaInto",
+    "line": 4801,
+    "feature_ids": [
+      "2a",
+      "2c",
+      "reveal"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "decode",
+      "study",
+      "reveal"
+    ],
+    "depends_on": [
+      "bindIpaSegments",
+      "buildIpaHtml"
+    ]
+  },
+  {
+    "symbol": "renderModeBDict",
+    "line": 3923,
+    "feature_ids": [
+      "2c"
+    ],
+    "scope": "primary",
+    "caller_areas": [
+      "study"
+    ],
+    "depends_on": [
+      "$",
+      "hideModeBCards",
+      "setCardCefr",
+      "show",
+      "speak"
+    ]
+  },
+  {
+    "symbol": "renderModeBMcq",
+    "line": 3897,
+    "feature_ids": [
+      "2c"
+    ],
+    "scope": "primary",
+    "caller_areas": [
+      "study"
+    ],
+    "depends_on": [
+      "$",
+      "buildMcqChoices",
+      "hideModeBCards",
+      "modeBGloss",
+      "modeBMcqPick",
+      "setCardCefr",
+      "show",
+      "speak"
+    ]
+  },
+  {
+    "symbol": "renderModeBQuizSpell",
+    "line": 3930,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "renderModeBDict"
+    ]
+  },
+  {
+    "symbol": "renderModeBStudy",
+    "line": 3860,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "$",
+      "activeNarrowIpa",
+      "applyModeBStudyTwoPane",
+      "hideModeBCards",
+      "refreshModeBStudyContent",
+      "renderAltAccentLine",
+      "renderIpaInto",
+      "setCardCefr",
+      "show",
+      "speak",
+      "updateProgressMeter",
+      "updateTaskHeader"
+    ]
+  },
+  {
+    "symbol": "renderOnboardingSlide",
+    "line": 4702,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "$",
+      "t"
+    ]
+  },
+  {
+    "symbol": "renderProgressPage",
+    "line": 1760,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "$",
+      "computeDrillProgress",
+      "dataReady",
+      "loadMarks",
+      "t"
+    ]
+  },
+  {
+    "symbol": "renderSummary",
+    "line": 5211,
+    "feature_ids": [
+      "summary"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "summary",
+      "infra"
+    ],
+    "depends_on": [
+      "$",
+      "activeIpa",
+      "hideModeBCards",
+      "show",
+      "t"
+    ]
+  },
+  {
+    "symbol": "renderSymbolPalette",
+    "line": 2976,
+    "feature_ids": [
+      "3c"
+    ],
+    "scope": "primary",
+    "caller_areas": [
+      "picker"
+    ],
+    "depends_on": [
+      "$",
+      "escAttr",
+      "symbolCellsHtml",
+      "symbolChartGroups",
+      "symbolGroupHeadingHtml",
+      "symbolHeightLabelHtml"
+    ]
+  },
+  {
+    "symbol": "renderSymbolPicker",
+    "line": 3046,
+    "feature_ids": [
+      "3b",
+      "3c"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "vocab",
+      "picker",
+      "infra"
+    ],
+    "depends_on": [
+      "renderSymbolPalette",
+      "renderSymbolQueryChips",
+      "renderSymbolResults"
+    ]
+  },
+  {
+    "symbol": "renderSymbolQueryChips",
+    "line": 2999,
+    "feature_ids": [
+      "3c"
+    ],
+    "scope": "primary",
+    "caller_areas": [
+      "picker"
+    ],
+    "depends_on": [
+      "$",
+      "escAttr",
+      "escHtml",
+      "t"
+    ]
+  },
+  {
+    "symbol": "renderSymbolResults",
+    "line": 3024,
+    "feature_ids": [
+      "3c"
+    ],
+    "scope": "primary",
+    "caller_areas": [
+      "picker"
+    ],
+    "depends_on": [
+      "$",
+      "bindVirtScroll",
+      "paintVirtWindow",
+      "rebuildVirtSlots",
+      "vocabSkeletonHtml",
+      "wordIpaForSearch"
+    ]
+  },
+  {
+    "symbol": "renderVocabIpaFilterBar",
+    "line": 2075,
+    "feature_ids": [
+      "3b",
+      "3c"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "vocab",
+      "picker"
+    ],
+    "depends_on": [
+      "$",
+      "escAttr",
+      "escHtml",
+      "vocabIpaKeyboardSymbols"
+    ]
+  },
+  {
+    "symbol": "renderVocabPhrases",
+    "line": 2109,
+    "feature_ids": [
+      "3b"
+    ],
+    "scope": "primary",
+    "caller_areas": [
+      "vocab"
+    ],
+    "depends_on": [
+      "$",
+      "csRuleText",
+      "escAttr",
+      "escHtml",
+      "formatSameAccentIpa",
+      "itemCefrLabel",
+      "progressChecksHtml",
+      "t",
+      "vocabAltSpeakerHtml",
+      "wordGloss"
+    ]
+  },
+  {
+    "symbol": "renderVocabTab",
+    "line": 2181,
+    "feature_ids": [
+      "3b"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "vocab",
+      "infra"
+    ],
+    "depends_on": [
+      "$",
+      "escHtml",
+      "renderVocabIpaFilterBar",
+      "renderVocabPhrases",
+      "renderVocabWords",
+      "show",
+      "syncVocabCefrPills",
+      "t",
+      "updateVocabTabActive",
+      "vocabSkeletonHtml"
+    ]
+  },
+  {
+    "symbol": "renderVocabWords",
+    "line": 2088,
+    "feature_ids": [
+      "3b",
+      "3c"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "vocab",
+      "picker",
+      "infra"
+    ],
+    "depends_on": [
+      "$",
+      "bindVirtScroll",
+      "itemCefrLabel",
+      "paintVirtWindow",
+      "rebuildVirtSlots",
+      "vocabSkeletonHtml",
+      "wordIpaForSearch"
+    ]
+  },
+  {
+    "symbol": "renderWordPronDetails",
+    "line": 5017,
+    "feature_ids": [
+      "2c",
+      "reveal"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "study",
+      "reveal",
+      "infra"
+    ],
+    "depends_on": [
+      "$",
+      "autoNote",
+      "renderInfo",
+      "t",
+      "trickyPhonemes"
+    ]
+  },
+  {
+    "symbol": "reopenOnboarding",
+    "line": 4730,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "showOnboarding"
+    ]
+  },
+  {
+    "symbol": "resolveDrillId",
+    "line": 3494,
+    "feature_ids": [
+      "3d"
+    ],
+    "scope": "primary",
+    "caller_areas": [
+      "progress"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "reveal",
+    "line": 5109,
+    "feature_ids": [
+      "2a",
+      "2b",
+      "2c"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "decode",
+      "encode",
+      "study"
+    ],
+    "depends_on": [
+      "$",
+      "activeIpa",
+      "activeStrongIpa",
+      "csRuleText",
+      "csTypeLabel",
+      "currentCheckMode",
+      "hideModeBCards",
+      "isConnectedItem",
+      "isWeakItem",
+      "lcsMark",
+      "recordHist",
+      "recordSymEncode",
+      "refreshAllSpeakers",
+      "refreshRevealChecksPanel",
+      "refreshRevealIpa",
+      "renderWordPronDetails",
+      "setCardCefr",
+      "show",
+      "speak",
+      "speakOptsForItem",
+      "stripStress",
+      "t",
+      "tokenize",
+      "tryLine",
+      "updateTaskHeader",
+      "wordGloss"
+    ]
+  },
+  {
+    "symbol": "saveAudioToLS",
+    "line": 4060,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "lsKey"
+    ]
+  },
+  {
+    "symbol": "saveAudioToLSAccent",
+    "line": 4052,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "lsKeyAccent"
+    ]
+  },
+  {
+    "symbol": "saveChecks",
+    "line": 3448,
+    "feature_ids": [
+      "3d"
+    ],
+    "scope": "primary",
+    "caller_areas": [
+      "progress"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "saveHist",
+    "line": 3443,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "saveMarks",
+    "line": 3456,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "savePrevSettings",
+    "line": 3504,
+    "feature_ids": [
+      "3d"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "progress",
+      "infra"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "saveSym",
+    "line": 3591,
+    "feature_ids": [
+      "2b"
+    ],
+    "scope": "primary",
+    "caller_areas": [
+      "encode"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "saveVocab",
+    "line": 3772,
+    "feature_ids": [
+      "2c"
+    ],
+    "scope": "primary",
+    "caller_areas": [
+      "study"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "scheduleIdle",
+    "line": 4296,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "schedulePoolPreread",
+    "line": 3702,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "$",
+      "buildSessionPool",
+      "bytesFromB64",
+      "currentAccent",
+      "dataReady",
+      "fetchAudioFromDriveUrl",
+      "fetchUrlsFromGas",
+      "hasCachedAudioFor",
+      "isConnectedItem",
+      "isWeakItem",
+      "memKeyAccent",
+      "saveAudioToLSAccent",
+      "scheduleIdle"
+    ]
+  },
+  {
+    "symbol": "scrollToAboutWhyIpa",
+    "line": 5103,
+    "feature_ids": [
+      "3h"
+    ],
+    "scope": "primary",
+    "caller_areas": [
+      "about"
+    ],
+    "depends_on": [
+      "$",
+      "showPurposeHome"
+    ]
+  },
+  {
+    "symbol": "sessionFinished",
+    "line": 4601,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "sessionItemKey",
+    "line": 4565,
+    "feature_ids": [
+      "3d",
+      "reveal"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "progress",
+      "reveal",
+      "infra"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "setAccent",
+    "line": 2716,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "$",
+      "buildKeyboard",
+      "prefetchAccentBodies",
+      "refreshRevealIpa",
+      "renderCard",
+      "renderSymbolPicker",
+      "renderVocabTab",
+      "savePrevSettings",
+      "syncProfileAccentUI"
+    ]
+  },
+  {
+    "symbol": "setCardCefr",
+    "line": 3323,
+    "feature_ids": [
+      "2a",
+      "2b",
+      "2c",
+      "reveal"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "decode",
+      "encode",
+      "study",
+      "reveal"
+    ],
+    "depends_on": [
+      "$",
+      "isConnectedItem",
+      "isWeakItem",
+      "itemCefrLabel",
+      "t"
+    ]
+  },
+  {
+    "symbol": "setCheckCount",
+    "line": 3560,
+    "feature_ids": [
+      "3d"
+    ],
+    "scope": "primary",
+    "caller_areas": [
+      "progress"
+    ],
+    "depends_on": [
+      "loadChecks",
+      "marksMigrated",
+      "resolveDrillId",
+      "saveChecks",
+      "sessionItemKey",
+      "setMark"
+    ]
+  },
+  {
+    "symbol": "setConnectedFilterAdvanced",
+    "line": 3414,
+    "feature_ids": [
+      "3a"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "profile",
+      "infra"
+    ],
+    "depends_on": [
+      "$",
+      "t"
+    ]
+  },
+  {
+    "symbol": "setExclusivePage",
+    "line": 1690,
+    "feature_ids": [
+      "3b",
+      "3c",
+      "3d",
+      "1a"
+    ],
+    "scope": "library",
+    "caller_areas": [
+      "vocab",
+      "picker",
+      "progress",
+      "top",
+      "infra"
+    ],
+    "depends_on": [
+      "syncPcSupportChrome"
+    ]
+  },
+  {
+    "symbol": "setLang",
+    "line": 2663,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "$",
+      "activeIpa",
+      "activeStrongIpa",
+      "applyI18n",
+      "applyI18nVocab",
+      "buildKeyboard",
+      "buildVocabLetterBar",
+      "csRuleText",
+      "csTypeLabel",
+      "isConnectedItem",
+      "isWeakItem",
+      "langFromPath",
+      "loadLocale",
+      "persistAppLang",
+      "refreshModeBStudyContent",
+      "refreshRevealIpa",
+      "renderSummary",
+      "renderVocabTab",
+      "renderWordPronDetails",
+      "t",
+      "updatePlayCrumb",
+      "wordGloss"
+    ]
+  },
+  {
+    "symbol": "setMark",
+    "line": 3467,
+    "feature_ids": [
+      "3d"
+    ],
+    "scope": "primary",
+    "caller_areas": [
+      "progress"
+    ],
+    "depends_on": [
+      "loadMarks",
+      "saveMarks"
+    ]
+  },
+  {
+    "symbol": "setPlayiconState",
+    "line": 4142,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "setSetupVisible",
+    "line": 3274,
+    "feature_ids": [
+      "1a"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "top",
+      "infra"
+    ],
+    "depends_on": [
+      "$",
+      "hidePracticePanels",
+      "show",
+      "showPurposeHome",
+      "syncPcSupportChrome",
+      "updatePlayCrumb",
+      "updateTaskHeader"
+    ]
+  },
+  {
+    "symbol": "setSinglePill",
+    "line": 3631,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "$"
+    ]
+  },
+  {
+    "symbol": "setSpeakerBusy",
+    "line": 4441,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "$",
+      "altSpeakerIdsForCurrentCard",
+      "refreshAllSpeakers",
+      "setPlayiconState",
+      "speakerIdsForCurrentCard"
+    ]
+  },
+  {
+    "symbol": "setWordsFilterAdvanced",
+    "line": 3408,
+    "feature_ids": [
+      "3a"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "profile",
+      "infra"
+    ],
+    "depends_on": [
+      "$",
+      "t"
+    ]
+  },
+  {
+    "symbol": "shouldConfirmSessionExit",
+    "line": 4635,
+    "feature_ids": [
+      "1a"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "top",
+      "infra"
+    ],
+    "depends_on": [
+      "isReflectAvailableScreen"
+    ]
+  },
+  {
+    "symbol": "show",
+    "line": 1467,
+    "feature_ids": [
+      "2a",
+      "2b",
+      "2c",
+      "3a",
+      "3b",
+      "3c",
+      "3d",
+      "reveal",
+      "summary",
+      "1a"
+    ],
+    "scope": "library",
+    "caller_areas": [
+      "decode",
+      "encode",
+      "study",
+      "profile",
+      "vocab",
+      "picker",
+      "progress",
+      "reveal",
+      "summary",
+      "top",
+      "infra"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "showAudioTapPrompt",
+    "line": 4518,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "$",
+      "audioHintText",
+      "speakerIdsForCurrentCard"
+    ]
+  },
+  {
+    "symbol": "showOnboarding",
+    "line": 4720,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "applyOnboardingI18n",
+      "show"
+    ]
+  },
+  {
+    "symbol": "showProfile3a",
+    "line": 3254,
+    "feature_ids": [
+      "3d"
+    ],
+    "scope": "primary",
+    "caller_areas": [
+      "progress"
+    ],
+    "depends_on": [
+      "$",
+      "clearAudioTapPrompt",
+      "hidePracticePanels",
+      "show",
+      "syncPcSupportChrome",
+      "syncProfileAccentUI",
+      "unlockInputScroll",
+      "updatePool",
+      "updateSetupFields"
+    ]
+  },
+  {
+    "symbol": "showProgressPage",
+    "line": 1775,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "applyI18nProgress",
+      "progressDefaultCefrLevels",
+      "setExclusivePage",
+      "show",
+      "syncProgressCefrPills"
+    ]
+  },
+  {
+    "symbol": "showPurposeHome",
+    "line": 3230,
+    "feature_ids": [
+      "3a",
+      "3h"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "profile",
+      "about",
+      "infra"
+    ],
+    "depends_on": [
+      "$",
+      "clearAudioTapPrompt",
+      "hidePracticePanels",
+      "setExclusivePage",
+      "show",
+      "syncPcSupportChrome",
+      "unlockInputScroll"
+    ]
+  },
+  {
+    "symbol": "showReflection",
+    "line": 4630,
+    "feature_ids": [
+      "summary"
+    ],
+    "scope": "primary",
+    "caller_areas": [
+      "summary"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "showSetupOrPractice",
+    "line": 2797,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "$",
+      "applyModeBStudyTwoPane",
+      "hideModeBCards",
+      "renderCard",
+      "setExclusivePage",
+      "show",
+      "showPurposeHome"
+    ]
+  },
+  {
+    "symbol": "showSymbolPickerView",
+    "line": 2863,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "$",
+      "applyI18nVocab",
+      "renderSymbolPicker",
+      "setExclusivePage",
+      "show"
+    ]
+  },
+  {
+    "symbol": "showVocabView",
+    "line": 2834,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "$",
+      "applyI18nVocab",
+      "buildVocabLetterBar",
+      "renderVocabTab",
+      "setExclusivePage",
+      "show"
+    ]
+  },
+  {
+    "symbol": "shuffle",
+    "line": 4537,
+    "feature_ids": [
+      "2c"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "study",
+      "infra"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "speak",
+    "line": 4457,
+    "feature_ids": [
+      "2c",
+      "3b",
+      "reveal"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "study",
+      "vocab",
+      "reveal",
+      "infra"
+    ],
+    "depends_on": [
+      "audioReadyKey",
+      "bytesFromB64",
+      "clearAudioTapPrompt",
+      "currentAccent",
+      "fetchAudioFromGas",
+      "loadAudioFromLS",
+      "memCacheKey",
+      "parseSpeakOpts",
+      "saveAudioToLS",
+      "setSpeakerBusy",
+      "showAudioTapPrompt"
+    ]
+  },
+  {
+    "symbol": "speakOptsForItem",
+    "line": 4119,
+    "feature_ids": [
+      "reveal"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "reveal",
+      "infra"
+    ],
+    "depends_on": [
+      "activeIpa",
+      "isConnectedItem",
+      "isWeakItem"
+    ]
+  },
+  {
+    "symbol": "speakerIdsForCurrentCard",
+    "line": 4130,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "spellCheck",
+    "line": 4898,
+    "feature_ids": [
+      "2a",
+      "2c"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "decode",
+      "study"
+    ],
+    "depends_on": [
+      "norm"
+    ]
+  },
+  {
+    "symbol": "startSession",
+    "line": 4613,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "initSessionQueue",
+      "renderCard",
+      "renderSummary",
+      "setSetupVisible",
+      "updateTaskHeader"
+    ]
+  },
+  {
+    "symbol": "stressSyllable",
+    "line": 3125,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "stripStress",
+    "line": 4972,
+    "feature_ids": [
+      "2b",
+      "reveal"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "encode",
+      "reveal"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "syllableCount",
+    "line": 3124,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "symbolCellsHtml",
+    "line": 2967,
+    "feature_ids": [
+      "3c"
+    ],
+    "scope": "primary",
+    "caller_areas": [
+      "picker"
+    ],
+    "depends_on": [
+      "escAttr",
+      "escHtml"
+    ]
+  },
+  {
+    "symbol": "symbolChartGroups",
+    "line": 2887,
+    "feature_ids": [
+      "3c"
+    ],
+    "scope": "primary",
+    "caller_areas": [
+      "picker"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "symbolGroupHeadingHtml",
+    "line": 2943,
+    "feature_ids": [
+      "3c"
+    ],
+    "scope": "primary",
+    "caller_areas": [
+      "picker"
+    ],
+    "depends_on": [
+      "escHtml",
+      "t"
+    ]
+  },
+  {
+    "symbol": "symbolHeightLabelHtml",
+    "line": 2955,
+    "feature_ids": [
+      "3c"
+    ],
+    "scope": "primary",
+    "caller_areas": [
+      "picker"
+    ],
+    "depends_on": [
+      "escHtml",
+      "t"
+    ]
+  },
+  {
+    "symbol": "symbolQueryClearAll",
+    "line": 3077,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "renderSymbolQueryChips",
+      "renderSymbolResults"
+    ]
+  },
+  {
+    "symbol": "symbolQueryPush",
+    "line": 3056,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "renderSymbolQueryChips",
+      "renderSymbolResults"
+    ]
+  },
+  {
+    "symbol": "symbolQueryRemoveAt",
+    "line": 3067,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "renderSymbolQueryChips",
+      "renderSymbolResults"
+    ]
+  },
+  {
+    "symbol": "syncPcSupportChrome",
+    "line": 5057,
+    "feature_ids": [
+      "3a",
+      "1a"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "profile",
+      "top",
+      "infra"
+    ],
+    "depends_on": [
+      "$",
+      "isPcLayout"
+    ]
+  },
+  {
+    "symbol": "syncProfileAccentUI",
+    "line": 2709,
+    "feature_ids": [
+      "3a"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "profile",
+      "infra"
+    ],
+    "depends_on": [
+      "$"
+    ]
+  },
+  {
+    "symbol": "syncProgressCefrPills",
+    "line": 1706,
+    "feature_ids": [
+      "3d"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "progress",
+      "infra"
+    ],
+    "depends_on": [
+      "$"
+    ]
+  },
+  {
+    "symbol": "syncVocabCefrPills",
+    "line": 1661,
+    "feature_ids": [
+      "3b"
+    ],
+    "scope": "primary",
+    "caller_areas": [
+      "vocab"
+    ],
+    "depends_on": [
+      "$"
+    ]
+  },
+  {
+    "symbol": "t",
+    "line": 2326,
+    "feature_ids": [
+      "2a",
+      "2c",
+      "2d",
+      "3a",
+      "3b",
+      "3c",
+      "3d",
+      "reveal",
+      "summary"
+    ],
+    "scope": "library",
+    "caller_areas": [
+      "decode",
+      "study",
+      "connected",
+      "profile",
+      "vocab",
+      "picker",
+      "progress",
+      "reveal",
+      "summary",
+      "infra"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "toggleCheckSlot",
+    "line": 3575,
+    "feature_ids": [
+      "3b",
+      "reveal"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "vocab",
+      "reveal"
+    ],
+    "depends_on": [
+      "getCheckCount",
+      "setCheckCount"
+    ]
+  },
+  {
+    "symbol": "toggleLangMenu",
+    "line": 2752,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "$"
+    ]
+  },
+  {
+    "symbol": "toggleProgressCefr",
+    "line": 1716,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "renderProgressPage",
+      "syncProgressCefrPills"
+    ]
+  },
+  {
+    "symbol": "toggleVocabCefr",
+    "line": 1674,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "renderVocabWords",
+      "syncVocabCefrPills"
+    ]
+  },
+  {
+    "symbol": "tokenize",
+    "line": 3116,
+    "feature_ids": [
+      "2b",
+      "reveal"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "encode",
+      "reveal",
+      "infra"
+    ],
+    "depends_on": [
+      "multiList"
+    ]
+  },
+  {
+    "symbol": "topWeakSymbols",
+    "line": 3598,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "loadSym"
+    ]
+  },
+  {
+    "symbol": "trickyPhonemes",
+    "line": 5014,
+    "feature_ids": [
+      "reveal"
+    ],
+    "scope": "primary",
+    "caller_areas": [
+      "reveal"
+    ],
+    "depends_on": [
+      "activeIpa",
+      "phonemesOf"
+    ]
+  },
+  {
+    "symbol": "tryLine",
+    "line": 5013,
+    "feature_ids": [
+      "reveal"
+    ],
+    "scope": "primary",
+    "caller_areas": [
+      "reveal"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "ttsAccent",
+    "line": 3958,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "currentAccent",
+      "parseSpeakOpts"
+    ]
+  },
+  {
+    "symbol": "ttsCacheSlug",
+    "line": 3965,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "parseSpeakOpts"
+    ]
+  },
+  {
+    "symbol": "unlockAudioFromGesture",
+    "line": 4499,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "unlockInputScroll",
+    "line": 4871,
+    "feature_ids": [
+      "3a",
+      "1a"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "profile",
+      "top"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "updateLangSwitcherCurrent",
+    "line": 2737,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "$"
+    ]
+  },
+  {
+    "symbol": "updatePlayCrumb",
+    "line": 3300,
+    "feature_ids": [
+      "3a"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "profile",
+      "infra"
+    ],
+    "depends_on": [
+      "$",
+      "playCrumbLearningLabel",
+      "playCrumbPracticeLabel"
+    ]
+  },
+  {
+    "symbol": "updatePool",
+    "line": 3676,
+    "feature_ids": [
+      "3a"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "profile",
+      "infra"
+    ],
+    "depends_on": [
+      "$",
+      "dataReady",
+      "filteredCsPool",
+      "filteredPool",
+      "modeBPool",
+      "schedulePoolPreread",
+      "t",
+      "updateWordFilterAvailability"
+    ]
+  },
+  {
+    "symbol": "updateProgressMeter",
+    "line": 3355,
+    "feature_ids": [
+      "2a",
+      "2b",
+      "2c"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "decode",
+      "encode",
+      "study"
+    ],
+    "depends_on": [
+      "$",
+      "t"
+    ]
+  },
+  {
+    "symbol": "updateSetupFields",
+    "line": 3420,
+    "feature_ids": [
+      "3a"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "profile",
+      "infra"
+    ],
+    "depends_on": [
+      "$",
+      "setConnectedFilterAdvanced",
+      "setWordsFilterAdvanced",
+      "show",
+      "t"
+    ]
+  },
+  {
+    "symbol": "updateTaskHeader",
+    "line": 5075,
+    "feature_ids": [
+      "2c",
+      "3a",
+      "reveal"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "study",
+      "profile",
+      "reveal",
+      "infra"
+    ],
+    "depends_on": [
+      "$",
+      "isPcLayout",
+      "syncPcSupportChrome",
+      "t"
+    ]
+  },
+  {
+    "symbol": "updateVocabTabActive",
+    "line": 2175,
+    "feature_ids": [
+      "3b"
+    ],
+    "scope": "primary",
+    "caller_areas": [
+      "vocab"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "updateWordFilterAvailability",
+    "line": 3647,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "$",
+      "dataReady",
+      "ensureEnabledSelection",
+      "filteredWordPoolWith",
+      "updateSetupFields"
+    ]
+  },
+  {
+    "symbol": "vocabAltSpeakerHtml",
+    "line": 2313,
+    "feature_ids": [
+      "3b"
+    ],
+    "scope": "primary",
+    "caller_areas": [
+      "vocab"
+    ],
+    "depends_on": [
+      "escAttr",
+      "hasCachedAudioFor",
+      "otherAccent",
+      "t"
+    ]
+  },
+  {
+    "symbol": "vocabDisplayGloss",
+    "line": 1968,
+    "feature_ids": [
+      "3b"
+    ],
+    "scope": "primary",
+    "caller_areas": [
+      "vocab"
+    ],
+    "depends_on": [
+      "posLabel",
+      "wordGloss"
+    ]
+  },
+  {
+    "symbol": "vocabEntry",
+    "line": 3773,
+    "feature_ids": [
+      "3b"
+    ],
+    "scope": "primary",
+    "caller_areas": [
+      "vocab"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "vocabIpaKeyboardSymbols",
+    "line": 2043,
+    "feature_ids": [
+      "3b"
+    ],
+    "scope": "primary",
+    "caller_areas": [
+      "vocab"
+    ],
+    "depends_on": [
+      "symbolChartGroups"
+    ]
+  },
+  {
+    "symbol": "vocabIpaQueryClear",
+    "line": 2068,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "renderVocabIpaFilterBar",
+      "renderVocabWords"
+    ]
+  },
+  {
+    "symbol": "vocabIpaQueryPush",
+    "line": 2055,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "renderVocabIpaFilterBar",
+      "renderVocabWords"
+    ]
+  },
+  {
+    "symbol": "vocabIpaQueryRemoveAt",
+    "line": 2062,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "renderVocabIpaFilterBar",
+      "renderVocabWords"
+    ]
+  },
+  {
+    "symbol": "vocabRowHeight",
+    "line": 1652,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "vocabDisplayGloss"
+    ]
+  },
+  {
+    "symbol": "vocabSkeletonHtml",
+    "line": 1789,
+    "feature_ids": [
+      "3b",
+      "3c"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "vocab",
+      "picker"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "vocabWordRowHtml",
+    "line": 1799,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "escAttr",
+      "escHtml",
+      "formatSameAccentIpa",
+      "highlightIpaMatch",
+      "itemCefrLabel",
+      "posLabel",
+      "progressChecksHtml",
+      "t",
+      "vocabAltSpeakerHtml",
+      "vocabDisplayGloss"
+    ]
+  },
+  {
+    "symbol": "vowelSet",
+    "line": 3114,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "weightedShuffle",
+    "line": 3584,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "wordGloss",
+    "line": 2349,
+    "feature_ids": [
+      "2c",
+      "3b",
+      "reveal"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "study",
+      "vocab",
+      "reveal",
+      "infra"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "wordIpaForSearch",
+    "line": 3016,
+    "feature_ids": [
+      "3b",
+      "3c"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "vocab",
+      "picker"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "wordWorker",
+    "line": 4322,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": []
+  }
+]

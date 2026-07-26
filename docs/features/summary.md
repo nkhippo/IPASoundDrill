@@ -25,4 +25,4 @@
 
 ## 関連シンボル
 
-Issue F の impact-ledger 生成後にリンク。
+`docs/impact-ledger.json` で `feature_ids` に `"summary"` を含むシンボルを参照（symbol 昇順の JSON 配列。scope・caller_areas・行番号を含む。スキーマは `docs/impact-ledger.md`）。

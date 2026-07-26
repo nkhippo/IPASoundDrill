@@ -25,7 +25,7 @@ Issue B は既存ファイルを削除しない。CLAUDE.md からは router に
 | 技術スタック / ファイル構成ツリー | `docs/repo-map.md` | exists |
 | 品質基準 3（データ整合性）/ 4（ランタイム契約 8 パス）/ 5（多言語 UI） | `docs/data-contract.md` | exists |
 
-> ※ Issue C 完了により `workflow.md` / `guardrails.md` / `change-classification.md` が正本化。Issue D 完了により `data-contract.md` / `tts-design.md` / `pipeline.md` / `repo-map.md` / `history.md` が正本化。Issue E 完了により `product.md` / `docs/features/<id>.md` が正本化（旧 `PURPOSE.md` / `DESIGN.md` / `SPECIFICATION.md` は退役・削除）。`CLAUDE.md` router 側は「Issue 起票要点 / レビュー・merge / ランタイム契約 8 パス（要点のみ）」の要点＋ポインタのみを残す（詳細は各ホーム参照）。
+> ※ Issue C 完了により `workflow.md` / `guardrails.md` / `change-classification.md` が正本化。Issue D 完了により `data-contract.md` / `tts-design.md` / `pipeline.md` / `repo-map.md` / `history.md` が正本化。Issue E 完了により `product.md` / `docs/features/<id>.md` が正本化（旧 `PURPOSE.md` / `DESIGN.md` / `SPECIFICATION.md` は退役・削除）。Issue F 完了により `impact-ledger.json` / `impact-ledger.md` が正本化し、`repo-map.md` の一時退避 JS map 節を置換（EPIC #169 完了）。`CLAUDE.md` router 側は「Issue 起票要点 / レビュー・merge / ランタイム契約 8 パス（要点のみ）」の要点＋ポインタのみを残す（詳細は各ホーム参照）。
 
 ---
 
@@ -40,8 +40,8 @@ Issue B は既存ファイルを削除しない。CLAUDE.md からは router に
 | 各 feature の挙動・画面・採点則+定数・データ・i18n キー | `docs/features/<id>.md` | exists | 該当 feature 変更時 |
 | feature ID 索引 | `docs/features/README.md` | exists | ID 追加時 |
 | ID 横断の共通シェル・セッションフロー・適応出題 | `docs/features/_common.md` | exists | 共通挙動変更時 |
-| ソースシンボル → feature_ids → scope → caller_areas | `docs/impact-ledger.json` | planned(F) | ソース共通シンボル変更時 |
-| impact-ledger 運用プロトコル | `docs/impact-ledger.md` | planned(F) | 横展開ルール変更時 |
+| ソースシンボル → feature_ids → scope → caller_areas | `docs/impact-ledger.json` | exists | ソース共通シンボル変更時（`scripts/gen_impact_ledger.py` 再実行） |
+| impact-ledger 運用プロトコル / impact-analysis halt ルール正本 | `docs/impact-ledger.md` | exists | 横展開ルール変更時 |
 | ランタイム 8 パス + JSON スキーマ + フィールド辞書 | `docs/data-contract.md` | exists | パス増減・スキーマ変更時 |
 | 採点ロジック定数 | `docs/features/2a.md`(+2b/2c/2d) | exists | 定数変更時 |
 | 多言語 UI i18n キー網羅 / leaf 数 | `docs/data-contract.md`(+ 該当 features) | exists | i18n キー増減時 |
