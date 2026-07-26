@@ -16,9 +16,9 @@ AI エージェント向けの**作業指示・実装レポート・設計相談
 | 正本 | 内容 |
 |------|------|
 | `../repo-map.md` | **最初に読む** — フォルダマップ。パイプラインは `../pipeline.md`、ランタイム契約は `../data-contract.md` |
-| `../PURPOSE.md` | 目的・2モード・評価方針 |
-| `../DESIGN.md` | 実装設計（SRS・TTS・データ整備） |
-| `../SPECIFICATION.md` | 画面・JSON フィールド・localStorage |
+| `../product.md` | 目的・ポジショニング・評価方針 |
+| `../features/<id>.md` | 各機能の挙動・画面・採点則+定数・データ・i18n（索引: `../features/README.md`） |
+| `../data-contract.md` | 画面・JSON フィールド・localStorage |
 
 **注意:** 古いレポート内のパス・語数は当時のスナップショット。現行の数値・パスは `../repo-map.md` / `../data-contract.md` / `../history.md` を正とする。
 
@@ -39,7 +39,7 @@ AI エージェント向けの**作業指示・実装レポート・設計相談
 ## Claude への推奨読み順
 
 1. `docs/repo-map.md` — どこに何があるか
-2. `docs/PURPOSE.md` — なぜそう作るか（本丸 vs サブテーマ）
-3. タスクに応じて `DESIGN.md` または `SPECIFICATION.md`
+2. `docs/product.md` — なぜそう作るか（目的・ポジショニング）
+3. タスクに応じて `docs/features/<id>.md`（挙動・画面・採点則・データ・i18n）
 4. 類似の過去タスクがあれば `instructions/` + `reports/` の該当ペア
 5. 運用の手動残作業は `docs/reference/remaining-ops-checklist.md`

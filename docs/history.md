@@ -14,6 +14,18 @@ evergreen な仕様ドキュメントから日付ログ（Phase 完了記録・�
 `docs/DESIGN.md` / `docs/SPECIFICATION.md` 内の日付ログ・実装状況（§5 実装状況、変更履歴 等）は **Issue E**（DESIGN/SPEC 退役時）で本ファイルへ追記する。
 重複移設を避けるため、E 実施者は着手前に本節を確認し、本節にリストされた範囲は再移設しないこと。
 
+## E で移した範囲（Issue #173）
+
+Issue E（#173）で `docs/DESIGN.md` / `docs/SPECIFICATION.md` を退役するにあたり、以下の日付ログ・実装状況を本ファイルへ移設した:
+
+- `docs/DESIGN.md` §0.1「Frame ID 再採番」（3e/3f/3g を含む旧 13 concept 案の歴史的記録） → §4 以下
+- `docs/DESIGN.md` §2c–2g（Narrow IPA + Respelling・Phase 2a Flap Merge・Phase 2b Respelling Merge・Phase 2 完了・Phase R）→ §4 以下
+- `docs/DESIGN.md` §5「実装状況（2026-07-18）」+ Phase 1-0-a 節 → §4 以下
+- `docs/DESIGN.md` §3.5「多言語 UI（fil 含む）」（Tier 表・fil 状態） → §4 以下
+- `docs/SPECIFICATION.md`「変更履歴」表 → §5 以下
+
+evergreen な仕様（観測可能挙動・画面構造・採点則・データスキーマ）は `docs/product.md` / `docs/features/<id>.md` / `docs/data-contract.md` / `docs/tts-design.md` / `docs/pipeline.md` へ移設済み（本ファイルには重複させない）。
+
 ---
 
 ## 1. Phase 完了ログ（`docs/PURPOSE.md` 由来）
@@ -141,4 +153,139 @@ Opus レビューで判明した分類器 dead-code・happY rp_ipa 破損（91�
 
 ---
 
-_Issue #172（Issue D）で新設。旧 `docs/PURPOSE.md`「Phase 1/2/R」「変更履歴」、旧 `docs/REPOSITORY-STRUCTURE.md`「Wordlist snapshot」「UI behaviour snapshot」を移設・統合。DESIGN/SPEC 由来の日付ログは Issue E で追記予定。_
+## 4. DESIGN 実装状況・Phase ログ（`docs/DESIGN.md` 由来）
+
+### Frame ID 再採番（DESIGN §0.1 由来・2026-07-18 時点）
+
+Phase 1 で命名規則（概念のみを ID とし、言語は `-ja`/`-en`/`-ko`/`-zh-hans`/`-zh-hant`/`-fil`、デバイスは `-pc` の variant suffix）を確定し、Claude Design の暫定 ID（`4a`/`7a`/`8a` 等）から現行 ID へ再採番した。当時は 13 concept（`1a`, `2a`–`2d`, `3a`–`3h`）を暫定登録していたが、`3e`（IPA って何？）・`3f`（言語設定・廃止済み）・`3g`（オンボーディング）は詳細仕様が固まらず、Issue B（`docs/_conventions.md`）で確定した**凍結 12 ID 版レジストリには含まれていない**（`3f` の実体はヘッダー言語スイッチャーへ統合済み、`3g` オンボーディングの挙動は `docs/product.md` §2 の横断ポリシーに記載、`3e` は独立画面として実装されず guide モーダルに相当）。現行の feature ID 正本は `docs/_conventions.md`。
+
+### narrow IPA + respelling（Phase 1 pilot・2026-07-02）
+
+- 既存 `ipa` / `rp_ipa`（phonemic）は採点・音素カバー用として不変
+- 表示専用フィールド `ipa_actual_ga` / `ipa_actual_rp`（narrow IPA）を追加
+- Respelling フィールド `respell_ga` / `respell_rp` はデータ保持するが UI では非表示（2026-07-06）
+
+### Phase 2a Flap Merge（186語上書き）
+
+- `phase2a_flap_candidates.json` の 186 語を `scripts/merge_flap_candidates.py` で一括マージ
+- `ipa_actual_ga` は常に candidates 側で上書き（既存値があっても更新）。pilot の既知誤値 2 語（`middle`, `thirty`）を修正
+- マージ後の `ipa_actual_ga` 保有語は 192 語（30 + 186 − 24 重複）
+
+### Phase 2b Respelling Merge（3,007語）
+
+- `phase2b_respell_draft.json` の 3,007 語を `scripts/merge_respelling.py` で一括マージ
+- Phase 2a の VntV 判定待ち 52 語（`phase2b_respell_pending.json`）はマージ対象外
+- マージ後の `respell_ga` 保有語は 3,007 語（全 3,059 語のうち 52 語は Phase 2a 確定待ち）
+
+### Phase 2 完了（VntV 52語 + respelling 最終マージ）
+
+- Naoya の TTS 実音判定（52語すべて `nasal=kept`, `consonant=plain`）を反映
+- 49語は narrow 不要。3語（`granddaughter`, `independence`, `underwater`）は Phase 2a 値を維持
+- pilot 由来の誤 narrow 3語（`winter`, `twenty`, `ninety`）を `scripts/merge_phase2a_final.py` で除去
+- **最終:** `respell_ga` 3,059/3,059語、`ipa_actual_ga` 192語（narrow 差分がある語のみ）
+- **v2 品質パッチ（2026-07-02）:** 音節主音 n/l + 追加コーダ子音パターン（`tnt` 等）18語の `respell_ga` を `uh` 補完表記に修正（`generate_respelling.py` v2）
+
+### Phase R: RP パイプライン品質修正（2026-07-10）
+
+Opus レビューで判明した分類器 dead-code・happY rp_ipa 破損（91語）・`ga_to_rp.py` latent bug を修正。
+
+| コンポーネント | 役割 |
+|----------------|------|
+| `scripts/gen_ga_rp_same.py` | `ga_rp_same` / `ga_rp_same_reason` 付与。`cot_caught`・`square_near_cure`・BATH+weak composite を活性化 |
+| `scripts/fix_happy_i.py` | word-final happY の `/iː/`・`/ɪ/` → `/i/` 一括是正（91語） |
+| `scripts/phonology_lexicon.py` | `BATH_WORDS_BASE`・`PALM_WORDS`・`YOD_CORONALS` を `ga_to_rp.py` と共有 |
+| `scripts/ga_to_rp.py` | offline fallback（PALM guard・yod・happY skip） |
+| `scripts/gen_rp_ipa.py` | 新規バッチ用 Claude API。SYSTEM_PROMPT に happY ルールあり |
+
+詳細: `docs/cursor/reports/cursor-implementation-report-phase-r.md`
+
+### 実装状況（2026-07-18 時点スナップショット）
+
+| 項目 | 状態 |
+|---|---|
+| 目的 `2a`/`2b`（音素軸・SRS・reveal・例語・TTS v2） | ✅ |
+| GA/RP（IPA・キーボード・RP TTS） | ✅ |
+| 連結句 201句（キャリア文） | ✅ |
+| 弱形 36語 + `?weak=` TTS | ✅ |
+| 目的 `2c`（Study/Quiz・vocab SRS） | ✅ Study のみ。Band Unlock 削除済み（`MODEB_BANDS` は CEFR 許可として残置） |
+| 練習タブ統一（Connected ⊃ Weak） | ✅ |
+| 語彙ブラウザ（`3b` full-page / `3c` `#/vocab/ipa` / 仮想化 / sticky filter） | ✅ |
+| TTS プリフェッチ（body-first + `?urls=1` + setup preread + スピーカー gating） | ✅ |
+| 無制限セッション（プール全件・6/5 先読み・離脱確認→サマリー） | ✅ |
+| CEFR 連動フィルタ（0 件ピル非活性） | ✅ |
+| GA バッチ warm（GAS 時間トリガー・5,397語） | ✅ |
+| UI 6言語（en/ja/zh-Hans/zh-Hant/ko/fil） | ✅ |
+| 多言語学習ガイド（6言語） | ✅ |
+| 英語定義 `def` | ✅ 5,397/5,397 |
+| narrow IPA + respelling | ✅ 全語彙 |
+| gloss.fil / cs_rule.fil | ✅ すべて完了（5,397語 + 237件） |
+| `ga_rp_same` フラグ + 分類器（Phase R） | ✅ same=2,674 / different=2,723 |
+| 連結句 RP TTS | ⬜ 未着手 |
+| 反対アクセント全画面表示 | ✅ |
+
+### 多言語 UI 実装状況（2026-07-18 時点スナップショット・DESIGN §3.5 由来）
+
+| Tier | 内容 | fil 状態 |
+|------|------|----------|
+| Tier 1 | UI 文言 246 leaf + 言語ピッカー（zh-Hant/zh-Hans 分離） | ✅ `i18n/fil.json` |
+| Tier 2 | 語義 gloss（5,397 語） | ✅ 5,397/5,397 |
+| Tier 3 | 音素解説 47 記号 + 学習ガイド | ✅ 全6言語（2026-07-07: zh→zh-Hant/zh-Hans 分離） |
+| Tier 4 | 連結句・弱形ルール文 `cs_rule` | ✅ 237/237（201+36） |
+| — | 英語定義 `def`（5,397 語） | ✅ 全語彙 |
+
+検証コマンド・現行スキーマは `docs/data-contract.md` §5 が正本（本節は歴史的スナップショット）。拡張手順: `docs/reference/i18n-language-scaling.md`。
+
+### Phase 1-0-a（2026-07-18）
+
+- PURPOSE/SPEC/DESIGN を目的 4 カード前提に先行改訂（Issue #75）
+- near 採点をテンプレートから削除
+- Mode B Band Unlock 実装シンボルを削除（Phase 1-D-PR2）。`MODEB_BANDS` は CEFR 許可リストとして残置
+- frame ID を 13 concept + variant suffix に再採番（後の Issue E で feature ID レジストリを 12 ID に確定・`3e`/`3f`/`3g` は registry 対象外）
+
+---
+
+## 5. 変更履歴（`docs/SPECIFICATION.md` 由来）
+
+| 日付 | 内容 |
+|------|------|
+| 2026-07-22 | Phase 1-E PR-3（#122）: `3h` About を6言語・246 leafへ拡張。`3f` 独立画面廃止を docs に集約 |
+| 2026-07-20 | Phase 1-E PR-1（#91）: `3b` exclusive full-page + 仮想化、`3c` `#/vocab/ipa` 記号ピッカー。i18n 219 leaf（§5.5 集約は PR-3）。`var(--legacy-*)` 249→228 |
+| 2026-07-18 | Phase 1-0-a（#75）: 目的 4 カード前提へ骨格改訂。Mode B Band 記述削除、near 採点廃止、CEFR 全目的横断・Connected はタグ表示のみ、プロフィール一元通過 / マーキング / オンボーディングの LS 要件を明示 |
+| 2026-07-16 | Q-7-A: Connected `cs_rule` に ko / zh-Hans / zh-Hant 追加（201 句 × 3。既存 en/ja/fil 不変） |
+| 2026-07-16 | Q-9-A: 3 モーダルに Escape キー対応（Exit=No 相当、Settings/Guide=閉じる） |
+| 2026-07-16 | Phase 0 段階 2: 実装突合（正本 `src/index.template.html`、Exit→setup、footer/audioHint、SRS 重み、Connected CEFR/TTS 判断、Mode B DOM 名、i18n 169 leaf・orphan 13 削除） |
+| 2026-07-10 | Phase B: Phase 2 バッチ監査反映（gloss.zh 的的・damn POS・Fil 13・バッチ 86 同期・複合 POS i18n）。UI キー 177 |
+| 2026-07-10 | Phase T: TTS 1問目遅延対策（body-first、`?urls=1`、setup preread）。GAS 再デプロイは残作業 |
+| 2026-07-10 | Phase V: 語彙ブラウザを `#vocabPage` に移設。hash routing (`#/vocab`, `#/vocab/phrases`)、2段組行・CEFR バッジ両タブ・`vocab.back` |
+| 2026-07-10 | Phase R: `ga_rp_same` 分類器修正、`fix_happy_i.py`（91語）、`phonology_lexicon.py`。語彙 5,397・B2=899 |
+| 2026-07-09 | v3.15 `ga_rp_same` / `ga_rp_same_reason` フラグ導入（`scripts/gen_ga_rp_same.py`）。UI 同一判定をフラグ参照に切替 |
+| 2026-07-09 | v3.14 Phase 1 M5: B1 最終 389語マージ。語数 4,828・B1=2,116（Phase 1 B1 拡充完了） |
+| 2026-07-09 | v3.12 反対アクセント同一表示 `/ipa/（同じ）`・GA/RP ラベル簡素化・離脱確認モーダル・CEFR 連動フィルタ非活性・`docs/reference/README.md` |
+| 2026-07-09 | v3.11 リポジトリ構成整理（`data/batches`・`pipeline`・`patches`、`docs/cursor`）。語数 4,439・B1=1,727。連結/弱形 `cefr`。`REPOSITORY-STRUCTURE.md` 追加。 |
+| 2026-07-06 | 学習モード名称を行為ベースに刷新（`mode.a` / `modeb.title`）。セットアップの詳細フィルタを折りたたみ。プレイ中パンくず追加。反対アクセント表示拡張。respelling UI 非表示。Mode B [次へ] 統一。i18n 161 キー |
+| 2026-07-07 | CEFR Phase 0-a 訂正: phonics 652語の `cefr` を CEFR-J 一次データに基づく B1/B2 へ復元（B1=347、B2=330） |
+| 2026-07-07 | 中文 UI を `zh-Hant`（繁體）と `zh-Hans`（简体）に分離。旧 `zh` ユーザーは `zh-Hans` へ自動移行 |
+| 2026-07-06 | 音素ガイド `i18n/phonemes/{ja,ko,zh}.json` を全面書き直し（47音素×3言語）。例語は英語のまま保持、機械翻訳による誤訳を解消 |
+| 2026-07-02 | respelling v2 品質パッチ。音節主音+コーダ子音パターン18語の `respell_ga` を可読性向上（`important`: `im-POR-tuhnt` 等） |
+| 2026-07-02 | Phase 2 完了。VntV 52語の TTS 判定を反映し respelling 最終52語をマージ。`respell_ga` 3,059/3,059語。pilot誤narrow 3語（winter/twenty/ninety）を除去 |
+| 2026-07-02 | Phase 2b respelling merge を反映。`respell_ga` / `respell_rp` を 3,007語マージ。VntV 判定待ち 52語は未マージ（pilot暫定3語を除去） |
+| 2026-07-02 | Phase 2a flap merge を反映。`ipa_actual_ga` を candidates 186語で上書きマージし、保有語数 192 語へ更新。`middle` `/ˈmɪdl̩/`、`thirty` `/ˈθɝˌɾi/` を修正 |
+| 2026-07-02 | Phase 1 narrow IPA + respelling（pilot 30語）を反映。allophone 4記号（ɾ/ʔ/n̩/l̩）追加、i18n 158キー・phonemes 47記号 |
+| 2026-07-02 | TTS プリフェッチ・GA バッチ warm・Mode B バンド解放・トップバー表示ルール・i18n 156 キー統一を反映 |
+| 2026-06-23 | 初版（Mode A のみ・GA 固定） |
+| 2026-06-26 | Mode B・連結句・GA/RP・SRS・TTS v2/accent キャッシュを反映 |
+| 2026-06-29 | 語彙ブラウザモーダル追加（Words 3,059 / Phrases 201） |
+| 2026-06-29 | 学習ガイド全章を Claude 生成版で丸ごと置換（decode_encode / connected / how_to_use 拡充含む） |
+| 2026-06-28 | 学習ガイド `philosophy`/`solves` 章を強化（全6言語） |
+| 2026-06-28 | 学習ガイド `welcome` 章を4段落ナラティブに強化（全6言語） |
+| 2026-06-28 | `def` 英語定義 batch01–08 マージ（3,059/3,059語） |
+| 2026-06-28 | 練習タブ統一: Connected Speech ⊃ Weak Forms（2タブ化） |
+| 2026-06-27 | gloss.fil batch04 更新 + batch17–20 追加（1,600/3,059語） |
+| 2026-06-27 | gloss.fil batch02/06–08 更新 + batch13–16 追加（1,280/3,059語） |
+| 2026-06-27 | gloss.fil batch02–05 更新 + batch09–12 追加（960/3,059語） |
+| 2026-06-27 | gloss.fil batch03–08 追加マージ（640/3,059語） |
+| 2026-06-26 | gloss.fil batch01–02 マージ（160語）・`tools/merge_gloss_fil.py` 追加 |
+
+---
+
+_Issue #172（Issue D）で新設。旧 `docs/PURPOSE.md`「Phase 1/2/R」「変更履歴」、旧 `docs/REPOSITORY-STRUCTURE.md`「Wordlist snapshot」「UI behaviour snapshot」を移設・統合。Issue #173（Issue E）で `docs/DESIGN.md` §2c–2g・§5・`docs/SPECIFICATION.md`「変更履歴」を追記・DESIGN/SPEC を retire。_

@@ -7,7 +7,7 @@
 | **これからやる** | 本フォルダ `cursor-instructions-*.md` |
 | **やり終わった結果** | [`../reports/cursor-implementation-report-*.md`](../reports/) |
 | **実装前の設計相談** | [`../briefs/`](../briefs/) |
-| **正本仕様** | `../../PURPOSE.md` / `../../DESIGN.md` / `../../SPECIFICATION.md` |
+| **正本仕様** | `../../product.md` / `../../features/<id>.md`（索引: `../../features/README.md`） |
 | **フォルダ地図** | `../../repo-map.md` |
 | **手動残作業（GAS 等）** | `../../reference/remaining-ops-checklist.md` |
 
@@ -22,4 +22,4 @@
 | T | `cursor-instructions-phase-t-tts-latency.md` | `../reports/cursor-implementation-report-phase-t.md` |
 | R | `cursor-instructions-phase-r-rp-pipeline-repair.md` | `../reports/cursor-implementation-report-phase-r.md` |
 
-**注意:** 指示書内の語数・キー数は執筆時点の値。現行は `PURPOSE.md` / `../../repo-map.md` / `../../data-contract.md` を正とする（語彙 5,397、語彙は `#vocabPage`）。
+**注意:** 指示書内の語数・キー数は執筆時点の値。現行は `../../product.md` / `../../repo-map.md` / `../../data-contract.md` を正とする（語彙 5,397、語彙は `#vocabPage`）。

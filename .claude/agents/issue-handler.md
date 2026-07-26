@@ -39,7 +39,7 @@ Cursor / Codex がこのリポで行っている運用と**完全に同じ品質
 - Issue から**触ってよいファイルのホワイトリスト**を確定。
 - **影響範囲分析（横展開）**: 共通シンボル / 共通関数に触る場合、`impact-ledger.json`（存在すれば）または設計ドキュメント＋ソースから
   共通/ローカルを判定。**実際の影響範囲（caller_areas）が Issue の宣言スコープを超える**なら、修正せず **halt** して報告。
-- ランタイム契約 8 パス・i18n・wordlist 等に触る場合、Issue / `data-contract.md`（または `SPECIFICATION.md`）が要求する
+- ランタイム契約 8 パス・i18n・wordlist 等に触る場合、Issue / `data-contract.md` が要求する
   データ整合性チェックを完了定義として控える。
 
 ## 実装

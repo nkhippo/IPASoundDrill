@@ -14,9 +14,9 @@ Use this folder when sharing context with Claude **in addition to** `../repo-map
 
 | File | Role |
 |------|------|
-| `../PURPOSE.md` | Why the app exists; Mode A/B; dependency status |
-| `../DESIGN.md` | Implementation design; session flow; TTS; GA/RP |
-| `../SPECIFICATION.md` | Screens, data fields, scoring, localStorage |
+| `../product.md` | Why the app exists; purpose cards; dependency status |
+| `../features/<id>.md` | Per-feature behavior, screen structure, scoring, data, i18n (index: `../features/README.md`) |
+| `../data-contract.md` | Screens' data fields, scoring constants pointer, localStorage |
 | `../repo-map.md` | Folder map (runtime paths: `../data-contract.md`; pipeline commands: `../pipeline.md`) |
 
 ---
