@@ -29,12 +29,12 @@ tools: Bash, Read, Grep, Glob, TodoWrite
 
 ## ブートストラップ（毎回・最新を読む）
 1. `CLAUDE.md`（router）+ `docs/doc-map.md`（ドキュメント地図）。
-2. 設計トレースチェーン: `product.md` → `docs/features/<id>.md` → `DESIGN.md` / `SPECIFICATION.md`
+2. 設計トレースチェーン: `product.md` → `docs/features/<id>.md` → `data-contract.md`
    → source（`src/index.template.html`）→ `impact-ledger.json`（それぞれ現存するもの）。
 3. governance 群: `docs/workflow.md` / `docs/guardrails.md` / `docs/change-classification.md`（`AGENTS.md` は薄い参照スタブ）。
 
 ## 監査観点
-1. **設計トレース整合**: product / features/<id> ↔ DESIGN / SPEC ↔ source ↔ impact-ledger が
+1. **設計トレース整合**: product / features/<id> ↔ data-contract ↔ source ↔ impact-ledger が
    相互に矛盾しないか。片方だけ更新された孤児（例: features に有るが source に無い）が無いか。
 2. **impact-ledger の鮮度**: 宣言された shared / local / caller_areas と、実 call-graph
    （source の grep）の乖離。共通シンボルの caller 実数とのズレ。

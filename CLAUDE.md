@@ -13,7 +13,7 @@
 
 - **名称**: IPA Sound Drill(旧 IPA Drill / English Pronunciation Trainer)
 - **repo**: https://github.com/nkhippo/IPASoundDrill / **公開 URL**: https://ipasounddrill.app
-- 目的・ポジショニング・タグライン → `docs/product.md`(Issue E で作成)。技術スタック・ファイル構成 → `docs/repo-map.md`。
+- 目的・ポジショニング・タグライン → `docs/product.md`。技術スタック・ファイル構成 → `docs/repo-map.md`。
 
 ---
 

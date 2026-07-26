@@ -9,11 +9,11 @@
 | 優先 | ファイル | 何が書いてあるか |
 |:---:|----------|------------------|
 | 1 | `repo-map.md` | フォルダマップ・インフラ（**Claude 共有用の入口**）。パイプライン手順は `pipeline.md`、ランタイム契約は `data-contract.md` |
-| 2 | `PURPOSE.md` | 目的・2モード・評価方針の正本 |
-| 3 | `DESIGN.md` | 実装設計（SRS・TTS・データ整備タスク） |
-| 4 | `SPECIFICATION.md` | 画面・JSON フィールド・localStorage の正本 |
+| 2 | `product.md` | 目的・ポジショニング・タグライン・personas の正本（WHY） |
+| 3 | `features/<id>.md` | 各機能の観測可能挙動・画面構造・採点則+定数・データ・i18n の正本（WHAT。索引: `features/README.md`） |
+| 4 | `data-contract.md` | JSON フィールド・localStorage・ランタイム契約の正本 |
 
-**衝突時:** `PURPOSE.md` → `DESIGN.md` → `SPECIFICATION.md`（governance は repo root `AGENTS.md`）
+**衝突時:** `product.md` → `features/<id>.md` → `data-contract.md`（governance は repo root `AGENTS.md`）
 
 ## 運用ルール
 

@@ -6,7 +6,7 @@ CEFR 向けの IPA 音写トレーナー（General American / Received Pronuncia
 
 - **Live**: https://ipasounddrill.app
 - **Docs**: docs/README.md
-- **Purpose**: docs/PURPOSE.md
+- **Purpose**: docs/product.md
 
 本番は Vercel + カスタムドメイン。リポジトリ名の正は `IPASoundDrill`。
 
@@ -25,9 +25,9 @@ CEFR 向けの IPA 音写トレーナー（General American / Received Pronuncia
 |---------|------|
 | `docs/README.md` | `docs/` 配下の索引（正本 vs タスク履歴の見分け） |
 | `docs/repo-map.md` | **フォルダ構成マップ（Claude 共有用・最初に読む）** |
-| `docs/PURPOSE.md` | 目的・モード構成の正本 |
-| `docs/DESIGN.md` | 実装設計仕様 |
-| `docs/SPECIFICATION.md` | 画面・データ・localStorage の正本 |
+| `docs/product.md` | 目的・ポジショニングの正本 |
+| `docs/features/<id>.md` | 各機能の挙動・画面・採点則・データ・i18n の正本（索引: `docs/features/README.md`） |
+| `docs/data-contract.md` | JSON スキーマ・localStorage・ランタイム契約の正本 |
 | `docs/reference/README.md` | 監査・運用ガイドの索引 |
 | `data/README.md` | `data/` 配下（runtime / batches / pipeline / derived）の見分け方 |
 

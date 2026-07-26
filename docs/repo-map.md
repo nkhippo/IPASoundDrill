@@ -27,7 +27,7 @@
 | **Batch imports** | `data/batches/` — Phase 1/2 merge sources（`data/batches/README.md`） |
 | **GAS TTS** | `gas/` — Google Apps Script proxy; not loaded by static site（設計は `docs/tts-design.md`） |
 | **Task history** | `docs/agent-reports/`（2026-07-20 以降の実装レポート）+ `docs/cursor/`（historical archive）（規約: `AGENTS.md`、索引: `docs/cursor/README.md`） |
-| **Canonical specs** | `docs/PURPOSE.md`, `docs/DESIGN.md`, `docs/SPECIFICATION.md`（読み分けは `docs/README.md`） |
+| **Canonical specs** | `docs/product.md`（WHY）, `docs/features/<id>.md`（WHAT、索引: `docs/features/README.md`）（読み分けは `docs/README.md`） |
 
 ### 正本ファイル（SPA）
 
@@ -75,9 +75,11 @@ ipasounddrill/
 │
 ├── docs/
 │   ├── README.md                # ★ docs/ 索引（AI 向け・最初の案内）
-│   ├── PURPOSE.md               # Goals, modes, dependency table（source of truth）
-│   ├── DESIGN.md                # Implementation design
-│   ├── SPECIFICATION.md         # Full spec（screens, data fields, localStorage）
+│   ├── product.md               # Goals, positioning, tagline, personas（source of truth・WHY）
+│   ├── features/                # 各 feature の挙動・画面・採点則+定数・データ・i18n（ID 単位・WHAT）
+│   │   ├── README.md            # feature ID インデックス
+│   │   ├── _common.md           # ID 横断の共通シェル・セッションフロー・適応出題
+│   │   └── <id>.md              # 1a / 2a-2d / 3a-3d / 3h / reveal / summary（12 ID）
 │   ├── data-contract.md         # ランタイム契約・JSON スキーマ・データ整合性
 │   ├── tts-design.md            # TTS プロンプト設計
 │   ├── pipeline.md              # Python パイプラインコマンド
@@ -354,7 +356,7 @@ CSS（`@media (min-width:1024px)`）:
 | Phase 2 staging | `data/pipeline/`（not root, not runtime） |
 | R4 作業 CSV/JSON | `data/pipeline/r4_pending_review_list.*`（**not** `docs/reference/`） |
 | Cursor task docs | `docs/cursor/**`（古いレポートは pre-reorg パスを引用する場合あり） |
-| Spec truth | `docs/PURPOSE.md` > `docs/DESIGN.md` > `docs/SPECIFICATION.md` |
+| Spec truth | `docs/product.md` > `docs/features/<id>.md` > `docs/data-contract.md` |
 
 ---
 
@@ -370,4 +372,4 @@ Vercel は main への push で自動デプロイ（Build Command: `node scripts
 
 ---
 
-_旧 `docs/REPOSITORY-STRUCTURE.md`、旧 `CLAUDE.md`「技術スタック」「ファイル構成」を統合継承（Issue #172）。ランタイム契約 → `docs/data-contract.md`、パイプライン → `docs/pipeline.md`、日付付きスナップショット → `docs/history.md` へ分離。_
+_旧 `docs/REPOSITORY-STRUCTURE.md`、旧 `CLAUDE.md`「技術スタック」「ファイル構成」を統合継承（Issue #172）。ランタイム契約 → `docs/data-contract.md`、パイプライン → `docs/pipeline.md`、日付付きスナップショット → `docs/history.md` へ分離。ディレクトリツリーの `docs/PURPOSE.md` / `docs/DESIGN.md` / `docs/SPECIFICATION.md` 行は Issue #173（Issue E）で `docs/product.md` / `docs/features/` に置換。_

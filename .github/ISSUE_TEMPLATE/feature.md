@@ -17,7 +17,7 @@ labels:
 
 ## 関連ドキュメント（任意）
 
-- 仕様書該当セクション: <!-- 例: docs/SPECIFICATION.md §2-3 -->
+- 仕様書該当セクション: <!-- 例: docs/features/2a.md -->
 - 過去の類似実装レポート: <!-- 例: docs/cursor/reports/cursor-implementation-report-phase-v.md -->
 - Cursor 指示書（タイプ B のみ）: <!-- 例: docs/cursor/instructions/cursor-instructions-<topic>.md -->
 
