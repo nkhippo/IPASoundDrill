@@ -1,11 +1,3 @@
----
-id: pj-2026-07-22-124c
-aliases:
-- pj-2026-07-22-124c
-title: 'Expand validate_i18n.py with parity CI guard (#124) — 実装レポート'
-created: '2026-07-22'
----
-
 # Expand validate_i18n.py with parity CI guard (#124) — 実装レポート
 
 ## 関連 Issue / PR

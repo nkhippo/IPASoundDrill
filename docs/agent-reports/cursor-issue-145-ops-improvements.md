@@ -1,11 +1,3 @@
----
-id: pj-2026-07-23-26ac
-aliases:
-- pj-2026-07-23-26ac
-title: 'Operational improvements (#145) — 実装レポート'
-created: '2026-07-23'
----
-
 # Operational improvements (#145) — 実装レポート
 
 ## 関連 Issue / PR

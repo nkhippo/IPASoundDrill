@@ -1,11 +1,3 @@
----
-id: pj-2026-07-18-10b-report
-aliases:
-- cursor-implementation-report-phase-1-0-b-data-mapping-recon
-title: Phase 1-0-b screen-data mapping Recon — 実装レポート
-created: '2026-07-18'
----
-
 # Phase 1-0-b screen-data mapping Recon — 実装レポート
 
 ## 関連 Issue / PR

@@ -1,11 +1,3 @@
----
-id: pj-2026-07-24-a7e1
-aliases:
-- pj-2026-07-24-a7e1
-title: 'PC UI CD compliance follow-up (#150) — 実装レポート'
-created: '2026-07-24'
----
-
 # PC UI CD compliance follow-up (#150) — 実装レポート
 
 ## 関連 Issue / PR

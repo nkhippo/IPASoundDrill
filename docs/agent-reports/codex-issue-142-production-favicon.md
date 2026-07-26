@@ -1,11 +1,3 @@
----
-id: pj-2026-07-23-f142
-aliases:
-- pj-2026-07-23-f142
-title: 'Production favicon 配線 (#142) — 実装レポート'
-created: '2026-07-23'
----
-
 # Production favicon 配線 (#142) — 実装レポート
 
 ## 関連 Issue / PR

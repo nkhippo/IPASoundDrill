@@ -1,11 +1,3 @@
----
-id: pj-2026-07-10-2e6a
-aliases:
-- pj-2026-07-10-2e6a
-title: '`data/batches/` — 語彙マージ用ソース JSON'
-created: '2026-07-10'
----
-
 # `data/batches/` — 語彙マージ用ソース JSON
 
 Cursor / Claude が生成し、マージスクリプト（またはインライン Python）で `wordlist_GA_a1a2_plus_phonics.json` に取り込むバッチ。**ブラウザからは読み込まない。**
@@ -37,4 +29,4 @@ Cursor / Claude が生成し、マージスクリプト（またはインライ�
 
 Phase 2 以降のバッチは **`rp_ipa` 同梱**（`gen_rp_ipa.py` API 不要）。
 
-マージ後の標準パイプライン: [[pj-2026-07-09-80be|`docs/REPOSITORY-STRUCTURE.md`]] § Common pipeline commands
+マージ後の標準パイプライン: `docs/REPOSITORY-STRUCTURE.md` § Common pipeline commands

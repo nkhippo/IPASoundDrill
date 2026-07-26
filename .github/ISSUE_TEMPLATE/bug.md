@@ -4,9 +4,6 @@ about: バグを報告する
 title: 【Bug】
 labels:
 - bug
-id: pj-2026-07-11-08d5
-aliases:
-- pj-2026-07-11-08d5
 ---
 
 ## 症状

@@ -1,11 +1,3 @@
----
-id: pj-2026-07-09-80be
-aliases:
-- pj-2026-07-09-80be
-title: Repository Structure
-created: '2026-07-09'
----
-
 # Repository Structure
 
 > **Purpose:** Share this file with Claude (or other AI assistants) at the start of a task so it knows where data, scripts, and docs live.  
@@ -44,9 +36,9 @@ Claude に渡すときは **本ファイルを最初に**読ませ、目的に�
 | **Runtime (Vercel + custom domain)** | `src/index.template.html` → build → `/{lang}/index.html` + JSON/i18n/fonts loaded by the browser |
 | **Production wordlist** | `wordlist_GA_a1a2_plus_phonics.json` at repo root (**5,397 words**, Jul 2026) |
 | **Pipeline** | `scripts/*.py` read/write `data/pipeline/` staging JSON, merge into wordlist |
-| **Batch imports** | `data/batches/` — Phase 1/2 merge sources（[[pj-2026-07-10-2e6a|`data/batches/README.md`]]） |
+| **Batch imports** | `data/batches/` — Phase 1/2 merge sources（`data/batches/README.md`） |
 | **GAS TTS** | `gas/` — Google Apps Script proxy; not loaded by static site |
-| **Task history** | `docs/agent-reports/`（2026-07-20 以降の実装レポート）+ `docs/cursor/` — instructions / briefs / recon / reports（historical archive）（規約: `AGENTS.md`、索引: [[pj-2026-07-10-a25d|`docs/cursor/README.md`]]） |
+| **Task history** | `docs/agent-reports/`（2026-07-20 以降の実装レポート）+ `docs/cursor/` — instructions / briefs / recon / reports（historical archive）（規約: `AGENTS.md`、索引: `docs/cursor/README.md`） |
 | **Canonical specs** | `docs/PURPOSE.md`, `docs/DESIGN.md`, `docs/SPECIFICATION.md`（読み分けは上表） |
 
 **Path helper for Python:** `scripts/paths.py` defines canonical paths. Prefer importing it over hard-coded strings.
@@ -59,7 +51,7 @@ Claude に渡すときは **本ファイルを最初に**読ませ、目的に�
 | 生成物 | `/{lang}/index.html`（`en` … `fil`） | `npm run build` / Vercel Build。`.gitignore` |
 | ルート `index.html` | **無し** | F2 以降削除。middleware が `/` を言語別 URL へ振り分け |
 
-**Data folder map:** [[pj-2026-07-10-359a|`data/README.md`]] — runtime / batches / pipeline / derived / patches / archive の見分け方。
+**Data folder map:** `data/README.md` — runtime / batches / pipeline / derived / patches / archive の見分け方。
 
 ---
 
@@ -551,7 +543,7 @@ Staging outputs → `data/pipeline/`. Neighbors / RP progress → `data/derived/
 | `gas/BatchWarm.gs` | Scheduled GA Drive pre-generation |
 | `gas/BatchWords.gs` | Word list for batch warm（**5,397 語** — `export_batch_words.py` で更新） |
 | `gas/README.md` | Deploy + API reference |
-| 手動残作業 | [[pj-2026-07-10-dd2c|`docs/reference/remaining-ops-checklist.md`]]（再デプロイ・`migratePublicSharing`・BatchWarm） |
+| 手動残作業 | `docs/reference/remaining-ops-checklist.md`（再デプロイ・`migratePublicSharing`・BatchWarm） |
 
 ---
 

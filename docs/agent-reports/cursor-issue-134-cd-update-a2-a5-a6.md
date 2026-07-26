@@ -1,11 +1,3 @@
----
-id: pj-2026-07-23-2a20
-aliases:
-- pj-2026-07-23-2a20
-title: 'Update CD SP/PC with A2/A5/A6 (#134) — 実装レポート'
-created: '2026-07-23'
----
-
 # Update CD SP/PC with A2/A5/A6 (#134) — 実装レポート
 
 ## 関連 Issue / PR

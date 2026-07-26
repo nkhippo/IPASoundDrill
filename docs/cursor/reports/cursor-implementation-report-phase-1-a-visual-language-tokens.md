@@ -1,11 +1,3 @@
----
-id: pj-2026-07-19-1a-report
-aliases:
-- cursor-implementation-report-phase-1-a-visual-language-tokens
-title: Phase 1-A 視覚言語トークン基盤 — 実装レポート
-created: '2026-07-19'
----
-
 # Phase 1-A 視覚言語トークン基盤 — 実装レポート
 
 ## 関連 Issue / PR

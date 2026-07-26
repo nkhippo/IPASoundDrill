@@ -1,11 +1,3 @@
----
-id: pj-2026-07-12-3141
-aliases:
-- pj-2026-07-12-3141
-title: AGENT-INSTRUCTION-GUIDE — AI エージェント指示の抽象度ガイドライン
-created: '2026-07-12'
----
-
 # AGENT-INSTRUCTION-GUIDE — AI エージェント指示の抽象度ガイドライン
 
 > **Last updated**: 2026-07-20（Issue #114: agent-agnostic 化、`docs/agent-instruction-guide.md` へリネーム）

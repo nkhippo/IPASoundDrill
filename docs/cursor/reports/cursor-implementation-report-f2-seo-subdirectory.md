@@ -1,11 +1,3 @@
----
-id: pj-2026-07-12-8fd8
-aliases:
-- pj-2026-07-12-8fd8
-title: F2 SEO subdirectory prerendering — 実装レポート
-created: '2026-07-12'
----
-
 # F2 SEO subdirectory prerendering — 実装レポート
 
 ## 関連 Issue / PR

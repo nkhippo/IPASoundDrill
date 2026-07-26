@@ -1,11 +1,3 @@
----
-id: pj-2026-07-21-a117
-aliases:
-- pj-2026-07-21-a117
-title: 'governance: Step 2 SSoT 化 + stub 削除予定日注記 (#117) — 実装レポート'
-created: '2026-07-21'
----
-
 # governance: Step 2 SSoT 化 + stub 削除予定日注記 (#117) — 実装レポート
 
 ## 関連 Issue / PR

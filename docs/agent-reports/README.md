@@ -1,11 +1,3 @@
----
-id: pj-2026-07-20-e7a1
-aliases:
-- pj-2026-07-20-e7a1
-title: 'docs/agent-reports/ — AI エージェント実装レポート統合ディレクトリ'
-created: '2026-07-20'
----
-
 # `docs/agent-reports/` — AI エージェント実装レポート統合ディレクトリ
 
 すべての AI エージェント (Codex / Cursor / Claude Code / その他) が実装完了時に生成する**実装レポート**を集約するディレクトリ。

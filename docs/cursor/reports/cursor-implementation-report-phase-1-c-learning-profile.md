@@ -1,11 +1,3 @@
----
-id: pj-2026-07-19-1c-report
-aliases:
-- cursor-implementation-report-phase-1-c-learning-profile
-title: Phase 1-C 学習プロフィール 3a — 実装レポート
-created: '2026-07-19'
----
-
 # Phase 1-C 学習プロフィール 3a — 実装レポート
 
 ## 関連 Issue / PR

@@ -1,11 +1,3 @@
----
-id: pj-2026-07-22-c122
-aliases:
-- pj-2026-07-22-c122
-title: 'Phase 1-E PR-3: About expansion and docs closing (#122) — implementation report'
-created: '2026-07-22'
----
-
 # Phase 1-E PR-3: About expansion and docs closing (#122) — implementation report
 
 ## Related Issue / PR

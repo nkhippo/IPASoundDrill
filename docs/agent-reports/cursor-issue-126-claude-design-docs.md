@@ -1,11 +1,3 @@
----
-id: pj-2026-07-23-3df3
-aliases:
-- pj-2026-07-23-3df3
-title: 'Place Claude Design files in docs/claude-design/ (#126) — 実装レポート'
-created: '2026-07-23'
----
-
 # Place Claude Design files in docs/claude-design/ (#126) — 実装レポート
 
 ## 関連 Issue / PR
