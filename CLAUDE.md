@@ -67,6 +67,43 @@ halt 経路: 同一セッション ClaudeCode → その場で Naoya に質問 /
 
 ---
 
+## Issue 起票の要点
+
+> 移設先ホーム（`docs/workflow.md` / `docs/change-classification.md`、いずれも Issue C で作成）が出来るまでは本節を運用の正本とする。作成後は詳細を各ホームへ移し、router には要点のみ残す。
+
+- **タイプ**: A(軽微=単一ファイル / 既知仕様への復帰 / docs / CI) / B(標準=複数ファイル / UI 変更 / データ拡充 / 仕様変更を伴う)。大規模仕様変更の C は Track B から導入。
+- **必須 5 項目**（1 つでも欠ければ `ready-for-cursor` を付与しない）: ①背景・目的 ②実装範囲（対象ファイル明示）③完了定義（観測可能な動作で記述）④テスト観点 ⑤非対象範囲。
+- **Track A/B**: Track A の Issue は「ローンチブロッカーか否か」を明示。Track B 案件は `track-b` ラベルを付与。
+- **改修分類ブロック必須**（本文冒頭）: Complexity Level(L1/L2/L3) × Change Pattern(C1–C7) + 判定根拠 1–2 行。境界が曖昧なら上位選択（L1↔L2 → L2、L2↔L3 → L3）。
+- Issue 背景の 5 サブセクション構成・署名・分割 5 軸などの詳細 → `docs/workflow.md`。分類体系の定義 → `docs/change-classification.md`。
+
+### ラベル
+
+`feature`(新機能) / `bug` / `docs` / `chore`(整備・CI) / `ready-for-cursor`(5 項目 OK) / `needs-review`(PR 自動付与) / `launch-blocker` / `track-b` / 優先度 `critical`〜`low`。
+
+---
+
+## レビュー & merge（Complexity Level でスケーリング）
+
+- **L1**（単一ファイル / docs のみ / ランタイム契約非該当）: CI 緑 + セルフチェックで auto-merge 可。
+- **L2**: pr-reviewer PASS で auto-merge 可。
+- **L3**（下記ランタイム契約 / wordlist / i18n / 大規模）: フル Claude Rv + md5 + **Naoya ack 必須**（auto-merge しない）。
+
+エージェントは `.claude/agents/`（`issue-handler`=実装 / `pr-reviewer`=契約ゲート / `consistency-auditor`=整合監査）。いずれも Naoya の明示委譲時のみ起動。詳細フロー → `docs/workflow.md`。
+
+---
+
+## ランタイム契約ガードレール（触れたら検証必須・L3 扱い）
+
+以下 8 パスに触れる変更は Issue でフラグを立て、対応する検証を完了定義に含める:
+`wordlist_GA_a1a2_plus_phonics.json` / `data/connected_speech.json` / `data/weak_forms.json` / `data/guide.json` / `i18n/{en,ja,ko,zh-Hans,zh-Hant,fil}.json` / `i18n/phonemes/{lang}.json` / `fonts/DoulosSIL-Regular.woff2` / `src/index.template.html` 内 `GAS_TTS_URL`。
+
+- i18n を触ったら `python3 tools/validate_i18n.py`（現行 UI i18n leaf = 169）。
+- wordlist / `rp_ipa` / `neighbors` / connected_speech / weak_forms を触ったら該当の再カウント・`scripts/gen_*.py` 再実行。
+- 詳細スキーマ・フィールド辞書 → `docs/data-contract.md`（Issue D で作成）。
+
+---
+
 ## 起動時動作
 
 1. このファイル(`CLAUDE.md`)を読む。

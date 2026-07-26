@@ -22,6 +22,8 @@ Issue B は既存ファイルを削除しない。CLAUDE.md からは router に
 | 技術スタック / ファイル構成ツリー | `docs/repo-map.md` | planned(D) |
 | 品質基準 3（データ整合性）/ 4（ランタイム契約 8 パス）/ 5（多言語 UI） | `docs/data-contract.md` | planned(D) |
 
+> ※ ホーム作成まで、`CLAUDE.md` router には上記のうち **Issue 起票要点 / ラベル / レビュー・merge / ランタイム契約 8 パス**の**要点のみ**残置し、これを運用の正本とする。C/D で詳細を各ホームへ移設後、router 側は要点＋ポインタに縮小する。
+
 ---
 
 ## 2. 概念 → ホーム レジストリ
