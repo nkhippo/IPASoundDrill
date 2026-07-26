@@ -21,17 +21,16 @@
 
 | ファイル | 何が書いてあるか |
 |---|---|
-| `DOCUMENT-MAP.md` | 全ドキュメントの分類（Category A-F）と参照タイミング |
-| `DEV-GUARDRAILS.md` | 堅固化パターン A/B、エージェント自己判断禁止事項 |
-| `DOC-SYNC-PLAYBOOK.md` | ソース ⇔ ドキュメント同期の 3 分岐マトリックス |
-| `agent-instruction-guide.md` | 指示の抽象度マトリックス、Pre-Issue Recon 運用 |
+| `doc-map.md` | 概念 → ホーム レジストリ（single-source 索引） |
+| `workflow.md` | Issue 起票・実装フロー・レビュー・auto-merge・PR 作成ルール |
+| `guardrails.md` | 堅固化パターン A/B/C、レビュー段階化、Cursor 自己判断禁止事項、doc-sync |
+| `change-classification.md` | Complexity Level（L1-L3）× Change Pattern（C1-C7）の判定 |
 
-**Chat 起動時、Claude は Category B の以下を必ず取得**:
-1. `HANDOFF-*.md`（Project Knowledge）
-2. `CLAUDE.md`（リポルート）
-3. `REPOSITORY-STRUCTURE.md`
-4. `LAUNCH-CHECKLIST.md`
-5. `DOCUMENT-MAP.md`
+**Chat 起動時、Claude は以下を必ず取得**（`CLAUDE.md` タスク種別対応表に従いオンデマンド追加取得）:
+1. `CLAUDE.md`（リポルート・router）
+2. `REPOSITORY-STRUCTURE.md`
+3. `LAUNCH-CHECKLIST.md`
+4. `doc-map.md`
 
 ## サブフォルダ
 

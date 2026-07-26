@@ -109,7 +109,11 @@ ipasounddrill/
 │   ├── agent-reports/           # AI エージェント実装レポート統合（Codex / Cursor / Claude Code 等）
 │   │   ├── README.md            # 命名規則・配置ルール
 │   │   └── TEMPLATE.md          # 実装レポートテンプレート
-│   ├── agent-instruction-guide.md  # 抽象度マトリックス・Pre-Issue Recon（旧 CURSOR-INSTRUCTION-GUIDE）
+│   ├── workflow.md               # 開発運用フロー正本（Issue 起票・実装・レビュー・auto-merge）
+│   ├── guardrails.md             # 堅固化パターン・レビュー段階化・自己判断禁止・doc-sync
+│   ├── change-classification.md  # Complexity Level × Change Pattern 判定
+│   ├── doc-map.md                # 概念 → ホーム レジストリ
+│   ├── _conventions.md           # 記法規約・feature ID レジストリ
 │   ├── design/                  # Phase 1+ デザイン入力（タグライン候補等）
 │   │   └── tagline-candidates.md
 │   ├── claude-design/           # UI/UX 正典（Claude Design 成果物）→ README.md 参照

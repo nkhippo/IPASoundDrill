@@ -27,9 +27,9 @@ Cursor / Codex がこのリポで行っている運用と**完全に同じ品質
 1. `CLAUDE.md`（router）を読む。
 2. `gh issue view <番号> --repo nkhippo/IPASoundDrill --comments` で対象 Issue 本文とコメントを**全文**読む。**Issue 本文が仕様の正本**。
 3. Issue の「改修分類」「参照ドキュメント」節から、**必要な分だけ**の governance / 設計ドキュメントを読む
-   （現行なら `workflow.md`/`guardrails.md`/`change-classification.md`、または再編前の
-   `dev-common.md`/`DEV-GUARDRAILS.md`/`CHANGE-CLASSIFICATION.md`/`AGENTS.md`/`.cursor/rules/dev-flow.mdc` 等、
-   その時点で存在するもの）。加えて `features/<id>.md` / `data-contract.md` / `impact-ledger.json` 等、該当機能のもの。
+   （`docs/workflow.md`/`docs/guardrails.md`/`docs/change-classification.md`が正本。`AGENTS.md`/`.cursor/rules/dev-flow.mdc`
+   は薄い参照スタブ）。加えて `features/<id>.md` / `data-contract.md` / `impact-ledger.json` 等、該当機能のもの
+   （EPIC #169 Issue D–F で順次作成、未作成なら `docs/doc-map.md` で現ホームを確認）。
 4. Issue が参照する先行 Issue のコミット済み成果物を読む。
 5. **現行ドキュメントが定めるルール（署名の要否・レビュー Level・halt 経路・PR フォーマット・レポート置き場）に従う。** 再編の進行度で変わるので、読んで得た最新ルールを採用する。
 

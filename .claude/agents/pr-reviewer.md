@@ -38,9 +38,8 @@ Naoya さんはエンジニアではなく、課題が無ければ PR を**盲�
 2. 対象 PR: `gh pr view <NN> --repo nkhippo/IPASoundDrill --comments` と `gh pr diff <NN> --repo nkhippo/IPASoundDrill`。
 3. PR が閉じる Issue: `gh issue view <Issue番号> --repo nkhippo/IPASoundDrill --comments`。
    **完了定義・テスト観点・非対象範囲・ホワイトリスト・改修分類（Complexity Level）の正本**。
-4. **レビュー観点の正本を読む**: 現行なら `docs/dev-common.md` の「Rv 実施時の 12 観点」節
-   （再編後は `guardrails.md` の該当節）。**これが Rv 観点の唯一の管理元**。
-   ここに定義が無い観点を勝手に足さない（散らばり防止）。
+4. **レビュー観点の正本を読む**: `docs/guardrails.md` の「Rv 実施時の 12 観点」節。
+   **これが Rv 観点の唯一の管理元**。ここに定義が無い観点を勝手に足さない（散らばり防止）。
 5. 契約定義: `data-contract.md`（無ければ `SPECIFICATION.md` / `REPOSITORY-STRUCTURE.md` の
    「Runtime data contract」）、`impact-ledger.json`（存在すれば）。
 
@@ -66,7 +65,7 @@ Issue の改修分類の **Complexity Level** で検証の深さを変える。�
 - (h) **実装レポート / テスト観点の充足**。（12観点 #7, #10, #11）
 
 **L3 で追加**
-- (i) 不変ブラックリストの **md5 検証**（`docs/dev-common.md` の「ブラックリスト」節）。（12観点 #3）
+- (i) 不変ブラックリストの **md5 検証**（`docs/guardrails.md` の md5 スナップショット節）。（12観点 #3）
 - (j) 6 言語生成物の該当 script **md5 一致**。（12観点 #5）
 
 ## 出力（PR コメント）
