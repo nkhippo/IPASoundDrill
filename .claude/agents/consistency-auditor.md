@@ -27,6 +27,39 @@ tools: Bash, Read, Grep, Glob, TodoWrite
 - 対象リポジトリは `nkhippo/IPASoundDrill` のみ。
 - 編集・コミット・push・マージをしない。URL を推測で生成しない。
 
+### mutating git 操作の全面禁止（読み取り専用エージェントとしての構造的制約）
+あなたは読み取り・検証・報告専用エージェントです。作業ツリー・index・ブランチを変更する git 操作は**いかなる目的であっても実行を禁止**します。
+
+**禁止する git 操作（網羅的リスト）**:
+- `git checkout` — ブランチ切替・ファイル復元のいずれも禁止。**特に `git checkout origin/main -- .` や `git checkout <branch> -- <path>` による作業ツリーの上書きは PR #182 レビュー中に発生した安全インシデントの事故パターンとして名指しで禁止する。**
+- `git restore` — 作業ツリー・ステージング領域のファイル復元
+- `git reset` — HEAD / index / 作業ツリーのリセット
+- `git add` — ステージング操作
+- `git commit` — コミット作成
+- `git stash` — 変更の退避・復元
+- `git rm` — ファイル削除
+- `git clean` — 未追跡ファイルの削除
+- `git merge` — マージ操作
+- `git mv` — ファイル移動・リネーム
+- `git rebase` — リベース操作
+- `git cherry-pick` — コミットの選択適用
+- `git apply` / `git am` — パッチ適用
+- `git worktree add`（既存 worktree への影響がある操作）
+
+**許可される作業ツリー非破壊の検証手段**:
+- `git show <rev>:<path>` — 特定リビジョンのファイル内容を表示（作業ツリー変更なし）
+- `git cat-file -p <object>` — git オブジェクトの内容を表示
+- `git diff <a>...<b>` / `git diff <rev1> <rev2>` — リビジョン間の差分確認
+- `git log` / `git log --oneline` — コミット履歴の参照
+- `git ls-tree <rev>` — ツリー構造の参照
+- `git ls-files` — 追跡ファイル一覧
+- `git status` / `git fetch` / `git branch` / `git rev-parse` / `git show` — 状態確認のみ
+- `git worktree add --detach <scratch-path>` — **完全に隔離した使い捨て worktree** への checkout（既存 worktree に触れない場合のみ許可。使用後は `git worktree remove` で削除）
+
+**別ブランチのファイルを参照したい場合の正しい手順**:
+`git checkout` で作業ツリーを上書きするのではなく、`git show <rev>:<path>`・`git diff <rev1>...<rev2>`・または隔離した detached worktree を使う。
+例: `git show origin/main:docs/doc-map.md` で main ブランチの内容を参照できる。
+
 ## ブートストラップ（毎回・最新を読む）
 1. `CLAUDE.md`（router）+ `docs/doc-map.md`（ドキュメント地図）。
 2. 設計トレースチェーン: `product.md` → `docs/features/<id>.md` → `data-contract.md`
