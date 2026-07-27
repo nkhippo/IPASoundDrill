@@ -130,8 +130,14 @@
     "no_results": "No results",
     "back": "Back",
     "filter": {
-      "ipa": "IPA",
-      "all": "All"
+      "ipa": "Filter by IPA",
+      "all": "All",
+      "ipa_max": "(max 3)",
+      "add": "Add symbol"
+    },
+    "count": {
+      "filtered": "Filtered · {accent} pronunciations with {syms} · {n}",
+      "all": "{n} entries"
     }
   },
   "reveal": {
@@ -386,5 +392,22 @@
       "title": "At your own pace.",
       "body": "Progress stays on this device. No account. Pause and resume anytime—start with one word."
     }
+  },
+  "footer": {
+    "ipa": "What is IPA?",
+    "language": "Language"
+  },
+  "language": {
+    "title": "Language & audio",
+    "display_label": "Display language",
+    "accent_note_html": "Accent (GA / RP) is set in your <b>learning profile</b>."
+  },
+  "ipa_info": {
+    "heading": "IPA is a map of sounds.",
+    "lead": "The same spelling can sound different. IPA writes down exactly how a word is pronounced — one symbol, one sound — in one international system.",
+    "example_note": "Similar spelling, very different sounds.",
+    "legend_stress": "Stress (accent) position",
+    "legend_syllable": "Syllable break",
+    "legend_link": "Linking between words"
   }
 }

@@ -130,8 +130,14 @@
     "no_results": "無結果",
     "back": "返回",
     "filter": {
-      "ipa": "IPA",
-      "all": "全部"
+      "ipa": "以 IPA 篩選",
+      "all": "全部",
+      "ipa_max": "(最多3個)",
+      "add": "新增符號"
+    },
+    "count": {
+      "filtered": "篩選結果 · 含 {syms} 的 {accent} 發音 · {n}個",
+      "all": "共 {n}個"
     }
   },
   "reveal": {
@@ -386,5 +392,22 @@
       "title": "照自己的節奏。",
       "body": "進度保存在本機，無需註冊。隨時可中斷、繼續。"
     }
+  },
+  "footer": {
+    "ipa": "什麼是IPA?",
+    "language": "語言設定"
+  },
+  "language": {
+    "title": "語言與語音",
+    "display_label": "顯示語言",
+    "accent_note_html": "口音（GA / RP）在<b>學習檔案</b>中設定。"
+  },
+  "ipa_info": {
+    "heading": "IPA 是聲音的地圖。",
+    "lead": "拼寫相同，發音未必相同。國際音標（IPA）以一個符號對應一個音，準確記錄「實際怎麼發音」，是一套國際通用的體系。",
+    "example_note": "拼寫相似，發音卻大不相同。",
+    "legend_stress": "重音（重讀）位置",
+    "legend_syllable": "音節分隔",
+    "legend_link": "詞與詞之間的連讀"
   }
 }

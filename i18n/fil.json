@@ -68,8 +68,14 @@
     "no_results": "Walang resulta",
     "back": "Bumalik",
     "filter": {
-      "ipa": "IPA",
-      "all": "Lahat"
+      "ipa": "Salain ayon sa IPA",
+      "all": "Lahat",
+      "ipa_max": "(hanggang 3)",
+      "add": "Magdagdag ng simbolo"
+    },
+    "count": {
+      "filtered": "Nasala · {accent} bigkas na may {syms} · {n}",
+      "all": "{n} entry"
     }
   },
   "info": {
@@ -386,5 +392,22 @@
       "title": "Sa sarili mong bilis.",
       "body": "Naka-save sa device ang progress. Walang account. Puwedeng i-pause at ipagpatuloy anytime."
     }
+  },
+  "footer": {
+    "ipa": "Ano ang IPA?",
+    "language": "Wika"
+  },
+  "language": {
+    "title": "Wika at audio",
+    "display_label": "Wika ng display",
+    "accent_note_html": "Ang accent (GA / RP) ay itinatakda sa iyong <b>learning profile</b>."
+  },
+  "ipa_info": {
+    "heading": "Ang IPA ay mapa ng mga tunog.",
+    "lead": "Magkapareho man ang baybay, maaaring magkaiba ang tunog. Isinusulat ng IPA kung paano talaga binibigkas — isang simbolo, isang tunog — sa isang internasyonal na sistema.",
+    "example_note": "Magkatulad ang baybay, ngunit magkaibang-magkaiba ang tunog.",
+    "legend_stress": "Posisyon ng diin (stress)",
+    "legend_syllable": "Hati ng pantig",
+    "legend_link": "Pag-uugnay ng mga salita"
   }
 }
