@@ -52,6 +52,7 @@ CD(Claude Design、`docs/claude-design/{sp,pc}.dc.html`)と実UIを **文言以�
   - ✅ **PC 精緻化 5件**(Naoya リクエスト第3弾): ①2ペイン境界=prompt paper/answer panel で明示(ID セレクタ勝ち負けを是正、CD一致)②言語入口をヘッダー globe→3f に一本化(フッター「言語設定」撤去)③初期描画をフラット化(第1カード塗り強調 撤去=Q2 supersede)④ドリルカード min-height:600px で高さ固定(出題↔答え合わせのガタつき解消)⑤PC 語彙リスト列幅 820→620px。CD 側は **CD-17(1a フラット)/CD-18(フッター言語設定削除)** で round-trip。PC 語彙は単一カラム確定=CD 3b-pc(2カラム)と意図的差異。
   - ✅ **追加改善 A/B/C/D**(Naoya リクエスト第2弾): A=戻る丸chevron/左寄せ明朝を 3a/3c/3d へ横展開、B=出題(2a)の入力/ボタン位置固定(RP 行スペース常時確保)、C=①アクセント「GA·米」→「GA」②オンボ位置表示をドット一本化、D=`ga_rp_same` の設計意図を data-contract.md に明記(実質同じ音=IPA完全一致ではない)。CD 側は **CD-14/15/16**(`cd-updates/2026-07-27_cd-parity-ux-improve-2.md`)で round-trip 予定。
   - ✅ **UX 改善 5件**(Naoya リクエスト, commit `adf2510`): ①オンボ4スライド高さ統一(「つぎへ」位置固定 Y=608)②装飾アンダーバー(`.top-swash`)撤去+余白詰め ③ヘッダー3ボタン丸型統一+言語=globe アイコン(既定 en)④2b「クリア」をビルド欄右隣へ ⑤ドリルヘッダーの語彙(≣)リンク撤去(GA/RP は保持)。#2/#3/#5 は CD 意匠と差分→**CD-9/10/11**(`cd-updates/2026-07-27_cd-parity-ux-improve.md`)で round-trip 予定。横展開(他画面のボタン位置固定)は今後検討。
+  - ✅ **1a トップ 0ベース再設計**(Naoya リクエスト, 案A採用): 左サブコピー(思想)と右サイドバー「このアプリについて」の**二重表現を解消**。右サイドバーを撤去し、思想は「サブコピー1文＋『思想を読む →』リンク(→3h モーダル)」に集約。空いた横幅へ**学習状況カードを右上へ移動**、**目的4カードを全幅グリッド化**(位置は hero 直下のまま=左寄せ移動しない)。PC は `grid-template-areas:"hero aside"/"purpose purpose"`、SP は 目的→振り返り の縦積み順を維持。CD-17/18 を内包。CD 側は **CD-19**(`cd-updates/2026-07-27_cd-parity-1a-redesign.md`)で round-trip。
 - **Phase 4/5**: 未(Sonnet 1次Rv → Opus 横断2次Rv)
 
 ## 4. app-2-ii ドリルヘッダー(大物・要注意)✅ 完了(2026-07-27, commit `37de505`)
