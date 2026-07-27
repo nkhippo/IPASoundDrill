@@ -54,6 +54,7 @@ CD(Claude Design、`docs/claude-design/{sp,pc}.dc.html`)と実UIを **文言以�
   - ✅ **UX 改善 5件**(Naoya リクエスト, commit `adf2510`): ①オンボ4スライド高さ統一(「つぎへ」位置固定 Y=608)②装飾アンダーバー(`.top-swash`)撤去+余白詰め ③ヘッダー3ボタン丸型統一+言語=globe アイコン(既定 en)④2b「クリア」をビルド欄右隣へ ⑤ドリルヘッダーの語彙(≣)リンク撤去(GA/RP は保持)。#2/#3/#5 は CD 意匠と差分→**CD-9/10/11**(`cd-updates/2026-07-27_cd-parity-ux-improve.md`)で round-trip 予定。横展開(他画面のボタン位置固定)は今後検討。
   - ✅ **1a トップ 0ベース再設計**(Naoya リクエスト, 案A採用): 左サブコピー(思想)と右サイドバー「このアプリについて」の**二重表現を解消**。右サイドバーを撤去し、思想は「サブコピー1文＋『思想を読む →』リンク(→3h モーダル)」に集約。空いた横幅へ**学習状況カードを右上へ移動**、**目的4カードを全幅グリッド化**(位置は hero 直下のまま=左寄せ移動しない)。PC は `grid-template-areas:"hero aside"/"purpose purpose"`、SP は 目的→振り返り の縦積み順を維持。CD-17/18 を内包。CD 側は **CD-19**(`cd-updates/2026-07-27_cd-parity-1a-redesign.md`)で round-trip。
   - ✅ **重複導線の集約**(Naoya リクエスト): ヘッダーの「学習状況/IPAって何?」テキストリンク(PCトップ限定表示)を撤去。学習状況=カード / IPAって何?=フッターピル / 思想=hero リンク に各1本化。ヘッダーが全ブレークポイント・全言語で同一(brand+globe+語彙≣+ガイド?)に。到達性喪失なし(他画面で `.header-nav` は元々非表示)。CD 側は **CD-20**(同 1a-redesign 指示書に追記)で round-trip。
+  - ✅ **IPA導線を hero に集約(案A)**: 「IPAって何?」をフッターピル→ hero に移設し「思想を読む →」の隣に併置(`.top-hero-links`)。フッターピルは撤去(=Feedback/Terms/Privacy/X のみ)。3e ページは温存。→ IPA=hero / 思想=hero / 学習状況=カード で全て1箇所。CD 側は **CD-21**(同指示書)で round-trip。
   - 📌 **「全言語でUI差異」検証結果**: 1a の CSS/構造は**言語非依存**(`:lang()`/lang別body class なし、build は文言と `<html lang>` のみ差替)。en/ja/ko/zh-Hans/zh-Hant/fil すべて同一構造を確認。ユーザが見た「英語だけ縦積み」は **1024px ブレークポイント未満**の応答的レイアウト(狭い窓)であり言語差ではない。※ 抜本見直し(IPA導線の露出度・トップ IA)は Naoya と方向確認中。
 - **Phase 4/5**: 未(Sonnet 1次Rv → Opus 横断2次Rv)
 

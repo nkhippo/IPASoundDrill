@@ -534,11 +534,9 @@
   @media (prefers-reduced-motion:no-preference){.panel{animation:rise .26s ease}@keyframes rise{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}}
   @media (prefers-reduced-motion:reduce){.playicon.needs-tap{animation:none}}
   .site-footer{max-width:600px;margin:8px auto 0;padding:4px 18px 28px;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:8px}
-  .site-footer .feedback-btn,.site-footer .x-link,.site-footer .legal-link,.site-footer .footer-ipa-link{font-family:var(--legacy-mono);font-size:11px;font-weight:600;letter-spacing:.04em;color:var(--legacy-muted);text-decoration:none;border:1px solid var(--legacy-hair);background:#fff;border-radius:999px;padding:7px 14px;cursor:pointer;line-height:1.2}
-  .site-footer .footer-ipa-link{border-color:var(--signal);background:var(--signal-soft);color:var(--signal);font-weight:700}
+  .site-footer .feedback-btn,.site-footer .x-link,.site-footer .legal-link{font-family:var(--legacy-mono);font-size:11px;font-weight:600;letter-spacing:.04em;color:var(--legacy-muted);text-decoration:none;border:1px solid var(--legacy-hair);background:#fff;border-radius:999px;padding:7px 14px;cursor:pointer;line-height:1.2}
   .site-footer .feedback-btn:hover,.site-footer .x-link:hover,.site-footer .legal-link:hover{color:var(--legacy-ink);border-color:var(--legacy-faint)}
-  .site-footer .footer-ipa-link:hover{border-color:var(--signal);color:var(--signal);filter:brightness(0.97)}
-  .site-footer .feedback-btn:focus-visible,.site-footer .x-link:focus-visible,.site-footer .legal-link:focus-visible,.site-footer .footer-ipa-link:focus-visible{outline:2px solid var(--legacy-signal);outline-offset:2px}
+  .site-footer .feedback-btn:focus-visible,.site-footer .x-link:focus-visible,.site-footer .legal-link:focus-visible{outline:2px solid var(--legacy-signal);outline-offset:2px}
   body.in-play .site-footer,body.in-play .about-block{display:none}
 
   /* Phase 1-E PR-3: expanded About copy (Issue #122) */
@@ -745,7 +743,8 @@
   .top-grid{display:block}
   .top-hero-aside{margin-top:24px}
   .top-purpose-block{margin-top:24px}
-  .top-philosophy-link{display:inline-flex;align-items:center;gap:5px;margin-top:16px;font-size:12.5px;font-weight:600;color:var(--accent);background:none;border:none;padding:0;cursor:pointer;font-family:var(--font-ui)}
+  .top-hero-links{display:flex;flex-wrap:wrap;gap:14px 24px;align-items:center;margin-top:16px}
+  .top-philosophy-link{display:inline-flex;align-items:center;gap:5px;font-size:12.5px;font-weight:600;color:var(--accent);background:none;border:none;padding:0;cursor:pointer;font-family:var(--font-ui)}
   .top-philosophy-link::after{content:"→"}
   .top-philosophy-link:hover{text-decoration:underline}
   .top-purpose-label{display:none}
@@ -797,7 +796,8 @@
     body.top-home:not(.in-play) .top-purpose-block{grid-area:purpose;margin-top:36px;border-top:1px solid var(--hair);padding-top:30px}
     body.top-home:not(.in-play) .top-tagline{font-size:clamp(40px,5vw,60px);line-height:1.32}
     body.top-home:not(.in-play) .top-subcopy{font-size:17px;max-width:620px}
-    body.top-home:not(.in-play) .top-philosophy-link{margin-top:20px;font-size:13px}
+    body.top-home:not(.in-play) .top-hero-links{margin-top:20px}
+    body.top-home:not(.in-play) .top-philosophy-link{font-size:13px}
     body.top-home:not(.in-play) .top-purpose-label{display:block;font-family:var(--font-serif);font-size:13px;font-weight:600;letter-spacing:.08em;color:var(--ink);margin:0 0 4px}
     body.top-home:not(.in-play) .top-purpose-hint{display:block;font-size:13px;color:var(--muted);margin:0 0 20px}
     body.top-home:not(.in-play) .purpose-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
@@ -1027,7 +1027,10 @@
         <h1 class="top-tagline" id="topTagline">音を、美しく。</h1>
         <p class="top-subcopy" id="topSubcopy"></p>
         <div class="top-attrs" id="topAttrs" aria-label="App attributes"></div>
-        <button type="button" class="top-philosophy-link" id="topSidebarLink">思想を読む</button>
+        <div class="top-hero-links">
+          <button type="button" class="top-philosophy-link" id="topSidebarLink">思想を読む</button>
+          <button type="button" class="top-philosophy-link" id="topIpaLink">IPAって何?</button>
+        </div>
       </div>
       <div class="top-purpose-block">
         <div class="top-purpose-label" id="topPurposeLabel">Choose your focus</div>
@@ -1327,7 +1330,6 @@
   </section>
 
   <footer class="site-footer" id="siteFooter">
-    <button type="button" class="footer-ipa-link" id="footerIpaLink" data-i18n="footer.ipa">What is IPA?</button>
     <button
       type="button"
       data-tally-open="xX1axk"
@@ -2615,6 +2617,7 @@ function applyI18n() {
   if ($("topPurposeLabel")) $("topPurposeLabel").textContent = home.purposeLabel || "";
   if ($("topPurposeHint")) $("topPurposeHint").textContent = home.purposeHint || "";
   if ($("topSidebarLink")) $("topSidebarLink").textContent = home.sidebarLink || "";
+  if ($("topIpaLink")) $("topIpaLink").textContent = home.headerIpa || t("footer.ipa");
   ["2a","2b","2c","2d"].forEach(id=>{
     const el=$("purpose"+id+"T");
     if(el) el.textContent = t("drill.title."+id);
@@ -2704,7 +2707,7 @@ function applyI18n() {
   applyI18nVocab();
   applyI18nProgress();
   // app-6/app-7: 3e/3f overlay pages + footer links (generic data-i18n)
-  document.querySelectorAll('#ipaInfoPage [data-i18n], #languagePage [data-i18n], #footerIpaLink, #footerLangLink').forEach(el => {
+  document.querySelectorAll('#ipaInfoPage [data-i18n], #languagePage [data-i18n], #footerLangLink').forEach(el => {
     const key = el.getAttribute('data-i18n');
     if (!key) return;
     const val = t(key);
@@ -4847,6 +4850,7 @@ function onboardingNextStep(){
 
 // app-improve: 「思想を読む」=このアプリについて をモーダルで(「IPAって何?」導線はフッターに一本化)
 if ($("topSidebarLink")) $("topSidebarLink").addEventListener("click", (e)=>{e.preventDefault();openAboutModal();});
+if ($("topIpaLink")) $("topIpaLink").addEventListener("click", (e)=>{e.preventDefault();navigate("ipa");});
 if ($("aboutModalScrim")) $("aboutModalScrim").addEventListener("click", closeAboutModal);
 if ($("aboutModalClose")) $("aboutModalClose").addEventListener("click", closeAboutModal);
 if ($("taskHeaderBack")) $("taskHeaderBack").addEventListener("click", () => {
@@ -5350,7 +5354,6 @@ document.addEventListener("keydown",onModalEscapeKey);
 
 $("vocabBtn").addEventListener("click",e=>{e.preventDefault();navigate("vocab");});
 // app-6 / app-7: 3e IPA って何? / 3f 言語設定 overlays
-if($("footerIpaLink")) $("footerIpaLink").addEventListener("click",e=>{e.preventDefault();navigate("ipa");});
 if($("footerLangLink")) $("footerLangLink").addEventListener("click",e=>{e.preventDefault();navigate("language");});
 if($("ipaInfoBack")) $("ipaInfoBack").addEventListener("click",e=>{e.preventDefault();navigate("");});
 if($("ipaInfoStart")) $("ipaInfoStart").addEventListener("click",e=>{e.preventDefault();navigate("");});
