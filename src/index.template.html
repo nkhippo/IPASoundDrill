@@ -742,10 +742,6 @@
 
 
   /* ===== Issue #147 + #150: PC CD layout (1a-pc / 2a-pc..2d-pc / 3a-pc..3g-pc) ===== */
-  .header-nav{display:none;align-items:center;gap:14px;margin-right:8px}
-  .header-link{border:none;background:transparent;padding:0;font-family:var(--font-ui);font-size:13.5px;color:var(--muted);cursor:pointer}
-  .header-link:hover{color:var(--ink)}
-  .header-link-accent{color:var(--accent)!important;font-weight:600}
   .top-grid{display:block}
   .top-hero-aside{margin-top:24px}
   .top-purpose-block{margin-top:24px}
@@ -790,7 +786,6 @@
     body.top-home:not(.in-play) .topbar{padding-bottom:16px;margin-bottom:28px;border-bottom:1px solid var(--hair)}
     body.top-home:not(.in-play) .brand .mark{font-size:26px}
     body.top-home:not(.in-play) .brand .name{font-size:16px}
-    body.top-home:not(.in-play) .header-nav{display:inline-flex}
     body.top-home:not(.in-play) .topbar-actions{flex-direction:row;align-items:center;gap:14px}
     body.top-home:not(.in-play) .topbar-btns{order:1}
     body.top-home:not(.in-play) .header-lang{order:2}
@@ -841,7 +836,6 @@
     /* 2a-pc / 2b-pc / 2c-pc / 2d-pc: hide site topbar; drill-header owns chrome */
     body.in-play .topbar{display:none!important}
     body.in-play .play-line{display:none!important}
-    body.in-play .header-nav{display:none!important}
     body.in-play .wrap{max-width:1024px;padding-top:8px}
     body.in-play .task-header,
     body.in-play .drill-header{
@@ -975,10 +969,6 @@
       <span class="mark">/iː/</span>
       <div class="name" id="brandName">IPA Sound Drill</div>
     </button>
-    <nav class="header-nav" id="headerNav" aria-label="Primary">
-      <button type="button" class="header-link" id="headerProgressLink">Your progress</button>
-      <button type="button" class="header-link header-link-accent" id="headerIpaLink">What is IPA?</button>
-    </nav>
     <div class="topbar-actions">
       <div class="header-lang" id="headerLang">
         <button class="lang-switcher topbtn" id="langSwitcher" type="button"
@@ -2624,8 +2614,6 @@ function applyI18n() {
   if ($("topReviewTitle")) $("topReviewTitle").textContent = home.review;
   if ($("topPurposeLabel")) $("topPurposeLabel").textContent = home.purposeLabel || "";
   if ($("topPurposeHint")) $("topPurposeHint").textContent = home.purposeHint || "";
-  if ($("headerProgressLink")) $("headerProgressLink").textContent = home.headerProgress || "";
-  if ($("headerIpaLink")) $("headerIpaLink").textContent = home.headerIpa || "";
   if ($("topSidebarLink")) $("topSidebarLink").textContent = home.sidebarLink || "";
   ["2a","2b","2c","2d"].forEach(id=>{
     const el=$("purpose"+id+"T");
@@ -4857,9 +4845,7 @@ function onboardingNextStep(){
 
 /* ---------- Phase 1-C: purpose stub → 3a ---------- */
 
-if ($("headerProgressLink")) $("headerProgressLink").addEventListener("click", () => navigate("progress"));
-// app-improve: 「IPA って何?」=3e 解説へ / 「思想を読む」=このアプリについて をモーダルで
-if ($("headerIpaLink")) $("headerIpaLink").addEventListener("click", (e)=>{e.preventDefault();navigate("ipa");});
+// app-improve: 「思想を読む」=このアプリについて をモーダルで(「IPAって何?」導線はフッターに一本化)
 if ($("topSidebarLink")) $("topSidebarLink").addEventListener("click", (e)=>{e.preventDefault();openAboutModal();});
 if ($("aboutModalScrim")) $("aboutModalScrim").addEventListener("click", closeAboutModal);
 if ($("aboutModalClose")) $("aboutModalClose").addEventListener("click", closeAboutModal);
