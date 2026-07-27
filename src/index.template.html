@@ -289,6 +289,8 @@
   .language-note{font-size:11px;color:var(--faint);margin-top:18px;line-height:1.6;border-top:1px solid var(--hair);padding-top:14px}
   .language-note b{color:var(--ink)}
   .vocab-page-inner,.symbol-picker-inner,.progress-page-inner{max-width:820px;width:100%;margin:0 auto;padding:0;flex:1;min-height:0;display:flex;flex-direction:column}
+  /* app-improve(Naoya): PC 語彙リストは単一カラムだと横幅が広すぎるため列幅を絞る */
+  .vocab-page-inner{max-width:620px}
   .symbol-picker-header{flex-shrink:0;z-index:10;background:var(--paper);padding:16px 16px 8px;border-bottom:1px solid var(--hair);display:flex;flex-direction:column;gap:12px}
   .vocab-header{flex-shrink:0;z-index:10;background:var(--paper);padding:14px 20px 12px;border-bottom:1px solid var(--hair);display:flex;flex-direction:column;gap:12px}
   .filter-bar-sticky{display:flex;flex-direction:column;gap:10px}
@@ -663,8 +665,8 @@
   .purpose-card-progress{margin-top:0;background:var(--review-panel);border-radius:16px;align-items:center}
   .purpose-card-progress .purpose-card-icon{width:42px;height:42px;border-radius:12px;background:var(--signal-soft);display:inline-flex;align-items:center;justify-content:center;margin-top:0}
   .purpose-card[aria-pressed="true"],.purpose-card--selected{border:1px solid var(--signal);background:var(--signal-soft);color:var(--ink);font-weight:600}
-  /* app-3 (CD parity): 第1 purpose カードは「おすすめ」強調(CD 1a 全言語で signal-soft 地 + teal border) */
-  #purposeGrid .purpose-card:first-child{border-color:var(--signal);background:var(--signal-soft)}
+  /* app-improve(Naoya): 第1カードの塗り強調を撤去し初期描画をフラットに(何も選択されていない状態)。
+     旧 app-3(第1カード強調=Q2)を supersede。CD 1a も同様にフラット化推奨(CD-17)。 */
   .purpose-grid{display:grid;gap:10px;margin:0}
   .top-subcopy{font-size:13.5px;line-height:1.9;color:var(--muted);margin:18px 0 0;text-wrap:pretty}
   .top-attrs{display:flex;flex-wrap:wrap;gap:6px 12px;margin:18px 0 var(--space-4);font-size:11.5px;color:var(--faint)}
@@ -829,6 +831,10 @@
     body.symbol-picker-page .brand,
     body.pc-support .brand{display:none!important}
 
+    /* app-improve #4: ドリルカードの高さを予約し、出題→答え合わせ/問題間で高さが
+       ガタつかないよう固定(内容が少ない出題phaseは余白で吸収)。encode は鍵盤で
+       元々高いため min 未満=自然高が優先。 */
+    body.in-play .drill-pane{min-height:600px}
     /* 2a-pc / 2b-pc / 2c-pc / 2d-pc: hide site topbar; drill-header owns chrome */
     body.in-play .topbar{display:none!important}
     body.in-play .play-line{display:none!important}
