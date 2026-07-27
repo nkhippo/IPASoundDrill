@@ -145,6 +145,7 @@
     "ga_note": "GA",
     "respell_label": "Respelling",
     "dict_label": "Dictionary",
+    "respell_label": "Respelling",
     "alt_same": "same"
   },
   "lang_opts": {
@@ -206,6 +207,7 @@
   "pos": {
     "限定詞": "determiner",
     "名詞": "noun",
+    "数詞": "numeral",
     "動詞": "verb",
     "形容詞": "adjective",
     "副詞": "adverb",

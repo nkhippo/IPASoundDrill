@@ -229,6 +229,8 @@
   .playicon.playicon-sm.inactive:disabled{opacity:.38;cursor:default}
   .playicon.playicon-sm.inactive:disabled:hover{border-color:var(--hair);background:var(--panel)}
   .dict-ipa{font-family:var(--legacy-ipa);font-size:clamp(13px,3.2vw,17px);color:var(--legacy-muted);letter-spacing:.5px;margin-top:4px;text-align:center}
+  /* respell(読み方): 親しみやすい発音表記。IPA が読めない層向けの主導線 */
+  .respell{font-family:var(--font-ui);font-size:clamp(14px,3.6vw,18px);color:var(--ink);font-weight:600;letter-spacing:.02em;margin-top:8px;text-align:center}
   .yourtry .uipa{font-family:var(--legacy-ipa)}
   #reveal.res-ok .yourtry .uipa{color:var(--legacy-ok)}
   #reveal.res-bad .yourtry .uipa{color:var(--legacy-bad)}
@@ -1301,6 +1303,7 @@
       <div class="readout" style="padding-top:0"><div class="ipa" id="rIpa"></div>
         <button class="playicon" id="rPlay" type="button" aria-label="Listen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button>
       </div>
+      <div class="respell hidden" id="rRespell"></div>
       <div class="dict-ipa hidden" id="rDictIpa"></div>
       <div class="alt-ipa alt-ipa-row hidden" id="rAltIpa"><span class="alt-ipa-text" id="rAltIpaText"></span><button class="playicon playicon-sm inactive hidden" id="rAltPlay" type="button" aria-label="Listen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg></button></div>
       <div class="info" id="rInfo"></div>
@@ -1596,8 +1599,6 @@
       <div class="onboarding-slide" id="onboardingSlide4" data-slide="4">
         <div class="onboarding-visual">
           <div class="onboarding-stats" aria-hidden="true">
-            <div style="text-align:center"><div class="onboarding-stat-n signal">7</div><div class="onboarding-stat-l" id="onboardingStatDays"></div></div>
-            <div class="onboarding-stat-div"></div>
             <div style="text-align:center"><div class="onboarding-stat-n">312</div><div class="onboarding-stat-l" id="onboardingStatWords"></div></div>
           </div>
         </div>
@@ -1940,7 +1941,8 @@ function vocabWordRowHtml(c, highlightQ) {
   const listen = escAttr(t("listen"));
   const glossStr = gloss ? `<div class="vocab-row-gloss">${escHtml(gloss)}</div>` : "";
   const gaRow = `<div class="vocab-ipa-ga"><span class="vocab-ipa-label">GA</span><span class="vocab-ipa-val">${vocabFmtIpa(gaIpa, highlightQ)}</span><button class="vocab-play" type="button" data-vw="${escAttr(c.w)}" data-vaccent="ga" aria-label="${listen}">${SPEAKER_SVG}</button></div>`;
-  const rpRow = rpIpa
+  // GA=RP が実質同一なら重複する RP 行は出さない(GA 行＋「GA=RP」バッジで表現)
+  const rpRow = (rpIpa && !isSame)
     ? `<div class="vocab-ipa-rp"><span class="vocab-ipa-label">RP</span><span class="vocab-ipa-val">${vocabFmtIpa(rpIpa, highlightQ)}</span><button class="vocab-play" type="button" data-vw="${escAttr(c.w)}" data-vaccent="rp" aria-label="${listen}">${SPEAKER_SVG}</button></div>`
     : "";
   return `<div class="vocab-row">
@@ -2406,7 +2408,15 @@ function wordGloss(c) {
   return c.gloss[LANG] || c.gloss.en || c.w;
 }
 
-function posLabel(pos) { return (UI.pos && UI.pos[pos]) || pos || "—"; }
+function posLabel(pos) {
+  if (!pos) return "";
+  if (UI.pos && UI.pos[pos]) return UI.pos[pos];
+  // 複合品詞(例「名詞 / 動詞」)は "/" で分割し各基礎品詞をマップ結合(生の日本語露出を防ぐ)
+  if (pos.indexOf("/") >= 0) {
+    return pos.split("/").map(p => { const k = p.trim(); return (UI.pos && UI.pos[k]) || k; }).join(" / ");
+  }
+  return pos;
+}
 
 const HOME_COPY = {
   ja: {
@@ -4784,7 +4794,6 @@ function applyOnboardingI18n(){
   if($("onboardingPcTitle")) $("onboardingPcTitle").textContent=t("onboarding.title")||"Onboarding";
   if($("onboardingPcLead")) $("onboardingPcLead").textContent=t("onboarding.pc_lead")||"";
   if($("onboardingIpaHint")) $("onboardingIpaHint").innerHTML=t("onboarding.ipa_hint")||"";
-  if($("onboardingStatDays")) $("onboardingStatDays").textContent=t("onboarding.stat_days")||"";
   if($("onboardingStatWords")) $("onboardingStatWords").textContent=t("onboarding.stat_words")||"";
   if($("onboardingMock1a")) $("onboardingMock1a").textContent=t("drill.title.2a");
   if($("onboardingMock1b")) $("onboardingMock1b").textContent=t("drill.title.2b");
@@ -5103,9 +5112,8 @@ function autoNote(c){
   const ipa=activeIpa(c);
   const sy=syllableCount(ipa);
   if(sy>1)parts.push(t("note.stress",{n:stressSyllable(ipa),sy}));
-  const tk=tokenize(ipa);
-  if(tk.includes("ə")||tk.includes("ɚ"))parts.push(t("note.schwa"));
-  const traps=[...new Set(tokenize(ipa))].filter(tk=>PH[tk]&&PH[tk].t===1&&tk!=="ˈ"&&tk!=="ˌ");
+  // 要注意音: t=1 のうち schwa(ə=ほぼ全語で出るノイズ)を除き、本当に難しい最大2音に厳選
+  const traps=[...new Set(tokenize(ipa))].filter(tk=>PH[tk]&&PH[tk].t===1&&tk!=="ˈ"&&tk!=="ˌ"&&tk!=="ə").slice(0,2);
   if(traps.length)parts.push(t("note.tricky",{s:traps.join(" ")}));
   return parts.join(" · ");
 }
@@ -5142,6 +5150,13 @@ function refreshRevealIpa(marker){
     dictEl.textContent=t("reveal.dict_label")+": "+activeIpa(c);
     dictEl.classList.remove("hidden");
   }else dictEl.classList.add("hidden");
+  // respell(親しみやすい発音表記, 98%被覆): アクティブアクセント優先で表示
+  const reEl=$("rRespell");
+  if(reEl){
+    const respell = ACCENT === "rp" ? (c.respell_rp || c.respell_ga) : (c.respell_ga || c.respell_rp);
+    if(respell){ reEl.textContent = t("reveal.respell_label") + ": " + respell; reEl.classList.remove("hidden"); }
+    else reEl.classList.add("hidden");
+  }
   const altEl=$("rAltIpa");
   renderAltAccentLine(c, $("rAltIpaText"), $("rAltPlay"), altEl);
 }

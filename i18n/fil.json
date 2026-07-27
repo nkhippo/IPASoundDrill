@@ -176,6 +176,7 @@
     "動詞（不規則変化）": "di-regular na anyo ng pandiwa",
     "口語表現": "pang-araw-araw na ekspresyon",
     "名詞": "pangngalan",
+    "数詞": "pamilang",
     "名詞（不規則複数）": "di-regular na maramihan",
     "形容詞": "pang-uri",
     "形容詞 / 副詞": "pang-uri / pang-abay",
@@ -199,6 +200,7 @@
     "rp_note": "RP",
     "respell_label": "Gabay sa bigkas",
     "dict_label": "Diksyonaryo",
+    "respell_label": "Pagbigkas",
     "alt_same": "pareho"
   },
   "see_answer": "Tingnan ang sagot",
