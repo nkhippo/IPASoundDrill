@@ -228,7 +228,9 @@ app 走行で 2a 答え合わせ(正解)撮影済:
 ## §PC-conflicts: app-5 PC(3b-pc)の CD 衝突 → ✅ Naoya 判断済(2026-07-27)
 
 **判断結果**: ①SRS=Q7準拠(無し)+CD修正 / ②レイアウト=まず単一カラムで確定 / ③●●●=削除維持+CD修正。
-→ **app 側は既に全て準拠(変更不要)**。CD `#3b-pc` の是正は **CD-7/CD-8**(`cd-updates/2026-07-27_cd-parity-fixes-pc3b.md`)で Naoya が Claude Design 適用。2カラム化は将来別途。
+→ **app 側は既に全て準拠(変更不要)**。CD `#3b-pc` の是正 **CD-7/CD-8** は Naoya が Claude Design で適用 → **repo `pc.dc.html #3b-pc` にも反映済(2026-07-27)**: Downloads の更新 CD と #3b-pc 行を突合し、**CD-7(SRS「覚えた」×4 削除)/ CD-8(●●● chrome 削除)のみの差分を確認して適用**(追加変更 0・他フレーム不変)。repo PC CD == Naoya 更新版で一致。2カラム化は将来別途。
+
+> ⚠️ **SP CD の未反映(要 Naoya·Claude Design)**: Naoya 更新版 SP(Downloads)は **#3c 装飾(9:41/●●●● @sp:309)と CD-4(スライドカード #FFF→panel @sp:412)を含まない=repo 直接パッチ未反映**。そのため今回 **SP は同期しなかった**(repo SP が正)。Claude Design の SP ソースに **#3c 装飾削除 + CD-4(モーダル=panel色)** を反映しないと、次回 SP エクスポートで両者が回帰する。
 
 以下は判断根拠の記録:
 

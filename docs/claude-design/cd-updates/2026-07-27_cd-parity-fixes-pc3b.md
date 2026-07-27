@@ -1,5 +1,9 @@
 # CD 更新指示書(追補)— PC 3b-pc を app-5 決定に整合(2026-07-27)
 
+> ✅ **適用済(2026-07-27)**: Naoya が Claude Design で CD-7/CD-8 を反映 → repo `pc.dc.html #3b-pc` にも突合の上同期(CD-7/CD-8 のみの差分・追加0を機械確認)。repo PC CD == Naoya 更新版で一致。
+> ⚠️ 併せて判明: Naoya 更新版 **SP** は #3c 装飾削除 と CD-4(モーダル=panel色)を**含まない**(repo 直接パッチ未反映)。SP は今回同期せず(repo が正)。**Claude Design の SP ソースに #3c/CD-4 を反映要**(PARITY-CATALOG §PC-conflicts 参照)。
+
+
 - メタ: **部分更新**(追補 2 項目 CD-7 / CD-8)/ 規模: **小(pc.dc.html #3b-pc のみ)**
 - 対象ファイル: `docs/claude-design/pc.dc.html`(`#3b-pc` のみ)
 - 根拠: PARITY-CATALOG.md `§PC-conflicts` + Naoya 判断(2026-07-27, app-5 PC)
