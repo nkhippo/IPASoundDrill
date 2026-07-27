@@ -130,8 +130,14 @@
     "no_results": "見つかりません",
     "back": "戻る",
     "filter": {
-      "ipa": "IPA",
-      "all": "全て"
+      "ipa": "IPAで絞り込み",
+      "all": "全て",
+      "ipa_max": "(最大3)",
+      "add": "記号を追加"
+    },
+    "count": {
+      "filtered": "絞り込み結果 · {syms} を含む {accent} 発音 · {n}件",
+      "all": "全 {n}件"
     }
   },
   "reveal": {

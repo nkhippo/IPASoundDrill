@@ -130,8 +130,14 @@
     "no_results": "No results",
     "back": "Back",
     "filter": {
-      "ipa": "IPA",
-      "all": "All"
+      "ipa": "Filter by IPA",
+      "all": "All",
+      "ipa_max": "(max 3)",
+      "add": "Add symbol"
+    },
+    "count": {
+      "filtered": "Filtered · {accent} pronunciations with {syms} · {n}",
+      "all": "{n} entries"
     }
   },
   "reveal": {

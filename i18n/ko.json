@@ -130,8 +130,14 @@
     "no_results": "결과 없음",
     "back": "뒤로",
     "filter": {
-      "ipa": "IPA",
-      "all": "전체"
+      "ipa": "IPA로 필터",
+      "all": "전체",
+      "ipa_max": "(최대 3)",
+      "add": "기호 추가"
+    },
+    "count": {
+      "filtered": "필터 결과 · {syms} 포함 {accent} 발음 · {n}개",
+      "all": "전체 {n}개"
     }
   },
   "reveal": {

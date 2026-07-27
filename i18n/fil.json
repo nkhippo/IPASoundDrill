@@ -68,8 +68,14 @@
     "no_results": "Walang resulta",
     "back": "Bumalik",
     "filter": {
-      "ipa": "IPA",
-      "all": "Lahat"
+      "ipa": "Salain ayon sa IPA",
+      "all": "Lahat",
+      "ipa_max": "(hanggang 3)",
+      "add": "Magdagdag ng simbolo"
+    },
+    "count": {
+      "filtered": "Nasala · {accent} bigkas na may {syms} · {n}",
+      "all": "{n} entry"
     }
   },
   "info": {

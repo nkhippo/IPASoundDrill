@@ -130,8 +130,14 @@
     "no_results": "無結果",
     "back": "返回",
     "filter": {
-      "ipa": "IPA",
-      "all": "全部"
+      "ipa": "以 IPA 篩選",
+      "all": "全部",
+      "ipa_max": "(最多3個)",
+      "add": "新增符號"
+    },
+    "count": {
+      "filtered": "篩選結果 · 含 {syms} 的 {accent} 發音 · {n}個",
+      "all": "共 {n}個"
     }
   },
   "reveal": {

@@ -130,8 +130,14 @@
     "no_results": "无结果",
     "back": "返回",
     "filter": {
-      "ipa": "IPA",
-      "all": "全部"
+      "ipa": "按 IPA 筛选",
+      "all": "全部",
+      "ipa_max": "(最多3个)",
+      "add": "添加符号"
+    },
+    "count": {
+      "filtered": "筛选结果 · 含 {syms} 的 {accent} 发音 · {n}个",
+      "all": "共 {n}个"
     }
   },
   "reveal": {
