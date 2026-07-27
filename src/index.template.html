@@ -218,6 +218,10 @@
   #reveal.res-bad .yourtry .try{color:var(--legacy-bad);font-weight:600;text-decoration:line-through;text-decoration-color:color-mix(in srgb,var(--legacy-bad) 55%,transparent)}
   .alt-ipa{font-family:var(--font-ipa);font-size:13px;color:var(--muted);margin-top:2px;text-align:center;line-height:1.35}
   .alt-ipa-row{display:flex;align-items:center;justify-content:center;gap:6px;flex-wrap:wrap}
+  /* app-improve B: 出題(decode)で RP 行(別音声ボタンの有無)により答え入力の位置が上下するのを防ぐ。
+     最大高(別音声ボタン有=44px)を常時確保し、問題間で「確認する」ボタンが動かない(サクサク) */
+  body.in-play #dAltIpa{min-height:44px}
+  body.in-play #dAltIpa.hidden{display:flex!important;visibility:hidden}
   .alt-ipa-row .alt-ipa-text{font-family:var(--font-ipa);font-size:13px;color:var(--muted);line-height:1.35}
   .playicon.playicon-sm{width:28px;height:28px}
   .playicon.playicon-sm svg{width:13px;height:13px}
@@ -289,9 +293,12 @@
   .vocab-header{flex-shrink:0;z-index:10;background:var(--paper);padding:14px 20px 12px;border-bottom:1px solid var(--hair);display:flex;flex-direction:column;gap:12px}
   .filter-bar-sticky{display:flex;flex-direction:column;gap:10px}
   .vocab-header-top,.symbol-picker-header-top{display:flex;align-items:center;gap:12px}
-  .symbol-back{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border-radius:var(--radius-button);background:transparent;color:var(--ink);border:1px solid var(--hair);cursor:pointer;font-size:14px;font-family:var(--font-ui);flex-shrink:0}
+  /* app-improve A: 戻る=丸chevron・title=左寄せ明朝 に全画面統一(vocab/3e/3f と揃える) */
+  .symbol-back{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;padding:0;border-radius:999px;background:var(--panel);color:var(--muted);border:1px solid var(--hair);cursor:pointer;flex-shrink:0}
+  .symbol-back span,.progress-back span{display:none}
+  .symbol-back svg,.progress-back svg{width:17px;height:17px}
   .symbol-back:hover{background:var(--signal-soft);border-color:var(--signal);color:var(--signal)}
-  .symbol-picker-title{flex:1;margin:0;font-size:18px;font-weight:600;color:var(--ink);text-align:center;font-family:var(--font-ui)}
+  .symbol-picker-title{margin:0;font-size:18px;font-weight:600;color:var(--ink);text-align:left;font-family:var(--font-serif)}
   /* 3b vocab list (CD #3b) */
   .vocab-back{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;padding:0;border-radius:999px;background:var(--panel);color:var(--muted);border:1px solid var(--hair);cursor:pointer;flex-shrink:0}
   .vocab-back:hover{background:var(--signal-soft);border-color:var(--signal);color:var(--signal)}
@@ -322,9 +329,9 @@
   .vocab-count .ipa{color:var(--signal);font-family:var(--font-ipa)}
   .progress-header{flex-shrink:0;z-index:10;background:var(--paper);padding:16px 18px 10px;border-bottom:1px solid var(--hair);display:flex;flex-direction:column;gap:12px}
   .progress-header-top{display:flex;align-items:center;gap:12px}
-  .progress-back{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border-radius:var(--radius-button);background:transparent;color:var(--ink);border:1px solid var(--hair);cursor:pointer;font-size:14px;font-family:var(--font-ui);flex-shrink:0}
+  .progress-back{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;padding:0;border-radius:999px;background:var(--panel);color:var(--muted);border:1px solid var(--hair);cursor:pointer;flex-shrink:0}
   .progress-back:hover{background:var(--signal-soft);border-color:var(--signal);color:var(--signal)}
-  .progress-title{flex:1;margin:0;font-size:18px;font-weight:600;color:var(--ink);text-align:center;font-family:var(--font-ui)}
+  .progress-title{margin:0;font-size:18px;font-weight:600;color:var(--ink);text-align:left;font-family:var(--font-serif)}
   .progress-filters{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
   .progress-filters .pill-cefr{border:1px solid var(--hair);background:var(--panel);border-radius:var(--radius-pill);padding:6px 12px;cursor:pointer;font-size:12px;font-weight:600;color:var(--ink);font-family:var(--font-mono)}
   .progress-filters .pill-cefr[aria-pressed="true"]{border-color:var(--signal);background:var(--signal-soft);color:var(--signal);font-weight:700}
@@ -703,6 +710,8 @@
   #setup.profile-3a .toggle-ga-rp{display:inline-flex;border:1px solid var(--hair);background:var(--paper);border-radius:var(--radius-toggle);padding:3px;gap:0}
   #setup.profile-3a .toggle-ga-rp button{border:none;background:transparent;color:var(--muted);padding:6px 14px;font-size:13px;font-weight:600;cursor:pointer;border-radius:var(--radius-toggle-active);font-family:var(--legacy-ui)}
   #setup.profile-3a .toggle-ga-rp button[aria-pressed="true"]{background:var(--panel);color:var(--signal);font-weight:700;box-shadow:var(--shadow-toggle-active)}
+  .profile-back{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;padding:0;border-radius:999px;background:var(--panel);color:var(--muted);border:1px solid var(--hair);cursor:pointer;flex-shrink:0}
+  .profile-back:hover{background:var(--signal-soft);border-color:var(--signal);color:var(--signal)}
   #setup.profile-3a .profile-back{margin-bottom:12px}
   .profile-intro{margin:22px 2px 18px}
   .profile-intro .top-swash{width:28px;margin-bottom:14px}
@@ -1026,7 +1035,9 @@
       </div>
     </div>
     <div class="profile-body">
-    <button type="button" class="btn-accent-link profile-back" id="profileBackBtn">← Change purpose</button>
+    <button type="button" class="profile-back" id="profileBackBtn" aria-label="Back">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+    </button>
     <div class="profile-intro">
       <span class="top-swash" aria-hidden="true"></span>
       <h3 class="profile-title" id="profileTitle"></h3>
@@ -2601,7 +2612,7 @@ function applyI18n() {
   if ($("flabelAccent")) $("flabelAccent").textContent = t("accent.label");
   if ($("accentGaName")) $("accentGaName").textContent = t("accent.ga");
   if ($("accentRpName")) $("accentRpName").textContent = t("accent.rp");
-  if ($("profileBackBtn")) $("profileBackBtn").textContent = "← " + (t("back_top") || "Menu");
+  if ($("profileBackBtn")) $("profileBackBtn").setAttribute("aria-label", t("back_top") || "Menu");
   ["A1","A2","B1","B2"].forEach(level => {
     const sub = $("cefr" + level + "Sub");
     if (sub) sub.textContent = home.cefr[level] || "";
@@ -4759,7 +4770,8 @@ function renderOnboardingSlide(){
   document.querySelectorAll("#onboardingDots .onboarding-dot").forEach(d=>{
     d.classList.toggle("is-on", parseInt(d.dataset.dot,10)===onboardingSlide);
   });
-  if($("onboardingProgress")) $("onboardingProgress").textContent=(t("onboarding.guide_label")||"Guide")+" "+onboardingSlide+" / 4";
+  // app-improve C: 位置はドットで示すため上部ラベルは番号を省き「ガイド」のみ(重複排除)
+  if($("onboardingProgress")) $("onboardingProgress").textContent=(t("onboarding.guide_label")||"Guide");
   const last=onboardingSlide>=4;
   if($("onboardingNext")) $("onboardingNext").textContent=last?t("onboarding.start"):t("onboarding.next");
   if($("onboardingPcStart")) $("onboardingPcStart").textContent=t("onboarding.start");
@@ -5143,7 +5155,7 @@ function updateTaskHeader(){
   }
   if ($("taskHeaderAccent")) {
     const isRp = ACCENT === "rp";
-    $("taskHeaderAccent").innerHTML = isRp ? "RP · <b>英</b>" : "GA · <b>米</b>";
+    $("taskHeaderAccent").textContent = isRp ? "RP" : "GA"; // app-improve C: 「· 米/英」を省いて簡潔に
   }
   if ($("taskHeaderCounter")) {
     const total = (S && S.poolTotal) || 0;
