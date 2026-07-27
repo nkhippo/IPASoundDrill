@@ -44,6 +44,7 @@ CD(Claude Design、`docs/claude-design/{sp,pc}.dc.html`)と実UIを **文言以�
   - ⏳ **app-5 PC 残**: 2カラムグリッド + SRS/●●●/フィルタUI の衝突判断(§PC-conflicts)
   - ✅ **app-6 完了**: 3e「IPA って何？」フルページ overlay 新設 + フッター「IPAって何?」導線(signal強調)。commit `867e42f`
   - ✅ **app-7 完了**: 3f 言語設定フルページ overlay 新設(6言語ラジオ)+ フッター「言語設定」導線。言語切替(reload/hash保持)動作確認。commit `867e42f`
+  - ✅ **UX 改善 5件**(Naoya リクエスト, commit `adf2510`): ①オンボ4スライド高さ統一(「つぎへ」位置固定 Y=608)②装飾アンダーバー(`.top-swash`)撤去+余白詰め ③ヘッダー3ボタン丸型統一+言語=globe アイコン(既定 en)④2b「クリア」をビルド欄右隣へ ⑤ドリルヘッダーの語彙(≣)リンク撤去(GA/RP は保持)。#2/#3/#5 は CD 意匠と差分→**CD-9/10/11**(`cd-updates/2026-07-27_cd-parity-ux-improve.md`)で round-trip 予定。横展開(他画面のボタン位置固定)は今後検討。
 - **Phase 4/5**: 未(Sonnet 1次Rv → Opus 横断2次Rv)
 
 ## 4. app-2-ii ドリルヘッダー(大物・要注意)✅ 完了(2026-07-27, commit `37de505`)
