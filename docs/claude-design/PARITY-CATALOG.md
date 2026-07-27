@@ -140,7 +140,7 @@ CD の SP/PC モックは `9:41` ステータスバー・右上 `●●●`(カ�
 | 要素 | CD 期待 | 実測(app) | 分類 | 状態 |
 |---|---|---|---|---|
 | プロフィール(setup)ヘッダー | brand+JA+≣+?(top と同じ)、戻るは content 内 | 浮いた丸「TOPへ」が折返して崩れ | app修正 | **✅ 2a-i 済**: `body:not(.in-play) #backTopBtn{display:none}` で浮き TOPへ を非表示。ヘッダー1行化、`←TOPへ`(パネル内)で戻る。検証済 |
-| ドリル(in-play)ヘッダー | CD 2a: card 上部1行に **戻る(chevron)+ title「音から単語を書く」+ progress meter + counter「1/2382」**を集約。浮き TOPへ無し | 情報が散在: topbar(brand+lang+≣+?+**浮きTOPへ**)+ breadcrumb「IPA読み書き>一単語(GA)」+ card内(A1バッジ+counter+progressバー)。task-header は force-show すると**戻るchevronのみ表示・title/meter は空(この flow で未populate)** | app修正(**要リストラクチャ**) | ⏳ **2a-ii = 単純トグルでない**。必要: ①card 上部に CD式ヘッダー行(戻る+title+meter+counter)を構成 ②breadcrumb + card counter/progress を集約 ③title/meter を4モード(2a/2b/2c/2d)で populate ④浮きTOPへ撤去(戻る用意が前提)。core UX のため各モード CD 突合しながら慎重に。**方針確定後に着手推奨** |
+| ドリル(in-play)ヘッダー | CD 2a: card 上部1行に **戻る(chevron)+ title + progress meter + counter**を集約。浮き TOPへ無し | (旧)情報が散在: topbar + breadcrumb + card内(A1+counter+progress) | app修正 | **✅ app-2-ii 済**(commit `37de505`): `.task-header` を SP でも表示(`isPcLayout` ゲート撤去)。in-play で topbar/breadcrumb/`.card-top`/`.drill-progress`/浮きTOPへ を撤去し、集約ヘッダーに一本化。4モード populate・戻る・reveal・PC 重複解消・console 0 err 確認。※CD は card 内ヘッダー、app は card 上バー(要素/行は一致) |
 | body クラス pc-support | — | SP でも付与(line 5065)。ただし現状 SP で実害は未確認(●●● は PC のみ) | 要確認 | 2a-ii/app-4 と併せて精査 |
 
 ### 3a 学習プロフィール(SP)

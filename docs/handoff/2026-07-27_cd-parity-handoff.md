@@ -39,14 +39,17 @@ CD(Claude Design、`docs/claude-design/{sp,pc}.dc.html`)と実UIを **文言以�
   - ✅ **app-2-i**: 非 in-play で浮き `#backTopBtn` 非表示 → プロフィールヘッダー崩れ解消
   - ✅ **app-3**: 1a 第1 purpose カード強調(`#purposeGrid .purpose-card:first-child` に signal-soft+teal)
   - ✅ **app-4**: PC 支援画面 左上 ●●● 削除(`.modal-chrome`/`.onboarding-chrome` を PC でも display:none)
-  - ⏳ **app-2-ii**(大物): ドリルヘッダー再構成 — 下記 §4
+  - ✅ **app-2-ii 完了**(大物): ドリルヘッダー集約(CD #2a-2d)。commit `37de505`。task-header を SP でも表示し、topbar/breadcrumb/card内 counter・progress・CEFRバッジを撤去。4モード検証済。PC の card 内重複も解消。詳細 §4
   - ✅ **app-5 SP 完了**(大物): 語彙リスト CD準拠フルリワーク(SP #3b 検証済)。commit `8899194`。PC(3b-pc)はカードのみレスポンシブ反映、固有要素は要判断 → PARITY-CATALOG §PC-conflicts。詳細 §5
   - ⏳ **app-5 PC 残**: 2カラムグリッド + SRS/●●●/フィルタUI の衝突判断(§PC-conflicts)
   - ⏳ **app-6**: 3e「IPA って何？」への SP フッター導線 / ⏳ **app-7**: 3f 言語設定の SP 専用ページ
 - **Phase 4/5**: 未(Sonnet 1次Rv → Opus 横断2次Rv)
 
-## 4. app-2-ii ドリルヘッダー(大物・要注意)
-**単純トグルではない。** 現状の散在(topbar の浮き `#backTopBtn` / breadcrumb「IPA読み書き>…」/ card 内 A1バッジ+counter+progressバー)を、CD 2a の **card 上部1行に「戻る(chevron)+ title + progress meter + counter」集約**へ作り替える。
+## 4. app-2-ii ドリルヘッダー(大物・要注意)✅ 完了(2026-07-27, commit `37de505`)
+**実装結果**: `.task-header`(back+title+meter+vocab+accent+counter)を **SP でも表示**(`updateTaskHeader` の `isPcLayout()` ゲート撤去 + `body.in-play .task-header{display:flex}` を一般規則化)。in-play で **topbar / play-line(breadcrumb)/ .card-top(CEFR+counter)/ .drill-progress(重複メーター+0%)/ 浮き #backTopBtn を display:none**。4モード(2a/2b/2c/2d)で title/counter/meter populate・戻る(exit-confirm→goToTop)・reveal 状態・PC 重複解消・console 0 err を確認。
+> 補足: CD SP はヘッダーを card 内 top 行に持つが、app は wired 済の task-header を card 上のバーとして表示(要素・行レイアウトは一致)。厳密に card 内へ入れる場合は別途構造変更。
+
+**(旧・着手前メモ)単純トグルではない。** 現状の散在(topbar の浮き `#backTopBtn` / breadcrumb「IPA読み書き>…」/ card 内 A1バッジ+counter+progressバー)を、CD 2a の **card 上部1行に「戻る(chevron)+ title + progress meter + counter」集約**へ作り替える。
 - `.task-header`(id=`taskHeader`, HTML 909-)は **JS 完全配線済**(taskHeaderTitle/MeterFill/Back/Accent を populate: 5086付近、Back click 4761)だが **container を表示するルールが無く `hidden` も外れない=デッドコード**。force-show すると戻る chevron のみ表示・title/meter は空(この flow で未populate)。
 - 実装方針: ① `body.in-play .task-header{display:flex}` 等で container 表示 + JS で in-play 時に `hidden` 解除 ② title/meter を 4モード(2a/2b/2c/2d)で populate 確認 ③ breadcrumb と card counter/progress を集約(重複排除) ④ 戻る動作確認後に浮き `#backTopBtn` を in-play でも撤去。
 - **各モードを CD `#2a`〜`#2d` と1枚ずつ視覚 diff しながら**。topbar の ≣/? との重複に注意(task-header の vocab/accent は現状 display:none)。
