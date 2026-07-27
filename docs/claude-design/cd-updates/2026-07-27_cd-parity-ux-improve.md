@@ -24,6 +24,17 @@
 - 内容: **語彙(≣)ボタンを削除**。**GA/RP 表示(アクセント)は保持**。
 - 根拠: 問題を解く最中に語彙リストへ飛ぶ導線は不要(Naoya 指摘)。GA/RP の別は表示があってよい。
 
+## CD-12【削除/統一】ドリルの STEP ラベルと集約ヘッダー title の重複解消
+- 対象: SP `#2a`〜`#2d`(および -en 系)/ PC `#2a-pc`〜`#2d-pc`。
+- 現状 CD: 集約ヘッダーに title「音から単語を書く」等 + その下に「STEP 1 · 音と記号を見て、単語を書く」「STEP 2 · 答え合わせ(正解)」の step ラベルが**両方**ある。
+- 変更後: **step ラベルを削除**し、集約ヘッダー title に一本化。問題/答え合わせの別は入力欄 vs 正解バナーで自明。空いた分だけ内容を上に詰める(Naoya 指摘)。
+- app 反映済(commit `f488b37`)。
+
+## CD-13【是正】#3c カード背景を token 化(raw #FFF 回避)
+- 対象: SP `#3c`(IPA 記号ピッカー フルページ)のカード container `background`。
+- 内容: `#FFFFFF` → **`var(--paper)`**(#3b 等と統一。CD-4 と同じ「raw 白は token へ」原則)。
+- 補足: v7 export では #3c 背景が `#FFFFFF` だったため repo 同期時に不採用(repo は `var(--paper)` 維持)。Claude Design ソースも `var(--paper)` へ。
+
 ## 保持事項
 - Design System トークン・文言・語彙リスト(3b/3b-pc)コンパクト設計。
 - 上記以外のヘッダー要素(戻る・title・progress meter・counter・ガイド・GA/RP)。
