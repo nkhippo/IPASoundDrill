@@ -42,7 +42,8 @@ CD(Claude Design、`docs/claude-design/{sp,pc}.dc.html`)と実UIを **文言以�
   - ✅ **app-2-ii 完了**(大物): ドリルヘッダー集約(CD #2a-2d)。commit `37de505`。task-header を SP でも表示し、topbar/breadcrumb/card内 counter・progress・CEFRバッジを撤去。4モード検証済。PC の card 内重複も解消。詳細 §4
   - ✅ **app-5 SP 完了**(大物): 語彙リスト CD準拠フルリワーク(SP #3b 検証済)。commit `8899194`。PC(3b-pc)はカードのみレスポンシブ反映、固有要素は要判断 → PARITY-CATALOG §PC-conflicts。詳細 §5
   - ⏳ **app-5 PC 残**: 2カラムグリッド + SRS/●●●/フィルタUI の衝突判断(§PC-conflicts)
-  - ⏳ **app-6**: 3e「IPA って何？」への SP フッター導線 / ⏳ **app-7**: 3f 言語設定の SP 専用ページ
+  - ✅ **app-6 完了**: 3e「IPA って何？」フルページ overlay 新設 + フッター「IPAって何?」導線(signal強調)。commit `867e42f`
+  - ✅ **app-7 完了**: 3f 言語設定フルページ overlay 新設(6言語ラジオ)+ フッター「言語設定」導線。言語切替(reload/hash保持)動作確認。commit `867e42f`
 - **Phase 4/5**: 未(Sonnet 1次Rv → Opus 横断2次Rv)
 
 ## 4. app-2-ii ドリルヘッダー(大物・要注意)✅ 完了(2026-07-27, commit `37de505`)
