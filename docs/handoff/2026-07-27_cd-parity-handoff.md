@@ -55,6 +55,13 @@ CD(Claude Design、`docs/claude-design/{sp,pc}.dc.html`)と実UIを **文言以�
   - ✅ **1a トップ 0ベース再設計**(Naoya リクエスト, 案A採用): 左サブコピー(思想)と右サイドバー「このアプリについて」の**二重表現を解消**。右サイドバーを撤去し、思想は「サブコピー1文＋『思想を読む →』リンク(→3h モーダル)」に集約。空いた横幅へ**学習状況カードを右上へ移動**、**目的4カードを全幅グリッド化**(位置は hero 直下のまま=左寄せ移動しない)。PC は `grid-template-areas:"hero aside"/"purpose purpose"`、SP は 目的→振り返り の縦積み順を維持。CD-17/18 を内包。CD 側は **CD-19**(`cd-updates/2026-07-27_cd-parity-1a-redesign.md`)で round-trip。
   - ✅ **重複導線の集約**(Naoya リクエスト): ヘッダーの「学習状況/IPAって何?」テキストリンク(PCトップ限定表示)を撤去。学習状況=カード / IPAって何?=フッターピル / 思想=hero リンク に各1本化。ヘッダーが全ブレークポイント・全言語で同一(brand+globe+語彙≣+ガイド?)に。到達性喪失なし(他画面で `.header-nav` は元々非表示)。CD 側は **CD-20**(同 1a-redesign 指示書に追記)で round-trip。
   - ✅ **IPA導線を hero に集約(案A)**: 「IPAって何?」をフッターピル→ hero に移設し「思想を読む →」の隣に併置(`.top-hero-links`)。フッターピルは撤去(=Feedback/Terms/Privacy/X のみ)。3e ページは温存。→ IPA=hero / 思想=hero / 学習状況=カード で全て1箇所。CD 側は **CD-21**(同指示書)で round-trip。
+  - 🔧 **ドリル(2a/2b)CD 再正本化(CD-first)**: Naoya 指摘「2b が CD と実UIで別物・完全一致させたい」。調査で **CD 側にも不足**(二重母音キー無し=/spaɪ/ 組立不能 / 削除操作未定義 / 未回答状態フレーム無し)が判明 → app→CD 単純コピー不可。governance に沿い **CD を先に正本化**する修正指示書 `cd-updates/2026-07-27_cd-parity-drill-reconcile.md` 作成。骨格=統合カード(ヘッダー内包+2ペイン paper|panel)を app が採用、(A)CD 追加=二重母音/削除ボタン/未回答単カラム~560px、(B)判断待ち=答えペイン「GA/RP発音カード vs 発音ポイント」。**この過程で今セッションの drill 実験(単問半幅・2ペイン統合)は一旦 revert**(CD 確定後に一致実装)。語彙3b・2c/2d は後続で同型展開。
+  - ✅ **v10 CD 反映検証**: CD-17/18/19/20/21 + A-1(二重母音)/A-2(単一⌫) すべて指示どおり反映を確認(マークアップ精査)。軽微: 1a-pc キャプションが旧「右=About」のまま(中身は学習状況カード)=次回修正。
+  - 📋 **決定(2026-07-27, 追加ラウンド分)**: ①進捗=**ヘッダーアイコンに格下げ**(CD-22。aside 大カード撤去・hero 単カラム化) ②答えペイン=**GA/RPカード＋発音ポイント両立**(B-1)かつ**白地の雑多な羅列→CDの枠付きサブカード型にクリーン化**(B-2) ③語彙=**レスポンシブ2カラム(PC)/1カラム(モバイル)・検索追加なし・行タップ現状**(app 側で CD 2カラムに一致)。
+  - ✅ **UX 全般 ux-review 一巡**: 答えペイン/1a/語彙/進捗/オンボ + 2c(neighbors <3=18%質劣化・非バグ)/2d(carriers・ipa_strong 正常, ga_rp_same=bool でバグ無し=誤検知解消)。監査 `cd-updates/2026-07-27_ux-data-audit.md`。実装ブロッカー無し。
+  - ✅ **再利用資産**: `.claude/skills/ux-brief`・`ux-review`(移植可) + `knowledge/`(手法+記載例)。
+  - ⏭️ **次 CD ラウンド指示=清書済**: `cd-updates/2026-07-27_cd-round-next.md`(CD-22進捗アイコン/A-3未回答フレーム/B-1・B-2 答えペイン=respell主役/CD-14見出し/3dストリーク撤去/1a-pcキャプション)。Naoya が Claude Design 反映 → エクスポート → repo CD 一括同期 → app 一致実装。
+  - ⏭️ **app 先行可(CD非依存)**: POS i18n・GA=RP畳み・streak撤去・要注意音厳選・respell表示・語彙2カラム。
   - 📌 **「全言語でUI差異」検証結果**: 1a の CSS/構造は**言語非依存**(`:lang()`/lang別body class なし、build は文言と `<html lang>` のみ差替)。en/ja/ko/zh-Hans/zh-Hant/fil すべて同一構造を確認。ユーザが見た「英語だけ縦積み」は **1024px ブレークポイント未満**の応答的レイアウト(狭い窓)であり言語差ではない。※ 抜本見直し(IPA導線の露出度・トップ IA)は Naoya と方向確認中。
 - **Phase 4/5**: 未(Sonnet 1次Rv → Opus 横断2次Rv)
 
