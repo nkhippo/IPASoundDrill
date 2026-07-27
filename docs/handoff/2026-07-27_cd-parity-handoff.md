@@ -40,7 +40,8 @@ CD(Claude Design、`docs/claude-design/{sp,pc}.dc.html`)と実UIを **文言以�
   - ✅ **app-3**: 1a 第1 purpose カード強調(`#purposeGrid .purpose-card:first-child` に signal-soft+teal)
   - ✅ **app-4**: PC 支援画面 左上 ●●● 削除(`.modal-chrome`/`.onboarding-chrome` を PC でも display:none)
   - ⏳ **app-2-ii**(大物): ドリルヘッダー再構成 — 下記 §4
-  - ⏳ **app-5**(大物): 語彙リスト CD準拠フルリワーク — 下記 §5
+  - ✅ **app-5 SP 完了**(大物): 語彙リスト CD準拠フルリワーク(SP #3b 検証済)。commit `8899194`。PC(3b-pc)はカードのみレスポンシブ反映、固有要素は要判断 → PARITY-CATALOG §PC-conflicts。詳細 §5
+  - ⏳ **app-5 PC 残**: 2カラムグリッド + SRS/●●●/フィルタUI の衝突判断(§PC-conflicts)
   - ⏳ **app-6**: 3e「IPA って何？」への SP フッター導線 / ⏳ **app-7**: 3f 言語設定の SP 専用ページ
 - **Phase 4/5**: 未(Sonnet 1次Rv → Opus 横断2次Rv)
 
@@ -63,8 +64,10 @@ CD `#3b`(SP)/`#3b-pc`(PC)のコンパクト設計に app を合わせる。**確
 - モーダル背景 = **#FDFBF7(他カード共通)**(Q10、app・CD 揃え済。当初「app=#FFF」は測定ミス→訂正済)
 - 1a「目的から選ぶ」ラベル=CD削除済 / 第1カード強調=app-3済 / 3e=SPフッター導線(app-6) / 3f=SP専用設定ページ(app-7) / IPAフォント=Charis優先(CD一致)
 
-## 7. ★ 未解決の調整事項: Open PR #164(要 Naoya 判断)
-**PR #164「feat: PC UI 品質補完 Phase 2」(branch `codex/issue-163-pc-quality-phase2`、OPEN、labels: feature)が CD-parity と衝突する。**
+## 7. ✅ 解決: PR #164 は CLOSED(2026-07-27)
+**PR #164「feat: PC UI 品質補完 Phase 2」は CLOSED(未 merge)確認済。** CD-parity(特に app-5 PC リワーク)が PC UI を包括的に作り替えるため上位互換=不要と判断し close で決着。以下は経緯記録:
+
+**(旧)PR #164「feat: PC UI 品質補完 Phase 2」(branch `codex/issue-163-pc-quality-phase2`)が CD-parity と衝突していた。**
 - #164 変更ファイル: `src/index.template.html`(+96/-17 の **PC UI**)、`docs/claude-design/pc.dc.html`(+5/-5)、`docs/LAUNCH-CHECKLIST.md`、agent-report。
 - **衝突点**: (a) `pc.dc.html` は CD-parity で **新 CD に全置換済**(CD-1〜6)→ #164 の pc.dc.html 差分と競合。 (b) `index.template.html` の PC UI は app-1〜4 と同一ファイル・同一領域を編集 → CD-parity が #164 を**上書き/上位互換**する可能性大。
 - **推奨(品質優先)**: #164 のレビュー/マージ判断は **CD-parity の存在を前提に**行う。CD-parity は PC UI を CD 準拠で包括的に作り替えるため、#164 は多くが**上位互換で不要**の見込み。選択肢: ①#164 を close(CD-parity に吸収)/ ②#164 を先に merge → CD-parity を rebase して衝突解消(最終状態は CD-parity 準拠に)。**フレッシュな Chat で #164 だけを見ると本重複を見落とす**ので、必ず本 handoff §7 を読んでからレビューすること(= Rv 品質はこの注記で担保)。
