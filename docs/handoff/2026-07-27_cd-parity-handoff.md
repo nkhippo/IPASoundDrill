@@ -47,6 +47,8 @@ CD(Claude Design、`docs/claude-design/{sp,pc}.dc.html`)と実UIを **文言以�
   - ✅ **CD-9/10/11 + #3c を repo CD へ同期**(commit `4b63cc2`, Naoya v7 出力): 装飾線削除/ヘッダー globe 丸型/ドリル語彙ボタン削除/#3c 枠装飾削除。※ SP line 308(#3c 背景)は export の `#FFFFFF` を不採用し repo の `var(--paper)` 維持=**CD-13** で Claude Design 側是正待ち。
   - ✅ **STEP ラベル一本化**(commit `f488b37`): 集約ヘッダー title と step ラベルの重複を解消(step ラベル常時非表示)。CD 側は **CD-12** で round-trip 予定。
   - ✅ **CD v7/v8 同期**: CD-9〜13 を repo CD へ反映済(v8 で SP/PC 完全一致、Design System 一致)。
+  - ✅ **CD v9 同期**(CD-14/15/16): repo CD == v9(SP/PC 完全一致)。PC 支援画面 ●●● 削除も反映。
+  - ✅ **PC 3件修正**(commit 済): ①ドリル幅=`renderCard` で `drill-two-pane` を必ず解除(次問が半幅/不安定になる不具合)②トップ浮き=`#purposeStub.panel` の残存 box-shadow を除去しフラット化 ③「このアプリについて/思想」を下部ロング→**モーダル化**(「思想を読む」で開く/×・スクリムで閉)。ヘッダー「IPA って何?」は 3e(#/ipa)へ正接続。※いずれも app 側(CD 影響小)。
   - ✅ **追加改善 A/B/C/D**(Naoya リクエスト第2弾): A=戻る丸chevron/左寄せ明朝を 3a/3c/3d へ横展開、B=出題(2a)の入力/ボタン位置固定(RP 行スペース常時確保)、C=①アクセント「GA·米」→「GA」②オンボ位置表示をドット一本化、D=`ga_rp_same` の設計意図を data-contract.md に明記(実質同じ音=IPA完全一致ではない)。CD 側は **CD-14/15/16**(`cd-updates/2026-07-27_cd-parity-ux-improve-2.md`)で round-trip 予定。
   - ✅ **UX 改善 5件**(Naoya リクエスト, commit `adf2510`): ①オンボ4スライド高さ統一(「つぎへ」位置固定 Y=608)②装飾アンダーバー(`.top-swash`)撤去+余白詰め ③ヘッダー3ボタン丸型統一+言語=globe アイコン(既定 en)④2b「クリア」をビルド欄右隣へ ⑤ドリルヘッダーの語彙(≣)リンク撤去(GA/RP は保持)。#2/#3/#5 は CD 意匠と差分→**CD-9/10/11**(`cd-updates/2026-07-27_cd-parity-ux-improve.md`)で round-trip 予定。横展開(他画面のボタン位置固定)は今後検討。
 - **Phase 4/5**: 未(Sonnet 1次Rv → Opus 横断2次Rv)
