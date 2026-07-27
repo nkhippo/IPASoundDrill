@@ -239,7 +239,7 @@
   .note p{font-size:13px;color:var(--legacy-ink);margin:0 0 10px}
   .trapchips{display:flex;gap:6px;flex-wrap:wrap}
   .trapchip{font-family:var(--legacy-ipa);font-size:15px;color:var(--legacy-signal);background:var(--legacy-signal-soft);border-radius:8px;padding:3px 10px;cursor:pointer}
-  .reveal-next{margin-top:16px;width:100%;border:none;border-radius:11px;cursor:pointer;background:var(--legacy-ink);color:#fff;font-family:var(--legacy-ui);font-weight:700;font-size:15px;padding:14px;letter-spacing:.03em}
+  .reveal-next{margin-top:16px;width:100%;border:none;border-radius:11px;cursor:pointer;background:var(--signal);color:#fff;font-family:var(--legacy-ui);font-weight:700;font-size:15px;padding:14px;letter-spacing:.03em}
   .reveal-next:active{transform:translateY(1px)}
   .reveal-next.hidden{display:none}
   .mbs-meaning-slot{min-height:10rem;display:flex;align-items:flex-start;justify-content:center}
@@ -646,7 +646,7 @@
   #cardModeBStudy .slash{color:var(--signal)}
   #cardModeBStudyAnswer .wordbig{font-family:var(--font-ui);color:var(--ink)}
   #cardModeBStudy .btn-reveal{border-color:var(--signal);color:var(--signal);font-family:var(--font-ui);border-radius:var(--radius-button)}
-  #cardModeBStudyAnswer .reveal-next{background:var(--ink);font-family:var(--font-ui);border-radius:var(--radius-button)}
+  #cardModeBStudyAnswer .reveal-next{background:var(--signal);font-family:var(--font-ui);border-radius:var(--radius-button)}
 
   /* Phase 1-C/B: Mood B components (visual-tokens §4) */
   .btn-primary{background:var(--signal);color:#fff;border:none;border-radius:var(--radius-button);padding:12px 24px;font-size:14px;font-weight:700;cursor:pointer;font-family:var(--font-ui)}
@@ -834,14 +834,15 @@
     /* app-improve #4: ドリルカードの高さを予約し、出題→答え合わせ/問題間で高さが
        ガタつかないよう固定(内容が少ない出題phaseは余白で吸収)。encode は鍵盤で
        元々高いため min 未満=自然高が優先。 */
-    body.in-play .drill-pane{min-height:600px}
+    body.in-play .drill-pane{min-height:520px}
     /* 2a-pc / 2b-pc / 2c-pc / 2d-pc: hide site topbar; drill-header owns chrome */
     body.in-play .topbar{display:none!important}
     body.in-play .play-line{display:none!important}
-    body.in-play .wrap{max-width:1024px;padding-top:8px}
+    /* CD 統合カード: ドリル全体(ヘッダー+ペイン)を1枚の角丸カードに収める(地=paper) */
+    body.in-play .wrap{max-width:1024px;padding:0;background:var(--paper);border:1px solid var(--hair);border-radius:20px;overflow:hidden}
     body.in-play .task-header,
     body.in-play .drill-header{
-      display:flex;align-items:center;gap:16px;padding:12px 0 16px;margin-bottom:8px;border-bottom:1px solid var(--hair)
+      display:flex;align-items:center;gap:16px;padding:20px 32px;margin:0;border-bottom:1px solid var(--hair)
     }
     body.in-play .task-header-back{border:1px solid var(--hair);background:var(--panel);border-radius:999px;width:38px;height:38px;display:inline-flex;align-items:center;justify-content:center;color:var(--muted);cursor:pointer;flex:none;padding:0}
     body.in-play .task-header-main{flex:1;min-width:0}
@@ -867,6 +868,19 @@
     #learningStatusPage > .modal-chrome,
     #symbolPickerPage > .modal-chrome{margin:0 0 12px}
 
+    /* 未回答(単問) = カード内で単カラム中央 ~600px (CD 2a/2b-pc-empty) */
+    body.in-play:not(.drill-two-pane) #cardDecode.panel,
+    body.in-play:not(.drill-two-pane) #cardEncode.panel,
+    body.in-play:not(.drill-two-pane) #cardModeBStudy.panel,
+    body.in-play:not(.drill-two-pane) #cardModeBMcq.panel,
+    body.in-play:not(.drill-two-pane) #cardModeBDict.panel,
+    body.in-play:not(.drill-two-pane) #reveal.panel,
+    body.in-play:not(.drill-two-pane) #summary.panel{
+      background:transparent;border:none;border-radius:0;box-shadow:none;
+      padding:48px 40px 56px;margin:0 auto;max-width:600px;width:100%
+    }
+
+    /* 回答後 = カードを2カラム grid、ヘッダー等は全幅 */
     body.in-play.drill-two-pane .wrap{display:grid;grid-template-columns:1fr 1fr;gap:0;align-items:stretch}
     body.in-play.drill-two-pane .topbar,
     body.in-play.drill-two-pane .play-line,
@@ -877,24 +891,18 @@
     body.in-play.drill-two-pane .reflect-dock,
     body.in-play.drill-two-pane #exitConfirmModal,
     body.in-play.drill-two-pane #onboardingModal{grid-column:1 / -1}
-    body.in-play.drill-two-pane .drill-pane{border-radius:0;margin:0}
-    body.in-play.drill-two-pane .drill-pane-prompt{border-right:1px solid var(--hair);background:var(--paper)}
-    body.in-play.drill-two-pane .drill-pane-answer{background:var(--panel)}
-    body.in-play.drill-two-pane #cardDecode.panel,
-    body.in-play.drill-two-pane #cardEncode.panel,
-    body.in-play.drill-two-pane #cardModeBStudy.panel,
-    body.in-play.drill-two-pane #cardModeBStudyAnswer.panel,
-    body.in-play.drill-two-pane #cardModeBMcq.panel,
-    body.in-play.drill-two-pane #cardModeBDict.panel,
-    body.in-play.drill-two-pane #reveal.panel{box-shadow:none;border-left:none;border-right:none}
-    /* app-improve: 出題/答えペインの背景色で境界を明示(CD準拠)。ID セレクタ(561)に勝つ強い指定 */
+    /* 左=出題(paper) / 右=答え(panel)、中央 hair の仕切り。外枠(.wrap)が境界なので背景と同化しない */
     body.in-play.drill-two-pane #cardDecode.panel,
     body.in-play.drill-two-pane #cardEncode.panel,
     body.in-play.drill-two-pane #cardModeBStudy.panel,
     body.in-play.drill-two-pane #cardModeBMcq.panel,
-    body.in-play.drill-two-pane #cardModeBDict.panel{background:var(--paper);border-right:1px solid var(--hair)}
+    body.in-play.drill-two-pane #cardModeBDict.panel{
+      background:var(--paper);border:none;border-right:1px solid var(--hair);border-radius:0;box-shadow:none;margin:0;padding:44px 40px
+    }
     body.in-play.drill-two-pane #cardModeBStudyAnswer.panel,
-    body.in-play.drill-two-pane #reveal.panel{background:var(--panel)}
+    body.in-play.drill-two-pane #reveal.panel{
+      background:var(--panel);border:none;border-radius:0;box-shadow:none;margin:0;padding:44px 40px
+    }
     /* app-improve: STEP ラベルは集約ヘッダーの title と重複するため常時非表示に統一
        (問題/答え合わせの別はコンテンツ=入力欄 vs 正解バナーで自明) */
   }
@@ -3982,18 +3990,11 @@ function renderModeBStudy(c){
  * @returns {void}
  */
 function applyModeBStudyTwoPane(ctx){
-  const pc = isPcLayout();
-  const studyOn = $("cardModeBStudy") && !$("cardModeBStudy").classList.contains("hidden");
-  if (pc && studyOn && ctx && ctx.type === "modeb-study") {
-    document.body.classList.add("drill-two-pane");
-    show("cardModeBStudyAnswer", true);
-    return;
-  }
-  if (!pc) {
-    document.body.classList.remove("drill-two-pane");
-    if (ctx && ctx.revealed) show("cardModeBStudyAnswer", true);
-    else show("cardModeBStudyAnswer", false);
-  }
+  // 統合カード化に伴い、mode B study は未回答=単カラム(意味未確認で空の右ペインを出さない)。
+  // 意味を確認したら答えを同カラム下に表示(PC/モバイル共通)。
+  document.body.classList.remove("drill-two-pane");
+  if (ctx && ctx.revealed) show("cardModeBStudyAnswer", true);
+  else show("cardModeBStudyAnswer", false);
 }
 function renderModeBMcq(c){
   hideModeBCards();document.body.classList.remove("drill-two-pane");show("cardModeBMcq",true);S.mbPhase="mcq";S.mbQuiz={mcq:null,spell:null};
@@ -5119,7 +5120,8 @@ function autoNote(c){
 }
 function tryLine(html){return t("you",{a:html});}
 function trickyPhonemes(c){
-  return [...new Set(phonemesOf(activeIpa(c)))].filter(s=>PH[s]&&PH[s].t===1);
+  // 要注意音チップ: schwa(ə=ほぼ全語)を除き、本当に難しい最大2音に厳選(発音ポイント文と整合)
+  return [...new Set(phonemesOf(activeIpa(c)))].filter(s=>PH[s]&&PH[s].t===1&&s!=="ə").slice(0,2);
 }
 function renderWordPronDetails(c,ids){
   const noteText=autoNote(c);
