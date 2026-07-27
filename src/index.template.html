@@ -882,6 +882,14 @@
     body.in-play.drill-two-pane #cardModeBMcq.panel,
     body.in-play.drill-two-pane #cardModeBDict.panel,
     body.in-play.drill-two-pane #reveal.panel{box-shadow:none;border-left:none;border-right:none}
+    /* app-improve: 出題/答えペインの背景色で境界を明示(CD準拠)。ID セレクタ(561)に勝つ強い指定 */
+    body.in-play.drill-two-pane #cardDecode.panel,
+    body.in-play.drill-two-pane #cardEncode.panel,
+    body.in-play.drill-two-pane #cardModeBStudy.panel,
+    body.in-play.drill-two-pane #cardModeBMcq.panel,
+    body.in-play.drill-two-pane #cardModeBDict.panel{background:var(--paper);border-right:1px solid var(--hair)}
+    body.in-play.drill-two-pane #cardModeBStudyAnswer.panel,
+    body.in-play.drill-two-pane #reveal.panel{background:var(--panel)}
     /* app-improve: STEP ラベルは集約ヘッダーの title と重複するため常時非表示に統一
        (問題/答え合わせの別はコンテンツ=入力欄 vs 正解バナーで自明) */
   }
@@ -1323,7 +1331,6 @@
 
   <footer class="site-footer" id="siteFooter">
     <button type="button" class="footer-ipa-link" id="footerIpaLink" data-i18n="footer.ipa">What is IPA?</button>
-    <button type="button" class="legal-link" id="footerLangLink" data-i18n="footer.language">Language</button>
     <button
       type="button"
       data-tally-open="xX1axk"
@@ -5480,8 +5487,8 @@ function bindRevealCheckClicks(wrapId,itemFn,modeFn){
 bindRevealCheckClicks("revealChecks",()=>S.cur,()=>currentCheckMode());
 bindRevealCheckClicks("mbSChecks",()=>S.cur,()=>"l");
 $("langSwitcher").addEventListener("click",(e)=>{
-  e.stopPropagation();
-  toggleLangMenu();
+  e.preventDefault(); e.stopPropagation();
+  navigate("language"); // app-improve: 言語は 3f ページに一本化(ヘッダーの旧ドロップダウン/フッター重複を廃止)
 });
 $("langMenu").querySelectorAll(".lang-menu-item").forEach(b=>{
   b.addEventListener("click",(e)=>{
