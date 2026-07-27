@@ -606,6 +606,8 @@
   .purpose-card-progress{margin-top:0;background:var(--review-panel);border-radius:16px;align-items:center}
   .purpose-card-progress .purpose-card-icon{width:42px;height:42px;border-radius:12px;background:var(--signal-soft);display:inline-flex;align-items:center;justify-content:center;margin-top:0}
   .purpose-card[aria-pressed="true"],.purpose-card--selected{border:1px solid var(--signal);background:var(--signal-soft);color:var(--ink);font-weight:600}
+  /* app-3 (CD parity): 第1 purpose カードは「おすすめ」強調(CD 1a 全言語で signal-soft 地 + teal border) */
+  #purposeGrid .purpose-card:first-child{border-color:var(--signal);background:var(--signal-soft)}
   .purpose-grid{display:grid;gap:10px;margin:0}
   .top-subcopy{font-size:13.5px;line-height:1.9;color:var(--muted);margin:18px 0 0;text-wrap:pretty}
   .top-attrs{display:flex;flex-wrap:wrap;gap:6px 12px;margin:18px 0 var(--space-4);font-size:11.5px;color:var(--faint)}
@@ -764,7 +766,7 @@
     body.pc-support .modal-chrome,
     body.vocab-page .modal-chrome,
     body.progress-page .modal-chrome,
-    body.symbol-picker-page .modal-chrome{display:flex}
+    body.symbol-picker-page .modal-chrome{display:none} /* app-4: CD に無い偽ウィンドウ枠 ●●● を削除(R2/CD-2) */
     body.pc-support .topbar{display:none!important}
     body.pc-support .wrap{max-width:880px;padding-top:24px}
     #vocabPage > .modal-chrome,
@@ -838,7 +840,7 @@
   .onboarding-pc-intro{display:none}
   @media (min-width:1024px){
     .onboarding-modal .modal-card{width:min(100%,880px);padding:0}
-    .onboarding-chrome{display:flex}
+    .onboarding-chrome{display:none} /* app-4: CD に無い ●●● を削除(R2/CD-2) */
     .onboarding-body{padding:40px 48px 44px}
     .onboarding-top,.onboarding-slide,.onboarding-dots{display:none!important}
     .onboarding-pc-intro{display:block;margin:0 0 24px}

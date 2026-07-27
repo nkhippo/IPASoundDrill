@@ -26,8 +26,8 @@
 ### B. 実装(app)側を CD に合わせる
 - **app-1**: 二重トークン一本化(`--legacy-*`→Mood B、body 背景 `--paper`)【R1】
 - **app-2**: ヘッダー崩れ修正(浮いた丸「TOPへ」削除、`←TOPへ`はパネル内テキストのみ、SP で `pc-support` を付けない)
-- **app-3**: 1a 第1 purpose カードに CD 準拠の強調スタイルを適用【Q2】
-- **app-4**: PC 左上「・・・」削除(CD-2 の誤踏襲)
+- **app-3** ✅済: 1a 第1 purpose カードに CD 準拠の強調スタイルを適用【Q2】
+- **app-4** ✅済: PC 左上「・・・」(modal-chrome/onboarding-chrome)削除(CD-2 の誤踏襲)
 - **app-5**: 3b 語彙リスト CD準拠フルリワーク(フレーズタブ削除【Q6】/ 3×3 ドット削除【Q7】/ 意味表示追加 / 最大3の IPA 部分一致フィルタ / IPA キーボード横スクロール / 戻る丸アイコン)。SP/PC 両方
 - **app-6**: 3e「IPA って何？」への SP フッター導線を追加【Q8】
 - **app-7**: 3f 言語設定の SP 専用ページ + 導線を新設【Q9】
@@ -130,7 +130,7 @@ CD の SP/PC モックは `9:41` ステータスバー・右上 `●●●`(カ�
 | 要素 | CD 期待 | 実測(app) | 分類 | 備考 |
 |---|---|---|---|---|
 | purpose セクション見出し「目的から選ぶ」 | (CD にある) | 見出し無し | **CD修正【Q1確定】** | 追加しない。**CD から削除**(実装が正) |
-| 第1 purpose カード強調 | signal-soft 緑地の強調スタイル(全言語共通) | 全カード白 | **app修正【Q2確定】** | 仕様。**CD準拠で app に第1カード強調を適用** |
+| 第1 purpose カード強調 | signal-soft 緑地の強調スタイル(全言語共通) | 全カード白 | **✅ app-3 済** | `#purposeGrid .purpose-card:first-child` に signal-soft+teal border 適用。card1 bg=#E1EFEE/border=#0C7C7E 実測、他カード #FDFBF7。CD 1a 一致・目視確認 |
 | デバイスフレーム ●●● / 9:41 | (フレーム装飾) | 実UIには無し(正) | **CD修正【R2確定】** | **CD から削除**。PC では誤踏襲→app も削除 |
 | 背景/ヘッダー/明朝見出し | Mood B | 概ね一致 | ok | |
 
@@ -138,7 +138,7 @@ CD の SP/PC モックは `9:41` ステータスバー・右上 `●●●`(カ�
 | 要素 | CD 期待 | 実測(app) | 分類 | 状態 |
 |---|---|---|---|---|
 | プロフィール(setup)ヘッダー | brand+JA+≣+?(top と同じ)、戻るは content 内 | 浮いた丸「TOPへ」が折返して崩れ | app修正 | **✅ 2a-i 済**: `body:not(.in-play) #backTopBtn{display:none}` で浮き TOPへ を非表示。ヘッダー1行化、`←TOPへ`(パネル内)で戻る。検証済 |
-| ドリル(in-play)ヘッダー | CD 2a は card 内 **戻る(chevron 32px)**+ 浮き TOPへ無し | 浮いた `#backTopBtn` が唯一の戻る。`.task-header`(戻る+title+progress)は**JS 配線済だが表示されないデッドコード** | app修正 | ⏳ **2a-ii 次**: task-header を in-play で復活(container display + hidden 解除)→ CD 2a 一致 → 浮き TOPへ をドリルでも撤去。topbar ≣/breadcrumb との重複回避に注意 |
+| ドリル(in-play)ヘッダー | CD 2a: card 上部1行に **戻る(chevron)+ title「音から単語を書く」+ progress meter + counter「1/2382」**を集約。浮き TOPへ無し | 情報が散在: topbar(brand+lang+≣+?+**浮きTOPへ**)+ breadcrumb「IPA読み書き>一単語(GA)」+ card内(A1バッジ+counter+progressバー)。task-header は force-show すると**戻るchevronのみ表示・title/meter は空(この flow で未populate)** | app修正(**要リストラクチャ**) | ⏳ **2a-ii = 単純トグルでない**。必要: ①card 上部に CD式ヘッダー行(戻る+title+meter+counter)を構成 ②breadcrumb + card counter/progress を集約 ③title/meter を4モード(2a/2b/2c/2d)で populate ④浮きTOPへ撤去(戻る用意が前提)。core UX のため各モード CD 突合しながら慎重に。**方針確定後に着手推奨** |
 | body クラス pc-support | — | SP でも付与(line 5065)。ただし現状 SP で実害は未確認(●●● は PC のみ) | 要確認 | 2a-ii/app-4 と併せて精査 |
 
 ### 3a 学習プロフィール(SP)
@@ -211,7 +211,7 @@ app 走行で 2a 答え合わせ(正解)撮影済:
 ### PC 全画面 — R2「・・・」確認済 + 概況
 | 項目 | CD 期待 | 実測(app PC) | 分類 |
 |---|---|---|---|
-| 支援画面 左上「●●●」 | (CD モックのウィンドウ枠装飾=非UI) | **語彙/オンボ等の左上に ●●● が実表示**(`modal-chrome` 枠踏襲) | **app修正(削除)+ CD-2** ★確定 |
+| 支援画面 左上「●●●」 | (CD モックのウィンドウ枠装飾=非UI) | **語彙/オンボ等の左上に ●●● が実表示**(`modal-chrome` 枠踏襲) | **✅ app-4 済**: PC の `body.pc-support/vocab/progress/symbol .modal-chrome` と `.onboarding-chrome` を display:none 化。PC 語彙で ●●● 消失・レイアウト無害 確認 |
 | 1a-pc | 目的カード 4×1 grid + 右 sidebar + ヘッダーテキストリンク | 要 Phase3 実測(過去 #147 で対応済のはず) | 実測差分は Phase 3 |
 | 2a-pc〜2d-pc | 2ペイン | 要 Phase3 実測 | Phase 3 |
 | 3b-pc 語彙 | SP と同じ CD準拠版へ | SP と同じ高機能版(タブ/CEFR/3×3/全KB) | app-5 と同一リワーク |
