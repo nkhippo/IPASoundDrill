@@ -392,5 +392,22 @@
       "title": "按自己的节奏。",
       "body": "进度保存在本机，无需注册。随时可中断、继续。"
     }
+  },
+  "footer": {
+    "ipa": "什么是IPA?",
+    "language": "语言设置"
+  },
+  "language": {
+    "title": "语言与语音",
+    "display_label": "显示语言",
+    "accent_note_html": "口音（GA / RP）在<b>学习档案</b>中设置。"
+  },
+  "ipa_info": {
+    "heading": "IPA 是声音的地图。",
+    "lead": "拼写相同，发音未必相同。国际音标（IPA）以一个符号对应一个音，准确记录“实际怎么发音”，是一套国际通用的体系。",
+    "example_note": "拼写相似，发音却大不相同。",
+    "legend_stress": "重音（重读）位置",
+    "legend_syllable": "音节分隔",
+    "legend_link": "词与词之间的连读"
   }
 }
