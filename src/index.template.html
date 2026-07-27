@@ -33,13 +33,14 @@
     font-display:block;
   }
   :root{
-    --legacy-paper:#F4F3EE; --legacy-panel:#FFFFFF; --legacy-ink:#191C20; --legacy-muted:#6C717A; --legacy-faint:#9AA0A8;
-    --legacy-hair:#E2E0D8; --legacy-signal:#0C7C7E; --legacy-signal-soft:#E2F0EF;
+    /* Phase 1 token unification: legacy → Mood B (single-point aliasing). Values live in the Mood B :root below. */
+    --legacy-paper:var(--paper); --legacy-panel:var(--panel); --legacy-ink:var(--ink); --legacy-muted:var(--muted); --legacy-faint:var(--faint);
+    --legacy-hair:var(--hair); --legacy-signal:#0C7C7E; --legacy-signal-soft:var(--signal-soft);
     --legacy-stress:#D9911B; --legacy-stress-soft:#F8ECD3; --legacy-ok:#2E7D54; --legacy-ok-soft:#E4F0E8;
     --legacy-bad:#BC4F3A; --legacy-bad-soft:#F6E6E1;
-    --legacy-ipa:"Doulos SIL","Charis SIL","Gentium Plus","Times New Roman","Apple Symbols",serif;
-    --legacy-ui:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-    --legacy-mono:"SF Mono","Roboto Mono",ui-monospace,Menlo,Consolas,monospace;
+    --legacy-ipa:var(--font-ipa);
+    --legacy-ui:var(--font-ui);
+    --legacy-mono:var(--font-mono);
   }
   /* Phase 1-A Mood B tokens (new UI from Phase 1-B). Existing screens use --legacy-*. */
   :root{
@@ -84,7 +85,7 @@
 
   *{box-sizing:border-box}
   html,body{margin:0;padding:0}
-  body{background:var(--legacy-paper);color:var(--legacy-ink);font-family:var(--legacy-ui);-webkit-font-smoothing:antialiased;line-height:1.5;min-height:100vh}
+  body{background:var(--paper);color:var(--ink);font-family:var(--legacy-ui);-webkit-font-smoothing:antialiased;line-height:1.5;min-height:100vh}
   body.scroll-locked{position:fixed;left:0;right:0;width:100%;overflow:hidden}
   .wrap{max-width:600px;margin:0 auto;padding:20px 18px 72px}
   .topbar{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:20px}
@@ -677,6 +678,8 @@
   .modal-chrome .modal-dots{display:inline-flex;align-items:center;gap:8px}
   .modal-chrome .modal-dot{width:11px;height:11px;border-radius:999px;background:#E7DCCF}
   .drill-step-label{display:none;font-family:var(--font-mono);font-size:11px;font-weight:700;letter-spacing:.08em;color:var(--faint);margin:0 0 12px}
+  /* app-2 (CD parity): 浮いた丸「TOPへ」は CD に無い。非ドリル画面(プロフィール等=パネル内「← TOPへ」あり)では隠す。ドリルは task-header 復活後に撤去(app-2-ii)。 */
+  body:not(.in-play) #backTopBtn{display:none!important}
   @media (min-width:1024px){
     /* Scope 3: SP-only TOPへ (#backTopBtn) */
     #backTopBtn{display:none!important}
