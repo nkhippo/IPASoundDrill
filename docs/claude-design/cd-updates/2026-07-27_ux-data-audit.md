@@ -14,5 +14,13 @@
 - `pattern`(綴り規則) は 27%、`ipa_actual_ga`(narrow) は 9%（→2 IPA 表示は少数）。
 - gloss フォールバック（`gloss[LANG]||en||w`）・`対象N語`(pool.length) は妥当。
 
+## 追加サイクル: 2c / 2d / 全般（2026-07-27）
+- **2c(Mode B MCQ / neighbors)**: 誤答選択肢に `neighbors` 使用。**<3近傍=982語(18%)・0近傍=284語(5%)**（avg 6.0）。<3 の語は band/preset へフォールバック＝**音的近傍でないランダム誤答**に劣化。バグではないが選択肢の質が約2割で低下 → 将来 `gen_neighbors` の拡充 or フォールバック改善を検討（今回はスコープ外・記録のみ）。
+- **2d(connected 201 / weak 36)**: `carriers`(例文)・`ipa_strong`(弱↔強)は**正しく使用**✓。`weak_forms` は36件と小プール（コンテンツ量の注記）。
+- **[誤検知→解消] ga_rp_same 型**: connected/weak の `ga_rp_same` は **boolean(false/true)** で正常（当初 string と誤読 → Python str() の表示由来。実 JSON は bare bool）。**バグ無し**。
+- **summary**: 弱点 `PH[s].lab/.mouth` 参照。PH 未収載音があると `p.lab` で例外の可能性（防御的 guard 推奨・軽微）。
+- **onboarding のモック数値**: `7`(日連続=撤去対象)・`312`(語) はハードコードのプレビュー値。streak 撤去に合わせ `312` 側も実値化 or モック明示を検討（軽微）。
+- **verified-clean**: gloss フォールバック / `対象N語`(pool.length) / carriers / ipa_strong / SRS 重み付け。
+
 ## 進め方
 内容ロジック（品詞分割マップ・trap 厳選・reason 文マップ・respell 表示・空時分岐）は**コード＋データの判断**のため、ClaudeCode が確定仕様（表示要素/データ源/条件/空時挙動）を作り、視覚は CD 指示へ落とす。データ不能なものは混ぜない。
