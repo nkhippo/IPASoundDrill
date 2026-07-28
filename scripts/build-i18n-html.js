@@ -22,7 +22,7 @@ function hreflangBlock() {
       `<link rel="alternate" hreflang="${lang}" href="https://ipasounddrill.app/${lang}/">`
   );
   lines.push(
-    `<link rel="alternate" hreflang="x-default" href="https://ipasounddrill.app/">`
+    `<link rel="alternate" hreflang="x-default" href="https://ipasounddrill.app/en/">`
   );
   return lines.join("\n");
 }
