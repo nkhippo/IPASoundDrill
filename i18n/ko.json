@@ -135,7 +135,7 @@
       "ipa_max": "(최대 3)",
       "add": "기호 추가",
       "clear": "모두 지우기",
-      "picker": "기호 선택기 열기"
+      "picker": "기호로 필터 (GA·RP 모두 검색)"
     },
     "count": {
       "filtered": "필터 결과 · {syms} 포함 {accent} 발음 · {n}개",
@@ -402,7 +402,10 @@
   },
   "footer": {
     "ipa": "IPA란?",
-    "language": "언어 설정"
+    "language": "언어 설정",
+    "feedback": "피드백",
+    "terms": "이용약관",
+    "privacy": "개인정보처리방침"
   },
   "language": {
     "title": "언어 및 음성",

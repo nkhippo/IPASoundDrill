@@ -135,7 +135,7 @@
       "ipa_max": "(最多3个)",
       "add": "添加符号",
       "clear": "全部清除",
-      "picker": "打开符号选择器"
+      "picker": "按符号筛选（同时搜索 GA/RP）"
     },
     "count": {
       "filtered": "筛选结果 · 含 {syms} 的 {accent} 发音 · {n}个",
@@ -402,7 +402,10 @@
   },
   "footer": {
     "ipa": "什么是IPA?",
-    "language": "语言设置"
+    "language": "语言设置",
+    "feedback": "反馈",
+    "terms": "使用条款",
+    "privacy": "隐私政策"
   },
   "language": {
     "title": "语言与语音",

@@ -135,7 +135,7 @@
       "ipa_max": "(最大3)",
       "add": "記号を追加",
       "clear": "全消去",
-      "picker": "記号ピッカーを開く"
+      "picker": "記号で絞り込み（GA・RP 両方を検索）"
     },
     "count": {
       "filtered": "絞り込み結果 · {syms} を含む {accent} 発音 · {n}件",
@@ -402,7 +402,10 @@
   },
   "footer": {
     "ipa": "IPAって何?",
-    "language": "言語設定"
+    "language": "言語設定",
+    "feedback": "フィードバック",
+    "terms": "利用規約",
+    "privacy": "プライバシーポリシー"
   },
   "language": {
     "title": "言語と音声",

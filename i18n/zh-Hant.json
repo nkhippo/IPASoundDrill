@@ -135,7 +135,7 @@
       "ipa_max": "(最多3個)",
       "add": "新增符號",
       "clear": "全部清除",
-      "picker": "開啟符號選擇器"
+      "picker": "依符號篩選（同時搜尋 GA/RP）"
     },
     "count": {
       "filtered": "篩選結果 · 含 {syms} 的 {accent} 發音 · {n}個",
@@ -402,7 +402,10 @@
   },
   "footer": {
     "ipa": "什麼是IPA?",
-    "language": "語言設定"
+    "language": "語言設定",
+    "feedback": "意見回饋",
+    "terms": "使用條款",
+    "privacy": "隱私政策"
   },
   "language": {
     "title": "語言與語音",

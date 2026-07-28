@@ -135,7 +135,7 @@
       "ipa_max": "(max 3)",
       "add": "Add symbol",
       "clear": "Clear all",
-      "picker": "Open picker"
+      "picker": "Filter by symbol (searches GA & RP)"
     },
     "count": {
       "filtered": "Filtered · {accent} pronunciations with {syms} · {n}",
@@ -402,7 +402,10 @@
   },
   "footer": {
     "ipa": "What is IPA?",
-    "language": "Language"
+    "language": "Language",
+    "feedback": "Feedback",
+    "terms": "Terms",
+    "privacy": "Privacy"
   },
   "language": {
     "title": "Language & audio",

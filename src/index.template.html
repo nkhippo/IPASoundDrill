@@ -254,9 +254,16 @@
   .reveal-pending p{font-size:13.5px;line-height:1.8;color:var(--muted);max-width:300px;margin:0}
   #reveal.is-pending #rPending{display:flex}
   #reveal.is-pending .reveal{display:none}
+  #cardModeBStudyAnswer.is-pending .mbsMeaning,
+  #cardModeBStudyAnswer.is-pending .mbs-actions{display:none}
+  #cardModeBStudyAnswer.is-pending #mbSPending{display:flex}
   body.drill-answered .drill-pane-prompt input,
   body.drill-answered .drill-pane-prompt button:not(.playicon){pointer-events:none;opacity:.5}
   #reveal #rAltIpa{display:none}
+  /* 答えペイン整理(Naoya): 読み方(respell)/辞書表記/曖昧なメインIPA を除去し、IPA は発音カードのGA/RP行に一本化 */
+  #reveal .readout{display:none}
+  #reveal #rRespell{display:none}
+  #reveal #rDictIpa{display:none}
   #reveal #rNoteBlock{border:1px solid var(--hair);background:var(--paper);border-radius:14px;padding:12px 16px;margin-top:14px;text-align:left}
   #reveal #rNoteBlock.hidden{display:none}
   .yourtry .uipa{font-family:var(--legacy-ipa)}
@@ -356,11 +363,12 @@
   .vocab-chip-add{display:inline-flex;align-items:center;gap:5px;border:1px dashed var(--hair);background:transparent;color:var(--muted);border-radius:999px;padding:5px 11px 5px 9px;font-size:13px;font-family:inherit;cursor:pointer;flex:none}
   .vocab-chip-add svg{width:12px;height:12px}
   .vocab-chip-add span{font-family:var(--font-ui);font-size:11px}
-  .vocab-ipa-keyboard{display:flex;gap:5px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;padding:10px 2px 2px}
+  .vocab-ipa-kbd-label{font-size:11px;color:var(--faint);margin:10px 2px 0;font-family:var(--font-ui)}
+  .vocab-ipa-keyboard{display:flex;gap:5px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;padding:6px 2px 2px}
   .vocab-ipa-keyboard::-webkit-scrollbar{display:none}
   .vocab-ipa-key{flex:none;border:1px solid var(--hair);background:var(--paper);color:var(--ink);border-radius:8px;min-width:34px;height:34px;display:inline-flex;align-items:center;justify-content:center;font-size:15px;font-family:var(--font-ipa);cursor:pointer}
   .vocab-ipa-key.is-active{border-color:var(--signal);background:var(--signal-soft);color:var(--signal);font-weight:700}
-  .vocab-az-row{display:flex;align-items:center;gap:8px}
+  .vocab-az-row{display:flex;align-items:center;gap:8px;border-top:1px solid var(--hair);padding-top:12px;margin-top:4px}
   .vocab-az-label{font-size:10px;font-weight:700;color:var(--faint);flex:none;font-family:var(--font-mono)}
   .vocab-count{font-size:11px;color:var(--faint);padding:2px 2px 0}
   .vocab-count .ipa{color:var(--signal);font-family:var(--font-ipa)}
@@ -825,7 +833,8 @@
     body.top-home:not(.in-play) .topbar{padding-bottom:16px;margin-bottom:28px;border-bottom:1px solid var(--hair)}
     body.top-home:not(.in-play) .brand .mark{font-size:26px}
     body.top-home:not(.in-play) .brand .name{font-size:16px}
-    body.top-home:not(.in-play) .topbar-actions{flex-direction:row;align-items:center;gap:14px}
+    body.top-home:not(.in-play) .topbar-actions{flex-direction:row;align-items:center;gap:8px}
+    body.top-home:not(.in-play) .topbar-btns{gap:8px}
     body.top-home:not(.in-play) .topbar-btns{order:1}
     body.top-home:not(.in-play) .header-lang{order:2}
     body.top-home:not(.in-play) .header-lang{max-width:none}
@@ -1259,6 +1268,10 @@
 
   <section id="cardModeBStudyAnswer" class="panel hidden drill-pane drill-pane-answer" data-frame="2c">
     <div class="drill-step-label" id="mbSStep2Label">STEP 2</div>
+    <div class="reveal-pending" id="mbSPending" aria-hidden="true">
+      <span class="reveal-pending-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></span>
+      <p id="mbSPendingText"></p>
+    </div>
     <div id="mbSMeaning" class="mbsMeaning hidden">
       <div class="readout"><div class="wordbig" id="mbSWord"></div></div>
       <div class="word-gloss" id="mbSGloss"></div>
@@ -1397,16 +1410,19 @@
       data-tally-open="xX1axk"
       data-tally-layout="modal"
       class="feedback-btn"
+      id="footerFeedback"
       aria-label="Send feedback"
     >Feedback</button>
     <a
       href="/terms.html"
       class="legal-link"
+      id="footerTerms"
       aria-label="Terms of Service"
     >Terms</a>
     <a
       href="/privacy.html"
       class="legal-link"
+      id="footerPrivacy"
       aria-label="Privacy Policy"
     >Privacy</a>
     <a
@@ -1438,14 +1454,12 @@
         <div class="vocab-ipa-filter" id="vocabIpaFilterBar">
           <div class="vocab-ipa-filter-head">
             <span class="vocab-ipa-filter-label" id="vocabIpaFilterLabel"><span data-i18n="vocab.filter.ipa">IPA</span> <span class="vocab-ipa-filter-max" id="vocabIpaFilterMax" data-i18n="vocab.filter.ipa_max">(max 3)</span></span>
-            <div class="vocab-filter-actions">
-              <button type="button" class="vocab-filter-clear hidden" id="vocabIpaClear" data-i18n="vocab.filter.clear">Clear all</button>
-              <button type="button" class="vocab-filter-picker" id="vocabIpaPicker" aria-expanded="false" data-i18n="vocab.filter.picker">Open picker</button>
-            </div>
+            <button type="button" class="vocab-filter-clear hidden" id="vocabIpaClear" data-i18n="vocab.filter.clear">Clear all</button>
           </div>
           <div class="vocab-ipa-chips" id="vocabIpaChips"></div>
+          <div class="vocab-ipa-kbd-label" id="vocabIpaKbdLabel"></div>
+          <div class="vocab-ipa-keyboard" id="vocabIpaKeyboard"></div>
         </div>
-        <div class="vocab-ipa-keyboard hidden" id="vocabIpaKeyboard"></div>
       </div>
       <div class="vocab-az-row">
         <span class="vocab-az-label">A–Z</span>
@@ -1810,7 +1824,7 @@ function applyI18nVocab() {
   const ipaFilterMax = $("vocabIpaFilterMax");
   if (ipaFilterMax) ipaFilterMax.textContent = t("vocab.filter.ipa_max");
   if ($("vocabIpaClear")) $("vocabIpaClear").textContent = t("vocab.filter.clear");
-  if ($("vocabIpaPicker")) $("vocabIpaPicker").textContent = t("vocab.filter.picker");
+  if ($("vocabIpaKbdLabel")) $("vocabIpaKbdLabel").textContent = t("vocab.filter.picker");
   if ($("accentGaName")) $("accentGaName").textContent = t("accent.ga");
   if ($("accentRpName")) $("accentRpName").textContent = t("accent.rp");
   renderVocabIpaFilterBar();
@@ -2276,7 +2290,7 @@ function renderVocabIpaFilterBar() {
   const chips = vocabIpaQuery.map((s, i) =>
     `<button type="button" class="vocab-chip" data-chip-idx="${i}" aria-label="${escAttr(s)}">${escHtml(s)}${xIcon}</button>`
   ).join("");
-  chipsEl.innerHTML = chips || `<span class="vocab-chip-empty">${escHtml(t("vocab.filter.add"))}</span>`;
+  chipsEl.innerHTML = chips;
   const clearBtn = $("vocabIpaClear");
   if (clearBtn) clearBtn.classList.toggle("hidden", vocabIpaQuery.length === 0);
   const accent = ACCENT === "rp" ? "rp" : "ga";
@@ -2695,6 +2709,9 @@ function applyI18n() {
   $("dirEncodeT").innerHTML = t("dir.encode_t");
   $("dirEncodeD").textContent = t("dir.encode_d");
   if ($("topTagline")) $("topTagline").textContent = t("top.tagline");
+  if ($("footerFeedback")) $("footerFeedback").textContent = t("footer.feedback");
+  if ($("footerTerms")) $("footerTerms").textContent = t("footer.terms");
+  if ($("footerPrivacy")) $("footerPrivacy").textContent = t("footer.privacy");
   const home = homeCopy();
   if ($("topSubcopy")) $("topSubcopy").textContent = home.subcopy;
   if ($("topAttrs")) $("topAttrs").innerHTML = home.attrs.map((label, idx) =>
@@ -4059,11 +4076,22 @@ function renderModeBStudy(c){
  * @returns {void}
  */
 function applyModeBStudyTwoPane(ctx){
-  // 統合カード化に伴い、mode B study は未回答=単カラム(意味未確認で空の右ペインを出さない)。
-  // 意味を確認したら答えを同カラム下に表示(PC/モバイル共通)。
-  document.body.classList.remove("drill-two-pane");
-  if (ctx && ctx.revealed) show("cardModeBStudyAnswer", true);
-  else show("cardModeBStudyAnswer", false);
+  // 共通ドリルUI(2a/2b と統一): mode B study も左右2ペイン。
+  // 左=音+IPA(cardModeBStudy) / 右=意味確認前はプレースホルダ→確認後に答え(cardModeBStudyAnswer)。
+  const pc = window.matchMedia("(min-width:1024px)").matches;
+  const revealed = !!(ctx && ctx.revealed);
+  const ans = $("cardModeBStudyAnswer");
+  if (pc) {
+    document.body.classList.add("drill-two-pane");
+    show("cardModeBStudyAnswer", true);
+    if (ans) ans.classList.toggle("is-pending", !revealed);
+    if (!revealed && $("mbSPendingText")) $("mbSPendingText").textContent = t("reveal.pending");
+    document.body.classList.toggle("drill-answered", revealed);
+  } else {
+    document.body.classList.remove("drill-two-pane");
+    if (ans) ans.classList.remove("is-pending");
+    show("cardModeBStudyAnswer", revealed);
+  }
 }
 function renderModeBMcq(c){
   hideModeBCards();document.body.classList.remove("drill-two-pane");show("cardModeBMcq",true);S.mbPhase="mcq";S.mbQuiz={mcq:null,spell:null};
@@ -5520,13 +5548,6 @@ $("drillProgressStack").addEventListener("click",e=>{
   if(card)openDrillProfile(card.dataset.progressDrill);
 });
 $("symbolQueryClear").addEventListener("click",()=>symbolQueryClearAll());
-// 記号ピッカーを開く: インライン IPA キーボードの表示/非表示を切替(CD 3b-pc)
-if($("vocabIpaPicker")) $("vocabIpaPicker").addEventListener("click",()=>{
-  const kb=$("vocabIpaKeyboard"); if(!kb)return;
-  const open=kb.classList.toggle("hidden")===false;
-  $("vocabIpaPicker").setAttribute("aria-expanded", open?"true":"false");
-  if(open) kb.scrollIntoView({block:"nearest"});
-});
 // 全消去: IPA 絞り込みチップを全てクリア
 if($("vocabIpaClear")) $("vocabIpaClear").addEventListener("click",()=>{ vocabIpaQuery.length=0; renderVocabWords(); renderVocabIpaFilterBar(); });
 $("symbolPalette").addEventListener("click",e=>{
