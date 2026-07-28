@@ -384,6 +384,10 @@
   .vocab-body,.symbol-results{flex:1;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:12px 18px 40px;position:relative}
   .vocab-virt-spacer{position:relative;width:100%}
   .vocab-virt-window{position:absolute;left:0;right:0;top:0;will-change:transform}
+  /* 語彙リスト PC 2カラム(仮想化は行を2件でペア化。モバイルは1カラム) */
+  .vocab-virt-row2{display:grid;grid-template-columns:1fr 1fr;gap:0 12px;align-items:stretch}
+  .vocab-virt-cell{min-width:0}
+  @media (min-width:1024px){ body.vocab-page .vocab-page-inner{max-width:1040px} }
   .vocab-skeleton{display:flex;flex-direction:column;gap:10px;padding:8px 0}
   .vocab-skel-row{height:72px;border-radius:10px;background:linear-gradient(90deg,var(--paper) 0%,var(--signal-soft) 50%,var(--paper) 100%);background-size:200% 100%;animation:vocabSkel 1.2s ease-in-out infinite}
   @keyframes vocabSkel{0%{background-position:100% 0}100%{background-position:-100% 0}}
@@ -1836,7 +1840,9 @@ function vocabRowHeight(c) {
   const g = vocabDisplayGloss(c);
   let h = VOCAB_CARD_BASE;
   if (g && String(g).trim()) h += VOCAB_CARD_GLOSS;
-  if (c && c.rp_ipa) h += VOCAB_CARD_RP;
+  // GA=RP 同一なら RP 行は描かない(=高さも予約しない)
+  const isSame = (c && c.ga_rp_same !== undefined) ? c.ga_rp_same : (c && c.rp_ipa === c.ipa);
+  if (c && c.rp_ipa && !isSame) h += VOCAB_CARD_RP;
   return h;
 }
 
@@ -2010,20 +2016,31 @@ function highlightIpaMatch(ipa, q) {
  * @param {{slots:Array,cum:number[],totalH:number,_start:number,_end:number}} state
  * @returns {void}
  */
-function rebuildVirtSlots(items, withHeads, state) {
+function rebuildVirtSlots(items, withHeads, state, cols) {
+  cols = cols || 1;
   const slots = [];
   let cur = "";
+  let pending = null; // 2カラム時の左セル保留
+  const flush = () => { if (pending) { slots.push(pending); pending = null; } };
   items.forEach(c => {
     if (withHeads) {
       const first = c.w[0].toUpperCase();
       const letter = /[A-Z]/.test(first) ? first : "#";
       if (letter !== cur) {
+        flush();
         cur = letter;
         slots.push({ kind: "head", letter, h: VOCAB_HEAD_H });
       }
     }
-    slots.push({ kind: "row", item: c, h: vocabRowHeight(c) });
+    const h = vocabRowHeight(c);
+    if (cols === 2) {
+      if (pending) { pending.items.push(c); pending.h = Math.max(pending.h, h); flush(); }
+      else { pending = { kind: "row2", items: [c], h }; }
+    } else {
+      slots.push({ kind: "row", item: c, h });
+    }
   });
+  flush();
   const cum = [];
   let total = 0;
   slots.forEach(s => { cum.push(total); total += s.h; });
@@ -2078,6 +2095,10 @@ function paintVirtWindow(body, state, highlightQ) {
     const s = slots[i];
     if (s.kind === "head") {
       html += `<div class="vocab-group-head" data-group="${s.letter}" id="vocab-group-${s.letter}" style="height:${s.h}px;box-sizing:border-box">${s.letter}</div>`;
+    } else if (s.kind === "row2") {
+      let cells = s.items.map(it => `<div class="vocab-virt-cell">${vocabWordRowHtml(it, highlightQ)}</div>`).join("");
+      if (s.items.length === 1) cells += `<div class="vocab-virt-cell" aria-hidden="true"></div>`;
+      html += `<div class="vocab-virt-row2" style="height:${s.h}px;box-sizing:border-box;overflow:hidden">${cells}</div>`;
     } else {
       html += `<div class="vocab-virt-row" style="height:${s.h}px;box-sizing:border-box;overflow:hidden">${vocabWordRowHtml(s.item, highlightQ)}</div>`;
     }
@@ -2276,7 +2297,8 @@ function renderVocabWords() {
       countEl.innerHTML = t("vocab.count.all", { n: filtered.length });
     }
   }
-  rebuildVirtSlots(filtered, false, vocabVirtState);
+  const cols = window.matchMedia("(min-width:1024px)").matches ? 2 : 1;
+  rebuildVirtSlots(filtered, false, vocabVirtState, cols);
   bindVirtScroll(body, vocabVirtState, () => paintVirtWindow(body, vocabVirtState, q));
   body.scrollTop = 0;
   paintVirtWindow(body, vocabVirtState, q);
