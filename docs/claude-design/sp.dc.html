@@ -18,7 +18,8 @@
   html,body{margin:0;padding:0}
   body{background:#EAE8E1;color:#1D1F22;font-family:'Noto Sans JP',system-ui,sans-serif;-webkit-font-smoothing:antialiased;line-height:1.5}
   .ipa{font-family:'Charis SIL','Doulos SIL',serif;overflow-wrap:anywhere;word-break:normal}
-  .frame{width:375px;background:#F3EDE6;border:1px solid #E7DCCF;border-radius:30px;box-shadow:0 14px 44px rgba(0,0,0,.10);overflow:hidden;color:#2A2420}
+  /* SP frame = 375px viewport, paper background (SP はドリル中も background 全面 paper) */
+  .frame{width:375px;background:#F3EDE6;border:1px solid #E7DCCF;border-radius:30px;box-shadow:0 14px 44px rgba(0,0,0,.10);overflow:hidden;color:#2A2420;position:relative}
   .tag{font-size:11px;font-weight:800;color:#fff;background:#B0604A;border-radius:6px;padding:3px 8px}
   .caption{font-size:12.5px;color:#7C7269}
   h3.hero{font-family:'Noto Serif JP',serif;font-weight:600;font-size:38px;line-height:1.34;letter-spacing:.03em;margin:0;text-wrap:pretty}
@@ -31,6 +32,34 @@
   .footer-pill{border:1px solid #E7DCCF;background:#FDFBF7;border-radius:999px;padding:6px 13px;font-size:11.5px;color:#7C7269}
   .header-icon{border:1px solid #E7DCCF;background:#FDFBF7;border-radius:999px;width:32px;height:32px;display:inline-flex;align-items:center;justify-content:center;color:#2A2420}
   .drill-badge{position:absolute;top:14px;left:14px;background:#E1EFEE;color:#0C7C7E;border:1px solid #E7DCCF;border-radius:999px;padding:3px 12px;font-family:ui-monospace,SF Mono,Menlo,monospace;font-size:11.5px;font-weight:800;letter-spacing:.08em}
+  .task-head{display:flex;align-items:center;padding:12px 16px;border-bottom:1px solid #E7DCCF}
+  .task-head .back{background:transparent;border:1px solid #E7DCCF;border-radius:999px;width:30px;height:30px;font-size:14px;color:#7C7269}
+  .task-head .title{flex:1;text-align:center;font-family:'Noto Serif JP',serif;font-weight:700;font-size:14px}
+  .r-badge{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:14.5px}
+  .r-badge .dot{width:22px;height:22px;border-radius:999px;display:inline-flex;align-items:center;justify-content:center;color:#fff;font-size:13px}
+  .r-badge.ok{color:#0C7C7E}
+  .r-badge.ok .dot{background:#0C7C7E}
+  .r-badge.bad{color:#B0604A}
+  .r-badge.bad .dot{background:#B0604A}
+  .pron-card{border:1px solid #E7DCCF;background:#F3EDE6;border-radius:14px;padding:6px 14px 10px;margin-top:12px}
+  .pron-card-label{font-size:10px;font-weight:700;letter-spacing:.08em;color:#AC9F94;padding:6px 0 2px}
+  .pron-row{display:grid;grid-template-columns:44px 1fr 32px;align-items:center;gap:8px;padding:7px 0}
+  .pron-row + .pron-row{border-top:1px solid #E7DCCF}
+  .pron-accent{font-size:10.5px;font-weight:800;color:#7C7269}
+  .pron-ipa{font-size:17px;color:#2A2420}
+  .pron-play{justify-self:end;width:30px;height:30px;border:1px solid #0C7C7E;color:#0C7C7E;background:#FDFBF7;border-radius:999px;display:inline-flex;align-items:center;justify-content:center;font-size:12px}
+  .rNote{border:1px solid #E7DCCF;background:#F3EDE6;border-radius:12px;padding:10px 12px;margin-top:12px;text-align:left;font-size:12.5px;color:#6E685C;line-height:1.75}
+  .rNote b{color:#2A2420}
+  .memorized{display:flex;align-items:center;gap:6px;font-size:11.5px;color:#7C7269}
+  .m-box{width:11px;height:11px;border:1.5px solid #E7DCCF;border-radius:3px;background:#FDFBF7}
+  .m-box.fill{background:#0C7C7E;border-color:#0C7C7E}
+  .btn-primary{background:#0C7C7E;color:#fff;border:none;border-radius:10px;padding:10px 22px;font-size:13.5px;font-weight:700}
+  .btn-secondary{background:transparent;border:1px solid #E7DCCF;border-radius:10px;padding:8px 14px;font-size:12.5px;color:#7C7269}
+  /* modal support */
+  .modal-behind{position:relative;background:#F3EDE6;padding:16px 20px 24px;filter:blur(1px);opacity:.5;pointer-events:none}
+  .modal-scrim{position:absolute;inset:0;background:rgba(20,18,15,.42);z-index:1;border-radius:30px}
+  .modal-card{position:absolute;top:56px;left:12px;right:12px;background:#FDFBF7;border-radius:20px;box-shadow:0 20px 60px rgba(0,0,0,.28);padding:24px 22px 22px;z-index:2}
+  .modal-x{position:absolute;top:12px;right:12px;background:transparent;border:none;color:#7C7269;font-size:20px;cursor:pointer}
 </style>
 </helmet>
 
@@ -39,10 +68,9 @@
   <div style="max-width:1040px">
     <div style="font-family:'Charis SIL',serif;font-size:15px;color:#0C7C7E;letter-spacing:.06em">/aɪ pʰiː eɪ/</div>
     <h1 style="font-family:'Noto Serif JP',serif;font-size:32px;font-weight:700;letter-spacing:.02em;margin:6px 0 10px">IPA Sound Drill — SP（モバイル 375px）</h1>
-    <p style="font-size:14.5px;line-height:1.85;color:#6E685C;margin:0;max-width:840px;text-wrap:pretty">Source of truth は <code>src/index.template.html</code>。この canvas は app の現状 UI を CD に写した参照層。SP 全画面（1a top × 6 言語 / 3a profile / 2a-2d drill / 3b vocab / 3d progress / 3e-3f-3h modal）。</p>
+    <p style="font-size:14.5px;line-height:1.85;color:#6E685C;margin:0;max-width:840px;text-wrap:pretty">Source of truth は <code>src/index.template.html</code>。この canvas は app の現状 UI を CD に写した参照層。SP 全画面（1a top × 6 言語 / 3a profile / 2a-2d ドリル 3-state × 4 目的 = 12 / 3b vocab / 3d progress / 3e-3f-3h modal（背面 dim + カード）/ terms / privacy）。</p>
     <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:18px">
-      <span style="font-size:12px;color:#6E685C;border:1px solid #E7DCCF;background:#FDFBF7;border-radius:999px;padding:5px 12px">frame ID = 概念 + variant（例 1a-ja / 2a / 3a）</span>
-      <span style="font-size:12px;color:#6E685C;border:1px solid #E7DCCF;background:#FDFBF7;border-radius:999px;padding:5px 12px">Mood B「音を、美しく。」× 明朝見出し</span>
+      <span style="font-size:12px;color:#6E685C;border:1px solid #E7DCCF;background:#FDFBF7;border-radius:999px;padding:5px 12px">frame ID = 概念 + variant（例 1a-ja / 2a-pending / 2a-correct）</span>
     </div>
   </div>
 </section>
@@ -51,20 +79,17 @@
 <section style="padding:56px 56px 24px;font-family:'Noto Sans JP',sans-serif">
   <div style="display:flex;align-items:baseline;gap:14px;border-bottom:1px solid #D8D5CC;padding-bottom:10px;margin-bottom:22px">
     <h2 style="font-family:'Noto Serif JP',serif;font-size:15px;font-weight:700;letter-spacing:.06em;margin:0">1a Top（6 言語）</h2>
-    <span class="caption">375px · JA / EN / KO / ZH-CN / ZH-TW / FIL · サブコピー word-break:keep-all</span>
+    <span class="caption">375px · JA / EN / KO / ZH-CN / ZH-TW / FIL</span>
   </div>
   <div style="display:flex;flex-wrap:wrap;gap:40px 30px;align-items:flex-start">
 
-    <!-- 1a-ja -->
     <div id="1a-ja">
       <div style="display:inline-flex;align-items:center;gap:8px;margin-bottom:12px"><span class="tag">1a-ja</span><span class="caption">日本語</span></div>
       <div class="frame">
         <div style="padding:16px 20px 24px">
           <div style="display:flex;align-items:center;justify-content:space-between">
             <div style="display:flex;align-items:center;gap:7px"><span class="ipa" style="font-size:20px;color:#0C7C7E">/iː/</span><span style="font-weight:700;font-size:13px">IPAサウンドドリル</span></div>
-            <div style="display:flex;gap:7px">
-              <span class="header-icon" title="学習状況">📈</span><span class="header-icon" title="Language">🌐</span><span class="header-icon" title="語彙">≡</span><span class="header-icon" title="ガイド" style="color:#7C7269">?</span>
-            </div>
+            <div style="display:flex;gap:7px"><span class="header-icon">📈</span><span class="header-icon">🌐</span><span class="header-icon">≡</span><span class="header-icon" style="color:#7C7269">?</span></div>
           </div>
           <div style="margin:34px 2px 26px">
             <h3 class="hero">音を、美しく。</h3>
@@ -83,7 +108,6 @@
       </div>
     </div>
 
-    <!-- 1a-en -->
     <div id="1a-en">
       <div style="display:inline-flex;align-items:center;gap:8px;margin-bottom:12px"><span class="tag">1a-en</span><span class="caption">English</span></div>
       <div class="frame">
@@ -109,7 +133,6 @@
       </div>
     </div>
 
-    <!-- 1a-ko -->
     <div id="1a-ko">
       <div style="display:inline-flex;align-items:center;gap:8px;margin-bottom:12px"><span class="tag">1a-ko</span><span class="caption">한국어</span></div>
       <div class="frame" style="font-family:'Noto Sans KR',sans-serif">
@@ -135,7 +158,6 @@
       </div>
     </div>
 
-    <!-- 1a-zh-CN -->
     <div id="1a-zh-CN">
       <div style="display:inline-flex;align-items:center;gap:8px;margin-bottom:12px"><span class="tag">1a-zh-CN</span><span class="caption">简体中文</span></div>
       <div class="frame" style="font-family:'Noto Sans SC',sans-serif">
@@ -161,7 +183,6 @@
       </div>
     </div>
 
-    <!-- 1a-zh-TW -->
     <div id="1a-zh-TW">
       <div style="display:inline-flex;align-items:center;gap:8px;margin-bottom:12px"><span class="tag">1a-zh-TW</span><span class="caption">繁體中文</span></div>
       <div class="frame" style="font-family:'Noto Sans TC',sans-serif">
@@ -187,7 +208,6 @@
       </div>
     </div>
 
-    <!-- 1a-fil -->
     <div id="1a-fil">
       <div style="display:inline-flex;align-items:center;gap:8px;margin-bottom:12px"><span class="tag">1a-fil</span><span class="caption">Filipino</span></div>
       <div class="frame">
@@ -220,7 +240,7 @@
 <section style="padding:56px 56px 24px;font-family:'Noto Sans JP',sans-serif">
   <div style="display:flex;align-items:baseline;gap:14px;border-bottom:1px solid #D8D5CC;padding-bottom:10px;margin-bottom:22px">
     <h2 style="font-family:'Noto Serif JP',serif;font-size:15px;font-weight:700;letter-spacing:.06em;margin:0">3a 学習プロフィール</h2>
-    <span class="caption">右上 X（案 B 昇格）· GA/RP 横 1 行 2 カラム · CEFR pills · IPA サンプル非表示</span>
+    <span class="caption">右上 X · GA/RP 横 2 カラム · CEFR pills</span>
   </div>
   <div id="3a">
     <div style="display:inline-flex;align-items:center;gap:8px;margin-bottom:12px"><span class="tag">3a</span><span class="caption">Profile</span></div>
@@ -228,13 +248,11 @@
       <div style="padding:16px 20px 24px;position:relative">
         <button aria-label="閉じる" style="position:absolute;top:14px;right:16px;background:transparent;border:none;font-size:22px;color:#7C7269">×</button>
         <div style="margin:8px 0 22px"><div style="font-family:'Noto Serif JP',serif;font-size:22px;font-weight:700">学習プロフィール</div><div style="font-size:12.5px;color:#7C7269;margin-top:6px">アクセントとレベルを選んで、はじめる</div></div>
-
         <div style="font-size:12px;font-weight:700;color:#7C7269;letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px">アクセント</div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:22px">
           <div style="border:1px solid #0C7C7E;background:#E1EFEE;border-radius:14px;padding:14px 12px"><div style="font-weight:700;color:#0C7C7E;font-size:15px">GA</div><div style="font-size:12px;color:#0C7C7E;margin-top:4px">アメリカ英語</div></div>
           <div style="border:1px solid #E7DCCF;background:#FDFBF7;border-radius:14px;padding:14px 12px"><div style="font-weight:700;font-size:15px">RP</div><div style="font-size:12px;color:#7C7269;margin-top:4px">イギリス英語</div></div>
         </div>
-
         <div style="font-size:12px;font-weight:700;color:#7C7269;letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px">出題レベル</div>
         <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px">
           <span style="border:1px solid #0C7C7E;background:#E1EFEE;color:#0C7C7E;border-radius:999px;padding:8px 16px;font-size:13px;font-weight:700">A1</span>
@@ -250,145 +268,334 @@
   </div>
 </section>
 
-<!-- ======= 2a-2d Drills ======= -->
+<!-- ======= 2a-2d Drills — SP 3-STATE ======= -->
 <section style="padding:56px 56px 24px;font-family:'Noto Sans JP',sans-serif">
   <div style="display:flex;align-items:baseline;gap:14px;border-bottom:1px solid #D8D5CC;padding-bottom:10px;margin-bottom:22px">
-    <h2 style="font-family:'Noto Serif JP',serif;font-size:15px;font-weight:700;letter-spacing:.06em;margin:0">2a–2d ドリル</h2>
-    <span class="caption">SP は 1 ペイン · 進捗バー/N/M カウンター なし · GA/RP バッジは signal-soft + signal fg</span>
+    <h2 style="font-family:'Noto Serif JP',serif;font-size:15px;font-weight:700;letter-spacing:.06em;margin:0">2a–2d ドリル（SP · pending / correct / incorrect × 4 目的 = 12 フレーム）</h2>
+    <span class="caption">SP は 1 ペイン 縦積み · 出題→回答→結果を同一画面内で切替（右ペインなし）</span>
   </div>
   <div style="display:flex;flex-wrap:wrap;gap:40px 30px;align-items:flex-start">
 
     <!-- 2a decode -->
-    <div id="2a">
-      <div style="display:inline-flex;align-items:center;gap:8px;margin-bottom:12px"><span class="tag">2a</span><span class="caption">音の発音を確かめる</span></div>
-      <div class="frame" style="min-height:620px">
-        <div style="display:flex;align-items:center;padding:12px 16px;border-bottom:1px solid #E7DCCF">
-          <button style="background:transparent;border:none;font-size:16px">‹</button>
-          <div style="flex:1;text-align:center;font-family:'Noto Serif JP',serif;font-weight:700;font-size:14px">音の発音を確かめる</div>
-          <span style="width:32px"></span>
-        </div>
+    <div id="2a-pending">
+      <div style="display:inline-flex;align-items:center;gap:8px;margin-bottom:12px"><span class="tag">2a-pending</span><span class="caption">出題直後</span></div>
+      <div class="frame">
+        <div class="task-head"><button class="back">‹</button><div class="title">音の発音を確かめる</div><span style="width:30px"></span></div>
         <div style="padding:20px 16px;position:relative">
           <span class="drill-badge">GA</span>
           <div style="background:#FDFBF7;border:1px solid #E7DCCF;border-radius:14px;padding:36px 16px 22px;text-align:center;margin-top:8px">
-            <div class="ipa" style="font-size:34px"><span style="color:#0C7C7E">ˈ</span>dʒæ<span style="color:#7C7269">‧</span>kət</div>
+            <div class="ipa" style="font-size:32px"><span style="color:#0C7C7E">ˈ</span>hɛd<span style="color:#7C7269">‧</span>foʊn</div>
             <div style="margin-top:14px;font-size:12px;color:#7C7269">この発音記号を読める形にすると?</div>
           </div>
           <div style="margin-top:14px"><input type="text" placeholder="スペルを入力" style="width:100%;padding:12px 14px;border:1px solid #E7DCCF;border-radius:12px;background:#FDFBF7;font-size:15px;font-family:inherit"></div>
           <div style="display:flex;gap:8px;margin-top:12px;justify-content:flex-end">
-            <button style="background:transparent;border:1px solid #E7DCCF;border-radius:10px;padding:8px 14px;font-size:12.5px;color:#7C7269">わからない</button>
-            <button style="background:#0C7C7E;color:#fff;border:none;border-radius:10px;padding:10px 22px;font-size:13.5px;font-weight:700">答え合わせ</button>
+            <button class="btn-secondary">わからない</button>
+            <button class="btn-primary">答え合わせ</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="2a-correct">
+      <div style="display:inline-flex;align-items:center;gap:8px;margin-bottom:12px"><span class="tag">2a-correct</span><span class="caption">正解</span></div>
+      <div class="frame">
+        <div class="task-head"><button class="back">‹</button><div class="title">音の発音を確かめる</div><span style="width:30px"></span></div>
+        <div style="padding:20px 16px;position:relative">
+          <span class="drill-badge">GA</span>
+          <div style="background:#FDFBF7;border:1px solid #E7DCCF;border-radius:14px;padding:20px 16px;text-align:center;opacity:.55">
+            <div class="ipa" style="font-size:28px"><span style="color:#0C7C7E">ˈ</span>hɛd<span style="color:#7C7269">‧</span>foʊn</div>
+            <input value="headphone" disabled style="margin-top:12px;width:100%;padding:10px;border:1px solid #E7DCCF;border-radius:10px;background:#F3EDE6;font-size:14px;color:#2A2420">
+          </div>
+          <div style="margin-top:14px;background:#F7F1EA;border:1px solid #E7DCCF;border-radius:14px;padding:16px">
+            <div style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#AC9F94;margin-bottom:6px">答えを確認</div>
+            <div class="r-badge ok"><span class="dot">✓</span><span>正解</span></div>
+            <div style="font-family:'Noto Serif JP',serif;font-size:30px;font-weight:600;margin-top:10px">headphone</div>
+            <div style="font-size:12.5px;color:#7C7269">respell · HED-fohn</div>
+            <div class="pron-card">
+              <div class="pron-card-label">発音</div>
+              <div class="pron-row"><span class="pron-accent">GA</span><span class="pron-ipa ipa">/ˈhɛd.foʊn/</span><span class="pron-play">▶</span></div>
+              <div class="pron-row"><span class="pron-accent">RP</span><span class="pron-ipa ipa">/ˈhɛd.fəʊn/</span><span class="pron-play">▶</span></div>
+            </div>
+            <div class="rNote"><b>発音ポイント:</b> /ɛ/ は日本語「エ」より横に開く。-phone /foʊn/ は長め。</div>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-top:14px">
+            <div class="memorized">覚えた <span style="display:inline-flex;gap:3px"><span class="m-box fill"></span><span class="m-box"></span><span class="m-box"></span></span> 1/3</div>
+            <button style="background:#0C7C7E;color:#fff;border:none;border-radius:10px;padding:10px 22px;font-size:13.5px;font-weight:700">次へ →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="2a-incorrect">
+      <div style="display:inline-flex;align-items:center;gap:8px;margin-bottom:12px"><span class="tag">2a-incorrect</span><span class="caption">不正解</span></div>
+      <div class="frame">
+        <div class="task-head"><button class="back">‹</button><div class="title">音の発音を確かめる</div><span style="width:30px"></span></div>
+        <div style="padding:20px 16px;position:relative">
+          <span class="drill-badge">GA</span>
+          <div style="background:#FDFBF7;border:1px solid #E7DCCF;border-radius:14px;padding:20px 16px;text-align:center;opacity:.55">
+            <div class="ipa" style="font-size:28px"><span style="color:#0C7C7E">ˈ</span>hɛd<span style="color:#7C7269">‧</span>foʊn</div>
+            <input value="hedphone" disabled style="margin-top:12px;width:100%;padding:10px;border:1px solid #E7DCCF;border-radius:10px;background:#F3EDE6;font-size:14px;color:#B0604A">
+          </div>
+          <div style="margin-top:14px;background:#F7F1EA;border:1px solid #E7DCCF;border-radius:14px;padding:16px">
+            <div style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#AC9F94;margin-bottom:6px">答えを確認</div>
+            <div class="r-badge bad"><span class="dot">×</span><span>不正解</span></div>
+            <div style="font-family:'Noto Serif JP',serif;font-size:30px;font-weight:600;margin-top:10px">headphone</div>
+            <div style="font-size:12.5px;color:#7C7269">respell · HED-fohn</div>
+            <div class="pron-card">
+              <div class="pron-card-label">発音</div>
+              <div class="pron-row"><span class="pron-accent">GA</span><span class="pron-ipa ipa">/ˈhɛd.foʊn/</span><span class="pron-play">▶</span></div>
+              <div class="pron-row"><span class="pron-accent">RP</span><span class="pron-ipa ipa">/ˈhɛd.fəʊn/</span><span class="pron-play">▶</span></div>
+            </div>
+            <div class="rNote"><b>あなたの入力:</b> "hedphone"<br><b>ポイント:</b> 綴りは head + phone。-phone の綴りに注意。</div>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-top:14px">
+            <div class="memorized">覚えた <span style="display:inline-flex;gap:3px"><span class="m-box"></span><span class="m-box"></span><span class="m-box"></span></span> 0/3</div>
+            <button style="background:#0C7C7E;color:#fff;border:none;border-radius:10px;padding:10px 22px;font-size:13.5px;font-weight:700">次へ →</button>
           </div>
         </div>
       </div>
     </div>
 
     <!-- 2b encode -->
-    <div id="2b">
-      <div style="display:inline-flex;align-items:center;gap:8px;margin-bottom:12px"><span class="tag">2b</span><span class="caption">発音から書いてみる</span></div>
-      <div class="frame" style="min-height:760px">
-        <div style="display:flex;align-items:center;padding:12px 16px;border-bottom:1px solid #E7DCCF">
-          <button style="background:transparent;border:none;font-size:16px">‹</button>
-          <div style="flex:1;text-align:center;font-family:'Noto Serif JP',serif;font-weight:700;font-size:14px">発音から書いてみる</div>
-          <span style="width:32px"></span>
-        </div>
+    <div id="2b-pending">
+      <div style="display:inline-flex;align-items:center;gap:8px;margin-bottom:12px"><span class="tag">2b-pending</span><span class="caption">出題直後</span></div>
+      <div class="frame">
+        <div class="task-head"><button class="back">‹</button><div class="title">発音から書いてみる</div><span style="width:30px"></span></div>
         <div style="padding:20px 16px;position:relative">
-          <span class="drill-badge">RP</span>
-          <div style="background:#FDFBF7;border:1px solid #E7DCCF;border-radius:14px;padding:36px 16px 22px;text-align:center">
-            <div style="font-size:26px;font-weight:600">jacket</div>
-            <div style="margin-top:12px;font-size:12px;color:#7C7269">この単語の発音記号を組み立てる</div>
-            <div class="ipa" style="margin-top:14px;padding:12px;border:1px dashed #E7DCCF;border-radius:8px;font-size:24px;color:#0C7C7E">ˈdʒæ_</div>
+          <span class="drill-badge">GA</span>
+          <div style="background:#FDFBF7;border:1px solid #E7DCCF;border-radius:14px;padding:28px 16px;text-align:center">
+            <div style="font-family:'Noto Serif JP',serif;font-size:28px;font-weight:600">real</div>
+            <div style="margin-top:10px;font-size:12px;color:#7C7269">この単語の発音記号を組み立てる</div>
+            <div class="ipa" style="margin-top:14px;padding:12px;border:1px dashed #E7DCCF;border-radius:8px;font-size:22px;color:#0C7C7E">/r_ _/</div>
           </div>
-          <div style="margin-top:14px;background:#FDFBF7;border:1px solid #E7DCCF;border-radius:12px;padding:8px">
-            <div style="font-size:11px;color:#7C7269;margin-bottom:6px">GA / RP キーボード</div>
+          <div style="margin-top:12px;background:#FDFBF7;border:1px solid #E7DCCF;border-radius:12px;padding:8px">
+            <div style="font-size:11px;color:#7C7269;margin-bottom:6px">IPA キーボード</div>
             <div style="display:flex;flex-wrap:wrap;gap:5px" class="ipa">
-              <span style="border:1px solid #E7DCCF;background:#F3EDE6;border-radius:8px;padding:6px 10px;font-size:14px">ə</span><span style="border:1px solid #E7DCCF;background:#F3EDE6;border-radius:8px;padding:6px 10px;font-size:14px">æ</span><span style="border:1px solid #E7DCCF;background:#F3EDE6;border-radius:8px;padding:6px 10px;font-size:14px">iː</span><span style="border:1px solid #E7DCCF;background:#F3EDE6;border-radius:8px;padding:6px 10px;font-size:14px">ɪ</span><span style="border:1px solid #E7DCCF;background:#F3EDE6;border-radius:8px;padding:6px 10px;font-size:14px">uː</span><span style="border:1px solid #E7DCCF;background:#F3EDE6;border-radius:8px;padding:6px 10px;font-size:14px">ʊ</span><span style="border:1px solid #E7DCCF;background:#F3EDE6;border-radius:8px;padding:6px 10px;font-size:14px">ɔː</span><span style="border:1px solid #E7DCCF;background:#F3EDE6;border-radius:8px;padding:6px 10px;font-size:14px">ɑː</span><span style="border:1px solid #E7DCCF;background:#F3EDE6;border-radius:8px;padding:6px 10px;font-size:14px">θ</span><span style="border:1px solid #E7DCCF;background:#F3EDE6;border-radius:8px;padding:6px 10px;font-size:14px">ð</span><span style="border:1px solid #E7DCCF;background:#F3EDE6;border-radius:8px;padding:6px 10px;font-size:14px">ʃ</span><span style="border:1px solid #E7DCCF;background:#F3EDE6;border-radius:8px;padding:6px 10px;font-size:14px">ʒ</span><span style="border:1px solid #E7DCCF;background:#F3EDE6;border-radius:8px;padding:6px 10px;font-size:14px">tʃ</span><span style="border:1px solid #E7DCCF;background:#F3EDE6;border-radius:8px;padding:6px 10px;font-size:14px">dʒ</span><span style="border:1px solid #E7DCCF;background:#F3EDE6;border-radius:8px;padding:6px 10px;font-size:14px">ŋ</span>
+              <span style="border:1px solid #E7DCCF;background:#F3EDE6;border-radius:8px;padding:6px 10px;font-size:14px">ə</span><span style="border:1px solid #E7DCCF;background:#F3EDE6;border-radius:8px;padding:6px 10px;font-size:14px">iː</span><span style="border:1px solid #E7DCCF;background:#F3EDE6;border-radius:8px;padding:6px 10px;font-size:14px">ɪ</span><span style="border:1px solid #E7DCCF;background:#F3EDE6;border-radius:8px;padding:6px 10px;font-size:14px">l</span><span style="border:1px solid #E7DCCF;background:#F3EDE6;border-radius:8px;padding:6px 10px;font-size:14px">r</span><span style="border:1px solid #E7DCCF;background:#F3EDE6;border-radius:8px;padding:6px 10px;font-size:14px">θ</span><span style="border:1px solid #E7DCCF;background:#F3EDE6;border-radius:8px;padding:6px 10px;font-size:14px">ð</span><span style="border:1px solid #E7DCCF;background:#F3EDE6;border-radius:8px;padding:6px 10px;font-size:14px">ʃ</span><span style="border:1px solid #E7DCCF;background:#F3EDE6;border-radius:8px;padding:6px 10px;font-size:14px">tʃ</span><span style="border:1px solid #E7DCCF;background:#F3EDE6;border-radius:8px;padding:6px 10px;font-size:14px">dʒ</span><span style="border:1px solid #E7DCCF;background:#F3EDE6;border-radius:8px;padding:6px 10px;font-size:14px">ŋ</span>
             </div>
           </div>
           <div style="display:flex;gap:8px;margin-top:12px;justify-content:flex-end">
-            <button style="background:transparent;border:1px solid #E7DCCF;border-radius:10px;padding:8px 14px;font-size:12.5px;color:#7C7269">わからない</button>
-            <button style="background:#0C7C7E;color:#fff;border:none;border-radius:10px;padding:10px 22px;font-size:13.5px;font-weight:700">答え合わせ</button>
+            <button class="btn-secondary">わからない</button>
+            <button class="btn-primary">答え合わせ</button>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- 2c word from sound -->
-    <div id="2c">
-      <div style="display:inline-flex;align-items:center;gap:8px;margin-bottom:12px"><span class="tag">2c</span><span class="caption">音から単語を覚える</span></div>
-      <div class="frame" style="min-height:600px">
-        <div style="display:flex;align-items:center;padding:12px 16px;border-bottom:1px solid #E7DCCF">
-          <button style="background:transparent;border:none;font-size:16px">‹</button>
-          <div style="flex:1;text-align:center;font-family:'Noto Serif JP',serif;font-weight:700;font-size:14px">音から単語を覚える</div>
-          <span style="width:32px"></span>
-        </div>
+    <div id="2b-correct">
+      <div style="display:inline-flex;align-items:center;gap:8px;margin-bottom:12px"><span class="tag">2b-correct</span><span class="caption">正解</span></div>
+      <div class="frame">
+        <div class="task-head"><button class="back">‹</button><div class="title">発音から書いてみる</div><span style="width:30px"></span></div>
         <div style="padding:20px 16px;position:relative">
           <span class="drill-badge">GA</span>
-          <div style="background:#FDFBF7;border:1px solid #E7DCCF;border-radius:14px;padding:40px 16px;text-align:center">
-            <button style="background:#0C7C7E;color:#fff;border:none;border-radius:999px;width:64px;height:64px;font-size:24px;margin:0 auto;display:block">▶</button>
-            <div class="ipa" style="margin-top:16px;font-size:24px;color:#0C7C7E">/ˈdʒækət/</div>
-            <div style="margin-top:14px;font-size:12px;color:#7C7269">今聞こえた単語を思い出そう</div>
+          <div style="background:#FDFBF7;border:1px solid #E7DCCF;border-radius:14px;padding:16px;text-align:center;opacity:.55">
+            <div style="font-family:'Noto Serif JP',serif;font-size:24px;font-weight:600">real</div>
+            <div class="ipa" style="margin-top:12px;padding:10px;border:1px solid #E7DCCF;border-radius:8px;font-size:20px;background:#F3EDE6">/riːl/</div>
           </div>
-          <div style="margin-top:14px"><input type="text" placeholder="単語を入力" style="width:100%;padding:12px 14px;border:1px solid #E7DCCF;border-radius:12px;background:#FDFBF7;font-size:15px;font-family:inherit"></div>
-          <div style="display:flex;gap:8px;margin-top:12px;justify-content:flex-end">
-            <button style="background:transparent;border:1px solid #E7DCCF;border-radius:10px;padding:8px 14px;font-size:12.5px;color:#7C7269">わからない</button>
-            <button style="background:#0C7C7E;color:#fff;border:none;border-radius:10px;padding:10px 22px;font-size:13.5px;font-weight:700">答え合わせ</button>
+          <div style="margin-top:14px;background:#F7F1EA;border:1px solid #E7DCCF;border-radius:14px;padding:16px">
+            <div style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#AC9F94;margin-bottom:6px">答えを確認</div>
+            <div class="r-badge ok"><span class="dot">✓</span><span>正解</span></div>
+            <div style="font-family:'Noto Serif JP',serif;font-size:28px;font-weight:600;margin-top:10px">real</div>
+            <div style="font-size:12.5px;color:#7C7269">respell · REEL</div>
+            <div class="pron-card">
+              <div class="pron-card-label">発音</div>
+              <div class="pron-row"><span class="pron-accent">GA</span><span class="pron-ipa ipa">/riːl/</span><span class="pron-play">▶</span></div>
+              <div class="pron-row"><span class="pron-accent">RP</span><span class="pron-ipa ipa">/rɪəl/</span><span class="pron-play">▶</span></div>
+            </div>
+            <div class="rNote"><b>ポイント:</b> GA は 1 音節、RP は 2 音節。/iː/ は長く。</div>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-top:14px">
+            <div class="memorized">覚えた <span style="display:inline-flex;gap:3px"><span class="m-box fill"></span><span class="m-box"></span><span class="m-box"></span></span> 1/3</div>
+            <button style="background:#0C7C7E;color:#fff;border:none;border-radius:10px;padding:10px 22px;font-size:13.5px;font-weight:700">次へ →</button>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- 2d connected speech -->
-    <div id="2d">
-      <div style="display:inline-flex;align-items:center;gap:8px;margin-bottom:12px"><span class="tag">2d</span><span class="caption">連結する音に慣れる</span></div>
-      <div class="frame" style="min-height:780px">
-        <div style="display:flex;align-items:center;padding:12px 16px;border-bottom:1px solid #E7DCCF">
-          <button style="background:transparent;border:none;font-size:16px">‹</button>
-          <div style="flex:1;text-align:center;font-family:'Noto Serif JP',serif;font-weight:700;font-size:14px">連結する音に慣れる</div>
-          <span style="width:32px"></span>
+    <div id="2b-incorrect">
+      <div style="display:inline-flex;align-items:center;gap:8px;margin-bottom:12px"><span class="tag">2b-incorrect</span><span class="caption">不正解</span></div>
+      <div class="frame">
+        <div class="task-head"><button class="back">‹</button><div class="title">発音から書いてみる</div><span style="width:30px"></span></div>
+        <div style="padding:20px 16px;position:relative">
+          <span class="drill-badge">GA</span>
+          <div style="background:#FDFBF7;border:1px solid #E7DCCF;border-radius:14px;padding:16px;text-align:center;opacity:.55">
+            <div style="font-family:'Noto Serif JP',serif;font-size:24px;font-weight:600">real</div>
+            <div class="ipa" style="margin-top:12px;padding:10px;border:1px solid #E7DCCF;border-radius:8px;font-size:20px;background:#F3EDE6;color:#B0604A">/rɪl/</div>
+          </div>
+          <div style="margin-top:14px;background:#F7F1EA;border:1px solid #E7DCCF;border-radius:14px;padding:16px">
+            <div style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#AC9F94;margin-bottom:6px">答えを確認</div>
+            <div class="r-badge bad"><span class="dot">×</span><span>不正解</span></div>
+            <div style="font-family:'Noto Serif JP',serif;font-size:28px;font-weight:600;margin-top:10px">real</div>
+            <div style="font-size:12.5px;color:#7C7269">respell · REEL</div>
+            <div class="pron-card">
+              <div class="pron-card-label">発音</div>
+              <div class="pron-row"><span class="pron-accent">GA</span><span class="pron-ipa ipa">/riːl/</span><span class="pron-play">▶</span></div>
+              <div class="pron-row"><span class="pron-accent">RP</span><span class="pron-ipa ipa">/rɪəl/</span><span class="pron-play">▶</span></div>
+            </div>
+            <div class="rNote"><b>入力:</b> <span class="ipa">/rɪl/</span><br><b>ポイント:</b> 短母音 /ɪ/ ではなく長母音 /iː/。/ɪ/ と /iː/ の対立に注意。</div>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-top:14px">
+            <div class="memorized">覚えた <span style="display:inline-flex;gap:3px"><span class="m-box"></span><span class="m-box"></span><span class="m-box"></span></span> 0/3</div>
+            <button style="background:#0C7C7E;color:#fff;border:none;border-radius:10px;padding:10px 22px;font-size:13.5px;font-weight:700">次へ →</button>
+          </div>
         </div>
+      </div>
+    </div>
+
+    <!-- 2c mode B study -->
+    <div id="2c-pending">
+      <div style="display:inline-flex;align-items:center;gap:8px;margin-bottom:12px"><span class="tag">2c-pending</span><span class="caption">出題直後 · IPA→意味確認</span></div>
+      <div class="frame">
+        <div class="task-head"><button class="back">‹</button><div class="title">音から単語を覚える</div><span style="width:30px"></span></div>
+        <div style="padding:20px 16px;position:relative">
+          <span class="drill-badge">GA</span>
+          <div style="background:#FDFBF7;border:1px solid #E7DCCF;border-radius:14px;padding:36px 16px;text-align:center">
+            <button style="background:#0C7C7E;color:#fff;border:none;border-radius:999px;width:64px;height:64px;font-size:24px;margin:0 auto;display:block">▶</button>
+            <div class="ipa" style="margin-top:16px;font-size:26px;color:#0C7C7E">/pɛr/</div>
+            <div style="margin-top:12px;font-size:12px;color:#7C7269">聞こえた音から、単語の意味を思い出そう</div>
+          </div>
+          <button style="width:100%;margin-top:14px;background:#0C7C7E;color:#fff;border:none;border-radius:12px;padding:14px;font-size:14px;font-weight:700">意味を確認する</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="2c-correct">
+      <div style="display:inline-flex;align-items:center;gap:8px;margin-bottom:12px"><span class="tag">2c-correct</span><span class="caption">思い出せた</span></div>
+      <div class="frame">
+        <div class="task-head"><button class="back">‹</button><div class="title">音から単語を覚える</div><span style="width:30px"></span></div>
+        <div style="padding:20px 16px;position:relative">
+          <span class="drill-badge">GA</span>
+          <div style="background:#FDFBF7;border:1px solid #E7DCCF;border-radius:14px;padding:20px 16px;text-align:center;opacity:.55">
+            <button disabled style="background:#0C7C7E;color:#fff;border:none;border-radius:999px;width:48px;height:48px;font-size:18px;margin:0 auto;display:block">▶</button>
+            <div class="ipa" style="margin-top:10px;font-size:20px;color:#0C7C7E">/pɛr/</div>
+          </div>
+          <div style="margin-top:14px;background:#F7F1EA;border:1px solid #E7DCCF;border-radius:14px;padding:16px">
+            <div style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#AC9F94;margin-bottom:6px">意味を確認</div>
+            <div class="r-badge ok"><span class="dot">✓</span><span>思い出せた</span></div>
+            <div style="font-family:'Noto Serif JP',serif;font-size:32px;font-weight:600;margin-top:10px">pair</div>
+            <div style="font-size:14px;color:#2A2420;margin-top:2px">一組・ペア（名詞）</div>
+            <div class="pron-card">
+              <div class="pron-card-label">発音</div>
+              <div class="pron-row"><span class="pron-accent">GA</span><span class="pron-ipa ipa">/pɛr/</span><span class="pron-play">▶</span></div>
+              <div class="pron-row"><span class="pron-accent">RP</span><span class="pron-ipa ipa">/pɛə/</span><span class="pron-play">▶</span></div>
+            </div>
+            <div class="rNote"><b>同音異綴:</b> pear（梨）· pare（皮をむく）も同じ /pɛr/。</div>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-top:14px">
+            <div class="memorized">覚えた <span style="display:inline-flex;gap:3px"><span class="m-box fill"></span><span class="m-box"></span><span class="m-box"></span></span> 1/3</div>
+            <button style="background:#0C7C7E;color:#fff;border:none;border-radius:10px;padding:10px 22px;font-size:13.5px;font-weight:700">次へ →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="2c-incorrect">
+      <div style="display:inline-flex;align-items:center;gap:8px;margin-bottom:12px"><span class="tag">2c-incorrect</span><span class="caption">思い出せなかった</span></div>
+      <div class="frame">
+        <div class="task-head"><button class="back">‹</button><div class="title">音から単語を覚える</div><span style="width:30px"></span></div>
+        <div style="padding:20px 16px;position:relative">
+          <span class="drill-badge">GA</span>
+          <div style="background:#FDFBF7;border:1px solid #E7DCCF;border-radius:14px;padding:20px 16px;text-align:center;opacity:.55">
+            <button disabled style="background:#0C7C7E;color:#fff;border:none;border-radius:999px;width:48px;height:48px;font-size:18px;margin:0 auto;display:block">▶</button>
+            <div class="ipa" style="margin-top:10px;font-size:20px;color:#0C7C7E">/pɛr/</div>
+          </div>
+          <div style="margin-top:14px;background:#F7F1EA;border:1px solid #E7DCCF;border-radius:14px;padding:16px">
+            <div style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#AC9F94;margin-bottom:6px">意味を確認</div>
+            <div class="r-badge bad"><span class="dot">×</span><span>思い出せなかった</span></div>
+            <div style="font-family:'Noto Serif JP',serif;font-size:32px;font-weight:600;margin-top:10px">pair</div>
+            <div style="font-size:14px;color:#2A2420;margin-top:2px">一組・ペア（名詞）</div>
+            <div class="pron-card">
+              <div class="pron-card-label">発音</div>
+              <div class="pron-row"><span class="pron-accent">GA</span><span class="pron-ipa ipa">/pɛr/</span><span class="pron-play">▶</span></div>
+              <div class="pron-row"><span class="pron-accent">RP</span><span class="pron-ipa ipa">/pɛə/</span><span class="pron-play">▶</span></div>
+            </div>
+            <div class="rNote"><b>覚え方:</b> "pair of shoes" 靴 <b>一組</b>。同音の pear（梨）と混同しないよう文脈で判別。</div>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-top:14px">
+            <div class="memorized">覚えた <span style="display:inline-flex;gap:3px"><span class="m-box"></span><span class="m-box"></span><span class="m-box"></span></span> 0/3</div>
+            <button style="background:#0C7C7E;color:#fff;border:none;border-radius:10px;padding:10px 22px;font-size:13.5px;font-weight:700">次へ →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2d connected -->
+    <div id="2d-pending">
+      <div style="display:inline-flex;align-items:center;gap:8px;margin-bottom:12px"><span class="tag">2d-pending</span><span class="caption">出題直後</span></div>
+      <div class="frame">
+        <div class="task-head"><button class="back">‹</button><div class="title">連結する音に慣れる</div><span style="width:30px"></span></div>
         <div style="padding:20px 16px;position:relative">
           <span class="drill-badge">GA</span>
           <div style="background:#FDFBF7;border:1px solid #E7DCCF;border-radius:14px;padding:14px 16px">
             <div style="font-size:11px;color:#7C7269;margin-bottom:6px">文脈</div>
-            <div style="font-size:14px;line-height:1.7">I&apos;ll <b style="background:#F8ECD3;border-radius:4px;padding:0 3px">pick it up</b> tomorrow.</div>
+            <div style="font-size:14px;line-height:1.7"><b style="background:#F8ECD3;border-radius:4px;padding:0 3px">hold on a sec</b>, I'm almost ready.</div>
           </div>
-          <div style="background:#FDFBF7;border:1px solid #E7DCCF;border-radius:14px;padding:28px 16px 22px;text-align:center;margin-top:12px">
+          <div style="background:#FDFBF7;border:1px solid #E7DCCF;border-radius:14px;padding:22px 16px;text-align:center;margin-top:12px">
             <button style="background:#0C7C7E;color:#fff;border:none;border-radius:999px;width:56px;height:56px;font-size:22px;margin:0 auto;display:block">▶</button>
-            <div class="ipa" style="margin-top:16px;padding:10px 8px 0;font-size:22px;color:#0C7C7E">/pɪ.kɪ.tʌp/</div>
-            <div style="margin-top:12px;font-size:12px;color:#7C7269">3語の連結を聞き取ろう</div>
+            <div class="ipa" style="margin-top:14px;font-size:19px;color:#0C7C7E">/ˌhoʊl.də.nəˈsɛk/</div>
+            <div style="margin-top:8px;font-size:12px;color:#7C7269">3語の連結を聞き取ろう</div>
           </div>
-          <div style="margin-top:14px"><input type="text" placeholder="聞こえたフレーズを入力" style="width:100%;padding:12px 14px;border:1px solid #E7DCCF;border-radius:12px;background:#FDFBF7;font-size:15px;font-family:inherit"></div>
+          <div style="margin-top:12px"><input type="text" placeholder="聞こえたフレーズを入力" style="width:100%;padding:12px 14px;border:1px solid #E7DCCF;border-radius:12px;background:#FDFBF7;font-size:15px;font-family:inherit"></div>
           <div style="display:flex;gap:8px;margin-top:12px;justify-content:flex-end">
-            <button style="background:transparent;border:1px solid #E7DCCF;border-radius:10px;padding:8px 14px;font-size:12.5px;color:#7C7269">わからない</button>
-            <button style="background:#0C7C7E;color:#fff;border:none;border-radius:10px;padding:10px 22px;font-size:13.5px;font-weight:700">答え合わせ</button>
+            <button class="btn-secondary">わからない</button>
+            <button class="btn-primary">答え合わせ</button>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- 2a answered -->
-    <div id="2a-answered">
-      <div style="display:inline-flex;align-items:center;gap:8px;margin-bottom:12px"><span class="tag">2a-answered</span><span class="caption">答え合わせ後</span></div>
-      <div class="frame" style="min-height:620px">
-        <div style="display:flex;align-items:center;padding:12px 16px;border-bottom:1px solid #E7DCCF">
-          <button style="background:transparent;border:none;font-size:16px">‹</button>
-          <div style="flex:1;text-align:center;font-family:'Noto Serif JP',serif;font-weight:700;font-size:14px">音の発音を確かめる</div>
-          <span style="width:32px"></span>
-        </div>
+    <div id="2d-correct">
+      <div style="display:inline-flex;align-items:center;gap:8px;margin-bottom:12px"><span class="tag">2d-correct</span><span class="caption">正解</span></div>
+      <div class="frame">
+        <div class="task-head"><button class="back">‹</button><div class="title">連結する音に慣れる</div><span style="width:30px"></span></div>
         <div style="padding:20px 16px;position:relative">
           <span class="drill-badge">GA</span>
-          <div style="background:#FDFBF7;border:1px solid #E7DCCF;border-radius:14px;padding:26px 16px 22px;text-align:center">
-            <div style="display:inline-block;background:#E4F0E8;color:#2E7D54;border-radius:999px;padding:4px 12px;font-size:11.5px;font-weight:700;letter-spacing:.06em">✓ 正解</div>
-            <div style="font-family:'Noto Serif JP',serif;font-size:32px;font-weight:600;margin-top:14px">jacket</div>
-            <div style="margin-top:6px;font-size:12px;color:#7C7269">respell · JAK-it</div>
-            <div style="margin-top:16px;background:#F7F1EA;border:1px solid #E7DCCF;border-radius:12px;padding:14px">
-              <div style="font-size:11px;color:#7C7269;letter-spacing:.08em;text-transform:uppercase">GA = RP</div>
-              <div class="ipa" style="margin-top:6px;font-size:22px"><span style="color:#0C7C7E">ˈ</span>dʒæ<span style="color:#7C7269">‧</span>kət <button style="background:transparent;border:none;color:#0C7C7E;font-size:14px;margin-left:6px">🔊</button></div>
+          <div style="background:#FDFBF7;border:1px solid #E7DCCF;border-radius:14px;padding:14px 16px;opacity:.55">
+            <div style="font-size:13px;line-height:1.6;text-align:center"><b style="background:#F8ECD3;border-radius:4px;padding:0 3px">hold on a sec</b>, I'm almost ready.</div>
+            <input value="hold on a sec" disabled style="margin-top:10px;width:100%;padding:8px;border:1px solid #E7DCCF;border-radius:10px;background:#F3EDE6;font-size:13px;color:#2A2420">
+          </div>
+          <div style="margin-top:14px;background:#F7F1EA;border:1px solid #E7DCCF;border-radius:14px;padding:16px">
+            <div style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#AC9F94;margin-bottom:6px">答えを確認</div>
+            <div class="r-badge ok"><span class="dot">✓</span><span>正解</span></div>
+            <div style="font-family:'Noto Serif JP',serif;font-size:24px;font-weight:600;margin-top:10px">hold on a sec</div>
+            <div class="pron-card">
+              <div class="pron-card-label">連結発音</div>
+              <div class="pron-row"><span class="pron-accent">GA</span><span class="pron-ipa ipa">/ˌhoʊl.də.nəˈsɛk/</span><span class="pron-play">▶</span></div>
+              <div class="pron-row"><span class="pron-accent">RP</span><span class="pron-ipa ipa">/ˌhəʊl.də.nəˈsɛk/</span><span class="pron-play">▶</span></div>
             </div>
-            <div style="margin-top:14px;text-align:left;font-size:12.5px;color:#6E685C"><b style="color:#2A2420">発音ポイント:</b> 語末 /t/ は弱く。</div>
+            <div class="rNote"><b>連結ルール:</b> hol<u>d-o</u>n（子音+母音 linking）· o<u>n-a</u>（さらに linking）· "a" は弱形 /ə/。</div>
           </div>
           <div style="display:flex;align-items:center;justify-content:space-between;margin-top:14px">
-            <div style="display:flex;align-items:center;gap:8px;font-size:12px;color:#7C7269">覚えた <span style="display:inline-flex;gap:3px"><span style="width:11px;height:11px;border:1px solid #E7DCCF;border-radius:3px;background:#FDFBF7"></span><span style="width:11px;height:11px;border:1px solid #E7DCCF;border-radius:3px;background:#FDFBF7"></span><span style="width:11px;height:11px;border:1px solid #E7DCCF;border-radius:3px;background:#FDFBF7"></span></span> 0/3</div>
+            <div class="memorized">覚えた <span style="display:inline-flex;gap:3px"><span class="m-box fill"></span><span class="m-box"></span><span class="m-box"></span></span> 1/3</div>
+            <button style="background:#0C7C7E;color:#fff;border:none;border-radius:10px;padding:10px 22px;font-size:13.5px;font-weight:700">次へ →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="2d-incorrect">
+      <div style="display:inline-flex;align-items:center;gap:8px;margin-bottom:12px"><span class="tag">2d-incorrect</span><span class="caption">不正解</span></div>
+      <div class="frame">
+        <div class="task-head"><button class="back">‹</button><div class="title">連結する音に慣れる</div><span style="width:30px"></span></div>
+        <div style="padding:20px 16px;position:relative">
+          <span class="drill-badge">GA</span>
+          <div style="background:#FDFBF7;border:1px solid #E7DCCF;border-radius:14px;padding:14px 16px;opacity:.55">
+            <div style="font-size:13px;line-height:1.6;text-align:center"><b style="background:#F8ECD3;border-radius:4px;padding:0 3px">hold on a sec</b>, I'm almost ready.</div>
+            <input value="hold in a sec" disabled style="margin-top:10px;width:100%;padding:8px;border:1px solid #E7DCCF;border-radius:10px;background:#F3EDE6;font-size:13px;color:#B0604A">
+          </div>
+          <div style="margin-top:14px;background:#F7F1EA;border:1px solid #E7DCCF;border-radius:14px;padding:16px">
+            <div style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#AC9F94;margin-bottom:6px">答えを確認</div>
+            <div class="r-badge bad"><span class="dot">×</span><span>不正解</span></div>
+            <div style="font-family:'Noto Serif JP',serif;font-size:24px;font-weight:600;margin-top:10px">hold on a sec</div>
+            <div class="pron-card">
+              <div class="pron-card-label">連結発音</div>
+              <div class="pron-row"><span class="pron-accent">GA</span><span class="pron-ipa ipa">/ˌhoʊl.də.nəˈsɛk/</span><span class="pron-play">▶</span></div>
+              <div class="pron-row"><span class="pron-accent">RP</span><span class="pron-ipa ipa">/ˌhəʊl.də.nəˈsɛk/</span><span class="pron-play">▶</span></div>
+            </div>
+            <div class="rNote"><b>入力:</b> "hold in a sec"<br><b>ポイント:</b> "on"→弱形 /ən/、"in" /ɪn/ とは母音が異なる。</div>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-top:14px">
+            <div class="memorized">覚えた <span style="display:inline-flex;gap:3px"><span class="m-box"></span><span class="m-box"></span><span class="m-box"></span></span> 0/3</div>
             <button style="background:#0C7C7E;color:#fff;border:none;border-radius:10px;padding:10px 22px;font-size:13.5px;font-weight:700">次へ →</button>
           </div>
         </div>
@@ -402,18 +609,13 @@
 <section style="padding:56px 56px 24px;font-family:'Noto Sans JP',sans-serif">
   <div style="display:flex;align-items:baseline;gap:14px;border-bottom:1px solid #D8D5CC;padding-bottom:10px;margin-bottom:22px">
     <h2 style="font-family:'Noto Serif JP',serif;font-size:15px;font-weight:700;letter-spacing:.06em;margin:0">3b 語彙リスト</h2>
-    <span class="caption">GA/RP toggle 右上 · IPA chip (min-h 28px) · A-Z 独立カード · GA/RP 両表記</span>
+    <span class="caption">GA/RP toggle 右上 · IPA chip 独立 · GA/RP 両表記</span>
   </div>
   <div id="3b">
     <div style="display:inline-flex;align-items:center;gap:8px;margin-bottom:12px"><span class="tag">3b</span><span class="caption">Vocabulary</span></div>
     <div class="frame">
-      <div style="display:flex;align-items:center;padding:12px 16px;border-bottom:1px solid #E7DCCF">
-        <button style="background:transparent;border:none;font-size:16px">‹</button>
-        <div style="flex:1;text-align:center;font-family:'Noto Serif JP',serif;font-weight:700;font-size:14px">語彙リスト</div>
-        <span style="width:32px"></span>
-      </div>
+      <div class="task-head"><button class="back">‹</button><div class="title">語彙リスト</div><span style="width:30px"></span></div>
       <div style="padding:16px">
-        <!-- filter card -->
         <div style="position:relative;background:#FDFBF7;border:1px solid #E7DCCF;border-radius:14px;padding:14px">
           <div style="font-size:12.5px;font-weight:700;padding-right:80px">GA/RP の発音記号で絞り込み<span style="color:#7C7269;font-weight:500"> (最大3)</span></div>
           <div style="position:absolute;top:12px;right:12px;display:inline-flex;border:1px solid #E7DCCF;background:#F3EDE6;border-radius:9px;padding:2px"><span style="background:#FDFBF7;color:#0C7C7E;border-radius:6px;padding:4px 10px;font-size:11.5px;font-weight:700">GA</span><span style="color:#7C7269;padding:4px 10px;font-size:11.5px;font-weight:600">RP</span></div>
@@ -424,16 +626,14 @@
           <div style="margin-top:10px">
             <div style="font-size:11px;color:#7C7269;margin-bottom:6px">IPA キーボード</div>
             <div style="display:flex;flex-wrap:wrap;gap:4px" class="ipa">
-              <span style="border:1px solid #E7DCCF;background:#F3EDE6;border-radius:8px;padding:4px 8px;font-size:12px">ə</span><span style="border:1px solid #E7DCCF;background:#F3EDE6;border-radius:8px;padding:4px 8px;font-size:12px">iː</span><span style="border:1px solid #E7DCCF;background:#F3EDE6;border-radius:8px;padding:4px 8px;font-size:12px">ɪ</span><span style="border:1px solid #E7DCCF;background:#F3EDE6;border-radius:8px;padding:4px 8px;font-size:12px">uː</span><span style="border:1px solid #E7DCCF;background:#F3EDE6;border-radius:8px;padding:4px 8px;font-size:12px">ʊ</span><span style="border:1px solid #E7DCCF;background:#F3EDE6;border-radius:8px;padding:4px 8px;font-size:12px">ɔː</span><span style="border:1px solid #E7DCCF;background:#F3EDE6;border-radius:8px;padding:4px 8px;font-size:12px">ð</span><span style="border:1px solid #E7DCCF;background:#F3EDE6;border-radius:8px;padding:4px 8px;font-size:12px">ʃ</span><span style="border:1px solid #E7DCCF;background:#F3EDE6;border-radius:8px;padding:4px 8px;font-size:12px">ʒ</span><span style="border:1px solid #E7DCCF;background:#F3EDE6;border-radius:8px;padding:4px 8px;font-size:12px">tʃ</span><span style="border:1px solid #E7DCCF;background:#F3EDE6;border-radius:8px;padding:4px 8px;font-size:12px">dʒ</span><span style="border:1px solid #E7DCCF;background:#F3EDE6;border-radius:8px;padding:4px 8px;font-size:12px">ŋ</span>
+              <span style="border:1px solid #E7DCCF;background:#F3EDE6;border-radius:8px;padding:4px 8px;font-size:12px">ə</span><span style="border:1px solid #E7DCCF;background:#F3EDE6;border-radius:8px;padding:4px 8px;font-size:12px">iː</span><span style="border:1px solid #E7DCCF;background:#F3EDE6;border-radius:8px;padding:4px 8px;font-size:12px">ɪ</span><span style="border:1px solid #E7DCCF;background:#F3EDE6;border-radius:8px;padding:4px 8px;font-size:12px">uː</span><span style="border:1px solid #E7DCCF;background:#F3EDE6;border-radius:8px;padding:4px 8px;font-size:12px">ʊ</span><span style="border:1px solid #E7DCCF;background:#F3EDE6;border-radius:8px;padding:4px 8px;font-size:12px">ð</span><span style="border:1px solid #E7DCCF;background:#F3EDE6;border-radius:8px;padding:4px 8px;font-size:12px">ʃ</span><span style="border:1px solid #E7DCCF;background:#F3EDE6;border-radius:8px;padding:4px 8px;font-size:12px">ʒ</span><span style="border:1px solid #E7DCCF;background:#F3EDE6;border-radius:8px;padding:4px 8px;font-size:12px">tʃ</span><span style="border:1px solid #E7DCCF;background:#F3EDE6;border-radius:8px;padding:4px 8px;font-size:12px">dʒ</span><span style="border:1px solid #E7DCCF;background:#F3EDE6;border-radius:8px;padding:4px 8px;font-size:12px">ŋ</span>
             </div>
           </div>
         </div>
-        <!-- A-Z card (independent) -->
         <div style="background:#FDFBF7;border:1px solid #E7DCCF;border-radius:12px;padding:10px 12px;margin-top:12px">
           <div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px"><span style="font-size:12.5px;font-weight:700">A–Z</span><span style="font-size:11.5px;color:#7C7269">頭文字で移動</span></div>
           <div style="display:flex;flex-wrap:wrap;gap:3px;font-family:'Charis SIL',serif;font-size:12px;color:#7C7269">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</div>
         </div>
-        <!-- word cards -->
         <div style="display:flex;flex-direction:column;gap:10px;margin-top:14px">
           <div style="background:#FDFBF7;border:1px solid #E7DCCF;border-radius:14px;padding:12px 14px">
             <div style="display:flex;align-items:baseline;gap:8px;flex-wrap:wrap">
@@ -443,8 +643,8 @@
               <span style="font-size:12px;color:#7C7269">考える</span>
             </div>
             <div style="display:grid;grid-template-columns:36px 1fr auto;gap:8px;align-items:center;margin-top:10px;font-size:13px">
-              <span style="font-size:10.5px;color:#7C7269;font-weight:700">GA</span><span class="ipa" style="color:#2A2420">/θɪŋk/</span><button style="background:transparent;border:none;color:#0C7C7E;font-size:14px">🔊</button>
-              <span style="font-size:10.5px;color:#7C7269;font-weight:700">RP</span><span class="ipa" style="color:#2A2420">/θɪŋk/</span><button style="background:transparent;border:none;color:#0C7C7E;font-size:14px">🔊</button>
+              <span style="font-size:10.5px;color:#7C7269;font-weight:700">GA</span><span class="ipa">/θɪŋk/</span><button style="background:transparent;border:none;color:#0C7C7E;font-size:14px">🔊</button>
+              <span style="font-size:10.5px;color:#7C7269;font-weight:700">RP</span><span class="ipa">/θɪŋk/</span><button style="background:transparent;border:none;color:#0C7C7E;font-size:14px">🔊</button>
             </div>
           </div>
           <div style="background:#FDFBF7;border:1px solid #E7DCCF;border-radius:14px;padding:12px 14px">
@@ -455,8 +655,8 @@
               <span style="font-size:12px;color:#7C7269">りんご</span>
             </div>
             <div style="display:grid;grid-template-columns:36px 1fr auto;gap:8px;align-items:center;margin-top:10px;font-size:13px">
-              <span style="font-size:10.5px;color:#7C7269;font-weight:700">GA</span><span class="ipa" style="color:#2A2420">/ˈæpəl/</span><button style="background:transparent;border:none;color:#0C7C7E;font-size:14px">🔊</button>
-              <span style="font-size:10.5px;color:#7C7269;font-weight:700">RP</span><span class="ipa" style="color:#2A2420">/ˈæpl̩/</span><button style="background:transparent;border:none;color:#0C7C7E;font-size:14px">🔊</button>
+              <span style="font-size:10.5px;color:#7C7269;font-weight:700">GA</span><span class="ipa">/ˈæpəl/</span><button style="background:transparent;border:none;color:#0C7C7E;font-size:14px">🔊</button>
+              <span style="font-size:10.5px;color:#7C7269;font-weight:700">RP</span><span class="ipa">/ˈæpl̩/</span><button style="background:transparent;border:none;color:#0C7C7E;font-size:14px">🔊</button>
             </div>
           </div>
         </div>
@@ -474,13 +674,8 @@
   <div id="3d">
     <div style="display:inline-flex;align-items:center;gap:8px;margin-bottom:12px"><span class="tag">3d</span><span class="caption">Progress</span></div>
     <div class="frame">
-      <div style="display:flex;align-items:center;padding:12px 16px;border-bottom:1px solid #E7DCCF">
-        <button style="background:transparent;border:none;font-size:16px">‹</button>
-        <div style="flex:1;text-align:center;font-family:'Noto Serif JP',serif;font-weight:700;font-size:14px">学習状況</div>
-        <span style="width:32px"></span>
-      </div>
+      <div class="task-head"><button class="back">‹</button><div class="title">学習状況</div><span style="width:30px"></span></div>
       <div style="padding:14px 16px 20px">
-        <!-- CEFR tabs -->
         <div style="display:inline-flex;border:1px solid #E7DCCF;background:#F3EDE6;border-radius:9px;padding:3px;margin-bottom:14px">
           <span style="background:#FDFBF7;color:#0C7C7E;border-radius:6px;padding:6px 12px;font-size:12px;font-weight:700">A1</span>
           <span style="color:#7C7269;padding:6px 12px;font-size:12px">A2</span>
@@ -511,42 +706,74 @@
   </div>
 </section>
 
-<!-- ======= 3e / 3f / 3h Modals ======= -->
-<section style="padding:56px 56px 60px;font-family:'Noto Sans JP',sans-serif">
+<!-- ======= 3e / 3f / 3h Modals with dimmed backing ======= -->
+<section style="padding:56px 56px 24px;font-family:'Noto Sans JP',sans-serif">
   <div style="display:flex;align-items:baseline;gap:14px;border-bottom:1px solid #D8D5CC;padding-bottom:10px;margin-bottom:22px">
-    <h2 style="font-family:'Noto Serif JP',serif;font-size:15px;font-weight:700;letter-spacing:.06em;margin:0">3e / 3f / 3h モーダル</h2>
-    <span class="caption">上寄せ padding-top:56px · スクリム越しに背面 top 見出しが見える</span>
+    <h2 style="font-family:'Noto Serif JP',serif;font-size:15px;font-weight:700;letter-spacing:.06em;margin:0">3e / 3f / 3h モーダル（背面 dim + スクリム + カード）</h2>
+    <span class="caption">1a top が dim/blur で背面に残り、スクリムが被り、上寄せカードが浮く三重表現</span>
   </div>
   <div style="display:flex;flex-wrap:wrap;gap:40px 30px;align-items:flex-start">
 
-    <!-- 3e IPA info -->
     <div id="3e">
-      <div style="display:inline-flex;align-items:center;gap:8px;margin-bottom:12px"><span class="tag">3e</span><span class="caption">IPAって何？</span></div>
-      <div class="frame" style="background:rgba(20,18,15,.42);border-radius:30px;padding:56px 8px 24px;display:flex;justify-content:center;align-items:flex-start">
-        <div style="background:#FDFBF7;border-radius:20px;box-shadow:0 20px 60px rgba(0,0,0,.28);max-width:520px;width:100%;padding:24px 22px 22px;position:relative">
-          <button style="position:absolute;top:12px;right:12px;background:transparent;border:none;color:#7C7269;font-size:20px">×</button>
+      <div style="display:inline-flex;align-items:center;gap:8px;margin-bottom:12px"><span class="tag">3e</span><span class="caption">IPAって何?</span></div>
+      <div class="frame">
+        <div class="modal-behind">
+          <div style="display:flex;align-items:center;justify-content:space-between">
+            <div style="display:flex;align-items:center;gap:7px"><span class="ipa" style="font-size:20px;color:#0C7C7E">/iː/</span><span style="font-weight:700;font-size:13px">IPAサウンドドリル</span></div>
+            <div style="display:flex;gap:7px"><span class="header-icon">📈</span><span class="header-icon">🌐</span><span class="header-icon">≡</span></div>
+          </div>
+          <div style="margin:24px 2px 16px">
+            <h3 class="hero" style="font-size:32px">音を、美しく。</h3>
+            <p class="subcopy">発音記号（IPA）で英語の音をていねいに練り直す。</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <div class="purpose"><span class="icon">〰️</span><span class="title">音の発音を確かめる</span></div>
+            <div class="purpose"><span class="icon">✎</span><span class="title">発音から書いてみる</span></div>
+            <div class="purpose"><span class="icon">💡</span><span class="title">音から単語を覚える</span></div>
+            <div class="purpose"><span class="icon">🔗</span><span class="title">連結する音に慣れる</span></div>
+          </div>
+        </div>
+        <div class="modal-scrim"></div>
+        <div class="modal-card">
+          <button class="modal-x">×</button>
           <div style="font-family:'Noto Serif JP',serif;font-size:22px;font-weight:700">IPAは、音の地図です。</div>
           <p style="font-size:13px;line-height:1.8;color:#6E685C;margin:10px 0">同じ綴りでも、音は全く違います。IPA を読めれば、辞書だけで正しい音にたどり着けます。</p>
-          <div style="display:flex;flex-direction:column;gap:8px;font-size:14px;margin:14px 0">
-            <div>though — <span class="ipa" style="color:#0C7C7E">/ðoʊ/</span></div>
-            <div>through — <span class="ipa" style="color:#0C7C7E">/θruː/</span></div>
+          <div style="border:1px solid #E7DCCF;background:#F3EDE6;border-radius:12px;padding:12px 14px;margin:12px 0;font-size:13.5px">
+            <div style="display:flex;justify-content:space-between;align-items:center"><span style="font-family:'Noto Serif JP',serif;font-weight:600">though</span><span class="ipa" style="color:#0C7C7E;font-size:18px">/ðoʊ/</span></div>
+            <div style="height:1px;background:#E7DCCF;margin:8px 0"></div>
+            <div style="display:flex;justify-content:space-between;align-items:center"><span style="font-family:'Noto Serif JP',serif;font-weight:600">through</span><span class="ipa" style="color:#0C7C7E;font-size:18px">/θruː/</span></div>
           </div>
           <div style="font-size:11.5px;color:#7C7269;border-top:1px solid #E7DCCF;padding-top:10px;margin-top:10px">
-            <b style="color:#2A2420">legend</b> · <span class="ipa">ˈ</span> = 強勢 · <span class="ipa">‧</span> = 音節境界 · <span class="ipa" style="color:#D9911B">下線</span> = 要注意音
+            <b style="color:#2A2420">legend</b> · <span class="ipa">ˈ</span> = 強勢 · <span class="ipa">‧</span> = 音節境界
           </div>
         </div>
       </div>
     </div>
 
-    <!-- 3f Language -->
     <div id="3f">
       <div style="display:inline-flex;align-items:center;gap:8px;margin-bottom:12px"><span class="tag">3f</span><span class="caption">言語設定</span></div>
-      <div class="frame" style="background:rgba(20,18,15,.42);border-radius:30px;padding:56px 8px 24px;display:flex;justify-content:center;align-items:flex-start">
-        <div style="background:#FDFBF7;border-radius:20px;box-shadow:0 20px 60px rgba(0,0,0,.28);max-width:520px;width:100%;padding:24px 22px 22px;position:relative">
-          <button style="position:absolute;top:12px;right:12px;background:transparent;border:none;color:#7C7269;font-size:20px">×</button>
+      <div class="frame">
+        <div class="modal-behind">
+          <div style="display:flex;align-items:center;justify-content:space-between">
+            <div style="display:flex;align-items:center;gap:7px"><span class="ipa" style="font-size:20px;color:#0C7C7E">/iː/</span><span style="font-weight:700;font-size:13px">IPAサウンドドリル</span></div>
+            <div style="display:flex;gap:7px"><span class="header-icon">📈</span><span class="header-icon">🌐</span><span class="header-icon">≡</span></div>
+          </div>
+          <div style="margin:24px 2px 16px">
+            <h3 class="hero" style="font-size:32px">音を、美しく。</h3>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <div class="purpose"><span class="icon">〰️</span><span class="title">音の発音を確かめる</span></div>
+            <div class="purpose"><span class="icon">✎</span><span class="title">発音から書いてみる</span></div>
+            <div class="purpose"><span class="icon">💡</span><span class="title">音から単語を覚える</span></div>
+            <div class="purpose"><span class="icon">🔗</span><span class="title">連結する音に慣れる</span></div>
+          </div>
+        </div>
+        <div class="modal-scrim"></div>
+        <div class="modal-card">
+          <button class="modal-x">×</button>
           <div style="font-family:'Noto Serif JP',serif;font-size:20px;font-weight:700">言語 / Language</div>
           <div style="display:flex;flex-direction:column;gap:6px;margin-top:16px">
-            <button style="border:1px solid #0C7C7E;background:#E1EFEE;color:#0C7C7E;border-radius:12px;padding:12px 14px;text-align:left;font-family:inherit;font-weight:700">日本語</button>
+            <button style="border:1px solid #0C7C7E;background:#E1EFEE;color:#0C7C7E;border-radius:12px;padding:12px 14px;text-align:left;font-family:inherit;font-weight:700">日本語 ✓</button>
             <button style="border:1px solid #E7DCCF;background:#FDFBF7;color:#2A2420;border-radius:12px;padding:12px 14px;text-align:left;font-family:inherit">English</button>
             <button style="border:1px solid #E7DCCF;background:#FDFBF7;color:#2A2420;border-radius:12px;padding:12px 14px;text-align:left;font-family:'Noto Sans KR',sans-serif">한국어</button>
             <button style="border:1px solid #E7DCCF;background:#FDFBF7;color:#2A2420;border-radius:12px;padding:12px 14px;text-align:left;font-family:'Noto Sans SC',sans-serif">简体中文</button>
@@ -557,17 +784,95 @@
       </div>
     </div>
 
-    <!-- 3h About -->
     <div id="3h">
       <div style="display:inline-flex;align-items:center;gap:8px;margin-bottom:12px"><span class="tag">3h</span><span class="caption">思想を読む</span></div>
-      <div class="frame" style="background:rgba(20,18,15,.42);border-radius:30px;padding:56px 8px 24px;display:flex;justify-content:center;align-items:flex-start">
-        <div style="background:#FDFBF7;border-radius:20px;box-shadow:0 20px 60px rgba(0,0,0,.28);max-width:520px;width:100%;padding:24px 22px 22px;position:relative">
-          <button style="position:absolute;top:12px;right:12px;background:transparent;border:none;color:#7C7269;font-size:20px">×</button>
+      <div class="frame">
+        <div class="modal-behind">
+          <div style="display:flex;align-items:center;justify-content:space-between">
+            <div style="display:flex;align-items:center;gap:7px"><span class="ipa" style="font-size:20px;color:#0C7C7E">/iː/</span><span style="font-weight:700;font-size:13px">IPAサウンドドリル</span></div>
+            <div style="display:flex;gap:7px"><span class="header-icon">📈</span><span class="header-icon">🌐</span><span class="header-icon">≡</span></div>
+          </div>
+          <div style="margin:24px 2px 16px">
+            <h3 class="hero" style="font-size:32px">音を、美しく。</h3>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <div class="purpose"><span class="icon">〰️</span><span class="title">音の発音を確かめる</span></div>
+            <div class="purpose"><span class="icon">✎</span><span class="title">発音から書いてみる</span></div>
+            <div class="purpose"><span class="icon">💡</span><span class="title">音から単語を覚える</span></div>
+            <div class="purpose"><span class="icon">🔗</span><span class="title">連結する音に慣れる</span></div>
+          </div>
+        </div>
+        <div class="modal-scrim"></div>
+        <div class="modal-card">
+          <button class="modal-x">×</button>
           <div style="font-family:'Noto Serif JP',serif;font-size:20px;font-weight:700">このアプリの思想</div>
           <p style="font-size:13px;line-height:1.9;color:#6E685C;margin:14px 0 10px">意味は既に知っている。足りないのは「音」だ。<br>IPA という道具で、英語の音を練り直す。</p>
           <p style="font-size:13px;line-height:1.9;color:#6E685C;margin:0 0 10px">読める音は、やがて聞き取れる音になる。<br>聞き取れる音は、話せる音になる。</p>
           <p style="font-size:12.5px;line-height:1.8;color:#AC9F94;margin:14px 0 0">— 無料 · 登録不要 · Local Storage 管理 · 6言語対応</p>
         </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ======= Terms / Privacy (SP) ======= -->
+<section style="padding:56px 56px 60px;font-family:'Noto Sans JP',sans-serif">
+  <div style="display:flex;align-items:baseline;gap:14px;border-bottom:1px solid #D8D5CC;padding-bottom:10px;margin-bottom:22px">
+    <h2 style="font-family:'Noto Serif JP',serif;font-size:15px;font-weight:700;letter-spacing:.06em;margin:0">terms / privacy（SP）</h2>
+    <span class="caption">brand ヘッダ + panel カード + 明朝 h1/h2 + teal rule</span>
+  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:40px 30px;align-items:flex-start">
+
+    <div id="terms">
+      <div style="display:inline-flex;align-items:center;gap:8px;margin-bottom:12px"><span class="tag">terms</span><span class="caption">利用規約</span></div>
+      <div class="frame">
+        <header style="padding:20px 20px 0">
+          <div style="display:inline-flex;align-items:baseline;gap:8px"><span class="ipa" style="font-size:20px;color:#0C7C7E">/iː/</span><span style="font-weight:700;font-size:13px">IPAサウンドドリル</span></div>
+        </header>
+        <main style="padding:20px 20px 24px">
+          <article style="background:#FDFBF7;border:1px solid #E7DCCF;border-radius:20px;padding:22px;box-shadow:0 1px 2px rgba(42,36,32,.04)">
+            <h1 style="font-family:'Noto Serif JP',serif;font-weight:600;font-size:26px;letter-spacing:.02em;line-height:1.3;margin:0 0 6px">利用規約</h1>
+            <p style="color:#AC9F94;font-size:12px;font-weight:500;margin:0 0 8px">最終更新日: 2026-07-13</p>
+            <div style="height:2px;width:28px;background:#0C7C7E;border-radius:2px;margin:14px 0 20px"></div>
+            <h2 style="font-family:'Noto Serif JP',serif;font-weight:600;font-size:15px;margin:24px 0 8px">1. 規約への同意</h2>
+            <p style="font-size:13px;line-height:1.85;margin:8px 0;color:#2A2420">IPA Sound Drill（以下「本サービス」）にアクセスまたは利用することにより、本利用規約に従うことに同意したものとみなされます。</p>
+            <h2 style="font-family:'Noto Serif JP',serif;font-weight:600;font-size:15px;margin:24px 0 8px">2. サービスの内容</h2>
+            <p style="font-size:13px;line-height:1.85;margin:8px 0;color:#2A2420">IPA Sound Drill は、国際音声記号（IPA）を用いて英語の発音を学習するための、無料のブラウザベースツールです。</p>
+            <h2 style="font-family:'Noto Serif JP',serif;font-weight:600;font-size:15px;margin:24px 0 8px">6. 第三者サービス</h2>
+            <p style="font-size:13px;line-height:1.85;margin:8px 0;color:#2A2420">本サービスは以下の第三者サービスを利用しています: <b>Vercel</b>（ホスティング）· <b>Tally.so</b>（フィードバック）· <b>Google Apps Script</b>（音声合成）。</p>
+            <a style="display:inline-flex;align-items:center;gap:8px;margin-top:28px;font-weight:600;font-size:13px;color:#0C7C7E;text-decoration:none">
+              <span style="display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border:1px solid #E7DCCF;background:#FDFBF7;border-radius:999px;color:#7C7269">←</span>
+              <span>IPAサウンドドリルへ戻る</span>
+            </a>
+          </article>
+        </main>
+      </div>
+    </div>
+
+    <div id="privacy">
+      <div style="display:inline-flex;align-items:center;gap:8px;margin-bottom:12px"><span class="tag">privacy</span><span class="caption">プライバシーポリシー</span></div>
+      <div class="frame">
+        <header style="padding:20px 20px 0">
+          <div style="display:inline-flex;align-items:baseline;gap:8px"><span class="ipa" style="font-size:20px;color:#0C7C7E">/iː/</span><span style="font-weight:700;font-size:13px">IPAサウンドドリル</span></div>
+        </header>
+        <main style="padding:20px 20px 24px">
+          <article style="background:#FDFBF7;border:1px solid #E7DCCF;border-radius:20px;padding:22px;box-shadow:0 1px 2px rgba(42,36,32,.04)">
+            <h1 style="font-family:'Noto Serif JP',serif;font-weight:600;font-size:26px;letter-spacing:.02em;line-height:1.3;margin:0 0 6px">プライバシーポリシー</h1>
+            <p style="color:#AC9F94;font-size:12px;font-weight:500;margin:0 0 8px">最終更新日: 2026-07-13</p>
+            <div style="height:2px;width:28px;background:#0C7C7E;border-radius:2px;margin:14px 0 20px"></div>
+            <h2 style="font-family:'Noto Serif JP',serif;font-weight:600;font-size:15px;margin:24px 0 8px">1. 収集する情報</h2>
+            <p style="font-size:13px;line-height:1.85;margin:8px 0;color:#2A2420">アカウント登録は不要です。学習進捗は<b>お使いのブラウザの Local Storage 内にのみ保存され、当方のサーバーへ送信されません</b>。</p>
+            <h2 style="font-family:'Noto Serif JP',serif;font-weight:600;font-size:15px;margin:24px 0 8px">2. アナリティクス</h2>
+            <p style="font-size:13px;line-height:1.85;margin:8px 0;color:#2A2420">Vercel Analytics を用いて匿名の集計データを収集します。個人を特定する情報は収集しません。</p>
+            <h2 style="font-family:'Noto Serif JP',serif;font-weight:600;font-size:15px;margin:24px 0 8px">3. 音声合成（TTS）</h2>
+            <p style="font-size:13px;line-height:1.85;margin:8px 0;color:#2A2420">スピーカーアイコンで再生される音声は、Google Apps Script プロキシ経由で生成されます。</p>
+            <a style="display:inline-flex;align-items:center;gap:8px;margin-top:28px;font-weight:600;font-size:13px;color:#0C7C7E;text-decoration:none">
+              <span style="display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border:1px solid #E7DCCF;background:#FDFBF7;border-radius:999px;color:#7C7269">←</span>
+              <span>IPAサウンドドリルへ戻る</span>
+            </a>
+          </article>
+        </main>
       </div>
     </div>
 

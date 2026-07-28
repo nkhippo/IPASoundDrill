@@ -174,6 +174,122 @@
   </div>
 </section>
 
+<!-- ======= MODAL CROSS-SECTION (three-layer readability) ======= -->
+<section style="padding:36px 56px 24px;font-family:'Noto Sans JP',sans-serif;color:#2A2420">
+  <div style="display:flex;align-items:baseline;gap:14px;border-bottom:2px solid #2A2420;padding-bottom:12px;margin-bottom:22px">
+    <h2 style="font-family:'Noto Serif JP',serif;font-size:22px;font-weight:700;letter-spacing:.04em;margin:0">モーダル 三層構造</h2>
+    <span style="font-size:12.5px;color:#AC9F94">背面 dim · スクリム · 浮遊カード</span>
+  </div>
+  <div style="background:#FFFFFF;border:1px solid #E7DCCF;border-radius:16px;padding:26px;display:flex;flex-wrap:wrap;gap:32px;align-items:flex-start">
+    <div style="flex:1;min-width:280px">
+      <div style="font-size:11px;color:#AC9F94;margin-bottom:10px">クロスセクション</div>
+      <div style="position:relative;width:100%;max-width:380px;height:280px;border-radius:16px;overflow:hidden;border:1px solid #E7DCCF">
+        <div style="position:absolute;inset:0;background:#F3EDE6;padding:14px;filter:blur(1px);opacity:.5">
+          <div style="display:flex;justify-content:space-between;font-size:11px"><span style="color:#0C7C7E">/iː/ IPAサウンドドリル</span><span>📈 🌐 ≡</span></div>
+          <div style="font-family:'Noto Serif JP',serif;font-size:24px;font-weight:600;margin-top:26px">音を、美しく。</div>
+          <div style="margin-top:14px;display:flex;flex-direction:column;gap:6px">
+            <div style="background:#FDFBF7;border:1px solid #E7DCCF;border-radius:10px;padding:8px;font-size:11px">〰️ 音の発音を確かめる</div>
+            <div style="background:#FDFBF7;border:1px solid #E7DCCF;border-radius:10px;padding:8px;font-size:11px">✎ 発音から書いてみる</div>
+          </div>
+        </div>
+        <div style="position:absolute;inset:0;background:rgba(20,18,15,.42)"></div>
+        <div style="position:absolute;top:36px;left:24px;right:24px;background:#FDFBF7;border-radius:16px;box-shadow:0 20px 60px rgba(0,0,0,.28);padding:16px 18px">
+          <div style="display:flex;justify-content:space-between;align-items:center"><span style="font-family:'Noto Serif JP',serif;font-weight:700;font-size:14px">IPAは、音の地図</span><span style="color:#7C7269">×</span></div>
+          <div style="font-size:11.5px;color:#6E685C;margin-top:6px;line-height:1.6">同じ綴りでも、音は違います。</div>
+        </div>
+      </div>
+    </div>
+    <div style="flex:1;min-width:260px">
+      <div style="font-size:11px;color:#AC9F94;margin-bottom:10px">レイヤー仕様</div>
+      <ol style="margin:0;padding-left:20px;font-size:13px;line-height:1.85;color:#2A2420">
+        <li><b>背面 (z:0)</b> — 1a top をそのまま残し、<code>filter:blur(1px);opacity:.5</code>で沈める。ユーザーに「この画面の上に何かが乗っている」ことを伝える</li>
+        <li><b>スクリム (z:1)</b> — <code>rgba(20,18,15,.42)</code> の半透明カバー。フォーカスを絞る</li>
+        <li><b>カード (z:2)</b> — <code>#FDFBF7</code> panel、<code>border-radius:20px</code>、<code>box-shadow:0 20px 60px rgba(0,0,0,.28)</code>で浮く。<code>padding-top:56px</code>で上寄せ配置 (背面 top の上端見出しをスクリム越しに視認可能に)</li>
+        <li><b>×</b> 右上に閉じるボタン。背景クリック / ESC でも閉じる</li>
+      </ol>
+      <p style="font-size:12px;color:#7C7269;margin:14px 0 0;line-height:1.7">対象: <code>#3e</code> IPAって何? · <code>#3f</code> 言語設定 · <code>#3h</code> 思想を読む。<br>Naoya フィードバック: 「モーダルはモーダルであることがわかるようにしてください」→ フルスクリーン info-page ではなく、背面が透けて見える三層構造で階層を明示。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ======= DRILL 3-STATE LEGEND ======= -->
+<section style="padding:36px 56px 24px;font-family:'Noto Sans JP',sans-serif;color:#2A2420">
+  <div style="display:flex;align-items:baseline;gap:14px;border-bottom:2px solid #2A2420;padding-bottom:12px;margin-bottom:22px">
+    <h2 style="font-family:'Noto Serif JP',serif;font-size:22px;font-weight:700;letter-spacing:.04em;margin:0">ドリル 3-STATE</h2>
+    <span style="font-size:12.5px;color:#AC9F94">pending → correct / incorrect（目的別 4 種 × 3 状態 = 12 フレーム per platform）</span>
+  </div>
+  <div style="background:#FFFFFF;border:1px solid #E7DCCF;border-radius:16px;padding:26px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px">
+
+    <div style="border:1px solid #E7DCCF;background:#FDFBF7;border-radius:14px;padding:16px">
+      <div style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#AC9F94;margin-bottom:8px">pending</div>
+      <div style="font-family:'Noto Serif JP',serif;font-size:14px;font-weight:700;margin-bottom:8px">出題直後</div>
+      <div style="font-size:12.5px;color:#6E685C;line-height:1.75">右ペイン (PC) / 下部 (SP) はプレースホルダ。左ペインで入力を受ける。「答え合わせ」ボタンは primary、「わからない」は secondary。</div>
+      <div style="margin-top:10px;background:#F7F1EA;border:1px dashed #E7DCCF;border-radius:10px;padding:10px;display:flex;flex-direction:column;align-items:center;gap:6px;color:#AC9F94">
+        <div style="width:36px;height:36px;border-radius:10px;background:#E1EFEE;color:#0C7C7E;display:inline-flex;align-items:center;justify-content:center">✓</div>
+        <div style="font-size:11px;text-align:center">答え合わせで結果を表示</div>
+      </div>
+    </div>
+
+    <div style="border:1px solid #E7DCCF;background:#FDFBF7;border-radius:14px;padding:16px">
+      <div style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#AC9F94;margin-bottom:8px">correct</div>
+      <div style="font-family:'Noto Serif JP',serif;font-size:14px;font-weight:700;margin-bottom:8px">正解</div>
+      <div style="font-size:12.5px;color:#6E685C;line-height:1.75">左ペインは opacity:.55 で非活性化。右ペインに正解カード（<b>正解 badge</b> = signal · チェックマーク） + word + respell + GA/RP 発音カード + 発音ポイント。</div>
+      <div style="margin-top:10px;background:#F7F1EA;border:1px solid #E7DCCF;border-radius:10px;padding:10px">
+        <div style="display:inline-flex;align-items:center;gap:6px;font-weight:700;font-size:13px;color:#0C7C7E"><span style="width:20px;height:20px;background:#0C7C7E;color:#fff;border-radius:999px;display:inline-flex;align-items:center;justify-content:center;font-size:12px">✓</span>正解</div>
+      </div>
+    </div>
+
+    <div style="border:1px solid #E7DCCF;background:#FDFBF7;border-radius:14px;padding:16px">
+      <div style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#AC9F94;margin-bottom:8px">incorrect</div>
+      <div style="font-family:'Noto Serif JP',serif;font-size:14px;font-weight:700;margin-bottom:8px">不正解</div>
+      <div style="font-size:12.5px;color:#6E685C;line-height:1.75">同じ構造だが badge は <b>accent</b> の terracotta × アイコン、rNote には「あなたの入力」+ 訂正ポイントを明示。次へは同じ位置。</div>
+      <div style="margin-top:10px;background:#F7F1EA;border:1px solid #E7DCCF;border-radius:10px;padding:10px">
+        <div style="display:inline-flex;align-items:center;gap:6px;font-weight:700;font-size:13px;color:#B0604A"><span style="width:20px;height:20px;background:#B0604A;color:#fff;border-radius:999px;display:inline-flex;align-items:center;justify-content:center;font-size:12px">×</span>不正解</div>
+      </div>
+    </div>
+
+    <div style="grid-column:1 / -1;font-size:12.5px;color:#7C7269;line-height:1.8;border-top:1px solid #F0EAE1;padding-top:14px">
+      <b style="color:#2A2420">目的別バリエーション:</b>
+      <b>2a decode</b> IPA→綴り (例: /ˈhɛd.foʊn/ → headphone) ·
+      <b>2b encode</b> 綴り→IPA (real → /riːl/) ·
+      <b>2c mode B study</b> IPA→意味の想起 (/pɛr/ → pair, 一組) ·
+      <b>2d connected</b> 連結音→フレーズ書き取り (/ˌhoʊl.də.nəˈsɛk/ → "hold on a sec")
+    </div>
+  </div>
+</section>
+
+<!-- ======= LEGAL BRAND CARD ======= -->
+<section style="padding:36px 56px 24px;font-family:'Noto Sans JP',sans-serif;color:#2A2420">
+  <div style="display:flex;align-items:baseline;gap:14px;border-bottom:2px solid #2A2420;padding-bottom:12px;margin-bottom:22px">
+    <h2 style="font-family:'Noto Serif JP',serif;font-size:22px;font-weight:700;letter-spacing:.04em;margin:0">terms / privacy ブランドカード</h2>
+    <span style="font-size:12.5px;color:#AC9F94">/terms.html · /privacy.html 共通レイアウト</span>
+  </div>
+  <div style="background:#FFFFFF;border:1px solid #E7DCCF;border-radius:16px;padding:26px;display:flex;flex-wrap:wrap;gap:26px;align-items:flex-start">
+    <div style="flex:1;min-width:320px;background:#F3EDE6;border:1px solid #E7DCCF;border-radius:14px;padding:20px">
+      <div style="display:inline-flex;align-items:baseline;gap:8px;margin-bottom:14px"><span class="ipa" style="font-size:24px;color:#0C7C7E">/iː/</span><span style="font-weight:700;font-size:15px">IPAサウンドドリル</span></div>
+      <div style="background:#FDFBF7;border:1px solid #E7DCCF;border-radius:20px;padding:22px 24px">
+        <div style="font-family:'Noto Serif JP',serif;font-weight:600;font-size:26px;line-height:1.3">利用規約</div>
+        <div style="color:#AC9F94;font-size:12px;margin-top:4px">最終更新日: 2026-07-13</div>
+        <div style="height:2px;width:28px;background:#0C7C7E;border-radius:2px;margin:14px 0 18px"></div>
+        <div style="font-family:'Noto Serif JP',serif;font-weight:600;font-size:15px">1. 規約への同意</div>
+        <div style="font-size:13px;line-height:1.85;color:#2A2420;margin-top:6px">本サービスにアクセスまたは利用することにより、本利用規約に従うことに同意したものとみなされます。</div>
+        <div style="display:inline-flex;align-items:center;gap:8px;margin-top:22px;font-weight:600;font-size:13px;color:#0C7C7E"><span style="display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border:1px solid #E7DCCF;background:#FDFBF7;border-radius:999px;color:#7C7269">←</span>IPAサウンドドリルへ戻る</div>
+      </div>
+    </div>
+    <div style="flex:1;min-width:280px">
+      <div style="font-size:11px;color:#AC9F94;margin-bottom:10px">仕様</div>
+      <ul style="margin:0;padding-left:20px;font-size:13px;line-height:1.85;color:#2A2420">
+        <li><b>brand mark 24px</b> — /iː/ + 名称。1a top と統一 (Phase-3 で 40px→24px に縮小)</li>
+        <li><b>legal-card</b> = panel #FDFBF7 · border-radius 20px · padding clamp(24px, 5vw, 44px)</li>
+        <li><b>h1</b> = Noto Serif JP 600 · clamp(28px, 7vw, 36px)</li>
+        <li><b>rule</b> = 2px × 32px teal signal underline (h1 と本文の呼吸を作る)</li>
+        <li><b>back link</b> = 30px 丸ピル ← + テキスト、hover で signal-soft ハイライト</li>
+        <li><b>i18n</b> = 6 言語辞書 (en/ja/ko/zh-Hans/zh-Hant/fil)。<code>data-i18n</code> / <code>data-i18n-html</code>、Local Storage の <code>app_lang</code> 優先 → navigator.language フォールバック</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
 <!-- ======= 設計判断まとめ (existing memory, preserved) ======= -->
 <section style="padding:44px 56px 40px;font-family:'Noto Sans JP',sans-serif;color:#2A2420">
   <div style="display:flex;align-items:baseline;gap:14px;border-bottom:2px solid #2A2420;padding-bottom:12px;margin-bottom:8px">
