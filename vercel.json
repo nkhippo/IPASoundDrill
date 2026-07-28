@@ -9,5 +9,19 @@
     { "source": "/zh-Hans", "destination": "/zh-Hans/index.html" },
     { "source": "/zh-Hant", "destination": "/zh-Hant/index.html" },
     { "source": "/fil", "destination": "/fil/index.html" }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "missing": [
+        {
+          "type": "host",
+          "value": "ipasounddrill\\.app"
+        }
+      ],
+      "headers": [
+        { "key": "X-Robots-Tag", "value": "noindex" }
+      ]
+    }
   ]
 }
