@@ -143,9 +143,11 @@
   "reveal": {
     "rp_note": "RP",
     "ga_note": "GA",
-    "respell_label": "発音ガイド",
     "dict_label": "辞書表記",
     "respell_label": "読み方",
+    "correct": "正解",
+    "incorrect": "おしい",
+    "pron_label": "発音（🔊で再生）",
     "alt_same": "同じ"
   },
   "lang_opts": {
