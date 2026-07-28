@@ -68,8 +68,16 @@
     "no_results": "Walang resulta",
     "back": "Bumalik",
     "filter": {
-      "ipa": "IPA",
-      "all": "Lahat"
+      "ipa": "Salain ayon sa IPA",
+      "all": "Lahat",
+      "ipa_max": "(hanggang 3)",
+      "add": "Magdagdag ng simbolo",
+      "clear": "Burahin lahat",
+      "picker": "I-filter ayon sa {accent} na ponema"
+    },
+    "count": {
+      "filtered": "Nasala · {accent} bigkas na may {syms} · {n}",
+      "all": "{n} entry"
     }
   },
   "info": {
@@ -170,6 +178,7 @@
     "動詞（不規則変化）": "di-regular na anyo ng pandiwa",
     "口語表現": "pang-araw-araw na ekspresyon",
     "名詞": "pangngalan",
+    "数詞": "pamilang",
     "名詞（不規則複数）": "di-regular na maramihan",
     "形容詞": "pang-uri",
     "形容詞 / 副詞": "pang-uri / pang-abay",
@@ -191,9 +200,13 @@
   "reveal": {
     "ga_note": "GA",
     "rp_note": "RP",
-    "respell_label": "Gabay sa bigkas",
     "dict_label": "Diksyonaryo",
-    "alt_same": "pareho"
+    "respell_label": "Pagbigkas",
+    "correct": "Tama",
+    "incorrect": "Mali",
+    "pron_label": "Bigkas (🔊 i-play)",
+    "alt_same": "pareho",
+    "pending": "I-check ang sagot — lalabas dito ang tamang salita at bigkas"
   },
   "see_answer": "Tingnan ang sagot",
   "start": "Simulan",
@@ -386,5 +399,25 @@
       "title": "Sa sarili mong bilis.",
       "body": "Naka-save sa device ang progress. Walang account. Puwedeng i-pause at ipagpatuloy anytime."
     }
+  },
+  "footer": {
+    "ipa": "Ano ang IPA?",
+    "language": "Wika",
+    "feedback": "Feedback",
+    "terms": "Mga Tuntunin",
+    "privacy": "Patakaran sa Privacy"
+  },
+  "language": {
+    "title": "Wika at audio",
+    "display_label": "Wika ng display",
+    "accent_note_html": "Ang accent (GA / RP) ay itinatakda sa iyong <b>learning profile</b>."
+  },
+  "ipa_info": {
+    "heading": "Ang IPA ay mapa ng mga tunog.",
+    "lead": "Magkapareho man ang baybay, maaaring magkaiba ang tunog. Isinusulat ng IPA kung paano talaga binibigkas — isang simbolo, isang tunog — sa isang internasyonal na sistema.",
+    "example_note": "Magkatulad ang baybay, ngunit magkaibang-magkaiba ang tunog.",
+    "legend_stress": "Posisyon ng diin (stress)",
+    "legend_syllable": "Hati ng pantig",
+    "legend_link": "Pag-uugnay ng mga salita"
   }
 }

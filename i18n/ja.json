@@ -130,16 +130,28 @@
     "no_results": "見つかりません",
     "back": "戻る",
     "filter": {
-      "ipa": "IPA",
-      "all": "全て"
+      "ipa": "IPAで絞り込み",
+      "all": "全て",
+      "ipa_max": "(最大3)",
+      "add": "記号を追加",
+      "clear": "全消去",
+      "picker": "{accent} の発音記号で絞り込み"
+    },
+    "count": {
+      "filtered": "絞り込み結果 · {syms} を含む {accent} 発音 · {n}件",
+      "all": "全 {n}件"
     }
   },
   "reveal": {
     "rp_note": "RP",
     "ga_note": "GA",
-    "respell_label": "発音ガイド",
     "dict_label": "辞書表記",
-    "alt_same": "同じ"
+    "respell_label": "読み方",
+    "correct": "正解",
+    "incorrect": "不正解",
+    "pron_label": "発音（🔊で再生）",
+    "alt_same": "同じ",
+    "pending": "答え合わせすると、ここに正解・発音が表示されます"
   },
   "lang_opts": {
     "en": "English",
@@ -200,6 +212,7 @@
   "pos": {
     "限定詞": "限定詞",
     "名詞": "名詞",
+    "数詞": "数詞",
     "動詞": "動詞",
     "形容詞": "形容詞",
     "副詞": "副詞",
@@ -386,5 +399,25 @@
       "title": "あなたのペースで。",
       "body": "記録は端末内に保存され、登録は不要。いつでも中断・再開できます。まずは1語から、気軽に。"
     }
+  },
+  "footer": {
+    "ipa": "IPAって何?",
+    "language": "言語設定",
+    "feedback": "フィードバック",
+    "terms": "利用規約",
+    "privacy": "プライバシーポリシー"
+  },
+  "language": {
+    "title": "言語と音声",
+    "display_label": "表示言語",
+    "accent_note_html": "アクセント（GA / RP）は<b>学習プロフィール</b>で設定します。"
+  },
+  "ipa_info": {
+    "heading": "IPA は、音の地図です。",
+    "lead": "同じ綴りでも音は違う。発音記号（IPA）は、1記号=1音で「実際どう鳴るか」を正確に書き取る国際的な仕組みです。",
+    "example_note": "綴りは似ていても、音はこんなに違う。",
+    "legend_stress": "強勢（アクセント）の位置",
+    "legend_syllable": "音節の区切り",
+    "legend_link": "語と語がつながる連結"
   }
 }

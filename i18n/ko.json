@@ -130,16 +130,28 @@
     "no_results": "결과 없음",
     "back": "뒤로",
     "filter": {
-      "ipa": "IPA",
-      "all": "전체"
+      "ipa": "IPA로 필터",
+      "all": "전체",
+      "ipa_max": "(최대 3)",
+      "add": "기호 추가",
+      "clear": "모두 지우기",
+      "picker": "{accent} 발음기호로 필터"
+    },
+    "count": {
+      "filtered": "필터 결과 · {syms} 포함 {accent} 발음 · {n}개",
+      "all": "전체 {n}개"
     }
   },
   "reveal": {
     "rp_note": "RP",
     "ga_note": "GA",
-    "respell_label": "발음 가이드",
     "dict_label": "사전 표기",
-    "alt_same": "같음"
+    "respell_label": "발음 표기",
+    "correct": "정답",
+    "incorrect": "오답",
+    "pron_label": "발음 (🔊 재생)",
+    "alt_same": "같음",
+    "pending": "채점하면 정답·발음이 여기에 표시됩니다"
   },
   "lang_opts": {
     "en": "English",
@@ -200,6 +212,7 @@
   "pos": {
     "限定詞": "한정사",
     "名詞": "명사",
+    "数詞": "수사",
     "動詞": "동사",
     "形容詞": "형용사",
     "副詞": "부사",
@@ -386,5 +399,25 @@
       "title": "내 페이스로.",
       "body": "기록은 기기에 저장되고 가입은 필요 없습니다. 언제든 중단·재개할 수 있습니다."
     }
+  },
+  "footer": {
+    "ipa": "IPA란?",
+    "language": "언어 설정",
+    "feedback": "피드백",
+    "terms": "이용약관",
+    "privacy": "개인정보처리방침"
+  },
+  "language": {
+    "title": "언어 및 음성",
+    "display_label": "표시 언어",
+    "accent_note_html": "악센트(GA / RP)는 <b>학습 프로필</b>에서 설정합니다."
+  },
+  "ipa_info": {
+    "heading": "IPA는 소리의 지도입니다.",
+    "lead": "같은 철자라도 소리는 다릅니다. 발음 기호(IPA)는 1기호=1소리로 '실제로 어떻게 소리 나는지'를 정확히 적는 국제 표기 체계입니다.",
+    "example_note": "철자는 비슷해도 소리는 이렇게 다릅니다.",
+    "legend_stress": "강세(악센트) 위치",
+    "legend_syllable": "음절 구분",
+    "legend_link": "단어와 단어의 연음"
   }
 }

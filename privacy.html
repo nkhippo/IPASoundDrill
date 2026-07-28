@@ -6,17 +6,64 @@
   <title>Privacy Policy - IPA Sound Drill</title>
   <meta name="description" content="Privacy Policy for IPA Sound Drill. We collect minimal data, use no cookies, and respect your privacy.">
   <link rel="canonical" href="https://ipasounddrill.app/privacy.html">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Charis+SIL:wght@400;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;700&display=swap" rel="stylesheet">
   <style>
-    body { max-width: 720px; margin: 2rem auto; padding: 0 1rem; font-family: system-ui, -apple-system, sans-serif; line-height: 1.6; color: #222; }
-    h1 { border-bottom: 2px solid #333; padding-bottom: 0.5rem; }
-    h2 { margin-top: 2rem; }
-    a { color: #0066cc; }
-    .updated { color: #666; font-size: 0.9rem; }
+    :root{
+      --paper:#F3EDE6; --panel:#FDFBF7; --ink:#2A2420; --muted:#7C7269; --faint:#AC9F94;
+      --hair:#E7DCCF; --signal:#0C7C7E; --signal-soft:#E1EFEE; --accent:#B0604A;
+      --font-ui:"Noto Sans JP", system-ui, -apple-system, "Segoe UI", sans-serif;
+      --font-serif:"Noto Serif JP", "Charis SIL", serif;
+      --font-ipa:"Charis SIL", "Gentium Plus", serif;
+    }
+    *{box-sizing:border-box}
+    html{-webkit-text-size-adjust:100%}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-ui);
+      -webkit-font-smoothing:antialiased;line-height:1.5;min-height:100vh}
+    .legal-top{max-width:760px;margin:0 auto;padding:20px 20px 0}
+    .legal-brand{display:inline-flex;align-items:baseline;gap:8px;text-decoration:none;color:var(--ink)}
+    .legal-brand .mark{font-family:var(--font-ipa);font-size:19px;color:var(--signal);letter-spacing:.02em}
+    .legal-brand .name{font-weight:700;font-size:15px;letter-spacing:.02em}
+    .legal-wrap{max-width:760px;margin:0 auto;padding:24px 20px 64px}
+    .legal-card{background:var(--panel);border:1px solid var(--hair);border-radius:20px;
+      padding:clamp(24px,5vw,44px);box-shadow:0 1px 2px rgba(42,36,32,.04)}
+    h1{font-family:var(--font-serif);font-weight:600;font-size:clamp(28px,7vw,36px);
+      color:var(--ink);letter-spacing:.02em;line-height:1.3;margin:0 0 6px}
+    .updated{color:var(--faint);font-size:12.5px;font-weight:500;margin:0 0 8px}
+    .rule{height:2px;width:32px;background:var(--signal);border-radius:2px;margin:16px 0 24px}
+    h2{font-family:var(--font-serif);font-weight:600;font-size:18px;color:var(--ink);
+      margin:34px 0 10px;letter-spacing:.01em}
+    h3{font-family:var(--font-ui);font-weight:700;font-size:14.5px;color:var(--ink);
+      margin:22px 0 6px;letter-spacing:.01em}
+    p{color:var(--ink);font-size:14.5px;line-height:1.9;margin:10px 0}
+    ul{margin:10px 0;padding-left:22px}
+    li{color:var(--ink);font-size:14.5px;line-height:1.85;margin:5px 0}
+    strong{font-weight:700;color:var(--ink)}
+    code{font-family:"SF Mono", ui-monospace, Menlo, Consolas, monospace;font-size:12.5px;
+      background:var(--signal-soft);color:var(--signal);padding:2px 6px;border-radius:6px;
+      word-break:break-all}
+    a{color:var(--signal);text-decoration:none;border-bottom:1px solid var(--signal-soft);
+      transition:border-color .15s}
+    a:hover{border-bottom-color:var(--signal)}
+    .legal-back{display:inline-flex;align-items:center;gap:8px;margin-top:36px;
+      font-weight:600;font-size:14.5px;border-bottom:none}
+    .legal-back .chev{display:inline-flex;align-items:center;justify-content:center;
+      width:30px;height:30px;border:1px solid var(--hair);background:var(--panel);
+      border-radius:999px;color:var(--muted);transition:all .15s}
+    .legal-back:hover .chev{background:var(--signal-soft);border-color:var(--signal);color:var(--signal)}
   </style>
 </head>
 <body>
+<header class="legal-top">
+  <a class="legal-brand" href="/"><span class="mark">/iː/</span><span class="name">IPA Sound Drill</span></a>
+</header>
+<main class="legal-wrap">
+<article class="legal-card">
 <h1>Privacy Policy</h1>
 <p class="updated">Last updated: 2026-07-13</p>
+<div class="rule"></div>
 
 <h2>1. Introduction</h2>
 <p>IPA Sound Drill respects your privacy. This Privacy Policy explains what information we collect, how we use it, and your rights.</p>
@@ -109,6 +156,8 @@
 <h2>13. Contact</h2>
 <p>For privacy-related questions, please contact us via the <a href="https://tally.so/r/xX1axk">Feedback form</a> or on <a href="https://x.com/nkhippo123">X (@nkhippo123)</a>.</p>
 
-<p><a href="/">Back to IPA Sound Drill</a></p>
+<a class="legal-back" href="/"><span class="chev">&#8592;</span> Back to IPA Sound Drill</a>
+</article>
+</main>
 </body>
 </html>
