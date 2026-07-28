@@ -343,14 +343,16 @@
   .vocab-back:hover{background:var(--signal-soft);border-color:var(--signal);color:var(--signal)}
   .vocab-title{margin:0;font-size:18px;font-weight:600;color:var(--ink);text-align:left;font-family:var(--font-serif)}
   .vocab-search-row{display:flex;flex-direction:column;gap:8px}
-  .vocab-ipa-filter{border:1px solid var(--hair);background:var(--panel);border-radius:14px;padding:11px 12px}
-  .vocab-ipa-filter-head{display:flex;align-items:center;justify-content:space-between;gap:8px}
-  .vocab-ipa-filter-label{font-size:11px;font-weight:700;letter-spacing:.06em;color:var(--faint)}
+  .vocab-ipa-filter{border:1px solid var(--hair);background:var(--panel);border-radius:16px;padding:14px 16px}
+  /* CD 3b-pc に合わせ、ラベル/選択チップ/GA・RPトグルを 1 行に統合(旧 2 段+kbd-label を廃止) */
+  .vocab-ipa-filter-head{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  .vocab-ipa-filter-left{display:flex;align-items:center;gap:8px;flex-wrap:wrap;min-width:0}
+  .vocab-ipa-filter-label{font-size:12px;font-weight:700;letter-spacing:.02em;color:var(--faint);white-space:nowrap}
   .vocab-ipa-filter-max{color:var(--muted);font-weight:700}
-  .vocab-accent-toggle{display:inline-flex;border:1px solid var(--hair);background:var(--paper);border-radius:8px;padding:2px;flex:none}
-  .vocab-accent-toggle button{border:none;background:transparent;color:var(--muted);border-radius:6px;padding:3px 10px;font-size:11px;font-weight:700;font-family:var(--font-mono);cursor:pointer}
-  .vocab-accent-toggle button[aria-pressed="true"]{background:var(--panel);color:var(--signal);font-weight:800;box-shadow:0 1px 2px rgba(0,0,0,.06)}
-  .vocab-ipa-chips{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-top:9px}
+  .vocab-accent-toggle{display:inline-flex;border:1px solid var(--hair);background:var(--panel);border-radius:9px;padding:3px;flex:none;font-family:var(--font-mono)}
+  .vocab-accent-toggle button{border:none;background:transparent;color:var(--muted);border-radius:6px;padding:5px 14px;font-size:12px;font-weight:700;font-family:inherit;cursor:pointer}
+  .vocab-accent-toggle button[aria-pressed="true"]{background:var(--paper);color:var(--signal);font-weight:800;box-shadow:0 1px 2px rgba(0,0,0,.06)}
+  .vocab-ipa-chips{display:inline-flex;align-items:center;gap:6px;flex-wrap:wrap;margin:0}
   .vocab-filter-actions{display:inline-flex;gap:8px;align-items:center;flex:none}
   .vocab-filter-clear,.vocab-filter-picker{border:1px solid var(--hair);background:var(--panel);color:var(--muted);border-radius:999px;padding:6px 14px;font-size:12px;font-family:var(--font-ui);cursor:pointer;white-space:nowrap}
   .vocab-filter-picker{border-color:var(--signal);color:var(--signal);background:var(--signal-soft);font-weight:700}
@@ -363,10 +365,10 @@
   .vocab-chip-add{display:inline-flex;align-items:center;gap:5px;border:1px dashed var(--hair);background:transparent;color:var(--muted);border-radius:999px;padding:5px 11px 5px 9px;font-size:13px;font-family:inherit;cursor:pointer;flex:none}
   .vocab-chip-add svg{width:12px;height:12px}
   .vocab-chip-add span{font-family:var(--font-ui);font-size:11px}
-  .vocab-ipa-kbd-label{font-size:11px;color:var(--faint);margin:10px 2px 0;font-family:var(--font-ui)}
-  .vocab-ipa-keyboard{display:flex;gap:5px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;padding:6px 2px 2px}
+  /* CD 3b-pc: filter card 直下にキーボード。旧 vocab-ipa-kbd-label は廃止(ラベルは head 行に統合済) */
+  .vocab-ipa-keyboard{display:flex;gap:5px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;padding:10px 2px 4px}
   .vocab-ipa-keyboard::-webkit-scrollbar{display:none}
-  .vocab-ipa-key{flex:none;border:1px solid var(--hair);background:var(--paper);color:var(--ink);border-radius:8px;min-width:34px;height:34px;display:inline-flex;align-items:center;justify-content:center;font-size:15px;font-family:var(--font-ipa);cursor:pointer}
+  .vocab-ipa-key{flex:none;border:1px solid var(--hair);background:var(--panel);color:var(--ink);border-radius:8px;min-width:38px;height:38px;display:inline-flex;align-items:center;justify-content:center;font-size:17px;font-family:var(--font-ipa);cursor:pointer}
   .vocab-ipa-key.is-active{border-color:var(--signal);background:var(--signal-soft);color:var(--signal);font-weight:700}
   .vocab-az-row{display:flex;align-items:center;gap:8px;border-top:1px solid var(--hair);padding-top:12px;margin-top:4px}
   .vocab-az-label{font-size:10px;font-weight:700;color:var(--faint);flex:none;font-family:var(--font-mono)}
@@ -815,8 +817,25 @@
   body.in-play .task-header-meter{height:5px;background:var(--hair);border-radius:999px;margin-top:6px;overflow:hidden}
   body.in-play .task-header-meter > span{display:block;height:100%;background:var(--signal);width:0%}
   body.in-play .task-header-counter{display:inline-block;font-family:var(--font-mono);font-size:11px;color:var(--muted);white-space:nowrap;flex:none}
-  body.in-play .task-header-accent{display:inline-flex;align-items:center;gap:4px;font-size:12px;color:var(--muted);white-space:nowrap;flex:none}
-  body.in-play .task-header-accent b{color:var(--ink);font-weight:700}
+  /* Naoya フィードバック(2026-07-28): 「GA / RP」表現がヘッダー右に埋もれて弱い。
+     プロンプトカード左上に prominent なバッジを追加し、ヘッダーの控えめ表記は撤去する。 */
+  body.in-play .task-header-accent{display:none!important}
+  /* Drill prompt card: prominent accent badge (top-left, teal 実塗り) */
+  .drill-pane-prompt{position:relative}
+  .drill-accent-badge{
+    position:absolute; top:14px; left:14px; z-index:2;
+    display:inline-flex; align-items:center; gap:6px;
+    background:var(--signal); color:#fff;
+    border-radius:999px; padding:5px 12px 5px 10px;
+    font-family:var(--font-mono); font-size:12px; font-weight:800; letter-spacing:.08em;
+    box-shadow:0 1px 2px rgba(0,0,0,.08);
+  }
+  .drill-accent-badge::before{
+    content:""; width:6px; height:6px; border-radius:999px; background:#fff; opacity:.9;
+  }
+  @media (min-width:1024px){
+    .drill-accent-badge{top:16px; left:16px; font-size:12.5px; padding:6px 14px 6px 12px}
+  }
   /* 集約により重複する散在要素を撤去 */
   body.in-play .topbar{display:none!important}
   body.in-play .play-line{display:none!important}
@@ -1251,6 +1270,7 @@
 
   <!-- MODE B STUDY (2c) — prompt pane; answer pane is #cardModeBStudyAnswer -->
   <section id="cardModeBStudy" class="panel hidden drill-pane drill-pane-prompt" data-frame="2c">
+    <span class="drill-accent-badge" data-role="drill-accent" aria-label="Accent">GA</span>
     <div class="drill-step-label" id="mbSStep1Label">STEP 1</div>
     <div class="card-top"><span class="cefr" id="mbSCefr" hidden></span><div class="card-top-right"><div class="qno" id="mbSNo"></div></div></div>
     <div class="drill-progress" id="mbSProgress" role="status" aria-live="polite">
@@ -1296,6 +1316,7 @@
 
   <!-- MODE B QUIZ MCQ -->
   <section id="cardModeBMcq" class="panel hidden drill-pane drill-pane-prompt" data-frame="2c-quiz">
+    <span class="drill-accent-badge" data-role="drill-accent" aria-label="Accent">GA</span>
     <div class="card-top"><span class="cefr" id="mbMCefr" hidden></span><div class="card-top-right"><div class="qno" id="mbMNo"></div></div></div>
     <div class="flabel" style="text-align:center;margin-bottom:4px" id="mbMHead">Choose the meaning</div>
     <div class="readout"><button class="playicon" id="mbMPlay" type="button" aria-label="Listen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div>
@@ -1305,6 +1326,7 @@
 
   <!-- MODE B QUIZ DICTATION -->
   <section id="cardModeBDict" class="panel hidden drill-pane drill-pane-prompt" data-frame="2c-dict">
+    <span class="drill-accent-badge" data-role="drill-accent" aria-label="Accent">GA</span>
     <div class="card-top"><span class="cefr" id="mbDCefr" hidden></span><div class="card-top-right"><div class="qno" id="mbDNo"></div></div></div>
     <div class="flabel" style="text-align:center;margin-bottom:4px" id="mbDHead">Type the word</div>
     <div class="readout"><button class="playicon" id="mbDPlay" type="button" aria-label="Listen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button></div>
@@ -1316,6 +1338,7 @@
 
   <!-- DECODE CARD -->
   <section id="cardDecode" class="panel hidden drill-pane drill-pane-prompt" data-frame="2a">
+    <span class="drill-accent-badge" data-role="drill-accent" aria-label="Accent">GA</span>
     <div class="card-top"><span class="cefr" id="dCefr" hidden></span><div class="card-top-right"><div class="qno" id="dNo"></div></div></div>
     <div class="drill-progress" id="dProgress" role="status" aria-live="polite">
       <div class="progress-meter" aria-hidden="true"><div class="progress-meter__fill" id="dProgressFill" style="width:0%"></div></div>
@@ -1334,6 +1357,7 @@
 
   <!-- ENCODE CARD -->
   <section id="cardEncode" class="panel hidden drill-pane drill-pane-prompt" data-frame="2b">
+    <span class="drill-accent-badge" data-role="drill-accent" aria-label="Accent">GA</span>
     <div class="card-top"><span class="cefr" id="eCefr" hidden></span><div class="card-top-right"><div class="qno" id="eNo"></div></div></div>
     <div class="drill-progress" id="eProgress" role="status" aria-live="polite">
       <div class="progress-meter" aria-hidden="true"><div class="progress-meter__fill" id="eProgressFill" style="width:0%"></div></div>
@@ -1453,7 +1477,10 @@
       <div class="vocab-search-row" id="vocabWordsCtrl">
         <div class="vocab-ipa-filter" id="vocabIpaFilterBar">
           <div class="vocab-ipa-filter-head">
-            <span class="vocab-ipa-filter-label" id="vocabIpaFilterLabel"><span data-i18n="vocab.filter.ipa">IPA</span> <span class="vocab-ipa-filter-max" id="vocabIpaFilterMax" data-i18n="vocab.filter.ipa_max">(max 3)</span></span>
+            <div class="vocab-ipa-filter-left">
+              <span class="vocab-ipa-filter-label" id="vocabIpaFilterLabel"><span id="vocabIpaFilterLabelText">GA</span> <span class="vocab-ipa-filter-max" id="vocabIpaFilterMax" data-i18n="vocab.filter.ipa_max">(max 3)</span></span>
+              <div class="vocab-ipa-chips" id="vocabIpaChips"></div>
+            </div>
             <div class="vocab-filter-actions">
               <div class="vocab-accent-toggle" id="vocabAccentToggle" role="group" aria-label="GA / RP">
                 <button type="button" data-vaccent="ga" aria-pressed="true">GA</button>
@@ -1462,8 +1489,6 @@
               <button type="button" class="vocab-filter-clear hidden" id="vocabIpaClear" data-i18n="vocab.filter.clear">Clear all</button>
             </div>
           </div>
-          <div class="vocab-ipa-chips" id="vocabIpaChips"></div>
-          <div class="vocab-ipa-kbd-label" id="vocabIpaKbdLabel"></div>
           <div class="vocab-ipa-keyboard" id="vocabIpaKeyboard"></div>
         </div>
       </div>
@@ -1828,12 +1853,11 @@ function escapeHtml(s) {
 
 function applyI18nVocab() {
   $("vocabTitle").textContent = t("vocab.title");
-  const ipaFilterLabel = document.querySelector('#vocabIpaFilterLabel [data-i18n="vocab.filter.ipa"]');
-  if (ipaFilterLabel) ipaFilterLabel.textContent = t("vocab.filter.ipa");
+  /* CD 3b-pc に合わせ、ラベルはアクセント別テンプレート「{accent} の発音記号で絞り込み」に一本化
+     (renderVocabIpaFilterBar で補間設定)。旧「IPAで絞り込み」+ kbd-label の二重表示を廃止。 */
   const ipaFilterMax = $("vocabIpaFilterMax");
   if (ipaFilterMax) ipaFilterMax.textContent = t("vocab.filter.ipa_max");
   if ($("vocabIpaClear")) $("vocabIpaClear").textContent = t("vocab.filter.clear");
-  /* vocabIpaKbdLabel はアクセント別テンプレート({accent})のため renderVocabIpaFilterBar で補間設定する */
   if ($("accentGaName")) $("accentGaName").textContent = t("accent.ga");
   if ($("accentRpName")) $("accentRpName").textContent = t("accent.rp");
   renderVocabIpaFilterBar();
@@ -2307,8 +2331,9 @@ function renderVocabIpaFilterBar() {
   const clearBtn = $("vocabIpaClear");
   if (clearBtn) clearBtn.classList.toggle("hidden", vocabIpaQuery.length === 0);
   const accent = vocabAccent === "rp" ? "rp" : "ga";
-  const kbdLabel = $("vocabIpaKbdLabel");
-  if (kbdLabel) kbdLabel.textContent = t("vocab.filter.picker", { accent: accent.toUpperCase() });
+  // CD 3b-pc に合わせ、ヘッダー行の label 1本にアクセント名 + 「発音記号で絞り込み」を出す
+  const labelText = $("vocabIpaFilterLabelText");
+  if (labelText) labelText.textContent = t("vocab.filter.picker", { accent: accent.toUpperCase() });
   kbEl.innerHTML = vocabIpaKeyboardSymbols(accent).map(s =>
     `<span class="vocab-ipa-key${vocabIpaQuery.includes(s) ? " is-active" : ""}" data-symbol="${escAttr(s)}">${escHtml(s)}</span>`
   ).join("");
@@ -2910,6 +2935,7 @@ function setAccent(accent) {
   if ($("symbolPickerPage") && !$("symbolPickerPage").classList.contains("hidden")) renderSymbolPicker();
   prefetchAccentBodies(accent);
   savePrevSettings();
+  if (typeof syncDrillAccentBadges === "function") syncDrillAccentBadges();
 }
 
 /** Short codes shown on the language switcher chip (brief §6). */
@@ -3021,6 +3047,22 @@ function showSetupOrPractice() {
   setExclusivePage(null);
   if (vocabReturnViews && vocabReturnViews.length) {
     vocabReturnViews.forEach(id => show(id, true));
+    // Bug fix (2026-07-28): restore body classes when returning from an overlay to
+    // whatever was visible before. showVocabView() records visible views but no code
+    // path was re-applying body.top-home / removing scroll-locked, so top rendered
+    // inside the narrow post-drill wrap.
+    const restoredTop = vocabReturnViews.includes("purposeStub") || vocabReturnViews.includes("setup");
+    const restoredDrill = vocabReturnViews.some(id => id !== "purposeStub" && id !== "setup");
+    if (restoredTop && !restoredDrill) {
+      document.body.classList.add("top-home");
+      document.body.classList.remove("in-play");
+    } else if (restoredDrill) {
+      document.body.classList.add("in-play");
+      document.body.classList.remove("top-home");
+    }
+    document.body.classList.remove("scroll-locked");
+    document.body.style.top = "";
+    syncPcSupportChrome();
     if (document.body.classList.contains("in-play")) show("playLine", true);
     vocabReturnViews = null;
     return;
@@ -5355,6 +5397,18 @@ function updateTaskHeader(){
     const cur = total ? Math.min(total, ((S && S.idx) || 0) + 1) : 0;
     $("taskHeaderCounter").textContent = cur + " / " + total;
   }
+  syncDrillAccentBadges();
+}
+
+/**
+ * Naoya フィードバック(2026-07-28): ヘッダー右の GA/RP 表記が控えめすぎる。
+ * 各ドリルのプロンプトカード左上に prominent な signal-fill バッジで示す。
+ */
+function syncDrillAccentBadges(){
+  const label = ACCENT === "rp" ? "RP" : "GA";
+  document.querySelectorAll('.drill-accent-badge[data-role="drill-accent"]').forEach(el => {
+    el.textContent = label;
+  });
 }
 
 function scrollToAboutWhyIpa(){
