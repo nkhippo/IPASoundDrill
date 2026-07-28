@@ -1454,7 +1454,13 @@
         <div class="vocab-ipa-filter" id="vocabIpaFilterBar">
           <div class="vocab-ipa-filter-head">
             <span class="vocab-ipa-filter-label" id="vocabIpaFilterLabel"><span data-i18n="vocab.filter.ipa">IPA</span> <span class="vocab-ipa-filter-max" id="vocabIpaFilterMax" data-i18n="vocab.filter.ipa_max">(max 3)</span></span>
-            <button type="button" class="vocab-filter-clear hidden" id="vocabIpaClear" data-i18n="vocab.filter.clear">Clear all</button>
+            <div class="vocab-filter-actions">
+              <div class="vocab-accent-toggle" id="vocabAccentToggle" role="group" aria-label="GA / RP">
+                <button type="button" data-vaccent="ga" aria-pressed="true">GA</button>
+                <button type="button" data-vaccent="rp" aria-pressed="false">RP</button>
+              </div>
+              <button type="button" class="vocab-filter-clear hidden" id="vocabIpaClear" data-i18n="vocab.filter.clear">Clear all</button>
+            </div>
           </div>
           <div class="vocab-ipa-chips" id="vocabIpaChips"></div>
           <div class="vocab-ipa-kbd-label" id="vocabIpaKbdLabel"></div>
@@ -1707,6 +1713,9 @@ let weakReady = false;
 let vocabTabCurrent = "words";
 let vocabBuilt = false;
 let vocabIpaQuery = [];
+/* 語彙リスト専用アクセント(GA/RP モード分離)。グローバル ACCENT(ドリル)とは独立 — Naoya 決定: 語彙ローカル。
+   GA モード=各語の GA IPA(c.ipa)で絞り込み・GA 行を強調 / RP モード=RP IPA(c.rp_ipa)で絞り込み・RP 行を強調。 */
+let vocabAccent = "ga";
 const VOCAB_CEFR_LEVELS = ["A1", "A2", "B1", "B2"];
 /* 3b card virtualization heights (CD #3b block card; incl. 8px bottom gap) */
 const VOCAB_CARD_BASE = 112;   // border+padding+word row+ipas margin+GA row+gap(12) (統一カード)
@@ -1824,7 +1833,7 @@ function applyI18nVocab() {
   const ipaFilterMax = $("vocabIpaFilterMax");
   if (ipaFilterMax) ipaFilterMax.textContent = t("vocab.filter.ipa_max");
   if ($("vocabIpaClear")) $("vocabIpaClear").textContent = t("vocab.filter.clear");
-  if ($("vocabIpaKbdLabel")) $("vocabIpaKbdLabel").textContent = t("vocab.filter.picker");
+  /* vocabIpaKbdLabel はアクセント別テンプレート({accent})のため renderVocabIpaFilterBar で補間設定する */
   if ($("accentGaName")) $("accentGaName").textContent = t("accent.ga");
   if ($("accentRpName")) $("accentRpName").textContent = t("accent.rp");
   renderVocabIpaFilterBar();
@@ -2015,11 +2024,15 @@ function vocabWordRowHtml(c, highlightQ) {
   const isSame = (c.ga_rp_same !== undefined) ? c.ga_rp_same : (rpIpa === gaIpa);
   const listen = escAttr(t("listen"));
   const glossStr = gloss ? `<div class="vocab-row-gloss">${escHtml(gloss)}</div>` : "";
+  // GA/RP モード分離(Naoya): 絞り込み中の記号強調は「アクティブアクセントの行」のみに適用。
+  // GA モード=GA 行だけ強調 / RP モード=RP 行だけ強調(強調は既存デザインルール .ipa-match = signal 太字)。
+  const gaHl = vocabAccent === "ga" ? highlightQ : "";
+  const rpHl = vocabAccent === "rp" ? highlightQ : "";
   // カードデザイン統一(CD 3b-pc): GA/RP は常に2行。GA=RP は RP 行に「（同じ）」を添えて共通を明示
-  const gaRow = `<div class="vocab-ipa-ga"><span class="vocab-ipa-label">GA</span><span class="vocab-ipa-val">${vocabFmtIpa(gaIpa, highlightQ)}</span><button class="vocab-play" type="button" data-vw="${escAttr(c.w)}" data-vaccent="ga" aria-label="${listen}">${SPEAKER_SVG}</button></div>`;
+  const gaRow = `<div class="vocab-ipa-ga"><span class="vocab-ipa-label">GA</span><span class="vocab-ipa-val">${vocabFmtIpa(gaIpa, gaHl)}</span><button class="vocab-play" type="button" data-vw="${escAttr(c.w)}" data-vaccent="ga" aria-label="${listen}">${SPEAKER_SVG}</button></div>`;
   const sameNote = isSame ? `<span class="vocab-same-note">（${escHtml(t("reveal.alt_same"))}）</span>` : "";
   const rpRow = (rpIpa || isSame)
-    ? `<div class="vocab-ipa-rp"><span class="vocab-ipa-label">RP</span><span class="vocab-ipa-val">${vocabFmtIpa(rpIpa || gaIpa, highlightQ)}${sameNote}</span><button class="vocab-play" type="button" data-vw="${escAttr(c.w)}" data-vaccent="rp" aria-label="${listen}">${SPEAKER_SVG}</button></div>`
+    ? `<div class="vocab-ipa-rp"><span class="vocab-ipa-label">RP</span><span class="vocab-ipa-val">${vocabFmtIpa(rpIpa || gaIpa, rpHl)}${sameNote}</span><button class="vocab-play" type="button" data-vw="${escAttr(c.w)}" data-vaccent="rp" aria-label="${listen}">${SPEAKER_SVG}</button></div>`
     : "";
   return `<div class="vocab-row">
       <div class="vocab-row-top">
@@ -2257,10 +2270,10 @@ function refreshRevealChecksPanel(wrapId, item, mode) {
  * Flattened GA/RP-aware IPA symbol list for the 3b inline keyboard row (CD #3b).
  * @returns {string[]}
  */
-function vocabIpaKeyboardSymbols() {
+function vocabIpaKeyboardSymbols(accent) {
   const out = [];
   if (typeof symbolChartGroups === "function") {
-    symbolChartGroups().forEach(g => {
+    symbolChartGroups(accent).forEach(g => {
       if (g.id === "stress") return;
       if (g.heights) g.heights.forEach(h => h.symbols.forEach(s => { if (!out.includes(s)) out.push(s); }));
       else (g.symbols || []).forEach(s => { if (!out.includes(s)) out.push(s); });
@@ -2293,22 +2306,33 @@ function renderVocabIpaFilterBar() {
   chipsEl.innerHTML = chips;
   const clearBtn = $("vocabIpaClear");
   if (clearBtn) clearBtn.classList.toggle("hidden", vocabIpaQuery.length === 0);
-  const accent = ACCENT === "rp" ? "rp" : "ga";
+  const accent = vocabAccent === "rp" ? "rp" : "ga";
+  const kbdLabel = $("vocabIpaKbdLabel");
+  if (kbdLabel) kbdLabel.textContent = t("vocab.filter.picker", { accent: accent.toUpperCase() });
   kbEl.innerHTML = vocabIpaKeyboardSymbols(accent).map(s =>
     `<span class="vocab-ipa-key${vocabIpaQuery.includes(s) ? " is-active" : ""}" data-symbol="${escAttr(s)}">${escHtml(s)}</span>`
   ).join("");
 }
-/** @returns {void} Sync the 3b GA/RP filter toggle from ACCENT. */
+/** @returns {void} Sync the 3b GA/RP filter toggle from vocab-local vocabAccent. */
 function syncVocabAccentToggle() {
   const box = $("vocabAccentToggle");
   if (!box) return;
   box.querySelectorAll("button").forEach(b =>
-    b.setAttribute("aria-pressed", b.dataset.accent === ACCENT ? "true" : "false"));
+    b.setAttribute("aria-pressed", b.dataset.vaccent === vocabAccent ? "true" : "false"));
 }
-/** @param {string} accent @returns {void} */
+/**
+ * 語彙リスト専用アクセント(GA/RP)切替。グローバル ACCENT/ドリルには影響しない(Naoya: 語彙ローカル)。
+ * アクセントが変わると記号セットが変わるため、選択中の IPA チップはクリアする(幽霊フィルタ防止)。
+ * @param {string} accent @returns {void}
+ */
 function setVocabAccent(accent) {
-  if (accent && accent !== ACCENT) setAccent(accent); // setAccent re-renders the vocab list
+  const a = accent === "rp" ? "rp" : "ga";
+  if (a === vocabAccent) return;
+  vocabAccent = a;
+  vocabIpaQuery = [];
+  renderVocabIpaFilterBar();
   syncVocabAccentToggle();
+  renderVocabWords();
 }
 
 
@@ -2320,12 +2344,13 @@ function renderVocabWords() {
   }
   const q = vocabIpaQuery.join("");
   const sorted = [...PRESET].sort((a, b) => a.w.toLowerCase().localeCompare(b.w.toLowerCase()));
-  const filtered = sorted.filter(c => !q || wordIpaForSearch(c).includes(q));
+  // GA/RP モード分離(Naoya): アクティブアクセントの IPA のみで絞り込み(両連結ではない)
+  const filtered = sorted.filter(c => !q || vocabSearchIpa(c).includes(q));
   const countEl = $("vocabCount");
   if (countEl) {
     if (q) {
       const syms = vocabIpaQuery.map(s => `<span class="ipa">${escHtml(s)}</span>`).join("+");
-      const accent = ACCENT === "rp" ? "RP" : "GA";
+      const accent = vocabAccent === "rp" ? "RP" : "GA";
       countEl.innerHTML = t("vocab.count.filtered", { syms, accent, n: filtered.length });
     } else {
       countEl.innerHTML = t("vocab.count.all", { n: filtered.length });
@@ -3079,7 +3104,8 @@ function closeVocab() { navigate(""); }
  * IPA Chart Standard Grouping for 3c palette (GA / RP).
  * @returns {Array<{id:string,symbols?:string[],heights?:Array<{id:string,symbols:string[]}>}>}
  */
-function symbolChartGroups() {
+function symbolChartGroups(accentOverride) {
+  const acc = accentOverride || ACCENT;
   const consonants = [
     { id: "plosives", symbols: ["p", "b", "t", "d", "k", "ɡ"] },
     { id: "fricatives", symbols: ["f", "v", "θ", "ð", "s", "z", "ʃ", "ʒ", "h"] },
@@ -3089,7 +3115,7 @@ function symbolChartGroups() {
     { id: "affricates", symbols: ["tʃ", "dʒ"] }
   ];
   const stress = { id: "stress", symbols: ["ˈ", "ˌ"] };
-  if (ACCENT === "rp") {
+  if (acc === "rp") {
     return [
       { id: "frontVowels", heights: [
         { id: "close", symbols: ["iː", "ɪ"] },
@@ -3211,6 +3237,16 @@ function renderSymbolQueryChips() {
 function wordIpaForSearch(c) {
   // GA/RP トグル廃止(両行常時表示)に伴い、GA・RP どちらの IPA でもヒットさせる
   return (c.ipa || "") + " " + (c.rp_ipa || "");
+}
+
+/**
+ * 語彙リストの GA/RP モード分離検索(Naoya): アクティブな vocabAccent の IPA のみを対象にする。
+ * GA モード=c.ipa / RP モード=c.rp_ipa(欠落時のみ c.ipa フォールバック、カード表示と一致)。
+ * @param {object} c
+ * @returns {string}
+ */
+function vocabSearchIpa(c) {
+  return vocabAccent === "rp" ? (c.rp_ipa || c.ipa || "") : (c.ipa || "");
 }
 
 /**
@@ -5580,6 +5616,11 @@ $("vocabIpaKeyboard").addEventListener("click",e=>{
   const cell=e.target.closest(".vocab-ipa-key");
   if(!cell) return;
   vocabIpaQueryPush(cell.dataset.symbol);
+});
+$("vocabAccentToggle").addEventListener("click",e=>{
+  const btn=e.target.closest("button[data-vaccent]");
+  if(!btn) return;
+  setVocabAccent(btn.dataset.vaccent);
 });
 $("vocabIpaChips").addEventListener("click",e=>{
   const chip=e.target.closest("[data-chip-idx]");

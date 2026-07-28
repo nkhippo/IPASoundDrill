@@ -73,7 +73,7 @@
       "ipa_max": "(hanggang 3)",
       "add": "Magdagdag ng simbolo",
       "clear": "Burahin lahat",
-      "picker": "Salain ayon sa simbolo (GA at RP)"
+      "picker": "I-filter ayon sa {accent} na ponema"
     },
     "count": {
       "filtered": "Nasala · {accent} bigkas na may {syms} · {n}",

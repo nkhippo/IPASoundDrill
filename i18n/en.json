@@ -135,7 +135,7 @@
       "ipa_max": "(max 3)",
       "add": "Add symbol",
       "clear": "Clear all",
-      "picker": "Filter by symbol (searches GA & RP)"
+      "picker": "Filter by {accent} phonemes"
     },
     "count": {
       "filtered": "Filtered · {accent} pronunciations with {syms} · {n}",

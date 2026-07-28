@@ -135,7 +135,7 @@
       "ipa_max": "(最多3個)",
       "add": "新增符號",
       "clear": "全部清除",
-      "picker": "依符號篩選（同時搜尋 GA/RP）"
+      "picker": "以 {accent} 音標篩選"
     },
     "count": {
       "filtered": "篩選結果 · 含 {syms} 的 {accent} 發音 · {n}個",

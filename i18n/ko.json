@@ -135,7 +135,7 @@
       "ipa_max": "(최대 3)",
       "add": "기호 추가",
       "clear": "모두 지우기",
-      "picker": "기호로 필터 (GA·RP 모두 검색)"
+      "picker": "{accent} 발음기호로 필터"
     },
     "count": {
       "filtered": "필터 결과 · {syms} 포함 {accent} 발음 · {n}개",
