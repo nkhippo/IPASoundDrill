@@ -24,6 +24,7 @@
 3. **憶測回答禁止**: 不明な点は該当 docs を参照するか Naoya に確認する。仕様の正本は GitHub Issue 本文。
 4. **公開 URL を勝手に生成しない**: プログラミング支援に確信がある URL、ユーザ提供 URL、ローカルファイル由来のみ使用する。
 5. **branch**: develop-first。全 PR の base は `develop`。`develop` → `main` のマージは Naoya の明示的指示で行う。
+6. **UI 仕様の正本**: `src/index.template.html`(実装) と `docs/claude-design/{sp,pc,design-system}.dc.html`(スナップショット) がリポ内の正本。Claude Design(外部 SaaS)は今後**更新しない・参照しない・反映を待たない**。UI 修正は必ず本リポ内の HTML ベースで Naoya と合意する。詳細は `docs/claude-design/README.md`。
 
 ---
 
@@ -62,6 +63,7 @@ halt 経路: 同一セッション ClaudeCode → その場で Naoya に質問 /
 | Issue 起票・改修方針判断 | `docs/workflow.md`、`docs/change-classification.md` |
 | ドキュメント整備 | `docs/doc-map.md`、`docs/_conventions.md`、`docs/guardrails.md`(doc-sync) |
 | リポ構造 / インフラ変更 | `docs/repo-map.md` |
+| UI デザイン参照 / 見た目確認 | `docs/claude-design/{sp,pc,design-system}.dc.html`（現行 UI スナップショット）、`docs/claude-design/README.md` |
 
 > 上表の各ホームは AI-first 再編（EPIC #169）で確立済み。各概念の現ホームと status は `docs/doc-map.md` を参照。
 

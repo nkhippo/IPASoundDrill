@@ -51,7 +51,7 @@ Issue B は既存ファイルを削除しない。CLAUDE.md からは router に
 | executor 対応フロー / Issue 起票ルール / レビュー・auto-merge / 返答末尾テンプレ | `docs/workflow.md` | exists | 運用フロー変更時 |
 | Level×Pattern 分類体系 | `docs/change-classification.md` | exists | 分類体系変更時 |
 | md5 検証(L3)/ 自己判断禁止 / doc-sync / impact-analysis halt / 仕様・指示書品質基準 | `docs/guardrails.md` | exists | ガードレール変更時 |
-| CD(Claude Design)修正判定 | `docs/guardrails.md`(判定) + `docs/claude-design/` | exists | UI 改修運用変更時 |
+| UI 仕様の参照ポリシー | `docs/guardrails.md` §9 + `docs/claude-design/README.md` + `src/index.template.html`(正本) | exists | UI 改修運用変更時 |
 | 日付ログ（Phase 完了等の dated 記録） | `docs/history.md` | exists | 各 Phase 完了時 |
 | ローンチ Phase 進捗 | `docs/LAUNCH-CHECKLIST.md` | exists | Phase 進捗・Issue 起票/完了時 |
 | 運用手順（Vercel/GAS/DNS/Analytics） | `docs/OPERATIONS.md` | exists | 運用手順変更時 |

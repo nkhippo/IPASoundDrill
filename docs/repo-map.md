@@ -99,7 +99,7 @@ ipasounddrill/
 │   ├── doc-map.md                # 概念 → ホーム レジストリ
 │   ├── _conventions.md           # 記法規約・feature ID レジストリ
 │   ├── design/                  # Phase 1+ デザイン入力（タグライン候補等）
-│   ├── claude-design/           # UI/UX 正典（Claude Design 成果物）→ README.md 参照
+│   ├── claude-design/           # 現行 UI のスナップショット(sp/pc/design-system.dc.html)。正本は src/index.template.html。詳細 README.md
 │   ├── reference/               # 監査・意思決定・運用ガイド → README.md 参照
 │   ├── testing/                 # Manual test checklists
 │   └── archive/                 # 旧ドキュメント退避
