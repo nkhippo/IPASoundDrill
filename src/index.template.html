@@ -815,16 +815,16 @@
     body.top-home:not(.in-play) .header-lang{order:2}
     body.top-home:not(.in-play) .header-lang{max-width:none}
     body.top-home:not(.in-play) #purposeStub.panel{background:transparent;border:none;box-shadow:none;padding:0} /* app-improve: 浮いて見える .panel の影を除去(トップは紙面にフラット) */
-    body.top-home:not(.in-play) .top-grid{display:grid;grid-template-columns:7fr 3fr;gap:0 48px;align-items:start;grid-template-areas:"hero aside" "purpose purpose"}
-    body.top-home:not(.in-play) .top-hero-main{grid-area:hero;min-width:0}
-    body.top-home:not(.in-play) .top-hero-aside{grid-area:aside;margin-top:0;position:sticky;top:24px}
-    body.top-home:not(.in-play) .top-purpose-block{grid-area:purpose;margin-top:36px;border-top:1px solid var(--hair);padding-top:30px}
+    body.top-home:not(.in-play) .top-grid{display:block}
+    body.top-home:not(.in-play) .top-hero-main{min-width:0}
+    body.top-home:not(.in-play) .top-purpose-block{margin-top:36px;border-top:1px solid var(--hair);padding-top:30px}
     body.top-home:not(.in-play) .top-tagline{font-size:clamp(40px,5vw,60px);line-height:1.32}
     body.top-home:not(.in-play) .top-subcopy{font-size:17px;max-width:620px}
     body.top-home:not(.in-play) .top-hero-links{margin-top:20px}
     body.top-home:not(.in-play) .top-philosophy-link{font-size:13px}
-    body.top-home:not(.in-play) .top-purpose-label{display:block;font-family:var(--font-serif);font-size:13px;font-weight:600;letter-spacing:.08em;color:var(--ink);margin:0 0 4px}
-    body.top-home:not(.in-play) .top-purpose-hint{display:block;font-size:13px;color:var(--muted);margin:0 0 20px}
+    /* CD v13 1a-pc は「目的から選ぶ」ラベル/ヒントを持たない(区切り線のみ)。CD一致で非表示 */
+    body.top-home:not(.in-play) .top-purpose-label{display:none}
+    body.top-home:not(.in-play) .top-purpose-hint{display:none}
     body.top-home:not(.in-play) .purpose-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
     body.top-home:not(.in-play) .purpose-card{flex-direction:column;gap:12px;padding:22px 20px;align-items:flex-start}
     body.top-home:not(.in-play) .purpose-card .purpose-chevron{display:none}
@@ -1029,6 +1029,9 @@
             <line x1="3" y1="18" x2="3.01" y2="18"/>
           </svg>
         </button>
+        <button class="topbtn progress-btn" id="progressBtn" type="button" aria-label="学習状況">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 7-7"/><path d="M17 8h4v4"/></svg>
+        </button>
         <button class="topbtn guide-btn" id="guideBtn" type="button" aria-label="ガイド">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M9.2 9a3 3 0 0 1 5.6 1c0 2-2.8 2.3-2.8 4"/><path d="M12 17h.01"/></svg>
         </button>
@@ -1075,10 +1078,6 @@
           <button type="button" class="purpose-card" data-drill="2d" aria-pressed="false" id="purpose2d"><span class="purpose-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg></span><span class="purpose-copy"><span class="purpose-title" id="purpose2dT">連結する音に慣れる</span><span class="purpose-subtitle" id="purpose2dD"></span></span><span class="purpose-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg></span></button>
         </div>
       </div>
-      <aside class="top-hero-aside" aria-label="Review">
-        <div class="top-review-title" id="topReviewTitle"></div>
-        <button type="button" class="purpose-card purpose-card-progress" id="progressCard"><span class="purpose-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 7-7"/><path d="M17 8h4v4"/></svg></span><span class="purpose-copy"><span class="purpose-title" id="progressCardTitle">学習状況を見る</span><span class="purpose-subtitle" id="progressCardSubtitle">進捗を確認</span></span><span class="purpose-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg></span></button>
-      </aside>
     </div>
   </section>
 
@@ -1817,8 +1816,8 @@ function applyI18nProgress() {
   $('progressTitle').textContent = t('progress.title');
   $('progressBackLabel').textContent = t('progress.back');
   $('progressBackBtn').setAttribute('aria-label', t('progress.back'));
-  $('progressCardTitle').textContent = t('progress.card_title');
-  $('progressCardSubtitle').textContent = t('progress.card_subtitle');
+  if ($('progressCardTitle')) $('progressCardTitle').textContent = t('progress.card_title');
+  if ($('progressCardSubtitle')) $('progressCardSubtitle').textContent = t('progress.card_subtitle');
   $('progressCefrAll').textContent = t('progress.filter_all');
   $('progressOverallTitle').textContent = t('progress.overall_title');
   $('progressDrillsTitle').textContent = t('progress.drills_title');
@@ -4923,6 +4922,7 @@ document.querySelectorAll(".purpose-card").forEach(btn=>{
     else openDrillProfile(btn.dataset.drill);
   });
 });
+if ($("progressBtn")) $("progressBtn").addEventListener("click",()=>navigate("progress"));
 $("profileBackBtn").addEventListener("click",()=>{
   savePrevSettings();
   showPurposeHome();
