@@ -47,7 +47,7 @@ Step 4: レビュー・マージ（Level 段階化。`docs/guardrails.md` §3）
   - [ ] **非対象範囲**: 触らない範囲を明示
   - [ ] **チャット由来の決定事項の明示**: 壁打ちで決めた前提・判断を Issue 本文に落とし込む（記憶・口頭に依存しない）
 - **参照ドキュメントの明示**: Issue 本文に必要な参照ドキュメントを列挙する。判定は `CLAUDE.md` のタスク種別対応表 + `docs/doc-map.md` レジストリに従う
-- **CD 修正判定**: UI 改修 Issue では `docs/guardrails.md` §9 の A/B/C 判定を改修分類ブロックに記載
+- **UI 仕様の参照**: UI 改修 Issue では `src/index.template.html`(正本) と `docs/claude-design/{sp,pc}.dc.html`(スナップショット) の 2 点を根拠にする。**外部 Claude Design(SaaS) の URL・zip・再開セッションは要求しない**(2026-07-28 に運用廃止)。詳細 `docs/claude-design/README.md`
 - **Phase 番号の記述**: 作業手順を Phase 番号で列挙する場合、「Phase 0, 1, 2, ...」の連番で明確に記述する。曖昧な範囲表記は使わず、総数を末尾に明記する
 
 ### ラベル

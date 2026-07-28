@@ -15,7 +15,7 @@
 2. `main` への直接 push 禁止。すべての変更は PR 経由
 3. ドキュメントに書かれていないことを推測で埋めない。判断に迷ったら halt（`CLAUDE.md` #halt プロトコル）
 4. このリポジトリの統治原則: **"AI is faithful to what's documented, guesses at what isn't"**
-5. UI 改修では `docs/claude-design/` を必ず参照する（視覚仕様の正典）。CD ファイルが配置されていない UI 改修 Issue は着手禁止
+5. UI 改修では `src/index.template.html`(正本) と `docs/claude-design/{sp,pc}.dc.html`(スナップショット) を参照する。**外部 Claude Design(SaaS) の更新・反映・再開セッションは要求しない**(2026-07-28 廃止)。詳細 `docs/claude-design/README.md`
 
 ## Agent-specific notes
 
