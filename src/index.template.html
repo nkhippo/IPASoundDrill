@@ -1003,27 +1003,29 @@
     body.in-play.drill-two-pane .reflect-dock,
     body.in-play.drill-two-pane #exitConfirmModal,
     body.in-play.drill-two-pane #onboardingModal{grid-column:1 / -1}
-    /* 左=出題(paper) / 右=答え(panel)、中央 hair の仕切り。外枠(.wrap)が境界なので背景と同化しない */
-    body.in-play.drill-two-pane #cardDecode.panel,
-    body.in-play.drill-two-pane #cardEncode.panel,
-    body.in-play.drill-two-pane #cardModeBStudy.panel,
-    body.in-play.drill-two-pane #cardModeBMcq.panel,
-    body.in-play.drill-two-pane #cardModeBDict.panel{
+    /* 左=出題(paper) / 右=答え(panel)、中央 hair の仕切り。外枠(.wrap)が境界なので背景と同化しない
+       Phase-3 round-4: `.hidden`(display:none)を上書きしないよう `:not(.hidden)` で保護。
+       round-3 で hidden なペインまで表示されてしまう bug の修正。 */
+    body.in-play.drill-two-pane #cardDecode.panel:not(.hidden),
+    body.in-play.drill-two-pane #cardEncode.panel:not(.hidden),
+    body.in-play.drill-two-pane #cardModeBStudy.panel:not(.hidden),
+    body.in-play.drill-two-pane #cardModeBMcq.panel:not(.hidden),
+    body.in-play.drill-two-pane #cardModeBDict.panel:not(.hidden){
       background:var(--paper);border:none;border-right:1px solid var(--hair);border-radius:0;box-shadow:none;margin:0;padding:44px 40px;
       /* Phase-3 round-3: ボタン位置固定 + 答え合わせ前後で高さジャンプさせない */
       display:flex;flex-direction:column;min-height:600px
     }
-    body.in-play.drill-two-pane #cardModeBStudyAnswer.panel,
-    body.in-play.drill-two-pane #reveal.panel{
+    body.in-play.drill-two-pane #cardModeBStudyAnswer.panel:not(.hidden),
+    body.in-play.drill-two-pane #reveal.panel:not(.hidden){
       background:var(--panel);border:none;border-radius:0;box-shadow:none;margin:0;padding:44px 40px;
       display:flex;flex-direction:column;min-height:600px
     }
     /* 「答え合わせ」「次へ」ボタンを常にペイン下部にアンカー (margin-top:auto)。
        2a decode(.answer)、2c mode B、2d、reveal(.reveal-next) はカバー。
        2b encode は kbd(キーボード)が下部に必要なので妥協(現状維持)。 */
-    body.in-play.drill-two-pane #cardDecode .answer,
-    body.in-play.drill-two-pane #cardModeBDict .answer,
-    body.in-play.drill-two-pane #reveal .reveal-next{margin-top:auto}
+    body.in-play.drill-two-pane #cardDecode:not(.hidden) .answer,
+    body.in-play.drill-two-pane #cardModeBDict:not(.hidden) .answer,
+    body.in-play.drill-two-pane #reveal:not(.hidden) .reveal-next{margin-top:auto}
     /* app-improve: STEP ラベルは集約ヘッダーの title と重複するため常時非表示に統一
        (問題/答え合わせの別はコンテンツ=入力欄 vs 正解バナーで自明) */
   }
