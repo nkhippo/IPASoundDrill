@@ -64,6 +64,16 @@ CD(Claude Design、`docs/claude-design/{sp,pc}.dc.html`)と実UIを **文言以�
   - ⏭️ **app 先行可(CD非依存)**: POS i18n・GA=RP畳み・streak撤去・要注意音厳選・respell表示・語彙2カラム。
   - ✅ **app 一致実装 完了(全4 Phase, develop 反映)**: Phase1=ドリル統合カード(ヘッダー内包/未回答単カラム600px/回答後2ペイン paper|panel・背景同化解消) / Phase2=答えペイン CD 完全一致(正解バッジ・読み方respell主役・GA/RP発音カード枠(GA=RP畳み)・発音ポイント枠・次へteal、renderPronCard 新設、reveal.correct/incorrect/pron_label 6言語追加、respell_label 重複キー一掃) / Phase3=2c(mode B study の空右ペイン破綻を単カラム化で修正)/2d クリーン / Phase4=語彙 PC2カラム(rebuildVirtSlots に cols、row2 ペア化、vocabRowHeight を GA=RP に補正)。2a/2b/2c/2d/語彙/モバイル で検証、コンソールエラーなし、i18n 緑。develop: `0a9d3d2`。
   - 📌 **「全言語でUI差異」検証結果**: 1a の CSS/構造は**言語非依存**(`:lang()`/lang別body class なし、build は文言と `<html lang>` のみ差替)。en/ja/ko/zh-Hans/zh-Hant/fil すべて同一構造を確認。ユーザが見た「英語だけ縦積み」は **1024px ブレークポイント未満**の応答的レイアウト(狭い窓)であり言語差ではない。※ 抜本見直し(IPA導線の露出度・トップ IA)は Naoya と方向確認中。
+  - ✅ **app 一致実装 追加(develop `efe844d` まで)**: 1a TOP を CD-22(進捗→ヘッダーアイコン/hero単カラム)に一致。ドリル**共通UI化**(2a/2b/2d を左右2ペインに統一: 未回答=左出題(半画面)+右プレースホルダ`setRevealPending`/回答後=左入力非活性`body.drill-answered`)。共通修正: 「おしい」→「不正解」・進捗バー`max-width:420`撤去・ページ地 canvas 色(#E7E1D7)でカード分離+影・語彙CD一致(カード統一/全消去+記号ピッカー/検索GA-RP両対応)・i18n(reveal.incorrect/pending/pron_label/correct, vocab.filter.clear/picker, 数詞, respell_label重複一掃)。
+
+### 🔜 次セッション TODO(Naoya フィードバック 2026-07-28・未対応)
+develop 最新 `efe844d`。`git-develop` エイリアスで確認。
+1. **2c(mode B)を左右2ペイン化**(承認済・別フロー): `renderModeBStudy`/`applyModeBStudyTwoPane` を 2a/2b と同じ骨格へ。左=音+IPA(cardModeBStudy)、右=意味確認前はプレースホルダ→確認後に答え(cardModeBStudyAnswer を drill-pane-answer 化 or #reveal 統合)。quiz/dict 派生も要考慮。
+2. **ヘッダーアイコン幅を均等に**: globe(lang-switcher)が ≣/📈 より広く見える。`.topbtn`/`.lang-switcher.topbtn` を同一サイズ・同一 gap に。
+3. **フッター文言 i18n**: 「Terms/Privacy」を各言語化(日本語=利用規約/プライバシーポリシー)。data-i18n は JS 個別適用のため footer 用の適用を追加。遷移先 `terms.html`/`privacy.html` にもデザイン適用。
+4. **答えペイン整理**: 「読み方(respell)」はスピーカー上に移動 or **トルツメ**(IPA学習主眼＋スピーカーありで読みの必要性低い=Naoya)。「辞書表記」と メインIPA が GA/RP どちらか不明 → GA/RP を明示する工夫(ラベル付与等)。
+5. **語彙リスト UI 改善**: 「記号ピッカーを開く」がモーダルでなく表示切替だけなら、**最初から記号表示**しボタン/枠を廃止する案。IPA記号は **GA/RP でバリエーション差**があるので可視化。**A–Z(アルファベット)と IPA記号キーの境界**を明確化。
+
 - **Phase 4/5**: 未(Sonnet 1次Rv → Opus 横断2次Rv)
 
 ## 4. app-2-ii ドリルヘッダー(大物・要注意)✅ 完了(2026-07-27, commit `37de505`)
