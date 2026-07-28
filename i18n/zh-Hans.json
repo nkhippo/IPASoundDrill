@@ -140,6 +140,9 @@
     "count": {
       "filtered": "筛选结果 · 含 {syms} 的 {accent} 发音 · {n}个",
       "all": "共 {n}个"
+    },
+    "az": {
+      "hint": "按首字母跳转"
     }
   },
   "reveal": {

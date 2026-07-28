@@ -140,6 +140,9 @@
     "count": {
       "filtered": "필터 결과 · {syms} 포함 {accent} 발음 · {n}개",
       "all": "전체 {n}개"
+    },
+    "az": {
+      "hint": "첫 글자로 이동"
     }
   },
   "reveal": {

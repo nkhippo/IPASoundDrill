@@ -140,6 +140,9 @@
     "count": {
       "filtered": "Filtered · {accent} pronunciations with {syms} · {n}",
       "all": "{n} entries"
+    },
+    "az": {
+      "hint": "jump by letter"
     }
   },
   "reveal": {
