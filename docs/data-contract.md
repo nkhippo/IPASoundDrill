@@ -152,7 +152,7 @@ python3 scripts/fix_happy_i.py   # その後 gen_ga_rp_same を再実行
 
 フィールド: `id`, `w`, `ipa`, `rp_ipa`, `cs_type`, `level`（1–3）, `cefr`（A1–B2）, `cs_rule`（en/ja/fil/ko/zh-Hans/zh-Hant）, `gloss`, `carriers`（キャリア文テンプレート配列）。
 
-**Connected phrase TTS（Track A 確定）**: SPA からの API 呼び出しは `phrase=&accent=ga` 固定。`BatchWarm.gs` の暖機ループも GA 固定。RP 連結 TTS は Track B（React 化以降）で対応予定。
+**Connected phrase TTS（現行）**: SPA からの API 呼び出しは `phrase=&accent=ga` 固定。`BatchWarm.gs` の暖機ループも GA 固定。RP 連結 TTS は将来対応予定（React 化以降）。
 
 ### `data/weak_forms.json`（36語）
 
@@ -258,7 +258,7 @@ UI 文言を変える Issue は、以下を必須記載すること:
 - ja / en / ko / zh-Hans / zh-Hant / fil の 6 言語すべての文言変更有無
 - `i18n/*.json` の更新対象 key リスト
 - 現行 UI i18n leaf 数（正本は本ファイル §5。数値は固定引用せず本ファイルを参照）
-- Track A 期間中は英語・日本語の完全性を最優先、他 4 言語は差分マージ可
+- 英語・日本語の完全性を最優先、他 4 言語は差分マージ可
 
 ---
 

@@ -93,7 +93,7 @@ IPA を情報源として、**音から英語の発音を鍛え直す**。入口
 | `neighbors` | Mode B MCQ distractor 用に事前計算（GA リストを RP でも流用） |
 | `ga_rp_same` フラグ | 反対アクセント表示の同一判定に使用（`docs/data-contract.md` §2） |
 | `neighbors_rp` | 保留（GA neighbors 流用） |
-| 連結句 RP TTS | 未対応（Track B 以降） |
+| 連結句 RP TTS | 未対応（将来対応予定） |
 
 語彙数・CEFR 内訳・Phase 完了ログ等の日付付きスナップショットは本ファイルに置かず `docs/history.md` §1–2 を参照。ローンチ Phase 進捗は `docs/LAUNCH-CHECKLIST.md`。
 
@@ -121,7 +121,7 @@ A remote CS agent for a US fintech company (TOEIC 850). Filipino English is her 
 
 A Shanghai university student preparing for US graduate school (TOEFL 92, Speaking 20). Her Mandarin L1 phonological filter (retroflex /ʐ/ vs English /r/, missing /v/, complex final consonant clusters) blocks her TOEFL Speaking score. She wants to reach Speaking 26+.
 
-**P-5: The Music-Driven Learner (Japanese, 16, Track B focus)**
+**P-5: The Music-Driven Learner (Japanese, 16, future focus)**
 
 A high school student in Kyoto whose English interest started with indie music (Billie Eilish, Boygenius). She wants to sing English songs beautifully — not to sound "native" but to develop her own beautiful voice in English. Instagram/TikTok-native aesthetic sensibility.
 

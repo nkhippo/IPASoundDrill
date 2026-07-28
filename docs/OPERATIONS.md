@@ -1,6 +1,6 @@
 # OPERATIONS — ipasounddrill 運用マニュアル
 
-このドキュメントは本番運用中のトラブル対応と定常オペレーション手順。CLAUDE.md の Track A/B 分離方針、`docs/data-contract.md` のランタイム契約を前提とする。
+このドキュメントは本番運用中のトラブル対応と定常オペレーション手順。CLAUDE.md の技術スタック制約、`docs/data-contract.md` のランタイム契約を前提とする。
 
 ---
 
@@ -237,9 +237,9 @@ Vercel Web Analytics が自動的に記録する情報:
 
 これらは Naoya の手動作業なしで自動記録される。
 
-### 5.4 カスタムイベント（Track B で実装予定）
+### 5.4 カスタムイベント（将来実装予定）
 
-以下のカスタムイベントは Track B の `@vercel/analytics` パッケージ導入時に実装予定（本 Issue のスコープ外）:
+以下のカスタムイベントは 将来の `@vercel/analytics` パッケージ導入時に実装予定（本 Issue のスコープ外）:
 
 | イベント名 | 意味 |
 |---|---|
@@ -250,7 +250,7 @@ Vercel Web Analytics が自動的に記録する情報:
 | `accent_switch` | GA↔RP 切替 |
 | `tts_play` | TTS 再生 |
 
-Track A ではページビュー等の自動記録のみ、カスタムイベントは Track B で `@vercel/analytics` パッケージ導入時に実装。
+現行ではページビュー等の自動記録のみ、カスタムイベントは `@vercel/analytics` パッケージ導入時に実装予定。
 
 ### 5.5 データ保持期間
 
@@ -258,7 +258,7 @@ Vercel Web Analytics のデータ保持期間は Hobby プランで直近 30 日
 
 ### 5.6 開発者除外（Naoya 自身のアクセスを除外）
 
-Vercel Web Analytics には公式のオプトアウト UI がなく（DNT 非対応、Cookie 不使用）、Track A の script タグ直接埋め込み方式では `@vercel/analytics` パッケージの `beforeSend` フックも使えない。そのため `src/index.template.html` に localStorage ベースの除外機構を実装している（Issue #46）。
+Vercel Web Analytics には公式のオプトアウト UI がなく（DNT 非対応、Cookie 不使用）、現行の script タグ直接埋め込み方式では `@vercel/analytics` パッケージの `beforeSend` フックも使えない。そのため `src/index.template.html` に localStorage ベースの除外機構を実装している（Issue #46）。
 
 **除外の有効化**:
 
@@ -302,9 +302,9 @@ https://ipasounddrill.app/?va-enable=1
 - Naoya さんが所有する全デバイス（MacBook A、Windows PC B、iPhone C）で 1 回ずつ設定する
 - Preview URL（`ipa-sound-drill.vercel.app` 等）でも同様の JS が動作するため、Preview 環境での動作確認時も設定が有効
 
-**Track B での拡張**:
+**将来の拡張**:
 
-Track B で `@vercel/analytics` パッケージを導入した際は、既存の `window.va` no-op 化ロジックがそのまま有効。追加実装は不要。
+`@vercel/analytics` パッケージを導入した際は、既存の `window.va` no-op 化ロジックがそのまま有効。追加実装は不要。
 
 ---
 
@@ -321,7 +321,7 @@ Track B で `@vercel/analytics` パッケージを導入した際は、既存の
 1. Tally 通知メール受信
 2. 内容確認、緊急度判定
 3. バグ・不具合 → Bug Issue 起票
-4. 機能要望 → Feature Issue 起票（Track B ラベル）
+4. 機能要望 → Feature Issue 起票（将来計画）
 5. 感想・応援 → X で reply（可能なら）、対応不要
 
 ---
@@ -364,14 +364,14 @@ Repository Settings > Secrets and variables > Actions:
 - [ ] 主要キーワード「IPA Sound Drill」「IPA drill」「English pronunciation IPA」等の順位変動チェック
 - [ ] 新規追加 URL があれば URL 検査 → インデックス登録リクエスト（月次でも可）
 
-### 8.2 月次チェック（Track B 開始後）
+### 8.2 月次チェック（定期）
 
 - [ ] `docs/bug-knowledge.md` を Opus に投げてパターン分析
-- [ ] Track B スコープの進捗レビュー
+- [ ] 将来計画の進捗レビュー
 - [ ] ドメイン更新期限確認
 - [ ] Google Search Console 累積データレビュー（3 ヶ月推移、上位キーワード分析、CTR 改善余地の特定）
 - [ ] Vercel Web Analytics 累積データレビュー（言語別分布、デバイス比率、リファラー傾向）
-- [ ] 任意改善候補の再評価（LAUNCH-CHECKLIST Track B「SEO 運用強化」参照）
+- [ ] 任意改善候補の再評価（SEO 運用強化等）
 
 ---
 

@@ -19,11 +19,12 @@ labels:
 
 （なぜこの変更が必要か）
 
-## ローンチブロッカー判定
+## 優先度
 
-- [ ] 🚨 launch-blocker
-- [ ] 📆 track-b（ローンチ後に着手）
-- [ ] 該当なし
+- [ ] critical
+- [ ] high
+- [ ] medium
+- [ ] low
 
 ## 実装範囲
 
