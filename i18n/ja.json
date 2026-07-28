@@ -148,9 +148,10 @@
     "dict_label": "辞書表記",
     "respell_label": "読み方",
     "correct": "正解",
-    "incorrect": "おしい",
+    "incorrect": "不正解",
     "pron_label": "発音（🔊で再生）",
-    "alt_same": "同じ"
+    "alt_same": "同じ",
+    "pending": "答え合わせすると、ここに正解・読み方・発音が表示されます"
   },
   "lang_opts": {
     "en": "English",

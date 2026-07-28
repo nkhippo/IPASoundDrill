@@ -148,9 +148,10 @@
     "dict_label": "사전 표기",
     "respell_label": "발음 표기",
     "correct": "정답",
-    "incorrect": "아쉬워요",
+    "incorrect": "오답",
     "pron_label": "발음 (🔊 재생)",
-    "alt_same": "같음"
+    "alt_same": "같음",
+    "pending": "채점하면 정답·발음 표기·발음이 여기에 표시됩니다"
   },
   "lang_opts": {
     "en": "English",

@@ -148,9 +148,10 @@
     "dict_label": "词典表记",
     "respell_label": "读法",
     "correct": "正确",
-    "incorrect": "差一点",
+    "incorrect": "错误",
     "pron_label": "发音（🔊 播放）",
-    "alt_same": "相同"
+    "alt_same": "相同",
+    "pending": "核对后，这里会显示正确答案、读法和发音"
   },
   "lang_opts": {
     "en": "English",

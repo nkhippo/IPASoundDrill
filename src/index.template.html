@@ -247,6 +247,15 @@
   .pron-ipa{font-size:20px;color:var(--ink)}
   .pron-row .playicon-sm{width:36px;height:36px;justify-self:end;border:1px solid var(--signal);color:var(--signal);background:var(--panel);border-radius:999px;display:inline-flex;align-items:center;justify-content:center;cursor:pointer}
   .pron-row .playicon-sm svg{width:17px;height:17px}
+  /* 共通ドリル: 未回答時の右ペイン プレースホルダ + 回答後の左入力 非活性 */
+  .reveal-pending{display:none;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:14px;min-height:360px;padding:24px}
+  .reveal-pending-icon{width:52px;height:52px;border-radius:14px;background:var(--signal-soft);color:var(--signal);display:inline-flex;align-items:center;justify-content:center}
+  .reveal-pending-icon svg{width:26px;height:26px}
+  .reveal-pending p{font-size:13.5px;line-height:1.8;color:var(--muted);max-width:300px;margin:0}
+  #reveal.is-pending #rPending{display:flex}
+  #reveal.is-pending .reveal{display:none}
+  body.drill-answered .drill-pane-prompt input,
+  body.drill-answered .drill-pane-prompt button:not(.playicon){pointer-events:none;opacity:.5}
   #reveal #rAltIpa{display:none}
   #reveal #rNoteBlock{border:1px solid var(--hair);background:var(--paper);border-radius:14px;padding:12px 16px;margin-top:14px;text-align:left}
   #reveal #rNoteBlock.hidden{display:none}
@@ -868,7 +877,9 @@
     body.in-play .topbar{display:none!important}
     body.in-play .play-line{display:none!important}
     /* CD 統合カード: ドリル全体(ヘッダー+ペイン)を1枚の角丸カードに収める(地=paper) */
-    body.in-play .wrap{max-width:1024px;padding:0;background:var(--paper);border:1px solid var(--hair);border-radius:20px;overflow:hidden}
+    /* ドリル中はページ地をカード(paper)より濃い canvas 色にして、左ペインが背景と同化しないようにする */
+    body.in-play{background:#E7E1D7}
+    body.in-play .wrap{max-width:1024px;padding:0;background:var(--paper);border:1px solid var(--hair);border-radius:20px;overflow:hidden;box-shadow:0 14px 44px rgba(0,0,0,.07)}
     body.in-play .task-header,
     body.in-play .drill-header{
       display:flex;align-items:center;gap:16px;padding:20px 32px;margin:0;border-bottom:1px solid var(--hair)
@@ -876,7 +887,7 @@
     body.in-play .task-header-back{border:1px solid var(--hair);background:var(--panel);border-radius:999px;width:38px;height:38px;display:inline-flex;align-items:center;justify-content:center;color:var(--muted);cursor:pointer;flex:none;padding:0}
     body.in-play .task-header-main{flex:1;min-width:0}
     body.in-play .task-header-title{font-weight:600;font-size:15px;color:var(--ink)}
-    body.in-play .task-header-meter{height:6px;background:var(--hair);border-radius:999px;margin-top:7px;max-width:420px;overflow:hidden}
+    body.in-play .task-header-meter{height:6px;background:var(--hair);border-radius:999px;margin-top:7px;overflow:hidden}
     body.in-play .task-header-meter > span{display:block;height:100%;background:var(--signal);width:0%}
     body.in-play .task-header-accent{
       display:inline-flex;align-items:center;gap:4px;font-size:12.5px;color:var(--muted);white-space:nowrap;flex:none
@@ -1331,6 +1342,10 @@
   <!-- REVEAL -->
   <section id="reveal" class="panel hidden drill-pane drill-pane-answer" data-frame="reveal">
     <div class="card-top"><span class="cefr" id="rCefr" hidden></span><div class="card-top-right"><div class="qno" id="rNo"></div></div></div>
+    <div class="reveal-pending" id="rPending" aria-hidden="true">
+      <span class="reveal-pending-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></span>
+      <p id="rPendingText"></p>
+    </div>
     <div class="reveal">
       <div class="reveal-badge hidden" id="rBadge"><span class="reveal-badge-icon" id="rBadgeIcon" aria-hidden="true"></span><span id="rBadgeText"></span></div>
       <div class="yourtry" id="rTry"></div>
@@ -5013,6 +5028,7 @@ function renderCard(){
   // 出題フェーズは常に単一ペイン。答え合わせで付いた two-pane を必ず解除
   // (次問が 2 カラムグリッドのまま半幅/左寄せになる不具合を防ぐ)。modeB study は後段で再付与。
   document.body.classList.remove("drill-two-pane");
+  document.body.classList.remove("drill-answered");
   show("reveal",false);hideModeBCards();
   $("reflectDock").classList.add("hidden");
   if(S.appMode==="b"){
@@ -5022,6 +5038,12 @@ function renderCard(){
     return;
   }
   if(S.tab==="connected"||S.dir==="decode")renderDecode(c);else renderEncode(c);
+  // 共通2ペイン(PC): 未回答から左=出題/右=プレースホルダの半画面にする(フル幅/空右ペインを防ぐ)
+  if(window.matchMedia("(min-width:1024px)").matches){
+    document.body.classList.add("drill-two-pane");
+    show("reveal",true);
+    setRevealPending(true);
+  }
   refreshAllSpeakers();
 }
 /* DECODE */
@@ -5277,6 +5299,13 @@ function scrollToAboutWhyIpa(){
   if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
+// 共通ドリルUI: 右ペインの未回答プレースホルダ/回答済の切替 + 左入力の非活性
+function setRevealPending(pending){
+  const rev=$("reveal"); if(!rev)return;
+  rev.classList.toggle("is-pending", !!pending);
+  if(pending && $("rPendingText")) $("rPendingText").textContent=t("reveal.pending");
+  document.body.classList.toggle("drill-answered", !pending);
+}
 function renderPronCard(c){
   const card=$("rPronCard"); if(!card)return;
   const ga=c.ipa||"", rp=c.rp_ipa||"";
@@ -5315,6 +5344,7 @@ function reveal(res,ctx){
     show("cardDecode", false); show("cardEncode", false); show("reveal", true);
   }
   updateTaskHeader();
+  setRevealPending(false); // 回答済: 右ペインを答えに切替、左入力を非活性
   setCardCefr("rCefr",c,"rNo");
   const panel=$("reveal");
   panel.classList.remove("res-ok","res-bad");

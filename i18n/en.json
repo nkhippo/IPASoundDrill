@@ -148,9 +148,10 @@
     "respell_label": "Respelling",
     "dict_label": "Dictionary",
     "correct": "Correct",
-    "incorrect": "Almost",
+    "incorrect": "Incorrect",
     "pron_label": "Pronunciation (🔊 to play)",
-    "alt_same": "same"
+    "alt_same": "same",
+    "pending": "Check your answer — the correct spelling, respelling and pronunciation appear here"
   },
   "lang_opts": {
     "en": "English",

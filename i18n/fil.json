@@ -203,9 +203,10 @@
     "dict_label": "Diksyonaryo",
     "respell_label": "Pagbigkas",
     "correct": "Tama",
-    "incorrect": "Halos",
+    "incorrect": "Mali",
     "pron_label": "Bigkas (🔊 i-play)",
-    "alt_same": "pareho"
+    "alt_same": "pareho",
+    "pending": "I-check ang sagot — lalabas dito ang tamang baybay at bigkas"
   },
   "see_answer": "Tingnan ang sagot",
   "start": "Simulan",
