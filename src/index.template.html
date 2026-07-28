@@ -231,6 +231,25 @@
   .dict-ipa{font-family:var(--legacy-ipa);font-size:clamp(13px,3.2vw,17px);color:var(--legacy-muted);letter-spacing:.5px;margin-top:4px;text-align:center}
   /* respell(読み方): 親しみやすい発音表記。IPA が読めない層向けの主導線 */
   .respell{font-family:var(--font-ui);font-size:clamp(14px,3.6vw,18px);color:var(--ink);font-weight:600;letter-spacing:.02em;margin-top:8px;text-align:center}
+  /* CD 答えペイン: 正解バッジ / GA-RP 発音カード / 発音ポイント枠 */
+  .reveal-badge{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:15px;margin-bottom:10px}
+  .reveal-badge.res-ok{color:var(--signal)}
+  .reveal-badge.res-bad{color:var(--accent)}
+  .reveal-badge-icon{width:24px;height:24px;border-radius:999px;display:inline-flex;align-items:center;justify-content:center;color:#fff}
+  .reveal-badge.res-ok .reveal-badge-icon{background:var(--signal)}
+  .reveal-badge.res-bad .reveal-badge-icon{background:var(--accent)}
+  .pron-card{border:1px solid var(--hair);background:var(--paper);border-radius:16px;padding:8px 16px 12px;margin-top:16px;text-align:left}
+  .pron-card-label{font-size:10.5px;font-weight:700;letter-spacing:.08em;color:var(--faint);padding:6px 0 2px}
+  .pron-row{display:grid;grid-template-columns:56px 1fr 40px;align-items:center;gap:10px;padding:8px 0}
+  .pron-row + .pron-row{border-top:1px solid var(--hair)}
+  .pron-row.hidden{display:none}
+  .pron-accent{font-size:11px;font-weight:800;color:var(--muted);letter-spacing:.04em}
+  .pron-ipa{font-size:20px;color:var(--ink)}
+  .pron-row .playicon-sm{width:36px;height:36px;justify-self:end;border:1px solid var(--signal);color:var(--signal);background:var(--panel);border-radius:999px;display:inline-flex;align-items:center;justify-content:center;cursor:pointer}
+  .pron-row .playicon-sm svg{width:17px;height:17px}
+  #reveal #rAltIpa{display:none}
+  #reveal #rNoteBlock{border:1px solid var(--hair);background:var(--paper);border-radius:14px;padding:12px 16px;margin-top:14px;text-align:left}
+  #reveal #rNoteBlock.hidden{display:none}
   .yourtry .uipa{font-family:var(--legacy-ipa)}
   #reveal.res-ok .yourtry .uipa{color:var(--legacy-ok)}
   #reveal.res-bad .yourtry .uipa{color:var(--legacy-bad)}
@@ -1304,14 +1323,22 @@
   <section id="reveal" class="panel hidden drill-pane drill-pane-answer" data-frame="reveal">
     <div class="card-top"><span class="cefr" id="rCefr" hidden></span><div class="card-top-right"><div class="qno" id="rNo"></div></div></div>
     <div class="reveal">
+      <div class="reveal-badge hidden" id="rBadge"><span class="reveal-badge-icon" id="rBadgeIcon" aria-hidden="true"></span><span id="rBadgeText"></span></div>
+      <div class="yourtry" id="rTry"></div>
       <div class="word" id="rWord"></div>
       <div class="word-gloss" id="rGloss"></div>
       <div class="word-gloss hidden" id="rCsMeta"></div>
-      <div class="yourtry" id="rTry"></div>
       <div class="readout" style="padding-top:0"><div class="ipa" id="rIpa"></div>
         <button class="playicon" id="rPlay" type="button" aria-label="Listen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button>
       </div>
       <div class="respell hidden" id="rRespell"></div>
+      <!-- 発音カード(GA/RP): CD 準拠の枠付きサブカード -->
+      <div class="pron-card hidden" id="rPronCard">
+        <div class="pron-card-label" id="rPronLabel"></div>
+        <div class="pron-row" id="rPronGaRow"><span class="pron-accent">GA</span><span class="ipa pron-ipa" id="rPronGa"></span><button class="playicon playicon-sm" id="rPronGaPlay" type="button" aria-label="GA"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg></button></div>
+        <div class="pron-row" id="rPronRpRow"><span class="pron-accent">RP</span><span class="ipa pron-ipa" id="rPronRp"></span><button class="playicon playicon-sm" id="rPronRpPlay" type="button" aria-label="RP"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg></button></div>
+        <div class="pron-diff hidden" id="rPronDiff"></div>
+      </div>
       <div class="dict-ipa hidden" id="rDictIpa"></div>
       <div class="alt-ipa alt-ipa-row hidden" id="rAltIpa"><span class="alt-ipa-text" id="rAltIpaText"></span><button class="playicon playicon-sm inactive hidden" id="rAltPlay" type="button" aria-label="Listen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg></button></div>
       <div class="info" id="rInfo"></div>
@@ -5222,6 +5249,24 @@ function scrollToAboutWhyIpa(){
   if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
+function renderPronCard(c){
+  const card=$("rPronCard"); if(!card)return;
+  const ga=c.ipa||"", rp=c.rp_ipa||"";
+  if(!ga&&!rp){card.classList.add("hidden");return;}
+  card.classList.remove("hidden");
+  if($("rPronLabel")) $("rPronLabel").textContent=t("reveal.pron_label");
+  const gaAcc=$("rPronGaRow")?$("rPronGaRow").querySelector(".pron-accent"):null;
+  if($("rPronGa")) $("rPronGa").innerHTML=buildIpaHtml(ga||rp);
+  const same=(c.ga_rp_same!==undefined)?c.ga_rp_same:(rp===ga);
+  if(rp&&!same){
+    if(gaAcc)gaAcc.textContent="GA";
+    $("rPronRpRow").classList.remove("hidden");
+    if($("rPronRp")) $("rPronRp").innerHTML=buildIpaHtml(rp);
+  }else{
+    if(gaAcc)gaAcc.textContent="GA=RP";
+    $("rPronRpRow").classList.add("hidden");
+  }
+}
 function reveal(res,ctx){
   const c=S.cur;S.revealed=true;
   if(S.appMode!=="b")recordHist(c.w,res);
@@ -5275,6 +5320,19 @@ function reveal(res,ctx){
     marker=(k,t)=>{if(t==="ˈ"||t==="ˌ")return null;return okTokens.has(k)?"tok-ok":"tok-bad";};
   }
   refreshRevealIpa(marker);
+  // 正解/不正解 バッジ(CD 準拠)
+  if($("rBadge")){
+    const okRes=res==="ok", badRes=res==="bad";
+    $("rBadge").classList.remove("hidden","res-ok","res-bad");
+    if(okRes||badRes){
+      $("rBadge").classList.add(okRes?"res-ok":"res-bad");
+      $("rBadgeText").textContent = okRes ? t("reveal.correct") : t("reveal.incorrect");
+      $("rBadgeIcon").innerHTML = okRes
+        ? '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>'
+        : '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>';
+    } else $("rBadge").classList.add("hidden");
+  }
+  renderPronCard(c);
   if(isConnectedItem(c)||isWeakItem(c)){
     renderWordPronDetails(c,{noteId:"rNote",tipsHeadId:"tipsHead",tipsHeadText:t("cs.ruleLabel"),noteBlockId:"rNoteBlock",includeTraps:false,infoId:"rInfo"});
   }else{
@@ -5293,6 +5351,8 @@ function nextCard(){
   renderCard();
 }
 $("nextBtn").addEventListener("click",nextCard);
+if($("rPronGaPlay")) $("rPronGaPlay").addEventListener("click",()=>{unlockAudioFromGesture();if(S.cur)speak(S.cur.w,{accent:"ga"});});
+if($("rPronRpPlay")) $("rPronRpPlay").addEventListener("click",()=>{unlockAudioFromGesture();if(S.cur)speak(S.cur.w,{accent:"rp"});});
 $("mbSRevealBtn").addEventListener("click",()=>{
   $("mbSMeaning").classList.remove("hidden");
   $("mbSRevealBtn").classList.add("hidden");
