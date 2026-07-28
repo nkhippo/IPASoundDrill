@@ -133,7 +133,9 @@
       "ipa": "Filter by IPA",
       "all": "All",
       "ipa_max": "(max 3)",
-      "add": "Add symbol"
+      "add": "Add symbol",
+      "clear": "Clear all",
+      "picker": "Open picker"
     },
     "count": {
       "filtered": "Filtered · {accent} pronunciations with {syms} · {n}",
@@ -146,9 +148,10 @@
     "respell_label": "Respelling",
     "dict_label": "Dictionary",
     "correct": "Correct",
-    "incorrect": "Almost",
+    "incorrect": "Incorrect",
     "pron_label": "Pronunciation (🔊 to play)",
-    "alt_same": "same"
+    "alt_same": "same",
+    "pending": "Check your answer — the correct spelling, respelling and pronunciation appear here"
   },
   "lang_opts": {
     "en": "English",

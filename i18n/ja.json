@@ -133,7 +133,9 @@
       "ipa": "IPAで絞り込み",
       "all": "全て",
       "ipa_max": "(最大3)",
-      "add": "記号を追加"
+      "add": "記号を追加",
+      "clear": "全消去",
+      "picker": "記号ピッカーを開く"
     },
     "count": {
       "filtered": "絞り込み結果 · {syms} を含む {accent} 発音 · {n}件",
@@ -146,9 +148,10 @@
     "dict_label": "辞書表記",
     "respell_label": "読み方",
     "correct": "正解",
-    "incorrect": "おしい",
+    "incorrect": "不正解",
     "pron_label": "発音（🔊で再生）",
-    "alt_same": "同じ"
+    "alt_same": "同じ",
+    "pending": "答え合わせすると、ここに正解・読み方・発音が表示されます"
   },
   "lang_opts": {
     "en": "English",

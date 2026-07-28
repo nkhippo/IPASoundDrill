@@ -133,7 +133,9 @@
       "ipa": "IPA로 필터",
       "all": "전체",
       "ipa_max": "(최대 3)",
-      "add": "기호 추가"
+      "add": "기호 추가",
+      "clear": "모두 지우기",
+      "picker": "기호 선택기 열기"
     },
     "count": {
       "filtered": "필터 결과 · {syms} 포함 {accent} 발음 · {n}개",
@@ -146,9 +148,10 @@
     "dict_label": "사전 표기",
     "respell_label": "발음 표기",
     "correct": "정답",
-    "incorrect": "아쉬워요",
+    "incorrect": "오답",
     "pron_label": "발음 (🔊 재생)",
-    "alt_same": "같음"
+    "alt_same": "같음",
+    "pending": "채점하면 정답·발음 표기·발음이 여기에 표시됩니다"
   },
   "lang_opts": {
     "en": "English",

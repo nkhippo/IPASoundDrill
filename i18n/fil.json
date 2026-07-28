@@ -71,7 +71,9 @@
       "ipa": "Salain ayon sa IPA",
       "all": "Lahat",
       "ipa_max": "(hanggang 3)",
-      "add": "Magdagdag ng simbolo"
+      "add": "Magdagdag ng simbolo",
+      "clear": "Burahin lahat",
+      "picker": "Buksan ang picker"
     },
     "count": {
       "filtered": "Nasala · {accent} bigkas na may {syms} · {n}",
@@ -201,9 +203,10 @@
     "dict_label": "Diksyonaryo",
     "respell_label": "Pagbigkas",
     "correct": "Tama",
-    "incorrect": "Halos",
+    "incorrect": "Mali",
     "pron_label": "Bigkas (🔊 i-play)",
-    "alt_same": "pareho"
+    "alt_same": "pareho",
+    "pending": "I-check ang sagot — lalabas dito ang tamang baybay at bigkas"
   },
   "see_answer": "Tingnan ang sagot",
   "start": "Simulan",

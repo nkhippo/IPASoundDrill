@@ -133,7 +133,9 @@
       "ipa": "以 IPA 篩選",
       "all": "全部",
       "ipa_max": "(最多3個)",
-      "add": "新增符號"
+      "add": "新增符號",
+      "clear": "全部清除",
+      "picker": "開啟符號選擇器"
     },
     "count": {
       "filtered": "篩選結果 · 含 {syms} 的 {accent} 發音 · {n}個",
@@ -146,9 +148,10 @@
     "dict_label": "詞典標記",
     "respell_label": "讀法",
     "correct": "正確",
-    "incorrect": "差一點",
+    "incorrect": "錯誤",
     "pron_label": "發音（🔊 播放）",
-    "alt_same": "相同"
+    "alt_same": "相同",
+    "pending": "核對後，這裡會顯示正確答案、讀法與發音"
   },
   "lang_opts": {
     "en": "English",
