@@ -1,11 +1,11 @@
 ---
 name: ux-review
-description: Review a UI design/mockup (Claude Design output, Figma, or a live screen) against the project's ACTUAL data and code for feasibility and clutter — not just aesthetics. Use when a mockup/design comes back and you need to catch infeasible fields, i18n leakage, redundant/cluttered info, fake placeholders, or claim-vs-implementation gaps before building. Triggers: "review this design", "check this mockup", "is this UI feasible", "ux review", "does the data support this".
+description: Review a UI design/mockup (screenshot, Vercel preview, Figma, or a live screen) against the project's ACTUAL data and code for feasibility and clutter — not just aesthetics. Use when a design comes back and you need to catch infeasible fields, i18n leakage, redundant/cluttered info, fake placeholders, or claim-vs-implementation gaps before building. Triggers: "review this design", "check this mockup", "is this UI feasible", "ux review", "does the data support this".
 ---
 
 # ux-review — デザインを「データ/コード実装」で叩く
 
-見た目の良し悪しではなく、**その画面が実データ・実コードで成立するか / 雑多でないか**を検証する。Claude Design はデータを見られないので、ここは repo アクセスできる側（ClaudeCode）が担う工程。
+見た目の良し悪しではなく、**その画面が実データ・実コードで成立するか / 雑多でないか**を検証する。正本は `src/index.template.html`。見た目確認は Vercel branch preview URL またはローカルビルドで行う。
 
 ## 手順
 1. レビュー対象（mockup 画像 / CD フレーム / 実画面）と、対応するデータ/コードを特定。

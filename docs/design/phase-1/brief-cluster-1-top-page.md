@@ -3,7 +3,7 @@ cluster: 1
 created: 2026-07-17T00:30:00+09:00
 phase: 1
 project: IPASoundDrill
-status: ready-for-claude-design
+status: archived
 summary: Phase 1 Cluster 1 の Claude Design へのブリーフ。トップページ再設計 (LP + 目的ファースト UI + 言語切替 + オンボーディング)。主軸 P-1 (日本 SIer PM、モバイル通勤学習)、準軸 P-3 (フィリピン CS、低帯域幅)、参考 P-2 (韓国 UI 品質判定)。2 Variation (J-3 vs J-5) × 3 言語 (ja/en/ko) = 6 プロトタイプを生成設定。
 tags:
   - ipasounddrill

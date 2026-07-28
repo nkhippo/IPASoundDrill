@@ -94,14 +94,16 @@ lint 修正 / typo 修正（元の文言を保持）/ Markdown 整形 / import �
 - **参照整合の自動検出**は grep ベースで行う: リネーム・削除した概念名を全リポで `grep -rn '<旧名>' .` し、意図した新ホームへの参照のみが残ることを確認する（`docs/agent-reports/` 等の履歴は除外）
 - 新規ドキュメントを作る場合、`docs/doc-map.md` §2 に行を追加することが Issue の完了条件に含まれる（PR ブロッカー相当）
 
-## 9. UI 仕様の参照ポリシー（2026-07-28 以降）
+## 9. UI 仕様の参照ポリシー（2026-07-29 改定）
 
-**UI 仕様の正本は `src/index.template.html`(実装)。** `docs/claude-design/{sp,pc,design-system}.dc.html` は現行 UI のスナップショット（追随物）で、Naoya との UI 議論に使う静的リファレンス。
+**UI 仕様の正本は `src/index.template.html`(実装)。** `docs/claude-design/{sp,pc,design-system}.dc.html` は**凍結フレームカタログ**（画面一覧としての俯瞰用。pixel-perfect 精度は保証しない。更新義務なし）。
 
 **外部 Claude Design(SaaS) は今後使用しない**（更新も参照も反映待ちもしない）。旧 A/B/C の CD 修正判定・「CD 修正必須」ブロック・round-trip 指示書は **廃止**。UI 改修 Issue では以下を守る:
 
 - 正本コード: `src/index.template.html` を read
-- 見た目リファレンス: `docs/claude-design/sp.dc.html` / `pc.dc.html`
+- 画面一覧の俯瞰: `docs/claude-design/sp.dc.html` / `pc.dc.html`（見た目の正確性は保証しない）
+- 見た目の確認: **Vercel branch preview URL**（PR/branch ごとに自動生成）で実際の描画を確認
+- `.dc.html` の更新を UI 改修の完了条件に含めない
 - 「CD が古いから CD 更新から」といった前提を持ち込まない
 - 「CD セッションを再開して zip を送って」といった要求を Naoya にしない
 
