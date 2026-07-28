@@ -24,7 +24,7 @@
       -webkit-font-smoothing:antialiased;line-height:1.5;min-height:100vh}
     .legal-top{max-width:760px;margin:0 auto;padding:20px 20px 0}
     .legal-brand{display:inline-flex;align-items:baseline;gap:8px;text-decoration:none;color:var(--ink)}
-    .legal-brand .mark{font-family:var(--font-ipa);font-size:19px;color:var(--signal);letter-spacing:.02em}
+    .legal-brand .mark{font-family:var(--font-ipa);font-size:24px;color:var(--signal);letter-spacing:.02em}
     .legal-brand .name{font-weight:700;font-size:15px;letter-spacing:.02em}
     .legal-wrap{max-width:760px;margin:0 auto;padding:24px 20px 64px}
     .legal-card{background:var(--panel);border:1px solid var(--hair);border-radius:20px;
@@ -57,7 +57,7 @@
 </head>
 <body>
 <header class="legal-top">
-  <a class="legal-brand" href="/"><span class="mark">/iː/</span><span class="name">IPA Sound Drill</span></a>
+  <a class="legal-brand" href="/"><span class="mark">/iː/</span><span class="name" data-i18n="brand_name">IPA Sound Drill</span></a>
 </header>
 <main class="legal-wrap">
 <article class="legal-card">
@@ -156,13 +156,15 @@
 <h2 data-i18n="s13_h">13. Contact</h2>
 <p data-i18n-html="s13_p">For privacy-related questions, please contact us via the <a href="https://tally.so/r/xX1axk">Feedback form</a> or on <a href="https://x.com/nkhippo123">X (@nkhippo123)</a>.</p>
 
-<a class="legal-back" href="/"><span class="chev">&#8592;</span> <span data-i18n="back">Back to IPA Sound Drill</span></a>
+<a class="legal-back" href="/"><span class="chev">&#8592;</span> <span data-i18n="brand_back">Back to IPA Sound Drill</span></a>
 </article>
 </main>
 <script>
 (function(){
   const DICT = {
     en: {
+      brand_name: "IPA Sound Drill",
+      brand_back: "Back to IPA Sound Drill",
       _title: "Privacy Policy - IPA Sound Drill",
       _desc: "Privacy Policy for IPA Sound Drill. We collect minimal data, use no cookies, and respect your privacy.",
       h1: "Privacy Policy",
@@ -229,6 +231,8 @@
       back: "Back to IPA Sound Drill"
     },
     ja: {
+      brand_name: "IPAサウンドドリル",
+      brand_back: "IPAサウンドドリルへ戻る",
       _title: "プライバシーポリシー - IPA Sound Drill",
       _desc: "IPA Sound Drill のプライバシーポリシー。最小限のデータのみを収集し、Cookie を使用せず、ユーザーのプライバシーを尊重します。",
       h1: "プライバシーポリシー",
@@ -295,6 +299,8 @@
       back: "IPA Sound Drill に戻る"
     },
     ko: {
+      brand_name: "IPA Sound Drill",
+      brand_back: "IPA Sound Drill로 돌아가기",
       _title: "개인정보처리방침 - IPA Sound Drill",
       _desc: "IPA Sound Drill 개인정보처리방침. 최소한의 데이터만 수집하고, 쿠키를 사용하지 않으며, 사용자의 개인정보를 존중합니다.",
       h1: "개인정보처리방침",
@@ -361,6 +367,8 @@
       back: "IPA Sound Drill로 돌아가기"
     },
     "zh-Hans": {
+      brand_name: "IPA Sound Drill",
+      brand_back: "返回 IPA Sound Drill",
       _title: "隐私政策 - IPA Sound Drill",
       _desc: "IPA Sound Drill 的隐私政策。我们仅收集最少的数据，不使用 Cookie，尊重您的隐私。",
       h1: "隐私政策",
@@ -427,6 +435,8 @@
       back: "返回 IPA Sound Drill"
     },
     "zh-Hant": {
+      brand_name: "IPA Sound Drill",
+      brand_back: "返回 IPA Sound Drill",
       _title: "隱私政策 - IPA Sound Drill",
       _desc: "IPA Sound Drill 的隱私政策。我們僅收集最少的資料，不使用 Cookie，尊重您的隱私。",
       h1: "隱私政策",
@@ -493,6 +503,8 @@
       back: "返回 IPA Sound Drill"
     },
     fil: {
+      brand_name: "IPA Sound Drill",
+      brand_back: "Bumalik sa IPA Sound Drill",
       _title: "Patakaran sa Privacy - IPA Sound Drill",
       _desc: "Patakaran sa Privacy para sa IPA Sound Drill. Kaunting data lang ang kinokolekta namin, walang cookies, at iginagalang ang iyong privacy.",
       h1: "Patakaran sa Privacy",

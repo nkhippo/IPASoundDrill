@@ -24,7 +24,7 @@
       -webkit-font-smoothing:antialiased;line-height:1.5;min-height:100vh}
     .legal-top{max-width:760px;margin:0 auto;padding:20px 20px 0}
     .legal-brand{display:inline-flex;align-items:baseline;gap:8px;text-decoration:none;color:var(--ink)}
-    .legal-brand .mark{font-family:var(--font-ipa);font-size:19px;color:var(--signal);letter-spacing:.02em}
+    .legal-brand .mark{font-family:var(--font-ipa);font-size:24px;color:var(--signal);letter-spacing:.02em}
     .legal-brand .name{font-weight:700;font-size:15px;letter-spacing:.02em}
     .legal-wrap{max-width:760px;margin:0 auto;padding:24px 20px 64px}
     .legal-card{background:var(--panel);border:1px solid var(--hair);border-radius:20px;
@@ -52,7 +52,7 @@
 </head>
 <body>
 <header class="legal-top">
-  <a class="legal-brand" href="/"><span class="mark">/iː/</span><span class="name">IPA Sound Drill</span></a>
+  <a class="legal-brand" href="/"><span class="mark">/iː/</span><span class="name" data-i18n="brand_name">IPA Sound Drill</span></a>
 </header>
 <main class="legal-wrap">
 <article class="legal-card">
@@ -107,13 +107,15 @@
 <h2 data-i18n="s12_h">12. Contact</h2>
 <p data-i18n-html="s12_p">For questions about these Terms, please contact us via the <a href="https://tally.so/r/xX1axk">Feedback form</a> or on <a href="https://x.com/nkhippo123">X (@nkhippo123)</a>.</p>
 
-<a class="legal-back" href="/"><span class="chev">&#8592;</span> <span data-i18n="back">Back to IPA Sound Drill</span></a>
+<a class="legal-back" href="/"><span class="chev">&#8592;</span> <span data-i18n="brand_back">Back to IPA Sound Drill</span></a>
 </article>
 </main>
 <script>
 (function(){
   const DICT = {
     en: {
+      brand_name: "IPA Sound Drill",
+      brand_back: "Back to IPA Sound Drill",
       _title: "Terms of Service - IPA Sound Drill",
       _desc: "Terms of Service for IPA Sound Drill, a free browser-based English pronunciation trainer.",
       h1: "Terms of Service",
@@ -152,6 +154,8 @@
       back: "Back to IPA Sound Drill"
     },
     ja: {
+      brand_name: "IPAサウンドドリル",
+      brand_back: "IPAサウンドドリルへ戻る",
       _title: "利用規約 - IPA Sound Drill",
       _desc: "無料のブラウザベース英語発音トレーナー IPA Sound Drill の利用規約。",
       h1: "利用規約",
@@ -190,6 +194,8 @@
       back: "IPA Sound Drill に戻る"
     },
     ko: {
+      brand_name: "IPA Sound Drill",
+      brand_back: "IPA Sound Drill로 돌아가기",
       _title: "서비스 이용약관 - IPA Sound Drill",
       _desc: "무료 브라우저 기반 영어 발음 트레이너 IPA Sound Drill의 서비스 이용약관.",
       h1: "서비스 이용약관",
@@ -228,6 +234,8 @@
       back: "IPA Sound Drill로 돌아가기"
     },
     "zh-Hans": {
+      brand_name: "IPA Sound Drill",
+      brand_back: "返回 IPA Sound Drill",
       _title: "服务条款 - IPA Sound Drill",
       _desc: "免费的浏览器端英语发音训练工具 IPA Sound Drill 的服务条款。",
       h1: "服务条款",
@@ -266,6 +274,8 @@
       back: "返回 IPA Sound Drill"
     },
     "zh-Hant": {
+      brand_name: "IPA Sound Drill",
+      brand_back: "返回 IPA Sound Drill",
       _title: "服務條款 - IPA Sound Drill",
       _desc: "免費的瀏覽器端英語發音訓練工具 IPA Sound Drill 的服務條款。",
       h1: "服務條款",
@@ -304,6 +314,8 @@
       back: "返回 IPA Sound Drill"
     },
     fil: {
+      brand_name: "IPA Sound Drill",
+      brand_back: "Bumalik sa IPA Sound Drill",
       _title: "Mga Tuntunin ng Serbisyo - IPA Sound Drill",
       _desc: "Mga Tuntunin ng Serbisyo para sa IPA Sound Drill, isang libreng browser-based na English pronunciation trainer.",
       h1: "Mga Tuntunin ng Serbisyo",
