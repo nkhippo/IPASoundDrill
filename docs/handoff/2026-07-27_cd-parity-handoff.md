@@ -74,15 +74,17 @@ CD(Claude Design、`docs/claude-design/{sp,pc}.dc.html`)と実UIを **文言以�
 5. 語彙: 記号ピッカーボタン廃止→IPAキーボード常時表示+ラベル(GA/RP両検索)、A–Zとの境界に区切り線。
 - 併せて: ドリル共通UI(2a/2b/2d左右2ペイン+未回答プレースホルダ+回答後入力非活性)、不正解表記、進捗バー、ページ地canvas色、1a=CD-22、語彙2カラム/カード統一 も develop 反映済。
 
+### ✅ 2026-07-28（第2ラウンド）対応完了
+1. **footer 遷移先 Mood B 化**（commit `918d73f`）: `terms.html`/`privacy.html` を system-ui プレーン → Mood B トークンで刷新（ブランドマーク＋panel カード＋serif 見出し＋teal ルール＋`.ipa-match` 系配色）。本文は逐語保持。静的HTML（build 対象外）につきトークン/フォントをインライン。
+2. **語彙リスト GA/RP モード分離**（commit `4a84db6`）: Naoya 決定＝GA/RP を**分離**（旧「両方検索」を撤回）。vocab ローカル accent `vocabAccent`（グローバル ACCENT/ドリル非干渉）＋フィルタ頭に GA/RP セグメント切替。GA モード=`c.ipa` で絞り込み・GA 行のみ記号強調／RP モード=`c.rp_ipa`・RP 行のみ強調（`.ipa-match` signal 太字）。切替でキーボード記号セット差替（`symbolChartGroups(accent)` 引数化）・チップ clear。副次: 旧 GA モードで RP 固有記号（ɒ əʊ iː 等）を絞り込めなかった欠陥も解消。i18n `vocab.filter.picker` を per-accent 化（6言語）。SP/PC・ɛ/ɝ/ɒ 強調・console 0 err 検証済。
+3. **CD round-trip 指示書**（commit `bbdebda`）: `cd-updates/2026-07-28_cd-roundtrip-app-first.md` 新規。ドリル共通2ペイン/答えペイン(respell 撤去)/2c統一/語彙(GA/RP分離含む)/共通軽微/footer(CD対象外) を「見た目の正」で列挙。**respell 主役だった旧指示（07-27_round-next §3・07-28_drill-answer【2】）を supersede 明記**。併せて `reveal.pending` の「読み方」文言も撤去し整合（6言語）。
+
 ### 🔜 次セッション TODO
-**まず**: `git-develop` エイリアスで全画面(1a/2a/2b/2c/2d/語彙/モバイル)を実機確認。
 **残(軽微・未対応)**:
-- footer 遷移先ページ `terms.html` / `privacy.html` に Mood B デザイン適用(別HTMLファイル)。
-- 語彙キーボードで記号別の GA/RP バリエーション可視化(現状はラベルで「GA/RP両検索」を示すのみ)。
 - 2c の quiz/dict 派生(MODEB_QUIZ有効時)も左右2ペインに揃えるか要確認。
 - mode B 答えの語(mbSWord)色が ink、2a/2b(rWord)は accent → 統一するか判断。
-**CD round-trip(app先行分の反映指示書作成)**: ドリル共通UI(常時2ペイン+プレースホルダ+非活性)・語彙(キーボード常時+カード統一)・答えペイン整理 は app 先行。CD(docs/claude-design)へ反映する指示書を作成 → Naoya が Claude Design 反映。
-**本番反映**: develop→main の PR(Naoya ack 必須)。develop は main より大幅先行。
+**本番反映（要 Naoya ack）**: develop→main の PR。develop は main より大幅先行。⚠️ **未実施**（Naoya の明示 ack が必要な L3。エージェントは PR 作成まで、merge は Naoya）。
+**CD 反映（Naoya 作業）**: 上記 `2026-07-28_cd-roundtrip-app-first.md` を Claude Design に反映 → エクスポート → repo CD 同期。
 
 ### (旧)次セッション TODO(2026-07-28・対応済に移行)
 develop 最新 `efe844d`。`git-develop` エイリアスで確認。
