@@ -19,11 +19,11 @@
 
 ## 絶対ルール（常時適用）
 
-1. **Track A 制約**: 現行の静的 HTML + JSON + GAS TTS 構成を維持する。React 化・BE 移管は Track B(ローンチ後)。Track A の Issue は「ローンチブロッカーか否か」を明示する。
+1. **技術スタック制約**: 現行の静的 HTML + JSON + GAS TTS 構成を維持する。React 化・BE 移管は将来計画として Issue 管理するが、現行構成を前提に実装する。
 2. **ThinkGrindAi と混同しない**: Naoya は別プロジェクト `thinkgrindai`(Vite+React、Obsidian 履歴、7-step)も運用する。本リポは静的 HTML・GitHub リポ内 AI 履歴・4-step。両者を跨ぐ時は本ファイルを読み直す。
 3. **憶測回答禁止**: 不明な点は該当 docs を参照するか Naoya に確認する。仕様の正本は GitHub Issue 本文。
 4. **公開 URL を勝手に生成しない**: プログラミング支援に確信がある URL、ユーザ提供 URL、ローカルファイル由来のみ使用する。
-5. **branch**: Track A は main-first(全 PR の base は `main`)。Track B で develop-first に切替。
+5. **branch**: develop-first。全 PR の base は `develop`。`develop` → `main` のマージは Naoya の明示的指示で行う。
 
 ---
 

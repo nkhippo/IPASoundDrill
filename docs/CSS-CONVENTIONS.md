@@ -1,7 +1,7 @@
-# CSS-CONVENTIONS — Track A CSS 命名・legacy 運用
+# CSS-CONVENTIONS — CSS 命名・legacy 運用
 
 > **Category A（常時最新化義務）**  
-> **Purpose:** CSS 変数の命名、`--legacy-*` の寿命、Track A の CSS 技術制約を正本化する。  
+> **Purpose:** CSS 変数の命名、`--legacy-*` の寿命、CSS 技術制約を正本化する。  
 > **関連:** Issue #81（Phase 1-A 導入）、実装値の snapshot は `docs/design/phase-1/visual-tokens.md`、Vault SoT は `30_projects/IPASoundDrill/design/phase-1/design-tokens.md`。
 
 ---
@@ -34,14 +34,14 @@
 
 ---
 
-## §3 Track A の CSS 全般ルール
+## §3 CSS 全般ルール
 
 - **preprocessor 不採用:** Sass / Less / Stylus は導入しない
 - **Modern CSS のみ:** 素の CSS。`:root` を第一選択
-- **CSS Nesting:** 許容（対応ブラウザ前提は現行 Track A 方針に従う）
-- **`color-mix()`:** Track B 以降（現行 Safari サポート方針のため Track A では使わない）
+- **CSS Nesting:** 許容（対応ブラウザ前提は現行方針に従う）
+- **`color-mix()`:** 将来対応予定（現行 Safari サポート方針のため現時点では使わない）
 - **インライン color/font/size の新規ハードコード:** 避け、トークンまたは既存パターンを使う
-- **配置:** Track A では別 CSS ファイル分離をしない。`src/index.template.html` の `<style>` を正とする
+- **配置:** 別 CSS ファイル分離をしない。`src/index.template.html` の `<style>` を正とする
 
 ---
 

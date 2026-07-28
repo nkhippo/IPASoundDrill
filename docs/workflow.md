@@ -29,7 +29,7 @@ Step 4: レビュー・マージ（Level 段階化。`docs/guardrails.md` §3）
 |---|---|
 | **A（軽微）** | 単一ファイル、既知仕様への復帰、CI/CD 整備、ドキュメント更新 |
 | **B（標準）** | 複数ファイル、UI 変更、データ拡充、仕様変更を伴う |
-| C（大規模） | Track B から導入（複数 PR にまたがる作業） |
+| **C（大規模）** | 複数 PR にまたがる作業 |
 
 **分割 5 判断軸**: ①設計 vs 実装（仕様変更を伴う → docs Issue を先行）②対応規模（影響ファイル 5 つ超 → 分割。docs-infrastructure の cohesive consolidation は例外的に単一 Issue で atomic 実施してよい）③ドキュメント独立性（運用ドキュメント修正は常に単独 Issue で先行）④ブロッキング関係（B が A 完了待ち → A 先行）⑤リスク隔離（本番影響大 → 単独 Issue）。
 
@@ -57,8 +57,7 @@ Step 4: レビュー・マージ（Level 段階化。`docs/guardrails.md` §3）
 | `feature` / `bug` / `docs` / `chore` | 変更種別 |
 | `ready-for-cursor` | executor-ready 標準を満たす（実装開始可） |
 | `needs-review` | PR がレビュー待ち（自動付与） |
-| `launch-blocker` | ローンチまでに必須（Track A） |
-| `track-b` | ローンチ後の作業 |
+| `high` | 優先対応が必要 |
 | `critical` / `high` / `medium` / `low` | 優先度（任意） |
 
 ## 5. Phase 毎コメントオフ（簡素化 2）
@@ -97,7 +96,7 @@ Level 段階化の内容（L1 セルフチェック / L2 `pr-reviewer` PASS / L3
 - draft ではなく通常 PR（`main` 直 push は禁止、すべて PR 経由）
 - PR タイトル: `feat:` / `fix:` / `chore:` / `docs:` + 内容 + `(#XXX)`
 - PR 本文テンプレは `.github/PULL_REQUEST_TEMPLATE.md`（概要・変更内容・変更理由・確認済み事項・未確認懸念点・Complexity Retrospective 実施確認・`Closes #N`）
-- Track A は `Closes #N` を記載してよい（main-first）。Track B は develop 向け PR には書かない
+- develop 向け PR には `Closes #N` を記載しない（Issue は main マージ時にクローズする）
 - **UI 改修 PR のスクショ必須（Change Pattern C6）**: ①Issue 本文のスクショ対象画面リスト全画面のスクショを PR Comment に添付 ②技術制約で添付できない場合は明記し、Naoya 実機検証を Rv の前提とする ③スクショ（または代替）無しの UI 改修 PR は pr-reviewer/Claude Rv で FAIL とする
 
 ## 9. 実装レポート（必須）
@@ -123,16 +122,17 @@ Issue が情報伝達漏れリスクを持つ場合（大規模ドキュメン�
 ## 12. Bug 対応ループ
 
 1. Bug Issue 完了時（実装エージェント）: PR マージ後（または同一 PR 内）に Issue 本文の「## 根本原因記録」テーブルと `docs/bug-knowledge.md` 末尾へ追記
-2. 月次レビュー時（Naoya、Track B 開始後）: Opus に分析依頼
+2. 月次レビュー時（Naoya）: Opus に分析依頼
 3. 分析結果に基づく改善（Claude）: governance docs へ反映提案
 
 ## 13. Branch 戦略
 
-Track A（main-first）/ Track B（develop-first）の概要は `CLAUDE.md` 絶対ルール §5。Track B 切替時は本ファイルと `CLAUDE.md` を同時更新する Issue（`chore: switch to develop-first branching`）で実施する。
+develop-first。全 PR の base は `develop`。`develop` → `main` のマージは Naoya の明示的指示で行う。Preview 環境（`ipa-sound-drill-git-develop-nkhippos-projects.vercel.app`）で状態を確認してから main へマージする運用。
 
-| ラベル | Track A base | Track B base |
-|---|---|---|
-| feature / bug / docs / chore | main | develop |
+| ブランチ | 役割 |
+|---|---|
+| `develop` | 全 PR の base。開発・確認用 |
+| `main` | 本番デプロイ。Naoya の指示で develop からマージ |
 
 ## 14. Pre-Issue Recon（100 行超で推奨）
 
@@ -144,7 +144,7 @@ Claude が index.html 等の大ファイルを全量取得する代わりに、�
 
 ## 15. 新規ドキュメント作成判定
 
-Naoya が「〇〇について資料を作りたい」と相談したら、以下を判定する: ①一時的なメモ → Chat 内で完結、MD 化しない ②AI 実装レポート → `docs/agent-reports/` ③意思決定記録 → Obsidian 提案（Track A では割愛可）④Track B スコープ → `track-b` ラベル Issue に残す ⑤運用ルール → 該当ホーム（`docs/doc-map.md` 参照）に追記 or 新規 MD ⑥バグ → `docs/bug-knowledge.md`。新規 MD を作る場合、`docs/doc-map.md` §2 への行追加を Issue の完了条件に含める。
+Naoya が「〇〇について資料を作りたい」と相談したら、以下を判定する: ①一時的なメモ → Chat 内で完結、MD 化しない ②AI 実装レポート → `docs/agent-reports/` ③意思決定記録 → Obsidian 提案 ④将来スコープ → Issue に残す ⑤運用ルール → 該当ホーム（`docs/doc-map.md` 参照）に追記 or 新規 MD ⑥バグ → `docs/bug-knowledge.md`。新規 MD を作る場合、`docs/doc-map.md` §2 への行追加を Issue の完了条件に含める。
 
 ## 16. ルール変更時のセルフチェック手順
 

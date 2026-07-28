@@ -31,11 +31,6 @@ labels:
 - URL: https://ipasounddrill.app または github.io / localhost
 - 言語設定: ja / en / ko / zh-Hans / zh-Hant / fil
 
-## ローンチブロッカー判定
-
-- [ ] 🚨 launch-blocker（2026-07-20 のローンチまでに必須）
-- [ ] 📆 track-b（ローンチ後に着手可）
-
 ## 優先度
 
 - [ ] 🚨 critical（使用不可）
