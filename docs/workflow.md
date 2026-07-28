@@ -96,7 +96,7 @@ Level 段階化の内容（L1 セルフチェック / L2 `pr-reviewer` PASS / L3
 - draft ではなく通常 PR（`main` 直 push は禁止、すべて PR 経由）
 - PR タイトル: `feat:` / `fix:` / `chore:` / `docs:` + 内容 + `(#XXX)`
 - PR 本文テンプレは `.github/PULL_REQUEST_TEMPLATE.md`（概要・変更内容・変更理由・確認済み事項・未確認懸念点・Complexity Retrospective 実施確認・`Closes #N`）
-- develop 向け PR には `Closes #N` を記載しない（Issue は main マージ時にクローズする）
+- develop 向け PR に `Closes #N` を記載する（develop マージ時に Issue をクローズする）
 - **UI 改修 PR のスクショ必須（Change Pattern C6）**: ①Issue 本文のスクショ対象画面リスト全画面のスクショを PR Comment に添付 ②技術制約で添付できない場合は明記し、Naoya 実機検証を Rv の前提とする ③スクショ（または代替）無しの UI 改修 PR は pr-reviewer/Claude Rv で FAIL とする
 
 ## 9. 実装レポート（必須）

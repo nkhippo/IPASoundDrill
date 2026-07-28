@@ -63,7 +63,7 @@ Cursor / Codex がこのリポで行っている運用と**完全に同じ品質
 ## PR 作成 → 停止
 1. コミット（現行 governance が要求する trailer / 署名規約に従う。署名がオフに変わっていればオフのまま）。
 2. push。
-3. `gh pr create` で base `develop` に PR を作成。PR description フォーマット・適切なラベルを付ける。`Closes #NN` は記載しない（Issue は main マージ時にクローズする）。
+3. `gh pr create` で base `develop` に PR を作成。`Closes #NN`・PR description フォーマット・適切なラベルを付ける。
 4. **PR 本文の末尾に必ずマーカー行 `<!-- authored-by: issue-handler -->` を入れる**（後続のレビュー自動対応の識別に使う）。
 5. **ここで停止**。マージはしない。PR URL を報告する。
 
