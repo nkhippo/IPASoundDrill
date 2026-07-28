@@ -62,6 +62,7 @@ CD(Claude Design、`docs/claude-design/{sp,pc}.dc.html`)と実UIを **文言以�
   - ✅ **再利用資産**: `.claude/skills/ux-brief`・`ux-review`(移植可) + `knowledge/`(手法+記載例)。
   - ⏭️ **次 CD ラウンド指示=清書済**: `cd-updates/2026-07-27_cd-round-next.md`(CD-22進捗アイコン/A-3未回答フレーム/B-1・B-2 答えペイン=respell主役/CD-14見出し/3dストリーク撤去/1a-pcキャプション)。Naoya が Claude Design 反映 → エクスポート → repo CD 一括同期 → app 一致実装。
   - ⏭️ **app 先行可(CD非依存)**: POS i18n・GA=RP畳み・streak撤去・要注意音厳選・respell表示・語彙2カラム。
+  - ✅ **app 一致実装 完了(全4 Phase, develop 反映)**: Phase1=ドリル統合カード(ヘッダー内包/未回答単カラム600px/回答後2ペイン paper|panel・背景同化解消) / Phase2=答えペイン CD 完全一致(正解バッジ・読み方respell主役・GA/RP発音カード枠(GA=RP畳み)・発音ポイント枠・次へteal、renderPronCard 新設、reveal.correct/incorrect/pron_label 6言語追加、respell_label 重複キー一掃) / Phase3=2c(mode B study の空右ペイン破綻を単カラム化で修正)/2d クリーン / Phase4=語彙 PC2カラム(rebuildVirtSlots に cols、row2 ペア化、vocabRowHeight を GA=RP に補正)。2a/2b/2c/2d/語彙/モバイル で検証、コンソールエラーなし、i18n 緑。develop: `0a9d3d2`。
   - 📌 **「全言語でUI差異」検証結果**: 1a の CSS/構造は**言語非依存**(`:lang()`/lang別body class なし、build は文言と `<html lang>` のみ差替)。en/ja/ko/zh-Hans/zh-Hant/fil すべて同一構造を確認。ユーザが見た「英語だけ縦積み」は **1024px ブレークポイント未満**の応答的レイアウト(狭い窓)であり言語差ではない。※ 抜本見直し(IPA導線の露出度・トップ IA)は Naoya と方向確認中。
 - **Phase 4/5**: 未(Sonnet 1次Rv → Opus 横断2次Rv)
 
