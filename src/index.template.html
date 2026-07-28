@@ -288,7 +288,10 @@
   @keyframes mbsFadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
   .mbs-actions{position:relative;margin-top:16px;height:52px}
   .mbs-actions .btn-reveal,.mbs-actions .reveal-next{position:absolute;inset:0;margin:0;width:100%;box-sizing:border-box;min-height:52px}
-  .btn-reveal{width:100%;padding:14px;border:2px solid var(--legacy-signal);background:transparent;color:var(--legacy-signal);border-radius:12px;font-size:1rem;font-weight:600;cursor:pointer;margin-top:8px;font-family:var(--legacy-ui)}
+  /* Phase-3 round-5: 2c「意味を確認する」は他ドリルの「答え合わせ / 次へ」と同じ塗り teal に統一。
+     以前は outline (border+color signal) で他ボタンと非一貫だった。 */
+  .btn-reveal{width:100%;padding:14px;border:none;background:var(--legacy-signal);color:#fff;border-radius:11px;font-size:15px;font-weight:700;cursor:pointer;margin-top:8px;font-family:var(--legacy-ui);letter-spacing:.03em}
+  .btn-reveal:active{transform:translateY(1px)}
   .btn-reveal.hidden{display:none}
 
   /* ---- Phase V: Vocabulary page ---- */
@@ -722,7 +725,8 @@
   #cardModeBStudy .seg.sel{background:var(--signal-soft);color:var(--signal)}
   #cardModeBStudy .slash{color:var(--signal)}
   #cardModeBStudyAnswer .wordbig{font-family:var(--font-ui);color:var(--ink)}
-  #cardModeBStudy .btn-reveal{border-color:var(--signal);color:var(--signal);font-family:var(--font-ui);border-radius:var(--radius-button)}
+  /* Phase-3 round-5: mode B の「意味を確認する」も塗り teal に (.btn-reveal 上位で統一済み) */
+  #cardModeBStudy .btn-reveal{background:var(--signal);color:#fff;border:none;font-family:var(--font-ui);border-radius:var(--radius-button)}
   #cardModeBStudyAnswer .reveal-next{background:var(--signal);font-family:var(--font-ui);border-radius:var(--radius-button)}
 
   /* Phase 1-C/B: Mood B components (visual-tokens §4) */
@@ -1005,25 +1009,41 @@
     body.in-play.drill-two-pane #onboardingModal{grid-column:1 / -1}
     /* 左=出題(paper) / 右=答え(panel)、中央 hair の仕切り。外枠(.wrap)が境界なので背景と同化しない
        Phase-3 round-4: `.hidden`(display:none)を上書きしないよう `:not(.hidden)` で保護。
-       round-3 で hidden なペインまで表示されてしまう bug の修正。 */
+       Phase-3 round-5: 「答え合わせ前後で高さが変わる」問題の根本対処。
+       grid は align-items:start でペイン独立、各ペインは各ドリルごとに最適な固定 height、
+       内容が超えたら overflow-y:auto で内部スクロール。ボタンは margin-top:auto で下端固定。 */
+    body.in-play.drill-two-pane .wrap{align-items:start}
     body.in-play.drill-two-pane #cardDecode.panel:not(.hidden),
     body.in-play.drill-two-pane #cardEncode.panel:not(.hidden),
     body.in-play.drill-two-pane #cardModeBStudy.panel:not(.hidden),
     body.in-play.drill-two-pane #cardModeBMcq.panel:not(.hidden),
     body.in-play.drill-two-pane #cardModeBDict.panel:not(.hidden){
       background:var(--paper);border:none;border-right:1px solid var(--hair);border-radius:0;box-shadow:none;margin:0;padding:44px 40px;
-      /* Phase-3 round-3: ボタン位置固定 + 答え合わせ前後で高さジャンプさせない */
-      display:flex;flex-direction:column;min-height:600px
+      display:flex;flex-direction:column;overflow-y:auto
     }
     body.in-play.drill-two-pane #cardModeBStudyAnswer.panel:not(.hidden),
     body.in-play.drill-two-pane #reveal.panel:not(.hidden){
       background:var(--panel);border:none;border-radius:0;box-shadow:none;margin:0;padding:44px 40px;
-      display:flex;flex-direction:column;min-height:600px
+      display:flex;flex-direction:column;overflow-y:auto
     }
-    /* 「答え合わせ」「次へ」ボタンを常にペイン下部にアンカー (margin-top:auto)。
-       2a decode(.answer)、2c mode B、2d、reveal(.reveal-next) はカバー。
-       2b encode は kbd(キーボード)が下部に必要なので妥協(現状維持)。 */
+    /* ドリルごとの最適 height。左右ペインで揃える(左右の grid cell に個別 height を回す難しさから、
+       ドリルモードは body.drill-mode-{2a|2b|2c|2d} を JS で付与して両ペインに一括反映する運用)。 */
+    body.in-play.drill-mode-2a #cardDecode.panel:not(.hidden),
+    body.in-play.drill-mode-2a #reveal.panel:not(.hidden){height:620px}
+    body.in-play.drill-mode-2b #cardEncode.panel:not(.hidden),
+    body.in-play.drill-mode-2b #reveal.panel:not(.hidden){height:760px}
+    body.in-play.drill-mode-2c #cardModeBStudy.panel:not(.hidden),
+    body.in-play.drill-mode-2c #cardModeBStudyAnswer.panel:not(.hidden),
+    body.in-play.drill-mode-2c #cardModeBMcq.panel:not(.hidden),
+    body.in-play.drill-mode-2c #cardModeBDict.panel:not(.hidden),
+    body.in-play.drill-mode-2c #reveal.panel:not(.hidden){height:600px}
+    body.in-play.drill-mode-2d #cardDecode.panel:not(.hidden),
+    body.in-play.drill-mode-2d #reveal.panel:not(.hidden){height:780px}
+    /* ボタン(答え合わせ / 次へ / 意味を確認する)を常にペイン下部にアンカー。
+       ペイン height が固定 → margin-top:auto でボタン位置がドリル前後で一致する。 */
     body.in-play.drill-two-pane #cardDecode:not(.hidden) .answer,
+    body.in-play.drill-two-pane #cardEncode:not(.hidden) .kbtns,
+    body.in-play.drill-two-pane #cardModeBStudy:not(.hidden) .btn-reveal,
     body.in-play.drill-two-pane #cardModeBDict:not(.hidden) .answer,
     body.in-play.drill-two-pane #reveal:not(.hidden) .reveal-next{margin-top:auto}
     /* app-improve: STEP ラベルは集約ヘッダーの title と重複するため常時非表示に統一
@@ -3537,6 +3557,8 @@ const PH_EXAMPLES={
 function applyDrillId(drillId){
   const id=drillId||"2a";
   S.lastDrill=id;
+  // Phase-3 round-5: body に drill-mode-{2a..2d} を付与し CSS で height を個別最適化
+  ["2a","2b","2c","2d"].forEach(m=>document.body.classList.toggle("drill-mode-"+m, m===id));
   if(id==="2a"){S.appMode="a";S.tab="words";S.dir="decode";}
   else if(id==="2b"){S.appMode="a";S.tab="words";S.dir="encode";}
   else if(id==="2c"){S.appMode="b";S.tab="words";S.dir="decode";}
@@ -3569,6 +3591,8 @@ function hidePracticePanels(){
 /** Purpose stub home (Phase 1-C). */
 function showPurposeHome(){
   document.body.classList.remove("drill-two-pane");
+  // Phase-3 round-5: drill-mode-* body class を確実にクリア(TOP に戻ったら height の残留を防ぐ)
+  ["2a","2b","2c","2d"].forEach(m=>document.body.classList.remove("drill-mode-"+m));
   if($("taskHeader")) $("taskHeader").hidden = true;
 
   hidePracticePanels();
