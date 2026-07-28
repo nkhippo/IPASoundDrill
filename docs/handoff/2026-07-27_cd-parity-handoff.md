@@ -66,7 +66,25 @@ CD(Claude Design、`docs/claude-design/{sp,pc}.dc.html`)と実UIを **文言以�
   - 📌 **「全言語でUI差異」検証結果**: 1a の CSS/構造は**言語非依存**(`:lang()`/lang別body class なし、build は文言と `<html lang>` のみ差替)。en/ja/ko/zh-Hans/zh-Hant/fil すべて同一構造を確認。ユーザが見た「英語だけ縦積み」は **1024px ブレークポイント未満**の応答的レイアウト(狭い窓)であり言語差ではない。※ 抜本見直し(IPA導線の露出度・トップ IA)は Naoya と方向確認中。
   - ✅ **app 一致実装 追加(develop `efe844d` まで)**: 1a TOP を CD-22(進捗→ヘッダーアイコン/hero単カラム)に一致。ドリル**共通UI化**(2a/2b/2d を左右2ペインに統一: 未回答=左出題(半画面)+右プレースホルダ`setRevealPending`/回答後=左入力非活性`body.drill-answered`)。共通修正: 「おしい」→「不正解」・進捗バー`max-width:420`撤去・ページ地 canvas 色(#E7E1D7)でカード分離+影・語彙CD一致(カード統一/全消去+記号ピッカー/検索GA-RP両対応)・i18n(reveal.incorrect/pending/pron_label/correct, vocab.filter.clear/picker, 数詞, respell_label重複一掃)。
 
-### 🔜 次セッション TODO(Naoya フィードバック 2026-07-28・未対応)
+### ✅ 2026-07-28 フィードバック 対応完了(develop `5608b46`)
+1. 2c(mode B study)を共通の左右2ペインに統一(左=音+IPA/右=意味確認前プレースホルダ→確認後に答え)。
+2. ヘッダーアイコン間隔を均等化(34px・gap8)。
+3. フッター Terms/Privacy/Feedback を各言語化(日=利用規約/プライバシーポリシー/フィードバック, 6言語)。
+4. 答えペイン整理: 読み方(respell)/辞書表記/曖昧なメインIPAを撤去→IPAは発音カードのGA/RP行に一本化(GA/RP明示)。
+5. 語彙: 記号ピッカーボタン廃止→IPAキーボード常時表示+ラベル(GA/RP両検索)、A–Zとの境界に区切り線。
+- 併せて: ドリル共通UI(2a/2b/2d左右2ペイン+未回答プレースホルダ+回答後入力非活性)、不正解表記、進捗バー、ページ地canvas色、1a=CD-22、語彙2カラム/カード統一 も develop 反映済。
+
+### 🔜 次セッション TODO
+**まず**: `git-develop` エイリアスで全画面(1a/2a/2b/2c/2d/語彙/モバイル)を実機確認。
+**残(軽微・未対応)**:
+- footer 遷移先ページ `terms.html` / `privacy.html` に Mood B デザイン適用(別HTMLファイル)。
+- 語彙キーボードで記号別の GA/RP バリエーション可視化(現状はラベルで「GA/RP両検索」を示すのみ)。
+- 2c の quiz/dict 派生(MODEB_QUIZ有効時)も左右2ペインに揃えるか要確認。
+- mode B 答えの語(mbSWord)色が ink、2a/2b(rWord)は accent → 統一するか判断。
+**CD round-trip(app先行分の反映指示書作成)**: ドリル共通UI(常時2ペイン+プレースホルダ+非活性)・語彙(キーボード常時+カード統一)・答えペイン整理 は app 先行。CD(docs/claude-design)へ反映する指示書を作成 → Naoya が Claude Design 反映。
+**本番反映**: develop→main の PR(Naoya ack 必須)。develop は main より大幅先行。
+
+### (旧)次セッション TODO(2026-07-28・対応済に移行)
 develop 最新 `efe844d`。`git-develop` エイリアスで確認。
 1. **2c(mode B)を左右2ペイン化**(承認済・別フロー): `renderModeBStudy`/`applyModeBStudyTwoPane` を 2a/2b と同じ骨格へ。左=音+IPA(cardModeBStudy)、右=意味確認前はプレースホルダ→確認後に答え(cardModeBStudyAnswer を drill-pane-answer 化 or #reveal 統合)。quiz/dict 派生も要考慮。
 2. **ヘッダーアイコン幅を均等に**: globe(lang-switcher)が ≣/📈 より広く見える。`.topbtn`/`.lang-switcher.topbtn` を同一サイズ・同一 gap に。
