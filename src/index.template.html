@@ -335,6 +335,11 @@
   .vocab-accent-toggle button{border:none;background:transparent;color:var(--muted);border-radius:6px;padding:3px 10px;font-size:11px;font-weight:700;font-family:var(--font-mono);cursor:pointer}
   .vocab-accent-toggle button[aria-pressed="true"]{background:var(--panel);color:var(--signal);font-weight:800;box-shadow:0 1px 2px rgba(0,0,0,.06)}
   .vocab-ipa-chips{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-top:9px}
+  .vocab-filter-actions{display:inline-flex;gap:8px;align-items:center;flex:none}
+  .vocab-filter-clear,.vocab-filter-picker{border:1px solid var(--hair);background:var(--panel);color:var(--muted);border-radius:999px;padding:6px 14px;font-size:12px;font-family:var(--font-ui);cursor:pointer;white-space:nowrap}
+  .vocab-filter-picker{border-color:var(--signal);color:var(--signal);background:var(--signal-soft);font-weight:700}
+  .vocab-filter-clear:hover{border-color:var(--faint);color:var(--ink)}
+  .vocab-chip-empty{font-size:12px;color:var(--faint);font-family:var(--font-ui)}
   .vocab-ipa-chips:empty{display:none}
   .vocab-chip{display:inline-flex;align-items:center;gap:5px;border:1px solid var(--signal);background:var(--signal-soft);color:var(--signal);border-radius:999px;padding:4px 5px 4px 10px;font-size:14px;font-weight:600;font-family:var(--font-ipa);flex:none;cursor:pointer}
   .vocab-chip-x{width:15px;height:15px;border-radius:999px;background:var(--signal);color:#fff;display:inline-flex;align-items:center;justify-content:center}
@@ -410,7 +415,8 @@
   .symbol-cell:hover,.symbol-cell:focus-visible{border-color:var(--signal);background:var(--signal-soft);color:var(--signal);outline:none}
   .ipa-match{color:var(--signal);font-weight:700}
   .vocab-group-head{font-family:var(--font-mono);font-size:10.5px;color:var(--faint);text-transform:uppercase;letter-spacing:.14em;padding:12px 2px 5px;border-bottom:1px solid var(--hair);margin-bottom:2px;position:sticky;top:0;background:var(--paper);z-index:1}
-  .vocab-row{display:block;padding:12px 15px;border:1px solid var(--hair);border-radius:14px;background:var(--panel);margin-bottom:8px}
+  .vocab-row{display:block;padding:12px 15px;border:1px solid var(--hair);border-radius:14px;background:var(--panel);margin-bottom:12px}
+  .vocab-same-note{font-size:11px;color:var(--faint);margin-left:6px;font-family:var(--font-ui)}
   .vocab-row-top{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
   .vocab-row-w,.vocab-w{font-family:var(--font-serif);font-weight:600;font-size:18px;color:var(--ink)}
   .vocab-samemark{font-family:var(--font-mono);font-size:10px;color:var(--faint);margin-left:auto}
@@ -1417,14 +1423,14 @@
         <div class="vocab-ipa-filter" id="vocabIpaFilterBar">
           <div class="vocab-ipa-filter-head">
             <span class="vocab-ipa-filter-label" id="vocabIpaFilterLabel"><span data-i18n="vocab.filter.ipa">IPA</span> <span class="vocab-ipa-filter-max" id="vocabIpaFilterMax" data-i18n="vocab.filter.ipa_max">(max 3)</span></span>
-            <div class="vocab-accent-toggle" id="vocabAccentToggle" role="group" aria-label="GA / RP">
-              <button type="button" data-accent="ga" aria-pressed="true" id="vocabAccentGa">GA</button>
-              <button type="button" data-accent="rp" aria-pressed="false" id="vocabAccentRp">RP</button>
+            <div class="vocab-filter-actions">
+              <button type="button" class="vocab-filter-clear hidden" id="vocabIpaClear" data-i18n="vocab.filter.clear">Clear all</button>
+              <button type="button" class="vocab-filter-picker" id="vocabIpaPicker" aria-expanded="false" data-i18n="vocab.filter.picker">Open picker</button>
             </div>
           </div>
           <div class="vocab-ipa-chips" id="vocabIpaChips"></div>
         </div>
-        <div class="vocab-ipa-keyboard" id="vocabIpaKeyboard"></div>
+        <div class="vocab-ipa-keyboard hidden" id="vocabIpaKeyboard"></div>
       </div>
       <div class="vocab-az-row">
         <span class="vocab-az-label">A–Z</span>
@@ -1674,7 +1680,7 @@ let vocabBuilt = false;
 let vocabIpaQuery = [];
 const VOCAB_CEFR_LEVELS = ["A1", "A2", "B1", "B2"];
 /* 3b card virtualization heights (CD #3b block card; incl. 8px bottom gap) */
-const VOCAB_CARD_BASE = 108;   // border+padding+word row+ipas margin+GA row+gap (measured: gloss+rp card ≈182)
+const VOCAB_CARD_BASE = 112;   // border+padding+word row+ipas margin+GA row+gap(12) (統一カード)
 const VOCAB_CARD_GLOSS = 23;   // single-line gloss row
 const VOCAB_CARD_RP = 51;      // RP row (divider + padding + speaker)
 const VOCAB_HEAD_H = 32;
@@ -1788,6 +1794,8 @@ function applyI18nVocab() {
   if (ipaFilterLabel) ipaFilterLabel.textContent = t("vocab.filter.ipa");
   const ipaFilterMax = $("vocabIpaFilterMax");
   if (ipaFilterMax) ipaFilterMax.textContent = t("vocab.filter.ipa_max");
+  if ($("vocabIpaClear")) $("vocabIpaClear").textContent = t("vocab.filter.clear");
+  if ($("vocabIpaPicker")) $("vocabIpaPicker").textContent = t("vocab.filter.picker");
   if ($("accentGaName")) $("accentGaName").textContent = t("accent.ga");
   if ($("accentRpName")) $("accentRpName").textContent = t("accent.rp");
   renderVocabIpaFilterBar();
@@ -1839,9 +1847,8 @@ function vocabRowHeight(c) {
   const g = vocabDisplayGloss(c);
   let h = VOCAB_CARD_BASE;
   if (g && String(g).trim()) h += VOCAB_CARD_GLOSS;
-  // GA=RP 同一なら RP 行は描かない(=高さも予約しない)
-  const isSame = (c && c.ga_rp_same !== undefined) ? c.ga_rp_same : (c && c.rp_ipa === c.ipa);
-  if (c && c.rp_ipa && !isSame) h += VOCAB_CARD_RP;
+  // カード統一: GA/RP を常に2行表示するため RP 行の高さを常に予約
+  h += VOCAB_CARD_RP;
   return h;
 }
 
@@ -1977,17 +1984,17 @@ function vocabWordRowHtml(c, highlightQ) {
     ? `<span class="vocab-cefr-badge vocab-cefr-${escAttr(cefrLabel)}">${escHtml(cefrLabel)}</span>`
     : "";
   const isSame = (c.ga_rp_same !== undefined) ? c.ga_rp_same : (rpIpa === gaIpa);
-  const sameMark = isSame && rpIpa ? `<span class="vocab-samemark">GA=RP</span>` : "";
   const listen = escAttr(t("listen"));
   const glossStr = gloss ? `<div class="vocab-row-gloss">${escHtml(gloss)}</div>` : "";
+  // カードデザイン統一(CD 3b-pc): GA/RP は常に2行。GA=RP は RP 行に「（同じ）」を添えて共通を明示
   const gaRow = `<div class="vocab-ipa-ga"><span class="vocab-ipa-label">GA</span><span class="vocab-ipa-val">${vocabFmtIpa(gaIpa, highlightQ)}</span><button class="vocab-play" type="button" data-vw="${escAttr(c.w)}" data-vaccent="ga" aria-label="${listen}">${SPEAKER_SVG}</button></div>`;
-  // GA=RP が実質同一なら重複する RP 行は出さない(GA 行＋「GA=RP」バッジで表現)
-  const rpRow = (rpIpa && !isSame)
-    ? `<div class="vocab-ipa-rp"><span class="vocab-ipa-label">RP</span><span class="vocab-ipa-val">${vocabFmtIpa(rpIpa, highlightQ)}</span><button class="vocab-play" type="button" data-vw="${escAttr(c.w)}" data-vaccent="rp" aria-label="${listen}">${SPEAKER_SVG}</button></div>`
+  const sameNote = isSame ? `<span class="vocab-same-note">（${escHtml(t("reveal.alt_same"))}）</span>` : "";
+  const rpRow = (rpIpa || isSame)
+    ? `<div class="vocab-ipa-rp"><span class="vocab-ipa-label">RP</span><span class="vocab-ipa-val">${vocabFmtIpa(rpIpa || gaIpa, highlightQ)}${sameNote}</span><button class="vocab-play" type="button" data-vw="${escAttr(c.w)}" data-vaccent="rp" aria-label="${listen}">${SPEAKER_SVG}</button></div>`
     : "";
   return `<div class="vocab-row">
       <div class="vocab-row-top">
-        <span class="vocab-row-w">${escHtml(c.w)}</span>${cefrBadge}${posStr}${sameMark}
+        <span class="vocab-row-w">${escHtml(c.w)}</span>${cefrBadge}${posStr}
       </div>
       ${glossStr}
       <div class="vocab-row-ipas">
@@ -2254,10 +2261,9 @@ function renderVocabIpaFilterBar() {
   const chips = vocabIpaQuery.map((s, i) =>
     `<button type="button" class="vocab-chip" data-chip-idx="${i}" aria-label="${escAttr(s)}">${escHtml(s)}${xIcon}</button>`
   ).join("");
-  const addChip = vocabIpaQuery.length < 3
-    ? `<button type="button" class="vocab-chip-add" id="vocabIpaAdd"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg><span>${escHtml(t("vocab.filter.add"))}</span></button>`
-    : "";
-  chipsEl.innerHTML = chips + addChip;
+  chipsEl.innerHTML = chips || `<span class="vocab-chip-empty">${escHtml(t("vocab.filter.add"))}</span>`;
+  const clearBtn = $("vocabIpaClear");
+  if (clearBtn) clearBtn.classList.toggle("hidden", vocabIpaQuery.length === 0);
   const accent = ACCENT === "rp" ? "rp" : "ga";
   kbEl.innerHTML = vocabIpaKeyboardSymbols(accent).map(s =>
     `<span class="vocab-ipa-key${vocabIpaQuery.includes(s) ? " is-active" : ""}" data-symbol="${escAttr(s)}">${escHtml(s)}</span>`
@@ -3171,8 +3177,8 @@ function renderSymbolQueryChips() {
  * @returns {string}
  */
 function wordIpaForSearch(c) {
-  if (ACCENT === "rp") return c.rp_ipa || c.ipa || "";
-  return c.ipa || "";
+  // GA/RP トグル廃止(両行常時表示)に伴い、GA・RP どちらの IPA でもヒットさせる
+  return (c.ipa || "") + " " + (c.rp_ipa || "");
 }
 
 /**
@@ -5484,10 +5490,15 @@ $("drillProgressStack").addEventListener("click",e=>{
   if(card)openDrillProfile(card.dataset.progressDrill);
 });
 $("symbolQueryClear").addEventListener("click",()=>symbolQueryClearAll());
-$("vocabAccentToggle").addEventListener("click",e=>{
-  const btn=e.target.closest("button[data-accent]");
-  if(btn)setVocabAccent(btn.dataset.accent);
+// 記号ピッカーを開く: インライン IPA キーボードの表示/非表示を切替(CD 3b-pc)
+if($("vocabIpaPicker")) $("vocabIpaPicker").addEventListener("click",()=>{
+  const kb=$("vocabIpaKeyboard"); if(!kb)return;
+  const open=kb.classList.toggle("hidden")===false;
+  $("vocabIpaPicker").setAttribute("aria-expanded", open?"true":"false");
+  if(open) kb.scrollIntoView({block:"nearest"});
 });
+// 全消去: IPA 絞り込みチップを全てクリア
+if($("vocabIpaClear")) $("vocabIpaClear").addEventListener("click",()=>{ vocabIpaQuery.length=0; renderVocabWords(); renderVocabIpaFilterBar(); });
 $("symbolPalette").addEventListener("click",e=>{
   const cell=e.target.closest(".symbol-cell");
   if(!cell)return;
@@ -5520,10 +5531,6 @@ $("vocabIpaKeyboard").addEventListener("click",e=>{
   vocabIpaQueryPush(cell.dataset.symbol);
 });
 $("vocabIpaChips").addEventListener("click",e=>{
-  if(e.target.closest("#vocabIpaAdd")){
-    $("vocabIpaKeyboard").scrollIntoView({block:"nearest"});
-    return;
-  }
   const chip=e.target.closest("[data-chip-idx]");
   if(!chip) return;
   vocabIpaQueryRemoveAt(parseInt(chip.dataset.chipIdx,10));

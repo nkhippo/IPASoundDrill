@@ -71,7 +71,9 @@
       "ipa": "Salain ayon sa IPA",
       "all": "Lahat",
       "ipa_max": "(hanggang 3)",
-      "add": "Magdagdag ng simbolo"
+      "add": "Magdagdag ng simbolo",
+      "clear": "Burahin lahat",
+      "picker": "Buksan ang picker"
     },
     "count": {
       "filtered": "Nasala · {accent} bigkas na may {syms} · {n}",

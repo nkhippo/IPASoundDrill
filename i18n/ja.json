@@ -133,7 +133,9 @@
       "ipa": "IPAで絞り込み",
       "all": "全て",
       "ipa_max": "(最大3)",
-      "add": "記号を追加"
+      "add": "記号を追加",
+      "clear": "全消去",
+      "picker": "記号ピッカーを開く"
     },
     "count": {
       "filtered": "絞り込み結果 · {syms} を含む {accent} 発音 · {n}件",

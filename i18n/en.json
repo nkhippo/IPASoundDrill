@@ -133,7 +133,9 @@
       "ipa": "Filter by IPA",
       "all": "All",
       "ipa_max": "(max 3)",
-      "add": "Add symbol"
+      "add": "Add symbol",
+      "clear": "Clear all",
+      "picker": "Open picker"
     },
     "count": {
       "filtered": "Filtered · {accent} pronunciations with {syms} · {n}",

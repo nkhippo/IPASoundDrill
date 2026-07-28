@@ -133,7 +133,9 @@
       "ipa": "以 IPA 篩選",
       "all": "全部",
       "ipa_max": "(最多3個)",
-      "add": "新增符號"
+      "add": "新增符號",
+      "clear": "全部清除",
+      "picker": "開啟符號選擇器"
     },
     "count": {
       "filtered": "篩選結果 · 含 {syms} 的 {accent} 發音 · {n}個",
