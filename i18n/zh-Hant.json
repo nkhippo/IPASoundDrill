@@ -151,7 +151,7 @@
     "incorrect": "錯誤",
     "pron_label": "發音（🔊 播放）",
     "alt_same": "相同",
-    "pending": "核對後，這裡會顯示正確答案、讀法與發音"
+    "pending": "核對後，這裡會顯示正確答案與發音"
   },
   "lang_opts": {
     "en": "English",
