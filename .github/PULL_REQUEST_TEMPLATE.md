@@ -28,4 +28,5 @@
 
 ## 関連 Issue
 
-Closes #N
+Refs #N
+<!-- develop 向け PR では Closes を使わない（Issue は main マージ時にクローズする）。Refs で関連付けのみ行う -->
