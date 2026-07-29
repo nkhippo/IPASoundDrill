@@ -357,9 +357,9 @@ def process(items: list[dict], word_field: str = "w") -> dict:
 
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--wordlist", default="wordlist_GA_a1a2_plus_phonics.json")
-    ap.add_argument("--connected", default="data/connected_speech.json")
-    ap.add_argument("--weak", default="data/weak_forms.json")
+    ap.add_argument("--wordlist", default="packages/core/data/wordlist.json")
+    ap.add_argument("--connected", default="packages/core/data/connected_speech.json")
+    ap.add_argument("--weak", default="packages/core/data/weak_forms.json")
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--report", default=None,
                     help="Optional path to write a JSON report of counts and samples.")

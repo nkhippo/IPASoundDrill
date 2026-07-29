@@ -398,7 +398,7 @@ def main() -> int:
     if args.check:
         old_text = OUT.read_text(encoding="utf-8") if OUT.exists() else None
         if old_text != new_text:
-            print(f"docs/impact-ledger.json is out of date (run: python3 scripts/gen_impact_ledger.py)")
+            print(f"docs/impact-ledger.json is out of date (run: python3 tools/impact-ledger/gen_impact_ledger.py)")
             return 1
         print("docs/impact-ledger.json is up to date.")
         return 0

@@ -1,6 +1,6 @@
-# `data/pipeline/` — IPA / respelling ステージング
+# `tools/data-pipeline/pipeline/` — IPA / respelling ステージング
 
-`scripts/generate_flap_ipa.py` 等が読み書きする**中間 JSON**。ブラウザからは読み込まない。
+`tools/data-pipeline/generate_flap_ipa.py` 等が読み書きする**中間 JSON**。ブラウザからは読み込まない。
 
 | File | Role |
 |------|------|
@@ -14,4 +14,4 @@
 
 レビュー手順: `docs/reference/r4-pending-review-guide.md`
 
-パス正本: `scripts/paths.py`
+パス正本: `tools/data-pipeline/paths.py`

@@ -16,7 +16,7 @@ became "ɑː", every "r" was dropped), which incorrectly deleted /r/ in
   artistry   /ˈɑrtəstri/  → (v1, WRONG) /ˈɑːtəstiː/  (v2) /ˈɑːtəstriː/
 
 This module is the OFFLINE FALLBACK only — the primary RP source is
-Britfone direct lookup, with scripts/gen_rp_ipa.py (Claude API) filling
+Britfone direct lookup, with tools/data-pipeline/gen_rp_ipa.py (Claude API) filling
 remaining gaps. This script exists for words neither source covers.
 """
 from __future__ import annotations

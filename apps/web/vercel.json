@@ -1,6 +1,6 @@
 {
-  "buildCommand": "node scripts/build-i18n-html.js",
-  "outputDirectory": ".",
+  "buildCommand": "cd ../.. && pnpm install && pnpm --filter @ipasounddrill/web build",
+  "outputDirectory": "public",
   "cleanUrls": true,
   "rewrites": [
     { "source": "/en", "destination": "/en/index.html" },
@@ -8,7 +8,8 @@
     { "source": "/ko", "destination": "/ko/index.html" },
     { "source": "/zh-Hans", "destination": "/zh-Hans/index.html" },
     { "source": "/zh-Hant", "destination": "/zh-Hant/index.html" },
-    { "source": "/fil", "destination": "/fil/index.html" }
+    { "source": "/fil", "destination": "/fil/index.html" },
+    { "source": "/wordlist_GA_a1a2_plus_phonics.json", "destination": "/data/wordlist.json" }
   ],
   "headers": [
     {
