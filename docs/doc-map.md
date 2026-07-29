@@ -59,6 +59,8 @@ Issue B は既存ファイルを削除しない。CLAUDE.md からは router に
 | data/ 配下の役割分担 | `data/README.md` | exists | data/ 役割変更時 |
 | エージェント定義（issue-handler / pr-reviewer / consistency-auditor） | `.claude/agents/*.md` | exists | エージェント仕様変更時 |
 | CSS 変数命名・`--legacy-*` 運用・Track A CSS 技術制約（開発ゾーン） | `docs/CSS-CONVENTIONS.md` | exists | CSS 規約変更時 |
+| CSS トークン実装値（色・spacing・radius・shadow・font-family）snapshot | `docs/design/phase-1/visual-tokens.md`（実装用 snapshot、`docs/design/phase-1/design-tokens.md` が抽出元記録） | exists | トークン値変更時 |
+| デザイン原則・ペルソナ・voice/tone・感覚設計・アンチパターン（evergreen 設計入力） | `docs/design/{product-principles,user-personas,voice-and-tone,sensory-design,anti-patterns}.md` | exists | 設計方針変更時 |
 
 ---
 

@@ -75,3 +75,17 @@
 | Phase 1-D-PR2 後 | 249 | ドリル `2c`/`2d` + Reveal 共通 Mood B |
 | Phase 1-E PR-1 後 | **228** | `#vocabPage` / `#symbolPickerPage` Mood B 化（249→228） |
 | Phase 1-E PR-2 後 | **228** | `#learningStatusPage` は新トークンのみで追加。既存 legacy 参照は不変 |
+| Phase 3（2026-07-28〜29 UI 改修）後 | **195** | モーダル方式変更（`.info-page` の全画面→ scrim + 浮遊カード化）・フッター整理・ドリル系画面の新トークン移行で 228→195（`grep -c 'var(--legacy-' src/index.template.html` 実測） |
+
+### Phase 3 で追加された CSS クラス/変数の規約（実例）
+
+Phase 3（2026-07-28〜29）の UI 改修で追加された代表的な非 legacy クラス。§1 の「新規追加は非 legacy トークンを使う」原則の実例として記録:
+
+| クラス | 用途 | 備考 |
+|---|---|---|
+| `.info-page` / `.info-page-inner` / `.info-page-head` / `.info-page-body` | 「IPA って何?」/ 言語設定オーバーレイの scrim + 浮遊カード構造（旧: 全画面ページ） | `.modal-scrim` と同じ scrim パターンに統一。新トークン（`--paper` / `--ink` / `--hair` / `--font-serif` 等）のみ使用 |
+| `.modal-scrim` / `.modal-card` | 汎用モーダルの scrim + カード二層構造（About / Onboarding 等でも共有） | `position:absolute;inset:0` の scrim ボタン + `.modal-card` の組み合わせが標準パターン |
+| `.drill-accent-badge` | ドリル画面ヘッダーの GA/RP 固定バッジ | 新トークンのみ。`data-role="drill-accent"` と併用 |
+| `.vocab-az-row` | 語彙ブラウザの A–Z ジャンプ行（ラベル強化） | `--panel` / `--hair` 等の新トークンで構成 |
+
+> Migration ログの記録義務（§5 表）は変数（CSS カスタムプロパティ）追加時のみ必須。クラス名追加は本節のような実例記録で足りる（毎回 Migration ログに 1 行追記する運用は課さない）。

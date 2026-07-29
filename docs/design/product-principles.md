@@ -76,7 +76,7 @@ IPA Sound Drill の意思決定原則を明文化。UI/UX の判断、機能追�
   - Motor Theory of Speech Perception (Liberman, 1985): 音の知覚は、その音を発する運動指令の内部シミュレーションを介して行われる
   - Speech Learning Model (SLM, Flege, 1995): 音の産出と知覚は同じ知覚音韻表象を共有する
 - **UI/UX への含意**:
-  - Mode A の Decode (音→スペル) と Encode (スペル→音) の両方向設計は、この循環を実装したもの
+  - 目的 `2a`（音の発音を確かめる／Decode: 音→スペル）と `2b`（発音から書いてみる／Encode: スペル→音）の両方向設計は、この循環を実装したもの（旧称 Mode A、目的 4 カード化で名称は廃止。設計思想は継承）
   - Encode を "Decode の反対の練習" ではなく "Decode を可能にする基礎" と位置づける
   - Reveal 画面で "口が作れる" 情報 (narrow IPA / respell / 口形図 (将来)) の表示が学習効果に直結
 - **反例**:
@@ -124,7 +124,7 @@ IPA Sound Drill の意思決定原則を明文化。UI/UX の判断、機能追�
 
 ### 原則 5: 各画面には 1 つの主軸情報がある。情報密度は制御する
 
-- **意味**: 各画面 (Setup, Decode, Encode, Mode B Study, Reveal, Summary, Vocab) には、"最も見てほしい情報" が 1 つある。他は補助
+- **意味**: 各画面 (Setup/プロフィール `3a`, Decode `2a`, Encode `2b`, Study `2c`, Reveal, Summary, Vocab) には、"最も見てほしい情報" が 1 つある。他は補助
 - **なぜ**: 情報過多は学習効果を下げる (Cognitive Load Theory の Germane Load 最大化)。UX 課題 C-10 (Reveal 情報密度過剰) はこの原則違反の典型
 - **UI/UX への含意**:
   - Reveal 画面の主軸は phonemic IPA、narrow IPA と respell は補助配置
