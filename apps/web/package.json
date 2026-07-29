@@ -1,0 +1,14 @@
+{
+  "name": "@ipasounddrill/web",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@ipasounddrill/core": "workspace:*"
+  },
+  "scripts": {
+    "build": "node scripts/copy-core-assets.js && node scripts/build-i18n-html.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
