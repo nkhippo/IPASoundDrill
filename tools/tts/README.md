@@ -2,7 +2,7 @@
 
 `gas/` 配下の Google Apps Script プロジェクト（`Code.gs` / `BatchWarm.gs` / `BatchWords.gs`）を
 リポジトリ内で管理するためのディレクトリ。API 仕様・キャッシュ設計・バッチ生成手順の詳細は
-[`gas/README.md`](gas/README.md) を参照。
+`tools/tts/gas/README.md` を参照。
 
 ## デプロイ手順の要点
 

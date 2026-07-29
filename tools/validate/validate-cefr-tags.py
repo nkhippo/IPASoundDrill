@@ -39,12 +39,13 @@ def validate_file(path: Path) -> list[str]:
 
 
 def main() -> int:
-    root = Path(__file__).resolve().parents[1]
+    root = Path(__file__).resolve().parents[2]
+    core_data = root / "packages" / "core" / "data"
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
         "--wordlist",
         type=Path,
-        default=root / "wordlist_GA_a1a2_plus_phonics.json",
+        default=core_data / "wordlist.json",
         help="Primary production wordlist (required)",
     )
     parser.add_argument(
@@ -52,8 +53,8 @@ def main() -> int:
         type=Path,
         nargs="*",
         default=[
-            root / "data" / "connected_speech.json",
-            root / "data" / "weak_forms.json",
+            core_data / "connected_speech.json",
+            core_data / "weak_forms.json",
         ],
         help="Optional extra JSON lists to validate",
     )

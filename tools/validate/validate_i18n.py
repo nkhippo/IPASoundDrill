@@ -16,15 +16,15 @@ i18n 整合性チェッカー  (IPA Sound Drill)
 from html.parser import HTMLParser
 import argparse, json, re, sys, glob, os
 
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-UI_DIR = os.path.join(ROOT, "i18n")
-PH_DIR = os.path.join(ROOT, "i18n", "phonemes")
-HTML = os.path.join(ROOT, "src", "index.template.html")
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+UI_DIR = os.path.join(ROOT, "packages", "core", "i18n")
+PH_DIR = os.path.join(ROOT, "packages", "core", "i18n", "phonemes")
+HTML = os.path.join(ROOT, "apps", "web", "src", "index.template.html")
 BASE = "en"
 RESIDUAL_JAPANESE_RE = re.compile(r"[\u3040-\u309f\u30a0-\u30ff]")
 PLACEHOLDER_RE = re.compile(r"\{[a-zA-Z_]+\}")
 ALLOWED_HTML_TAGS = {"a", "b", "br", "code", "em", "i", "p", "strong"}
-ALLOW_MISSING_HTML_REFS = {"audio_tap_hint"}  # runtime fallback is intentionally coded in src/index.template.html
+ALLOW_MISSING_HTML_REFS = {"audio_tap_hint"}  # runtime fallback is intentionally coded in apps/web/src/index.template.html
 VOID_HTML_TAGS = {"br"}
 
 ALLOW_EN_IDENTICAL = {
@@ -237,7 +237,7 @@ def main(strict=False):
         if r in ALLOW_MISSING_HTML_REFS:
             continue
         if r not in base_keys:
-            errors.append(f"[D] src/index.template.html が参照する未定義キー: t(\"{r}\")")
+            errors.append(f"[D] apps/web/src/index.template.html が参照する未定義キー: t(\"{r}\")")
     if dyn_prefixes:
         print(f"[D] 動的キー接頭辞(前方一致で許容): {sorted(dyn_prefixes)}")
 
