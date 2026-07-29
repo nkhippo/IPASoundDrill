@@ -11,6 +11,14 @@
 
 `#summary`
 
+| 要素 | 内容 |
+|------|------|
+| 正答率 | `.sumhead .bigstat#sumPct`（%表示） |
+| サマリー行 | `.substat#sumLine`（`summary.line`: 正解数/回答済み数/ミス数） |
+| 苦手音素 | `#weakWrap`: 見出し（`#weakHead`）+ リスト（`#weakList`、音素シンボル+ラベル+口の動きヒント+ミス回数。0件時は `summary.weak_none_*`） |
+| ミス単語レビュー | `.reviewlist#reviewList`（`summary.review`） |
+| CTA | `.sumbtns`: `#againBtn`（表示テキストは i18n `back_top`＝「TOP へ」。クリックで `goToTop()`）/ `#weakBtn`（`summary.weak_btn`＝苦手だけ復習。クリックで `startSession(true)`。ミスなし時 `disabled`） |
+
 ## 採点則・定数
 
 正答率は `ok` のみ(near 廃止)。

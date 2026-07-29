@@ -24,6 +24,8 @@
 
 ID 横断の共通シェル（トップバー・Footer・Modals）・セッションフロー・適応出題・視覚言語トークンは `docs/features/_common.md`。
 
+全画面の DOM セレクタ・要素名・表示条件・状態パターンの横断一覧（React 化デグレ確認用）は `docs/features/screen-inventory.md`。
+
 ---
 
 ## 読み方

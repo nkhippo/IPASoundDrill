@@ -40,6 +40,7 @@ Issue B は既存ファイルを削除しない。CLAUDE.md からは router に
 | 各 feature の挙動・画面・採点則+定数・データ・i18n キー | `docs/features/<id>.md` | exists | 該当 feature 変更時 |
 | feature ID 索引 | `docs/features/README.md` | exists | ID 追加時 |
 | ID 横断の共通シェル・セッションフロー・適応出題 | `docs/features/_common.md` | exists | 共通挙動変更時 |
+| 全画面の DOM セレクタ・要素名・表示条件・状態パターン横断一覧（React 化デグレ確認用） | `docs/features/screen-inventory.md` | exists | 画面構造変更時 |
 | ソースシンボル → feature_ids → scope → caller_areas | `docs/impact-ledger.json` | exists | ソース共通シンボル変更時（`scripts/gen_impact_ledger.py` 再実行） |
 | impact-ledger 運用プロトコル / impact-analysis halt ルール正本 | `docs/impact-ledger.md` | exists | 横展開ルール変更時 |
 | ランタイム 8 パス + JSON スキーマ + フィールド辞書 | `docs/data-contract.md` | exists | パス増減・スキーマ変更時 |
