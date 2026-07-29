@@ -4,6 +4,7 @@
 *.pre-phase0a.json
 scripts/*.log
 node_modules/
+**/node_modules
 /en/
 /ja/
 /ko/
