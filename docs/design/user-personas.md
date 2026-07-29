@@ -274,7 +274,7 @@ Naoya さん最終レビュー待ち。実感で違和感があれば修正。
 
 - Motor Theory of Speech Perception (Liberman & Mattingly, 1985) と対応
 - product-principles.md § 原則 2 (Production-Perception 循環) の理論的裏付け
-- Mode A の Decode + Encode 両方向設計の理論的支柱
+- 目的 `2a`（Decode）+ `2b`（Encode）両方向設計の理論的支柱（旧称 Mode A。目的 4 カード化で名称は廃止、設計思想は継承）
 
 ### P-2/P-3/P-4 共通洞察: L1 音韻フィルタは学習者ごとに異なる
 

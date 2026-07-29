@@ -78,6 +78,9 @@
     "count": {
       "filtered": "Nasala · {accent} bigkas na may {syms} · {n}",
       "all": "{n} entry"
+    },
+    "az": {
+      "hint": "lumipat ayon sa unang titik"
     }
   },
   "info": {

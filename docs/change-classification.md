@@ -77,7 +77,7 @@ Issue 起票時、本文冒頭に次を**必ず**含める。欠落・`TBD`・`�
 - **Level 昇格・降格履歴**: なし / （あれば経緯）
 ```
 
-UI 改修 Issue では CD（Claude Design）修正判定（A. CD 修正必須 / B. CD 意図的乖離 / C. CD 修正不要、`docs/guardrails.md` § CD 判定）も同ブロックに追記する。
+UI 改修 Issue では、正本 `src/index.template.html` を根拠として提示する。`docs/claude-design/{sp,pc}.dc.html` は凍結フレームカタログ（画面一覧用、更新義務なし）。見た目の確認は Vercel branch preview URL。旧 CD 修正判定(A/B/C)は 2026-07-28 に廃止(`docs/guardrails.md` §9)。
 
 ## 7. Level 昇格・降格運用
 

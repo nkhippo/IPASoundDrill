@@ -19,11 +19,13 @@
 
 ## 絶対ルール（常時適用）
 
-1. **Track A 制約**: 現行の静的 HTML + JSON + GAS TTS 構成を維持する。React 化・BE 移管は Track B(ローンチ後)。Track A の Issue は「ローンチブロッカーか否か」を明示する。
+1. **技術スタック制約**: 現行の静的 HTML + JSON + GAS TTS 構成を維持する。React 化・BE 移管は将来計画として Issue 管理するが、現行構成を前提に実装する。
 2. **ThinkGrindAi と混同しない**: Naoya は別プロジェクト `thinkgrindai`(Vite+React、Obsidian 履歴、7-step)も運用する。本リポは静的 HTML・GitHub リポ内 AI 履歴・4-step。両者を跨ぐ時は本ファイルを読み直す。
 3. **憶測回答禁止**: 不明な点は該当 docs を参照するか Naoya に確認する。仕様の正本は GitHub Issue 本文。
 4. **公開 URL を勝手に生成しない**: プログラミング支援に確信がある URL、ユーザ提供 URL、ローカルファイル由来のみ使用する。
-5. **branch**: Track A は main-first(全 PR の base は `main`)。Track B で develop-first に切替。
+5. **branch**: develop-first。全 PR の base は `develop`。`develop` → `main` のマージは Naoya の明示的指示で行う。
+6. **UI 仕様の正本**: `src/index.template.html`（実装）が唯一の正本。`docs/claude-design/{sp,pc,design-system}.dc.html` は凍結フレームカタログ（画面一覧用、更新義務なし、pixel-perfect 精度は保証しない）。Claude Design（外部 SaaS）は今後**更新しない・参照しない・反映を待たない**。UI 改修の見た目確認は Vercel branch preview URL で行う。詳細は `docs/claude-design/README.md`。
+7. **Issue-first 必須**: 壁打ちで合意した UI 改修・機能変更は、**実装着手前に必ず Issue を起票する**。同一セッション内の ClaudeCode 実装であっても例外なし。Issue なしの PR 作成は禁止。詳細は `docs/workflow.md` §2a。
 
 ---
 
@@ -31,8 +33,8 @@
 
 | 役割 | 担当 | 作業 |
 |---|---|---|
-| 壁打ち + Issue 起票 | Claude(Naoya と対話) | 要件整理・Issue 本文作成・起票 |
-| 実装 | 原則 Codex/Cursor が非同期(PR)。**情報伝達漏れが起きやすい大規模ドキュメント/デザイン反映は ClaudeCode 同一セッション** | Issue を読んで実装・PR |
+| 壁打ち + Issue 起票 | Claude(Naoya と対話) | 要件整理・Issue 本文作成・**起票**（実装着手の前提条件） |
+| 実装 | 原則 Codex/Cursor が非同期(PR)。**情報伝達漏れが起きやすい大規模ドキュメント/デザイン反映は ClaudeCode 同一セッション** | **起票済み Issue** を読んで実装・PR |
 | PM・最終 merge | Naoya | 壁打ち + halt 質問への回答 + 最終 merge のみ |
 
 エージェント委譲・レビュー・auto-merge の詳細は `docs/workflow.md`。
@@ -44,6 +46,7 @@
 - **(a)** 多義な解釈が生じた
 - **(b)** ホワイトリスト(Issue 宣言の対象ファイル)を逸脱する必要が出た
 - **(c)** 実際の影響範囲(横展開)が Issue 宣言 scope と異なる(共通シンボルに触れて周辺機能に波及する等)
+- **(d)** 壁打ちから実装に移ろうとしているが、対応する Issue が起票されていない（Issue-first 違反）
 
 halt 経路: 同一セッション ClaudeCode → その場で Naoya に質問 / 非同期 Codex/Cursor → Issue コメント。
 
@@ -62,6 +65,7 @@ halt 経路: 同一セッション ClaudeCode → その場で Naoya に質問 /
 | Issue 起票・改修方針判断 | `docs/workflow.md`、`docs/change-classification.md` |
 | ドキュメント整備 | `docs/doc-map.md`、`docs/_conventions.md`、`docs/guardrails.md`(doc-sync) |
 | リポ構造 / インフラ変更 | `docs/repo-map.md` |
+| UI デザイン参照 / 見た目確認 | `docs/claude-design/{sp,pc,design-system}.dc.html`（凍結フレームカタログ）、`docs/claude-design/README.md`。見た目の正確な確認は Vercel branch preview URL |
 
 > 上表の各ホームは AI-first 再編（EPIC #169）で確立済み。各概念の現ホームと status は `docs/doc-map.md` を参照。
 

@@ -140,6 +140,9 @@
     "count": {
       "filtered": "絞り込み結果 · {syms} を含む {accent} 発音 · {n}件",
       "all": "全 {n}件"
+    },
+    "az": {
+      "hint": "頭文字で移動"
     }
   },
   "reveal": {

@@ -24,7 +24,7 @@
       -webkit-font-smoothing:antialiased;line-height:1.5;min-height:100vh}
     .legal-top{max-width:760px;margin:0 auto;padding:20px 20px 0}
     .legal-brand{display:inline-flex;align-items:baseline;gap:8px;text-decoration:none;color:var(--ink)}
-    .legal-brand .mark{font-family:var(--font-ipa);font-size:19px;color:var(--signal);letter-spacing:.02em}
+    .legal-brand .mark{font-family:var(--font-ipa);font-size:24px;color:var(--signal);letter-spacing:.02em}
     .legal-brand .name{font-weight:700;font-size:15px;letter-spacing:.02em}
     .legal-wrap{max-width:760px;margin:0 auto;padding:24px 20px 64px}
     .legal-card{background:var(--panel);border:1px solid var(--hair);border-radius:20px;
@@ -57,107 +57,558 @@
 </head>
 <body>
 <header class="legal-top">
-  <a class="legal-brand" href="/"><span class="mark">/iː/</span><span class="name">IPA Sound Drill</span></a>
+  <a class="legal-brand" href="/"><span class="mark">/iː/</span><span class="name" data-i18n="brand_name">IPA Sound Drill</span></a>
 </header>
 <main class="legal-wrap">
 <article class="legal-card">
-<h1>Privacy Policy</h1>
-<p class="updated">Last updated: 2026-07-13</p>
+<h1 data-i18n="h1">Privacy Policy</h1>
+<p class="updated" data-i18n="updated">Last updated: 2026-07-13</p>
 <div class="rule"></div>
 
-<h2>1. Introduction</h2>
-<p>IPA Sound Drill respects your privacy. This Privacy Policy explains what information we collect, how we use it, and your rights.</p>
+<h2 data-i18n="s1_h">1. Introduction</h2>
+<p data-i18n="s1_p">IPA Sound Drill respects your privacy. This Privacy Policy explains what information we collect, how we use it, and your rights.</p>
 
-<h2>2. Information We Collect</h2>
+<h2 data-i18n="s2_h">2. Information We Collect</h2>
 
-<h3>2.1 Analytics Data (via Vercel Web Analytics)</h3>
-<p>We use Vercel Web Analytics, which collects:</p>
+<h3 data-i18n="s21_h">2.1 Analytics Data (via Vercel Web Analytics)</h3>
+<p data-i18n="s21_p1">We use Vercel Web Analytics, which collects:</p>
 <ul>
-  <li>Page views (which URLs you visit)</li>
-  <li>Referrer (which site brought you here)</li>
-  <li>Device type (Desktop / Mobile / Tablet)</li>
-  <li>Browser and operating system</li>
-  <li>Country and region (based on IP address, IP is not stored)</li>
+  <li data-i18n="s21_li1">Page views (which URLs you visit)</li>
+  <li data-i18n="s21_li2">Referrer (which site brought you here)</li>
+  <li data-i18n="s21_li3">Device type (Desktop / Mobile / Tablet)</li>
+  <li data-i18n="s21_li4">Browser and operating system</li>
+  <li data-i18n="s21_li5">Country and region (based on IP address, IP is not stored)</li>
 </ul>
-<p><strong>No cookies are used.</strong> Vercel Analytics generates a 24-hour hash from your request, which resets daily.</p>
-<p>You can opt out by visiting <code>https://ipasounddrill.app/?va-disable=1</code>. This sets a LocalStorage flag on your device to disable analytics.</p>
+<p data-i18n-html="s21_p2"><strong>No cookies are used.</strong> Vercel Analytics generates a 24-hour hash from your request, which resets daily.</p>
+<p data-i18n-html="s21_p3">You can opt out by visiting <code>https://ipasounddrill.app/?va-disable=1</code>. This sets a LocalStorage flag on your device to disable analytics.</p>
 
-<h3>2.2 Feedback Data (via Tally.so)</h3>
-<p>When you submit our feedback form (powered by Tally.so), we collect:</p>
+<h3 data-i18n="s22_h">2.2 Feedback Data (via Tally.so)</h3>
+<p data-i18n="s22_p1">When you submit our feedback form (powered by Tally.so), we collect:</p>
 <ul>
-  <li>Your feedback text (required)</li>
-  <li>Your email address (optional, only if you want a reply)</li>
-  <li>User type (optional: learner / teacher / developer / other)</li>
+  <li data-i18n="s22_li1">Your feedback text (required)</li>
+  <li data-i18n="s22_li2">Your email address (optional, only if you want a reply)</li>
+  <li data-i18n="s22_li3">User type (optional: learner / teacher / developer / other)</li>
 </ul>
-<p>Email addresses are used only for replying to your feedback and are never shared or used for marketing.</p>
+<p data-i18n="s22_p2">Email addresses are used only for replying to your feedback and are never shared or used for marketing.</p>
 
-<h3>2.3 LocalStorage Data (stored on your device)</h3>
-<p>We store the following data in your browser's LocalStorage (not on our servers):</p>
+<h3 data-i18n="s23_h">2.3 LocalStorage Data (stored on your device)</h3>
+<p data-i18n="s23_p1">We store the following data in your browser's LocalStorage (not on our servers):</p>
 <ul>
-  <li>Language preference (<code>app_lang</code>)</li>
-  <li>Analytics opt-out setting (<code>va-disable</code>)</li>
-  <li>Learning progress (<code>ept_checks_v1</code>)</li>
+  <li data-i18n-html="s23_li1">Language preference (<code>app_lang</code>)</li>
+  <li data-i18n-html="s23_li2">Analytics opt-out setting (<code>va-disable</code>)</li>
+  <li data-i18n-html="s23_li3">Learning progress (<code>ept_checks_v1</code>)</li>
 </ul>
-<p>This data stays on your device and is not transmitted to our servers.</p>
+<p data-i18n="s23_p2">This data stays on your device and is not transmitted to our servers.</p>
 
-<h2>3. How We Use Your Information</h2>
+<h2 data-i18n="s3_h">3. How We Use Your Information</h2>
 <ul>
-  <li>To understand how users interact with the Service and improve it</li>
-  <li>To respond to feedback (if you provide an email address)</li>
-  <li>To maintain your learning progress on your device</li>
-</ul>
-
-<h2>4. Third-Party Services</h2>
-<p>The following third parties process data on our behalf:</p>
-<ul>
-  <li><strong>Vercel</strong>: hosting and analytics - <a href="https://vercel.com/legal/privacy-policy">Vercel Privacy Policy</a></li>
-  <li><strong>Tally.so</strong>: feedback form processing - <a href="https://tally.so/help/privacy-policy">Tally Privacy Policy</a></li>
-  <li><strong>Google Apps Script</strong>: text-to-speech proxy (no personal data sent)</li>
+  <li data-i18n="s3_li1">To understand how users interact with the Service and improve it</li>
+  <li data-i18n="s3_li2">To respond to feedback (if you provide an email address)</li>
+  <li data-i18n="s3_li3">To maintain your learning progress on your device</li>
 </ul>
 
-<h2>5. Cookies</h2>
-<p><strong>We do not use cookies.</strong> The LocalStorage data described in Section 2.3 is not a cookie and stays on your device.</p>
-
-<h2>6. Your Rights</h2>
-<p>Depending on your location, you may have the following rights:</p>
+<h2 data-i18n="s4_h">4. Third-Party Services</h2>
+<p data-i18n="s4_p">The following third parties process data on our behalf:</p>
 <ul>
-  <li><strong>Access</strong>: Request information about data we hold about you</li>
-  <li><strong>Deletion</strong>: Request deletion of your data (limited to Tally feedback data, as analytics is not tied to identifiable individuals)</li>
-  <li><strong>Opt-out</strong>: Disable analytics tracking (see Section 2.1)</li>
-</ul>
-<p>To exercise these rights, contact us via the <a href="https://tally.so/r/xX1axk">Feedback form</a>.</p>
-
-<h2>7. GDPR (EU/EEA Users)</h2>
-<p>Our legal basis for processing:</p>
-<ul>
-  <li>Analytics: Legitimate interest in understanding and improving the Service</li>
-  <li>Feedback: Your consent (via voluntary form submission)</li>
+  <li data-i18n-html="s4_li1"><strong>Vercel</strong>: hosting and analytics - <a href="https://vercel.com/legal/privacy-policy">Vercel Privacy Policy</a></li>
+  <li data-i18n-html="s4_li2"><strong>Tally.so</strong>: feedback form processing - <a href="https://tally.so/help/privacy-policy">Tally Privacy Policy</a></li>
+  <li data-i18n-html="s4_li3"><strong>Google Apps Script</strong>: text-to-speech proxy (no personal data sent)</li>
 </ul>
 
-<h2>8. CCPA (California Users)</h2>
-<p>We do not sell your personal information. California residents can request access to or deletion of their data via the <a href="https://tally.so/r/xX1axk">Feedback form</a>.</p>
+<h2 data-i18n="s5_h">5. Cookies</h2>
+<p data-i18n-html="s5_p"><strong>We do not use cookies.</strong> The LocalStorage data described in Section 2.3 is not a cookie and stays on your device.</p>
 
-<h2>9. Data Retention</h2>
+<h2 data-i18n="s6_h">6. Your Rights</h2>
+<p data-i18n="s6_p1">Depending on your location, you may have the following rights:</p>
 <ul>
-  <li>Vercel Analytics data: retained for 30 days (Hobby plan)</li>
-  <li>Tally feedback data: retained indefinitely, or until deletion request</li>
-  <li>LocalStorage data: retained until you clear your browser data</li>
+  <li data-i18n-html="s6_li1"><strong>Access</strong>: Request information about data we hold about you</li>
+  <li data-i18n-html="s6_li2"><strong>Deletion</strong>: Request deletion of your data (limited to Tally feedback data, as analytics is not tied to identifiable individuals)</li>
+  <li data-i18n-html="s6_li3"><strong>Opt-out</strong>: Disable analytics tracking (see Section 2.1)</li>
+</ul>
+<p data-i18n-html="s6_p2">To exercise these rights, contact us via the <a href="https://tally.so/r/xX1axk">Feedback form</a>.</p>
+
+<h2 data-i18n="s7_h">7. GDPR (EU/EEA Users)</h2>
+<p data-i18n="s7_p">Our legal basis for processing:</p>
+<ul>
+  <li data-i18n="s7_li1">Analytics: Legitimate interest in understanding and improving the Service</li>
+  <li data-i18n="s7_li2">Feedback: Your consent (via voluntary form submission)</li>
 </ul>
 
-<h2>10. Children's Privacy</h2>
-<p>The Service is not directed at children under 13. We do not knowingly collect personal information from children.</p>
+<h2 data-i18n="s8_h">8. CCPA (California Users)</h2>
+<p data-i18n-html="s8_p">We do not sell your personal information. California residents can request access to or deletion of their data via the <a href="https://tally.so/r/xX1axk">Feedback form</a>.</p>
 
-<h2>11. International Data Transfers</h2>
-<p>Vercel and Tally.so may process data in countries outside your location. These providers maintain appropriate safeguards for international data transfers.</p>
+<h2 data-i18n="s9_h">9. Data Retention</h2>
+<ul>
+  <li data-i18n="s9_li1">Vercel Analytics data: retained for 30 days (Hobby plan)</li>
+  <li data-i18n="s9_li2">Tally feedback data: retained indefinitely, or until deletion request</li>
+  <li data-i18n="s9_li3">LocalStorage data: retained until you clear your browser data</li>
+</ul>
 
-<h2>12. Changes to This Policy</h2>
-<p>We may update this Privacy Policy periodically. Changes will be posted here with an updated date.</p>
+<h2 data-i18n="s10_h">10. Children's Privacy</h2>
+<p data-i18n="s10_p">The Service is not directed at children under 13. We do not knowingly collect personal information from children.</p>
 
-<h2>13. Contact</h2>
-<p>For privacy-related questions, please contact us via the <a href="https://tally.so/r/xX1axk">Feedback form</a> or on <a href="https://x.com/nkhippo123">X (@nkhippo123)</a>.</p>
+<h2 data-i18n="s11_h">11. International Data Transfers</h2>
+<p data-i18n="s11_p">Vercel and Tally.so may process data in countries outside your location. These providers maintain appropriate safeguards for international data transfers.</p>
 
-<a class="legal-back" href="/"><span class="chev">&#8592;</span> Back to IPA Sound Drill</a>
+<h2 data-i18n="s12_h">12. Changes to This Policy</h2>
+<p data-i18n="s12_p">We may update this Privacy Policy periodically. Changes will be posted here with an updated date.</p>
+
+<h2 data-i18n="s13_h">13. Contact</h2>
+<p data-i18n-html="s13_p">For privacy-related questions, please contact us via the <a href="https://tally.so/r/xX1axk">Feedback form</a> or on <a href="https://x.com/nkhippo123">X (@nkhippo123)</a>.</p>
+
+<a class="legal-back" href="/"><span class="chev">&#8592;</span> <span data-i18n="brand_back">Back to IPA Sound Drill</span></a>
 </article>
 </main>
+<script>
+(function(){
+  const DICT = {
+    en: {
+      brand_name: "IPA Sound Drill",
+      brand_back: "Back to IPA Sound Drill",
+      _title: "Privacy Policy - IPA Sound Drill",
+      _desc: "Privacy Policy for IPA Sound Drill. We collect minimal data, use no cookies, and respect your privacy.",
+      h1: "Privacy Policy",
+      updated: "Last updated: 2026-07-13",
+      s1_h: "1. Introduction",
+      s1_p: "IPA Sound Drill respects your privacy. This Privacy Policy explains what information we collect, how we use it, and your rights.",
+      s2_h: "2. Information We Collect",
+      s21_h: "2.1 Analytics Data (via Vercel Web Analytics)",
+      s21_p1: "We use Vercel Web Analytics, which collects:",
+      s21_li1: "Page views (which URLs you visit)",
+      s21_li2: "Referrer (which site brought you here)",
+      s21_li3: "Device type (Desktop / Mobile / Tablet)",
+      s21_li4: "Browser and operating system",
+      s21_li5: "Country and region (based on IP address, IP is not stored)",
+      s21_p2: "<strong>No cookies are used.</strong> Vercel Analytics generates a 24-hour hash from your request, which resets daily.",
+      s21_p3: "You can opt out by visiting <code>https://ipasounddrill.app/?va-disable=1</code>. This sets a LocalStorage flag on your device to disable analytics.",
+      s22_h: "2.2 Feedback Data (via Tally.so)",
+      s22_p1: "When you submit our feedback form (powered by Tally.so), we collect:",
+      s22_li1: "Your feedback text (required)",
+      s22_li2: "Your email address (optional, only if you want a reply)",
+      s22_li3: "User type (optional: learner / teacher / developer / other)",
+      s22_p2: "Email addresses are used only for replying to your feedback and are never shared or used for marketing.",
+      s23_h: "2.3 LocalStorage Data (stored on your device)",
+      s23_p1: "We store the following data in your browser's LocalStorage (not on our servers):",
+      s23_li1: "Language preference (<code>app_lang</code>)",
+      s23_li2: "Analytics opt-out setting (<code>va-disable</code>)",
+      s23_li3: "Learning progress (<code>ept_checks_v1</code>)",
+      s23_p2: "This data stays on your device and is not transmitted to our servers.",
+      s3_h: "3. How We Use Your Information",
+      s3_li1: "To understand how users interact with the Service and improve it",
+      s3_li2: "To respond to feedback (if you provide an email address)",
+      s3_li3: "To maintain your learning progress on your device",
+      s4_h: "4. Third-Party Services",
+      s4_p: "The following third parties process data on our behalf:",
+      s4_li1: "<strong>Vercel</strong>: hosting and analytics - <a href=\"https://vercel.com/legal/privacy-policy\">Vercel Privacy Policy</a>",
+      s4_li2: "<strong>Tally.so</strong>: feedback form processing - <a href=\"https://tally.so/help/privacy-policy\">Tally Privacy Policy</a>",
+      s4_li3: "<strong>Google Apps Script</strong>: text-to-speech proxy (no personal data sent)",
+      s5_h: "5. Cookies",
+      s5_p: "<strong>We do not use cookies.</strong> The LocalStorage data described in Section 2.3 is not a cookie and stays on your device.",
+      s6_h: "6. Your Rights",
+      s6_p1: "Depending on your location, you may have the following rights:",
+      s6_li1: "<strong>Access</strong>: Request information about data we hold about you",
+      s6_li2: "<strong>Deletion</strong>: Request deletion of your data (limited to Tally feedback data, as analytics is not tied to identifiable individuals)",
+      s6_li3: "<strong>Opt-out</strong>: Disable analytics tracking (see Section 2.1)",
+      s6_p2: "To exercise these rights, contact us via the <a href=\"https://tally.so/r/xX1axk\">Feedback form</a>.",
+      s7_h: "7. GDPR (EU/EEA Users)",
+      s7_p: "Our legal basis for processing:",
+      s7_li1: "Analytics: Legitimate interest in understanding and improving the Service",
+      s7_li2: "Feedback: Your consent (via voluntary form submission)",
+      s8_h: "8. CCPA (California Users)",
+      s8_p: "We do not sell your personal information. California residents can request access to or deletion of their data via the <a href=\"https://tally.so/r/xX1axk\">Feedback form</a>.",
+      s9_h: "9. Data Retention",
+      s9_li1: "Vercel Analytics data: retained for 30 days (Hobby plan)",
+      s9_li2: "Tally feedback data: retained indefinitely, or until deletion request",
+      s9_li3: "LocalStorage data: retained until you clear your browser data",
+      s10_h: "10. Children's Privacy",
+      s10_p: "The Service is not directed at children under 13. We do not knowingly collect personal information from children.",
+      s11_h: "11. International Data Transfers",
+      s11_p: "Vercel and Tally.so may process data in countries outside your location. These providers maintain appropriate safeguards for international data transfers.",
+      s12_h: "12. Changes to This Policy",
+      s12_p: "We may update this Privacy Policy periodically. Changes will be posted here with an updated date.",
+      s13_h: "13. Contact",
+      s13_p: "For privacy-related questions, please contact us via the <a href=\"https://tally.so/r/xX1axk\">Feedback form</a> or on <a href=\"https://x.com/nkhippo123\">X (@nkhippo123)</a>.",
+      back: "Back to IPA Sound Drill"
+    },
+    ja: {
+      brand_name: "IPAサウンドドリル",
+      brand_back: "IPAサウンドドリルへ戻る",
+      _title: "プライバシーポリシー - IPA Sound Drill",
+      _desc: "IPA Sound Drill のプライバシーポリシー。最小限のデータのみを収集し、Cookie を使用せず、ユーザーのプライバシーを尊重します。",
+      h1: "プライバシーポリシー",
+      updated: "最終更新日: 2026-07-13",
+      s1_h: "1. はじめに",
+      s1_p: "IPA Sound Drill はユーザーのプライバシーを尊重します。本プライバシーポリシーは、当方が収集する情報、その利用方法、およびユーザーの権利について説明します。",
+      s2_h: "2. 収集する情報",
+      s21_h: "2.1 アナリティクスデータ（Vercel Web Analytics 経由）",
+      s21_p1: "Vercel Web Analytics を利用しており、以下を収集します:",
+      s21_li1: "ページビュー（訪問した URL）",
+      s21_li2: "リファラー（アクセス元サイト）",
+      s21_li3: "デバイスタイプ（デスクトップ / モバイル / タブレット）",
+      s21_li4: "ブラウザおよびオペレーティングシステム",
+      s21_li5: "国および地域（IP アドレスに基づく。IP は保存されません）",
+      s21_p2: "<strong>Cookie は使用しません。</strong> Vercel Analytics はリクエストから 24 時間有効なハッシュを生成し、毎日リセットされます。",
+      s21_p3: "<code>https://ipasounddrill.app/?va-disable=1</code> にアクセスすることでオプトアウトできます。これにより、お使いのデバイスの LocalStorage にアナリティクスを無効化するフラグが設定されます。",
+      s22_h: "2.2 フィードバックデータ（Tally.so 経由）",
+      s22_p1: "フィードバックフォーム（Tally.so を利用）を送信すると、以下を収集します:",
+      s22_li1: "フィードバック本文（必須）",
+      s22_li2: "メールアドレス（任意、返信を希望する場合のみ）",
+      s22_li3: "ユーザータイプ（任意: 学習者 / 教師 / 開発者 / その他）",
+      s22_p2: "メールアドレスはフィードバックへの返信のみに使用され、共有やマーケティングには使用されません。",
+      s23_h: "2.3 LocalStorage データ（デバイスに保存）",
+      s23_p1: "以下のデータはブラウザの LocalStorage に保存されます（当方のサーバーには保存されません）:",
+      s23_li1: "言語設定 (<code>app_lang</code>)",
+      s23_li2: "アナリティクスのオプトアウト設定 (<code>va-disable</code>)",
+      s23_li3: "学習進捗 (<code>ept_checks_v1</code>)",
+      s23_p2: "これらのデータはお使いのデバイス内にのみ保存され、当方のサーバーには送信されません。",
+      s3_h: "3. 情報の利用方法",
+      s3_li1: "ユーザーが本サービスをどのように利用するかを理解し、改善するため",
+      s3_li2: "フィードバックへの返信（メールアドレスが提供された場合）",
+      s3_li3: "お使いのデバイス上で学習進捗を保持するため",
+      s4_h: "4. 第三者サービス",
+      s4_p: "以下の第三者が当方に代わってデータを処理します:",
+      s4_li1: "<strong>Vercel</strong>: ホスティングおよびアナリティクス - <a href=\"https://vercel.com/legal/privacy-policy\">Vercel プライバシーポリシー</a>",
+      s4_li2: "<strong>Tally.so</strong>: フィードバックフォームの処理 - <a href=\"https://tally.so/help/privacy-policy\">Tally プライバシーポリシー</a>",
+      s4_li3: "<strong>Google Apps Script</strong>: 音声合成プロキシ（個人データは送信されません）",
+      s5_h: "5. Cookie",
+      s5_p: "<strong>当方は Cookie を使用しません。</strong> セクション 2.3 に記載の LocalStorage データは Cookie ではなく、お使いのデバイス内にのみ保存されます。",
+      s6_h: "6. ユーザーの権利",
+      s6_p1: "お住まいの地域によっては、以下の権利を有する場合があります:",
+      s6_li1: "<strong>アクセス</strong>: 当方が保有するあなたに関するデータの情報を請求する",
+      s6_li2: "<strong>削除</strong>: データの削除を請求する（アナリティクスは特定個人と結び付けられていないため、Tally フィードバックデータに限定されます）",
+      s6_li3: "<strong>オプトアウト</strong>: アナリティクストラッキングを無効化する（セクション 2.1 参照）",
+      s6_p2: "これらの権利を行使するには、<a href=\"https://tally.so/r/xX1axk\">フィードバックフォーム</a>よりお問い合わせください。",
+      s7_h: "7. GDPR（EU/EEA ユーザー）",
+      s7_p: "処理の法的根拠:",
+      s7_li1: "アナリティクス: 本サービスの理解および改善に関する正当な利益",
+      s7_li2: "フィードバック: ユーザーの同意（任意のフォーム送信による）",
+      s8_h: "8. CCPA（カリフォルニアのユーザー）",
+      s8_p: "当方は個人情報を販売しません。カリフォルニア州の居住者は、<a href=\"https://tally.so/r/xX1axk\">フィードバックフォーム</a>を通じてデータへのアクセスまたは削除を請求できます。",
+      s9_h: "9. データ保持",
+      s9_li1: "Vercel Analytics データ: 30 日間保持（Hobby プラン）",
+      s9_li2: "Tally フィードバックデータ: 無期限、または削除請求まで保持",
+      s9_li3: "LocalStorage データ: ブラウザデータを消去するまで保持",
+      s10_h: "10. 児童のプライバシー",
+      s10_p: "本サービスは 13 歳未満の児童を対象としていません。当方は児童から意図的に個人情報を収集しません。",
+      s11_h: "11. 国際的なデータ移転",
+      s11_p: "Vercel および Tally.so は、ユーザーの居住国以外の国でデータを処理する場合があります。これらの提供者は国際的なデータ移転に関する適切な保護措置を維持しています。",
+      s12_h: "12. 本ポリシーの変更",
+      s12_p: "本プライバシーポリシーは随時更新される場合があります。変更は更新日とともにここに掲載されます。",
+      s13_h: "13. お問い合わせ",
+      s13_p: "プライバシーに関するご質問は、<a href=\"https://tally.so/r/xX1axk\">フィードバックフォーム</a>または <a href=\"https://x.com/nkhippo123\">X (@nkhippo123)</a> よりお問い合わせください。",
+      back: "IPA Sound Drill に戻る"
+    },
+    ko: {
+      brand_name: "IPA Sound Drill",
+      brand_back: "IPA Sound Drill로 돌아가기",
+      _title: "개인정보처리방침 - IPA Sound Drill",
+      _desc: "IPA Sound Drill 개인정보처리방침. 최소한의 데이터만 수집하고, 쿠키를 사용하지 않으며, 사용자의 개인정보를 존중합니다.",
+      h1: "개인정보처리방침",
+      updated: "최종 업데이트: 2026-07-13",
+      s1_h: "1. 개요",
+      s1_p: "IPA Sound Drill은 귀하의 개인정보를 존중합니다. 본 개인정보처리방침은 당사가 수집하는 정보, 이용 방법 및 귀하의 권리에 대해 설명합니다.",
+      s2_h: "2. 수집하는 정보",
+      s21_h: "2.1 분석 데이터 (Vercel Web Analytics 통해)",
+      s21_p1: "Vercel Web Analytics를 사용하며, 다음을 수집합니다:",
+      s21_li1: "페이지 조회 (방문한 URL)",
+      s21_li2: "리퍼러 (유입 사이트)",
+      s21_li3: "기기 유형 (데스크톱 / 모바일 / 태블릿)",
+      s21_li4: "브라우저 및 운영체제",
+      s21_li5: "국가 및 지역 (IP 주소 기반, IP는 저장되지 않음)",
+      s21_p2: "<strong>쿠키를 사용하지 않습니다.</strong> Vercel Analytics는 요청으로부터 24시간 해시를 생성하며, 매일 재설정됩니다.",
+      s21_p3: "<code>https://ipasounddrill.app/?va-disable=1</code>을 방문하여 옵트아웃할 수 있습니다. 이는 기기의 LocalStorage에 분석을 비활성화하는 플래그를 설정합니다.",
+      s22_h: "2.2 피드백 데이터 (Tally.so 통해)",
+      s22_p1: "피드백 양식(Tally.so 기반)을 제출하면 다음을 수집합니다:",
+      s22_li1: "피드백 내용 (필수)",
+      s22_li2: "이메일 주소 (선택, 답변을 원하는 경우에만)",
+      s22_li3: "사용자 유형 (선택: 학습자 / 교사 / 개발자 / 기타)",
+      s22_p2: "이메일 주소는 피드백에 대한 답변용으로만 사용되며, 공유되거나 마케팅에 사용되지 않습니다.",
+      s23_h: "2.3 LocalStorage 데이터 (기기에 저장)",
+      s23_p1: "다음 데이터는 브라우저의 LocalStorage에 저장됩니다 (당사 서버에는 저장되지 않음):",
+      s23_li1: "언어 설정 (<code>app_lang</code>)",
+      s23_li2: "분석 옵트아웃 설정 (<code>va-disable</code>)",
+      s23_li3: "학습 진행 상황 (<code>ept_checks_v1</code>)",
+      s23_p2: "이 데이터는 귀하의 기기에 저장되며 당사 서버로 전송되지 않습니다.",
+      s3_h: "3. 정보 이용 방법",
+      s3_li1: "사용자가 본 서비스와 상호작용하는 방식을 이해하고 개선하기 위해",
+      s3_li2: "피드백에 답변하기 위해 (이메일 주소를 제공한 경우)",
+      s3_li3: "기기에 학습 진행 상황을 유지하기 위해",
+      s4_h: "4. 제3자 서비스",
+      s4_p: "다음의 제3자가 당사를 대신하여 데이터를 처리합니다:",
+      s4_li1: "<strong>Vercel</strong>: 호스팅 및 분석 - <a href=\"https://vercel.com/legal/privacy-policy\">Vercel 개인정보처리방침</a>",
+      s4_li2: "<strong>Tally.so</strong>: 피드백 양식 처리 - <a href=\"https://tally.so/help/privacy-policy\">Tally 개인정보처리방침</a>",
+      s4_li3: "<strong>Google Apps Script</strong>: 텍스트 음성 변환 프록시 (개인 데이터가 전송되지 않음)",
+      s5_h: "5. 쿠키",
+      s5_p: "<strong>당사는 쿠키를 사용하지 않습니다.</strong> 섹션 2.3에 설명된 LocalStorage 데이터는 쿠키가 아니며 귀하의 기기에 저장됩니다.",
+      s6_h: "6. 귀하의 권리",
+      s6_p1: "귀하의 거주 지역에 따라 다음 권리를 가질 수 있습니다:",
+      s6_li1: "<strong>접근</strong>: 당사가 보유한 귀하에 관한 데이터에 대한 정보 요청",
+      s6_li2: "<strong>삭제</strong>: 데이터 삭제 요청 (분석은 식별 가능한 개인과 연결되어 있지 않으므로 Tally 피드백 데이터로 제한됨)",
+      s6_li3: "<strong>옵트아웃</strong>: 분석 추적 비활성화 (섹션 2.1 참조)",
+      s6_p2: "이러한 권리를 행사하려면 <a href=\"https://tally.so/r/xX1axk\">피드백 양식</a>을 통해 문의하십시오.",
+      s7_h: "7. GDPR (EU/EEA 사용자)",
+      s7_p: "처리의 법적 근거:",
+      s7_li1: "분석: 본 서비스의 이해와 개선에 대한 정당한 이익",
+      s7_li2: "피드백: 귀하의 동의 (자발적 양식 제출을 통해)",
+      s8_h: "8. CCPA (캘리포니아 사용자)",
+      s8_p: "당사는 개인정보를 판매하지 않습니다. 캘리포니아 거주자는 <a href=\"https://tally.so/r/xX1axk\">피드백 양식</a>을 통해 데이터 접근 또는 삭제를 요청할 수 있습니다.",
+      s9_h: "9. 데이터 보관",
+      s9_li1: "Vercel Analytics 데이터: 30일 보관 (Hobby 요금제)",
+      s9_li2: "Tally 피드백 데이터: 무기한 보관, 또는 삭제 요청 시까지",
+      s9_li3: "LocalStorage 데이터: 브라우저 데이터를 지울 때까지 보관",
+      s10_h: "10. 아동의 개인정보",
+      s10_p: "본 서비스는 13세 미만 아동을 대상으로 하지 않습니다. 당사는 아동으로부터 개인정보를 고의로 수집하지 않습니다.",
+      s11_h: "11. 국제 데이터 이전",
+      s11_p: "Vercel과 Tally.so는 귀하의 거주지 외 국가에서 데이터를 처리할 수 있습니다. 이러한 제공자는 국제 데이터 이전에 대한 적절한 보호 조치를 유지합니다.",
+      s12_h: "12. 본 방침의 변경",
+      s12_p: "본 개인정보처리방침은 수시로 업데이트될 수 있습니다. 변경사항은 업데이트된 날짜와 함께 여기에 게시됩니다.",
+      s13_h: "13. 문의",
+      s13_p: "개인정보 관련 문의는 <a href=\"https://tally.so/r/xX1axk\">피드백 양식</a> 또는 <a href=\"https://x.com/nkhippo123\">X (@nkhippo123)</a>을(를) 통해 연락해 주십시오.",
+      back: "IPA Sound Drill로 돌아가기"
+    },
+    "zh-Hans": {
+      brand_name: "IPA Sound Drill",
+      brand_back: "返回 IPA Sound Drill",
+      _title: "隐私政策 - IPA Sound Drill",
+      _desc: "IPA Sound Drill 的隐私政策。我们仅收集最少的数据，不使用 Cookie，尊重您的隐私。",
+      h1: "隐私政策",
+      updated: "最后更新: 2026-07-13",
+      s1_h: "1. 简介",
+      s1_p: "IPA Sound Drill 尊重您的隐私。本隐私政策说明我们收集哪些信息、如何使用这些信息以及您的权利。",
+      s2_h: "2. 我们收集的信息",
+      s21_h: "2.1 分析数据（通过 Vercel Web Analytics）",
+      s21_p1: "我们使用 Vercel Web Analytics，其收集:",
+      s21_li1: "页面浏览量（您访问的 URL）",
+      s21_li2: "来源（将您引导至此的网站）",
+      s21_li3: "设备类型（桌面 / 移动 / 平板）",
+      s21_li4: "浏览器和操作系统",
+      s21_li5: "国家和地区（基于 IP 地址，不存储 IP）",
+      s21_p2: "<strong>不使用 Cookie。</strong> Vercel Analytics 会从您的请求生成 24 小时哈希值，每日重置。",
+      s21_p3: "您可以访问 <code>https://ipasounddrill.app/?va-disable=1</code> 以选择退出。这将在您设备的 LocalStorage 中设置一个禁用分析的标志。",
+      s22_h: "2.2 反馈数据（通过 Tally.so）",
+      s22_p1: "当您提交我们的反馈表单（由 Tally.so 提供）时，我们收集:",
+      s22_li1: "反馈内容（必填）",
+      s22_li2: "电子邮件地址（可选，仅当您希望得到回复时）",
+      s22_li3: "用户类型（可选: 学习者 / 教师 / 开发者 / 其他）",
+      s22_p2: "电子邮件地址仅用于回复您的反馈，绝不会被分享或用于营销目的。",
+      s23_h: "2.3 LocalStorage 数据（存储在您的设备上）",
+      s23_p1: "我们将以下数据存储在您浏览器的 LocalStorage 中（而非我们的服务器）:",
+      s23_li1: "语言偏好 (<code>app_lang</code>)",
+      s23_li2: "分析选择退出设置 (<code>va-disable</code>)",
+      s23_li3: "学习进度 (<code>ept_checks_v1</code>)",
+      s23_p2: "这些数据保留在您的设备上，不会传输至我们的服务器。",
+      s3_h: "3. 我们如何使用您的信息",
+      s3_li1: "了解用户如何与本服务互动并加以改进",
+      s3_li2: "回复反馈（如果您提供了电子邮件地址）",
+      s3_li3: "在您的设备上维护您的学习进度",
+      s4_h: "4. 第三方服务",
+      s4_p: "以下第三方代表我们处理数据:",
+      s4_li1: "<strong>Vercel</strong>: 托管与分析 - <a href=\"https://vercel.com/legal/privacy-policy\">Vercel 隐私政策</a>",
+      s4_li2: "<strong>Tally.so</strong>: 反馈表单处理 - <a href=\"https://tally.so/help/privacy-policy\">Tally 隐私政策</a>",
+      s4_li3: "<strong>Google Apps Script</strong>: 文本转语音代理（不发送个人数据）",
+      s5_h: "5. Cookie",
+      s5_p: "<strong>我们不使用 Cookie。</strong> 第 2.3 节所述的 LocalStorage 数据不是 Cookie，仅保留在您的设备上。",
+      s6_h: "6. 您的权利",
+      s6_p1: "根据您所在的位置，您可能拥有以下权利:",
+      s6_li1: "<strong>访问</strong>: 请求获取我们持有的关于您的数据的信息",
+      s6_li2: "<strong>删除</strong>: 请求删除您的数据（仅限 Tally 反馈数据，因为分析未与可识别个人关联）",
+      s6_li3: "<strong>选择退出</strong>: 禁用分析追踪（参见第 2.1 节）",
+      s6_p2: "如需行使这些权利，请通过<a href=\"https://tally.so/r/xX1axk\">反馈表单</a>联系我们。",
+      s7_h: "7. GDPR（EU/EEA 用户）",
+      s7_p: "我们处理的法律依据:",
+      s7_li1: "分析: 理解和改进本服务的正当利益",
+      s7_li2: "反馈: 您的同意（通过自愿提交表单）",
+      s8_h: "8. CCPA（加州用户）",
+      s8_p: "我们不出售您的个人信息。加州居民可通过<a href=\"https://tally.so/r/xX1axk\">反馈表单</a>请求访问或删除其数据。",
+      s9_h: "9. 数据保留",
+      s9_li1: "Vercel Analytics 数据: 保留 30 天（Hobby 计划）",
+      s9_li2: "Tally 反馈数据: 无限期保留，或直至收到删除请求",
+      s9_li3: "LocalStorage 数据: 保留至您清除浏览器数据",
+      s10_h: "10. 儿童隐私",
+      s10_p: "本服务不面向 13 岁以下儿童。我们不会故意收集儿童的个人信息。",
+      s11_h: "11. 国际数据传输",
+      s11_p: "Vercel 和 Tally.so 可能在您所在国家/地区以外的国家处理数据。这些提供者维持适当的国际数据传输保障措施。",
+      s12_h: "12. 本政策的变更",
+      s12_p: "我们可能会定期更新本隐私政策。变更将连同更新日期一并发布于此。",
+      s13_h: "13. 联系方式",
+      s13_p: "如有隐私相关问题，请通过<a href=\"https://tally.so/r/xX1axk\">反馈表单</a>或 <a href=\"https://x.com/nkhippo123\">X (@nkhippo123)</a> 与我们联系。",
+      back: "返回 IPA Sound Drill"
+    },
+    "zh-Hant": {
+      brand_name: "IPA Sound Drill",
+      brand_back: "返回 IPA Sound Drill",
+      _title: "隱私政策 - IPA Sound Drill",
+      _desc: "IPA Sound Drill 的隱私政策。我們僅收集最少的資料，不使用 Cookie，尊重您的隱私。",
+      h1: "隱私政策",
+      updated: "最後更新: 2026-07-13",
+      s1_h: "1. 簡介",
+      s1_p: "IPA Sound Drill 尊重您的隱私。本隱私政策說明我們收集哪些資訊、如何使用這些資訊以及您的權利。",
+      s2_h: "2. 我們收集的資訊",
+      s21_h: "2.1 分析資料（透過 Vercel Web Analytics）",
+      s21_p1: "我們使用 Vercel Web Analytics，其收集:",
+      s21_li1: "頁面瀏覽次數（您造訪的 URL）",
+      s21_li2: "來源（將您引導至此的網站）",
+      s21_li3: "裝置類型（桌面 / 行動 / 平板）",
+      s21_li4: "瀏覽器和作業系統",
+      s21_li5: "國家和地區（依據 IP 位址，不儲存 IP）",
+      s21_p2: "<strong>不使用 Cookie。</strong> Vercel Analytics 會從您的請求產生 24 小時雜湊值，每日重設。",
+      s21_p3: "您可以造訪 <code>https://ipasounddrill.app/?va-disable=1</code> 以選擇退出。這將在您裝置的 LocalStorage 中設定一個停用分析的標記。",
+      s22_h: "2.2 意見回饋資料（透過 Tally.so）",
+      s22_p1: "當您提交我們的意見回饋表單（由 Tally.so 提供）時，我們收集:",
+      s22_li1: "意見回饋內容（必填）",
+      s22_li2: "電子郵件地址（選填，僅當您希望獲得回覆時）",
+      s22_li3: "使用者類型（選填: 學習者 / 教師 / 開發者 / 其他）",
+      s22_p2: "電子郵件地址僅用於回覆您的意見回饋，絕不會被分享或用於行銷用途。",
+      s23_h: "2.3 LocalStorage 資料（儲存於您的裝置）",
+      s23_p1: "我們將以下資料儲存於您瀏覽器的 LocalStorage 中（而非我們的伺服器）:",
+      s23_li1: "語言偏好 (<code>app_lang</code>)",
+      s23_li2: "分析選擇退出設定 (<code>va-disable</code>)",
+      s23_li3: "學習進度 (<code>ept_checks_v1</code>)",
+      s23_p2: "這些資料保留在您的裝置上，不會傳輸至我們的伺服器。",
+      s3_h: "3. 我們如何使用您的資訊",
+      s3_li1: "了解使用者如何與本服務互動並加以改進",
+      s3_li2: "回覆意見回饋（如果您提供了電子郵件地址）",
+      s3_li3: "在您的裝置上維護您的學習進度",
+      s4_h: "4. 第三方服務",
+      s4_p: "以下第三方代表我們處理資料:",
+      s4_li1: "<strong>Vercel</strong>: 主機代管與分析 - <a href=\"https://vercel.com/legal/privacy-policy\">Vercel 隱私政策</a>",
+      s4_li2: "<strong>Tally.so</strong>: 意見回饋表單處理 - <a href=\"https://tally.so/help/privacy-policy\">Tally 隱私政策</a>",
+      s4_li3: "<strong>Google Apps Script</strong>: 文字轉語音代理（不傳送個人資料）",
+      s5_h: "5. Cookie",
+      s5_p: "<strong>我們不使用 Cookie。</strong> 第 2.3 節所述的 LocalStorage 資料不是 Cookie，僅保留在您的裝置上。",
+      s6_h: "6. 您的權利",
+      s6_p1: "根據您所在的位置，您可能擁有以下權利:",
+      s6_li1: "<strong>存取</strong>: 請求取得我們持有的關於您的資料的資訊",
+      s6_li2: "<strong>刪除</strong>: 請求刪除您的資料（僅限 Tally 意見回饋資料，因為分析未與可識別個人關聯）",
+      s6_li3: "<strong>選擇退出</strong>: 停用分析追蹤（參見第 2.1 節）",
+      s6_p2: "如需行使這些權利，請透過<a href=\"https://tally.so/r/xX1axk\">意見回饋表單</a>與我們聯絡。",
+      s7_h: "7. GDPR（EU/EEA 使用者）",
+      s7_p: "我們處理的法律依據:",
+      s7_li1: "分析: 理解和改進本服務的正當利益",
+      s7_li2: "意見回饋: 您的同意（透過自願提交表單）",
+      s8_h: "8. CCPA（加州使用者）",
+      s8_p: "我們不出售您的個人資訊。加州居民可透過<a href=\"https://tally.so/r/xX1axk\">意見回饋表單</a>請求存取或刪除其資料。",
+      s9_h: "9. 資料保留",
+      s9_li1: "Vercel Analytics 資料: 保留 30 天（Hobby 方案）",
+      s9_li2: "Tally 意見回饋資料: 無限期保留，或直至收到刪除請求",
+      s9_li3: "LocalStorage 資料: 保留至您清除瀏覽器資料",
+      s10_h: "10. 兒童隱私",
+      s10_p: "本服務不針對 13 歲以下兒童。我們不會故意收集兒童的個人資訊。",
+      s11_h: "11. 國際資料傳輸",
+      s11_p: "Vercel 和 Tally.so 可能在您所在國家/地區以外的國家處理資料。這些提供者維持適當的國際資料傳輸保障措施。",
+      s12_h: "12. 本政策的變更",
+      s12_p: "我們可能會定期更新本隱私政策。變更將連同更新日期一併發布於此。",
+      s13_h: "13. 聯絡方式",
+      s13_p: "如有隱私相關問題，請透過<a href=\"https://tally.so/r/xX1axk\">意見回饋表單</a>或 <a href=\"https://x.com/nkhippo123\">X (@nkhippo123)</a> 與我們聯絡。",
+      back: "返回 IPA Sound Drill"
+    },
+    fil: {
+      brand_name: "IPA Sound Drill",
+      brand_back: "Bumalik sa IPA Sound Drill",
+      _title: "Patakaran sa Privacy - IPA Sound Drill",
+      _desc: "Patakaran sa Privacy para sa IPA Sound Drill. Kaunting data lang ang kinokolekta namin, walang cookies, at iginagalang ang iyong privacy.",
+      h1: "Patakaran sa Privacy",
+      updated: "Huling na-update: 2026-07-13",
+      s1_h: "1. Panimula",
+      s1_p: "Iginagalang ng IPA Sound Drill ang iyong privacy. Ipinapaliwanag ng Patakaran sa Privacy na ito kung anong impormasyon ang kinokolekta namin, paano namin ito ginagamit, at ang iyong mga karapatan.",
+      s2_h: "2. Impormasyong Kinokolekta Namin",
+      s21_h: "2.1 Analytics Data (sa pamamagitan ng Vercel Web Analytics)",
+      s21_p1: "Gumagamit kami ng Vercel Web Analytics, na nangongolekta ng:",
+      s21_li1: "Page views (kung anong mga URL ang binibisita mo)",
+      s21_li2: "Referrer (kung anong site ang nagdala sa iyo dito)",
+      s21_li3: "Uri ng device (Desktop / Mobile / Tablet)",
+      s21_li4: "Browser at operating system",
+      s21_li5: "Bansa at rehiyon (batay sa IP address, hindi iniimbak ang IP)",
+      s21_p2: "<strong>Walang ginagamit na cookies.</strong> Ang Vercel Analytics ay gumagawa ng 24-oras na hash mula sa iyong request, na nire-reset araw-araw.",
+      s21_p3: "Maaari kang mag-opt out sa pamamagitan ng pagbisita sa <code>https://ipasounddrill.app/?va-disable=1</code>. Ito ay naglalagay ng LocalStorage flag sa iyong device upang i-disable ang analytics.",
+      s22_h: "2.2 Feedback Data (sa pamamagitan ng Tally.so)",
+      s22_p1: "Kapag isinumite mo ang aming feedback form (pinapagana ng Tally.so), kinokolekta namin ang:",
+      s22_li1: "Teksto ng iyong feedback (kinakailangan)",
+      s22_li2: "Iyong email address (opsyonal, kung nais mo lang ng sagot)",
+      s22_li3: "Uri ng user (opsyonal: mag-aaral / guro / developer / iba pa)",
+      s22_p2: "Ang mga email address ay ginagamit lamang para sa pagsagot sa iyong feedback at hindi ibinabahagi o ginagamit para sa marketing.",
+      s23_h: "2.3 LocalStorage Data (naka-imbak sa iyong device)",
+      s23_p1: "Iniimbak namin ang sumusunod na data sa LocalStorage ng iyong browser (hindi sa aming mga server):",
+      s23_li1: "Kagustuhan sa wika (<code>app_lang</code>)",
+      s23_li2: "Setting sa analytics opt-out (<code>va-disable</code>)",
+      s23_li3: "Learning progress (<code>ept_checks_v1</code>)",
+      s23_p2: "Ang data na ito ay nananatili sa iyong device at hindi ipinapadala sa aming mga server.",
+      s3_h: "3. Paano Namin Ginagamit ang Iyong Impormasyon",
+      s3_li1: "Upang maunawaan kung paano nakikipag-ugnayan ang mga user sa Serbisyo at mapabuti ito",
+      s3_li2: "Upang tumugon sa feedback (kung nagbigay ka ng email address)",
+      s3_li3: "Upang panatilihin ang iyong learning progress sa iyong device",
+      s4_h: "4. Mga Third-Party na Serbisyo",
+      s4_p: "Ang sumusunod na third parties ang nagpoproseso ng data para sa amin:",
+      s4_li1: "<strong>Vercel</strong>: hosting at analytics - <a href=\"https://vercel.com/legal/privacy-policy\">Vercel Privacy Policy</a>",
+      s4_li2: "<strong>Tally.so</strong>: pagproseso ng feedback form - <a href=\"https://tally.so/help/privacy-policy\">Tally Privacy Policy</a>",
+      s4_li3: "<strong>Google Apps Script</strong>: text-to-speech proxy (walang personal na data na ipinapadala)",
+      s5_h: "5. Cookies",
+      s5_p: "<strong>Hindi kami gumagamit ng cookies.</strong> Ang LocalStorage data na inilarawan sa Seksyon 2.3 ay hindi cookie at nananatili sa iyong device.",
+      s6_h: "6. Iyong mga Karapatan",
+      s6_p1: "Depende sa iyong lokasyon, maaaring may sumusunod kang mga karapatan:",
+      s6_li1: "<strong>Access</strong>: Humiling ng impormasyon tungkol sa data na hawak namin tungkol sa iyo",
+      s6_li2: "<strong>Deletion</strong>: Humiling ng pagbura ng iyong data (limitado sa Tally feedback data, dahil ang analytics ay hindi nakatali sa mga identifiable individuals)",
+      s6_li3: "<strong>Opt-out</strong>: I-disable ang analytics tracking (tingnan ang Seksyon 2.1)",
+      s6_p2: "Upang gamitin ang mga karapatang ito, makipag-ugnayan sa amin sa pamamagitan ng <a href=\"https://tally.so/r/xX1axk\">Feedback form</a>.",
+      s7_h: "7. GDPR (EU/EEA Users)",
+      s7_p: "Ang aming legal na batayan para sa pagproseso:",
+      s7_li1: "Analytics: Legitimate interest sa pag-unawa at pagpapabuti ng Serbisyo",
+      s7_li2: "Feedback: Ang iyong pahintulot (sa pamamagitan ng boluntaryong pagsusumite ng form)",
+      s8_h: "8. CCPA (California Users)",
+      s8_p: "Hindi namin ibinebenta ang iyong personal na impormasyon. Ang mga residente ng California ay maaaring humiling ng access o pagbura ng kanilang data sa pamamagitan ng <a href=\"https://tally.so/r/xX1axk\">Feedback form</a>.",
+      s9_h: "9. Pagpapanatili ng Data",
+      s9_li1: "Vercel Analytics data: pinapanatili sa loob ng 30 araw (Hobby plan)",
+      s9_li2: "Tally feedback data: pinapanatili nang walang katapusan, o hanggang sa kahilingan sa pagbura",
+      s9_li3: "LocalStorage data: pinapanatili hanggang sa i-clear mo ang iyong browser data",
+      s10_h: "10. Privacy ng mga Bata",
+      s10_p: "Ang Serbisyo ay hindi nakadirekta sa mga batang wala pang 13 taong gulang. Hindi namin sinasadyang kolektahin ang personal na impormasyon mula sa mga bata.",
+      s11_h: "11. Mga International Data Transfer",
+      s11_p: "Maaaring iproseso ng Vercel at Tally.so ang data sa mga bansa sa labas ng iyong lokasyon. Ang mga provider na ito ay nagpapanatili ng naaangkop na safeguards para sa mga international data transfer.",
+      s12_h: "12. Mga Pagbabago sa Patakarang Ito",
+      s12_p: "Maaari naming i-update ang Patakaran sa Privacy na ito paminsan-minsan. Ang mga pagbabago ay ipapaskil dito kasama ng na-update na petsa.",
+      s13_h: "13. Kontak",
+      s13_p: "Para sa mga tanong na may kinalaman sa privacy, mangyaring makipag-ugnayan sa amin sa pamamagitan ng <a href=\"https://tally.so/r/xX1axk\">Feedback form</a> o sa <a href=\"https://x.com/nkhippo123\">X (@nkhippo123)</a>.",
+      back: "Bumalik sa IPA Sound Drill"
+    }
+  };
+
+  function detectLang(){
+    try {
+      const saved = localStorage.getItem('app_lang');
+      if (saved && DICT[saved]) return saved;
+    } catch(e){}
+    const nav = (navigator.language || 'en').toLowerCase();
+    if (nav.startsWith('ja')) return 'ja';
+    if (nav.startsWith('ko')) return 'ko';
+    if (nav.startsWith('zh-hant') || nav.startsWith('zh-tw') || nav.startsWith('zh-hk')) return 'zh-Hant';
+    if (nav.startsWith('zh')) return 'zh-Hans';
+    if (nav.startsWith('fil') || nav.startsWith('tl')) return 'fil';
+    return 'en';
+  }
+
+  function apply(){
+    const lang = detectLang();
+    const dict = DICT[lang] || DICT.en;
+    document.documentElement.lang = lang;
+    if (dict._title) document.title = dict._title;
+    const meta = document.querySelector('meta[name="description"]');
+    if (meta && dict._desc) meta.setAttribute('content', dict._desc);
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const k = el.getAttribute('data-i18n');
+      if (dict[k] != null) el.textContent = dict[k];
+    });
+    document.querySelectorAll('[data-i18n-html]').forEach(el => {
+      const k = el.getAttribute('data-i18n-html');
+      if (dict[k] != null) el.innerHTML = dict[k];
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', apply);
+  } else {
+    apply();
+  }
+})();
+</script>
 </body>
 </html>

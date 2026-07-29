@@ -23,13 +23,43 @@ Step 4: レビュー・マージ（Level 段階化。`docs/guardrails.md` §3）
 
 エージェント委譲は `.claude/agents/`（`issue-handler`=実装 / `pr-reviewer`=契約ゲート / `consistency-auditor`=整合監査）。いずれも Naoya の明示委譲時のみ起動する。
 
+## 2a. Issue-first 原則（2026-07-29 追加）
+
+**壁打ちから実装に移る際、Issue が起票されていなければ halt する**（`CLAUDE.md` halt トリガー (d)）。同一セッション内の ClaudeCode 実装であっても**例外なし**。
+
+### なぜ必要か
+
+2026-07-28〜29 の UI 改修セッション（PR #195〜#202）で、壁打ち→直接実装→PR という流れが常態化し、以下の問題が発生した:
+
+1. **設計書（`docs/features/*.md`）が更新されない**: Issue の完了定義に spec 更新が含まれないため、実装と設計書が乖離
+2. **変更の追跡が困難**: Issue 番号がないため、PR から「なぜこの変更をしたのか」の根拠が辿れない
+3. **レビューの品質が低下**: Issue 本文のホワイトリスト・完了定義がないため、pr-reviewer が契約検証できない
+
+### 壁打ちから実装への正規フロー
+
+```
+壁打ち（Naoya × Claude）
+  ↓ 合意形成
+Issue 起票（Claude が draft → Naoya 確認 → 起票）
+  ↓ ready-for-cursor
+実装（ClaudeCode 同一セッション or issue-handler 委譲）
+  ↓
+PR 作成（Closes #N 必須）
+```
+
+壁打ちが細かいラウンドで進む場合（例: UI フィードバック→修正→再フィードバック）、**ラウンドごとに個別 Issue を起票する必要はない**。1 つの Issue にまとめてよい。ただし、壁打ちで合意した内容を Issue 本文に落とし込んでから実装に着手すること。
+
+### spec 同期の完了条件
+
+UI 改修 Issue の完了定義には、影響を受ける `docs/features/<id>.md` の更新を含めること。spec が最新でない PR は pr-reviewer で指摘対象となる。
+
 ## 3. Issue タイプと分割
 
 | タイプ | 定義 |
 |---|---|
 | **A（軽微）** | 単一ファイル、既知仕様への復帰、CI/CD 整備、ドキュメント更新 |
 | **B（標準）** | 複数ファイル、UI 変更、データ拡充、仕様変更を伴う |
-| C（大規模） | Track B から導入（複数 PR にまたがる作業） |
+| **C（大規模）** | 複数 PR にまたがる作業 |
 
 **分割 5 判断軸**: ①設計 vs 実装（仕様変更を伴う → docs Issue を先行）②対応規模（影響ファイル 5 つ超 → 分割。docs-infrastructure の cohesive consolidation は例外的に単一 Issue で atomic 実施してよい）③ドキュメント独立性（運用ドキュメント修正は常に単独 Issue で先行）④ブロッキング関係（B が A 完了待ち → A 先行）⑤リスク隔離（本番影響大 → 単独 Issue）。
 
@@ -47,7 +77,7 @@ Step 4: レビュー・マージ（Level 段階化。`docs/guardrails.md` §3）
   - [ ] **非対象範囲**: 触らない範囲を明示
   - [ ] **チャット由来の決定事項の明示**: 壁打ちで決めた前提・判断を Issue 本文に落とし込む（記憶・口頭に依存しない）
 - **参照ドキュメントの明示**: Issue 本文に必要な参照ドキュメントを列挙する。判定は `CLAUDE.md` のタスク種別対応表 + `docs/doc-map.md` レジストリに従う
-- **CD 修正判定**: UI 改修 Issue では `docs/guardrails.md` §9 の A/B/C 判定を改修分類ブロックに記載
+- **UI 仕様の参照**: UI 改修 Issue では `src/index.template.html`(正本) を根拠にする。`docs/claude-design/{sp,pc}.dc.html` は凍結フレームカタログ（画面一覧の俯瞰用、pixel-perfect 精度は保証しない）。見た目の確認は **Vercel branch preview URL** で行う。**外部 Claude Design(SaaS) の URL・zip・再開セッションは要求しない**(2026-07-28 に運用廃止)。詳細 `docs/claude-design/README.md`
 - **Phase 番号の記述**: 作業手順を Phase 番号で列挙する場合、「Phase 0, 1, 2, ...」の連番で明確に記述する。曖昧な範囲表記は使わず、総数を末尾に明記する
 
 ### ラベル
@@ -57,8 +87,7 @@ Step 4: レビュー・マージ（Level 段階化。`docs/guardrails.md` §3）
 | `feature` / `bug` / `docs` / `chore` | 変更種別 |
 | `ready-for-cursor` | executor-ready 標準を満たす（実装開始可） |
 | `needs-review` | PR がレビュー待ち（自動付与） |
-| `launch-blocker` | ローンチまでに必須（Track A） |
-| `track-b` | ローンチ後の作業 |
+| `high` | 優先対応が必要 |
 | `critical` / `high` / `medium` / `low` | 優先度（任意） |
 
 ## 5. Phase 毎コメントオフ（簡素化 2）
@@ -97,7 +126,7 @@ Level 段階化の内容（L1 セルフチェック / L2 `pr-reviewer` PASS / L3
 - draft ではなく通常 PR（`main` 直 push は禁止、すべて PR 経由）
 - PR タイトル: `feat:` / `fix:` / `chore:` / `docs:` + 内容 + `(#XXX)`
 - PR 本文テンプレは `.github/PULL_REQUEST_TEMPLATE.md`（概要・変更内容・変更理由・確認済み事項・未確認懸念点・Complexity Retrospective 実施確認・`Closes #N`）
-- Track A は `Closes #N` を記載してよい（main-first）。Track B は develop 向け PR には書かない
+- develop 向け PR に `Closes #N` を記載する（develop マージ時に Issue をクローズする）
 - **UI 改修 PR のスクショ必須（Change Pattern C6）**: ①Issue 本文のスクショ対象画面リスト全画面のスクショを PR Comment に添付 ②技術制約で添付できない場合は明記し、Naoya 実機検証を Rv の前提とする ③スクショ（または代替）無しの UI 改修 PR は pr-reviewer/Claude Rv で FAIL とする
 
 ## 9. 実装レポート（必須）
@@ -123,16 +152,17 @@ Issue が情報伝達漏れリスクを持つ場合（大規模ドキュメン�
 ## 12. Bug 対応ループ
 
 1. Bug Issue 完了時（実装エージェント）: PR マージ後（または同一 PR 内）に Issue 本文の「## 根本原因記録」テーブルと `docs/bug-knowledge.md` 末尾へ追記
-2. 月次レビュー時（Naoya、Track B 開始後）: Opus に分析依頼
+2. 月次レビュー時（Naoya）: Opus に分析依頼
 3. 分析結果に基づく改善（Claude）: governance docs へ反映提案
 
 ## 13. Branch 戦略
 
-Track A（main-first）/ Track B（develop-first）の概要は `CLAUDE.md` 絶対ルール §5。Track B 切替時は本ファイルと `CLAUDE.md` を同時更新する Issue（`chore: switch to develop-first branching`）で実施する。
+develop-first。全 PR の base は `develop`。`develop` → `main` のマージは Naoya の明示的指示で行う。Preview 環境（`ipa-sound-drill-git-develop-nkhippos-projects.vercel.app`）で状態を確認してから main へマージする運用。
 
-| ラベル | Track A base | Track B base |
-|---|---|---|
-| feature / bug / docs / chore | main | develop |
+| ブランチ | 役割 |
+|---|---|
+| `develop` | 全 PR の base。開発・確認用 |
+| `main` | 本番デプロイ。Naoya の指示で develop からマージ |
 
 ## 14. Pre-Issue Recon（100 行超で推奨）
 
@@ -144,7 +174,7 @@ Claude が index.html 等の大ファイルを全量取得する代わりに、�
 
 ## 15. 新規ドキュメント作成判定
 
-Naoya が「〇〇について資料を作りたい」と相談したら、以下を判定する: ①一時的なメモ → Chat 内で完結、MD 化しない ②AI 実装レポート → `docs/agent-reports/` ③意思決定記録 → Obsidian 提案（Track A では割愛可）④Track B スコープ → `track-b` ラベル Issue に残す ⑤運用ルール → 該当ホーム（`docs/doc-map.md` 参照）に追記 or 新規 MD ⑥バグ → `docs/bug-knowledge.md`。新規 MD を作る場合、`docs/doc-map.md` §2 への行追加を Issue の完了条件に含める。
+Naoya が「〇〇について資料を作りたい」と相談したら、以下を判定する: ①一時的なメモ → Chat 内で完結、MD 化しない ②AI 実装レポート → `docs/agent-reports/` ③意思決定記録 → Obsidian 提案 ④将来スコープ → Issue に残す ⑤運用ルール → 該当ホーム（`docs/doc-map.md` 参照）に追記 or 新規 MD ⑥バグ → `docs/bug-knowledge.md`。新規 MD を作る場合、`docs/doc-map.md` §2 への行追加を Issue の完了条件に含める。
 
 ## 16. ルール変更時のセルフチェック手順
 

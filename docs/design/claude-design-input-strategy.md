@@ -1,7 +1,7 @@
 ---
 created: 2026-07-16 02:00:00+09:00
 project: IPASoundDrill
-status: confirmed
+status: archived
 summary: Phase 1 (Claude Design プロトタイプ探索) 品質を最大化するための資料強化戦略。現状の資料層分析、追加推奨 8 資料の優先度付き提案、既存資料の強化ポイント、ブリーフ構造化テンプレート、実行順序。Opus
   からの戦略提案 (2026-07-15)、Naoya 判断完了 (2026-07-16)。
 tags:
@@ -16,6 +16,8 @@ id: pj-2026-07-16-b8ab
 aliases:
 - pj-2026-07-16-b8ab
 ---
+
+> **⚠️ ARCHIVED (2026-07-29)**: Claude Design(SaaS) は 2026-07-28 に運用廃止。本資料は Phase 1 当時の戦略記録として残置するが、現行ワークフローでは参照しない。現行の UI 運用ポリシーは `docs/guardrails.md` §9 + `docs/claude-design/README.md` を参照。
 
 ## 目的
 

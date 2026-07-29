@@ -1,16 +1,16 @@
 # repo-map.md — ディレクトリ + インフラの単一ホーム
 
-技術スタック・ディレクトリツリー・ランタイムインフラ・Track A/B スコープ・JS 関数マップの唯一のホーム。
+技術スタック・ディレクトリツリー・ランタイムインフラ・将来計画・JS 関数マップの唯一のホーム。
 旧 `docs/REPOSITORY-STRUCTURE.md` を継承（ランタイム契約 → `docs/data-contract.md`、パイプライン → `docs/pipeline.md`、
 日付付きスナップショット → `docs/history.md` へ分離済み）。
 
 ---
 
-## 技術スタック（Track A）
+## 技術スタック
 
 - **フロントエンド**: `src/index.template.html` + ビルドスクリプト（`scripts/build-i18n-html.js`）で 6 言語版 HTML を生成 + 純粋 JS + JSON データ
 - **ホスティング**: Vercel（静的サイト、カスタムドメイン）
-- **TTS**: Google Apps Script（`gas/Code.gs`、Track A 期間中は現行維持）
+- **TTS**: Google Apps Script（`gas/Code.gs`、現行維持）
 - **データ生成パイプライン**: Python（`scripts/*.py`、ローカル実行。コマンドは `docs/pipeline.md`）
 - **ドメイン**: `ipasounddrill.app`
 - **計測**: Vercel Web Analytics（クッキーレス）
@@ -99,7 +99,7 @@ ipasounddrill/
 │   ├── doc-map.md                # 概念 → ホーム レジストリ
 │   ├── _conventions.md           # 記法規約・feature ID レジストリ
 │   ├── design/                  # Phase 1+ デザイン入力（タグライン候補等）
-│   ├── claude-design/           # UI/UX 正典（Claude Design 成果物）→ README.md 参照
+│   ├── claude-design/           # 凍結フレームカタログ(sp/pc/design-system.dc.html)。画面一覧用、更新義務なし。正本は src/index.template.html。詳細 README.md
 │   ├── reference/               # 監査・意思決定・運用ガイド → README.md 参照
 │   ├── testing/                 # Manual test checklists
 │   └── archive/                 # 旧ドキュメント退避
@@ -137,25 +137,21 @@ ipasounddrill/
 
 ---
 
-## Track A / B スコープ
+## 現行スコープと将来計画
 
-**Track A（ローンチ〜）**: `src/index.template.html` + 言語別静的 HTML 生成 + GAS TTS
+**現行スコープ**: `src/index.template.html` + 言語別静的 HTML 生成 + GAS TTS
 - 対象: `src/index.template.html`（inline CSS/JS）、`scripts/build-i18n-html.js` で 6 言語版 HTML 生成、Vercel カスタムドメイン運用
 - 実装可能: SEO、meta、i18n meta、hreflang、Analytics 統合、Tally、法務、favicon、OGP、UI polish、英語 LP、静的 HTML プリレンダ用 Node ビルド
-- 実装不可: React 化、TypeScript アプリ化、状態管理ライブラリ、BE 移管
+- 実装不可（現行構成制約）: React 化、TypeScript アプリ化、状態管理ライブラリ、BE 移管
 
-**Track B（ローンチ後）**: React 化、BYOK、BE 移管、Sentry、Playwright 等
-- 主要スコープ:
+**将来計画**（個別 Issue で管理）:
   - React + Vite 化（既存単一 HTML → コンポーネント分割）
   - BE の Railway 化（GAS TTS からの脱却）
   - BYOK（ユーザー自身の API キー入力）
   - Sentry 導入
   - Playwright + Visual Regression Test
-  - develop-first ブランチ運用への切替
   - Storybook 導入
-  - 本ファイル（`docs/repo-map.md`）の動的セクション自動生成（Issue K2。旧 `docs/REPOSITORY-STRUCTURE.md` 時代からのバックログ項目、Issue #172 でファイル retire に伴い参照先を更新）
-
-Track A 期間中に Track B スコープの提案が出たら、`track-b` ラベルで別 Issue 化する。
+  - 本ファイル（`docs/repo-map.md`）の動的セクション自動生成（Issue K2）
 
 ---
 

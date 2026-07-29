@@ -3,7 +3,7 @@ cluster: 2
 created: 2026-07-17T00:45:00+09:00
 phase: 1
 project: IPASoundDrill
-status: ready-for-claude-design
+status: archived
 summary: Phase 1 Cluster 2 の Claude Design へのブリーフ。視覚言語刷新 (デザイントークン + component patterns + mood plates 3 案)。判定基準ペルソナ P-2 (韓国 UI 品質) と P-5 (若年層美意識)。sensory-design.md の 5 中核質問に対する採用ルールを確定。Cluster 1 と同時投入推奨。
 tags:
   - ipasounddrill

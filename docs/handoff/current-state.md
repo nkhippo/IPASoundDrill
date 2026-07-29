@@ -1,5 +1,43 @@
 ---
-updated: 2026-07-24T23:40:55+09:00
+updated: 2026-07-28T22:00:00+09:00
+---
+
+## 2026-07-28 GSC アラート対応 + develop-first 移行
+
+### ブランチ運用
+
+- **develop-first に移行完了**: 全 PR の base は `develop`。`develop` → `main` は Naoya 明示指示のみ
+- **Track A / B 概念は廃止**: governance 正本から除去済み（PR #195）
+- **GitHub デフォルトブランチ**: `develop` に変更済み
+- **Branch Protection**: main / develop 両方に Ruleset 設定済み（PR 必須 + force push 禁止 + 削除禁止）
+- **Issue クローズ**: develop マージ時に `Closes #N` でクローズ
+
+### GSC Coverage アラート対応（Issue #190）
+
+- PR #192: hreflang x-default `/` → `/en/`、canonical `.html` 除去、preview noindex ヘッダー追加
+- www → apex 308 リダイレクト: Vercel 設定済み
+- GSC 再クロール待ち（数日〜2 週間）
+
+### 修正したエージェント / テンプレート
+
+- `.claude/agents/issue-handler.md`: base ブランチ `develop` 固定、`Closes #N` 使用可
+- `.github/PULL_REQUEST_TEMPLATE.md`: `Closes #N` 維持
+- `docs/workflow.md`: develop 向け PR で `Closes #N` 使用可
+
+### 残タスク
+
+- GSC 再クロール結果の確認
+- `docs/LAUNCH-CHECKLIST.md` の Track A/B 残存参照整理（20 件、別 Issue で対応）
+
+### 関連 PR
+
+| PR | 内容 | 状態 |
+|---|---|---|
+| #192 | GSC fix（hreflang / canonical / preview noindex） | Merged |
+| #193 | 滞留ブランチ → main マージ | Merged |
+| #194 | main → develop 同期 | Merged |
+| #195 | develop-first + Track A/B 廃止 | Merged |
+
 ---
 
 ## 2026-07-24 全日セッション最終状態(8 PR Rv + 4 大成果)

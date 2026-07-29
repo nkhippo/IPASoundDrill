@@ -94,17 +94,20 @@ lint 修正 / typo 修正（元の文言を保持）/ Markdown 整形 / import �
 - **参照整合の自動検出**は grep ベースで行う: リネーム・削除した概念名を全リポで `grep -rn '<旧名>' .` し、意図した新ホームへの参照のみが残ることを確認する（`docs/agent-reports/` 等の履歴は除外）
 - 新規ドキュメントを作る場合、`docs/doc-map.md` §2 に行を追加することが Issue の完了条件に含まれる（PR ブロッカー相当）
 
-## 9. CD（Claude Design）修正判定
+## 9. UI 仕様の参照ポリシー（2026-07-29 改定）
 
-UI 改修 Issue 起票時、実装が CD（`docs/claude-design/`）とどう関係するかを判定し、Issue 本文の改修分類ブロックに記載する。
+**UI 仕様の正本は `src/index.template.html`(実装)。** `docs/claude-design/{sp,pc,design-system}.dc.html` は**凍結フレームカタログ**（画面一覧としての俯瞰用。pixel-perfect 精度は保証しない。更新義務なし）。
 
-| 分類 | 状況 | 対応 |
-|---|---|---|
-| **A. CD 修正必須** | 実装が CD 準拠を目指すべきだが、CD が古い/不足 | CD 更新 PR → UI 改修 Issue の順 |
-| **B. CD 意図的乖離** | 実装が CD と意図的に異なる | UI 改修 Issue 内に「CD 意図的乖離」セクションで明記 |
-| **C. CD 修正不要** | CD が最新と一致 | UI 改修 Issue のみ起票 |
+**外部 Claude Design(SaaS) は今後使用しない**（更新も参照も反映待ちもしない）。旧 A/B/C の CD 修正判定・「CD 修正必須」ブロック・round-trip 指示書は **廃止**。UI 改修 Issue では以下を守る:
 
-CD ファイルが添付されていない UI 改修 Issue は着手禁止。詳細運用は `docs/claude-design/UPDATE-GUIDE.md`。Docs 改修（C1）等 UI に影響しない Issue では「該当なし」と記載する。
+- 正本コード: `src/index.template.html` を read
+- 画面一覧の俯瞰: `docs/claude-design/sp.dc.html` / `pc.dc.html`（見た目の正確性は保証しない）
+- 見た目の確認: **Vercel branch preview URL**（PR/branch ごとに自動生成）で実際の描画を確認
+- `.dc.html` の更新を UI 改修の完了条件に含めない
+- 「CD が古いから CD 更新から」といった前提を持ち込まない
+- 「CD セッションを再開して zip を送って」といった要求を Naoya にしない
+
+詳細ポリシーと廃止経緯は `docs/claude-design/README.md`。旧 `UPDATE-GUIDE.md` / `cd-updates/*.md` は歴史的資料として残置（参照禁止）。
 
 ## 10. ランタイム契約検証ガード
 

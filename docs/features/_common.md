@@ -44,7 +44,7 @@ ID 横断で共有される画面シェル・セッションフロー・適応�
 | スピーカー | キャッシュ準備完了まで無効化（全目的共通） |
 | 離脱確認 | Decode / Encode / Study / Reveal から Menu またはブランドタップ時に Yes/No。**Yes → トップ（`1a`）復帰**（再開なし）。Summary・プロフィールではモーダルなし |
 | 終了 | プール全問消化で自動サマリー |
-| 進捗表示 | 各カード内 `現在番号 / プール総数` + STEP 行右上の CEFR タグ（例:「語彙 A2」） |
+| 進捗表示 | 各カード内 `現在番号 / プール総数` + STEP 行右上の CEFR タグ（例:「語彙 A2」）。**プログレスメーター（`.task-header-meter`）と進捗カウンター（`.task-header-counter`）は非表示**（`display:none`、2026-07-28 UI 改修で撤廃） |
 
 ### 適応出題（プール全件・重複なし）
 
@@ -69,24 +69,52 @@ ID 横断で共有される画面シェル・セッションフロー・適応�
 |------|------|
 | ブランド | `#brandBtn` + `#brandName` |
 | 語彙 | `#vocabBtn`（常時表示。`3b` 語彙ブラウザ導線） |
-| ガイド | `#guideBtn`（オンボーディング再表示にも利用） |
-| 言語 | ヘッダー `#langSwitcher` / `#langMenu` に集約（独立の言語設定画面は廃止済み） |
+| 学習状況 | `#progressBtn`（常時表示。`3d` 学習状況導線） |
+| ガイド | `#guideBtn`（`reopenOnboarding()` で `#onboardingModal`＝オンボーディングを再表示） |
+| 言語 | ヘッダー `#langSwitcher` タップ → `navigate("language")` → `#languagePage`（独立の言語設定ページ、`3f`）へ遷移。DOM 上の `#langMenu` ドロップダウンは常時 `toggleLangMenu(false)` で閉じられ実質使われない dead code（2026-07-28 時点） |
 | Menu | `#backTopBtn`（プレイ中。離脱確認対象では Yes で `1a` 復帰） |
-| アクセントバッジ | ヘッダーに GA/RP **固定**表示（学習中切替なし） |
+| アクセントバッジ | ヘッダーに GA/RP **固定**表示（学習中切替なし）。ドリル中は `.drill-accent-badge`（`position:absolute; top:14px; left:14px`、`--signal-soft` 背景）でカード内左上に表示 |
 | 離脱確認 | `#exitConfirmModal`（Decode / Encode / Study / Reveal） |
 | 進捗表示 | 各カード内 `#*No` + CEFR タグ |
 
 ### Footer（`#siteFooter`）
 
-shell 最下部。Feedback / Terms / Privacy / X + `3h`「このアプリについて」への DOM 常時導線（AI クローラビリティ）。`body.in-play` では非表示。
+shell 最下部。`#footerFeedback` / `#footerTerms` / `#footerPrivacy` の 3 リンクのみ。**X リンクは削除済み**（2026-07-28）。`3h`「このアプリについて」・`IPA って何?`・言語設定への導線は Hero（`1a`）/ ヘッダーへ移設済みでフッターにはない（2026-07-28）。`body.in-play` では非表示。
 
 ### Modals
 
-| モーダル | Backdrop | Escape | Outside click |
-|----------|----------|--------|----------------|
-| `#exitConfirmModal` | `#exitConfirmScrim` | No 相当 | scrim → No 相当 |
-| `#settingsModal` | `#settingsScrim` | 閉じる | scrim → close |
-| `#guideModal` | `#guideScrim` | 閉じる | scrim / Close → close |
+`#settingsModal` / `#guideModal` は DOM から撤去済み（2026-07-28）。設定はヘッダー `#langSwitcher`、ガイドは `#onboardingModal` 再表示に統合。
+
+| モーダル | Backdrop | Escape | Outside click | 表示形式 |
+|----------|----------|--------|----------------|----------|
+| `#exitConfirmModal` | `#exitConfirmScrim` | No 相当 | scrim → No 相当 | full overlay |
+| `#aboutModal`（`3h` このアプリについて） | `#aboutModalScrim` | 閉じる | scrim → close | full overlay |
+| `#onboardingModal`（オンボーディング／ガイド。`data-frame="3g"`） | `#onboardingScrim` | — | scrim → `hideOnboarding(true)` | full overlay。`#onboardingSkip` でも同様に閉じる |
+| `#ipaInfoPage`（IPAとは） | scrim（`rgba(20,18,15,.42)`） | 閉じる | scrim クリック → `backToTop()` | **浮遊カード**（上寄せ `padding-top:56px`、背面 TOP を沈めた三層構造） |
+| `#languagePage`（言語設定） | 同上 | 閉じる | scrim クリック → `backToTop()` | **浮遊カード**（同上） |
+
+> `3g`（オンボーディング）は `_conventions.md` の feature ID レジストリ未登録（旧来 DOM 上のみの補助モーダル）。ID 追加はこの Issue の非対象範囲。
+
+info-page モーダル（IPAとは / 言語設定）は `.info-page` クラスで共通化。`position:fixed; inset:0` の scrim 上に `max-width:520px` の角丸カード（`.info-page-inner`）を浮かせる。閉じるボタンは ❌（`position:absolute; top:12px; right:12px`）。背面の TOP コンテンツは残したまま（blur/opacity で沈める）。
+
+### PC 2ペインレイアウト（`min-width:900px`）
+
+ドリル中（`body.in-play`）、問題カードと Reveal カードを横並び 2 ペインで表示:
+
+- `grid-template-columns: 1fr 1fr`、`align-items: start`（各ペイン独立高さ）
+- `.hidden` との CSS 詳細度衝突を避けるため、全 2ペイン セレクタに `:not(.hidden)` を付与
+- ドリルごとに最適高さを個別指定（`body.drill-mode-{id}` クラスを JS で付与）:
+
+| ドリル | 高さ | 備考 |
+|--------|------|------|
+| 2a Decode | 620px | |
+| 2b Encode | 760px | IPA キーボードがあるため最大 |
+| 2c Study | 600px | 最小（音→IPA→意味の 2段階のみ） |
+| 2d Connected | 780px | carrier テキスト + 長い IPA |
+
+### 「意味を確認する」ボタン（`.btn-reveal`）
+
+全ドリルで統一デザイン: `background: var(--signal); color: #fff; border: none`（塗り teal）。2c Study の `.btn-reveal` も同一（2026-07-28 デザイン統一）。
 
 ### 視覚言語トークン
 
