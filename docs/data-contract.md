@@ -97,22 +97,38 @@
 
 第一強勢 `ˈ` は削除しない — 強勢の syllable 位置が異なるペアは different。
 
-**「different」となる主な差異:**
+**`ga_rp_same_reason` 完全列挙**（`ga_rp_same` の値ごと。値は wordlist / connected_speech / weak_forms 全体で共通の語彙）:
 
-| 種類 | reason 値 | 例 |
+`same`（差異が STRICT 正規化で吸収される）:
+
+| reason 値 | 意味 | 例 |
 |---|---|---|
-| GA 内音（フラップ T 等） | `ga_allophony` | `city` (`[ˈsɪɾi]`), `water` (`[ˈwɔɾɚ]`) |
-| 第一強勢位置差 | `stress_placement` | `baseball`, `discount` |
-| Non-rhotic 差 | `rhoticity` | `actor`, `winner` |
-| GOAT 母音 | `goat_vowel` | `boat`, `ago` |
-| LOT 母音 | `lot_vowel` | `hot`, `block` |
-| TRAP-BATH | `trap_bath` | `path`, `bath`, `after` |
-| COT-CAUGHT | `cot_caught` | `bought` |
-| SQUARE / NEAR / CURE | `square_near_cure` | `bear`, `dear` |
-| 弱母音の質差 | `weak_vowel` | `biscuit` (`ə`/`ɪ`) |
-| Yod-dropping | `yod` | `new`, `due` |
-| 語彙音韻差 | `lexical` | `schedule`, `vitamin` |
-| その他構造差 | `structural_other` / `composite_structural` | 目視レビュー対象 |
+| `identical` | 正規化前から完全一致 | 多数 |
+| `length_marking_only` | 長音記号 `ː` の有無のみの差 | — |
+| `dress_notation_only` | DRESS 母音の表記差（`ɛ`↔`e`）のみ | `M` (`/ɛm/` vs `/em/`) |
+| `notation_composite` | 上記複数要因の複合（いずれも same 側） | — |
+| `rhotic_vowel_notation` | 母音表記の rhotic 関連差（same 側） | — |
+| `stress_marking_only` | 第二強勢 `ˌ` の有無・位置差のみ | — |
+
+`different`（学習者にとって聞いて分かる差）:
+
+| reason 値 | 意味 | 例 |
+|---|---|---|
+| `rhoticity` | Non-rhotic 差 | `actor`, `winner` |
+| `structural_other` | その他構造差（目視レビュー対象） | — |
+| `ga_allophony` | GA 内音（フラップ T 等） | `city` (`[ˈsɪɾi]`), `water` (`[ˈwɔɾɚ]`) |
+| `goat_vowel` | GOAT 母音 | `boat`, `ago` |
+| `lot_vowel` | LOT 母音 | `hot`, `block` |
+| `square_near_cure` | SQUARE / NEAR / CURE | `bear`, `dear` |
+| `weak_vowel` | 弱母音の質差 | `biscuit` (`ə`/`ɪ`) |
+| `trap_bath` | TRAP-BATH | `path`, `bath`, `after` |
+| `stress_placement` | 第一強勢位置差 | `baseball`, `discount` |
+| `yod` | Yod-dropping | `new`, `due` |
+| `cot_caught` | COT-CAUGHT | `bought` |
+| `composite_structural` | 複数の構造差の複合 | 目視レビュー対象 |
+
+> 上記は wordlist 実データ（5,397 語）から機械的に集計した全 reason 値（2026-07-29 時点）。新しい reason 値が
+> `scripts/gen_ga_rp_same.py` の改修で追加された場合、本表を更新すること。
 
 **GA-only 異音カーブアウト（重要）**: `ipa_actual_ga`（narrow 転写）が存在し `ipa`（phonemic）と異なる語は、
 phonemic レベルで RP と一致していても different と判定する。Flap T・音節主音子音・声門閉鎖など、GA でのみ生じる異音を
@@ -134,7 +150,8 @@ audibly-different として扱う（例: `city`）。
 | connected_speech | 201 | 94 (47%) | 107 (53%) |
 | weak_forms | 36 | 30 (83%) | 6 (17%) |
 
-wordlist の主な `ga_rp_same_reason`（different）: `rhoticity` 691, `structural_other` 615, `ga_allophony` 529, `goat_vowel` 288, `square_near_cure` 105, `cot_caught` 11。
+wordlist の `ga_rp_same_reason` 内訳（different）: `rhoticity` 691, `structural_other` 615, `ga_allophony` 529, `goat_vowel` 288, `lot_vowel` 258, `square_near_cure` 105, `weak_vowel` 102, `trap_bath` 71, `stress_placement` 30, `yod` 22, `cot_caught` 11, `composite_structural` 1。
+wordlist の `ga_rp_same_reason` 内訳（same）: `identical` 1,527, `length_marking_only` 558, `dress_notation_only` 457, `notation_composite` 59, `rhotic_vowel_notation` 38, `stress_marking_only` 35。
 
 **更新手順**（`ipa` / `rp_ipa` / `ipa_actual_ga` を変更した場合）:
 
@@ -171,23 +188,25 @@ UI i18n とは独立。各言語キー（`en`, `ja`, `ko`, `zh-Hans`, `zh-Hant`,
 | キー | 内容 | Phase 1 扱い |
 |------|------|----------------|
 | `app_lang` | UI 言語 | 維持（ヘッダー言語スイッチャー） |
-| `app_accent` | `ga` / `rp` | プロフィール固定へ |
-| `app_mode` | 旧 `a` / `b` | 目的 4 カード化で廃止予定 |
+| `app_accent` | `ga` / `rp` | プロフィール固定 |
+| `app_mode` | 内部レガシー state `a`/`b`（`LS.appMode`） | UI 選択導線（`#modeField`/`#modeOpts`）は `hidden` 化済み。目的 4 カードに置換済みだが内部 state・LS キーは残存 |
 | `ept_hist_v1` | 単語 SRS（Leitner） | 維持 |
 | `ept_sym_v1` | 記号弱点（Encode） | 維持 |
 | `ept_vocab_v1` | Study 語彙 SRS | 維持 |
-| `ept_vocab_band` | 旧 Mode B バンド | 廃止予定 |
-| `ept_checks_v1` | 旧手動進捗 d/e/l | マーキングへ移行予定 |
-| `mark:{drill_id}:{word_id}` | マーキング 0..3（仕様の正） | Phase 1-C で実装 |
+| `ept_checks_v1` | 旧手動進捗 d/e/l | `ept_marks_v1` への lazy migration ソースとして残存（`migrateChecksToMarksIfNeeded()`） |
+| `ept_marks_v1` | マーキング 0..3（仕様の正）。単一 JSON オブジェクト `{"{drill_id}:{word_id}": 0..3}` | Phase 1-C で実装 |
+| `ept_marks_migrated_v1` | `ept_checks_v1` → `ept_marks_v1` migration 完了フラグ（`"1"`） | 一度のみ実行 |
 | `onboarding_completed_v1` | オンボーディング完了 | Phase 1-F |
-| `prev_settings_v1`（仮） | プロフィール前回値 | — |
+| `prev_settings_v1` | プロフィール前回値 | — |
 | `va-disable` | Analytics オプトアウト | 維持 |
+
+> `ept_vocab_band`（旧 Mode B バンド）は実装から削除済み（本表から除去、2026-07-29 確認）。
 
 **TTS キャッシュキー**: Prefix `ipa_tts_v2:`（定数 `LS_TTS_PREFIX`）。キー形式: `ipa_tts_v2:{ga|rp}:{slug}`（単語）、`ipa_tts_v2:{ga|rp}:p4_{slug}`（連結）、`ipa_tts_v2:{ga|rp}:weak_{slug}`（弱形）。Legacy 形式（`ipa_tts_v1:*`）は読取時に v2 へマイグレーション。
 
 ### セッション状態（メモリ `S`）
 
-現行: `appMode`, `tab`（`words` / `connected`）, `dir`, `focus`, `reg`, `grp`, `cefrLevels`, `csFilter`, `csLevel`, `sessionPool`, `sessionNext`, `poolTotal`, `queue`, `idx`, `answered`, `correct`, `weak`, `missed`, `cur`, `mbPhase`, `curCarrier`, `revealed`, `built`, `mbQuiz`。
+現行: `appMode`, `lastDrill`（直近選択した目的 ID、既定 `"2a"`）, `tab`（`words` / `connected`）, `dir`, `focus`, `reg`, `grp`, `cefrLevels`, `csFilter`, `csLevel`, `sessionPool`, `sessionNext`, `poolTotal`, `queue`, `idx`, `answered`, `correct`, `weak`, `missed`, `cur`, `mbPhase`, `curCarrier`, `revealed`, `built`, `mbQuiz`。
 
 定数: `SESSION_INITIAL=6`, `SESSION_REFILL=5`, `MODEB_QUIZ_ENABLED=false`, `MODEB_SESSION={newCount:10, reviewCount:10}`, `PREFETCH={warmChunk:6, warmParallel:2, bodyParallel:3}`。
 
@@ -221,7 +240,7 @@ python3 tools/validate_i18n.py
 | `guide` | object | サイトガイドモーダル |
 | `about` | object | About（`lead`, `why_ipa_html`, `features.*`, `contact_html`） |
 | `onboarding` | object | オンボーディング（`slide_1`〜`slide_4`.`title`/`body`、`next`/`skip`/`start` 等） |
-| `vocab` | object | 語彙ブラウザ（`vocab.filter.ipa` / `vocab.filter.all`） |
+| `vocab` | object | 語彙ブラウザ（`vocab.filter.ipa` / `vocab.filter.all` / `vocab.az.hint`＝A–Z ジャンプ導線のヒント文言） |
 | `symbol` | object | IPA 記号ピッカー（`symbol.picker.*` / `symbol.group.*.{en,sub}` / `symbol.height.*.{en,sub}`） |
 | `reveal` | object | Reveal 画面（GA / RP 表記） |
 | `lang_opts` | object | 言語切替 dropdown（6言語） |
@@ -230,7 +249,7 @@ python3 tools/validate_i18n.py
 | `meta` | object | `title` / `description` / `ogTitle` / `ogDescription`（build-only、`brand` 直後に挿入） |
 
 **Notes:**
-- 総 leaf 数（正本・SPEC §5.5 由来・Issue #122 PR-3 時点）: **246**（Phase 1-E PR-3。237→246、新規 `about.*` +9）
+- 総 leaf 数（`tools/validate_i18n.py` 実測値・2026-07-29 時点）: **280**（Phase 3 UI 改修で 246→280。増分は `vocab.az.hint`、`about.*` 追加、`symbol.group.*` / `symbol.height.*` 内訳キー等）
 - HTML 埋め込みキーは `_html` サフィックス
 - 動的置換プレースホルダ: `{n}`, `{band}`, `{pct}`, `{m}`, `{t}`, `{c}`, `{list}`, `{p}`, `{sy}`, `{s}`, `{a}`
 - LS 追加キー: `onboarding_completed_v1`（`"true"` で初回オンボ完了。スキップも完了扱い）
