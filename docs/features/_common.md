@@ -69,8 +69,9 @@ ID 横断で共有される画面シェル・セッションフロー・適応�
 |------|------|
 | ブランド | `#brandBtn` + `#brandName` |
 | 語彙 | `#vocabBtn`（常時表示。`3b` 語彙ブラウザ導線） |
-| ガイド | `#guideBtn`（オンボーディング再表示にも利用） |
-| 言語 | ヘッダー `#langSwitcher` / `#langMenu` に集約（独立の言語設定画面は廃止済み） |
+| 学習状況 | `#progressBtn`（常時表示。`3d` 学習状況導線） |
+| ガイド | `#guideBtn`（`reopenOnboarding()` で `#onboardingModal`＝オンボーディングを再表示） |
+| 言語 | ヘッダー `#langSwitcher` タップ → `navigate("language")` → `#languagePage`（独立の言語設定ページ、`3f`）へ遷移。DOM 上の `#langMenu` ドロップダウンは常時 `toggleLangMenu(false)` で閉じられ実質使われない dead code（2026-07-28 時点） |
 | Menu | `#backTopBtn`（プレイ中。離脱確認対象では Yes で `1a` 復帰） |
 | アクセントバッジ | ヘッダーに GA/RP **固定**表示（学習中切替なし）。ドリル中は `.drill-accent-badge`（`position:absolute; top:14px; left:14px`、`--signal-soft` 背景）でカード内左上に表示 |
 | 離脱確認 | `#exitConfirmModal`（Decode / Encode / Study / Reveal） |
@@ -78,17 +79,21 @@ ID 横断で共有される画面シェル・セッションフロー・適応�
 
 ### Footer（`#siteFooter`）
 
-shell 最下部。Feedback / Terms / Privacy + `3h`「このアプリについて」への DOM 常時導線（AI クローラビリティ）。**X リンクは削除済み**（2026-07-28）。`IPA って何?` → `#ipaInfoPage`（info-page モーダル）、`言語設定` → `#languagePage`（info-page モーダル）への導線あり。`body.in-play` では非表示。
+shell 最下部。`#footerFeedback` / `#footerTerms` / `#footerPrivacy` の 3 リンクのみ。**X リンクは削除済み**（2026-07-28）。`3h`「このアプリについて」・`IPA って何?`・言語設定への導線は Hero（`1a`）/ ヘッダーへ移設済みでフッターにはない（2026-07-28）。`body.in-play` では非表示。
 
 ### Modals
+
+`#settingsModal` / `#guideModal` は DOM から撤去済み（2026-07-28）。設定はヘッダー `#langSwitcher`、ガイドは `#onboardingModal` 再表示に統合。
 
 | モーダル | Backdrop | Escape | Outside click | 表示形式 |
 |----------|----------|--------|----------------|----------|
 | `#exitConfirmModal` | `#exitConfirmScrim` | No 相当 | scrim → No 相当 | full overlay |
-| `#settingsModal` | `#settingsScrim` | 閉じる | scrim → close | full overlay |
-| `#guideModal` | `#guideScrim` | 閉じる | scrim / Close → close | full overlay |
+| `#aboutModal`（`3h` このアプリについて） | `#aboutModalScrim` | 閉じる | scrim → close | full overlay |
+| `#onboardingModal`（オンボーディング／ガイド。`data-frame="3g"`） | `#onboardingScrim` | — | scrim → `hideOnboarding(true)` | full overlay。`#onboardingSkip` でも同様に閉じる |
 | `#ipaInfoPage`（IPAとは） | scrim（`rgba(20,18,15,.42)`） | 閉じる | scrim クリック → `backToTop()` | **浮遊カード**（上寄せ `padding-top:56px`、背面 TOP を沈めた三層構造） |
 | `#languagePage`（言語設定） | 同上 | 閉じる | scrim クリック → `backToTop()` | **浮遊カード**（同上） |
+
+> `3g`（オンボーディング）は `_conventions.md` の feature ID レジストリ未登録（旧来 DOM 上のみの補助モーダル）。ID 追加はこの Issue の非対象範囲。
 
 info-page モーダル（IPAとは / 言語設定）は `.info-page` クラスで共通化。`position:fixed; inset:0` の scrim 上に `max-width:520px` の角丸カード（`.info-page-inner`）を浮かせる。閉じるボタンは ❌（`position:absolute; top:12px; right:12px`）。背面の TOP コンテンツは残したまま（blur/opacity で沈める）。
 
