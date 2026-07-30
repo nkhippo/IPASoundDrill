@@ -6,7 +6,7 @@ created: 2026-07-19T00:00:00+09:00
 id: pj-2026-07-19-dtok
 project: IPASoundDrill
 status: published
-summary: Phase 1 UI/UX (Variation B「音を、美しく。」/ Mood B / Warm Contemporary) の視覚言語トークンの source of truth。Claude Design 出力 (`Kickoff_design_prompt2.zip` 内 `IPA Sound Drill - Phase 1.dc.html` § デザインガイドライン + ドリル section) から抽出。カラー 11 変数、タイポ 3 系統、spacing / radius / shadow、基本コンポーネント 5 種の CSS 定義を集約。Phase 1-A で `src/index.template.html` の `<style>` に追加、Phase 1-B 以降で参照。既存 `--signal` 等は legacy prefix (`--legacy-*`) に退避し、既存規則の見た目は据え置き (解釈 i レガシー退避方式)。
+summary: Phase 1 UI/UX (Variation B「音を、美しく。」/ Mood B / Warm Contemporary) の視覚言語トークンの source of truth。Claude Design 出力 (`Kickoff_design_prompt2.zip` 内 `IPA Sound Drill - Phase 1.dc.html` § デザインガイドライン + ドリル section) から抽出。カラー 11 変数、タイポ 3 系統、spacing / radius / shadow、基本コンポーネント 5 種の CSS 定義を集約。Phase 1-A で `apps/web/src/index.template.html` の `<style>` に追加、Phase 1-B 以降で参照。既存 `--signal` 等は legacy prefix (`--legacy-*`) に退避し、既存規則の見た目は据え置き (解釈 i レガシー退避方式)。
 tags:
   - ipasounddrill
   - phase-1
@@ -68,7 +68,7 @@ updated: 2026-07-19T13:45:59+09:00
 |---|---|---|
 | 見出し (heading) | `'Noto Serif JP', 'Noto Serif KR', serif` | 明朝、Phase 1 の主軸見出しは明朝で統一 |
 | 本文 (body) | `'Noto Sans JP', 'Noto Sans KR', system-ui, sans-serif` | body 全体の font-family fallback |
-| IPA 記号 | `'Charis SIL', 'Doulos SIL', serif` | 既存 `fonts/DoulosSIL-Regular.woff2` あり、Google Fonts で Charis SIL 追加 |
+| IPA 記号 | `'Charis SIL', 'Doulos SIL', serif` | 既存 `packages/core/fonts/DoulosSIL-Regular.woff2`（公開 URL `/fonts/DoulosSIL-Regular.woff2`）あり、Google Fonts で Charis SIL 追加 |
 | コード / モノスペース | `monospace` | 変数名表示等の限定用途 |
 
 ### Google Fonts import (実装参考)

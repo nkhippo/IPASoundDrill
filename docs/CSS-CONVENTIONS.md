@@ -41,13 +41,13 @@
 - **CSS Nesting:** 許容（対応ブラウザ前提は現行方針に従う）
 - **`color-mix()`:** 将来対応予定（現行 Safari サポート方針のため現時点では使わない）
 - **インライン color/font/size の新規ハードコード:** 避け、トークンまたは既存パターンを使う
-- **配置:** 別 CSS ファイル分離をしない。`src/index.template.html` の `<style>` を正とする
+- **配置:** 別 CSS ファイル分離をしない。`apps/web/src/index.template.html` の `<style>` を正とする
 
 ---
 
 ## §4 6 言語ビルドとの整合性
 
-- `<style>` ブロックは 6 言語で **共通**（`scripts/build-i18n-html.js` がテンプレートから生成）
+- `<style>` ブロックは 6 言語で **共通**（`apps/web/scripts/build-i18n-html.js` がテンプレートから生成）
 - Font family / Google Fonts import も **共通**（Noto stack の言語別 fallback は stack 内で吸収）
 - CSS 変数の **値は言語非依存**
 - 言語別差分は HTML 文言・`lang`・meta のみ。CSS トークン値を言語ごとに分岐しない
@@ -75,7 +75,7 @@
 | Phase 1-D-PR2 後 | 249 | ドリル `2c`/`2d` + Reveal 共通 Mood B |
 | Phase 1-E PR-1 後 | **228** | `#vocabPage` / `#symbolPickerPage` Mood B 化（249→228） |
 | Phase 1-E PR-2 後 | **228** | `#learningStatusPage` は新トークンのみで追加。既存 legacy 参照は不変 |
-| Phase 3（2026-07-28〜29 UI 改修）後 | **195** | モーダル方式変更（`.info-page` の全画面→ scrim + 浮遊カード化）・フッター整理・ドリル系画面の新トークン移行で 228→195（`grep -c 'var(--legacy-' src/index.template.html` 実測） |
+| Phase 3（2026-07-28〜29 UI 改修）後 | **195** | モーダル方式変更（`.info-page` の全画面→ scrim + 浮遊カード化）・フッター整理・ドリル系画面の新トークン移行で 228→195（`grep -c 'var(--legacy-' apps/web/src/index.template.html` 実測） |
 
 ### Phase 3 で追加された CSS クラス/変数の規約（実例）
 

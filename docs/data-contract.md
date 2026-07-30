@@ -8,26 +8,27 @@
 
 ## 1. ランタイム 8 パス契約
 
-これらのパスは `src/index.template.html` に**ハードコード**されている（`<base href="/">` により言語サブディレクトリからもルート相対で解決）。
-`src/index.template.html` を更新せずに移動しないこと。
+これらの**公開 URL**は `apps/web/src/index.template.html` に**ハードコード**されている（`<base href="/">` により言語サブディレクトリからもルート相対で解決）。
+`apps/web/src/index.template.html` を更新せずに移動しないこと。**正本ファイル**は monorepo 化（#EPIC-02）後 `packages/core/` 配下に移設済みで、
+Web ビルド時に `apps/web/public/` へコピーされ公開 URL として配信される（`旧 wordlist_GA_a1a2_plus_phonics.json` は `apps/web/vercel.json` の rewrite により互換 URL として維持）。
 
-| Asset | Path |
-|-------|------|
-| Wordlist | `wordlist_GA_a1a2_plus_phonics.json` |
-| Connected speech | `data/connected_speech.json` |
-| Weak forms | `data/weak_forms.json` |
-| Guide | `data/guide.json` |
-| UI i18n | `i18n/{en,ja,ko,zh-Hans,zh-Hant,fil}.json` |
-| Phoneme help | `i18n/phonemes/{lang}.json` |
-| IPA font | `fonts/DoulosSIL-Regular.woff2` |
-| TTS | External `GAS_TTS_URL` in `src/index.template.html` → `gas/Code.gs` deployment |
+| Asset | 公開 URL | 正本ファイル |
+|-------|------|------|
+| Wordlist | `/data/wordlist.json`（`/wordlist_GA_a1a2_plus_phonics.json` は rewrite 互換） | `packages/core/data/wordlist.json` |
+| Connected speech | `/data/connected_speech.json` | `packages/core/data/connected_speech.json` |
+| Weak forms | `/data/weak_forms.json` | `packages/core/data/weak_forms.json` |
+| Guide | `/data/guide.json` | `packages/core/data/guide.json` |
+| UI i18n | `/i18n/{en,ja,ko,zh-Hans,zh-Hant,fil}.json` | `packages/core/i18n/{en,ja,ko,zh-Hans,zh-Hant,fil}.json` |
+| Phoneme help | `/i18n/phonemes/{lang}.json` | `packages/core/i18n/phonemes/{lang}.json` |
+| IPA font | `/fonts/DoulosSIL-Regular.woff2` | `packages/core/fonts/DoulosSIL-Regular.woff2` |
+| TTS | External `GAS_TTS_URL` in `apps/web/src/index.template.html` → `tools/tts/gas/Code.gs` deployment | — |
 
 **フラグ義務**: 上記 8 パスのいずれかに触れる Issue は、Issue 本文で明示的にフラグを立て、Complexity Level を L3 として扱い、
 下記「§6 データ整合性チェック義務表」の対応する完了定義を含めること（`docs/guardrails.md` §3 のレビュー段階化と連動）。
 
 ---
 
-## 2. wordlist スキーマ — `wordlist_GA_a1a2_plus_phonics.json`
+## 2. wordlist スキーマ — `packages/core/data/wordlist.json`（公開 URL `/data/wordlist.json`）
 
 約 **5,397 語**（オリジナル 3,059 + Phase 1 B1 +1,769 + Phase 2 B2 +569）。主要フィールド:
 
@@ -67,7 +68,7 @@
 | `src` | letter / contraction / irregular_* / casual / cefr / phonics 等 |
 | `pattern` / `group` | 規則語フィルタ・発音ポイント |
 | `cefr` | CEFR レベル（`A1` / `A2` / `B1` / `B2`） |
-| `ga_rp_same` | GA と RP が学習者にとって実質同じか（`scripts/gen_ga_rp_same.py` で付与） |
+| `ga_rp_same` | GA と RP が学習者にとって実質同じか（`tools/data-pipeline/gen_ga_rp_same.py` で付与） |
 | `ga_rp_same_reason` | 判定理由（`identical`, `rhoticity`, `square_near_cure`, `ga_allophony` 等） |
 
 ### `cefr` フィールドの現状
@@ -77,7 +78,7 @@
 - `src: "phonics"` の 652語は CEFR-J Wordlist v1.5 一次データ照合で B1/B2 正当語彙と確認済み
 - プロフィール（`3a`）で複数レベル選択。ドリル STEP 行にタグ表示。Connected（`2d`）はタグ表示のみ・UI フィルタなし
 
-**パイプライン補足:** narrow IPA 候補・respelling のステージング JSON は `data/pipeline/`。バッチソースは `data/batches/`。コマンド詳細は `docs/pipeline.md`。
+**パイプライン補足:** narrow IPA 候補・respelling のステージング JSON は `tools/data-pipeline/pipeline/`。バッチソースは `tools/data-pipeline/batches/`。コマンド詳細は `docs/pipeline.md`。
 
 ### GA / RP 「実質同じ」判定 (`ga_rp_same`)
 
@@ -88,7 +89,7 @@
 | `ga_rp_same` | `boolean` | GA と RP が学習者にとって実質同じ発音か |
 | `ga_rp_same_reason` | `string` | 判定理由（同じ / 異なる、いずれの場合も付与） |
 
-`scripts/gen_ga_rp_same.py` により全語彙一括で生成される派生フィールドで、`ipa` / `rp_ipa` / `ipa_actual_ga` から決定的に導出される（LLM 判定なし）。
+`tools/data-pipeline/gen_ga_rp_same.py` により全語彙一括で生成される派生フィールドで、`ipa` / `rp_ipa` / `ipa_actual_ga` から決定的に導出される（LLM 判定なし）。
 
 **「same」の定義**（以下の差異のみを持つペアを same と判定・STRICT）:
 1. 長音記号 `ː` の有無（GA 系辞書は緊張母音に付けない慣習）
@@ -128,7 +129,7 @@
 | `composite_structural` | 複数の構造差の複合 | 目視レビュー対象 |
 
 > 上記は wordlist 実データ（5,397 語）から機械的に集計した全 reason 値（2026-07-29 時点）。新しい reason 値が
-> `scripts/gen_ga_rp_same.py` の改修で追加された場合、本表を更新すること。
+> `tools/data-pipeline/gen_ga_rp_same.py` の改修で追加された場合、本表を更新すること。
 
 **GA-only 異音カーブアウト（重要）**: `ipa_actual_ga`（narrow 転写）が存在し `ipa`（phonemic）と異なる語は、
 phonemic レベルで RP と一致していても different と判定する。Flap T・音節主音子音・声門閉鎖など、GA でのみ生じる異音を
@@ -156,26 +157,26 @@ wordlist の `ga_rp_same_reason` 内訳（same）: `identical` 1,527, `length_ma
 **更新手順**（`ipa` / `rp_ipa` / `ipa_actual_ga` を変更した場合）:
 
 ```bash
-python3 scripts/gen_ga_rp_same.py --report data/pipeline/ga_rp_same_report.json
+python3 tools/data-pipeline/gen_ga_rp_same.py --report tools/data-pipeline/pipeline/ga_rp_same_report.json
 # rp_ipa バッチ追加後に happY 過剰伸長が疑われる場合:
-python3 scripts/fix_happy_i.py   # その後 gen_ga_rp_same を再実行
+python3 tools/data-pipeline/fix_happy_i.py   # その後 gen_ga_rp_same を再実行
 ```
 
 ---
 
 ## 3. connected_speech / weak_forms / guide スキーマ
 
-### `data/connected_speech.json`（201句）
+### `packages/core/data/connected_speech.json`（公開 URL `/data/connected_speech.json`、201句）
 
 フィールド: `id`, `w`, `ipa`, `rp_ipa`, `cs_type`, `level`（1–3）, `cefr`（A1–B2）, `cs_rule`（en/ja/fil/ko/zh-Hans/zh-Hant）, `gloss`, `carriers`（キャリア文テンプレート配列）。
 
 **Connected phrase TTS（現行）**: SPA からの API 呼び出しは `phrase=&accent=ga` 固定。`BatchWarm.gs` の暖機ループも GA 固定。RP 連結 TTS は将来対応予定（React 化以降）。
 
-### `data/weak_forms.json`（36語）
+### `packages/core/data/weak_forms.json`（公開 URL `/data/weak_forms.json`、36語）
 
 フィールド: `id`, `w`（機能語）, `ipa`（弱形）, `strong_ipa`, `level`（1–3）, `cefr`（A2/B1）, `cs_rule`（en/ja/fil）, `carrier`（キャリア文テンプレート）。Decode のみ。TTS は `?weak=/IPA/&ww=word&accent=ga|rp`。
 
-### `data/guide.json`
+### `packages/core/data/guide.json`（公開 URL `/data/guide.json`）
 
 UI i18n とは独立。各言語キー（`en`, `ja`, `ko`, `zh-Hans`, `zh-Hant`, `fil`）に 8 セクション（`welcome` … `how_to_use`）。段落数: welcome 4 / philosophy 3 / solves 2 / modes 3 / decode_encode 3 / connected 3 / accents 1 / how_to_use 3。モーダルで閲覧。
 
@@ -217,12 +218,12 @@ UI i18n とは独立。各言語キー（`en`, `ja`, `ko`, `zh-Hans`, `zh-Hant`,
 
 ## 5. i18n スキーマ
 
-**Files**: `i18n/{en,ja,ko,zh-Hans,zh-Hant,fil}.json`（6言語） + `i18n/phonemes/{lang}.json`（音素解説、47記号）
+**Files**: `packages/core/i18n/{en,ja,ko,zh-Hans,zh-Hant,fil}.json`（6言語、公開 URL `/i18n/{lang}.json`） + `packages/core/i18n/phonemes/{lang}.json`（音素解説、47記号、公開 URL `/i18n/phonemes/{lang}.json`）
 
-**検証ガード**: `tools/validate_i18n.py` が local / CI（`.github/workflows/validate-i18n.yml`）の唯一のガード。`i18n/*.json` または `src/index.template.html` の i18n 参照を編集したら必ず実行:
+**検証ガード**: `tools/validate/validate_i18n.py` が local / CI（`.github/workflows/validate-i18n.yml`）の唯一のガード。`packages/core/i18n/*.json` または `apps/web/src/index.template.html` の i18n 参照を編集したら必ず実行:
 
 ```bash
-python3 tools/validate_i18n.py
+python3 tools/validate/validate_i18n.py
 ```
 
 **Top-level keys**（`en.json` を基準、他言語も同一構造）:
@@ -249,11 +250,11 @@ python3 tools/validate_i18n.py
 | `meta` | object | `title` / `description` / `ogTitle` / `ogDescription`（build-only、`brand` 直後に挿入） |
 
 **Notes:**
-- 総 leaf 数（`tools/validate_i18n.py` 実測値・2026-07-29 時点）: **280**（Phase 3 UI 改修で 246→280。増分は `vocab.az.hint`、`about.*` 追加、`symbol.group.*` / `symbol.height.*` 内訳キー等）
+- 総 leaf 数（`tools/validate/validate_i18n.py` 実測値・2026-07-29 時点）: **280**（Phase 3 UI 改修で 246→280。増分は `vocab.az.hint`、`about.*` 追加、`symbol.group.*` / `symbol.height.*` 内訳キー等）
 - HTML 埋め込みキーは `_html` サフィックス
 - 動的置換プレースホルダ: `{n}`, `{band}`, `{pct}`, `{m}`, `{t}`, `{c}`, `{list}`, `{p}`, `{sy}`, `{s}`, `{a}`
 - LS 追加キー: `onboarding_completed_v1`（`"true"` で初回オンボ完了。スキップも完了扱い）
-- **leaf 数はコード変更（Issue #147/#150 等の UI 改修）のたびに増減しうる。本節の数値と実ファイルの `キー数(en)` が乖離した場合は `python3 tools/validate_i18n.py` の実測値を正とし、本節を更新すること**（doc-sync 対象、`docs/guardrails.md` §6）。
+- **leaf 数はコード変更（Issue #147/#150 等の UI 改修）のたびに増減しうる。本節の数値と実ファイルの `キー数(en)` が乖離した場合は `python3 tools/validate/validate_i18n.py` の実測値を正とし、本節を更新すること**（doc-sync 対象、`docs/guardrails.md` §6）。
 
 ---
 
@@ -263,19 +264,19 @@ python3 tools/validate_i18n.py
 
 | 触る対象 | 必須の完了定義 |
 |---|---|
-| `wordlist_GA_a1a2_plus_phonics.json` | 総語数・CEFR 別内訳の再カウント |
-| `rp_ipa` フィールド | `scripts/gen_ga_rp_same.py` 再実行、same/different 内訳の再確認 |
-| `neighbors` フィールド | `scripts/gen_neighbors.py` 再実行、0近傍率の変化確認 |
-| `data/connected_speech.json` | 総フレーズ数・CEFR バッジ整合性 |
-| `data/weak_forms.json` | 総エントリ数、type=weak の出題確認 |
-| `i18n/*.json` | 6 言語すべての key 網羅性（`tools/validate_i18n.py` 実行） |
-| `gas/BatchWords.gs` | `scripts/export_batch_words.py` で再生成 |
+| `packages/core/data/wordlist.json` | 総語数・CEFR 別内訳の再カウント |
+| `rp_ipa` フィールド | `tools/data-pipeline/gen_ga_rp_same.py` 再実行、same/different 内訳の再確認 |
+| `neighbors` フィールド | `tools/data-pipeline/gen_neighbors.py` 再実行、0近傍率の変化確認 |
+| `packages/core/data/connected_speech.json` | 総フレーズ数・CEFR バッジ整合性 |
+| `packages/core/data/weak_forms.json` | 総エントリ数、type=weak の出題確認 |
+| `packages/core/i18n/*.json` | 6 言語すべての key 網羅性（`tools/validate/validate_i18n.py` 実行） |
+| `tools/tts/gas/BatchWords.gs` | `tools/data-pipeline/export_batch_words.py` で再生成 |
 
 ## 7. 多言語 UI への影響（必須記載）
 
 UI 文言を変える Issue は、以下を必須記載すること:
 - ja / en / ko / zh-Hans / zh-Hant / fil の 6 言語すべての文言変更有無
-- `i18n/*.json` の更新対象 key リスト
+- `packages/core/i18n/*.json` の更新対象 key リスト
 - 現行 UI i18n leaf 数（正本は本ファイル §5。数値は固定引用せず本ファイルを参照）
 - 英語・日本語の完全性を最優先、他 4 言語は差分マージ可
 

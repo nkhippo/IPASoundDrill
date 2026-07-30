@@ -1,7 +1,7 @@
 [
   {
     "symbol": "$",
-    "line": 1466,
+    "line": 1790,
     "feature_ids": [
       "2a",
       "2b",
@@ -36,7 +36,7 @@
   },
   {
     "symbol": "activeIpa",
-    "line": 2229,
+    "line": 2517,
     "feature_ids": [
       "2a",
       "2b",
@@ -56,7 +56,7 @@
   },
   {
     "symbol": "activeNarrowIpa",
-    "line": 2237,
+    "line": 2525,
     "feature_ids": [
       "2a",
       "2c",
@@ -75,7 +75,7 @@
   },
   {
     "symbol": "activeNeighbors",
-    "line": 2320,
+    "line": 2602,
     "feature_ids": [
       "2c"
     ],
@@ -87,7 +87,7 @@
   },
   {
     "symbol": "activeStrongIpa",
-    "line": 2509,
+    "line": 2799,
     "feature_ids": [
       "reveal"
     ],
@@ -100,7 +100,7 @@
   },
   {
     "symbol": "altAccentLabel",
-    "line": 2248,
+    "line": 2536,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -112,7 +112,7 @@
   },
   {
     "symbol": "altAccentSpeakerState",
-    "line": 2272,
+    "line": 2560,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -129,7 +129,7 @@
   },
   {
     "symbol": "altAccentValue",
-    "line": 2257,
+    "line": 2545,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -143,7 +143,7 @@
   },
   {
     "symbol": "altIpa",
-    "line": 2233,
+    "line": 2521,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -153,7 +153,7 @@
   },
   {
     "symbol": "altSpeakerIdsForCurrentCard",
-    "line": 4134,
+    "line": 4506,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -165,7 +165,7 @@
   },
   {
     "symbol": "appendSessionBatch",
-    "line": 4588,
+    "line": 4960,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -175,7 +175,7 @@
   },
   {
     "symbol": "applyDrillId",
-    "line": 3197,
+    "line": 3557,
     "feature_ids": [
       "3d"
     ],
@@ -190,7 +190,7 @@
   },
   {
     "symbol": "applyI18n",
-    "line": 2525,
+    "line": 2815,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -204,6 +204,7 @@
       "escHtml",
       "homeCopy",
       "renderBuild",
+      "syncLanguageOptions",
       "t",
       "updateLangSwitcherCurrent",
       "updatePool",
@@ -212,7 +213,7 @@
   },
   {
     "symbol": "applyI18nProgress",
-    "line": 1628,
+    "line": 1948,
     "feature_ids": [
       "3d"
     ],
@@ -229,7 +230,7 @@
   },
   {
     "symbol": "applyI18nVocab",
-    "line": 1590,
+    "line": 1917,
     "feature_ids": [
       "3b",
       "3c"
@@ -250,7 +251,7 @@
   },
   {
     "symbol": "applyModeBStudyTwoPane",
-    "line": 3883,
+    "line": 4251,
     "feature_ids": [
       "2c"
     ],
@@ -261,13 +262,13 @@
     ],
     "depends_on": [
       "$",
-      "isPcLayout",
-      "show"
+      "show",
+      "t"
     ]
   },
   {
     "symbol": "applyOnboardingI18n",
-    "line": 4680,
+    "line": 5054,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -281,7 +282,7 @@
   },
   {
     "symbol": "applyPrevSettings",
-    "line": 3520,
+    "line": 3888,
     "feature_ids": [
       "3d"
     ],
@@ -298,7 +299,7 @@
   },
   {
     "symbol": "audioHintText",
-    "line": 4514,
+    "line": 4886,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -310,7 +311,7 @@
   },
   {
     "symbol": "audioReadyKey",
-    "line": 3994,
+    "line": 4366,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -320,7 +321,7 @@
   },
   {
     "symbol": "autoNote",
-    "line": 4990,
+    "line": 5377,
     "feature_ids": [
       "reveal"
     ],
@@ -342,8 +343,20 @@
     ]
   },
   {
+    "symbol": "backToTop",
+    "line": 5735,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "showPurposeHome"
+    ]
+  },
+  {
     "symbol": "bindIpaSegments",
-    "line": 4817,
+    "line": 5194,
     "feature_ids": [
       "2d"
     ],
@@ -358,7 +371,7 @@
   },
   {
     "symbol": "bindPills",
-    "line": 3374,
+    "line": 3742,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -373,7 +386,7 @@
   },
   {
     "symbol": "bindRevealCheckClicks",
-    "line": 5360,
+    "line": 5825,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -387,7 +400,7 @@
   },
   {
     "symbol": "bindVirtScroll",
-    "line": 1938,
+    "line": 2262,
     "feature_ids": [
       "3b",
       "3c"
@@ -401,7 +414,7 @@
   },
   {
     "symbol": "bodyWorkerBatch",
-    "line": 4378,
+    "line": 4750,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -411,7 +424,7 @@
   },
   {
     "symbol": "buildIpaHtml",
-    "line": 4806,
+    "line": 5183,
     "feature_ids": [
       "2d"
     ],
@@ -427,7 +440,7 @@
   },
   {
     "symbol": "buildKeyboard",
-    "line": 4946,
+    "line": 5333,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -441,7 +454,7 @@
   },
   {
     "symbol": "buildMcqChoices",
-    "line": 3798,
+    "line": 4166,
     "feature_ids": [
       "2c"
     ],
@@ -460,7 +473,7 @@
   },
   {
     "symbol": "buildModeBQueue",
-    "line": 3817,
+    "line": 4185,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -475,7 +488,7 @@
   },
   {
     "symbol": "buildSessionPool",
-    "line": 4568,
+    "line": 4940,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -495,7 +508,7 @@
   },
   {
     "symbol": "buildSessionQueue",
-    "line": 4538,
+    "line": 4910,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -516,7 +529,7 @@
   },
   {
     "symbol": "buildVocabLetterBar",
-    "line": 1641,
+    "line": 1961,
     "feature_ids": [
       "3b"
     ],
@@ -531,7 +544,7 @@
   },
   {
     "symbol": "bytesFromB64",
-    "line": 4001,
+    "line": 4373,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -541,7 +554,7 @@
   },
   {
     "symbol": "capCarrierBefore",
-    "line": 4826,
+    "line": 5203,
     "feature_ids": [
       "2d"
     ],
@@ -553,7 +566,7 @@
   },
   {
     "symbol": "clearAudioTapPrompt",
-    "line": 4529,
+    "line": 4901,
     "feature_ids": [
       "3a",
       "1a"
@@ -569,8 +582,20 @@
     ]
   },
   {
+    "symbol": "closeAboutModal",
+    "line": 5019,
+    "feature_ids": [
+      "3h"
+    ],
+    "scope": "primary",
+    "caller_areas": [
+      "about"
+    ],
+    "depends_on": []
+  },
+  {
     "symbol": "closeExitConfirm",
-    "line": 4638,
+    "line": 5010,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -582,7 +607,7 @@
   },
   {
     "symbol": "closeVocab",
-    "line": 2881,
+    "line": 3230,
     "feature_ids": [
       "3b"
     ],
@@ -594,7 +619,7 @@
   },
   {
     "symbol": "completeOnboarding",
-    "line": 4673,
+    "line": 5047,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -604,7 +629,7 @@
   },
   {
     "symbol": "computeDrillProgress",
-    "line": 1737,
+    "line": 2035,
     "feature_ids": [
       "3d"
     ],
@@ -619,14 +644,12 @@
   },
   {
     "symbol": "csRuleText",
-    "line": 2520,
+    "line": 2810,
     "feature_ids": [
-      "3b",
       "reveal"
     ],
     "scope": "shared",
     "caller_areas": [
-      "vocab",
       "reveal",
       "infra"
     ],
@@ -634,7 +657,7 @@
   },
   {
     "symbol": "csTypeLabel",
-    "line": 2514,
+    "line": 2804,
     "feature_ids": [
       "reveal"
     ],
@@ -649,7 +672,7 @@
   },
   {
     "symbol": "currentAccent",
-    "line": 3997,
+    "line": 4369,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -659,7 +682,7 @@
   },
   {
     "symbol": "currentCardWord",
-    "line": 4126,
+    "line": 4498,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -669,7 +692,7 @@
   },
   {
     "symbol": "currentCheckMode",
-    "line": 3547,
+    "line": 3915,
     "feature_ids": [
       "reveal"
     ],
@@ -682,7 +705,7 @@
   },
   {
     "symbol": "dataReady",
-    "line": 2205,
+    "line": 2493,
     "feature_ids": [
       "3d"
     ],
@@ -695,7 +718,7 @@
   },
   {
     "symbol": "decodeCheck",
-    "line": 4902,
+    "line": 5289,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -709,7 +732,7 @@
   },
   {
     "symbol": "drillProgressCardHtml",
-    "line": 1750,
+    "line": 2048,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -722,7 +745,7 @@
   },
   {
     "symbol": "encodeCheck",
-    "line": 4981,
+    "line": 5368,
     "feature_ids": [
       "2b"
     ],
@@ -738,7 +761,7 @@
   },
   {
     "symbol": "ensureEnabledSelection",
-    "line": 3637,
+    "line": 4005,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -751,7 +774,7 @@
   },
   {
     "symbol": "ensureQueueStock",
-    "line": 4595,
+    "line": 4967,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -765,7 +788,7 @@
   },
   {
     "symbol": "escAttr",
-    "line": 1964,
+    "line": 2292,
     "feature_ids": [
       "3b",
       "3c",
@@ -781,7 +804,7 @@
   },
   {
     "symbol": "escHtml",
-    "line": 1961,
+    "line": 2289,
     "feature_ids": [
       "3b",
       "3c"
@@ -796,7 +819,7 @@
   },
   {
     "symbol": "escapeHtml",
-    "line": 1586,
+    "line": 1913,
     "feature_ids": [
       "2d"
     ],
@@ -808,7 +831,7 @@
   },
   {
     "symbol": "fetchAudioFromDriveUrl",
-    "line": 4090,
+    "line": 4462,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -818,7 +841,7 @@
   },
   {
     "symbol": "fetchAudioFromGas",
-    "line": 4100,
+    "line": 4472,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -832,7 +855,7 @@
   },
   {
     "symbol": "fetchAudioFromGasAccent",
-    "line": 4068,
+    "line": 4440,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -842,7 +865,7 @@
   },
   {
     "symbol": "fetchBodyToCache",
-    "line": 4251,
+    "line": 4623,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -863,7 +886,7 @@
   },
   {
     "symbol": "fetchBodyToCacheItem",
-    "line": 4226,
+    "line": 4598,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -883,7 +906,7 @@
   },
   {
     "symbol": "fetchUrlsFromGas",
-    "line": 4076,
+    "line": 4448,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -893,7 +916,7 @@
   },
   {
     "symbol": "filteredCsPool",
-    "line": 3669,
+    "line": 4037,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -903,7 +926,7 @@
   },
   {
     "symbol": "filteredPool",
-    "line": 3628,
+    "line": 3996,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -915,7 +938,7 @@
   },
   {
     "symbol": "filteredWordPoolWith",
-    "line": 3608,
+    "line": 3976,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -925,7 +948,7 @@
   },
   {
     "symbol": "findItemByKey",
-    "line": 1997,
+    "line": 2325,
     "feature_ids": [
       "3b"
     ],
@@ -939,13 +962,10 @@
   },
   {
     "symbol": "formatSameAccentIpa",
-    "line": 2251,
-    "feature_ids": [
-      "3b"
-    ],
-    "scope": "shared",
+    "line": 2539,
+    "feature_ids": [],
+    "scope": "primary",
     "caller_areas": [
-      "vocab",
       "infra"
     ],
     "depends_on": [
@@ -954,7 +974,7 @@
   },
   {
     "symbol": "frequencyWeight",
-    "line": 3581,
+    "line": 3949,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -966,7 +986,7 @@
   },
   {
     "symbol": "gasWarm",
-    "line": 4186,
+    "line": 4558,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -976,7 +996,7 @@
   },
   {
     "symbol": "getCheckCount",
-    "line": 3551,
+    "line": 3919,
     "feature_ids": [
       "3d",
       "reveal"
@@ -996,7 +1016,7 @@
   },
   {
     "symbol": "getMark",
-    "line": 3460,
+    "line": 3828,
     "feature_ids": [
       "3d"
     ],
@@ -1010,7 +1030,7 @@
   },
   {
     "symbol": "goToTop",
-    "line": 3304,
+    "line": 3672,
     "feature_ids": [
       "1a"
     ],
@@ -1027,13 +1047,10 @@
   },
   {
     "symbol": "hasCachedAudioFor",
-    "line": 4008,
-    "feature_ids": [
-      "3b"
-    ],
-    "scope": "shared",
+    "line": 4380,
+    "feature_ids": [],
+    "scope": "primary",
     "caller_areas": [
-      "vocab",
       "infra"
     ],
     "depends_on": [
@@ -1043,7 +1060,7 @@
   },
   {
     "symbol": "hasCachedAudioForItem",
-    "line": 4156,
+    "line": 4528,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -1059,7 +1076,7 @@
   },
   {
     "symbol": "hasNarrowDifference",
-    "line": 2242,
+    "line": 2530,
     "feature_ids": [
       "reveal"
     ],
@@ -1074,7 +1091,7 @@
   },
   {
     "symbol": "hasTrapPhoneme",
-    "line": 3439,
+    "line": 3807,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -1086,7 +1103,7 @@
   },
   {
     "symbol": "hideModeBCards",
-    "line": 3849,
+    "line": 4217,
     "feature_ids": [
       "2c",
       "reveal",
@@ -1105,7 +1122,7 @@
   },
   {
     "symbol": "hideOnboarding",
-    "line": 4734,
+    "line": 5108,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -1118,7 +1135,7 @@
   },
   {
     "symbol": "hidePracticePanels",
-    "line": 3218,
+    "line": 3580,
     "feature_ids": [
       "3a",
       "1a"
@@ -1134,7 +1151,7 @@
   },
   {
     "symbol": "highlightIpaMatch",
-    "line": 1843,
+    "line": 2145,
     "feature_ids": [
       "3b"
     ],
@@ -1148,7 +1165,7 @@
   },
   {
     "symbol": "histEntry",
-    "line": 3592,
+    "line": 3960,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -1158,7 +1175,7 @@
   },
   {
     "symbol": "homeCopy",
-    "line": 2503,
+    "line": 2793,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -1168,7 +1185,7 @@
   },
   {
     "symbol": "initApp",
-    "line": 3085,
+    "line": 3445,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -1196,7 +1213,7 @@
   },
   {
     "symbol": "initSessionQueue",
-    "line": 4604,
+    "line": 4976,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -1210,7 +1227,7 @@
   },
   {
     "symbol": "isConnectedItem",
-    "line": 2507,
+    "line": 2797,
     "feature_ids": [
       "2a",
       "reveal"
@@ -1225,7 +1242,7 @@
   },
   {
     "symbol": "isCurrentItem",
-    "line": 4566,
+    "line": 4938,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -1235,7 +1252,7 @@
   },
   {
     "symbol": "isDue",
-    "line": 3593,
+    "line": 3961,
     "feature_ids": [
       "2c"
     ],
@@ -1248,7 +1265,7 @@
   },
   {
     "symbol": "isOnboardingCompleted",
-    "line": 4667,
+    "line": 5041,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -1258,20 +1275,17 @@
   },
   {
     "symbol": "isPcLayout",
-    "line": 5051,
-    "feature_ids": [
-      "2c"
-    ],
-    "scope": "shared",
+    "line": 5445,
+    "feature_ids": [],
+    "scope": "primary",
     "caller_areas": [
-      "study",
       "infra"
     ],
     "depends_on": []
   },
   {
     "symbol": "isReflectAvailableScreen",
-    "line": 4632,
+    "line": 5004,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -1283,7 +1297,7 @@
   },
   {
     "symbol": "isValidDistractor",
-    "line": 3791,
+    "line": 4159,
     "feature_ids": [
       "2c"
     ],
@@ -1297,7 +1311,7 @@
   },
   {
     "symbol": "isWeakItem",
-    "line": 2508,
+    "line": 2798,
     "feature_ids": [
       "2a",
       "reveal"
@@ -1312,7 +1326,7 @@
   },
   {
     "symbol": "itemAudioReadyKey",
-    "line": 4150,
+    "line": 4522,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -1327,7 +1341,7 @@
   },
   {
     "symbol": "itemCefrLabel",
-    "line": 3317,
+    "line": 3685,
     "feature_ids": [
       "3b",
       "3d"
@@ -1342,7 +1356,7 @@
   },
   {
     "symbol": "jumpVocabLetter",
-    "line": 1955,
+    "line": 2279,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -1354,7 +1368,7 @@
   },
   {
     "symbol": "keyGroups",
-    "line": 4929,
+    "line": 5316,
     "feature_ids": [
       "2b"
     ],
@@ -1368,7 +1382,7 @@
   },
   {
     "symbol": "langFromPath",
-    "line": 2211,
+    "line": 2499,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -1378,7 +1392,7 @@
   },
   {
     "symbol": "lcsMark",
-    "line": 4973,
+    "line": 5360,
     "feature_ids": [
       "2b",
       "reveal"
@@ -1392,7 +1406,7 @@
   },
   {
     "symbol": "leaveExclusiveRoute",
-    "line": 4647,
+    "line": 5021,
     "feature_ids": [
       "3d"
     ],
@@ -1407,7 +1421,7 @@
   },
   {
     "symbol": "legacyLsKey",
-    "line": 3977,
+    "line": 4349,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -1417,7 +1431,7 @@
   },
   {
     "symbol": "loadAudioFromLS",
-    "line": 4032,
+    "line": 4404,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -1433,7 +1447,7 @@
   },
   {
     "symbol": "loadAudioFromLSAccent",
-    "line": 4013,
+    "line": 4385,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -1447,7 +1461,7 @@
   },
   {
     "symbol": "loadChecks",
-    "line": 3444,
+    "line": 3812,
     "feature_ids": [
       "3d"
     ],
@@ -1460,7 +1474,7 @@
   },
   {
     "symbol": "loadConnected",
-    "line": 1551,
+    "line": 1878,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -1472,7 +1486,7 @@
   },
   {
     "symbol": "loadHist",
-    "line": 3442,
+    "line": 3810,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -1482,7 +1496,7 @@
   },
   {
     "symbol": "loadLocale",
-    "line": 2333,
+    "line": 2615,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -1492,7 +1506,7 @@
   },
   {
     "symbol": "loadMarks",
-    "line": 3452,
+    "line": 3820,
     "feature_ids": [
       "3d"
     ],
@@ -1505,7 +1519,7 @@
   },
   {
     "symbol": "loadPrevSettings",
-    "line": 3500,
+    "line": 3868,
     "feature_ids": [
       "3d"
     ],
@@ -1518,7 +1532,7 @@
   },
   {
     "symbol": "loadSym",
-    "line": 3590,
+    "line": 3958,
     "feature_ids": [
       "2b",
       "3c"
@@ -1532,7 +1546,7 @@
   },
   {
     "symbol": "loadVocab",
-    "line": 3771,
+    "line": 4139,
     "feature_ids": [
       "2c",
       "3b"
@@ -1546,7 +1560,7 @@
   },
   {
     "symbol": "loadWeak",
-    "line": 1559,
+    "line": 1886,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -1558,7 +1572,7 @@
   },
   {
     "symbol": "loadWordlist",
-    "line": 1515,
+    "line": 1842,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -1573,7 +1587,7 @@
   },
   {
     "symbol": "localizePattern",
-    "line": 2343,
+    "line": 2625,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -1585,7 +1599,7 @@
   },
   {
     "symbol": "lockInputScroll",
-    "line": 4866,
+    "line": 5253,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -1595,7 +1609,7 @@
   },
   {
     "symbol": "lsKey",
-    "line": 3971,
+    "line": 4343,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -1608,7 +1622,7 @@
   },
   {
     "symbol": "lsKeyAccent",
-    "line": 3974,
+    "line": 4346,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -1620,7 +1634,7 @@
   },
   {
     "symbol": "marksMigrated",
-    "line": 3476,
+    "line": 3844,
     "feature_ids": [
       "3d"
     ],
@@ -1633,7 +1647,7 @@
   },
   {
     "symbol": "matchesWeakFocus",
-    "line": 3602,
+    "line": 3970,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -1646,7 +1660,7 @@
   },
   {
     "symbol": "maybeShowOnboarding",
-    "line": 4740,
+    "line": 5114,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -1659,7 +1673,7 @@
   },
   {
     "symbol": "memCacheKey",
-    "line": 3983,
+    "line": 4355,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -1673,7 +1687,7 @@
   },
   {
     "symbol": "memKeyAccent",
-    "line": 3991,
+    "line": 4363,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -1683,7 +1697,7 @@
   },
   {
     "symbol": "migrateChecksToMarksIfNeeded",
-    "line": 3480,
+    "line": 3848,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -1698,7 +1712,7 @@
   },
   {
     "symbol": "modeBBandPool",
-    "line": 3775,
+    "line": 4143,
     "feature_ids": [
       "2c"
     ],
@@ -1710,7 +1724,7 @@
   },
   {
     "symbol": "modeBDictCheck",
-    "line": 3934,
+    "line": 4306,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -1725,7 +1739,7 @@
   },
   {
     "symbol": "modeBDisplayGloss",
-    "line": 3782,
+    "line": 4150,
     "feature_ids": [
       "2c"
     ],
@@ -1740,7 +1754,7 @@
   },
   {
     "symbol": "modeBEligible",
-    "line": 3774,
+    "line": 4142,
     "feature_ids": [
       "2c"
     ],
@@ -1752,7 +1766,7 @@
   },
   {
     "symbol": "modeBGloss",
-    "line": 3780,
+    "line": 4148,
     "feature_ids": [
       "2c"
     ],
@@ -1765,7 +1779,7 @@
   },
   {
     "symbol": "modeBMcqPick",
-    "line": 3908,
+    "line": 4280,
     "feature_ids": [
       "2c"
     ],
@@ -1781,7 +1795,7 @@
   },
   {
     "symbol": "modeBPool",
-    "line": 3776,
+    "line": 4144,
     "feature_ids": [
       "2c"
     ],
@@ -1796,7 +1810,7 @@
   },
   {
     "symbol": "multiList",
-    "line": 3113,
+    "line": 3473,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -1806,7 +1820,7 @@
   },
   {
     "symbol": "navigate",
-    "line": 2785,
+    "line": 3116,
     "feature_ids": [
       "3b"
     ],
@@ -1821,7 +1835,7 @@
   },
   {
     "symbol": "nextCard",
-    "line": 5171,
+    "line": 5616,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -1837,7 +1851,7 @@
   },
   {
     "symbol": "norm",
-    "line": 4897,
+    "line": 5284,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -1847,7 +1861,7 @@
   },
   {
     "symbol": "normalizeConnected",
-    "line": 1532,
+    "line": 1859,
     "feature_ids": [
       "2d"
     ],
@@ -1859,7 +1873,7 @@
   },
   {
     "symbol": "normalizeWeak",
-    "line": 1567,
+    "line": 1894,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -1869,7 +1883,7 @@
   },
   {
     "symbol": "normalizeWord",
-    "line": 1496,
+    "line": 1823,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -1879,7 +1893,7 @@
   },
   {
     "symbol": "nucleusIndex",
-    "line": 3122,
+    "line": 3482,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -1889,7 +1903,7 @@
   },
   {
     "symbol": "onModalEscapeKey",
-    "line": 5236,
+    "line": 5683,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -1904,7 +1918,7 @@
   },
   {
     "symbol": "onRouteChange",
-    "line": 2791,
+    "line": 3122,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -1916,7 +1930,7 @@
   },
   {
     "symbol": "onVocabListClick",
-    "line": 5332,
+    "line": 5797,
     "feature_ids": [
       "3b"
     ],
@@ -1933,7 +1947,7 @@
   },
   {
     "symbol": "onboardingNextStep",
-    "line": 4746,
+    "line": 5120,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -1945,8 +1959,18 @@
     ]
   },
   {
+    "symbol": "openAboutModal",
+    "line": 5018,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": []
+  },
+  {
     "symbol": "openDrillProfile",
-    "line": 4653,
+    "line": 5027,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -1964,7 +1988,7 @@
   },
   {
     "symbol": "openExitConfirm",
-    "line": 4642,
+    "line": 5014,
     "feature_ids": [
       "1a"
     ],
@@ -1979,7 +2003,7 @@
   },
   {
     "symbol": "openVocab",
-    "line": 2880,
+    "line": 3229,
     "feature_ids": [
       "3b"
     ],
@@ -1991,13 +2015,10 @@
   },
   {
     "symbol": "otherAccent",
-    "line": 2269,
-    "feature_ids": [
-      "3b"
-    ],
-    "scope": "shared",
+    "line": 2557,
+    "feature_ids": [],
+    "scope": "primary",
     "caller_areas": [
-      "vocab",
       "infra"
     ],
     "depends_on": [
@@ -2006,7 +2027,7 @@
   },
   {
     "symbol": "paintVirtWindow",
-    "line": 1886,
+    "line": 2206,
     "feature_ids": [
       "3b",
       "3c"
@@ -2024,7 +2045,7 @@
   },
   {
     "symbol": "parseHash",
-    "line": 2780,
+    "line": 3111,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -2034,7 +2055,7 @@
   },
   {
     "symbol": "parseSpeakOpts",
-    "line": 3954,
+    "line": 4326,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -2044,7 +2065,7 @@
   },
   {
     "symbol": "persistAppLang",
-    "line": 2215,
+    "line": 2503,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -2054,7 +2075,7 @@
   },
   {
     "symbol": "phonemesOf",
-    "line": 3123,
+    "line": 3483,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -2064,7 +2085,7 @@
   },
   {
     "symbol": "pickCarrier",
-    "line": 4822,
+    "line": 5199,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -2074,7 +2095,7 @@
   },
   {
     "symbol": "playCrumbLearningLabel",
-    "line": 3297,
+    "line": 3665,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -2086,7 +2107,7 @@
   },
   {
     "symbol": "playCrumbPracticeLabel",
-    "line": 3292,
+    "line": 3660,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -2098,7 +2119,7 @@
   },
   {
     "symbol": "posLabel",
-    "line": 2357,
+    "line": 2639,
     "feature_ids": [
       "2c",
       "3b"
@@ -2112,7 +2133,7 @@
   },
   {
     "symbol": "prefetchAccentBodies",
-    "line": 4304,
+    "line": 4676,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -2133,7 +2154,7 @@
   },
   {
     "symbol": "prefetchIdleBodies",
-    "line": 4288,
+    "line": 4660,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -2146,7 +2167,7 @@
   },
   {
     "symbol": "prefetchItemsAudio",
-    "line": 4337,
+    "line": 4709,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -2176,7 +2197,7 @@
   },
   {
     "symbol": "prefetchSessionAudio",
-    "line": 4437,
+    "line": 4809,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -2188,13 +2209,13 @@
   },
   {
     "symbol": "progressChecksHtml",
-    "line": 1976,
+    "line": 2304,
     "feature_ids": [
-      "3b"
+      "3d"
     ],
     "scope": "primary",
     "caller_areas": [
-      "vocab"
+      "progress"
     ],
     "depends_on": [
       "escAttr",
@@ -2205,7 +2226,7 @@
   },
   {
     "symbol": "progressDefaultCefrLevels",
-    "line": 1698,
+    "line": 1996,
     "feature_ids": [
       "3d"
     ],
@@ -2219,7 +2240,7 @@
   },
   {
     "symbol": "progressPoolForDrill",
-    "line": 1729,
+    "line": 2027,
     "feature_ids": [
       "3d"
     ],
@@ -2233,7 +2254,7 @@
   },
   {
     "symbol": "queueStock",
-    "line": 4567,
+    "line": 4939,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -2243,7 +2264,7 @@
   },
   {
     "symbol": "rebuildVirtSlots",
-    "line": 1856,
+    "line": 2165,
     "feature_ids": [
       "3b",
       "3c"
@@ -2259,7 +2280,7 @@
   },
   {
     "symbol": "recordHist",
-    "line": 3748,
+    "line": 4116,
     "feature_ids": [
       "reveal"
     ],
@@ -2274,7 +2295,7 @@
   },
   {
     "symbol": "recordModeBQuiz",
-    "line": 3839,
+    "line": 4207,
     "feature_ids": [
       "2c"
     ],
@@ -2289,7 +2310,7 @@
   },
   {
     "symbol": "recordModeBStudy",
-    "line": 3835,
+    "line": 4203,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -2302,7 +2323,7 @@
   },
   {
     "symbol": "recordSymEncode",
-    "line": 3756,
+    "line": 4124,
     "feature_ids": [
       "reveal"
     ],
@@ -2321,7 +2342,7 @@
   },
   {
     "symbol": "refreshAllSpeakers",
-    "line": 4180,
+    "line": 4552,
     "feature_ids": [
       "reveal"
     ],
@@ -2337,7 +2358,7 @@
   },
   {
     "symbol": "refreshAltAccentSpeakers",
-    "line": 2304,
+    "line": 2592,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -2350,7 +2371,7 @@
   },
   {
     "symbol": "refreshAltSpeakerFor",
-    "line": 4204,
+    "line": 4576,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -2366,7 +2387,7 @@
   },
   {
     "symbol": "refreshChecksInDom",
-    "line": 2003,
+    "line": 2331,
     "feature_ids": [
       "3b"
     ],
@@ -2380,7 +2401,7 @@
   },
   {
     "symbol": "refreshModeBStudyContent",
-    "line": 3856,
+    "line": 4224,
     "feature_ids": [
       "2c"
     ],
@@ -2397,7 +2418,7 @@
   },
   {
     "symbol": "refreshRevealChecksPanel",
-    "line": 2013,
+    "line": 2341,
     "feature_ids": [
       "reveal"
     ],
@@ -2415,7 +2436,7 @@
   },
   {
     "symbol": "refreshRevealIpa",
-    "line": 5037,
+    "line": 5424,
     "feature_ids": [
       "reveal"
     ],
@@ -2436,7 +2457,7 @@
   },
   {
     "symbol": "refreshSpeakerFor",
-    "line": 4212,
+    "line": 4584,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -2456,7 +2477,7 @@
   },
   {
     "symbol": "refreshSpeakerForItem",
-    "line": 4165,
+    "line": 4537,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -2477,7 +2498,7 @@
   },
   {
     "symbol": "renderAltAccentLine",
-    "line": 2285,
+    "line": 2573,
     "feature_ids": [
       "2a",
       "2c",
@@ -2499,7 +2520,7 @@
   },
   {
     "symbol": "renderBuild",
-    "line": 4958,
+    "line": 5345,
     "feature_ids": [
       "2b"
     ],
@@ -2516,7 +2537,7 @@
   },
   {
     "symbol": "renderCard",
-    "line": 4846,
+    "line": 5223,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -2536,12 +2557,13 @@
       "renderModeBStudy",
       "renderSummary",
       "sessionFinished",
+      "setRevealPending",
       "show"
     ]
   },
   {
     "symbol": "renderConnectedPrompt",
-    "line": 4830,
+    "line": 5207,
     "feature_ids": [
       "2a"
     ],
@@ -2560,7 +2582,7 @@
   },
   {
     "symbol": "renderDecode",
-    "line": 4877,
+    "line": 5264,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -2582,7 +2604,7 @@
   },
   {
     "symbol": "renderEncode",
-    "line": 4964,
+    "line": 5351,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -2598,7 +2620,7 @@
   },
   {
     "symbol": "renderInfo",
-    "line": 4788,
+    "line": 5165,
     "feature_ids": [
       "reveal"
     ],
@@ -2614,7 +2636,7 @@
   },
   {
     "symbol": "renderIpaInto",
-    "line": 4801,
+    "line": 5178,
     "feature_ids": [
       "2a",
       "2c",
@@ -2633,7 +2655,7 @@
   },
   {
     "symbol": "renderModeBDict",
-    "line": 3923,
+    "line": 4295,
     "feature_ids": [
       "2c"
     ],
@@ -2651,7 +2673,7 @@
   },
   {
     "symbol": "renderModeBMcq",
-    "line": 3897,
+    "line": 4269,
     "feature_ids": [
       "2c"
     ],
@@ -2672,7 +2694,7 @@
   },
   {
     "symbol": "renderModeBQuizSpell",
-    "line": 3930,
+    "line": 4302,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -2684,7 +2706,7 @@
   },
   {
     "symbol": "renderModeBStudy",
-    "line": 3860,
+    "line": 4228,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -2707,7 +2729,7 @@
   },
   {
     "symbol": "renderOnboardingSlide",
-    "line": 4702,
+    "line": 5075,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -2720,7 +2742,7 @@
   },
   {
     "symbol": "renderProgressPage",
-    "line": 1760,
+    "line": 2058,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -2735,8 +2757,24 @@
     ]
   },
   {
+    "symbol": "renderPronCard",
+    "line": 5522,
+    "feature_ids": [
+      "reveal"
+    ],
+    "scope": "primary",
+    "caller_areas": [
+      "reveal"
+    ],
+    "depends_on": [
+      "$",
+      "buildIpaHtml",
+      "t"
+    ]
+  },
+  {
     "symbol": "renderSummary",
-    "line": 5211,
+    "line": 5658,
     "feature_ids": [
       "summary"
     ],
@@ -2755,7 +2793,7 @@
   },
   {
     "symbol": "renderSymbolPalette",
-    "line": 2976,
+    "line": 3326,
     "feature_ids": [
       "3c"
     ],
@@ -2774,7 +2812,7 @@
   },
   {
     "symbol": "renderSymbolPicker",
-    "line": 3046,
+    "line": 3406,
     "feature_ids": [
       "3b",
       "3c"
@@ -2793,7 +2831,7 @@
   },
   {
     "symbol": "renderSymbolQueryChips",
-    "line": 2999,
+    "line": 3349,
     "feature_ids": [
       "3c"
     ],
@@ -2810,7 +2848,7 @@
   },
   {
     "symbol": "renderSymbolResults",
-    "line": 3024,
+    "line": 3384,
     "feature_ids": [
       "3c"
     ],
@@ -2829,7 +2867,7 @@
   },
   {
     "symbol": "renderVocabIpaFilterBar",
-    "line": 2075,
+    "line": 2404,
     "feature_ids": [
       "3b",
       "3c"
@@ -2837,41 +2875,20 @@
     "scope": "shared",
     "caller_areas": [
       "vocab",
-      "picker"
+      "picker",
+      "infra"
     ],
     "depends_on": [
       "$",
       "escAttr",
       "escHtml",
+      "t",
       "vocabIpaKeyboardSymbols"
     ]
   },
   {
-    "symbol": "renderVocabPhrases",
-    "line": 2109,
-    "feature_ids": [
-      "3b"
-    ],
-    "scope": "primary",
-    "caller_areas": [
-      "vocab"
-    ],
-    "depends_on": [
-      "$",
-      "csRuleText",
-      "escAttr",
-      "escHtml",
-      "formatSameAccentIpa",
-      "itemCefrLabel",
-      "progressChecksHtml",
-      "t",
-      "vocabAltSpeakerHtml",
-      "wordGloss"
-    ]
-  },
-  {
     "symbol": "renderVocabTab",
-    "line": 2181,
+    "line": 2479,
     "feature_ids": [
       "3b"
     ],
@@ -2882,20 +2899,15 @@
     ],
     "depends_on": [
       "$",
-      "escHtml",
       "renderVocabIpaFilterBar",
-      "renderVocabPhrases",
       "renderVocabWords",
-      "show",
-      "syncVocabCefrPills",
-      "t",
-      "updateVocabTabActive",
+      "syncVocabAccentToggle",
       "vocabSkeletonHtml"
     ]
   },
   {
     "symbol": "renderVocabWords",
-    "line": 2088,
+    "line": 2446,
     "feature_ids": [
       "3b",
       "3c"
@@ -2909,16 +2921,17 @@
     "depends_on": [
       "$",
       "bindVirtScroll",
-      "itemCefrLabel",
+      "escHtml",
       "paintVirtWindow",
       "rebuildVirtSlots",
-      "vocabSkeletonHtml",
-      "wordIpaForSearch"
+      "t",
+      "vocabSearchIpa",
+      "vocabSkeletonHtml"
     ]
   },
   {
     "symbol": "renderWordPronDetails",
-    "line": 5017,
+    "line": 5404,
     "feature_ids": [
       "2c",
       "reveal"
@@ -2939,7 +2952,7 @@
   },
   {
     "symbol": "reopenOnboarding",
-    "line": 4730,
+    "line": 5104,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -2951,7 +2964,7 @@
   },
   {
     "symbol": "resolveDrillId",
-    "line": 3494,
+    "line": 3862,
     "feature_ids": [
       "3d"
     ],
@@ -2963,7 +2976,7 @@
   },
   {
     "symbol": "reveal",
-    "line": 5109,
+    "line": 5540,
     "feature_ids": [
       "2a",
       "2b",
@@ -2991,8 +3004,10 @@
       "refreshAllSpeakers",
       "refreshRevealChecksPanel",
       "refreshRevealIpa",
+      "renderPronCard",
       "renderWordPronDetails",
       "setCardCefr",
+      "setRevealPending",
       "show",
       "speak",
       "speakOptsForItem",
@@ -3006,7 +3021,7 @@
   },
   {
     "symbol": "saveAudioToLS",
-    "line": 4060,
+    "line": 4432,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -3018,7 +3033,7 @@
   },
   {
     "symbol": "saveAudioToLSAccent",
-    "line": 4052,
+    "line": 4424,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -3030,7 +3045,7 @@
   },
   {
     "symbol": "saveChecks",
-    "line": 3448,
+    "line": 3816,
     "feature_ids": [
       "3d"
     ],
@@ -3042,7 +3057,7 @@
   },
   {
     "symbol": "saveHist",
-    "line": 3443,
+    "line": 3811,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -3052,7 +3067,7 @@
   },
   {
     "symbol": "saveMarks",
-    "line": 3456,
+    "line": 3824,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -3062,7 +3077,7 @@
   },
   {
     "symbol": "savePrevSettings",
-    "line": 3504,
+    "line": 3872,
     "feature_ids": [
       "3d"
     ],
@@ -3075,7 +3090,7 @@
   },
   {
     "symbol": "saveSym",
-    "line": 3591,
+    "line": 3959,
     "feature_ids": [
       "2b"
     ],
@@ -3087,7 +3102,7 @@
   },
   {
     "symbol": "saveVocab",
-    "line": 3772,
+    "line": 4140,
     "feature_ids": [
       "2c"
     ],
@@ -3099,7 +3114,7 @@
   },
   {
     "symbol": "scheduleIdle",
-    "line": 4296,
+    "line": 4668,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -3109,7 +3124,7 @@
   },
   {
     "symbol": "schedulePoolPreread",
-    "line": 3702,
+    "line": 4070,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -3133,7 +3148,7 @@
   },
   {
     "symbol": "scrollToAboutWhyIpa",
-    "line": 5103,
+    "line": 5509,
     "feature_ids": [
       "3h"
     ],
@@ -3148,7 +3163,7 @@
   },
   {
     "symbol": "sessionFinished",
-    "line": 4601,
+    "line": 4973,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -3158,7 +3173,7 @@
   },
   {
     "symbol": "sessionItemKey",
-    "line": 4565,
+    "line": 4937,
     "feature_ids": [
       "3d",
       "reveal"
@@ -3173,7 +3188,7 @@
   },
   {
     "symbol": "setAccent",
-    "line": 2716,
+    "line": 3013,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -3188,12 +3203,13 @@
       "renderSymbolPicker",
       "renderVocabTab",
       "savePrevSettings",
+      "syncDrillAccentBadges",
       "syncProfileAccentUI"
     ]
   },
   {
     "symbol": "setCardCefr",
-    "line": 3323,
+    "line": 3691,
     "feature_ids": [
       "2a",
       "2b",
@@ -3217,7 +3233,7 @@
   },
   {
     "symbol": "setCheckCount",
-    "line": 3560,
+    "line": 3928,
     "feature_ids": [
       "3d"
     ],
@@ -3236,7 +3252,7 @@
   },
   {
     "symbol": "setConnectedFilterAdvanced",
-    "line": 3414,
+    "line": 3782,
     "feature_ids": [
       "3a"
     ],
@@ -3252,7 +3268,7 @@
   },
   {
     "symbol": "setExclusivePage",
-    "line": 1690,
+    "line": 1985,
     "feature_ids": [
       "3b",
       "3c",
@@ -3273,7 +3289,7 @@
   },
   {
     "symbol": "setLang",
-    "line": 2663,
+    "line": 2960,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -3306,7 +3322,7 @@
   },
   {
     "symbol": "setMark",
-    "line": 3467,
+    "line": 3835,
     "feature_ids": [
       "3d"
     ],
@@ -3321,7 +3337,7 @@
   },
   {
     "symbol": "setPlayiconState",
-    "line": 4142,
+    "line": 4514,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -3330,8 +3346,24 @@
     "depends_on": []
   },
   {
+    "symbol": "setRevealPending",
+    "line": 5516,
+    "feature_ids": [
+      "reveal"
+    ],
+    "scope": "shared",
+    "caller_areas": [
+      "reveal",
+      "infra"
+    ],
+    "depends_on": [
+      "$",
+      "t"
+    ]
+  },
+  {
     "symbol": "setSetupVisible",
-    "line": 3274,
+    "line": 3642,
     "feature_ids": [
       "1a"
     ],
@@ -3352,7 +3384,7 @@
   },
   {
     "symbol": "setSinglePill",
-    "line": 3631,
+    "line": 3999,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -3364,7 +3396,7 @@
   },
   {
     "symbol": "setSpeakerBusy",
-    "line": 4441,
+    "line": 4813,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -3379,8 +3411,22 @@
     ]
   },
   {
+    "symbol": "setVocabAccent",
+    "line": 2435,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "renderVocabIpaFilterBar",
+      "renderVocabWords",
+      "syncVocabAccentToggle"
+    ]
+  },
+  {
     "symbol": "setWordsFilterAdvanced",
-    "line": 3408,
+    "line": 3776,
     "feature_ids": [
       "3a"
     ],
@@ -3396,7 +3442,7 @@
   },
   {
     "symbol": "shouldConfirmSessionExit",
-    "line": 4635,
+    "line": 5007,
     "feature_ids": [
       "1a"
     ],
@@ -3411,7 +3457,7 @@
   },
   {
     "symbol": "show",
-    "line": 1467,
+    "line": 1791,
     "feature_ids": [
       "2a",
       "2b",
@@ -3420,6 +3466,7 @@
       "3b",
       "3c",
       "3d",
+      "3h",
       "reveal",
       "summary",
       "1a"
@@ -3433,6 +3480,7 @@
       "vocab",
       "picker",
       "progress",
+      "about",
       "reveal",
       "summary",
       "top",
@@ -3442,7 +3490,7 @@
   },
   {
     "symbol": "showAudioTapPrompt",
-    "line": 4518,
+    "line": 4890,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -3455,8 +3503,22 @@
     ]
   },
   {
+    "symbol": "showInfoOverlay",
+    "line": 3084,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": [
+      "$",
+      "setExclusivePage",
+      "show"
+    ]
+  },
+  {
     "symbol": "showOnboarding",
-    "line": 4720,
+    "line": 5094,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -3469,7 +3531,7 @@
   },
   {
     "symbol": "showProfile3a",
-    "line": 3254,
+    "line": 3622,
     "feature_ids": [
       "3d"
     ],
@@ -3491,7 +3553,7 @@
   },
   {
     "symbol": "showProgressPage",
-    "line": 1775,
+    "line": 2074,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -3507,7 +3569,7 @@
   },
   {
     "symbol": "showPurposeHome",
-    "line": 3230,
+    "line": 3592,
     "feature_ids": [
       "3a",
       "3h"
@@ -3530,7 +3592,7 @@
   },
   {
     "symbol": "showReflection",
-    "line": 4630,
+    "line": 5002,
     "feature_ids": [
       "summary"
     ],
@@ -3542,7 +3604,7 @@
   },
   {
     "symbol": "showSetupOrPractice",
-    "line": 2797,
+    "line": 3128,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -3555,12 +3617,14 @@
       "renderCard",
       "setExclusivePage",
       "show",
-      "showPurposeHome"
+      "showPurposeHome",
+      "showVocabView",
+      "syncPcSupportChrome"
     ]
   },
   {
     "symbol": "showSymbolPickerView",
-    "line": 2863,
+    "line": 3212,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -3576,7 +3640,7 @@
   },
   {
     "symbol": "showVocabView",
-    "line": 2834,
+    "line": 3183,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -3593,7 +3657,7 @@
   },
   {
     "symbol": "shuffle",
-    "line": 4537,
+    "line": 4909,
     "feature_ids": [
       "2c"
     ],
@@ -3606,7 +3670,7 @@
   },
   {
     "symbol": "speak",
-    "line": 4457,
+    "line": 4829,
     "feature_ids": [
       "2c",
       "3b",
@@ -3635,7 +3699,7 @@
   },
   {
     "symbol": "speakOptsForItem",
-    "line": 4119,
+    "line": 4491,
     "feature_ids": [
       "reveal"
     ],
@@ -3652,7 +3716,7 @@
   },
   {
     "symbol": "speakerIdsForCurrentCard",
-    "line": 4130,
+    "line": 4502,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -3662,7 +3726,7 @@
   },
   {
     "symbol": "spellCheck",
-    "line": 4898,
+    "line": 5285,
     "feature_ids": [
       "2a",
       "2c"
@@ -3678,7 +3742,7 @@
   },
   {
     "symbol": "startSession",
-    "line": 4613,
+    "line": 4985,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -3694,7 +3758,7 @@
   },
   {
     "symbol": "stressSyllable",
-    "line": 3125,
+    "line": 3485,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -3704,7 +3768,7 @@
   },
   {
     "symbol": "stripStress",
-    "line": 4972,
+    "line": 5359,
     "feature_ids": [
       "2b",
       "reveal"
@@ -3718,7 +3782,7 @@
   },
   {
     "symbol": "syllableCount",
-    "line": 3124,
+    "line": 3484,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -3728,7 +3792,7 @@
   },
   {
     "symbol": "symbolCellsHtml",
-    "line": 2967,
+    "line": 3317,
     "feature_ids": [
       "3c"
     ],
@@ -3743,7 +3807,7 @@
   },
   {
     "symbol": "symbolChartGroups",
-    "line": 2887,
+    "line": 3236,
     "feature_ids": [
       "3c"
     ],
@@ -3755,7 +3819,7 @@
   },
   {
     "symbol": "symbolGroupHeadingHtml",
-    "line": 2943,
+    "line": 3293,
     "feature_ids": [
       "3c"
     ],
@@ -3770,7 +3834,7 @@
   },
   {
     "symbol": "symbolHeightLabelHtml",
-    "line": 2955,
+    "line": 3305,
     "feature_ids": [
       "3c"
     ],
@@ -3785,7 +3849,7 @@
   },
   {
     "symbol": "symbolQueryClearAll",
-    "line": 3077,
+    "line": 3437,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -3798,7 +3862,7 @@
   },
   {
     "symbol": "symbolQueryPush",
-    "line": 3056,
+    "line": 3416,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -3811,7 +3875,7 @@
   },
   {
     "symbol": "symbolQueryRemoveAt",
-    "line": 3067,
+    "line": 3427,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -3823,8 +3887,28 @@
     ]
   },
   {
+    "symbol": "syncDrillAccentBadges",
+    "line": 5502,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": []
+  },
+  {
+    "symbol": "syncLanguageOptions",
+    "line": 3105,
+    "feature_ids": [],
+    "scope": "primary",
+    "caller_areas": [
+      "infra"
+    ],
+    "depends_on": []
+  },
+  {
     "symbol": "syncPcSupportChrome",
-    "line": 5057,
+    "line": 5451,
     "feature_ids": [
       "3a",
       "1a"
@@ -3842,7 +3926,7 @@
   },
   {
     "symbol": "syncProfileAccentUI",
-    "line": 2709,
+    "line": 3006,
     "feature_ids": [
       "3a"
     ],
@@ -3857,7 +3941,7 @@
   },
   {
     "symbol": "syncProgressCefrPills",
-    "line": 1706,
+    "line": 2004,
     "feature_ids": [
       "3d"
     ],
@@ -3871,8 +3955,8 @@
     ]
   },
   {
-    "symbol": "syncVocabCefrPills",
-    "line": 1661,
+    "symbol": "syncVocabAccentToggle",
+    "line": 2424,
     "feature_ids": [
       "3b"
     ],
@@ -3886,7 +3970,7 @@
   },
   {
     "symbol": "t",
-    "line": 2326,
+    "line": 2608,
     "feature_ids": [
       "2a",
       "2c",
@@ -3915,7 +3999,7 @@
   },
   {
     "symbol": "toggleCheckSlot",
-    "line": 3575,
+    "line": 3943,
     "feature_ids": [
       "3b",
       "reveal"
@@ -3932,7 +4016,7 @@
   },
   {
     "symbol": "toggleLangMenu",
-    "line": 2752,
+    "line": 3050,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -3944,7 +4028,7 @@
   },
   {
     "symbol": "toggleProgressCefr",
-    "line": 1716,
+    "line": 2014,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -3956,21 +4040,8 @@
     ]
   },
   {
-    "symbol": "toggleVocabCefr",
-    "line": 1674,
-    "feature_ids": [],
-    "scope": "primary",
-    "caller_areas": [
-      "infra"
-    ],
-    "depends_on": [
-      "renderVocabWords",
-      "syncVocabCefrPills"
-    ]
-  },
-  {
     "symbol": "tokenize",
-    "line": 3116,
+    "line": 3476,
     "feature_ids": [
       "2b",
       "reveal"
@@ -3987,7 +4058,7 @@
   },
   {
     "symbol": "topWeakSymbols",
-    "line": 3598,
+    "line": 3966,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -3999,7 +4070,7 @@
   },
   {
     "symbol": "trickyPhonemes",
-    "line": 5014,
+    "line": 5400,
     "feature_ids": [
       "reveal"
     ],
@@ -4014,7 +4085,7 @@
   },
   {
     "symbol": "tryLine",
-    "line": 5013,
+    "line": 5399,
     "feature_ids": [
       "reveal"
     ],
@@ -4026,7 +4097,7 @@
   },
   {
     "symbol": "ttsAccent",
-    "line": 3958,
+    "line": 4330,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -4039,7 +4110,7 @@
   },
   {
     "symbol": "ttsCacheSlug",
-    "line": 3965,
+    "line": 4337,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -4051,7 +4122,7 @@
   },
   {
     "symbol": "unlockAudioFromGesture",
-    "line": 4499,
+    "line": 4871,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -4061,7 +4132,7 @@
   },
   {
     "symbol": "unlockInputScroll",
-    "line": 4871,
+    "line": 5258,
     "feature_ids": [
       "3a",
       "1a"
@@ -4075,7 +4146,7 @@
   },
   {
     "symbol": "updateLangSwitcherCurrent",
-    "line": 2737,
+    "line": 3035,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -4087,7 +4158,7 @@
   },
   {
     "symbol": "updatePlayCrumb",
-    "line": 3300,
+    "line": 3668,
     "feature_ids": [
       "3a"
     ],
@@ -4104,7 +4175,7 @@
   },
   {
     "symbol": "updatePool",
-    "line": 3676,
+    "line": 4044,
     "feature_ids": [
       "3a"
     ],
@@ -4126,7 +4197,7 @@
   },
   {
     "symbol": "updateProgressMeter",
-    "line": 3355,
+    "line": 3723,
     "feature_ids": [
       "2a",
       "2b",
@@ -4145,7 +4216,7 @@
   },
   {
     "symbol": "updateSetupFields",
-    "line": 3420,
+    "line": 3788,
     "feature_ids": [
       "3a"
     ],
@@ -4164,7 +4235,7 @@
   },
   {
     "symbol": "updateTaskHeader",
-    "line": 5075,
+    "line": 5469,
     "feature_ids": [
       "2c",
       "3a",
@@ -4179,26 +4250,14 @@
     ],
     "depends_on": [
       "$",
-      "isPcLayout",
+      "syncDrillAccentBadges",
       "syncPcSupportChrome",
       "t"
     ]
   },
   {
-    "symbol": "updateVocabTabActive",
-    "line": 2175,
-    "feature_ids": [
-      "3b"
-    ],
-    "scope": "primary",
-    "caller_areas": [
-      "vocab"
-    ],
-    "depends_on": []
-  },
-  {
     "symbol": "updateWordFilterAvailability",
-    "line": 3647,
+    "line": 4015,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -4213,25 +4272,8 @@
     ]
   },
   {
-    "symbol": "vocabAltSpeakerHtml",
-    "line": 2313,
-    "feature_ids": [
-      "3b"
-    ],
-    "scope": "primary",
-    "caller_areas": [
-      "vocab"
-    ],
-    "depends_on": [
-      "escAttr",
-      "hasCachedAudioFor",
-      "otherAccent",
-      "t"
-    ]
-  },
-  {
     "symbol": "vocabDisplayGloss",
-    "line": 1968,
+    "line": 2296,
     "feature_ids": [
       "3b"
     ],
@@ -4246,7 +4288,7 @@
   },
   {
     "symbol": "vocabEntry",
-    "line": 3773,
+    "line": 4141,
     "feature_ids": [
       "3b"
     ],
@@ -4257,8 +4299,23 @@
     "depends_on": []
   },
   {
+    "symbol": "vocabFmtIpa",
+    "line": 2098,
+    "feature_ids": [
+      "3b"
+    ],
+    "scope": "primary",
+    "caller_areas": [
+      "vocab"
+    ],
+    "depends_on": [
+      "escHtml",
+      "highlightIpaMatch"
+    ]
+  },
+  {
     "symbol": "vocabIpaKeyboardSymbols",
-    "line": 2043,
+    "line": 2371,
     "feature_ids": [
       "3b"
     ],
@@ -4271,21 +4328,8 @@
     ]
   },
   {
-    "symbol": "vocabIpaQueryClear",
-    "line": 2068,
-    "feature_ids": [],
-    "scope": "primary",
-    "caller_areas": [
-      "infra"
-    ],
-    "depends_on": [
-      "renderVocabIpaFilterBar",
-      "renderVocabWords"
-    ]
-  },
-  {
     "symbol": "vocabIpaQueryPush",
-    "line": 2055,
+    "line": 2383,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -4298,7 +4342,7 @@
   },
   {
     "symbol": "vocabIpaQueryRemoveAt",
-    "line": 2062,
+    "line": 2398,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -4311,7 +4355,7 @@
   },
   {
     "symbol": "vocabRowHeight",
-    "line": 1652,
+    "line": 1972,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -4322,8 +4366,20 @@
     ]
   },
   {
+    "symbol": "vocabSearchIpa",
+    "line": 3377,
+    "feature_ids": [
+      "3b"
+    ],
+    "scope": "primary",
+    "caller_areas": [
+      "vocab"
+    ],
+    "depends_on": []
+  },
+  {
     "symbol": "vocabSkeletonHtml",
-    "line": 1789,
+    "line": 2088,
     "feature_ids": [
       "3b",
       "3c"
@@ -4337,7 +4393,7 @@
   },
   {
     "symbol": "vocabWordRowHtml",
-    "line": 1799,
+    "line": 2105,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -4346,19 +4402,16 @@
     "depends_on": [
       "escAttr",
       "escHtml",
-      "formatSameAccentIpa",
-      "highlightIpaMatch",
       "itemCefrLabel",
       "posLabel",
-      "progressChecksHtml",
       "t",
-      "vocabAltSpeakerHtml",
-      "vocabDisplayGloss"
+      "vocabDisplayGloss",
+      "vocabFmtIpa"
     ]
   },
   {
     "symbol": "vowelSet",
-    "line": 3114,
+    "line": 3474,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -4368,7 +4421,7 @@
   },
   {
     "symbol": "weightedShuffle",
-    "line": 3584,
+    "line": 3952,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [
@@ -4378,7 +4431,7 @@
   },
   {
     "symbol": "wordGloss",
-    "line": 2349,
+    "line": 2631,
     "feature_ids": [
       "2c",
       "3b",
@@ -4395,21 +4448,19 @@
   },
   {
     "symbol": "wordIpaForSearch",
-    "line": 3016,
+    "line": 3366,
     "feature_ids": [
-      "3b",
       "3c"
     ],
-    "scope": "shared",
+    "scope": "primary",
     "caller_areas": [
-      "vocab",
       "picker"
     ],
     "depends_on": []
   },
   {
     "symbol": "wordWorker",
-    "line": 4322,
+    "line": 4694,
     "feature_ids": [],
     "scope": "primary",
     "caller_areas": [

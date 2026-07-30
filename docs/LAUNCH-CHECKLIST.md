@@ -75,7 +75,7 @@
 ### タスク
 
 - [x] Vercel Web Analytics 有効化（Vercel Dashboard > Analytics タブ）— **Naoya 手動**（Issue #19）
-- [x] `src/index.template.html` に Vercel Analytics script タグ追加（Issue #43）
+- [x] `apps/web/src/index.template.html` に Vercel Analytics script タグ追加（Issue #43）
 - [ ] カスタムイベント実装（JS 経由で `window.va?.track()` 呼び出し）— Track B
   - `mode_start`（props: mode="decode"/"encode"/"modeb"/"vocab_browser"）
   - `answer_correct`（props: mode, cefr）
@@ -110,7 +110,7 @@
 Track A で「単一 HTML + JS 動的更新」ではなく、以下の構成を採用する。多言語 SEO / AI クローラー対応のベストプラクティスに準拠。
 
 - 言語別サブディレクトリ（`/en/`, `/ja/`, `/ko/`, `/zh-Hans/`, `/zh-Hant/`, `/fil/`）
-- 各言語別に静的 HTML をビルド時生成（`scripts/build-i18n-html.js`）
+- 各言語別に静的 HTML をビルド時生成（`apps/web/scripts/build-i18n-html.js`）
 - 各言語 HTML の `<head>` に静的な meta / OGP / Twitter Card / canonical / hreflang / og:locale
 - Vercel の rewrites/redirects で URL 制御
 - Edge Middleware（任意）で Accept-Language 自動判定 → 302 リダイレクト
@@ -121,8 +121,8 @@ Issue F1（i18n meta 追加、#25）でデータ側は既に整備済み。Issue
 
 ### タスク
 
-- [x] `scripts/build-i18n-html.js` 新規追加（i18n/*.json の meta を index.html テンプレートに埋め込み、6 言語版 HTML 生成）（Issue #39）
-- [x] `src/index.template.html` 新規追加（既存 index.html から meta 部分をテンプレート化）（Issue #39）
+- [x] `apps/web/scripts/build-i18n-html.js` 新規追加（`packages/core/i18n/*.json` の meta を index.html テンプレートに埋め込み、6 言語版 HTML 生成）（Issue #39）
+- [x] `apps/web/src/index.template.html` 新規追加（既存 index.html から meta 部分をテンプレート化）（Issue #39）
 - [x] `vercel.json` に rewrites/redirects 設定追加（Issue #39）
 - [x] `middleware.ts`（任意、Accept-Language 判定）（Issue #39、Preview で PoC）
 - [x] 各言語版 HTML の head に以下を静的埋め込み（Issue #39）:
@@ -430,7 +430,7 @@ Track A の 6 言語（ja / en / ko / zh-Hans / zh-Hant / fil）に加え、以�
 | 6 | `hi` | ヒンディー語 | インド | 母語干渉学習需要 |
 | 7 | `ar` | アラビア語 | 中東・北アフリカ | 母音構造が英語と大きく異なる、IPA 価値高 |
 
-各言語追加の Issue には、i18n JSON 追加、`lang_opts` 追加、`meta` オブジェクト追加、音素解説（`i18n/phonemes/{lang}.json`）追加、ネイティブレビュー、が含まれる。
+各言語追加の Issue には、i18n JSON 追加、`lang_opts` 追加、`meta` オブジェクト追加、音素解説（`packages/core/i18n/phonemes/{lang}.json`）追加、ネイティブレビュー、が含まれる。
 
 Phase 5 の SEO 基本セット（サブディレクトリ + プリレンダリング）が Track A で完成しているため、Phase B-Lang では上記 7 言語のサブディレクトリ・sitemap・hreflang エントリを追加するのみでよい。設計変更は不要。
 
