@@ -32,7 +32,7 @@ diff before-all.md5 after-all.md5
 |---|---|---|---|
 | **L1** | CI 緑 + セルフチェック（実装エージェント自身の確認）。`pr-reviewer` 起動は任意・省略可 | 不要 | 目視のみ、auto-merge 可 |
 | **L2** | `pr-reviewer` による契約検証（ホワイトリスト・ゾーン逸脱・参照整合・完了定義トレース・ついで作業ゼロ・契約検証・横展開・実装レポート充足）が PASS | 不要 | auto-merge 可（PASS が条件） |
-| **L3** | 上記に加え不変ブラックリストの md5 検証、6 言語生成物の script md5 一致、Complexity Retrospective（§6） | **必須** | **ack 必須**（auto-merge しない、レビュー結果が rubber stamp でも Naoya の明示承認を要する） |
+| **L3** | 上記に加え不変ブラックリストの md5 検証、6 言語生成物の script md5 一致、Complexity Retrospective（§6）。**Mobile 両プラットフォーム影響 or `packages/core` 公開 API 変更は本カテゴリ**（`docs/change-classification.md` §2 条件⑤） | **必須** | **ack 必須**（auto-merge しない、レビュー結果が rubber stamp でも Naoya の明示承認を要する） |
 
 **md5 検証対象の拡張（monorepo 化、EPIC #209 以降）**: ランタイム契約 8 パスに触れる L3 変更では、正本 `packages/core/data/*.json` の md5 に加え、`apps/web/public/data/*.json`（build 生成物、リポには追跡されない場合は build 直後のローカル比較でよい）と `apps/mobile/assets/data/*.json`（Mobile 実装後）が正本と一致することを確認する。3 箇所（core 正本 + web copy + mobile copy）の md5 が全て一致していることを実装レポートに記録する。
 

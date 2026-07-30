@@ -17,11 +17,9 @@ Issue 起票時に **Complexity Level（L1–L3）× Change Pattern（C1–C7）
 |---|---|---|
 | **L1**（軽微） | 次の 3 条件を**すべて満たす**: ①単一関心（Runtime/i18n schema/URL/ビルド等の別系統契約に触れない）②構造非破壊（ファイル移動・ディレクトリ新設・ビルド導入・運用フロー改変を含まない）③既存の軽量チェック（目視 / 既存 validate）で完了確認できる | 文言 1 箇所修正、既存キーへの値差し替えのみ、単一 docs の誤記修正 |
 | **L2**（通常） | L1 の 3 条件を満たさず、L3 の該当条件にも当たらない。複数ファイルの整合が必要、運用ドキュメントの内容更新（フロー再設計ではない）、既存アーキテクチャ維持のままの機能追加等 | i18n `meta` 追加、OPERATIONS への rollback 手順追記、単一機能の UI 改善 |
-| **L3**（大規模） | 次の 4 条件の**いずれか 1 つ以上**: ①AI 協業フローの再設計（`CLAUDE.md` / `workflow.md` / `guardrails.md` の実装ゲートを変更）②ビルド/ホスティングの初導入・転換 ③構造移動（公開 URL 構造変更、大規模ファイル移動・分割）④複合システム変更（フロント・データ契約・インフラ・docs をまたぐ大規模改修） | ガバナンス統合（本ファイル自身の作成 Issue）、SEO サブディレクトリ化、React 化 |
+| **L3**（大規模） | 次の 5 条件の**いずれか 1 つ以上**: ①AI 協業フローの再設計（`CLAUDE.md` / `workflow.md` / `guardrails.md` の実装ゲートを変更）②ビルド/ホスティングの初導入・転換 ③構造移動（公開 URL 構造変更、大規模ファイル移動・分割）④複合システム変更（フロント・データ契約・インフラ・docs をまたぐ大規模改修）⑤**Mobile iOS/Android 両プラットフォームに影響する変更、または `packages/core` の公開 API 変更** | ガバナンス統合（本ファイル自身の作成 Issue）、SEO サブディレクトリ化、React 化、iOS/Android 両方の画面挙動を変える Mobile 改修、`packages/core` の関数シグネチャ変更 |
 
 境界曖昧 → 上位 Level。判定根拠の省略禁止。実装中に実態が乖離したら Complexity Retrospective（`docs/guardrails.md`）で昇格/降格を提案し、勝手に続行しない。
-
-> **未確定事項（Naoya 判断待ち、Issue #215 Phase 3 由来）**: 「Mobile iOS/Android 両プラットフォーム影響 = L3」を新たな L3 判定条件として追加するかは、L3 判定条件そのものの追加変更にあたるため本 Issue では確定せず保留する。現状は既存条件④（複合システム変更）で個別に判断する。追加する場合は別途 Naoya 承認の上、本セクションの表に条件⑤として追記する。
 
 
 
@@ -62,7 +60,7 @@ Track ラベル（`launch-blocker` / `track-b`）は本軸の外で管理する�
 | **C1** | `docs/guardrails.md` | md5 でホワイトリスト外不変、相互リンク健全性 | 実装レポートに「Issue 背景」「後続への影響」必須 |
 | **C2** | `docs/OPERATIONS.md`、`docs/repo-map.md`（作成後） | デプロイ/設定の手動確認項目を完了定義に明記 | rollback・Secrets 手順の有無を Issue に書く |
 | **C3** | `docs/repo-map.md`（作成後）、`.gitignore` | 旧パス参照の grep、生成物の存在確認、URL 200 確認 | パス移動は Issue で明示。暗黙移動禁止 |
-| **C4** | `docs/product.md` / `docs/features/<id>.md`、Track B メモ | ビルド成功、主要画面の回帰、依存 lockfile の意図的更新 | Track B ラベル必須。Phase 分割前提 |
+| **C4** | `docs/product.md` / `docs/features/<id>.md`、Track B メモ | ビルド成功、主要画面の回帰、依存 lockfile の意図的更新 | Track B ラベル必須。Phase 分割前提。**Mobile 両プラットフォーム影響時は Level=L3 自動化**（§2 条件⑤） |
 | **C5** | `docs/data-contract.md`（作成後） | `validate_i18n` / wordlist 集計 / 契約パスの不変 or 意図的更新の証明 | 契約変更は完了定義に「前後値」を書く。**Mobile 側の扱い**（EPIC #209 以降）: `packages/core/data/*.json` が正本、Web は build 時 `apps/web/public/data/` へ copy、Mobile は build 時 `apps/mobile/assets/data/` へ copy（RN バンドラー）または実行時 `packages/core` を直接 import のいずれか（実装方式は EPIC-06/EPIC-07 で確定）。いずれの方式でも正本は `packages/core/data/*.json` 一箇所に保つ |
 | **C6** | 該当 `docs/features/<id>.md` | ブラウザ手動確認、（該当時）多言語 UI・TTS、スクショ対象画面リスト明示（`docs/workflow.md`） | 非対象範囲で触らないモードを明示 |
 | **C7** | `docs/doc-map.md` | 動作不変の証明、参照リンク更新漏れゼロ（grep 検証） | 月次レビュー候補として記録 |

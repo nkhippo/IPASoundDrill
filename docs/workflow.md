@@ -81,6 +81,7 @@ UI 改修 Issue の完了定義には、影響を受ける `docs/features/<id>.m
 - **参照ドキュメントの明示**: Issue 本文に必要な参照ドキュメントを列挙する。判定は `CLAUDE.md` のタスク種別対応表 + `docs/doc-map.md` レジストリに従う
 - **UI 仕様の参照**: UI 改修 Issue では、Web は `apps/web/src/index.template.html`（正本）、Mobile は `apps/mobile/src/` の RN 画面コンポーネント（正本、EPIC-06/EPIC-07 実装後に発生）を根拠にする。`docs/claude-design/{sp,pc}.dc.html` は凍結フレームカタログ（画面一覧の俯瞰用、pixel-perfect 精度は保証しない、Web 画面のみ収録）。見た目の確認は **Vercel branch preview URL**（Web）で行う。**外部 Claude Design(SaaS) の URL・zip・再開セッションは要求しない**(2026-07-28 に運用廃止)。詳細 `docs/claude-design/README.md`
 - **ファイルホワイトリスト表現（monorepo 4 ゾーン、EPIC #209 以降）**: Issue 本文のファイルホワイトリストは、対象ファイルが 4 ゾーン（`apps/web/`, `apps/mobile/`, `packages/core/`, `tools/`）のどれに属するかを明示する。**ゾーン跨ぎの Issue は原則分割**する（本ファイル §3 分割 5 判断軸 ②に準拠）。例外として、`packages/core/` の契約変更に伴う `apps/web/` / `apps/mobile/` 双方の追随のような cohesive な一体変更は、単一 Issue で atomic に実施してよい（例外を選ぶ場合は Issue 本文にその理由を明記）。ゾーン跨ぎで halt が発生した場合は `CLAUDE.md` halt トリガー (c) に従う
+- **Mobile 両プラットフォーム影響 or `packages/core` 公開 API 変更は Level 自動 L3**: 対象プラットフォームが iOS/Android 両方に及ぶ変更、または `packages/core` の公開 API を変更する Issue は、`docs/change-classification.md` §2 条件⑤により Level を自動的に L3 とする（起票者の裁量で L2 に留めない）
 - **スクショ対象範囲（Web / Mobile 別記載義務）**: UI 改修 Issue でスクショ対象画面を指定する場合、Web 画面（ブラウザ / Vercel preview）と Mobile 画面（iOS / Android シミュレータ・実機）を別リストとして明示する。Mobile 実装が無い期間は「Mobile: 該当なし」と明記する
 - **Phase 番号の記述**: 作業手順を Phase 番号で列挙する場合、「Phase 0, 1, 2, ...」の連番で明確に記述する。曖昧な範囲表記は使わず、総数を末尾に明記する
 
@@ -113,7 +114,7 @@ UI 改修 Issue の完了定義には、影響を受ける `docs/features/<id>.m
 
 ## 7. レビュー・auto-merge フロー
 
-Level 段階化の内容（L1 セルフチェック / L2 `pr-reviewer` PASS / L3 フル Rv+md5+Naoya ack）は `docs/guardrails.md` §3 が正本。
+Level 段階化の内容（L1 セルフチェック / L2 `pr-reviewer` PASS / L3 フル Rv+md5+Naoya ack）は `docs/guardrails.md` §3 が正本。Mobile 両プラットフォーム影響 or `packages/core` 公開 API 変更は `docs/change-classification.md` §2 条件⑤により Level=L3 自動化のため、本表の auto-merge（L1/L2）対象にはならない。
 
 **ゾーン別レビュー深度（monorepo 4 ゾーン、EPIC #209 以降）**: `packages/core/` の変更は、`apps/web/` と `apps/mobile/`（実装後）の**両方**への回帰確認を Issue の完了定義・PR の確認済み事項に含める（core は shared 契約のため、単一ゾーンの動作確認だけでは不十分）。`tools/` の変更（パイプライン・validate スクリプト）は生成物を消費する `packages/core/data` 経由で `apps/web` / `apps/mobile` 双方への影響有無を確認する。
 
