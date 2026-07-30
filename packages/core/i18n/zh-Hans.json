@@ -210,7 +210,8 @@
     "vowels": "元音",
     "r_vowels": "r化元音",
     "diphthongs": "双元音",
-    "consonants": "辅音"
+    "consonants": "辅音",
+    "syllabic": "成音节辅音"
   },
   "pos": {
     "限定詞": "限定词",
@@ -353,6 +354,14 @@
       },
       "stress": {
         "en": "Stress",
+        "sub": ""
+      },
+      "other": {
+        "en": "Other",
+        "sub": ""
+      },
+      "syllabic": {
+        "en": "Syllabic",
         "sub": ""
       }
     },

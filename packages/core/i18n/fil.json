@@ -95,7 +95,8 @@
     "diphthongs": "Mga diptonggo",
     "r_vowels": "May kulay-r",
     "stress": "Diin",
-    "vowels": "Mga patinig"
+    "vowels": "Mga patinig",
+    "syllabic": "Syllabic"
   },
   "lang_opts": {
     "en": "English",
@@ -353,6 +354,14 @@
       },
       "stress": {
         "en": "Stress",
+        "sub": ""
+      },
+      "other": {
+        "en": "Other",
+        "sub": ""
+      },
+      "syllabic": {
+        "en": "Syllabic",
         "sub": ""
       }
     },
