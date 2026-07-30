@@ -6,6 +6,7 @@
 
 export * from "./types.js";
 export * from "./loaders.js";
+export * from "./tts.js";
 
 export * as decode from "./scoring/decode.js";
 export * as encode from "./scoring/encode.js";
