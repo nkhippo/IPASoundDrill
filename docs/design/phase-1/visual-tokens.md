@@ -42,7 +42,7 @@
 | **UI sans** | 本文・UI | `"Noto Sans JP", "Noto Sans KR", system-ui, sans-serif` |
 | **Display serif** | 見出し・目的カード | `"Noto Serif JP", "Charis SIL", serif` |
 
-Google Fonts import（`src/index.template.html` `<head>`、Phase 1-A で追加済み）:
+Google Fonts import（`apps/web/src/index.template.html` `<head>`、Phase 1-A で追加済み）:
 
 ```html
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -88,7 +88,7 @@ Google Fonts import（`src/index.template.html` `<head>`、Phase 1-A で追加�
 ## §4 基本コンポーネント (Mood B 確定 CSS)
 
 > Vault SoT §4 全文（Issue #83 comment `5014860270` / commit `680d83ec`）。
-> **実装:** Phase 1-C は Button / 目的カード / Pill / Toggle を `src/index.template.html` に定義。**Progress meter と §4.6 IPA タイポは Phase 1-D**（本 snapshot には完全性のため含める）。
+> **実装:** Phase 1-C は Button / 目的カード / Pill / Toggle を `apps/web/src/index.template.html` に定義。**Progress meter と §4.6 IPA タイポは Phase 1-D**（本 snapshot には完全性のため含める）。
 
 ### 4.1 Button
 
@@ -368,5 +368,5 @@ Google Fonts import（`src/index.template.html` `<head>`、Phase 1-A で追加�
 
 | Track | 方針 |
 |-------|------|
-| **Track A（現行）** | 単一ファイル `src/index.template.html` の `:root` にトークン定義。preprocessor 不採用。`--legacy-*` は Phase 1-H 完了まで残す |
+| **Track A（現行）** | 単一ファイル `apps/web/src/index.template.html` の `:root` にトークン定義。preprocessor 不採用。`--legacy-*` は Phase 1-H 完了まで残す |
 | **Track B** | React / CSS Modules 等への移行時に本 snapshot をトークンファイルへ移植。`color-mix()` 等の新 API は Track B 以降 |

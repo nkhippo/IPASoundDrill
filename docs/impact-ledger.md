@@ -8,10 +8,10 @@ Issue F（#174, EPIC #169）で確立。旧 `docs/repo-map.md`「src/index.templ
 ## 1. 何のためのファイルか
 
 「共通シンボル（`t()` / `activeIpa()` / `setExclusivePage` 等）を修正する場合、周辺機能への影響を機械的に確認できる」を実現する台帳。
-`src/index.template.html`（~5,400L、~290 関数）の**静的解析**（正規表現 + 行範囲ベースの簡易スコープ判定であり、AST/コンパイラ相当の
+`apps/web/src/index.template.html`（~5,400L、~290 関数）の**静的解析**（正規表現 + 行範囲ベースの簡易スコープ判定であり、AST/コンパイラ相当の
 呼び出しグラフではない）。編集エージェントは共通シンボルを触る前に必ずこの台帳を引く（§4 halt ルール）。
 
-生成器: `scripts/gen_impact_ledger.py`。データ本体: `docs/impact-ledger.json`（symbol 昇順の JSON 配列）。
+生成器: `tools/impact-ledger/gen_impact_ledger.py`。データ本体: `docs/impact-ledger.json`（symbol 昇順の JSON 配列）。
 
 ---
 
@@ -22,7 +22,7 @@ Issue F（#174, EPIC #169）で確立。旧 `docs/repo-map.md`「src/index.templ
 | フィールド | 型 | 意味 |
 |---|---|---|
 | `symbol` | string | 関数名（`function name(` / `const name = (...) => `で定義されたトップレベル or ネスト関数） |
-| `line` | number | `src/index.template.html` 内の定義行番号（1-indexed。ソース変更のたびに生成器再実行で追従） |
+| `line` | number | `apps/web/src/index.template.html` 内の定義行番号（1-indexed。ソース変更のたびに生成器再実行で追従） |
 | `feature_ids` | string[] | この関数を**呼び出している**コードが属する feature area のうち、`docs/_conventions.md` の凍結 12 ID レジストリに登録されているものだけを抽出したもの（`caller_areas` の部分集合。`infra` 等未登録概念は含まれない） |
 | `scope` | `"library"` \| `"shared"` \| `"primary"` | 呼び出し元エリア数によるスコープ分類（§3） |
 | `caller_areas` | string[] | この関数を呼び出しているコードが属するエリア一覧（`infra` を含む 13 エリア語彙。§3） |
@@ -74,7 +74,7 @@ Issue F（#174, EPIC #169）で確立。旧 `docs/repo-map.md`「src/index.templ
 > **既知の固定例外**: `activeIpa` は Issue F 本文が `scope="shared"` + `caller_areas` 5 件（`["decode","encode","study","connected","reveal"]`）を
 > スキーマの正式な worked example として明示しており、この 5 件は上記「5 エリア以上 = library」の閾値と字面上ズレる
 > （accent/TTS 系の共有ヘルパー経由で decode/study/connected に間接的に波及するため、直接呼び出しグラフだけでは 4 エリアしか検出できず、
-> かつ Issue の worked example 自体が閾値ルールより緩い「shared」ラベルを指定している）。この 1 件は `scripts/gen_impact_ledger.py` の
+> かつ Issue の worked example 自体が閾値ルールより緩い「shared」ラベルを指定している）。この 1 件は `tools/impact-ledger/gen_impact_ledger.py` の
 > `SEED_OVERRIDES` で Issue 本文の値をそのまま固定しており、閾値ルールを変更するものではない。他の 292 シンボルは全てコールグラフ計算のみで導出。
 
 ---
@@ -98,21 +98,21 @@ Issue F（#174, EPIC #169）で確立。旧 `docs/repo-map.md`「src/index.templ
 ## 5. 再生成手順
 
 ```bash
-python3 scripts/gen_impact_ledger.py          # docs/impact-ledger.json を再生成（上書き）
-python3 scripts/gen_impact_ledger.py --check  # 生成物が最新か検査するのみ（差分があれば exit 1）
+python3 tools/impact-ledger/gen_impact_ledger.py          # docs/impact-ledger.json を再生成（上書き）
+python3 tools/impact-ledger/gen_impact_ledger.py --check  # 生成物が最新か検査するのみ（差分があれば exit 1）
 ```
 
-生成器は `src/index.template.html` のみを読み取り専用で解析する（ソース自体は変更しない）。**冪等**（同一ソース入力に対し常に
+生成器は `apps/web/src/index.template.html` のみを読み取り専用で解析する（ソース自体は変更しない）。**冪等**（同一ソース入力に対し常に
 同一 JSON バイト列を出力する）。
 
 ---
 
 ## 6. 編集エージェントの更新義務
 
-`src/index.template.html` 内の関数を**追加・改名・移動**した実装エージェントは、当該 PR で `python3 scripts/gen_impact_ledger.py`
+`apps/web/src/index.template.html` 内の関数を**追加・改名・移動**した実装エージェントは、当該 PR で `python3 tools/impact-ledger/gen_impact_ledger.py`
 を再実行し、`docs/impact-ledger.json` の差分（該当行番号・`caller_areas`・`feature_ids` の更新）をコミットに含める。
 生成器自体（分類ルール・シードマップ）を変更する必要がある場合（例: 新しい feature area の追加、明らかな誤分類の発見）は、
-`scripts/gen_impact_ledger.py` 冒頭の `EXACT_AREA` / `PREFIX_RULES` / `SEED_OVERRIDES` を編集し、再生成後に diff を確認する。
+`tools/impact-ledger/gen_impact_ledger.py` 冒頭の `EXACT_AREA` / `PREFIX_RULES` / `SEED_OVERRIDES` を編集し、再生成後に diff を確認する。
 
 **制約事項（既知の限界。誤分類を見つけた場合はここを疑う）**:
 - 直接呼び出し（`name(...)`）のみを検出する。コールバック参照渡し（`addEventListener("click", handlerName)` のように括弧なしで渡す形）は
