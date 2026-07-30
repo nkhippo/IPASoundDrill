@@ -4,16 +4,16 @@ on:
   pull_request:
     types: [opened, synchronize, reopened]
     paths:
-      - 'i18n/**/*.json'
-      - 'src/index.template.html'
-      - 'tools/validate_i18n.py'
+      - 'packages/core/i18n/**/*.json'
+      - 'apps/web/src/index.template.html'
+      - 'tools/validate/validate_i18n.py'
       - '.github/workflows/validate-i18n.yml'
   push:
     branches: [main, master]
     paths:
-      - 'i18n/**/*.json'
-      - 'src/index.template.html'
-      - 'tools/validate_i18n.py'
+      - 'packages/core/i18n/**/*.json'
+      - 'apps/web/src/index.template.html'
+      - 'tools/validate/validate_i18n.py'
       - '.github/workflows/validate-i18n.yml'
 
 jobs:
@@ -29,4 +29,4 @@ jobs:
           python-version: '3.11'
 
       - name: Validate i18n parity and formatting
-        run: python3 tools/validate_i18n.py
+        run: python3 tools/validate/validate_i18n.py

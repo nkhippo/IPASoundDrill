@@ -41,7 +41,7 @@ Issue B は既存ファイルを削除しない。CLAUDE.md からは router に
 | feature ID 索引 | `docs/features/README.md` | exists | ID 追加時 |
 | ID 横断の共通シェル・セッションフロー・適応出題 | `docs/features/_common.md` | exists | 共通挙動変更時 |
 | 全画面の DOM セレクタ・要素名・表示条件・状態パターン横断一覧（React 化デグレ確認用） | `docs/features/screen-inventory.md` | exists | 画面構造変更時 |
-| ソースシンボル → feature_ids → scope → caller_areas | `docs/impact-ledger.json` | exists | ソース共通シンボル変更時（`scripts/gen_impact_ledger.py` 再実行） |
+| ソースシンボル → feature_ids → scope → caller_areas | `docs/impact-ledger.json` | exists | ソース共通シンボル変更時（`tools/impact-ledger/gen_impact_ledger.py` 再実行） |
 | impact-ledger 運用プロトコル / impact-analysis halt ルール正本 | `docs/impact-ledger.md` | exists | 横展開ルール変更時 |
 | ランタイム 8 パス + JSON スキーマ + フィールド辞書 | `docs/data-contract.md` | exists | パス増減・スキーマ変更時 |
 | 採点ロジック定数 | `docs/features/2a.md`(+2b/2c/2d) | exists | 定数変更時 |
@@ -52,16 +52,20 @@ Issue B は既存ファイルを削除しない。CLAUDE.md からは router に
 | executor 対応フロー / Issue 起票ルール / レビュー・auto-merge / 返答末尾テンプレ | `docs/workflow.md` | exists | 運用フロー変更時 |
 | Level×Pattern 分類体系 | `docs/change-classification.md` | exists | 分類体系変更時 |
 | md5 検証(L3)/ 自己判断禁止 / doc-sync / impact-analysis halt / 仕様・指示書品質基準 | `docs/guardrails.md` | exists | ガードレール変更時 |
-| UI 仕様の参照ポリシー | `docs/guardrails.md` §9 + `docs/claude-design/README.md` + `src/index.template.html`(正本) | exists | UI 改修運用変更時 |
+| UI 仕様の参照ポリシー | `docs/guardrails.md` §9 + `docs/claude-design/README.md` + `apps/web/src/index.template.html`(正本) | exists | UI 改修運用変更時 |
 | 日付ログ（Phase 完了等の dated 記録） | `docs/history.md` | exists | 各 Phase 完了時 |
 | ローンチ Phase 進捗 | `docs/LAUNCH-CHECKLIST.md` | exists | Phase 進捗・Issue 起票/完了時 |
 | 運用手順（Vercel/GAS/DNS/Analytics） | `docs/OPERATIONS.md` | exists | 運用手順変更時 |
 | バグ根本原因記録 | `docs/bug-knowledge.md` | exists | Bug PR マージ時 |
-| data/ 配下の役割分担 | `data/README.md` | exists | data/ 役割変更時 |
+| ランタイム契約データ（wordlist/connected_speech/weak_forms/guide）の役割分担 | `packages/core/data/README.md` | exists | data 役割変更時 |
 | エージェント定義（issue-handler / pr-reviewer / consistency-auditor） | `.claude/agents/*.md` | exists | エージェント仕様変更時 |
 | CSS 変数命名・`--legacy-*` 運用・Track A CSS 技術制約（開発ゾーン） | `docs/CSS-CONVENTIONS.md` | exists | CSS 規約変更時 |
 | CSS トークン実装値（色・spacing・radius・shadow・font-family）snapshot | `docs/design/phase-1/visual-tokens.md`（実装用 snapshot、`docs/design/phase-1/design-tokens.md` が抽出元記録） | exists | トークン値変更時 |
 | デザイン原則・ペルソナ・voice/tone・感覚設計・アンチパターン（evergreen 設計入力） | `docs/design/{product-principles,user-personas,voice-and-tone,sensory-design,anti-patterns}.md` | exists | 設計方針変更時 |
+| Mobile アプリ設計方針（React Native / Expo 画面構成） | `docs/repo-map.md`（apps/mobile セクション） | planned | Mobile アーキテクチャ変更時 |
+| TTS バッチツーリング（`tools/tts/gen_tts_batch.py` 等） | `docs/tts-design.md` | planned | TTS バッチ改修時 |
+| monorepo 4 ゾーン定義（`apps/web/` / `apps/mobile/` / `packages/core/` / `tools/`） | `docs/repo-map.md` | planned | ゾーン構成変更時 |
+| Expo/EAS 設定（build profile・prebuild・app config） | `docs/repo-map.md` | planned | Expo/EAS 設定変更時 |
 
 ---
 

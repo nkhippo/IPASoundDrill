@@ -15,8 +15,9 @@
 2. `main` への直接 push 禁止。すべての変更は PR 経由
 3. ドキュメントに書かれていないことを推測で埋めない。判断に迷ったら halt（`CLAUDE.md` #halt プロトコル）
 4. このリポジトリの統治原則: **"AI is faithful to what's documented, guesses at what isn't"**
-5. UI 改修では `src/index.template.html`(唯一の正本) を参照する。`docs/claude-design/{sp,pc}.dc.html` は凍結フレームカタログ（画面一覧用、更新義務なし）。見た目の確認は Vercel branch preview URL で行う。**外部 Claude Design(SaaS) の更新・反映・再開セッションは要求しない**(2026-07-28 廃止)。詳細 `docs/claude-design/README.md`
+5. UI 改修では Web は `apps/web/src/index.template.html`、Mobile は `apps/mobile/src/`（実装後）を正本として参照する。`docs/claude-design/{sp,pc}.dc.html` は Web 画面の凍結フレームカタログ（画面一覧用、更新義務なし）。見た目の確認は Web: Vercel branch preview URL / Mobile: 実機・シミュレータで行う。**外部 Claude Design(SaaS) の更新・反映・再開セッションは要求しない**(2026-07-28 廃止)。詳細 `docs/claude-design/README.md`
 6. **Issue-first 必須**: 壁打ちで合意した変更は**実装着手前に必ず Issue を起票する**。同一セッション内の ClaudeCode 実装でも例外なし。Issue なしの PR 作成は禁止（`CLAUDE.md` halt トリガー (d)）
+7. **monorepo 4 ゾーン明文化**（monorepo 化・EPIC #209 以降）: 本リポは `apps/web/`（Web SPA）, `apps/mobile/`（Mobile、実装後）, `packages/core/`（共有ロジック・データ）, `tools/`（パイプライン・validate 等）の 4 ゾーンで構成される。Issue が宣言したゾーン外への変更が必要になったら、自己判断で進めず halt する（`CLAUDE.md` halt トリガー (b)）。`packages/core/` の変更は原則 `apps/web/` と `apps/mobile/` 双方への影響確認を伴う（Issue が明示した場合のみ同一 PR で両方に触れてよい）
 
 ## Agent-specific notes
 

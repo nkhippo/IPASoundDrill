@@ -19,6 +19,15 @@ labels:
 
 （なぜこの変更が必要か）
 
+## 対象ゾーン（monorepo 4 ゾーン）
+
+- [ ] `apps/web/`
+- [ ] `apps/mobile/`（実装後）
+- [ ] `packages/core/`
+- [ ] `tools/`
+
+複数ゾーンにまたがる場合は `docs/workflow.md` §4 の分割 5 判断軸に従い、原則分割する（cohesive consolidation の例外時は理由を明記）。
+
 ## 優先度
 
 - [ ] critical

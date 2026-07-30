@@ -41,12 +41,16 @@ Cursor / Codex がこのリポで行っている運用と**完全に同じ品質
   共通/ローカルを判定。**実際の影響範囲（caller_areas）が Issue の宣言スコープを超える**なら、修正せず **halt** して報告。
 - ランタイム契約 8 パス・i18n・wordlist 等に触る場合、Issue / `data-contract.md` が要求する
   データ整合性チェックを完了定義として控える。
+- **4 ゾーン跨ぎの halt トリガー（monorepo 化、EPIC #209 以降）**: 本リポは `apps/web/`, `apps/mobile/`（実装後）,
+  `packages/core/`, `tools/` の 4 ゾーン構成。Issue のホワイトリストが単一ゾーンを宣言しているのに、
+  実装上どうしても他ゾーンへの変更が必要になった場合は、halt トリガー (b)（ホワイトリスト逸脱）として扱い **halt** する。
+  `packages/core/` の変更で `apps/web/` / `apps/mobile/` 双方への追随が Issue で明示的に許可されている場合のみ実施してよい。
 
 ## 実装
 - **最小差分**。新機能はドキュメントが指示する場所で新規ファイルに実装。既存への変更は必要最小限。
 - 触った資産に応じて検証を実行:
-  - i18n を触ったら `python3 tools/validate_i18n.py`
-  - wordlist / `rp_ipa` / `neighbors` / connected_speech / weak_forms を触ったら該当の再カウント・`scripts/gen_*.py` 再実行
+  - i18n を触ったら `python3 tools/validate/validate_i18n.py`
+  - wordlist / `rp_ipa` / `neighbors` / connected_speech / weak_forms を触ったら該当の再カウント・`tools/data-pipeline/gen_*.py` 再実行
 - 現行 governance が要求する**実装レポート**を、指定の場所（例 `docs/cursor/reports/`、または再編後の指定先）に同一 PR で追加。
 - UI 改修で C6（スクショ必須）に該当するなら、Issue のスクショ対象画面を PR コメントに添付（不可なら明記して Naoya 実機検証を前提化）。
 

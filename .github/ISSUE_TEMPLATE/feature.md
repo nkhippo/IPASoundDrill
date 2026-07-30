@@ -16,12 +16,29 @@ labels:
 - 過去の類似実装レポート: <!-- 例: docs/cursor/reports/cursor-implementation-report-phase-v.md -->
 - Cursor 指示書（タイプ B のみ）: <!-- 例: docs/cursor/instructions/cursor-instructions-<topic>.md -->
 
+## 対象プラットフォーム
+
+- [ ] Web（`apps/web/`）
+- [ ] Mobile iOS（`apps/mobile/`、実装後）
+- [ ] Mobile Android（`apps/mobile/`、実装後）
+- [ ] Core（`packages/core/`、共有ロジック・データ）
+- [ ] Tools（`tools/`、パイプライン・validate 等）
+
+## 対象ゾーン（monorepo 4 ゾーン、ホワイトリストは必ずゾーン単位で明示）
+
+- [ ] `apps/web/`
+- [ ] `apps/mobile/`（実装後）
+- [ ] `packages/core/`
+- [ ] `tools/`
+
+複数ゾーンにまたがる場合は `docs/workflow.md` §4 の分割 5 判断軸に従い、原則分割する（cohesive consolidation の例外時は理由を明記）。
+
 ## 実装範囲
 
-- 対象ファイル:
-  - `index.html`（該当セクション）
-  - `data/<file>.json`
-  - `scripts/<file>.py`
+- 対象ファイル（ゾーンを明示）:
+  - `apps/web/src/index.template.html`（該当セクション）
+  - `packages/core/data/<file>.json`
+  - `tools/data-pipeline/<file>.py`
 - 実装内容:
   - 〇〇機能を追加
   - △△のロジックを変更
@@ -56,11 +73,11 @@ labels:
 
 ## ランタイム契約への影響
 
-以下のパスに触る場合はチェック（`CLAUDE.md` §品質基準-4 参照）:
+以下のパス（正本は `packages/core/data/` / `packages/core/i18n/` / `packages/core/fonts/`、Web 配信は `apps/web/public/` 経由。詳細は `docs/data-contract.md`）に触る場合はチェック:
 
-- [ ] `wordlist_GA_a1a2_plus_phonics.json`
-- [ ] `data/{connected_speech,weak_forms,guide}.json`
-- [ ] `i18n/*.json` / `i18n/phonemes/*.json`
-- [ ] `fonts/DoulosSIL-Regular.woff2`
-- [ ] `index.html` 内の `GAS_TTS_URL`
+- [ ] `packages/core/data/wordlist.json`
+- [ ] `packages/core/data/{connected_speech,weak_forms,guide}.json`
+- [ ] `packages/core/i18n/*.json` / `packages/core/i18n/phonemes/*.json`
+- [ ] `packages/core/fonts/DoulosSIL-Regular.woff2`
+- [ ] `apps/web/src/index.template.html` 内の `GAS_TTS_URL`
 - [ ] 該当なし

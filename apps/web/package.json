@@ -1,0 +1,21 @@
+{
+  "name": "@ipasounddrill/web",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@ipasounddrill/core": "workspace:*"
+  },
+  "scripts": {
+    "build": "node scripts/copy-core-assets.js && node scripts/build-i18n-html.js",
+    "typecheck": "tsc --allowJs --checkJs --noEmit --target ES2020 --moduleResolution node scripts/build-i18n-html.js scripts/copy-core-assets.js",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "esbuild": "^0.21.5",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.4"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

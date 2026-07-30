@@ -93,7 +93,7 @@ aliases:
 
 ### v2 での追記
 
-- Recon で判明: `src/index.template.html` に一部インライン style が残存 (Mode B heads 等)、デザイントークン化されていない
+- Recon で判明: `apps/web/src/index.template.html` に一部インライン style が残存 (Mode B heads 等)、デザイントークン化されていない
 - Q-4-B (respell 追加) で Reveal 画面の情報密度が上がるため、視覚言語刷新は Reveal を含むべき
 
 ### 想定される解決の方向

@@ -4,7 +4,7 @@
 各画面の詳細な観測可能挙動・採点則・i18n キーは対応する `docs/features/<id>.md` を正本とする。
 本ファイルは **DOM セレクタ・要素名・表示条件・状態パターン** の横断一覧のみを扱う（重複記述しない）。
 
-`src/index.template.html` 実装が正本。CSS: ~L90-1035、HTML: ~L1080-1650、JS: ~L1760-5876。
+`apps/web/src/index.template.html` 実装が正本。CSS: ~L90-1035、HTML: ~L1080-1650、JS: ~L1760-5876。
 
 ---
 
@@ -100,7 +100,7 @@
 
 ## 検証メモ（Issue #204 突合時点）
 
-- 本ファイルに列挙した全 DOM セレクタは `src/index.template.html` 内に実在することを `grep` で確認済み（テスト観点）
+- 本ファイルに列挙した全 DOM セレクタは `apps/web/src/index.template.html` 内に実在することを `grep` で確認済み（テスト観点）
 - `3c`（IPA 記号ピッカー）は現行 UI から遷移するトリガーが見当たらず、hash 直打ちでのみ到達可能。別 Issue でのフォローアップ対象として `docs/features/3c.md` に記録済み
 - `3d` の SRS queue（単語単位の期限一覧）は撤去済み。旧仕様書の記載を `docs/features/3d.md` で更新済み
 - `reveal` の旧 IPA 表示（`.readout` / `#rAltIpa` / `#rRespell` / `#rDictIpa`）は発音カード（`#rPronCard`）へ統合され `display:none` 化。DOM 自体は削除されていない

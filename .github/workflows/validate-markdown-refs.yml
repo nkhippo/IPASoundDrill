@@ -5,13 +5,13 @@ on:
     types: [opened, synchronize, reopened]
     paths:
       - '**/*.md'
-      - 'scripts/validate/**'
+      - 'tools/validate/**'
       - 'migration/broken-refs.csv'
   push:
     branches: [main, master]
     paths:
       - '**/*.md'
-      - 'scripts/validate/**'
+      - 'tools/validate/**'
       - 'migration/broken-refs.csv'
 
 jobs:
@@ -43,7 +43,7 @@ jobs:
         if: github.event_name == 'pull_request'
         run: |
           if [ -s changed-md.txt ]; then
-            python scripts/validate/validate-markdown-refs.py \
+            python tools/validate/validate-markdown-refs.py \
               --changed-files changed-md.txt \
               --broken-refs migration/broken-refs.csv
           else
@@ -53,6 +53,6 @@ jobs:
       - name: Validate (push mode)
         if: github.event_name == 'push'
         run: |
-          python scripts/validate/validate-markdown-refs.py \
+          python tools/validate/validate-markdown-refs.py \
             --full-scan \
             --broken-refs migration/broken-refs.csv

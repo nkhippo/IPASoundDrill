@@ -17,9 +17,11 @@ Issue 起票時に **Complexity Level（L1–L3）× Change Pattern（C1–C7）
 |---|---|---|
 | **L1**（軽微） | 次の 3 条件を**すべて満たす**: ①単一関心（Runtime/i18n schema/URL/ビルド等の別系統契約に触れない）②構造非破壊（ファイル移動・ディレクトリ新設・ビルド導入・運用フロー改変を含まない）③既存の軽量チェック（目視 / 既存 validate）で完了確認できる | 文言 1 箇所修正、既存キーへの値差し替えのみ、単一 docs の誤記修正 |
 | **L2**（通常） | L1 の 3 条件を満たさず、L3 の該当条件にも当たらない。複数ファイルの整合が必要、運用ドキュメントの内容更新（フロー再設計ではない）、既存アーキテクチャ維持のままの機能追加等 | i18n `meta` 追加、OPERATIONS への rollback 手順追記、単一機能の UI 改善 |
-| **L3**（大規模） | 次の 4 条件の**いずれか 1 つ以上**: ①AI 協業フローの再設計（`CLAUDE.md` / `workflow.md` / `guardrails.md` の実装ゲートを変更）②ビルド/ホスティングの初導入・転換 ③構造移動（公開 URL 構造変更、大規模ファイル移動・分割）④複合システム変更（フロント・データ契約・インフラ・docs をまたぐ大規模改修） | ガバナンス統合（本ファイル自身の作成 Issue）、SEO サブディレクトリ化、React 化 |
+| **L3**（大規模） | 次の 5 条件の**いずれか 1 つ以上**: ①AI 協業フローの再設計（`CLAUDE.md` / `workflow.md` / `guardrails.md` の実装ゲートを変更）②ビルド/ホスティングの初導入・転換 ③構造移動（公開 URL 構造変更、大規模ファイル移動・分割）④複合システム変更（フロント・データ契約・インフラ・docs をまたぐ大規模改修）⑤**Mobile iOS/Android 両プラットフォームに影響する変更、または `packages/core` の公開 API 変更** | ガバナンス統合（本ファイル自身の作成 Issue）、SEO サブディレクトリ化、React 化、iOS/Android 両方の画面挙動を変える Mobile 改修、`packages/core` の関数シグネチャ変更 |
 
 境界曖昧 → 上位 Level。判定根拠の省略禁止。実装中に実態が乖離したら Complexity Retrospective（`docs/guardrails.md`）で昇格/降格を提案し、勝手に続行しない。
+
+
 
 ## 3. Change Pattern（C1–C7）
 
@@ -32,7 +34,7 @@ Issue 起票時に **Complexity Level（L1–L3）× Change Pattern（C1–C7）
 | **C3** | Structure / URL / artifact layout | パス配置・公開 URL・生成物ディレクトリなど「どこに何があるか」を変える | `/en/` 等サブディレクトリ、テンプレート化移動、生成物の gitignore |
 | **C4** | Stack / framework | 言語・FW・モジュール境界など技術スタックの転換 | React + Vite 化、TypeScript 導入、BE 化、状態管理ライブラリ導入 |
 | **C5** | Runtime data / schema contract | wordlist / connected / weak / guide / i18n schema / ランタイム契約 8 パスの契約変更 | wordlist フィールド追加、i18n 新トップレベルキー、GAS TTS 契約変更 |
-| **C6** | Product behavior / UX | ユーザー可視の機能・画面フロー・採点・モード挙動の変更 | 新練習モード、Reveal UI 変更、TTS prefetch 挙動、設定モーダル追加 |
+| **C6** | Product behavior / UX | ユーザー可視の機能・画面フロー・採点・モード挙動の変更。**Mobile 特有の UX**（gesture / haptics / offline 挙動 / IAP / push 通知）も本 Pattern に含む（EPIC #209 以降、Mobile 実装後に発生） | 新練習モード、Reveal UI 変更、TTS prefetch 挙動、設定モーダル追加、スワイプ操作、haptics フィードバック、オフライン時の挙動切替、課金導線、push 通知 |
 | **C7** | Structural refactoring（AI readability） | 動作不変を前提に、ファイル分割・フォルダ再編・命名整理で AI/人間の可読性を上げる | docs 再編（本ファイル自身）、scripts のモジュール分割、重複 MD 統合 |
 
 複数選択の例: React 化（Track B）= **L3 × [C4, C3]**、本ファイル作成 Issue = **L3 × C7**。
@@ -58,9 +60,9 @@ Track ラベル（`launch-blocker` / `track-b`）は本軸の外で管理する�
 | **C1** | `docs/guardrails.md` | md5 でホワイトリスト外不変、相互リンク健全性 | 実装レポートに「Issue 背景」「後続への影響」必須 |
 | **C2** | `docs/OPERATIONS.md`、`docs/repo-map.md`（作成後） | デプロイ/設定の手動確認項目を完了定義に明記 | rollback・Secrets 手順の有無を Issue に書く |
 | **C3** | `docs/repo-map.md`（作成後）、`.gitignore` | 旧パス参照の grep、生成物の存在確認、URL 200 確認 | パス移動は Issue で明示。暗黙移動禁止 |
-| **C4** | `docs/product.md` / `docs/features/<id>.md`、Track B メモ | ビルド成功、主要画面の回帰、依存 lockfile の意図的更新 | Track B ラベル必須。Phase 分割前提 |
-| **C5** | `docs/data-contract.md`（作成後） | `validate_i18n` / wordlist 集計 / 契約パスの不変 or 意図的更新の証明 | 契約変更は完了定義に「前後値」を書く |
-| **C6** | 該当 `docs/features/<id>.md` | ブラウザ手動確認、（該当時）多言語 UI・TTS、スクショ対象画面リスト明示（`docs/workflow.md`） | 非対象範囲で触らないモードを明示 |
+| **C4** | `docs/product.md` / `docs/features/<id>.md`、Track B メモ | ビルド成功、主要画面の回帰、依存 lockfile の意図的更新 | Track B ラベル必須。Phase 分割前提。**Mobile 両プラットフォーム影響時は Level=L3 自動化**（§2 条件⑤） |
+| **C5** | `docs/data-contract.md`（作成後） | `validate_i18n` / wordlist 集計 / 契約パスの不変 or 意図的更新の証明 | 契約変更は完了定義に「前後値」を書く。**Mobile 側の扱い**: `packages/core/data/*.json` が正本。Web/Mobile とも build 時 copy 方式で複製する（Web: `apps/web/scripts/copy-core-assets.js` → `apps/web/public/data/`、Mobile: `apps/mobile/scripts/copy-core-assets.js` → `apps/mobile/assets/data/`、実行時は `apps/mobile/src/loaders/bundleLoader.ts` が読む）。正本は 1 箇所（`packages/core/data/*.json`）に保つ |
+| **C6** | 該当 `docs/features/<id>.md` | ブラウザ手動確認、（該当時）多言語 UI・TTS、スクショ対象画面リスト明示（`docs/workflow.md`）、Mobile 実装該当時: iOS/Android シミュレータ・実機確認 | 非対象範囲で触らないモードを明示 |
 | **C7** | `docs/doc-map.md` | 動作不変の証明、参照リンク更新漏れゼロ（grep 検証） | 月次レビュー候補として記録 |
 
 ## 6. Issue 本文の必須メタデータブロック
@@ -77,7 +79,7 @@ Issue 起票時、本文冒頭に次を**必ず**含める。欠落・`TBD`・`�
 - **Level 昇格・降格履歴**: なし / （あれば経緯）
 ```
 
-UI 改修 Issue では、正本 `src/index.template.html` を根拠として提示する。`docs/claude-design/{sp,pc}.dc.html` は凍結フレームカタログ（画面一覧用、更新義務なし）。見た目の確認は Vercel branch preview URL。旧 CD 修正判定(A/B/C)は 2026-07-28 に廃止(`docs/guardrails.md` §9)。
+UI 改修 Issue では、Web は正本 `apps/web/src/index.template.html`、Mobile は `apps/mobile/src/`（実装後）を根拠として提示する。`docs/claude-design/{sp,pc}.dc.html` は Web 画面の凍結フレームカタログ（画面一覧用、更新義務なし）。見た目の確認は Web: Vercel branch preview URL / Mobile: 実機・シミュレータ。旧 CD 修正判定(A/B/C)は 2026-07-28 に廃止(`docs/guardrails.md` §9)。
 
 ## 7. Level 昇格・降格運用
 
@@ -108,7 +110,7 @@ Retrospective の実施手順・テンプレートは `docs/guardrails.md`（Com
 | 分類判定精度 | 起票時 Level と Retrospective 結果の一致率 | 境界事例を §2 に追記 |
 | 誤判定率 | 昇格提案の発生率、Naoya による分類差し戻し | 代表例の更新 |
 | Pattern 網羅性 | 「どれにも当てはまらない」の発生 | §8 トリガー |
-| C7 候補 | `index.html` 肥大、docs 重複、レジストリと実態の乖離 | C7 Issue 起票（`docs/doc-map.md` 経由） |
+| C7 候補 | `apps/web/src/index.template.html` 肥大、docs 重複、レジストリと実態の乖離 | C7 Issue 起票（`docs/doc-map.md` 経由） |
 
 ---
 
