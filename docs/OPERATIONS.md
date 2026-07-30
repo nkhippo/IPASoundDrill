@@ -10,8 +10,9 @@
 
 `main` に PR がマージされると Vercel が自動でデプロイする。所要時間: 30〜60秒。
 
-- ビルドコマンド: `node scripts/build-i18n-html.js`（F2 で導入）
-- 出力ディレクトリ: リポジトリルート（`/en/`〜`/fil/` を含む、生成物）
+- Root Directory: `apps/web`（monorepo 化・#EPIC-02 以降）
+- ビルドコマンド: `pnpm --filter @ipasounddrill/web build`（`apps/web/scripts/copy-core-assets.js` → `apps/web/scripts/build-i18n-html.js`、F2 で導入・#EPIC-02 で monorepo 対応）
+- 出力ディレクトリ: `apps/web/public`（`/en/`〜`/fil/` を含む、生成物）
 - Vercel ダッシュボード: https://vercel.com/nkhippo/ipa-sound-drill
 
 ### 1.2 Preview デプロイ
@@ -22,7 +23,7 @@
 
 1. Vercel ダッシュボード > Deployments タブでビルドログを確認
 2. よくある原因:
-   - JSON ファイルの構文エラー（`wordlist_GA_a1a2_plus_phonics.json` の破損）
+   - JSON ファイルの構文エラー（`packages/core/data/wordlist.json` の破損）
    - ファイル参照パスの誤り（大文字小文字の違い）
    - 静的サイト設定の変更
 3. `git revert <SHA>` で問題コミットを取り消し、push → 再デプロイ
@@ -61,8 +62,8 @@ Vercel dashboard > Settings > Production Branch → 空文字列に設定し保�
 
 Vercel Build の失敗は、既存 § 1.3「デプロイ失敗時の対応」の静的サイト前提の失敗（JSON 構文エラー、ファイル参照誤り等）とは異なる性質を持つ:
 
-- Build Command 実行時のエラー（例: `npm run build` の非 0 終了、スクリプトのバグ、環境変数不足）
-- 依存関係インストールエラー（`npm install` 失敗、lockfile 不整合、レジストリアクセス不能）
+- Build Command 実行時のエラー（例: `pnpm --filter @ipasounddrill/web build` の非 0 終了、スクリプトのバグ、環境変数不足）
+- 依存関係インストールエラー（`pnpm install` 失敗、`pnpm-lock.yaml` 不整合、レジストリアクセス不能）
 - Node.js バージョン不整合（`.nvmrc` / `package.json` の `engines` フィールドと Vercel 環境の差異）
 - Output Directory 誤設定（生成物が指定ディレクトリに存在しない、Vercel が空を配信）
 - Build Command のタイムアウト（デフォルト 45 分）
@@ -145,7 +146,7 @@ F2 のように Vercel Build を新規導入する Issue や、Build 設定を�
 | 全ユーザーで音が鳴らない | GAS Deploy が停止・破損 | GAS ダッシュボードでデプロイ確認、再デプロイ |
 | 特定ユーザーのみ音が鳴らない | ブラウザキャッシュ / 権限 | ユーザーにキャッシュクリア + ブラウザ再起動を案内 |
 | 1回目だけ音が途切れる | 既知の初回タップ遅延 | Phase T レポート参照（`docs/cursor/reports/`） |
-| 特定単語だけ音が変 | GAS BatchWords 未更新 | `python3 scripts/export_batch_words.py` を実行、GAS 更新 |
+| 特定単語だけ音が変 | GAS BatchWords 未更新 | `python3 tools/data-pipeline/export_batch_words.py` を実行、GAS 更新 |
 
 ### 3.2 GAS 再デプロイ手順
 
@@ -209,11 +210,11 @@ DNS 伝播に最大 24 時間かかることがある（通常は 10〜30分）�
 - サイト: `ipasounddrill.app`（Vercel プロジェクト `ipa-sound-drill`）
 - Dashboard: https://vercel.com/nkhippo/ipa-sound-drill/analytics
 - Dashboard 側有効化: Issue #19 で完了済み（Naoya 手動）
-- 計測タグ埋め込み: Issue E1 / #43 で `src/index.template.html` の `</body>` 直前に追加、生成物 6 言語版すべてに反映
+- 計測タグ埋め込み: Issue E1 / #43 で `apps/web/src/index.template.html` の `</body>` 直前に追加、生成物 6 言語版すべてに反映
 
 ### 5.2 埋め込みタグ
 
-`src/index.template.html` の `</body>` 直前に以下を配置:
+`apps/web/src/index.template.html` の `</body>` 直前に以下を配置:
 
 ```html
 <script defer src="/_vercel/insights/script.js"></script>
@@ -258,7 +259,7 @@ Vercel Web Analytics のデータ保持期間は Hobby プランで直近 30 日
 
 ### 5.6 開発者除外（Naoya 自身のアクセスを除外）
 
-Vercel Web Analytics には公式のオプトアウト UI がなく（DNT 非対応、Cookie 不使用）、現行の script タグ直接埋め込み方式では `@vercel/analytics` パッケージの `beforeSend` フックも使えない。そのため `src/index.template.html` に localStorage ベースの除外機構を実装している（Issue #46）。
+Vercel Web Analytics には公式のオプトアウト UI がなく（DNT 非対応、Cookie 不使用）、現行の script タグ直接埋め込み方式では `@vercel/analytics` パッケージの `beforeSend` フックも使えない。そのため `apps/web/src/index.template.html` に localStorage ベースの除外機構を実装している（Issue #46）。
 
 **除外の有効化**:
 
@@ -401,12 +402,12 @@ Repository Settings > Secrets and variables > Actions:
 - **旧 Railway（deprecated, Phase F まで存置）**: service `https://ipasounddrill-production.up.railway.app` / endpoint `/mcp` / コード `nkhippo/ipasounddrill-mcp` / コネクタ `IPASoundDrill GitHub`
 ## 9. i18n 検証のローカル実行
 
-UI 翻訳 JSON や `src/index.template.html` の i18n 参照を変更した場合は、Preview / Production デプロイ前にリポジトリ直下で以下を実行する。
+UI 翻訳 JSON や `apps/web/src/index.template.html` の i18n 参照を変更した場合は、Preview / Production デプロイ前にリポジトリ直下で以下を実行する。
 
 ```bash
-python3 tools/validate_i18n.py
+python3 tools/validate/validate_i18n.py
 ```
 
-このコマンドは JSON パース、UI key parity、phoneme key parity、未翻訳疑い、HTML 参照 key、TODO 痕跡、ja 以外の CJK かな残留、プレースホルダ整合、JSON フォーマット、`_html` key の HTML 妥当性を検査する。エラーが 1 件でも出た場合は PR / deploy を止め、該当 `i18n/*.json` または参照元を修正してから再実行する。
+このコマンドは JSON パース、UI key parity、phoneme key parity、未翻訳疑い、HTML 参照 key、TODO 痕跡、ja 以外の CJK かな残留、プレースホルダ整合、JSON フォーマット、`_html` key の HTML 妥当性を検査する。エラーが 1 件でも出た場合は PR / deploy を止め、該当 `packages/core/i18n/*.json` または参照元を修正してから再実行する。
 
 GitHub Actions の `validate-i18n` workflow も同じコマンドを PR / push 時に実行する。

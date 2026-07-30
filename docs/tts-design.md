@@ -82,7 +82,7 @@ GAS 側の `?urls=1` / `migratePublicSharing` 反映は `docs/reference/remainin
 
 ## 4. GA バッチ warm（GAS 時間トリガー）
 
-全 **5,397** 語の GA 音声を Google Drive に事前ストックするオフラインジョブ。`gas/BatchWarm.gs` + `gas/BatchWords.gs`（`scripts/export_batch_words.py` で生成）。
+全 **5,397** 語の GA 音声を Google Drive に事前ストックするオフラインジョブ。`tools/tts/gas/BatchWarm.gs` + `tools/tts/gas/BatchWords.gs`（`tools/data-pipeline/export_batch_words.py` で生成）。
 
 | 定数 | 値 |
 |------|-----|
@@ -96,7 +96,7 @@ GAS 側の `?urls=1` / `migratePublicSharing` 反映は `docs/reference/remainin
 - 進捗: `getBatchStatusGA()` / スクリプトプロパティ `BATCH_INDEX_GA`
 - 任意: スプレッドシート `BATCH_SPREADSHEET_ID` で語彙リストを上書き
 
-詳細: `gas/README.md` §GA 一括バッチ
+詳細: `tools/tts/gas/README.md` §GA 一括バッチ
 
 ---
 
@@ -104,18 +104,18 @@ GAS 側の `?urls=1` / `migratePublicSharing` 反映は `docs/reference/remainin
 
 | File | Role |
 |------|------|
-| `gas/Code.gs` | TTS proxy（word / phrase / weak / warm / `?urls=1`） |
-| `gas/BatchWarm.gs` | Scheduled GA Drive pre-generation |
-| `gas/BatchWords.gs` | Word list for batch warm（**5,397 語** — `export_batch_words.py` で更新） |
-| `gas/README.md` | Deploy + API reference |
+| `tools/tts/gas/Code.gs` | TTS proxy（word / phrase / weak / warm / `?urls=1`） |
+| `tools/tts/gas/BatchWarm.gs` | Scheduled GA Drive pre-generation |
+| `tools/tts/gas/BatchWords.gs` | Word list for batch warm（**5,397 語** — `export_batch_words.py` で更新） |
+| `tools/tts/gas/README.md` | Deploy + API reference |
 | 手動残作業 | `docs/reference/remaining-ops-checklist.md`（再デプロイ・`migratePublicSharing`・BatchWarm） |
 
 ## 6. R4 pending（TTS レビュー）
 
 | Asset | Path |
 |-------|------|
-| 機械抽出リスト | `data/pipeline/phase2a_review_needed.json`（127 語） |
-| 作業用リスト（拡張） | `data/pipeline/r4_pending_review_list.json` / `.csv` |
+| 機械抽出リスト | `tools/data-pipeline/pipeline/phase2a_review_needed.json`（127 語） |
+| 作業用リスト（拡張） | `tools/data-pipeline/pipeline/r4_pending_review_list.json` / `.csv` |
 | 手順ガイド | `docs/reference/r4-pending-review-guide.md` |
 
 ---
