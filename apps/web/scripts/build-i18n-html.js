@@ -3,11 +3,37 @@
 
 const fs = require("fs");
 const path = require("path");
+const esbuild = require("esbuild");
 
 const ROOT = path.resolve(__dirname, "..");
 const REPO_ROOT = path.resolve(__dirname, "..", "..", "..");
 const TEMPLATE = path.resolve(__dirname, "..", "src", "index.template.html");
 const CORE_I18N_DIR = path.join(REPO_ROOT, "packages", "core", "i18n");
+const CORE_ENTRY = path.join(REPO_ROOT, "packages", "core", "src", "index.ts");
+const CORE_BUNDLE_OUT = path.join(ROOT, "public", "core-bundle.js");
+
+/**
+ * `@ipasounddrill/core`（判定ロジック + 型 + loader）を単一 ESM バンドルへ esbuild する
+ * （Issue #213 Phase 4）。`apps/web/src/index.template.html` はこのバンドルを
+ * `<script type="module">` から import する。データ内容・見た目には影響しない
+ * ビルド時変換のみ（`apps/web/.gitignore` により生成物は未追跡）。
+ */
+function bundleCore() {
+  if (!fs.existsSync(CORE_ENTRY)) {
+    console.error("Missing core entry:", CORE_ENTRY);
+    process.exit(1);
+  }
+  esbuild.buildSync({
+    entryPoints: [CORE_ENTRY],
+    outfile: CORE_BUNDLE_OUT,
+    bundle: true,
+    format: "esm",
+    platform: "browser",
+    target: "es2020",
+    sourcemap: true,
+  });
+  console.log("Wrote", path.relative(ROOT, CORE_BUNDLE_OUT));
+}
 const LANGS = ["en", "ja", "ko", "zh-Hans", "zh-Hant", "fil"];
 const OG_LOCALE = {
   en: "en_US",
@@ -56,6 +82,7 @@ function build() {
     console.error("Missing template:", TEMPLATE);
     process.exit(1);
   }
+  bundleCore();
   const template = fs.readFileSync(TEMPLATE, "utf8");
   const alternates = hreflangBlock();
 
