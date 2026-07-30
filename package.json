@@ -11,6 +11,6 @@
     "build:web": "pnpm --filter @ipasounddrill/web build"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=22"
   }
 }
