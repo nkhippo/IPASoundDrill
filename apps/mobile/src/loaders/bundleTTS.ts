@@ -59,3 +59,12 @@ function createMobileBundleAssets(): BundleAssets {
 export function createMobileBundleTTS(): TTSSource {
   return createHybridTTS(createMobileBundleAssets(), GAS_TTS_URL, createInMemoryTTSCache());
 }
+
+/**
+ * 指定単語・アクセントの mp3 が bundle 同梱済みかどうか（Issue #224 Phase 5）。
+ * `PlaybackButton` がオフライン再生可否（bundle 同梱があればオフラインでも再生できる）を
+ * 判定するために使う。`AUDIO_MODULES` が空の間は常に `false`（GAS フォールバック必須）。
+ */
+export function hasBundledAudio(word: string, accent: Accent): boolean {
+  return AUDIO_MODULES[accent]?.[word] !== undefined;
+}
