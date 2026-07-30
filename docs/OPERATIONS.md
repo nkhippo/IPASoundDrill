@@ -411,3 +411,30 @@ python3 tools/validate/validate_i18n.py
 このコマンドは JSON パース、UI key parity、phoneme key parity、未翻訳疑い、HTML 参照 key、TODO 痕跡、ja 以外の CJK かな残留、プレースホルダ整合、JSON フォーマット、`_html` key の HTML 妥当性を検査する。エラーが 1 件でも出た場合は PR / deploy を止め、該当 `packages/core/i18n/*.json` または参照元を修正してから再実行する。
 
 GitHub Actions の `validate-i18n` workflow も同じコマンドを PR / push 時に実行する。
+
+---
+
+## 11. Mobile ビルド（Naoya 用、Developer Account 加入後）
+
+`apps/mobile/`（Expo/React Native、EPIC #209）は Issue #225 時点で **EAS Build の config 整備のみ完了**（`apps/mobile/eas.json` の development/preview/production 3 profile、`apps/mobile/app.config.ts` の bundle identifier・version・runtimeVersion、仮アイコン/スプラッシュ SVG）。実ビルド・ストア申請は Naoya が下記の加入完了後に実施する。
+
+### 前提条件
+
+1. **iOS**: [Apple Developer Program](https://developer.apple.com/programs/)（$99/年）に加入
+2. **Android**: [Google Play Console](https://play.google.com/console/signup)（$25、一回のみ）に加入
+3. **Expo アカウント**: https://expo.dev/signup で無料サインアップ + `eas login`
+
+手順・コマンド・トラブルシューティングの詳細は `tools/mobile/README.md` を参照（本項では重複させない）。
+
+### 実行順序の要点
+
+1. `tools/mobile/README.md` §1 の手順で Expo アカウント作成 + `eas init`（初回のみ、`extra.eas.projectId` が発行される）
+2. 上記 Developer Account 加入
+3. `eas build --profile development` で開発ビルドを作成し、実機/シミュレータ動作確認
+4. `eas build --profile preview` で内部配布ビルド、TestFlight 内部テスター / 社内 apk 配布で最終確認
+5. `eas build --profile production` + `eas submit` でストア提出
+
+### 注意事項
+
+- 仮アイコン/スプラッシュ（`apps/mobile/assets/icons/*.svg`, `apps/mobile/assets/splash/*.svg`）は v1.1 で本番アセットに差し替え予定。実ビルド初回時に SVG がラスタライズ後の見た目として意図通りか必ず確認する（反映不十分な場合は `tools/mobile/README.md` トラブルシューティング参照）。
+- `apps/mobile/assets/audio`（人気単語の同梱 mp3、`tools/tts/gen_tts_batch.py` 生成）のバンドルサイズは `node tools/mobile/verify-bundle-size.js` で事前確認可能（CI 非統合、手動実行）。

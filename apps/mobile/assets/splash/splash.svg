@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  IPA Sound Drill — splash screen (Issue #225, v1 仮アイコン)
+  1024x1024, white background with the app icon centered.
+  Naoya が v1.1 で本番アイコンに差し替え予定。
+-->
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="splash-icon-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4A90E2" />
+      <stop offset="100%" stop-color="#357ABD" />
+    </linearGradient>
+  </defs>
+
+  <!-- white background -->
+  <rect width="1024" height="1024" fill="#FFFFFF" />
+
+  <!-- centered icon (roughly 40% of canvas) -->
+  <g transform="translate(312, 312) scale(0.4)">
+    <rect width="1024" height="1024" rx="192" fill="url(#splash-icon-bg)" />
+    <g stroke="#FFFFFF" stroke-width="36" stroke-linecap="round">
+      <line x1="272" y1="452" x2="272" y2="572" />
+      <line x1="368" y1="392" x2="368" y2="632" />
+      <line x1="464" y1="332" x2="464" y2="692" />
+      <line x1="560" y1="392" x2="560" y2="632" />
+      <line x1="656" y1="452" x2="656" y2="572" />
+    </g>
+    <circle cx="752" cy="512" r="20" fill="#F5A623" />
+    <text x="512" y="820" font-family="Georgia, 'Times New Roman', serif" font-size="128"
+          font-style="italic" fill="#F5A623" text-anchor="middle">[aɪ]</text>
+  </g>
+</svg>

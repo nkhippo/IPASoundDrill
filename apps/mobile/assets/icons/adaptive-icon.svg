@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  IPA Sound Drill — Android adaptive icon foreground (Issue #225, v1 仮アイコン)
+  1024x1024 viewBox, foreground element only (transparent background).
+  Background color is specified separately via app.config.ts
+  (android.adaptiveIcon.backgroundColor). Content is kept within Android's
+  safe zone (inner ~66% / 672px circle) so it is not clipped by icon masks.
+  Naoya が v1.1 で本番アイコンに差し替え予定。
+-->
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <!-- sound wave bars (scaled to stay within adaptive-icon safe zone) -->
+  <g stroke="#FFFFFF" stroke-width="30" stroke-linecap="round">
+    <line x1="332" y1="472" x2="332" y2="552" />
+    <line x1="412" y1="422" x2="412" y2="602" />
+    <line x1="492" y1="382" x2="492" y2="642" />
+    <line x1="572" y1="422" x2="572" y2="602" />
+    <line x1="652" y1="472" x2="652" y2="552" />
+  </g>
+
+  <!-- accent dot -->
+  <circle cx="724" cy="512" r="16" fill="#F5A623" />
+
+  <!-- IPA text [aɪ] -->
+  <text x="512" y="760" font-family="Georgia, 'Times New Roman', serif" font-size="104"
+        font-style="italic" fill="#F5A623" text-anchor="middle">[aɪ]</text>
+</svg>
