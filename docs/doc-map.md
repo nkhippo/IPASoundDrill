@@ -62,6 +62,10 @@ Issue B は既存ファイルを削除しない。CLAUDE.md からは router に
 | CSS 変数命名・`--legacy-*` 運用・Track A CSS 技術制約（開発ゾーン） | `docs/CSS-CONVENTIONS.md` | exists | CSS 規約変更時 |
 | CSS トークン実装値（色・spacing・radius・shadow・font-family）snapshot | `docs/design/phase-1/visual-tokens.md`（実装用 snapshot、`docs/design/phase-1/design-tokens.md` が抽出元記録） | exists | トークン値変更時 |
 | デザイン原則・ペルソナ・voice/tone・感覚設計・アンチパターン（evergreen 設計入力） | `docs/design/{product-principles,user-personas,voice-and-tone,sensory-design,anti-patterns}.md` | exists | 設計方針変更時 |
+| Mobile アプリ設計方針（React Native / Expo 画面構成） | `docs/repo-map.md`（apps/mobile セクション） | exists | Mobile アーキテクチャ変更時 |
+| TTS バッチツーリング（`tools/tts/gen_tts_batch.py` 等） | `docs/tts-design.md` | exists | TTS バッチ改修時 |
+| monorepo 4 ゾーン定義（`apps/web/` / `apps/mobile/` / `packages/core/` / `tools/`） | `docs/repo-map.md` | exists | ゾーン構成変更時 |
+| Expo/EAS 設定（build profile・prebuild・app config） | `docs/repo-map.md` | exists | Expo/EAS 設定変更時 |
 
 ---
 

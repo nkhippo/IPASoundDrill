@@ -13,6 +13,8 @@ Issue F（#174, EPIC #169）で確立。旧 `docs/repo-map.md`「src/index.templ
 
 生成器: `tools/impact-ledger/gen_impact_ledger.py`。データ本体: `docs/impact-ledger.json`（symbol 昇順の JSON 配列）。
 
+**現在のスコープは Web（`apps/web/src/index.template.html`）のみ**。`apps/mobile/`（EPIC #209 以降）のシンボルは本台帳の対象外で、`caller_areas` / `scope` の計算にも含まれない。Mobile 側のシンボル影響管理は将来 Issue で個別対応する。
+
 ---
 
 ## 2. スキーマ

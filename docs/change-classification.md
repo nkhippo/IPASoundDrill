@@ -61,8 +61,8 @@ Track ラベル（`launch-blocker` / `track-b`）は本軸の外で管理する�
 | **C2** | `docs/OPERATIONS.md`、`docs/repo-map.md`（作成後） | デプロイ/設定の手動確認項目を完了定義に明記 | rollback・Secrets 手順の有無を Issue に書く |
 | **C3** | `docs/repo-map.md`（作成後）、`.gitignore` | 旧パス参照の grep、生成物の存在確認、URL 200 確認 | パス移動は Issue で明示。暗黙移動禁止 |
 | **C4** | `docs/product.md` / `docs/features/<id>.md`、Track B メモ | ビルド成功、主要画面の回帰、依存 lockfile の意図的更新 | Track B ラベル必須。Phase 分割前提。**Mobile 両プラットフォーム影響時は Level=L3 自動化**（§2 条件⑤） |
-| **C5** | `docs/data-contract.md`（作成後） | `validate_i18n` / wordlist 集計 / 契約パスの不変 or 意図的更新の証明 | 契約変更は完了定義に「前後値」を書く。**Mobile 側の扱い**（EPIC #209 以降）: `packages/core/data/*.json` が正本、Web は build 時 `apps/web/public/data/` へ copy、Mobile は build 時 `apps/mobile/assets/data/` へ copy（RN バンドラー）または実行時 `packages/core` を直接 import のいずれか（実装方式は EPIC-06/EPIC-07 で確定）。いずれの方式でも正本は `packages/core/data/*.json` 一箇所に保つ |
-| **C6** | 該当 `docs/features/<id>.md` | ブラウザ手動確認、（該当時）多言語 UI・TTS、スクショ対象画面リスト明示（`docs/workflow.md`） | 非対象範囲で触らないモードを明示 |
+| **C5** | `docs/data-contract.md`（作成後） | `validate_i18n` / wordlist 集計 / 契約パスの不変 or 意図的更新の証明 | 契約変更は完了定義に「前後値」を書く。**Mobile 側の扱い**: `packages/core/data/*.json` が正本。Web/Mobile とも build 時 copy 方式で複製する（Web: `apps/web/scripts/copy-core-assets.js` → `apps/web/public/data/`、Mobile: `apps/mobile/scripts/copy-core-assets.js` → `apps/mobile/assets/data/`、実行時は `apps/mobile/src/loaders/bundleLoader.ts` が読む）。正本は 1 箇所（`packages/core/data/*.json`）に保つ |
+| **C6** | 該当 `docs/features/<id>.md` | ブラウザ手動確認、（該当時）多言語 UI・TTS、スクショ対象画面リスト明示（`docs/workflow.md`）、Mobile 実装該当時: iOS/Android シミュレータ・実機確認 | 非対象範囲で触らないモードを明示 |
 | **C7** | `docs/doc-map.md` | 動作不変の証明、参照リンク更新漏れゼロ（grep 検証） | 月次レビュー候補として記録 |
 
 ## 6. Issue 本文の必須メタデータブロック
