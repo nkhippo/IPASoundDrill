@@ -1,11 +1,30 @@
-# [EPIC-05] TTS 事前バッチ生成 + hybrid delivery (#222) — 実装レポート（Phase 3 halt 時点）
+# [EPIC-05] TTS 事前バッチ生成 + hybrid delivery (#222) — 実装レポート
 
 ## 関連 Issue / PR
 
 - Issue: #222（親 EPIC #209、先行 Issue #212 / #214 merged）
-- PR: 本レポート時点では未作成（Phase 3 halt のため、下記「halt 状況」参照）
 - Agent: issue-handler（ClaudeCode 同一セッション、Naoya 明示委譲）
 - 作業ブランチ: `feature/tts-batch-222`（base: `develop`）
+
+## Phase 3 判断確定（Naoya 承認 2026-07-30、halt 復帰）
+
+Issue コメント https://github.com/nkhippo/IPASoundDrill/issues/222#issuecomment-5125916345 にて、
+下記の通り Phase 3 の halt に対する回答が確定した。
+
+- **Git LFS: 不使用**。`apps/mobile/assets/audio/` は `.gitignore` で除外し、リポジトリにバイナリを
+  コミットしない方針とする。理由: 個人開発でクラウド LFS ストレージ/帯域の追加料金を回避するため。
+  実 mp3（1,000 語 × GA/RP ≈ 2,000 ファイル）の生成は Naoya が個人環境で
+  `GAS_TTS_URL=<url> python3 tools/tts/gen_tts_batch.py --top-n 1000` を実行して行う。
+- **`apps/mobile/.gitignore` の新規作成は本 Issue の対象外** とし、`apps/mobile/`（Expo プロジェクト）
+  自体がまだ存在しないため、#EPIC-06（Issue #223、Expo 初期化）に作成を移送する。
+- **Phase 5（CI 統合、`.github/workflows/mobile-prebuild-tts.yml`）は skip**。Issue 本文で optional と
+  明記されており、本 Issue の完了範囲には含めない。
+- **実 mp3 生成のテスト観点は dry-run 検証のみで完了扱い**とする。`GAS_TTS_URL` が本セッション環境に
+  存在しないため、実際の HTTP 経由 mp3 生成は Naoya が後日ローカル環境で実行する。
+
+これにより本 Issue の完了範囲は Phase 1（`gen_tts_batch.py`）・Phase 2（`packages/core/src/tts.ts` +
+テスト）・Phase 4（`tools/tts/README.md`）に確定し、Phase 3（`apps/mobile/.gitignore`）と Phase 5
+（CI workflow）は本 Issue のファイルホワイトリストから除外される。
 
 ## Issue 背景（Issue 本文から要約）
 
@@ -62,44 +81,34 @@ Issue 本文のファイルホワイトリストのうち、以下は Phase 3 ha
 - 実生成 10 mp3（テスト観点「実生成 10 mp3 で `apps/mobile/assets/audio/{ga,rp}/{word}.mp3` が作られる」）: **未実施**。本セッションの環境には `GAS_TTS_URL` が設定されておらず、実際の HTTP 経由 mp3 生成テストができない（dry-run 経路のみ検証済み）。Naoya の `GAS_TTS_URL` を用いた実生成確認を依頼する。
 - データ整合性: `packages/core/data/wordlist.json` md5 = `54937707f733d1f906c99ba119444d5a`（読み取りのみ、変更なし）。ランタイム契約 8 パスへの内容変更なし。
 
-## halt 状況（Phase 3: LFS 判断）
+## halt 経緯（解消済み）
 
 Issue #222 本文の指示（「Naoya 判断待ち → 本 Issue Phase 3 で halt 予定」）に従い、Phase 3
-（`apps/mobile/assets/audio/` の git 管理方針 = LFS 利用要否）で **halt** する。
+（`apps/mobile/assets/audio/` の git 管理方針 = LFS 利用要否）で一度 halt した
+（https://github.com/nkhippo/IPASoundDrill/issues/222#issuecomment-5125835689）。
+Naoya 承認により上記「Phase 3 判断確定」の内容で解消済み
+（https://github.com/nkhippo/IPASoundDrill/issues/222#issuecomment-5125916345）。
 
-- **現在の状態**: Phase 1（`gen_tts_batch.py`）・Phase 2（`packages/core/src/tts.ts` + テスト）・
-  Phase 4（README 追記）を実装・検証済み（上記「動作確認」参照）。Phase 3・Phase 5 は未着手。
-- **中断理由**: Issue 本文が Phase 3 を Naoya 判断待ちと明記しているため。加えて、本セッションで
-  リポジトリを確認したところ `apps/mobile/` ディレクトリ自体がまだ存在しない（#EPIC-06 Expo 初期化が
-  未実施）ことを確認した。そのため `apps/mobile/.gitignore` を新規作成する場合、ディレクトリ構成の
-  前提（Expo プロジェクト構造）が定まっていない状態での作成になる。
-- **次に必要なこと**:
-  1. git LFS 利用要否の判断（Issue 本文記載の判定基準: LFS 非利用+CI/EAS prebuild 生成 vs LFS 管理）。
-  2. 上記 1 に伴い、`apps/mobile/.gitignore` を今 Issue で作成するか、`apps/mobile/` 自体が
-     #EPIC-06 で作成されてから追従する別 Issue にするかの判断。
-  3. Phase 5（CI 統合）の要否（Issue 本文で optional と明記、Naoya 判断待ち）。
-  4. 実生成 10 mp3 のテスト観点検証に使う `GAS_TTS_URL`（Naoya 提供、または Naoya 実施依頼）。
-
-halt 中は本 Issue へのコメント投稿後、追加の推測実装を行わず待機する。
-
-## Complexity Retrospective（Phase 3 halt 時点、暫定）
+## Complexity Retrospective
 
 ### 事前分類 vs 実際
 
 - 事前 Complexity Level: L2
-- 実装後の妥当性判定（Phase 1/2/4 の範囲では）: 妥当
-- 判定根拠: 新規 tooling 追加のみで既存ランタイム契約（GAS TTS URL・4 JSON）は不変。ただし
-  Phase 3 の LFS 判断・`apps/mobile/` 未作成という状況次第では、後続 Issue 分割が必要になる
-  可能性がある（Naoya 判断待ち）。
+- 実装後の妥当性判定: 妥当
+- 判定根拠: 新規 tooling 追加のみで既存ランタイム契約（GAS TTS URL・4 JSON）は不変。
+  Phase 3（`apps/mobile/.gitignore`）は `apps/mobile/` 自体が未作成のため #EPIC-06 へ、
+  Phase 5（CI 統合）は Naoya 判断で skip となり、本 Issue の完了範囲は Phase 1/2/4 に確定した。
 
 ### 事前 Change Pattern vs 実際
 
 - 事前 Pattern: C4（stack: TTS batch tooling）, C5（runtime data: mp3 asset 追加）
-- 実装中に追加が必要になった Pattern: なし（Phase 1/2/4 の範囲では）
+- 実装中に追加が必要になった Pattern: なし
 
 ## 残課題・申し送り
 
-- Phase 3 の LFS 判断（Naoya 待ち、本 halt の主因）。
-- 実生成 10 mp3 のテスト観点未検証（`GAS_TTS_URL` 未提供のため）。
-- Phase 5（CI 統合）実施可否（Naoya 判断待ち、halt 復帰時に確認）。
-- `apps/mobile/` ディレクトリが未作成（#EPIC-06 未実施）である点を、Phase 3 判断時の前提として共有。
+- 実生成 1,000 語（GA/RP ≈ 2,000 mp3）: Naoya が個人環境で
+  `GAS_TTS_URL=<url> python3 tools/tts/gen_tts_batch.py --top-n 1000` を実行して行う
+  （本 Issue では dry-run 検証のみで完了扱い）。
+- `apps/mobile/.gitignore`（LFS 不使用の除外設定）: #EPIC-06（Issue #223、Expo 初期化）で作成。
+- Phase 5（CI 統合、`.github/workflows/mobile-prebuild-tts.yml`）: 本 Issue では skip。
+  将来必要になった場合は別 Issue で起票する。
