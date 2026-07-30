@@ -1,6 +1,6 @@
 ---
 description: ipasounddrill の開発フロー・実装ルール
-globs: ["**/*.html", "**/*.js", "**/*.css", "**/*.json", "**/*.py", "gas/**/*.gs"]
+globs: ["**/*.html", "**/*.js", "**/*.ts", "**/*.tsx", "**/*.css", "**/*.json", "**/*.py", "tools/tts/gas/**/*.gs"]
 alwaysApply: true
 ---
 
@@ -21,3 +21,6 @@ alwaysApply: true
 - 実装レポートは `docs/agent-reports/cursor-issue-<N>-<slug>.md`（`docs/cursor/reports/` には新規追加しない）
 - Bug 対応の根本原因記録は `docs/bug-knowledge.md` を参照
 - Bug Issue テンプレは `.github/ISSUE_TEMPLATE/bug.md` を参照
+- **monorepo 4 ゾーン（EPIC #209 以降）**: 本リポは `apps/web/`, `apps/mobile/`（実装後）, `packages/core/`, `tools/` の
+  4 ゾーン構成。Issue のファイルホワイトリストはゾーン単位で明示される（`docs/workflow.md` §4）。宣言ゾーン外への
+  変更が必要になったら halt する（`CLAUDE.md` halt トリガー (b)）。

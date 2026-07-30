@@ -80,9 +80,10 @@ Issue の改修分類の **Complexity Level** で検証の深さを変える。�
 
 **共通（全 Level・必須）**
 - (a) **ホワイトリスト**: diff のファイルが Issue 宣言の対象ファイル内か。逸脱 = FAIL。（12観点 #1）
-- (b) **ゾーン逸脱**: 運用ゾーン（`CLAUDE.md` / `docs/**` / `.cursor/**` / `.github/**`）と
-  開発ゾーン（`src/**` / `i18n/**` / `data/**` / `scripts/**` / `tools/**` / `gas/**`）を
-  1 PR で跨いでいないか（跨ぐ = FAIL、分割を推奨）。
+- (b) **ゾーン逸脱**: 運用ゾーン（`CLAUDE.md` / `docs/**` / `.cursor/**` / `.claude/**` / `.github/**`）と
+  monorepo 4 開発ゾーン（`apps/web/**` / `apps/mobile/**`（実装後） / `packages/core/**` / `tools/**`）を
+  1 PR で跨いでいないか（跨ぐ = FAIL、分割を推奨）。**4 開発ゾーン間でも跨ぎは原則 FAIL**（`packages/core/` 変更に伴う
+  `apps/web/` / `apps/mobile/` 双方への追随のような cohesive consolidation が Issue で明示されている場合のみ許容）。
 - (c) **参照整合**: 削除・リネームによる dangling 参照が無いか
   （`python3 tools/` の該当検証 or `grep`、`validate-markdown-refs` 相当）。
 - (d) **完了定義トレース**: Issue の完了定義 each を diff / 実行で満たすか。（12観点 #2）
@@ -90,10 +91,13 @@ Issue の改修分類の **Complexity Level** で検証の深さを変える。�
 
 **L2 以上で追加**
 - (f) **契約検証**: ランタイム契約 8 パスに触れていれば —
-  i18n は `python3 tools/validate_i18n.py`、leaf 数不変（or 意図した増減）、
-  wordlist 再カウント一致、`scripts/gen_*.py` 再実行の diff がゼロ。（12観点 #4, #5）
+  i18n は `python3 tools/validate/validate_i18n.py`、leaf 数不変（or 意図した増減）、
+  wordlist 再カウント一致、`tools/data-pipeline/gen_*.py` 再実行の diff がゼロ。正本 `packages/core/data/*.json`
+  と Web/Mobile 配信先の md5 一致（`docs/guardrails.md` §3 md5 検証対象の拡張）。（12観点 #4, #5）
 - (g) **横展開**: 共通シンボル（`t` / `activeIpa` / `setExclusivePage` / `navigate` / `loadWordlist` 等）に
   触れていれば、`impact-ledger.json` の `caller_areas` と実 diff を突き合わせ、宣言スコープ超過が無いか。
+  **ゾーン別横展開（EPIC #209 以降）**: `packages/core/` の変更は `apps/web/` と `apps/mobile/`（実装後）
+  双方への回帰確認が完了定義・確認済み事項に含まれているか。
 - (h) **実装レポート / テスト観点の充足**。（12観点 #7, #10, #11）
 
 **L3 で追加**
