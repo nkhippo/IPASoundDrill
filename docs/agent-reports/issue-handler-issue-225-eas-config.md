@@ -5,6 +5,36 @@
 - Issue: #225（親 EPIC #209、先行 Issue #223（Expo 骨格）/ #224（4-step MVP）merged）
 - Agent: issue-handler（非同期、Naoya 明示委譲）
 - 作業ブランチ: `feature/eas-config-225`（base: `develop`）
+- PR: #229
+
+## 追記（pr-reviewer FAIL 対応、2026-07-30）
+
+[pr-reviewer FAIL](https://github.com/nkhippo/IPASoundDrill/pull/229#issuecomment-5127243347) にて、
+`apps/mobile/app.config.ts` が SVG icon/adaptiveIcon/splash を参照しているが、Expo SDK 57 の
+`@expo/image-utils` は SVG を受け付けず `expo prebuild` が失敗する defect を実測で検知。
+[修正指示](https://github.com/nkhippo/IPASoundDrill/issues/225#issuecomment-5127250795) に従い以下を実施:
+
+1. **PNG 生成**: `sharp`（devDependency として追加、`apps/mobile/package.json` /
+   `pnpm-lock.yaml` 更新）で既存 SVG から PNG をラスタライズ。
+   - `apps/mobile/assets/icons/icon.png`（1024x1024）
+   - `apps/mobile/assets/icons/adaptive-icon.png`（1024x1024）
+   - `apps/mobile/assets/splash/splash.png`（2048x2048）
+2. **`apps/mobile/app.config.ts` 更新**: `icon` / `android.adaptiveIcon.foregroundImage` /
+   `expo-splash-screen` プラグインの `image` 参照を上記 PNG に切替。コメントも
+   「SVG が prebuild で失敗するため PNG が必須」である旨に更新。
+3. **SVG は削除せず維持**: `apps/mobile/assets/icons/*.svg` / `apps/mobile/assets/splash/*.svg`
+   は v1.1 本番デザイン差替時の参考として残置（修正指示に従い削除しない）。
+4. **`docs/OPERATIONS.md` §11 / `tools/mobile/README.md` 修正**: 「SVG が自動的に
+   ラスタライズされる」という誤った前提の記述を削除し、「PNG が必須。差替時は
+   SVG → PNG 変換してから `app.config.ts` の参照を更新する」旨を明記。
+5. **実測検証**: `npx expo prebuild --no-install --platform android` および
+   `npx expo prebuild --no-install --platform ios` が両方成功することを確認
+   （生成物 `android/`・`ios/` は本 PR の対象外のため検証後に削除）。
+   `android/app/src/main/res/mipmap-*/ic_launcher*.webp` と
+   `ios/.../AppIcon.appiconset/App-Icon-1024x1024@1x.png` が実際に生成されることを確認し、
+   PNG 参照が正しく機能していることを実証。
+6. `pnpm --filter @ipasounddrill/mobile run typecheck` / `node tools/mobile/verify-bundle-size.js`
+   継続 PASS を再確認。
 
 ## Issue 背景（Issue 本文から要約）
 

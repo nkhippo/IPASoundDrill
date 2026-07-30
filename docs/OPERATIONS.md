@@ -416,7 +416,7 @@ GitHub Actions の `validate-i18n` workflow も同じコマンドを PR / push �
 
 ## 11. Mobile ビルド（Naoya 用、Developer Account 加入後）
 
-`apps/mobile/`（Expo/React Native、EPIC #209）は Issue #225 時点で **EAS Build の config 整備のみ完了**（`apps/mobile/eas.json` の development/preview/production 3 profile、`apps/mobile/app.config.ts` の bundle identifier・version・runtimeVersion、仮アイコン/スプラッシュ SVG）。実ビルド・ストア申請は Naoya が下記の加入完了後に実施する。
+`apps/mobile/`（Expo/React Native、EPIC #209）は Issue #225 時点で **EAS Build の config 整備のみ完了**（`apps/mobile/eas.json` の development/preview/production 3 profile、`apps/mobile/app.config.ts` の bundle identifier・version・runtimeVersion、仮アイコン/スプラッシュ PNG）。実ビルド・ストア申請は Naoya が下記の加入完了後に実施する。
 
 ### 前提条件
 
@@ -436,5 +436,5 @@ GitHub Actions の `validate-i18n` workflow も同じコマンドを PR / push �
 
 ### 注意事項
 
-- 仮アイコン/スプラッシュ（`apps/mobile/assets/icons/*.svg`, `apps/mobile/assets/splash/*.svg`）は v1.1 で本番アセットに差し替え予定。実ビルド初回時に SVG がラスタライズ後の見た目として意図通りか必ず確認する（反映不十分な場合は `tools/mobile/README.md` トラブルシューティング参照）。
+- 仮アイコン/スプラッシュは **PNG が必須**（`apps/mobile/assets/icons/icon.png` 1024x1024・`adaptive-icon.png` 1024x1024・`apps/mobile/assets/splash/splash.png` 2048x2048、`app.config.ts` の `icon`/`android.adaptiveIcon.foregroundImage`/`expo-splash-screen` プラグインから参照）。Expo SDK 57 の `@expo/image-utils` は SVG を受け付けず `expo prebuild` が失敗するため、SVG を直接参照しないこと。元デザインの参考として同名の `*.svg`（`apps/mobile/assets/icons/*.svg`, `apps/mobile/assets/splash/*.svg`）は削除せず残しており、v1.1 で本番アセットに差し替える際は SVG → PNG に変換してから `app.config.ts` の参照を更新する（変換手順は `tools/mobile/README.md` 参照）。
 - `apps/mobile/assets/audio`（人気単語の同梱 mp3、`tools/tts/gen_tts_batch.py` 生成）のバンドルサイズは `node tools/mobile/verify-bundle-size.js` で事前確認可能（CI 非統合、手動実行）。

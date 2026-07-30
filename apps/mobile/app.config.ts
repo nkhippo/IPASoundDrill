@@ -3,8 +3,11 @@
  *
  * Expo app config for the IPA Sound Drill mobile app.
  * Config-only for Issue #225 (scope 変更: 実ビルドは非対象、EAS Build 用の
- * config + 仮アイコン/スプラッシュ整備のみ)。Icons/splash are placeholder SVG
- * assets (primary #4A90E2 / accent #F5A623, IPA "[aɪ]" + sound-wave motif);
+ * config + 仮アイコン/スプラッシュ整備のみ)。Icons/splash are placeholder PNG
+ * assets (primary #4A90E2 / accent #F5A623, IPA "[aɪ]" + sound-wave motif)
+ * generated from the source SVGs under assets/icons|splash/*.svg (kept for
+ * reference — Expo SDK 57's @expo/image-utils does not accept SVG for
+ * icon/adaptiveIcon/splash, so PNG is required at build time, see PR #229);
  * Naoya が v1.1 で本番アイコンに差し替え予定（Issue #225 comment 参照）。
  * `runtimeVersion` は EAS Update ポリシーとして `appVersion` を採用（Naoya が
  * `eas build` を初回実行する際に `eas init` で `extra.eas.projectId` の設定が
@@ -18,7 +21,7 @@ const config: ExpoConfig = {
   scheme: "ipasounddrill",
   version: "1.0.0",
   orientation: "portrait",
-  icon: "./assets/icons/icon.svg",
+  icon: "./assets/icons/icon.png",
   userInterfaceStyle: "automatic",
   assetBundlePatterns: ["assets/**/*"],
   runtimeVersion: {
@@ -31,7 +34,7 @@ const config: ExpoConfig = {
   android: {
     package: "app.ipasounddrill.mobile",
     adaptiveIcon: {
-      foregroundImage: "./assets/icons/adaptive-icon.svg",
+      foregroundImage: "./assets/icons/adaptive-icon.png",
       backgroundColor: "#4A90E2",
     },
   },
@@ -45,7 +48,7 @@ const config: ExpoConfig = {
     [
       "expo-splash-screen",
       {
-        image: "./assets/splash/splash.svg",
+        image: "./assets/splash/splash.png",
         resizeMode: "contain",
         backgroundColor: "#FFFFFF",
       },

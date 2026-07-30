@@ -9,8 +9,13 @@ Account 加入後、Naoya が本 README の手順で実ビルドを行う。
 - `apps/mobile/eas.json`: development / preview / production の 3 profile を定義済み。
 - `apps/mobile/app.config.ts`: bundle identifier (`app.ipasounddrill.mobile`)、version
   (`1.0.0`)、`runtimeVersion`（policy: `appVersion`）を設定済み。
-- アイコン/スプラッシュは `apps/mobile/assets/icons/*.svg` / `apps/mobile/assets/splash/*.svg`
-  の仮アセット（v1.1 で Naoya が本番アイコンに差し替え予定）。
+- アイコン/スプラッシュは **PNG が必須**（`apps/mobile/assets/icons/icon.png` 1024x1024・
+  `adaptive-icon.png` 1024x1024・`apps/mobile/assets/splash/splash.png` 2048x2048）の仮アセット
+  （v1.1 で Naoya が本番アイコンに差し替え予定）。Expo SDK 57 の `@expo/image-utils` は SVG を
+  受け付けず、SVG を直接参照すると `expo prebuild` が失敗する。元デザイン参考用の同名
+  `*.svg`（`apps/mobile/assets/icons/*.svg` / `apps/mobile/assets/splash/*.svg`）は削除せず
+  残しているが、`app.config.ts` からは PNG のみを参照すること。差替時は SVG → PNG に変換
+  （例: `sharp` や `@resvg/resvg-cli`）してから `app.config.ts` の参照を更新する。
 
 ## 1. Expo アカウント作成 + EAS CLI ログイン
 
@@ -82,7 +87,7 @@ eas submit --profile production --platform android
 | iOS ビルドが証明書エラーで失敗 | `eas credentials` で Apple Developer アカウントとの連携状態を確認。Apple Developer Program 未加入の場合は development/preview profile でも配布可能な範囲が限定される |
 | Android ビルドで keystore 関連エラー | 初回は `eas credentials` で EAS 管理の keystore を新規生成（既存 keystore がある場合は手動アップロード） |
 | ビルドサイズが大きい | `node tools/mobile/verify-bundle-size.js` で `apps/mobile/assets/audio` の合計サイズを確認。人気単語トップ N の同梱数を `tools/tts/gen_tts_batch.py --top-n` で調整（詳細は `tools/tts/README.md`） |
-| アイコン/スプラッシュが反映されない | 本 Issue (#225) のアイコン/スプラッシュは SVG（`apps/mobile/assets/icons/*.svg` / `apps/mobile/assets/splash/*.svg`）。`expo prebuild` 実行時に想定通りラスタライズされるか、初回ビルド時に必ず確認すること。反映されない場合は該当アセットを PNG（1024x1024 目安）に変換して同名参照に差し替える |
+| アイコン/スプラッシュが反映されない | 本 Issue (#225) のアイコン/スプラッシュは PNG（`apps/mobile/assets/icons/icon.png` / `adaptive-icon.png`, `apps/mobile/assets/splash/splash.png`）。`expo prebuild` 実行時に見た目が意図通りか初回ビルド時に必ず確認すること。SVG（`*.svg`）を `app.config.ts` から直接参照すると `@expo/image-utils` が SVG を受け付けず prebuild が失敗するので、参照は必ず PNG のままにする |
 
 ## 関連ドキュメント
 
