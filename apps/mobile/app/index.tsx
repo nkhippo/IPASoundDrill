@@ -1,12 +1,13 @@
 /**
  * apps/mobile/app/index.tsx
  *
- * Root screen（Issue #223 Phase 2）。暫定的に DebugScreen をそのまま表示し、
- * `packages/core` consume（Phase 3）と MMKV/Zustand（Phase 4）の動作確認先とする。
- * 4-step の実画面遷移は #EPIC-07 で置き換える。
+ * Root screen（Issue #223 Phase 2、Issue #224 Phase 1 で 4-step 骨格へ置き換え）。
+ * ホーム → `(step)/1a`（トップページ、目的 4 カード）へ即 redirect する
+ * （`docs/features/1a.md` 「エントリーポイント」）。旧 DebugScreen は `app/debug.tsx`
+ * （internal-only、`packages/core` consume 動作確認用）に残す。
  */
-import { DebugScreen } from "../src/screens/DebugScreen";
+import { Redirect } from "expo-router";
 
 export default function IndexScreen() {
-  return <DebugScreen />;
+  return <Redirect href="/(step)/1a" />;
 }
