@@ -19,7 +19,7 @@
 
 ## 絶対ルール（常時適用）
 
-1. **技術スタック制約**: 現行の静的 HTML + JSON + GAS TTS 構成を維持する。React 化・BE 移管は将来計画として Issue 管理するが、現行構成を前提に実装する。
+1. **技術スタック制約**: 各層の現行スタックを維持する。Web は静的 HTML + JSON + GAS TTS。Mobile は React Native (Expo)。共有ロジックは TypeScript (packages/core)。スタック転換(例: Web の React 化、Mobile の Flutter 化、BE 導入)は Issue 管理し、Naoya の明示的承認なしに着手しない。
 2. **ThinkGrindAi と混同しない**: Naoya は別プロジェクト `thinkgrindai`(Vite+React、Obsidian 履歴、7-step)も運用する。本リポは静的 HTML・GitHub リポ内 AI 履歴・4-step。両者を跨ぐ時は本ファイルを読み直す。
 3. **憶測回答禁止**: 不明な点は該当 docs を参照するか Naoya に確認する。仕様の正本は GitHub Issue 本文。
 4. **公開 URL を勝手に生成しない**: プログラミング支援に確信がある URL、ユーザ提供 URL、ローカルファイル由来のみ使用する。
