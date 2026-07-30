@@ -13,7 +13,7 @@ labels:
 ## 関連ドキュメント（任意）
 
 - 仕様書該当セクション: <!-- 例: docs/features/2a.md -->
-- 過去の類似実装レポート: <!-- 例: docs/cursor/reports/cursor-implementation-report-phase-v.md -->
+- 過去の類似実装レポート: <!-- 例: docs/agent-reports/cursor-implementation-report-phase-v.md -->
 - Cursor 指示書（タイプ B のみ）: <!-- 例: docs/cursor/instructions/cursor-instructions-<topic>.md -->
 
 ## 対象プラットフォーム
@@ -50,7 +50,7 @@ labels:
 - [ ] （具体的な動作 A）
 - [ ] （具体的な動作 B）
 - [ ] （データ整合性チェック：wordlist / i18n / rp_ipa 等に触った場合）
-- [ ] `docs/cursor/reports/` に実装レポートが追加されている
+- [ ] `docs/agent-reports/` に実装レポートが追加されている
 
 ## テスト観点
 
