@@ -10,6 +10,14 @@ labels:
 
 （なぜこのドキュメント / 整備が必要か）
 
+## 対象ゾーン（monorepo 4 ゾーン、docs 変更が対象とする実ゾーンを明示）
+
+- [ ] `apps/web/`
+- [ ] `apps/mobile/`（実装後）
+- [ ] `packages/core/`
+- [ ] `tools/`
+- [ ] 該当なし（運用ドキュメント / governance のみ）
+
 ## 実装範囲
 
 - 対象ファイル:
