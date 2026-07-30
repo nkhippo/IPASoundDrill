@@ -1786,7 +1786,11 @@
   </div>
 </div>
 
-<script>
+<script type="module">
+/* Issue #213 Phase 4: 判定ロジック（型・loader 含む）は @ipasounddrill/core（packages/core/src）
+   から import する。ビルド時に apps/web/scripts/build-i18n-html.js が esbuild で
+   /core-bundle.js へバンドルする。 */
+import * as Core from "/core-bundle.js";
 const $=id=>document.getElementById(id);
 const show=(id,on)=>$(id).classList.toggle("hidden",!on);
 const SPEAKER_SVG = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>`;
@@ -2024,25 +2028,14 @@ function toggleProgressCefr(level) {
   renderProgressPage();
 }
 
+/* Issue #213 Phase 4: 判定ロジック本体は packages/core/src/scoring/step3.ts へ移動済み。 */
 function progressPoolForDrill(drillId) {
-  const pool = drillId === "2d" ? CONNECTED.concat(WEAK) : PRESET;
-  return pool.filter(item => {
-    const level = itemCefrLabel(item);
-    return level && progressCefrSelected.has(level);
-  });
+  return Core.step3.progressPoolForDrill(drillId, { PRESET, CONNECTED, WEAK }, progressCefrSelected);
 }
 
 function computeDrillProgress(drillId, marks) {
-  const counts = [0, 0, 0, 0];
   const pool = progressPoolForDrill(drillId);
-  pool.forEach(item => {
-    const raw = marks[drillId + ":" + sessionItemKey(item)];
-    const mark = Number.isInteger(raw) ? Math.max(0, Math.min(CHECK_MAX, raw)) : 0;
-    counts[mark]++;
-  });
-  const total = pool.length;
-  const graduated = counts[3];
-  return { drillId, counts, total, graduated, pct: total ? Math.round(graduated / total * 100) : 0 };
+  return Core.step3.computeDrillProgress(drillId, pool, marks, CHECK_MAX, sessionItemKey);
 }
 
 function drillProgressCardHtml(result) {
@@ -2794,23 +2787,14 @@ function homeCopy() {
   return HOME_COPY[LANG] || HOME_COPY.en;
 }
 
-function isConnectedItem(c) { return !!(c && c.cs_type); }
-function isWeakItem(c) { return !!(c && c.src === "weak_form"); }
-function activeStrongIpa(c) {
-  if (!c) return "";
-  return ACCENT === "rp" ? (c.rp_ipa_strong || c.ipa_strong || c.ipa) : (c.ipa_strong || c.ipa);
-}
+/* Issue #213 Phase 4: 判定・補助ロジック本体は packages/core/src/scoring/{connectedSpeech,weakForms}.ts へ移動済み。 */
+function isConnectedItem(c) { return Core.connectedSpeech.isConnectedItem(c); }
+function isWeakItem(c) { return Core.weakForms.isWeakItem(c); }
+function activeStrongIpa(c) { return Core.weakForms.activeStrongIpa(c, ACCENT); }
 
-function csTypeLabel(type) {
-  if (!type || type === "all") return "";
-  const key = "cs." + type;
-  return t(key) || type;
-}
+function csTypeLabel(type) { return Core.connectedSpeech.csTypeLabel(type, key => t(key)); }
 
-function csRuleText(c) {
-  if (!c || !c.cs_rule) return "";
-  return c.cs_rule[LANG] || c.cs_rule.en || "";
-}
+function csRuleText(c) { return Core.connectedSpeech.csRuleText(c, LANG); }
 
 function applyI18n() {
   document.title = t("brand.name");
@@ -3466,23 +3450,16 @@ async function initApp() {
   });
 }
 
-const MULTI_GA=["tʃ","dʒ","eɪ","aɪ","ɔɪ","oʊ","aʊ","n̩","l̩","m̩"];
-const MULTI_RP=["tʃ","dʒ","eɪ","aɪ","ɔɪ","əʊ","aʊ","ɪə","eə","ʊə","iː","uː","ɑː","ɔː","ɜː","n̩","l̩","m̩"];
-const VOWELS_GA=new Set(["i","ɪ","ɛ","æ","ə","ʌ","ɑ","ɔ","ʊ","u","ɝ","ɚ","eɪ","aɪ","ɔɪ","oʊ","aʊ"]);
-const VOWELS_RP=new Set(["iː","ɪ","e","æ","ə","ʌ","ɑː","ɒ","ɔː","ʊ","uː","ɜː","eɪ","aɪ","ɔɪ","əʊ","aʊ","ɪə","eə","ʊə"]);
-function multiList(){return ACCENT==="rp"?MULTI_RP:MULTI_GA;}
-function vowelSet(){return ACCENT==="rp"?VOWELS_RP:VOWELS_GA;}
-
-function tokenize(raw){
-  const MULTI=multiList();
-  const s=raw.replace(/\//g,"");const out=[];let i=0;
-  while(i<s.length){let m=null;for(const x of MULTI){if(s.startsWith(x,i)){m=x;break;}}if(m){out.push(m);i+=m.length;}else{out.push(s[i]);i++;}}
-  return out;
-}
-function nucleusIndex(tk){const VOWELS=vowelSet();const si=tk.indexOf("ˈ");const from=si>=0?si+1:0;for(let k=from;k<tk.length;k++)if(VOWELS.has(tk[k]))return k;for(let k=0;k<tk.length;k++)if(VOWELS.has(tk[k]))return k;return -1;}
-function phonemesOf(ipa){return tokenize(ipa).filter(t=>PH[t]&&t!=="ˈ"&&t!=="ˌ");}
-function syllableCount(ipa){const VOWELS=vowelSet();return tokenize(ipa).filter(t=>VOWELS.has(t)).length||1;}
-function stressSyllable(ipa){const VOWELS=vowelSet();const tk=tokenize(ipa);let n=0;for(let k=0;k<tk.length;k++){if(tk[k]==="ˈ"){let c=0;for(let j=0;j<k;j++)if(VOWELS.has(tk[j]))c++;return c+1;}}return 1;}
+/* Issue #213 Phase 4: tokenize/nucleusIndex/phonemesOf/syllableCount/stressSyllable の
+   判定ロジック本体は packages/core/src/scoring/encode.ts へ移動済み。以下は元シグネチャ
+   （引数なしで module-level ACCENT/PH を参照）を保つ薄いラッパー。 */
+function multiList(){return Core.encode.multiList(ACCENT);}
+function vowelSet(){return Core.encode.vowelSet(ACCENT);}
+function tokenize(raw){return Core.encode.tokenize(raw,ACCENT);}
+function nucleusIndex(tk){return Core.encode.nucleusIndex(tk,ACCENT);}
+function phonemesOf(ipa){return Core.encode.phonemesOf(ipa,ACCENT,tok=>!!PH[tok]);}
+function syllableCount(ipa){return Core.encode.syllableCount(ipa,ACCENT);}
+function stressSyllable(ipa){return Core.encode.stressSyllable(ipa,ACCENT);}
 
 /* ---------- state ---------- */
 const TRAPSET=new Set(["θ","ð","æ","ʒ","ɝ"]);
@@ -3682,12 +3659,8 @@ function goToTop(force){
 $("backTopBtn").addEventListener("click",goToTop);
 $("brandBtn").addEventListener("click",goToTop);
 
-function itemCefrLabel(c){
-  if(!c)return "";
-  const raw=c.cefr;
-  if(typeof raw==="string"&&/^[ABC][12]$/.test(raw))return raw;
-  return "";
-}
+/* Issue #213 Phase 4: 判定ロジック本体は packages/core/src/scoring/step3.ts へ移動済み。 */
+function itemCefrLabel(c){return Core.step3.itemCefrLabel(c);}
 function setCardCefr(elId,c,qnoId){
   const el=$(elId);
   if(!el)return;
@@ -5196,14 +5169,8 @@ function bindIpaSegments(container,infoBoxId){
     container.querySelectorAll(".seg").forEach(s=>s.classList.remove("sel"));seg.classList.add("sel");renderInfo(infoBoxId,seg.dataset.sym);
   }));
 }
-function pickCarrier(c){
-  if(!c.carriers||!c.carriers.length)return null;
-  return c.carriers[Math.floor(Math.random()*c.carriers.length)];
-}
-function capCarrierBefore(before){
-  if(!before)return "";
-  return before.charAt(0).toUpperCase()+before.slice(1);
-}
+function pickCarrier(c){return Core.connectedSpeech.pickCarrier(c);}
+function capCarrierBefore(before){return Core.connectedSpeech.capCarrierBefore(before);}
 function renderConnectedPrompt(c){
   const container=$("dIpa");
   const ipaHtml=buildIpaHtml(activeNarrowIpa(c),null);
@@ -5281,11 +5248,9 @@ function renderDecode(c){
   inp.placeholder=(S.cur&&isConnectedItem(S.cur))?t("input_phrase"):t("input_ph");
   if(!COARSE)inp.focus({preventScroll:true});
 }
-function norm(s){return s.toLowerCase().replace(/[^a-z]/g,"");}
-function spellCheck(text,word){
-  const a=norm(text),g=norm(word);
-  return a===g?"ok":"bad";
-}
+/* Issue #213 Phase 4: 判定ロジック本体は packages/core/src/scoring/decode.ts へ移動済み。 */
+function norm(s){return Core.decode.normalizeSpelling(s);}
+function spellCheck(text,word){return Core.decode.checkSpelling(text,word);}
 function decodeCheck(){
   if(S.revealed)return;const c=S.cur;const t=$("dInput").value.trim();
   reveal(spellCheck(t,c.w),{type:"decode",tryRaw:t});
@@ -5356,20 +5321,14 @@ function renderEncode(c){
 }
 $("ePlay").addEventListener("click",()=>{unlockAudioFromGesture();speak(S.cur.w);});
 $("eClear").addEventListener("click",()=>{S.built=[];renderBuild();});
-function stripStress(tk){return tk.filter(t=>t!=="ˈ"&&t!=="ˌ");}
-function lcsMark(target,user){ // returns Set of target indices matched (segments only, ignoring stress)
-  const T=target,U=user,m=T.length,n=U.length;
-  const dp=Array.from({length:m+1},()=>Array(n+1).fill(0));
-  for(let i=1;i<=m;i++)for(let j=1;j<=n;j++)dp[i][j]=T[i-1]===U[j-1]?dp[i-1][j-1]+1:Math.max(dp[i-1][j],dp[i][j-1]);
-  const matched=new Set();let i=m,j=n;
-  while(i>0&&j>0){if(T[i-1]===U[j-1]){matched.add(i-1);i--;j--;}else if(dp[i-1][j]>=dp[i][j-1])i--;else j--;}
-  return matched;
-}
+/* Issue #213 Phase 4: 判定ロジック本体は packages/core/src/scoring/encode.ts へ移動済み。 */
+function stripStress(tk){return Core.encode.stripStress(tk);}
+function lcsMark(target,user){return Core.encode.lcsMark(target,user);}
 function encodeCheck(){
   if(S.revealed)return;const c=S.cur;
-  const tgt=tokenize(activeIpa(c)),usr=S.built.slice();
-  const stressEqual=tgt.join("")===usr.join("");
-  reveal(stressEqual?"ok":"bad",{type:"encode",usr:usr});
+  const usr=S.built.slice();
+  const res=Core.encode.checkEncode(activeIpa(c),usr,ACCENT);
+  reveal(res,{type:"encode",usr:usr});
 }
 $("eCheck").addEventListener("click",encodeCheck);
 
@@ -5581,14 +5540,11 @@ function reveal(res,ctx){
     const u=ctx.usr||[];
     $("rTry").innerHTML=u.length?tryLine('<span class="uipa">/'+u.join("")+'/</span>'):t("see_answer");
   }
+  /* Issue #213 Phase 4: 判定ロジック本体は packages/core/src/scoring/reveal.ts へ移動済み。 */
   let marker=null;
   if(ctx.type==="encode"){
-    const tgt=tokenize(activeIpa(c)),tgtSeg=stripStress(tgt),usrSeg=stripStress(ctx.usr||[]);
-    const matched=lcsMark(tgtSeg,usrSeg);
-    // map seg index -> token index
-    const segIdxOf=[];tgt.forEach((t,k)=>{if(t!=="ˈ"&&t!=="ˌ")segIdxOf.push(k);});
-    const okTokens=new Set();matched.forEach(si=>okTokens.add(segIdxOf[si]));
-    marker=(k,t)=>{if(t==="ˈ"||t==="ˌ")return null;return okTokens.has(k)?"tok-ok":"tok-bad";};
+    const marks=Core.reveal.buildEncodeTokenMarks(activeIpa(c),ctx.usr||[],ACCENT);
+    marker=(k,t)=>marks[k]!=null?marks[k]:null;
   }
   refreshRevealIpa(marker);
   // 正解/不正解 バッジ(CD 準拠)
