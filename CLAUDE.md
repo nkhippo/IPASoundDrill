@@ -24,8 +24,8 @@
 3. **憶測回答禁止**: 不明な点は該当 docs を参照するか Naoya に確認する。仕様の正本は GitHub Issue 本文。
 4. **公開 URL を勝手に生成しない**: プログラミング支援に確信がある URL、ユーザ提供 URL、ローカルファイル由来のみ使用する。
 5. **branch**: develop-first。全 PR の base は `develop`。`develop` → `main` のマージは Naoya の明示的指示で行う。
-6. **UI 仕様の正本**: `src/index.template.html`（実装）が唯一の正本。`docs/claude-design/{sp,pc,design-system}.dc.html` は凍結フレームカタログ（画面一覧用、更新義務なし、pixel-perfect 精度は保証しない）。Claude Design（外部 SaaS）は今後**更新しない・参照しない・反映を待たない**。UI 改修の見た目確認は Vercel branch preview URL で行う。詳細は `docs/claude-design/README.md`。
-7. **Issue-first 必須**: 壁打ちで合意した UI 改修・機能変更は、**実装着手前に必ず Issue を起票する**。同一セッション内の ClaudeCode 実装であっても例外なし。Issue なしの PR 作成は禁止。詳細は `docs/workflow.md` §2a。
+6. **UI 仕様の正本**: Web は `apps/web/src/index.template.html`（実装）、Mobile は `apps/mobile/src/` の RN 画面コンポーネント（実装後、EPIC-06/EPIC-07）が唯一の正本。`docs/claude-design/{sp,pc,design-system}.dc.html` は Web 画面の凍結フレームカタログ（画面一覧用、更新義務なし、pixel-perfect 精度は保証しない）。Claude Design（外部 SaaS）は今後**更新しない・参照しない・反映を待たない**。UI 改修の見た目確認は Web は Vercel branch preview URL、Mobile は実機・シミュレータで行う。詳細は `docs/claude-design/README.md`。
+7. **Issue-first 必須**: 壁打ちで合意した UI 改修・機能変更は、**実装着手前に必ず Issue を起票する**。同一セッション内の ClaudeCode 実装であっても例外なし。Issue なしの PR 作成は禁止。**platform 明示義務**（monorepo 化・EPIC #209 以降）: Issue 本文または `platform:web` / `platform:mobile` / `platform:shared` / `platform:tools` ラベルで対象 platform を明示する。詳細は `docs/workflow.md` §2a。
 
 ---
 
@@ -65,7 +65,8 @@ halt 経路: 同一セッション ClaudeCode → その場で Naoya に質問 /
 | Issue 起票・改修方針判断 | `docs/workflow.md`、`docs/change-classification.md` |
 | ドキュメント整備 | `docs/doc-map.md`、`docs/_conventions.md`、`docs/guardrails.md`(doc-sync) |
 | リポ構造 / インフラ変更 | `docs/repo-map.md` |
-| UI デザイン参照 / 見た目確認 | `docs/claude-design/{sp,pc,design-system}.dc.html`（凍結フレームカタログ）、`docs/claude-design/README.md`。見た目の正確な確認は Vercel branch preview URL |
+| UI デザイン参照 / 見た目確認 | `docs/claude-design/{sp,pc,design-system}.dc.html`（凍結フレームカタログ、Web 画面のみ）、`docs/claude-design/README.md`。見た目の正確な確認は Web: Vercel branch preview URL / Mobile: 実機・シミュレータ |
+| `apps/mobile/**` の変更（monorepo 化、EPIC #209 以降・実装後） | `docs/features/<id>.md`（Mobile 実装 path 欄）、`docs/repo-map.md`、（共有ロジック変更を伴うなら）`packages/core/` 側の `docs/data-contract.md` |
 
 > 上表の各ホームは AI-first 再編（EPIC #169）で確立済み。各概念の現ホームと status は `docs/doc-map.md` を参照。
 
@@ -93,8 +94,8 @@ Issue はタイプ A(軽微)/B(標準)、**必須 5 項目**（背景・目的/�
 触れる変更は Issue でフラグを立て、対応する検証を完了定義に含める。**8 パスの一覧・JSON スキーマ・i18n leaf 数・データ整合性
 チェック義務表の正本は `docs/data-contract.md`**（重複させない）。
 
-- i18n を触ったら `python3 tools/validate_i18n.py` を実行。
-- wordlist / `rp_ipa` / `neighbors` / connected_speech / weak_forms を触ったら該当の再カウント・`scripts/gen_*.py` 再実行（コマンドは `docs/pipeline.md`）。
+- i18n を触ったら `python3 tools/validate/validate_i18n.py` を実行。
+- wordlist / `rp_ipa` / `neighbors` / connected_speech / weak_forms を触ったら該当の再カウント・`tools/data-pipeline/gen_*.py` 再実行（コマンドは `docs/pipeline.md`）。
 
 ---
 

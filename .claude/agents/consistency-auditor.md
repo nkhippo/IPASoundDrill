@@ -63,7 +63,8 @@ tools: Bash, Read, Grep, Glob, TodoWrite
 ## ブートストラップ（毎回・最新を読む）
 1. `CLAUDE.md`（router）+ `docs/doc-map.md`（ドキュメント地図）。
 2. 設計トレースチェーン: `product.md` → `docs/features/<id>.md` → `data-contract.md`
-   → source（`src/index.template.html`）→ `impact-ledger.json`（それぞれ現存するもの）。
+   → source（Web: `apps/web/src/index.template.html`、Mobile: `apps/mobile/src/`〔実装後〕、共有ロジック: `packages/core/src/`）
+   → `impact-ledger.json`（それぞれ現存するもの）。
 3. governance 群: `docs/workflow.md` / `docs/guardrails.md` / `docs/change-classification.md`（`AGENTS.md` は薄い参照スタブ）。
 
 ## 監査観点
@@ -77,6 +78,10 @@ tools: Bash, Read, Grep, Glob, TodoWrite
    （one-fact-one-home 違反）。`CLAUDE.md`（always-loaded）と各 doc の重複。
 5. **参照グラフ**: dangling 参照、orphan（どこからも参照されない doc）、循環参照。
 6. **MECE**: 採点 / screen 定義 / 2c 等が複数 doc に重複定義されていないか。
+7. **4 ゾーン間整合（monorepo 化、EPIC #209 以降）**: `packages/core/data/*.json` が正本と一致しているか
+   （`apps/web/public/data/*.json` 等の配信先コピーとの md5 差異）。`docs/features/<id>.md` の実装 path 欄が
+   Web/Mobile 双方の実ソースと乖離していないか。`docs/bug-knowledge.md` の発生層記録が特定ゾーンに
+   偏っていないか（月次レビュー観点との整合）。
 
 ## 出力（監査レポート）
 Issue または指定 PR コメントに投稿。末尾に必ずマーカー `<!-- audited-by: consistency-auditor -->`。

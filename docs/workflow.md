@@ -27,6 +27,8 @@ Step 4: レビュー・マージ（Level 段階化。`docs/guardrails.md` §3）
 
 **壁打ちから実装に移る際、Issue が起票されていなければ halt する**（`CLAUDE.md` halt トリガー (d)）。同一セッション内の ClaudeCode 実装であっても**例外なし**。
 
+**platform 明示義務**（monorepo 化・EPIC #209 以降）: Issue 起票時、本文または `platform:web` / `platform:mobile` / `platform:shared` / `platform:tools` ラベルのいずれかで対象 platform を明示する。1 Issue で複数 platform に触れる場合は全て列挙する。未明示の Issue には `ready-for-cursor` を付与しない。
+
 ### なぜ必要か
 
 2026-07-28〜29 の UI 改修セッション（PR #195〜#202）で、壁打ち→直接実装→PR という流れが常態化し、以下の問題が発生した:
@@ -73,11 +75,13 @@ UI 改修 Issue の完了定義には、影響を受ける `docs/features/<id>.m
   - [ ] **必読リスト**: 実装に必要な docs / 先行 Issue 成果物を具体パスで列挙
   - [ ] **ファイルホワイトリスト**: 触ってよいファイルを明示
   - [ ] **完了定義**: 観測可能な動作で記述（曖昧表現禁止）
-  - [ ] **テスト/検証コマンド**: 実行すべき検証（`tools/validate_i18n.py`・再カウント等）を具体的に
+  - [ ] **テスト/検証コマンド**: 実行すべき検証（`tools/validate/validate_i18n.py`・再カウント等）を具体的に
   - [ ] **非対象範囲**: 触らない範囲を明示
   - [ ] **チャット由来の決定事項の明示**: 壁打ちで決めた前提・判断を Issue 本文に落とし込む（記憶・口頭に依存しない）
 - **参照ドキュメントの明示**: Issue 本文に必要な参照ドキュメントを列挙する。判定は `CLAUDE.md` のタスク種別対応表 + `docs/doc-map.md` レジストリに従う
-- **UI 仕様の参照**: UI 改修 Issue では `src/index.template.html`(正本) を根拠にする。`docs/claude-design/{sp,pc}.dc.html` は凍結フレームカタログ（画面一覧の俯瞰用、pixel-perfect 精度は保証しない）。見た目の確認は **Vercel branch preview URL** で行う。**外部 Claude Design(SaaS) の URL・zip・再開セッションは要求しない**(2026-07-28 に運用廃止)。詳細 `docs/claude-design/README.md`
+- **UI 仕様の参照**: UI 改修 Issue では、Web は `apps/web/src/index.template.html`（正本）、Mobile は `apps/mobile/src/` の RN 画面コンポーネント（正本、EPIC-06/EPIC-07 実装後に発生）を根拠にする。`docs/claude-design/{sp,pc}.dc.html` は凍結フレームカタログ（画面一覧の俯瞰用、pixel-perfect 精度は保証しない、Web 画面のみ収録）。見た目の確認は **Vercel branch preview URL**（Web）で行う。**外部 Claude Design(SaaS) の URL・zip・再開セッションは要求しない**(2026-07-28 に運用廃止)。詳細 `docs/claude-design/README.md`
+- **ファイルホワイトリスト表現（monorepo 4 ゾーン、EPIC #209 以降）**: Issue 本文のファイルホワイトリストは、対象ファイルが 4 ゾーン（`apps/web/`, `apps/mobile/`, `packages/core/`, `tools/`）のどれに属するかを明示する。**ゾーン跨ぎの Issue は原則分割**する（本ファイル §3 分割 5 判断軸 ②に準拠）。例外として、`packages/core/` の契約変更に伴う `apps/web/` / `apps/mobile/` 双方の追随のような cohesive な一体変更は、単一 Issue で atomic に実施してよい（例外を選ぶ場合は Issue 本文にその理由を明記）。ゾーン跨ぎで halt が発生した場合は `CLAUDE.md` halt トリガー (c) に従う
+- **スクショ対象範囲（Web / Mobile 別記載義務）**: UI 改修 Issue でスクショ対象画面を指定する場合、Web 画面（ブラウザ / Vercel preview）と Mobile 画面（iOS / Android シミュレータ・実機）を別リストとして明示する。Mobile 実装が無い期間は「Mobile: 該当なし」と明記する
 - **Phase 番号の記述**: 作業手順を Phase 番号で列挙する場合、「Phase 0, 1, 2, ...」の連番で明確に記述する。曖昧な範囲表記は使わず、総数を末尾に明記する
 
 ### ラベル
@@ -109,7 +113,11 @@ UI 改修 Issue の完了定義には、影響を受ける `docs/features/<id>.m
 
 ## 7. レビュー・auto-merge フロー
 
-Level 段階化の内容（L1 セルフチェック / L2 `pr-reviewer` PASS / L3 フル Rv+md5+Naoya ack）は `docs/guardrails.md` §3 が正本。運用上のラベル遷移:
+Level 段階化の内容（L1 セルフチェック / L2 `pr-reviewer` PASS / L3 フル Rv+md5+Naoya ack）は `docs/guardrails.md` §3 が正本。
+
+**ゾーン別レビュー深度（monorepo 4 ゾーン、EPIC #209 以降）**: `packages/core/` の変更は、`apps/web/` と `apps/mobile/`（実装後）の**両方**への回帰確認を Issue の完了定義・PR の確認済み事項に含める（core は shared 契約のため、単一ゾーンの動作確認だけでは不十分）。`tools/` の変更（パイプライン・validate スクリプト）は生成物を消費する `packages/core/data` 経由で `apps/web` / `apps/mobile` 双方への影響有無を確認する。
+
+運用上のラベル遷移:
 
 | イベント | ラベル変化 |
 |---|---|
@@ -166,11 +174,13 @@ develop-first。全 PR の base は `develop`。`develop` → `main` のマー�
 
 ## 14. Pre-Issue Recon（100 行超で推奨）
 
-Claude が index.html 等の大ファイルを全量取得する代わりに、実装エージェントに現状調査だけを依頼する手法。適用条件: 影響ファイル 3 個以上かつ変更行数推定 100 行超、既存コード構造の把握が不十分、複数の設計選択肢がある場合。
+Claude が `apps/web/src/index.template.html` 等の大ファイルを全量取得する代わりに、実装エージェントに現状調査だけを依頼する手法。適用条件: 影響ファイル 3 個以上かつ変更行数推定 100 行超、既存コード構造の把握が不十分、複数の設計選択肢がある場合。
 
 1. Claude が Issue Comment で調査依頼（対象・調査項目・出力先 `docs/cursor/recon/pre-issue-recon-YYYYMMDD-<topic>.md`・中断条件を明記）
 2. 実装エージェントが調査、Recon MD を出力しコミット+push
 3. Claude が Recon MD を取得し、内容を反映した Issue 本文を作成 → Naoya 承認 → 起票 → 実装
+
+**monorepo 化後の出力先（変更なし）**: Recon MD の出力先は `docs/cursor/recon/` のまま維持する（EPIC #209 の monorepo 物理移設は `docs/**` を対象外としたため、Recon の置き場所自体は変わらない）。調査対象パスの記述のみ 4 ゾーン（`apps/web/`, `apps/mobile/`, `packages/core/`, `tools/`）を踏まえて具体化する。
 
 ## 15. 新規ドキュメント作成判定
 
