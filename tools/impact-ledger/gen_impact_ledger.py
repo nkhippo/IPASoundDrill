@@ -1,4 +1,4 @@
-"""Generate docs/impact-ledger.json from a static analysis of src/index.template.html.
+"""Generate docs/impact-ledger.json from a static analysis of apps/web/src/index.template.html.
 
 Purpose (Issue F / EPIC #169):
     Answer "if I edit a common symbol, what feature areas break?" cheaply, without
@@ -9,7 +9,7 @@ Purpose (Issue F / EPIC #169):
 
 Algorithm
 ---------
-1. Locate the main app `<script>` block in src/index.template.html (the block with
+1. Locate the main app `<script>` block in apps/web/src/index.template.html (the block with
    the most `function ` declarations; the tiny Vercel-analytics IIFE script is
    ignored because it defines no named functions).
 2. Extract every named function definition in that block via regex:
@@ -47,13 +47,13 @@ Algorithm
    indirect fan-out through shared render helpers. Everything else is fully
    computed — no other symbol is hand-tuned.
 
-Idempotency: the script only reads src/index.template.html and writes a
+Idempotency: the script only reads apps/web/src/index.template.html and writes a
 deterministic, symbol-sorted JSON array; running it twice on unchanged source
 produces byte-identical output.
 
 Usage:
-    python3 scripts/gen_impact_ledger.py            # writes docs/impact-ledger.json
-    python3 scripts/gen_impact_ledger.py --check     # exits 1 if output would change
+    python3 tools/impact-ledger/gen_impact_ledger.py            # writes docs/impact-ledger.json
+    python3 tools/impact-ledger/gen_impact_ledger.py --check     # exits 1 if output would change
 """
 from __future__ import annotations
 
@@ -63,10 +63,10 @@ import re
 import sys
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parent))
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "data-pipeline"))
 from paths import ROOT, DOCS  # noqa: E402
 
-SRC = ROOT / "src" / "index.template.html"
+SRC = ROOT / "apps" / "web" / "src" / "index.template.html"
 OUT = DOCS / "impact-ledger.json"
 
 # ---------------------------------------------------------------------------
@@ -252,7 +252,7 @@ def find_main_script_range(lines: list[str]) -> tuple[int, int]:
             blocks.append((open_line + 1, i - 1))
             open_line = None
     if not blocks:
-        raise RuntimeError("no <script> blocks found in src/index.template.html")
+        raise RuntimeError("no <script> blocks found in apps/web/src/index.template.html")
     best = max(
         blocks,
         key=lambda rng: sum(
@@ -398,7 +398,7 @@ def main() -> int:
     if args.check:
         old_text = OUT.read_text(encoding="utf-8") if OUT.exists() else None
         if old_text != new_text:
-            print(f"docs/impact-ledger.json is out of date (run: python3 scripts/gen_impact_ledger.py)")
+            print(f"docs/impact-ledger.json is out of date (run: python3 tools/impact-ledger/gen_impact_ledger.py)")
             return 1
         print("docs/impact-ledger.json is up to date.")
         return 0

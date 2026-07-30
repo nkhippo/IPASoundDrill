@@ -1,28 +1,36 @@
 """Canonical repository paths for pipeline scripts and tools.
 
 All scripts should resolve paths through this module instead of assuming cwd.
-Runtime assets loaded by index.html keep stable URLs under data/ and repo root.
+Runtime contract assets (wordlist / connected_speech / weak_forms / guide) live in
+packages/core/data/ (see docs/data-contract.md §1). Non-runtime pipeline
+intermediates (batches/derived/patches/pipeline/archive) live alongside this file
+under tools/data-pipeline/.
 """
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
-DATA = ROOT / "data"
+ROOT = Path(__file__).resolve().parents[2]
 
-# --- Production wordlist (runtime: index.html fetch) ---
-WORDLIST = ROOT / "wordlist_GA_a1a2_plus_phonics.json"
-WORDLIST_CSV = ROOT / "wordlist_GA_a1a2_plus_phonics.csv"
-WORDLIST_BACKUP_PHASE0A = DATA / "archive" / "wordlist_GA_a1a2_plus_phonics.pre-phase0a.json"
+# --- Runtime contract data home (packages/core, shared with future mobile) ---
+DATA = ROOT / "packages" / "core" / "data"
 
-# --- Runtime JSON (loaded by index.html) ---
+# --- Non-runtime pipeline intermediates (this directory) ---
+PIPELINE_ROOT = Path(__file__).resolve().parent
+
+# --- Production wordlist (runtime: apps/web fetch of /data/wordlist.json) ---
+WORDLIST = DATA / "wordlist.json"
+WORDLIST_CSV = ROOT / "apps" / "web" / "wordlist_GA_a1a2_plus_phonics.csv"
+WORDLIST_BACKUP_PHASE0A = PIPELINE_ROOT / "archive" / "wordlist_GA_a1a2_plus_phonics.pre-phase0a.json"
+
+# --- Runtime JSON (loaded by apps/web via packages/core/data) ---
 CONNECTED_SPEECH = DATA / "connected_speech.json"
 WEAK_FORMS = DATA / "weak_forms.json"
 GUIDE = DATA / "guide.json"
 
 # --- Batch merge sources (Phase 1 M1–M5, CEFR proposals, etc.) ---
-BATCHES = DATA / "batches"
+BATCHES = PIPELINE_ROOT / "batches"
 
 # --- IPA / respelling pipeline staging ---
-PIPELINE = DATA / "pipeline"
+PIPELINE = PIPELINE_ROOT / "pipeline"
 FLAP_CANDIDATES = PIPELINE / "phase2a_flap_candidates.json"
 REVIEW_NEEDED = PIPELINE / "phase2a_review_needed.json"
 R4_REVIEW_LIST_JSON = PIPELINE / "r4_pending_review_list.json"
@@ -39,8 +47,8 @@ PILOT_30 = PIPELINE / "pilot-30words.json"
 VNTV_EXPORT = PIPELINE / "review-vntv-export.json"
 
 # --- Generated / intermediate datasets ---
-DERIVED = DATA / "derived"
-ARCHIVE = DATA / "archive"
+DERIVED = PIPELINE_ROOT / "derived"
+ARCHIVE = PIPELINE_ROOT / "archive"
 RP_COMPLETE = DERIVED / "rp_complete.json"
 RP_PROGRESS = DERIVED / "rp_progress.json"
 WORDLIST_NEIGHBORS = DERIVED / "wordlist_with_neighbors.json"
@@ -49,7 +57,7 @@ CONNECTED_SPEECH_RP = DERIVED / "connected_speech_with_rp.json"
 CONNECTED_SPEECH_LEGACY = DERIVED / "connected_speech.legacy15.json"
 
 # --- Historical merge patches (def, gloss-fil, step4 patches) ---
-PATCHES = DATA / "patches"
+PATCHES = PIPELINE_ROOT / "patches"
 GLOSS_CORRECTIONS = PATCHES / "gloss-corrections.clear.json"
 CASUAL_PATCH = PATCHES / "casual_patch.json"
 THIN_PHONEME_PATCH = PATCHES / "thin_phoneme_patch.json"
@@ -64,7 +72,7 @@ DOCS = ROOT / "docs"
 NEIGHBORS_REPORT = DOCS / "reference" / "neighbors_report.md"
 
 # --- Other runtime-adjacent ---
-I18N = ROOT / "i18n"
-GAS = ROOT / "gas"
+I18N = ROOT / "packages" / "core" / "i18n"
+GAS = ROOT / "tools" / "tts" / "gas"
 TOOLS = ROOT / "tools"
 TESTS = ROOT / "tests"

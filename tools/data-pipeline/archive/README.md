@@ -1,4 +1,4 @@
-# `data/archive/` — local backups & snapshots
+# `tools/data-pipeline/archive/` — local backups & snapshots
 
 Runtime やパイプラインが**読み込まない**退避用ファイル置き場。
 
@@ -6,5 +6,5 @@ Runtime やパイプラインが**読み込まない**退避用ファイル置�
 |------|------|
 | `wordlist_GA_a1a2_plus_phonics.pre-phase0a.json` | Phase 0-a 実施前の wordlist スナップショット（ローカル復元用） |
 
-- パス正本: `scripts/paths.py` → `WORDLIST_BACKUP_PHASE0A`
+- パス正本: `tools/data-pipeline/paths.py` → `WORDLIST_BACKUP_PHASE0A`
 - `*.pre-phase0a.json` は `.gitignore` 対象（コミットしない）

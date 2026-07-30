@@ -2,8 +2,13 @@
   "name": "ipasounddrill",
   "version": "1.0.0",
   "private": true,
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "packageManager": "pnpm@9.15.0",
   "scripts": {
-    "build": "node scripts/build-i18n-html.js"
+    "build:web": "pnpm --filter @ipasounddrill/web build"
   },
   "engines": {
     "node": ">=18"

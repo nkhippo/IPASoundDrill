@@ -1,6 +1,6 @@
-# `data/batches/` — 語彙マージ用ソース JSON
+# `tools/data-pipeline/batches/` — 語彙マージ用ソース JSON
 
-Cursor / Claude が生成し、マージスクリプト（またはインライン Python）で `wordlist_GA_a1a2_plus_phonics.json` に取り込むバッチ。**ブラウザからは読み込まない。**
+Cursor / Claude が生成し、マージスクリプト（またはインライン Python）で `packages/core/data/wordlist.json` に取り込むバッチ。**ブラウザからは読み込まない。**
 
 ## 命名規則
 

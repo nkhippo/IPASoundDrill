@@ -5,7 +5,9 @@ const fs = require("fs");
 const path = require("path");
 
 const ROOT = path.resolve(__dirname, "..");
-const TEMPLATE = path.join(ROOT, "src", "index.template.html");
+const REPO_ROOT = path.resolve(__dirname, "..", "..", "..");
+const TEMPLATE = path.resolve(__dirname, "..", "src", "index.template.html");
+const CORE_I18N_DIR = path.join(REPO_ROOT, "packages", "core", "i18n");
 const LANGS = ["en", "ja", "ko", "zh-Hans", "zh-Hant", "fil"];
 const OG_LOCALE = {
   en: "en_US",
@@ -58,7 +60,7 @@ function build() {
   const alternates = hreflangBlock();
 
   for (const lang of LANGS) {
-    const i18nPath = path.join(ROOT, "i18n", `${lang}.json`);
+    const i18nPath = path.join(CORE_I18N_DIR, `${lang}.json`);
     if (!fs.existsSync(i18nPath)) {
       console.error("Missing i18n file:", i18nPath);
       process.exit(1);
@@ -99,7 +101,7 @@ function build() {
       jsonLd(lang, brandName, meta.description || "")
     );
 
-    const outDir = path.join(ROOT, lang);
+    const outDir = path.join(ROOT, "public", lang);
     fs.mkdirSync(outDir, { recursive: true });
     const outFile = path.join(outDir, "index.html");
     fs.writeFileSync(outFile, html, "utf8");

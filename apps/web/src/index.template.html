@@ -1840,7 +1840,7 @@ function normalizeWord(row) {
 }
 
 async function loadWordlist() {
-  const res = await fetch("wordlist_GA_a1a2_plus_phonics.json");
+  const res = await fetch("/data/wordlist.json");
   if (!res.ok) throw new Error("wordlist load failed: " + res.status);
   const rows = await res.json();
   PRESET = rows.map(normalizeWord);
@@ -1876,7 +1876,7 @@ function normalizeConnected(row) {
 }
 
 async function loadConnected() {
-  const res = await fetch("data/connected_speech.json");
+  const res = await fetch("/data/connected_speech.json");
   if (!res.ok) throw new Error("connected speech load failed: " + res.status);
   CONNECTED = (await res.json()).map(normalizeConnected);
   connectedReady = true;
@@ -1884,7 +1884,7 @@ async function loadConnected() {
 }
 
 async function loadWeak() {
-  const res = await fetch("data/weak_forms.json");
+  const res = await fetch("/data/weak_forms.json");
   if (!res.ok) throw new Error("weak forms load failed: " + res.status);
   WEAK = (await res.json()).map(normalizeWeak);
   weakReady = true;

@@ -4,18 +4,18 @@ on:
   pull_request:
     types: [opened, synchronize, reopened]
     paths:
-      - 'wordlist_GA_a1a2_plus_phonics.json'
-      - 'data/connected_speech.json'
-      - 'data/weak_forms.json'
-      - 'scripts/validate-cefr-tags.py'
+      - 'packages/core/data/wordlist.json'
+      - 'packages/core/data/connected_speech.json'
+      - 'packages/core/data/weak_forms.json'
+      - 'tools/validate/validate-cefr-tags.py'
       - '.github/workflows/validate-cefr-tags.yml'
   push:
     branches: [main, master]
     paths:
-      - 'wordlist_GA_a1a2_plus_phonics.json'
-      - 'data/connected_speech.json'
-      - 'data/weak_forms.json'
-      - 'scripts/validate-cefr-tags.py'
+      - 'packages/core/data/wordlist.json'
+      - 'packages/core/data/connected_speech.json'
+      - 'packages/core/data/weak_forms.json'
+      - 'tools/validate/validate-cefr-tags.py'
       - '.github/workflows/validate-cefr-tags.yml'
 
 jobs:
@@ -31,4 +31,4 @@ jobs:
           python-version: '3.11'
 
       - name: Validate CEFR tags
-        run: python3 scripts/validate-cefr-tags.py
+        run: python3 tools/validate/validate-cefr-tags.py

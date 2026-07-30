@@ -36,9 +36,9 @@ RP neighbors については別途 GA 流用が妥当と決定済み。
 参照: docs/reference/rp-neighbors-priority-decision.md
 将来トリガー到達時は距離入力を rp_ipa に切替、`neighbors_rp` として出力。
 
-入力: wordlist_GA_a1a2_plus_phonics.json
-出力: data/derived/wordlist_with_neighbors.json (元の全フィールド + neighbors)
-     data/derived/wordlist_with_neighbors_slim.json (neighbors を string 配列に)
+入力: packages/core/data/wordlist.json
+出力: tools/data-pipeline/derived/wordlist_with_neighbors.json (元の全フィールド + neighbors)
+     tools/data-pipeline/derived/wordlist_with_neighbors_slim.json (neighbors を string 配列に)
      docs/reference/neighbors_report.md (品質確認用サマリ)
 """
 import json
