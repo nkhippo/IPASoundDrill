@@ -39,6 +39,24 @@
       "scope_ga": "GA (General American)",
       "scope_rp": "RP (Received Pronunciation)",
       "scope_shared": "GA & RP"
+    },
+    "weakForms": {
+      "breadcrumb_root": "Weak forms",
+      "lbl_weak": "Weak form",
+      "lbl_strong": "Strong form",
+      "lbl_ga": "General American",
+      "lbl_rp": "RP",
+      "sec_rule": "When to use the weak form",
+      "sec_examples": "Example sentences",
+      "play_ga": "Listen (GA)",
+      "play_rp": "Listen (RP)",
+      "related_title": "Related weak forms",
+      "cta_lead": "Drill weak forms in real connected speech with 201 phrase patterns.",
+      "cta_button": "Open IPA Sound Drill",
+      "back_top": "Back to IPA Sound Drill",
+      "meta_desc_tpl": "The weak form of \"{word}\" in English (weak {weak_ipa}, strong {strong_ipa}) — when to use it, example sentences, and audio for GA and RP. Free.",
+      "h1_tpl": "The English weak form of \"{word}\" — Weak {weak_ipa}, Strong {strong_ipa}",
+      "title_tpl": "Weak form: {word} (weak {weak_ipa}, strong {strong_ipa}) | IPA Sound Drill"
     }
   },
   "lead_html": "Drill <b>IPA reading and writing</b> for words you already know&mdash;sound by sound. Target <b>trap sounds</b> (θ, ð, æ, ʒ, ɝ) or your <b>weak spots</b> from practice history. Scored by accuracy only&mdash;build IPA coverage, not longer word lists.",

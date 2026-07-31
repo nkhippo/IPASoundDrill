@@ -39,6 +39,24 @@
       "scope_ga": "GA（美式）",
       "scope_rp": "RP（英式）",
       "scope_shared": "GA·RP 共通"
+    },
+    "weakForms": {
+      "breadcrumb_root": "弱读列表",
+      "lbl_weak": "弱读",
+      "lbl_strong": "强读",
+      "lbl_ga": "美式",
+      "lbl_rp": "英式",
+      "sec_rule": "何时使用弱读",
+      "sec_examples": "例句",
+      "play_ga": "播放（GA）",
+      "play_rp": "播放（RP）",
+      "related_title": "相关弱读",
+      "cta_lead": "通过 201 个短语模式在实际连读中练习弱读。",
+      "cta_button": "打开 IPA Sound Drill",
+      "back_top": "返回首页",
+      "meta_desc_tpl": "英语 \"{word}\" 弱读（弱读 {weak_ipa}、强读 {strong_ipa}）的使用条件、例句和 GA/RP 发音详解。免费。",
+      "h1_tpl": "英语 \"{word}\" 的弱读 — 弱读 {weak_ipa} / 强读 {strong_ipa}",
+      "title_tpl": "弱读: {word}（弱读 {weak_ipa} / 强读 {strong_ipa}）| IPA Sound Drill"
     }
   },
   "lead_html": "针对<b>已知单词</b>逐音素训练<b>IPA读写</b>。专攻<b>陷阱音</b>（θ, ð, æ, ʒ, ɝ）或练习记录中的<b>薄弱音</b>。仅客观评分；提升音标覆盖，而非词汇量。",
