@@ -16,7 +16,36 @@
     "ogDescription": "Marinig, basahin, at isulat ang tamang pagbigkas gamit ang IPA. Libre at pwede mo nang subukan ngayon."
   },
   "seo": {
-    "h1": "English Pronunciation Trainer with IPA — Libreng ehersisyo para sa General American at RP"
+    "h1": "English Pronunciation Trainer with IPA — Libreng ehersisyo para sa General American at RP",
+    "sounds": {
+      "breadcrumb_home": "Home",
+      "breadcrumb_root": "Mga Tunog",
+      "sec_how": "Paano bigkasin ang tunog na ito",
+      "lbl_example": "Halimbawa",
+      "lbl_mouth": "Posisyon ng bibig",
+      "lbl_trap": "Karaniwang pagkakamali",
+      "ga_variant": "General American (GA)",
+      "rp_variant": "Received Pronunciation (RP)",
+      "gr_section_title": "GA vs RP",
+      "gr_same": "Ginagamit sa parehong GA at RP.",
+      "gr_ga_only": "Ginagamit sa GA. Sa RP, iba ang tunog sa parehong salita.",
+      "gr_rp_only": "Ginagamit sa RP. Sa GA, iba ang tunog sa parehong salita.",
+      "play_audio": "Pakinggan",
+      "related_title": "Kaugnay na mga tunog",
+      "cta_lead": "Sanayin ang tunog na ito gamit ang mga drill, connected speech, at 5,397 CEFR-graded na salita.",
+      "cta_button": "Buksan ang IPA Sound Drill",
+      "back_top": "Bumalik sa home",
+      "meta_desc_tpl": "Alamin ang tunog na \"{label}\" sa Ingles (IPA {ipa}) — gabay sa pagbigkas, posisyon ng bibig, karaniwang pagkakamali, at audio. Libre, may GA at RP.",
+      "h1_tpl": "Ang \"{label}\" na tunog sa Ingles (IPA {ipa}) — Gabay sa Pagbigkas",
+      "title_tpl": "{label} (IPA {ipa}) — English Pronunciation | IPA Sound Drill",
+      "category_vowel": "Patinig",
+      "category_diphthong": "Diphthong",
+      "category_consonant": "Katinig",
+      "category_allophone": "Allophone",
+      "scope_ga": "GA (General American)",
+      "scope_rp": "RP (Received Pronunciation)",
+      "scope_shared": "GA at RP"
+    }
   },
   "build_ph": "I-tap ang mga IPA key sa ibaba para buuin ang pagbigkas",
   "check": "Suriin",

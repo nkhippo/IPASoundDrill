@@ -10,7 +10,36 @@
     "ogDescription": "A free, open IPA pronunciation trainer. Decode, encode, and listen your way to clearer English — GA and RP accents supported."
   },
   "seo": {
-    "h1": "English Pronunciation Trainer with IPA — General American and Received Pronunciation, Free"
+    "h1": "English Pronunciation Trainer with IPA — General American and Received Pronunciation, Free",
+    "sounds": {
+      "breadcrumb_home": "Home",
+      "breadcrumb_root": "Sounds",
+      "sec_how": "How to make this sound",
+      "lbl_example": "Example",
+      "lbl_mouth": "Mouth",
+      "lbl_trap": "Common trap",
+      "ga_variant": "General American (GA)",
+      "rp_variant": "Received Pronunciation (RP)",
+      "gr_section_title": "GA vs RP",
+      "gr_same": "GA and RP share this sound.",
+      "gr_ga_only": "This sound is used in GA. RP uses a different sound in the same word.",
+      "gr_rp_only": "This sound is used in RP. GA uses a different sound in the same word.",
+      "play_audio": "Listen",
+      "related_title": "Related sounds",
+      "cta_lead": "Practice this sound with drills, connected speech, and 5,397 CEFR-graded words.",
+      "cta_button": "Open IPA Sound Drill",
+      "back_top": "Back to IPA Sound Drill",
+      "meta_desc_tpl": "Learn the English \"{label}\" sound (IPA {ipa}) — pronunciation guide, mouth position, common mistakes, and audio. Free, with General American and Received Pronunciation.",
+      "h1_tpl": "The English \"{label}\" sound (IPA {ipa}) — Pronunciation Guide",
+      "title_tpl": "{label} (IPA {ipa}) — English Pronunciation | IPA Sound Drill",
+      "category_vowel": "Vowel",
+      "category_diphthong": "Diphthong",
+      "category_consonant": "Consonant",
+      "category_allophone": "Allophone",
+      "scope_ga": "GA (General American)",
+      "scope_rp": "RP (Received Pronunciation)",
+      "scope_shared": "GA & RP"
+    }
   },
   "lead_html": "Drill <b>IPA reading and writing</b> for words you already know&mdash;sound by sound. Target <b>trap sounds</b> (θ, ð, æ, ʒ, ɝ) or your <b>weak spots</b> from practice history. Scored by accuracy only&mdash;build IPA coverage, not longer word lists.",
   "lead_connected_html": "Hear <b>connected speech</b> in GA&mdash;linking, assimilation, and elision. Read the connected IPA and recover the original phrase.",

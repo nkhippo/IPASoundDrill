@@ -10,7 +10,36 @@
     "ogDescription": "発音記号を武器に、英語の音を聞き取り・読み書きするトレーニングツール。無料で今すぐ始められます。"
   },
   "seo": {
-    "h1": "英語発音トレーナー（IPA）— アメリカ英語・イギリス英語を無料で練習"
+    "h1": "英語発音トレーナー（IPA）— アメリカ英語・イギリス英語を無料で練習",
+    "sounds": {
+      "breadcrumb_home": "ホーム",
+      "breadcrumb_root": "音素一覧",
+      "sec_how": "この音の出し方",
+      "lbl_example": "例語",
+      "lbl_mouth": "口の形",
+      "lbl_trap": "よくある間違い",
+      "ga_variant": "アメリカ英語 (GA)",
+      "rp_variant": "イギリス英語 (RP)",
+      "gr_section_title": "GA と RP",
+      "gr_same": "GA・RP で共通の音です。",
+      "gr_ga_only": "GA で使われる音です。RP では同じ単語で別の音を使います。",
+      "gr_rp_only": "RP で使われる音です。GA では同じ単語で別の音を使います。",
+      "play_audio": "再生",
+      "related_title": "関連する音",
+      "cta_lead": "ドリル・連結音・5,397 語の CEFR 語彙で、この音を実際に練習できます。",
+      "cta_button": "IPA Sound Drill を開く",
+      "back_top": "トップに戻る",
+      "meta_desc_tpl": "英語の「{label}」（IPA {ipa}）の発音を、口の形・よくある間違い・音声付きで解説。GA・RP 両方対応、無料。",
+      "h1_tpl": "英語の「{label}」（IPA {ipa}）の発音ガイド",
+      "title_tpl": "{label}（IPA {ipa}）英語発音の解説 | IPA Sound Drill",
+      "category_vowel": "母音",
+      "category_diphthong": "二重母音",
+      "category_consonant": "子音",
+      "category_allophone": "異音（発音のバリエーション）",
+      "scope_ga": "GA（アメリカ英語）",
+      "scope_rp": "RP（イギリス英語）",
+      "scope_shared": "GA・RP 共通"
+    }
   },
   "lead_html": "既知の単語で<b>IPAの読み書き</b>を音素単位で鍛えるツール。<b>トラップ音</b>（θ, ð, æ, ʒ, ɝ）や<b>練習履歴の苦手音</b>を狙って出題。客観採点のみで、語彙リストではなく記号カバーを伸ばします。",
   "lead_connected_html": "GAの<b>連結発音</b>（連結・同化・脱落）を聞き取り、連結後のIPAから元の句を当てます。",
