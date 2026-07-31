@@ -57,6 +57,25 @@
       "meta_desc_tpl": "英語 \"{word}\" 弱讀（弱讀 {weak_ipa}、強讀 {strong_ipa}）的使用條件、例句和 GA/RP 發音詳解。免費。",
       "h1_tpl": "英語 \"{word}\" 的弱讀 — 弱讀 {weak_ipa} / 強讀 {strong_ipa}",
       "title_tpl": "弱讀: {word}（弱讀 {weak_ipa} / 強讀 {strong_ipa}）| IPA Sound Drill"
+    },
+    "phrases": {
+      "breadcrumb_root": "連讀列表",
+      "lbl_rp": "英式",
+      "lbl_gloss": "含意",
+      "sec_rule": "這個短語中發生的變化",
+      "sec_examples": "例句",
+      "play_ga": "播放（GA）",
+      "play_rp": "播放（RP）",
+      "related_title": "相關短語",
+      "cta_lead": "透過實際練習掌握這個和另外 200 個短語的連讀。",
+      "cta_button": "開啟 IPA Sound Drill",
+      "back_top": "返回首頁",
+      "meta_desc_tpl": "母語者如何發音 \"{phrase}\"（IPA {ipa}）— 連讀規則、例句和 GA/RP 音檔。免費。",
+      "h1_tpl": "英語 \"{phrase}\" 的發音 — 連讀指南（IPA {ipa}）",
+      "title_tpl": "{phrase} 發音（IPA {ipa}）— {type} | IPA Sound Drill",
+      "type_linking": "連讀",
+      "type_assimilation": "同化",
+      "type_elision": "省音"
     }
   },
   "lead_html": "針對<b>已知單字</b>逐音素訓練<b>IPA讀寫</b>。專攻<b>陷阱音</b>（θ, ð, æ, ʒ, ɝ）或練習紀錄中的<b>弱點音</b>。僅客觀評分；提升音標涵蓋率,而非詞彙量。",

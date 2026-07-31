@@ -11,6 +11,7 @@ const REPO_ROOT = path.resolve(__dirname, "..", "..", "..");
 const TEMPLATE = path.resolve(__dirname, "..", "src", "index.template.html");
 const SOUND_TEMPLATE = path.resolve(__dirname, "..", "src", "sound-detail.template.html");
 const WEAK_TEMPLATE = path.resolve(__dirname, "..", "src", "weak-form-detail.template.html");
+const PHRASE_TEMPLATE = path.resolve(__dirname, "..", "src", "phrase-detail.template.html");
 const CORE_I18N_DIR = path.join(REPO_ROOT, "packages", "core", "i18n");
 const CORE_PHONEMES_DIR = path.join(CORE_I18N_DIR, "phonemes");
 const CORE_DATA_DIR = path.join(REPO_ROOT, "packages", "core", "data");
@@ -216,12 +217,34 @@ ${xd}
     }
   }
 
+  // Deep URL: connected-speech phrase pages (Phase 3, EPIC #243)
+  const phraseUrls = [];
+  const phrases = loadConnectedSpeech();
+  for (const lang of LANGS) {
+    for (const p of phrases) {
+      const slug = phraseSlug(p.w);
+      const alts = LANGS.map(
+        (l) => `    <xhtml:link rel="alternate" hreflang="${l}" href="https://ipasounddrill.app/${l}/phrases/${slug}/"/>`
+      ).join("\n");
+      const xd = `    <xhtml:link rel="alternate" hreflang="x-default" href="https://ipasounddrill.app/en/phrases/${slug}/"/>`;
+      phraseUrls.push(`  <url>
+    <loc>https://ipasounddrill.app/${lang}/phrases/${slug}/</loc>
+${alts}
+${xd}
+    <lastmod>${today}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>`);
+    }
+  }
+
   return `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 ${rootUrls}
 ${soundUrls.join("\n")}
 ${weakUrls.join("\n")}
+${phraseUrls.join("\n")}
 </urlset>
 `;
 }
@@ -496,6 +519,157 @@ function buildWeakFormPage(lang, i18nRoot, entry, allEntries) {
   return html;
 }
 
+// ---- EPIC #243 Phase 3: Connected speech phrases ----
+
+const CONNECTED_SPEECH_JSON = path.join(CORE_DATA_DIR, "connected_speech.json");
+
+function loadConnectedSpeech() {
+  return JSON.parse(fs.readFileSync(CONNECTED_SPEECH_JSON, "utf8"));
+}
+
+function phraseSlug(w) {
+  return String(w)
+    .toLowerCase()
+    .replace(/['’]/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/-+/g, "-")
+    .replace(/^-|-$/g, "");
+}
+
+function renderPhraseCarriers(carriers, phrase) {
+  return carriers
+    .map((c) => {
+      const filled = String(c).replace(/\{P\}/g, `<span class="ph-word-hl">${escHtml(phrase)}</span>`);
+      return `<li>${filled}</li>`;
+    })
+    .join("\n        ");
+}
+
+function buildPhrasePage(lang, i18nRoot, entry, allEntries) {
+  const seo = (i18nRoot && i18nRoot.seo && i18nRoot.seo.phrases) || {};
+  const phrase = entry.w;
+  const slug = phraseSlug(phrase);
+  const ipa = entry.ipa;
+  const rpIpa = entry.rp_ipa || ipa;
+  const url = `https://ipasounddrill.app/${lang}/phrases/${slug}/`;
+  const homeUrl = `/${lang}/`;
+  const phrasesUrl = `/${lang}/phrases/`;
+  const rule = (entry.cs_rule && entry.cs_rule[lang]) || (entry.cs_rule && entry.cs_rule.en) || "";
+  const glossLangKey = lang === "zh-Hans" ? "zh-Hans" : lang;
+  const gloss = (entry.gloss && (entry.gloss[glossLangKey] || entry.gloss.en)) || "";
+  const typeKey = "type_" + (entry.cs_type || "");
+  const typeLabel = seo[typeKey] || entry.cs_type || "";
+
+  const title = fmtTpl(seo.title_tpl, { phrase, ipa, type: typeLabel }) || `${phrase} (${ipa})`;
+  const metaDesc = fmtTpl(seo.meta_desc_tpl, { phrase, ipa });
+  const seoH1 = fmtTpl(seo.h1_tpl, { phrase, ipa });
+
+  const glossBlock = gloss
+    ? `<p class="ph-hero-gloss">${escHtml(seo.lbl_gloss || "Meaning")}: ${escHtml(gloss)}</p>`
+    : "";
+
+  // Related: 6 other phrases of same cs_type, then fill from other types
+  const sameType = allEntries.filter((x) => x.w !== phrase && x.cs_type === entry.cs_type);
+  const otherType = allEntries.filter((x) => x.w !== phrase && x.cs_type !== entry.cs_type);
+  const related = sameType.slice(0, 6).concat(otherType).slice(0, 6);
+  const relatedHtml = related
+    .map((r) => `<li><a href="/${lang}/phrases/${phraseSlug(r.w)}/"><span>${escHtml(r.w)}</span><span class="ph-ipa-mini">${escHtml(r.ipa)}</span></a></li>`)
+    .join("\n        ");
+
+  const hreflang = LANGS.map(
+    (l) => `<link rel="alternate" hreflang="${l}" href="https://ipasounddrill.app/${l}/phrases/${slug}/">`
+  )
+    .concat([`<link rel="alternate" hreflang="x-default" href="https://ipasounddrill.app/en/phrases/${slug}/">`])
+    .join("\n");
+
+  const jsonLd = JSON.stringify({
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "LearningResource",
+        "@id": `${url}#resource`,
+        name: title,
+        description: metaDesc,
+        url,
+        inLanguage: lang,
+        learningResourceType: "Article",
+        teaches: `English connected speech (${entry.cs_type}): ${phrase} → ${ipa}`,
+        educationalUse: ["Practice", "Self-study"],
+        isAccessibleForFree: true,
+        educationalLevel: entry.cefr || undefined,
+        isPartOf: { "@id": `https://ipasounddrill.app/${lang}/#webapp` },
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: (i18nRoot.seo && i18nRoot.seo.sounds && i18nRoot.seo.sounds.breadcrumb_home) || "Home", item: `https://ipasounddrill.app/${lang}/` },
+          { "@type": "ListItem", position: 2, name: seo.breadcrumb_root || "Connected speech", item: `https://ipasounddrill.app/${lang}/phrases/` },
+          { "@type": "ListItem", position: 3, name: phrase },
+        ],
+      },
+    ],
+  });
+
+  const template = fs.readFileSync(PHRASE_TEMPLATE, "utf8");
+  const crumbHome = (i18nRoot.seo && i18nRoot.seo.sounds && i18nRoot.seo.sounds.breadcrumb_home) || "Home";
+  let html = template;
+  const rep = (k, v) => (html = replaceAll(html, `<!-- PH:${k} -->`, v));
+  rep("HTML_LANG", lang);
+  rep("TITLE", escHtml(title));
+  rep("META_DESC", escHtml(metaDesc));
+  rep("CANONICAL", url);
+  rep("HREFLANG", hreflang);
+  rep("OG_TITLE", escHtml(title));
+  rep("OG_LOCALE", OG_LOCALE[lang]);
+  rep("JSON_LD", jsonLd);
+  rep("SEO_H1", escHtml(seoH1));
+  rep("HOME_URL", homeUrl);
+  rep("PHRASES_URL", phrasesUrl);
+  rep("CRUMB_HOME", escHtml(crumbHome));
+  rep("CRUMB_ROOT", escHtml(seo.breadcrumb_root || "Connected speech"));
+  rep("PHRASE", escHtml(phrase));
+  rep("CEFR", escHtml(entry.cefr || ""));
+  rep("CS_TYPE_LABEL", escHtml(typeLabel));
+  rep("IPA", escHtml(ipa));
+  rep("LBL_RP", escHtml(seo.lbl_rp || "RP"));
+  rep("RP_IPA", escHtml(rpIpa));
+  rep("GLOSS_BLOCK", glossBlock);
+  rep("BTN_LISTEN_GA", escHtml(seo.play_ga || "Listen (GA)"));
+  rep("BTN_LISTEN_RP", escHtml(seo.play_rp || "Listen (RP)"));
+  rep("SEC_RULE", escHtml(seo.sec_rule || "What happens in this phrase"));
+  rep("RULE", escHtml(rule));
+  rep("SEC_EXAMPLES", escHtml(seo.sec_examples || "Example sentences"));
+  rep("CARRIERS", renderPhraseCarriers(entry.carriers || [], phrase));
+  rep("REL_TITLE", escHtml(seo.related_title || "Related phrases"));
+  rep("REL_LIST", relatedHtml);
+  rep("CTA_LEAD", escHtml(seo.cta_lead || "Drill in the app."));
+  rep("CTA_BUTTON", escHtml(seo.cta_button || "Open IPA Sound Drill"));
+  rep("BACK_TOP", escHtml(seo.back_top || "Home"));
+
+  return html;
+}
+
+function writePhrasePages() {
+  if (!fs.existsSync(PHRASE_TEMPLATE)) {
+    console.error("Missing phrase template:", PHRASE_TEMPLATE);
+    process.exit(1);
+  }
+  const phrases = loadConnectedSpeech();
+  let count = 0;
+  for (const lang of LANGS) {
+    const i18nRoot = JSON.parse(fs.readFileSync(path.join(CORE_I18N_DIR, `${lang}.json`), "utf8"));
+    for (const entry of phrases) {
+      const html = buildPhrasePage(lang, i18nRoot, entry, phrases);
+      const slug = phraseSlug(entry.w);
+      const outDir = path.join(ROOT, "public", lang, "phrases", slug);
+      fs.mkdirSync(outDir, { recursive: true });
+      fs.writeFileSync(path.join(outDir, "index.html"), html, "utf8");
+      count++;
+    }
+  }
+  console.log(`Wrote ${count} phrase pages (${LANGS.length} langs × ${phrases.length} phrases)`);
+}
+
 function writeWeakFormPages() {
   if (!fs.existsSync(WEAK_TEMPLATE)) {
     console.error("Missing weak-form template:", WEAK_TEMPLATE);
@@ -619,6 +793,7 @@ function build() {
 
   writeSoundPages();
   writeWeakFormPages();
+  writePhrasePages();
   writeSitemap();
   writeOgImage();
 }

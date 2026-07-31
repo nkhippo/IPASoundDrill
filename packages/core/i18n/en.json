@@ -57,6 +57,25 @@
       "meta_desc_tpl": "The weak form of \"{word}\" in English (weak {weak_ipa}, strong {strong_ipa}) — when to use it, example sentences, and audio for GA and RP. Free.",
       "h1_tpl": "The English weak form of \"{word}\" — Weak {weak_ipa}, Strong {strong_ipa}",
       "title_tpl": "Weak form: {word} (weak {weak_ipa}, strong {strong_ipa}) | IPA Sound Drill"
+    },
+    "phrases": {
+      "breadcrumb_root": "Connected speech",
+      "lbl_rp": "RP",
+      "lbl_gloss": "Meaning",
+      "sec_rule": "What happens in this phrase",
+      "sec_examples": "Example sentences",
+      "play_ga": "Listen (GA)",
+      "play_rp": "Listen (RP)",
+      "related_title": "Related phrases",
+      "cta_lead": "Drill this pattern and 200 more phrases in real practice.",
+      "cta_button": "Open IPA Sound Drill",
+      "back_top": "Back to IPA Sound Drill",
+      "meta_desc_tpl": "How native English speakers pronounce \"{phrase}\" (IPA {ipa}) — connected speech rule, example sentences, and audio for GA and RP. Free.",
+      "h1_tpl": "How to pronounce \"{phrase}\" in English — Connected Speech Guide (IPA {ipa})",
+      "title_tpl": "{phrase} pronunciation (IPA {ipa}) — {type} | IPA Sound Drill",
+      "type_linking": "Linking",
+      "type_assimilation": "Assimilation",
+      "type_elision": "Elision"
     }
   },
   "lead_html": "Drill <b>IPA reading and writing</b> for words you already know&mdash;sound by sound. Target <b>trap sounds</b> (θ, ð, æ, ʒ, ɝ) or your <b>weak spots</b> from practice history. Scored by accuracy only&mdash;build IPA coverage, not longer word lists.",

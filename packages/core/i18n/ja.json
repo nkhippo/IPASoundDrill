@@ -57,6 +57,25 @@
       "meta_desc_tpl": "英語 \"{word}\" の弱形（弱形 {weak_ipa}、強形 {strong_ipa}）の使い方・例文・GA/RP 発音を解説。無料。",
       "h1_tpl": "英語 \"{word}\" の弱形 — 弱形 {weak_ipa} / 強形 {strong_ipa}",
       "title_tpl": "弱形: {word}（弱形 {weak_ipa} / 強形 {strong_ipa}）| IPA Sound Drill"
+    },
+    "phrases": {
+      "breadcrumb_root": "連結音一覧",
+      "lbl_rp": "イギリス英語",
+      "lbl_gloss": "意味",
+      "sec_rule": "この句で起きていること",
+      "sec_examples": "例文",
+      "play_ga": "再生（GA）",
+      "play_rp": "再生（RP）",
+      "related_title": "関連する句",
+      "cta_lead": "この 1 句と、他 200 句を実際の連結音として練習。",
+      "cta_button": "IPA Sound Drill を開く",
+      "back_top": "トップに戻る",
+      "meta_desc_tpl": "ネイティブが \"{phrase}\"（IPA {ipa}）をどう発音するか — 連結音のルール、例文、GA/RP 音声付きで解説。無料。",
+      "h1_tpl": "英語 \"{phrase}\" の発音 — 連結音ガイド（IPA {ipa}）",
+      "title_tpl": "{phrase} の発音（IPA {ipa}）— {type} | IPA Sound Drill",
+      "type_linking": "連結",
+      "type_assimilation": "同化",
+      "type_elision": "脱落"
     }
   },
   "lead_html": "既知の単語で<b>IPAの読み書き</b>を音素単位で鍛えるツール。<b>トラップ音</b>（θ, ð, æ, ʒ, ɝ）や<b>練習履歴の苦手音</b>を狙って出題。客観採点のみで、語彙リストではなく記号カバーを伸ばします。",
