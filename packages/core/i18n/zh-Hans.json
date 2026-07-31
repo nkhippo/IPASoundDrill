@@ -38,7 +38,8 @@
       "category_allophone": "同位音",
       "scope_ga": "GA（美式）",
       "scope_rp": "RP（英式）",
-      "scope_shared": "GA·RP 共通"
+      "scope_shared": "GA·RP 共通",
+      "see_words_link_tpl": "查看包含此音的 {n} 个代表词 →"
     },
     "weakForms": {
       "breadcrumb_root": "弱读列表",
@@ -76,6 +77,22 @@
       "type_linking": "连读",
       "type_assimilation": "同化",
       "type_elision": "省音"
+    },
+    "soundWords": {
+      "breadcrumb_words": "单词列表",
+      "sec_title": "包含此音的英语单词",
+      "sec_intro": "按 CEFR 等级顺序 (A1 起)显示包含此音素的常用英语单词。GA 和 RP 发音不同时同时显示。",
+      "th_word": "单词",
+      "th_ga": "GA",
+      "th_rp": "RP",
+      "th_cefr": "等级",
+      "th_listen": "播放",
+      "back_to_sound_tpl": "返回「{label}」音页面",
+      "cta_lead_tpl": "在应用中练习全部 {count} 个 CEFR 分级词汇（含 GA/RP 音频）。",
+      "meta_desc_tpl": "按 CEFR 级别列出包含英语「{label}」音 (IPA {ipa}) 的常用单词。GA·RP 支持，免费。",
+      "h1_tpl": "包含英语「{label}」音 (IPA {ipa}) 的单词",
+      "title_tpl": "{label} 音 (IPA {ipa}) 的单词列表 | IPA Sound Drill",
+      "no_words": "尚未收录包含此音的词汇。"
     }
   },
   "lead_html": "针对<b>已知单词</b>逐音素训练<b>IPA读写</b>。专攻<b>陷阱音</b>（θ, ð, æ, ʒ, ɝ）或练习记录中的<b>薄弱音</b>。仅客观评分；提升音标覆盖，而非词汇量。",

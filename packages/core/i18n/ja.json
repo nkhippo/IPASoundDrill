@@ -38,7 +38,8 @@
       "category_allophone": "異音（発音のバリエーション）",
       "scope_ga": "GA（アメリカ英語）",
       "scope_rp": "RP（イギリス英語）",
-      "scope_shared": "GA・RP 共通"
+      "scope_shared": "GA・RP 共通",
+      "see_words_link_tpl": "この音を含む {n} 語の代表単語を見る →"
     },
     "weakForms": {
       "breadcrumb_root": "弱形一覧",
@@ -76,6 +77,22 @@
       "type_linking": "連結",
       "type_assimilation": "同化",
       "type_elision": "脱落"
+    },
+    "soundWords": {
+      "breadcrumb_words": "単語一覧",
+      "sec_title": "この音を含む英単語",
+      "sec_intro": "この音素を含む代表的な英単語を CEFR レベル順（A1 から）で表示します。GA と RP で発音が異なる場合は両方を表示。「再生」で音声を確認できます。",
+      "th_word": "単語",
+      "th_ga": "GA",
+      "th_rp": "RP",
+      "th_cefr": "レベル",
+      "th_listen": "再生",
+      "back_to_sound_tpl": "「{label}」の音のページに戻る",
+      "cta_lead_tpl": "アプリで CEFR 分類された全 {count} 語を GA/RP 音声付きで練習できます。",
+      "meta_desc_tpl": "英語の「{label}」の音（IPA {ipa}）を含む代表的な単語を CEFR 順で一覧。GA・RP 対応、無料。",
+      "h1_tpl": "英語の「{label}」の音（IPA {ipa}）を含む単語",
+      "title_tpl": "{label} の音（IPA {ipa}）を含む単語一覧 | IPA Sound Drill",
+      "no_words": "この音を含む語彙はまだ登録されていません。"
     }
   },
   "lead_html": "既知の単語で<b>IPAの読み書き</b>を音素単位で鍛えるツール。<b>トラップ音</b>（θ, ð, æ, ʒ, ɝ）や<b>練習履歴の苦手音</b>を狙って出題。客観採点のみで、語彙リストではなく記号カバーを伸ばします。",

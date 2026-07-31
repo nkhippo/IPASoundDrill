@@ -44,7 +44,8 @@
       "category_allophone": "Allophone",
       "scope_ga": "GA (General American)",
       "scope_rp": "RP (Received Pronunciation)",
-      "scope_shared": "GA at RP"
+      "scope_shared": "GA at RP",
+      "see_words_link_tpl": "Tingnan ang {n} karaniwang salitang may tunog na ito →"
     },
     "weakForms": {
       "breadcrumb_root": "Mga Weak Form",
@@ -82,6 +83,22 @@
       "type_linking": "Linking",
       "type_assimilation": "Assimilation",
       "type_elision": "Elision"
+    },
+    "soundWords": {
+      "breadcrumb_words": "Mga Salita",
+      "sec_title": "Mga karaniwang salitang may tunog na ito",
+      "sec_intro": "CEFR-graded na koleksiyon ng mga karaniwang salitang naglalaman ng phoneme na ito, mula A1. Ipinapakita ang GA at RP kapag naiiba.",
+      "th_word": "Salita",
+      "th_ga": "GA",
+      "th_rp": "RP",
+      "th_cefr": "Antas",
+      "th_listen": "Pakinggan",
+      "back_to_sound_tpl": "Balik sa \"{label}\" na tunog",
+      "cta_lead_tpl": "Sanayin lahat ng {count} CEFR-graded na salita na may GA/RP audio sa app.",
+      "meta_desc_tpl": "Listahan ng mga karaniwang salita sa Ingles na may tunog na \"{label}\" (IPA {ipa}) — CEFR-graded, may GA at RP. Libre.",
+      "h1_tpl": "Mga karaniwang salitang may tunog na \"{label}\" (IPA {ipa})",
+      "title_tpl": "Mga salita na may {label} na tunog (IPA {ipa}) — Halimbawa | IPA Sound Drill",
+      "no_words": "Wala pang mga graded na halimbawa para sa tunog na ito."
     }
   },
   "build_ph": "I-tap ang mga IPA key sa ibaba para buuin ang pagbigkas",
