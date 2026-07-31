@@ -42,6 +42,16 @@ Interface available in 6 languages:
 - Phoneme inventory: 44 English phonemes plus stress marks and allophones (flap, glottal stop, syllabic consonants)
 - Multilingual phoneme explanations: 6 languages
 
+## Free open dataset (CC BY 4.0)
+
+The 5,397-word wordlist with GA/RP IPA and CEFR levels is freely downloadable as CSV and JSON under CC BY 4.0. Suitable for research, apps, and classroom use.
+
+- Landing page: https://ipasounddrill.app/en/data/
+- CSV: https://ipasounddrill.app/data/wordlist-ga-rp-cefr.csv
+- JSON: https://ipasounddrill.app/data/wordlist-ga-rp-cefr.json
+- LICENSE: https://ipasounddrill.app/data/LICENSE.txt
+- Attribution line: `Data: IPA Sound Drill (https://ipasounddrill.app), CC BY 4.0`
+
 ## Technology
 
 Static HTML + vanilla JS + JSON data + Google Apps Script (TTS proxy). Hosted on Vercel. No sign-up. No ads. Cookieless analytics only (Vercel Web Analytics).
