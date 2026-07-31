@@ -13,6 +13,7 @@ const SOUND_TEMPLATE = path.resolve(__dirname, "..", "src", "sound-detail.templa
 const SOUND_WORDS_TEMPLATE = path.resolve(__dirname, "..", "src", "sound-words.template.html");
 const WEAK_TEMPLATE = path.resolve(__dirname, "..", "src", "weak-form-detail.template.html");
 const PHRASE_TEMPLATE = path.resolve(__dirname, "..", "src", "phrase-detail.template.html");
+const DATASET_TEMPLATE = path.resolve(__dirname, "..", "src", "dataset-landing.template.html");
 const CORE_I18N_DIR = path.join(REPO_ROOT, "packages", "core", "i18n");
 const CORE_PHONEMES_DIR = path.join(CORE_I18N_DIR, "phonemes");
 const CORE_DATA_DIR = path.join(REPO_ROOT, "packages", "core", "data");
@@ -258,6 +259,22 @@ ${xd}
     }
   }
 
+  // Deep URL: dataset landing pages (Issue #251)
+  const datasetUrls = LANGS.map((lang) => {
+    const alts = LANGS.map(
+      (l) => `    <xhtml:link rel="alternate" hreflang="${l}" href="https://ipasounddrill.app/${l}/data/"/>`
+    ).join("\n");
+    const xd = `    <xhtml:link rel="alternate" hreflang="x-default" href="https://ipasounddrill.app/en/data/"/>`;
+    return `  <url>
+    <loc>https://ipasounddrill.app/${lang}/data/</loc>
+${alts}
+${xd}
+    <lastmod>${today}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>`;
+  });
+
   return `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
@@ -266,6 +283,7 @@ ${soundUrls.join("\n")}
 ${soundWordsUrls.join("\n")}
 ${weakUrls.join("\n")}
 ${phraseUrls.join("\n")}
+${datasetUrls.join("\n")}
 </urlset>
 `;
 }
@@ -981,6 +999,265 @@ function writeOgImage() {
   console.log("Wrote", path.relative(ROOT, OG_PNG_OUT));
 }
 
+// ---- Public dataset publication (Issue #251, CC BY 4.0) ----
+
+const DATASET_OUT_DIR = path.join(ROOT, "public", "data");
+
+function csvEscape(v) {
+  const s = v == null ? "" : String(v);
+  if (/[",\n\r]/.test(s)) return `"${s.replace(/"/g, '""')}"`;
+  return s;
+}
+
+function writeDataset() {
+  const wl = loadWordlist();
+  fs.mkdirSync(DATASET_OUT_DIR, { recursive: true });
+
+  // CSV (6 columns, UTF-8 BOM for Excel)
+  const header = ["word", "ipa_ga", "ipa_rp", "cefr", "pos", "gloss_en"];
+  const rows = wl.map((w) => [
+    w.w,
+    w.ipa || "",
+    w.rp_ipa || "",
+    w.cefr || "",
+    w.pos || "",
+    (w.gloss && w.gloss.en) || w.def || "",
+  ]);
+  const csv =
+    "﻿" +
+    header.join(",") +
+    "\n" +
+    rows.map((r) => r.map(csvEscape).join(",")).join("\n") +
+    "\n";
+  fs.writeFileSync(path.join(DATASET_OUT_DIR, "wordlist-ga-rp-cefr.csv"), csv, "utf8");
+
+  // JSON (full records, pretty-printed for readability)
+  fs.writeFileSync(
+    path.join(DATASET_OUT_DIR, "wordlist-ga-rp-cefr.json"),
+    JSON.stringify(wl, null, 2) + "\n",
+    "utf8"
+  );
+
+  // LICENSE.txt (CC BY 4.0 human-readable summary + link to full text)
+  const license = `IPA Sound Drill — Wordlist Dataset (GA + RP + CEFR)
+====================================================
+
+Copyright (c) IPA Sound Drill contributors
+https://ipasounddrill.app
+
+This dataset is licensed under the Creative Commons Attribution 4.0
+International License (CC BY 4.0).
+
+You are free to:
+
+  Share  — copy and redistribute the material in any medium or format
+  Adapt  — remix, transform, and build upon the material for any purpose,
+           even commercially.
+
+Under the following terms:
+
+  Attribution — You must give appropriate credit, provide a link to the
+  license, and indicate if changes were made. You may do so in any
+  reasonable manner, but not in any way that suggests the licensor
+  endorses you or your use.
+
+Suggested attribution:
+
+  Data: IPA Sound Drill (https://ipasounddrill.app), CC BY 4.0
+
+Full legal text:
+
+  https://creativecommons.org/licenses/by/4.0/legalcode
+
+Human-readable summary:
+
+  https://creativecommons.org/licenses/by/4.0/
+
+`;
+  fs.writeFileSync(path.join(DATASET_OUT_DIR, "LICENSE.txt"), license, "utf8");
+
+  // README.md (field definitions + usage)
+  const readme = `# IPA Sound Drill — Wordlist Dataset
+
+**${wl.length} CEFR-graded English words** with General American (GA) and Received
+Pronunciation (RP) IPA transcriptions.
+
+- License: **CC BY 4.0** — free for any use with attribution
+- Source: https://ipasounddrill.app/data/
+- Attribution line: \`Data: IPA Sound Drill (https://ipasounddrill.app), CC BY 4.0\`
+
+## Files
+
+- \`wordlist-ga-rp-cefr.csv\` — Spreadsheet-friendly, 6 columns, UTF-8 with BOM
+- \`wordlist-ga-rp-cefr.json\` — Programmatic use, full metadata array
+- \`LICENSE.txt\` — CC BY 4.0 text and attribution notice
+
+## CSV columns
+
+| Column | Description |
+|---|---|
+| \`word\` | English word (lowercase) |
+| \`ipa_ga\` | General American IPA in slash notation |
+| \`ipa_rp\` | Received Pronunciation IPA in slash notation |
+| \`cefr\` | CEFR level A1–C2 (may be empty) |
+| \`pos\` | Part of speech |
+| \`gloss_en\` | Short English gloss / definition |
+
+## JSON additional fields
+
+- \`respell_ga\` / \`respell_rp\` — Respelling (pronunciation hint using English letters)
+- \`neighbors\` — Similar-sounding words (rhymes / minimal pairs)
+- \`gloss\` — Multi-language gloss object (\`en\`, \`ja\`, \`ko\`, \`zh-Hans\`, \`zh-Hant\`, \`fil\`)
+- \`ga_rp_same\` — Boolean: GA and RP transcriptions match
+
+## Attribution examples
+
+### Academic paper
+
+> We used the IPA Sound Drill wordlist (https://ipasounddrill.app, CC BY 4.0)
+> for CEFR-graded pronunciation data.
+
+### Software project (README)
+
+\`\`\`
+## Data attribution
+
+English IPA dataset: [IPA Sound Drill](https://ipasounddrill.app) — CC BY 4.0
+\`\`\`
+
+### Product credits
+
+> Includes pronunciation data from IPA Sound Drill (CC BY 4.0).
+
+## Contact
+
+Issues or corrections: https://github.com/nkhippo/IPASoundDrill/issues
+`;
+  fs.writeFileSync(path.join(DATASET_OUT_DIR, "README.md"), readme, "utf8");
+
+  const csvSize = fs.statSync(path.join(DATASET_OUT_DIR, "wordlist-ga-rp-cefr.csv")).size;
+  const jsonSize = fs.statSync(path.join(DATASET_OUT_DIR, "wordlist-ga-rp-cefr.json")).size;
+  console.log(
+    `Wrote dataset (${wl.length} words): CSV ${(csvSize / 1024).toFixed(1)}KB, JSON ${(jsonSize / 1024).toFixed(1)}KB, LICENSE, README`
+  );
+  return { csvSize, jsonSize };
+}
+
+function writeDatasetLandingPages(sizes) {
+  if (!fs.existsSync(DATASET_TEMPLATE)) {
+    console.error("Missing dataset template:", DATASET_TEMPLATE);
+    process.exit(1);
+  }
+  const wl = loadWordlist();
+  const csvKb = `${((sizes.csvSize) / 1024).toFixed(0)} KB`;
+  const jsonKb = `${((sizes.jsonSize) / 1024 / 1024).toFixed(1)} MB`;
+
+  for (const lang of LANGS) {
+    const i18nRoot = JSON.parse(fs.readFileSync(path.join(CORE_I18N_DIR, `${lang}.json`), "utf8"));
+    const seo = (i18nRoot.seo && i18nRoot.seo.dataset) || {};
+    const seoSounds = (i18nRoot.seo && i18nRoot.seo.sounds) || {};
+    const url = `https://ipasounddrill.app/${lang}/data/`;
+    const title = seo.title_tpl || `IPA Sound Drill Dataset`;
+    const metaDesc = seo.meta_desc_tpl || "";
+    const seoH1 = seo.h1_tpl || title;
+
+    const hreflang = LANGS.map(
+      (l) => `<link rel="alternate" hreflang="${l}" href="https://ipasounddrill.app/${l}/data/">`
+    )
+      .concat([`<link rel="alternate" hreflang="x-default" href="https://ipasounddrill.app/en/data/">`])
+      .join("\n");
+
+    const jsonLd = JSON.stringify({
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Dataset",
+          "@id": `${url}#dataset`,
+          name: "IPA Sound Drill Wordlist Dataset",
+          description:
+            "5,397 CEFR-graded English words with General American (GA) and Received Pronunciation (RP) IPA transcriptions.",
+          url,
+          license: "https://creativecommons.org/licenses/by/4.0/",
+          creator: { "@type": "Organization", name: "IPA Sound Drill", url: "https://ipasounddrill.app/" },
+          keywords: ["English pronunciation", "IPA", "General American", "Received Pronunciation", "CEFR", "wordlist"],
+          inLanguage: "en",
+          isAccessibleForFree: true,
+          distribution: [
+            {
+              "@type": "DataDownload",
+              encodingFormat: "text/csv",
+              contentUrl: "https://ipasounddrill.app/data/wordlist-ga-rp-cefr.csv",
+            },
+            {
+              "@type": "DataDownload",
+              encodingFormat: "application/json",
+              contentUrl: "https://ipasounddrill.app/data/wordlist-ga-rp-cefr.json",
+            },
+          ],
+        },
+        {
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: seoSounds.breadcrumb_home || "Home", item: `https://ipasounddrill.app/${lang}/` },
+            { "@type": "ListItem", position: 2, name: seo.crumb_data || "Data" },
+          ],
+        },
+      ],
+    });
+
+    const template = fs.readFileSync(DATASET_TEMPLATE, "utf8");
+    let html = template;
+    const rep = (k, v) => (html = replaceAll(html, `<!-- DS:${k} -->`, v));
+    rep("HTML_LANG", lang);
+    rep("TITLE", escHtml(title));
+    rep("META_DESC", escHtml(metaDesc));
+    rep("CANONICAL", url);
+    rep("HREFLANG", hreflang);
+    rep("OG_TITLE", escHtml(title));
+    rep("OG_LOCALE", OG_LOCALE[lang]);
+    rep("JSON_LD", jsonLd);
+    rep("SEO_H1", escHtml(seoH1));
+    rep("HOME_URL", `/${lang}/`);
+    rep("CRUMB_HOME", escHtml(seoSounds.breadcrumb_home || "Home"));
+    rep("CRUMB_DATA", escHtml(seo.crumb_data || "Data"));
+    rep("LICENSE_FREE", escHtml(seo.license_free || "Free for any use with attribution"));
+    rep("HERO_TITLE", escHtml(seo.hero_title || title));
+    rep("HERO_SUB", escHtml(seo.hero_sub || ""));
+    rep("STAT_WORDS", escHtml(seo.stat_words || "CEFR-graded words"));
+    rep("STAT_ACCENTS", escHtml(seo.stat_accents || "Both accents"));
+    rep("STAT_CEFR", escHtml(seo.stat_cefr || "Levels covered"));
+    rep("DL_CSV_DESC", escHtml(seo.dl_csv_desc || ""));
+    rep("DL_JSON_DESC", escHtml(seo.dl_json_desc || ""));
+    rep("DL_LICENSE_DESC", escHtml(seo.dl_license_desc || ""));
+    rep("DL_BTN", escHtml(seo.dl_btn || "Download"));
+    rep("DL_CSV_SIZE", csvKb);
+    rep("DL_JSON_SIZE", jsonKb);
+    rep("SEC_ATTRIBUTION", escHtml(seo.sec_attribution || "How to credit"));
+    rep("SEC_ATTRIBUTION_LEAD", escHtml(seo.sec_attribution_lead || ""));
+    rep("SEC_FIELDS", escHtml(seo.sec_fields || "Fields"));
+    rep("SEC_FIELDS_LEAD", escHtml(seo.sec_fields_lead || ""));
+    rep("FIELD_NAME", escHtml(seo.field_name || "Column"));
+    rep("FIELD_DESC", escHtml(seo.field_desc || "Description"));
+    rep("FIELD_EX", escHtml(seo.field_ex || "Example"));
+    rep("FIELD_WORD", escHtml(seo.field_word || ""));
+    rep("FIELD_GA", escHtml(seo.field_ga || ""));
+    rep("FIELD_RP", escHtml(seo.field_rp || ""));
+    rep("FIELD_CEFR", escHtml(seo.field_cefr || ""));
+    rep("FIELD_POS", escHtml(seo.field_pos || ""));
+    rep("FIELD_GLOSS", escHtml(seo.field_gloss || ""));
+    rep("SEC_USAGE", escHtml(seo.sec_usage || "Usage"));
+    rep("SEC_USAGE_LEAD", escHtml(seo.sec_usage_lead || ""));
+    rep("CTA_LEAD", escHtml(seo.cta_lead || ""));
+    rep("CTA_BUTTON", escHtml(seo.cta_button || "Open IPA Sound Drill"));
+    rep("BACK_TOP", escHtml(seo.back_top || "Home"));
+
+    const outDir = path.join(ROOT, "public", lang, "data");
+    fs.mkdirSync(outDir, { recursive: true });
+    fs.writeFileSync(path.join(outDir, "index.html"), html, "utf8");
+  }
+  console.log(`Wrote ${LANGS.length} dataset landing pages (/{lang}/data/)`);
+}
+
 function writePwaIcons() {
   fs.mkdirSync(PWA_OUT_DIR, { recursive: true });
   for (const [size, src, name] of PWA_TARGETS) {
@@ -1063,6 +1340,8 @@ function build() {
   writeSoundWordsPages();
   writeWeakFormPages();
   writePhrasePages();
+  const datasetSizes = writeDataset();
+  writeDatasetLandingPages(datasetSizes);
   writeSitemap();
   writeOgImage();
   writePwaIcons();
