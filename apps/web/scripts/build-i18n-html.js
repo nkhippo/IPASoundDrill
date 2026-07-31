@@ -279,6 +279,18 @@ function writeSitemap() {
 const OG_SVG_SRC = path.join(ROOT, "src", "og", "og-default.svg");
 const OG_PNG_OUT = path.join(ROOT, "public", "og", "og-default.png");
 
+// PWA icons — favicon.svg is the shared canvas, maskable variant lives at src/pwa-icon-maskable.svg
+const PWA_ICON_SRC = path.join(ROOT, "public", "favicon.svg");
+const PWA_MASKABLE_SRC = path.join(ROOT, "src", "pwa-icon-maskable.svg");
+const PWA_OUT_DIR = path.join(ROOT, "public", "icons");
+// [size, sourceSvgPath, outputBasename]
+const PWA_TARGETS = [
+  [180, PWA_ICON_SRC, "apple-touch-icon.png"],
+  [192, PWA_ICON_SRC, "icon-192.png"],
+  [512, PWA_ICON_SRC, "icon-512.png"],
+  [512, PWA_MASKABLE_SRC, "icon-512-maskable.png"],
+];
+
 function escHtml(s) {
   return String(s == null ? "" : s)
     .replace(/&/g, "&amp;")
@@ -969,6 +981,22 @@ function writeOgImage() {
   console.log("Wrote", path.relative(ROOT, OG_PNG_OUT));
 }
 
+function writePwaIcons() {
+  fs.mkdirSync(PWA_OUT_DIR, { recursive: true });
+  for (const [size, src, name] of PWA_TARGETS) {
+    if (!fs.existsSync(src)) {
+      console.error("Missing PWA icon source:", src);
+      process.exit(1);
+    }
+    const svg = fs.readFileSync(src, "utf8");
+    const resvg = new Resvg(svg, { fitTo: { mode: "width", value: size } });
+    const pngData = resvg.render().asPng();
+    const out = path.join(PWA_OUT_DIR, name);
+    fs.writeFileSync(out, pngData);
+    console.log("Wrote", path.relative(ROOT, out));
+  }
+}
+
 function replaceAll(haystack, needle, replacement) {
   return haystack.split(needle).join(replacement);
 }
@@ -1037,6 +1065,7 @@ function build() {
   writePhrasePages();
   writeSitemap();
   writeOgImage();
+  writePwaIcons();
 }
 
 build();
