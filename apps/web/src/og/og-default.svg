@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F5F1EA"/>
+      <stop offset="100%" stop-color="#EAE3D6"/>
+    </linearGradient>
+    <style>
+      .ipa { font-family: "DejaVu Sans", "Noto Sans", "Helvetica", sans-serif; font-weight: 400; fill: #0C7C7E; }
+      .brand { font-family: "DejaVu Sans", "Helvetica", sans-serif; font-weight: 700; fill: #1F2933; letter-spacing: 0.02em; }
+      .tag { font-family: "DejaVu Sans", "Helvetica", sans-serif; font-weight: 400; fill: #52606D; }
+      .url { font-family: "DejaVu Sans Mono", "Menlo", monospace; font-weight: 400; fill: #7B8794; }
+      .accent { fill: #D9911B; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- decorative brackets -->
+  <text x="140" y="360" class="ipa accent" font-size="320" text-anchor="start">/</text>
+  <text x="1060" y="360" class="ipa accent" font-size="320" text-anchor="end">/</text>
+
+  <!-- centered IPA sample: /aɪˌpiːˈeɪ/  (== "IPA" pronounced) -->
+  <text x="600" y="335" class="ipa" font-size="150" text-anchor="middle">aɪˌpiːˈeɪ</text>
+
+  <!-- brand -->
+  <text x="600" y="460" class="brand" font-size="64" text-anchor="middle">IPA Sound Drill</text>
+
+  <!-- tagline -->
+  <text x="600" y="518" class="tag" font-size="30" text-anchor="middle">English Pronunciation Trainer · GA &amp; RP · 6 languages</text>
+
+  <!-- url -->
+  <text x="600" y="580" class="url" font-size="26" text-anchor="middle">ipasounddrill.app</text>
+</svg>
