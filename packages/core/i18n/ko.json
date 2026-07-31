@@ -210,7 +210,8 @@
     "vowels": "모음",
     "r_vowels": "r색 모음",
     "diphthongs": "이중 모음",
-    "consonants": "자음"
+    "consonants": "자음",
+    "syllabic": "성절 자음"
   },
   "pos": {
     "限定詞": "한정사",
@@ -353,6 +354,14 @@
       },
       "stress": {
         "en": "Stress",
+        "sub": ""
+      },
+      "other": {
+        "en": "Other",
+        "sub": ""
+      },
+      "syllabic": {
+        "en": "Syllabic",
         "sub": ""
       }
     },

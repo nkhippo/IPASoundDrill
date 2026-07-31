@@ -210,7 +210,8 @@
     "vowels": "Vowels",
     "r_vowels": "R-colored",
     "diphthongs": "Diphthongs",
-    "consonants": "Consonants"
+    "consonants": "Consonants",
+    "syllabic": "Syllabic"
   },
   "pos": {
     "限定詞": "determiner",
@@ -354,6 +355,14 @@
       "stress": {
         "en": "Stress",
         "sub": "Stress"
+      },
+      "other": {
+        "en": "Other",
+        "sub": "Other"
+      },
+      "syllabic": {
+        "en": "Syllabic",
+        "sub": "Syllabic"
       }
     },
     "height": {

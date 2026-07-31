@@ -210,7 +210,8 @@
     "vowels": "母音",
     "r_vowels": "r母音",
     "diphthongs": "二重母音",
-    "consonants": "子音"
+    "consonants": "子音",
+    "syllabic": "成節子音"
   },
   "pos": {
     "限定詞": "限定詞",
@@ -354,6 +355,14 @@
       "stress": {
         "en": "Stress",
         "sub": "強勢"
+      },
+      "other": {
+        "en": "Other",
+        "sub": "その他"
+      },
+      "syllabic": {
+        "en": "Syllabic",
+        "sub": "成節子音"
       }
     },
     "height": {

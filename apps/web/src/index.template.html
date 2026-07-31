@@ -3219,13 +3219,18 @@ function closeVocab() { navigate(""); }
  */
 function symbolChartGroups(accentOverride) {
   const acc = accentOverride || ACCENT;
-  const consonants = [
+  const consonantsBase = [
     { id: "plosives", symbols: ["p", "b", "t", "d", "k", "ɡ"] },
     { id: "fricatives", symbols: ["f", "v", "θ", "ð", "s", "z", "ʃ", "ʒ", "h"] },
     { id: "nasals", symbols: ["m", "n", "ŋ"] },
     { id: "approximants", symbols: ["r", "w", "j"] },
     { id: "laterals", symbols: ["l"] },
     { id: "affricates", symbols: ["tʃ", "dʒ"] }
+  ];
+  const consonants = acc === "rp" ? consonantsBase : [
+    ...consonantsBase,
+    { id: "other", symbols: ["ɾ", "ʔ"] },
+    { id: "syllabic", symbols: ["n̩", "l̩"] }
   ];
   const stress = { id: "stress", symbols: ["ˈ", "ˌ"] };
   if (acc === "rp") {
@@ -3261,7 +3266,6 @@ function symbolChartGroups(accentOverride) {
     ]},
     { id: "backVowels", heights: [
       { id: "close", symbols: ["u", "ʊ"] },
-      { id: "openMid", symbols: ["ɔ"] },
       { id: "open", symbols: ["ɑ"] }
     ]},
     { id: "diphthongs", symbols: ["eɪ", "aɪ", "ɔɪ", "oʊ", "aʊ"] },
@@ -3524,7 +3528,7 @@ const PH_EXAMPLES={
   "ɔɪ":[["boy","/bɔɪ/"],["toy","/tɔɪ/"],["joy","/dʒɔɪ/"]],
   "oʊ":[["go","/ɡoʊ/"],["owe","/oʊ/"],["show","/ʃoʊ/"]],
   "aʊ":[["how","/haʊ/"],["cow","/kaʊ/"],["hour","/ˈaʊɚ/"]],
-  "ɾ":[["butter","/ˈbʌɾɚ/"],["city","/ˈsɪɾi/"],["water","/ˈwɔɾɚ/"]],
+  "ɾ":[["butter","/ˈbʌɾɚ/"],["city","/ˈsɪɾi/"],["water","/ˈwɑɾɚ/"]],
   "ʔ":[["button","/ˈbʌʔn̩/"],["mountain","/ˈmaʊnʔn̩/"],["written","/ˈrɪʔn̩/"]],
   "n̩":[["button","/ˈbʌʔn̩/"],["garden","/ˈɡɑrdn̩/"],["ridden","/ˈrɪdn̩/"]],
   "l̩":[["bottle","/ˈbɑɾl̩/"],["little","/ˈlɪɾl̩/"],["middle","/ˈmɪɾl̩/"]]
@@ -5289,10 +5293,11 @@ function keyGroups(){
   }
   return [
     {label:t("kbd.stress"),keys:["ˈ","ˌ"],cls:"stress"},
-    {label:t("kbd.vowels"),keys:["i","ɪ","ɛ","æ","ə","ʌ","ɑ","ɔ","ʊ","u"]},
+    {label:t("kbd.vowels"),keys:["i","ɪ","ɛ","æ","ə","ʌ","ɑ","ʊ","u"]},
     {label:t("kbd.r_vowels"),keys:["ɝ","ɚ"]},
     {label:t("kbd.diphthongs"),keys:["eɪ","aɪ","ɔɪ","oʊ","aʊ"]},
-    {label:t("kbd.consonants"),keys:["p","b","t","d","k","ɡ","f","v","θ","ð","s","z","ʃ","ʒ","tʃ","dʒ","m","n","ŋ","l","r","w","j","h"]}
+    {label:t("kbd.consonants"),keys:["p","b","t","d","k","ɡ","f","v","θ","ð","s","z","ʃ","ʒ","tʃ","dʒ","m","n","ŋ","l","r","w","j","h","ɾ","ʔ"]},
+    {label:t("kbd.syllabic"),keys:["n̩","l̩"]}
   ];
 }
 function buildKeyboard(){
