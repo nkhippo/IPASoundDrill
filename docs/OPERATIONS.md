@@ -145,7 +145,7 @@ F2 のように Vercel Build を新規導入する Issue や、Build 設定を�
 |---|---|---|
 | 全ユーザーで音が鳴らない | GAS Deploy が停止・破損 | GAS ダッシュボードでデプロイ確認、再デプロイ |
 | 特定ユーザーのみ音が鳴らない | ブラウザキャッシュ / 権限 | ユーザーにキャッシュクリア + ブラウザ再起動を案内 |
-| 1回目だけ音が途切れる | 既知の初回タップ遅延 | Phase T レポート参照（`docs/cursor/reports/`） |
+| 1回目だけ音が途切れる | 既知の初回タップ遅延 | Phase T レポート参照（`docs/agent-reports/`） |
 | 特定単語だけ音が変 | GAS BatchWords 未更新 | `python3 tools/data-pipeline/export_batch_words.py` を実行、GAS 更新 |
 
 ### 3.2 GAS 再デプロイ手順
@@ -154,7 +154,7 @@ F2 のように Vercel Build を新規導入する Issue や、Build 設定を�
 2. 右上「Deploy」→「Manage deployments」
 3. 現在のデプロイの三点メニュー → Edit
 4. Version を "New version" に設定して Deploy
-5. **URL は変えないこと**（`index.html` の `GAS_TTS_URL` を書き換える必要が出る）
+5. **URL は変えないこと**（`apps/web/src/index.template.html` の `GAS_TTS_URL` を書き換える必要が出る）
 6. デプロイ後、`https://ipasounddrill.app` で動作確認
 
 ### 3.3 GAS Deploy の Rollback
@@ -163,7 +163,7 @@ GAS は複数バージョンを保持しているので、Manage deployments で
 
 ### 3.4 TTS 完全停止時のユーザーへの通知
 
-`index.html` に「TTS 一時停止中」バナーを表示する簡易 hotfix Issue を起票、Cursor に実装依頼。所要 15 分。
+`apps/web/src/index.template.html` に「TTS 一時停止中」バナーを表示する簡易 hotfix Issue を起票、Cursor に実装依頼。所要 15 分。
 
 ---
 

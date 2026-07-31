@@ -51,7 +51,7 @@ Cursor / Codex がこのリポで行っている運用と**完全に同じ品質
 - 触った資産に応じて検証を実行:
   - i18n を触ったら `python3 tools/validate/validate_i18n.py`
   - wordlist / `rp_ipa` / `neighbors` / connected_speech / weak_forms を触ったら該当の再カウント・`tools/data-pipeline/gen_*.py` 再実行
-- 現行 governance が要求する**実装レポート**を、指定の場所（例 `docs/cursor/reports/`、または再編後の指定先）に同一 PR で追加。
+- 現行 governance が要求する**実装レポート**を、`docs/agent-reports/<agent>-issue-<N>-<slug>.md` に同一 PR で追加。
 - UI 改修で C6（スクショ必須）に該当するなら、Issue のスクショ対象画面を PR コメントに添付（不可なら明記して Naoya 実機検証を前提化）。
 
 ## halt プロトコル（非同期 executor として）
