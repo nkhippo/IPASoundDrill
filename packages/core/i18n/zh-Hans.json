@@ -10,7 +10,36 @@
     "ogDescription": "用国际音标练习听、读、写，轻松掌握地道英语发音。现在就免费开始。"
   },
   "seo": {
-    "h1": "英语发音训练器（IPA）— 免费练习美式与英式发音"
+    "h1": "英语发音训练器（IPA）— 免费练习美式与英式发音",
+    "sounds": {
+      "breadcrumb_home": "首页",
+      "breadcrumb_root": "音素列表",
+      "sec_how": "如何发这个音",
+      "lbl_example": "例词",
+      "lbl_mouth": "口型",
+      "lbl_trap": "常见错误",
+      "ga_variant": "美式英语 (GA)",
+      "rp_variant": "英式英语 (RP)",
+      "gr_section_title": "GA 与 RP",
+      "gr_same": "GA 和 RP 共通的音。",
+      "gr_ga_only": "GA 中使用的音。RP 在同一单词中使用不同的音。",
+      "gr_rp_only": "RP 中使用的音。GA 在同一单词中使用不同的音。",
+      "play_audio": "播放",
+      "related_title": "相关音素",
+      "cta_lead": "通过练习、连读和 5,397 个 CEFR 分级词汇实际训练这个音。",
+      "cta_button": "打开 IPA Sound Drill",
+      "back_top": "返回首页",
+      "meta_desc_tpl": "英语「{label}」（IPA {ipa}）发音详解，包含口型、常见错误和音频示例。支持 GA 和 RP，免费。",
+      "h1_tpl": "英语「{label}」（IPA {ipa}）发音指南",
+      "title_tpl": "{label}（IPA {ipa}）英语发音详解 | IPA Sound Drill",
+      "category_vowel": "元音",
+      "category_diphthong": "双元音",
+      "category_consonant": "辅音",
+      "category_allophone": "同位音",
+      "scope_ga": "GA（美式）",
+      "scope_rp": "RP（英式）",
+      "scope_shared": "GA·RP 共通"
+    }
   },
   "lead_html": "针对<b>已知单词</b>逐音素训练<b>IPA读写</b>。专攻<b>陷阱音</b>（θ, ð, æ, ʒ, ɝ）或练习记录中的<b>薄弱音</b>。仅客观评分；提升音标覆盖，而非词汇量。",
   "lead_connected_html": "听辨 GA 的<b>连读现象</b>（连读、同化、脱落）。根据连读后的 IPA 还原原短语。",

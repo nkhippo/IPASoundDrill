@@ -10,7 +10,36 @@
     "ogDescription": "발음 기호를 눈으로 읽고 귀로 듣고 직접 써보며 영어 발음을 훈련하세요. 지금 무료로 시작해보세요."
   },
   "seo": {
-    "h1": "영어 발음 트레이너 (IPA) — 미국식·영국식 발음 무료 연습"
+    "h1": "영어 발음 트레이너 (IPA) — 미국식·영국식 발음 무료 연습",
+    "sounds": {
+      "breadcrumb_home": "홈",
+      "breadcrumb_root": "음소 목록",
+      "sec_how": "이 소리를 내는 방법",
+      "lbl_example": "예시 단어",
+      "lbl_mouth": "입 모양",
+      "lbl_trap": "자주 하는 실수",
+      "ga_variant": "미국식 (GA)",
+      "rp_variant": "영국식 (RP)",
+      "gr_section_title": "GA와 RP",
+      "gr_same": "GA와 RP에서 공통으로 사용됩니다.",
+      "gr_ga_only": "GA에서 사용되는 소리입니다. RP는 같은 단어에서 다른 소리를 사용합니다.",
+      "gr_rp_only": "RP에서 사용되는 소리입니다. GA는 같은 단어에서 다른 소리를 사용합니다.",
+      "play_audio": "듣기",
+      "related_title": "관련 소리",
+      "cta_lead": "드릴, 연음, 5,397개 CEFR 어휘로 이 소리를 실제로 연습해 보세요.",
+      "cta_button": "IPA Sound Drill 열기",
+      "back_top": "홈으로",
+      "meta_desc_tpl": "영어 \"{label}\" (IPA {ipa}) 발음을 입 모양·자주 하는 실수·음성과 함께 설명. GA·RP 모두 지원, 무료.",
+      "h1_tpl": "영어 \"{label}\" (IPA {ipa}) 발음 가이드",
+      "title_tpl": "{label} (IPA {ipa}) 영어 발음 해설 | IPA Sound Drill",
+      "category_vowel": "모음",
+      "category_diphthong": "이중모음",
+      "category_consonant": "자음",
+      "category_allophone": "변이음",
+      "scope_ga": "GA (미국식)",
+      "scope_rp": "RP (영국식)",
+      "scope_shared": "GA·RP 공통"
+    }
   },
   "lead_html": "이미 아는 단어로 <b>IPA 읽기·쓰기</b>를 음소 단위로 훈련합니다. <b>함정 소리</b>(θ, ð, æ, ʒ, ɝ)나 연습 기록의 <b>약점 소리</b>를 집중 공략. 객관 채점만 사용하며, 어휘 목록이 아니라 기호 커버리지를 키웁니다.",
   "lead_connected_html": "GA <b>연음</b>(연음·동화·탈락)을 듣고, 연음된 IPA에서 원래 구를 맞춥니다.",

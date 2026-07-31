@@ -9,9 +9,12 @@ const { Resvg } = require("@resvg/resvg-js");
 const ROOT = path.resolve(__dirname, "..");
 const REPO_ROOT = path.resolve(__dirname, "..", "..", "..");
 const TEMPLATE = path.resolve(__dirname, "..", "src", "index.template.html");
+const SOUND_TEMPLATE = path.resolve(__dirname, "..", "src", "sound-detail.template.html");
 const CORE_I18N_DIR = path.join(REPO_ROOT, "packages", "core", "i18n");
+const CORE_PHONEMES_DIR = path.join(CORE_I18N_DIR, "phonemes");
 const CORE_ENTRY = path.join(REPO_ROOT, "packages", "core", "src", "index.ts");
 const CORE_BUNDLE_OUT = path.join(ROOT, "public", "core-bundle.js");
+const { PHONEMES, IPA_TO_SLUG, SLUG_TO_ENTRY } = require("./phoneme-slugs");
 
 /**
  * `@ipasounddrill/core`（判定ロジック + 型 + loader）を単一 ESM バンドルへ esbuild する
@@ -155,25 +158,46 @@ function jsonLd(lang, brandName, description) {
 
 function buildSitemapXml() {
   const today = new Date().toISOString().slice(0, 10);
-  const alternatesXml = LANGS.map(
+  const rootAlternates = LANGS.map(
     (l) =>
       `    <xhtml:link rel="alternate" hreflang="${l}" href="https://ipasounddrill.app/${l}/"/>`
   ).join("\n");
-  const xDefault = `    <xhtml:link rel="alternate" hreflang="x-default" href="https://ipasounddrill.app/en/"/>`;
-  const urls = LANGS.map(
+  const xDefaultRoot = `    <xhtml:link rel="alternate" hreflang="x-default" href="https://ipasounddrill.app/en/"/>`;
+  const rootUrls = LANGS.map(
     (lang) => `  <url>
     <loc>https://ipasounddrill.app/${lang}/</loc>
-${alternatesXml}
-${xDefault}
+${rootAlternates}
+${xDefaultRoot}
     <lastmod>${today}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>`
   ).join("\n");
+
+  // Deep URL: sound-detail pages (Phase 1, EPIC #243)
+  const soundUrls = [];
+  for (const lang of LANGS) {
+    for (const p of PHONEMES) {
+      const alts = LANGS.map(
+        (l) => `    <xhtml:link rel="alternate" hreflang="${l}" href="https://ipasounddrill.app/${l}/sounds/${p.slug}/"/>`
+      ).join("\n");
+      const xd = `    <xhtml:link rel="alternate" hreflang="x-default" href="https://ipasounddrill.app/en/sounds/${p.slug}/"/>`;
+      soundUrls.push(`  <url>
+    <loc>https://ipasounddrill.app/${lang}/sounds/${p.slug}/</loc>
+${alts}
+${xd}
+    <lastmod>${today}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>`);
+    }
+  }
+
   return `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
-${urls}
+${rootUrls}
+${soundUrls.join("\n")}
 </urlset>
 `;
 }
@@ -186,6 +210,171 @@ function writeSitemap() {
 
 const OG_SVG_SRC = path.join(ROOT, "src", "og", "og-default.svg");
 const OG_PNG_OUT = path.join(ROOT, "public", "og", "og-default.png");
+
+function escHtml(s) {
+  return String(s == null ? "" : s)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
+function fmtTpl(tpl, vars) {
+  return String(tpl || "").replace(/\{(\w+)\}/g, (_, k) => (vars[k] == null ? "" : String(vars[k])));
+}
+
+function buildSoundPage(lang, i18nRoot, phonemesI18n, entry) {
+  const seo = (i18nRoot && i18nRoot.seo && i18nRoot.seo.sounds) || {};
+  const pIpa = phonemesI18n[entry.ipa] || {};
+  const label = pIpa.lab || entry.label;
+  const mouth = pIpa.mouth || "";
+  const trap = pIpa.trap || "";
+  const ex = pIpa.ex || "";
+  const brandName = (i18nRoot.brand && i18nRoot.brand.name) || "IPA Sound Drill";
+
+  const url = `https://ipasounddrill.app/${lang}/sounds/${entry.slug}/`;
+  const homeUrl = `/${lang}/`;
+  const soundsUrl = `/${lang}/sounds/`;
+  const catKey = "category_" + entry.category;
+  const categoryLabel = seo[catKey] || entry.category;
+  const title = fmtTpl(seo.title_tpl, { label, ipa: entry.ipa }) || `${label} (IPA ${entry.ipa})`;
+  const metaDesc = fmtTpl(seo.meta_desc_tpl, { label, ipa: entry.ipa });
+  const seoH1 = fmtTpl(seo.h1_tpl, { label, ipa: entry.ipa });
+
+  // Scope badge
+  let scopeBadge = "";
+  if (entry.scope === "ga") {
+    scopeBadge = `<span class="sd-hero-scope">${escHtml(seo.scope_ga || "GA only")}</span>`;
+  } else if (entry.scope === "rp") {
+    scopeBadge = `<span class="sd-hero-scope">${escHtml(seo.scope_rp || "RP only")}</span>`;
+  }
+
+  // GA vs RP section
+  let gaRpBlock = "";
+  const noteMap = { shared: seo.gr_same, ga: seo.gr_ga_only, rp: seo.gr_rp_only };
+  const note = noteMap[entry.scope] || seo.gr_same;
+  if (note) {
+    gaRpBlock = `<section class="sd-section">
+      <h2>${escHtml(seo.gr_section_title || "GA vs RP")}</h2>
+      <p>${escHtml(note)}</p>
+    </section>`;
+  }
+
+  // Related sounds: same category, up to 6 others, prefer same subgroup first
+  const related = PHONEMES.filter((p) => p.slug !== entry.slug && p.category === entry.category);
+  related.sort((a, b) => {
+    const aSub = a.subgroup === entry.subgroup ? 0 : 1;
+    const bSub = b.subgroup === entry.subgroup ? 0 : 1;
+    return aSub - bSub;
+  });
+  const relatedHtml = related
+    .slice(0, 6)
+    .map((r) => {
+      const rlab = (phonemesI18n[r.ipa] && phonemesI18n[r.ipa].lab) || r.label;
+      return `<li><a href="/${lang}/sounds/${r.slug}/"><span class="sd-ipa-mini">${escHtml(r.ipa)}</span><span>${escHtml(rlab)}</span></a></li>`;
+    })
+    .join("\n        ");
+
+  // hreflang
+  const hreflang = LANGS.map(
+    (l) => `<link rel="alternate" hreflang="${l}" href="https://ipasounddrill.app/${l}/sounds/${entry.slug}/">`
+  )
+    .concat([`<link rel="alternate" hreflang="x-default" href="https://ipasounddrill.app/en/sounds/${entry.slug}/">`])
+    .join("\n");
+
+  // JSON-LD
+  const jsonLd = JSON.stringify({
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "LearningResource",
+        "@id": `${url}#resource`,
+        name: title,
+        description: metaDesc,
+        url,
+        inLanguage: lang,
+        learningResourceType: "Article",
+        teaches: `English phoneme ${entry.ipa} (${label})`,
+        educationalUse: ["Practice", "Self-study"],
+        isAccessibleForFree: true,
+        isPartOf: { "@id": `https://ipasounddrill.app/${lang}/#webapp` },
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: seo.breadcrumb_home || "Home", item: `https://ipasounddrill.app/${lang}/` },
+          { "@type": "ListItem", position: 2, name: seo.breadcrumb_root || "Sounds", item: `https://ipasounddrill.app/${lang}/sounds/` },
+          { "@type": "ListItem", position: 3, name: label },
+        ],
+      },
+    ],
+  });
+
+  // Example word for TTS: extract first word from `ex` (e.g. "cup /kʌp/" -> "cup")
+  const exWord = (ex.match(/^([A-Za-z][A-Za-z\-']*)/) || [null, ""])[1];
+  const exAccent = entry.scope === "rp" ? "rp" : "ga";
+
+  const template = fs.readFileSync(SOUND_TEMPLATE, "utf8");
+  let html = template;
+  const rep = (k, v) => (html = replaceAll(html, `<!-- SD:${k} -->`, v));
+  rep("HTML_LANG", lang);
+  rep("TITLE", escHtml(title));
+  rep("META_DESC", escHtml(metaDesc));
+  rep("CANONICAL", url);
+  rep("HREFLANG", hreflang);
+  rep("OG_TITLE", escHtml(title));
+  rep("OG_LOCALE", OG_LOCALE[lang]);
+  rep("JSON_LD", jsonLd);
+  rep("SEO_H1", escHtml(seoH1));
+  rep("HOME_URL", homeUrl);
+  rep("SOUNDS_URL", soundsUrl);
+  rep("CRUMB_HOME", escHtml(seo.breadcrumb_home || "Home"));
+  rep("CRUMB_SOUNDS", escHtml(seo.breadcrumb_root || "Sounds"));
+  rep("CRUMB_CURRENT", escHtml(entry.ipa));
+  rep("IPA", escHtml(entry.ipa));
+  rep("LABEL", escHtml(label));
+  rep("CATEGORY_LABEL", escHtml(categoryLabel));
+  rep("SCOPE_BADGE", scopeBadge);
+  rep("EX_WORD", escHtml(exWord));
+  rep("EX_ACCENT", exAccent);
+  rep("BTN_LISTEN", escHtml(seo.play_audio || "Listen"));
+  rep("SEC_HOW", escHtml(seo.sec_how || "How to make this sound"));
+  rep("LBL_EXAMPLE", escHtml(seo.lbl_example || "Example"));
+  rep("LBL_MOUTH", escHtml(seo.lbl_mouth || "Mouth"));
+  rep("LBL_TRAP", escHtml(seo.lbl_trap || "Common trap"));
+  rep("EX_TEXT", escHtml(ex));
+  rep("MOUTH", escHtml(mouth));
+  rep("TRAP", escHtml(trap));
+  rep("GA_RP_SECTION", gaRpBlock);
+  rep("REL_TITLE", escHtml(seo.related_title || "Related sounds"));
+  rep("REL_LIST", relatedHtml);
+  rep("CTA_LEAD", escHtml(seo.cta_lead || "Practice this sound in the app."));
+  rep("CTA_BUTTON", escHtml(seo.cta_button || "Open IPA Sound Drill"));
+  rep("BACK_TOP", escHtml(seo.back_top || "Home"));
+
+  return html;
+}
+
+function writeSoundPages() {
+  if (!fs.existsSync(SOUND_TEMPLATE)) {
+    console.error("Missing sound template:", SOUND_TEMPLATE);
+    process.exit(1);
+  }
+  let count = 0;
+  for (const lang of LANGS) {
+    const i18nRoot = JSON.parse(fs.readFileSync(path.join(CORE_I18N_DIR, `${lang}.json`), "utf8"));
+    const phonemesI18n = JSON.parse(fs.readFileSync(path.join(CORE_PHONEMES_DIR, `${lang}.json`), "utf8"));
+    for (const entry of PHONEMES) {
+      const html = buildSoundPage(lang, i18nRoot, phonemesI18n, entry);
+      const outDir = path.join(ROOT, "public", lang, "sounds", entry.slug);
+      fs.mkdirSync(outDir, { recursive: true });
+      fs.writeFileSync(path.join(outDir, "index.html"), html, "utf8");
+      count++;
+    }
+  }
+  console.log(`Wrote ${count} sound-detail pages (${LANGS.length} langs × ${PHONEMES.length} phonemes)`);
+}
 
 function writeOgImage() {
   if (!fs.existsSync(OG_SVG_SRC)) {
@@ -268,6 +457,7 @@ function build() {
     console.log("Wrote", path.relative(ROOT, outFile));
   }
 
+  writeSoundPages();
   writeSitemap();
   writeOgImage();
 }
