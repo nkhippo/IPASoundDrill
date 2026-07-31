@@ -39,6 +39,24 @@
       "scope_ga": "GA（アメリカ英語）",
       "scope_rp": "RP（イギリス英語）",
       "scope_shared": "GA・RP 共通"
+    },
+    "weakForms": {
+      "breadcrumb_root": "弱形一覧",
+      "lbl_weak": "弱形",
+      "lbl_strong": "強形",
+      "lbl_ga": "アメリカ英語",
+      "lbl_rp": "イギリス英語",
+      "sec_rule": "弱形を使う条件",
+      "sec_examples": "例文",
+      "play_ga": "再生（GA）",
+      "play_rp": "再生（RP）",
+      "related_title": "関連する弱形",
+      "cta_lead": "201 の句パターンで弱形を実際の連結音の中で練習。",
+      "cta_button": "IPA Sound Drill を開く",
+      "back_top": "トップに戻る",
+      "meta_desc_tpl": "英語 \"{word}\" の弱形（弱形 {weak_ipa}、強形 {strong_ipa}）の使い方・例文・GA/RP 発音を解説。無料。",
+      "h1_tpl": "英語 \"{word}\" の弱形 — 弱形 {weak_ipa} / 強形 {strong_ipa}",
+      "title_tpl": "弱形: {word}（弱形 {weak_ipa} / 強形 {strong_ipa}）| IPA Sound Drill"
     }
   },
   "lead_html": "既知の単語で<b>IPAの読み書き</b>を音素単位で鍛えるツール。<b>トラップ音</b>（θ, ð, æ, ʒ, ɝ）や<b>練習履歴の苦手音</b>を狙って出題。客観採点のみで、語彙リストではなく記号カバーを伸ばします。",

@@ -10,8 +10,10 @@ const ROOT = path.resolve(__dirname, "..");
 const REPO_ROOT = path.resolve(__dirname, "..", "..", "..");
 const TEMPLATE = path.resolve(__dirname, "..", "src", "index.template.html");
 const SOUND_TEMPLATE = path.resolve(__dirname, "..", "src", "sound-detail.template.html");
+const WEAK_TEMPLATE = path.resolve(__dirname, "..", "src", "weak-form-detail.template.html");
 const CORE_I18N_DIR = path.join(REPO_ROOT, "packages", "core", "i18n");
 const CORE_PHONEMES_DIR = path.join(CORE_I18N_DIR, "phonemes");
+const CORE_DATA_DIR = path.join(REPO_ROOT, "packages", "core", "data");
 const CORE_ENTRY = path.join(REPO_ROOT, "packages", "core", "src", "index.ts");
 const CORE_BUNDLE_OUT = path.join(ROOT, "public", "core-bundle.js");
 const { PHONEMES, IPA_TO_SLUG, SLUG_TO_ENTRY } = require("./phoneme-slugs");
@@ -193,11 +195,33 @@ ${xd}
     }
   }
 
+  // Deep URL: weak-form pages (Phase 2, EPIC #243)
+  const weakUrls = [];
+  const weakForms = loadWeakForms();
+  for (const lang of LANGS) {
+    for (const w of weakForms) {
+      const slug = encodeURIComponent(w.w);
+      const alts = LANGS.map(
+        (l) => `    <xhtml:link rel="alternate" hreflang="${l}" href="https://ipasounddrill.app/${l}/weak-forms/${slug}/"/>`
+      ).join("\n");
+      const xd = `    <xhtml:link rel="alternate" hreflang="x-default" href="https://ipasounddrill.app/en/weak-forms/${slug}/"/>`;
+      weakUrls.push(`  <url>
+    <loc>https://ipasounddrill.app/${lang}/weak-forms/${slug}/</loc>
+${alts}
+${xd}
+    <lastmod>${today}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>`);
+    }
+  }
+
   return `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 ${rootUrls}
 ${soundUrls.join("\n")}
+${weakUrls.join("\n")}
 </urlset>
 `;
 }
@@ -356,6 +380,142 @@ function buildSoundPage(lang, i18nRoot, phonemesI18n, entry) {
   return html;
 }
 
+// ---- EPIC #243 Phase 2: Weak forms ----
+
+const WEAK_FORMS_JSON = path.join(CORE_DATA_DIR, "weak_forms.json");
+
+function loadWeakForms() {
+  return JSON.parse(fs.readFileSync(WEAK_FORMS_JSON, "utf8"));
+}
+
+function renderCarriers(carriers, word) {
+  return carriers
+    .map((c) => {
+      const filled = String(c).replace(/\{P\}/g, `<span class="wf-word-hl">${escHtml(word)}</span>`);
+      return `<li>${filled}</li>`;
+    })
+    .join("\n        ");
+}
+
+function buildWeakFormPage(lang, i18nRoot, entry, allEntries) {
+  const seo = (i18nRoot && i18nRoot.seo && i18nRoot.seo.weakForms) || {};
+  const word = entry.w;
+  const weakIpa = entry.ipa;
+  const strongIpa = entry.ipa_strong;
+  const rpWeak = entry.rp_ipa || weakIpa;
+  const rpStrong = entry.rp_ipa_strong || strongIpa;
+  const url = `https://ipasounddrill.app/${lang}/weak-forms/${encodeURIComponent(word)}/`;
+  const homeUrl = `/${lang}/`;
+  const weakformsUrl = `/${lang}/weak-forms/`;
+  const rule = (entry.cs_rule && entry.cs_rule[lang]) || (entry.cs_rule && entry.cs_rule.en) || "";
+  const title = fmtTpl(seo.title_tpl, { word, weak_ipa: weakIpa, strong_ipa: strongIpa }) || `${word} — weak form`;
+  const metaDesc = fmtTpl(seo.meta_desc_tpl, { word, weak_ipa: weakIpa, strong_ipa: strongIpa });
+  const seoH1 = fmtTpl(seo.h1_tpl, { word, weak_ipa: weakIpa, strong_ipa: strongIpa });
+
+  // Related: 6 other weak forms by CEFR proximity
+  const related = allEntries
+    .filter((x) => x.w !== word)
+    .sort((a, b) => Math.abs((a.level || 1) - (entry.level || 1)) - Math.abs((b.level || 1) - (entry.level || 1)))
+    .slice(0, 6);
+  const relatedHtml = related
+    .map((r) => `<li><a href="/${lang}/weak-forms/${encodeURIComponent(r.w)}/"><span>${escHtml(r.w)}</span><span class="wf-ipa-mini">${escHtml(r.ipa)}</span></a></li>`)
+    .join("\n        ");
+
+  const hreflang = LANGS.map(
+    (l) => `<link rel="alternate" hreflang="${l}" href="https://ipasounddrill.app/${l}/weak-forms/${encodeURIComponent(word)}/">`
+  )
+    .concat([`<link rel="alternate" hreflang="x-default" href="https://ipasounddrill.app/en/weak-forms/${encodeURIComponent(word)}/">`])
+    .join("\n");
+
+  const jsonLd = JSON.stringify({
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "LearningResource",
+        "@id": `${url}#resource`,
+        name: title,
+        description: metaDesc,
+        url,
+        inLanguage: lang,
+        learningResourceType: "Article",
+        teaches: `English weak form: ${word} (weak ${weakIpa}, strong ${strongIpa})`,
+        educationalUse: ["Practice", "Self-study"],
+        isAccessibleForFree: true,
+        educationalLevel: entry.cefr || undefined,
+        isPartOf: { "@id": `https://ipasounddrill.app/${lang}/#webapp` },
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: seo.breadcrumb_root ? (i18nRoot.seo.sounds && i18nRoot.seo.sounds.breadcrumb_home) || "Home" : "Home", item: `https://ipasounddrill.app/${lang}/` },
+          { "@type": "ListItem", position: 2, name: seo.breadcrumb_root || "Weak forms", item: `https://ipasounddrill.app/${lang}/weak-forms/` },
+          { "@type": "ListItem", position: 3, name: word },
+        ],
+      },
+    ],
+  });
+
+  const template = fs.readFileSync(WEAK_TEMPLATE, "utf8");
+  const crumbHome = (i18nRoot.seo && i18nRoot.seo.sounds && i18nRoot.seo.sounds.breadcrumb_home) || "Home";
+  let html = template;
+  const rep = (k, v) => (html = replaceAll(html, `<!-- WF:${k} -->`, v));
+  rep("HTML_LANG", lang);
+  rep("TITLE", escHtml(title));
+  rep("META_DESC", escHtml(metaDesc));
+  rep("CANONICAL", url);
+  rep("HREFLANG", hreflang);
+  rep("OG_TITLE", escHtml(title));
+  rep("OG_LOCALE", OG_LOCALE[lang]);
+  rep("JSON_LD", jsonLd);
+  rep("SEO_H1", escHtml(seoH1));
+  rep("HOME_URL", homeUrl);
+  rep("WEAKFORMS_URL", weakformsUrl);
+  rep("CRUMB_HOME", escHtml(crumbHome));
+  rep("CRUMB_ROOT", escHtml(seo.breadcrumb_root || "Weak forms"));
+  rep("WORD", escHtml(word));
+  rep("CEFR", escHtml(entry.cefr || ""));
+  rep("LBL_WEAK", escHtml(seo.lbl_weak || "Weak form"));
+  rep("LBL_STRONG", escHtml(seo.lbl_strong || "Strong form"));
+  rep("LBL_RP", escHtml(seo.lbl_rp || "RP"));
+  rep("WEAK_IPA", escHtml(weakIpa));
+  rep("STRONG_IPA", escHtml(strongIpa));
+  rep("RP_WEAK_IPA", escHtml(rpWeak));
+  rep("RP_STRONG_IPA", escHtml(rpStrong));
+  rep("BTN_LISTEN_GA", escHtml(seo.play_ga || "Listen (GA)"));
+  rep("BTN_LISTEN_RP", escHtml(seo.play_rp || "Listen (RP)"));
+  rep("SEC_RULE", escHtml(seo.sec_rule || "When to use the weak form"));
+  rep("RULE", escHtml(rule));
+  rep("SEC_EXAMPLES", escHtml(seo.sec_examples || "Example sentences"));
+  rep("CARRIERS", renderCarriers(entry.carriers || [], word));
+  rep("REL_TITLE", escHtml(seo.related_title || "Related weak forms"));
+  rep("REL_LIST", relatedHtml);
+  rep("CTA_LEAD", escHtml(seo.cta_lead || "Drill weak forms in the app."));
+  rep("CTA_BUTTON", escHtml(seo.cta_button || "Open IPA Sound Drill"));
+  rep("BACK_TOP", escHtml(seo.back_top || "Home"));
+
+  return html;
+}
+
+function writeWeakFormPages() {
+  if (!fs.existsSync(WEAK_TEMPLATE)) {
+    console.error("Missing weak-form template:", WEAK_TEMPLATE);
+    process.exit(1);
+  }
+  const weakForms = loadWeakForms();
+  let count = 0;
+  for (const lang of LANGS) {
+    const i18nRoot = JSON.parse(fs.readFileSync(path.join(CORE_I18N_DIR, `${lang}.json`), "utf8"));
+    for (const entry of weakForms) {
+      const html = buildWeakFormPage(lang, i18nRoot, entry, weakForms);
+      const outDir = path.join(ROOT, "public", lang, "weak-forms", entry.w);
+      fs.mkdirSync(outDir, { recursive: true });
+      fs.writeFileSync(path.join(outDir, "index.html"), html, "utf8");
+      count++;
+    }
+  }
+  console.log(`Wrote ${count} weak-form pages (${LANGS.length} langs × ${weakForms.length} weak forms)`);
+}
+
 function writeSoundPages() {
   if (!fs.existsSync(SOUND_TEMPLATE)) {
     console.error("Missing sound template:", SOUND_TEMPLATE);
@@ -458,6 +618,7 @@ function build() {
   }
 
   writeSoundPages();
+  writeWeakFormPages();
   writeSitemap();
   writeOgImage();
 }
