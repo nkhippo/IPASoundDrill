@@ -38,7 +38,8 @@
       "category_allophone": "Allophone",
       "scope_ga": "GA (General American)",
       "scope_rp": "RP (Received Pronunciation)",
-      "scope_shared": "GA & RP"
+      "scope_shared": "GA & RP",
+      "see_words_link_tpl": "See {n} common English words with this sound →"
     },
     "weakForms": {
       "breadcrumb_root": "Weak forms",
@@ -76,6 +77,22 @@
       "type_linking": "Linking",
       "type_assimilation": "Assimilation",
       "type_elision": "Elision"
+    },
+    "soundWords": {
+      "breadcrumb_words": "Words",
+      "sec_title": "Common English words with this sound",
+      "sec_intro": "A CEFR-graded selection of the most common words that include this phoneme, sorted by learner level (A1 first). Both GA and RP shown when they differ. Tap Listen for audio.",
+      "th_word": "Word",
+      "th_ga": "GA",
+      "th_rp": "RP",
+      "th_cefr": "Level",
+      "th_listen": "Listen",
+      "back_to_sound_tpl": "Back to the {label} sound page",
+      "cta_lead_tpl": "Practice all {count} CEFR-graded words with GA/RP audio in the app.",
+      "meta_desc_tpl": "A curated list of common English words that use the \"{label}\" sound (IPA {ipa}) — CEFR-graded, with GA and RP pronunciation. Free.",
+      "h1_tpl": "Common English words with the \"{label}\" sound (IPA {ipa})",
+      "title_tpl": "Words with the {label} sound (IPA {ipa}) — Examples | IPA Sound Drill",
+      "no_words": "No graded examples yet for this sound."
     }
   },
   "lead_html": "Drill <b>IPA reading and writing</b> for words you already know&mdash;sound by sound. Target <b>trap sounds</b> (θ, ð, æ, ʒ, ɝ) or your <b>weak spots</b> from practice history. Scored by accuracy only&mdash;build IPA coverage, not longer word lists.",

@@ -10,6 +10,7 @@ const ROOT = path.resolve(__dirname, "..");
 const REPO_ROOT = path.resolve(__dirname, "..", "..", "..");
 const TEMPLATE = path.resolve(__dirname, "..", "src", "index.template.html");
 const SOUND_TEMPLATE = path.resolve(__dirname, "..", "src", "sound-detail.template.html");
+const SOUND_WORDS_TEMPLATE = path.resolve(__dirname, "..", "src", "sound-words.template.html");
 const WEAK_TEMPLATE = path.resolve(__dirname, "..", "src", "weak-form-detail.template.html");
 const PHRASE_TEMPLATE = path.resolve(__dirname, "..", "src", "phrase-detail.template.html");
 const CORE_I18N_DIR = path.join(REPO_ROOT, "packages", "core", "i18n");
@@ -217,6 +218,25 @@ ${xd}
     }
   }
 
+  // Deep URL: sound → words pages (Phase 4, EPIC #243)
+  const soundWordsUrls = [];
+  for (const lang of LANGS) {
+    for (const p of PHONEMES) {
+      const alts = LANGS.map(
+        (l) => `    <xhtml:link rel="alternate" hreflang="${l}" href="https://ipasounddrill.app/${l}/sounds/${p.slug}/words/"/>`
+      ).join("\n");
+      const xd = `    <xhtml:link rel="alternate" hreflang="x-default" href="https://ipasounddrill.app/en/sounds/${p.slug}/words/"/>`;
+      soundWordsUrls.push(`  <url>
+    <loc>https://ipasounddrill.app/${lang}/sounds/${p.slug}/words/</loc>
+${alts}
+${xd}
+    <lastmod>${today}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>`);
+    }
+  }
+
   // Deep URL: connected-speech phrase pages (Phase 3, EPIC #243)
   const phraseUrls = [];
   const phrases = loadConnectedSpeech();
@@ -243,6 +263,7 @@ ${xd}
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 ${rootUrls}
 ${soundUrls.join("\n")}
+${soundWordsUrls.join("\n")}
 ${weakUrls.join("\n")}
 ${phraseUrls.join("\n")}
 </urlset>
@@ -307,6 +328,11 @@ function buildSoundPage(lang, i18nRoot, phonemesI18n, entry) {
       <p>${escHtml(note)}</p>
     </section>`;
   }
+
+  // Cross-link to Phase 4 sound-words page (EPIC #243 Phase 4)
+  const seeWordsTpl = seo.see_words_link_tpl || "See {n} common words with this sound →";
+  const wordsLinkText = fmtTpl(seeWordsTpl, { n: "20" });
+  const wordsLinkBlock = `<p style="text-align:center;margin:8px 0 0"><a href="/${lang}/sounds/${entry.slug}/words/" style="display:inline-block;padding:10px 20px;border:1px solid var(--signal);background:var(--signal-soft);color:var(--signal);border-radius:99px;font-size:14px;font-weight:600">${escHtml(wordsLinkText)}</a></p>`;
 
   // Related sounds: same category, up to 6 others, prefer same subgroup first
   const related = PHONEMES.filter((p) => p.slug !== entry.slug && p.category === entry.category);
@@ -394,6 +420,7 @@ function buildSoundPage(lang, i18nRoot, phonemesI18n, entry) {
   rep("MOUTH", escHtml(mouth));
   rep("TRAP", escHtml(trap));
   rep("GA_RP_SECTION", gaRpBlock);
+  rep("WORDS_LINK", wordsLinkBlock);
   rep("REL_TITLE", escHtml(seo.related_title || "Related sounds"));
   rep("REL_LIST", relatedHtml);
   rep("CTA_LEAD", escHtml(seo.cta_lead || "Practice this sound in the app."));
@@ -690,6 +717,219 @@ function writeWeakFormPages() {
   console.log(`Wrote ${count} weak-form pages (${LANGS.length} langs × ${weakForms.length} weak forms)`);
 }
 
+// ---- EPIC #243 Phase 4: Sound → word list ("Words with the X sound") ----
+
+const WORDLIST_JSON = path.join(CORE_DATA_DIR, "wordlist.json");
+const IPAS_SORTED_BY_LEN = [...PHONEMES].sort((a, b) => b.ipa.length - a.ipa.length);
+const CEFR_ORDER = { A1: 1, A2: 2, B1: 3, B2: 4, C1: 5, C2: 6 };
+const WORDS_PER_PAGE = 20;
+
+function loadWordlist() {
+  return JSON.parse(fs.readFileSync(WORDLIST_JSON, "utf8"));
+}
+
+// Normalize an IPA string so that RP-only variants collapse onto the GA phoneme
+// used as the page key (e.g. ɒ→ɑ, ɜ→ɝ, əʊ→oʊ, strip length marks).
+function normalizeIpa(s) {
+  if (!s) return "";
+  return String(s)
+    .replace(/[/ˈˌ.]/g, "")
+    .replace(/ː/g, "")
+    .replace(/ɒ/g, "ɑ")
+    .replace(/ɜ/g, "ɝ")
+    .replace(/əʊ/g, "oʊ");
+}
+
+function extractPhonemes(ipa) {
+  const s = normalizeIpa(ipa);
+  const found = new Set();
+  let i = 0;
+  while (i < s.length) {
+    let matched = false;
+    for (const p of IPAS_SORTED_BY_LEN) {
+      if (s.slice(i, i + p.ipa.length) === p.ipa) {
+        found.add(p.ipa);
+        i += p.ipa.length;
+        matched = true;
+        break;
+      }
+    }
+    if (!matched) i++;
+  }
+  return found;
+}
+
+function groupWordsByPhoneme() {
+  const wl = loadWordlist();
+  const map = {};
+  for (const p of PHONEMES) map[p.ipa] = [];
+  for (const w of wl) {
+    const phs = new Set([
+      ...extractPhonemes(w.ipa),
+      ...extractPhonemes(w.rp_ipa),
+    ]);
+    for (const p of phs) {
+      if (map[p]) map[p].push(w);
+    }
+  }
+  for (const p of PHONEMES) {
+    map[p.ipa].sort((a, b) => {
+      const ca = CEFR_ORDER[a.cefr] || 99;
+      const cb = CEFR_ORDER[b.cefr] || 99;
+      if (ca !== cb) return ca - cb;
+      return String(a.w).localeCompare(String(b.w));
+    });
+  }
+  return map;
+}
+
+function renderWordsTable(words, seoSW) {
+  if (!words.length) {
+    return `<div class="sw-empty">${escHtml(seoSW.no_words || "No graded examples yet for this sound.")}</div>`;
+  }
+  const rows = words
+    .map((w) => {
+      const ga = w.ipa || "";
+      const rp = w.rp_ipa && w.rp_ipa !== ga ? w.rp_ipa : "";
+      const cefr = w.cefr || "";
+      const rpCell = rp
+        ? `<span class="sw-ipa">${escHtml(rp)}</span>`
+        : `<span style="color:var(--faint);font-size:12px">—</span>`;
+      const cefrCell = cefr
+        ? `<span class="sw-cefr">${escHtml(cefr)}</span>`
+        : `<span style="color:var(--faint);font-size:12px">—</span>`;
+      return `<tr>
+          <td class="sw-w">${escHtml(w.w)}</td>
+          <td><span class="sw-ipa">${escHtml(ga)}</span></td>
+          <td>${rpCell}</td>
+          <td>${cefrCell}</td>
+          <td><button class="sw-listen" type="button" data-word="${escHtml(w.w)}" data-accent="ga" aria-label="${escHtml(seoSW.th_listen || "Listen")}">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+            <span>${escHtml(seoSW.th_listen || "Listen")}</span>
+          </button></td>
+        </tr>`;
+    })
+    .join("\n        ");
+  return `<div class="sw-table-wrap">
+      <table class="sw-tbl">
+        <thead><tr>
+          <th>${escHtml(seoSW.th_word || "Word")}</th>
+          <th>${escHtml(seoSW.th_ga || "GA")}</th>
+          <th>${escHtml(seoSW.th_rp || "RP")}</th>
+          <th>${escHtml(seoSW.th_cefr || "Level")}</th>
+          <th>${escHtml(seoSW.th_listen || "Listen")}</th>
+        </tr></thead>
+        <tbody>
+        ${rows}
+        </tbody>
+      </table>
+    </div>`;
+}
+
+function buildSoundWordsPage(lang, i18nRoot, phonemesI18n, phEntry, allWords) {
+  const seoSW = (i18nRoot && i18nRoot.seo && i18nRoot.seo.soundWords) || {};
+  const seoSounds = (i18nRoot && i18nRoot.seo && i18nRoot.seo.sounds) || {};
+  const pIpa = phonemesI18n[phEntry.ipa] || {};
+  const label = pIpa.lab || phEntry.label;
+  const words = allWords.slice(0, WORDS_PER_PAGE);
+  const totalCount = allWords.length;
+  const url = `https://ipasounddrill.app/${lang}/sounds/${phEntry.slug}/words/`;
+  const soundUrl = `/${lang}/sounds/${phEntry.slug}/`;
+  const homeUrl = `/${lang}/`;
+  const soundsUrl = `/${lang}/sounds/`;
+  const title = fmtTpl(seoSW.title_tpl, { label, ipa: phEntry.ipa });
+  const metaDesc = fmtTpl(seoSW.meta_desc_tpl, { label, ipa: phEntry.ipa });
+  const seoH1 = fmtTpl(seoSW.h1_tpl, { label, ipa: phEntry.ipa });
+  const backToSound = fmtTpl(seoSW.back_to_sound_tpl, { label });
+  const ctaLead = fmtTpl(seoSW.cta_lead_tpl, { count: String(totalCount) });
+
+  const hreflang = LANGS.map(
+    (l) => `<link rel="alternate" hreflang="${l}" href="https://ipasounddrill.app/${l}/sounds/${phEntry.slug}/words/">`
+  )
+    .concat([`<link rel="alternate" hreflang="x-default" href="https://ipasounddrill.app/en/sounds/${phEntry.slug}/words/">`])
+    .join("\n");
+
+  const jsonLd = JSON.stringify({
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "LearningResource",
+        "@id": `${url}#resource`,
+        name: title,
+        description: metaDesc,
+        url,
+        inLanguage: lang,
+        learningResourceType: "Article",
+        teaches: `Common English words with the ${label} sound (IPA ${phEntry.ipa})`,
+        educationalUse: ["Practice", "Self-study"],
+        isAccessibleForFree: true,
+        isPartOf: { "@id": `https://ipasounddrill.app/${lang}/#webapp` },
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: seoSounds.breadcrumb_home || "Home", item: `https://ipasounddrill.app/${lang}/` },
+          { "@type": "ListItem", position: 2, name: seoSounds.breadcrumb_root || "Sounds", item: `https://ipasounddrill.app/${lang}/sounds/` },
+          { "@type": "ListItem", position: 3, name: phEntry.ipa, item: `https://ipasounddrill.app/${lang}/sounds/${phEntry.slug}/` },
+          { "@type": "ListItem", position: 4, name: seoSW.breadcrumb_words || "Words" },
+        ],
+      },
+    ],
+  });
+
+  const template = fs.readFileSync(SOUND_WORDS_TEMPLATE, "utf8");
+  let html = template;
+  const rep = (k, v) => (html = replaceAll(html, `<!-- SW:${k} -->`, v));
+  rep("HTML_LANG", lang);
+  rep("TITLE", escHtml(title));
+  rep("META_DESC", escHtml(metaDesc));
+  rep("CANONICAL", url);
+  rep("HREFLANG", hreflang);
+  rep("OG_TITLE", escHtml(title));
+  rep("OG_LOCALE", OG_LOCALE[lang]);
+  rep("JSON_LD", jsonLd);
+  rep("SEO_H1", escHtml(seoH1));
+  rep("HOME_URL", homeUrl);
+  rep("SOUNDS_URL", soundsUrl);
+  rep("SOUND_URL", soundUrl);
+  rep("CRUMB_HOME", escHtml(seoSounds.breadcrumb_home || "Home"));
+  rep("CRUMB_SOUNDS", escHtml(seoSounds.breadcrumb_root || "Sounds"));
+  rep("CRUMB_WORDS", escHtml(seoSW.breadcrumb_words || "Words"));
+  rep("IPA", escHtml(phEntry.ipa));
+  rep("LABEL", escHtml(label));
+  rep("SEC_TITLE", escHtml(seoSW.sec_title || "Common English words with this sound"));
+  rep("INTRO", escHtml(seoSW.sec_intro || ""));
+  rep("TABLE", renderWordsTable(words, seoSW));
+  rep("BACK_TO_SOUND", escHtml(backToSound));
+  rep("CTA_LEAD", escHtml(ctaLead));
+  rep("CTA_BUTTON", escHtml(seoSounds.cta_button || "Open IPA Sound Drill"));
+  rep("BACK_TOP", escHtml(seoSounds.back_top || "Home"));
+
+  return html;
+}
+
+function writeSoundWordsPages() {
+  if (!fs.existsSync(SOUND_WORDS_TEMPLATE)) {
+    console.error("Missing sound-words template:", SOUND_WORDS_TEMPLATE);
+    process.exit(1);
+  }
+  const grouped = groupWordsByPhoneme();
+  let count = 0;
+  for (const lang of LANGS) {
+    const i18nRoot = JSON.parse(fs.readFileSync(path.join(CORE_I18N_DIR, `${lang}.json`), "utf8"));
+    const phonemesI18n = JSON.parse(fs.readFileSync(path.join(CORE_PHONEMES_DIR, `${lang}.json`), "utf8"));
+    for (const entry of PHONEMES) {
+      const words = grouped[entry.ipa] || [];
+      const html = buildSoundWordsPage(lang, i18nRoot, phonemesI18n, entry, words);
+      const outDir = path.join(ROOT, "public", lang, "sounds", entry.slug, "words");
+      fs.mkdirSync(outDir, { recursive: true });
+      fs.writeFileSync(path.join(outDir, "index.html"), html, "utf8");
+      count++;
+    }
+  }
+  console.log(`Wrote ${count} sound-words pages (${LANGS.length} langs × ${PHONEMES.length} phonemes)`);
+}
+
 function writeSoundPages() {
   if (!fs.existsSync(SOUND_TEMPLATE)) {
     console.error("Missing sound template:", SOUND_TEMPLATE);
@@ -792,6 +1032,7 @@ function build() {
   }
 
   writeSoundPages();
+  writeSoundWordsPages();
   writeWeakFormPages();
   writePhrasePages();
   writeSitemap();

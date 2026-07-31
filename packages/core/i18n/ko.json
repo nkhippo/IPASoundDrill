@@ -38,7 +38,8 @@
       "category_allophone": "변이음",
       "scope_ga": "GA (미국식)",
       "scope_rp": "RP (영국식)",
-      "scope_shared": "GA·RP 공통"
+      "scope_shared": "GA·RP 공통",
+      "see_words_link_tpl": "이 소리를 포함하는 {n}개 대표 단어 보기 →"
     },
     "weakForms": {
       "breadcrumb_root": "약형 목록",
@@ -76,6 +77,22 @@
       "type_linking": "연음",
       "type_assimilation": "동화",
       "type_elision": "탈락"
+    },
+    "soundWords": {
+      "breadcrumb_words": "단어 목록",
+      "sec_title": "이 소리가 포함된 영단어",
+      "sec_intro": "이 음소를 포함하는 대표적인 영단어를 CEFR 레벨 순 (A1부터) 로 표시합니다. GA와 RP 발음이 다를 때는 둘 다 표시합니다.",
+      "th_word": "단어",
+      "th_ga": "GA",
+      "th_rp": "RP",
+      "th_cefr": "레벨",
+      "th_listen": "듣기",
+      "back_to_sound_tpl": "\"{label}\" 소리 페이지로 돌아가기",
+      "cta_lead_tpl": "앱에서 CEFR 분류된 총 {count}개 단어를 GA/RP 음성으로 연습할 수 있습니다.",
+      "meta_desc_tpl": "영어 \"{label}\" 소리 (IPA {ipa})가 포함된 대표 단어를 CEFR 순으로 나열. GA·RP 지원, 무료.",
+      "h1_tpl": "영어 \"{label}\" 소리 (IPA {ipa})가 포함된 단어",
+      "title_tpl": "{label} 소리 (IPA {ipa})가 포함된 단어 목록 | IPA Sound Drill",
+      "no_words": "이 소리가 포함된 어휘가 아직 등록되지 않았습니다."
     }
   },
   "lead_html": "이미 아는 단어로 <b>IPA 읽기·쓰기</b>를 음소 단위로 훈련합니다. <b>함정 소리</b>(θ, ð, æ, ʒ, ɝ)나 연습 기록의 <b>약점 소리</b>를 집중 공략. 객관 채점만 사용하며, 어휘 목록이 아니라 기호 커버리지를 키웁니다.",
