@@ -1003,6 +1003,46 @@ function writeOgImage() {
 
 const DATASET_OUT_DIR = path.join(ROOT, "public", "data");
 
+// Public dataset only: normalize pos to English. In-app UI keeps Japanese
+// pos as an i18n key (packages/core/i18n/{lang}.json pos.*), so wordlist.json
+// itself stays untouched — this map runs only when writing CSV/JSON exports.
+const POS_JA_TO_EN = {
+  "名詞": "noun",
+  "動詞": "verb",
+  "形容詞": "adjective",
+  "副詞": "adverb",
+  "代名詞": "pronoun",
+  "前置詞": "preposition",
+  "接続詞": "conjunction",
+  "限定詞": "determiner",
+  "数詞": "numeral",
+  "助動詞": "auxiliary verb",
+  "間投詞": "interjection",
+  "文字": "letter",
+  "短縮形": "contraction",
+  "口語表現": "colloquial",
+  "be動詞": "be-verb",
+  "動詞（不規則変化）": "verb (irregular)",
+  "名詞（不規則複数）": "noun (irregular plural)",
+};
+
+function posToEnglish(raw) {
+  if (!raw) return "";
+  const trimmed = String(raw).trim();
+  if (!trimmed) return "";
+  // Compound like "名詞 / 動詞" → "noun / verb"; unknown parts pass through as-is.
+  if (trimmed.indexOf("/") >= 0) {
+    return trimmed
+      .split("/")
+      .map((p) => {
+        const k = p.trim();
+        return POS_JA_TO_EN[k] || k;
+      })
+      .join(" / ");
+  }
+  return POS_JA_TO_EN[trimmed] || trimmed;
+}
+
 function csvEscape(v) {
   const s = v == null ? "" : String(v);
   if (/[",\n\r]/.test(s)) return `"${s.replace(/"/g, '""')}"`;
@@ -1013,14 +1053,15 @@ function writeDataset() {
   const wl = loadWordlist();
   fs.mkdirSync(DATASET_OUT_DIR, { recursive: true });
 
-  // CSV (6 columns, UTF-8 BOM for Excel)
+  // CSV (6 columns, UTF-8 BOM for Excel). pos is English-normalized for the
+  // public dataset — see POS_JA_TO_EN above.
   const header = ["word", "ipa_ga", "ipa_rp", "cefr", "pos", "gloss_en"];
   const rows = wl.map((w) => [
     w.w,
     w.ipa || "",
     w.rp_ipa || "",
     w.cefr || "",
-    w.pos || "",
+    posToEnglish(w.pos),
     (w.gloss && w.gloss.en) || w.def || "",
   ]);
   const csv =
@@ -1031,10 +1072,12 @@ function writeDataset() {
     "\n";
   fs.writeFileSync(path.join(DATASET_OUT_DIR, "wordlist-ga-rp-cefr.csv"), csv, "utf8");
 
-  // JSON (full records, pretty-printed for readability)
+  // JSON (full records, pretty-printed). Same English pos normalization applied
+  // to the exported copy; in-app wordlist.json remains untouched.
+  const wlPublic = wl.map((w) => ({ ...w, pos: posToEnglish(w.pos) }));
   fs.writeFileSync(
     path.join(DATASET_OUT_DIR, "wordlist-ga-rp-cefr.json"),
-    JSON.stringify(wl, null, 2) + "\n",
+    JSON.stringify(wlPublic, null, 2) + "\n",
     "utf8"
   );
 
