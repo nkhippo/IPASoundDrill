@@ -57,6 +57,25 @@
       "meta_desc_tpl": "영어 \"{word}\" 약형（약형 {weak_ipa}, 강형 {strong_ipa}）의 사용법·예문·GA/RP 발음. 무료.",
       "h1_tpl": "영어 \"{word}\" 약형 — 약형 {weak_ipa} / 강형 {strong_ipa}",
       "title_tpl": "약형: {word}（약형 {weak_ipa} / 강형 {strong_ipa}）| IPA Sound Drill"
+    },
+    "phrases": {
+      "breadcrumb_root": "연음 목록",
+      "lbl_rp": "영국식",
+      "lbl_gloss": "의미",
+      "sec_rule": "이 구문에서 일어나는 일",
+      "sec_examples": "예문",
+      "play_ga": "듣기（GA）",
+      "play_rp": "듣기（RP）",
+      "related_title": "관련 구문",
+      "cta_lead": "이 구문과 다른 200개 구문을 실제 연음으로 연습해 보세요.",
+      "cta_button": "IPA Sound Drill 열기",
+      "back_top": "홈으로",
+      "meta_desc_tpl": "원어민이 \"{phrase}\" (IPA {ipa})를 어떻게 발음하는지 — 연음 규칙, 예문, GA/RP 음성. 무료.",
+      "h1_tpl": "영어 \"{phrase}\" 발음 — 연음 가이드 (IPA {ipa})",
+      "title_tpl": "{phrase} 발음 (IPA {ipa}) — {type} | IPA Sound Drill",
+      "type_linking": "연음",
+      "type_assimilation": "동화",
+      "type_elision": "탈락"
     }
   },
   "lead_html": "이미 아는 단어로 <b>IPA 읽기·쓰기</b>를 음소 단위로 훈련합니다. <b>함정 소리</b>(θ, ð, æ, ʒ, ɝ)나 연습 기록의 <b>약점 소리</b>를 집중 공략. 객관 채점만 사용하며, 어휘 목록이 아니라 기호 커버리지를 키웁니다.",

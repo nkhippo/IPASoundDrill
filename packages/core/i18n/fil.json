@@ -63,6 +63,25 @@
       "meta_desc_tpl": "Ang weak form ng \"{word}\" sa Ingles (weak {weak_ipa}, strong {strong_ipa}) — kailan gamitin, mga halimbawa, audio para sa GA at RP. Libre.",
       "h1_tpl": "Ang English weak form ng \"{word}\" — Weak {weak_ipa}, Strong {strong_ipa}",
       "title_tpl": "Weak form: {word} (weak {weak_ipa}, strong {strong_ipa}) | IPA Sound Drill"
+    },
+    "phrases": {
+      "breadcrumb_root": "Connected speech",
+      "lbl_rp": "RP",
+      "lbl_gloss": "Kahulugan",
+      "sec_rule": "Ano ang nangyayari sa pariralang ito",
+      "sec_examples": "Mga halimbawa",
+      "play_ga": "Pakinggan (GA)",
+      "play_rp": "Pakinggan (RP)",
+      "related_title": "Kaugnay na mga parirala",
+      "cta_lead": "Sanayin ang pariralang ito at 200 pang parirala sa aktwal na practice.",
+      "cta_button": "Buksan ang IPA Sound Drill",
+      "back_top": "Bumalik sa home",
+      "meta_desc_tpl": "Paano bigkasin ng mga native ang \"{phrase}\" (IPA {ipa}) — connected speech rule, mga halimbawa, at audio para sa GA at RP. Libre.",
+      "h1_tpl": "Paano bigkasin ang \"{phrase}\" sa Ingles — Connected Speech Guide (IPA {ipa})",
+      "title_tpl": "{phrase} pagbigkas (IPA {ipa}) — {type} | IPA Sound Drill",
+      "type_linking": "Linking",
+      "type_assimilation": "Assimilation",
+      "type_elision": "Elision"
     }
   },
   "build_ph": "I-tap ang mga IPA key sa ibaba para buuin ang pagbigkas",
