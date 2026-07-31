@@ -1184,8 +1184,9 @@
   <section id="purposeStub" class="panel" data-frame="1a">
     <div class="top-grid">
       <div class="top-hero-main">
+        <h1 class="visually-hidden" id="seoH1">English Pronunciation Trainer with IPA — General American and Received Pronunciation, Free</h1>
         <span class="top-swash" aria-hidden="true"></span>
-        <h1 class="top-tagline" id="topTagline">音を、美しく。</h1>
+        <p class="top-tagline" id="topTagline">音を、美しく。</p>
         <p class="top-subcopy" id="topSubcopy"></p>
         <div class="top-attrs" id="topAttrs" aria-label="App attributes"></div>
         <div class="top-hero-links">
@@ -2835,6 +2836,7 @@ function applyI18n() {
   $("dirEncodeT").innerHTML = t("dir.encode_t");
   $("dirEncodeD").textContent = t("dir.encode_d");
   if ($("topTagline")) $("topTagline").textContent = t("top.tagline");
+  if ($("seoH1")) $("seoH1").textContent = t("seo.h1");
   if ($("footerFeedback")) $("footerFeedback").textContent = t("footer.feedback");
   if ($("footerTerms")) $("footerTerms").textContent = t("footer.terms");
   if ($("footerPrivacy")) $("footerPrivacy").textContent = t("footer.privacy");
