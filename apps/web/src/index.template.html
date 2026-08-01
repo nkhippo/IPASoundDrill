@@ -309,21 +309,21 @@
   body.symbol-picker-page .wrap,
   body.progress-page .wrap{display:none!important}
   body.vocab-page,body.symbol-picker-page,body.progress-page,body.info-page{background:var(--paper);color:var(--ink)}
-  .vocab-page,.symbol-picker-page,.progress-page,.info-page{padding:0;position:fixed;inset:0;z-index:40;display:none;flex-direction:column;background:var(--paper);overflow:hidden}
-  .vocab-page:not(.hidden),.symbol-picker-page:not(.hidden),.progress-page:not(.hidden),.info-page:not(.hidden){display:flex}
+  .vocab-page,.symbol-picker-page,.progress-page,section.info-page{padding:0;position:fixed;inset:0;z-index:40;display:none;flex-direction:column;background:var(--paper);overflow:hidden}
+  .vocab-page:not(.hidden),.symbol-picker-page:not(.hidden),.progress-page:not(.hidden),section.info-page:not(.hidden){display:flex}
   /* Naoya フィードバック(2026-07-28 phase-3): .info-page(IPAとは/言語)は「情報量が少ないのに全画面」で圧迫感がある。
      モーダル感を出すためスクリム地+中央カード+角丸+影に切り替える(モバイル/PC共通)。 */
   /* Phase-3 round-3: 中央配置だと背面 TOP の上部にスクリムだけの大きな空白が生まれる。
      モーダルを上寄せ(flex-start)にし、視覚的な空白帯を圧縮する。 */
-  .info-page{background:rgba(20,18,15,.42);padding:56px 16px 24px;align-items:flex-start;justify-content:center}
-  .info-page:not(.hidden){display:flex}
-  .info-page .info-page-inner{position:relative;background:var(--paper);border:1px solid var(--hair);border-radius:20px;box-shadow:0 20px 60px rgba(0,0,0,.28);max-width:520px;width:100%;max-height:calc(100vh - 48px);flex:0 1 auto;overflow:hidden;display:flex;flex-direction:column}
+  section.info-page{background:rgba(20,18,15,.42);padding:56px 16px 24px;align-items:flex-start;justify-content:center}
+  section.info-page:not(.hidden){display:flex}
+  section.info-page .info-page-inner{position:relative;background:var(--paper);border:1px solid var(--hair);border-radius:20px;box-shadow:0 20px 60px rgba(0,0,0,.28);max-width:520px;width:100%;max-height:calc(100vh - 48px);flex:0 1 auto;overflow:hidden;display:flex;flex-direction:column}
   /* 戻る→閉じる X を右上に絶対配置(モーダル定石) */
-  .info-page .info-page-inner .info-back{position:absolute;top:12px;right:12px;z-index:2}
-  .info-page .info-page-head{padding-right:56px}
+  section.info-page .info-page-inner .info-back{position:absolute;top:12px;right:12px;z-index:2}
+  section.info-page .info-page-head{padding-right:56px}
   @media (max-width:520px){
-    .info-page{padding:16px 12px}
-    .info-page .info-page-inner{border-radius:18px}
+    section.info-page{padding:16px 12px}
+    section.info-page .info-page-inner{border-radius:18px}
   }
   /* 3e/3f overlay pages (app-6 / app-7, CD #3e #3f) */
   .info-page-inner{max-width:560px;width:100%;margin:0 auto;flex:1;min-height:0;display:flex;flex-direction:column;overflow:hidden}
