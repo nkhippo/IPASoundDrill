@@ -285,7 +285,7 @@
   .note p{font-size:13px;color:var(--legacy-ink);margin:0 0 10px}
   .trapchips{display:flex;gap:6px;flex-wrap:wrap}
   .trapchip{font-family:var(--legacy-ipa);font-size:15px;color:var(--legacy-signal);background:var(--legacy-signal-soft);border-radius:8px;padding:3px 10px;cursor:pointer}
-  .reveal-next{margin-top:16px;width:100%;border:none;border-radius:11px;cursor:pointer;background:var(--signal);color:#fff;font-family:var(--legacy-ui);font-weight:700;font-size:15px;padding:14px;letter-spacing:.03em}
+  .reveal-next{margin-top:24px;width:100%;border:none;border-radius:11px;cursor:pointer;background:var(--signal);color:#fff;font-family:var(--legacy-ui);font-weight:700;font-size:15px;padding:14px;letter-spacing:.03em}
   .reveal-next:active{transform:translateY(1px)}
   .reveal-next.hidden{display:none}
   .mbs-meaning-slot{min-height:10rem;display:flex;align-items:flex-start;justify-content:center}
@@ -350,8 +350,6 @@
   .language-opt{display:flex;align-items:center;justify-content:space-between;border:1px solid var(--hair);background:var(--panel);border-radius:12px;padding:13px 15px;font-size:14.5px;font-weight:600;color:var(--ink);font-family:var(--font-ui);cursor:pointer;text-align:left;width:100%}
   .language-opt[aria-checked="true"]{border-color:var(--signal);background:var(--signal-soft);color:var(--signal)}
   .language-opt[aria-checked="true"]::after{content:"";width:18px;height:18px;flex:none;background:var(--signal);-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 12l5 5L20 6'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 12l5 5L20 6'/%3E%3C/svg%3E") center/contain no-repeat}
-  .language-note{font-size:11px;color:var(--faint);margin-top:18px;line-height:1.6;border-top:1px solid var(--hair);padding-top:14px}
-  .language-note b{color:var(--ink)}
   .vocab-page-inner,.symbol-picker-inner,.progress-page-inner{max-width:820px;width:100%;margin:0 auto;padding:0;flex:1;min-height:0;display:flex;flex-direction:column}
   /* app-improve(Naoya): PC 語彙リストは単一カラムだと横幅が広すぎるため列幅を絞る */
   .vocab-page-inner{max-width:620px}
@@ -761,7 +759,7 @@
   /* 2026-07-28 phase-3 round-3: 「聞き取|れる」等の熟語途中改行を防ぐ。
      日本語では `word-break:keep-all` で漢字連続を 1 語扱いにできる。overflow-wrap を anywhere にせず自然改行。 */
   .top-subcopy{font-size:13.5px;line-height:1.9;color:var(--muted);margin:18px 0 0;text-wrap:pretty;word-break:keep-all;overflow-wrap:break-word}
-  .top-attrs{display:flex;flex-wrap:wrap;gap:6px 12px;margin:18px 0 var(--space-4);font-size:11.5px;color:var(--faint)}
+  .top-attrs{display:flex;flex-wrap:wrap;gap:6px 12px;margin:24px 0 var(--space-4);font-size:11.5px;color:var(--faint)}
   .top-review-title{font-family:var(--font-serif);font-size:12.5px;font-weight:600;letter-spacing:.1em;color:var(--ink);margin:0 2px 10px}
   /* Phase 1-B top page (1a) */
   body.top-home{background:var(--paper);color:var(--ink)}
@@ -855,7 +853,7 @@
   .top-purpose-block{margin-top:24px}
   .top-hero-links{display:flex;flex-wrap:wrap;gap:14px 24px;align-items:center;margin-top:16px}
   .top-philosophy-link{display:inline-flex;align-items:center;gap:5px;font-size:12.5px;font-weight:600;color:var(--accent);background:none;border:none;padding:0;cursor:pointer;font-family:var(--font-ui)}
-  .top-philosophy-link::after{content:"→"}
+  .top-philosophy-link::after{content:"";display:inline-block;width:5px;height:5px;border-top:1.5px solid currentColor;border-right:1.5px solid currentColor;transform:rotate(45deg)}
   .top-philosophy-link:hover{text-decoration:underline}
   .top-purpose-label{display:none}
   .top-purpose-hint{display:none}
@@ -1016,12 +1014,13 @@
     body.in-play.drill-two-pane .reflect-dock,
     body.in-play.drill-two-pane #exitConfirmModal,
     body.in-play.drill-two-pane #onboardingModal{grid-column:1 / -1}
-    /* 左=出題(paper) / 右=答え(panel)、中央 hair の仕切り。外枠(.wrap)が境界なので背景と同化しない
-       Phase-3 round-4: `.hidden`(display:none)を上書きしないよう `:not(.hidden)` で保護。
-       Phase-3 round-5: 「答え合わせ前後で高さが変わる」問題の根本対処。
-       grid は align-items:start でペイン独立、各ペインは各ドリルごとに最適な固定 height、
-       内容が超えたら overflow-y:auto で内部スクロール。ボタンは margin-top:auto で下端固定。 */
-    body.in-play.drill-two-pane .wrap{align-items:start}
+    /* 左=出題(paper) / 右=答え(panel)、中央 hair の仕切り。外枠(.wrap)が境界なので背景と同化しない。
+       `.hidden`(display:none)を上書きしないよう `:not(.hidden)` で保護。
+       Issue #259: align-items:stretch で左右ペインは中身の高い方に自動で揃う。
+       mode 別固定 height は撤廃（GA≠RP や長い発音ポイントで右ペインが最長化するケースに追随できないため）。
+       min-height:520px は `.drill-pane` 側で維持（コンテンツが少ないケースの下限）。
+       ボタンは margin-top:auto でペイン下端に anchor（左右高さが揃えば下端 y も揃う）。 */
+    body.in-play.drill-two-pane .wrap{align-items:stretch}
     body.in-play.drill-two-pane #cardDecode.panel:not(.hidden),
     body.in-play.drill-two-pane #cardEncode.panel:not(.hidden),
     body.in-play.drill-two-pane #cardModeBStudy.panel:not(.hidden),
@@ -1035,24 +1034,15 @@
       background:var(--panel);border:none;border-radius:0;box-shadow:none;margin:0;padding:44px 40px;
       display:flex;flex-direction:column;overflow-y:auto
     }
-    /* ドリルごとの最適 height。左右ペインで揃える(左右の grid cell に個別 height を回す難しさから、
-       ドリルモードは body.drill-mode-{2a|2b|2c|2d} を JS で付与して両ペインに一括反映する運用)。 */
-    body.in-play.drill-mode-2a #cardDecode.panel:not(.hidden),
-    body.in-play.drill-mode-2a #reveal.panel:not(.hidden){height:620px}
-    body.in-play.drill-mode-2b #cardEncode.panel:not(.hidden),
-    body.in-play.drill-mode-2b #reveal.panel:not(.hidden){height:760px}
-    body.in-play.drill-mode-2c #cardModeBStudy.panel:not(.hidden),
-    body.in-play.drill-mode-2c #cardModeBStudyAnswer.panel:not(.hidden),
-    body.in-play.drill-mode-2c #cardModeBMcq.panel:not(.hidden),
-    body.in-play.drill-mode-2c #cardModeBDict.panel:not(.hidden),
-    body.in-play.drill-mode-2c #reveal.panel:not(.hidden){height:600px}
-    body.in-play.drill-mode-2d #cardDecode.panel:not(.hidden),
-    body.in-play.drill-mode-2d #reveal.panel:not(.hidden){height:780px}
     /* ボタン(答え合わせ / 次へ / 意味を確認する)を常にペイン下部にアンカー。
-       ペイン height が固定 → margin-top:auto でボタン位置がドリル前後で一致する。 */
+       stretch で左右ペイン高さが揃う → margin-top:auto でボタン下端 y も揃う。
+       Issue #259: 2c の .btn-reveal / .reveal-next は position:absolute inset:0 で
+       .mbs-actions(height:52px)に張り付いているため、anchor は .btn-reveal ではなく
+       .mbs-actions 側に付ける必要がある。 */
     body.in-play.drill-two-pane #cardDecode:not(.hidden) .answer,
     body.in-play.drill-two-pane #cardEncode:not(.hidden) .kbtns,
-    body.in-play.drill-two-pane #cardModeBStudy:not(.hidden) .btn-reveal,
+    body.in-play.drill-two-pane #cardModeBStudy:not(.hidden) .mbs-actions,
+    body.in-play.drill-two-pane #cardModeBStudyAnswer:not(.hidden) .mbs-actions,
     body.in-play.drill-two-pane #cardModeBDict:not(.hidden) .answer,
     body.in-play.drill-two-pane #reveal:not(.hidden) .reveal-next{margin-top:auto}
     /* app-improve: STEP ラベルは集約ヘッダーの title と重複するため常時非表示に統一
@@ -1380,6 +1370,12 @@
     <div id="mbSMeaning" class="mbsMeaning hidden">
       <div class="readout"><div class="wordbig" id="mbSWord"></div></div>
       <div class="word-gloss" id="mbSGloss"></div>
+      <!-- Issue #260: 2a reveal と同一構造の発音カード(GA/RP + 🔊)を 2c answer にも配置 -->
+      <div class="pron-card hidden" id="mbSPronCard">
+        <div class="pron-card-label" id="mbSPronLabel"></div>
+        <div class="pron-row" id="mbSPronGaRow"><span class="pron-accent">GA</span><span class="ipa pron-ipa" id="mbSPronGa"></span><button class="playicon playicon-sm" id="mbSPronGaPlay" type="button" aria-label="GA"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg></button></div>
+        <div class="pron-row" id="mbSPronRpRow"><span class="pron-accent">RP</span><span class="ipa pron-ipa" id="mbSPronRp"></span><button class="playicon playicon-sm" id="mbSPronRpPlay" type="button" aria-label="RP"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg></button></div>
+      </div>
       <div class="note" id="mbSNoteBlock">
         <div class="nh" id="mbSTipsHead">Pronunciation tips</div>
         <p id="mbSNote"></p>
@@ -1619,14 +1615,13 @@
     <div class="info-page-body">
       <div class="language-section-label" id="languageDisplayLabel" data-i18n="language.display_label">Display language</div>
       <div class="language-list" id="languageList" role="radiogroup" aria-labelledby="languageDisplayLabel">
-        <button type="button" class="language-opt" role="radio" data-lang="ja">日本語</button>
         <button type="button" class="language-opt" role="radio" data-lang="en">English</button>
+        <button type="button" class="language-opt" role="radio" data-lang="ja">日本語</button>
         <button type="button" class="language-opt" role="radio" data-lang="ko">한국어</button>
         <button type="button" class="language-opt" role="radio" data-lang="zh-Hans">简体中文</button>
         <button type="button" class="language-opt" role="radio" data-lang="zh-Hant">繁體中文</button>
         <button type="button" class="language-opt" role="radio" data-lang="fil">Filipino</button>
       </div>
-      <div class="language-note" id="languageNote" data-i18n="language.accent_note_html"></div>
     </div>
   </div>
 </section>
@@ -2507,7 +2502,16 @@ function persistAppLang(lang) {
   try { localStorage.setItem("app_lang", lang); } catch (e) {}
   try { document.cookie = "app_lang=" + encodeURIComponent(lang) + ";path=/;max-age=31536000;SameSite=Lax"; } catch (e) {}
 }
-let LANG = langFromPath() || localStorage.getItem("app_lang") || "en";
+function detectBrowserLang() {
+  const raw = (navigator.language || "").toLowerCase();
+  if (raw.startsWith("ja")) return "ja";
+  if (raw.startsWith("ko")) return "ko";
+  if (raw.startsWith("fil") || raw.startsWith("tl")) return "fil";
+  if (raw === "zh-tw" || raw === "zh-hant" || raw.startsWith("zh-hant")) return "zh-Hant";
+  if (raw.startsWith("zh")) return "zh-Hans";
+  return "en";
+}
+let LANG = langFromPath() || localStorage.getItem("app_lang") || detectBrowserLang();
 // Migrate legacy "zh" (single Chinese) to zh-Hans (Simplified default).
 if (LANG === "zh") {
   LANG = "zh-Hans";
@@ -2651,7 +2655,7 @@ function posLabel(pos) {
 
 const HOME_COPY = {
   ja: {
-    subcopy: "発音記号（IPA）で、英語の音をていねいに練り直す。読める音は、やがて聞き取れる音になります。",
+    subcopy: ["発音できない音は、聞き取れない。", "英語のあらゆる音は、IPA（発音記号）で表せる。", "IPAで発音の解像度を上げて、もっとクリアに聞き取りましょう。"],
     attrs: ["6言語対応", "無料", "登録不要"],
     review: "振り返る",
     purposeLabel: "目的から選ぶ",
@@ -2674,7 +2678,7 @@ const HOME_COPY = {
     cefr: { A1: "入門", A2: "初級", B1: "中級", B2: "中上級", all: "すべて" }
   },
   en: {
-    subcopy: "Use IPA to rebuild English sounds carefully. Sounds you can read become sounds you can hear.",
+    subcopy: ["You can't hear a sound you can't say.", "Every sound in English can be written in IPA.", "Raise your pronunciation's resolution with IPA—and hear English clearly."],
     attrs: ["6 languages", "Free", "No signup"],
     review: "Review",
     purposeLabel: "Choose your focus",
@@ -2697,7 +2701,7 @@ const HOME_COPY = {
     cefr: { A1: "Starter", A2: "Elementary", B1: "Intermediate", B2: "Upper", all: "All" }
   },
   ko: {
-    subcopy: "IPA로 영어 소리를 차근차근 다시 다듬습니다. 읽을 수 있는 소리는 곧 들을 수 있는 소리가 됩니다.",
+    subcopy: ["발음할 수 없는 소리는, 들리지 않는다.", "영어의 모든 소리는 IPA(발음기호)로 표현할 수 있다.", "IPA로 발음의 해상도를 높이고, 더 또렷하게 들어보자."],
     attrs: ["6개 언어", "무료", "가입 불필요"],
     review: "돌아보기",
     purposeLabel: "목적 선택",
@@ -2720,7 +2724,7 @@ const HOME_COPY = {
     cefr: { A1: "입문", A2: "초급", B1: "중급", B2: "중상급", all: "전체" }
   },
   "zh-Hans": {
-    subcopy: "用 IPA 重新打磨英语声音。能读出的声音，最终会变成能听出的声音。",
+    subcopy: ["发不出的音，就听不出来。", "英语的每一个音，都能用 IPA（音标）表示。", "用 IPA 提升发音的分辨率，把英语听得更清晰。"],
     attrs: ["6 种语言", "免费", "无需注册"],
     review: "回顾",
     purposeLabel: "选择目的",
@@ -2743,7 +2747,7 @@ const HOME_COPY = {
     cefr: { A1: "入门", A2: "初级", B1: "中级", B2: "中高级", all: "全部" }
   },
   "zh-Hant": {
-    subcopy: "用 IPA 重新打磨英語聲音。能讀出的聲音，最後會變成能聽出的聲音。",
+    subcopy: ["發不出的音，就聽不出來。", "英語的每一個音，都能用 IPA（音標）表示。", "用 IPA 提升發音的解析度，把英語聽得更清晰。"],
     attrs: ["6 種語言", "免費", "免註冊"],
     review: "回顧",
     purposeLabel: "選擇目的",
@@ -2766,7 +2770,7 @@ const HOME_COPY = {
     cefr: { A1: "入門", A2: "初級", B1: "中級", B2: "中高級", all: "全部" }
   },
   fil: {
-    subcopy: "Gamitin ang IPA para ayusin muli ang tunog ng English. Ang tunog na nababasa mo ay magiging tunog na naririnig mo.",
+    subcopy: ["Ang tunog na hindi mo kayang bigkasin ay hindi mo maririnig.", "Bawat tunog sa Ingles ay maisusulat sa IPA (phonetic symbols).", "Sa IPA, hasain ang bigkas—at marinig ang Ingles nang mas malinaw."],
     attrs: ["6 na wika", "Libre", "Walang signup"],
     review: "Balikan",
     purposeLabel: "Pumili ng layunin",
@@ -2845,7 +2849,11 @@ function applyI18n() {
   if ($("footerTerms")) $("footerTerms").textContent = t("footer.terms");
   if ($("footerPrivacy")) $("footerPrivacy").textContent = t("footer.privacy");
   const home = homeCopy();
-  if ($("topSubcopy")) $("topSubcopy").textContent = home.subcopy;
+  if ($("topSubcopy")) {
+    const sc = home.subcopy;
+    if (Array.isArray(sc)) $("topSubcopy").innerHTML = sc.map(escHtml).join("<br>");
+    else $("topSubcopy").textContent = sc;
+  }
   if ($("topAttrs")) $("topAttrs").innerHTML = home.attrs.map((label, idx) =>
     (idx ? '<span aria-hidden="true">·</span>' : '') + '<span>' + escHtml(label) + '</span>'
   ).join("");
@@ -4212,6 +4220,7 @@ const MB_S_PRON_IDS={noteId:"mbSNote",tipsHeadId:"mbSTipsHead",trapsId:"mbSTraps
 function refreshModeBStudyContent(c){
   $("mbSGloss").textContent=modeBDisplayGloss(c);
   renderWordPronDetails(c,MB_S_PRON_IDS);
+  renderPronCardInto(c,MB_S_PRON_CARD_IDS);
 }
 function renderModeBStudy(c){
   hideModeBCards();
@@ -4661,6 +4670,10 @@ function scheduleIdle(fn, timeout) {
   }
 }
 
+// Issue #261: accent 切替時の再 prefetch。session 開始側 prefetchItemsAudio と
+// 同じ「現問(index 0 相当)優先 → 以降 background 並列」構造にする。切替直後は
+// 現在表示中の word がユーザーに最初に叩かれる可能性が最も高いため、単独 fetch
+// を先に走らせ、残りは PREFETCH.bodyParallel の worker で背景処理する。
 async function prefetchAccentBodies(accent) {
   if (!S.queue.length) return;
   const token = ++prefetchToken;
@@ -4678,15 +4691,27 @@ async function prefetchAccentBodies(accent) {
     }
   });
   refreshAllSpeakers();
+
+  // FAST PATH: 現問(items[0] 相当)の body を最優先で開始(fire-and-forget)。
+  // 背景 worker と並行に走るため、待ち時間ゼロで叩き始められる。
+  const firstWord = words[0];
+  if (firstWord && !hasCachedAudioFor(firstWord, accent)) {
+    fetchBodyToCache(firstWord, accent, token);
+  }
+  const remaining = firstWord ? words.filter(w => w !== firstWord) : words.slice();
+
+  // BACKGROUND: 残り word を bodyParallel 並列で worker 消化。
   let wi = 0;
   async function wordWorker() {
-    while (wi < words.length) {
+    while (wi < remaining.length) {
       if (token !== prefetchToken) return;
-      const w = words[wi++];
+      const w = remaining[wi++];
       await fetchBodyToCache(w, accent, token);
     }
   }
   await Promise.all(Array.from({ length: PREFETCH.bodyParallel }, wordWorker));
+
+  // 連結/弱形は逐次(元設計を維持)。
   for (const c of items) {
     if (token !== prefetchToken) return;
     if (isConnectedItem(c)) await fetchBodyToCacheItem(c, "ga", token);
@@ -5168,8 +5193,8 @@ function renderIpaInto(container,ipa,infoBoxId,markTokens){
   container.classList.remove("connected-prompt");
   bindIpaSegments(container,infoBoxId);
 }
-function buildIpaHtml(ipa,markTokens){
-  const tk=tokenize(ipa);const nuc=nucleusIndex(tk);let html='<span class="ipa-inline"><span class="slash">/</span>';
+function buildIpaHtml(ipa,markTokens,accent){
+  const tk=accent?Core.encode.tokenize(ipa,accent):tokenize(ipa);const nuc=accent?Core.encode.nucleusIndex(tk,accent):nucleusIndex(tk);let html='<span class="ipa-inline"><span class="slash">/</span>';
   tk.forEach((t,k)=>{
     if(t==="ˈ"||t==="ˌ"){html+='<span class="seg mark" data-sym="'+t+'">'+t+'</span>';return;}
     let cls="seg"+(k===nuc?" nucleus":"");
@@ -5494,24 +5519,27 @@ function setRevealPending(pending){
   if(pending && $("rPendingText")) $("rPendingText").textContent=t("reveal.pending");
   document.body.classList.toggle("drill-answered", !pending);
 }
-function renderPronCard(c){
-  const card=$("rPronCard"); if(!card)return;
+const R_PRON_IDS={card:"rPronCard",label:"rPronLabel",gaRow:"rPronGaRow",ga:"rPronGa",rpRow:"rPronRpRow",rp:"rPronRp"};
+const MB_S_PRON_CARD_IDS={card:"mbSPronCard",label:"mbSPronLabel",gaRow:"mbSPronGaRow",ga:"mbSPronGa",rpRow:"mbSPronRpRow",rp:"mbSPronRp"};
+function renderPronCardInto(c,ids){
+  const card=$(ids.card); if(!card)return;
   const ga=c.ipa||"", rp=c.rp_ipa||"";
   if(!ga&&!rp){card.classList.add("hidden");return;}
   card.classList.remove("hidden");
-  if($("rPronLabel")) $("rPronLabel").textContent=t("reveal.pron_label");
-  const gaAcc=$("rPronGaRow")?$("rPronGaRow").querySelector(".pron-accent"):null;
-  if($("rPronGa")) $("rPronGa").innerHTML=buildIpaHtml(ga||rp);
+  if($(ids.label)) $(ids.label).textContent=t("reveal.pron_label");
+  const gaAcc=$(ids.gaRow)?$(ids.gaRow).querySelector(".pron-accent"):null;
+  if($(ids.ga)) $(ids.ga).innerHTML=buildIpaHtml(ga||rp,null,"ga");
   const same=(c.ga_rp_same!==undefined)?c.ga_rp_same:(rp===ga);
   if(rp&&!same){
     if(gaAcc)gaAcc.textContent="GA";
-    $("rPronRpRow").classList.remove("hidden");
-    if($("rPronRp")) $("rPronRp").innerHTML=buildIpaHtml(rp);
+    $(ids.rpRow).classList.remove("hidden");
+    if($(ids.rp)) $(ids.rp).innerHTML=buildIpaHtml(rp,null,"rp");
   }else{
     if(gaAcc)gaAcc.textContent="GA=RP";
-    $("rPronRpRow").classList.add("hidden");
+    $(ids.rpRow).classList.add("hidden");
   }
 }
+function renderPronCard(c){ renderPronCardInto(c,R_PRON_IDS); }
 function reveal(res,ctx){
   const c=S.cur;S.revealed=true;
   if(S.appMode!=="b")recordHist(c.w,res);
@@ -5596,6 +5624,8 @@ function nextCard(){
 $("nextBtn").addEventListener("click",nextCard);
 if($("rPronGaPlay")) $("rPronGaPlay").addEventListener("click",()=>{unlockAudioFromGesture();if(S.cur)speak(S.cur.w,{accent:"ga"});});
 if($("rPronRpPlay")) $("rPronRpPlay").addEventListener("click",()=>{unlockAudioFromGesture();if(S.cur)speak(S.cur.w,{accent:"rp"});});
+if($("mbSPronGaPlay")) $("mbSPronGaPlay").addEventListener("click",()=>{unlockAudioFromGesture();if(S.cur)speak(S.cur.w,{accent:"ga"});});
+if($("mbSPronRpPlay")) $("mbSPronRpPlay").addEventListener("click",()=>{unlockAudioFromGesture();if(S.cur)speak(S.cur.w,{accent:"rp"});});
 $("mbSRevealBtn").addEventListener("click",()=>{
   $("mbSMeaning").classList.remove("hidden");
   $("mbSRevealBtn").classList.add("hidden");
