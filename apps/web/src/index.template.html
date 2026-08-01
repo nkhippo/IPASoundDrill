@@ -285,7 +285,7 @@
   .note p{font-size:13px;color:var(--legacy-ink);margin:0 0 10px}
   .trapchips{display:flex;gap:6px;flex-wrap:wrap}
   .trapchip{font-family:var(--legacy-ipa);font-size:15px;color:var(--legacy-signal);background:var(--legacy-signal-soft);border-radius:8px;padding:3px 10px;cursor:pointer}
-  .reveal-next{margin-top:24px;width:100%;border:none;border-radius:11px;cursor:pointer;background:var(--signal);color:#fff;font-family:var(--legacy-ui);font-weight:700;font-size:15px;padding:14px;letter-spacing:.03em}
+  .reveal-next{margin-top:32px;width:100%;border:none;border-radius:11px;cursor:pointer;background:var(--signal);color:#fff;font-family:var(--legacy-ui);font-weight:700;font-size:15px;padding:14px;letter-spacing:.03em}
   .reveal-next:active{transform:translateY(1px)}
   .reveal-next.hidden{display:none}
   .mbs-meaning-slot{min-height:10rem;display:flex;align-items:flex-start;justify-content:center}
@@ -938,7 +938,7 @@
     body.pc-support #setup.profile-3a > .modal-chrome{margin:0}
     body.pc-support #setup.profile-3a > .profile-body{padding:40px 48px 44px}
     body.pc-support #setup.profile-3a .profile-back{display:none!important}
-    body.pc-support #setup.profile-3a .accent-card-grid{display:flex;gap:12px}
+    body.pc-support #setup.profile-3a .accent-card-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
     body.pc-support #setup.profile-3a .accent-card{
       display:inline-flex;align-items:center;border:1px solid var(--hair);background:var(--panel);color:var(--ink);
       border-radius:12px;padding:12px 22px;font-family:var(--font-ui);font-size:15px;font-weight:600;cursor:pointer
@@ -965,7 +965,7 @@
     /* CD 統合カード: ドリル全体(ヘッダー+ペイン)を1枚の角丸カードに収める(地=paper) */
     /* ドリル中はページ地をカード(paper)より濃い canvas 色にして、左ペインが背景と同化しないようにする */
     body.in-play{background:#E7E1D7}
-    body.in-play .wrap{max-width:1024px;padding:0;background:var(--paper);border:1px solid var(--hair);border-radius:20px;overflow:hidden;box-shadow:0 14px 44px rgba(0,0,0,.07)}
+    body.in-play .wrap{max-width:1024px;margin-top:32px;padding:0;background:var(--paper);border:1px solid var(--hair);border-radius:20px;overflow:hidden;box-shadow:0 14px 44px rgba(0,0,0,.07)}
     body.in-play .task-header,
     body.in-play .drill-header{
       display:flex;align-items:center;gap:16px;padding:20px 32px;margin:0;border-bottom:1px solid var(--hair)
