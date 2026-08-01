@@ -541,8 +541,7 @@
   },
   "language": {
     "title": "언어 및 음성",
-    "display_label": "표시 언어",
-    "accent_note_html": "악센트(GA / RP)는 <b>학습 프로필</b>에서 설정합니다."
+    "display_label": "표시 언어"
   },
   "ipa_info": {
     "heading": "IPA는 소리의 지도입니다.",

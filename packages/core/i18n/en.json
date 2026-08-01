@@ -541,8 +541,7 @@
   },
   "language": {
     "title": "Language & audio",
-    "display_label": "Display language",
-    "accent_note_html": "Accent (GA / RP) is set in your <b>learning profile</b>."
+    "display_label": "Display language"
   },
   "ipa_info": {
     "heading": "IPA is a map of sounds.",

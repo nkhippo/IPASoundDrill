@@ -541,8 +541,7 @@
   },
   "language": {
     "title": "言語と音声",
-    "display_label": "表示言語",
-    "accent_note_html": "アクセント（GA / RP）は<b>学習プロフィール</b>で設定します。"
+    "display_label": "表示言語"
   },
   "ipa_info": {
     "heading": "IPA は、音の地図です。",

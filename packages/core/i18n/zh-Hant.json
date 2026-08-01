@@ -541,8 +541,7 @@
   },
   "language": {
     "title": "語言與語音",
-    "display_label": "顯示語言",
-    "accent_note_html": "口音（GA / RP）在<b>學習檔案</b>中設定。"
+    "display_label": "顯示語言"
   },
   "ipa_info": {
     "heading": "IPA 是聲音的地圖。",
