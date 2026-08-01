@@ -2,7 +2,7 @@
 
 > Drill your English sounds with IPA. A free, open, browser-based tool for learning English pronunciation using the International Phonetic Alphabet.
 
-IPA Sound Drill helps learners understand sound-to-spelling relationships and rebuild their pronunciation from the sound level. Built on the principle "you can't hear what you can't say," the app is designed for non-native English speakers who want to systematically improve their pronunciation using IPA notation.
+IPA Sound Drill helps learners understand sound-to-spelling relationships and rebuild their pronunciation from the sound level. Built on the principle "you can't hear what you can't say," the app is designed for non-native English speakers who want to systematically improve their pronunciation using IPA notation. Both General American (GA) and Received Pronunciation (RP) are supported for every word and phrase.
 
 ## Modes
 
@@ -38,12 +38,146 @@ Interface available in 6 languages:
 
 - Wordlist: 5,397 CEFR-graded English words with both General American (GA) and Received Pronunciation (RP) IPA
 - Connected speech phrases: 201 (with CEFR badges)
-- Weak forms: 36 function words
+- Weak forms: 36 function words with weak/strong IPA and GA/RP variants
+- Phoneme inventory: 44 English phonemes plus stress marks and allophones (flap, glottal stop, syllabic consonants)
 - Multilingual phoneme explanations: 6 languages
+
+## Free open dataset (CC BY 4.0)
+
+The 5,397-word wordlist with GA/RP IPA and CEFR levels is freely downloadable as CSV and JSON under CC BY 4.0. Suitable for research, apps, and classroom use.
+
+- Landing page: https://ipasounddrill.app/en/data/
+- CSV: https://ipasounddrill.app/data/wordlist-ga-rp-cefr.csv
+- JSON: https://ipasounddrill.app/data/wordlist-ga-rp-cefr.json
+- LICENSE: https://ipasounddrill.app/data/LICENSE.txt
+- Attribution line: `Data: IPA Sound Drill (https://ipasounddrill.app), CC BY 4.0`
 
 ## Technology
 
-Static HTML + vanilla JS + JSON data + Google Apps Script (TTS proxy). Hosted on Vercel.
+Static HTML + vanilla JS + JSON data + Google Apps Script (TTS proxy). Hosted on Vercel. No sign-up. No ads. Cookieless analytics only (Vercel Web Analytics).
+
+## Phonemes covered
+
+### Vowels — monophthongs (GA)
+
+- `i` — long ee (see /si/)
+- `ɪ` — short i (sit /sɪt/)
+- `ɛ` — eh (bed /bɛd/)
+- `æ` — a~eh (cat /kæt/)
+- `ə` — schwa (about /əˈbaʊt/)
+- `ʌ` — uh (cup /kʌp/)
+- `ɑ` — ah (hot /hɑt/, father)
+- `ɔ` — aw (dog /dɔɡ/, thought)
+- `ʊ` — short u (book /bʊk/)
+- `u` — long oo (food /fud/)
+- `ɝ` — stressed er (bird /bɝd/) — GA rhotic
+- `ɚ` — unstressed er (water /ˈwɔtɚ/) — GA rhotic
+
+### Vowels — diphthongs
+
+- `eɪ` — ay (day /deɪ/)
+- `aɪ` — eye (my /maɪ/)
+- `ɔɪ` — oy (boy /bɔɪ/)
+- `oʊ` — oh (go /ɡoʊ/)
+- `aʊ` — ow (now /naʊ/)
+
+### Consonants — fricatives / affricates
+
+- `θ` — voiceless th (think /θɪŋk/)
+- `ð` — voiced th (this /ðɪs/)
+- `ʃ` — sh (she /ʃi/)
+- `ʒ` — zh (measure /ˈmɛʒɚ/)
+- `tʃ` — ch (church /tʃɝtʃ/)
+- `dʒ` — j (judge /dʒʌdʒ/)
+- `f` — f (fan)
+- `v` — v (van)
+- `s` — s (see)
+- `z` — z (zoo)
+- `h` — h (hat)
+
+### Consonants — stops / nasals / approximants
+
+- `p b t d k ɡ` — plosives
+- `m n ŋ` — nasals (sing /sɪŋ/ for ŋ)
+- `r l w j` — approximants
+- `ɾ` — flap / tap (butter /ˈbʌɾɚ/ in GA)
+- `ʔ` — glottal stop (button /ˈbʌʔn̩/)
+- `n̩` `l̩` — syllabic consonants (button, bottle)
+
+### Stress marks
+
+- `ˈ` — primary stress on the next syllable
+- `ˌ` — secondary stress
+
+## GA vs RP — key differences the app teaches
+
+- **Rhoticity**: GA pronounces `r` after vowels (car /kɑr/); RP typically drops it (car /kɑː/).
+- **er sound**: GA uses `ɝ`/`ɚ`; RP uses `ɜː`/`ə`.
+- **The LOT/CLOTH vowel**: GA `ɑ` or `ɔ` where RP uses `ɒ` (hot GA /hɑt/ vs RP /hɒt/).
+- **Bath vowel**: GA `æ` where RP uses `ɑː` (bath GA /bæθ/ vs RP /bɑːθ/).
+- **Flap t**: GA turns intervocalic `t` into `ɾ` (water /ˈwɔɾɚ/); RP keeps `t`.
+
+Every word and phrase in the app shows both GA and RP IPA side-by-side.
+
+## Sample weak forms (all 36 in-app)
+
+Function words reduce to weak forms in unstressed positions. Learning weak forms is the single fastest way to sound natural.
+
+- **a** — weak /ə/ before a consonant (strong /ə/)
+- **an** — weak /ən/ before a vowel (strong /æn/)
+- **the** — weak /ðə/ before a consonant (strong /ðə/, /ði/ before a vowel)
+- **to** — weak /tə/ before a consonant (strong /tu/)
+- **of** — weak /əv/, often /ə/ before a consonant (strong /ʌv/)
+- **and** — weak /ən/ with d dropped (strong /ænd/)
+- **for** — weak /fɚ/ GA / /fə/ RP (strong /fɔr/)
+- **from** — weak /frəm/ (strong /frʌm/)
+- **at** — weak /ət/ (strong /æt/)
+- **than** — weak /ðən/ (strong /ðæn/)
+- **was** — weak /wəz/ (strong /wɑz/)
+- **were** — weak /wɚ/ GA / /wə/ RP (strong /wɝ/)
+- **can** — weak /kən/ (strong /kæn/ when stressed)
+- **have / has / had** — weak /həv/ /həz/ /həd/ (often reduced to /əv/ /əz/ /əd/ after a pronoun)
+- **your** — weak /jɚ/ GA / /jə/ RP (strong /jɔr/)
+- **them** — weak /ðəm/, often /əm/ casually
+- **he / him / his / her** — h-drop mid-sentence: /i/ /ɪm/ /ɪz/ /ɚ/
+
+## Sample connected speech patterns (from the 201 in-app phrases)
+
+### Linking (consonant → vowel)
+
+- **an apple** — /əˈnæpəl/ — n links onto the next vowel: "a-napple"
+- **pick it up** — /ˈpɪkɪˈtʌp/ — k→it, t→up link consonants to vowels
+- **come on** — /kʌˈmɑn/ — m links into on: "co-mon"
+- **look at** — /ˈlʊkət/ — k links into at: "loo-kat"
+- **turn off** — /tɝˈnɔf/ — n links into off: "tur-noff"
+
+### Glide insertion
+
+- **I am** — /aɪˈjæm/ — a /j/ glide bridges I→am
+- **go away** — /ˌɡoʊwəˈweɪ/ — a /w/ glide bridges go→away
+- **the end** — /ðiˈjɛnd/ — the→/ði/ before a vowel, /j/ glide
+
+### Assimilation (yod-coalescence)
+
+- **did you** — /ˈdɪdʒu/ — d + y → /dʒ/
+- **would you** — /ˈwʊdʒu/ — d + y → /dʒ/
+- **don't you** — /ˈdoʊntʃu/ — t + y → /tʃ/
+
+## Who this is for
+
+- Non-native English learners (CEFR A1–C2) who want to fix pronunciation at the sound level, not the word level
+- Learners preparing for IELTS / TOEFL / TOEIC speaking sections where connected speech and weak forms distinguish upper bands
+- ESL / EFL teachers who need a free, no-signup tool for classroom demos of IPA, GA vs RP, weak forms, and connected speech
+- Self-studiers who already know some IPA and want structured drill on the 44 English phonemes
+- Interface languages: English, Japanese, Korean, Simplified Chinese, Traditional Chinese, Filipino
+
+## Why free and open
+
+- **No ads.** No display ads, no affiliate content, no upsell.
+- **No sign-up.** No account required, no email collected, no login.
+- **No tracking beyond privacy-preserving analytics.** Uses Vercel Web Analytics (cookieless, no personal data). No third-party trackers.
+- **Open source.** Full code and data on GitHub: https://github.com/nkhippo/IPASoundDrill
+- **Built for learners, not for engagement metrics.** No streaks, no gamification pressure. Practice as long or short as helps.
 
 ## Source
 

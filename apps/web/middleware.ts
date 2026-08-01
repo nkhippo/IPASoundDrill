@@ -1,13 +1,46 @@
 /**
- * F2 root router: Accept-Language / Cookie / Bot handling for `/` only.
- * Matcher excludes language subdirectories to prevent redirect loops.
+ * F2 root router: Accept-Language / Cookie / Bot handling for `/`.
+ * EPIC #243 Phase 1: also handles unsupported-locale fallback and
+ * IPA-symbol slug redirects under `/{lang}/sounds/<ipa>/`.
+ *
+ * Matcher list is enumerated to avoid catching static assets or the
+ * canonical language pages (which serve directly from public/).
  */
 export const config = {
-  matcher: "/",
+  matcher: [
+    "/",
+    // unsupported-locale bare paths: /it/, /fi/, /zu/, etc. — GSC 404 fix
+    // Anything that looks like a 2- or 5-char locale but isn't in LANGS.
+    "/:locale([a-z]{2}|[a-z]{2}-[A-Za-z]{2,4})/",
+    // IPA-symbol slug redirects: /{lang}/sounds/<ipa>/
+    // Slug may contain non-ASCII (θ, ə, ...) — matcher stays permissive; handler validates.
+    "/:lang(en|ja|ko|zh-Hans|zh-Hant|fil)/sounds/:slug/",
+  ],
 };
 
 const LANGS = ["en", "ja", "ko", "zh-Hans", "zh-Hant", "fil"] as const;
 type Lang = (typeof LANGS)[number];
+
+/**
+ * IPA symbol → SEO slug map (EPIC #243 Phase 1).
+ * Mirror of apps/web/scripts/phoneme-slugs.js. Keep in sync.
+ * Only 45 phonemes need redirect; the SEO-slug URLs are served
+ * from public/{lang}/sounds/<slug>/index.html directly.
+ */
+const IPA_TO_SLUG: Record<string, string> = {
+  "i": "long-e", "ɪ": "short-i", "ɛ": "short-e", "æ": "short-a",
+  "ə": "schwa", "ʌ": "short-u-cup", "ɑ": "short-o-ah", "ɔ": "aw",
+  "ʊ": "short-u-book", "u": "long-oo", "ɝ": "er-stressed", "ɚ": "er-unstressed",
+  "eɪ": "long-a", "aɪ": "long-i", "ɔɪ": "oy", "oʊ": "long-o", "aʊ": "ow",
+  "θ": "th-voiceless", "ð": "th-voiced", "ʃ": "sh", "ʒ": "zh",
+  "tʃ": "ch", "dʒ": "j-sound", "ŋ": "ng",
+  "r": "r", "l": "l", "v": "v", "f": "f", "w": "w", "j": "y-sound", "h": "h",
+  "b": "b", "d": "d", "ɡ": "g", "k": "k", "p": "p", "t": "t", "m": "m", "n": "n",
+  "s": "s", "z": "z",
+  "ɾ": "flap-t", "ʔ": "glottal-stop", "n̩": "syllabic-n", "l̩": "syllabic-l",
+};
+
+const KNOWN_SLUGS = new Set(Object.values(IPA_TO_SLUG));
 
 const BOT_UA =
   /Googlebot|Bingbot|GPTBot|anthropic-ai|ClaudeBot|Baiduspider|YandexBot|Slurp|DuckDuckBot|facebookexternalhit|Twitterbot|LinkedInBot|Applebot/i;
@@ -64,7 +97,57 @@ function redirectTo(request: Request, lang: Lang, status = 302): Response {
   return Response.redirect(url, status);
 }
 
-export default function middleware(request: Request): Response {
+function redirectToUrl(url: URL, status: number): Response {
+  return Response.redirect(url, status);
+}
+
+// Vercel Edge Middleware contract: return `Response` to short-circuit,
+// or `undefined` to fall through to origin (static file, etc.).
+export default function middleware(request: Request): Response | undefined {
+  const url = new URL(request.url);
+  const path = url.pathname;
+
+  // ---- EPIC #243 Phase 1: Deep URL routing ----
+
+  // Case A: /{lang}/sounds/<slug>/ — IPA symbol → SEO slug 301 redirect.
+  //   If <slug> is a canonical SEO slug (matches KNOWN_SLUGS), fall through
+  //   so Vercel serves the static file at public/{lang}/sounds/<slug>/index.html.
+  //   If <slug> is an IPA symbol (matches IPA_TO_SLUG), 301 to canonical.
+  //   Otherwise, fall through (Vercel serves 404).
+  const soundsMatch = path.match(
+    /^\/(en|ja|ko|zh-Hans|zh-Hant|fil)\/sounds\/([^/]+)\/?$/,
+  );
+  if (soundsMatch) {
+    const lang = soundsMatch[1];
+    const rawSlug = decodeURIComponent(soundsMatch[2]);
+    if (KNOWN_SLUGS.has(rawSlug)) {
+      return undefined; // passthrough → static file
+    }
+    const targetSlug = IPA_TO_SLUG[rawSlug];
+    if (targetSlug) {
+      url.pathname = `/${lang}/sounds/${targetSlug}/`;
+      return redirectToUrl(url, 301);
+    }
+    return undefined; // let Vercel 404
+  }
+
+  // Case B: /{locale}/ — unsupported locale → /en/ fallback (GSC 404 fix).
+  //   Supported locales fall through so Vercel serves public/{lang}/index.html.
+  const localeMatch = path.match(/^\/([A-Za-z]{2}(?:-[A-Za-z]{2,4})?)\/?$/);
+  if (localeMatch) {
+    const candidate = localeMatch[1];
+    if (isLang(candidate)) {
+      return undefined; // passthrough → static file
+    }
+    url.pathname = "/en/";
+    return redirectToUrl(url, 302);
+  }
+
+  // ---- Original F2 root router: `/` only ----
+  if (path !== "/") {
+    return undefined;
+  }
+
   const ua = request.headers.get("user-agent") || "";
 
   // Bots: send to English. Prefer rewrite when platform helpers exist; 302 keeps

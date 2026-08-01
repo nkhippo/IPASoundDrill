@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="<!-- SD:HTML_LANG -->">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="theme-color" content="#0C7C7E">
+<script>if('serviceWorker' in navigator){window.addEventListener('load',()=>{navigator.serviceWorker.register('/sw.js').catch(()=>{})});}</script>
+<title><!-- SD:TITLE --></title>
+<meta name="description" content="<!-- SD:META_DESC -->">
+<link rel="canonical" href="<!-- SD:CANONICAL -->">
+<!-- SD:HREFLANG -->
+<meta property="og:title" content="<!-- SD:OG_TITLE -->">
+<meta property="og:description" content="<!-- SD:META_DESC -->">
+<meta property="og:url" content="<!-- SD:CANONICAL -->">
+<meta property="og:locale" content="<!-- SD:OG_LOCALE -->">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="IPA Sound Drill">
+<meta property="og:image" content="https://ipasounddrill.app/og/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="<!-- SD:OG_TITLE -->">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="<!-- SD:OG_TITLE -->">
+<meta name="twitter:description" content="<!-- SD:META_DESC -->">
+<meta name="twitter:image" content="https://ipasounddrill.app/og/og-default.png">
+<script type="application/ld+json"><!-- SD:JSON_LD --></script>
+<link rel="preload" href="/fonts/DoulosSIL-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Charis+SIL:wght@400;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+JP:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  @font-face{
+    font-family:"Doulos SIL";
+    src:url("/fonts/DoulosSIL-Regular.woff2") format("woff2");
+    font-weight:400; font-style:normal; font-display:block;
+  }
+  :root{
+    --paper:#F5F1EA; --paper-2:#EAE3D6; --panel:#FBF8F1;
+    --ink:#1F2933; --muted:#52606D; --faint:#7B8794; --hair:#D8CFBE;
+    --signal:#0C7C7E; --signal-soft:#DCF0EF;
+    --stress:#D9911B; --stress-soft:#F8ECD3;
+    --font-serif:"Charis SIL","Noto Serif JP",Georgia,"Times New Roman",serif;
+    --font-sans:"Helvetica Neue","Noto Sans JP","Noto Sans KR","Hiragino Sans",Arial,sans-serif;
+    --font-ipa:"Doulos SIL","Charis SIL","Lucida Sans Unicode",serif;
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{font-family:var(--font-sans);background:var(--paper);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+  .visually-hidden{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+  a{color:var(--signal);text-decoration:none}
+  a:hover{text-decoration:underline}
+
+  .sd-wrap{max-width:820px;margin:0 auto;padding:24px 20px 80px}
+  .sd-top{display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-bottom:24px;font-size:14px}
+  .sd-brand{font-family:var(--font-serif);font-weight:700;color:var(--ink);letter-spacing:.02em}
+  .sd-brand a{color:inherit}
+  .sd-crumb{color:var(--faint);font-size:13px}
+  .sd-crumb a{color:var(--muted)}
+  .sd-crumb span[aria-hidden]{margin:0 8px}
+
+  .sd-hero{background:var(--panel);border:1px solid var(--hair);border-radius:14px;padding:36px 28px;text-align:center;margin-bottom:32px}
+  .sd-hero-ipa{font-family:var(--font-ipa);font-size:clamp(80px,20vw,140px);line-height:1;color:var(--signal);margin:0 0 12px}
+  .sd-hero-label{font-family:var(--font-serif);font-size:clamp(22px,4vw,28px);color:var(--ink);margin:0 0 6px;font-weight:600}
+  .sd-hero-category{font-size:13px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+  .sd-hero-scope{display:inline-block;margin-top:10px;padding:3px 10px;border-radius:99px;background:var(--stress-soft);color:var(--stress);font-size:12px;font-weight:600;letter-spacing:.04em}
+
+  .sd-audio{margin:20px 0 0;text-align:center}
+  .sd-listen{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;border:1px solid var(--signal);background:var(--signal-soft);color:var(--signal);border-radius:99px;font-family:var(--font-sans);font-size:15px;font-weight:600;cursor:pointer}
+  .sd-listen:hover{background:var(--signal);color:#fff}
+  .sd-listen[disabled]{opacity:.5;cursor:default}
+  .sd-listen svg{width:16px;height:16px}
+
+  .sd-section{margin:28px 0}
+  .sd-section h2{font-family:var(--font-serif);font-size:20px;margin:0 0 12px;color:var(--ink)}
+  .sd-section p{margin:0 0 8px;color:var(--ink)}
+  .sd-kv{display:grid;grid-template-columns:120px 1fr;gap:12px 16px;margin:0}
+  .sd-kv dt{font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.04em;text-transform:uppercase}
+  .sd-kv dd{margin:0;color:var(--ink)}
+  .sd-example{font-family:var(--font-ipa);color:var(--signal)}
+
+  .sd-related{margin-top:32px;padding-top:24px;border-top:1px solid var(--hair)}
+  .sd-related h2{font-family:var(--font-serif);font-size:18px;margin:0 0 14px}
+  .sd-related-list{display:flex;flex-wrap:wrap;gap:10px;padding:0;margin:0;list-style:none}
+  .sd-related-list a{display:inline-flex;align-items:baseline;gap:6px;padding:6px 12px;border:1px solid var(--hair);border-radius:99px;background:var(--panel);color:var(--ink);font-size:14px}
+  .sd-related-list a:hover{background:var(--signal-soft);border-color:var(--signal);text-decoration:none}
+  .sd-related-list .sd-ipa-mini{font-family:var(--font-ipa);color:var(--signal);font-size:16px}
+
+  .sd-cta{margin-top:36px;padding:24px 20px;background:var(--panel);border:1px solid var(--hair);border-radius:14px;text-align:center}
+  .sd-cta a{display:inline-block;padding:12px 28px;background:var(--ink);color:#fff;border-radius:99px;font-weight:600;font-size:15px}
+  .sd-cta a:hover{background:var(--signal);text-decoration:none}
+  .sd-cta-lead{margin:0 0 12px;color:var(--muted);font-size:14px}
+
+  .sd-foot{margin-top:40px;padding-top:20px;border-top:1px solid var(--hair);font-size:12px;color:var(--faint);text-align:center}
+  .sd-foot a{color:var(--muted);margin:0 10px}
+</style>
+</head>
+<body>
+  <h1 class="visually-hidden"><!-- SD:SEO_H1 --></h1>
+
+  <div class="sd-wrap">
+    <div class="sd-top">
+      <div class="sd-brand"><a href="<!-- SD:HOME_URL -->">IPA Sound Drill</a></div>
+      <nav class="sd-crumb" aria-label="Breadcrumb">
+        <a href="<!-- SD:HOME_URL -->"><!-- SD:CRUMB_HOME --></a>
+        <span aria-hidden="true">›</span>
+        <a href="<!-- SD:SOUNDS_URL -->"><!-- SD:CRUMB_SOUNDS --></a>
+        <span aria-hidden="true">›</span>
+        <span><!-- SD:CRUMB_CURRENT --></span>
+      </nav>
+    </div>
+
+    <header class="sd-hero">
+      <p class="sd-hero-ipa" aria-label="IPA symbol"><!-- SD:IPA --></p>
+      <p class="sd-hero-label"><!-- SD:LABEL --></p>
+      <p class="sd-hero-category"><!-- SD:CATEGORY_LABEL --></p>
+      <!-- SD:SCOPE_BADGE -->
+      <div class="sd-audio">
+        <button class="sd-listen" type="button" id="sdListen" data-word="<!-- SD:EX_WORD -->" data-accent="<!-- SD:EX_ACCENT -->">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>
+          <span><!-- SD:BTN_LISTEN --></span>
+        </button>
+      </div>
+    </header>
+
+    <section class="sd-section">
+      <h2><!-- SD:SEC_HOW --></h2>
+      <dl class="sd-kv">
+        <dt><!-- SD:LBL_EXAMPLE --></dt>
+        <dd class="sd-example"><!-- SD:EX_TEXT --></dd>
+        <dt><!-- SD:LBL_MOUTH --></dt>
+        <dd><!-- SD:MOUTH --></dd>
+        <dt><!-- SD:LBL_TRAP --></dt>
+        <dd><!-- SD:TRAP --></dd>
+      </dl>
+    </section>
+
+    <!-- SD:GA_RP_SECTION -->
+
+    <!-- SD:WORDS_LINK -->
+
+    <nav class="sd-related" aria-label="Related sounds">
+      <h2><!-- SD:REL_TITLE --></h2>
+      <ul class="sd-related-list">
+        <!-- SD:REL_LIST -->
+      </ul>
+    </nav>
+
+    <aside class="sd-cta">
+      <p class="sd-cta-lead"><!-- SD:CTA_LEAD --></p>
+      <a href="<!-- SD:HOME_URL -->"><!-- SD:CTA_BUTTON --></a>
+    </aside>
+
+    <footer class="sd-foot">
+      <a href="<!-- SD:HOME_URL -->"><!-- SD:BACK_TOP --></a>
+      <a href="/terms.html">Terms</a>
+      <a href="/privacy.html">Privacy</a>
+    </footer>
+  </div>
+
+<script>
+(function(){
+  var GAS = "https://script.google.com/macros/s/AKfycbz-O44-1Nyi3rrEsBMYfwGeBK_DTGAH-ItOsamiHz8iFe4Kz2pnnowNatlb6LeZS8mE/exec";
+  var btn = document.getElementById("sdListen");
+  if (!btn) return;
+  var audioCtx = null;
+  var currentBuffer = null;
+  btn.addEventListener("click", function() {
+    var w = btn.getAttribute("data-word");
+    var a = btn.getAttribute("data-accent") || "ga";
+    if (!w) return;
+    btn.disabled = true;
+    fetch(GAS + "?word=" + encodeURIComponent(w) + "&accent=" + a)
+      .then(function(r){ return r.arrayBuffer(); })
+      .then(function(buf){
+        if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        return audioCtx.decodeAudioData(buf);
+      })
+      .then(function(decoded){
+        var src = audioCtx.createBufferSource();
+        src.buffer = decoded;
+        src.connect(audioCtx.destination);
+        src.start(0);
+        src.onended = function(){ btn.disabled = false; };
+      })
+      .catch(function(){ btn.disabled = false; });
+  });
+})();
+</script>
+</body>
+</html>

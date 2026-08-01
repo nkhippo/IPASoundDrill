@@ -3,20 +3,20 @@
 - 総語数: **5397**
 - K (近傍上限): 8
 - MAX_DIST: 2 (短 <7) / 3 (7≤ 長 <11) / 4 (超長 ≥11)
-- 近傍0語: **284** (5%)  ← Mode B実行時はランダム補填
-- 近傍3語未満: 982 (18%)
-- 近傍K語フル: 3262 (60%)
-- 平均近傍数: 6.0
-- ミニマルペア(sub)を1つ以上持つ語: **2419** (44%)
+- 近傍0語: **291** (5%)  ← Mode B実行時はランダム補填
+- 近傍3語未満: 1062 (19%)
+- 近傍K語フル: 3153 (58%)
+- 平均近傍数: 5.9
+- ミニマルペア(sub)を1つ以上持つ語: **2441** (45%)
 
 ## CEFR別カバー率
 
 | CEFR | 総数 | 0近傍 | 0近傍% | フルK% | sub保有% |
 |---|---:|---:|---:|---:|---:|
-| A1 | 1187 | 19 | 2% | 83% | 71% |
-| A2 | 1195 | 54 | 5% | 62% | 44% |
-| B1 | 2116 | 152 | 7% | 48% | 31% |
-| B2 | 899 | 59 | 7% | 59% | 44% |
+| A1 | 1187 | 26 | 2% | 81% | 72% |
+| A2 | 1195 | 51 | 4% | 60% | 44% |
+| B1 | 2116 | 156 | 7% | 46% | 31% |
+| B2 | 899 | 58 | 6% | 56% | 45% |
 
 ## サンプル: 主要なミニマルペアが取れているか
 
@@ -32,24 +32,24 @@
 
 ## サンプル: 長い複合語（v2 で新たに近傍を得たもの）
 
-- **basketball** /ˈbæskətˌbɔl/ (9 tokens) → basket/mix33
-- **submarine** /ˈsʌbməˌrin/ (8 tokens) → summarise/mix33, summarize/mix33
-- **rainforest** /ˈreɪnˌfɔrəst/ (9 tokens) → forest/mix33
+- **basketball** /ˈbæskətˌbɑl/ (9 tokens) → (0 neighbors — genuinely isolated in wordlist)
+- **submarine** /ˈsʌbməˌrin/ (8 tokens) → summarise/mix33, summarize/mix33, marine/mix33
+- **rainforest** /ˈreɪnˌfɑrəst/ (9 tokens) → forest/mix33
 - **entertainment** /ˌɛntɚˈteɪnmənt/ (11 tokens) → attainment/mix44, entertainer/mix44, entertain/mix44
-- **international** /ˌɪntɚˈnæʃənəl/ (11 tokens) → internationally/ins1, intentionally/mix33, interaction/mix44, intermission/mix44, national/mix44
-- **organization** /ˌɔrɡənəˈzeɪʃən/ (11 tokens) → organisation/sub1, civilisation/mix44, organism/mix44
-- **information** /ˌɪnfɚˈmeɪʃən/ (9 tokens) → intermission/mix2, confirmation/mix2, inspiration/mix33, interaction/mix33, invitation/mix33, animation/mix33
-- **representative** /ˌrɛprəˈzɛntətɪv/ (13 tokens) → (0 neighbors — genuinely isolated in wordlist)
-- **advertisement** /ædˈvɝtəzmənt/ (11 tokens) → advancement/mix44
-- **literature** /ˈlɪtɚətʃɚ/ (7 tokens) → literary/mix33, signature/mix33, little/mix33
+- **international** /ˌɪntɚˈnæʃənəl/ (11 tokens) → intentionally/mix33, internationally/mix33
+- **organization** /ˌɑrɡənəˈzeɪʃn̩/ (11 tokens) → organisation/sub1
+- **information** /ˌɪnfɚˈmeɪʃən/ (9 tokens) → confirmation/mix2
+- **representative** /ˌrɛprɪˈzɛntəɾɪv/ (13 tokens) → represent/mix44
+- **advertisement** /ˌædvɚˈtaɪzmənt/ (11 tokens) → advertising/mix44, advertise/mix44
+- **literature** /ˈlɪɾɚətʃɚ/ (7 tokens) → literary/mix33, signature/mix33
 
 ## 近傍数の分布
-  - 0近傍: 284語
-  - 1近傍: 346語
-  - 2近傍: 352語
-  - 3近傍: 300語
-  - 4近傍: 273語
-  - 5近傍: 235語
-  - 6近傍: 188語
-  - 7近傍: 157語
-  - 8近傍: 3262語
+  - 0近傍: 291語
+  - 1近傍: 408語
+  - 2近傍: 363語
+  - 3近傍: 329語
+  - 4近傍: 260語
+  - 5近傍: 233語
+  - 6近傍: 180語
+  - 7近傍: 180語
+  - 8近傍: 3153語

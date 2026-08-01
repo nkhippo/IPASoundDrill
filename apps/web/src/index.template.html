@@ -5,6 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <base href="/">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="theme-color" content="#0C7C7E">
+<script>if('serviceWorker' in navigator){window.addEventListener('load',()=>{navigator.serviceWorker.register('/sw.js').catch(()=>{})});}</script>
 <title><!-- BUILD:META_TITLE --></title>
 <meta name="description" content="<!-- BUILD:META_DESCRIPTION -->">
 <link rel="canonical" href="<!-- BUILD:CANONICAL -->">
@@ -15,9 +19,14 @@
 <meta property="og:locale" content="<!-- BUILD:OG_LOCALE -->">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="IPA Sound Drill">
+<meta property="og:image" content="https://ipasounddrill.app/og/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="<!-- BUILD:OG_TITLE -->">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="<!-- BUILD:OG_TITLE -->">
 <meta name="twitter:description" content="<!-- BUILD:OG_DESCRIPTION -->">
+<meta name="twitter:image" content="https://ipasounddrill.app/og/og-default.png">
 <script type="application/ld+json"><!-- BUILD:JSON_LD --></script>
 <link rel="preload" href="fonts/DoulosSIL-Regular.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1179,8 +1188,9 @@
   <section id="purposeStub" class="panel" data-frame="1a">
     <div class="top-grid">
       <div class="top-hero-main">
+        <h1 class="visually-hidden" id="seoH1">English Pronunciation Trainer with IPA — General American and Received Pronunciation, Free</h1>
         <span class="top-swash" aria-hidden="true"></span>
-        <h1 class="top-tagline" id="topTagline">音を、美しく。</h1>
+        <p class="top-tagline" id="topTagline">音を、美しく。</p>
         <p class="top-subcopy" id="topSubcopy"></p>
         <div class="top-attrs" id="topAttrs" aria-label="App attributes"></div>
         <div class="top-hero-links">
@@ -2830,6 +2840,7 @@ function applyI18n() {
   $("dirEncodeT").innerHTML = t("dir.encode_t");
   $("dirEncodeD").textContent = t("dir.encode_d");
   if ($("topTagline")) $("topTagline").textContent = t("top.tagline");
+  if ($("seoH1")) $("seoH1").textContent = t("seo.h1");
   if ($("footerFeedback")) $("footerFeedback").textContent = t("footer.feedback");
   if ($("footerTerms")) $("footerTerms").textContent = t("footer.terms");
   if ($("footerPrivacy")) $("footerPrivacy").textContent = t("footer.privacy");
@@ -3219,13 +3230,18 @@ function closeVocab() { navigate(""); }
  */
 function symbolChartGroups(accentOverride) {
   const acc = accentOverride || ACCENT;
-  const consonants = [
+  const consonantsBase = [
     { id: "plosives", symbols: ["p", "b", "t", "d", "k", "ɡ"] },
     { id: "fricatives", symbols: ["f", "v", "θ", "ð", "s", "z", "ʃ", "ʒ", "h"] },
     { id: "nasals", symbols: ["m", "n", "ŋ"] },
     { id: "approximants", symbols: ["r", "w", "j"] },
     { id: "laterals", symbols: ["l"] },
     { id: "affricates", symbols: ["tʃ", "dʒ"] }
+  ];
+  const consonants = acc === "rp" ? consonantsBase : [
+    ...consonantsBase,
+    { id: "other", symbols: ["ɾ", "ʔ"] },
+    { id: "syllabic", symbols: ["n̩", "l̩"] }
   ];
   const stress = { id: "stress", symbols: ["ˈ", "ˌ"] };
   if (acc === "rp") {
@@ -3261,7 +3277,6 @@ function symbolChartGroups(accentOverride) {
     ]},
     { id: "backVowels", heights: [
       { id: "close", symbols: ["u", "ʊ"] },
-      { id: "openMid", symbols: ["ɔ"] },
       { id: "open", symbols: ["ɑ"] }
     ]},
     { id: "diphthongs", symbols: ["eɪ", "aɪ", "ɔɪ", "oʊ", "aʊ"] },
@@ -3524,7 +3539,7 @@ const PH_EXAMPLES={
   "ɔɪ":[["boy","/bɔɪ/"],["toy","/tɔɪ/"],["joy","/dʒɔɪ/"]],
   "oʊ":[["go","/ɡoʊ/"],["owe","/oʊ/"],["show","/ʃoʊ/"]],
   "aʊ":[["how","/haʊ/"],["cow","/kaʊ/"],["hour","/ˈaʊɚ/"]],
-  "ɾ":[["butter","/ˈbʌɾɚ/"],["city","/ˈsɪɾi/"],["water","/ˈwɔɾɚ/"]],
+  "ɾ":[["butter","/ˈbʌɾɚ/"],["city","/ˈsɪɾi/"],["water","/ˈwɑɾɚ/"]],
   "ʔ":[["button","/ˈbʌʔn̩/"],["mountain","/ˈmaʊnʔn̩/"],["written","/ˈrɪʔn̩/"]],
   "n̩":[["button","/ˈbʌʔn̩/"],["garden","/ˈɡɑrdn̩/"],["ridden","/ˈrɪdn̩/"]],
   "l̩":[["bottle","/ˈbɑɾl̩/"],["little","/ˈlɪɾl̩/"],["middle","/ˈmɪɾl̩/"]]
@@ -4287,7 +4302,7 @@ function modeBDictCheck(){
 
 
 /* ---------- speech (GAS → Drive → localStorage) ---------- */
-const GAS_TTS_URL = "https://script.google.com/macros/s/AKfycbz-O44-1Nyi3rrEsBMYfwGeBK_DTGAH-ItOsamiHz8iFe4Kz2pnnowNatlb6LeZS8mE/exec";
+const GAS_TTS_URL = "https://script.google.com/macros/s/AKfycbzlliPKlw-v-4ne1rCIz1d2_zGCqt8WkCWcl4JuHxsEF4C4lJD-sZngu1IXGAEE9Hml/exec";
 const LS_TTS_PREFIX = "ipa_tts_v2:";
 const PREFETCH = { warmChunk: 6, warmParallel: 2, bodyParallel: 3 };
 const memAudioCache = new Map();
@@ -5289,10 +5304,11 @@ function keyGroups(){
   }
   return [
     {label:t("kbd.stress"),keys:["ˈ","ˌ"],cls:"stress"},
-    {label:t("kbd.vowels"),keys:["i","ɪ","ɛ","æ","ə","ʌ","ɑ","ɔ","ʊ","u"]},
+    {label:t("kbd.vowels"),keys:["i","ɪ","ɛ","æ","ə","ʌ","ɑ","ʊ","u"]},
     {label:t("kbd.r_vowels"),keys:["ɝ","ɚ"]},
     {label:t("kbd.diphthongs"),keys:["eɪ","aɪ","ɔɪ","oʊ","aʊ"]},
-    {label:t("kbd.consonants"),keys:["p","b","t","d","k","ɡ","f","v","θ","ð","s","z","ʃ","ʒ","tʃ","dʒ","m","n","ŋ","l","r","w","j","h"]}
+    {label:t("kbd.consonants"),keys:["p","b","t","d","k","ɡ","f","v","θ","ð","s","z","ʃ","ʒ","tʃ","dʒ","m","n","ŋ","l","r","w","j","h","ɾ","ʔ"]},
+    {label:t("kbd.syllabic"),keys:["n̩","l̩"]}
   ];
 }
 function buildKeyboard(){

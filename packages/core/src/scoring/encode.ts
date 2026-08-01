@@ -29,7 +29,7 @@ export const MULTI_RP: readonly string[] = [
 ];
 
 export const VOWELS_GA: ReadonlySet<string> = new Set([
-  "i", "ɪ", "ɛ", "æ", "ə", "ʌ", "ɑ", "ɔ", "ʊ", "u", "ɝ", "ɚ",
+  "i", "ɪ", "ɛ", "æ", "ə", "ʌ", "ɑ", "ʊ", "u", "ɝ", "ɚ",
   "eɪ", "aɪ", "ɔɪ", "oʊ", "aʊ",
 ]);
 
