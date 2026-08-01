@@ -761,7 +761,7 @@
   /* 2026-07-28 phase-3 round-3: 「聞き取|れる」等の熟語途中改行を防ぐ。
      日本語では `word-break:keep-all` で漢字連続を 1 語扱いにできる。overflow-wrap を anywhere にせず自然改行。 */
   .top-subcopy{font-size:13.5px;line-height:1.9;color:var(--muted);margin:18px 0 0;text-wrap:pretty;word-break:keep-all;overflow-wrap:break-word}
-  .top-attrs{display:flex;flex-wrap:wrap;gap:6px 12px;margin:18px 0 var(--space-4);font-size:11.5px;color:var(--faint)}
+  .top-attrs{display:flex;flex-wrap:wrap;gap:6px 12px;margin:24px 0 var(--space-4);font-size:11.5px;color:var(--faint)}
   .top-review-title{font-family:var(--font-serif);font-size:12.5px;font-weight:600;letter-spacing:.1em;color:var(--ink);margin:0 2px 10px}
   /* Phase 1-B top page (1a) */
   body.top-home{background:var(--paper);color:var(--ink)}
@@ -2649,7 +2649,7 @@ function posLabel(pos) {
 
 const HOME_COPY = {
   ja: {
-    subcopy: "発音記号（IPA）で、英語の音をていねいに練り直す。読める音は、やがて聞き取れる音になります。",
+    subcopy: ["発音できない音は、聞き取れない。", "英語のあらゆる音は、IPA（発音記号）で表せる。", "IPAで発音の解像度を上げて、もっとクリアに聞き取りましょう。"],
     attrs: ["6言語対応", "無料", "登録不要"],
     review: "振り返る",
     purposeLabel: "目的から選ぶ",
@@ -2672,7 +2672,7 @@ const HOME_COPY = {
     cefr: { A1: "入門", A2: "初級", B1: "中級", B2: "中上級", all: "すべて" }
   },
   en: {
-    subcopy: "Use IPA to rebuild English sounds carefully. Sounds you can read become sounds you can hear.",
+    subcopy: ["You can't hear a sound you can't say.", "Every sound in English can be written in IPA.", "Raise your pronunciation's resolution with IPA—and hear English clearly."],
     attrs: ["6 languages", "Free", "No signup"],
     review: "Review",
     purposeLabel: "Choose your focus",
@@ -2695,7 +2695,7 @@ const HOME_COPY = {
     cefr: { A1: "Starter", A2: "Elementary", B1: "Intermediate", B2: "Upper", all: "All" }
   },
   ko: {
-    subcopy: "IPA로 영어 소리를 차근차근 다시 다듬습니다. 읽을 수 있는 소리는 곧 들을 수 있는 소리가 됩니다.",
+    subcopy: ["발음할 수 없는 소리는, 들리지 않는다.", "영어의 모든 소리는 IPA(발음기호)로 표현할 수 있다.", "IPA로 발음의 해상도를 높이고, 더 또렷하게 들어보자."],
     attrs: ["6개 언어", "무료", "가입 불필요"],
     review: "돌아보기",
     purposeLabel: "목적 선택",
@@ -2718,7 +2718,7 @@ const HOME_COPY = {
     cefr: { A1: "입문", A2: "초급", B1: "중급", B2: "중상급", all: "전체" }
   },
   "zh-Hans": {
-    subcopy: "用 IPA 重新打磨英语声音。能读出的声音，最终会变成能听出的声音。",
+    subcopy: ["发不出的音，就听不出来。", "英语的每一个音，都能用 IPA（音标）表示。", "用 IPA 提升发音的分辨率，把英语听得更清晰。"],
     attrs: ["6 种语言", "免费", "无需注册"],
     review: "回顾",
     purposeLabel: "选择目的",
@@ -2741,7 +2741,7 @@ const HOME_COPY = {
     cefr: { A1: "入门", A2: "初级", B1: "中级", B2: "中高级", all: "全部" }
   },
   "zh-Hant": {
-    subcopy: "用 IPA 重新打磨英語聲音。能讀出的聲音，最後會變成能聽出的聲音。",
+    subcopy: ["發不出的音，就聽不出來。", "英語的每一個音，都能用 IPA（音標）表示。", "用 IPA 提升發音的解析度，把英語聽得更清晰。"],
     attrs: ["6 種語言", "免費", "免註冊"],
     review: "回顧",
     purposeLabel: "選擇目的",
@@ -2764,7 +2764,7 @@ const HOME_COPY = {
     cefr: { A1: "入門", A2: "初級", B1: "中級", B2: "中高級", all: "全部" }
   },
   fil: {
-    subcopy: "Gamitin ang IPA para ayusin muli ang tunog ng English. Ang tunog na nababasa mo ay magiging tunog na naririnig mo.",
+    subcopy: ["Ang tunog na hindi mo kayang bigkasin ay hindi mo maririnig.", "Bawat tunog sa Ingles ay maisusulat sa IPA (phonetic symbols).", "Sa IPA, hasain ang bigkas—at marinig ang Ingles nang mas malinaw."],
     attrs: ["6 na wika", "Libre", "Walang signup"],
     review: "Balikan",
     purposeLabel: "Pumili ng layunin",
@@ -2843,7 +2843,11 @@ function applyI18n() {
   if ($("footerTerms")) $("footerTerms").textContent = t("footer.terms");
   if ($("footerPrivacy")) $("footerPrivacy").textContent = t("footer.privacy");
   const home = homeCopy();
-  if ($("topSubcopy")) $("topSubcopy").textContent = home.subcopy;
+  if ($("topSubcopy")) {
+    const sc = home.subcopy;
+    if (Array.isArray(sc)) $("topSubcopy").innerHTML = sc.map(escHtml).join("<br>");
+    else $("topSubcopy").textContent = sc;
+  }
   if ($("topAttrs")) $("topAttrs").innerHTML = home.attrs.map((label, idx) =>
     (idx ? '<span aria-hidden="true">·</span>' : '') + '<span>' + escHtml(label) + '</span>'
   ).join("");
