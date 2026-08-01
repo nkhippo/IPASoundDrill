@@ -4660,6 +4660,10 @@ function scheduleIdle(fn, timeout) {
   }
 }
 
+// Issue #261: accent 切替時の再 prefetch。session 開始側 prefetchItemsAudio と
+// 同じ「現問(index 0 相当)優先 → 以降 background 並列」構造にする。切替直後は
+// 現在表示中の word がユーザーに最初に叩かれる可能性が最も高いため、単独 fetch
+// を先に走らせ、残りは PREFETCH.bodyParallel の worker で背景処理する。
 async function prefetchAccentBodies(accent) {
   if (!S.queue.length) return;
   const token = ++prefetchToken;
@@ -4677,15 +4681,27 @@ async function prefetchAccentBodies(accent) {
     }
   });
   refreshAllSpeakers();
+
+  // FAST PATH: 現問(items[0] 相当)の body を最優先で開始(fire-and-forget)。
+  // 背景 worker と並行に走るため、待ち時間ゼロで叩き始められる。
+  const firstWord = words[0];
+  if (firstWord && !hasCachedAudioFor(firstWord, accent)) {
+    fetchBodyToCache(firstWord, accent, token);
+  }
+  const remaining = firstWord ? words.filter(w => w !== firstWord) : words.slice();
+
+  // BACKGROUND: 残り word を bodyParallel 並列で worker 消化。
   let wi = 0;
   async function wordWorker() {
-    while (wi < words.length) {
+    while (wi < remaining.length) {
       if (token !== prefetchToken) return;
-      const w = words[wi++];
+      const w = remaining[wi++];
       await fetchBodyToCache(w, accent, token);
     }
   }
   await Promise.all(Array.from({ length: PREFETCH.bodyParallel }, wordWorker));
+
+  // 連結/弱形は逐次(元設計を維持)。
   for (const c of items) {
     if (token !== prefetchToken) return;
     if (isConnectedItem(c)) await fetchBodyToCacheItem(c, "ga", token);
