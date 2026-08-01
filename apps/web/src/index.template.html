@@ -1372,6 +1372,12 @@
     <div id="mbSMeaning" class="mbsMeaning hidden">
       <div class="readout"><div class="wordbig" id="mbSWord"></div></div>
       <div class="word-gloss" id="mbSGloss"></div>
+      <!-- Issue #260: 2a reveal と同一構造の発音カード(GA/RP + 🔊)を 2c answer にも配置 -->
+      <div class="pron-card hidden" id="mbSPronCard">
+        <div class="pron-card-label" id="mbSPronLabel"></div>
+        <div class="pron-row" id="mbSPronGaRow"><span class="pron-accent">GA</span><span class="ipa pron-ipa" id="mbSPronGa"></span><button class="playicon playicon-sm" id="mbSPronGaPlay" type="button" aria-label="GA"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg></button></div>
+        <div class="pron-row" id="mbSPronRpRow"><span class="pron-accent">RP</span><span class="ipa pron-ipa" id="mbSPronRp"></span><button class="playicon playicon-sm" id="mbSPronRpPlay" type="button" aria-label="RP"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg></button></div>
+      </div>
       <div class="note" id="mbSNoteBlock">
         <div class="nh" id="mbSTipsHead">Pronunciation tips</div>
         <p id="mbSNote"></p>
@@ -4204,6 +4210,7 @@ const MB_S_PRON_IDS={noteId:"mbSNote",tipsHeadId:"mbSTipsHead",trapsId:"mbSTraps
 function refreshModeBStudyContent(c){
   $("mbSGloss").textContent=modeBDisplayGloss(c);
   renderWordPronDetails(c,MB_S_PRON_IDS);
+  renderPronCardInto(c,MB_S_PRON_CARD_IDS);
 }
 function renderModeBStudy(c){
   hideModeBCards();
@@ -5486,24 +5493,27 @@ function setRevealPending(pending){
   if(pending && $("rPendingText")) $("rPendingText").textContent=t("reveal.pending");
   document.body.classList.toggle("drill-answered", !pending);
 }
-function renderPronCard(c){
-  const card=$("rPronCard"); if(!card)return;
+const R_PRON_IDS={card:"rPronCard",label:"rPronLabel",gaRow:"rPronGaRow",ga:"rPronGa",rpRow:"rPronRpRow",rp:"rPronRp"};
+const MB_S_PRON_CARD_IDS={card:"mbSPronCard",label:"mbSPronLabel",gaRow:"mbSPronGaRow",ga:"mbSPronGa",rpRow:"mbSPronRpRow",rp:"mbSPronRp"};
+function renderPronCardInto(c,ids){
+  const card=$(ids.card); if(!card)return;
   const ga=c.ipa||"", rp=c.rp_ipa||"";
   if(!ga&&!rp){card.classList.add("hidden");return;}
   card.classList.remove("hidden");
-  if($("rPronLabel")) $("rPronLabel").textContent=t("reveal.pron_label");
-  const gaAcc=$("rPronGaRow")?$("rPronGaRow").querySelector(".pron-accent"):null;
-  if($("rPronGa")) $("rPronGa").innerHTML=buildIpaHtml(ga||rp);
+  if($(ids.label)) $(ids.label).textContent=t("reveal.pron_label");
+  const gaAcc=$(ids.gaRow)?$(ids.gaRow).querySelector(".pron-accent"):null;
+  if($(ids.ga)) $(ids.ga).innerHTML=buildIpaHtml(ga||rp);
   const same=(c.ga_rp_same!==undefined)?c.ga_rp_same:(rp===ga);
   if(rp&&!same){
     if(gaAcc)gaAcc.textContent="GA";
-    $("rPronRpRow").classList.remove("hidden");
-    if($("rPronRp")) $("rPronRp").innerHTML=buildIpaHtml(rp);
+    $(ids.rpRow).classList.remove("hidden");
+    if($(ids.rp)) $(ids.rp).innerHTML=buildIpaHtml(rp);
   }else{
     if(gaAcc)gaAcc.textContent="GA=RP";
-    $("rPronRpRow").classList.add("hidden");
+    $(ids.rpRow).classList.add("hidden");
   }
 }
+function renderPronCard(c){ renderPronCardInto(c,R_PRON_IDS); }
 function reveal(res,ctx){
   const c=S.cur;S.revealed=true;
   if(S.appMode!=="b")recordHist(c.w,res);
@@ -5588,6 +5598,8 @@ function nextCard(){
 $("nextBtn").addEventListener("click",nextCard);
 if($("rPronGaPlay")) $("rPronGaPlay").addEventListener("click",()=>{unlockAudioFromGesture();if(S.cur)speak(S.cur.w,{accent:"ga"});});
 if($("rPronRpPlay")) $("rPronRpPlay").addEventListener("click",()=>{unlockAudioFromGesture();if(S.cur)speak(S.cur.w,{accent:"rp"});});
+if($("mbSPronGaPlay")) $("mbSPronGaPlay").addEventListener("click",()=>{unlockAudioFromGesture();if(S.cur)speak(S.cur.w,{accent:"ga"});});
+if($("mbSPronRpPlay")) $("mbSPronRpPlay").addEventListener("click",()=>{unlockAudioFromGesture();if(S.cur)speak(S.cur.w,{accent:"rp"});});
 $("mbSRevealBtn").addEventListener("click",()=>{
   $("mbSMeaning").classList.remove("hidden");
   $("mbSRevealBtn").classList.add("hidden");
