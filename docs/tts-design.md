@@ -67,13 +67,14 @@ Keep the delivery identical and consistent across all words.
 
 **フロー（Phase T 以降）:**
 1. `prefetchItemsAudio(batch)` — キューへ追加した分を先読み
-2. 単語: 1問目 body を warm 完了前に開始（body-first）。現アクセント `gasWarm` は非ブロック。反対アクセント warm は idle 延期
+2. 単語: 1問目 body を warm 完了前に開始（body-first、FAST PATH）。現アクセント `gasWarm` は非ブロック。残り word は `bodyWorkerBatch` の `warmChunk=6` × parallel Drive DL でバッチ処理。反対アクセント warm は idle 延期
 3. body 取得は Drive 公開 URL（`?urls=1`）優先、失敗時は従来 base64（`?word=` 等）
 4. 連結句: `?phrase=` body を GA で先読み
 5. 弱形: `?weak=` body を GA/RP 両方で先読み
 6. setup 表示中はプール先頭を preread（フィルタ変更でキャンセル）
 7. スピーカーボタンはキャッシュ準備完了まで `disabled`（全モード共通）
 8. `prefetchToken` で古いジョブをキャンセル
+9. **accent 切替時 (`prefetchAccentBodies`)** — session 開始と同じ「現問優先 → 以降 background」構造。現問 word の body を単独で fire-and-forget、残り word を `bodyParallel=3` worker で並列消化、連結/弱形は最後に逐次（Issue #261 で明示化）
 9. 離脱確認（`#exitConfirmModal`）— Decode / Encode / Mode B Study / Reveal から Menu またはブランドタップ時に Yes/No。Yes → トップ（`1a`）復帰（`goToTop(true)`。再開なし）。Summary・プロフィールではモーダルなし
 
 GAS 側の `?urls=1` / `migratePublicSharing` 反映は `docs/reference/remaining-ops-checklist.md`。
