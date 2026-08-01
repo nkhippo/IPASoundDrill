@@ -11,7 +11,7 @@
  *        GET ?weak=/kən/&ww=can&accent=ga|rp  (weak form; IPA input)
  */
 
-const FOLDER_NAME = 'IPA-TTS-Audio';
+const FOLDER_ID = '1-eReuBXdwKWukpXdIHAiI6lPvaAkATpA'; // Drive folder: IPASoundDrill/TTS-Audio
 const TTS_CACHE_VER = 'v2';
 const TTS_CONNECTED_CACHE_VER = 'v4';
 const TTS_MODEL = 'gpt-4o-mini-tts';
@@ -40,9 +40,7 @@ const TTS_MIN_BYTES = 9000;
 const WARM_MAX = 6;
 
 function getFolder_() {
-  const folders = DriveApp.getFoldersByName(FOLDER_NAME);
-  if (folders.hasNext()) return folders.next();
-  return DriveApp.createFolder(FOLDER_NAME);
+  return DriveApp.getFolderById(FOLDER_ID);
 }
 
 function slugForInput_(text) {
