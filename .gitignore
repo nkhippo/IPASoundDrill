@@ -12,3 +12,5 @@ node_modules/
 /zh-Hant/
 /fil/
 .vercel/
+tools/tts/audio/
+tools/tts/drive_upload/
