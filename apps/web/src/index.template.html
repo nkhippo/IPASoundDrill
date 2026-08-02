@@ -2277,8 +2277,11 @@ function bindVirtScroll(body, state, paintFn) {
  */
 function jumpVocabLetter(letter) {
   const L = String(letter || "").toUpperCase();
-  const idx = vocabVirtState.slots.findIndex(s =>
-    s.kind === "row" && s.item && s.item.w && s.item.w[0].toUpperCase() === L);
+  const idx = vocabVirtState.slots.findIndex(s => {
+    if (s.kind === "row") return s.item && s.item.w && s.item.w[0].toUpperCase() === L;
+    if (s.kind === "row2") return s.items && s.items.some(it => it.w && it.w[0].toUpperCase() === L);
+    return false;
+  });
   if (idx < 0) return;
   $("vocabBody").scrollTo({ top: vocabVirtState.cum[idx], behavior: "smooth" });
   document.querySelectorAll("#vocabLetters .vocab-letter-btn").forEach(b =>
