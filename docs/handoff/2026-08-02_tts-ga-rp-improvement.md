@@ -201,3 +201,107 @@ PoC v1（綴り入力 × alloy/nova × 現行/強化 instructions の 4 バリ�
 
 PoC v2 では IPA 直接入力（wordlist.json の rp_ipa フィールド）に切り替えた 4 バリアントを検証予定。
 ```
+
+---
+
+## PoC v2 実施者向け引き継ぎパック（本 doc 単体で完結）
+
+新 Chat が本 handoff doc + OpenAI API キーのみで PoC v2 を完遂できるように、必要な素材を全て inline する。Code.gs や wordlist.json を追加で読む必要はない。
+
+### 1. Baseline instructions 全文（A/B バリアント用、production 現行と完全一致）
+
+`tools/tts/gas/Code.gs` 由来。GA/RP で差分は「General American accent」vs「modern Received Pronunciation (standard Southern British) accent」の 1 句のみ。
+
+**TTS_INSTRUCTIONS_GA**:
+```
+Pronounce the single English word in a clear General American accent. Use the citation (dictionary) form: full, unreduced vowels and the correct lexical stress — do not use the weak or reduced connected-speech form, even for function words. Say the word once, at a calm pace slightly slower than conversational, with neutral falling intonation. Articulate consonants precisely and keep contrasts distinct — especially /θ/–/f/, /ð/–/d/, /l/–/r/, /s/–/ʃ/, /b/–/v/, and word-final consonants — but stay natural and never exaggerate them into distortion. Do not spell the word, do not add any other words, do not pause, and do not use emotional or expressive delivery. Keep the delivery identical and consistent across all words.
+```
+
+**TTS_INSTRUCTIONS_RP**:
+```
+Pronounce the single English word in a clear modern Received Pronunciation (standard Southern British) accent. Use the citation (dictionary) form: full, unreduced vowels and the correct lexical stress — do not use the weak or reduced connected-speech form, even for function words. Say the word once, at a calm pace slightly slower than conversational, with neutral falling intonation. Articulate consonants precisely and keep contrasts distinct — especially /θ/–/f/, /ð/–/d/, /l/–/r/, /s/–/ʃ/, /b/–/v/, and word-final consonants — but stay natural and never exaggerate them into distortion. Do not spell the word, do not add any other words, do not pause, and do not use emotional or expressive delivery. Keep the delivery identical and consistent across all words.
+```
+
+### 2. C/D 用強化 instructions（IPA 厳密遵守）全文
+
+A/B の RP instructions（上記）末尾に以下 1 文を追加した文字列を C/D の instructions として使う。
+
+**追記文**:
+```
+The input is an IPA transcription in slashes (e.g. /fɜːst/). Pronounce EXACTLY the phonemes shown — do not substitute rhotic /ɹ/ where the IPA shows /ə/ or /ɜː/, do not substitute /oʊ/ where the IPA shows /əʊ/. Follow every symbol including stress marks.
+```
+
+すなわち C/D の instructions = `TTS_INSTRUCTIONS_RP + ' ' + 上記追記文`。
+
+### 3. 12 語 × GA/RP IPA 完全表（wordlist.json v-current から取得済み）
+
+C/D の `input` にはこの表の **RP IPA**（`/…/` を含む文字列）を渡す。A/B は `word`（綴り）を渡す。
+
+| # | word | category | GA IPA (`ipa`) | RP IPA (`rp_ipa`) |
+|---|---|---|---|---|
+| 1 | first | rhoticity | `/fɝst/` | `/fɜːst/` |
+| 2 | picture | rhoticity | `/ˈpɪktʃɚ/` | `/ˈpɪktʃə/` |
+| 3 | chirp | rhoticity | `/tʃɝp/` | `/tʃɜːp/` |
+| 4 | container | rhoticity | `/kənˈteɪnɚ/` | `/kənˈteɪnə/` |
+| 5 | cover | rhoticity | `/ˈkʌvɚ/` | `/ˈkʌvə/` |
+| 6 | control | goat_vowel | `/kənˈtroʊl/` | `/kənˈtrəʊl/` |
+| 7 | roast | goat_vowel | `/roʊst/` | `/rəʊst/` |
+| 8 | home | goat_vowel | `/hoʊm/` | `/həʊm/` |
+| 9 | sorry | lot_vowel | `/ˈsɑri/` | `/ˈsɒri/` |
+| 10 | population | lot_vowel | `/ˌpɑpjəˈleɪʃn̩/` | `/ˌpɒpjəˈleɪʃn̩/` |
+| 11 | hot | lot_vowel | `/hɑt/` | `/hɒt/` |
+| 12 | chance | trap_bath | `/tʃæns/` | `/tʃɑːns/` |
+
+### 4. API 呼び出し仕様（OpenAI Audio Speech）
+
+- **Endpoint**: `POST https://api.openai.com/v1/audio/speech`
+- **Auth**: `Authorization: Bearer $OPENAI_API_KEY`
+- **Body（JSON）**:
+  - `model`: `"gpt-4o-mini-tts"` （production と同一。v2 はモデル固定）
+  - `voice`: A/B/C は `"alloy"`、D は `"nova"`
+  - `input`: A/B は綴り（例 `"first"`）、C/D は RP IPA 文字列（例 `"/fɜːst/"`）
+  - `instructions`: §1/§2 のいずれか（バリアント別）
+  - `response_format`: `"mp3"`
+- **response**: バイナリ MP3。ファイル名規約 `{index:02d}_{word}_{variant}.mp3`（例 `01_first_A.mp3`, `01_first_B.mp3`, `01_first_C.mp3`, `01_first_D.mp3`）。
+- **temperature / speed**: 指定しない（デフォルト）。production も未指定。
+
+Python 参考（1 音声分）:
+```python
+import requests, os
+r = requests.post(
+    "https://api.openai.com/v1/audio/speech",
+    headers={"Authorization": f"Bearer {os.environ['OPENAI_API_KEY']}"},
+    json={
+        "model": "gpt-4o-mini-tts",
+        "voice": "alloy",
+        "input": "/fɜːst/",
+        "instructions": RP_INSTRUCTIONS + " " + IPA_STRICT_SUFFIX,
+        "response_format": "mp3",
+    },
+    timeout=60,
+)
+r.raise_for_status()
+open("01_first_C.mp3", "wb").write(r.content)
+```
+
+### 5. 失敗時リトライ方針（v1 で "sorry" C が生成失敗した対策）
+
+- HTTP 5xx / タイムアウト / レスポンスバイト数 < 9000（production の `TTS_MIN_BYTES` と同値）→ **最大 3 回リトライ**（各リトライ間に 2 秒 sleep）
+- 3 回失敗した音声はエラーマーカー（`_FAILED.mp3` 0 バイトファイル or 記録 json）に残し、比較 HTML に「生成失敗」表示。全体を止めない。
+
+### 6. 成果物の永続化ルール（v1 で artifact URL 消失した対策）
+
+- **必須**: 48 個の MP3 を **zip でまとめて Naoya がダウンロードできる形**にする（Claude.ai artifact の HTML 内 `<a download>` リンク、または Chat 応答内の直接ダウンロードリンク）
+- **必須**: 比較 HTML は **相対 path で MP3 を参照**（`<audio src="01_first_A.mp3">`）。base64 埋め込みでも可
+- **必須**: 比較 HTML 内に、各バリアントの `voice / input / instructions 抜粋` を表示（後で仕様追跡できるように）
+- **推奨**: 比較 HTML 内に「Naoya が試聴後に貼るメモ欄」を各行に 1 マス設ける（コピペで handoff doc v2 セクションに転記可能な形式）
+
+### 7. 実施フロー（新 Chat での想定手順）
+
+1. Naoya が本 handoff doc を新 Chat に添付、API キーを投入
+2. Claude が §3 の 12 語 × §1/§2 の 4 バリアント = 48 リクエストを §4 の仕様で送信、§5 のリトライ適用
+3. Claude が §6 に従い zip + 比較 HTML を artifact 化
+4. Naoya が試聴、行ごとに「差あり／微差／差なし／生成失敗」を判定してスクショで保存
+5. Naoya が別セッションで本 handoff doc に「## PoC v2 試聴結果」セクションを追記（v1 セクションと同形式）
+6. C or D が有意に効く場合 → Code.gs 改修方針を決定して Issue #287 で PR 起票
+7. 効かない場合 → tts-1-hd / gpt-4o-audio 系モデル切替（PoC v3）
