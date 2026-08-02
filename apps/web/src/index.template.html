@@ -285,7 +285,7 @@
   .note p{font-size:13px;color:var(--legacy-ink);margin:0 0 10px}
   .trapchips{display:flex;gap:6px;flex-wrap:wrap}
   .trapchip{font-family:var(--legacy-ipa);font-size:15px;color:var(--legacy-signal);background:var(--legacy-signal-soft);border-radius:8px;padding:3px 10px;cursor:pointer}
-  .reveal-next{margin-top:24px;width:100%;border:none;border-radius:11px;cursor:pointer;background:var(--signal);color:#fff;font-family:var(--legacy-ui);font-weight:700;font-size:15px;padding:14px;letter-spacing:.03em}
+  .reveal-next{margin-top:32px;width:100%;border:none;border-radius:11px;cursor:pointer;background:var(--signal);color:#fff;font-family:var(--legacy-ui);font-weight:700;font-size:15px;padding:14px;letter-spacing:.03em}
   .reveal-next:active{transform:translateY(1px)}
   .reveal-next.hidden{display:none}
   .mbs-meaning-slot{min-height:10rem;display:flex;align-items:flex-start;justify-content:center}
@@ -309,21 +309,21 @@
   body.symbol-picker-page .wrap,
   body.progress-page .wrap{display:none!important}
   body.vocab-page,body.symbol-picker-page,body.progress-page,body.info-page{background:var(--paper);color:var(--ink)}
-  .vocab-page,.symbol-picker-page,.progress-page,.info-page{padding:0;position:fixed;inset:0;z-index:40;display:none;flex-direction:column;background:var(--paper);overflow:hidden}
-  .vocab-page:not(.hidden),.symbol-picker-page:not(.hidden),.progress-page:not(.hidden),.info-page:not(.hidden){display:flex}
+  .vocab-page,.symbol-picker-page,.progress-page,section.info-page{padding:0;position:fixed;inset:0;z-index:40;display:none;flex-direction:column;background:var(--paper);overflow:hidden}
+  .vocab-page:not(.hidden),.symbol-picker-page:not(.hidden),.progress-page:not(.hidden),section.info-page:not(.hidden){display:flex}
   /* Naoya フィードバック(2026-07-28 phase-3): .info-page(IPAとは/言語)は「情報量が少ないのに全画面」で圧迫感がある。
      モーダル感を出すためスクリム地+中央カード+角丸+影に切り替える(モバイル/PC共通)。 */
   /* Phase-3 round-3: 中央配置だと背面 TOP の上部にスクリムだけの大きな空白が生まれる。
      モーダルを上寄せ(flex-start)にし、視覚的な空白帯を圧縮する。 */
-  .info-page{background:rgba(20,18,15,.42);padding:56px 16px 24px;align-items:flex-start;justify-content:center}
-  .info-page:not(.hidden){display:flex}
-  .info-page .info-page-inner{position:relative;background:var(--paper);border:1px solid var(--hair);border-radius:20px;box-shadow:0 20px 60px rgba(0,0,0,.28);max-width:520px;width:100%;max-height:calc(100vh - 48px);flex:0 1 auto;overflow:hidden;display:flex;flex-direction:column}
+  section.info-page{background:rgba(20,18,15,.42);padding:56px 16px 24px;align-items:flex-start;justify-content:center}
+  section.info-page:not(.hidden){display:flex}
+  section.info-page .info-page-inner{position:relative;background:var(--paper);border:1px solid var(--hair);border-radius:20px;box-shadow:0 20px 60px rgba(0,0,0,.28);max-width:520px;width:100%;max-height:calc(100vh - 48px);flex:0 1 auto;overflow:hidden;display:flex;flex-direction:column}
   /* 戻る→閉じる X を右上に絶対配置(モーダル定石) */
-  .info-page .info-page-inner .info-back{position:absolute;top:12px;right:12px;z-index:2}
-  .info-page .info-page-head{padding-right:56px}
+  section.info-page .info-page-inner .info-back{position:absolute;top:12px;right:12px;z-index:2}
+  section.info-page .info-page-head{padding-right:56px}
   @media (max-width:520px){
-    .info-page{padding:16px 12px}
-    .info-page .info-page-inner{border-radius:18px}
+    section.info-page{padding:16px 12px}
+    section.info-page .info-page-inner{border-radius:18px}
   }
   /* 3e/3f overlay pages (app-6 / app-7, CD #3e #3f) */
   .info-page-inner{max-width:560px;width:100%;margin:0 auto;flex:1;min-height:0;display:flex;flex-direction:column;overflow:hidden}
@@ -938,7 +938,7 @@
     body.pc-support #setup.profile-3a > .modal-chrome{margin:0}
     body.pc-support #setup.profile-3a > .profile-body{padding:40px 48px 44px}
     body.pc-support #setup.profile-3a .profile-back{display:none!important}
-    body.pc-support #setup.profile-3a .accent-card-grid{display:flex;gap:12px}
+    body.pc-support #setup.profile-3a .accent-card-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
     body.pc-support #setup.profile-3a .accent-card{
       display:inline-flex;align-items:center;border:1px solid var(--hair);background:var(--panel);color:var(--ink);
       border-radius:12px;padding:12px 22px;font-family:var(--font-ui);font-size:15px;font-weight:600;cursor:pointer
@@ -965,7 +965,7 @@
     /* CD 統合カード: ドリル全体(ヘッダー+ペイン)を1枚の角丸カードに収める(地=paper) */
     /* ドリル中はページ地をカード(paper)より濃い canvas 色にして、左ペインが背景と同化しないようにする */
     body.in-play{background:#E7E1D7}
-    body.in-play .wrap{max-width:1024px;padding:0;background:var(--paper);border:1px solid var(--hair);border-radius:20px;overflow:hidden;box-shadow:0 14px 44px rgba(0,0,0,.07)}
+    body.in-play .wrap{max-width:1024px;margin-top:32px;padding:0;background:var(--paper);border:1px solid var(--hair);border-radius:20px;overflow:hidden;box-shadow:0 14px 44px rgba(0,0,0,.07)}
     body.in-play .task-header,
     body.in-play .drill-header{
       display:flex;align-items:center;gap:16px;padding:20px 32px;margin:0;border-bottom:1px solid var(--hair)
@@ -2277,8 +2277,11 @@ function bindVirtScroll(body, state, paintFn) {
  */
 function jumpVocabLetter(letter) {
   const L = String(letter || "").toUpperCase();
-  const idx = vocabVirtState.slots.findIndex(s =>
-    s.kind === "row" && s.item && s.item.w && s.item.w[0].toUpperCase() === L);
+  const idx = vocabVirtState.slots.findIndex(s => {
+    if (s.kind === "row") return s.item && s.item.w && s.item.w[0].toUpperCase() === L;
+    if (s.kind === "row2") return s.items && s.items.some(it => it.w && it.w[0].toUpperCase() === L);
+    return false;
+  });
   if (idx < 0) return;
   $("vocabBody").scrollTo({ top: vocabVirtState.cum[idx], behavior: "smooth" });
   document.querySelectorAll("#vocabLetters .vocab-letter-btn").forEach(b =>
