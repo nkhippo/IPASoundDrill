@@ -34,7 +34,7 @@ export const VOWELS_GA: ReadonlySet<string> = new Set([
 ]);
 
 export const VOWELS_RP: ReadonlySet<string> = new Set([
-  "iː", "ɪ", "e", "æ", "ə", "ʌ", "ɑː", "ɒ", "ɔː", "ʊ", "uː", "ɜː",
+  "iː", "ɪ", "ɛ", "e", "æ", "ə", "ʌ", "ɑː", "ɒ", "ɔː", "ʊ", "uː", "ɜː",
   "eɪ", "aɪ", "ɔɪ", "əʊ", "aʊ", "ɪə", "eə", "ʊə",
 ]);
 
