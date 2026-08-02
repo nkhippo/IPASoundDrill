@@ -118,17 +118,41 @@ Level 段階化の内容（L1 セルフチェック / L2 `pr-reviewer` PASS / L3
 
 **ゾーン別レビュー深度（monorepo 4 ゾーン、EPIC #209 以降）**: `packages/core/` の変更は、`apps/web/` と `apps/mobile/`（実装後）の**両方**への回帰確認を Issue の完了定義・PR の確認済み事項に含める（core は shared 契約のため、単一ゾーンの動作確認だけでは不十分）。`tools/` の変更（パイプライン・validate スクリプト）は生成物を消費する `packages/core/data` 経由で `apps/web` / `apps/mobile` 双方への影響有無を確認する。
 
+### 自動 Rv → merge パイプライン（issue-handler PR）
+
+issue-handler がマーカー付き PR を作成した後、オーケストレーション Claude（壁打ちセッション）は以下を**自動的に**実行する（Naoya の追加指示を待たない）:
+
+```
+issue-handler PR 作成
+  ↓ 自動
+pr-reviewer 起動（契約検証）
+  ↓
+┌─ PASS + L1/L2 → オーケストレーション Claude が gh pr merge --squash --delete-branch で auto-merge
+│                  → Closes #N により Issue 自動クローズ
+└─ PASS + L3    → Naoya に ack を求める（auto-merge しない）
+  ↓
+┌─ FAIL → issue-handler を再起動して指摘対応 → 修正後に pr-reviewer を再起動
+└─（ループ: PASS まで繰り返し）
+```
+
+**前提条件**: auto-merge を実行するのはオーケストレーション Claude のみ。issue-handler / pr-reviewer は merge しない（各エージェント定義で禁止）。
+
 運用上のラベル遷移:
 
 | イベント | ラベル変化 |
 |---|---|
 | PR 作成 / 追加 push | `needs-review` が自動付与 |
-| Naoya が承認コメント（`ok`/`lgtm`/`✅` 等） | `needs-review` 除去、auto-merge 実行（L1/L2）または Naoya 手動 merge（L3） |
+| pr-reviewer PASS（L1/L2） | auto-merge 実行、`needs-review` 除去 |
+| Naoya が承認コメント（`ok`/`lgtm`/`✅` 等） | `needs-review` 除去、auto-merge 実行（L3 含む） |
 | Naoya が PR をマージ | `needs-review` 除去 |
 
 **PR コメント対応の完了条件**（全エージェント共通）: 修正 commit / push だけで完了としない。①同じ PR の Conversation に結果コメントを投稿 ②「対応した指摘」「変更内容」「検証結果」「未解決事項（なければなし）」を記載 ③投稿後に ready for review 化・再レビュー依頼を行う。修正不要と判断した指摘にも理由を返信する。承認トリガーワードのみのコメント・CI bot 通知には返信不要。
 
 **issue-handler-authored PR の自動対応**: マーカー `<!-- authored-by: issue-handler -->` 付き PR に Claude がレビューコメントを投稿したら、issue-handler が追加指示を待たず即対応する（Cursor/Codex 作成 PR は対象外、Naoya が別途指示）。
+
+### Issue 自動クローズ
+
+develop マージ時の Issue 自動クローズは GitHub 標準機能を利用する。PR 本文に `Closes #N` を記載し、`develop`（default branch）へのマージで自動クローズされる。`.github/workflows/approval.yml` の permissions に `issues: write` を含めること（欠落すると `github-actions[bot]` によるマージ時に自動クローズが発火しない）。
 
 ## 8. PR 作成ルール
 

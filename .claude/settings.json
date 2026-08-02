@@ -29,8 +29,7 @@
       "Bash(md5sum:*)"
     ],
     "deny": [
-      "Bash(git push:*origin main*)",
-      "Bash(gh pr merge:*)"
+      "Bash(git push:*origin main*)"
     ]
   }
 }
