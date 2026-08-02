@@ -143,16 +143,18 @@ audibly-different として扱う（例: `city`）。
 > **表示上 IPA 文字列が違って見えても「GA=RP」印が出るのは正しい挙動**（例: `M` の GA `/ɛm/` と RP `/em/` は `ɛ↔e` 正規化で same）。
 > これは仕様であり不具合ではない。フラップ T 等の GA 異音や強勢位置差など「聞いて分かる差」は different（上表）。
 
-**分布統計（Phase R 後）:**
+**分布統計（Issue #288 複合軸マッチング対応後）:**
 
 | ファイル | 総数 | same | different |
 |---|---:|---:|---:|
-| wordlist | 5,397 | 2,674 (50%) | 2,723 (50%) |
-| connected_speech | 201 | 94 (47%) | 107 (53%) |
+| wordlist | 5,397 | 2,713 (50%) | 2,684 (50%) |
+| connected_speech | 201 | 90 (45%) | 111 (55%) |
 | weak_forms | 36 | 30 (83%) | 6 (17%) |
 
-wordlist の `ga_rp_same_reason` 内訳（different）: `rhoticity` 691, `structural_other` 615, `ga_allophony` 529, `goat_vowel` 288, `lot_vowel` 258, `square_near_cure` 105, `weak_vowel` 102, `trap_bath` 71, `stress_placement` 30, `yod` 22, `cot_caught` 11, `composite_structural` 1。
-wordlist の `ga_rp_same_reason` 内訳（same）: `identical` 1,527, `length_marking_only` 558, `dress_notation_only` 457, `notation_composite` 59, `rhotic_vowel_notation` 38, `stress_marking_only` 35。
+wordlist の `ga_rp_same_reason` 内訳（different）: `rhoticity` 558, `structural_other` 453, `ga_allophony` 375, `lot_vowel` 313, `goat_vowel` 270, `cot_caught` 223, `composite_structural` 157, `square_near_cure` 154, `trap_bath` 74, `weak_vowel` 66, `yod` 34, `stress_placement` 7。
+wordlist の `ga_rp_same_reason` 内訳（same）: `identical` 1,908, `length_marking_only` 502, `dress_notation_only` 187, `stress_marking_only` 47, `notation_composite` 35, `rhotic_vowel_notation` 34。
+
+> `rhoticity` / `square_near_cure` は GA の介母音 `/r/`（母音間・onset 位置）を誤って脱落させないよう文脈依存（トークン単位）で判定する。`composite_structural` は 2 軸以上の構造差を組み合わせないと説明できない語（例: `airport` = square_near_cure + cot_caught、`forest` = lot_vowel + weak_vowel、`better` = フラップT正規化 + rhoticity）。フラップT `ɾ` / 声門閉鎖 `ʔ` が `ipa` に直接埋め込まれている語は、判定前に `t`/`d`/`t` へ正規化してから軸判定する（該当語のみ `ga_allophony` または `composite_structural`）。
 
 **更新手順**（`ipa` / `rp_ipa` / `ipa_actual_ga` を変更した場合）:
 
