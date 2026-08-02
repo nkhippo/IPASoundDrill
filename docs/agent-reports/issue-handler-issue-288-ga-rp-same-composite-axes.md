@@ -41,7 +41,8 @@ Naoya 承認のもとスコープを拡大し、以下 4 点すべてに対応�
 ## デグレ防止検証
 
 - **`ipa` / `rp_ipa` 等、`ga_rp_same` / `ga_rp_same_reason` 以外のフィールドは一切変更していない**ことを、旧 HEAD の JSON と再生成後の JSON をキー単位で全件比較して確認（wordlist 5,397 件・connected_speech 201 件とも差分 0）。
-- **`ga_rp_same`（same/different の真偽値）に一切のフリップがない**ことを、develop 版スクリプトと新スクリプトの分類結果を全件（wordlist 5,397 語）突き合わせて確認（フリップ 0 件）。`ga_rp_same_reason`（理由ラベル）のみが変化する設計であることを保証した。
+- **`ga_rp_same`（same/different の真偽値）のロジック単体比較ではフリップ 0 件**（develop 版スクリプトと新スクリプトを、同一の入力フィールド snapshot に対して実行し突き合わせ、5,397 語全件で一致を確認）。ただし後述のとおり、**develop に実際にコミットされていた JSON の値**と再生成後の値を直接比較すると、`candle` 1 件が `true→false` にフリップしていた（リポジトリに既にコミット済みのデータが `gen_ga_rp_same.py` の未再実行により古い値のまま残っていたことによる、既存 `ga_allophony` carve-out（`classify()` 内、本 PR で無変更）の正しい適用。詳細は下記）。それ以外の 5,396 語では真偽値の変化なし。`ga_rp_same_reason`（理由ラベル）のみが変化する設計であることを保証した。
+- **`candle` の 1 件フリップの検証**: `ipa` = `/ˈkændəl/`、`rp_ipa` = `/ˈkændəl/`（GA/RP phonemic が完全一致）だが `ipa_actual_ga` = `/ˈkændl̩/`（syllabic l、audibly different）。`classify()` の CARVE-OUT（`ipa_actual_ga != ipa` かつ RP narrow 形と不一致なら `ga_allophony`/`false`）は本 PR で一切変更していない既存ロジックであり、develop にコミットされていた `ga_rp_same: true` はこの carve-out が反映されていない stale な値だった。`--dry-run` なしでパイプラインを再実行したことで正しい値（`false`/`ga_allophony`）に是正された。コード変更は不要と判断。
 - reason ラベルの遷移を全件突き合わせ、旧ラベルから `structural_other` に後退したケースがないことを確認（`error`/`terror`/`mirror`/`sheriff`/`terribly` 等、実装途中で一時的に発生した後退は、上記の "隣接する r音化母音を SQUARE 扱いしない" 特殊ケースを追加して解消済み）。
 - `lot_vowel`/`cot_caught`/`trap_bath` から `composite_structural` へ変わった少数のケース（例: `following` = lot_vowel+goat_vowel, `before`/`board` は変化なし=cot_caught 維持）は、旧コードが暗黙に goat/lot 両方の変化を見落として単一ラベルを返していた既存の不正確さを是正したものであり、後退ではなく精度向上と判断（`_search_structural_combo` のコメントに根拠を明記）。
 - `apps/web/src/index.template.html` の UI ロジックは `ga_rp_same`（真偽値）のみを参照し `ga_rp_same_reason`（文字列）の具体値には依存していないことを確認（`GaRpSameReason` 型も `string` エイリアスで列挙型ではない）。UI 影響なし。
