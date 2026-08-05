@@ -49,6 +49,50 @@ Keep the delivery identical and consistent across all words.
 - **弱形:** `GET ?weak=/IPA/&ww=word&accent=ga|rp`。`instructions` は弱形（連結内の reduced form）を強制。`input` はキャリア文内の機能語綴り。GA/RP で `TTS_WEAK_INSTRUCTIONS_*` を分岐。
 - 詳細: `docs/reference/rp-tts-design-and-priority.md`、`docs/cursor/reports/cursor-implementation-report-weak-forms.md`
 
+### 2a. RP accent 差改善 PoC v3（Issue #287、段階検証中）
+
+**背景**: 現行 `gpt-4o-mini-tts` + 綴り入力では、GA/RP を `instructions` テキストで分岐しても、代表 12 語の試聴で **8/12 で accent 差が聞き取れない**（詳細: `docs/handoff/2026-08-02_tts-ga-rp-improvement.md`）。特に rhoticity / GOAT vowel / LOT vowel / TRAP-BATH の音素差が再現されない。
+
+**代替 backend 検証結果**: `gpt-audio`（Chat Completions API）+ IPA 直接入力（`rp_ipa` フィールドを `/…/` 形式で input に渡す）で、以下のカテゴリで RP 差が明瞭化:
+
+| カテゴリ | 効くパターン | 効かないパターン |
+|---|---|---|
+| rhoticity | 語末 unstressed `-r`（picture, container 型） | 強勢の `/ɝ/-/ɜː/`（first, chirp 型） |
+| goat_vowel | monosyllable（home 型） | multisyllable（control, roast 型） |
+| trap_bath | 全般（chance 型） | — |
+| lot_vowel | **なし**（gpt-audio でも `/ɑ/-/ɒ/` は出せない） | 全て |
+
+**gpt-audio の既知の failure mode** (単純採用不可、healing pipeline 必須):
+- 会話返答（`roast` → "I'm here and ready" 等）
+- 無音返答（特に `/həʊm/` で 5/6 の頻度）
+- スペリング読み（`first` → "F-R-S-T"）
+- 発話開始が早すぎる（lead silence 40-70ms）
+- 補助として使う Whisper が silence を "you"/"the" と幻覚 → RMS 波形分析必須
+
+**Healing pipeline** (`~/tts-poc-v3/heal_v2.py`):
+```
+generate → validate (RMS + Whisper + duration + lead_silence)
+  ├─ PASS → save
+  ├─ NO_LEAD only → post-process (250ms silence pad) → WAV 保存
+  ├─ SILENT/VERBOSE/SLOW → retry with progressive prompt strategies
+  └─ N 回失敗 → best-available (audible attempt) を保存 (PARTIAL 状態)
+```
+
+**Prompt 戦略** (progressive cascade、`ga_rp_same_reason` によっては `V2_GO` から開始):
+- `V2_GO`: 単語/IPA を system message に埋め込み、user は "GO" だけ送る → 会話文脈を切断
+- `V4_LEADPAD`: 「200-300ms silence で始めて、1.5秒以内で話せ」を明示
+- `V3_QUOTE`: user 側を `Say only: "<word>"` の形式で明示
+
+**Rollout 計画** (~425 語の RP を `gpt-audio` で再生成、GA は M1 継続、`TTS_CACHE_VER` v2→v3 bump は Phase C):
+
+| Phase | 内容 | 状態 |
+|---|---|---|
+| A | 対象語抽出 + gpt-audio 生成 + healing pipeline 通過 | 未実行 (次 Chat) |
+| B | Drive `TTS-Audio` に `{slug}__rp_v3.mp3` として upload、サンプル 20 語試聴 | 未実行 |
+| C | `TTS_CACHE_VER` v3 bump PR (L3 判定、Naoya ack 必須)、v3 未生成語は M1 fallback | 未実行 |
+
+詳細は Issue #287 と `docs/handoff/2026-08-02_tts-ga-rp-improvement.md`「PoC v3 試聴結果 + 大量生成 rollout 計画」セクション。
+
 ---
 
 ## 3. クライアント TTS プリフェッチ

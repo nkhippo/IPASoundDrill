@@ -20,11 +20,26 @@ Everything else is `different`, in particular:
   * LOT vowel (ɑ ↔ ɒ)                             — quality difference
   * Rhoticity (GA /r/, ɚ, ɝ vs RP schwa/long)     — structural
   * TRAP-BATH, CLOTH-LOT, yod-dropping, weak-vowel choice
-  * GA-only allophony captured by ipa_actual_ga:
-      – Flap-T [ɾ]         (city → [sɪɾi])
+  * GA-only allophony:
+      – Flap-T/D [ɾ]        (city → [sɪɾi]; also common baked directly into
+                             the phonemic `ipa` field itself, e.g. "better"
+                             /ˈbɛɾɚ/ — see flap_variants() below)
       – Syllabic consonants (button → [bʌʔn̩])
-      – Glottal stop [ʔ]
+      – Glottal stop [ʔ]    (pre-syllabic-n /t/, e.g. "written" /ˈrɪʔn̩/)
     These are audibly different from RP even when phonemic /ipa/ matches.
+
+INTERVOCALIC /r/ (important)
+=============================
+GA /r/ is NOT dropped/merged when followed by a vowel (onset/intervocalic
+position) — only true coda /r/ (word-final or pre-consonant) undergoes
+non-rhotic merging. `apply_rhoticity()` and `apply_square_near_cure()` apply
+this context check token-wise; naive string replacement would wrongly delete
+/r/ in words like "sorry" (/ˈsɑri/), "fairy" (/ˈfɛri/) or "airport"
+(/ˈɛrˌpɑrt/) where the /r/ survives into RP as an onset consonant. A further
+wrinkle: a literal ɚ/ɝ token immediately after /r/ (e.g. "error" /ˈɛrɚ/,
+"terror" /ˈtɛrɚ/) is itself the *next* syllable's own r-coloured vowel, not
+a plain vowel that would make the preceding /r/ intervocalic — SQUARE/NEAR/
+CURE conversion does not fire there.
 
 REASON TAXONOMY
 ===============
@@ -37,21 +52,35 @@ same:
   notation_composite      combination of the above
 
 different:
-  ga_allophony            ipa_actual_ga ≠ ipa (highest-priority carve-out)
+  ga_allophony            ipa_actual_ga ≠ ipa narrow-transcription carve-out,
+                          OR a flap-T/D `ɾ` / glottal-stop `ʔ` baked into
+                          `ipa` alone (with no other structural axis needed)
+                          explains the whole difference once de-flapped
   stress_placement        primary stress on different syllable
-  rhoticity               peel-off matches after non-rhotic conversion
-  goat_vowel              only oʊ↔əʊ remains after other peels
-  lot_vowel               only ɑ↔ɒ remains
-  trap_bath               only æ↔ɑː remains
-  cloth_lot               only GA ɔ ↔ RP ɒ remains
-  square_near_cure        r-coloured diphthong shifts (ɛr↔eə, ɪr↔ɪə, ʊr↔ʊə)
+  rhoticity               coda r-colouring resolves the whole difference
+                          (free/always-tried baseline — also implicitly
+                          satisfied whenever goat_vowel/lot_vowel/cot_caught/
+                          trap_bath/weak_vowel/yod is the reported reason)
+  goat_vowel              only oʊ↔əʊ remains after rhoticity
+  lot_vowel               only ɑ↔ɒ remains after rhoticity
+  trap_bath               only æ↔ɑː remains after rhoticity
+  square_near_cure        r-coloured diphthong shifts (ɛr↔eə, ɪr↔ɪə, ʊr↔ʊə);
+                          NOT free — searched as its own axis since the same
+                          GA sequence can be a true SQUARE vowel (fairy) or a
+                          plain DRESS/KIT vowel + onset /r/ (sheriff)
   yod                     GA drops /j/ where RP keeps it (new, tune, due)
   weak_vowel              schwa vs /ɪ/ etc. in unstressed syllables
   cot_caught              GA /ɑ/ merges with RP /ɔː/ (bought, thought)
-  composite_structural    multiple structural differences (typical for
-                          rhotic + BATH words like "after")
-  lexical                 whole-word divergence (schedule, zebra, vitamin)
+  composite_structural    two or more of the axes above (square_near_cure /
+                          goat_vowel / lot_vowel / cot_caught / trap_bath /
+                          weak_vowel / yod / flap-T normalisation) are all
+                          needed together, none alone explains the word
+                          (e.g. "airport" = square_near_cure + cot_caught;
+                          "forest" = lot_vowel + weak_vowel; "better" =
+                          flap-T normalisation + rhoticity)
   structural_other        residual — cannot decompose into any of the above
+                          combination (smallest axis-count wins; see
+                          _search_structural_combo())
 
 USAGE
 =====
@@ -60,6 +89,7 @@ Runs from repo root. Rewrites the three JSON files in place unless --dry-run.
 
 from __future__ import annotations
 import argparse
+import itertools
 import json
 import sys
 from pathlib import Path
@@ -201,17 +231,179 @@ def primary_syllable_index(s: str) -> int:
     return s.find("ˈ")
 
 # --- structural transformations (applied when trying to explain a diff) -----
+#
+# NOTE (intervocalic /r/): GA /r/ is NOT dropped/merged when it is followed by
+# a vowel (onset / intervocalic position) — only true coda /r/ (word-final or
+# pre-consonant) is subject to non-rhotic merging. `apply_rhoticity()` and
+# `apply_square_near_cure()` below both apply this context check token-wise
+# (mirrors `expand_ga_rhotic_vowels()`); a plain string .replace() would wrongly
+# delete /r/ in words like "sorry" (/ˈsɑri/), "fairy" (/ˈfɛri/) or "airport"
+# (/ˈɛrˌpɑrt/) where the /r/ survives into RP as an onset consonant.
 
-RHOTICITY_MAP = [
-    ("aʊr", "aʊə"), ("aɪr", "aɪə"), ("ɔɪr", "ɔɪə"), ("eɪr", "eɪə"),
-    ("ɑr", "ɑː"),   ("ɔr", "ɔː"),
-]
+RHOTICITY_BASE_MERGE = {
+    "aʊ": "aʊə", "aɪ": "aɪə", "ɔɪ": "ɔɪə", "eɪ": "eɪə",
+    "ɑ": "ɑː", "ɔ": "ɔː",
+}
 
 def apply_rhoticity(ga_inner: str) -> str:
+    """Merge GA coda r-colouring into RP-style long vowels/diphthongs.
+
+    Only fires when the /r/ is in coda position (not followed by a vowel).
+    """
     s = vocalise_coda_rhotic_vowels(expand_ga_rhotic_vowels(ga_inner))
-    for src, dst in RHOTICITY_MAP:
-        s = s.replace(src, dst)
-    return s
+    tokens = tokenize(s)
+    out: list[str] = []
+    i = 0
+    while i < len(tokens):
+        tok = tokens[i]
+        if tok in RHOTICITY_BASE_MERGE and i + 1 < len(tokens) and tokens[i + 1] == "r":
+            nxt = _next_phoneme(tokens, i + 1)
+            if _is_vowel_tok(nxt):
+                # intervocalic /r/ — keep both the vowel and the /r/ intact
+                out.append(tok)
+                i += 1
+                continue
+            out.append(RHOTICITY_BASE_MERGE[tok])
+            i += 2
+            continue
+        out.append(tok)
+        i += 1
+    return detokenize(out)
+
+SQUARE_NEAR_CURE_BASE = {"ɛ": "eə", "ɪ": "ɪə", "ʊ": "ʊə"}
+
+def apply_square_near_cure(ga_inner: str) -> str:
+    """Convert GA r-coloured SQUARE/NEAR/CURE vowels to RP centring diphthongs.
+
+    Coda /r/ is dropped (bear /bɛr/ → beə); intervocalic /r/ is kept as an
+    onset consonant after the diphthong (fairy /fɛri/ → feəri, not feəi).
+
+    Does NOT fire when the /r/ is immediately followed by another r-coloured
+    vowel (ɚ/ɝ) — that pattern is a plain DRESS/KIT/FOOT vowel + onset /r/
+    starting the *next* syllable's own rhotic nucleus (error /ˈɛrɚ/, mirror
+    /ˈmɪrɚ/, terror /ˈtɛrɚ/), not a SQUARE/NEAR/CURE diphthong.
+    """
+    tokens = tokenize(expand_ga_rhotic_vowels(ga_inner))
+    out: list[str] = []
+    i = 0
+    while i < len(tokens):
+        tok = tokens[i]
+        if tok in SQUARE_NEAR_CURE_BASE and i + 1 < len(tokens) and tokens[i + 1] == "r":
+            nxt = _next_phoneme(tokens, i + 1)
+            if nxt in ("ɚ", "ɝ"):
+                # ambiguous — leave both tokens untouched, don't consume /r/
+                out.append(tok)
+                i += 1
+                continue
+            out.append(SQUARE_NEAR_CURE_BASE[tok])
+            if _is_vowel_tok(nxt):
+                out.append("r")
+            i += 2
+            continue
+        out.append(tok)
+        i += 1
+    return detokenize(out)
+
+# --- GA-only surface allophony normalisation (flap T/D, glottal stop) -------
+#
+# Some entries bake the GA-only narrow allophone directly into the phonemic
+# `ipa` field (no distinct `ipa_actual_ga`), e.g. "better" /ˈbɛɾɚ/, "button"
+# /ˈbʌʔn̩/. `ɾ` (flap) can realise either /t/ or /d/ depending on the word, and
+# `ʔ` (glottal stop, pre-syllabic-n) realises /t/. We try each plausible
+# de-flapped variant when the raw comparison fails, and — if a variant makes
+# the word explainable — fold the flap/glottal substitution in as one more
+# structural axis (see `reason_when_different`).
+
+def flap_variants(ga_inner: str) -> list[str]:
+    variants: list[str] = []
+    bases = [ga_inner]
+    if "ɾ" in ga_inner:
+        bases = [ga_inner.replace("ɾ", "t"), ga_inner.replace("ɾ", "d")]
+    for b in bases:
+        v = b.replace("ʔ", "t") if "ʔ" in b else b
+        if v != ga_inner and v not in variants:
+            variants.append(v)
+    return variants
+
+# --- generalised structural-axis search --------------------------------------
+#
+# `rhoticity` (coda r-colouring merge) is treated as a "free" prerequisite
+# baseline — exactly like the pre-existing single-step logic did (goat/lot/
+# trap/cot checks were always built on top of the rhoticity-resolved form).
+# This keeps already-correct single-axis classifications stable (e.g.
+# "before" /bɪˈfɑr/→/bɪˈfɔː/ stays `cot_caught`, not `composite_structural`,
+# even though it technically also needs coda-r resolution — same r-coloured
+# vowel, one audible feature).
+#
+# `square_near_cure` is NOT free — whether GA /ɛr, ɪr, ʊr/ + vowel actually
+# becomes an RP centring diphthong is lexically determined, not purely
+# phonetic-context determined (fairy/vary → SQUARE, but sheriff/terrible →
+# plain DRESS+onset-/r/). So it is searched as a toggle, like the other
+# "quality" axes (GOAT / LOT-COT / TRAP-BATH / weak-vowel / yod): a single
+# axis keeps its specific name; two or more combined (e.g. "airport":
+# square_near_cure + cot_caught; "forest": lot_vowel + weak_vowel) are
+# tagged `composite_structural`.
+
+def _quality_axis_defs(word: str, ga_inner: str, rp_inner: str) -> list[tuple[str, list[tuple[str | None, object]]]]:
+    """Each axis is (name, [(reason_label_or_None, transform_fn_or_None), ...])."""
+    axis_defs: list[tuple[str, list[tuple[str | None, object]]]] = []
+
+    if "j" in rp_inner and "j" not in ga_inner:
+        axis_defs.append(("yod", [(None, None), ("yod", "YOD_SPECIAL")]))
+
+    axis_defs.append(("square_near_cure",
+                       [(None, None), ("square_near_cure", apply_square_near_cure)]))
+    axis_defs.append(("goat_vowel",
+                       [(None, None), ("goat_vowel", lambda s: s.replace("oʊ", "əʊ"))]))
+    axis_defs.append(("lot_cot",
+                       [(None, None),
+                        ("lot_vowel", lambda s: s.replace("ɑ", "ɒ")),
+                        ("cot_caught", lambda s: s.replace("ɑ", "ɔː"))]))
+    if is_bath_word(word) or ("æ" in ga_inner and "ɑː" in rp_inner):
+        axis_defs.append(("trap_bath",
+                           [(None, None), ("trap_bath", lambda s: s.replace("æ", "ɑː"))]))
+    axis_defs.append(("weak_vowel",
+                       [(None, None),
+                        ("weak_vowel", lambda s: s.replace("ə", "ɪ")),
+                        ("weak_vowel", lambda s: s.replace("ɪ", "ə"))]))
+    return axis_defs
+
+
+def _search_structural_combo(word: str, ga_inner: str, rp_inner: str, rp_norm: str) -> str | None:
+    """Free-resolve rhoticity, then search quality-axis combinations
+    (square_near_cure / goat / lot-cot / trap-bath / weak-vowel / yod,
+    smallest active-count first) against rp_norm.
+
+    Returns a reason string, or None if no combination works.
+    """
+    ga_base = apply_rhoticity(ga_inner)
+    if notation_norm(ga_base) == rp_norm:
+        return "rhoticity"
+
+    axis_defs = _quality_axis_defs(word, ga_inner, rp_inner)
+    choice_lists = [a[1] for a in axis_defs]
+
+    best: tuple[int, str] | None = None
+    for combo in itertools.product(*choice_lists):
+        active = [c for c in combo if c[0] is not None]
+        n_active = len(active)
+        if n_active == 0 or (best is not None and n_active >= best[0]):
+            continue
+
+        if any(name == "yod" for name, _ in active):
+            s = apply_rhoticity(ga_inner.replace("u", "ju"))
+        else:
+            s = ga_base
+        for name, fn in combo:
+            if name is None or name == "yod":
+                continue
+            s = fn(s)
+
+        if notation_norm(s) == rp_norm:
+            reason = active[0][0] if n_active == 1 else "composite_structural"
+            best = (n_active, reason)
+
+    return best[1] if best else None
 
 # --- reason detectors --------------------------------------------------------
 
@@ -249,64 +441,26 @@ def reason_when_different(word: str, ga_raw: str, rp_raw: str) -> str:
         if ga_norm.replace("ˈ", "") == rp_norm.replace("ˈ", ""):
             return "stress_placement"
 
-    # 1. Yod (GA drops /j/ before /u/ after coronals: new, tune, due, produce)
-    #    GA has /Cu/ where RP has /Cjuː/
-    if "j" in rp_inner and "j" not in ga_inner:
-        # Insert j before every u in ga_inner and see if it matches
-        if notation_norm(expand_ga_rhotic_vowels(ga_inner.replace("u", "ju"))) == rp_norm:
-            return "yod"
+    # 1. Structural-axis search on the raw GA transcription (single quality
+    #    axis keeps its specific name; 2+ → composite_structural; rhoticity /
+    #    square_near_cure alone explaining it also keep their own names).
+    reason = _search_structural_combo(word, ga_inner, rp_inner, rp_norm)
+    if reason is not None:
+        return reason
 
-    # 2. SQUARE / NEAR / CURE (before rhoticity so ɛr/ɪr/ʊr are not absorbed)
-    ga_sq = expand_ga_rhotic_vowels(ga_inner).replace("ɛr", "eə").replace("ɪr", "ɪə").replace("ʊr", "ʊə")
-    if notation_norm(ga_sq) == rp_norm:
-        return "square_near_cure"
-
-    # 3. Rhoticity — apply non-rhotic transform to GA, compare
-    ga_derhotic = apply_rhoticity(ga_inner)
-    if notation_norm(ga_derhotic) == rp_norm:
-        return "rhoticity"
-
-    # 4. GOAT — after rhoticity
-    ga_goat = ga_derhotic.replace("oʊ", "əʊ")
-    if notation_norm(ga_goat) == rp_norm:
-        return "goat_vowel" if ga_derhotic != ga_goat else "rhoticity"
-
-    # 5. LOT
-    ga_lot = ga_goat.replace("ɑ", "ɒ")
-    if notation_norm(ga_lot) == rp_norm:
-        return "lot_vowel" if ga_goat != ga_lot else "goat_vowel"
-
-    # 6. TRAP-BATH (word-triggered)
-    if is_bath_word(word) or ("æ" in ga_inner and "ɑː" in rp_inner):
-        ga_bath = ga_lot.replace("æ", "ɑː")
-        if notation_norm(ga_bath) == rp_norm:
-            return "trap_bath"
-
-    # 7. CLOTH-LOT / COT-CAUGHT split (base on ga_goat so ɑ is still available)
-    ga_cot = ga_goat.replace("ɑ", "ɔː")
-    if notation_norm(ga_cot) == rp_norm:
-        return "cot_caught"
-
-    # 8. Composite structural (rhoticity + BATH / rhoticity + LOT etc.)
-    ga_combo = apply_rhoticity(ga_inner)
-    ga_combo = ga_combo.replace("oʊ", "əʊ").replace("ɑ", "ɒ")
-    if is_bath_word(word):
-        ga_combo = ga_combo.replace("æ", "ɑː")
-    if notation_norm(ga_combo) == rp_norm:
-        return "composite_structural"
-
-    # 8b. Composite structural v2: BATH middle-syllable + first-syllable weak-vowel
-    if is_bath_word(word) and "æ" in ga_inner:
-        ga_combo_v2 = apply_rhoticity(ga_inner).replace("oʊ", "əʊ").replace("ɑ", "ɒ")
-        ga_combo_v2 = ga_combo_v2.replace("æ", "ə", 1).replace("æ", "ɑː")
-        if notation_norm(ga_combo_v2) == rp_norm:
+    # 2. GA-only surface allophony baked directly into `ipa` (flap T/D `ɾ`,
+    #    glottal stop `ʔ` before syllabic n). Try plausible de-flapped
+    #    variants:
+    #      - flap alone (no rhoticity/square/quality axis needed) → `ga_allophony`
+    #        (same category as the narrow-transcription carve-out in classify()).
+    #      - flap + anything else needed → `composite_structural` (flap-T/D is
+    #        a distinct notation-level axis from the phonological ones above).
+    for variant in flap_variants(ga_inner):
+        variant_expanded = expand_ga_rhotic_vowels(variant)
+        if notation_norm(variant_expanded) == rp_norm:
+            return "ga_allophony"
+        if _search_structural_combo(word, variant, rp_inner, rp_norm) is not None:
             return "composite_structural"
-
-    # 9. Try weak-vowel: ə ↔ ɪ swap in unstressed syllables
-    ga_exp = expand_ga_rhotic_vowels(ga_inner)
-    if notation_norm(ga_exp.replace("ə", "ɪ")) == rp_norm or \
-       notation_norm(ga_exp.replace("ɪ", "ə")) == rp_norm:
-        return "weak_vowel"
 
     return "structural_other"
 
