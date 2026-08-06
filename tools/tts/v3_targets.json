@@ -1,0 +1,2107 @@
+[
+  {
+    "word": "actor",
+    "rp_ipa": "/ˈæktə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "after",
+    "rp_ipa": "/ˈɑːftə/",
+    "category": "trap_bath"
+  },
+  {
+    "word": "afternoon",
+    "rp_ipa": "/ˌɑːftəˈnuːn/",
+    "category": "trap_bath"
+  },
+  {
+    "word": "another",
+    "rp_ipa": "/əˈnʌðə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "answer",
+    "rp_ipa": "/ˈɑːnsə/",
+    "category": "trap_bath"
+  },
+  {
+    "word": "ask",
+    "rp_ipa": "/ɑːsk/",
+    "category": "trap_bath"
+  },
+  {
+    "word": "aunt",
+    "rp_ipa": "/ɑːnt/",
+    "category": "trap_bath"
+  },
+  {
+    "word": "banana",
+    "rp_ipa": "/bəˈnɑːnə/",
+    "category": "trap_bath"
+  },
+  {
+    "word": "bath",
+    "rp_ipa": "/bɑːθ/",
+    "category": "trap_bath"
+  },
+  {
+    "word": "bathroom",
+    "rp_ipa": "/ˈbɑːθˌruːm/",
+    "category": "trap_bath"
+  },
+  {
+    "word": "blow",
+    "rp_ipa": "/bləʊ/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "boat",
+    "rp_ipa": "/bəʊt/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "bone",
+    "rp_ipa": "/bəʊn/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "both",
+    "rp_ipa": "/bəʊθ/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "bowl",
+    "rp_ipa": "/bəʊl/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "broke",
+    "rp_ipa": "/brəʊk/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "brother",
+    "rp_ipa": "/ˈbrʌðə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "burger",
+    "rp_ipa": "/ˈbɜːɡə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "can't",
+    "rp_ipa": "/kɑːnt/",
+    "category": "trap_bath"
+  },
+  {
+    "word": "chose",
+    "rp_ipa": "/tʃəʊz/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "class",
+    "rp_ipa": "/klɑːs/",
+    "category": "trap_bath"
+  },
+  {
+    "word": "classmate",
+    "rp_ipa": "/ˈklɑːsˌmeɪt/",
+    "category": "trap_bath"
+  },
+  {
+    "word": "classroom",
+    "rp_ipa": "/ˈklɑːsˌruːm/",
+    "category": "trap_bath"
+  },
+  {
+    "word": "clever",
+    "rp_ipa": "/ˈklevə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "close",
+    "rp_ipa": "/kləʊs/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "closed",
+    "rp_ipa": "/kləʊzd/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "clothes",
+    "rp_ipa": "/kləʊðz/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "coach",
+    "rp_ipa": "/kəʊtʃ/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "coat",
+    "rp_ipa": "/kəʊt/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "code",
+    "rp_ipa": "/kəʊd/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "coke",
+    "rp_ipa": "/kəʊk/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "cold",
+    "rp_ipa": "/kəʊld/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "cover",
+    "rp_ipa": "/ˈkʌvə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "culture",
+    "rp_ipa": "/ˈkʌltʃə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "dance",
+    "rp_ipa": "/dɑːns/",
+    "category": "trap_bath"
+  },
+  {
+    "word": "dancing",
+    "rp_ipa": "/ˈdɑːnsɪŋ/",
+    "category": "trap_bath"
+  },
+  {
+    "word": "december",
+    "rp_ipa": "/dɪˈsembə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "dinner",
+    "rp_ipa": "/ˈdɪnə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "don't",
+    "rp_ipa": "/dəʊnt/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "driver",
+    "rp_ipa": "/ˈdraɪvə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "drove",
+    "rp_ipa": "/drəʊv/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "either",
+    "rp_ipa": "/ˈiːðə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "example",
+    "rp_ipa": "/ɪɡˈzɑːmpəl/",
+    "category": "trap_bath"
+  },
+  {
+    "word": "farmer",
+    "rp_ipa": "/ˈfɑːmə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "fast",
+    "rp_ipa": "/fɑːst/",
+    "category": "trap_bath"
+  },
+  {
+    "word": "father",
+    "rp_ipa": "/ˈfɑːðə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "fever",
+    "rp_ipa": "/ˈfiːvə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "fire",
+    "rp_ipa": "/ˈfaɪə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "flower",
+    "rp_ipa": "/ˈflaʊə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "flown",
+    "rp_ipa": "/fləʊn/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "future",
+    "rp_ipa": "/ˈfjuːtʃə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "ghost",
+    "rp_ipa": "/ɡəʊst/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "glass",
+    "rp_ipa": "/ɡlɑːs/",
+    "category": "trap_bath"
+  },
+  {
+    "word": "glasses",
+    "rp_ipa": "/ˈɡlɑːsɪz/",
+    "category": "trap_bath"
+  },
+  {
+    "word": "go",
+    "rp_ipa": "/ɡəʊ/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "goal",
+    "rp_ipa": "/ɡəʊl/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "gold",
+    "rp_ipa": "/ɡəʊld/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "grammar",
+    "rp_ipa": "/ˈɡræmə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "grandfather",
+    "rp_ipa": "/ˈɡrændˌfɑːðə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "grandmother",
+    "rp_ipa": "/ˈɡrændˌmʌðə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "grass",
+    "rp_ipa": "/ɡrɑːs/",
+    "category": "trap_bath"
+  },
+  {
+    "word": "grow",
+    "rp_ipa": "/ɡrəʊ/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "grown",
+    "rp_ipa": "/ɡrəʊn/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "half",
+    "rp_ipa": "/hɑːf/",
+    "category": "trap_bath"
+  },
+  {
+    "word": "halves",
+    "rp_ipa": "/hɑːvz/",
+    "category": "trap_bath"
+  },
+  {
+    "word": "hamburger",
+    "rp_ipa": "/ˈhæmbəɡə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "hold",
+    "rp_ipa": "/həʊld/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "hole",
+    "rp_ipa": "/həʊl/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "home",
+    "rp_ipa": "/həʊm/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "hope",
+    "rp_ipa": "/həʊp/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "interviewer",
+    "rp_ipa": "/ˈɪntəˌvjuːə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "know",
+    "rp_ipa": "/nəʊ/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "laugh",
+    "rp_ipa": "/lɑːf/",
+    "category": "trap_bath"
+  },
+  {
+    "word": "most",
+    "rp_ipa": "/məʊst/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "mother",
+    "rp_ipa": "/ˈmʌðə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "never",
+    "rp_ipa": "/ˈnɛvə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "no",
+    "rp_ipa": "/nəʊ/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "nose",
+    "rp_ipa": "/nəʊz/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "note",
+    "rp_ipa": "/nəʊt/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "number",
+    "rp_ipa": "/ˈnʌmbə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "O",
+    "rp_ipa": "/əʊ/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "old",
+    "rp_ipa": "/əʊld/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "other",
+    "rp_ipa": "/ˈʌðə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "our",
+    "rp_ipa": "/ˈaʊə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "own",
+    "rp_ipa": "/əʊn/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "paper",
+    "rp_ipa": "/ˈpeɪpə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "partner",
+    "rp_ipa": "/ˈpɑːtnə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "past",
+    "rp_ipa": "/pɑːst/",
+    "category": "trap_bath"
+  },
+  {
+    "word": "phone",
+    "rp_ipa": "/fəʊn/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "picture",
+    "rp_ipa": "/ˈpɪktʃə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "player",
+    "rp_ipa": "/ˈpleɪə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "pleasure",
+    "rp_ipa": "/ˈplɛʒə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "post",
+    "rp_ipa": "/pəʊst/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "remember",
+    "rp_ipa": "/rɪˈmɛmbə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "river",
+    "rp_ipa": "/ˈrɪvə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "rode",
+    "rp_ipa": "/rəʊd/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "role",
+    "rp_ipa": "/rəʊl/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "rose",
+    "rp_ipa": "/rəʊz/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "row",
+    "rp_ipa": "/rəʊ/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "ruler",
+    "rp_ipa": "/ˈruːlə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "sailor",
+    "rp_ipa": "/ˈseɪlə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "september",
+    "rp_ipa": "/sɛpˈtɛmbə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "show",
+    "rp_ipa": "/ʃəʊ/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "showed",
+    "rp_ipa": "/ʃəʊd/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "shower",
+    "rp_ipa": "/ˈʃaʊə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "shown",
+    "rp_ipa": "/ʃəʊn/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "singer",
+    "rp_ipa": "/ˈsɪŋə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "sister",
+    "rp_ipa": "/ˈsɪstə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "slow",
+    "rp_ipa": "/sləʊ/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "smoke",
+    "rp_ipa": "/sməʊk/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "snow",
+    "rp_ipa": "/snəʊ/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "so",
+    "rp_ipa": "/səʊ/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "sold",
+    "rp_ipa": "/səʊld/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "spoke",
+    "rp_ipa": "/spəʊk/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "stone",
+    "rp_ipa": "/stəʊn/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "sugar",
+    "rp_ipa": "/ˈʃʊɡə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "summer",
+    "rp_ipa": "/ˈsʌmə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "super",
+    "rp_ipa": "/ˈsuːpə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "teacher",
+    "rp_ipa": "/ˈtiːtʃə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "those",
+    "rp_ipa": "/ðəʊz/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "throw",
+    "rp_ipa": "/θrəʊ/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "thrown",
+    "rp_ipa": "/θrəʊn/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "tiger",
+    "rp_ipa": "/ˈtaɪɡə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "together",
+    "rp_ipa": "/təˈɡɛðə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "told",
+    "rp_ipa": "/təʊld/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "tower",
+    "rp_ipa": "/ˈtaʊə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "under",
+    "rp_ipa": "/ˈʌndə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "vote",
+    "rp_ipa": "/vəʊt/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "weather",
+    "rp_ipa": "/ˈwɛðə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "winter",
+    "rp_ipa": "/ˈwɪntə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "woke",
+    "rp_ipa": "/wəʊk/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "won't",
+    "rp_ipa": "/wəʊnt/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "worker",
+    "rp_ipa": "/ˈwɜːkə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "wrote",
+    "rp_ipa": "/rəʊt/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "admire",
+    "rp_ipa": "/ədˈmaɪə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "advanced",
+    "rp_ipa": "/ədˈvɑːnst/",
+    "category": "trap_bath"
+  },
+  {
+    "word": "advantage",
+    "rp_ipa": "/ədˈvɑːntɪdʒ/",
+    "category": "trap_bath"
+  },
+  {
+    "word": "adventure",
+    "rp_ipa": "/ədˈventʃə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "ancestor",
+    "rp_ipa": "/ˈænsestə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "barber",
+    "rp_ipa": "/ˈbɑːbə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "basket",
+    "rp_ipa": "/ˈbɑːskɪt/",
+    "category": "trap_bath"
+  },
+  {
+    "word": "beginner",
+    "rp_ipa": "/bɪˈɡɪnə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "branch",
+    "rp_ipa": "/brɑːntʃ/",
+    "category": "trap_bath"
+  },
+  {
+    "word": "castle",
+    "rp_ipa": "/ˈkɑːsl̩/",
+    "category": "trap_bath"
+  },
+  {
+    "word": "chance",
+    "rp_ipa": "/tʃɑːns/",
+    "category": "trap_bath"
+  },
+  {
+    "word": "chapter",
+    "rp_ipa": "/ˈtʃæptə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "cleaner",
+    "rp_ipa": "/ˈkliːnə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "clone",
+    "rp_ipa": "/kləʊn/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "coast",
+    "rp_ipa": "/kəʊst/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "comb",
+    "rp_ipa": "/kəʊm/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "container",
+    "rp_ipa": "/kənˈteɪnə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "cooker",
+    "rp_ipa": "/ˈkʊkə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "cooler",
+    "rp_ipa": "/ˈkuːlə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "creature",
+    "rp_ipa": "/ˈkriːtʃə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "customer",
+    "rp_ipa": "/ˈkʌstəmə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "dancer",
+    "rp_ipa": "/ˈdɑːnsə/",
+    "category": "trap_bath"
+  },
+  {
+    "word": "danger",
+    "rp_ipa": "/ˈdeɪndʒə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "director",
+    "rp_ipa": "/dɪˈrektə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "disadvantage",
+    "rp_ipa": "/ˌdɪsədˈvɑːntɪdʒ/",
+    "category": "trap_bath"
+  },
+  {
+    "word": "discover",
+    "rp_ipa": "/dɪˈskʌvə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "employer",
+    "rp_ipa": "/ɪmˈplɔɪə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "enter",
+    "rp_ipa": "/ˈentə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "error",
+    "rp_ipa": "/ˈerə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "ever",
+    "rp_ipa": "/ˈevə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "feather",
+    "rp_ipa": "/ˈfeðə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "feature",
+    "rp_ipa": "/ˈfiːtʃə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "float",
+    "rp_ipa": "/fləʊt/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "flour",
+    "rp_ipa": "/ˈflaʊə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "forever",
+    "rp_ipa": "/fəˈrevə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "furniture",
+    "rp_ipa": "/ˈfɜːnɪtʃə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "further",
+    "rp_ipa": "/ˈfɜːðə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "gather",
+    "rp_ipa": "/ˈɡæðə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "gender",
+    "rp_ipa": "/ˈdʒendə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "globe",
+    "rp_ipa": "/ɡləʊb/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "host",
+    "rp_ipa": "/həʊst/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "however",
+    "rp_ipa": "/ˌhaʊˈevə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "hunter",
+    "rp_ipa": "/ˈhʌntə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "injure",
+    "rp_ipa": "/ˈɪndʒə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "inner",
+    "rp_ipa": "/ˈɪnə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "joke",
+    "rp_ipa": "/dʒəʊk/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "killer",
+    "rp_ipa": "/ˈkɪlə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "last",
+    "rp_ipa": "/lɑːst/",
+    "category": "trap_bath"
+  },
+  {
+    "word": "learner",
+    "rp_ipa": "/ˈlɜːnə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "leather",
+    "rp_ipa": "/ˈleðə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "load",
+    "rp_ipa": "/ləʊd/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "lover",
+    "rp_ipa": "/ˈlʌvə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "low",
+    "rp_ipa": "/ləʊ/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "major",
+    "rp_ipa": "/ˈmeɪdʒə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "maker",
+    "rp_ipa": "/ˈmeɪkə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "manager",
+    "rp_ipa": "/ˈmænɪdʒə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "manner",
+    "rp_ipa": "/ˈmænə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "measure",
+    "rp_ipa": "/ˈmɛʒə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "member",
+    "rp_ipa": "/ˈmɛmbə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "mirror",
+    "rp_ipa": "/ˈmɪrə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "nature",
+    "rp_ipa": "/ˈneɪtʃə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "oak",
+    "rp_ipa": "/əʊk/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "painter",
+    "rp_ipa": "/ˈpeɪntə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "pass",
+    "rp_ipa": "/pɑːs/",
+    "category": "trap_bath"
+  },
+  {
+    "word": "path",
+    "rp_ipa": "/pɑːθ/",
+    "category": "trap_bath"
+  },
+  {
+    "word": "pepper",
+    "rp_ipa": "/ˈpɛpə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "plant",
+    "rp_ipa": "/plɑːnt/",
+    "category": "trap_bath"
+  },
+  {
+    "word": "power",
+    "rp_ipa": "/ˈpaʊə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "pressure",
+    "rp_ipa": "/ˈprɛʃə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "printer",
+    "rp_ipa": "/ˈprɪntə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "pro",
+    "rp_ipa": "/prəʊ/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "rather",
+    "rp_ipa": "/ˈrɑːðə/",
+    "category": "trap_bath"
+  },
+  {
+    "word": "regular",
+    "rp_ipa": "/ˈrɛɡjələ/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "retire",
+    "rp_ipa": "/rɪˈtaɪə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "road",
+    "rp_ipa": "/rəʊd/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "roast",
+    "rp_ipa": "/rəʊst/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "roll",
+    "rp_ipa": "/rəʊl/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "rope",
+    "rp_ipa": "/rəʊp/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "runner",
+    "rp_ipa": "/ˈrʌnə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "sample",
+    "rp_ipa": "/ˈsɑːmpl̩/",
+    "category": "trap_bath"
+  },
+  {
+    "word": "sew",
+    "rp_ipa": "/səʊ/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "silver",
+    "rp_ipa": "/ˈsɪlvə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "similar",
+    "rp_ipa": "/ˈsɪmɪlə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "singular",
+    "rp_ipa": "/ˈsɪŋɡjələ/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "soap",
+    "rp_ipa": "/səʊp/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "speaker",
+    "rp_ipa": "/ˈspiːkə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "staff",
+    "rp_ipa": "/stɑːf/",
+    "category": "trap_bath"
+  },
+  {
+    "word": "stove",
+    "rp_ipa": "/stəʊv/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "stranger",
+    "rp_ipa": "/ˈstreɪndʒə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "structure",
+    "rp_ipa": "/ˈstrʌktʃə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "sunflower",
+    "rp_ipa": "/ˈsʌnˌflaʊə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "sunglasses",
+    "rp_ipa": "/ˈsʌnˌɡlɑːsɪz/",
+    "category": "trap_bath"
+  },
+  {
+    "word": "supper",
+    "rp_ipa": "/ˈsʌpə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "task",
+    "rp_ipa": "/tɑːsk/",
+    "category": "trap_bath"
+  },
+  {
+    "word": "teenager",
+    "rp_ipa": "/ˈtiːˌneɪdʒə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "temperature",
+    "rp_ipa": "/ˈtɛmprətʃə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "though",
+    "rp_ipa": "/ðəʊ/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "toast",
+    "rp_ipa": "/təʊst/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "toe",
+    "rp_ipa": "/təʊ/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "tone",
+    "rp_ipa": "/təʊn/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "treasure",
+    "rp_ipa": "/ˈtrɛʒə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "whether",
+    "rp_ipa": "/ˈwɛðə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "whole",
+    "rp_ipa": "/həʊl/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "winner",
+    "rp_ipa": "/ˈwɪnə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "wonder",
+    "rp_ipa": "/ˈwʌndə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "zone",
+    "rp_ipa": "/zəʊn/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "boast",
+    "rp_ipa": "/bəʊst/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "bold",
+    "rp_ipa": "/bəʊld/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "brass",
+    "rp_ipa": "/brɑːs/",
+    "category": "trap_bath"
+  },
+  {
+    "word": "butcher",
+    "rp_ipa": "/ˈbʊtʃə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "choke",
+    "rp_ipa": "/tʃəʊk/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "clothe",
+    "rp_ipa": "/kləʊð/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "coal",
+    "rp_ipa": "/kəʊl/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "craft",
+    "rp_ipa": "/krɑːft/",
+    "category": "trap_bath"
+  },
+  {
+    "word": "crow",
+    "rp_ipa": "/krəʊ/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "doze",
+    "rp_ipa": "/dəʊz/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "farther",
+    "rp_ipa": "/ˈfɑːðə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "flow",
+    "rp_ipa": "/fləʊ/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "fold",
+    "rp_ipa": "/fəʊld/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "glance",
+    "rp_ipa": "/ɡlɑːns/",
+    "category": "trap_bath"
+  },
+  {
+    "word": "grant",
+    "rp_ipa": "/ɡrɑːnt/",
+    "category": "trap_bath"
+  },
+  {
+    "word": "graph",
+    "rp_ipa": "/ɡrɑːf/",
+    "category": "trap_bath"
+  },
+  {
+    "word": "growth",
+    "rp_ipa": "/ɡrəʊθ/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "loaf",
+    "rp_ipa": "/ləʊf/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "owe",
+    "rp_ipa": "/əʊ/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "oyster",
+    "rp_ipa": "/ˈɔɪstə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "pole",
+    "rp_ipa": "/pəʊl/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "scold",
+    "rp_ipa": "/skəʊld/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "scope",
+    "rp_ipa": "/skəʊp/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "slope",
+    "rp_ipa": "/sləʊp/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "soul",
+    "rp_ipa": "/səʊl/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "vast",
+    "rp_ipa": "/vɑːst/",
+    "category": "trap_bath"
+  },
+  {
+    "word": "blast",
+    "rp_ipa": "/blɑːst/",
+    "category": "trap_bath"
+  },
+  {
+    "word": "bolt",
+    "rp_ipa": "/bəʊlt/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "cast",
+    "rp_ipa": "/kɑːst/",
+    "category": "trap_bath"
+  },
+  {
+    "word": "cone",
+    "rp_ipa": "/kəʊn/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "cope",
+    "rp_ipa": "/kəʊp/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "daft",
+    "rp_ipa": "/dɑːft/",
+    "category": "trap_bath"
+  },
+  {
+    "word": "dose",
+    "rp_ipa": "/dəʊs/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "gasp",
+    "rp_ipa": "/ɡɑːsp/",
+    "category": "trap_bath"
+  },
+  {
+    "word": "glow",
+    "rp_ipa": "/ɡləʊ/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "goat",
+    "rp_ipa": "/ɡəʊt/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "grasp",
+    "rp_ipa": "/ɡrɑːsp/",
+    "category": "trap_bath"
+  },
+  {
+    "word": "gross",
+    "rp_ipa": "/ɡrəʊs/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "hone",
+    "rp_ipa": "/həʊn/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "known",
+    "rp_ipa": "/nəʊn/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "lance",
+    "rp_ipa": "/lɑːns/",
+    "category": "trap_bath"
+  },
+  {
+    "word": "loan",
+    "rp_ipa": "/ləʊn/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "mask",
+    "rp_ipa": "/mɑːsk/",
+    "category": "trap_bath"
+  },
+  {
+    "word": "oath",
+    "rp_ipa": "/əʊθ/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "pose",
+    "rp_ipa": "/pəʊz/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "prance",
+    "rp_ipa": "/prɑːns/",
+    "category": "trap_bath"
+  },
+  {
+    "word": "probe",
+    "rp_ipa": "/prəʊb/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "prose",
+    "rp_ipa": "/prəʊz/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "quote",
+    "rp_ipa": "/kwəʊt/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "roam",
+    "rp_ipa": "/rəʊm/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "soak",
+    "rp_ipa": "/səʊk/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "stroke",
+    "rp_ipa": "/strəʊk/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "throat",
+    "rp_ipa": "/θrəʊt/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "toll",
+    "rp_ipa": "/təʊl/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "acquire",
+    "rp_ipa": "/əˈkwaɪə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "advance",
+    "rp_ipa": "/ədˈvɑːns/",
+    "category": "trap_bath"
+  },
+  {
+    "word": "afterward",
+    "rp_ipa": "/ˈɑːftəwəd/",
+    "category": "trap_bath"
+  },
+  {
+    "word": "afterwards",
+    "rp_ipa": "/ˈɑːftəwədz/",
+    "category": "trap_bath"
+  },
+  {
+    "word": "agriculture",
+    "rp_ipa": "/ˈæɡrɪˌkʌltʃə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "anger",
+    "rp_ipa": "/ˈæŋɡə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "backpacker",
+    "rp_ipa": "/ˈbækˌpækə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "baker",
+    "rp_ipa": "/ˈbeɪkə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "beaver",
+    "rp_ipa": "/ˈbiːvə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "behalf",
+    "rp_ipa": "/bɪˈhɑːf/",
+    "category": "trap_bath"
+  },
+  {
+    "word": "builder",
+    "rp_ipa": "/ˈbɪldə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "burglar",
+    "rp_ipa": "/ˈbɜːɡlə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "buyer",
+    "rp_ipa": "/ˈbaɪə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "calf",
+    "rp_ipa": "/kɑːf/",
+    "category": "trap_bath"
+  },
+  {
+    "word": "cancer",
+    "rp_ipa": "/ˈkænsə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "capture",
+    "rp_ipa": "/ˈkæptʃə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "climber",
+    "rp_ipa": "/ˈklaɪmə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "command",
+    "rp_ipa": "/kəˈmɑːnd/",
+    "category": "trap_bath"
+  },
+  {
+    "word": "counter",
+    "rp_ipa": "/ˈkaʊntə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "cucumber",
+    "rp_ipa": "/ˈkjuːˌkʌmbə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "dealer",
+    "rp_ipa": "/ˈdiːlə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "defender",
+    "rp_ipa": "/dɪˈfɛndə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "deliver",
+    "rp_ipa": "/dɪˈlɪvə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "demand",
+    "rp_ipa": "/dɪˈmɑːnd/",
+    "category": "trap_bath"
+  },
+  {
+    "word": "departure",
+    "rp_ipa": "/dɪˈpɑːtʃə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "designer",
+    "rp_ipa": "/dɪˈzaɪnə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "desire",
+    "rp_ipa": "/dɪˈzaɪə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "differ",
+    "rp_ipa": "/ˈdɪfə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "disaster",
+    "rp_ipa": "/dɪˈzɑːstə/",
+    "category": "trap_bath"
+  },
+  {
+    "word": "disastrous",
+    "rp_ipa": "/dɪˈzɑːstrəs/",
+    "category": "trap_bath"
+  },
+  {
+    "word": "diver",
+    "rp_ipa": "/ˈdaɪvə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "eager",
+    "rp_ipa": "/ˈiːɡə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "emperor",
+    "rp_ipa": "/ˈempərə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "empire",
+    "rp_ipa": "/ˈempaɪə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "encounter",
+    "rp_ipa": "/ɪnˈkaʊntə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "endanger",
+    "rp_ipa": "/ɪnˈdeɪndʒə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "entertainer",
+    "rp_ipa": "/ˌentəˈteɪnə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "entire",
+    "rp_ipa": "/ɪnˈtaɪə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "examiner",
+    "rp_ipa": "/ɪɡˈzæmɪnə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "failure",
+    "rp_ipa": "/ˈfeɪljə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "fasten",
+    "rp_ipa": "/ˈfɑːsn̩/",
+    "category": "trap_bath"
+  },
+  {
+    "word": "film-maker",
+    "rp_ipa": "/ˈfɪlmˌmeɪkə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "filter",
+    "rp_ipa": "/ˈfɪltə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "finger",
+    "rp_ipa": "/ˈfɪŋɡə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "flavor",
+    "rp_ipa": "/ˈfleɪvə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "flavour",
+    "rp_ipa": "/ˈfleɪvə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "folk",
+    "rp_ipa": "/fəʊk/",
+    "category": "goat_vowel"
+  },
+  {
+    "word": "freezer",
+    "rp_ipa": "/ˈfriːzə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "gesture",
+    "rp_ipa": "/ˈdʒestʃə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "ginger",
+    "rp_ipa": "/ˈdʒɪndʒə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "governor",
+    "rp_ipa": "/ˈɡʌvənə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "hammer",
+    "rp_ipa": "/ˈhæmə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "harbor",
+    "rp_ipa": "/ˈhɑːbə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "harbour",
+    "rp_ipa": "/ˈhɑːbə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "humor",
+    "rp_ipa": "/ˈhjuːmə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "humour",
+    "rp_ipa": "/ˈhjuːmə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "hunger",
+    "rp_ipa": "/ˈhʌŋɡə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "inspire",
+    "rp_ipa": "/ɪnˈspaɪə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "instructor",
+    "rp_ipa": "/ɪnˈstrʌktə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "jumper",
+    "rp_ipa": "/ˈdʒʌmpə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "lasting",
+    "rp_ipa": "/ˈlɑːstɪŋ/",
+    "category": "trap_bath"
+  },
+  {
+    "word": "latecomer",
+    "rp_ipa": "/ˈleɪtˌkʌmə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "laughter",
+    "rp_ipa": "/ˈlɑːftə/",
+    "category": "trap_bath"
+  },
+  {
+    "word": "layer",
+    "rp_ipa": "/ˈleɪə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "lecture",
+    "rp_ipa": "/ˈlektʃə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "liar",
+    "rp_ipa": "/ˈlaɪə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "liver",
+    "rp_ipa": "/ˈlɪvə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "minor",
+    "rp_ipa": "/ˈmaɪnə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "moisture",
+    "rp_ipa": "/ˈmɔɪstʃə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "nasty",
+    "rp_ipa": "/ˈnɑːsti/",
+    "category": "trap_bath"
+  },
+  {
+    "word": "nectar",
+    "rp_ipa": "/ˈnektə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "password",
+    "rp_ipa": "/ˈpɑːswɜːd/",
+    "category": "trap_bath"
+  },
+  {
+    "word": "professor",
+    "rp_ipa": "/prəˈfɛsə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "publisher",
+    "rp_ipa": "/ˈpʌblɪʃə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "razor",
+    "rp_ipa": "/ˈreɪzə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "recover",
+    "rp_ipa": "/rɪˈkʌvə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "register",
+    "rp_ipa": "/ˈrɛdʒɪstə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "remainder",
+    "rp_ipa": "/rɪˈmeɪndə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "require",
+    "rp_ipa": "/rɪˈkwaɪə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "researcher",
+    "rp_ipa": "/rɪˈsɜːtʃə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "rubber",
+    "rp_ipa": "/ˈrʌbə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "schoolteacher",
+    "rp_ipa": "/ˈskuːlˌtiːtʃə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "sculpture",
+    "rp_ipa": "/ˈskʌlptʃə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "server",
+    "rp_ipa": "/ˈsɜːvə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "shelter",
+    "rp_ipa": "/ˈʃɛltə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "shiver",
+    "rp_ipa": "/ˈʃɪvə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "signature",
+    "rp_ipa": "/ˈsɪɡnətʃə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "skyscraper",
+    "rp_ipa": "/ˈskaɪˌskreɪpə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "sour",
+    "rp_ipa": "/ˈsaʊə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "sticker",
+    "rp_ipa": "/ˈstɪkə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "suffer",
+    "rp_ipa": "/ˈsʌfə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "survivor",
+    "rp_ipa": "/səˈvaɪvə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "swimmer",
+    "rp_ipa": "/ˈswɪmə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "teller",
+    "rp_ipa": "/ˈtɛlə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "temper",
+    "rp_ipa": "/ˈtɛmpə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "terror",
+    "rp_ipa": "/ˈtɛrə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "thriller",
+    "rp_ipa": "/ˈθrɪlə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "thunder",
+    "rp_ipa": "/ˈθʌndə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "tire",
+    "rp_ipa": "/ˈtaɪə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "trigger",
+    "rp_ipa": "/ˈtrɪɡə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "uncover",
+    "rp_ipa": "/ʌnˈkʌvə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "upper",
+    "rp_ipa": "/ˈʌpə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "whenever",
+    "rp_ipa": "/wɛnˈɛvə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "whichever",
+    "rp_ipa": "/wɪtʃˈɛvə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "whisper",
+    "rp_ipa": "/ˈwɪspə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "whoever",
+    "rp_ipa": "/huːˈɛvə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "wither",
+    "rp_ipa": "/ˈwɪðə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "advancement",
+    "rp_ipa": "/ədˈvɑːnsmənt/",
+    "category": "trap_bath"
+  },
+  {
+    "word": "anchor",
+    "rp_ipa": "/ˈæŋkə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "anticancer",
+    "rp_ipa": "/ˌæntiˈkænsə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "aspire",
+    "rp_ipa": "/əˈspaɪə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "banker",
+    "rp_ipa": "/ˈbæŋkə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "barrier",
+    "rp_ipa": "/ˈbæriə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "bathhouse",
+    "rp_ipa": "/ˈbɑːθˌhaʊs/",
+    "category": "trap_bath"
+  },
+  {
+    "word": "bestseller",
+    "rp_ipa": "/ˌbɛstˈsɛlə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "bewilder",
+    "rp_ipa": "/bɪˈwɪldə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "browser",
+    "rp_ipa": "/ˈbraʊzə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "bumper",
+    "rp_ipa": "/ˈbʌmpə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "cellar",
+    "rp_ipa": "/ˈsɛlə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "chancellor",
+    "rp_ipa": "/ˈtʃɑːnsələ/",
+    "category": "trap_bath"
+  },
+  {
+    "word": "collector",
+    "rp_ipa": "/kəˈlɛktə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "commander",
+    "rp_ipa": "/kəˈmɑːndə/",
+    "category": "trap_bath"
+  },
+  {
+    "word": "conductor",
+    "rp_ipa": "/kənˈdʌktə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "craftsman",
+    "rp_ipa": "/ˈkrɑːftsmən/",
+    "category": "trap_bath"
+  },
+  {
+    "word": "cursor",
+    "rp_ipa": "/ˈkɜːsə/",
+    "category": "rhoticity"
+  },
+  {
+    "word": "demanding",
+    "rp_ipa": "/dɪˈmɑːndɪŋ/",
+    "category": "trap_bath"
+  },
+  {
+    "word": "displeasure",
+    "rp_ipa": "/dɪsˈplɛʒə/",
+    "category": "rhoticity"
+  }
+]
