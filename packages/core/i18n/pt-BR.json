@@ -1,0 +1,562 @@
+{
+  "brand": {
+    "name": "IPA Sound Drill",
+    "home": "Voltar ao início"
+  },
+  "meta": {
+    "title": "IPA Sound Drill — Domine a pronúncia do inglês com o AFI",
+    "description": "Treine os sons do inglês com o AFI (IPA). Prática gratuita no navegador para inglês americano e britânico: decodifique, escreva e reconstrua a pronúncia a partir do som.",
+    "ogTitle": "IPA Sound Drill — Treine os sons do inglês com o AFI",
+    "ogDescription": "Um treinador de pronúncia com AFI, gratuito e aberto. Decodifique, escreva e escute para falar um inglês mais claro, com sotaques GA e RP."
+  },
+  "seo": {
+    "h1": "Treinador de pronúncia do inglês com AFI — inglês americano e britânico, grátis",
+    "sounds": {
+      "breadcrumb_home": "Início",
+      "breadcrumb_root": "Sons",
+      "sec_how": "Como produzir este som",
+      "lbl_example": "Exemplo",
+      "lbl_mouth": "Boca",
+      "lbl_trap": "Erro comum",
+      "ga_variant": "Inglês americano (GA)",
+      "rp_variant": "Inglês britânico (RP)",
+      "gr_section_title": "GA vs RP",
+      "gr_same": "GA e RP compartilham este som.",
+      "gr_ga_only": "Este som é usado no GA. No RP usa-se outro som na mesma palavra.",
+      "gr_rp_only": "Este som é usado no RP. No GA usa-se outro som na mesma palavra.",
+      "play_audio": "Ouvir",
+      "related_title": "Sons relacionados",
+      "cta_lead": "Pratique este som com exercícios, fala conectada e 5.397 palavras classificadas pelo CEFR.",
+      "cta_button": "Abrir IPA Sound Drill",
+      "back_top": "Voltar ao IPA Sound Drill",
+      "meta_desc_tpl": "Aprenda o som inglês \"{label}\" (AFI {ipa}) — guia de pronúncia, posição da boca, erros comuns e áudio. Grátis, com inglês americano e britânico.",
+      "h1_tpl": "O som inglês \"{label}\" (AFI {ipa}) — guia de pronúncia",
+      "title_tpl": "{label} (AFI {ipa}) — pronúncia do inglês | IPA Sound Drill",
+      "category_vowel": "Vogal",
+      "category_diphthong": "Ditongo",
+      "category_consonant": "Consoante",
+      "category_allophone": "Alofone",
+      "scope_ga": "GA (inglês americano)",
+      "scope_rp": "RP (inglês britânico)",
+      "scope_shared": "GA e RP",
+      "see_words_link_tpl": "Ver {n} palavras comuns do inglês com este som →"
+    },
+    "weakForms": {
+      "breadcrumb_root": "Formas fracas",
+      "lbl_weak": "Forma fraca",
+      "lbl_strong": "Forma forte",
+      "lbl_ga": "Inglês americano",
+      "lbl_rp": "Inglês britânico",
+      "sec_rule": "Quando usar a forma fraca",
+      "sec_examples": "Frases de exemplo",
+      "play_ga": "Ouvir (GA)",
+      "play_rp": "Ouvir (RP)",
+      "related_title": "Formas fracas relacionadas",
+      "cta_lead": "Pratique formas fracas em fala conectada real com 201 padrões de frases.",
+      "cta_button": "Abrir IPA Sound Drill",
+      "back_top": "Voltar ao IPA Sound Drill",
+      "meta_desc_tpl": "A forma fraca de \"{word}\" em inglês (fraca {weak_ipa}, forte {strong_ipa}) — quando usar, frases de exemplo e áudio em GA e RP. Grátis.",
+      "h1_tpl": "A forma fraca inglesa de \"{word}\" — fraca {weak_ipa}, forte {strong_ipa}",
+      "title_tpl": "Forma fraca: {word} (fraca {weak_ipa}, forte {strong_ipa}) | IPA Sound Drill"
+    },
+    "phrases": {
+      "breadcrumb_root": "Fala conectada",
+      "lbl_rp": "RP",
+      "lbl_gloss": "Significado",
+      "sec_rule": "O que acontece nesta frase",
+      "sec_examples": "Frases de exemplo",
+      "play_ga": "Ouvir (GA)",
+      "play_rp": "Ouvir (RP)",
+      "related_title": "Frases relacionadas",
+      "cta_lead": "Pratique este padrão e mais 200 frases em exercícios reais.",
+      "cta_button": "Abrir IPA Sound Drill",
+      "back_top": "Voltar ao IPA Sound Drill",
+      "meta_desc_tpl": "Como falantes nativos pronunciam \"{phrase}\" (AFI {ipa}) — regra de fala conectada, frases de exemplo e áudio em GA e RP. Grátis.",
+      "h1_tpl": "Como pronunciar \"{phrase}\" em inglês — guia de fala conectada (AFI {ipa})",
+      "title_tpl": "{phrase} pronúncia (AFI {ipa}) — {type} | IPA Sound Drill",
+      "type_linking": "Ligação",
+      "type_assimilation": "Assimilação",
+      "type_elision": "Elisão"
+    },
+    "soundWords": {
+      "breadcrumb_words": "Palavras",
+      "sec_title": "Palavras comuns do inglês com este som",
+      "sec_intro": "Seleção das palavras mais frequentes que contêm este fonema, ordenadas por nível do aprendiz (a partir de A1). GA e RP são exibidos quando diferem. Toque em Ouvir para o áudio.",
+      "th_word": "Palavra",
+      "th_ga": "GA",
+      "th_rp": "RP",
+      "th_cefr": "Nível",
+      "th_listen": "Ouvir",
+      "back_to_sound_tpl": "Voltar à página do som {label}",
+      "cta_lead_tpl": "Pratique no app todas as {count} palavras classificadas pelo CEFR com áudio GA/RP.",
+      "meta_desc_tpl": "Lista curada de palavras inglesas comuns com o som \"{label}\" (AFI {ipa}) — classificadas pelo CEFR, com pronúncia GA e RP. Grátis.",
+      "h1_tpl": "Palavras inglesas comuns com o som \"{label}\" (AFI {ipa})",
+      "title_tpl": "Palavras com o som {label} (AFI {ipa}) — exemplos | IPA Sound Drill",
+      "no_words": "Ainda não há exemplos classificados para este som."
+    },
+    "dataset": {
+      "crumb_data": "Dados",
+      "license_free": "Uso livre com atribuição",
+      "hero_title": "Conjunto de dados AFI do inglês grátis — palavras classificadas pelo CEFR com GA e RP",
+      "hero_sub": "Disponível em CSV e JSON. Atribuição obrigatória (CC BY 4.0). Adequado para pesquisa, aplicativos e uso em sala de aula.",
+      "stat_words": "Palavras classificadas pelo CEFR",
+      "stat_accents": "Ambos os sotaques",
+      "stat_cefr": "Níveis cobertos",
+      "dl_csv_desc": "Para planilhas e análise rápida. UTF-8 com BOM.",
+      "dl_json_desc": "Para código. Array de registros com metadados completos.",
+      "dl_license_desc": "Texto legal CC BY 4.0 e aviso de atribuição.",
+      "dl_btn": "Baixar",
+      "sec_attribution": "Como creditar estes dados",
+      "sec_attribution_lead": "Copie a linha abaixo para seu artigo, README ou créditos do produto:",
+      "sec_fields": "Definição de campos (CSV)",
+      "sec_fields_lead": "O CSV tem estas 6 colunas. A versão JSON inclui campos adicionais (respell, neighbors, etc.).",
+      "field_name": "Coluna",
+      "field_desc": "Descrição",
+      "field_ex": "Exemplo",
+      "field_word": "A palavra inglesa (em minúsculas).",
+      "field_ga": "AFI do inglês americano em notação com barras.",
+      "field_rp": "AFI do inglês britânico em notação com barras.",
+      "field_cefr": "Nível CEFR A1–C2 (ou vazio).",
+      "field_pos": "Classe gramatical.",
+      "field_gloss": "Glosa ou definição breve em inglês.",
+      "sec_usage": "Exemplos de uso",
+      "sec_usage_lead": "Trechos simples de carregamento em várias linguagens.",
+      "cta_lead": "Quer experimentar o treinador de pronúncia que usa estes dados?",
+      "cta_button": "Abrir IPA Sound Drill",
+      "back_top": "Voltar ao IPA Sound Drill",
+      "meta_desc_tpl": "Conjunto de dados AFI do inglês grátis — 5.397 palavras classificadas pelo CEFR com inglês americano e britânico. CSV + JSON, CC BY 4.0.",
+      "h1_tpl": "Conjunto de dados AFI do inglês grátis — 5.397 palavras classificadas pelo CEFR com GA e RP (CC BY 4.0)",
+      "title_tpl": "Conjunto de dados AFI do inglês grátis (5.397 palavras, GA + RP, CEFR) — CC BY 4.0 | IPA Sound Drill"
+    }
+  },
+  "lead_html": "Treine a <b>leitura e escrita do AFI</b> com palavras que você já conhece, som por som. Foque nos <b>sons armadilha</b> (θ, ð, æ, ʒ, ɝ) ou nos seus <b>pontos fracos</b> do histórico de prática. Pontua-se só pela precisão: amplia a cobertura de símbolos, não as listas de palavras.",
+  "lead_connected_html": "Ouça a <b>fala conectada</b> em GA: ligação, assimilação e elisão. Leia o AFI conectado e recupere a frase original.",
+  "lead_weak_html": "Ouça as <b>formas fracas</b> de palavras funcionais na fala conectada. Leia o AFI e recupere a palavra.",
+  "tab": {
+    "label": "Modo de prática",
+    "words": "Uma palavra",
+    "connected": "Conectada",
+    "weak": "Formas fracas"
+  },
+  "mode": {
+    "label": "Modo de aprendizagem",
+    "a": "Ler e escrever AFI"
+  },
+  "modeb": {
+    "title": "Ouça e aprenda",
+    "lead_html": "Aprenda <b>palavras novas a partir do som</b>: ouça a palavra e depois associe significado e grafia. Avance por faixa CEFR.",
+    "study": {
+      "got_it": "Próximo",
+      "reveal_meaning": "Ver significado"
+    },
+    "quiz": {
+      "choose_meaning": "Escolha o significado",
+      "type_word": "Digite a palavra"
+    },
+    "band": {
+      "label": "Faixa",
+      "note": "{band}: {n} palavras · {pct}% dominadas ({m} na caixa 4+)"
+    },
+    "pool": "Faixa {band}: {n} palavras · {pct}% dominadas",
+    "correct": "Correto",
+    "incorrect": "Tente novamente"
+  },
+  "cs": {
+    "label": "Tipo",
+    "all": "Todos",
+    "linking": "Ligação",
+    "assimilation": "Assimilação",
+    "elision": "Elisão",
+    "ruleLabel": "Regra",
+    "level": {
+      "label": "Nível",
+      "all": "Todos",
+      "l1": "Iniciante",
+      "l2": "Intermediário",
+      "l3": "Avançado"
+    }
+  },
+  "weak": {
+    "strong_label": "Forte",
+    "weak_label": "Fraca"
+  },
+  "focus": {
+    "label": "Foco de fonema",
+    "all": "Todos os sons",
+    "traps": "Sons armadilha",
+    "traps_d": "θ ð æ ʒ ɝ",
+    "weak": "Pontos fracos",
+    "weak_d": "Com base no seu histórico de prática",
+    "letters": "Alfabeto",
+    "contractions": "Contrações",
+    "irregular": "Formas irregulares",
+    "casual": "Fala coloquial"
+  },
+  "reg": {
+    "label": "Padrão ortográfico",
+    "all": "Todos",
+    "regular": "Regular",
+    "regular_d": "Fonética e regras regulares entre grafia e som",
+    "irregular": "Irregular",
+    "irregular_d": "Palavras comuns com grafia irregular"
+  },
+  "pool": {
+    "count": "Grupo: {n} palavras",
+    "count_phrases": "Grupo: {n} frases",
+    "count_weak": "Grupo: {n} formas fracas"
+  },
+  "setup": {
+    "show_filters": "Configurações avançadas",
+    "hide_filters": "Ocultar configurações"
+  },
+  "dir": {
+    "label": "Direção",
+    "decode_t": "AFI &rarr; palavra",
+    "decode_d": "Leia o AFI e digite a palavra",
+    "encode_t": "palavra &rarr; AFI",
+    "encode_d": "Monte o AFI a partir da palavra escrita"
+  },
+  "lvl": {
+    "label": "Nível CEFR",
+    "a1": "A1",
+    "a2": "A2",
+    "b1": "B1",
+    "b2": "B2",
+    "pool": "Grupo: {n} palavras"
+  },
+  "grp": {
+    "label": "Grupo de padrão ortográfico",
+    "all": "Todos",
+    "short": "Vogais curtas",
+    "long": "Vogais longas · e mudo",
+    "team": "Times de vogais",
+    "r": "Vogais com r"
+  },
+  "start": "Começar",
+  "loading": "Carregando…",
+  "load_fail": "Falha ao carregar. Tente novamente.",
+  "wordlist_fail": "Falha ao carregar a lista de palavras. Atualize e tente novamente.",
+  "back_top": "Menu",
+  "accent": {
+    "label": "Sotaque",
+    "ga": "Americano (GA)",
+    "rp": "Britânico (RP)"
+  },
+  "vocab": {
+    "title": "Vocabulário",
+    "tab_words": "Palavras",
+    "tab_phrases": "Frases",
+    "search": "Buscar…",
+    "no_results": "Sem resultados",
+    "back": "Voltar",
+    "filter": {
+      "ipa": "Filtrar por AFI",
+      "all": "Todos",
+      "ipa_max": "(máx. 3)",
+      "add": "Adicionar símbolo",
+      "clear": "Limpar tudo",
+      "picker": "Filtrar por fonemas de {accent}"
+    },
+    "count": {
+      "filtered": "Filtrado · pronúncia {accent} com {syms} · {n}",
+      "all": "{n} entradas"
+    },
+    "az": {
+      "hint": "pule por letra"
+    }
+  },
+  "reveal": {
+    "rp_note": "RP",
+    "ga_note": "GA",
+    "respell_label": "Reescrita fonética",
+    "dict_label": "Dicionário",
+    "correct": "Correto",
+    "incorrect": "Incorreto",
+    "pron_label": "Pronúncia (🔊 para reproduzir)",
+    "alt_same": "igual",
+    "pending": "Confira sua resposta: a palavra e a pronúncia corretas aparecerão aqui"
+  },
+  "lang_opts": {
+    "en": "English",
+    "ja": "日本語",
+    "zh-Hant": "繁體",
+    "zh-Hans": "简体",
+    "ko": "한국어",
+    "fil": "Filipino",
+    "es": "Español",
+    "pt-BR": "Português (Brasil)",
+    "vi": "Tiếng Việt",
+    "id": "Bahasa Indonesia",
+    "ru": "Русский",
+    "th": "ไทย",
+    "hi": "हिन्दी",
+    "tr": "Türkçe"
+  },
+  "listen": "Ouvir",
+  "reflect": {
+    "btn": "Revisar"
+  },
+  "exit_confirm": {
+    "title": "Encerrar sessão?",
+    "body": "Deseja encerrar esta sessão de prática?",
+    "yes": "Sim",
+    "no": "Não"
+  },
+  "input_ph": "Digite a palavra",
+  "input_phrase": "Digite a frase",
+  "check": "Verificar",
+  "clear": "Limpar",
+  "next": "Próximo",
+  "build_ph": "Toque nas teclas do AFI abaixo para montar a pronúncia",
+  "tips_head": "Dicas de pronúncia",
+  "note": {
+    "pattern": "Padrão ortográfico: {p}",
+    "stress": "Acento na sílaba {n} ({sy} sílabas)",
+    "schwa": "Schwa (ə/ɚ): mantenha-o fraco e neutro; não se deixe levar pela grafia",
+    "tricky": "Sons difíceis: {s}"
+  },
+  "patterns": {
+    "magic_e": "e mudo"
+  },
+  "you": "Você: {a}",
+  "see_answer": "Ver a resposta",
+  "summary": {
+    "line": "{c} / {t} corretas · {m} para revisar",
+    "weak_head": "Sons para praticar a seguir",
+    "weak_none_t": "Nenhum ponto fraco encontrado",
+    "weak_none_d": "Você não errou nenhum som. Experimente um nível mais alto.",
+    "review": "Lista de revisão: {list}",
+    "weak_btn": "Revisar erros"
+  },
+  "info": {
+    "mouth": "Boca",
+    "watch": "Atenção",
+    "examples": "Exemplos"
+  },
+  "kbd": {
+    "stress": "Acento",
+    "vowels": "Vogais",
+    "r_vowels": "Com r",
+    "diphthongs": "Ditongos",
+    "consonants": "Consoantes",
+    "syllabic": "Silábicas"
+  },
+  "pos": {
+    "限定詞": "determinante",
+    "名詞": "substantivo",
+    "数詞": "numeral",
+    "動詞": "verbo",
+    "形容詞": "adjetivo",
+    "副詞": "advérbio",
+    "前置詞": "preposição",
+    "接続詞": "conjunção",
+    "代名詞": "pronome",
+    "間投詞": "interjeição",
+    "副詞 / 前置詞": "advérbio / preposição",
+    "形容詞 / 副詞": "adjetivo / advérbio",
+    "形容詞 / 副詞 / 間投詞": "adjetivo / advérbio / interjeição",
+    "be動詞": "verbo be",
+    "助動詞": "verbo modal",
+    "文字": "nome da letra",
+    "短縮形": "contração",
+    "動詞（不規則変化）": "forma verbal irregular",
+    "名詞（不規則複数）": "plural irregular",
+    "口語表現": "expressão coloquial"
+  },
+  "cefr": {
+    "pending": "CEFR?",
+    "pending_hint": "Nível CEFR ainda não atribuído",
+    "tag": {
+      "a1": "CEFR A1",
+      "a2": "CEFR A2",
+      "b1": "CEFR B1",
+      "b2": "CEFR B2"
+    }
+  },
+  "checks": {
+    "progress": "Progresso",
+    "mode_d": "AFI → palavra",
+    "mode_e": "palavra → AFI",
+    "mode_l": "Ouvir"
+  },
+  "top": {
+    "tagline": "Reajuste seu inglês. A partir do som."
+  },
+  "drill": {
+    "title": {
+      "2a": "Verifique o som",
+      "2b": "Escreva a partir da pronúncia",
+      "2c": "Aprenda palavras pelo som",
+      "2d": "Acostume-se com sons conectados"
+    }
+  },
+  "about": {
+    "title": "Sobre este app",
+    "placeholder": "Uma ferramenta de aprendizagem para verificar a pronúncia do inglês com o AFI e reconstruí-la a partir do som.",
+    "lead": "IPA Sound Drill é uma ferramenta de treino para afinar os sons do inglês usando o alfabeto fonético. Reconstrua sua pronúncia a partir do som: ouça a palavra e associe significado e grafia, avançando por faixa CEFR.",
+    "why_ipa_html": "<p>Para adultos que aprendem inglês, compreensão auditiva e pronúncia são inseparáveis. <b>Um som que você não consegue produzir com precisão é um som que você não consegue distinguir de forma confiável de ouvido</b>, e um som que você não distingue é um som que você não consegue reproduzir. Os dois são duas faces da mesma capacidade: perceber o som como som.</p><p>Considere a palavra <i>turtle</i>. Sua pronúncia real em inglês é <code>/ˈtɝːtəl/</code>: duas sílabas construídas sobre uma vogal com r e uma schwa, bem diferentes do que a grafia sugere. A distância entre como uma palavra parece e como ela realmente soa é onde a pronúncia se quebra.</p><p>Para tornar o inglês seu, você precisa lidar com o som em <b>resolução AFI</b>: não apenas \"ah\" versus \"ee\", mas <code>/æ/</code>, <code>/ʌ/</code>, <code>/ɑ/</code> e <code>/ə/</code> como sons distintos que você consegue ouvir e pronunciar separadamente.</p><p>Há algumas maneiras de alcançar essa resolução: viver em um ambiente de língua inglesa, fazer a maior parte do seu estudo com áudio em inglês ou <b>estudar o AFI de forma deliberada</b>. Para adultos em que as duas primeiras não são realistas, o estudo do AFI é, de longe, o caminho mais eficiente em tempo.</p><p>IPA Sound Drill treina essa \"resolução de som\" fonema por fonema. Foca nos sons armadilha que mais desafiam os aprendizes — <code>θ</code>, <code>ð</code>, <code>æ</code>, <code>ʒ</code>, <code>ɝ</code> — construindo a base para tudo o que vem depois no seu inglês.</p>",
+    "features": {
+      "title": "O que este app oferece",
+      "item_1_html": "<b>Quatro exercícios de aprendizagem</b>. A prática é dividida em quatro exercícios: \"Verifique o som\" (AFI → palavra), \"Escreva a partir da pronúncia\" (palavra → AFI), \"Aprenda palavras pelo som\" (som → vocabulário) e \"Acostume-se com sons conectados\" (fala conectada / formas fracas), cada um com um objetivo diferente.",
+      "item_2_html": "<b>5.397 palavras marcadas pelo CEFR</b>. Cada palavra tem uma marcação CEFR (A1 / A2 / B1 / B2), para que você filtre apenas as que combinam com o seu nível.",
+      "item_3_html": "<b>Prática focada em sons armadilha</b>. Os exercícios miram nos sons armadilha mais difíceis (<code>θ</code> / <code>ð</code> / <code>æ</code> / <code>ʒ</code> / <code>ɝ</code>) e mostram automaticamente os seus pontos fracos a partir do histórico, expandindo a cobertura de símbolos com eficiência.",
+      "item_4_html": "<b>Busque palavras por símbolo do AFI</b>. Monte uma sequência de símbolos AFI na paleta para buscar palavras. Digite <code>æk</code>, por exemplo, e todas as palavras que contêm esse som — \"back\", \"pack\", \"lack\" — aparecerão. Organizada por categoria fonética (10 grupos de vogais e consoantes), a paleta também serve como referência de fonética.",
+      "item_5_html": "<b>Veja seu progresso</b>. Um medidor de progresso mostra o quanto você avançou em cada um dos quatro exercícios, com um sistema de três marcas (três verificações de domínio por palavra) que registra o aprendizado."
+    },
+    "contact_html": "<p>Para comentários e relatos de bugs, use o <a href=\"https://tally.so/r/xX1axk\" target=\"_blank\" rel=\"noopener\">formulário de contato</a>.</p>"
+  },
+  "mark": {
+    "aria": {
+      "step_0": "Sem marca",
+      "step_1": "Marca 1 de 3",
+      "step_2": "Marca 2 de 3",
+      "step_3": "Concluído (3 de 3)"
+    }
+  },
+  "progress": {
+    "meter_label": "{pct}% ({cur} / {total})",
+    "meter_aria": "Progresso {pct} por cento, pergunta {cur} de {total}",
+    "title": "Status de aprendizagem",
+    "back": "Voltar",
+    "card_title": "Ver status de aprendizagem",
+    "card_subtitle": "Confira o progresso",
+    "filter_all": "Todos",
+    "overall_title": "Progresso geral",
+    "drills_title": "Progresso por exercício",
+    "graduated_summary": "{n} / {m} itens concluídos",
+    "drill_summary": "{n} / {m} concluídos",
+    "slots": {
+      "0": "Não iniciado",
+      "1": "1 marca",
+      "2": "2 marcas",
+      "3": "Concluído"
+    }
+  },
+  "symbol": {
+    "picker": {
+      "title": "Buscar por AFI",
+      "clear": "Limpar tudo",
+      "empty": "Toque nos símbolos abaixo",
+      "remove_chip": "Remover"
+    },
+    "group": {
+      "frontVowels": {
+        "en": "Front Vowels",
+        "sub": "Vogais anteriores"
+      },
+      "centralVowels": {
+        "en": "Central Vowels",
+        "sub": "Vogais centrais"
+      },
+      "backVowels": {
+        "en": "Back Vowels",
+        "sub": "Vogais posteriores"
+      },
+      "diphthongs": {
+        "en": "Diphthongs",
+        "sub": "Ditongos"
+      },
+      "plosives": {
+        "en": "Plosives",
+        "sub": "Oclusivas"
+      },
+      "fricatives": {
+        "en": "Fricatives",
+        "sub": "Fricativas"
+      },
+      "nasals": {
+        "en": "Nasals",
+        "sub": "Nasais"
+      },
+      "approximants": {
+        "en": "Approximants",
+        "sub": "Aproximantes"
+      },
+      "laterals": {
+        "en": "Laterals",
+        "sub": "Laterais"
+      },
+      "affricates": {
+        "en": "Affricates",
+        "sub": "Africadas"
+      },
+      "stress": {
+        "en": "Stress",
+        "sub": "Acento"
+      },
+      "other": {
+        "en": "Other",
+        "sub": "Outros"
+      },
+      "syllabic": {
+        "en": "Syllabic",
+        "sub": "Silábicas"
+      }
+    },
+    "height": {
+      "close": {
+        "en": "Close",
+        "sub": "Fechada"
+      },
+      "closeMid": {
+        "en": "Close-Mid",
+        "sub": "Semifechada"
+      },
+      "openMid": {
+        "en": "Open-Mid",
+        "sub": "Semiaberta"
+      },
+      "open": {
+        "en": "Open",
+        "sub": "Aberta"
+      }
+    }
+  },
+  "onboarding": {
+    "title": "Introdução",
+    "pc_lead": "Mostrado automaticamente no primeiro acesso. Pular também conta como concluído. Reabra a qualquer momento pelo guia no cabeçalho.",
+    "guide_aria": "Guia",
+    "guide_label": "Guia",
+    "ipa_hint": "Acento <span class=\"ipa\" style=\"color:var(--signal)\">ˈ</span> · sílaba <span class=\"ipa\">‧</span>",
+    "stat_days": "dias seguidos",
+    "stat_words": "palavras vistas",
+    "next": "Próximo",
+    "skip": "Pular",
+    "start": "Começar",
+    "slide_1": {
+      "title": "Comece por um objetivo.",
+      "body": "Escolha uma meta. Sem configuração complicada: seu exercício começa na hora."
+    },
+    "slide_2": {
+      "title": "Ouça o som, confira os símbolos.",
+      "body": "O AFI é um mapa do som. Ligue o que você ouve aos símbolos. As diferenças entre GA e RP aparecem lado a lado."
+    },
+    "slide_3": {
+      "title": "Marque quando souber.",
+      "body": "Toque em uma caixa quando sentir que já sabe. Preencha <b>três</b> para concluir aquela palavra. Palavras com menos marcas aparecem primeiro: você não precisa de uma sequência perfeita."
+    },
+    "slide_4": {
+      "title": "No seu ritmo.",
+      "body": "O progresso fica neste dispositivo. Sem conta. Pause e retome quando quiser: comece com uma palavra."
+    }
+  },
+  "footer": {
+    "ipa": "O que é o AFI?",
+    "language": "Idioma",
+    "feedback": "Comentários",
+    "terms": "Termos",
+    "privacy": "Privacidade"
+  },
+  "language": {
+    "title": "Idioma",
+    "display_label": "Idioma de exibição"
+  },
+  "ipa_info": {
+    "heading": "O AFI é um mapa dos sons.",
+    "lead": "A mesma grafia pode soar diferente. O AFI anota com exatidão como uma palavra é pronunciada (um símbolo, um som) em um único sistema internacional.",
+    "example_note": "Grafia parecida, sons bem diferentes.",
+    "legend_stress": "Posição do acento",
+    "legend_syllable": "Divisão silábica",
+    "legend_link": "Ligação entre palavras"
+  }
+}

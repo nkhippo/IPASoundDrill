@@ -206,8 +206,10 @@ def main(strict=False):
     ph = {l: load(os.path.join(PH_DIR, f"{l}.json")) for l in ph_langs}
     base_sym = set(ph[BASE])
     print(f"[B] 音素言語: {ph_langs}  記号数(en)={len(base_sym)}")
-    if set(ui_langs) != set(ph_langs):
-        errors.append(f"[B] UI言語と音素言語の集合が不一致: UI={ui_langs} PH={ph_langs}")
+    # PH は UI の subset であれば OK（欠落言語は build 時に en へ fallback する — Issue #297 baseline に整合）
+    ph_extra = set(ph_langs) - set(ui_langs)
+    if ph_extra:
+        errors.append(f"[B] UI に無い音素言語が存在: PH_extra={sorted(ph_extra)}")
     for l in ph_langs:
         if l == BASE:
             continue
