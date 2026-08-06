@@ -31,6 +31,8 @@ ALLOW_EN_IDENTICAL = {
     "focus.traps_d",
     "lvl.a1", "lvl.a2", "lvl.b1", "lvl.b2", "lvl.c1",
     "lang_opts.en", "lang_opts.ja", "lang_opts.zh-Hant", "lang_opts.zh-Hans", "lang_opts.ko", "lang_opts.fil",
+    "lang_opts.es", "lang_opts.pt-BR", "lang_opts.vi", "lang_opts.id",
+    "lang_opts.ru", "lang_opts.th", "lang_opts.hi", "lang_opts.tr",
 }
 
 class I18nHTMLParser(HTMLParser):
