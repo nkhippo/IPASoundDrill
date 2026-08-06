@@ -1,0 +1,562 @@
+{
+  "brand": {
+    "name": "IPA Sound Drill",
+    "home": "Về đầu trang"
+  },
+  "meta": {
+    "title": "IPA Sound Drill — Làm chủ phát âm tiếng Anh với IPA",
+    "description": "Luyện âm tiếng Anh bằng IPA. Ứng dụng web miễn phí cho giọng Mỹ (GA) và Anh (RP): giải mã, viết và tái tạo phát âm từ cấp độ âm.",
+    "ogTitle": "IPA Sound Drill — Luyện âm tiếng Anh với IPA",
+    "ogDescription": "Ứng dụng luyện phát âm bằng IPA, miễn phí và mã nguồn mở. Giải mã, viết và nghe để nói tiếng Anh rõ ràng hơn, hỗ trợ giọng GA và RP."
+  },
+  "seo": {
+    "h1": "Ứng dụng luyện phát âm tiếng Anh bằng IPA — giọng Mỹ và Anh, miễn phí",
+    "sounds": {
+      "breadcrumb_home": "Trang chủ",
+      "breadcrumb_root": "Danh sách âm",
+      "sec_how": "Cách phát âm này",
+      "lbl_example": "Ví dụ",
+      "lbl_mouth": "Khẩu hình",
+      "lbl_trap": "Lỗi thường gặp",
+      "ga_variant": "Tiếng Anh Mỹ (GA)",
+      "rp_variant": "Tiếng Anh Anh (RP)",
+      "gr_section_title": "GA và RP",
+      "gr_same": "GA và RP dùng chung âm này.",
+      "gr_ga_only": "Âm này dùng trong GA. Trong RP, cùng một từ dùng âm khác.",
+      "gr_rp_only": "Âm này dùng trong RP. Trong GA, cùng một từ dùng âm khác.",
+      "play_audio": "Nghe",
+      "related_title": "Âm liên quan",
+      "cta_lead": "Luyện âm này qua bài tập, nối âm và 5.397 từ được phân cấp CEFR.",
+      "cta_button": "Mở IPA Sound Drill",
+      "back_top": "Quay lại IPA Sound Drill",
+      "meta_desc_tpl": "Học âm tiếng Anh \"{label}\" (IPA {ipa}) — hướng dẫn phát âm, khẩu hình, lỗi thường gặp và âm thanh. Miễn phí, hỗ trợ giọng Mỹ và Anh.",
+      "h1_tpl": "Âm tiếng Anh \"{label}\" (IPA {ipa}) — hướng dẫn phát âm",
+      "title_tpl": "{label} (IPA {ipa}) — phát âm tiếng Anh | IPA Sound Drill",
+      "category_vowel": "Nguyên âm",
+      "category_diphthong": "Nguyên âm đôi",
+      "category_consonant": "Phụ âm",
+      "category_allophone": "Biến âm",
+      "scope_ga": "GA (tiếng Anh Mỹ)",
+      "scope_rp": "RP (tiếng Anh Anh)",
+      "scope_shared": "GA và RP",
+      "see_words_link_tpl": "Xem {n} từ tiếng Anh phổ biến chứa âm này →"
+    },
+    "weakForms": {
+      "breadcrumb_root": "Danh sách dạng yếu",
+      "lbl_weak": "Dạng yếu",
+      "lbl_strong": "Dạng mạnh",
+      "lbl_ga": "Tiếng Anh Mỹ",
+      "lbl_rp": "Tiếng Anh Anh",
+      "sec_rule": "Khi nào dùng dạng yếu",
+      "sec_examples": "Câu ví dụ",
+      "play_ga": "Nghe (GA)",
+      "play_rp": "Nghe (RP)",
+      "related_title": "Dạng yếu liên quan",
+      "cta_lead": "Luyện dạng yếu trong nối âm thực tế với 201 mẫu cụm từ.",
+      "cta_button": "Mở IPA Sound Drill",
+      "back_top": "Quay lại IPA Sound Drill",
+      "meta_desc_tpl": "Dạng yếu của \"{word}\" trong tiếng Anh (yếu {weak_ipa}, mạnh {strong_ipa}) — khi nào dùng, câu ví dụ và âm thanh GA/RP. Miễn phí.",
+      "h1_tpl": "Dạng yếu tiếng Anh của \"{word}\" — yếu {weak_ipa}, mạnh {strong_ipa}",
+      "title_tpl": "Dạng yếu: {word} (yếu {weak_ipa}, mạnh {strong_ipa}) | IPA Sound Drill"
+    },
+    "phrases": {
+      "breadcrumb_root": "Nối âm",
+      "lbl_rp": "RP",
+      "lbl_gloss": "Nghĩa",
+      "sec_rule": "Cái gì xảy ra trong cụm này",
+      "sec_examples": "Câu ví dụ",
+      "play_ga": "Nghe (GA)",
+      "play_rp": "Nghe (RP)",
+      "related_title": "Cụm liên quan",
+      "cta_lead": "Luyện mẫu này và 200 cụm khác trong bài tập thực tế.",
+      "cta_button": "Mở IPA Sound Drill",
+      "back_top": "Quay lại IPA Sound Drill",
+      "meta_desc_tpl": "Cách người bản xứ phát âm \"{phrase}\" (IPA {ipa}) — quy tắc nối âm, câu ví dụ và âm thanh GA/RP. Miễn phí.",
+      "h1_tpl": "Cách phát âm \"{phrase}\" trong tiếng Anh — hướng dẫn nối âm (IPA {ipa})",
+      "title_tpl": "{phrase} phát âm (IPA {ipa}) — {type} | IPA Sound Drill",
+      "type_linking": "Nối âm",
+      "type_assimilation": "Đồng hóa",
+      "type_elision": "Lược âm"
+    },
+    "soundWords": {
+      "breadcrumb_words": "Từ vựng",
+      "sec_title": "Từ tiếng Anh phổ biến chứa âm này",
+      "sec_intro": "Danh sách các từ tiếng Anh phổ biến nhất chứa âm vị này, sắp xếp theo cấp độ người học (bắt đầu từ A1). Hiển thị cả GA và RP khi khác nhau. Nhấn Nghe để phát âm thanh.",
+      "th_word": "Từ",
+      "th_ga": "GA",
+      "th_rp": "RP",
+      "th_cefr": "Cấp độ",
+      "th_listen": "Nghe",
+      "back_to_sound_tpl": "Quay lại trang âm {label}",
+      "cta_lead_tpl": "Luyện toàn bộ {count} từ được phân cấp CEFR với âm thanh GA/RP trong ứng dụng.",
+      "meta_desc_tpl": "Danh sách chọn lọc các từ tiếng Anh phổ biến có âm \"{label}\" (IPA {ipa}) — phân cấp CEFR, kèm phát âm GA và RP. Miễn phí.",
+      "h1_tpl": "Từ tiếng Anh phổ biến có âm \"{label}\" (IPA {ipa})",
+      "title_tpl": "Từ có âm {label} (IPA {ipa}) — ví dụ | IPA Sound Drill",
+      "no_words": "Chưa có ví dụ được phân cấp cho âm này."
+    },
+    "dataset": {
+      "crumb_data": "Dữ liệu",
+      "license_free": "Sử dụng tự do có ghi công",
+      "hero_title": "Bộ dữ liệu IPA tiếng Anh miễn phí — từ được phân cấp CEFR kèm GA và RP",
+      "hero_sub": "Tải về ở định dạng CSV và JSON. Bắt buộc ghi công (CC BY 4.0). Phù hợp cho nghiên cứu, ứng dụng và lớp học.",
+      "stat_words": "Từ được phân cấp CEFR",
+      "stat_accents": "Cả hai giọng",
+      "stat_cefr": "Cấp độ bao phủ",
+      "dl_csv_desc": "Cho bảng tính và phân tích nhanh. UTF-8 có BOM.",
+      "dl_json_desc": "Cho lập trình. Mảng bản ghi có đầy đủ siêu dữ liệu.",
+      "dl_license_desc": "Văn bản pháp lý CC BY 4.0 và ghi chú ghi công.",
+      "dl_btn": "Tải về",
+      "sec_attribution": "Cách ghi công bộ dữ liệu này",
+      "sec_attribution_lead": "Sao chép dòng bên dưới vào bài báo, README hoặc phần ghi công sản phẩm của bạn:",
+      "sec_fields": "Định nghĩa các trường (CSV)",
+      "sec_fields_lead": "CSV có 6 cột sau. Bản JSON có thêm các trường phụ (respell, neighbors, v.v.).",
+      "field_name": "Cột",
+      "field_desc": "Mô tả",
+      "field_ex": "Ví dụ",
+      "field_word": "Từ tiếng Anh (chữ thường).",
+      "field_ga": "IPA tiếng Anh Mỹ, dạng dấu gạch chéo.",
+      "field_rp": "IPA tiếng Anh Anh, dạng dấu gạch chéo.",
+      "field_cefr": "Cấp độ CEFR A1–C2 (hoặc để trống).",
+      "field_pos": "Từ loại.",
+      "field_gloss": "Định nghĩa ngắn bằng tiếng Anh.",
+      "sec_usage": "Ví dụ sử dụng",
+      "sec_usage_lead": "Đoạn mã tải dữ liệu đơn giản trong các ngôn ngữ phổ biến.",
+      "cta_lead": "Bạn muốn thử ứng dụng luyện phát âm sử dụng bộ dữ liệu này?",
+      "cta_button": "Mở IPA Sound Drill",
+      "back_top": "Quay lại IPA Sound Drill",
+      "meta_desc_tpl": "Bộ dữ liệu IPA tiếng Anh miễn phí — 5.397 từ được phân cấp CEFR kèm giọng Mỹ và Anh. CSV + JSON, CC BY 4.0.",
+      "h1_tpl": "Bộ dữ liệu IPA tiếng Anh miễn phí — 5.397 từ được phân cấp CEFR kèm GA và RP (CC BY 4.0)",
+      "title_tpl": "Bộ dữ liệu IPA tiếng Anh miễn phí (5.397 từ, GA + RP, CEFR) — CC BY 4.0 | IPA Sound Drill"
+    }
+  },
+  "lead_html": "Luyện <b>đọc và viết IPA</b> với những từ bạn đã biết, từng âm một. Nhắm vào <b>các âm dễ nhầm</b> (θ, ð, æ, ʒ, ɝ) hoặc <b>điểm yếu</b> rút ra từ lịch sử luyện tập. Chấm điểm chỉ theo độ chính xác: mở rộng độ phủ ký hiệu, không phải danh sách từ dài hơn.",
+  "lead_connected_html": "Nghe <b>nối âm</b> trong GA: nối, đồng hóa và lược âm. Đọc IPA đã nối và khôi phục cụm gốc.",
+  "lead_weak_html": "Nghe <b>dạng yếu</b> của từ chức năng trong nối âm. Đọc IPA và khôi phục từ.",
+  "tab": {
+    "label": "Chế độ luyện",
+    "words": "Một từ",
+    "connected": "Nối âm",
+    "weak": "Dạng yếu"
+  },
+  "mode": {
+    "label": "Chế độ học",
+    "a": "Đọc và viết IPA"
+  },
+  "modeb": {
+    "title": "Nghe và học",
+    "lead_html": "Học <b>từ mới từ âm thanh</b>: nghe từ, rồi ghép nghĩa và chính tả. Tiến theo dải CEFR.",
+    "study": {
+      "got_it": "Tiếp",
+      "reveal_meaning": "Xem nghĩa"
+    },
+    "quiz": {
+      "choose_meaning": "Chọn nghĩa",
+      "type_word": "Nhập từ"
+    },
+    "band": {
+      "label": "Dải",
+      "note": "{band}: {n} từ · thuộc {pct}% ({m} ở box 4+)"
+    },
+    "pool": "Dải {band}: {n} từ · thuộc {pct}%",
+    "correct": "Đúng",
+    "incorrect": "Thử lại"
+  },
+  "cs": {
+    "label": "Kiểu",
+    "all": "Tất cả",
+    "linking": "Nối âm",
+    "assimilation": "Đồng hóa",
+    "elision": "Lược âm",
+    "ruleLabel": "Quy tắc",
+    "level": {
+      "label": "Cấp độ",
+      "all": "Tất cả",
+      "l1": "Sơ cấp",
+      "l2": "Trung cấp",
+      "l3": "Cao cấp"
+    }
+  },
+  "weak": {
+    "strong_label": "Mạnh",
+    "weak_label": "Yếu"
+  },
+  "focus": {
+    "label": "Trọng tâm âm vị",
+    "all": "Tất cả âm",
+    "traps": "Âm dễ nhầm",
+    "traps_d": "θ ð æ ʒ ɝ",
+    "weak": "Điểm yếu",
+    "weak_d": "Dựa trên lịch sử luyện tập của bạn",
+    "letters": "Bảng chữ cái",
+    "contractions": "Dạng rút gọn",
+    "irregular": "Dạng bất quy tắc",
+    "casual": "Ngôn ngữ đời thường"
+  },
+  "reg": {
+    "label": "Mẫu chính tả",
+    "all": "Tất cả",
+    "regular": "Quy tắc",
+    "regular_d": "Phonics và các quy tắc chính tả–âm",
+    "irregular": "Bất quy tắc",
+    "irregular_d": "Từ phổ biến với chính tả bất quy tắc"
+  },
+  "pool": {
+    "count": "Nhóm: {n} từ",
+    "count_phrases": "Nhóm: {n} cụm",
+    "count_weak": "Nhóm: {n} dạng yếu"
+  },
+  "setup": {
+    "show_filters": "Cài đặt nâng cao",
+    "hide_filters": "Ẩn cài đặt"
+  },
+  "dir": {
+    "label": "Hướng",
+    "decode_t": "IPA &rarr; từ",
+    "decode_d": "Đọc IPA và nhập từ",
+    "encode_t": "từ &rarr; IPA",
+    "encode_d": "Dựng IPA từ từ đã viết"
+  },
+  "lvl": {
+    "label": "Cấp độ CEFR",
+    "a1": "A1",
+    "a2": "A2",
+    "b1": "B1",
+    "b2": "B2",
+    "pool": "Nhóm: {n} từ"
+  },
+  "grp": {
+    "label": "Nhóm mẫu chính tả",
+    "all": "Tất cả",
+    "short": "Nguyên âm ngắn",
+    "long": "Nguyên âm dài · e câm",
+    "team": "Cụm nguyên âm",
+    "r": "Nguyên âm có r"
+  },
+  "start": "Bắt đầu",
+  "loading": "Đang tải…",
+  "load_fail": "Không tải được. Vui lòng thử lại.",
+  "wordlist_fail": "Không tải được danh sách từ. Hãy làm mới và thử lại.",
+  "back_top": "Menu",
+  "accent": {
+    "label": "Giọng",
+    "ga": "Mỹ (GA)",
+    "rp": "Anh (RP)"
+  },
+  "vocab": {
+    "title": "Từ vựng",
+    "tab_words": "Từ",
+    "tab_phrases": "Cụm từ",
+    "search": "Tìm kiếm…",
+    "no_results": "Không có kết quả",
+    "back": "Quay lại",
+    "filter": {
+      "ipa": "Lọc theo IPA",
+      "all": "Tất cả",
+      "ipa_max": "(tối đa 3)",
+      "add": "Thêm ký hiệu",
+      "clear": "Xóa hết",
+      "picker": "Lọc theo âm vị của {accent}"
+    },
+    "count": {
+      "filtered": "Đã lọc · phát âm {accent} có {syms} · {n}",
+      "all": "{n} mục"
+    },
+    "az": {
+      "hint": "nhảy theo chữ cái"
+    }
+  },
+  "reveal": {
+    "rp_note": "RP",
+    "ga_note": "GA",
+    "respell_label": "Ghi âm giản lược",
+    "dict_label": "Từ điển",
+    "correct": "Đúng",
+    "incorrect": "Sai",
+    "pron_label": "Phát âm (🔊 để nghe)",
+    "alt_same": "giống",
+    "pending": "Kiểm tra câu trả lời — từ và phát âm đúng sẽ hiển thị ở đây"
+  },
+  "lang_opts": {
+    "en": "English",
+    "ja": "日本語",
+    "zh-Hant": "繁體",
+    "zh-Hans": "简体",
+    "ko": "한국어",
+    "fil": "Filipino",
+    "es": "Español",
+    "pt-BR": "Português (Brasil)",
+    "vi": "Tiếng Việt",
+    "id": "Bahasa Indonesia",
+    "ru": "Русский",
+    "th": "ไทย",
+    "hi": "हिन्दी",
+    "tr": "Türkçe"
+  },
+  "listen": "Nghe",
+  "reflect": {
+    "btn": "Xem lại"
+  },
+  "exit_confirm": {
+    "title": "Kết thúc phiên?",
+    "body": "Bạn muốn kết thúc phiên luyện tập này?",
+    "yes": "Có",
+    "no": "Không"
+  },
+  "input_ph": "Nhập từ",
+  "input_phrase": "Nhập cụm từ",
+  "check": "Kiểm tra",
+  "clear": "Xóa",
+  "next": "Tiếp",
+  "build_ph": "Nhấn các phím IPA bên dưới để dựng phát âm",
+  "tips_head": "Mẹo phát âm",
+  "note": {
+    "pattern": "Mẫu chính tả: {p}",
+    "stress": "Trọng âm ở âm tiết {n} ({sy} âm tiết)",
+    "schwa": "Schwa (ə/ɚ): giữ nhẹ và mơ hồ, đừng để chính tả dẫn dắt",
+    "tricky": "Âm khó: {s}"
+  },
+  "patterns": {
+    "magic_e": "e câm"
+  },
+  "you": "Bạn: {a}",
+  "see_answer": "Xem đáp án",
+  "summary": {
+    "line": "{c} / {t} đúng · {m} cần ôn",
+    "weak_head": "Âm cần luyện tiếp theo",
+    "weak_none_t": "Không phát hiện điểm yếu",
+    "weak_none_d": "Bạn không sai âm nào. Thử cấp độ cao hơn.",
+    "review": "Danh sách ôn: {list}",
+    "weak_btn": "Ôn lỗi"
+  },
+  "info": {
+    "mouth": "Khẩu hình",
+    "watch": "Chú ý",
+    "examples": "Ví dụ"
+  },
+  "kbd": {
+    "stress": "Trọng âm",
+    "vowels": "Nguyên âm",
+    "r_vowels": "Có r",
+    "diphthongs": "Nguyên âm đôi",
+    "consonants": "Phụ âm",
+    "syllabic": "Âm tiết tính"
+  },
+  "pos": {
+    "限定詞": "hạn định từ",
+    "名詞": "danh từ",
+    "数詞": "số từ",
+    "動詞": "động từ",
+    "形容詞": "tính từ",
+    "副詞": "trạng từ",
+    "前置詞": "giới từ",
+    "接続詞": "liên từ",
+    "代名詞": "đại từ",
+    "間投詞": "thán từ",
+    "副詞 / 前置詞": "trạng từ / giới từ",
+    "形容詞 / 副詞": "tính từ / trạng từ",
+    "形容詞 / 副詞 / 間投詞": "tính từ / trạng từ / thán từ",
+    "be動詞": "động từ be",
+    "助動詞": "động từ khiếm khuyết",
+    "文字": "tên chữ cái",
+    "短縮形": "dạng rút gọn",
+    "動詞（不規則変化）": "dạng động từ bất quy tắc",
+    "名詞（不規則複数）": "số nhiều bất quy tắc",
+    "口語表現": "cách nói đời thường"
+  },
+  "cefr": {
+    "pending": "CEFR?",
+    "pending_hint": "Chưa gán cấp độ CEFR",
+    "tag": {
+      "a1": "CEFR A1",
+      "a2": "CEFR A2",
+      "b1": "CEFR B1",
+      "b2": "CEFR B2"
+    }
+  },
+  "checks": {
+    "progress": "Tiến độ",
+    "mode_d": "IPA → từ",
+    "mode_e": "từ → IPA",
+    "mode_l": "Nghe"
+  },
+  "top": {
+    "tagline": "Chỉnh lại tiếng Anh của bạn. Từ âm."
+  },
+  "drill": {
+    "title": {
+      "2a": "Kiểm tra âm",
+      "2b": "Viết từ phát âm",
+      "2c": "Học từ qua âm",
+      "2d": "Làm quen với nối âm"
+    }
+  },
+  "about": {
+    "title": "Về ứng dụng",
+    "placeholder": "Công cụ học để kiểm tra phát âm tiếng Anh bằng IPA và tái tạo lại từ âm.",
+    "lead": "IPA Sound Drill là công cụ luyện tập để làm sắc các âm tiếng Anh qua bảng ký hiệu ngữ âm. Tái tạo phát âm từ âm: nghe từ, ghép nghĩa và chính tả, tiến theo dải CEFR.",
+    "why_ipa_html": "<p>Với người lớn học tiếng Anh, nghe và phát âm không thể tách rời. <b>Âm bạn không tạo ra được chính xác cũng là âm bạn không thể nghe phân biệt đáng tin cậy</b>, và âm bạn không phân biệt được là âm bạn không thể tái tạo. Cả hai là hai mặt của cùng một khả năng: nhận thức âm như là âm.</p><p>Lấy từ <i>turtle</i>. Phát âm tiếng Anh thực tế là <code>/ˈtɝːtəl/</code> — hai âm tiết dựng trên nguyên âm có r và một schwa, khác hẳn cách chính tả gợi ra. Khoảng cách giữa cách một từ trông và cách nó thực sự vang lên là nơi phát âm gãy đổ.</p><p>Để làm chủ tiếng Anh, bạn cần xử lý âm ở <b>độ phân giải IPA</b>: không chỉ \"ah\" so với \"ee\", mà <code>/æ/</code>, <code>/ʌ/</code>, <code>/ɑ/</code> và <code>/ə/</code> như những âm riêng biệt bạn có thể nghe và phát âm tách bạch.</p><p>Có vài cách để đạt độ phân giải đó: sống ở môi trường tiếng Anh, học phần lớn qua audio tiếng Anh, hoặc <b>chủ động học IPA</b>. Với người lớn mà hai cách đầu không thực tế, học IPA là con đường tiết kiệm thời gian nhất.</p><p>IPA Sound Drill luyện \"độ phân giải âm\" này từng âm vị một. Nó tập trung vào các âm dễ nhầm mà người học vật lộn nhất — <code>θ</code>, <code>ð</code>, <code>æ</code>, <code>ʒ</code>, <code>ɝ</code> — xây nền cho mọi thứ tiếp theo trong tiếng Anh của bạn.</p>",
+    "features": {
+      "title": "Ứng dụng này có gì",
+      "item_1_html": "<b>Bốn bài luyện</b>. Luyện tập chia thành bốn bài: \"Kiểm tra âm\" (IPA → từ), \"Viết từ phát âm\" (từ → IPA), \"Học từ qua âm\" (âm → từ vựng) và \"Làm quen với nối âm\" (nối âm / dạng yếu) — mỗi bài nhắm một mục tiêu khác nhau.",
+      "item_2_html": "<b>5.397 từ có nhãn CEFR</b>. Mỗi từ có nhãn CEFR (A1 / A2 / B1 / B2), giúp bạn lọc đúng cấp độ.",
+      "item_3_html": "<b>Luyện trọng tâm âm dễ nhầm</b>. Bài luyện nhắm vào các âm khó nhất (<code>θ</code> / <code>ð</code> / <code>æ</code> / <code>ʒ</code> / <code>ɝ</code>) và tự động nêu điểm yếu từ lịch sử — mở rộng độ phủ ký hiệu hiệu quả.",
+      "item_4_html": "<b>Tìm từ theo ký hiệu IPA</b>. Ghép một chuỗi ký hiệu IPA từ bảng chọn để tìm từ. Ví dụ, gõ <code>æk</code> và mọi từ chứa âm đó — \"back\", \"pack\", \"lack\" — sẽ hiện ra. Được xếp theo phân loại ngữ âm (10 nhóm nguyên âm và phụ âm), bảng chọn còn là tham chiếu ngữ âm học.",
+      "item_5_html": "<b>Xem tiến độ</b>. Thanh tiến độ hiển thị mức bạn đã đi trong mỗi bài, với hệ thống ba đánh dấu (ba lần kiểm tra thuộc mỗi từ) để theo dõi mức thành thạo."
+    },
+    "contact_html": "<p>Để gửi phản hồi và báo lỗi, vui lòng dùng <a href=\"https://tally.so/r/xX1axk\" target=\"_blank\" rel=\"noopener\">biểu mẫu phản hồi</a>.</p>"
+  },
+  "mark": {
+    "aria": {
+      "step_0": "Chưa đánh dấu",
+      "step_1": "Đánh dấu 1/3",
+      "step_2": "Đánh dấu 2/3",
+      "step_3": "Đã thuộc (3/3)"
+    }
+  },
+  "progress": {
+    "meter_label": "{pct}% ({cur} / {total})",
+    "meter_aria": "Tiến độ {pct} phần trăm, câu {cur} trên {total}",
+    "title": "Trạng thái học",
+    "back": "Quay lại",
+    "card_title": "Xem trạng thái học",
+    "card_subtitle": "Xem tiến độ",
+    "filter_all": "Tất cả",
+    "overall_title": "Tiến độ tổng thể",
+    "drills_title": "Tiến độ theo bài luyện",
+    "graduated_summary": "{n} / {m} mục đã thuộc",
+    "drill_summary": "{n} / {m} đã thuộc",
+    "slots": {
+      "0": "Chưa bắt đầu",
+      "1": "1 đánh dấu",
+      "2": "2 đánh dấu",
+      "3": "Đã thuộc"
+    }
+  },
+  "symbol": {
+    "picker": {
+      "title": "Tìm theo IPA",
+      "clear": "Xóa hết",
+      "empty": "Nhấn các ký hiệu bên dưới",
+      "remove_chip": "Xóa"
+    },
+    "group": {
+      "frontVowels": {
+        "en": "Front Vowels",
+        "sub": "Nguyên âm trước"
+      },
+      "centralVowels": {
+        "en": "Central Vowels",
+        "sub": "Nguyên âm giữa"
+      },
+      "backVowels": {
+        "en": "Back Vowels",
+        "sub": "Nguyên âm sau"
+      },
+      "diphthongs": {
+        "en": "Diphthongs",
+        "sub": "Nguyên âm đôi"
+      },
+      "plosives": {
+        "en": "Plosives",
+        "sub": "Âm nổ"
+      },
+      "fricatives": {
+        "en": "Fricatives",
+        "sub": "Âm xát"
+      },
+      "nasals": {
+        "en": "Nasals",
+        "sub": "Âm mũi"
+      },
+      "approximants": {
+        "en": "Approximants",
+        "sub": "Âm tiếp cận"
+      },
+      "laterals": {
+        "en": "Laterals",
+        "sub": "Âm bên"
+      },
+      "affricates": {
+        "en": "Affricates",
+        "sub": "Âm tắc xát"
+      },
+      "stress": {
+        "en": "Stress",
+        "sub": "Trọng âm"
+      },
+      "other": {
+        "en": "Other",
+        "sub": "Khác"
+      },
+      "syllabic": {
+        "en": "Syllabic",
+        "sub": "Âm tiết tính"
+      }
+    },
+    "height": {
+      "close": {
+        "en": "Close",
+        "sub": "Cao"
+      },
+      "closeMid": {
+        "en": "Close-Mid",
+        "sub": "Nửa cao"
+      },
+      "openMid": {
+        "en": "Open-Mid",
+        "sub": "Nửa thấp"
+      },
+      "open": {
+        "en": "Open",
+        "sub": "Thấp"
+      }
+    }
+  },
+  "onboarding": {
+    "title": "Giới thiệu",
+    "pc_lead": "Tự hiện ở lần truy cập đầu tiên. Bỏ qua cũng coi là hoàn tất. Bạn có thể mở lại bất cứ lúc nào từ hướng dẫn ở đầu trang.",
+    "guide_aria": "Hướng dẫn",
+    "guide_label": "Hướng dẫn",
+    "ipa_hint": "Trọng âm <span class=\"ipa\" style=\"color:var(--signal)\">ˈ</span> · âm tiết <span class=\"ipa\">‧</span>",
+    "stat_days": "ngày liên tiếp",
+    "stat_words": "từ đã học",
+    "next": "Tiếp",
+    "skip": "Bỏ qua",
+    "start": "Bắt đầu",
+    "slide_1": {
+      "title": "Bắt đầu từ một mục tiêu.",
+      "body": "Chọn một mục tiêu. Không cần cài đặt sâu — bài luyện bắt đầu ngay."
+    },
+    "slide_2": {
+      "title": "Nghe âm, đối chiếu ký hiệu.",
+      "body": "IPA là bản đồ âm thanh. Liên kết cái bạn nghe với ký hiệu. Khác biệt GA và RP được hiển thị song song."
+    },
+    "slide_3": {
+      "title": "Tự đánh dấu khi thuộc.",
+      "body": "Nhấn một ô khi cảm thấy đã thuộc. Đủ <b>ba</b> ô là từ đó tốt nghiệp. Từ có ít đánh dấu sẽ hiện trước — bạn không cần chuỗi đúng liên tục."
+    },
+    "slide_4": {
+      "title": "Theo nhịp của bạn.",
+      "body": "Tiến độ lưu trên thiết bị này. Không cần tài khoản. Tạm dừng và tiếp tục bất kỳ lúc nào — bắt đầu với một từ."
+    }
+  },
+  "footer": {
+    "ipa": "IPA là gì?",
+    "language": "Ngôn ngữ",
+    "feedback": "Phản hồi",
+    "terms": "Điều khoản",
+    "privacy": "Quyền riêng tư"
+  },
+  "language": {
+    "title": "Ngôn ngữ",
+    "display_label": "Ngôn ngữ hiển thị"
+  },
+  "ipa_info": {
+    "heading": "IPA là bản đồ của âm.",
+    "lead": "Cùng một cách viết có thể nghe khác nhau. IPA ghi lại chính xác cách phát âm của một từ — một ký hiệu, một âm — trong một hệ thống quốc tế duy nhất.",
+    "example_note": "Chính tả giống nhau, âm rất khác nhau.",
+    "legend_stress": "Vị trí trọng âm",
+    "legend_syllable": "Ranh giới âm tiết",
+    "legend_link": "Nối âm giữa các từ"
+  }
+}

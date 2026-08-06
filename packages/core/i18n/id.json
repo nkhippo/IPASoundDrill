@@ -1,0 +1,562 @@
+{
+  "brand": {
+    "name": "IPA Sound Drill",
+    "home": "Kembali ke atas"
+  },
+  "meta": {
+    "title": "IPA Sound Drill — Kuasai pelafalan bahasa Inggris dengan IPA",
+    "description": "Latih bunyi bahasa Inggris dengan IPA. Latihan gratis di peramban untuk aksen Amerika dan Britania: uraikan, tulis, dan bangun ulang pelafalan dari tingkat bunyi.",
+    "ogTitle": "IPA Sound Drill — Latih bunyi bahasa Inggris dengan IPA",
+    "ogDescription": "Pelatih pelafalan berbasis IPA, gratis dan terbuka. Uraikan, tulis, dan dengarkan menuju bahasa Inggris yang lebih jelas — mendukung aksen GA dan RP."
+  },
+  "seo": {
+    "h1": "Pelatih pelafalan bahasa Inggris dengan IPA — aksen Amerika dan Britania, gratis",
+    "sounds": {
+      "breadcrumb_home": "Beranda",
+      "breadcrumb_root": "Bunyi",
+      "sec_how": "Cara membuat bunyi ini",
+      "lbl_example": "Contoh",
+      "lbl_mouth": "Mulut",
+      "lbl_trap": "Kesalahan umum",
+      "ga_variant": "Inggris Amerika (GA)",
+      "rp_variant": "Inggris Britania (RP)",
+      "gr_section_title": "GA vs RP",
+      "gr_same": "GA dan RP menggunakan bunyi yang sama.",
+      "gr_ga_only": "Bunyi ini digunakan di GA. Di RP, kata yang sama memakai bunyi berbeda.",
+      "gr_rp_only": "Bunyi ini digunakan di RP. Di GA, kata yang sama memakai bunyi berbeda.",
+      "play_audio": "Dengarkan",
+      "related_title": "Bunyi terkait",
+      "cta_lead": "Latih bunyi ini dengan drill, ucapan bersambung, dan 5.397 kata berjenjang CEFR.",
+      "cta_button": "Buka IPA Sound Drill",
+      "back_top": "Kembali ke IPA Sound Drill",
+      "meta_desc_tpl": "Pelajari bunyi Inggris \"{label}\" (IPA {ipa}) — panduan pelafalan, posisi mulut, kesalahan umum, dan audio. Gratis, dengan aksen Amerika dan Britania.",
+      "h1_tpl": "Bunyi Inggris \"{label}\" (IPA {ipa}) — panduan pelafalan",
+      "title_tpl": "{label} (IPA {ipa}) — pelafalan bahasa Inggris | IPA Sound Drill",
+      "category_vowel": "Vokal",
+      "category_diphthong": "Diftong",
+      "category_consonant": "Konsonan",
+      "category_allophone": "Alofon",
+      "scope_ga": "GA (Inggris Amerika)",
+      "scope_rp": "RP (Inggris Britania)",
+      "scope_shared": "GA & RP",
+      "see_words_link_tpl": "Lihat {n} kata Inggris umum dengan bunyi ini →"
+    },
+    "weakForms": {
+      "breadcrumb_root": "Bentuk lemah",
+      "lbl_weak": "Bentuk lemah",
+      "lbl_strong": "Bentuk kuat",
+      "lbl_ga": "Inggris Amerika",
+      "lbl_rp": "Inggris Britania",
+      "sec_rule": "Kapan memakai bentuk lemah",
+      "sec_examples": "Kalimat contoh",
+      "play_ga": "Dengarkan (GA)",
+      "play_rp": "Dengarkan (RP)",
+      "related_title": "Bentuk lemah terkait",
+      "cta_lead": "Latih bentuk lemah dalam ucapan bersambung nyata dengan 201 pola frasa.",
+      "cta_button": "Buka IPA Sound Drill",
+      "back_top": "Kembali ke IPA Sound Drill",
+      "meta_desc_tpl": "Bentuk lemah \"{word}\" dalam bahasa Inggris (lemah {weak_ipa}, kuat {strong_ipa}) — kapan dipakai, kalimat contoh, dan audio GA/RP. Gratis.",
+      "h1_tpl": "Bentuk lemah Inggris untuk \"{word}\" — lemah {weak_ipa}, kuat {strong_ipa}",
+      "title_tpl": "Bentuk lemah: {word} (lemah {weak_ipa}, kuat {strong_ipa}) | IPA Sound Drill"
+    },
+    "phrases": {
+      "breadcrumb_root": "Ucapan bersambung",
+      "lbl_rp": "RP",
+      "lbl_gloss": "Arti",
+      "sec_rule": "Apa yang terjadi pada frasa ini",
+      "sec_examples": "Kalimat contoh",
+      "play_ga": "Dengarkan (GA)",
+      "play_rp": "Dengarkan (RP)",
+      "related_title": "Frasa terkait",
+      "cta_lead": "Latih pola ini dan 200 frasa lainnya dalam latihan nyata.",
+      "cta_button": "Buka IPA Sound Drill",
+      "back_top": "Kembali ke IPA Sound Drill",
+      "meta_desc_tpl": "Bagaimana penutur asli melafalkan \"{phrase}\" (IPA {ipa}) — aturan ucapan bersambung, kalimat contoh, dan audio GA/RP. Gratis.",
+      "h1_tpl": "Cara melafalkan \"{phrase}\" dalam bahasa Inggris — panduan ucapan bersambung (IPA {ipa})",
+      "title_tpl": "{phrase} pelafalan (IPA {ipa}) — {type} | IPA Sound Drill",
+      "type_linking": "Penautan",
+      "type_assimilation": "Asimilasi",
+      "type_elision": "Elisi"
+    },
+    "soundWords": {
+      "breadcrumb_words": "Kata",
+      "sec_title": "Kata Inggris umum dengan bunyi ini",
+      "sec_intro": "Pilihan kata Inggris paling umum yang mengandung fonem ini, diurutkan berdasarkan jenjang pemelajar (mulai A1). GA dan RP ditampilkan bila berbeda. Ketuk Dengarkan untuk audio.",
+      "th_word": "Kata",
+      "th_ga": "GA",
+      "th_rp": "RP",
+      "th_cefr": "Jenjang",
+      "th_listen": "Dengarkan",
+      "back_to_sound_tpl": "Kembali ke halaman bunyi {label}",
+      "cta_lead_tpl": "Latih seluruh {count} kata berjenjang CEFR dengan audio GA/RP di aplikasi.",
+      "meta_desc_tpl": "Daftar kurasi kata Inggris umum yang menggunakan bunyi \"{label}\" (IPA {ipa}) — berjenjang CEFR, dengan pelafalan GA dan RP. Gratis.",
+      "h1_tpl": "Kata Inggris umum dengan bunyi \"{label}\" (IPA {ipa})",
+      "title_tpl": "Kata dengan bunyi {label} (IPA {ipa}) — contoh | IPA Sound Drill",
+      "no_words": "Belum ada contoh berjenjang untuk bunyi ini."
+    },
+    "dataset": {
+      "crumb_data": "Data",
+      "license_free": "Bebas digunakan dengan atribusi",
+      "hero_title": "Dataset IPA bahasa Inggris gratis — kata berjenjang CEFR dengan GA dan RP",
+      "hero_sub": "Dapat diunduh dalam CSV dan JSON. Atribusi wajib (CC BY 4.0). Cocok untuk riset, aplikasi, dan penggunaan di kelas.",
+      "stat_words": "Kata berjenjang CEFR",
+      "stat_accents": "Kedua aksen",
+      "stat_cefr": "Jenjang tercakup",
+      "dl_csv_desc": "Untuk lembar sebar dan analisis cepat. UTF-8 dengan BOM.",
+      "dl_json_desc": "Untuk kode. Larik rekaman dengan metadata lengkap.",
+      "dl_license_desc": "Teks legal CC BY 4.0 dan pemberitahuan atribusi.",
+      "dl_btn": "Unduh",
+      "sec_attribution": "Cara mengatribusi dataset ini",
+      "sec_attribution_lead": "Salin baris di bawah ke makalah, README, atau kredit produk Anda:",
+      "sec_fields": "Definisi kolom (CSV)",
+      "sec_fields_lead": "CSV memiliki 6 kolom berikut. Versi JSON menyertakan kolom tambahan (respell, neighbors, dll.).",
+      "field_name": "Kolom",
+      "field_desc": "Deskripsi",
+      "field_ex": "Contoh",
+      "field_word": "Kata Inggris (huruf kecil).",
+      "field_ga": "IPA Inggris Amerika dalam notasi garis miring.",
+      "field_rp": "IPA Inggris Britania dalam notasi garis miring.",
+      "field_cefr": "Jenjang CEFR A1–C2 (atau kosong).",
+      "field_pos": "Kelas kata.",
+      "field_gloss": "Glos atau definisi singkat dalam bahasa Inggris.",
+      "sec_usage": "Contoh penggunaan",
+      "sec_usage_lead": "Cuplikan pemuatan sederhana dalam berbagai bahasa.",
+      "cta_lead": "Ingin mencoba pelatih pelafalan yang menggunakan dataset ini?",
+      "cta_button": "Buka IPA Sound Drill",
+      "back_top": "Kembali ke IPA Sound Drill",
+      "meta_desc_tpl": "Dataset IPA bahasa Inggris gratis — 5.397 kata berjenjang CEFR dengan aksen Amerika dan Britania. CSV + JSON, CC BY 4.0.",
+      "h1_tpl": "Dataset IPA bahasa Inggris gratis — 5.397 kata berjenjang CEFR dengan GA dan RP (CC BY 4.0)",
+      "title_tpl": "Dataset IPA bahasa Inggris gratis (5.397 kata, GA + RP, CEFR) — CC BY 4.0 | IPA Sound Drill"
+    }
+  },
+  "lead_html": "Latih <b>membaca dan menulis IPA</b> untuk kata-kata yang sudah Anda kenal, satu bunyi demi satu bunyi. Sasarkan <b>bunyi jebakan</b> (θ, ð, æ, ʒ, ɝ) atau <b>titik lemah</b> Anda dari riwayat latihan. Dinilai hanya berdasarkan akurasi — perluas cakupan simbol, bukan daftar kata.",
+  "lead_connected_html": "Dengarkan <b>ucapan bersambung</b> dalam GA: penautan, asimilasi, dan elisi. Baca IPA yang tersambung dan pulihkan frasa aslinya.",
+  "lead_weak_html": "Dengarkan <b>bentuk lemah</b> dari kata fungsi dalam ucapan bersambung. Baca IPA dan pulihkan katanya.",
+  "tab": {
+    "label": "Mode latihan",
+    "words": "Satu kata",
+    "connected": "Bersambung",
+    "weak": "Bentuk lemah"
+  },
+  "mode": {
+    "label": "Mode belajar",
+    "a": "Baca & tulis IPA"
+  },
+  "modeb": {
+    "title": "Dengarkan & belajar",
+    "lead_html": "Pelajari <b>kata baru dari bunyi</b> — dengarkan katanya, lalu cocokkan arti dan ejaan. Naik jenjang berdasarkan pita CEFR.",
+    "study": {
+      "got_it": "Lanjut",
+      "reveal_meaning": "Lihat arti"
+    },
+    "quiz": {
+      "choose_meaning": "Pilih arti",
+      "type_word": "Ketik kata"
+    },
+    "band": {
+      "label": "Pita",
+      "note": "{band}: {n} kata · {pct}% dikuasai ({m} di kotak 4+)"
+    },
+    "pool": "Pita {band}: {n} kata · {pct}% dikuasai",
+    "correct": "Benar",
+    "incorrect": "Coba lagi"
+  },
+  "cs": {
+    "label": "Tipe",
+    "all": "Semua",
+    "linking": "Penautan",
+    "assimilation": "Asimilasi",
+    "elision": "Elisi",
+    "ruleLabel": "Aturan",
+    "level": {
+      "label": "Tingkat",
+      "all": "Semua",
+      "l1": "Pemula",
+      "l2": "Menengah",
+      "l3": "Lanjut"
+    }
+  },
+  "weak": {
+    "strong_label": "Kuat",
+    "weak_label": "Lemah"
+  },
+  "focus": {
+    "label": "Fokus fonem",
+    "all": "Semua bunyi",
+    "traps": "Bunyi jebakan",
+    "traps_d": "θ ð æ ʒ ɝ",
+    "weak": "Titik lemah",
+    "weak_d": "Berdasarkan riwayat latihan Anda",
+    "letters": "Alfabet",
+    "contractions": "Kontraksi",
+    "irregular": "Bentuk tak beraturan",
+    "casual": "Bahasa santai"
+  },
+  "reg": {
+    "label": "Pola ejaan",
+    "all": "Semua",
+    "regular": "Beraturan",
+    "regular_d": "Fonik dan aturan ejaan–bunyi yang beraturan",
+    "irregular": "Tak beraturan",
+    "irregular_d": "Kata umum dengan ejaan tak beraturan"
+  },
+  "pool": {
+    "count": "Kumpulan: {n} kata",
+    "count_phrases": "Kumpulan: {n} frasa",
+    "count_weak": "Kumpulan: {n} bentuk lemah"
+  },
+  "setup": {
+    "show_filters": "Pengaturan lanjutan",
+    "hide_filters": "Sembunyikan pengaturan"
+  },
+  "dir": {
+    "label": "Arah",
+    "decode_t": "IPA &rarr; kata",
+    "decode_d": "Baca IPA dan ketik kata",
+    "encode_t": "kata &rarr; IPA",
+    "encode_d": "Bangun IPA dari kata tertulis"
+  },
+  "lvl": {
+    "label": "Jenjang CEFR",
+    "a1": "A1",
+    "a2": "A2",
+    "b1": "B1",
+    "b2": "B2",
+    "pool": "Kumpulan: {n} kata"
+  },
+  "grp": {
+    "label": "Grup pola ejaan",
+    "all": "Semua",
+    "short": "Vokal pendek",
+    "long": "Vokal panjang · e bisu",
+    "team": "Tim vokal",
+    "r": "Vokal ber-r"
+  },
+  "start": "Mulai",
+  "loading": "Memuat…",
+  "load_fail": "Gagal memuat. Silakan coba lagi.",
+  "wordlist_fail": "Gagal memuat daftar kata. Segarkan lalu coba lagi.",
+  "back_top": "Menu",
+  "accent": {
+    "label": "Aksen",
+    "ga": "Amerika (GA)",
+    "rp": "Britania (RP)"
+  },
+  "vocab": {
+    "title": "Kosakata",
+    "tab_words": "Kata",
+    "tab_phrases": "Frasa",
+    "search": "Cari…",
+    "no_results": "Tidak ada hasil",
+    "back": "Kembali",
+    "filter": {
+      "ipa": "Saring berdasarkan IPA",
+      "all": "Semua",
+      "ipa_max": "(maks. 3)",
+      "add": "Tambah simbol",
+      "clear": "Hapus semua",
+      "picker": "Saring berdasarkan fonem {accent}"
+    },
+    "count": {
+      "filtered": "Tersaring · pelafalan {accent} dengan {syms} · {n}",
+      "all": "{n} entri"
+    },
+    "az": {
+      "hint": "loncat per huruf"
+    }
+  },
+  "reveal": {
+    "rp_note": "RP",
+    "ga_note": "GA",
+    "respell_label": "Penulisan ulang bunyi",
+    "dict_label": "Kamus",
+    "correct": "Benar",
+    "incorrect": "Salah",
+    "pron_label": "Pelafalan (🔊 untuk memainkan)",
+    "alt_same": "sama",
+    "pending": "Periksa jawaban Anda — kata dan pelafalan yang benar akan muncul di sini"
+  },
+  "lang_opts": {
+    "en": "English",
+    "ja": "日本語",
+    "zh-Hant": "繁體",
+    "zh-Hans": "简体",
+    "ko": "한국어",
+    "fil": "Filipino",
+    "es": "Español",
+    "pt-BR": "Português (Brasil)",
+    "vi": "Tiếng Việt",
+    "id": "Bahasa Indonesia",
+    "ru": "Русский",
+    "th": "ไทย",
+    "hi": "हिन्दी",
+    "tr": "Türkçe"
+  },
+  "listen": "Dengarkan",
+  "reflect": {
+    "btn": "Tinjau"
+  },
+  "exit_confirm": {
+    "title": "Akhiri sesi?",
+    "body": "Akhiri sesi latihan ini?",
+    "yes": "Ya",
+    "no": "Tidak"
+  },
+  "input_ph": "Ketik kata",
+  "input_phrase": "Ketik frasa",
+  "check": "Periksa",
+  "clear": "Hapus",
+  "next": "Lanjut",
+  "build_ph": "Ketuk tombol IPA di bawah untuk menyusun pelafalan",
+  "tips_head": "Tips pelafalan",
+  "note": {
+    "pattern": "Pola ejaan: {p}",
+    "stress": "Tekanan pada suku kata {n} ({sy} suku kata)",
+    "schwa": "Schwa (ə/ɚ): jaga tetap lemah dan samar — jangan terpengaruh ejaan",
+    "tricky": "Bunyi sulit: {s}"
+  },
+  "patterns": {
+    "magic_e": "e bisu"
+  },
+  "you": "Anda: {a}",
+  "see_answer": "Lihat jawaban",
+  "summary": {
+    "line": "{c} / {t} benar · {m} untuk ditinjau",
+    "weak_head": "Bunyi untuk dilatih selanjutnya",
+    "weak_none_t": "Tidak ada titik lemah ditemukan",
+    "weak_none_d": "Anda tidak melewatkan bunyi apa pun. Coba tingkat lebih tinggi.",
+    "review": "Daftar tinjauan: {list}",
+    "weak_btn": "Tinjau kesalahan"
+  },
+  "info": {
+    "mouth": "Mulut",
+    "watch": "Perhatikan",
+    "examples": "Contoh"
+  },
+  "kbd": {
+    "stress": "Tekanan",
+    "vowels": "Vokal",
+    "r_vowels": "Ber-r",
+    "diphthongs": "Diftong",
+    "consonants": "Konsonan",
+    "syllabic": "Silabis"
+  },
+  "pos": {
+    "限定詞": "determinatif",
+    "名詞": "nomina",
+    "数詞": "numeralia",
+    "動詞": "verba",
+    "形容詞": "adjektiva",
+    "副詞": "adverbia",
+    "前置詞": "preposisi",
+    "接続詞": "konjungsi",
+    "代名詞": "pronomina",
+    "間投詞": "interjeksi",
+    "副詞 / 前置詞": "adverbia / preposisi",
+    "形容詞 / 副詞": "adjektiva / adverbia",
+    "形容詞 / 副詞 / 間投詞": "adjektiva / adverbia / interjeksi",
+    "be動詞": "verba be",
+    "助動詞": "verba modal",
+    "文字": "nama huruf",
+    "短縮形": "kontraksi",
+    "動詞（不規則変化）": "bentuk verba tak beraturan",
+    "名詞（不規則複数）": "bentuk jamak tak beraturan",
+    "口語表現": "ungkapan santai"
+  },
+  "cefr": {
+    "pending": "CEFR?",
+    "pending_hint": "Jenjang CEFR belum ditetapkan",
+    "tag": {
+      "a1": "CEFR A1",
+      "a2": "CEFR A2",
+      "b1": "CEFR B1",
+      "b2": "CEFR B2"
+    }
+  },
+  "checks": {
+    "progress": "Kemajuan",
+    "mode_d": "IPA → kata",
+    "mode_e": "kata → IPA",
+    "mode_l": "Dengarkan"
+  },
+  "top": {
+    "tagline": "Setel ulang bahasa Inggris Anda. Dari bunyi."
+  },
+  "drill": {
+    "title": {
+      "2a": "Periksa bunyi",
+      "2b": "Tulis dari pelafalan",
+      "2c": "Pelajari kata dari bunyi",
+      "2d": "Terbiasa dengan ucapan bersambung"
+    }
+  },
+  "about": {
+    "title": "Tentang aplikasi ini",
+    "placeholder": "Alat bantu belajar untuk memverifikasi pelafalan bahasa Inggris dengan IPA dan membangunnya ulang dari bunyi.",
+    "lead": "IPA Sound Drill adalah alat latihan untuk mempertajam bunyi bahasa Inggris melalui alfabet fonetik. Bangun ulang pelafalan dari bunyi — dengarkan kata, lalu cocokkan arti dan ejaan, sambil naik jenjang berdasarkan pita CEFR.",
+    "why_ipa_html": "<p>Bagi pemelajar dewasa, menyimak dan melafalkan tidak dapat dipisahkan. <b>Bunyi yang tidak dapat Anda produksi secara akurat adalah bunyi yang tidak dapat Anda bedakan dengan andal di telinga</b>, dan bunyi yang tidak dapat Anda bedakan adalah bunyi yang tidak dapat Anda tirukan. Keduanya adalah dua sisi dari kemampuan yang sama: memersepsi bunyi sebagai bunyi.</p><p>Ambil kata <i>turtle</i>. Pelafalan Inggrisnya yang sebenarnya adalah <code>/ˈtɝːtəl/</code> — dua suku kata yang dibangun di atas vokal ber-r dan schwa, sangat berbeda dengan apa yang disugestikan ejaannya. Jurang antara bagaimana sebuah kata terlihat dan bagaimana ia benar-benar berbunyi adalah tempat pelafalan runtuh.</p><p>Untuk menjadikan bahasa Inggris milik Anda, Anda perlu menangani bunyi pada <b>resolusi IPA</b>: bukan sekadar \"ah\" melawan \"ee\", melainkan <code>/æ/</code>, <code>/ʌ/</code>, <code>/ɑ/</code>, dan <code>/ə/</code> sebagai bunyi-bunyi berbeda yang dapat Anda dengar dan lafalkan secara terpisah.</p><p>Ada beberapa jalan untuk mencapai resolusi itu: tinggal di lingkungan berbahasa Inggris, menjalani sebagian besar pembelajaran melalui audio bahasa Inggris, atau <b>mempelajari IPA secara terarah</b>. Untuk pemelajar dewasa yang dua opsi pertamanya tidak realistis, mempelajari IPA adalah jalan yang paling efisien secara waktu.</p><p>IPA Sound Drill melatih \"resolusi bunyi\" ini fonem demi fonem. Ia berfokus pada bunyi jebakan yang paling sulit — <code>θ</code>, <code>ð</code>, <code>æ</code>, <code>ʒ</code>, <code>ɝ</code> — membangun fondasi untuk semua yang akan datang dalam bahasa Inggris Anda.</p>",
+    "features": {
+      "title": "Yang ditawarkan aplikasi ini",
+      "item_1_html": "<b>Empat drill belajar</b>. Latihan dibagi menjadi empat drill: \"Periksa bunyi\" (IPA → kata), \"Tulis dari pelafalan\" (kata → IPA), \"Pelajari kata dari bunyi\" (bunyi → kosakata), dan \"Terbiasa dengan ucapan bersambung\" (ucapan bersambung / bentuk lemah) — masing-masing menyasar tujuan berbeda.",
+      "item_2_html": "<b>5.397 kata bertag CEFR</b>. Setiap kata memiliki tag CEFR (A1 / A2 / B1 / B2), sehingga Anda dapat menyaring hanya kata yang sesuai tingkat Anda.",
+      "item_3_html": "<b>Latihan terfokus pada bunyi jebakan</b>. Drill menyasar bunyi jebakan yang paling sulit (<code>θ</code> / <code>ð</code> / <code>æ</code> / <code>ʒ</code> / <code>ɝ</code>) dan secara otomatis memunculkan titik lemah Anda dari riwayat latihan — memperluas cakupan simbol secara efisien.",
+      "item_4_html": "<b>Cari kata berdasarkan simbol IPA</b>. Susun deretan simbol IPA dari palet untuk mencari kata. Ketik <code>æk</code>, misalnya, dan setiap kata yang mengandung bunyi itu — \"back\", \"pack\", \"lack\" — akan muncul. Disusun berdasarkan kategori fonetik (10 grup vokal dan konsonan), palet ini sekaligus berfungsi sebagai rujukan fonetik.",
+      "item_5_html": "<b>Lihat kemajuan Anda</b>. Meter kemajuan menampilkan sejauh mana Anda sudah maju di tiap-tiap dari empat drill, dengan sistem tiga tanda (tiga pemeriksaan kemahiran per kata) yang mencatat penguasaan."
+    },
+    "contact_html": "<p>Untuk masukan dan laporan bug, silakan gunakan <a href=\"https://tally.so/r/xX1axk\" target=\"_blank\" rel=\"noopener\">formulir umpan balik</a>.</p>"
+  },
+  "mark": {
+    "aria": {
+      "step_0": "Belum ditandai",
+      "step_1": "Ditandai 1 dari 3",
+      "step_2": "Ditandai 2 dari 3",
+      "step_3": "Lulus (3 dari 3)"
+    }
+  },
+  "progress": {
+    "meter_label": "{pct}% ({cur} / {total})",
+    "meter_aria": "Kemajuan {pct} persen, soal {cur} dari {total}",
+    "title": "Status belajar",
+    "back": "Kembali",
+    "card_title": "Lihat status belajar",
+    "card_subtitle": "Periksa kemajuan",
+    "filter_all": "Semua",
+    "overall_title": "Kemajuan keseluruhan",
+    "drills_title": "Kemajuan per drill",
+    "graduated_summary": "{n} / {m} item lulus",
+    "drill_summary": "{n} / {m} lulus",
+    "slots": {
+      "0": "Belum mulai",
+      "1": "1 tanda",
+      "2": "2 tanda",
+      "3": "Lulus"
+    }
+  },
+  "symbol": {
+    "picker": {
+      "title": "Cari berdasarkan IPA",
+      "clear": "Hapus semua",
+      "empty": "Ketuk simbol di bawah",
+      "remove_chip": "Hapus"
+    },
+    "group": {
+      "frontVowels": {
+        "en": "Front Vowels",
+        "sub": "Vokal depan"
+      },
+      "centralVowels": {
+        "en": "Central Vowels",
+        "sub": "Vokal tengah"
+      },
+      "backVowels": {
+        "en": "Back Vowels",
+        "sub": "Vokal belakang"
+      },
+      "diphthongs": {
+        "en": "Diphthongs",
+        "sub": "Diftong"
+      },
+      "plosives": {
+        "en": "Plosives",
+        "sub": "Letup"
+      },
+      "fricatives": {
+        "en": "Fricatives",
+        "sub": "Geser"
+      },
+      "nasals": {
+        "en": "Nasals",
+        "sub": "Sengau"
+      },
+      "approximants": {
+        "en": "Approximants",
+        "sub": "Hampiran"
+      },
+      "laterals": {
+        "en": "Laterals",
+        "sub": "Sampingan"
+      },
+      "affricates": {
+        "en": "Affricates",
+        "sub": "Paduan"
+      },
+      "stress": {
+        "en": "Stress",
+        "sub": "Tekanan"
+      },
+      "other": {
+        "en": "Other",
+        "sub": "Lainnya"
+      },
+      "syllabic": {
+        "en": "Syllabic",
+        "sub": "Silabis"
+      }
+    },
+    "height": {
+      "close": {
+        "en": "Close",
+        "sub": "Tertutup"
+      },
+      "closeMid": {
+        "en": "Close-Mid",
+        "sub": "Semi-tertutup"
+      },
+      "openMid": {
+        "en": "Open-Mid",
+        "sub": "Semi-terbuka"
+      },
+      "open": {
+        "en": "Open",
+        "sub": "Terbuka"
+      }
+    }
+  },
+  "onboarding": {
+    "title": "Pengenalan",
+    "pc_lead": "Ditampilkan otomatis pada kunjungan pertama. Melewati juga dihitung sebagai selesai. Buka lagi kapan saja dari panduan di kepala halaman.",
+    "guide_aria": "Panduan",
+    "guide_label": "Panduan",
+    "ipa_hint": "Tekanan <span class=\"ipa\" style=\"color:var(--signal)\">ˈ</span> · suku kata <span class=\"ipa\">‧</span>",
+    "stat_days": "hari berturut",
+    "stat_words": "kata tersentuh",
+    "next": "Lanjut",
+    "skip": "Lewati",
+    "start": "Mulai",
+    "slide_1": {
+      "title": "Mulai dari tujuan.",
+      "body": "Pilih satu tujuan. Tanpa pengaturan berat — drill Anda langsung dimulai."
+    },
+    "slide_2": {
+      "title": "Dengarkan bunyi, periksa simbolnya.",
+      "body": "IPA adalah peta bunyi. Hubungkan apa yang Anda dengar dengan simbolnya. Perbedaan GA dan RP ditampilkan berdampingan."
+    },
+    "slide_3": {
+      "title": "Tandai bila sudah tahu.",
+      "body": "Ketuk satu kotak bila terasa sudah dikuasai. Isi <b>tiga</b> untuk meluluskan kata itu. Kata dengan lebih sedikit tanda akan muncul lebih dulu — Anda tidak perlu rangkaian benar yang sempurna."
+    },
+    "slide_4": {
+      "title": "Sesuai irama Anda.",
+      "body": "Kemajuan tersimpan di perangkat ini. Tanpa akun. Jeda dan lanjutkan kapan saja — mulai dengan satu kata saja."
+    }
+  },
+  "footer": {
+    "ipa": "Apa itu IPA?",
+    "language": "Bahasa",
+    "feedback": "Umpan balik",
+    "terms": "Ketentuan",
+    "privacy": "Privasi"
+  },
+  "language": {
+    "title": "Bahasa",
+    "display_label": "Bahasa tampilan"
+  },
+  "ipa_info": {
+    "heading": "IPA adalah peta bunyi.",
+    "lead": "Ejaan yang sama bisa berbunyi berbeda. IPA menuliskan dengan tepat bagaimana sebuah kata dilafalkan — satu simbol, satu bunyi — dalam satu sistem internasional.",
+    "example_note": "Ejaan mirip, bunyi sangat berbeda.",
+    "legend_stress": "Posisi tekanan",
+    "legend_syllable": "Batas suku kata",
+    "legend_link": "Penautan antar kata"
+  }
+}
