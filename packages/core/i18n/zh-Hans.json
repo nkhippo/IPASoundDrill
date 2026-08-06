@@ -282,7 +282,15 @@
     "zh-Hant": "繁體",
     "zh-Hans": "简体",
     "ko": "한국어",
-    "fil": "Filipino"
+    "fil": "Filipino",
+    "es": "Español",
+    "pt-BR": "Português (Brasil)",
+    "vi": "Tiếng Việt",
+    "id": "Bahasa Indonesia",
+    "ru": "Русский",
+    "th": "ไทย",
+    "hi": "हिन्दी",
+    "tr": "Türkçe"
   },
   "listen": "播放发音",
   "reflect": {

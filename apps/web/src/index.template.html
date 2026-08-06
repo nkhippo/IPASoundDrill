@@ -2497,7 +2497,7 @@ function dataReady() {
 }
 
 /* ---------- i18n ---------- */
-const SUPPORTED_LANGS = ["en", "ja", "ko", "zh-Hans", "zh-Hant", "fil"];
+const SUPPORTED_LANGS = ["en", "ja", "ko", "zh-Hans", "zh-Hant", "fil", "es", "pt-BR", "vi", "id", "ru", "th", "hi", "tr"];
 function langFromPath() {
   const seg = (location.pathname || "/").split("/").filter(Boolean)[0] || "";
   return SUPPORTED_LANGS.indexOf(seg) >= 0 ? seg : null;
@@ -2513,6 +2513,14 @@ function detectBrowserLang() {
   if (raw.startsWith("fil") || raw.startsWith("tl")) return "fil";
   if (raw === "zh-tw" || raw === "zh-hant" || raw.startsWith("zh-hant")) return "zh-Hant";
   if (raw.startsWith("zh")) return "zh-Hans";
+  if (raw.startsWith("pt")) return "pt-BR";
+  if (raw.startsWith("es")) return "es";
+  if (raw.startsWith("vi")) return "vi";
+  if (raw.startsWith("id")) return "id";
+  if (raw.startsWith("ru")) return "ru";
+  if (raw.startsWith("th")) return "th";
+  if (raw.startsWith("hi")) return "hi";
+  if (raw.startsWith("tr")) return "tr";
   return "en";
 }
 let LANG = langFromPath() || localStorage.getItem("app_lang") || detectBrowserLang();
@@ -2625,8 +2633,8 @@ function t(path, vars) {
 
 async function loadLocale(lang) {
   const uiRes = await fetch("i18n/" + lang + ".json");
-  if (!uiRes.ok) throw new Error("locale load failed: " + lang);
-  UI = await uiRes.json();
+  if (uiRes.ok) UI = await uiRes.json();
+  else UI = await (await fetch("i18n/en.json")).json();
   const phRes = await fetch("i18n/phonemes/" + lang + ".json");
   if (phRes.ok) PH = await phRes.json();
   else PH = await (await fetch("i18n/phonemes/en.json")).json();

@@ -224,7 +224,15 @@
     "zh-Hant": "繁體",
     "zh-Hans": "简体",
     "ko": "한국어",
-    "fil": "Filipino"
+    "fil": "Filipino",
+    "es": "Español",
+    "pt-BR": "Português (Brasil)",
+    "vi": "Tiếng Việt",
+    "id": "Bahasa Indonesia",
+    "ru": "Русский",
+    "th": "ไทย",
+    "hi": "हिन्दी",
+    "tr": "Türkçe"
   },
   "lead_connected_html": "Pakinggan ang <b>konektadong pananalita</b> sa GA—pagkakawing, asimilasyon, pagkakaltas. Mula sa konektadong IPA, hulaan ang orihinal na parirala.",
   "lead_html": "Sanayin ang <b>pagbasa at pagsulat ng IPA</b> nang paisa-isang ponema gamit ang mga salitang alam mo na. Pokus sa <b>mga mahirap na tunog</b> (θ, ð, æ, ...).",

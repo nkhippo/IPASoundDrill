@@ -43,7 +43,10 @@ function bundleCore() {
   });
   console.log("Wrote", path.relative(ROOT, CORE_BUNDLE_OUT));
 }
-const LANGS = ["en", "ja", "ko", "zh-Hans", "zh-Hant", "fil"];
+const LANGS = [
+  "en", "ja", "ko", "zh-Hans", "zh-Hant", "fil",
+  "es", "pt-BR", "vi", "id", "ru", "th", "hi", "tr",
+];
 const OG_LOCALE = {
   en: "en_US",
   ja: "ja_JP",
@@ -51,7 +54,24 @@ const OG_LOCALE = {
   "zh-Hans": "zh_CN",
   "zh-Hant": "zh_TW",
   fil: "fil_PH",
+  es: "es_ES",
+  "pt-BR": "pt_BR",
+  vi: "vi_VN",
+  id: "id_ID",
+  ru: "ru_RU",
+  th: "th_TH",
+  hi: "hi_IN",
+  tr: "tr_TR",
 };
+
+// Read per-lang i18n JSON with fallback to en.json (Issue #297 baseline).
+// Allows adding a lang to LANGS without simultaneously creating its JSON;
+// #B/#C then drop translated JSONs into packages/core/i18n/{lang,phonemes/lang}.
+function readI18nWithFallback(dir, lang) {
+  const p = path.join(dir, `${lang}.json`);
+  if (fs.existsSync(p)) return JSON.parse(fs.readFileSync(p, "utf8"));
+  return JSON.parse(fs.readFileSync(path.join(dir, "en.json"), "utf8"));
+}
 
 function hreflangBlock() {
   const lines = LANGS.map(
@@ -714,7 +734,7 @@ function writePhrasePages() {
   const phrases = loadConnectedSpeech();
   let count = 0;
   for (const lang of LANGS) {
-    const i18nRoot = JSON.parse(fs.readFileSync(path.join(CORE_I18N_DIR, `${lang}.json`), "utf8"));
+    const i18nRoot = readI18nWithFallback(CORE_I18N_DIR, lang);
     for (const entry of phrases) {
       const html = buildPhrasePage(lang, i18nRoot, entry, phrases);
       const slug = phraseSlug(entry.w);
@@ -735,7 +755,7 @@ function writeWeakFormPages() {
   const weakForms = loadWeakForms();
   let count = 0;
   for (const lang of LANGS) {
-    const i18nRoot = JSON.parse(fs.readFileSync(path.join(CORE_I18N_DIR, `${lang}.json`), "utf8"));
+    const i18nRoot = readI18nWithFallback(CORE_I18N_DIR, lang);
     for (const entry of weakForms) {
       const html = buildWeakFormPage(lang, i18nRoot, entry, weakForms);
       const outDir = path.join(ROOT, "public", lang, "weak-forms", entry.w);
@@ -946,8 +966,8 @@ function writeSoundWordsPages() {
   const grouped = groupWordsByPhoneme();
   let count = 0;
   for (const lang of LANGS) {
-    const i18nRoot = JSON.parse(fs.readFileSync(path.join(CORE_I18N_DIR, `${lang}.json`), "utf8"));
-    const phonemesI18n = JSON.parse(fs.readFileSync(path.join(CORE_PHONEMES_DIR, `${lang}.json`), "utf8"));
+    const i18nRoot = readI18nWithFallback(CORE_I18N_DIR, lang);
+    const phonemesI18n = readI18nWithFallback(CORE_PHONEMES_DIR, lang);
     for (const entry of PHONEMES) {
       const words = grouped[entry.ipa] || [];
       const html = buildSoundWordsPage(lang, i18nRoot, phonemesI18n, entry, words);
@@ -967,8 +987,8 @@ function writeSoundPages() {
   }
   let count = 0;
   for (const lang of LANGS) {
-    const i18nRoot = JSON.parse(fs.readFileSync(path.join(CORE_I18N_DIR, `${lang}.json`), "utf8"));
-    const phonemesI18n = JSON.parse(fs.readFileSync(path.join(CORE_PHONEMES_DIR, `${lang}.json`), "utf8"));
+    const i18nRoot = readI18nWithFallback(CORE_I18N_DIR, lang);
+    const phonemesI18n = readI18nWithFallback(CORE_PHONEMES_DIR, lang);
     for (const entry of PHONEMES) {
       const html = buildSoundPage(lang, i18nRoot, phonemesI18n, entry);
       const outDir = path.join(ROOT, "public", lang, "sounds", entry.slug);
@@ -1196,7 +1216,7 @@ function writeDatasetLandingPages(sizes) {
   const jsonKb = `${((sizes.jsonSize) / 1024 / 1024).toFixed(1)} MB`;
 
   for (const lang of LANGS) {
-    const i18nRoot = JSON.parse(fs.readFileSync(path.join(CORE_I18N_DIR, `${lang}.json`), "utf8"));
+    const i18nRoot = readI18nWithFallback(CORE_I18N_DIR, lang);
     const seo = (i18nRoot.seo && i18nRoot.seo.dataset) || {};
     const seoSounds = (i18nRoot.seo && i18nRoot.seo.sounds) || {};
     const url = `https://ipasounddrill.app/${lang}/data/`;
@@ -1331,12 +1351,7 @@ function build() {
   const alternates = hreflangBlock();
 
   for (const lang of LANGS) {
-    const i18nPath = path.join(CORE_I18N_DIR, `${lang}.json`);
-    if (!fs.existsSync(i18nPath)) {
-      console.error("Missing i18n file:", i18nPath);
-      process.exit(1);
-    }
-    const i18n = JSON.parse(fs.readFileSync(i18nPath, "utf8"));
+    const i18n = readI18nWithFallback(CORE_I18N_DIR, lang);
     const meta = i18n.meta || {};
     const brandName = (i18n.brand && i18n.brand.name) || "IPA Sound Drill";
 
