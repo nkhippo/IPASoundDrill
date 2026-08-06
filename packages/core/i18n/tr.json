@@ -1,0 +1,562 @@
+{
+  "brand": {
+    "name": "IPA Sound Drill",
+    "home": "Başa dön"
+  },
+  "meta": {
+    "title": "IPA Sound Drill — IPA ile İngilizce Telaffuzda Ustalaşın",
+    "description": "IPA ile İngilizce sesleri alıştırın. GA ve RP için ücretsiz tarayıcı pratiği — telaffuzu ses düzeyinden çözün, oluşturun ve yeniden inşa edin.",
+    "ogTitle": "IPA Sound Drill — IPA ile İngilizce Sesleri Alıştırın",
+    "ogDescription": "Ücretsiz ve açık bir IPA telaffuz eğitmeni. Daha net İngilizce için çözümleyin, oluşturun ve dinleyin — GA ve RP aksanları desteklenir."
+  },
+  "seo": {
+    "h1": "IPA ile İngilizce Telaffuz Eğitmeni — General American ve Received Pronunciation, Ücretsiz",
+    "sounds": {
+      "breadcrumb_home": "Ana sayfa",
+      "breadcrumb_root": "Sesler",
+      "sec_how": "Bu ses nasıl çıkarılır",
+      "lbl_example": "Örnek",
+      "lbl_mouth": "Ağız",
+      "lbl_trap": "Sık yapılan hata",
+      "ga_variant": "General American (GA)",
+      "rp_variant": "Received Pronunciation (RP)",
+      "gr_section_title": "GA vs RP",
+      "gr_same": "GA ve RP bu sesi paylaşır.",
+      "gr_ga_only": "Bu ses GA'da kullanılır. RP aynı kelimede farklı bir ses kullanır.",
+      "gr_rp_only": "Bu ses RP'de kullanılır. GA aynı kelimede farklı bir ses kullanır.",
+      "play_audio": "Dinle",
+      "related_title": "İlgili sesler",
+      "cta_lead": "Bu sesi alıştırmalar, connected speech ve 5.397 CEFR düzeyli kelime ile alıştırın.",
+      "cta_button": "IPA Sound Drill'i aç",
+      "back_top": "IPA Sound Drill'e dön",
+      "meta_desc_tpl": "İngilizce \"{label}\" sesini öğrenin (IPA {ipa}) — telaffuz kılavuzu, ağız konumu, sık yapılan hatalar ve ses. Ücretsiz, General American ve Received Pronunciation ile.",
+      "h1_tpl": "İngilizce \"{label}\" sesi (IPA {ipa}) — Telaffuz Kılavuzu",
+      "title_tpl": "{label} (IPA {ipa}) — İngilizce Telaffuz | IPA Sound Drill",
+      "category_vowel": "Ünlü",
+      "category_diphthong": "Çift ünlü",
+      "category_consonant": "Ünsüz",
+      "category_allophone": "Alt ses",
+      "scope_ga": "GA (General American)",
+      "scope_rp": "RP (Received Pronunciation)",
+      "scope_shared": "GA ve RP",
+      "see_words_link_tpl": "Bu sesi içeren {n} yaygın İngilizce kelimeyi gör →"
+    },
+    "weakForms": {
+      "breadcrumb_root": "Zayıf biçimler (Weak forms)",
+      "lbl_weak": "Zayıf biçim",
+      "lbl_strong": "Güçlü biçim",
+      "lbl_ga": "General American",
+      "lbl_rp": "RP",
+      "sec_rule": "Zayıf biçim ne zaman kullanılır",
+      "sec_examples": "Örnek cümleler",
+      "play_ga": "Dinle (GA)",
+      "play_rp": "Dinle (RP)",
+      "related_title": "İlgili zayıf biçimler",
+      "cta_lead": "Zayıf biçimleri 201 cümle örüntüsü ile gerçek connected speech'te alıştırın.",
+      "cta_button": "IPA Sound Drill'i aç",
+      "back_top": "IPA Sound Drill'e dön",
+      "meta_desc_tpl": "İngilizce'de \"{word}\" kelimesinin zayıf biçimi (weak {weak_ipa}, strong {strong_ipa}) — ne zaman kullanılır, örnek cümleler ve GA ve RP için ses. Ücretsiz.",
+      "h1_tpl": "İngilizce'de \"{word}\" kelimesinin zayıf biçimi — Weak {weak_ipa}, Strong {strong_ipa}",
+      "title_tpl": "Zayıf biçim: {word} (weak {weak_ipa}, strong {strong_ipa}) | IPA Sound Drill"
+    },
+    "phrases": {
+      "breadcrumb_root": "Connected speech",
+      "lbl_rp": "RP",
+      "lbl_gloss": "Anlam",
+      "sec_rule": "Bu cümlede ne olur",
+      "sec_examples": "Örnek cümleler",
+      "play_ga": "Dinle (GA)",
+      "play_rp": "Dinle (RP)",
+      "related_title": "İlgili ifadeler",
+      "cta_lead": "Bu örüntüyü ve 200 ifadeyi gerçek pratikte alıştırın.",
+      "cta_button": "IPA Sound Drill'i aç",
+      "back_top": "IPA Sound Drill'e dön",
+      "meta_desc_tpl": "Anadili İngilizce olanlar \"{phrase}\" ifadesini nasıl telaffuz eder (IPA {ipa}) — connected speech kuralı, örnek cümleler ve GA ve RP için ses. Ücretsiz.",
+      "h1_tpl": "İngilizce'de \"{phrase}\" nasıl telaffuz edilir — Connected Speech Kılavuzu (IPA {ipa})",
+      "title_tpl": "{phrase} telaffuzu (IPA {ipa}) — {type} | IPA Sound Drill",
+      "type_linking": "Bağlama",
+      "type_assimilation": "Benzeşme",
+      "type_elision": "Düşme"
+    },
+    "soundWords": {
+      "breadcrumb_words": "Kelimeler",
+      "sec_title": "Bu sesi içeren yaygın İngilizce kelimeler",
+      "sec_intro": "Bu fonemi içeren en yaygın kelimelerin CEFR düzeyli seçkisi, öğrenci düzeyine göre sıralanmış (önce A1). Farklı olduklarında hem GA hem de RP gösterilir. Ses için Dinle'ye dokunun.",
+      "th_word": "Kelime",
+      "th_ga": "GA",
+      "th_rp": "RP",
+      "th_cefr": "Düzey",
+      "th_listen": "Dinle",
+      "back_to_sound_tpl": "{label} sesi sayfasına dön",
+      "cta_lead_tpl": "Uygulamada GA/RP ses ile tüm {count} CEFR düzeyli kelimeyi alıştırın.",
+      "meta_desc_tpl": "\"{label}\" sesini (IPA {ipa}) kullanan yaygın İngilizce kelimelerin özenle seçilmiş listesi — CEFR düzeyli, GA ve RP telaffuzu ile. Ücretsiz.",
+      "h1_tpl": "\"{label}\" sesli yaygın İngilizce kelimeler (IPA {ipa})",
+      "title_tpl": "{label} sesli kelimeler (IPA {ipa}) — Örnekler | IPA Sound Drill",
+      "no_words": "Bu ses için henüz düzeyli örnek yok."
+    },
+    "dataset": {
+      "crumb_data": "Veri",
+      "license_free": "Atıfla her türlü kullanım için ücretsiz",
+      "hero_title": "Ücretsiz İngilizce IPA Veri Kümesi — GA ve RP ile CEFR düzeyli kelimeler",
+      "hero_sub": "CSV ve JSON olarak indirilebilir. Atıf gerekli (CC BY 4.0). Araştırma, uygulama ve sınıf kullanımına uygun.",
+      "stat_words": "CEFR düzeyli kelime",
+      "stat_accents": "İki aksan",
+      "stat_cefr": "Kapsanan düzey",
+      "dl_csv_desc": "Elektronik tablolar ve hızlı analiz için. BOM ile UTF-8.",
+      "dl_json_desc": "Kod için. Tam meta veri ile kayıt dizisi.",
+      "dl_license_desc": "CC BY 4.0 yasal metin ve atıf bildirimi.",
+      "dl_btn": "İndir",
+      "sec_attribution": "Bu veri kümesine nasıl atıf yapılır",
+      "sec_attribution_lead": "Aşağıdaki satırı makalenize, README'nize veya ürün kredilerinize kopyalayın:",
+      "sec_fields": "Alan tanımları (CSV)",
+      "sec_fields_lead": "CSV'de bu 6 sütun bulunur. JSON sürümü ek alanlar içerir (respell, neighbors vb.).",
+      "field_name": "Sütun",
+      "field_desc": "Açıklama",
+      "field_ex": "Örnek",
+      "field_word": "İngilizce kelime (küçük harf).",
+      "field_ga": "Slash gösterimi ile General American IPA.",
+      "field_rp": "Slash gösterimi ile Received Pronunciation IPA.",
+      "field_cefr": "CEFR düzeyi A1–C2 (veya boş).",
+      "field_pos": "Söz türü.",
+      "field_gloss": "Kısa İngilizce açıklama / tanım.",
+      "sec_usage": "Kullanım örnekleri",
+      "sec_usage_lead": "Yaygın dillerde basit yükleme parçacıkları.",
+      "cta_lead": "Bu veri kümesinin güçlendirdiği telaffuz eğitmenini denemek ister misiniz?",
+      "cta_button": "IPA Sound Drill'i aç",
+      "back_top": "IPA Sound Drill'e dön",
+      "meta_desc_tpl": "Ücretsiz İngilizce IPA veri kümesi — General American ve Received Pronunciation ile 5.397 CEFR düzeyli kelime. CSV + JSON, CC BY 4.0.",
+      "h1_tpl": "Ücretsiz İngilizce IPA Veri Kümesi — GA ve RP telaffuzu ile 5.397 CEFR düzeyli kelime (CC BY 4.0)",
+      "title_tpl": "Ücretsiz İngilizce IPA Veri Kümesi (5.397 kelime, GA + RP, CEFR) — CC BY 4.0 | IPA Sound Drill"
+    }
+  },
+  "lead_html": "Zaten bildiğiniz kelimeler için <b>IPA okuma ve yazma</b> alıştırması yapın&mdash;ses ses. <b>Tuzak seslere</b> (θ, ð, æ, ʒ, ɝ) veya pratik geçmişinizdeki <b>zayıf noktalarınıza</b> odaklanın. Yalnızca doğrulukla puanlanır&mdash;uzun kelime listeleri değil, IPA kapsamı oluşturun.",
+  "lead_connected_html": "GA'da <b>connected speech</b> dinleyin&mdash;bağlama, benzeşme ve düşme. Bağlantılı IPA'yı okuyun ve orijinal ifadeyi kurtarın.",
+  "lead_weak_html": "Connected speech'te işlev sözcüklerinin <b>zayıf biçimlerini</b> dinleyin. IPA'yı okuyun ve kelimeyi kurtarın.",
+  "tab": {
+    "label": "Pratik modu",
+    "words": "Tek kelime",
+    "connected": "Bağlantılı",
+    "weak": "Zayıf biçimler"
+  },
+  "mode": {
+    "label": "Öğrenme modu",
+    "a": "IPA oku ve yaz"
+  },
+  "modeb": {
+    "title": "Dinle ve öğren",
+    "lead_html": "<b>Sesten yeni kelimeler</b> öğrenin&mdash;kelimeyi duyun, sonra anlam ve yazılışı eşleştirin. CEFR bandına göre ilerleyin.",
+    "study": {
+      "got_it": "Sonraki",
+      "reveal_meaning": "Anlamı göster"
+    },
+    "quiz": {
+      "choose_meaning": "Anlamı seçin",
+      "type_word": "Kelimeyi yazın"
+    },
+    "band": {
+      "label": "Bant",
+      "note": "{band}: {n} kelime · %{pct} ustalaşıldı ({m} kutu 4+ üzerinde)"
+    },
+    "pool": "Bant {band}: {n} kelime · %{pct} ustalaşıldı",
+    "correct": "Doğru",
+    "incorrect": "Tekrar dene"
+  },
+  "cs": {
+    "label": "Tür",
+    "all": "Tümü",
+    "linking": "Bağlama",
+    "assimilation": "Benzeşme",
+    "elision": "Düşme",
+    "ruleLabel": "Kural",
+    "level": {
+      "label": "Düzey",
+      "all": "Tümü",
+      "l1": "Başlangıç",
+      "l2": "Orta",
+      "l3": "İleri"
+    }
+  },
+  "weak": {
+    "strong_label": "Güçlü",
+    "weak_label": "Zayıf"
+  },
+  "focus": {
+    "label": "Fonem odağı",
+    "all": "Tüm sesler",
+    "traps": "Tuzak sesler",
+    "traps_d": "θ ð æ ʒ ɝ",
+    "weak": "Zayıf noktalar",
+    "weak_d": "Pratik geçmişinize dayalı",
+    "letters": "Alfabe",
+    "contractions": "Kısaltmalar",
+    "irregular": "Düzensiz biçimler",
+    "casual": "Günlük konuşma"
+  },
+  "reg": {
+    "label": "Yazım örüntüsü",
+    "all": "Tümü",
+    "regular": "Düzenli",
+    "regular_d": "Phonics ve düzenli yazım–ses kuralları",
+    "irregular": "Düzensiz",
+    "irregular_d": "Düzensiz yazımlı yaygın kelimeler"
+  },
+  "pool": {
+    "count": "Havuz: {n} kelime",
+    "count_phrases": "Havuz: {n} ifade",
+    "count_weak": "Havuz: {n} zayıf biçim"
+  },
+  "setup": {
+    "show_filters": "Gelişmiş ayarlar",
+    "hide_filters": "Ayarları gizle"
+  },
+  "dir": {
+    "label": "Yön",
+    "decode_t": "IPA &rarr; kelime",
+    "decode_d": "IPA'yı okuyun ve kelimeyi yazın",
+    "encode_t": "kelime &rarr; IPA",
+    "encode_d": "Yazılı kelimeden IPA'yı oluşturun"
+  },
+  "lvl": {
+    "label": "CEFR düzeyi",
+    "a1": "A1",
+    "a2": "A2",
+    "b1": "B1",
+    "b2": "B2",
+    "pool": "Havuz: {n} kelime"
+  },
+  "grp": {
+    "label": "Yazım örüntüsü grubu",
+    "all": "Tümü",
+    "short": "Kısa ünlüler",
+    "long": "Uzun ünlüler · silent e",
+    "team": "Ünlü grupları",
+    "r": "R renkli ünlüler"
+  },
+  "start": "Başla",
+  "loading": "Yükleniyor…",
+  "load_fail": "Yüklenemedi. Lütfen tekrar deneyin.",
+  "wordlist_fail": "Kelime listesi yüklenemedi. Yenileyip tekrar deneyin.",
+  "back_top": "Menü",
+  "accent": {
+    "label": "Aksan",
+    "ga": "Amerikan (GA)",
+    "rp": "İngiliz (RP)"
+  },
+  "vocab": {
+    "title": "Kelime Dağarcığı",
+    "tab_words": "Kelimeler",
+    "tab_phrases": "İfadeler",
+    "search": "Ara…",
+    "no_results": "Sonuç yok",
+    "back": "Geri",
+    "filter": {
+      "ipa": "IPA'ya göre filtrele",
+      "all": "Tümü",
+      "ipa_max": "(en fazla 3)",
+      "add": "Sembol ekle",
+      "clear": "Tümünü temizle",
+      "picker": "{accent} fonemlerine göre filtrele"
+    },
+    "count": {
+      "filtered": "Filtrelenmiş · {syms} ile {accent} telaffuzlar · {n}",
+      "all": "{n} girdi"
+    },
+    "az": {
+      "hint": "harfe göre atla"
+    }
+  },
+  "reveal": {
+    "rp_note": "RP",
+    "ga_note": "GA",
+    "respell_label": "Yeniden yazım",
+    "dict_label": "Sözlük",
+    "correct": "Doğru",
+    "incorrect": "Yanlış",
+    "pron_label": "Telaffuz (oynatmak için 🔊)",
+    "alt_same": "aynı",
+    "pending": "Yanıtınızı kontrol edin — doğru kelime ve telaffuz burada görünür"
+  },
+  "lang_opts": {
+    "en": "English",
+    "ja": "日本語",
+    "zh-Hant": "繁體",
+    "zh-Hans": "简体",
+    "ko": "한국어",
+    "fil": "Filipino",
+    "es": "Español",
+    "pt-BR": "Português (Brasil)",
+    "vi": "Tiếng Việt",
+    "id": "Bahasa Indonesia",
+    "ru": "Русский",
+    "th": "ไทย",
+    "hi": "हिन्दी",
+    "tr": "Türkçe"
+  },
+  "listen": "Dinle",
+  "reflect": {
+    "btn": "Değerlendir"
+  },
+  "exit_confirm": {
+    "title": "Oturum sonlansın mı?",
+    "body": "Bu pratik oturumunu sonlandır?",
+    "yes": "Evet",
+    "no": "Hayır"
+  },
+  "input_ph": "Kelimeyi yazın",
+  "input_phrase": "İfadeyi yazın",
+  "check": "Kontrol et",
+  "clear": "Temizle",
+  "next": "Sonraki",
+  "build_ph": "IPA oluşturmak için aşağıdaki IPA tuşlarına dokunun",
+  "tips_head": "Telaffuz ipuçları",
+  "note": {
+    "pattern": "Yazım örüntüsü: {p}",
+    "stress": "{n}. hecede vurgu ({sy} hece)",
+    "schwa": "Schwa (ə/ɚ): zayıf ve belirsiz tutun — yazımın sizi yönlendirmesine izin vermeyin",
+    "tricky": "Zor sesler: {s}"
+  },
+  "patterns": {
+    "magic_e": "silent e"
+  },
+  "you": "Siz: {a}",
+  "see_answer": "Yanıtı gör",
+  "summary": {
+    "line": "{c} / {t} doğru · {m} gözden geçirilecek",
+    "weak_head": "Sonra alıştırılacak sesler",
+    "weak_none_t": "Zayıf nokta bulunamadı",
+    "weak_none_d": "Hiçbir sesi kaçırmadınız. Daha yüksek bir düzey deneyin.",
+    "review": "Gözden geçirme listesi: {list}",
+    "weak_btn": "Kaçırılanları gözden geçir"
+  },
+  "info": {
+    "mouth": "Ağız",
+    "watch": "Dikkat",
+    "examples": "Örnekler"
+  },
+  "kbd": {
+    "stress": "Vurgu",
+    "vowels": "Ünlüler",
+    "r_vowels": "R renkli",
+    "diphthongs": "Çift ünlüler",
+    "consonants": "Ünsüzler",
+    "syllabic": "Heceli"
+  },
+  "pos": {
+    "限定詞": "belirteç",
+    "名詞": "isim",
+    "数詞": "sayı",
+    "動詞": "fiil",
+    "形容詞": "sıfat",
+    "副詞": "zarf",
+    "前置詞": "edat",
+    "接続詞": "bağlaç",
+    "代名詞": "zamir",
+    "間投詞": "ünlem",
+    "副詞 / 前置詞": "zarf / edat",
+    "形容詞 / 副詞": "sıfat / zarf",
+    "形容詞 / 副詞 / 間投詞": "sıfat / zarf / ünlem",
+    "be動詞": "be fiili",
+    "助動詞": "yardımcı fiil",
+    "文字": "harf adı",
+    "短縮形": "kısaltma",
+    "動詞（不規則変化）": "düzensiz fiil biçimi",
+    "名詞（不規則複数）": "düzensiz çoğul",
+    "口語表現": "günlük ifade"
+  },
+  "cefr": {
+    "pending": "CEFR?",
+    "pending_hint": "CEFR düzeyi henüz atanmadı",
+    "tag": {
+      "a1": "CEFR A1",
+      "a2": "CEFR A2",
+      "b1": "CEFR B1",
+      "b2": "CEFR B2"
+    }
+  },
+  "checks": {
+    "progress": "İlerleme",
+    "mode_d": "IPA → kelime",
+    "mode_e": "kelime → IPA",
+    "mode_l": "Dinle"
+  },
+  "top": {
+    "tagline": "İngilizcenizi yeniden ayarlayın. Sesten yukarıya."
+  },
+  "drill": {
+    "title": {
+      "2a": "Sesi kontrol et",
+      "2b": "Telaffuzdan yaz",
+      "2c": "Sesten kelime öğren",
+      "2d": "Bağlantılı seslere alış"
+    }
+  },
+  "about": {
+    "title": "Bu uygulama hakkında",
+    "placeholder": "IPA ile İngilizce telaffuzu doğrulayan ve sesten yeniden inşa eden bir öğrenme aracı.",
+    "lead": "IPA Sound Drill, fonetik alfabe aracılığıyla İngilizce sesleri keskinleştirmek için bir eğitim aracıdır. Sesten telaffuzu yeniden inşa edin — kelimeyi duyun, sonra anlam ve yazılışı eşleştirin — CEFR bandına göre ilerleyin.",
+    "why_ipa_html": "<p>Yetişkin öğrenciler için dinleme ve telaffuz ayrılmazdır. <b>Doğru bir şekilde üretemediğiniz ses, kulağınızla güvenilir şekilde ayırt edemediğiniz sestir</b> — ve ayırt edemediğiniz ses, yeniden üretemediğiniz sestir. Her ikisi de aynı yeteneğin iki yüzüdür: sesi ses olarak algılamak.</p><p><i>turtle</i> kelimesini ele alalım. Gerçek İngilizce telaffuzu <code>/ˈtɝːtəl/</code>'dir — bir r renkli ünlü ve bir schwa üzerine kurulu iki hece, yazımın önerdiğinden oldukça farklı. Bir kelimenin nasıl göründüğü ile gerçekte nasıl duyulduğu arasındaki boşluk, telaffuzun çöktüğü yerdir.</p><p>İngilizceyi kendinize ait yapmak için sesle <b>IPA düzeyinde çözünürlükte</b> ilgilenmeniz gerekir: yalnızca \"ah\" ve \"ee\" değil, <code>/æ/</code>, <code>/ʌ/</code>, <code>/ɑ/</code> ve <code>/ə/</code> hem duyarak hem telaffuz ederek ayırt edebileceğiniz ayrı sesler olarak.</p><p>O çözünürlüğe ulaşmanın birkaç yolu vardır: İngilizce konuşulan bir ortamda yaşamak, öğrenmenizin çoğunu İngilizce sesle yapmak veya <b>IPA'yı bilinçli olarak çalışmak</b>. İlk ikisinin gerçekçi olmadığı yetişkin öğrenciler için IPA çalışması açık ara en zaman verimli yoldur.</p><p>IPA Sound Drill bu \"ses çözünürlüğünü\" fonem fonem eğitir. Öğrencilerin en çok zorlandığı tuzak seslere odaklanır — <code>θ</code>, <code>ð</code>, <code>æ</code>, <code>ʒ</code>, <code>ɝ</code> — İngilizcenizde sonra gelen her şey için temel oluşturur.</p>",
+    "features": {
+      "title": "Bu uygulama neler sunar",
+      "item_1_html": "<b>Dört öğrenme alıştırması</b>. Pratik dört alıştırmaya bölünmüştür: \"Sesi kontrol et\" (IPA → kelime), \"Telaffuzdan yaz\" (kelime → IPA), \"Sesten kelime öğren\" (ses → kelime dağarcığı) ve \"Bağlantılı seslere alış\" (connected speech / zayıf biçimler) — her biri farklı bir hedefe odaklıdır.",
+      "item_2_html": "<b>5.397 CEFR etiketli kelime</b>. Her kelime bir CEFR etiketi taşır (A1 / A2 / B1 / B2), böylece yalnızca düzeyinize uyan kelimelere filtre uygulayabilirsiniz.",
+      "item_3_html": "<b>Odaklanmış tuzak-ses pratiği</b>. Alıştırmalar öğrencilerin en zor bulduğu tuzak seslere odaklanır (<code>θ</code> / <code>ð</code> / <code>æ</code> / <code>ʒ</code> / <code>ɝ</code>) ve pratik geçmişinizden zayıf noktalarınızı otomatik olarak gündeme getirir — sembol kapsamını verimli şekilde büyütür.",
+      "item_4_html": "<b>IPA sembolüne göre kelime ara</b>. Kelimeleri aramak için paletten bir IPA sembol dizisi oluşturun. Örneğin <code>æk</code> yazın ve o sesi içeren her kelime — \"back,\" \"pack,\" \"lack\" — görünsün. Fonetik kategoriye göre düzenlenmiş (ünlü ve ünsüzlerin 10 grubu), palet aynı zamanda bir fonetik referans olarak da işlev görür.",
+      "item_5_html": "<b>İlerlemenizi görün</b>. Bir ilerleme ölçer, dört alıştırmanın her birinde ne kadar ilerlediğinizi gösterir; üç işaretli bir sistem (kelime başına üç mezuniyet kontrolü) ustalığı takip eder."
+    },
+    "contact_html": "<p>Geri bildirim ve hata raporları için lütfen <a href=\"https://tally.so/r/xX1axk\" target=\"_blank\" rel=\"noopener\">geri bildirim formunu</a> kullanın.</p>"
+  },
+  "mark": {
+    "aria": {
+      "step_0": "İşaretlenmedi",
+      "step_1": "3'ten 1 işaretlendi",
+      "step_2": "3'ten 2 işaretlendi",
+      "step_3": "Mezun (3'ten 3)"
+    }
+  },
+  "progress": {
+    "meter_label": "%{pct} ({cur} / {total})",
+    "meter_aria": "İlerleme %{pct}, soru {cur} / {total}",
+    "title": "Öğrenme durumu",
+    "back": "Geri",
+    "card_title": "Öğrenme durumunu görüntüle",
+    "card_subtitle": "İlerlemeyi kontrol et",
+    "filter_all": "Tümü",
+    "overall_title": "Genel ilerleme",
+    "drills_title": "Alıştırma ilerlemesi",
+    "graduated_summary": "{n} / {m} öğe mezun",
+    "drill_summary": "{n} / {m} mezun",
+    "slots": {
+      "0": "Başlanmadı",
+      "1": "1 işaret",
+      "2": "2 işaret",
+      "3": "Mezun"
+    }
+  },
+  "symbol": {
+    "picker": {
+      "title": "IPA ile ara",
+      "clear": "Tümünü temizle",
+      "empty": "Aşağıdaki sembollere dokunun",
+      "remove_chip": "Kaldır"
+    },
+    "group": {
+      "frontVowels": {
+        "en": "Front Vowels",
+        "sub": "Ön Ünlüler"
+      },
+      "centralVowels": {
+        "en": "Central Vowels",
+        "sub": "Orta Ünlüler"
+      },
+      "backVowels": {
+        "en": "Back Vowels",
+        "sub": "Arka Ünlüler"
+      },
+      "diphthongs": {
+        "en": "Diphthongs",
+        "sub": "Çift Ünlüler"
+      },
+      "plosives": {
+        "en": "Plosives",
+        "sub": "Patlamalı"
+      },
+      "fricatives": {
+        "en": "Fricatives",
+        "sub": "Sürtünmeli"
+      },
+      "nasals": {
+        "en": "Nasals",
+        "sub": "Genizsi"
+      },
+      "approximants": {
+        "en": "Approximants",
+        "sub": "Yaklaşık"
+      },
+      "laterals": {
+        "en": "Laterals",
+        "sub": "Yan"
+      },
+      "affricates": {
+        "en": "Affricates",
+        "sub": "Patlamalı-Sürtünmeli"
+      },
+      "stress": {
+        "en": "Stress",
+        "sub": "Vurgu"
+      },
+      "other": {
+        "en": "Other",
+        "sub": "Diğer"
+      },
+      "syllabic": {
+        "en": "Syllabic",
+        "sub": "Heceli"
+      }
+    },
+    "height": {
+      "close": {
+        "en": "Close",
+        "sub": "Kapalı"
+      },
+      "closeMid": {
+        "en": "Close-Mid",
+        "sub": "Yarı-Kapalı"
+      },
+      "openMid": {
+        "en": "Open-Mid",
+        "sub": "Yarı-Açık"
+      },
+      "open": {
+        "en": "Open",
+        "sub": "Açık"
+      }
+    }
+  },
+  "onboarding": {
+    "title": "Tanıtım",
+    "pc_lead": "İlk ziyarette otomatik olarak gösterilir. Atlamak da tamamlanmış sayılır. Başlık kılavuzundan istediğiniz zaman yeniden açın.",
+    "guide_aria": "Kılavuz",
+    "guide_label": "Kılavuz",
+    "ipa_hint": "Vurgu <span class=\"ipa\" style=\"color:var(--signal)\">ˈ</span> · hece <span class=\"ipa\">‧</span>",
+    "stat_days": "gün üst üste",
+    "stat_words": "dokunulan kelime",
+    "next": "Sonraki",
+    "skip": "Atla",
+    "start": "Başla",
+    "slide_1": {
+      "title": "Bir amaçla başlayın.",
+      "body": "Bir hedef seçin. Derin kurulum yok — alıştırmanız hemen başlar."
+    },
+    "slide_2": {
+      "title": "Sesi duyun, sembolleri kontrol edin.",
+      "body": "IPA sesin haritasıdır. Duyduklarınızı sembollere bağlayın. GA ve RP farkları yan yana gösterilir."
+    },
+    "slide_3": {
+      "title": "Bildiğinizde işaretleyin.",
+      "body": "Öğrenilmiş hissettiğinizde bir kutuya dokunun. O kelimeyi mezun etmek için <b>üçünü</b> doldurun. Daha az işaretli kelimeler önce görünür — mükemmel bir seri gerekmez."
+    },
+    "slide_4": {
+      "title": "Kendi hızınızda.",
+      "body": "İlerleme bu cihazda kalır. Hesap yok. İstediğiniz zaman duraklatın ve devam edin — tek kelimeyle başlayın."
+    }
+  },
+  "footer": {
+    "ipa": "IPA nedir?",
+    "language": "Dil",
+    "feedback": "Geri bildirim",
+    "terms": "Şartlar",
+    "privacy": "Gizlilik"
+  },
+  "language": {
+    "title": "Dil",
+    "display_label": "Görüntüleme dili"
+  },
+  "ipa_info": {
+    "heading": "IPA seslerin haritasıdır.",
+    "lead": "Aynı yazım farklı ses verebilir. IPA bir kelimenin tam olarak nasıl telaffuz edildiğini yazar — bir sembol, bir ses — tek bir uluslararası sistemde.",
+    "example_note": "Benzer yazım, çok farklı sesler.",
+    "legend_stress": "Vurgu (aksan) konumu",
+    "legend_syllable": "Hece bölmesi",
+    "legend_link": "Kelimeler arasında bağlama"
+  }
+}
