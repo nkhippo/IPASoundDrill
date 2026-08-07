@@ -98,7 +98,7 @@ Vercel は Build 失敗時に自動 Rollback しない仕様。したがって�
 
 Build 失敗を検知したら、以下の順で判定:
 
-1. **本番サイトの動作確認**: `https://ipasounddrill.app` にアクセス、主要機能（トップページ表示、モード切替、TTS、6 言語切替）を目視確認
+1. **本番サイトの動作確認**: `https://ipasounddrill.app` にアクセス、主要機能（トップページ表示、モード切替、TTS、14 言語切替）を目視確認
 2. **正常動作** → パターン α、Build Log を Cursor 実装 Issue に報告、緊急対応不要
 3. **異常動作** → パターン β、即時 Rollback（§ 2.1 or § 2.2）を実施、その後原因調査
 
@@ -129,7 +129,7 @@ F2 のように Vercel Build を新規導入する Issue や、Build 設定を�
    - トップページ表示（`https://ipasounddrill.app`）
    - モード切替（Decode / Encode / Mode B / vocab browser）
    - TTS 動作（初回タップ + 連続再生）
-   - 6 言語切替（ja / en / ko / zh-Hans / zh-Hant / fil）
+   - 14 言語切替（ja / en / ko / zh-Hans / zh-Hant / fil / es / pt-BR / vi / id / ru / th / hi / tr）
 8. **問題発生時の即時 rollback 判断基準**:
    - トップページが 500 エラー / 空白 → 即時 § 2.1 で Promote to Production（30 秒以内）
    - 一部機能が動作しない（例: TTS のみ不動作） → 30 分以内に原因特定 or § 2.1 で Rollback

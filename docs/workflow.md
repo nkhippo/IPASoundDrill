@@ -197,6 +197,35 @@ develop-first。全 PR の base は `develop`。`develop` → `main` のマー�
 | `develop` | 全 PR の base。開発・確認用 |
 | `main` | 本番デプロイ。Naoya の指示で develop からマージ |
 
+## 13a. 新言語追加プロトコル（EPIC #297/#299/#301 で確立）
+
+UI i18n の新規言語追加は runtime 契約 8 パスに触れる L3 変更（`docs/data-contract.md` §5）。以下を必ず踏む:
+
+**1. EPIC 単位で Issue 起票**（Issue-first 原則、§2a）
+- 1 EPIC につき 3–5 言語をまとめる（例: #297 Latin 3 / #299 CJK・Latin 3 / #301 non-Latin 4）
+- Issue 本文に対象言語 code の一覧、`platform:web` ラベル、Complexity Level=L3 を明記
+
+**2. データ完成の順序**
+- (a) `packages/core/i18n/<lang>.json` を `en.json` 400 leaves と 1:1 で作成（[A] check 必須）
+- (b) `packages/core/i18n/phonemes/<lang>.json` は任意（未提供でも build 時に `readI18nWithFallback` で en fallback、Issue #297 baseline）
+- (c) 音素の gloss / `connected_speech.<lang>.gloss` / `weak_forms.<lang>.cs_rule` / `guide.<lang>` は独立 backlog（現状 6 言語のみ、Issue #303 で 8 言語追加を検討）
+
+**3. コード側の連動更新（見落とし頻発）**
+- `apps/web/src/index.template.html` の `LANG_CODE_MAP`（言語切替チップ表示）— 追加漏れは全ユーザーで "EN" フォールバック表示になる（#306 教訓）
+- `apps/web/scripts/build-i18n-html.js` の言語配列（build ターゲット）
+- `apps/web/middleware.ts` / hreflang / sitemap の言語ルーティング
+- Chip 命名規約: Latin 2–3 文字大文字（`ES` / `PT` / `VI`）。CJK 曖昧回避のみ native char（`簡` / `繁`）
+
+**4. docs 反映（差分マージ、本 PR で漏らさない）**
+- `docs/data-contract.md` §1 / §3 / §5 / §6 / §7 の言語数・列挙・整合性チェック行
+- `docs/repo-map.md` 生成物リスト・build script 説明
+- `docs/guardrails.md` L3 md5 対象言語数・[A] check 説明
+
+**5. 検証（完了定義）**
+- `python3 tools/validate/validate_i18n.py` PASS（[A]/[C]/[G]/[H]/[I] 全緑、[B] は subset 緩和）
+- Vercel Preview URL で `/<lang>/` を全新言語目視確認（chip 表示 / 言語切替 dropdown / 主要画面のかな残留・placeholder 崩れ・HTML タグ）
+- md5 一致確認: `packages/core/i18n/*.json` → build 後 `apps/web/public/i18n/*.json`
+
 ## 14. Pre-Issue Recon（100 行超で推奨）
 
 Claude が `apps/web/src/index.template.html` 等の大ファイルを全量取得する代わりに、実装エージェントに現状調査だけを依頼する手法。適用条件: 影響ファイル 3 個以上かつ変更行数推定 100 行超、既存コード構造の把握が不十分、複数の設計選択肢がある場合。

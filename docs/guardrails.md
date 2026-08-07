@@ -32,7 +32,7 @@ diff before-all.md5 after-all.md5
 |---|---|---|---|
 | **L1** | CI 緑 + セルフチェック（実装エージェント自身の確認）。`pr-reviewer` 起動は任意・省略可 | 不要 | 目視のみ、auto-merge 可 |
 | **L2** | `pr-reviewer` による契約検証（ホワイトリスト・ゾーン逸脱・参照整合・完了定義トレース・ついで作業ゼロ・契約検証・横展開・実装レポート充足）が PASS | 不要 | auto-merge 可（PASS が条件） |
-| **L3** | 上記に加え不変ブラックリストの md5 検証、6 言語生成物の script md5 一致、Complexity Retrospective（§6）。**Mobile 両プラットフォーム影響 or `packages/core` 公開 API 変更は本カテゴリ**（`docs/change-classification.md` §2 条件⑤） | **必須** | **ack 必須**（auto-merge しない、レビュー結果が rubber stamp でも Naoya の明示承認を要する） |
+| **L3** | 上記に加え不変ブラックリストの md5 検証、14 言語生成物の script md5 一致、Complexity Retrospective（§6）。**Mobile 両プラットフォーム影響 or `packages/core` 公開 API 変更は本カテゴリ**（`docs/change-classification.md` §2 条件⑤） | **必須** | **ack 必須**（auto-merge しない、レビュー結果が rubber stamp でも Naoya の明示承認を要する） |
 
 **md5 検証対象の拡張（monorepo 化、EPIC #209 以降）**: ランタイム契約 8 パスに触れる L3 変更では、正本 `packages/core/data/*.json` の md5 に加え、`apps/web/public/data/*.json`（build 生成物、リポには追跡されない場合は build 直後のローカル比較でよい）と `apps/mobile/assets/data/*.json`（Mobile 実装後）が正本と一致することを確認する。3 箇所（core 正本 + web copy + mobile copy）の md5 が全て一致していることを実装レポートに記録する。
 
@@ -44,7 +44,7 @@ diff before-all.md5 after-all.md5
 | 2 | Issue 本文の完全仕様との一致度 | 完了定義・テスト観点・非対象範囲がすべて満たされているか |
 | 3 | 既存成果物への不変性 | 先行 Issue の成果物・ブラックリスト指定ファイルが変更されていないか（md5 検証、L3） |
 | 4 | Runtime data contract の不変 | `packages/core/data/*.json` 等の実行時契約が意図せず変更されていないか |
-| 5 | 生成物 6 言語の script md5 一致（該当時） | 多言語ビルド生成物で同一 script のものが md5 一致するか |
+| 5 | 生成物 14 言語の script md5 一致（該当時） | 多言語ビルド生成物で同一 script のものが md5 一致するか |
 | 6 | 参照ドキュメントの整合 | 影響を受けるドキュメントがすべて意図通り更新されているか（`doc-map.md` レジストリ照合） |
 | 7 | Complexity Retrospective の完全性 | 実装レポートの Retrospective が具体的で、テンプレの雛形が残っていないか |
 | 8 | 「ついで作業」ゼロ | Issue に無い lint / typo / Markdown 整形が混入していないか |
@@ -132,7 +132,7 @@ lint 修正 / typo 修正（元の文言を保持）/ Markdown 整形 / import �
 python3 tools/validate/validate_i18n.py
 ```
 
-GitHub Actions `validate-i18n` でも実行され、以下を hard-fail として扱う: ja 以外の UI JSON に残った CJK かな / 6 言語 UI JSON の leaf key 不一致 / 同一 key のプレースホルダ集合不一致 / BOM・末尾改行欠落・インデント崩れ / `_html` サフィックス key の不正タグ・ネスト。翻訳品質そのもの（自然さ・字体妥当性）は機械判定対象外、Preview URL での目視確認に委ねる。
+GitHub Actions `validate-i18n` でも実行され、以下を hard-fail として扱う: ja 以外の UI JSON に残った CJK かな / 14 言語 UI JSON の leaf key 不一致（[A] check、`en` 基準に全キー一致必須）/ 同一 key のプレースホルダ集合不一致 / BOM・末尾改行欠落・インデント崩れ / `_html` サフィックス key の不正タグ・ネスト。音素辞書 `packages/core/i18n/phonemes/*.json` は現行 6 言語のみで、validator [B] check は `PH ⊆ UI` の subset 緩和（Issue #297 baseline）で未提供言語は build 時に en へ fallback する（`readI18nWithFallback`）。翻訳品質そのもの（自然さ・字体妥当性）は機械判定対象外、Preview URL での目視確認に委ねる。
 
 ランタイム契約 8 パスの一覧・JSON スキーマ・wordlist 系再カウントコマンドの正本は `docs/data-contract.md`。パイプラインコマンドは `docs/pipeline.md`。
 
