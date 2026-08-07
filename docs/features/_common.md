@@ -71,7 +71,7 @@ ID 横断で共有される画面シェル・セッションフロー・適応�
 | 語彙 | `#vocabBtn`（常時表示。`3b` 語彙ブラウザ導線） |
 | 学習状況 | `#progressBtn`（常時表示。`3d` 学習状況導線） |
 | ガイド | `#guideBtn`（`reopenOnboarding()` で `#onboardingModal`＝オンボーディングを再表示） |
-| 言語 | ヘッダー `#langSwitcher` タップ → `navigate("language")` → `#languagePage`（独立の言語設定ページ、`3f`）へ遷移。DOM 上の `#langMenu` ドロップダウンは常時 `toggleLangMenu(false)` で閉じられ実質使われない dead code（2026-07-28 時点） |
+| 言語 | ヘッダー `#langSwitcher` タップ → `navigate("language")` → `#languagePage`（独立の言語設定ページ、`3f`）へ遷移。DOM 上の `#langMenu` ドロップダウンは常時 `toggleLangMenu(false)` で閉じられ実質使われない dead code（2026-07-28 時点）。EPIC #297/#299/#301 の 14 言語追加時に menu 側の 14 言語ボタンも整備済み（rollback / A/B 想定の予備 DOM として維持、`toggleLangMenu(true)` 呼び出し箇所は現状 0） |
 | Menu | `#backTopBtn`（プレイ中。離脱確認対象では Yes で `1a` 復帰） |
 | アクセントバッジ | ヘッダーに GA/RP **固定**表示（学習中切替なし）。ドリル中は `.drill-accent-badge`（`position:absolute; top:14px; left:14px`、`--signal-soft` 背景）でカード内左上に表示 |
 | 離脱確認 | `#exitConfirmModal`（Decode / Encode / Study / Reveal） |

@@ -161,6 +161,7 @@ develop マージ時の Issue 自動クローズは GitHub 標準機能を利用
 - PR 本文テンプレは `.github/PULL_REQUEST_TEMPLATE.md`（概要・変更内容・変更理由・確認済み事項・未確認懸念点・Complexity Retrospective 実施確認・`Closes #N`）
 - develop 向け PR に `Closes #N` を記載する（develop マージ時に Issue をクローズする）
 - **UI 改修 PR のスクショ必須（Change Pattern C6）**: ①Issue 本文のスクショ対象画面リスト全画面のスクショを PR Comment に添付 ②技術制約で添付できない場合は明記し、Naoya 実機検証を Rv の前提とする ③スクショ（または代替）無しの UI 改修 PR は pr-reviewer/Claude Rv で FAIL とする
+- **PR 作成直後のセルフチェック**（PR #302 の `Closes` 漏れ landing）: `gh pr view <N> --json body,closingIssuesReferences` で ① 本文に `Closes #<N>` 行が存在する ② `closingIssuesReferences` が空配列でない — の 2 点を確認する。片方でも欠けている場合は `gh pr edit <N> --body` で本文を修正（Issue の手動 close 事後リカバリを避けるため）
 
 ## 9. 実装レポート（必須）
 
