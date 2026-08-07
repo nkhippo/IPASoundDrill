@@ -19,7 +19,7 @@ Web ビルド時に `apps/web/public/` へコピーされ公開 URL として配
 | Weak forms | `/data/weak_forms.json` | `packages/core/data/weak_forms.json` |
 | Guide | `/data/guide.json` | `packages/core/data/guide.json` |
 | UI i18n | `/i18n/{lang}.json`（現行 14 言語: en/ja/ko/zh-Hans/zh-Hant/fil/es/pt-BR/vi/id/ru/th/hi/tr） | `packages/core/i18n/{lang}.json` |
-| Phoneme help | `/i18n/phonemes/{lang}.json`（現行 6 言語: en/ja/ko/zh-Hans/zh-Hant/fil。他 8 言語は build 時 en fallback — `apps/web/tools/build-i18n-html.js` の `readI18nWithFallback`） | `packages/core/i18n/phonemes/{lang}.json` |
+| Phoneme help | `/i18n/phonemes/{lang}.json`（現行 6 言語: en/ja/ko/zh-Hans/zh-Hant/fil。他 8 言語は build 時 en fallback — `apps/web/scripts/build-i18n-html.js` の `readI18nWithFallback`） | `packages/core/i18n/phonemes/{lang}.json` |
 | IPA font | `/fonts/DoulosSIL-Regular.woff2` | `packages/core/fonts/DoulosSIL-Regular.woff2` |
 | TTS | External `GAS_TTS_URL` in `apps/web/src/index.template.html` → `tools/tts/gas/Code.gs` deployment | — |
 
@@ -223,7 +223,7 @@ UI i18n とは独立。各言語キー（`en`, `ja`, `ko`, `zh-Hans`, `zh-Hant`,
 **Files**: `packages/core/i18n/{lang}.json`（**14 言語**: en/ja/ko/zh-Hans/zh-Hant/fil/es/pt-BR/vi/id/ru/th/hi/tr、公開 URL `/i18n/{lang}.json`） + `packages/core/i18n/phonemes/{lang}.json`（音素解説、47 記号、**現行 6 言語**: en/ja/ko/zh-Hans/zh-Hant/fil、公開 URL `/i18n/phonemes/{lang}.json`）
 
 **Fallback 設計（2 段構え）**:
-- **Build 時 fallback**: `apps/web/tools/build-i18n-html.js` の `readI18nWithFallback` により、phonemes に無い 8 言語（es/pt-BR/vi/id/ru/th/hi/tr）は en を読んで埋める（SEO 静的 HTML 生成用）
+- **Build 時 fallback**: `apps/web/scripts/build-i18n-html.js` の `readI18nWithFallback` により、phonemes に無い 8 言語（es/pt-BR/vi/id/ru/th/hi/tr）は en を読んで埋める（SEO 静的 HTML 生成用）
 - **Runtime fallback**: `apps/web/src/index.template.html` の `loadLocale()` は UI / PH 各々 4xx 応答時に `i18n/en.json` を fetch して差し替え
 - 上記により、phonemes 側の 8 言語未整備でも動作は成立する（Issue #297 で確立、validator `[B]` は `PH ⊆ UI` の subset に緩和）
 
