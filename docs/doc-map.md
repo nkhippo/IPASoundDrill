@@ -61,6 +61,7 @@ Issue B は既存ファイルを削除しない。CLAUDE.md からは router に
 | エージェント定義（issue-handler / pr-reviewer / consistency-auditor） | `.claude/agents/*.md` | exists | エージェント仕様変更時 |
 | CSS 変数命名・`--legacy-*` 運用・Track A CSS 技術制約（開発ゾーン） | `docs/CSS-CONVENTIONS.md` | exists | CSS 規約変更時 |
 | CSS トークン実装値（色・spacing・radius・shadow・font-family）snapshot | `docs/design/phase-1/visual-tokens.md`（実装用 snapshot、`docs/design/phase-1/design-tokens.md` が抽出元記録） | exists | トークン値変更時 |
+| 整合の辺チェッカー / 辺昇格フック（横展開信頼問題 α） | `tools/validate/validate_design_tokens.py`（色トークン一致検証）+ `docs/guardrails.md` §11（昇格プロトコル正本） | exists | 辺チェッカー追加・昇格ルール変更時 |
 | デザイン原則・ペルソナ・voice/tone・感覚設計・アンチパターン（evergreen 設計入力） | `docs/design/{product-principles,user-personas,voice-and-tone,sensory-design,anti-patterns}.md` | exists | 設計方針変更時 |
 | Mobile アプリ設計方針（React Native / Expo 画面構成） | `docs/repo-map.md`（apps/mobile セクション） | planned | Mobile アーキテクチャ変更時 |
 | TTS バッチツーリング（`tools/tts/gen_tts_batch.py` 等） | `docs/tts-design.md` | planned | TTS バッチ改修時 |
