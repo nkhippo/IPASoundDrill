@@ -136,6 +136,27 @@ GitHub Actions `validate-i18n` でも実行され、以下を hard-fail とし�
 
 ランタイム契約 8 パスの一覧・JSON スキーマ・wordlist 系再カウントコマンドの正本は `docs/data-contract.md`。パイプラインコマンドは `docs/pipeline.md`。
 
+## 11. 整合の辺の機械検証と昇格（横展開信頼問題 α）
+
+同じ事実（値・キー・定義）が複数ファイルに複製されている箇所を「**整合の辺**」と呼ぶ。辺は「ガイドラインで気をつける」のではなく、**機械チェックで守る**のが原則（LLM の compliance は確率的で 100% にならない。母数が増えるほど取りこぼす）。
+
+**現行の辺チェッカー**（`tools/validate/*`、GitHub Actions で該当 path の PR/push 時に自動実行）:
+
+| チェッカー | 守る辺 |
+|---|---|
+| `validate_i18n.py` | i18n キー/音素の全言語一致・プレースホルダ・HTML 妥当性 |
+| `validate_design_tokens.py` | 色トークンの正本(`apps/web/src/index.template.html`)一致（`*.template.html` 間の共通トークンのみ照合） |
+| `validate-markdown-refs.py` | Markdown 参照リンクの健全性 |
+| `validate-cefr-tags.py` | CEFR タグ形式 |
+
+**辺昇格フック（実装・Rv 時の義務）**: 実装エージェント / レビュアーが、既存チェッカーで守られていない**新しい重複の辺**（同じ値・定義が複数箇所に手書きされている箇所）に気づいた場合、以下を行う:
+
+1. その辺が**機械照合可能か**（値の一致・有無・形式・参照解決で判定できるか）を判断する
+2. 可能なら、既存チェッカーへのルール追加 or 新規チェッカーを **Issue として提案**する（`docs/change-classification.md` の分類に従い通常 L2×[C2] 程度）。実装 Issue のついで作業として勝手に追加しない（`§4` 自己判断禁止）
+3. 機械照合できない辺（意味・意図・自然さ・網羅性の判断を要する）は、Rv 観点（§3 の #6 参照ドキュメント整合）で人手/LLM が拾う層として扱う
+
+この昇格を繰り返すことで、機械化できる辺が増え、LLM/Rv が気にすべき辺が減っていく（詳細な背景は横展開信頼問題のロードマップ）。
+
 ---
 
 _旧 `docs/DEV-GUARDRAILS.md` / `docs/DOC-SYNC-PLAYBOOK.md` / `docs/dev-common.md`（Rv 12 観点・md5 検証節）を整理継承。_

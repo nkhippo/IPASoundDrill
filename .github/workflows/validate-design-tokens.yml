@@ -1,0 +1,30 @@
+name: validate-design-tokens
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    paths:
+      - 'apps/web/src/*.template.html'
+      - 'tools/validate/validate_design_tokens.py'
+      - '.github/workflows/validate-design-tokens.yml'
+  push:
+    branches: [main, master]
+    paths:
+      - 'apps/web/src/*.template.html'
+      - 'tools/validate/validate_design_tokens.py'
+      - '.github/workflows/validate-design-tokens.yml'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Validate design token consistency
+        run: python3 tools/validate/validate_design_tokens.py
