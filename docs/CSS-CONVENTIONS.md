@@ -45,9 +45,9 @@
 
 ---
 
-## §4 6 言語ビルドとの整合性
+## §4 14 言語ビルドとの整合性
 
-- `<style>` ブロックは 6 言語で **共通**（`apps/web/scripts/build-i18n-html.js` がテンプレートから生成）
+- `<style>` ブロックは 14 言語で **共通**（`apps/web/scripts/build-i18n-html.js` がテンプレートから生成）
 - Font family / Google Fonts import も **共通**（Noto stack の言語別 fallback は stack 内で吸収）
 - CSS 変数の **値は言語非依存**
 - 言語別差分は HTML 文言・`lang`・meta のみ。CSS トークン値を言語ごとに分岐しない

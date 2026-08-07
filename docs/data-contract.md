@@ -18,8 +18,8 @@ Web ビルド時に `apps/web/public/` へコピーされ公開 URL として配
 | Connected speech | `/data/connected_speech.json` | `packages/core/data/connected_speech.json` |
 | Weak forms | `/data/weak_forms.json` | `packages/core/data/weak_forms.json` |
 | Guide | `/data/guide.json` | `packages/core/data/guide.json` |
-| UI i18n | `/i18n/{en,ja,ko,zh-Hans,zh-Hant,fil}.json` | `packages/core/i18n/{en,ja,ko,zh-Hans,zh-Hant,fil}.json` |
-| Phoneme help | `/i18n/phonemes/{lang}.json` | `packages/core/i18n/phonemes/{lang}.json` |
+| UI i18n | `/i18n/{lang}.json`（現行 14 言語: en/ja/ko/zh-Hans/zh-Hant/fil/es/pt-BR/vi/id/ru/th/hi/tr） | `packages/core/i18n/{lang}.json` |
+| Phoneme help | `/i18n/phonemes/{lang}.json`（現行 6 言語: en/ja/ko/zh-Hans/zh-Hant/fil。他 8 言語は build 時 en fallback — `apps/web/tools/build-i18n-html.js` の `readI18nWithFallback`） | `packages/core/i18n/phonemes/{lang}.json` |
 | IPA font | `/fonts/DoulosSIL-Regular.woff2` | `packages/core/fonts/DoulosSIL-Regular.woff2` |
 | TTS | External `GAS_TTS_URL` in `apps/web/src/index.template.html` → `tools/tts/gas/Code.gs` deployment | — |
 
@@ -170,17 +170,17 @@ python3 tools/data-pipeline/fix_happy_i.py   # その後 gen_ga_rp_same を再�
 
 ### `packages/core/data/connected_speech.json`（公開 URL `/data/connected_speech.json`、201句）
 
-フィールド: `id`, `w`, `ipa`, `rp_ipa`, `cs_type`, `level`（1–3）, `cefr`（A1–B2）, `cs_rule`（en/ja/fil/ko/zh-Hans/zh-Hant）, `gloss`, `carriers`（キャリア文テンプレート配列）。
+フィールド: `id`, `w`, `ipa`, `rp_ipa`, `cs_type`, `level`（1–3）, `cefr`（A1–B2）, `cs_rule`（en/ja/fil/ko/zh-Hans/zh-Hant）, `gloss`（同 6 言語）, `carriers`（キャリア文テンプレート配列）。**`cs_rule` / `gloss` の 8 言語（es/pt-BR/vi/id/ru/th/hi/tr）拡張は Issue #303 で backlog 対応。** 未拡張言語では runtime で en fallback。
 
 **Connected phrase TTS（現行）**: SPA からの API 呼び出しは `phrase=&accent=ga` 固定。`BatchWarm.gs` の暖機ループも GA 固定。RP 連結 TTS は将来対応予定（React 化以降）。
 
 ### `packages/core/data/weak_forms.json`（公開 URL `/data/weak_forms.json`、36語）
 
-フィールド: `id`, `w`（機能語）, `ipa`（弱形）, `strong_ipa`, `level`（1–3）, `cefr`（A2/B1）, `cs_rule`（en/ja/fil）, `carrier`（キャリア文テンプレート）。Decode のみ。TTS は `?weak=/IPA/&ww=word&accent=ga|rp`。
+フィールド: `id`, `w`（機能語）, `ipa`（弱形）, `strong_ipa`, `level`（1–3）, `cefr`（A2/B1）, `cs_rule`（en/ja/fil/ko/zh-Hans/zh-Hant）, `carrier`（キャリア文テンプレート）。Decode のみ。TTS は `?weak=/IPA/&ww=word&accent=ga|rp`。**8 言語（es/pt-BR/vi/id/ru/th/hi/tr）拡張は Issue #303 で backlog 対応。** 未拡張言語では runtime で en fallback。
 
 ### `packages/core/data/guide.json`（公開 URL `/data/guide.json`）
 
-UI i18n とは独立。各言語キー（`en`, `ja`, `ko`, `zh-Hans`, `zh-Hant`, `fil`）に 8 セクション（`welcome` … `how_to_use`）。段落数: welcome 4 / philosophy 3 / solves 2 / modes 3 / decode_encode 3 / connected 3 / accents 1 / how_to_use 3。モーダルで閲覧。
+UI i18n とは独立。各言語キー（`en`, `ja`, `ko`, `zh-Hans`, `zh-Hant`, `fil`。**8 言語拡張は Issue #303 で backlog 対応**）に 8 セクション（`welcome` … `how_to_use`）。段落数: welcome 4 / philosophy 3 / solves 2 / modes 3 / decode_encode 3 / connected 3 / accents 1 / how_to_use 3。モーダルで閲覧。
 
 ---
 
@@ -220,7 +220,12 @@ UI i18n とは独立。各言語キー（`en`, `ja`, `ko`, `zh-Hans`, `zh-Hant`,
 
 ## 5. i18n スキーマ
 
-**Files**: `packages/core/i18n/{en,ja,ko,zh-Hans,zh-Hant,fil}.json`（6言語、公開 URL `/i18n/{lang}.json`） + `packages/core/i18n/phonemes/{lang}.json`（音素解説、47記号、公開 URL `/i18n/phonemes/{lang}.json`）
+**Files**: `packages/core/i18n/{lang}.json`（**14 言語**: en/ja/ko/zh-Hans/zh-Hant/fil/es/pt-BR/vi/id/ru/th/hi/tr、公開 URL `/i18n/{lang}.json`） + `packages/core/i18n/phonemes/{lang}.json`（音素解説、47 記号、**現行 6 言語**: en/ja/ko/zh-Hans/zh-Hant/fil、公開 URL `/i18n/phonemes/{lang}.json`）
+
+**Fallback 設計（2 段構え）**:
+- **Build 時 fallback**: `apps/web/tools/build-i18n-html.js` の `readI18nWithFallback` により、phonemes に無い 8 言語（es/pt-BR/vi/id/ru/th/hi/tr）は en を読んで埋める（SEO 静的 HTML 生成用）
+- **Runtime fallback**: `apps/web/src/index.template.html` の `loadLocale()` は UI / PH 各々 4xx 応答時に `i18n/en.json` を fetch して差し替え
+- 上記により、phonemes 側の 8 言語未整備でも動作は成立する（Issue #297 で確立、validator `[B]` は `PH ⊆ UI` の subset に緩和）
 
 **検証ガード**: `tools/validate/validate_i18n.py` が local / CI（`.github/workflows/validate-i18n.yml`）の唯一のガード。`packages/core/i18n/*.json` または `apps/web/src/index.template.html` の i18n 参照を編集したら必ず実行:
 
@@ -246,13 +251,13 @@ python3 tools/validate/validate_i18n.py
 | `vocab` | object | 語彙ブラウザ（`vocab.filter.ipa` / `vocab.filter.all` / `vocab.az.hint`＝A–Z ジャンプ導線のヒント文言） |
 | `symbol` | object | IPA 記号ピッカー（`symbol.picker.*` / `symbol.group.*.{en,sub}` / `symbol.height.*.{en,sub}`） |
 | `reveal` | object | Reveal 画面（GA / RP 表記） |
-| `lang_opts` | object | 言語切替 dropdown（6言語） |
+| `lang_opts` | object | 言語切替 dropdown（14 言語の自称名。値は全言語共通） |
 | `reflect`, `exit_confirm`, `note`, `patterns`, `summary`, `info`, `kbd`, `pos`, `cefr`, `checks`, `progress` | object | 各機能セクション |
 | `start`, `loading`, `load_fail`, `wordlist_fail`, `back_top`, `settings_*`, `listen`, `input_ph`, `input_phrase`, `check`, `clear`, `next`, `build_ph`, `tips_head`, `you`, `see_answer` | string | 各種 UI 文字列 |
 | `meta` | object | `title` / `description` / `ogTitle` / `ogDescription`（build-only、`brand` 直後に挿入） |
 
 **Notes:**
-- 総 leaf 数（`tools/validate/validate_i18n.py` 実測値・2026-07-29 時点）: **280**（Phase 3 UI 改修で 246→280。増分は `vocab.az.hint`、`about.*` 追加、`symbol.group.*` / `symbol.height.*` 内訳キー等）
+- 総 leaf 数（`tools/validate/validate_i18n.py` 実測値・2026-08-07 時点）: **400 leaves × 14 languages = 5,600 leaves**（全 14 言語 parity 完成、Issue #297/#299/#301 で 6→14 言語追加）
 - HTML 埋め込みキーは `_html` サフィックス
 - 動的置換プレースホルダ: `{n}`, `{band}`, `{pct}`, `{m}`, `{t}`, `{c}`, `{list}`, `{p}`, `{sy}`, `{s}`, `{a}`
 - LS 追加キー: `onboarding_completed_v1`（`"true"` で初回オンボ完了。スキップも完了扱い）
@@ -271,16 +276,17 @@ python3 tools/validate/validate_i18n.py
 | `neighbors` フィールド | `tools/data-pipeline/gen_neighbors.py` 再実行、0近傍率の変化確認 |
 | `packages/core/data/connected_speech.json` | 総フレーズ数・CEFR バッジ整合性 |
 | `packages/core/data/weak_forms.json` | 総エントリ数、type=weak の出題確認 |
-| `packages/core/i18n/*.json` | 6 言語すべての key 網羅性（`tools/validate/validate_i18n.py` 実行） |
+| `packages/core/i18n/*.json` | 14 言語すべての key 網羅性（`tools/validate/validate_i18n.py` 実行、[A] check で en と全キー一致必須） |
+| `packages/core/i18n/phonemes/*.json` | 現行 6 言語の記号・フィールド網羅性（validator [B] check は `PH ⊆ UI` の subset 緩和。8 言語追加時は build/runtime fallback 動作を確認） |
 | `tools/tts/gas/BatchWords.gs` | `tools/data-pipeline/export_batch_words.py` で再生成 |
 
 ## 7. 多言語 UI への影響（必須記載）
 
 UI 文言を変える Issue は、以下を必須記載すること:
-- ja / en / ko / zh-Hans / zh-Hant / fil の 6 言語すべての文言変更有無
+- 現行 14 言語（ja / en / ko / zh-Hans / zh-Hant / fil / es / pt-BR / vi / id / ru / th / hi / tr）すべての文言変更有無
 - `packages/core/i18n/*.json` の更新対象 key リスト
 - 現行 UI i18n leaf 数（正本は本ファイル §5。数値は固定引用せず本ファイルを参照）
-- 英語・日本語の完全性を最優先、他 4 言語は差分マージ可
+- 英語・日本語の完全性を最優先。他 12 言語は差分マージ可（新規言語追加 PR は EPIC 単位、Issue #297/#299/#301 と同型の分割）
 
 ---
 

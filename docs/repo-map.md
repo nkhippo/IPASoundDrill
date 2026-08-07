@@ -9,7 +9,7 @@
 ## 技術スタック
 
 - **monorepo**: pnpm workspace（`pnpm-workspace.yaml`: `packages/*`, `apps/*`）
-- **フロントエンド**: `apps/web/src/index.template.html` + ビルドスクリプト（`apps/web/scripts/build-i18n-html.js`）で 6 言語版 HTML を生成 + 純粋 JS + JSON データ
+- **フロントエンド**: `apps/web/src/index.template.html` + ビルドスクリプト（`apps/web/scripts/build-i18n-html.js`）で 14 言語版 HTML を生成 + 純粋 JS + JSON データ
 - **共有データ / ローダー**: `packages/core`（`@ipasounddrill/core`）— ランタイム JSON（`packages/core/data/`）、i18n（`packages/core/i18n/`）、フォント（`packages/core/fonts/`）、TS ローダー/採点ロジック（`packages/core/src/`、#EPIC-03）
 - **ホスティング**: Vercel（静的サイト、カスタムドメイン、Root Directory `apps/web`）
 - **TTS**: Google Apps Script（`tools/tts/gas/Code.gs`、現行維持）
@@ -36,7 +36,7 @@
 | 種別 | パス | 備考 |
 |------|------|------|
 | SPA テンプレート（正本） | `apps/web/src/index.template.html` | Cursor が編集する唯一の HTML ソース |
-| 生成物 | `/{lang}/index.html`（`en` … `fil`） | `pnpm --filter @ipasounddrill/web build` / Vercel Build。`.gitignore` |
+| 生成物 | `/{lang}/index.html`（14 言語: `en` / `ja` / `ko` / `zh-Hans` / `zh-Hant` / `fil` / `es` / `pt-BR` / `vi` / `id` / `ru` / `th` / `hi` / `tr`） | `pnpm --filter @ipasounddrill/web build` / Vercel Build。`.gitignore` |
 | ルート `index.html` | **無し** | middleware が `/` を言語別 URL へ振り分け |
 
 **Data folder map:** `packages/core/data/README.md` — ランタイム契約データ（wordlist / connected_speech / weak_forms / guide）の役割分担。パイプライン中間生成物（batches / pipeline / derived / patches / archive）は `tools/data-pipeline/README.md` を参照。
@@ -63,7 +63,7 @@ ipasounddrill/
 │       ├── src/
 │       │   └── index.template.html   # ★ SPA テンプレート（Decode/Encode, Mode B, Connected Speech, vocab browser, progress checks）
 │       ├── scripts/
-│       │   ├── build-i18n-html.js    # 6 言語版 HTML 生成（`packages/core/i18n/` を読む）
+│       │   ├── build-i18n-html.js    # 14 言語版 HTML 生成（`packages/core/i18n/` を読む）
 │       │   └── copy-core-assets.js   # `packages/core/{data,i18n,fonts}` → `apps/web/public/` コピー
 │       ├── public/                   # favicon.svg, robots.txt, sitemap.xml, privacy.html, terms.html, llms.txt（+ build 時コピーの data/i18n/fonts、`.gitignore`）
 │       ├── middleware.ts             # `/` の Accept-Language / Cookie / Bot 振り分け
@@ -80,7 +80,7 @@ ipasounddrill/
 │       │   ├── connected_speech.json  # ★ RUNTIME
 │       │   ├── weak_forms.json  # ★ RUNTIME
 │       │   └── guide.json       # ★ RUNTIME
-│       ├── i18n/                # UI strings + phonemes/（6 languages）
+│       ├── i18n/                # UI strings（14 languages）+ phonemes/（6 languages、build/runtime で en fallback）
 │       ├── fonts/                # Doulos SIL（IPA）
 │       ├── src/                  # TS 型定義・ローダー・採点ロジック（#EPIC-03）
 │       ├── package.json
@@ -145,7 +145,7 @@ ipasounddrill/
 | DNS | Namecheap Advanced DNS | A `@` → `216.198.79.1`, CNAME `www` → `52646c530fa600df.vercel-dns-017.com.` |
 | TLS | Vercel + Let's Encrypt | 90-day auto-renewal, `.app` = HSTS preload (forced HTTPS) |
 | TTS proxy | Google Apps Script | `tools/tts/gas/Code.gs` deployment, `GAS_TTS_URL` in `apps/web/src/index.template.html` |
-| Build system | Node.js（pnpm workspace） | `apps/web/scripts/build-i18n-html.js`（6 言語 HTML 生成、`apps/web/scripts/copy-core-assets.js` が先行実行） |
+| Build system | Node.js（pnpm workspace） | `apps/web/scripts/build-i18n-html.js`（14 言語 HTML 生成、`apps/web/scripts/copy-core-assets.js` が先行実行） |
 | Middleware | Vercel Routing Middleware | `apps/web/middleware.ts`（Accept-Language 判定、C1 fallback 時は不使用） |
 | Vercel Build Command | `pnpm --filter @ipasounddrill/web build` | `apps/web/vercel.json`（Root Directory `apps/web`）/ Dashboard Build & Development Settings |
 | i18n parity CI | GitHub Actions `validate-i18n` | `python3 tools/validate/validate_i18n.py` で UI key parity / residual CJK kana / placeholders / JSON format / `_html` validity を検証 |
@@ -162,7 +162,7 @@ ipasounddrill/
 ## 現行スコープと将来計画
 
 **現行スコープ**: `apps/web/src/index.template.html` + 言語別静的 HTML 生成 + GAS TTS
-- 対象: `apps/web/src/index.template.html`（inline CSS/JS）、`apps/web/scripts/build-i18n-html.js` で 6 言語版 HTML 生成、Vercel カスタムドメイン運用
+- 対象: `apps/web/src/index.template.html`（inline CSS/JS）、`apps/web/scripts/build-i18n-html.js` で 14 言語版 HTML 生成、Vercel カスタムドメイン運用
 - 実装可能: SEO、meta、i18n meta、hreflang、Analytics 統合、Tally、法務、favicon、OGP、UI polish、英語 LP、静的 HTML プリレンダ用 Node ビルド
 - 実装不可（現行構成制約）: React 化、TypeScript アプリ化、状態管理ライブラリ、BE 移管
 
