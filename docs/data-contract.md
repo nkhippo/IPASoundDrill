@@ -42,7 +42,7 @@ Web ビルド時に `apps/web/public/` へコピーされ公開 URL として配
   "src": "cefr",
   "pattern": null,
   "group": null,
-  "gloss": { "en": "...", "ja": "...", "zh": "...", "ko": "...", "fil": "..." },
+  "gloss": { "en": "...", "ja": "...", "ko": "...", "fil": "...", "zh-Hans": "...", "zh-Hant": "..." },
   "ipa_actual_ga": "/ˈpɑrɾi/",
   "ipa_actual_rp": null,
   "respell_ga": "PAR-dee",
