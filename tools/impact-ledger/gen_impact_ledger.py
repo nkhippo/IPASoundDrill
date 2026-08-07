@@ -17,6 +17,12 @@ Algorithm
        helpers like `wordWorker` inside `prefetchAccentBodies` are captured too)
      - `const name = (...) => ...` / `const name = async (...) => ...` at column 0
        (covers the two utility one-liners `$` and `show`)
+     - `const NAME = { ... }` / `const NAME = [ ... ]` at column 0 (module-scope
+       data literals such as `LANG_CODE_MAP`, `SUPPORTED_LANGS`, `ROUTES` — Issue
+       #312 landing after PR #305 hotfix showed `LANG_CODE_MAP` was invisible to
+       the ledger and edits to it broke UI in 8 langs without an impact-ledger
+       halt). Data literals use reference-pattern matching (`NAME` as a bare
+       identifier) instead of the call-site pattern.
    Each symbol records its 1-indexed line number in the full file.
 3. Build a line -> enclosing top-level function map. Because (with two documented
    exceptions) every function in this file is declared at column 0, "which top
@@ -236,6 +242,12 @@ ARROW_CONST_RE = re.compile(
     r"^const\s+(?P<name>[A-Za-z_$][A-Za-z0-9_$]*)\s*=\s*(?:async\s*)?"
     r"(?:\([^)]*\)|[A-Za-z_$][A-Za-z0-9_$]*)\s*=>"
 )
+# Module-scope const object/array literals (Issue #312).
+# Kept separate from ARROW_CONST_RE so data vs callable symbols can be tracked
+# with kind-appropriate reference patterns downstream.
+CONST_LITERAL_RE = re.compile(
+    r"^const\s+(?P<name>[A-Za-z_$][A-Za-z0-9_$]*)\s*=\s*[\{\[]"
+)
 SCRIPT_OPEN_RE = re.compile(r"^\s*<script(\s[^>]*)?>\s*$")
 SCRIPT_CLOSE_RE = re.compile(r"^\s*</script>\s*$")
 
@@ -294,8 +306,9 @@ def build_enclosing_map(lines: list[str], start: int, end: int) -> dict[int, str
     return enclosing
 
 
-def extract_symbols(lines: list[str], start: int, end: int) -> list[tuple[str, int]]:
-    symbols: list[tuple[str, int]] = []
+def extract_symbols(lines: list[str], start: int, end: int) -> list[tuple[str, int, str]]:
+    """Return (name, line, kind) tuples. kind is "callable" or "data"."""
+    symbols: list[tuple[str, int, str]] = []
     seen: set[str] = set()
     for i in range(start, end + 1):
         line = lines[i - 1]
@@ -303,20 +316,41 @@ def extract_symbols(lines: list[str], start: int, end: int) -> list[tuple[str, i
         if m:
             name = m.group("name")
             if name not in seen:
-                symbols.append((name, i))
+                symbols.append((name, i, "callable"))
                 seen.add(name)
             continue
         m2 = ARROW_CONST_RE.match(line)
         if m2:
             name = m2.group("name")
             if name not in seen:
-                symbols.append((name, i))
+                symbols.append((name, i, "callable"))
+                seen.add(name)
+            continue
+        m3 = CONST_LITERAL_RE.match(line)
+        if m3:
+            name = m3.group("name")
+            if name not in seen:
+                symbols.append((name, i, "data"))
                 seen.add(name)
     return symbols
 
 
-def find_call_lines(text_lines: list[str], start: int, end: int, name: str, def_line: int) -> list[int]:
-    pattern = re.compile(r"(?<![A-Za-z0-9_$])" + re.escape(name) + r"\s*\(")
+def find_reference_lines(
+    text_lines: list[str], start: int, end: int, name: str, def_line: int, kind: str
+) -> list[int]:
+    """Return lines in [start,end] that reference `name` (excluding def_line).
+
+    - callable: matches call sites `name(` only (preserves original heuristic).
+    - data: matches any bare-identifier reference `name` not immediately followed
+      by another identifier char, so `LANG_CODE_MAP[k]`, `LANG_CODE_MAP.k`, and
+      `Object.keys(LANG_CODE_MAP)` all count, while `LANG_CODE_MAP_FOO` does not.
+    """
+    if kind == "data":
+        pattern = re.compile(
+            r"(?<![A-Za-z0-9_$])" + re.escape(name) + r"(?![A-Za-z0-9_$])"
+        )
+    else:
+        pattern = re.compile(r"(?<![A-Za-z0-9_$])" + re.escape(name) + r"\s*\(")
     hits = []
     for i in range(start, end + 1):
         if i == def_line:
@@ -336,36 +370,39 @@ def build_ledger() -> list[dict]:
     start, end = find_main_script_range(lines)
     symbols = extract_symbols(lines, start, end)
     enclosing = build_enclosing_map(lines, start, end)
-    symbol_names = {name for name, _ in symbols}
+    symbol_kinds = {name: kind for name, _, kind in symbols}
+    callable_names = {name for name, _, kind in symbols if kind == "callable"}
 
     entries = []
-    for name, line in symbols:
-        call_lines = find_call_lines(lines, start, end, name, line)
+    for name, line, kind in symbols:
+        ref_lines = find_reference_lines(lines, start, end, name, line, kind)
         areas: set[str] = set()
-        for cl in call_lines:
+        for cl in ref_lines:
             caller = enclosing.get(cl)
             areas.add(classify_area(caller) if caller else "infra")
         if not areas:
-            # Never called by name (e.g. only reachable via HTML event wiring
-            # by reference) — fall back to the symbol's own classified area
-            # so caller_areas is never empty.
+            # Never referenced by name (e.g. callable only reachable via HTML
+            # event wiring by reference) — fall back to the symbol's own
+            # classified area so caller_areas is never empty.
             areas.add(classify_area(name))
         caller_areas = sort_areas(areas)
 
-        # depends_on: other tracked symbols invoked from within this symbol's
-        # own body (best-effort forward dependency list).
-        body_lines = [ln for ln, fn in enclosing.items() if fn == name and ln != line]
+        # depends_on: other tracked *callable* symbols invoked from within this
+        # symbol's own body (best-effort forward dependency list). Data
+        # literals have no body, so their depends_on is always empty.
         depends_on: set[str] = set()
-        if body_lines:
-            body_start, body_end = min(body_lines), max(body_lines)
-            for other in symbol_names:
-                if other == name:
-                    continue
-                other_pattern = re.compile(r"(?<![A-Za-z0-9_$])" + re.escape(other) + r"\s*\(")
-                for i in range(body_start, body_end + 1):
-                    if other_pattern.search(lines[i - 1]):
-                        depends_on.add(other)
-                        break
+        if kind == "callable":
+            body_lines = [ln for ln, fn in enclosing.items() if fn == name and ln != line]
+            if body_lines:
+                body_start, body_end = min(body_lines), max(body_lines)
+                for other in callable_names:
+                    if other == name:
+                        continue
+                    other_pattern = re.compile(r"(?<![A-Za-z0-9_$])" + re.escape(other) + r"\s*\(")
+                    for i in range(body_start, body_end + 1):
+                        if other_pattern.search(lines[i - 1]):
+                            depends_on.add(other)
+                            break
 
         n = len(caller_areas)
         scope = "library" if n >= 5 else ("shared" if n >= 2 else "primary")
@@ -373,6 +410,7 @@ def build_ledger() -> list[dict]:
 
         entry = {
             "symbol": name,
+            "kind": kind,
             "line": line,
             "feature_ids": feature_ids,
             "scope": scope,

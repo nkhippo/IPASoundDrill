@@ -7,9 +7,14 @@ Issue F（#174, EPIC #169）で確立。旧 `docs/repo-map.md`「src/index.templ
 
 ## 1. 何のためのファイルか
 
-「共通シンボル（`t()` / `activeIpa()` / `setExclusivePage` 等）を修正する場合、周辺機能への影響を機械的に確認できる」を実現する台帳。
-`apps/web/src/index.template.html`（~5,400L、~290 関数）の**静的解析**（正規表現 + 行範囲ベースの簡易スコープ判定であり、AST/コンパイラ相当の
+「共通シンボル（`t()` / `activeIpa()` / `setExclusivePage` / `LANG_CODE_MAP` / `SUPPORTED_LANGS` 等）を修正する場合、周辺機能への影響を機械的に確認できる」を実現する台帳。
+`apps/web/src/index.template.html`（~5,400L、~290 関数 + ~15 モジュールスコープ const リテラル）の**静的解析**（正規表現 + 行範囲ベースの簡易スコープ判定であり、AST/コンパイラ相当の
 呼び出しグラフではない）。編集エージェントは共通シンボルを触る前に必ずこの台帳を引く（§4 halt ルール）。
+
+**捕捉対象シンボル**（Issue #312 で拡張）:
+- callable: `function name(...)`（任意インデント）、`const name = (...) => ...` / `const name = async (...) => ...`（col 0）
+- data: `const NAME = { ... }` / `const NAME = [ ... ]`（col 0、モジュールスコープの const オブジェクト / 配列リテラル）
+  — PR #305/#306 の landing。`LANG_CODE_MAP` を編集して 8 言語 UI が壊れた際、台帳に露出していなかったため halt 発火せずマージされた反省を反映。
 
 生成器: `tools/impact-ledger/gen_impact_ledger.py`。データ本体: `docs/impact-ledger.json`（symbol 昇順の JSON 配列）。
 
@@ -23,18 +28,20 @@ Issue F（#174, EPIC #169）で確立。旧 `docs/repo-map.md`「src/index.templ
 
 | フィールド | 型 | 意味 |
 |---|---|---|
-| `symbol` | string | 関数名（`function name(` / `const name = (...) => `で定義されたトップレベル or ネスト関数） |
+| `symbol` | string | 関数名またはデータリテラル名（`function name(` / `const name = (...) => ` で定義されたトップレベル or ネスト関数、あるいは `const NAME = {...}` / `const NAME = [...]` の col 0 モジュールスコープリテラル） |
+| `kind` | `"callable"` \| `"data"` | シンボル種別。`callable`（関数・アロー関数）は呼び出し `name(` を参照とみなす。`data`（オブジェクト / 配列リテラル）は裸の識別子参照（`NAME[k]` / `NAME.k` / `Object.keys(NAME)` 等）を参照とみなす |
 | `line` | number | `apps/web/src/index.template.html` 内の定義行番号（1-indexed。ソース変更のたびに生成器再実行で追従） |
-| `feature_ids` | string[] | この関数を**呼び出している**コードが属する feature area のうち、`docs/_conventions.md` の凍結 12 ID レジストリに登録されているものだけを抽出したもの（`caller_areas` の部分集合。`infra` 等未登録概念は含まれない） |
-| `scope` | `"library"` \| `"shared"` \| `"primary"` | 呼び出し元エリア数によるスコープ分類（§3） |
-| `caller_areas` | string[] | この関数を呼び出しているコードが属するエリア一覧（`infra` を含む 13 エリア語彙。§3） |
-| `depends_on` | string[] | この関数の本体内で呼び出している**他の台帳登録シンボル**（ベストエフォートの前方依存。コールバック参照渡し等は捕捉できない場合がある） |
+| `feature_ids` | string[] | このシンボルを**参照している**コードが属する feature area のうち、`docs/_conventions.md` の凍結 12 ID レジストリに登録されているものだけを抽出したもの（`caller_areas` の部分集合。`infra` 等未登録概念は含まれない） |
+| `scope` | `"library"` \| `"shared"` \| `"primary"` | 参照元エリア数によるスコープ分類（§3） |
+| `caller_areas` | string[] | このシンボルを参照しているコードが属するエリア一覧（`infra` を含む 13 エリア語彙。§3） |
+| `depends_on` | string[] | この**関数**の本体内で呼び出している**他の台帳登録 callable**（ベストエフォートの前方依存。コールバック参照渡し等は捕捉できない場合がある。`kind=data` は本体を持たないため常に空配列） |
 
-例（`docs/impact-ledger.json` より — `scope=shared`、`caller_areas` 2 エリアの典型例）:
+例 1（callable、`scope=shared`、`caller_areas` 2 エリアの典型例）:
 
 ```json
 {
   "symbol": "vocabSkeletonHtml",
+  "kind": "callable",
   "line": 1789,
   "feature_ids": ["3b", "3c"],
   "scope": "shared",
@@ -42,6 +49,25 @@ Issue F（#174, EPIC #169）で確立。旧 `docs/repo-map.md`「src/index.templ
   "depends_on": []
 }
 ```
+
+例 2（data、Issue #312 で追加された `LANG_CODE_MAP`）:
+
+```json
+{
+  "symbol": "LANG_CODE_MAP",
+  "kind": "data",
+  "line": 3067,
+  "feature_ids": [],
+  "scope": "primary",
+  "caller_areas": ["infra"],
+  "depends_on": []
+}
+```
+
+> `caller_areas=["infra"]` は「言語切替は横断インフラ」の意。実質的には全 feature に波及するため、
+> **`kind=data` の infra エントリを編集する際は台帳の `caller_areas` だけを見ず、i18n 完全性
+> （14 言語全キー揃い）を必ず検証する**（i18n を触ったら `python3 tools/validate/validate_i18n.py`
+> — `docs/data-contract.md` §5）。
 
 ---
 
@@ -95,6 +121,16 @@ Issue F（#174, EPIC #169）で確立。旧 `docs/repo-map.md`「src/index.templ
 
 `scope=primary` のシンボルは単一エリアのみに影響するため、通常の Issue ホワイトリスト内で完結する（halt 対象外）。
 
+**`kind=data` シンボルの追加ルール**（Issue #312、PR #305/#306 landing）:
+
+- 言語別マップ・言語別配列（`LANG_CODE_MAP` / `SUPPORTED_LANGS` / `HOME_COPY` 等）を編集する場合、
+  `caller_areas=["infra"]` であっても i18n 完全性（14 言語全キー揃い）を必ず検証する。
+  `python3 tools/validate/validate_i18n.py` を実行し PASS を完了定義に含める。
+- データ literal は本体を持たず fanout が直接コード解析で見えないため、
+  「1 言語追加漏れ」のような品質欠陥は台帳の `caller_areas` からは検出できない。
+  台帳の役割は「編集時にそのシンボルが台帳に載っている＝ i18n / data-contract の完全性チェック
+  義務がある」ことを halt プロトコルで確実に想起させることにある。
+
 ---
 
 ## 5. 再生成手順
@@ -117,13 +153,18 @@ python3 tools/impact-ledger/gen_impact_ledger.py --check  # 生成物が最新�
 `tools/impact-ledger/gen_impact_ledger.py` 冒頭の `EXACT_AREA` / `PREFIX_RULES` / `SEED_OVERRIDES` を編集し、再生成後に diff を確認する。
 
 **制約事項（既知の限界。誤分類を見つけた場合はここを疑う）**:
-- 直接呼び出し（`name(...)`）のみを検出する。コールバック参照渡し（`addEventListener("click", handlerName)` のように括弧なしで渡す形）は
+- callable の直接呼び出し（`name(...)`）のみを検出する。コールバック参照渡し（`addEventListener("click", handlerName)` のように括弧なしで渡す形）は
   呼び出しグラフに現れない。
-- 呼び出し元の「エリア」は呼び出し元関数の**名前**から分類する（`EXACT_AREA` 辞書 → `PREFIX_RULES` 前方一致 → `infra` フォールバック）。
+- data リテラルは裸の識別子参照（`NAME` を bareword で使う）で検出する。文字列内・コメント内の
+  `NAME` は検出できない（前後の識別子文字境界のみ判定するため）。
+- 参照元の「エリア」は参照元関数の**名前**から分類する（`EXACT_AREA` 辞書 → `PREFIX_RULES` 前方一致 → `infra` フォールバック）。
   総称的な名前のヘルパー関数（例: 仮想リスト描画の共通関数）経由で呼ばれる場合、実際には特定のエリア専用でも `infra` に分類されうる。
 - `docs/_conventions.md` の凍結 12 ID レジストリに未登録の概念（例: オンボーディング ≈ 未登録の "3g"）は意図的に `infra` へ寄せている
   （`feature_ids` に未登録 ID を出力しないため）。当該概念が正式に feature 化されたら（登録 Issue と同一 PR で）
   `EXACT_AREA` に専用エリアを追加し再生成する。
+- data リテラルの `caller_areas` は「そのリテラルを参照している関数の分類」であり、リテラル自身の
+  実質的なエリア（例: `LANG_CODE_MAP` は「全 feature の言語表示」に波及）とは一致しないことがある。
+  §4 の「`kind=data` シンボルの追加ルール」参照。
 
 ---
 
