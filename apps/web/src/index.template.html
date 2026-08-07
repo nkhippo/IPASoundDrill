@@ -2666,7 +2666,7 @@ function localizePattern(pat) {
 function wordGloss(c) {
   if (!c || !c.gloss) return c ? c.w : "";
   if (LANG === "zh-Hant" || LANG === "zh-Hans") {
-    return c.gloss[LANG] || c.gloss.zh || c.gloss.en || c.w;
+    return c.gloss[LANG] || c.gloss.en || c.w;
   }
   return c.gloss[LANG] || c.gloss.en || c.w;
 }
