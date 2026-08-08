@@ -180,7 +180,7 @@ python3 tools/data-pipeline/fix_happy_i.py   # その後 gen_ga_rp_same を再�
 
 ### `packages/core/data/guide.json`（公開 URL `/data/guide.json`）
 
-UI i18n とは独立。各言語キー（`en`, `ja`, `ko`, `zh-Hans`, `zh-Hant`, `fil`。**8 言語拡張は Issue #303 で backlog 対応**）に 8 セクション（`welcome` … `how_to_use`）。段落数: welcome 4 / philosophy 3 / solves 2 / modes 3 / decode_encode 3 / connected 3 / accents 1 / how_to_use 3。モーダルで閲覧。
+UI i18n とは独立。各言語キー（**現行 14 言語**: `en`, `ja`, `ko`, `zh-Hans`, `zh-Hant`, `fil`, `es`, `pt-BR`, `vi`, `id`, `ru`, `th`, `hi`, `tr` — Issue #303 PR-D1 で 6→14 拡張済み）に 8 セクション（`welcome` … `how_to_use`）。段落数: welcome 4 / philosophy 3 / solves 2 / modes 3 / decode_encode 3 / connected 3 / accents 1 / how_to_use 3（合計 22 段落 / lang）。モーダルで閲覧。
 
 ---
 
